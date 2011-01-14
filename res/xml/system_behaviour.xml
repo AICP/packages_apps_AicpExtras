@@ -31,6 +31,17 @@
         android:title="@string/screen_state_toggles_title"
         android:fragment="com.aicp.extras.fragments.SuspendActions" />
 
+    <com.aicp.gear.preference.HostnamePreference
+        android:key="device_hostname"
+        android:title="@string/device_hostname"
+        android:dialogTitle="@string/device_hostname"
+        android:positiveButtonText="@string/ok"
+        android:negativeButtonText="@string/cancel"
+        android:selectAllOnFocus="true"
+        android:imeOptions="actionDone"
+        android:inputType="textNoSuggestions"
+        android:persistent="false" />
+
     <!-- SELinux -->
     <PreferenceCategory
         android:key="selinux"
