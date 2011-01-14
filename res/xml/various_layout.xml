@@ -34,4 +34,15 @@
         android:title="@string/disable_immersive_message_title"
         android:summary="@string/disable_immersive_message_summary" />
 
+    <com.lordclockan.aicpextras.preferences.HostnamePreference
+        android:key="device_hostname"
+        android:title="@string/device_hostname"
+        android:dialogTitle="@string/device_hostname"
+        android:positiveButtonText="@string/ga_rename_action"
+        android:negativeButtonText="@string/ga_cancel_action"
+        android:selectAllOnFocus="true"
+        android:imeOptions="actionDone"
+        android:inputType="textNoSuggestions"
+        android:persistent="false" />
+
 </PreferenceScreen>
