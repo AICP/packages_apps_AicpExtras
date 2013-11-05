@@ -87,6 +87,11 @@
         android:defaultValue="0"
         android:title="@string/smart_pulldown_title" />
 
+    <PreferenceScreen
+        android:key="status_bar_clock"
+        android:title="@string/status_bar_clock_title"
+        android:fragment="com.aicp.extras.fragments.StatusBarClockSettings" />
+
     <PreferenceCategory
         android:key="carrier_label_category"
         android:title="@string/carrier_category">
