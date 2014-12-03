@@ -73,4 +73,11 @@
         android:summary="%s"
         android:title="@string/ticker_mode_title" />
 
+    <com.aicp.extras.preference.SystemSettingIntListPreference
+        android:key="qs_smart_pulldown"
+        android:entries="@array/smart_pulldown_entries"
+        android:entryValues="@array/smart_pulldown_values"
+        android:defaultValue="0"
+        android:title="@string/smart_pulldown_title" />
+
 </PreferenceScreen>
