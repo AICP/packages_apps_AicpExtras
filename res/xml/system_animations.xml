@@ -21,6 +21,11 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/system_animations_title">
 
+    <PreferenceScreen
+        android:key="aokp_animation"
+        android:title="@string/system_animation_title"
+        android:fragment="com.aicp.extras.fragments.AnimationControls" />
+
     <Preference
         android:key="custom_bootanimation"
         android:title="@string/custom_bootanimation_title"
@@ -72,5 +77,4 @@
             android:defaultValue="0" />
 
     </PreferenceCategory>
-
 </PreferenceScreen>
