@@ -18,11 +18,17 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
     android:title="@string/system_animations_title">
 
     <Preference
             android:key="custom_bootanimation"
             android:title="@string/custom_bootanimation_title"
             android:summary="@string/custom_bootanimation_summary" />
+
+    <PreferenceScreen
+        android:key="aokp_animation"
+        android:title="@string/system_animation_title"
+        android:fragment="com.aicp.extras.fragments.AnimationControls" />
 
 </PreferenceScreen>
