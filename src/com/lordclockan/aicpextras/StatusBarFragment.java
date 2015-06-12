@@ -2,7 +2,9 @@ package com.lordclockan.aicpextras;
 
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemProperties;
@@ -13,6 +15,7 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import android.support.v4.app.Fragment;
@@ -42,6 +45,8 @@ public class StatusBarFragment extends Fragment {
         private String PREF_STATUSBAR_WEATHER = "statusbar_weather";
         private static final String KEY_AICP_LOGO_COLOR = "status_bar_aicp_logo_color";
         private static final String KEY_AICP_LOGO_STYLE = "status_bar_aicp_logo_style";
+        private static final String MISSED_CALL_BREATH = "missed_call_breath";
+        private static final String VOICEMAIL_BREATH = "voicemail_breath";
 
         private Preference mTraffic;
         private Preference mCarrierLabel;
@@ -49,6 +54,9 @@ public class StatusBarFragment extends Fragment {
         private Preference mStatusbarWeather;
         private ColorPickerPreference mAicpLogoColor;
         private ListPreference mAicpLogoStyle;
+        private SwitchPreference mMissedCallBreath;
+        private SwitchPreference mVoicemailBreath;
+
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -59,6 +67,7 @@ public class StatusBarFragment extends Fragment {
 
             PreferenceScreen prefSet = getPreferenceScreen();
             final ContentResolver resolver = getActivity().getContentResolver();
+            Context context = getActivity();
 
             mTraffic = prefSet.findPreference(PREF_TRAFFIC);
             mCarrierLabel = prefSet.findPreference(PREF_CARRIE_LABEL);
@@ -83,6 +92,26 @@ public class StatusBarFragment extends Fragment {
             mAicpLogoColor.setSummary(hexColor);
             mAicpLogoColor.setNewPreviewColor(intColor);
 
+            // Breathing Notifications
+            mMissedCallBreath = (SwitchPreference) findPreference(MISSED_CALL_BREATH);
+            mVoicemailBreath = (SwitchPreference) findPreference(VOICEMAIL_BREATH);
+
+            ConnectivityManager cm = (ConnectivityManager)
+                    context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+            if (cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE)) {
+
+                mMissedCallBreath.setChecked(Settings.System.getInt(resolver,
+                        Settings.System.KEY_MISSED_CALL_BREATH, 0) == 1);
+                mMissedCallBreath.setOnPreferenceChangeListener(this);
+
+                mVoicemailBreath.setChecked(Settings.System.getInt(resolver,
+                        Settings.System.KEY_VOICEMAIL_BREATH, 0) == 1);
+                mVoicemailBreath.setOnPreferenceChangeListener(this);
+            } else {
+                prefSet.removePreference(mMissedCallBreath);
+                prefSet.removePreference(mVoicemailBreath);
+            }
         }
 
         @Override
@@ -124,6 +153,14 @@ public class StatusBarFragment extends Fragment {
                         UserHandle.USER_CURRENT);
                 mAicpLogoStyle.setSummary(
                         mAicpLogoStyle.getEntries()[index]);
+                return true;
+            } else if (preference == mMissedCallBreath) {
+                boolean value = (Boolean) newValue;
+                Settings.System.putInt(resolver, Settings.System.KEY_MISSED_CALL_BREATH, value ? 1 : 0);
+                return true;
+            } else if (preference == mVoicemailBreath) {
+                boolean value = (Boolean) newValue;
+                Settings.System.putInt(resolver, Settings.System.KEY_VOICEMAIL_BREATH, value ? 1 : 0);
                 return true;
             }
             return false;
