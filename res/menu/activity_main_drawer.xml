@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/ui_title">
+        <menu>
+            <item android:id="@+id/nav_display_animations"
+                android:icon="@android:drawable/ic_menu_slideshow"
+                android:title="@string/display_animations_title"
+                android:checkable="true"/>
+            <item android:id="@+id/nav_headsup"
+                android:icon="@android:drawable/ic_menu_slideshow"
+                android:title="@string/headsup_title"
+                android:checkable="true"/>
+            <item android:id="@+id/nav_notif_drawer"
+                android:icon="@android:drawable/ic_menu_slideshow"
+                android:title="@string/notificaitons_title"
+                android:checkable="true"/>
+            <item android:id="@+id/nav_recents"
+                android:icon="@android:drawable/ic_menu_slideshow"
+                android:title="@string/recents_panel_title"
+                android:checkable="true"/>
+            <item android:id="@+id/nav_statusbar"
+                android:icon="@android:drawable/ic_menu_slideshow"
+                android:title="@string/statubar_title"
+                android:checkable="true"/>
+            <item android:id="@+id/nav_various"
+                android:icon="@android:drawable/ic_menu_slideshow"
+                android:title="@string/various_shit_title"
+                android:checkable="true"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/other_title">
+        <menu>
+            <item android:id="@+id/nav_about"
+                android:icon="@android:drawable/ic_menu_share"
+                android:title="@string/about_title"
+                android:checkable="true"/>
+        </menu>
+    </item>
+
+</menu>

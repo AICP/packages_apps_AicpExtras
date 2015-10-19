@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:title="Your Name"
+        android:key="username"
+        android:summary="Please provide your username"></EditTextPreference>
+    <SwitchPreference
+        android:title="Application Updates"
+        android:defaultValue="false"
+        android:summary="This option if selected will allow the application to check for latest versions."
+        android:key="test_check" />
+    <ListPreference
+        android:title="Amount of fucks given"
+        android:summary="Select the amount of fucks you want to give"
+        android:key="fuck_amount"
+        android:defaultValue="0"
+        android:entries="@array/amountArray"
+        android:entryValues="@array/amountValues" />
+</PreferenceScreen>

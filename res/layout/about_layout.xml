@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="?android:attr/selectableItemBackground" >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvGplus"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16sp"
+        style="TextAppearance.AppCompat.Body1"
+        android:text="@string/g_community" />
+
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B6B6B6" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAicpDownloads"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16sp"
+        style="TextAppearance.AppCompat.Body1"
+        android:text="@string/aicp_downloads_title" />
+
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B6B6B6" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAicpGerrit"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16sp"
+        style="TextAppearance.AppCompat.Body1"
+        android:text="@string/aicp_gerrit_title" />
+
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B6B6B6" />
+
+</LinearLayout>
