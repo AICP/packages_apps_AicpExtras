@@ -1,23 +1,35 @@
-LOCAL_PATH := $(call my-dir)
+LOCAL_PATH:= $(call my-dir)
+
+# We need to add some special AAPT flags to generate R classes
+# for resources that are included from the libraries.
 include $(CLEAR_VARS)
+LOCAL_PACKAGE_NAME := AicpExtras
 
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_STATIC_JAVA_LIBRARIES := support-v4-23.1.0-sources cardview-v7-23.1.0-sources appcompat-v7-23.1.0-sources support-annotations-23.1.0-sources
+LOCAL_SDK_VERSION := current
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
+LOCAL_STATIC_JAVA_LIBRARIES := \
+        android-support-v4 \
+        android-support-v7-appcompat \
+        android-support-v7-cardview \
+        android-support-annotations \
+        android-support-design
+LOCAL_RESOURCE_DIR = \
+        $(LOCAL_PATH)/res \
+        frameworks/support/v7/appcompat/res \
+        frameworks/support/v7/cardview/res \
+        frameworks/support/design/res \
+
+LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
-LOCAL_PACKAGE_NAME := AicpExtras
 
-
+LOCAL_AAPT_FLAGS := \
+        --auto-add-overlay \
+        --extra-packages android.support.v7.appcompat \
+        --extra-packages android.support.v7.cardview \
+        --extra-packages android.support.annotations \
+        --extra-packages android.support.design.* 
 include $(BUILD_PACKAGE)
-##################################################
-include $(CLEAR_VARS)
-
-# LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := roottools:libs/RootTools.jar renderscript:libs/renderscript-v8.jar google:libs/libGoogleAnalyticsServices.jar nineoldandroids:libs/nineoldandroids-2.4.0.jar
-
-include $(BUILD_MULTI_PREBUILT)
-
-# Use the folloing include to make our test apk.
-include $(call all-makefiles-under,$(LOCAL_PATH))
