@@ -34,6 +34,12 @@
         android:inputType="textNoSuggestions"
         android:persistent="false" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="disable_fc_notifications"
+        android:title="@string/disable_fc_notifications_title"
+        android:summary="@string/disable_fc_notifications_summary"
+        android:defaultValue="false" />
+
     <PreferenceScreen
         android:key="chooser_activity_blacklist"
         android:fragment="com.aicp.extras.fragments.ChooserActivityBlacklist"
