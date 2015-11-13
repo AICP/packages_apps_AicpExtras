@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 public class RecentsPanelFragment extends Fragment {
 
     View myView;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
