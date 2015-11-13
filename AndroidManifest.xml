@@ -8,10 +8,21 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="23" />
 
+    <uses-permission android:name="android.permission.SET_ANIMATION_SCALE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.CONTROL_INCALL_EXPERIENCE" />
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" android:protectionLevel="signatureOrSystem" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_aicp_logo"
         android:label="@string/app_name"
+        android:configChanges="orientation|screenSize"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
