@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 public class HeadsUpFragment extends Fragment {
 
     View myView;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
