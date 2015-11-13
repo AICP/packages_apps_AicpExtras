@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="@dimen/nav_header_height"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
     android:background="@drawable/side_nav_bar"
+    android:gravity="bottom"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    android:gravity="bottom">
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:paddingRight="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/ic_aicp" android:id="@+id/imageView"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:contentDescription="@string/logo" />
+        android:contentDescription="@string/logo"
+        android:paddingRight="@dimen/nav_header_vertical_spacing"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:src="@drawable/ic_aicp" />
 
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:text="@string/aicp_extras_title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/textView"
-        android:layout_toEndOf="@+id/imageView" />
+        android:layout_toEndOf="@+id/imageView"
+        android:text="@string/aicp_extras_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/pun_title" android:id="@+id/textView"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/imageView" />
+        android:layout_toEndOf="@+id/imageView"
+        android:text="@string/pun_title" />
 
 </RelativeLayout>
