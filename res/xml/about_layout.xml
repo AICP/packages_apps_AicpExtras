@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:key="gplus"
+        android:title="@string/g_community" />
+
+    <Preference
+        android:key="aicp_downloads"
+        android:title="@string/aicp_downloads_title" />
+
+    <Preference
+        android:key="aicp_gerrit"
+        android:title="@string/aicp_gerrit_title" />
+
+    <Preference
+        android:key="aicp_changelog"
+        android:title="@string/changelog_title"
+        android:summary="@string/changelog_title_summary"/>
+
+</PreferenceScreen>
