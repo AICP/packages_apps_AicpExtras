@@ -5,6 +5,7 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
@@ -28,10 +29,13 @@ public class AboutFragment extends Fragment {
         private String PREF_AICP_GERRIT = "aicp_gerrit";
         private String PREF_AICP_CHANGELOG = "aicp_changelog";
 
+        private String mDeviceName;
+
         private Preference mGcommunity;
         private Preference mAicpDownloads;
         private Preference mAicpGerrit;
         private Preference mAicpChangeLog;
+
         public SettingsPreferenceFragment() {
         }
 
@@ -62,7 +66,8 @@ public class AboutFragment extends Fragment {
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
             } else if (preference == mAicpDownloads) {
-                String url = "http://dwnld.aicp-rom.com";
+                getDeviceName();
+                String url = "http://dwnld.aicp-rom.com/?device=" + mDeviceName;
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
@@ -79,6 +84,10 @@ public class AboutFragment extends Fragment {
             }
 
             return false;
+        }
+
+        public void getDeviceName() {
+            mDeviceName = SystemProperties.get("ro.product.device");
         }
     }
 }
