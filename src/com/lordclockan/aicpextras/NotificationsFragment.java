@@ -31,7 +31,7 @@ public class NotificationsFragment extends Fragment {
             super.onCreate(savedInstanceState);
 
             // Load the preferences from an XML resource
-            addPreferencesFromResource(R.xml.ui_layout);
+            addPreferencesFromResource(R.xml.notifications_layout);
 
             PreferenceScreen prefSet = getPreferenceScreen();
             Activity activity = getActivity();
