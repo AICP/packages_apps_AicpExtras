@@ -35,19 +35,21 @@ LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_PROGUARD_ENABLED := disabled
 
-LOCAL_STATIC_JAVA_LIBRARIES := android-support-v4
-LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-appcompat
-LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-recyclerview
-LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-cardview
-LOCAL_STATIC_JAVA_LIBRARIES += android-support-v13
-LOCAL_STATIC_JAVA_LIBRARIES += android-support-design
-LOCAL_STATIC_JAVA_LIBRARIES += libsuperuser
+LOCAL_STATIC_JAVA_LIBRARIES := \
+    android-support-v4 \
+    android-support-v7-appcompat \
+    android-support-v7-recyclerview \
+    android-support-v7-cardview \
+    android-support-v13 \
+    android-support-design \
+    libsuperuser \
+    org.cyanogenmod.platform.internal
+LOCAL_JAVA_LIBRARIES := org.cyanogenmod.hardware
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, $(res_dirs))
 LOCAL_AAPT_FLAGS := --auto-add-overlay
 LOCAL_AAPT_FLAGS += --extra-packages android.support.v7.appcompat:android.support.v7.cardview:android.support.v7.recyclerview:android.support.design
-
 
 include $(BUILD_PACKAGE)
 
