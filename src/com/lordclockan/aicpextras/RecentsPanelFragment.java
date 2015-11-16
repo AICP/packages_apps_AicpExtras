@@ -66,7 +66,7 @@ public class RecentsPanelFragment extends Fragment {
             if (preference == mRecentsClearAllLocation) {
                 int location = Integer.valueOf((String) newValue);
                 int index = mRecentsClearAllLocation.findIndexOfValue((String) newValue);
-                Settings.System.putIntForUser(getActivity().getContentResolver(),
+                Settings.System.putIntForUser(resolver,
                         Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
                 mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
                 return true;
