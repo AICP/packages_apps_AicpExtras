@@ -6,4 +6,9 @@
         android:title="@string/toast_icon_title"
         android:summary="@string/toast_icon_summary" />
 
+    <ListPreference
+        android:key="lcd_density"
+        android:title="@string/lcd_density"
+        android:persistent="false" />
+
 </PreferenceScreen>
