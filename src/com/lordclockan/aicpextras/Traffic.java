@@ -27,40 +27,34 @@ import android.os.Bundle;
 import android.preference.SwitchPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.PreferenceActivity;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
-import android.support.v4.app.Fragment;
+import android.support.annotation.LayoutRes;
+import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatDelegate;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.lordclockan.aicpextras.R;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class Traffic extends Activity {
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // Display the fragment as the main content.
-        getFragmentManager().beginTransaction().replace(android.R.id.content,
-                new SettingsPreferenceFragment()).commit();
-    }
-
-    public static class SettingsPreferenceFragment extends PreferenceFragment
-            implements OnPreferenceChangeListener {
-
-        public SettingsPreferenceFragment() {
-        }
+public class Traffic extends PreferenceActivity {
 
         private static final String TAG = "Traffic";
+
+        private AppCompatDelegate mDelegate;
 
         private static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
         private static final String NETWORK_TRAFFIC_COLOR = "network_traffic_color";
@@ -87,14 +81,29 @@ public class Traffic extends Activity {
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
+        getDelegate().installViewFactory();
+        getDelegate().onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_settings);
+        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
             addPreferencesFromResource(R.xml.traffic);
 
             loadResources();
 
             PreferenceScreen prefSet = getPreferenceScreen();
-            ContentResolver resolver = getActivity().getContentResolver();
+            ContentResolver resolver = this.getContentResolver();
+
+            FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    resetToDefault();
+                    Snackbar.make(view, "Restting to default", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                    finish();
+                }
+            });
 
             mNetTrafficState = (ListPreference) prefSet.findPreference(NETWORK_TRAFFIC_STATE);
             mNetTrafficUnit = (ListPreference) prefSet.findPreference(NETWORK_TRAFFIC_UNIT);
@@ -104,18 +113,18 @@ public class Traffic extends Activity {
                 (SwitchPreference) prefSet.findPreference(NETWORK_TRAFFIC_AUTOHIDE);
             mNetTrafficAutohide.setChecked((Settings.System.getInt(resolver,
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE, 0) == 1));
-            mNetTrafficAutohide.setOnPreferenceChangeListener(this);
+            //mNetTrafficAutohide.setOnPreferenceChangeListener(this);
 
             mNetTrafficAutohideThreshold =
                 (SeekBarPreferenceCham) prefSet.findPreference(NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD);
             int netTrafficAutohideThreshold = Settings.System.getInt(resolver,
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 10);
                 mNetTrafficAutohideThreshold.setValue(netTrafficAutohideThreshold / 1);
-                mNetTrafficAutohideThreshold.setOnPreferenceChangeListener(this);
+               // mNetTrafficAutohideThreshold.setOnPreferenceChangeListener(this);
 
             mNetTrafficColor =
                 (ColorPickerPreference) prefSet.findPreference(NETWORK_TRAFFIC_COLOR);
-            mNetTrafficColor.setOnPreferenceChangeListener(this);
+            //mNetTrafficColor.setOnPreferenceChangeListener(this);
             int intColor = Settings.System.getInt(resolver,
                     Settings.System.NETWORK_TRAFFIC_COLOR, 0xffffffff);
             String hexColor = String.format("#%08x", (0xffffffff & intColor));
@@ -132,17 +141,17 @@ public class Traffic extends Activity {
 
                 mNetTrafficState.setValueIndex(intIndex >= 0 ? intIndex : 0);
                 mNetTrafficState.setSummary(mNetTrafficState.getEntry());
-                mNetTrafficState.setOnPreferenceChangeListener(this);
+                //mNetTrafficState.setOnPreferenceChangeListener(this);
 
                 mNetTrafficUnit.setValueIndex(getBit(mNetTrafficVal, MASK_UNIT) ? 1 : 0);
                 mNetTrafficUnit.setSummary(mNetTrafficUnit.getEntry());
-                mNetTrafficUnit.setOnPreferenceChangeListener(this);
+               // mNetTrafficUnit.setOnPreferenceChangeListener(this);
 
                 intIndex = (mNetTrafficVal & MASK_PERIOD) >>> 16;
                 intIndex = mNetTrafficPeriod.findIndexOfValue(String.valueOf(intIndex));
                 mNetTrafficPeriod.setValueIndex(intIndex >= 0 ? intIndex : 1);
                 mNetTrafficPeriod.setSummary(mNetTrafficPeriod.getEntry());
-                mNetTrafficPeriod.setOnPreferenceChangeListener(this);
+                //mNetTrafficPeriod.setOnPreferenceChangeListener(this);
             }
         }
 
@@ -162,7 +171,7 @@ public class Traffic extends Activity {
             }
         }
 
-        @Override
+        /*@Override
         public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
             menu.add(0, MENU_RESET, 0, R.string.network_traffic_color_reset)
                     .setIcon(R.drawable.ic_settings_backup)
@@ -178,10 +187,10 @@ public class Traffic extends Activity {
                 default:
                     return super.onContextItemSelected(item);
             }
-        }
+        }*/
 
         private void resetToDefault() {
-            AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
             alertDialog.setTitle(R.string.network_traffic_color_reset);
             alertDialog.setMessage(R.string.network_traffic_color_reset_message);
             alertDialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
@@ -194,7 +203,7 @@ public class Traffic extends Activity {
         }
 
         private void NetworkTrafficColorReset() {
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(this.getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_COLOR, DEFAULT_TRAFFIC_COLOR);
 
             mNetTrafficColor.setNewPreviewColor(DEFAULT_TRAFFIC_COLOR);
@@ -203,7 +212,7 @@ public class Traffic extends Activity {
         }
 
         public boolean onPreferenceChange(Preference preference, Object newValue) {
-            ContentResolver resolver = getActivity().getContentResolver();
+            ContentResolver resolver = this.getContentResolver();
             if (preference == mNetTrafficState) {
                 int intState = Integer.valueOf((String)newValue);
                 mNetTrafficVal = setBit(mNetTrafficVal, MASK_UP, getBit(intState, MASK_UP));
@@ -252,7 +261,7 @@ public class Traffic extends Activity {
         }
 
         private void loadResources() {
-            Resources resources = getActivity().getResources();
+            Resources resources = this.getResources();
             MASK_UP = resources.getInteger(R.integer.maskUp);
             MASK_DOWN = resources.getInteger(R.integer.maskDown);
             MASK_UNIT = resources.getInteger(R.integer.maskUnit);
@@ -269,5 +278,44 @@ public class Traffic extends Activity {
         private boolean getBit(int intNumber, int intMask) {
             return (intNumber & intMask) == intMask;
         }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        getDelegate().onPostCreate(savedInstanceState);
+    }
+
+    @Override
+    public void setContentView(@LayoutRes int layoutResID) {
+        getDelegate().setContentView(layoutResID);
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        getDelegate().onPostResume();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        getDelegate().onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        getDelegate().onDestroy();
+    }
+
+    private void setSupportActionBar(@Nullable Toolbar toolbar) {
+        getDelegate().setSupportActionBar(toolbar);
+    }
+
+    private AppCompatDelegate getDelegate() {
+        if (mDelegate == null) {
+            mDelegate = AppCompatDelegate.create(this, null);
+        }
+        return mDelegate;
     }
 }
