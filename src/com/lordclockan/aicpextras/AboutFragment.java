@@ -2,6 +2,7 @@ package com.lordclockan.aicpextras;
 
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.support.v4.app.Fragment;
+
+import com.lordclockan.aicpextras.utils.Utils;
 
 public class AboutFragment extends Fragment {
 
@@ -28,8 +31,6 @@ public class AboutFragment extends Fragment {
         private String PREF_AICP_DOWNLOADS = "aicp_downloads";
         private String PREF_AICP_GERRIT = "aicp_gerrit";
         private String PREF_AICP_CHANGELOG = "aicp_changelog";
-
-        private String mDeviceName;
 
         private Preference mGcommunity;
         private Preference mAicpDownloads;
@@ -66,8 +67,8 @@ public class AboutFragment extends Fragment {
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
             } else if (preference == mAicpDownloads) {
-                getDeviceName();
-                String url = "http://dwnld.aicp-rom.com/?device=" + mDeviceName;
+                String mDevice = Utils.getDevice(getContext());
+                String url = "http://dwnld.aicp-rom.com/?device=" + mDevice;
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
@@ -84,10 +85,6 @@ public class AboutFragment extends Fragment {
             }
 
             return false;
-        }
-
-        public void getDeviceName() {
-            mDeviceName = SystemProperties.get("ro.product.device");
         }
     }
 }
