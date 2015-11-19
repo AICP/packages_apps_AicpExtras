@@ -2,14 +2,14 @@ package com.lordclockan.aicpextras;
 
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.preference.ListPreference;
+import android.os.SystemProperties;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
-import android.preference.SwitchPreference;
 import android.support.v4.app.Fragment;
-import android.widget.Toast;
 
 public class StatusBarFragment extends Fragment {
 
@@ -23,20 +23,36 @@ public class StatusBarFragment extends Fragment {
     }
 
     public static class SettingsPreferenceFragment extends PreferenceFragment {
+
         public SettingsPreferenceFragment() {
         }
+
+        private String PREF_TRAFFIC = "traffic";
+
+        private Preference mTraffic;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
             // Load the preferences from an XML resource
-            addPreferencesFromResource(R.xml.ui_layout);
+            addPreferencesFromResource(R.xml.statusbar_layout);
 
             PreferenceScreen prefSet = getPreferenceScreen();
-            Activity activity = getActivity();
+            ContentResolver resolver = getActivity().getContentResolver();
 
-            final ContentResolver resolver = getActivity().getContentResolver();
+            mTraffic = prefSet.findPreference(PREF_TRAFFIC);
+        }
+
+        @Override
+        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+            if (preference == mTraffic) {
+                Intent intent = new Intent(getActivity(), Traffic.class);
+                getActivity().startActivity(intent);
+            } else {
+                return super.onPreferenceTreeClick(preferenceScreen, preference);
+            }
+            return false;
         }
     }
 }
