@@ -40,10 +40,12 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.animation.AnimationUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.lordclockan.aicpextras.R;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
@@ -56,6 +58,7 @@ public class Traffic extends PreferenceActivity
     private static final String TAG = "Traffic";
 
     private AppCompatDelegate mDelegate;
+    private LinearLayout mView;
 
     private static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
     private static final String NETWORK_TRAFFIC_COLOR = "network_traffic_color";
@@ -82,11 +85,12 @@ public class Traffic extends PreferenceActivity
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-    getDelegate().installViewFactory();
-    getDelegate().onCreate(savedInstanceState);
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_settings);
-    setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        getDelegate().installViewFactory();
+        getDelegate().onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_settings);
+        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        getActionBar().setTitle(R.string.traffic_title);
 
         addPreferencesFromResource(R.xml.traffic);
 
@@ -94,14 +98,16 @@ public class Traffic extends PreferenceActivity
 
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = this.getContentResolver();
+        mView = (LinearLayout) findViewById(R.id.content_frame);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+            fab.setImageDrawable(getResources().getDrawable(android.R.drawable.ic_popup_sync));
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    view.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(),
+                            R.anim.rotate));
                     resetToDefault();
-                    Snackbar.make(view, "Restting to default", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
                 }
         });
 
@@ -209,6 +215,9 @@ public class Traffic extends PreferenceActivity
         mNetTrafficColor.setNewPreviewColor(DEFAULT_TRAFFIC_COLOR);
         String hexColor = String.format("#%08x", (0xffffffff & DEFAULT_TRAFFIC_COLOR));
         mNetTrafficColor.setSummary(hexColor);
+
+        Snackbar.make(mView, R.string.resetting_default, Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -226,7 +235,7 @@ public class Traffic extends PreferenceActivity
         } else if (preference == mNetTrafficColor) {
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
+            mNetTrafficColor.setSummary(hex);
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(resolver,
                     Settings.System.NETWORK_TRAFFIC_COLOR, intHex);
