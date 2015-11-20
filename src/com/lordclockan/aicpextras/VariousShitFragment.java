@@ -56,6 +56,8 @@ public class VariousShitFragment extends Fragment {
         private ListPreference mScreenshotType;
         private NumberPickerPreference mScreenshotDelay;
 
+        private static final String PREF_MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -64,6 +66,12 @@ public class VariousShitFragment extends Fragment {
 
             PreferenceScreen prefSet = getPreferenceScreen();
             ContentResolver resolver = getActivity().getContentResolver();
+
+            mMsob = (ListPreference) findPreference(PREF_MEDIA_SCANNER_ON_BOOT);
+            mMsob.setValue(String.valueOf(Settings.System.getInt(resolver,
+                    Settings.System.MEDIA_SCANNER_ON_BOOT, 0)));
+            mMsob.setSummary(mMsob.getEntry());
+            mMsob.setOnPreferenceChangeListener(this);
 
             mCameraSounds = (SwitchPreference) findPreference(KEY_CAMERA_SOUNDS);
             mCameraSounds.setChecked(SystemProperties.getBoolean(PROP_CAMERA_SOUND, true));
@@ -113,6 +121,14 @@ public class VariousShitFragment extends Fragment {
                 Settings.System.putInt(resolver, Settings.System.SCREENSHOT_DELAY,
                         mScreenshotDelayValue);
                 updateScreenshotDelaySummary(mScreenshotDelayValue);
+                return true;
+            } else if (preference == mMsob) {
+                Settings.System.putInt(resolver,
+                    Settings.System.MEDIA_SCANNER_ON_BOOT,
+                        Integer.valueOf(String.valueOf(newValue)));
+
+                mMsob.setValue(String.valueOf(newValue));
+                mMsob.setSummary(mMsob.getEntry());
                 return true;
             }
             return false;
