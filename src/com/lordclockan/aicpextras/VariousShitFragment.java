@@ -18,6 +18,7 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
@@ -49,6 +50,7 @@ public class VariousShitFragment extends Fragment {
         private static final String SCROLLINGCACHE_DEFAULT = "1";
         private static final String PREF_SYSTEMUI_TUNER = "systemui_tuner";
         private static final String PREF_ADAWAY_START = "adaway_start";
+        private static final String PREF_MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
 
         // Package name of the SystemUI tuner
         public static final String SYSTEMUITUNER_PACKAGE_NAME = "com.android.systemui";
@@ -69,6 +71,7 @@ public class VariousShitFragment extends Fragment {
                 .setClassName(ADAWAY_PACKAGE_NAME, ADAWAY_PACKAGE_NAME + ".ui.BaseActivity");
 
         private ListPreference mScrollingCachePref;
+        private ListPreference mMsob;
         private Preference mSystemUITuner;
         private String mTunerFirstRun = "true";
 
@@ -97,6 +100,12 @@ public class VariousShitFragment extends Fragment {
                     SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
             mScrollingCachePref.setOnPreferenceChangeListener(this);
 
+            mMsob = (ListPreference) findPreference(PREF_MEDIA_SCANNER_ON_BOOT);
+            mMsob.setValue(String.valueOf(Settings.System.getInt(resolver,
+                    Settings.System.MEDIA_SCANNER_ON_BOOT, 0)));
+            mMsob.setSummary(mMsob.getEntry());
+            mMsob.setOnPreferenceChangeListener(this);
+
             mSystemUITuner = prefSet.findPreference(PREF_SYSTEMUI_TUNER);
             mSystemappRemover = prefSet.findPreference(PREF_SYSTEMAPP_REMOVER);
             mWakelockBlocker = prefSet.findPreference(PREF_WAKELOCK_BLOCKER);
@@ -118,6 +127,14 @@ public class VariousShitFragment extends Fragment {
                     SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String)newValue);
                     return true;
                 }
+            } else if (preference == mMsob) {
+                Settings.System.putInt(resolver,
+                    Settings.System.MEDIA_SCANNER_ON_BOOT,
+                        Integer.valueOf(String.valueOf(newValue)));
+
+                mMsob.setValue(String.valueOf(newValue));
+                mMsob.setSummary(mMsob.getEntry());
+                return true;
             }
             return false;
         }

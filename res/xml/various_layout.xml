@@ -36,6 +36,13 @@
         android:entries="@array/entries_scrollingcache"
         android:entryValues="@array/values_scrollingcache" />
 
+    <ListPreference
+        android:key="media_scanner_on_boot"
+        android:dialogTitle="@string/media_scanner_on_boot_title"
+        android:title="@string/media_scanner_on_boot_title"
+        android:entries="@array/media_scanner_on_boot_entries"
+        android:entryValues="@array/media_scanner_on_boot_values" />
+
     <Preference
         android:key="system_app_remover"
         android:title="@string/system_app_remover" />
