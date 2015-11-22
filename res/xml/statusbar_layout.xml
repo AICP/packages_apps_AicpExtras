@@ -10,11 +10,14 @@
 
     <Preference
         android:key="traffic"
-        android:fragment="com.lordclockan.aicpextras.Traffic"
         android:title="@string/traffic_category" />
 
     <Preference
         android:key="carrierlabel"
         android:title="@string/carrier_options" />
+
+    <Preference
+        android:key="batterybar"
+        android:title="@string/battery_bar_title" />
 
 </PreferenceScreen>
