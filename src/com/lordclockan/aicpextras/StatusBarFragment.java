@@ -29,9 +29,11 @@ public class StatusBarFragment extends Fragment {
 
         private String PREF_TRAFFIC = "traffic";
         private String PREF_CARRIE_LABEL = "carrierlabel";
+        private String PREF_BATTERY_BAR = "batterybar";
 
         private Preference mTraffic;
         private Preference mCarrierLabel;
+        private Preference mBatteryBar;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,7 @@ public class StatusBarFragment extends Fragment {
 
             mTraffic = prefSet.findPreference(PREF_TRAFFIC);
             mCarrierLabel = prefSet.findPreference(PREF_CARRIE_LABEL);
+            mBatteryBar = prefSet.findPreference(PREF_BATTERY_BAR);
         }
 
         @Override
@@ -54,6 +57,9 @@ public class StatusBarFragment extends Fragment {
                 getActivity().startActivity(intent);
             } else if (preference == mCarrierLabel) {
                 Intent intent = new Intent(getActivity(), CarrierLabel.class);
+                getActivity().startActivity(intent);
+            } else if (preference == mBatteryBar) {
+                Intent intent = new Intent(getActivity(), BatteryBar.class);
                 getActivity().startActivity(intent);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
