@@ -13,4 +13,8 @@
         android:fragment="com.lordclockan.aicpextras.Traffic"
         android:title="@string/traffic_category" />
 
+    <Preference
+        android:key="carrierlabel"
+        android:title="@string/carrier_options" />
+
 </PreferenceScreen>
