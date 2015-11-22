@@ -99,7 +99,7 @@ public class CarrierLabel extends PreferenceActivity
         mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntry());
         mShowCarrierLabel.setOnPreferenceChangeListener(this);
 
-        if (!Utils.isVoiceCapable(this)) {
+        if (Utils.isWifiOnly(this)) {
             prefSet.removePreference(mShowCarrierLabel);
         }
         mCustomCarrierLabel = (PreferenceScreen) prefSet.findPreference(CUSTOM_CARRIER_LABEL);
