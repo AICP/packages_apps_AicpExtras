@@ -24,6 +24,12 @@
         android:defaultValue="true" />
 
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="status_bar_custom_header"
+        android:title="@string/status_bar_custom_header_title"
+        android:summary="@string/status_bar_custom_header_summary"
+        android:defaultValue="false"/>
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="force_expanded_notifications"
         android:title="@string/force_expanded_notifications_title"
         android:summary="@string/force_expanded_notifications_summary" />
