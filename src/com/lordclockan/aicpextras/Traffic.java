@@ -105,8 +105,6 @@ public class Traffic extends PreferenceActivity
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    view.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(),
-                            R.anim.rotate));
                     resetToDefault();
                 }
         });
@@ -216,6 +214,9 @@ public class Traffic extends PreferenceActivity
         String hexColor = String.format("#%08x", (0xffffffff & DEFAULT_TRAFFIC_COLOR));
         mNetTrafficColor.setSummary(hexColor);
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(),
+                 R.anim.rotate));
         Snackbar.make(mView, R.string.resetting_default, Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
     }
