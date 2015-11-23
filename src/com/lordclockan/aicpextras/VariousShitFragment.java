@@ -31,6 +31,12 @@ public class VariousShitFragment extends Fragment {
         public SettingsPreferenceFragment() {
         }
 
+        private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
+        private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
+        private static final String SCROLLINGCACHE_DEFAULT = "1";
+
+        private ListPreference mScrollingCachePref;
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -40,11 +46,22 @@ public class VariousShitFragment extends Fragment {
 
             PreferenceScreen prefSet = getPreferenceScreen();
             ContentResolver resolver = getActivity().getContentResolver();
+
+            mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
+            mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
+                    SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
+            mScrollingCachePref.setOnPreferenceChangeListener(this);
         }
 
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getActivity().getContentResolver();
+            if (preference == mScrollingCachePref) {
+                if (newValue != null) {
+                    SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String)newValue);
+                    return true;
+                }
+            }
             return false;
         }
     }
