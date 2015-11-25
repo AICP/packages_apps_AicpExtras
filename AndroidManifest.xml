@@ -65,5 +65,13 @@
             android:name=".BatteryBar"
             android:label="@string/battery_bar_title">
         </activity>
+        <activity
+            android:name=".GestureAnywhereSettings"
+            android:label="@string/gesture_anywhere_title">
+        </activity>
+        <activity
+            android:name=".GestureAnywhereBuilderActivity"
+            android:label="@string/gesture_anywhere_title">
+        </activity>
     </application>
 </manifest>
