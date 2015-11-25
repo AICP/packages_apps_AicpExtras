@@ -48,6 +48,7 @@ import android.widget.LinearLayout;
 
 import com.lordclockan.aicpextras.R;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
+import eu.chainfire.libsuperuser.Shell;
 
 public class GestureAnywhereSettings extends PreferenceActivity
         implements OnPreferenceChangeListener {
@@ -152,8 +153,10 @@ public class GestureAnywhereSettings extends PreferenceActivity
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mGestures) {
-            Intent intent = new Intent(this, GestureAnywhereBuilderActivity.class);
-            this.startActivity(intent);
+            if (Shell.SU.available()) {
+                Intent intent = new Intent(this, GestureAnywhereBuilderActivity.class);
+                this.startActivity(intent);
+            }
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
