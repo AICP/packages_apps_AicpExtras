@@ -16,8 +16,13 @@
 
 package com.lordclockan.aicpextras;
 
+import android.Manifest;
 import android.app.Dialog;
 import android.app.ListActivity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.AsyncTask;
 import android.os.Environment;
@@ -30,14 +35,15 @@ import android.view.ViewGroup;
 import android.gesture.GestureLibrary;
 import android.gesture.Gesture;
 import android.gesture.GestureLibraries;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.widget.TextView;
 import android.widget.EditText;
 import android.widget.AdapterView;
 import android.widget.Toast;
 import android.widget.ArrayAdapter;
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.Resources;
+import android.widget.LinearLayout;
 import android.text.TextUtils;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
@@ -70,10 +76,15 @@ public class GestureAnywhereBuilderActivity extends ListActivity
     private static final int REQUEST_PICK_APPLICATION = 101;
     private static final int REQUEST_CREATE_SHORTCUT = 102;
 
+    private static final int PERMISSION_REQUEST_CODE = 1;
+    private Context context;
+    private LinearLayout mView;
+
     // Type: long (id)
     private static final String GESTURES_INFO_ID = "gestures.info_id";
 
-    private final File mStoreFile = new File("/data/system", "ga_gestures");
+    private final File mStoreFile = new File(Environment
+            .getExternalStorageDirectory(), "/data/ga_gestures");
 
     private final Comparator<NamedGesture> mSorter = new Comparator<NamedGesture>() {
         public int compare(NamedGesture object1, NamedGesture object2) {
@@ -102,6 +113,8 @@ public class GestureAnywhereBuilderActivity extends ListActivity
         mAdapter = new GesturesAdapter(this);
         setListAdapter(mAdapter);
 
+        mView = (LinearLayout) findViewById(R.id.gesturesList);
+
         if (sStore == null) {
             sStore = GestureLibraries.fromFile(mStoreFile);
         }
@@ -116,6 +129,9 @@ public class GestureAnywhereBuilderActivity extends ListActivity
     @Override
     protected void onResume() {
         super.onResume();
+        if (!checkStoragePermission()) {
+            requestPermission();
+        }
         if (mStoreFile.exists()) mStoreFile.setReadable(true, false);
     }
 
@@ -361,6 +377,36 @@ public class GestureAnywhereBuilderActivity extends ListActivity
                     null, null, null);
 
             return convertView;
+        }
+    }
+
+    private boolean checkStoragePermission() {
+        int result = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if (result == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private void requestPermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            ActivityCompat.requestPermissions(this,new String[] {
+                Manifest.permission.WRITE_EXTERNAL_STORAGE},PERMISSION_REQUEST_CODE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSION_REQUEST_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Snackbar.make(mView, R.string.storage_permission_granted ,Snackbar.LENGTH_LONG).show();
+                } else {
+                    Snackbar.make(mView, storage_permission_not_granted ,Snackbar.LENGTH_LONG).show();
+                }
+            return;
         }
     }
 }
