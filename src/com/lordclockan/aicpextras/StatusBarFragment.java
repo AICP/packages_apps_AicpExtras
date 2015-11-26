@@ -30,10 +30,12 @@ public class StatusBarFragment extends Fragment {
         private String PREF_TRAFFIC = "traffic";
         private String PREF_CARRIE_LABEL = "carrierlabel";
         private String PREF_BATTERY_BAR = "batterybar";
+        private String PREF_STATUSBAR_WEATHER = "statusbar_weather";
 
         private Preference mTraffic;
         private Preference mCarrierLabel;
         private Preference mBatteryBar;
+        private Preference mStatusbarWeather;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,7 @@ public class StatusBarFragment extends Fragment {
             mTraffic = prefSet.findPreference(PREF_TRAFFIC);
             mCarrierLabel = prefSet.findPreference(PREF_CARRIE_LABEL);
             mBatteryBar = prefSet.findPreference(PREF_BATTERY_BAR);
+            mStatusbarWeather = prefSet.findPreference(PREF_STATUSBAR_WEATHER);
         }
 
         @Override
@@ -60,6 +63,9 @@ public class StatusBarFragment extends Fragment {
                 getActivity().startActivity(intent);
             } else if (preference == mBatteryBar) {
                 Intent intent = new Intent(getActivity(), BatteryBar.class);
+                getActivity().startActivity(intent);
+            } else if (preference == mStatusbarWeather) {
+                Intent intent = new Intent(getActivity(), StatusBarWeather.class);
                 getActivity().startActivity(intent);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
