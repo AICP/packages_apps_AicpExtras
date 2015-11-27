@@ -15,9 +15,27 @@
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:background">#00ffffff</item>
+       <item name="android:background">#00ffffff</item>
     </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="FragmentTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#607D8B</item>
+        <item name="colorPrimaryDark">#455A64</item>
+        <item name="colorAccent">#607D8B</item>
+        <item name="android:navigationBarColor">?attr/colorPrimary</item>
+        <item name="android:colorBackground">@color/background_material_dark</item>
+        <item name="android:colorForeground">@color/foreground_material_dark</item>
+        <item name="android:textColorPrimary">@color/primary_text_material_dark</item>
+        <item name="android:textColorPrimaryInverse">@color/primary_text_material_light
+        </item>
+        <item name="android:textColorSecondary">@color/secondary_text_material_dark</item>
+        <item name="android:textColorSecondaryInverse">@color/secondary_text_material_light</item>
+        <item name="android:colorPrimary">#607D8B</item>
+        <item name="android:colorPrimaryDark">#455A64</item>
+        <item name="android:colorAccent">#607D8B</item>
+    </style>
+
 </resources>
+
