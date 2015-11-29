@@ -49,9 +49,11 @@ public class DisplayAnimationsActivity extends Fragment {
 
         private static final String KEY_LCD_DENSITY = "lcd_density";
         private static final String PREF_GESTURE_ANYWHERE = "gestureanywhere";
+        private static final String PREF_LOCKSCREEN_WEATHER = "lockscreen_weather";
 
         private ListPreference mLcdDensityPreference;
         private Preference mGestureAnywhere;
+        private Preference mLockscreenWeather;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -103,6 +105,7 @@ public class DisplayAnimationsActivity extends Fragment {
             }
 
         mGestureAnywhere = prefSet.findPreference(PREF_GESTURE_ANYWHERE);
+        mLockscreenWeather = prefSet.findPreference(PREF_LOCKSCREEN_WEATHER);
 
         }
 
@@ -126,6 +129,9 @@ public class DisplayAnimationsActivity extends Fragment {
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
             if (preference == mGestureAnywhere) {
                 Intent intent = new Intent(getActivity(), GestureAnywhereSettings.class);
+                getActivity().startActivity(intent);
+            } else if (preference == mLockscreenWeather) {
+                Intent intent = new Intent(getActivity(), Weather.class);
                 getActivity().startActivity(intent);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);

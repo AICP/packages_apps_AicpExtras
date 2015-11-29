@@ -84,5 +84,10 @@
             android:label="@string/status_bar_temperature_title"
             android:theme="@style/FragmentTheme">
         </activity>
+        <activity
+            android:name=".Weather"
+            android:label="@string/weahter_lockscreen_category"
+            android:theme="@style/FragmentTheme">
+        </activity>
     </application>
 </manifest>
