@@ -55,7 +55,8 @@
         </activity>
         <activity
             android:name=".Traffic"
-            android:label="@string/changelog_title">
+            android:label="@string/traffic_category"
+            android:theme="@style/FragmentTheme">
         </activity>
         <activity
             android:name=".CarrierLabel"
@@ -67,7 +68,8 @@
         </activity>
         <activity
             android:name=".GestureAnywhereSettings"
-            android:label="@string/gesture_anywhere_title">
+            android:label="@string/gesture_anywhere_title"
+            android:theme="@style/FragmentTheme">
         </activity>
         <activity
             android:name=".GestureAnywhereCreateGestureActivity"
@@ -79,7 +81,8 @@
         </activity>
         <activity
             android:name=".StatusBarWeather"
-            android:label="@string/status_bar_temperature_title">
+            android:label="@string/status_bar_temperature_title"
+            android:theme="@style/FragmentTheme">
         </activity>
     </application>
 </manifest>
