@@ -9,6 +9,13 @@
         android:summary="@string/headset_connect_player_summary"
         android:defaultValue="false" />
 
+    <!-- Camera shutter -->
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="camera_sounds"
+        android:title="@string/camera_sounds_title"
+        android:summary="@string/camera_sounds_summary"
+        android:defaultValue="true" />
+
     <!-- Screenshot tone -->
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="screenshot_sound"
