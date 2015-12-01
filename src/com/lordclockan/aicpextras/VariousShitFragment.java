@@ -42,8 +42,11 @@ public class VariousShitFragment extends Fragment {
         public SettingsPreferenceFragment() {
         }
 
+        private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
+        private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
         private static final String SCREENSHOT_TYPE = "screenshot_type";
 
+        private SwitchPreference mCameraSounds;
         private ListPreference mScreenshotType;
 
         @Override
@@ -54,6 +57,10 @@ public class VariousShitFragment extends Fragment {
 
             PreferenceScreen prefSet = getPreferenceScreen();
             ContentResolver resolver = getActivity().getContentResolver();
+
+            mCameraSounds = (SwitchPreference) findPreference(KEY_CAMERA_SOUNDS);
+            mCameraSounds.setChecked(SystemProperties.getBoolean(PROP_CAMERA_SOUND, true));
+            mCameraSounds.setOnPreferenceChangeListener(this);
 
             mScreenshotType = (ListPreference) findPreference(SCREENSHOT_TYPE);
             int mScreenshotTypeValue = Settings.System.getInt(resolver,
@@ -66,8 +73,18 @@ public class VariousShitFragment extends Fragment {
 
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
+            final String key = preference.getKey();
             ContentResolver resolver = getActivity().getContentResolver();
-            if  (preference == mScreenshotType) {
+            if (preference == mCameraSounds) {
+               if (KEY_CAMERA_SOUNDS.equals(key)) {
+                   if ((Boolean) newValue) {
+                       SystemProperties.set(PROP_CAMERA_SOUND, "1");
+                   } else {
+                       SystemProperties.set(PROP_CAMERA_SOUND, "0");
+                   }
+                }
+                return true;
+            } else if (preference == mScreenshotType) {
                 int mScreenshotTypeValue = Integer.parseInt(((String) newValue).toString());
                 mScreenshotType.setSummary(
                         mScreenshotType.getEntries()[mScreenshotTypeValue]);
