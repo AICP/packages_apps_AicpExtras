@@ -9,10 +9,10 @@
                 android:icon="@android:drawable/ic_menu_slideshow"
                 android:title="@string/display_animations_title" />
             <item
-                android:id="@+id/nav_headsup"
+                android:id="@+id/nav_statusbar"
                 android:checkable="true"
                 android:icon="@android:drawable/ic_menu_slideshow"
-                android:title="@string/headsup_title" />
+                android:title="@string/statubar_title" />
             <item
                 android:id="@+id/nav_notif_drawer"
                 android:checkable="true"
@@ -24,10 +24,15 @@
                 android:icon="@android:drawable/ic_menu_slideshow"
                 android:title="@string/recents_panel_title" />
             <item
-                android:id="@+id/nav_statusbar"
+                android:id="@+id/nav_lockscreen"
                 android:checkable="true"
                 android:icon="@android:drawable/ic_menu_slideshow"
-                android:title="@string/statubar_title" />
+                android:title="@string/lockscreen_title" />
+            <item
+                android:id="@+id/nav_headsup"
+                android:checkable="true"
+                android:icon="@android:drawable/ic_menu_slideshow"
+                android:title="@string/headsup_title" />
             <item
                 android:id="@+id/nav_various"
                 android:checkable="true"

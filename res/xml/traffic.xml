@@ -58,7 +58,7 @@
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="network_traffic_autohide_threshold"
         android:title="@string/network_traffic_autohide_threshold"
-        android:max="100"
+        aicpextras:max="100"
         aicpextras:min="0"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="kB/s"
