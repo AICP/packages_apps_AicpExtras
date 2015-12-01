@@ -107,8 +107,8 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_display_animations:
                 fragmentClass = DisplayAnimationsActivity.class;
                 break;
-            case R.id.nav_headsup:
-                fragmentClass = HeadsUpFragment.class;
+            case R.id.nav_statusbar:
+                fragmentClass = StatusBarFragment.class;
                 break;
             case R.id.nav_notif_drawer:
                 fragmentClass = NotificationsFragment.class;
@@ -116,8 +116,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_recents:
                 fragmentClass = RecentsPanelFragment.class;
                 break;
-            case R.id.nav_statusbar:
-                fragmentClass = StatusBarFragment.class;
+            case R.id.nav_lockscreen:
+                fragmentClass = LockscreenFragment.class;
+                break;
+            case R.id.nav_headsup:
+                fragmentClass = HeadsUpFragment.class;
                 break;
             case R.id.nav_various:
                 fragmentClass = VariousShitFragment.class;

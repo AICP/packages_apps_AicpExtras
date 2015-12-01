@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan.aicpextras">
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_see_through"
+        android:title="@string/lockscreen_see_through_title"
+        android:summary="@string/lockscreen_see_through_summary"
+        android:defaultValue="false" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="lockscreen_blur_radius"
+        android:title="@string/lockscreen_blur_radius"
+        aicpextras:max="25"
+        aicpextras:min="0"
+        aicpextras:defaultValue="14"
+        android:dependency="lockscreen_see_through" />
+
+    <Preference
+        android:key="lockscreen_weather"
+        android:title="@string/weahter_lockscreen_category" />
+
+</PreferenceScreen>
