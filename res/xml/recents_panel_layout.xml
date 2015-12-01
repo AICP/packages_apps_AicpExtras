@@ -45,5 +45,11 @@
         android:summaryOff="@string/recents_fullscreen_summary_disabled"
         android:defaultValue="false" />
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="shake_clean_recent"
+        android:title="@string/shake_clear_recents"
+        android:summary="@string/shake_clear_recents_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
 
