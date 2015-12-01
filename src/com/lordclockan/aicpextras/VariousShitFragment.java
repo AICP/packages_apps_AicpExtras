@@ -14,6 +14,8 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.support.v4.app.Fragment;
 
+import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
+
 public class VariousShitFragment extends Fragment {
 
     @Override
@@ -34,8 +36,10 @@ public class VariousShitFragment extends Fragment {
         private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
         private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
         private static final String SCROLLINGCACHE_DEFAULT = "1";
+        private static final String KEY_LOCKSCREEN_BLUR_RADIUS = "lockscreen_blur_radius";
 
         private ListPreference mScrollingCachePref;
+        private SeekBarPreferenceCham mBlurRadius;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -51,6 +55,11 @@ public class VariousShitFragment extends Fragment {
             mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                     SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
             mScrollingCachePref.setOnPreferenceChangeListener(this);
+
+            mBlurRadius = (SeekBarPreferenceCham) findPreference(KEY_LOCKSCREEN_BLUR_RADIUS);
+            mBlurRadius.setValue(Settings.System.getInt(resolver,
+                    Settings.System.LOCKSCREEN_BLUR_RADIUS, 14));
+            mBlurRadius.setOnPreferenceChangeListener(this);
         }
 
         @Override
@@ -61,6 +70,11 @@ public class VariousShitFragment extends Fragment {
                     SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String)newValue);
                     return true;
                 }
+            } else if (preference == mBlurRadius) {
+                int width = ((Integer)newValue).intValue();
+                Settings.System.putInt(resolver,
+                        Settings.System.LOCKSCREEN_BLUR_RADIUS, width);
+                return true;
             }
             return false;
         }
