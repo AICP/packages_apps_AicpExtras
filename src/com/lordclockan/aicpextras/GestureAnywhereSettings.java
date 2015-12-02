@@ -29,7 +29,7 @@ import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 
-import com.lordclockan.aicpextras.R;
+import com.lordclockan.R;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 public class GestureAnywhereSettings extends AppCompatActivity {
