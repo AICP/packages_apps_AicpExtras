@@ -49,7 +49,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.BitmapDrawable;
 
-import com.lordclockan.aicpextras.R;
+import com.lordclockan.R;
 import com.lordclockan.aicpextras.utils.ShortcutPickHelper;
 
 import java.util.Map;

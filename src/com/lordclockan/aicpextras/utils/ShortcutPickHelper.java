@@ -40,7 +40,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import com.lordclockan.aicpextras.R;
+import com.lordclockan.R;
 import com.lordclockan.aicpextras.utils.ShortcutPickHelper.AppExpandableAdapter.GroupInfo;
 
 public class ShortcutPickHelper {
