@@ -41,4 +41,12 @@
         <item name="android:alertDialogTheme">@style/DialogStyle</item>
     </style>
 
+    <!-- Switch bar -->
+    <style name="TextAppearance.Small" parent="@android:style/TextAppearance.Material.Small" />
+    <style name="TextAppearance.Switch" parent="@android:style/TextAppearance.Material.Title" />
+    <style name="TextAppearance.Small.SwitchBar">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
 </resources>
