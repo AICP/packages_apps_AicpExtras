@@ -297,4 +297,48 @@
     <string name="notif_drawer_weather_title">Weather</string>
     <string name="notif_drawer_weather_summary">Toggle notification drawer weather info</string>
 
+    <!-- ROm Stats -->
+    <!-- Main -->
+     <string name="stats_title">Stats</string>
+
+    <!-- Notification -->
+    <string name="notification_ticker">Statistics Opted-In</string>
+    <string name="notification_title">AICP Statistics</string>
+    <string name="notification_desc">Enable or Disable Anonymous Statistics</string>
+    
+    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
+    
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">AICP Stats</string>
+    <string name="anonymous_statistics_summary">Help AICP by opting into anonymous statistics reporting</string>
+    <string name="anonymous_statistics_warning_title">About</string>
+    <string name="anonymous_statistics_warning">Opting into AICP Stats will allow non-personal data to be submitted to 
+         our servers. The information submitted includes an unique identifier, which does not compromise your privacy or personal data. 
+         The data is submitted every 7 days.\n\nFor an example of the data that is submitted, tap on Preview Data.</string>
+ 
+    <string name="pref_settings">Settings</string>
+    <string name="enable_reporting_title">Enable reporting</string>
+    <string name="disable_reporting_persistent">Persistent opt-out</string>
+    <string name="preview_data_title">Preview data</string>
+    <string name="preview_data_summary">%s</string>
+    <string name="view_stats_title">View Stats Page</string>
+    <string name="anonymous_learn_more">Learn more</string>
+
+    <string name="last_report_on">Last reported</string>
+    <string name="reporting_interval">Reporting interval</string>
+    <plurals name="reporting_interval_days">
+        <item quantity="one">1 day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <string name="next_report_on">Next report</string>
+
+    <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">Unique ID</string>
+    <string name="preview_device_title">Device</string>
+    <string name="preview_version_title">Version</string>
+    <string name="preview_country_title">Country</string>
+    <string name="preview_carrier_title">Carrier</string>    
+    <string name="preview_romname_title">ROM Name</string>    
+    <string name="preview_romversion_title">AICP Version</string>
+
 </resources>
