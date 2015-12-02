@@ -31,11 +31,13 @@ public class StatusBarFragment extends Fragment {
         private String PREF_CARRIE_LABEL = "carrierlabel";
         private String PREF_BATTERY_BAR = "batterybar";
         private String PREF_STATUSBAR_WEATHER = "statusbar_weather";
+        private String PREF_STATS_AICP = "aicp_stats";
 
         private Preference mTraffic;
         private Preference mCarrierLabel;
         private Preference mBatteryBar;
         private Preference mStatusbarWeather;
+        private Preference mAicpStats;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,7 @@ public class StatusBarFragment extends Fragment {
             mCarrierLabel = prefSet.findPreference(PREF_CARRIE_LABEL);
             mBatteryBar = prefSet.findPreference(PREF_BATTERY_BAR);
             mStatusbarWeather = prefSet.findPreference(PREF_STATUSBAR_WEATHER);
+            mAicpStats = prefSet.findPreference(PREF_STATS_AICP);
         }
 
         @Override

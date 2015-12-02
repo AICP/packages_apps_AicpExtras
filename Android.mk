@@ -43,8 +43,11 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v13 \
     android-support-design \
     libsuperuser \
+    play \
     org.cyanogenmod.platform.internal
 LOCAL_JAVA_LIBRARIES := org.cyanogenmod.hardware
+
+LOCAL_JAVA_LIBRARIES := org.apache.http.legacy
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, $(res_dirs))
