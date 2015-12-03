@@ -38,7 +38,7 @@ import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.lordclockan.aicpextras.R;
+import com.lordclockan.R;
 import com.lordclockan.aicpextras.utils.Utils;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;

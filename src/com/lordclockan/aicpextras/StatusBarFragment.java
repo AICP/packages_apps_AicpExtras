@@ -11,6 +11,8 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.support.v4.app.Fragment;
 
+import com.lordclockan.R;
+
 public class StatusBarFragment extends Fragment {
 
     @Override

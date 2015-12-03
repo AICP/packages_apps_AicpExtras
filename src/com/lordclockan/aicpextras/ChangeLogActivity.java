@@ -26,7 +26,7 @@ import android.view.ViewGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.lordclockan.aicpextras.R;
+import com.lordclockan.R;
 
 import java.io.FileReader;
 import java.io.IOException;

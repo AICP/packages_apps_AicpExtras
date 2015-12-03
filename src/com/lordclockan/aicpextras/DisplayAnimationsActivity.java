@@ -28,6 +28,8 @@ import android.view.WindowManagerGlobal;
 import android.view.WindowManagerImpl;
 import android.widget.Toast;
 
+import com.lordclockan.R;
+
 public class DisplayAnimationsActivity extends Fragment {
 
     @Override

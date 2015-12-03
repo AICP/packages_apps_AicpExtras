@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.SeekBar;
 
-import com.lordclockan.aicpextras.R;
+import com.lordclockan.R;
 
 /**
  * Custom SeekBar that allows setting both a minimum and maximum value.
