@@ -14,6 +14,8 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.support.v4.app.Fragment;
 
+import com.lordclockan.R;
+
 public class VariousShitFragment extends Fragment {
 
     @Override
@@ -34,8 +36,14 @@ public class VariousShitFragment extends Fragment {
         private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
         private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
         private static final String SCROLLINGCACHE_DEFAULT = "1";
+        private static final String PREF_STATS_AICP = "stats_aicp";
+
+        public static final String STATS_PACKAGE_NAME = "com.lordclockan";
+        public static Intent INTENT_STATS = new Intent(Intent.ACTION_MAIN)
+                .setClassName(STATS_PACKAGE_NAME, STATS_PACKAGE_NAME + ".romstats.AnonymousStats");
 
         private ListPreference mScrollingCachePref;
+        private Preference mStatsAicp;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -51,6 +59,8 @@ public class VariousShitFragment extends Fragment {
             mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                     SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
             mScrollingCachePref.setOnPreferenceChangeListener(this);
+
+            mStatsAicp = prefSet.findPreference(PREF_STATS_AICP);
         }
 
         @Override
@@ -61,6 +71,16 @@ public class VariousShitFragment extends Fragment {
                     SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String)newValue);
                     return true;
                 }
+            }
+            return false;
+        }
+
+        @Override
+        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+            if (preference == mStatsAicp) {
+                startActivity(INTENT_STATS);
+            } else {
+                return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
             return false;
         }

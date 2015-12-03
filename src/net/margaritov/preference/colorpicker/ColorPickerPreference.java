@@ -32,7 +32,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.lordclockan.aicpextras.R;
+import com.lordclockan.R;
 
 /**
  * A preference type that allows a user to choose a time

@@ -25,7 +25,7 @@ import android.preference.PreferenceFragment;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 
-import com.lordclockan.aicpextras.R;
+import com.lordclockan.R;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
