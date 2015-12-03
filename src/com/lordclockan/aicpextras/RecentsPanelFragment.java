@@ -17,6 +17,8 @@ import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
+import com.lordclockan.R;
+
 public class RecentsPanelFragment extends Fragment {
 
     @Override

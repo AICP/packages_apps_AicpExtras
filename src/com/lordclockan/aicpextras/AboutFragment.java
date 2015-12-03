@@ -14,6 +14,8 @@ import android.support.v4.app.Fragment;
 
 import com.lordclockan.aicpextras.utils.Utils;
 
+import com.lordclockan.R;
+
 public class AboutFragment extends Fragment {
 
     @Override
