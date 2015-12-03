@@ -14,6 +14,8 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.support.v4.app.Fragment;
 
+import com.lordclockan.R;
+
 public class VariousShitFragment extends Fragment {
 
     @Override

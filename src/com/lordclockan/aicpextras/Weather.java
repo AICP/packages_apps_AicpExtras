@@ -34,7 +34,7 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 
-import com.lordclockan.aicpextras.R;
+import com.lordclockan.R;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
