@@ -14,7 +14,7 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
-import com.lordclockan.aicpextras.R;
+import com.lordclockan.R;
 
 public class SeekBarPreferenceCham extends Preference implements OnSeekBarChangeListener {
 

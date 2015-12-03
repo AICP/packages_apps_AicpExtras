@@ -27,7 +27,7 @@ import android.gesture.Gesture;
 import android.gesture.GestureLibrary;
 import android.widget.TextView;
 
-import com.lordclockan.aicpextras.R;
+import com.lordclockan.R;
 
 public class GestureAnywhereCreateGestureActivity extends Activity {
 

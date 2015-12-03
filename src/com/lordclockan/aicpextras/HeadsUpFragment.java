@@ -11,6 +11,8 @@ import android.preference.SwitchPreference;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
+import com.lordclockan.R;
+
 public class HeadsUpFragment extends Fragment {
 
     @Override

@@ -29,7 +29,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-import com.lordclockan.aicpextras.R;
+import com.lordclockan.R;
 
 public class ColorPickerDialog
         extends

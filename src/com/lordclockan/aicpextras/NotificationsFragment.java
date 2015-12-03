@@ -19,6 +19,8 @@ import android.support.v4.app.Fragment;
 
 import cyanogenmod.providers.CMSettings;
 
+import com.lordclockan.R;
+
 public class NotificationsFragment extends Fragment {
 
     @Override

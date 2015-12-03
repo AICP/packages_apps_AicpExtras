@@ -15,6 +15,8 @@ import android.support.v4.app.Fragment;
 
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
+import com.lordclockan.R;
+
 public class LockscreenFragment extends Fragment {
 
     @Override

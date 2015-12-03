@@ -14,6 +14,8 @@ import android.support.v4.app.Fragment;
 
 import com.lordclockan.aicpextras.utils.Utils;
 
+import com.lordclockan.R;
+
 public class AboutFragment extends Fragment {
 
     @Override
@@ -36,6 +38,13 @@ public class AboutFragment extends Fragment {
         private Preference mAicpDownloads;
         private Preference mAicpGerrit;
         private Preference mAicpChangeLog;
+        private Preference mStatsAicp;
+
+        private static final String PREF_STATS_AICP = "aicp_stats";
+
+        public static final String STATS_PACKAGE_NAME = "com.lordclockan";
+        public static Intent INTENT_STATS = new Intent(Intent.ACTION_MAIN)
+                .setClassName(STATS_PACKAGE_NAME, STATS_PACKAGE_NAME + ".romstats.AnonymousStats");
 
         public SettingsPreferenceFragment() {
         }
@@ -56,6 +65,7 @@ public class AboutFragment extends Fragment {
             mAicpDownloads = prefSet.findPreference(PREF_AICP_DOWNLOADS);
             mAicpGerrit = prefSet.findPreference(PREF_AICP_GERRIT);
             mAicpChangeLog = prefSet.findPreference(PREF_AICP_CHANGELOG);
+            mStatsAicp = prefSet.findPreference(PREF_STATS_AICP);
 
         }
 
@@ -80,6 +90,8 @@ public class AboutFragment extends Fragment {
             } else if (preference == mAicpChangeLog) {
                 Intent intent = new Intent(getActivity(), ChangeLogActivity.class);
                 getActivity().startActivity(intent);
+            } else if (preference == mStatsAicp) {
+                startActivity(INTENT_STATS);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }

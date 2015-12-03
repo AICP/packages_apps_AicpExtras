@@ -32,7 +32,7 @@ import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import com.lordclockan.aicpextras.R;
+import com.lordclockan.R;
 
 import java.util.ArrayList;
 
