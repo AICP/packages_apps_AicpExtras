@@ -27,4 +27,20 @@
         android:key="lockscreen_weather"
         android:title="@string/weahter_lockscreen_category" />
 
+    <PreferenceCategory
+            android:key="lockscreen_wallpaper"
+            android:title="@string/lockscreen_category_title" >
+
+        <Preference
+            android:key="lockscreen_wallpaper_set"
+            android:title="@string/lockscreen_wallpaper_set_title"
+            android:persistent="false"/>
+
+        <Preference
+            android:key="lockscreen_wallpaper_clear"
+            android:title="@string/lockscreen_wallpaper_clear_title"
+            android:persistent="false"/>
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
