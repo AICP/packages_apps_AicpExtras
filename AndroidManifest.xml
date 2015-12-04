@@ -91,6 +91,11 @@
             android:label="@string/weahter_lockscreen_category"
             android:theme="@style/FragmentTheme">
         </activity>
+        <activity
+            android:name=".aicpextras.AppCircleBar"
+            android:label="@string/category_app_circle_bar_title"
+            android:theme="@style/FragmentTheme">
+        </activity>
 
         <activity android:name=".romstats.AnonymousStats"
             android:label="@string/stats_title" >

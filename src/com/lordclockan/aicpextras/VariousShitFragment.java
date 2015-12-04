@@ -36,8 +36,10 @@ public class VariousShitFragment extends Fragment {
         private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
         private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
         private static final String SCROLLINGCACHE_DEFAULT = "1";
+        private String PREF_APP_CIRCLE_BAR = "app_circle_bar";
 
         private ListPreference mScrollingCachePref;
+        private Preference mAppCircleBar;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,8 @@ public class VariousShitFragment extends Fragment {
             mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                     SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
             mScrollingCachePref.setOnPreferenceChangeListener(this);
+
+            mAppCircleBar = prefSet.findPreference(PREF_APP_CIRCLE_BAR);
         }
 
         @Override
@@ -63,6 +67,17 @@ public class VariousShitFragment extends Fragment {
                     SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String)newValue);
                     return true;
                 }
+            }
+            return false;
+        }
+
+        @Override
+        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+            if (preference == mAppCircleBar) {
+                Intent intent = new Intent(getActivity(), AppCircleBar.class);
+                getActivity().startActivity(intent);
+            } else {
+                return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
             return false;
         }
