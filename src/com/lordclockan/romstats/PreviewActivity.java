@@ -47,8 +47,6 @@ public class PreviewActivity extends PreferenceActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-                getPermissionToReadPhoneState();
-
 		addPreferencesFromResource(R.xml.preview_data);
 		
 		final PreferenceScreen prefSet = getPreferenceScreen();
@@ -62,53 +60,10 @@ public class PreviewActivity extends PreferenceActivity {
         prefSet.findPreference(CARRIER).setSummary(Utilities.getCarrier(context));
         prefSet.findPreference(ROMNAME).setSummary(Utilities.getRomName());
         prefSet.findPreference(ROMVERSION).setSummary(Utilities.getRomVersion());
+
+
 	}
 
-        private static final int READ_PHONE_STATE_PERMISSIONS_REQUEST = 1;
 
-         public void getPermissionToReadPhoneState() {
-
-             if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE)
-                     != PackageManager.PERMISSION_GRANTED) {
-
-                 if (shouldShowRequestPermissionRationale(
-                         Manifest.permission.READ_PHONE_STATE)) {
-
-                 }
-
-                 requestPermissions(new String[]{Manifest.permission.READ_PHONE_STATE},
-                         READ_PHONE_STATE_PERMISSIONS_REQUEST);
-
-             }
-          }
-	
-
-       @Override
-       public void onRequestPermissionsResult(int requestCode,
-                                           @NonNull String permissions[],
-                                           @NonNull int[] grantResults) {
-
-
-            if (requestCode ==  READ_PHONE_STATE_PERMISSIONS_REQUEST) {
-               if (grantResults.length == 1 &&
-                       grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                  Toast.makeText(this, "Read Contacts permission granted", Toast.LENGTH_SHORT).show();
-               } else {
-                  Toast.makeText(this, "Read Contacts permission denied", Toast.LENGTH_SHORT).show();
-               }
-             } else {
-               super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-             }
-        } 
-
-
-
-
-
-
-
-
-
-
-/* Last Bracket */
-}
+  /* Last Bracket */
+  }
