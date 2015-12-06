@@ -9,4 +9,22 @@
         android:key="app_circle_bar"
         android:title="@string/app_circle_bar_title" />
 
+    <PreferenceCategory
+            android:key="omniswitch_category"
+            android:title="@string/omniswitch_category_title" >
+
+        <SwitchPreference
+                android:key="recents_use_omniswitch"
+                android:title="@string/recents_use_omniswitch_title"
+                android:summary="@string/recents_use_omniswitch_summary"
+                android:persistent="false" />
+
+        <Preference
+                android:key="omniswitch_start_settings"
+                android:title="@string/omniswitch_start_settings_title"
+                android:summary="@string/omniswitch_start_settings_summary"
+                android:persistent="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
