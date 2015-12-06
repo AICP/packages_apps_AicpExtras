@@ -28,4 +28,17 @@ public class Helpers {
     public static void restartSystemUI() {
         CMDProcessor.startSuCommand("pkill -TERM -f com.android.systemui");
     }
+
+    public static boolean isPackageInstalled(String packageName, PackageManager pm) {
+        try {
+            String mVersion = pm.getPackageInfo(packageName, 0).versionName;
+            if (mVersion == null) {
+                return false;
+            }
+        } catch (NameNotFoundException notFound) {
+            Log.e(TAG, "Package could not be found!", notFound);
+            return false;
+        }
+        return true;
+    }
 }
