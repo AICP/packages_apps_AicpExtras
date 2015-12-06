@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.lordclockan.R;
 
-public class HeadsUpFragment extends Fragment {
+public class MultiShitFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class HeadsUpFragment extends Fragment {
             super.onCreate(savedInstanceState);
 
             // Load the preferences from an XML resource
-            addPreferencesFromResource(R.xml.ui_layout);
+            addPreferencesFromResource(R.xml.multishit_layout);
 
             PreferenceScreen prefSet = getPreferenceScreen();
             Activity activity = getActivity();
