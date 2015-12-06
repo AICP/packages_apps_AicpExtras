@@ -121,8 +121,8 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_lockscreen:
                 fragmentClass = LockscreenFragment.class;
                 break;
-            case R.id.nav_headsup:
-                fragmentClass = HeadsUpFragment.class;
+            case R.id.nav_multishit:
+                fragmentClass = MultiShitFragment.class;
                 break;
             case R.id.nav_various:
                 fragmentClass = VariousShitFragment.class;
