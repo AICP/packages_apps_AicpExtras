@@ -50,10 +50,8 @@ public class DisplayAnimationsActivity extends Fragment {
         private static final String TAG = "DisplayAndAnimSettings";
 
         private static final String KEY_LCD_DENSITY = "lcd_density";
-        private static final String PREF_GESTURE_ANYWHERE = "gestureanywhere";
 
         private ListPreference mLcdDensityPreference;
-        private Preference mGestureAnywhere;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -103,9 +101,6 @@ public class DisplayAnimationsActivity extends Fragment {
                     updateLcdDensityPreferenceDescription(currentDensity);
                 }
             }
-
-        mGestureAnywhere = prefSet.findPreference(PREF_GESTURE_ANYWHERE);
-
         }
 
         @Override
@@ -126,12 +121,9 @@ public class DisplayAnimationsActivity extends Fragment {
 
         @Override
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-            if (preference == mGestureAnywhere) {
-                Intent intent = new Intent(getActivity(), GestureAnywhereSettings.class);
-                getActivity().startActivity(intent);
-            } else {
+        /*} else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
-            }
+            }*/
             return false;
         }
 

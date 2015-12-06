@@ -2,8 +2,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <Preference
-        android:key="nothing"
-        android:title="@string/nothing_title"
-        android:enabled="false" />
+        android:key="gestureanywhere"
+        android:title="@string/gesture_anywhere_title" />
+
+    <Preference
+        android:key="app_circle_bar"
+        android:title="@string/app_circle_bar_title" />
 
 </PreferenceScreen>
