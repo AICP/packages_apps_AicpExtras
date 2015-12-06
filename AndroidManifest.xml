@@ -96,6 +96,12 @@
             android:label="@string/category_app_circle_bar_title"
             android:theme="@style/FragmentTheme">
         </activity>
+        <activity
+            android:name=".aicpextras.HiddenAnimActivity"
+            android:label="@string/hidden_anim_activity_title"
+            android:theme="@style/FragmentTheme"
+            android:excludeFromRecents="true">
+        </activity>
 
         <activity android:name=".romstats.AnonymousStats"
             android:label="@string/stats_title" >
