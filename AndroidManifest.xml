@@ -97,6 +97,10 @@
             android:theme="@style/FragmentTheme">
         </activity>
         <activity
+            android:name=".aicpextras.SystemappRemover"
+            android:label="@string/system_app_remover">
+        </activity>
+        <activity
             android:name=".aicpextras.HiddenAnimActivity"
             android:label="@string/hidden_anim_activity_title"
             android:theme="@style/FragmentTheme"
