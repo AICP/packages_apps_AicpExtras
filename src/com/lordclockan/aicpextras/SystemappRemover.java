@@ -4,12 +4,17 @@
  *            Team Slimroms (http://www.slimroms.net)
  *
  *  COPYRIGHT Copyright (C) 2013 Slimroms http://www.slimroms.net
+ *            Copyright (C) 2014 Dirty Unicorns
  *            All rights reserved
  *
  *  LICENSE   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  *
  *  AUTHORS:     fronti90
  *  DESCRIPTION: SlimSizer: manage your apps
+ *
+ *  MODS: Dirty Unicorns
+ *        Team D.I.R.T.
+ *        Added priv-app and odex files support
  *
  *=========================================================================
  */
@@ -24,6 +29,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.ListIterator;
 import java.util.Scanner;
 
 import android.app.AlertDialog;
@@ -60,6 +66,7 @@ public class SystemappRemover extends AppCompatActivity {
     private ArrayList<String> mSysApp;
     private boolean startup =true;
     public final String systemPath = "/system/app/";
+    public final String systemPrivPath = "/system/priv-app/";
     protected Process superUser;
     protected DataOutputStream dos;
 
@@ -78,17 +85,35 @@ public class SystemappRemover extends AppCompatActivity {
 
         // create arraylist of apps not to be removed
         final ArrayList<String> safetyList = new ArrayList<String>();
+        // app
         safetyList.add("CertInstaller.apk");
         safetyList.add("DrmProvider.apk");
         safetyList.add("PackageInstaller.apk");
         safetyList.add("Superuser.apk");
         safetyList.add("TelephonyProvider.apk");
+        // priv-app
+        safetyList.add("ContactsProvider.apk");
+        safetyList.add("DefaultContainerService.apk");
+        safetyList.add("Dialer.apk");
+        safetyList.add("DownloadProvider.apk");
+        safetyList.add("FusedLocation.apk");
+        safetyList.add("Keyguard.apk");
+        safetyList.add("MediaProvider.apk");
+        safetyList.add("ProxyHandler.apk");
+        safetyList.add("Settings.apk");
+        safetyList.add("SettingsProvider.apk");
+        safetyList.add("SystemUI.apk");
+        safetyList.add("TeleService.apk");
 
-        // create arraylist from /system/app content
+        // create arraylist from /system/app and /system/priv-app content
         File system = new File(systemPath);
-        String[] sysappArray = system.list();
+        File systemPriv = new File(systemPrivPath);
+        String[] sysappArray = combine(system.list(), systemPriv.list());
         mSysApp = new ArrayList<String>(
                 Arrays.asList(sysappArray));
+
+        // remove .odex files from list
+        filterOdex();
 
         // remove "apps not to be removed" from list and sort list
         mSysApp.removeAll(safetyList);
@@ -220,6 +245,24 @@ public class SystemappRemover extends AppCompatActivity {
         }
         // show warning dialog
         alert.show();
+    }
+
+    private String[] combine(String[] a, String[] b) {
+        int length = a.length + b.length;
+        String[] result = new String[length];
+        System.arraycopy(a, 0, result, 0, a.length);
+        System.arraycopy(b, 0, result, a.length, b.length);
+        return result;
+    }
+
+    private void filterOdex() {
+        ListIterator<String> it = mSysApp.listIterator();
+        while ( it.hasNext() ) {
+            String str = it.next();
+            if ( str.endsWith(".odex") ) {
+                it.remove();
+            }
+        }
     }
 
     // profile select dialog
@@ -382,8 +425,19 @@ public class SystemappRemover extends AppCompatActivity {
 
         protected Void doInBackground(String... params) {
             for (String appName : params) {
+                String odexAppName = appName.replaceAll(".apk$", ".odex");
+                String basePath = systemPath;
+                File app = new File(systemPath + appName);
+
+                if( ! app.exists() )
+                    basePath = systemPrivPath;
+
                 try {
-                    dos.writeBytes("\n" + "rm -rf '" + systemPath + appName + "'\n");
+                    dos.writeBytes("\n" + "rm -f '" + basePath + appName + "'\n");
+                    // needed in case user is using odexed ROM
+                    File odex = new File(basePath + odexAppName);
+                    if( odex.exists() )
+                        dos.writeBytes("\n" + "rm -f '" + basePath + odexAppName + "'\n");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
