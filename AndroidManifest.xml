@@ -60,6 +60,12 @@
             android:label="@string/traffic_category"
             android:theme="@style/FragmentTheme">
         </activity>
+	<activity
+	    android:name=".aicpextras.SystemappRemover"
+	    android:label="@string/system_app_remover"
+	    android:theme="@style/FragmentTheme"
+	    android:excludeFromRecents="true">
+	</activity>
         <activity
             android:name=".aicpextras.CarrierLabel"
             android:label="@string/carrier_options">
