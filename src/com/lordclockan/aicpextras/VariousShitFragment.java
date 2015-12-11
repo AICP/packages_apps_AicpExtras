@@ -57,6 +57,10 @@ public class VariousShitFragment extends Fragment {
         private Preference mSystemUITuner;
         private String mTunerFirstRun = "true";
 
+        private static final String PREF_SYSTEMAPP_REMOVER = "system_app_remover";
+
+        private Preference mSystemappRemover;
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -75,6 +79,7 @@ public class VariousShitFragment extends Fragment {
             mScrollingCachePref.setOnPreferenceChangeListener(this);
 
             mSystemUITuner = prefSet.findPreference(PREF_SYSTEMUI_TUNER);
+            mSystemappRemover = prefSet.findPreference(PREF_SYSTEMAPP_REMOVER);
 
             sharedPreferences();
 
@@ -104,6 +109,9 @@ public class VariousShitFragment extends Fragment {
                 } else if (mVariousShitSettings.getString("firstRun", "").equals("false")) {
                     getActivity().startActivity(INTENT_SYSTEMUITUNER_SETTINGS);
                 }
+            } else if (preference == mSystemappRemover) {
+                Intent intent = new Intent(getActivity(), SystemappRemover.class);
+                startActivity(intent);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
