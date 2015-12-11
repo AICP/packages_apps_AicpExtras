@@ -36,8 +36,10 @@ public class VariousShitFragment extends Fragment {
         private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
         private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
         private static final String SCROLLINGCACHE_DEFAULT = "1";
+        private static final String PREF_SYSTEMAPP_REMOVER = "system_app_remover";
 
         private ListPreference mScrollingCachePref;
+        private Preference mSystemappRemover;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,8 @@ public class VariousShitFragment extends Fragment {
             mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                     SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
             mScrollingCachePref.setOnPreferenceChangeListener(this);
+
+            mSystemappRemover = prefSet.findPreference(PREF_SYSTEMAPP_REMOVER);
 
         }
 
@@ -70,9 +74,12 @@ public class VariousShitFragment extends Fragment {
 
         @Override
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-            /*} else {
+            if (preference == mSystemappRemover) {
+                Intent intent = new Intent(getActivity(), SystemappRemover.class);
+                startActivity(intent);
+            } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
-            }*/
+            }
             return false;
         }
     }
