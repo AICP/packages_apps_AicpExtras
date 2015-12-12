@@ -3,6 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan.aicpextras">
 
+    <Preference
+        android:key="systemui_tuner"
+        android:title="@string/systemui_tuner_title" />
+
     <ListPreference
         android:key="pref_scrollingcache"
         android:dialogTitle="@string/pref_scrollingcache_title"

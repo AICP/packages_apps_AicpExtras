@@ -36,8 +36,16 @@ public class VariousShitFragment extends Fragment {
         private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
         private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
         private static final String SCROLLINGCACHE_DEFAULT = "1";
+        private static final String PREF_SYSTEMUI_TUNER = "systemui_tuner";
+
+        // Package name of the SystemUI tuner
+        public static final String SYSTEMUITUNER_PACKAGE_NAME = "com.android.systemui";
+        // Intent for launching the SystemUI tuner actvity
+        public static Intent INTENT_SYSTEMUITUNER_SETTINGS = new Intent(Intent.ACTION_MAIN)
+                .setClassName(SYSTEMUITUNER_PACKAGE_NAME, SYSTEMUITUNER_PACKAGE_NAME + ".tuner.TunerActivity");
 
         private ListPreference mScrollingCachePref;
+        private Preference mSystemUITuner;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -53,6 +61,8 @@ public class VariousShitFragment extends Fragment {
             mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                     SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
             mScrollingCachePref.setOnPreferenceChangeListener(this);
+
+            mSystemUITuner = prefSet.findPreference(PREF_SYSTEMUI_TUNER);
 
         }
 
@@ -70,9 +80,11 @@ public class VariousShitFragment extends Fragment {
 
         @Override
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-            /*} else {
+            if (preference == mSystemUITuner) {
+                getActivity().startActivity(INTENT_SYSTEMUITUNER_SETTINGS);
+            } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
-            }*/
+            }
             return false;
         }
     }
