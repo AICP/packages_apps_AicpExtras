@@ -41,6 +41,7 @@ public class MultiShitFragment extends Fragment {
 
         private static final String TAG = "MultiShit";
 
+        private static final String PREF_PIE = "pa_pie_control";
         private static final String PREF_GESTURE_ANYWHERE = "gestureanywhere";
         private static final String PREF_APP_CIRCLE_BAR = "app_circle_bar";
         private static final String CAT_OMNISWITCH = "omniswitch_category";
@@ -53,6 +54,7 @@ public class MultiShitFragment extends Fragment {
         public static Intent INTENT_OMNISWITCH_SETTINGS = new Intent(Intent.ACTION_MAIN)
                 .setClassName(OMNISWITCH_PACKAGE_NAME, OMNISWITCH_PACKAGE_NAME + ".SettingsActivity");
 
+        private Preference mPie;
         private Preference mGestureAnywhere;
         private Preference mAppCircleBar;
         private PreferenceCategory mOmniSwitchCategory;
@@ -71,6 +73,7 @@ public class MultiShitFragment extends Fragment {
             PackageManager pm = getActivity().getPackageManager();
             final ContentResolver resolver = getActivity().getContentResolver();
 
+            mPie = prefSet.findPreference(PREF_PIE);
             mGestureAnywhere = prefSet.findPreference(PREF_GESTURE_ANYWHERE);
             mAppCircleBar = prefSet.findPreference(PREF_APP_CIRCLE_BAR);
 
@@ -105,6 +108,9 @@ public class MultiShitFragment extends Fragment {
                 getActivity().startActivity(intent);
             } else if (preference == mOmniSwitchSettings){
                 getActivity().startActivity(INTENT_OMNISWITCH_SETTINGS);
+            } else if (preference == mPie) {
+                Intent intent = new Intent(getActivity(), PieControl.class);
+                getActivity().startActivity(intent);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
