@@ -97,6 +97,21 @@
             android:theme="@style/FragmentTheme">
         </activity>
         <activity
+            android:name=".aicpextras.PieControl"
+            android:label="@string/pa_pie_control_title"
+            android:theme="@style/FragmentTheme">
+        </activity>
+        <activity
+            android:name=".aicpextras.PieColor"
+            android:label="@string/pa_pie_control_title"
+            android:theme="@style/FragmentTheme">
+        </activity>
+        <activity
+            android:name=".aicpextras.PieTargets"
+            android:label="@string/pa_pie_control_title"
+            android:theme="@style/FragmentTheme">
+        </activity>
+        <activity
             android:name=".aicpextras.HiddenAnimActivity"
             android:label="@string/hidden_anim_activity_title"
             android:theme="@style/FragmentTheme"
