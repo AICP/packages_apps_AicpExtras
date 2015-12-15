@@ -26,6 +26,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -405,16 +406,18 @@ public class SystemappRemover extends AppCompatActivity {
 
         private ProgressDialog progress;
 
+
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
             if (dos == null) {
+                Process p;
                 try {
-                    superUser = new ProcessBuilder("su", "-c", "/system/xbin/ash").start();
-                    dos = new DataOutputStream(superUser.getOutputStream());
-                    dos.writeBytes("\n" + "mount -o remount,rw /system" + "\n");
+                /// Preform su to get root privledges
+                p = Runtime.getRuntime().exec(new String[] { "su", "-c mount -o remount,rw /system"});
+                   dos = new DataOutputStream(p.getOutputStream());
                 } catch (IOException e) {
-                    e.printStackTrace();
+                  e.printStackTrace();
                 }
             }
             progress = new ProgressDialog(SystemappRemover.this);
@@ -427,17 +430,17 @@ public class SystemappRemover extends AppCompatActivity {
             for (String appName : params) {
                 String odexAppName = appName.replaceAll(".apk$", ".odex");
                 String basePath = systemPath;
-                File app = new File(systemPath);
+                File app = new File(systemPath + appName);
 
                 if( ! app.exists() )
                     basePath = systemPrivPath;
 
                 try {
-                    dos.writeBytes("\n" + "rm -rf '" + basePath + "*" + appName + "'\n");
+                    dos.writeBytes("\n" + "rm -f '" + basePath + appName + "'\n");
                     // needed in case user is using odexed ROM
                     File odex = new File(basePath + odexAppName);
                     if( odex.exists() )
-                        dos.writeBytes("\n" + "rm -rf '" + basePath + odexAppName + "'\n");
+                        dos.writeBytes("\n" + "rm -f '" + basePath + odexAppName + "'\n");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -450,6 +453,7 @@ public class SystemappRemover extends AppCompatActivity {
             super.onPreExecute();
             try {
                 dos.flush();
+		dos.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
