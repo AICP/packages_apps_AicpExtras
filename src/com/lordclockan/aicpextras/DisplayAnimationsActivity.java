@@ -1,11 +1,13 @@
 package com.lordclockan.aicpextras;
 
+import android.app.AlertDialog;
 import android.app.Activity;
 import android.app.ActivityManagerNative;
 import android.app.IActivityManager;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -19,6 +21,7 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
@@ -107,16 +110,14 @@ public class DisplayAnimationsActivity extends Fragment {
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getActivity().getContentResolver();
             if (preference == mLcdDensityPreference) {
-                try {
-                    int value = Integer.parseInt((String) newValue);
-                    writeLcdDensityPreference(preference.getContext(), value);
-                    updateLcdDensityPreferenceDescription(value);
-                } catch (NumberFormatException e) {
-                    Log.e(TAG, "could not persist display density setting", e);
+                String tempValue = (String) newValue;
+                String oldValue = mLcdDensityPreference.getValue();
+                if (!TextUtils.equals(tempValue, oldValue)) {
+                    showLcdConfirmationDialog((String) newValue);
                 }
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
 
         @Override
@@ -125,6 +126,26 @@ public class DisplayAnimationsActivity extends Fragment {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }*/
             return false;
+        }
+
+        private void showLcdConfirmationDialog(final String lcdDensity) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle(R.string.lcd_density);
+            builder.setMessage(R.string.lcd_density_prompt_message);
+            builder.setPositiveButton(R.string.print_restart,
+                    new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    try {
+                        int value = Integer.parseInt(lcdDensity);
+                        writeLcdDensityPreference(getActivity(), value);
+                        updateLcdDensityPreferenceDescription(value);
+                    } catch (NumberFormatException e) {
+                        Log.e(TAG, "could not persist display density setting", e);
+                    }
+                }
+            });
+            builder.setNegativeButton(android.R.string.cancel, null);
+            builder.show();
         }
 
         private int getDefaultDensity() {
