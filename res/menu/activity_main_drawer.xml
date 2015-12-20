@@ -6,37 +6,37 @@
             <item
                 android:id="@+id/nav_display_animations"
                 android:checkable="true"
-                android:icon="@android:drawable/ic_menu_slideshow"
+                android:icon="@drawable/ic_display_animation"
                 android:title="@string/display_animations_title" />
             <item
                 android:id="@+id/nav_statusbar"
                 android:checkable="true"
-                android:icon="@android:drawable/ic_menu_slideshow"
+                android:icon="@drawable/ic_statusbar"
                 android:title="@string/statubar_title" />
             <item
                 android:id="@+id/nav_notif_drawer"
                 android:checkable="true"
-                android:icon="@android:drawable/ic_menu_slideshow"
+                android:icon="@drawable/ic_notif"
                 android:title="@string/notificaitons_title" />
             <item
                 android:id="@+id/nav_recents"
                 android:checkable="true"
-                android:icon="@android:drawable/ic_menu_slideshow"
+                android:icon="@drawable/ic_recents"
                 android:title="@string/recents_panel_title" />
             <item
                 android:id="@+id/nav_lockscreen"
                 android:checkable="true"
-                android:icon="@android:drawable/ic_menu_slideshow"
+                android:icon="@drawable/ic_lockscreen"
                 android:title="@string/lockscreen_title" />
             <item
                 android:id="@+id/nav_multishit"
                 android:checkable="true"
-                android:icon="@android:drawable/ic_menu_slideshow"
+                android:icon="@drawable/ic_multishit"
                 android:title="@string/multishit_title" />
             <item
                 android:id="@+id/nav_various"
                 android:checkable="true"
-                android:icon="@android:drawable/ic_menu_slideshow"
+                android:icon="@drawable/ic_various_shit"
                 android:title="@string/various_shit_title" />
         </menu>
     </item>
@@ -46,7 +46,7 @@
             <item
                 android:id="@+id/nav_about"
                 android:checkable="true"
-                android:icon="@android:drawable/ic_menu_share"
+                android:icon="@drawable/ic_about"
                 android:title="@string/about_title" />
         </menu>
     </item>
