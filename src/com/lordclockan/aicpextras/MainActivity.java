@@ -1,6 +1,5 @@
 package com.lordclockan.aicpextras;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -11,13 +10,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.lordclockan.R;
 
@@ -25,53 +20,12 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String NAV_ITEM_ID = "navItemId";
-    static final String TAG = MainActivity.class.getSimpleName();
-
 
     private DrawerLayout mDrawer;
     private int id;
 
     @Override
-    protected void onStart() {
-	    super.onStart();
-
-	    new AsyncTask<Void, Void, Boolean>() {
-
-            @Override
-	    protected void onPreExecute() {
-		    setProgressBarIndeterminateVisibility(true);
-	    }
-
-	    @Override
-	    protected Boolean doInBackground(Void... params) {
-	           try {
-	           	boolean canGainSu = SuShell.canGainSu(getApplicationContext());
-	                return canGainSu;
-		   } catch (Exception e) {
-		        Log.e(TAG, "Error: " + e.getMessage(), e);
-		        return false;
-		   }
-            }
-
-	    @Override
-	    protected void onPostExecute(Boolean result) {
-		setProgressBarIndeterminateVisibility(false);
-
-		if (!result) {
-                    Toast.makeText(MainActivity.this, R.string.cannot_get_su,
-				    Toast.LENGTH_LONG).show();
-		    finish();
-		}
-	    }
-	}.execute();
-    }
-
-		
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
-	requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -107,9 +61,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-    
-
-   } 
+    }
 
     @Override
     public void onBackPressed() {

@@ -96,7 +96,7 @@ public class SuShell {
 
             process.waitFor();
         } catch (IOException e) {
-            Log.e(TAG, "Error: " + e.getMessage(), e);
+            Log.e(TAG, "Error something went Wrong: " + e.getMessage(), e);
             throw new RuntimeException(e);
         } catch (InterruptedException e) {
             Log.e(TAG, "Error: " + e.getMessage(), e);

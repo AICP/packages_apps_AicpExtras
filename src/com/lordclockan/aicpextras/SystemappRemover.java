@@ -29,6 +29,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.ListIterator;
 import java.util.Scanner;
 
@@ -41,6 +42,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,6 +53,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.widget.ProgressBar;
+
+import com.lordclockan.aicpextras.SuShell;
 
 import com.lordclockan.R;
 
@@ -69,6 +74,43 @@ public class SystemappRemover extends AppCompatActivity {
     public final String systemPrivPath = "/system/priv-app/";
     protected Process superUser;
     protected DataOutputStream dos;
+
+    static final boolean DEBUG = true;
+
+    @Override
+    protected void onStart() {
+	super.onStart();
+	
+	new AsyncTask<Void, Void, Boolean>() {
+	
+	@Override
+	protected void onPreExecute() {
+		setProgressBarIndeterminateVisibility(true);
+        }
+
+	@Override
+	protected Boolean doInBackground(Void... params) {
+	       try {
+		   boolean canGainSu = SuShell.canGainSu(getApplicationContext());
+		   return canGainSu;
+		} catch (Exception e) {
+		   Log.e(TAG, "Error: " + e.getMessage(), e);
+		   return false;
+		}
+	}
+
+	@Override
+	protected void onPostExecute(Boolean result) {
+
+
+	    if (!result) {
+		Toast.makeText(SystemappRemover.this, R.string.cannot_get_su,
+			Toast.LENGTH_LONG).show();
+		finish();
+	    }
+	}
+        }.execute();
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -392,10 +434,7 @@ public class SystemappRemover extends AppCompatActivity {
     // mount /system as ro on close
     protected void onStop(Bundle savedInstanceState) throws IOException {
         try {
-           dos.writeBytes("\n" + "mount -o remount,ro /system" + "\n");
-              dos.writeBytes("\n" + "exit" + "\n");
-              dos.flush();
-              dos.close();
+		List<String> sushell = SuShell.runWithSu("mount -o remount,ro /system");
           } catch (Exception e) {
             e.printStackTrace();
         }
@@ -410,10 +449,11 @@ public class SystemappRemover extends AppCompatActivity {
             super.onPreExecute();
             if (dos == null) {
                 try {
-                    superUser = new ProcessBuilder("su", "-c", "/system/xbin/ash").start();
-                    dos = new DataOutputStream(superUser.getOutputStream());
-                    dos.writeBytes("\n" + "mount -o remount,rw /system" + "\n");
-                } catch (IOException e) {
+		    List<String> sushell = SuShell.runWithSu("mount -o remount,rw /system");
+		    if (DEBUG) {
+		        Log.d(TAG, "File System Mounted as root");
+		    }
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -429,16 +469,27 @@ public class SystemappRemover extends AppCompatActivity {
                 String basePath = systemPath;
                 File app = new File(systemPath);
 
-                if( ! app.exists() )
+		if (DEBUG) {
+		    Log.d(TAG, "Applicattion is in '" + app + "'\n");
+		}
+
+                if( app.exists() )
                     basePath = systemPrivPath;
 
                 try {
-                    dos.writeBytes("\n" + "rm -rf '" + basePath + "*" + appName + "'\n");
+		    List<String> dos = SuShell.runWithSu("rm -rf '" + basePath + appName + "'\n");
+		    if (DEBUG) {
+		        Log.d(TAG, "Applicattion removed '" + basePath + appName + "'\n");
+		    }
                     // needed in case user is using odexed ROM
-                    File odex = new File(basePath + odexAppName);
-                    if( odex.exists() )
-                        dos.writeBytes("\n" + "rm -rf '" + basePath + odexAppName + "'\n");
-                } catch (IOException e) {
+		    File odex = new File(basePath + odexAppName);
+		    if (odex.exists()) {
+			List<String> sushell = SuShell.runWithSu("rm -rf '" + basePath + odexAppName + "'\n");
+			if (DEBUG) {
+			    Log.d(TAG, "Applicattion removed '" + basePath +  odexAppName + "'\n");
+			}
+		    }
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -448,11 +499,6 @@ public class SystemappRemover extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void param) {
             super.onPreExecute();
-            try {
-                dos.flush();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
             progress.dismiss();
         }
     }
