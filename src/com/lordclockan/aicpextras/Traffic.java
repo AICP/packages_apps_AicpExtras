@@ -33,8 +33,6 @@ import android.support.v7.app.AppCompatActivity;
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
-
 public class Traffic extends AppCompatActivity {
 
     @Override
@@ -51,14 +49,12 @@ public class Traffic extends AppCompatActivity {
         private static final String TAG = "Traffic";
 
         private static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
-        private static final String NETWORK_TRAFFIC_COLOR = "network_traffic_color";
         private static final String NETWORK_TRAFFIC_UNIT = "network_traffic_unit";
         private static final String NETWORK_TRAFFIC_PERIOD = "network_traffic_period";
         private static final String NETWORK_TRAFFIC_AUTOHIDE = "network_traffic_autohide";
         private static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
 
         private ListPreference mNetTrafficState;
-        private ColorPickerPreference mNetTrafficColor;
         private ListPreference mNetTrafficUnit;
         private ListPreference mNetTrafficPeriod;
         private SwitchPreference mNetTrafficAutohide;
@@ -98,15 +94,6 @@ public class Traffic extends AppCompatActivity {
             mNetTrafficAutohideThreshold.setValue(netTrafficAutohideThreshold / 1);
             mNetTrafficAutohideThreshold.setOnPreferenceChangeListener(this);
 
-            mNetTrafficColor =
-                    (ColorPickerPreference) prefSet.findPreference(NETWORK_TRAFFIC_COLOR);
-            mNetTrafficColor.setOnPreferenceChangeListener(this);
-            int intColor = Settings.System.getInt(resolver,
-                   Settings.System.NETWORK_TRAFFIC_COLOR, 0xffffffff);
-            String hexColor = String.format("#%08x", (0xffffffff & intColor));
-            mNetTrafficColor.setSummary(hexColor);
-            mNetTrafficColor.setNewPreviewColor(intColor);
-
             if (TrafficStats.getTotalTxBytes() != TrafficStats.UNSUPPORTED &&
                     TrafficStats.getTotalRxBytes() != TrafficStats.UNSUPPORTED) {
                 mNetTrafficVal = Settings.System.getInt(resolver,
@@ -134,13 +121,11 @@ public class Traffic extends AppCompatActivity {
         private void updateNetworkTrafficState(int mIndex) {
             if (mIndex <= 0) {
                 mNetTrafficUnit.setEnabled(false);
-                mNetTrafficColor.setEnabled(false);
                 mNetTrafficPeriod.setEnabled(false);
                 mNetTrafficAutohide.setEnabled(false);
                 mNetTrafficAutohideThreshold.setEnabled(false);
             } else {
                 mNetTrafficUnit.setEnabled(true);
-                mNetTrafficColor.setEnabled(true);
                 mNetTrafficPeriod.setEnabled(true);
                 mNetTrafficAutohide.setEnabled(true);
                 mNetTrafficAutohideThreshold.setEnabled(true);
@@ -158,14 +143,6 @@ public class Traffic extends AppCompatActivity {
                 int index = mNetTrafficState.findIndexOfValue((String) newValue);
                 mNetTrafficState.setSummary(mNetTrafficState.getEntries()[index]);
                 updateNetworkTrafficState(index);
-                return true;
-            } else if (preference == mNetTrafficColor) {
-                String hex = ColorPickerPreference.convertToARGB(
-                        Integer.valueOf(String.valueOf(newValue)));
-                mNetTrafficColor.setSummary(hex);
-                int intHex = ColorPickerPreference.convertToColorInt(hex);
-                Settings.System.putInt(resolver,
-                        Settings.System.NETWORK_TRAFFIC_COLOR, intHex);
                 return true;
             } else if (preference == mNetTrafficUnit) {
                 mNetTrafficVal = setBit(mNetTrafficVal, MASK_UNIT, ((String)newValue).equals("1"));
