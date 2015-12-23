@@ -26,4 +26,9 @@
         android:key="aicp_stats"
         android:title="@string/stats_title" />
 
+    <Preference
+        android:key="aicp_logcat"
+        android:title="@string/logcat_title"
+        android:summary="@string/logcat_summary"/>
+
 </PreferenceScreen>
