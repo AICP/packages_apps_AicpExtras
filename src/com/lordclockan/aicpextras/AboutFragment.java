@@ -1,23 +1,28 @@
 package com.lordclockan.aicpextras;
 
+import java.io.DataOutputStream;
 import android.app.Activity;
 import android.content.ContentResolver;
-import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
-import com.lordclockan.aicpextras.utils.Utils;
-
 import com.lordclockan.R;
+import com.lordclockan.aicpextras.utils.Utils;
 
 public class AboutFragment extends Fragment {
 
@@ -43,6 +48,15 @@ public class AboutFragment extends Fragment {
         private String PREF_AICP_DOWNLOADS = "aicp_downloads";
         private String PREF_AICP_GERRIT = "aicp_gerrit";
         private String PREF_AICP_CHANGELOG = "aicp_changelog";
+        private String PREF_AICP_LOGCAT = "aicp_logcat";
+        private static final String LOGCAT_FILE = new File(Environment
+            .getExternalStorageDirectory(), "aicp_logcat.txt").getAbsolutePath();
+        private static final String HASTE_KEY = new File(Environment
+                .getExternalStorageDirectory(), "haste_key").getAbsolutePath();
+        private static final String AICP_HASTE = "http://haste.aicp-rom.com/documents";
+        private static final File sdCardDirectory = Environment.getExternalStorageDirectory();
+        private static final File logcatFile = new File(sdCardDirectory, "aicp_logcat.txt");
+        private static final File hasteKey = new File(sdCardDirectory, "haste_key");
 
         private PreferenceScreen mAicpLogo;
         private long[] mHits = new long[3];
@@ -51,6 +65,9 @@ public class AboutFragment extends Fragment {
         private Preference mAicpGerrit;
         private Preference mAicpChangeLog;
         private Preference mStatsAicp;
+        private Preference mAicpLogcat;
+	protected Process superUser;
+	protected DataOutputStream dos;
 
         private static final String PREF_STATS_AICP = "aicp_stats";
 
@@ -83,6 +100,7 @@ public class AboutFragment extends Fragment {
             mAicpGerrit = prefSet.findPreference(PREF_AICP_GERRIT);
             mAicpChangeLog = prefSet.findPreference(PREF_AICP_CHANGELOG);
             mStatsAicp = prefSet.findPreference(PREF_STATS_AICP);
+            mAicpLogcat = prefSet.findPreference(PREF_AICP_LOGCAT);
 
         }
 
@@ -115,11 +133,61 @@ public class AboutFragment extends Fragment {
                 if  (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
                     startActivity(INTENT_YOGA);
                 }
+            } else if (preference == mAicpLogcat) {
+		    try {
+			superUser = new ProcessBuilder("su", "-c", "/system/bin/sh").start();
+			dos = new DataOutputStream(superUser.getOutputStream());
+			dos.writeBytes("\n" + "ogcat -d > " + LOGCAT_FILE + "&& curl -s -X POST -T " + LOGCAT_FILE + " " + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_KEY);
+			dos.flush();
+                        logcatDialog();
+		    } catch (Exception e) {
+			e.printStackTrace();
+		    }
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
 
             return false;
         }
+
+        public void logcatDialog() {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle(R.string.logcat_title);
+            builder.setMessage(R.string.logcat_warning);
+
+            builder.setPositiveButton(R.string.make_logcat, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface arg0, int arg1) {
+                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                    sharingIntent.setType("text/plain");
+                    //String shareBody = readHasteKey(getContext(), hasteKey);
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Aicp logcat");
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+                    try {
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, readHasteKey());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    //sharingIntent.putExtra(android.content.Intent.EXTRA_STREAM, Uri.fromFile(logcatFile));
+                    startActivity(Intent.createChooser(sharingIntent, "Share via"));
+                }
+            });
+
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
+        }
+
+        public static String readHasteKey() throws IOException {
+                FileReader fileReader = new FileReader(hasteKey);
+                StringBuffer stringBuffer = new StringBuffer();
+                int numCharsRead;
+                char[] charArray = new char[1024];
+                while ((numCharsRead = fileReader.read(charArray)) > 0) {
+                    stringBuffer.append(charArray, 0, numCharsRead);
+                }
+                fileReader.close();
+            return stringBuffer.toString();
+        }
+
     }
 }
