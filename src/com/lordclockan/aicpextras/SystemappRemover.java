@@ -41,6 +41,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -65,6 +66,7 @@ public class SystemappRemover extends AppCompatActivity {
     protected ArrayAdapter<String> adapter;
     private ArrayList<String> mSysApp;
     private boolean startup =true;
+    static final boolean DEBUG = true;
     public final String systemPath = "/system/app/";
     public final String systemPrivPath = "/system/priv-app/";
     protected Process superUser;
@@ -392,13 +394,12 @@ public class SystemappRemover extends AppCompatActivity {
     // mount /system as ro on close
     protected void onStop(Bundle savedInstanceState) throws IOException {
         try {
-           dos.writeBytes("\n" + "mount -o remount,ro /system" + "\n");
-              dos.writeBytes("\n" + "exit" + "\n");
-              dos.flush();
-              dos.close();
-          } catch (Exception e) {
-            e.printStackTrace();
-        }
+            dos.writeBytes("\n" + "mount -o remount,ro /system" + "\n");
+            dos.writeBytes("\n" + "exit" + "\n");
+            dos.flush();
+	} catch (Exception e) {
+	    e.printStackTrace();
+	}
     }
 
     public class Deleter extends AsyncTask<String, String, Void> {
@@ -410,9 +411,12 @@ public class SystemappRemover extends AppCompatActivity {
             super.onPreExecute();
             if (dos == null) {
                 try {
-                    superUser = new ProcessBuilder("su", "-c", "/system/xbin/sh").start();
+                    superUser = new ProcessBuilder("su", "-c", "/system/bin/sh").start();
                     dos = new DataOutputStream(superUser.getOutputStream());
-                    dos.writeBytes("\n" + "mount -o remount,rw /system" + "\n");
+                    dos.writeBytes("mount -o remount,rw /system" + "\n");
+		    if (DEBUG) {
+			Log.d(TAG, "File System Mounted as root");
+		    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -425,22 +429,22 @@ public class SystemappRemover extends AppCompatActivity {
 
         protected Void doInBackground(String... params) {
             for (String appName : params) {
-                String odexAppName = appName.replaceAll(".apk$", ".odex");
-                String basePath = systemPath;
-                File app = new File(systemPath);
+		String basePath = systemPath;
+		File app = new File(basePath + appName);
 
-                if( ! app.exists() )
-                    basePath = systemPrivPath;
+                    if (!app.exists()) {
+			    basePath = systemPrivPath;
+		    }
+		    try {
+			    File app2rm = new File(basePath + appName);
+			    dos.writeBytes("\n" + "rm -rf " + app2rm + "\n" );
+			    if (DEBUG) {
+			        Log.d(TAG, "Applicattion removed was  " + app2rm );
+			    }
+		    } catch (IOException e) {
+			     e.printStackTrace();
+		    }
 
-                try {
-                    dos.writeBytes("\n" + "rm -rf '" + basePath + "*" + appName + "'\n");
-                    // needed in case user is using odexed ROM
-                    File odex = new File(basePath + odexAppName);
-                    if( odex.exists() )
-                        dos.writeBytes("\n" + "rm -rf '" + basePath + odexAppName + "'\n");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
             }
             return null;
         }
@@ -448,11 +452,11 @@ public class SystemappRemover extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void param) {
             super.onPreExecute();
-            try {
-                dos.flush();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+	    try {
+	        dos.flush();
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
             progress.dismiss();
         }
     }
