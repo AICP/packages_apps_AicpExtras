@@ -44,6 +44,7 @@ public class MultiShitFragment extends Fragment {
         private static final String PREF_PIE = "pa_pie_control";
         private static final String PREF_GESTURE_ANYWHERE = "gestureanywhere";
         private static final String PREF_APP_CIRCLE_BAR = "app_circle_bar";
+        private static final String PREF_SLIM_RECENTS = "slim_recents_panel";
         private static final String CAT_OMNISWITCH = "omniswitch_category";
         private static final String RECENTS_USE_OMNISWITCH = "recents_use_omniswitch";
         private static final String OMNISWITCH_START_SETTINGS = "omniswitch_start_settings";
@@ -57,6 +58,7 @@ public class MultiShitFragment extends Fragment {
         private Preference mPie;
         private Preference mGestureAnywhere;
         private Preference mAppCircleBar;
+        private Preference mSlimRecentsPanel;
         private PreferenceCategory mOmniSwitchCategory;
         private SwitchPreference mRecentsUseOmniSwitch;
         private Preference mOmniSwitchSettings;
@@ -76,6 +78,7 @@ public class MultiShitFragment extends Fragment {
             mPie = prefSet.findPreference(PREF_PIE);
             mGestureAnywhere = prefSet.findPreference(PREF_GESTURE_ANYWHERE);
             mAppCircleBar = prefSet.findPreference(PREF_APP_CIRCLE_BAR);
+            mSlimRecentsPanel = prefSet.findPreference(PREF_SLIM_RECENTS);
 
             mRecentsUseOmniSwitch = (SwitchPreference)
                     findPreference(RECENTS_USE_OMNISWITCH);
@@ -105,6 +108,9 @@ public class MultiShitFragment extends Fragment {
                 getActivity().startActivity(intent);
             } else if (preference == mAppCircleBar) {
                 Intent intent = new Intent(getActivity(), AppCircleBar.class);
+                getActivity().startActivity(intent);
+            } else if (preference == mSlimRecentsPanel) {
+                Intent intent = new Intent(getActivity(), SlimRecentPanel.class);
                 getActivity().startActivity(intent);
             } else if (preference == mOmniSwitchSettings){
                 getActivity().startActivity(INTENT_OMNISWITCH_SETTINGS);

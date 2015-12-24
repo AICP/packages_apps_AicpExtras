@@ -104,6 +104,11 @@
             android:theme="@style/FragmentTheme">
         </activity>
         <activity
+            android:name=".aicpextras.SlimRecentPanel"
+            android:label="@string/use_slim_recents_title"
+            android:theme="@style/FragmentTheme">
+        </activity>
+        <activity
             android:name=".aicpextras.PieControl"
             android:label="@string/pa_pie_control_title"
             android:theme="@style/FragmentTheme">
