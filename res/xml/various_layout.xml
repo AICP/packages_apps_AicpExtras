@@ -28,6 +28,12 @@
         android:summary="@string/double_tap_sleep_nav_bar_summary"
         android:defaultValue="false" />
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="three_finger_gesture"
+        android:title="@string/three_finger_gesture"
+        android:summary="@string/three_finger_gesture_summary"
+        android:defaultValue="true" />
+
     <Preference
         android:key="system_app_remover"
         android:title="@string/system_app_remover" />
