@@ -28,6 +28,13 @@
         android:summary="@string/screenshot_sound_summary"
         android:defaultValue="true" />
 
+    <!-- Three-Finger Gesture to Screenshot -->
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="three_finger_gesture"
+        android:title="@string/three_finger_gesture_title"
+        android:summary="@string/three_finger_gesture_summary"
+        android:defaultValue="false" />
+
     <ListPreference
         android:entries="@array/screenshot_type_entries"
         android:entryValues="@array/screenshot_type_values"
