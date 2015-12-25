@@ -20,24 +20,15 @@ import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.res.Resources;
-import android.database.ContentObserver;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.UserHandle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceCategory;
+import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatDelegate;
-import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
 import android.text.Spannable;
 import android.text.TextUtils;
@@ -45,193 +36,153 @@ import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.utils.Utils;
-
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
+
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class CarrierLabel extends PreferenceActivity
-        implements OnPreferenceChangeListener {
-
-    private static final String TAG = "CarrierLabel";
-
-    private AppCompatDelegate mDelegate;
-
-    private static final String SHOW_CARRIER_LABEL = "status_bar_show_carrier";
-    private static final String CUSTOM_CARRIER_LABEL = "custom_carrier_label";
-    private static final String STATUS_BAR_CARRIER_FONT_SIZE  = "status_bar_carrier_font_size";
-    private static final String STATUS_BAR_CARRIER_COLOR = "status_bar_carrier_color";
-
-    static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
-
-    private PreferenceScreen mCustomCarrierLabel;
-
-    private ListPreference mShowCarrierLabel;
-    private String mCustomCarrierLabelText;
-    private SeekBarPreferenceCham mStatusBarCarrierSize;
-    private ColorPickerPreference mCarrierColorPicker;
+public class CarrierLabel extends AppCompatActivity {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        getDelegate().installViewFactory();
-        getDelegate().onCreate(savedInstanceState);
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
-        Toolbar actionBarToolbar = (Toolbar) this.findViewById(R.id.toolbar);
-        actionBarToolbar.setTitle(R.string.carrier_options);
+        getFragmentManager().beginTransaction().replace(android.R.id.content,
+                new CarrierLabelFragment()).commit();
+    }
 
-        addPreferencesFromResource(R.xml.carrierlabel);
+    public static class CarrierLabelFragment extends PreferenceFragment
+            implements OnPreferenceChangeListener {
 
-        PreferenceScreen prefSet = getPreferenceScreen();
-        ContentResolver resolver = this.getContentResolver();
+        private static final String TAG = "CarrierLabel";
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setVisibility(View.GONE);
+        private static final String SHOW_CARRIER_LABEL = "status_bar_show_carrier";
+        private static final String CUSTOM_CARRIER_LABEL = "custom_carrier_label";
+        private static final String STATUS_BAR_CARRIER_FONT_SIZE = "status_bar_carrier_font_size";
+        private static final String STATUS_BAR_CARRIER_COLOR = "status_bar_carrier_color";
 
-        int intColor;
-        String hexColor;
+        static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
 
-        mShowCarrierLabel =
-                (ListPreference) findPreference(SHOW_CARRIER_LABEL);
-        int showCarrierLabel = Settings.System.getIntForUser(resolver,
-                Settings.System.STATUS_BAR_SHOW_CARRIER, 1, UserHandle.USER_CURRENT);
-        mShowCarrierLabel.setValue(String.valueOf(showCarrierLabel));
-        mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntry());
-        mShowCarrierLabel.setOnPreferenceChangeListener(this);
+        private PreferenceScreen mCustomCarrierLabel;
 
-        if (Utils.isWifiOnly(this)) {
-            prefSet.removePreference(mShowCarrierLabel);
-        }
-        mCustomCarrierLabel = (PreferenceScreen) prefSet.findPreference(CUSTOM_CARRIER_LABEL);
+        private ListPreference mShowCarrierLabel;
+        private String mCustomCarrierLabelText;
+        private SeekBarPreferenceCham mStatusBarCarrierSize;
+        private ColorPickerPreference mCarrierColorPicker;
 
-        mStatusBarCarrierSize = (SeekBarPreferenceCham) prefSet.findPreference(STATUS_BAR_CARRIER_FONT_SIZE);
-        mStatusBarCarrierSize.setValue(Settings.System.getInt(resolver,
-                Settings.System.STATUS_BAR_CARRIER_FONT_SIZE, 14));
-        mStatusBarCarrierSize.setOnPreferenceChangeListener(this);
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
 
-        mCarrierColorPicker = (ColorPickerPreference) findPreference(STATUS_BAR_CARRIER_COLOR);
-        mCarrierColorPicker.setOnPreferenceChangeListener(this);
-        intColor = Settings.System.getInt(getContentResolver(),
+            addPreferencesFromResource(R.xml.carrierlabel);
+
+            PreferenceScreen prefSet = getPreferenceScreen();
+            ContentResolver resolver = getActivity().getContentResolver();
+
+
+            int intColor;
+            String hexColor;
+
+            mShowCarrierLabel =
+                    (ListPreference) findPreference(SHOW_CARRIER_LABEL);
+            int showCarrierLabel = Settings.System.getIntForUser(resolver,
+                    Settings.System.STATUS_BAR_SHOW_CARRIER, 1, UserHandle.USER_CURRENT);
+            mShowCarrierLabel.setValue(String.valueOf(showCarrierLabel));
+            mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntry());
+            mShowCarrierLabel.setOnPreferenceChangeListener(this);
+
+            if (Utils.isWifiOnly(getActivity())) {
+                prefSet.removePreference(mShowCarrierLabel);
+            }
+            mCustomCarrierLabel = (PreferenceScreen) prefSet.findPreference(CUSTOM_CARRIER_LABEL);
+
+            mStatusBarCarrierSize = (SeekBarPreferenceCham) prefSet.findPreference(STATUS_BAR_CARRIER_FONT_SIZE);
+            mStatusBarCarrierSize.setValue(Settings.System.getInt(resolver,
+                    Settings.System.STATUS_BAR_CARRIER_FONT_SIZE, 14));
+            mStatusBarCarrierSize.setOnPreferenceChangeListener(this);
+
+            mCarrierColorPicker = (ColorPickerPreference) findPreference(STATUS_BAR_CARRIER_COLOR);
+            mCarrierColorPicker.setOnPreferenceChangeListener(this);
+            intColor = Settings.System.getInt(resolver,
                     Settings.System.STATUS_BAR_CARRIER_COLOR, DEFAULT_STATUS_CARRIER_COLOR);
-        hexColor = String.format("#%08x", (0xffffffff & intColor));
-        mCarrierColorPicker.setSummary(hexColor);
-        mCarrierColorPicker.setNewPreviewColor(intColor);
+            hexColor = String.format("#%08x", (0xffffffff & intColor));
+            mCarrierColorPicker.setSummary(hexColor);
+            mCarrierColorPicker.setNewPreviewColor(intColor);
 
-    }
-
-    private void updateCustomLabelTextSummary() {
-        mCustomCarrierLabelText = Settings.System.getString(
-            this.getContentResolver(), Settings.System.CUSTOM_CARRIER_LABEL);
-
-        if (TextUtils.isEmpty(mCustomCarrierLabelText)) {
-            mCustomCarrierLabel.setSummary(R.string.custom_carrier_label_notset);
-        } else {
-            mCustomCarrierLabel.setSummary(mCustomCarrierLabelText);
         }
-    }
 
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-		ContentResolver resolver = this.getContentResolver();
-        if (preference == mCarrierColorPicker) {
-            String hex = ColorPickerPreference.convertToARGB(
-                    Integer.valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(this.getApplicationContext().getContentResolver(),
-                    Settings.System.STATUS_BAR_CARRIER_COLOR, intHex);
-            return true;
-         } else if (preference == mShowCarrierLabel) {
-            int showCarrierLabel = Integer.valueOf((String) newValue);
-            int index = mShowCarrierLabel.findIndexOfValue((String) newValue);
-            Settings.System.putIntForUser(resolver, Settings.System.
-                STATUS_BAR_SHOW_CARRIER, showCarrierLabel, UserHandle.USER_CURRENT);
-            mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntries()[index]);
-            return true;
-         } else if (preference == mStatusBarCarrierSize) {
-            int width = ((Integer)newValue).intValue();
-            Settings.System.putInt(resolver,
-                    Settings.System.STATUS_BAR_CARRIER_FONT_SIZE, width);
-            return true;
-         }
-         return false;
-    }
+        private void updateCustomLabelTextSummary() {
+            mCustomCarrierLabelText = Settings.System.getString(
+                    getActivity().getContentResolver(), Settings.System.CUSTOM_CARRIER_LABEL);
 
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
-            final Preference preference) {
-        final ContentResolver resolver = this.getContentResolver();
-        if (preference.getKey().equals(CUSTOM_CARRIER_LABEL)) {
-            AlertDialog.Builder alert = new AlertDialog.Builder(this);
-            alert.setTitle(R.string.custom_carrier_label_title);
-            alert.setMessage(R.string.custom_carrier_label_explain);
-
-            // Set an EditText view to get user input
-            final EditText input = new EditText(this);
-            input.setText(TextUtils.isEmpty(mCustomCarrierLabelText) ? "" : mCustomCarrierLabelText);
-            input.setSelection(input.getText().length());
-            alert.setView(input);
-            alert.setPositiveButton(getString(android.R.string.ok),
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int whichButton) {
-                            String value = ((Spannable) input.getText()).toString().trim();
-                            Settings.System.putString(resolver, Settings.System.CUSTOM_CARRIER_LABEL, value);
-                            updateCustomLabelTextSummary();
-                            Intent i = new Intent();
-                            i.setAction(Intent.ACTION_CUSTOM_CARRIER_LABEL_CHANGED);
-                            sendBroadcast(i);
-                }
-            });
-            alert.setNegativeButton(getString(android.R.string.cancel), null);
-            alert.show();
+            if (TextUtils.isEmpty(mCustomCarrierLabelText)) {
+                mCustomCarrierLabel.setSummary(R.string.custom_carrier_label_notset);
+            } else {
+                mCustomCarrierLabel.setSummary(mCustomCarrierLabelText);
+            }
         }
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
-    }
 
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        getDelegate().onPostCreate(savedInstanceState);
-    }
-
-    @Override
-    public void setContentView(@LayoutRes int layoutResID) {
-        getDelegate().setContentView(layoutResID);
-    }
-
-    @Override
-    protected void onPostResume() {
-        super.onPostResume();
-        getDelegate().onPostResume();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        getDelegate().onStop();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        getDelegate().onDestroy();
-    }
-
-    private void setSupportActionBar(@Nullable Toolbar toolbar) {
-        getDelegate().setSupportActionBar(toolbar);
-    }
-
-    private AppCompatDelegate getDelegate() {
-        if (mDelegate == null) {
-            mDelegate = AppCompatDelegate.create(this, null);
+        public boolean onPreferenceChange(Preference preference, Object newValue) {
+            ContentResolver resolver = getActivity().getContentResolver();
+            if (preference == mCarrierColorPicker) {
+                String hex = ColorPickerPreference.convertToARGB(
+                        Integer.valueOf(String.valueOf(newValue)));
+                preference.setSummary(hex);
+                int intHex = ColorPickerPreference.convertToColorInt(hex);
+                Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                        Settings.System.STATUS_BAR_CARRIER_COLOR, intHex);
+                return true;
+            } else if (preference == mShowCarrierLabel) {
+                int showCarrierLabel = Integer.valueOf((String) newValue);
+                int index = mShowCarrierLabel.findIndexOfValue((String) newValue);
+                Settings.System.putIntForUser(resolver, Settings.System.
+                        STATUS_BAR_SHOW_CARRIER, showCarrierLabel, UserHandle.USER_CURRENT);
+                mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntries()[index]);
+                return true;
+            } else if (preference == mStatusBarCarrierSize) {
+                int width = ((Integer) newValue).intValue();
+                Settings.System.putInt(resolver,
+                        Settings.System.STATUS_BAR_CARRIER_FONT_SIZE, width);
+                return true;
+            }
+            return false;
         }
-        return mDelegate;
+
+        @Override
+        public void onResume() {
+            super.onResume();
+        }
+
+        @Override
+        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
+                                             final Preference preference) {
+            final ContentResolver resolver = getActivity().getContentResolver();
+            if (preference.getKey().equals(CUSTOM_CARRIER_LABEL)) {
+                AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+                alert.setTitle(R.string.custom_carrier_label_title);
+                alert.setMessage(R.string.custom_carrier_label_explain);
+
+                // Set an EditText view to get user input
+                final EditText input = new EditText(getActivity());
+                input.setText(TextUtils.isEmpty(mCustomCarrierLabelText) ? "" : mCustomCarrierLabelText);
+                input.setSelection(input.getText().length());
+                alert.setView(input);
+                alert.setPositiveButton(getString(android.R.string.ok),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                String value = ((Spannable) input.getText()).toString().trim();
+                                Settings.System.putString(resolver, Settings.System.CUSTOM_CARRIER_LABEL, value);
+                                updateCustomLabelTextSummary();
+                                Intent i = new Intent();
+                                i.setAction(Intent.ACTION_CUSTOM_CARRIER_LABEL_CHANGED);
+                                getActivity().sendBroadcast(i);
+                            }
+                        });
+                alert.setNegativeButton(getString(android.R.string.cancel), null);
+                alert.show();
+            }
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
+        }
     }
 }
