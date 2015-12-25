@@ -68,7 +68,8 @@
 	</activity>
         <activity
             android:name=".aicpextras.CarrierLabel"
-            android:label="@string/carrier_options">
+            android:label="@string/carrier_options"
+            android:theme="@style/FragmentTheme">
         </activity>
         <activity
             android:name=".aicpextras.BatteryBar"
