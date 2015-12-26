@@ -56,10 +56,12 @@ public class DisplayAnimationsActivity extends Fragment {
         private static final String KEY_LCD_DENSITY = "lcd_density";
         private static final String PREF_AOKP_ANIMATION = "aokp_animation";
         private static final String KEY_TOAST_ANIMATION = "toast_animation";
+        private static final String POWER_MENU_ANIMATIONS = "power_menu_animations";
 
         private ListPreference mLcdDensityPreference;
         private Preference mAokpAnimation;
         private ListPreference mToastAnimation;
+        private ListPreference mPowerMenuAnimations;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -119,6 +121,14 @@ public class DisplayAnimationsActivity extends Fragment {
             mToastAnimation.setValueIndex(CurrentToastAnimation); //set to index of default value
             mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
             mToastAnimation.setOnPreferenceChangeListener(this);
+
+            // Power Menu Animations
+            mPowerMenuAnimations = (ListPreference) prefSet.findPreference(POWER_MENU_ANIMATIONS);
+            mPowerMenuAnimations.setValue(String.valueOf(Settings.System.getInt(
+                    resolver, Settings.System.POWER_MENU_ANIMATIONS, 0)));
+            mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
+            mPowerMenuAnimations.setOnPreferenceChangeListener(this);
+
         }
 
         @Override
@@ -137,6 +147,11 @@ public class DisplayAnimationsActivity extends Fragment {
                         Settings.System.TOAST_ANIMATION, (String) newValue);
                 mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
                 Toast.makeText(getActivity(), "Toast test!!!", Toast.LENGTH_SHORT).show();
+            } else if (preference == mPowerMenuAnimations) {
+                Settings.System.putInt(resolver, Settings.System.POWER_MENU_ANIMATIONS,
+                        Integer.valueOf((String) newValue));
+                mPowerMenuAnimations.setValue(String.valueOf(newValue));
+                mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
             }
             return true;
         }
