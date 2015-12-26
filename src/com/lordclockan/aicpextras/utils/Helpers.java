@@ -41,4 +41,16 @@ public class Helpers {
         }
         return true;
     }
+
+    public static String readStringFromFile(File inputFile ) throws IOException {
+            FileReader fileReader = new FileReader(inputFile);
+            StringBuffer stringBuffer = new StringBuffer();
+            int numCharsRead;
+            char[] charArray = new char[1024];
+            while ((numCharsRead = fileReader.read(charArray)) > 0) {
+                stringBuffer.append(charArray, 0, numCharsRead);
+            }
+            fileReader.close();
+        return stringBuffer.toString();
+    }
 }
