@@ -41,7 +41,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceActivity;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -394,13 +393,7 @@ public class SystemappRemover extends AppCompatActivity {
 
     // mount /system as ro on close
     protected void onStop(Bundle savedInstanceState) throws IOException {
-        try {
-            dos.writeBytes("\n" + "mount -o remount,ro /system" + "\n");
-            dos.writeBytes("\n" + "exit" + "\n");
-            dos.flush();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            SuShell.runWithSu("mount -o remount,ro /system");
     }
 
     public class Deleter extends AsyncTask<String, String, Void> {
@@ -411,16 +404,8 @@ public class SystemappRemover extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             if (dos == null) {
-                try {
-                    superUser = new ProcessBuilder("su", "-c", "/system/bin/sh").start();
-                    dos = new DataOutputStream(superUser.getOutputStream());
-                    dos.writeBytes("mount -o remount,rw /system" + "\n");
-                    if (DEBUG) {
-                       Log.d(TAG, "File System Mounted as root");
-                    }
-                } catch (IOException e) {
-                  e.printStackTrace();
-                }
+		    SuShell.runWithSu("mount -o remount,rw /system");
+
             }
             progress = new ProgressDialog(SystemappRemover.this);
             progress.setTitle(getString(R.string.delete_progress_title));
@@ -436,15 +421,8 @@ public class SystemappRemover extends AppCompatActivity {
                     if (!app.exists()) {
                            basePath = systemPrivPath;
                     }
-                    try {
-                            File app2rm = new File(basePath + appName);
-                            dos.writeBytes("\n" + "rm -rf " + app2rm + "\n" );
-                    if (DEBUG) {
-                            Log.d(TAG, "Applicattion removed was  " + app2rm );
-                            }
-                    } catch (IOException e) {
-                            e.printStackTrace();
-                    }
+                    File app2rm = new File(basePath + appName);
+                    SuShell.runWithSu("rm -Rf " + app2rm + "\n" );
             }
             return null;
         }
@@ -452,11 +430,6 @@ public class SystemappRemover extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void param) {
             super.onPreExecute();
-            try {
-                dos.flush(); 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
             progress.dismiss();
         }
     }
