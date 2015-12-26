@@ -14,6 +14,7 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.widget.Toast;
 
 import java.io.DataOutputStream;
 import java.io.File;
@@ -137,7 +138,10 @@ public class AboutFragment extends Fragment {
                     startActivity(INTENT_YOGA);
                 }
             } else if (preference == mAicpLogcat) {
-                SuShell.runWithSu("logcat -d > " + LOGCAT_FILE +  "&& curl -s -X POST -T " + LOGCAT_FILE + " " + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_KEY);
+                Toast.makeText(SettingsPreferenceFragment.this.getActivity(), R.string.generating_log_wait, Toast.LENGTH_LONG).show();
+                SuShell.runWithSu("logcat -d > " + LOGCAT_FILE +  
+                "&& curl -s -X POST -T " + LOGCAT_FILE + " " 
+                + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_KEY);
                 logcatDialog();
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
