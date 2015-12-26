@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="logcat"
+        android:title="@string/logcat_title"
+        android:defaultValue="false" />
+
+    <CheckBoxPreference
+        android:key="kmseg"
+        android:title="@string/kmesg_title"
+        android:defaultValue="false" />
+
+    <CheckBoxPreference
+        android:key="dmesg"
+        android:title="@string/dmesg_title"
+        android:defaultValue="false" />
+
+    <Preference
+        android:key="aicp_log_it"
+        android:title="@string/log_it_title" />
+
+</PreferenceScreen>

@@ -44,6 +44,11 @@
     <item android:title="@string/other_title">
         <menu>
             <item
+                android:id="@+id/nav_log_it"
+                android:checkable="true"
+                android:icon="@drawable/ic_about"
+                android:title="@string/log_that_shit_title" />
+            <item
                 android:id="@+id/nav_about"
                 android:checkable="true"
                 android:icon="@drawable/ic_about"
