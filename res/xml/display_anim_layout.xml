@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <Preference
+        android:key="aokp_animation"
+        android:title="@string/aokp_animation_title"
+        android:summary="@string/aokp_animation_summary" />
+
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="toast_icon"
         android:title="@string/toast_icon_title"
