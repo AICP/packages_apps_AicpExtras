@@ -20,6 +20,7 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
@@ -29,6 +30,7 @@ import android.view.IWindowManager;
 import android.view.WindowManager;
 import android.view.WindowManagerGlobal;
 import android.view.WindowManagerImpl;
+import android.widget.Toast;
 
 import com.lordclockan.R;
 
@@ -53,9 +55,11 @@ public class DisplayAnimationsActivity extends Fragment {
 
         private static final String KEY_LCD_DENSITY = "lcd_density";
         private static final String PREF_AOKP_ANIMATION = "aokp_animation";
+        private static final String KEY_TOAST_ANIMATION = "toast_animation";
 
         private ListPreference mLcdDensityPreference;
         private Preference mAokpAnimation;
+        private ListPreference mToastAnimation;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -107,6 +111,14 @@ public class DisplayAnimationsActivity extends Fragment {
             }
 
             mAokpAnimation = prefSet.findPreference(PREF_AOKP_ANIMATION);
+
+            // Toast Animations
+            mToastAnimation = (ListPreference) prefSet.findPreference(KEY_TOAST_ANIMATION);
+            mToastAnimation.setSummary(mToastAnimation.getEntry());
+            int CurrentToastAnimation = Settings.System.getInt(resolver, Settings.System.TOAST_ANIMATION, 1);
+            mToastAnimation.setValueIndex(CurrentToastAnimation); //set to index of default value
+            mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
+            mToastAnimation.setOnPreferenceChangeListener(this);
         }
 
         @Override
@@ -119,6 +131,12 @@ public class DisplayAnimationsActivity extends Fragment {
                     showLcdConfirmationDialog((String) newValue);
                 }
                 return false;
+            } else if (preference == mToastAnimation) {
+                int index = mToastAnimation.findIndexOfValue((String) newValue);
+                Settings.System.putString(resolver,
+                        Settings.System.TOAST_ANIMATION, (String) newValue);
+                mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
+                Toast.makeText(getActivity(), "Toast test!!!", Toast.LENGTH_SHORT).show();
             }
             return true;
         }
