@@ -52,8 +52,10 @@ public class DisplayAnimationsActivity extends Fragment {
         private static final String TAG = "DisplayAndAnimSettings";
 
         private static final String KEY_LCD_DENSITY = "lcd_density";
+        private static final String PREF_AOKP_ANIMATION = "aokp_animation";
 
         private ListPreference mLcdDensityPreference;
+        private Preference mAokpAnimation;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -103,6 +105,8 @@ public class DisplayAnimationsActivity extends Fragment {
                     updateLcdDensityPreferenceDescription(currentDensity);
                 }
             }
+
+            mAokpAnimation = prefSet.findPreference(PREF_AOKP_ANIMATION);
         }
 
         @Override
@@ -121,9 +125,12 @@ public class DisplayAnimationsActivity extends Fragment {
 
         @Override
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        /*} else {
+            if (preference == mAokpAnimation) {
+                Intent intent = new Intent(getActivity(), AnimationControls.class);
+                getActivity().startActivity(intent);
+            } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
-            }*/
+            }
             return false;
         }
 
