@@ -24,6 +24,7 @@ import android.view.View;
 
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.utils.Helpers;
+import com.lordclockan.aicpextras.widget.NumberPickerPreference;
 
 public class VariousShitFragment extends Fragment {
 
@@ -42,12 +43,17 @@ public class VariousShitFragment extends Fragment {
         public SettingsPreferenceFragment() {
         }
 
+        private static final int MIN_DELAY_VALUE = 1;
+        private static final int MAX_DELAY_VALUE = 30;
+
         private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
         private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
         private static final String SCREENSHOT_TYPE = "screenshot_type";
+        private static final String SCREENSHOT_DELAY = "screenshot_delay";
 
         private SwitchPreference mCameraSounds;
         private ListPreference mScreenshotType;
+        private NumberPickerPreference mScreenshotDelay;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -68,6 +74,14 @@ public class VariousShitFragment extends Fragment {
             mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
             mScreenshotType.setSummary(mScreenshotType.getEntry());
             mScreenshotType.setOnPreferenceChangeListener(this);
+
+            mScreenshotDelay = (NumberPickerPreference) findPreference(SCREENSHOT_DELAY);
+            mScreenshotDelay.setOnPreferenceChangeListener(this);
+            mScreenshotDelay.setMinValue(MIN_DELAY_VALUE);
+            mScreenshotDelay.setMaxValue(MAX_DELAY_VALUE);
+            int ssDelay = Settings.System.getInt(resolver,
+                    Settings.System.SCREENSHOT_DELAY, 1);
+            mScreenshotDelay.setCurrentValue(ssDelay);
 
         }
 
@@ -91,6 +105,11 @@ public class VariousShitFragment extends Fragment {
                 Settings.System.putInt(resolver,
                         Settings.System.SCREENSHOT_TYPE, mScreenshotTypeValue);
                 mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
+                return true;
+            } else if (preference == mScreenshotDelay) {
+                int value = Integer.parseInt(newValue.toString());
+                Settings.System.putInt(resolver, Settings.System.SCREENSHOT_DELAY,
+                        value);
                 return true;
             }
             return false;
