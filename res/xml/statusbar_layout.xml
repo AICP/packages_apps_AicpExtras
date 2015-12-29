@@ -15,6 +15,18 @@
         android:summary="@string/show_headset_icon_summary"
         android:defaultValue="true" />
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="battery_saver_notification"
+        android:title="@string/battery_saver_notif_title"
+        android:summary="@string/battery_saver_notif_summary"
+        android:defaultValue="true" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="battery_low_notification"
+        android:title="@string/battery_low_notif_title"
+        android:summary="@string/battery_low_notif_summary"
+        android:defaultValue="true" />
+
     <Preference
         android:key="traffic"
         android:title="@string/traffic_category" />
