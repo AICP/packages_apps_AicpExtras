@@ -1,0 +1,560 @@
+<resources>
+    <!-- Do not translate app_name string. -->
+    <string name="app_name">Aicp Extras</string>
+
+    <string name="navigation_drawer_open">Öffne Navigationsbereich</string>
+    <string name="navigation_drawer_close">Schließe Navigationsbereich</string>
+
+    <string name="action_settings">Einstellungen</string>
+    <string name="first_layout_title">Platzhalter für Verschiedenes\nund nackte Chicks!!!</string>
+    <string name="second_layout_title">Zweites Layout</string>
+    <string name="third_layout_title">Drittes Layout</string>
+    <string name="aicp_extras_title">AICP Extras</string>
+    <string name="pun_title">One rom to rule them all</string>
+    <string name="various_shit_title">Verschiedenes</string>
+    <string name="about_title">Über</string>
+    <string name="other_title">Sonstiges</string>
+    <string name="g_community">G+ Community</string>
+    <string name="ui_title">UI</string>
+    <string name="builtin_title">Intern</string>
+    <string name="addons_title">Extern</string>
+    <string name="welcome_title">WELCOME\nto the real world!!!</string>
+    <!-- Do not translate logo string. -->
+    <string name="logo">logo</string>
+    <string name="display_animations_title">Display und Animationen</string>
+    <string name="multishit_title">Zusätze</string>
+    <string name="notificaitons_title">Benachrichtigungsleiste</string>
+    <string name="statubar_title">Statusleiste</string>
+    <string name="lockscreen_title">Sperrbildschirm</string>
+    <string name="systemui_tuner_title">SystemUI Tuner</string>
+    <string name="systemui_tuner_summary">Marshmallow übernimmt das Tuning der SystemUI</string>
+    <string name="systemui_tuner_dilog_title">Achtung</string>
+    <string name="systemui_tuner_dilog_warning">Der Tuner bietet begrenzte SystemUI Modificationen. Eine Verknüpfung hierfür wurde zu AICP Extras hinzugefügt.\nHier könne auch neue Kacheln hinzugefügt werden.</string>
+    <string name="aicp_downloads_title">Downloads</string>
+    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="send_mail_intent">Sende E-Mail...</string>
+    <string name="hidden_anim_activity_title">"Yoga"-zeit!!!</string>
+    <string name="hidden_anim_more_title">MEHR?</string>
+    <string name="hidden_anim_more_nice">SCHÖN</string>
+    <string name="continue_title">Weiter</string>
+
+    <string name="nothing_title">Hier gibt es noch nichts zu sehen, geh weiter.</string>
+
+    <!-- Switch On/Off  -->
+    <string name="switch_on_text">An</string>
+    <string name="switch_off_text">Aus</string>
+
+    <!-- Permissions -->
+    <string name="storage_permission_granted">Zugriff gestattet. Du kannst jetzt auf den Speicher zugreifen.</string>
+    <string name="storage_permission_not_granted">Zugriff verweigert. Du kannst nicht auf den Speicher zugreifen.</string>
+
+    <!-- Recents panel -->
+    <string name="recents_panel_title">Anwendungsverlauf</string>
+    <string name="show_clear_all_recents_button_title">Lösch-Taste für den gesamten Verlauf</string>
+    <string name="show_clear_all_recents_button_summary">Zeige Taste zum Löschen aller geöffneten Anwendungen</string>
+    <string name="recents_clear_all_location_title">Position der Taste</string>
+    <string name="recents_clear_all_location_top_right">Oben rechts</string>
+    <string name="recents_clear_all_location_top_left">Oben links</string>
+    <string name="recents_clear_all_location_top_center">Oben mittig</string>
+    <string name="recents_clear_all_location_bottom_right">Unten rechts</string>
+    <string name="recents_clear_all_location_bottom_left">Unten links</string>
+    <string name="recents_clear_all_location_bottom_center">Unten mittig</string>
+    <string name="recents_clear_all_dismiss_all_title">Lösche alle laufenden Anwendungen</string>
+    <string name="recents_clear_all_dismiss_all_summary">Lösche auch Anwendung im Vordergrund, wenn alle gelöscht werden.</string>
+
+    <!-- Change Log -->
+    <string name="changelog_title">Änderungsprotokoll</string>
+    <string name="changelog_title_summary">Zeige letzte Änderungen im ROM</string>
+    <string name="changelog_error">Kann Änderungsprotokoll nicht laden</string>
+
+    <!-- Toast Icons -->
+    <string name="toast_icon_title">Toast Icon</string>
+    <string name="toast_icon_summary">Zeige das zur Meldung zugehörige Icon der Anwendung</string>
+
+    <!-- Brightness slider -->
+    <string name="qs_brightness_slider_title">Helligkeitsregler</string>
+    <string name="qs_brightness_slider_enabled">Aktiviert</string>
+    <string name="qs_brightness_slider_disabled">Deaktiviert</string>
+
+    <!-- Display & Lights screen, setting options for LCD density -->
+    <string name="lcd_density">LCD Dichte</string>
+    <string name="dialog_title_lcd_density">LCD Dichte</string>
+    <string name="lcd_density_value_format">%d DPI</string>
+    <string name="lcd_density_default_value_format">%d DPI (Standard)</string>
+    <string name="restarting_ui">Neustart der UI\u2026</string>
+    <string name="lcd_density_prompt_message">Einige Anwendungen könnten mit eigenem DPI-Wert nicht mehr funktionieren.\n\nDies wird ihr Gerät neustarten.</string>
+
+    <!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
+    <string name="print_restart">Neustart</string>
+
+    <!-- Force expanded notifications -->
+    <string name="force_expanded_notifications_title">Erzwinge erweiterte Benachrichtigungen</string>
+    <string name="force_expanded_notifications_summary">Nur für Anwendungen verfügbar, welche dies unterstützen</string>
+
+    <!-- Disabling immersive mode messages -->
+    <string name="disable_immersive_message_title">Deaktiviere Benachrichtigungen für Immersive-Modus</string>
+    <string name="disable_immersive_message_summary">Dies versteckt alle Benachrichtigungen im Immersive-Modus (Full Screen)</string>
+
+    <!-- Disabling FC notifications -->
+    <string name="disable_fc_notifications_title">FC Benachrichtigungen abschalten</string>
+    <string name="disable_fc_notifications_summary">Dies versteckt alle Absturz-Benachrichtungen</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Farbwähler</string>
+    <string name="press_color_to_apply">Wähle unten eine Farbe</string>
+    <!-- Do not translate arrow. -->
+    <string name="arrow_right">→</string>
+    <!-- Do not translate arrow. -->
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Setzen</string>
+    <string name="color_default">Standard</string>
+
+    <!-- Network traffic -->
+    <string name="traffic_category">Netzwerk-Datenverkehr</string>
+    <string name="traffic_title">Datenverkehr</string>
+    <string name="network_traffic_title">Netzwerk-Datenverkehr</string>
+    <string name="show_network_traffic_state">Datenmonitor in der Statusleiste</string>
+    <string name="show_network_traffic_unit">Einheit der Anzeige</string>
+    <string name="show_network_traffic_frequency">Aktualisierungsintervall</string>
+    <string name="show_network_traffic_disable">Deaktiviert</string>
+    <string name="show_network_traffic_up">Ausgehend</string>
+    <string name="show_network_traffic_down">Eingehend</string>
+    <string name="show_network_traffic_all">Aus- und eingehend</string>
+    <string name="show_network_traffic_bit">Bits pro Sekunde</string>
+    <string name="show_network_traffic_byte">Bytes pro Sekunde</string>
+    <string name="show_network_traffic_500">500 ms</string>
+    <string name="show_network_traffic_1000">1000 ms</string>
+    <string name="show_network_traffic_1500">1500 ms</string>
+    <string name="show_network_traffic_2000">2000 ms</string>
+    <string name="network_traffic_autohide">Automatisch ausblenden</string>
+    <string name="network_traffic_autohide_summary">Versteckt den Datenmonitor, wenn keine Aktivität vorhanden ist</string>
+    <string name="network_traffic_autohide_threshold">Inaktivitätsschwelle</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Abbruch</string>
+    <string name="default_string">Standard</string>
+
+    <!-- Superuser indicator on status bar -->
+    <string name="su_indicator">Superuser Anzeige</string>
+    <string name="su_indicator_summary_on">Superuser Indikator ist bei aktiver Sitzung sichtbar</string>
+    <string name="su_indicator_summary_off">Umschalten der Anzeige des Superuser Indikators, wenn eine Sitzung aktiv ist</string>
+
+    <!--Time Contexual Header -->
+    <string name="status_bar_custom_header_title">Benutzerdefinierter Hintergrund nach Zeit</string>
+    <string name="status_bar_custom_header_summary">Aktiviere Hintergrundbild für die Benachrichtigungsleiste</string>
+    <string name="status_bar_custom_header_default_title">Benutze Poly HD Bilder</string>
+    <string name="status_bar_custom_header_default_summary">Einschalten für Polygraphische HD Bilder. Ausschalten für die originalen Bilder.</string>
+
+    <!-- Carrier Label -->
+    <string name="carrier_options">Anzeige des Anbieters</string>
+    <string name="custom_carrier_label_title">Eigene Anbieterbezeichnung</string>
+    <string name="custom_carrier_label_explain">Bitte eine neue Bezeichnung eingeben. Leerlassen für die Standardanzeige.</string>
+    <string name="custom_carrier_label_notset">Eigene Bezeichnung zur Zeit nicht gesetzt</string>
+    <string name="status_bar_carrier_color">Farbe der Anbieterbezeichnung</string>
+    <string name="status_bar_carrier_size">Textgröße der Anbieterbezeichnung</string>
+    <string name="show_carrier_title">Anbieteranzeige</string>
+    <string name="show_carrier_disabled">Deaktiviert</string>
+    <string name="show_carrier_keyguard">Nur auf Sperrbildschirm</string>
+    <string name="show_carrier_statusbar">Nur in Statusleiste</string>
+    <string name="show_carrier_enabled">Aktiviert</string>
+
+    <!-- Battery Bar -->
+    <string name="battery_bar_title">Akkustandleiste</string>
+    <string name="battery_bar">Position der Akkustandleiste</string>
+    <string name="battery_bar_color">Farbe der Akkustandleiste</string>
+    <string name="battery_bar_cat">Stil der Akkustandleiste</string>
+    <string name="battery_bar_style_title">Ausrichtung der Akkustandleiste</string>
+    <string name="battery_bar_thickness_title">Dicke der Akkustandleiste</string>
+    <string name="battery_bar_animate_title">Animation beim Laden</string>
+    <string name="battery_bar_animate_summary">Die Animation beim Laden könnte zu einer schwachen Benutzererfahrung führen. Nach eigenem Ermessen einschalten!</string>
+
+    <!-- Scrolling Cache -->
+    <string name="pref_scrollingcache_title">Scroll-Cache</string>
+    <string name="pref_scrollingcache_summary">Der Scroll-Cache verbessert die Performance beim Blättern, auf Kosten des Speicherplatzes</string>
+    <string name="pref_scrollingcache_force_enable">Immer aktiviert</string>
+    <string name="pref_scrollingcache_default_enable">Standardmäßig aktiviert</string>
+    <string name="pref_scrollingcache_default_disable">Standardmäßig deaktiviert</string>
+    <string name="pref_scrollingcache_force_disable">Immer deaktiviert</string>
+
+    <!-- Headphones icon switch -->
+    <string name="show_headset_icon_title">Symbol für Kopfhörer</string>
+    <string name="show_headset_icon_summary">Zeigt ein Symbol, wenn ein Kopfhörer oder Headset verbunden ist.</string>
+
+    <!-- Gesture Anywhere -->
+    <string name="gesture_anywhere_title">Gesten überall</string>
+    <string name="gesture_anywhere_enabled_title">Gesten überall</string>
+    <string name="gesture_anywhere_enabled_summary">Aktiviere das "Gesten überall"-Feature</string>
+    <string name="gesture_anywhere_position_title">Position</string>
+    <string name="gesture_anywhere_position_left">Linke Ecke</string>
+    <string name="gesture_anywhere_position_right">Rechte Ecke</string>
+    <string name="gesture_anywhere_gestures_title">Gesten</string>
+    <string name="gesture_anywhere_gestures_summary">Gesten hinzufügen, löschen und bearbeiten</string>
+    <!-- Label, button used to add a gesture -->
+    <string name="ga_button_add">Geste hinzufügen</string>
+    <!-- Label, button used to reload all gestures -->
+    <string name="ga_button_reload">Neuladen</string>
+    <!-- Label, button used to cancel the operation of adding a gesture -->
+    <string name="ga_button_discard">Verwerfen</string>
+    <!-- Label, button used to save a gesture newly created -->
+    <string name="ga_button_done">Fertig</string>
+    <!-- Label, prompt asking the user to enter the name of the gesture -->
+    <string name="ga_prompt_gesture_name">Name</string>
+    <!-- Error message, informs the user he needs to enter a name before saving a gesture -->
+    <string name="ga_error_missing_name">Du musst einen Namen eintragen</string>
+    <!-- success message, tells the user where the gesture was saved -->
+    <string name="ga_save_success">Geste gespeichert unter %s</string>
+    <!-- Buttons in Rename gesture dialog box -->
+    <string name="ga_rename_action">OK</string>
+    <!-- Buttons in Rename gesture dialog box -->
+    <string name="ga_cancel_action">Abbrechen</string>
+    <!-- Message displayed when the user opens the gestures settings screen -->
+    <string name="ga_gestures_loading">Lade Gesten...</string>
+    <!-- Message displayed when the user has no gestures -->
+    <string name="ga_gestures_empty">Keine Gesten</string>
+    <!-- Title of the screen used to view/manage gestures -->
+    <string name="ga_gestures_activity">Gesten</string>
+    <!-- Noun, menu item used to edit a gesture -->
+    <string name="ga_gestures_edit">Bearbeiten</string>
+    <!-- Noun, menu item used to remove a gesture -->
+    <string name="ga_gestures_delete">Löschen</string>
+    <!-- Message displayed when a gesture is successfully deleted -->
+    <string name="ga_gestures_delete_success">Geste gelöscht</string>
+    <!-- Title of dialog box -->
+    <string name="ga_gestures_rename_title">Geste umbenennen</string>
+    <!-- Label of gesture name field in Rename gesture dialog box -->
+    <string name="ga_gestures_rename_label">Name der Geste</string>
+    <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
+    <string name="ga_gestures_error_loading">Konnte %s nicht laden. Stellen Sie sicher, dass genug Speicher vorhanden ist.</string>
+    <string name="trigger_category">Auslösebereich</string>
+    <string name="trigger_width_title">Breite des Auslösers</string>
+    <string name="trigger_width_summary">Breite des Auslösebereichs einstellen</string>
+    <string name="trigger_top_title">Position des Auslösers</string>
+    <string name="trigger_top_summary">Stelle die vertikale Position ein</string>
+    <string name="trigger_bottom_title">Höhe des Auslösers</string>
+    <string name="trigger_bottom_summary">Höhe des Auslösebereichs einstellen</string>
+    <string name="picker_activities">Aktivitäten</string>
+    <string name="select_custom_app_title">Wähle eine App</string>
+    <string name="select_custom_activity_title">Wähle eine Aktivität</string>
+    <string name="profile_applist_title">Anwendungen</string>
+
+    <!-- Status bar temperature -->
+    <string name="status_bar_temperature_title">Außentemperatur in der Statusleiste</string>
+    <string name="status_bar_temperature_hidden">Versteckt</string>
+    <string name="status_bar_temperature_show_scale">Anzeigen mit Einheit</string>
+    <string name="status_bar_temperature_hide_scale">Anzeigen ohne Einheit</string>
+    <string name="status_bar_temperature_location_title">Platzierung</string>
+    <string name="status_bar_temperature_location_summary">Wähle, wo die Temperatur in der Statusleiste platziert wird</string>
+    <string name="status_bar_temperature_location_right">rechts platzieren</string>
+    <string name="status_bar_temperature_location_left">links platzieren</string>
+    <string name="status_bar_weather_color_title">Farbe des Temperaturwerts</string>
+    <string name="status_bar_weather_size_title">Schriftgröße</string>
+    <string name="status_bar_weather_font_style_title">Schriftart</string>
+    <string name="status_bar_weather_font_normal">Normal</string>
+    <string name="status_bar_weather_font_italic">Kursiv</string>
+    <string name="status_bar_weather_font_bold">Fett</string>
+    <string name="status_bar_weather_font_bold_italic">Fett &amp; kursiv</string>
+    <string name="status_bar_weather_font_light">Leicht</string>
+    <string name="status_bar_weather_font_light_italic">Leicht &amp; kursiv</string>
+    <string name="status_bar_weather_font_thin">Dünn</string>
+    <string name="status_bar_weather_font_thin_italic">Dünn &amp; kursiv</string>
+    <string name="status_bar_weather_font_condensed">Gestaucht</string>
+    <string name="status_bar_weather_font_condensed_italic">Gestaucht &amp; kursiv</string>
+    <string name="status_bar_weather_font_condensed_bold">Gestaucht &amp; fett</string>
+    <string name="status_bar_weather_font_condensed_bold_italic">Gestaucht, fett, kursiv</string>
+    <string name="status_bar_weather_font_medium">Mittel</string>
+    <string name="status_bar_weather_font_medium_italic">Mittel &amp; kursiv</string>
+
+    <!-- Recents Fullscreen -->
+    <string name="recents_show_fullscreen">Anwendungsverlauf bei Vollbild</string>
+    <string name="recents_fullscreen_summary_enabled">Anwendungsverlauf bei Vollbild ist aktiviert</string>
+    <string name="recents_fullscreen_summary_disabled">Anwendungsverlauf bei Vollbild ist deaktiviert</string>
+
+    <!-- Weather settings -->
+    <string name="weahter_lockscreen_category">Optionen für Wetter auf Sperrbildschirm</string>
+    <string name="weather_settings_title">LockClock Einstellungen</string>
+    <string name="weather_settings_summary">Konfiguration des Standorts im Wetter Widget und andere Einstellungen</string>
+    <string name="weather_lockscreen_show_title">Wetterlage auf Sperrbildschirm</string>
+    <string name="weather_lockscreen_show_summary">Wetter auf Sperrbildschirm anzeigen</string>
+    <string name="weather_show_weather_title">Zeige Optionen für Wetteranzeige</string>
+    <string name="weather_show_weather_summary">Aktivieren, um Wetteroptionen von LockClock anzuzeigen</string>
+    <string name="status_bar_show_weather_title">Wetteranzeige in erweiterter Statusleiste</string>
+    <string name="status_bar_show_weather_summary">Wetterdaten über den Schnelleinstellungen anzeigen</string>
+    <string name="weather_show_location_title">Standort anzeigen</string>
+    <string name="weather_show_location_summary">Aktivieren, um den Standort anzuzeigen</string>
+    <string name="weather_show_timestamp_title">Zeitstempel anzeigen</string>
+    <string name="weather_show_timestamp_summary">Aktivieren, um Zeitstempel der Daten anzuzeigen</string>
+    <string name="weather_condition_icon_title">Icon für Wetterlage</string>
+    <string name="weather_condition_icon_dlg_title">Auswahl eines Icons zur Anzeige der Wetterlage</string>
+    <string name="weather_condition_icon_monochrome_title">Einfarbig</string>
+    <string name="weather_condition_icon_colored_title">Farbig</string>
+    <string name="weather_condition_icon_vclouds_title">VClouds</string>
+    <string name="weather_colorize_all_icons_title">Alle Icons einfärben</string>
+    <string name="weather_colorize_all_icons_summary">Einschalten um alle Icons farbig darzustellen, Ausschalten um nur einfarbige Icons einzufärben</string>
+    <string name="colors_title">Farben</string>
+    <string name="icons_title">Icons</string>
+    <string name="text_title">Text</string>
+    <string name="reset">Rücksetzen</string>
+    <string name="reset_lockscreen_weather">OK</string>
+    <string name="reset_values_message">Werte zurücksetzen?</string>
+    <string name="weather_reset_title">Wetterwerte zurücksetzen</string>
+
+    <!-- Lockscreen see through -->
+    <string name="lockscreen_see_through_title">Sperrbildschirm-Trübung</string>
+    <string name="lockscreen_see_through_summary">Eintrübung und Anzeige des Inhalts hinter dem Sperrbildschirm.</string>
+    <string name="lockscreen_blur_radius">Intensität der Trübung</string>
+
+    <!-- Notificatio drawer weather -->
+    <string name="notif_drawer_weather_title">Wetter</string>
+    <string name="notif_drawer_weather_summary">Anzeige von Wetter-Infos über den Schnelleinstellungen umschalten</string>
+
+    <!-- Power menu on lock screen -->
+    <string name="powermenu_lockscreen_title">Ein/Aus-Menü auf Sperrbildschirm</string>
+    <string name="powermenu_lockscreen_summary">Ein/Aus-Menü bei gesperrtem Display anzeigen</string>
+
+    <!-- ROm Stats -->
+    <!-- Main -->
+    <string name="stats_title">Statistiken</string>
+
+    <!-- Notification -->
+    <string name="notification_ticker">Statistiken freigeben</string>
+    <string name="notification_title">AICP Statistiken</string>
+    <string name="notification_desc">Aktiviere oder deaktiviere die Übertragung anonymer Statistiken</string>
+    
+    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
+    
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">AICP Statistiken</string>
+    <string name="anonymous_statistics_summary">Hilf AICP, indem du die Übertragung anonymer Datenreporte zuläßt.</string>
+    <string name="anonymous_statistics_warning_title">Über</string>
+    <string name="anonymous_statistics_warning">Der Beitritt zu AICP Stats erlaubt die Übersendung nicht-personenbezogener Daten an unsere Server. 
+         Die übertragenen Informationen erhalten einen eindeutigen Identifizierungscode (ID), der nicht die Privatsphäre oder persönliche Daten verletzt. 
+         Die Daten werden alle 7 Tage übermittelt.\n\nUm ein Beispiel der übertragenen Daten zu sehen, tippe auf Datenvorschau.</string>
+ 
+    <string name="pref_settings">Einstellungen</string>
+    <string name="enable_reporting_title">Übertragung aktivieren</string>
+    <string name="disable_reporting_persistent">Andauernde Verweigerung</string>
+    <string name="preview_data_title">Datenvorschau</string>
+    <string name="preview_data_summary">%s</string>
+    <string name="view_stats_title">Anzeige der Statistik-Seite</string>
+    <string name="anonymous_learn_more">Weitere Infos</string>
+
+    <string name="last_report_on">Letzte Übertragung am</string>
+    <string name="reporting_interval">Übertragungsintervall</string>
+    <plurals name="reporting_interval_days">
+        <item quantity="one">1 Tag</item>
+        <item quantity="other">%d Tage</item>
+    </plurals>
+    <string name="next_report_on">Nächste Übertragung am</string>
+
+    <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">Eindeutiger ID</string>
+    <string name="preview_device_title">Gerät</string>
+    <string name="preview_version_title">Version</string>
+    <string name="preview_country_title">Land</string>
+    <string name="preview_carrier_title">Anbieter</string>    
+    <string name="preview_romname_title">ROM Name</string>    
+    <string name="preview_romversion_title">AICP Version</string>
+    <string name="preview_buildtype_title">AICP Bau-Typ</string>
+
+    <!-- Circle app bar -->
+    <string name="category_app_circle_bar_title">App-Starter (Ring)</string>
+    <string name="app_circle_bar_title">Ringleiste für Apps</string>
+    <string name="app_circle_bar_summary">Zeige den Ring bei Berührung des rechten Displayrandes</string>
+    <string name="app_circle_bar_included_apps_title">Enthaltene Apps</string>
+    <string name="app_circle_bar_included_apps_summary">Angezeigte Apps in der Ringleiste</string>
+    <string name="trigger_width_title">Breite des Auslösers</string>
+    <string name="trigger_width_summary">Breite des Auslösebereichs einstellen</string>
+    <string name="trigger_top_title">Position des Auslösers</string>
+    <string name="trigger_top_summary">Stelle die vertikale Position ein</string>
+    <string name="trigger_bottom_title">Höhe des Auslösers</string>
+    <string name="trigger_bottom_summary">Höhe des Auslösebereichs einstellen</string>
+
+   <!-- Lock screen wallpaper -->
+   <string name="lockscreen_category_title">Displayhintergrund</string>
+   <string name="lockscreen_wallpaper_title">Sperrbildschirm-Hintergrund</string>
+   <string name="lockscreen_wallpaper_set_title">Setze neues Hintergrundbild</string>
+   <string name="lockscreen_wallpaper_set_summary">Ein Neustart ist erforderlich</string>
+   <string name="lockscreen_wallpaper_clear_title">Standard wieder herstellen</string>
+   <string name="reset_lockscreen_wallpaper">Sperrbildschirm-Hintergrund zurückgesetzt</string>
+
+    <!-- OmniSwitch -->
+    <string name="omniswitch_category_title">OmniSwitch</string>
+    <string name="recents_use_omniswitch_title">Als Anwendungsverlauf verwenden</string>
+    <string name="recents_use_omniswitch_summary">Benutze OmniSwitch anstatt der Standardansicht für den Anwendungsverlauf</string>
+    <string name="omniswitch_start_settings_title">Einstellungen</string>
+    <string name="omniswitch_start_settings_summary">Öffne die Einstellungen von OmniSwitch</string>
+    <string name="omniswitch_first_time_title">Information</string>
+    <string name="omniswitch_first_time_message">Stellen Sie sicher, dass Omniswitch aktiviert ist. Sie können dies mit Hilfe der \"Einstellungen\" unten tun.</string>
+
+    <!-- Double Tap Navbar to Sleep -->
+    <string name="double_tap_sleep_nav_bar_title">DT2S auf Navigationsleiste</string>
+    <string name="double_tap_sleep_nav_bar_summary">Zweimal auf die Navigationsleiste tippen, um das Gerät in den Ruhezustand zu versetzen</string>
+
+    <!-- Double tap to sleep on lockscreen -->
+    <string name="double_tap_sleep_anywhere_title">DT2S auf Sperrbildschirm</string>
+    <string name="double_tap_sleep_anywhere_summary">Zweimal auf das Display tippen, um das Gerät in den Ruhezustand zu versetzen</string>
+
+    <!-- PA Pie control -->
+    <string name="pa_piecontrol_settings_summary">Anpassung von PA Pie 2.0 Zielen, Stil, Größe und Farbe</string>
+    <string name="pa_pie_control_title">PIE Displaynavigation</string>
+    <string name="pa_pie_control_enable_title">Schaltet die PIE Displaynavigation ein</string>
+    <string name="pa_pie_always_right_title">PIE am rechten Displayrand</string>
+    <string name="pa_pie_always_right_summary">PIE wird bei horizontaler Drehung des Geräts immer auf der rechten Seite angezeigt</string>
+    <string name="pa_pie_targets_title">PIE Ziele</string>
+    <string name="pa_pie_style_title">PIE Stil</string>
+    <string name="pa_pie_menu_title">Menü-Taste immer anzeigen</string>
+    <string name="pa_pie_menu_summary">Einstellen ob die Menü-Taste angezeigt wird, auch wenn sie nicht gebraucht wird</string>
+    <string name="pa_pie_size_title">PIE Größe</string>
+    <string name="pa_pie_size_summary">Größe der PIE Navigation definieren</string>
+    <string name="pa_pie_size_small">Klein</string>
+    <!-- Do not translate size_default string. -->
+    <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
+    <string name="pa_pie_size_large">Groß</string>
+    <string name="pa_pie_size_gigantic">Gigantisch</string>
+    <string name="pa_pie_size_monster">Monströs</string>
+    <string name="pa_pie_size_enormous">Enorm</string>
+    <string name="pa_pie_mode_default">Standard</string>
+    <string name="pa_pie_gravity_title">PIE Auslösung</string>
+    <string name="pa_pie_gravity_summary">Auswählen auf welcher Displayseite PIE platziert wird</string>
+    <string name="pa_pie_gravity_bottom">Unten</string>
+    <string name="pa_pie_gravity_right">Rechts</string>
+    <string name="pa_pie_gravity_left">Links</string>
+    <string name="pa_pie_gap_title">Element-Abstand</string>
+    <string name="pa_pie_gap_summary">Abstand der PIE Elemente zueinander anpassen</string>
+    <string name="pa_pie_gap_none">Keiner</string>
+    <string name="pa_pie_gap_small">Klein</string>
+    <string name="pa_pie_gap_big">Groß (Standard)</string>
+    <string name="pa_pie_gap_huge">Riesig</string>
+    <string name="pa_pie_angle_title">PIE Winkel</string>
+    <string name="pa_pie_angle_summary">Winkel der PIE Ecken zum Auslösepunkt einstellen</string>
+    <string name="pa_pie_angle_none">Keiner (Alt)</string>
+    <string name="pa_pie_angle_small">Klein</string>
+    <string name="pa_pie_angle_big">Normal (Standard)</string>
+    <string name="pa_pie_angle_huge">Groß</string>
+    <string name="pa_pie_angle_super">Riesig</string>
+    <string name="pa_pie_mode_title">PIE Stil</string>
+    <string name="pa_pie_mode_summary">Verwalten, wie Animationen und Statuszusätze gehandhabt werden</string>
+    <string name="pa_pie_mode_bare">Knapp</string>
+    <string name="pa_pie_mode_quick">Schnell</string>
+    <string name="pa_pie_mode_default">Standard</string>
+    <string name="pa_pie_mode_slow">Langsam</string>
+    <string name="pa_pie_lastapp_title">Letzte App</string>
+    <string name="pa_pie_lastapp_summary">Taste für letzte App anzeigen</string>
+    <string name="pa_pie_killtask_title">Task löschen</string>
+    <string name="pa_pie_killtask_summary">Taste zum Löschen von Tasks anzeigen</string>
+    <string name="pa_pie_notifications_title">Benachrichtigungen</string>
+    <string name="pa_pie_notifications_summary">Taste für Benachrichtigungen anzeigen</string>
+    <string name="pa_pie_settings_panel_title">Schnelleinstellungen</string>
+    <string name="pa_pie_settings_panel_summary">Taste für Anzeige der Schnelleinstellungen anzeigen</string>
+    <string name="pa_pie_screenshot_title">Bildschirmfoto</string>
+    <string name="pa_pie_screenshot_summary">Taste für Bildschirmfoto anzeigen</string>
+    <string name="pa_pie_color_title">PIE Farbeinstellungen</string>
+    <string name="pa_pie_color_style_title">PIE Farbstil</string>
+    <string name="pa_pie_background_title">Hintergrundfarbe</string>
+    <string name="pa_pie_select_title">Auswahlfarbe</string>
+    <string name="pa_pie_outlines_title">Rahmenfarbe</string>
+    <string name="pa_pie_status_clock_title">Uhrfarbe</string>
+    <string name="pa_pie_status_title">Farbe der Statusanzeigen</string>
+    <string name="pa_pie_chevron_title">Farbe des Winkelrahmens</string>
+    <string name="pa_pie_juice_title">Farbe des Akkuverbrauchs</string>
+    <string name="pa_pie_button_color">Tastenfarbe</string>
+    <string name="pa_pie_button_color_title">Tastenfarbe</string>
+    <string name="pa_pie_color_reset_title">Farben zurücksetzen</string>
+    <string name="reset_message">Alle Farben auf Standard zurücksetzen?</string>
+    <string name="reset_paranoid">AICP</string>
+    <string name="reset_android">Android</string>
+
+    <!-- Task Manager -->
+    <string name="enable_task_manager_title">Task Manager</string>
+    <string name="enable_task_manager_summary">Ein-/Ausschalten der Anzeige des Task Manager-Icons im Bereich der erweiterten Statusleiste.</string>
+
+    <!-- SlimSizer  -->
+    <!-- Do not translate listsystem string. -->
+    <string name="listsystem">list</string>
+    <string name="sizer_title">App Entferner</string>
+    <string name="caution">Vorsicht!</string>
+    <string name="sizer_message_startup">Dieses Werkzeug erlaubt das Löschen von Systemanwendungen. Mit Vorsicht benutzen und nur Apps löschen, bei denen Sie sich sicher sind.</string>
+    <string name="cancel">Abbruch</string>
+    <string name="sizer_message_delete">Sind Sie sicher, dass diese App gelöscht werden soll?</string>
+    <string name="btn_delete">Jetzt ausgewählte Apps löschen!</string>
+    <string name="delete_progress_title">Lösche</string>
+    <string name="delete_progress">Ausgewählte Dateien werden gelöscht...</string>
+    <string name="delete_success">Gelöscht</string>
+    <string name="delete_fail">Löschen nicht möglich</string>
+    <string name="btn_profile">Profil</string>
+    <string name="sizer_message_sdnowrite">Kann nicht auf SD Karte schreiben.</string>
+    <string name="sizer_message_sdnoread">Kann SD Karte nicht lesen.</string>
+    <string name="sizer_message_filesuccess">Profil erstellt.</string>
+    <string name="sizer_message_filefail">Konnte Profil nicht erstellen.</string>
+    <string name="sizer_message_noselect">Nichts ausgewählt.</string>
+    <string name="system_app_remover">System App Entferner</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Drei-Finger-Geste</string>
+    <string name="three_finger_gesture_summary">Wische mit drei Fingern, um ein Bildschirmfoto aufzunehmen</string>
+
+    <!-- SU -->
+    <string name="cannot_get_su">Keinen Superuser-Zugriff erhalten, beende.</string>
+
+    <!-- Aicp logcat -->
+    <string name="logcat_title">Logcat</string>
+    <string name="kmesg_title">Kmesg</string>
+    <string name="dmesg_title">Dmesg</string>
+    <string name="log_it_title">Loslegen</string>
+    <string name="log_it_dialog_title">Loslegen</string>
+    <string name="log_that_shit_title">Logge diesen Mist</string>
+    <string name="logcat_warning">Teile das oder GTFO!</string>
+    <string name="share_title">Teilen...</string>
+    <string name="log_it_share_subject">AICP logs</string>
+    <string name="log_it_summary">Bitte warten, während die Logdateien erzeugt werden</string>
+
+    <!-- AOKP custom system animations -->
+    <string name="aokp_animation_title">Systemanimationen</string>
+    <string name="aokp_animation_summary">AOKP eigene Animation</string>
+    <string name="activity_open_title">Animation für Aktivität öffnen</string>
+    <string name="activity_close_title">Animation für Aktivität schließen</string>
+    <string name="task_open_title">Animation für Aufgabe öffnen</string>
+    <string name="task_close_title">Animation für Aufgabe schließen</string>
+    <string name="task_move_to_front_title">Animation für Bewegung nach vorne</string>
+    <string name="task_move_to_back_title">Animation für Bewegung nach hinten</string>
+    <string name="wallpaper_open_title">Animation für Bildhintergrund öffnen</string>
+    <string name="wallpaper_close_title">Animation für Bildhintergrund schließen</string>
+    <string name="wallpaper_intra_open_title">Animation für Bildhintergrund intra öffnen</string>
+    <string name="wallpaper_intra_close_title">Animation für Bildhintergrund intra schließen</string>
+    <string name="task_open_behind_title">Animation hinter offener Aufgabe</string>
+    <string name="animation_duration_title">Animationsdauer</string>
+    <string name="animation_duration_default">Dauer (in Millisekunden) der oben gewählten Animationen</string>
+    <string name="title_animation_no_override">Verhindere App-Überschreibungen</string>
+    <string name="summary_animation_no_override">Verhindere, dass Anwendungen die Überblendeffekte überschreiben.</string>
+    <string name="animation_exit_only_title">Animation nur fürs Ausführen (Starten)</string>
+    <string name="animation_reverse_exit_title">Umgekehrte Beenden-Animation</string>
+
+    <!-- Toast Animation -->
+    <string name="toast_animation_title">Toast Animation</string>
+    <string name="toast_none_animation">Keine</string>
+    <string name="toast_default_animation">Standard</string>
+    <string name="toast_fade_animation">Ausblenden</string>
+    <string name="toast_SlideRight_animation">Nach rechts gleiten</string>
+    <string name="toast_SlideLeft_animation">Nach links gleiten</string>
+    <string name="toast_Xylon_animation">Xylon</string>
+    <string name="toast_Toko_animation">Toko</string>
+    <string name="toast_Tn_animation">Tn</string>
+    <string name="toast_Honami_animation">Honami</string>
+    <string name="toast_FastFade_animation">Schnell ausblenden</string>
+    <string name="toast_GrowFade_animation">Ausblenden und vergrößern</string>
+    <string name="toast_GrowFadeCenter_animation">Zentriert ausblenden und vergrößern</string>
+    <string name="toast_GrowFadeBottom_animation">Nach unten ausblenden und vergrößern</string>
+    <string name="toast_Translucent_animation">Durchsichtig</string>
+    <string name="toast_SlideLeftRight_animation">Gleite von links nach rechts</string>
+    <string name="toast_SlideRightLeft_animation">Gleite von rechts nach links</string>
+
+    <!-- Power menu Animations  -->
+    <string name="power_menu_animation_title">Ein/Aus-Menü Animation</string>
+    <string name="power_menu_animation_summary">Wechselt die Animation beim Aufruf/Verlassen des Ein/Aus-Menüs.</string>
+    <string name="power_menu_animation_dialog_title">Animation für Ein/Aus-Menü wählen</string>
+    <string name="power_menu_animation_aosp">AOSP (Standard)</string>
+    <string name="power_menu_animation_bottom">Unten</string>
+    <string name="power_menu_animation_top">Oben</string>
+
+</resources>
