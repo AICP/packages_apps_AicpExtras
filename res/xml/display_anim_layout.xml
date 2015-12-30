@@ -43,6 +43,11 @@
         android:summary="@string/power_menu_animation_summary"
         android:persistent="false" />
 
+   <Preference
+        android:key="ime_animations"
+        android:title="@string/ime_animation_title"
+        android:summary="@string/ime_animation_summary" />
+
    <ListPreference
         android:key="lcd_density"
         android:title="@string/lcd_density"
