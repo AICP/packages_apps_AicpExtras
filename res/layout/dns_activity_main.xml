@@ -1,0 +1,130 @@
+<!--
+  ~ Copyright (c) 2014 Bruno Parmentier. This file is part of DNSSetter.
+  ~
+  ~ DNSSetter is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ DNSSetter is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with DNSSetter.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:id="@+id/dns1layout" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+		android:text="@string/dns1"
+                android:id="@+id/dns1label" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editdns1"
+                android:imeOptions="actionNext" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dns2layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_below="@id/dns1layout">
+
+            <TextView
+                android:id="@+id/dns2label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+		android:text="@string/dns2" />
+
+            <EditText
+                android:id="@+id/editdns2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/applydns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+	    android:text="@string/dns_apply"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/dns2layout"/>
+
+        <TextView
+            android:id="@+id/currentconfiglabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+	    android:text="@string/dns_config"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/applydns" />
+
+        <TextView
+            android:id="@+id/currentdns1label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:text="@string/dns1"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/currentconfiglabel" />
+
+        <TextView
+            android:id="@+id/currentdns1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_alignBottom="@id/currentdns1label"
+            android:layout_toRightOf="@id/currentdns1label"/>
+
+        <TextView
+            android:id="@+id/currentdns2label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:text="@string/dns2"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/currentdns1label" />
+
+        <TextView
+            android:id="@+id/currentdns2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_alignBottom="@id/currentdns2label"
+            android:layout_toRightOf="@id/currentdns2label" />
+
+    </RelativeLayout>
+</RelativeLayout>

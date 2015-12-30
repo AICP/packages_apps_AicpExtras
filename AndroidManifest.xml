@@ -66,6 +66,12 @@
 	    android:theme="@style/FragmentTheme"
 	    android:excludeFromRecents="true">
 	</activity>
+	<activity
+	    android:name=".aicpextras.DNSChanger"
+	    android:label="@string/dns_changer"
+	    android:theme="@style/FragmentTheme"
+	    android:excludeFromRecents="true">
+	</activity>
         <activity
             android:name=".aicpextras.CarrierLabel"
             android:label="@string/carrier_options"
