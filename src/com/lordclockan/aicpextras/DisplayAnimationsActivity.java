@@ -57,11 +57,15 @@ public class DisplayAnimationsActivity extends Fragment {
         private static final String PREF_AOKP_ANIMATION = "aokp_animation";
         private static final String KEY_TOAST_ANIMATION = "toast_animation";
         private static final String POWER_MENU_ANIMATIONS = "power_menu_animations";
+        private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
+        private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
 
         private ListPreference mLcdDensityPreference;
         private Preference mAokpAnimation;
         private ListPreference mToastAnimation;
         private ListPreference mPowerMenuAnimations;
+        private ListPreference mListViewAnimation;
+        private ListPreference mListViewInterpolator;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -129,6 +133,22 @@ public class DisplayAnimationsActivity extends Fragment {
             mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
             mPowerMenuAnimations.setOnPreferenceChangeListener(this);
 
+            // ListView Animations
+            mListViewAnimation = (ListPreference) prefSet.findPreference(KEY_LISTVIEW_ANIMATION);
+            int listviewanimation = Settings.System.getInt(resolver,
+                    Settings.System.LISTVIEW_ANIMATION, 0);
+            mListViewAnimation.setValue(String.valueOf(listviewanimation));
+            mListViewAnimation.setSummary(mListViewAnimation.getEntry());
+            mListViewAnimation.setOnPreferenceChangeListener(this);
+
+            mListViewInterpolator = (ListPreference) prefSet.findPreference(KEY_LISTVIEW_INTERPOLATOR);
+            int listviewinterpolator = Settings.System.getInt(resolver,
+                    Settings.System.LISTVIEW_INTERPOLATOR, 0);
+            mListViewInterpolator.setValue(String.valueOf(listviewinterpolator));
+            mListViewInterpolator.setSummary(mListViewInterpolator.getEntry());
+            mListViewInterpolator.setOnPreferenceChangeListener(this);
+            mListViewInterpolator.setEnabled(listviewanimation > 0);
+
         }
 
         @Override
@@ -152,6 +172,19 @@ public class DisplayAnimationsActivity extends Fragment {
                         Integer.valueOf((String) newValue));
                 mPowerMenuAnimations.setValue(String.valueOf(newValue));
                 mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
+            } else if (preference == mListViewAnimation) {
+                int value = Integer.parseInt((String) newValue);
+                int index = mListViewAnimation.findIndexOfValue((String) newValue);
+                Settings.System.putInt(resolver,
+                        Settings.System.LISTVIEW_ANIMATION, value);
+                mListViewAnimation.setSummary(mListViewAnimation.getEntries()[index]);
+                mListViewInterpolator.setEnabled(value > 0);
+            } else if (preference == mListViewInterpolator) {
+                int value = Integer.parseInt((String) newValue);
+                int index = mListViewInterpolator.findIndexOfValue((String) newValue);
+                Settings.System.putInt(resolver,
+                        Settings.System.LISTVIEW_INTERPOLATOR, value);
+                mListViewInterpolator.setSummary(mListViewInterpolator.getEntries()[index]);
             }
             return true;
         }
