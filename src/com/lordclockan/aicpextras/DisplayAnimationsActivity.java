@@ -59,6 +59,7 @@ public class DisplayAnimationsActivity extends Fragment {
         private static final String POWER_MENU_ANIMATIONS = "power_menu_animations";
         private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
         private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
+        private static final String PREF_IME_ANIMATIONS = "ime_animations";
 
         private ListPreference mLcdDensityPreference;
         private Preference mAokpAnimation;
@@ -66,6 +67,7 @@ public class DisplayAnimationsActivity extends Fragment {
         private ListPreference mPowerMenuAnimations;
         private ListPreference mListViewAnimation;
         private ListPreference mListViewInterpolator;
+        private Preference mImeAnimations;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -117,6 +119,8 @@ public class DisplayAnimationsActivity extends Fragment {
             }
 
             mAokpAnimation = prefSet.findPreference(PREF_AOKP_ANIMATION);
+
+            mImeAnimations = prefSet.findPreference(PREF_IME_ANIMATIONS);
 
             // Toast Animations
             mToastAnimation = (ListPreference) prefSet.findPreference(KEY_TOAST_ANIMATION);
@@ -193,6 +197,9 @@ public class DisplayAnimationsActivity extends Fragment {
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
             if (preference == mAokpAnimation) {
                 Intent intent = new Intent(getActivity(), AnimationControls.class);
+                getActivity().startActivity(intent);
+            } else if (preference == mImeAnimations) {
+                Intent intent = new Intent(getActivity(), KeyboardAnimationInterfaceSettings.class);
                 getActivity().startActivity(intent);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
