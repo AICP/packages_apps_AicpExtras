@@ -124,6 +124,11 @@
             android:theme="@style/FragmentTheme">
         </activity>
         <activity
+            android:name=".aicpextras.KeyboardAnimationInterfaceSettings"
+            android:label="@string/ime_animation_title"
+            android:theme="@style/FragmentTheme">
+        </activity>
+        <activity
             android:name=".aicpextras.HiddenAnimActivity"
             android:label="@string/hidden_anim_activity_title"
             android:theme="@style/FragmentTheme"
