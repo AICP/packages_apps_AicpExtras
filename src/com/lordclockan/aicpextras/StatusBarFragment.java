@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.os.UserHandle;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
@@ -39,12 +41,14 @@ public class StatusBarFragment extends Fragment {
         private String PREF_BATTERY_BAR = "batterybar";
         private String PREF_STATUSBAR_WEATHER = "statusbar_weather";
         private static final String KEY_AICP_LOGO_COLOR = "status_bar_aicp_logo_color";
+        private static final String KEY_AICP_LOGO_STYLE = "status_bar_aicp_logo_style";
 
         private Preference mTraffic;
         private Preference mCarrierLabel;
         private Preference mBatteryBar;
         private Preference mStatusbarWeather;
         private ColorPickerPreference mAicpLogoColor;
+        private ListPreference mAicpLogoStyle;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -60,6 +64,14 @@ public class StatusBarFragment extends Fragment {
             mCarrierLabel = prefSet.findPreference(PREF_CARRIE_LABEL);
             mBatteryBar = prefSet.findPreference(PREF_BATTERY_BAR);
             mStatusbarWeather = prefSet.findPreference(PREF_STATUSBAR_WEATHER);
+
+            mAicpLogoStyle = (ListPreference) findPreference(KEY_AICP_LOGO_STYLE);
+            int aicpLogoStyle = Settings.System.getIntForUser(resolver,
+                    Settings.System.STATUS_BAR_AICP_LOGO_STYLE, 0,
+                    UserHandle.USER_CURRENT);
+            mAicpLogoStyle.setValue(String.valueOf(aicpLogoStyle));
+            mAicpLogoStyle.setSummary(mAicpLogoStyle.getEntry());
+            mAicpLogoStyle.setOnPreferenceChangeListener(this);
 
             // Aicp logo color
             mAicpLogoColor =
@@ -103,6 +115,15 @@ public class StatusBarFragment extends Fragment {
                 int intHex = ColorPickerPreference.convertToColorInt(hex);
                 Settings.System.putInt(resolver,
                         Settings.System.STATUS_BAR_AICP_LOGO_COLOR, intHex);
+                return true;
+            } else if (preference == mAicpLogoStyle) {
+                int aicpLogoStyle = Integer.valueOf((String) newValue);
+                int index = mAicpLogoStyle.findIndexOfValue((String) newValue);
+                Settings.System.putIntForUser(
+                        resolver, Settings.System.STATUS_BAR_AICP_LOGO_STYLE, aicpLogoStyle,
+                        UserHandle.USER_CURRENT);
+                mAicpLogoStyle.setSummary(
+                        mAicpLogoStyle.getEntries()[index]);
                 return true;
             }
             return false;
