@@ -45,5 +45,11 @@
         android:summaryOff="@string/recents_fullscreen_summary_disabled"
         android:defaultValue="false" />
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="systemui_recents_mem_display"
+        android:title="@string/recents_show_membar_title"
+        android:summary="@string/recents_show_membar_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
 
