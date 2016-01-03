@@ -38,6 +38,12 @@
         android:defaultValue="true"
         android:dependency="show_clear_all_recents" />
 
+    <!-- Search in Recents -->
+    <com.lordclockan.aicpextras.preferences.CMSystemSettingSwitchPreference
+        android:key="recents_show_search_bar"
+        android:title="@string/recents_show_searchbar"
+        android:defaultValue="true" />
+
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="recents_full_screen"
         android:title="@string/recents_show_fullscreen"
