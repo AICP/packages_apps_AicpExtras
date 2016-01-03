@@ -46,6 +46,13 @@
         android:defaultValue="false" />
 
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="recents_full_screen_clock"
+        android:title="@string/recents_full_screen_clock_title"
+        android:summary="@string/recents_full_screen_clock_summary"
+        android:defaultValue="false"
+        android:dependency="recents_full_screen" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="systemui_recents_mem_display"
         android:title="@string/recents_show_membar_title"
         android:summary="@string/recents_show_membar_summary"
