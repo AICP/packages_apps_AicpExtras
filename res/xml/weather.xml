@@ -35,12 +35,6 @@
             android:summary="@string/weather_show_location_summary"
             android:dependency="weather_lockscreen_show" />
 
-        <SwitchPreference
-            android:key="weather_show_timestamp"
-            android:title="@string/weather_show_timestamp_title"
-            android:summary="@string/weather_show_timestamp_summary"
-            android:dependency="weather_lockscreen_show" />
-
         <ListPreference
             android:key="weather_condition_icon"
             android:title="@string/weather_condition_icon_title"
