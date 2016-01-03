@@ -10,7 +10,7 @@
     <string name="second_layout_title">Zweites Layout</string>
     <string name="third_layout_title">Drittes Layout</string>
     <string name="aicp_extras_title">AICP Extras</string>
-    <string name="pun_title">One rom to rule them all</string>
+    <string name="pun_title">One ROM to rule them all</string>
     <string name="various_shit_title">Verschiedenes</string>
     <string name="about_title">Über</string>
     <string name="other_title">Sonstiges</string>
@@ -38,7 +38,7 @@
     <string name="hidden_anim_more_nice">SCHÖN</string>
     <string name="continue_title">Weiter</string>
 
-    <string name="nothing_title">Hier gibt es noch nichts zu sehen, geh weiter.</string>
+    <string name="nothing_title">Hier gibt es noch nichts zu sehen, also weiter.</string>
 
     <!-- Switch On/Off  -->
     <string name="switch_on_text">An</string>
@@ -60,7 +60,7 @@
     <string name="recents_clear_all_location_bottom_left">Unten links</string>
     <string name="recents_clear_all_location_bottom_center">Unten mittig</string>
     <string name="recents_clear_all_dismiss_all_title">Lösche alle laufenden Anwendungen</string>
-    <string name="recents_clear_all_dismiss_all_summary">Lösche auch Anwendung im Vordergrund, wenn alle gelöscht werden.</string>
+    <string name="recents_clear_all_dismiss_all_summary">Lösche auch die Anwendung im Vordergrund, wenn alle gelöscht werden.</string>
 
     <!-- Change Log -->
     <string name="changelog_title">Änderungsprotokoll</string>
@@ -227,12 +227,6 @@
     <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
     <string name="ga_gestures_error_loading">Konnte %s nicht laden. Stellen Sie sicher, dass genug Speicher vorhanden ist.</string>
     <string name="trigger_category">Auslösebereich</string>
-    <string name="trigger_width_title">Breite des Auslösers</string>
-    <string name="trigger_width_summary">Breite des Auslösebereichs einstellen</string>
-    <string name="trigger_top_title">Position des Auslösers</string>
-    <string name="trigger_top_summary">Stelle die vertikale Position ein</string>
-    <string name="trigger_bottom_title">Höhe des Auslösers</string>
-    <string name="trigger_bottom_summary">Höhe des Auslösebereichs einstellen</string>
     <string name="picker_activities">Aktivitäten</string>
     <string name="select_custom_app_title">Wähle eine App</string>
     <string name="select_custom_activity_title">Wähle eine Aktivität</string>
@@ -291,10 +285,26 @@
     <string name="weather_condition_icon_vclouds_title">VClouds</string>
     <string name="weather_colorize_all_icons_title">Alle Icons einfärben</string>
     <string name="weather_colorize_all_icons_summary">Einschalten um alle Icons farbig darzustellen, Ausschalten um nur einfarbige Icons einzufärben</string>
+    <string name="weather_hide_panel_title">Wetteranzeige ausblenden</string>
+    <string name="weather_hide_panel_dlg_title">Wähle, wann die Anzeige ausgeblendet werden soll</string>
+    <string name="weather_hide_panel_auto_title">Automatisch</string>
+    <string name="weather_hide_panel_custom_title">Eigene Vorgabe</string>
+    <string name="weather_hide_panel_never_title">Niemals</string>
+    <string name="weather_hide_panel_auto_summary">Die Wetteranzeige wird ausgeblendet, wenn die max. Anzahl von Benachrichtigungen auf dem Sperrbildschirm erreicht wird</string>
+    <string name="weather_hide_panel_custom_summary">Die Wetteranzeige wird ausgeblendet, wenn die gewählte Anzahl von Benachrichtigungen (%s) erreicht wird</string>
+    <string name="weather_hide_panel_never_summary">Die Wetteranzeige wird nicht ausgeblendet</string>
+    <string name="weather_number_of_notifications_title">Anzahl der Benachrichtigungen</string>
+    <string name="weather_number_of_notifications_dlg_title">Wähle die Anzahl von Benachrichtigungen, bevor die Wetteranzeige ausgeblendet wird</string>
+    <string name="weather_number_of_notifications_always_title">Immer</string>
+    <string name="weather_number_of_notifications_two_title">2</string>
+    <string name="weather_number_of_notifications_three_title">3</string>
+    <string name="weather_number_of_notifications_four_title">4</string>
+    <string name="weather_number_of_notifications_five_title">5</string>
+    <string name="weather_number_of_notifications_six_title">6</string>
     <string name="colors_title">Farben</string>
     <string name="icons_title">Icons</string>
     <string name="text_title">Text</string>
-    <string name="reset">Rücksetzen</string>
+    <string name="reset">Zurücksetzen</string>
     <string name="reset_lockscreen_weather">OK</string>
     <string name="reset_values_message">Werte zurücksetzen?</string>
     <string name="weather_reset_title">Wetterwerte zurücksetzen</string>
@@ -304,7 +314,7 @@
     <string name="lockscreen_see_through_summary">Eintrübung und Anzeige des Inhalts hinter dem Sperrbildschirm.</string>
     <string name="lockscreen_blur_radius">Intensität der Trübung</string>
 
-    <!-- Notificatio drawer weather -->
+    <!-- Notification drawer weather -->
     <string name="notif_drawer_weather_title">Wetter</string>
     <string name="notif_drawer_weather_summary">Anzeige von Wetter-Infos über den Schnelleinstellungen umschalten</string>
 
@@ -396,7 +406,7 @@
     <string name="double_tap_sleep_anywhere_summary">Zweimal auf das Display tippen, um das Gerät in den Ruhezustand zu versetzen</string>
 
     <!-- PA Pie control -->
-    <string name="pa_piecontrol_settings_summary">Anpassung von PA Pie 2.0 Zielen, Stil, Größe und Farbe</string>
+    <string name="pa_piecontrol_settings_summary">Anpassung von PA Pie 3.0 Zielen, Stil, Größe und Farbe</string>
     <string name="pa_pie_control_title">PIE Displaynavigation</string>
     <string name="pa_pie_control_enable_title">Schaltet die PIE Displaynavigation ein</string>
     <string name="pa_pie_always_right_title">PIE am rechten Displayrand</string>
@@ -556,5 +566,97 @@
     <string name="power_menu_animation_aosp">AOSP (Standard)</string>
     <string name="power_menu_animation_bottom">Unten</string>
     <string name="power_menu_animation_top">Oben</string>
+    <string name="power_menu_animation_rotate">Rotation</string>
+
+    <!-- Statusbar AICP logo -->
+    <string name="status_bar_logo_category_title">Statusleisten-Logo</string>
+    <string name="status_bar_aicp_logo_title">AICP Logo</string>
+    <string name="status_bar_aicp_logo_summary">Aktivieren, um das AICP Logo in der Statusleiste anzuzeigen</string>
+    <string name="status_bar_aicp_logo_color">Farbe des AICP Logos</string>
+    <string name="status_bar_aicp_logo_position">Logo Position</string>
+    <string name="status_bar_aicp_logo_position_summary">Wähle auf welcher Seite das Logo angezeigt wird, rechts oder links</string>
+    <string name="status_bar_logo_position_right">Rechts</string>
+    <string name="status_bar_logo_position_left">Links</string>
+
+    <!-- ListView animation -->
+    <string name="interface_settings_animation_title">Optionen für Animationen</string>
+    <string name="listview_animation_title">Animation der Listenansicht</string>
+    <string name="listview_off">Standard</string>
+    <string name="listview_wave_left">Wischen (links)</string>
+    <string name="listview_wave_right">Wischen (rechts)</string>
+    <string name="listview_alpha">Transparenz</string>
+    <string name="listview_scale">Skalierung</string>
+    <string name="listview_stack_top">Stapel (oben)</string>
+    <string name="listview_stack_bottom">Stapel (unten)</string>
+    <string name="listview_unfold">Aufklappen</string>
+    <string name="listview_fold">Zuklappen</string>
+    <string name="listview_translate_left">Versatz (links)</string>
+    <string name="listview_translate_right">Versatz (rechts)</string>
+
+    <!-- ListView interpolator -->
+    <string name="listview_interpolator_title">Interpolation der Listenansicht</string>
+    <string name="listview_accelerate_interpolator">Beschleunigen</string>
+    <string name="listview_decelerate_interpolator">Verlangsamen</string>
+    <string name="listview_accelerate_decelerate_interpolator">Beschleunigen und verlangsamen</string>
+    <string name="listview_anticipate_interpolator">Vorgreifen</string>
+    <string name="listview_overshoot_interpolator">Überschwingen</string>
+    <string name="listview_anticipate_overshoot_interpolator">Vorgreifen und überschwingen</string>
+    <string name="listview_bounce_interpolator">Hüpfen</string>
+
+    <!-- IME animations -->
+    <string name="ime_animation_title">IME Animationen</string>
+    <string name="ime_animation_summary">Lege eine andere Animation für die System-Tastatur fest</string>
+    <string name="animation_settings_reset_message">Animation auf Standard zurücksetzen?</string>
+    <string name="animation_default">Standard</string>
+    <string name="animation_fade">Verblassen</string>
+    <string name="animation_slide_right">von rechts hereingleiten</string>
+    <string name="animation_slide_left">von links hereingleiten</string>
+    <string name="animation_slide_right_no_fade">von rechts hereingleiten (ohne verblassen)</string>
+    <string name="animation_slide_left_no_fade">von links hereingleiten (ohne verblassen)</string>
+    <string name="animation_slide_up">von unten hereingleiten</string>
+    <string name="animation_slide_down">von oben hereingleiten</string>
+    <string name="animation_translucent">Transparent</string>
+    <string name="animation_grow_shrink">Hereinzoomen (von oben)</string>
+    <string name="animation_grow_shrink_center">Hereinzoomen (aus der Mitte)</string>
+    <string name="animation_grow_shrink_bottom">Hereinzoomen (von unten)</string>
+    <string name="animation_grow_shrink_left">Hereinzoomen (von links)</string>
+    <string name="animation_grow_shrink_right">Hereinzoomen (von rechts)</string>
+    <string name="animation_random">Zufällig</string>
+    <string name="ime_animation_test_title">Teste IME Animation</string>
+    <string name="ime_enter_animation_title">Animation beim Auftauchen</string>
+    <string name="ime_exit_animation_title">Animation beim Verlassen</string>
+    <string name="ime_interpolator_title">Interpolation</string>
+    <string name="ime_duration_title">Dauer der Animation</string>
+    <string name="animation_duration_summary">Setze Dauer</string>
+
+    <!-- Launch music player when headset is connected -->
+    <string name="headset_connect_player_title">Starte Musik App</string>
+    <string name="headset_connect_player_summary">Starte die voreingestellte Musik App, wenn ein Kopfhörer angeschlossen ist</string>
+
+    <!-- Recent panel -->
+    <string name="recent_panel_category">Slim Recents</string>
+    <string name="use_slim_recents_title">Slim Anwendungsverlauf</string>
+    <string name="show_running_tasks_title">Zeige nur laufende Apps</string>
+    <string name="recents_max_apps_title">max. zulässige Anzahl Apps</string>
+    <string name="recent_panel_scale_title">Größe</string>
+    <string name="recent_panel_expanded_mode_title">Erweiterter Modus</string>
+    <string name="recent_panel_expanded_mode_summary">Erweiterter Vorschaumodus des Verlaufs</string>
+    <string name="recent_panel_expanded_mode_auto">Auto (Standard)</string>
+    <string name="recent_panel_expanded_mode_always">Immer</string>
+    <string name="recent_panel_expanded_mode_never">Niemals</string>
+    <string name="recent_panel_show_topmost_title">Zeige aktuelle App</string>
+    <string name="recent_panel_show_topmost_summary">Aktuelle App nicht von der Verlaufsanzeige ausschließen</string>
+    <string name="recent_panel_bg_color_title">Hintergrundfarbe des Paneels</string>
+    <string name="recent_card_bg_color_title">Hintergrundfarbe der Karten</string>
+    <string name="recent_card_text_color_title">Textfarbe der Karten</string>
+    <string name="recent_reset_value_title">Werte zurücksetzen</string>
+
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Anzeige auf der linken Seite</string>
+    <string name="recent_panel_lefty_mode_summary">Zeige das Paneel des App-Verlaufs auf der linken Seite</string>
+
+    <!-- Membar recents -->
+    <string name="recents_show_membar_title">Arbeitsspeicheranzeige</string>
+    <string name="recents_show_membar_summary">Zeige eine Leiste mit dem verfügbaren Arbeitsspeicher des Geräts</string>
 
 </resources>
