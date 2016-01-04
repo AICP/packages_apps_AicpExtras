@@ -1,8 +1,5 @@
 package com.lordclockan.aicpextras;
 
-import java.io.IOException;
-import java.io.InputStream;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -22,24 +19,19 @@ import com.lordclockan.R;
 import com.lordclockan.aicpextras.utils.GifWebView;
 
 public class HiddenAnimActivity extends Activity {
-    /** Called when the activity is first created. */
+
+    private GifWebView gifView;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.animgif_layout);
 
-        InputStream stream = null;
-        try {
-            stream = getAssets().open("yoga.gif");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        GifWebView view = new GifWebView(this, "file:///android_asset/yoga.gif");
-
-        setContentView(view);
+        gifView = (GifWebView) findViewById(R.id.gif_view);
+        gifView.setGifAssetPath("file:///android_asset/yoga.gif");
 
         Snackbar snackbar = Snackbar
-                .make(view, R.string.hidden_anim_activity_title, Snackbar.LENGTH_LONG)
+                .make(gifView, R.string.hidden_anim_activity_title, Snackbar.LENGTH_LONG)
                 .setAction(R.string.hidden_anim_more_title, new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
