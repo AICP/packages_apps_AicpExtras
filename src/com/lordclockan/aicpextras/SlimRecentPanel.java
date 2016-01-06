@@ -18,6 +18,7 @@ package com.lordclockan.aicpextras;
 
 import android.app.ActivityManager;
 import android.content.ContentResolver;
+import android.content.Intent;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
@@ -75,6 +76,7 @@ public class SlimRecentPanel extends AppCompatActivity {
         private static final String RECENT_CARD_TEXT_COLOR =
                 "recent_card_text_color";
         private static final String RECENTS_RESET_VALUE = "recent_reset_value";
+        private static final String RECENT_APP_SIDEBAR = "recent_app_sidebar_content";
 
         private SwitchPreference mUseSlimRecents;
         private SwitchPreference mShowRunningTasks;
@@ -87,6 +89,13 @@ public class SlimRecentPanel extends AppCompatActivity {
         private ColorPickerPreference mRecentCardBgColor;
         private ColorPickerPreference mRecentCardTextColor;
         private Preference mRecentsResetValue;
+        private Preference mRecentAppSidebar;
+
+        // Package name of the SystemUI tuner
+        public static final String AICPSETTINGS_PACKAGE_NAME = "com.android.settings";
+        // Intent for launching the SystemUI tuner actvity
+        public static Intent INTENT_AICPSETTINGS_SETTINGS = new Intent(Intent.ACTION_MAIN)
+                .setClassName(AICPSETTINGS_PACKAGE_NAME, AICPSETTINGS_PACKAGE_NAME + ".Settings$AicpSettingsExternalActivity");
 
         private static final int DEFAULT_BACKGROUND_COLOR = 0x00ffffff;
 
@@ -182,6 +191,8 @@ public class SlimRecentPanel extends AppCompatActivity {
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
             if (preference == mRecentsResetValue) {
                 resetValues();
+            } else if (preference == mRecentAppSidebar) {
+                getActivity().startActivity(INTENT_AICPSETTINGS_SETTINGS);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
@@ -310,6 +321,8 @@ public class SlimRecentPanel extends AppCompatActivity {
             mRecentPanelExpandedMode.setOnPreferenceChangeListener(this);
 
             mRecentsResetValue = findPreference(RECENTS_RESET_VALUE);
+
+            mRecentAppSidebar = findPreference(RECENT_APP_SIDEBAR);
         }
 
     }
