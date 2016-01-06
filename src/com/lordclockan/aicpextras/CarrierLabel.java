@@ -61,6 +61,7 @@ public class CarrierLabel extends AppCompatActivity {
         private static final String CUSTOM_CARRIER_LABEL = "custom_carrier_label";
         private static final String STATUS_BAR_CARRIER_FONT_SIZE = "status_bar_carrier_font_size";
         private static final String STATUS_BAR_CARRIER_COLOR = "status_bar_carrier_color";
+        private static final String STATUS_BAR_CARRIER_SPOT = "status_bar_carrier_spot";
 
         static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
 
@@ -70,6 +71,7 @@ public class CarrierLabel extends AppCompatActivity {
         private String mCustomCarrierLabelText;
         private SeekBarPreferenceCham mStatusBarCarrierSize;
         private ColorPickerPreference mCarrierColorPicker;
+        private ListPreference mStatusBarCarrierSpot;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -110,6 +112,14 @@ public class CarrierLabel extends AppCompatActivity {
             mCarrierColorPicker.setSummary(hexColor);
             mCarrierColorPicker.setNewPreviewColor(intColor);
 
+            mStatusBarCarrierSpot =
+                    (ListPreference) findPreference(SHOW_CARRIER_LABEL);
+            int statusBarCarrierSpot = Settings.System.getIntForUser(resolver,
+                    Settings.System.STATUS_BAR_SHOW_CARRIER, 1, UserHandle.USER_CURRENT);
+            mStatusBarCarrierSpot.setValue(String.valueOf(statusBarCarrierSpot));
+            mStatusBarCarrierSpot.setSummary(mStatusBarCarrierSpot.getEntry());
+            mStatusBarCarrierSpot.setOnPreferenceChangeListener(this);
+
         }
 
         private void updateCustomLabelTextSummary() {
@@ -144,6 +154,13 @@ public class CarrierLabel extends AppCompatActivity {
                 int width = ((Integer) newValue).intValue();
                 Settings.System.putInt(resolver,
                         Settings.System.STATUS_BAR_CARRIER_FONT_SIZE, width);
+                return true;
+            } else if (preference == mStatusBarCarrierSpot) {
+                int statusBarCarrierSpot = Integer.valueOf((String) newValue);
+                int index = mStatusBarCarrierSpot.findIndexOfValue((String) newValue);
+                Settings.System.putIntForUser(resolver, Settings.System.
+                        STATUS_BAR_CARRIER_SPOT, statusBarCarrierSpot, UserHandle.USER_CURRENT);
+                mStatusBarCarrierSpot.setSummary(mStatusBarCarrierSpot.getEntries()[index]);
                 return true;
             }
             return false;
