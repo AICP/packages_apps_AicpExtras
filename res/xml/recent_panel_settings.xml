@@ -31,6 +31,11 @@
             android:key="max_apps"
             android:title="@string/recents_max_apps_title" />
 
+        <Preference
+            android:dependency="use_slim_recents"
+            android:key="recent_app_sidebar_content"
+            android:title="@string/recent_app_sidebar_title" />
+
         <ListPreference
             android:dependency="use_slim_recents"
             android:key="recent_panel_expanded_mode"
