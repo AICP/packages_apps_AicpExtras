@@ -309,6 +309,25 @@
     <string name="reset_values_message">Werte zurücksetzen?</string>
     <string name="weather_reset_title">Wetterwerte zurücksetzen</string>
 
+    <!-- Lock Clock Fonts -->
+    <string name="lock_clock_font_title">Lock Clock Fonts</string>
+    <string name="lock_clock_font_summary">Change the default font of the lockscreen clock widget</string>
+    <string name="lock_clock_font_dialog_title">Select lock clock font</string>
+    <string name="lock_clock_font_stock">Normal (Standard)</string>
+    <string name="lock_clock_font_bold">Fett</string>
+    <string name="lock_clock_font_italic">Kursiv</string>
+    <string name="lock_clock_font_bold_italic">Fett &amp; kursiv</string>
+    <string name="lock_clock_font_light">Leicht</string>
+    <string name="lock_clock_font_light_italic">Leicht &amp; kursiv</string>
+    <string name="lock_clock_font_thin">Dünn</string>
+    <string name="lock_clock_font_thin_italic">Dünn &amp; kursiv</string>
+    <string name="lock_clock_font_condensed_normal">Gestaucht</string>
+    <string name="lock_clock_font_condensed_italic">Gestaucht &amp; kursiv</string>
+    <string name="lock_clock_font_condensed_bold">Gestaucht &amp; fett</string>
+    <string name="lock_clock_font_condensed_bold_italic">Gestaucht, fett, kursiv</string>
+    <string name="lock_clock_font_medium_normal">Mittel</string>
+    <string name="lock_clock_font_medium_italic">Mittel &amp; kursiv</string>
+
     <!-- Lockscreen see through -->
     <string name="lockscreen_see_through_title">Sperrbildschirm-Trübung</string>
     <string name="lockscreen_see_through_summary">Eintrübung und Anzeige des Inhalts hinter dem Sperrbildschirm.</string>
@@ -616,11 +635,11 @@
     <string name="animation_slide_up">von unten hereingleiten</string>
     <string name="animation_slide_down">von oben hereingleiten</string>
     <string name="animation_translucent">Transparent</string>
-    <string name="animation_grow_shrink">Hereinzoomen (von oben)</string>
-    <string name="animation_grow_shrink_center">Hereinzoomen (aus der Mitte)</string>
-    <string name="animation_grow_shrink_bottom">Hereinzoomen (von unten)</string>
-    <string name="animation_grow_shrink_left">Hereinzoomen (von links)</string>
-    <string name="animation_grow_shrink_right">Hereinzoomen (von rechts)</string>
+    <string name="animation_grow_shrink">Zoom-in (von oben)</string>
+    <string name="animation_grow_shrink_center">Zoom-in (aus der Mitte)</string>
+    <string name="animation_grow_shrink_bottom">Zoom-in (von unten)</string>
+    <string name="animation_grow_shrink_left">Zoom-in (von links)</string>
+    <string name="animation_grow_shrink_right">Zoom-in (von rechts)</string>
     <string name="animation_random">Zufällig</string>
     <string name="ime_animation_test_title">Teste IME Animation</string>
     <string name="ime_enter_animation_title">Animation beim Auftauchen</string>
@@ -634,8 +653,8 @@
     <string name="headset_connect_player_summary">Starte die voreingestellte Musik App, wenn ein Kopfhörer angeschlossen ist</string>
 
     <!-- Recent panel -->
-    <string name="recent_panel_category">Slim Recents</string>
-    <string name="use_slim_recents_title">Slim Anwendungsverlauf</string>
+    <string name="recent_panel_category">Slim Anwendungsverlauf</string>
+    <string name="use_slim_recents_title">Slim Verlauf</string>
     <string name="show_running_tasks_title">Zeige nur laufende Apps</string>
     <string name="recents_max_apps_title">max. zulässige Anzahl Apps</string>
     <string name="recent_panel_scale_title">Größe</string>
@@ -650,6 +669,7 @@
     <string name="recent_card_bg_color_title">Hintergrundfarbe der Karten</string>
     <string name="recent_card_text_color_title">Textfarbe der Karten</string>
     <string name="recent_reset_value_title">Werte zurücksetzen</string>
+    <string name="recent_app_sidebar_title">App-Seitenleiste</string>
 
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Anzeige auf der linken Seite</string>
@@ -658,5 +678,16 @@
     <!-- Membar recents -->
     <string name="recents_show_membar_title">Arbeitsspeicheranzeige</string>
     <string name="recents_show_membar_summary">Zeige eine Leiste mit dem verfügbaren Arbeitsspeicher des Geräts</string>
+
+    <!-- Show/Hide Search Bar -->
+    <string name="recents_show_searchbar">Zeige Suchleiste im Anwendungsverlauf</string>
+    <string name="keywords_recents_show_searchbar">verlauf aktivieren deaktivieren zeigen verstecken Suchleiste such leiste</string>
+
+    <!-- Screenshot sound -->
+    <string name="screenshot_sound_title">Ton bei Bildschirmfoto</string>
+    <string name="screenshot_sound_summary">Spielt einen Ton ab, wenn ein Bildschirmfoto aufgenommen wird</string>
+
+    <string name="brightness_icon_title">Icon für Helligkeit</string>
+    <string name="brightness_icon_summary">Zeigt ein Symbol für die Helligkeit auf der linken Seite des Helligkeitsreglers, um die Auto-Helligkeit anzupassen</string>
 
 </resources>
