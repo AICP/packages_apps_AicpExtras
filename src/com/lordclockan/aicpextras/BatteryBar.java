@@ -17,6 +17,7 @@
 package com.lordclockan.aicpextras;
 
 import android.content.ContentResolver;
+import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
@@ -51,6 +52,7 @@ public class BatteryBar extends PreferenceActivity
     private AppCompatDelegate mDelegate;
 
     private static final String PREF_BATT_BAR = "battery_bar_list";
+    private static final String PREF_BATT_BAR_NO_NAVBAR = "battery_bar_no_navbar_list";
     private static final String PREF_BATT_BAR_STYLE = "battery_bar_style";
     private static final String PREF_BATT_BAR_COLOR = "battery_bar_color";
     private static final String PREF_BATT_BAR_WIDTH = "battery_bar_thickness";
@@ -59,6 +61,7 @@ public class BatteryBar extends PreferenceActivity
     static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
 
     private ListPreference mBatteryBar;
+    private ListPreference mBatteryBarNoNavbar;
     private ListPreference mBatteryBarStyle;
     private ListPreference mBatteryBarThickness;
     private SwitchPreference mBatteryBarChargingAnimation;
@@ -89,6 +92,11 @@ public class BatteryBar extends PreferenceActivity
         mBatteryBar.setValue((Settings.System.getInt(resolver, Settings.System.STATUSBAR_BATTERY_BAR, 0)) + "");
         mBatteryBar.setSummary(mBatteryBar.getEntry());
 
+        mBatteryBarNoNavbar = (ListPreference) findPreference(PREF_BATT_BAR);
+        mBatteryBarNoNavbar.setOnPreferenceChangeListener(this);
+        mBatteryBarNoNavbar.setValue((Settings.System.getInt(resolver, Settings.System.STATUSBAR_BATTERY_BAR, 0)) + "");
+        mBatteryBarNoNavbar.setSummary(mBatteryBarNoNavbar.getEntry());
+
         mBatteryBarStyle = (ListPreference) findPreference(PREF_BATT_BAR_STYLE);
         mBatteryBarStyle.setOnPreferenceChangeListener(this);
         mBatteryBarStyle.setValue((Settings.System.getInt(resolver,
@@ -111,6 +119,18 @@ public class BatteryBar extends PreferenceActivity
         mBatteryBarThickness.setValue((Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_BATTERY_BAR_THICKNESS, 1)) + "");
         mBatteryBarThickness.setSummary(mBatteryBarThickness.getEntry());
+
+        boolean hasNavBarByDefault = getResources().getBoolean(
+                com.android.internal.R.bool.config_showNavigationBar);
+        boolean enableNavigationBar = Settings.System.getInt(resolver,
+                Settings.System.NAVIGATION_BAR_SHOW, hasNavBarByDefault ? 1 : 0) == 1;
+
+        if (hasNavBarByDefault || enableNavigationBar) {
+            prefSet.removePreference(mBatteryBarNoNavbar);
+        } else {
+            prefSet.removePreference(mBatteryBar);
+        }
+
         updateBatteryBarOptions();
 
     }
