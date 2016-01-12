@@ -71,7 +71,8 @@
         </activity>
         <activity
             android:name=".aicpextras.BatteryBar"
-            android:label="@string/battery_bar_title">
+            android:label="@string/battery_bar_title"
+            android:theme="@style/FragmentTheme">
         </activity>
         <activity
             android:name=".aicpextras.GestureAnywhereSettings"
