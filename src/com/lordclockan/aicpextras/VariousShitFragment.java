@@ -53,13 +53,21 @@ public class VariousShitFragment extends Fragment {
         public static Intent INTENT_SYSTEMUITUNER_SETTINGS = new Intent(Intent.ACTION_MAIN)
                 .setClassName(SYSTEMUITUNER_PACKAGE_NAME, SYSTEMUITUNER_PACKAGE_NAME + ".tuner.TunerActivity");
 
+        // Package name of the SystemUI tuner
+        public static final String AICPSETTINGS_PACKAGE_NAME = "com.android.settings";
+        // Intent for launching the SystemUI tuner actvity
+        public static Intent INTENT_AICPSETTINGS_SETTINGS = new Intent(Intent.ACTION_MAIN)
+                .setClassName(AICPSETTINGS_PACKAGE_NAME, AICPSETTINGS_PACKAGE_NAME + ".Settings$AicpSettingsExternalActivity");
+
         private ListPreference mScrollingCachePref;
         private Preference mSystemUITuner;
         private String mTunerFirstRun = "true";
 
         private static final String PREF_SYSTEMAPP_REMOVER = "system_app_remover";
+        private static final String PREF_WAKELOCK_BLOCKER = "wakelock_blocker";
 
         private Preference mSystemappRemover;
+        private Preference mWakelockBlocker;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -80,6 +88,7 @@ public class VariousShitFragment extends Fragment {
 
             mSystemUITuner = prefSet.findPreference(PREF_SYSTEMUI_TUNER);
             mSystemappRemover = prefSet.findPreference(PREF_SYSTEMAPP_REMOVER);
+            mWakelockBlocker = prefSet.findPreference(PREF_WAKELOCK_BLOCKER);
 
             sharedPreferences();
 
@@ -112,6 +121,8 @@ public class VariousShitFragment extends Fragment {
             } else if (preference == mSystemappRemover) {
                 Intent intent = new Intent(getActivity(), SystemappRemover.class);
                 startActivity(intent);
+            } else if (preference == mWakelockBlocker) {
+                getActivity().startActivity(INTENT_AICPSETTINGS_SETTINGS);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
