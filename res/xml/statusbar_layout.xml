@@ -15,6 +15,22 @@
         android:summary="@string/show_headset_icon_summary"
         android:defaultValue="true" />
 
+    <Preference
+        android:key="batterybar"
+        android:title="@string/battery_bar_title" />
+
+    <Preference
+        android:key="carrierlabel"
+        android:title="@string/carrier_options" />
+
+    <Preference
+        android:key="statusbar_weather"
+        android:title="@string/status_bar_temperature_title" />
+
+   <Preference
+        android:key="traffic"
+        android:title="@string/traffic_category" />
+
    <!-- Status bar AICP logo -->
    <PreferenceCategory
            android:title="@string/status_bar_logo_category_title">
@@ -37,21 +53,5 @@
            android:entryValues="@array/status_bar_logo_position_values"
            android:dependency="status_bar_aicp_logo" />
     </PreferenceCategory>
-
-   <Preference
-        android:key="traffic"
-        android:title="@string/traffic_category" />
-
-    <Preference
-        android:key="carrierlabel"
-        android:title="@string/carrier_options" />
-
-    <Preference
-        android:key="batterybar"
-        android:title="@string/battery_bar_title" />
-
-    <Preference
-        android:key="statusbar_weather"
-        android:title="@string/status_bar_temperature_title" />
 
 </PreferenceScreen>
