@@ -38,6 +38,21 @@
         android:defaultValue="true"/>
 
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="disable_immersive_message"
+        android:title="@string/disable_immersive_message_title"
+        android:summary="@string/disable_immersive_message_summary" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="force_expanded_notifications"
+        android:title="@string/force_expanded_notifications_title"
+        android:summary="@string/force_expanded_notifications_summary" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="enable_task_manager"
+        android:title="@string/enable_task_manager_title"
+        android:summary="@string/enable_task_manager_summary" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="status_bar_custom_header"
         android:title="@string/status_bar_custom_header_title"
         android:summary="@string/status_bar_custom_header_summary"
@@ -55,21 +70,6 @@
         android:title="@string/notif_drawer_weather_title"
         android:summary="@string/notif_drawer_weather_summary"
         android:defaultValue="true"/>
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="enable_task_manager"
-        android:title="@string/enable_task_manager_title"
-        android:summary="@string/enable_task_manager_summary" />
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="force_expanded_notifications"
-        android:title="@string/force_expanded_notifications_title"
-        android:summary="@string/force_expanded_notifications_summary" />
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="disable_immersive_message"
-        android:title="@string/disable_immersive_message_title"
-        android:summary="@string/disable_immersive_message_summary" />
 
 </PreferenceScreen>
 
