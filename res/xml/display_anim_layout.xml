@@ -1,26 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <Preference
-        android:key="aokp_animation"
-        android:title="@string/aokp_animation_title"
-        android:summary="@string/aokp_animation_summary" />
-
-    <ListPreference
-        android:key="listview_animation"
-        android:dialogTitle="@string/listview_animation_title"
-        android:title="@string/listview_animation_title"
-        android:entries="@array/listview_animation_entries"
-        android:entryValues="@array/listview_animation_values"
-        android:defaultValue="0" />
-
-    <ListPreference
-        android:key="listview_interpolator"
-        android:dialogTitle="@string/listview_interpolator_title"
-        android:title="@string/listview_interpolator_title"
-        android:entries="@array/listview_interpolator_entries"
-        android:entryValues="@array/listview_interpolator_values"
-        android:defaultValue="0" />
+   <ListPreference
+        android:key="lcd_density"
+        android:title="@string/lcd_density"
+        android:persistent="false" />
 
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="toast_icon"
@@ -48,9 +32,25 @@
         android:title="@string/ime_animation_title"
         android:summary="@string/ime_animation_summary" />
 
-   <ListPreference
-        android:key="lcd_density"
-        android:title="@string/lcd_density"
-        android:persistent="false" />
+    <ListPreference
+        android:key="listview_animation"
+        android:dialogTitle="@string/listview_animation_title"
+        android:title="@string/listview_animation_title"
+        android:entries="@array/listview_animation_entries"
+        android:entryValues="@array/listview_animation_values"
+        android:defaultValue="0" />
+
+    <ListPreference
+        android:key="listview_interpolator"
+        android:dialogTitle="@string/listview_interpolator_title"
+        android:title="@string/listview_interpolator_title"
+        android:entries="@array/listview_interpolator_entries"
+        android:entryValues="@array/listview_interpolator_values"
+        android:defaultValue="0" />
+
+    <Preference
+        android:key="aokp_animation"
+        android:title="@string/aokp_animation_title"
+        android:summary="@string/aokp_animation_summary" />
 
 </PreferenceScreen>
