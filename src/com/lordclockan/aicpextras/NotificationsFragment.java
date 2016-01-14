@@ -19,6 +19,7 @@ import android.support.v4.app.Fragment;
 
 import cyanogenmod.providers.CMSettings;
 
+import org.cyanogenmod.internal.util.CmLockPatternUtils;
 import com.lordclockan.R;
 
 public class NotificationsFragment extends Fragment {
@@ -39,8 +40,13 @@ public class NotificationsFragment extends Fragment {
         }
 
         private static final String PREF_QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
+        private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
 
         private SwitchPreference mBrightnessSlider;
+        private SwitchPreference mBlockOnSecureKeyguard;
+
+        private static final int MY_USER_ID = UserHandle.myUserId();
+
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -53,6 +59,17 @@ public class NotificationsFragment extends Fragment {
             Activity activity = getActivity();
 
             final ContentResolver resolver = getActivity().getContentResolver();
+            final CmLockPatternUtils lockPatternUtils = new CmLockPatternUtils(getActivity());
+
+            // Block QS on secure LockScreen
+            mBlockOnSecureKeyguard = (SwitchPreference) findPreference(PREF_BLOCK_ON_SECURE_KEYGUARD);
+            if (lockPatternUtils.isSecure(MY_USER_ID)) {
+                mBlockOnSecureKeyguard.setChecked(Settings.Secure.getIntForUser(resolver,
+                        Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD, 1, UserHandle.USER_CURRENT) == 1);
+                mBlockOnSecureKeyguard.setOnPreferenceChangeListener(this);
+            } else if (mBlockOnSecureKeyguard != null) {
+                prefSet.removePreference(mBlockOnSecureKeyguard);
+            }
 
             // Brightness slider
             mBrightnessSlider = (SwitchPreference) prefSet.findPreference(PREF_QS_SHOW_BRIGHTNESS_SLIDER);
@@ -75,6 +92,11 @@ public class NotificationsFragment extends Fragment {
                         CMSettings.System.QS_SHOW_BRIGHTNESS_SLIDER, 1,
                         UserHandle.USER_CURRENT);
                 updateBrightnessSliderSummary(brightnessSlider);
+                return true;
+            } else if (preference == mBlockOnSecureKeyguard) {
+                Settings.Secure.putInt(resolver,
+                        Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
+                        (Boolean) newValue ? 1 : 0);
                 return true;
             }
             return false;
