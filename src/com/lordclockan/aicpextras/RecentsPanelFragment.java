@@ -37,9 +37,22 @@ public class RecentsPanelFragment extends Fragment {
         }
 
         private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+        private static final String RECENTS_CLEAR_ALL = "show_clear_all_recents";
+        private static final String RECENTS_CLEAR_ALL_DISMISS_ALL = "recents_clear_all_dismiss_all";
+        private static final String RECENTS_SHOW_SEARCH_BAR = "recents_show_search_bar";
+        private static final String RECENTS_MEM_DISPLAY = "systemui_recents_mem_display";
+        private static final String RECENTS_FULL_SCREEN = "recents_full_screen";
+        private static final String RECENTS_FULL_SCREEN_CLOCK = "recents_full_screen_clock";
+        private static final String RECENTS_FULL_SCREEN_DATE = "recents_full_screen_date";
 
         private SwitchPreference mRecentsClearAll;
         private ListPreference mRecentsClearAllLocation;
+        private SwitchPreference mRecentsClearAllDismissAll;
+        private SwitchPreference mRecentsShowSearchBar;
+        private SwitchPreference mRecentsMemDisplay;
+        private SwitchPreference mRecentsFullScreen;
+        private SwitchPreference mRecentsFullScreenClock;
+        private SwitchPreference mRecentsFullScreenDate;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -59,6 +72,16 @@ public class RecentsPanelFragment extends Fragment {
             mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
             mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
 
+            mRecentsClearAll = (SwitchPreference) prefSet.findPreference(RECENTS_CLEAR_ALL);
+            mRecentsClearAllDismissAll = (SwitchPreference) prefSet.findPreference(RECENTS_CLEAR_ALL_DISMISS_ALL);
+            mRecentsShowSearchBar = (SwitchPreference) prefSet.findPreference(RECENTS_SHOW_SEARCH_BAR);
+            mRecentsMemDisplay = (SwitchPreference) prefSet.findPreference(RECENTS_MEM_DISPLAY);
+            mRecentsFullScreen = (SwitchPreference) prefSet.findPreference(RECENTS_FULL_SCREEN);
+            mRecentsFullScreenClock = (SwitchPreference) prefSet.findPreference(RECENTS_FULL_SCREEN_CLOCK);
+            mRecentsFullScreenDate = (SwitchPreference) prefSet.findPreference(RECENTS_FULL_SCREEN_DATE);
+
+            updateSettingsVisibility();
+
         }
 
         @Override
@@ -73,6 +96,25 @@ public class RecentsPanelFragment extends Fragment {
                 return true;
             }
             return false;
+        }
+
+        private void updateSettingsVisibility() {
+            ContentResolver resolver = getActivity().getContentResolver();
+            if ((Settings.System.getInt(resolver,
+                    Settings.System.RECENTS_USE_OMNISWITCH, 0) == 1) ||
+                    (Settings.System.getInt(resolver,
+                    Settings.System.USE_SLIM_RECENTS, 0) == 1)) {
+                mRecentsClearAllLocation.setEnabled(false);
+                mRecentsClearAll.setEnabled(false);
+                mRecentsClearAllDismissAll.setEnabled(false);
+                mRecentsShowSearchBar.setEnabled(false);
+                mRecentsMemDisplay.setEnabled(false);
+                mRecentsFullScreen.setEnabled(false);
+                mRecentsFullScreenClock.setEnabled(false);
+                mRecentsFullScreenDate.setEnabled(false);
+                Toast.makeText(getActivity(), getString(R.string.stock_recents_disabled),
+                    Toast.LENGTH_LONG).show();
+            }
         }
     }
 }
