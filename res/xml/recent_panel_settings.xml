@@ -23,11 +23,13 @@
             android:defaultValue="false" />
 
         <SwitchPreference
+            android:dependency="use_slim_recents"
             android:key="only_show_running_tasks"
             android:title="@string/show_running_tasks_title"
             android:defaultValue="false" />
 
         <SlimSeekBarPreference
+            android:dependency="use_slim_recents"
             android:key="max_apps"
             android:title="@string/recents_max_apps_title" />
 
@@ -60,6 +62,7 @@
             android:persistent="false" />
 
         <SlimSeekBarPreference
+            android:dependency="use_slim_recents"
             android:key="recent_panel_scale"
             android:title="@string/recent_panel_scale_title" />
 
