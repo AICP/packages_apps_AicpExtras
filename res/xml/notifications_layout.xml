@@ -15,7 +15,7 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:pure="http://schemas.android.com/apk/res-auto" >
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
 
     <SwitchPreference
         android:key="qs_show_brightness_slider"
@@ -29,6 +29,15 @@
         android:summary="@string/brightness_icon_summary"
         android:dependency="qs_show_brightness_slider"
         android:defaultValue="true"/>
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="qs_transparent_shade"
+        android:title="@string/qs_transparent_shade"
+        android:max="255"
+        aicpextras:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight=""
+        android:persistent="false" />
 
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="disable_immersive_message"
