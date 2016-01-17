@@ -3,6 +3,7 @@ package com.lordclockan.aicpextras;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.res.Resources;
+import android.content.Intent;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,7 +15,10 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.lordclockan.R;
@@ -45,6 +49,12 @@ public class RecentsPanelFragment extends Fragment {
         private static final String RECENTS_FULL_SCREEN_CLOCK = "recents_full_screen_clock";
         private static final String RECENTS_FULL_SCREEN_DATE = "recents_full_screen_date";
 
+        // Package name of the omnniswitch app
+        public static final String OMNISWITCH_PACKAGE_NAME = "org.omnirom.omniswitch";
+        // Intent for launching the omniswitch settings actvity
+        public static Intent INTENT_OMNISWITCH_SETTINGS = new Intent(Intent.ACTION_MAIN)
+                .setClassName(OMNISWITCH_PACKAGE_NAME, OMNISWITCH_PACKAGE_NAME + ".SettingsActivity");
+
         private SwitchPreference mRecentsClearAll;
         private ListPreference mRecentsClearAllLocation;
         private SwitchPreference mRecentsClearAllDismissAll;
@@ -54,6 +64,8 @@ public class RecentsPanelFragment extends Fragment {
         private SwitchPreference mRecentsFullScreenClock;
         private SwitchPreference mRecentsFullScreenDate;
 
+        ViewGroup viewGroup;
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -61,8 +73,10 @@ public class RecentsPanelFragment extends Fragment {
             // Load the preferences from an XML resource
             addPreferencesFromResource(R.xml.recents_panel_layout);
 
+            viewGroup = (ViewGroup) ((ViewGroup) getActivity()
+                    .findViewById(android.R.id.content)).getChildAt(0);
+
             PreferenceScreen prefSet = getPreferenceScreen();
-            Activity activity = getActivity();
             ContentResolver resolver = getActivity().getContentResolver();
 
             mRecentsClearAllLocation = (ListPreference) prefSet.findPreference(RECENTS_CLEAR_ALL_LOCATION);
@@ -100,10 +114,11 @@ public class RecentsPanelFragment extends Fragment {
 
         private void updateSettingsVisibility() {
             ContentResolver resolver = getActivity().getContentResolver();
-            if ((Settings.System.getInt(resolver,
-                    Settings.System.RECENTS_USE_OMNISWITCH, 0) == 1) ||
-                    (Settings.System.getInt(resolver,
-                    Settings.System.USE_SLIM_RECENTS, 0) == 1)) {
+            final boolean isOmniEnabled = (Settings.System.getInt(resolver,
+                    Settings.System.RECENTS_USE_OMNISWITCH, 0) == 1);
+            final boolean isSlimEnabled = (Settings.System.getInt(resolver,
+                    Settings.System.USE_SLIM_RECENTS, 0) == 1);
+            if (isOmniEnabled || isSlimEnabled) {
                 mRecentsClearAllLocation.setEnabled(false);
                 mRecentsClearAll.setEnabled(false);
                 mRecentsClearAllDismissAll.setEnabled(false);
@@ -112,8 +127,22 @@ public class RecentsPanelFragment extends Fragment {
                 mRecentsFullScreen.setEnabled(false);
                 mRecentsFullScreenClock.setEnabled(false);
                 mRecentsFullScreenDate.setEnabled(false);
-                Toast.makeText(getActivity(), getString(R.string.stock_recents_disabled),
-                    Toast.LENGTH_LONG).show();
+                Snackbar snackbar = Snackbar
+                    .make(viewGroup, R.string.stock_recents_disabled, Snackbar.LENGTH_LONG)
+                    .setAction(R.string.alternatives_title, new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            if (isOmniEnabled) {
+                                getActivity().startActivity(INTENT_OMNISWITCH_SETTINGS);
+                            }
+                            if (isSlimEnabled) {
+                                Intent intent = new Intent(getActivity(), SlimRecentPanel.class);
+                                getActivity().startActivity(intent);
+                            }
+                        }
+                });
+
+                snackbar.show();
             }
         }
     }
