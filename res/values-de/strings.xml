@@ -61,6 +61,7 @@
     <string name="recents_clear_all_location_bottom_center">Unten mittig</string>
     <string name="recents_clear_all_dismiss_all_title">Lösche alle laufenden Anwendungen</string>
     <string name="recents_clear_all_dismiss_all_summary">Lösche auch die Anwendung im Vordergrund, wenn alle gelöscht werden.</string>
+    <string name="stock_recents_disabled">Der eingebaute Anwendungsverlauf ist deaktiviert!</string>
 
     <!-- Change Log -->
     <string name="changelog_title">Änderungsprotokoll</string>
@@ -68,8 +69,8 @@
     <string name="changelog_error">Kann Änderungsprotokoll nicht laden</string>
 
     <!-- Toast Icons -->
-    <string name="toast_icon_title">Toast Icon</string>
-    <string name="toast_icon_summary">Zeige das zur Meldung zugehörige Icon der Anwendung</string>
+    <string name="toast_icon_title">Toast Symbol</string>
+    <string name="toast_icon_summary">Zeige das zur Meldung zugehörige Symbol der Anwendung</string>
 
     <!-- Brightness slider -->
     <string name="qs_brightness_slider_title">Helligkeitsregler</string>
@@ -254,15 +255,23 @@
     <string name="status_bar_weather_font_thin_italic">Dünn &amp; kursiv</string>
     <string name="status_bar_weather_font_condensed">Gestaucht</string>
     <string name="status_bar_weather_font_condensed_italic">Gestaucht &amp; kursiv</string>
+   <string name="status_bar_weather_font_condensed_light">Gestaucht &amp; leicht</string>
+    <string name="status_bar_weather_font_condensed_light_italic">Gestaucht, leicht, kursiv</string>
     <string name="status_bar_weather_font_condensed_bold">Gestaucht &amp; fett</string>
     <string name="status_bar_weather_font_condensed_bold_italic">Gestaucht, fett, kursiv</string>
     <string name="status_bar_weather_font_medium">Mittel</string>
     <string name="status_bar_weather_font_medium_italic">Mittel &amp; kursiv</string>
+    <string name="status_bar_weather_font_black">Schwarz</string>
+    <string name="status_bar_weather_font_black_italic">Schwarz &amp; kursiv</string>
 
     <!-- Recents Fullscreen -->
     <string name="recents_show_fullscreen">Anwendungsverlauf bei Vollbild</string>
     <string name="recents_fullscreen_summary_enabled">Anwendungsverlauf bei Vollbild ist aktiviert</string>
     <string name="recents_fullscreen_summary_disabled">Anwendungsverlauf bei Vollbild ist deaktiviert</string>
+    <string name="recents_full_screen_clock_title">Uhrzeit anzeigen</string>
+    <string name="recents_full_screen_clock_summary">Zeigt die Uhrzeit im Vollbildmodus oben an</string>
+    <string name="recents_full_screen_date_title">Datum anzeigen</string>
+    <string name="recents_full_screen_date_summary">Zeigt das Datum im Vollbildmodus oben an</string>
 
     <!-- Weather settings -->
     <string name="weahter_lockscreen_category">Optionen für Wetter auf Sperrbildschirm</string>
@@ -278,13 +287,13 @@
     <string name="weather_show_location_summary">Aktivieren, um den Standort anzuzeigen</string>
     <string name="weather_show_timestamp_title">Zeitstempel anzeigen</string>
     <string name="weather_show_timestamp_summary">Aktivieren, um Zeitstempel der Daten anzuzeigen</string>
-    <string name="weather_condition_icon_title">Icon für Wetterlage</string>
-    <string name="weather_condition_icon_dlg_title">Auswahl eines Icons zur Anzeige der Wetterlage</string>
+    <string name="weather_condition_icon_title">Symbol für Wetterlage</string>
+    <string name="weather_condition_icon_dlg_title">Auswahl eines Symbols zur Anzeige der Wetterlage</string>
     <string name="weather_condition_icon_monochrome_title">Einfarbig</string>
     <string name="weather_condition_icon_colored_title">Farbig</string>
     <string name="weather_condition_icon_vclouds_title">VClouds</string>
-    <string name="weather_colorize_all_icons_title">Alle Icons einfärben</string>
-    <string name="weather_colorize_all_icons_summary">Einschalten um alle Icons farbig darzustellen, Ausschalten um nur einfarbige Icons einzufärben</string>
+    <string name="weather_colorize_all_icons_title">Alle Symbole einfärben</string>
+    <string name="weather_colorize_all_icons_summary">Einschalten um alle Symbole farbig darzustellen; ausschalten um nur einfarbige Symbole einzufärben</string>
     <string name="weather_hide_panel_title">Wetteranzeige ausblenden</string>
     <string name="weather_hide_panel_dlg_title">Wähle, wann die Anzeige ausgeblendet werden soll</string>
     <string name="weather_hide_panel_auto_title">Automatisch</string>
@@ -302,7 +311,7 @@
     <string name="weather_number_of_notifications_five_title">5</string>
     <string name="weather_number_of_notifications_six_title">6</string>
     <string name="colors_title">Farben</string>
-    <string name="icons_title">Icons</string>
+    <string name="icons_title">Symbole</string>
     <string name="text_title">Text</string>
     <string name="reset">Zurücksetzen</string>
     <string name="reset_lockscreen_weather">OK</string>
@@ -310,23 +319,27 @@
     <string name="weather_reset_title">Wetterwerte zurücksetzen</string>
 
     <!-- Lock Clock Fonts -->
-    <string name="lock_clock_font_title">Lock Clock Fonts</string>
-    <string name="lock_clock_font_summary">Change the default font of the lockscreen clock widget</string>
-    <string name="lock_clock_font_dialog_title">Select lock clock font</string>
-    <string name="lock_clock_font_stock">Normal (Standard)</string>
-    <string name="lock_clock_font_bold">Fett</string>
-    <string name="lock_clock_font_italic">Kursiv</string>
-    <string name="lock_clock_font_bold_italic">Fett &amp; kursiv</string>
-    <string name="lock_clock_font_light">Leicht</string>
-    <string name="lock_clock_font_light_italic">Leicht &amp; kursiv</string>
-    <string name="lock_clock_font_thin">Dünn</string>
-    <string name="lock_clock_font_thin_italic">Dünn &amp; kursiv</string>
-    <string name="lock_clock_font_condensed_normal">Gestaucht</string>
-    <string name="lock_clock_font_condensed_italic">Gestaucht &amp; kursiv</string>
-    <string name="lock_clock_font_condensed_bold">Gestaucht &amp; fett</string>
-    <string name="lock_clock_font_condensed_bold_italic">Gestaucht, fett, kursiv</string>
-    <string name="lock_clock_font_medium_normal">Mittel</string>
-    <string name="lock_clock_font_medium_italic">Mittel &amp; kursiv</string>
+    <string name="lock_clock_font_title">cLock Schriftart</string>
+    <string name="lock_clock_font_summary">Ändert die Schriftart der Uhr auf dem Sperrbildschirm</string>
+    <string name="lock_clock_font_dialog_title">Wähle die cLock Schriftart</string>
+    <string name="lock_clock_font_stock">Roboto (Standard)</string>
+    <string name="lock_clock_font_bold">Roboto fett</string>
+    <string name="lock_clock_font_italic">Roboto kursiv</string>
+    <string name="lock_clock_font_bold_italic">Roboto fett &amp; kursiv</string>
+    <string name="lock_clock_font_light">Roboto leicht</string>
+    <string name="lock_clock_font_light_italic">Roboto leicht &amp; kursiv</string>
+    <string name="lock_clock_font_thin">Roboto dünn</string>
+    <string name="lock_clock_font_thin_italic">Roboto dünn &amp; kursiv</string>
+    <string name="lock_clock_font_condensed_normal">Roboto gestaucht</string>
+    <string name="lock_clock_font_condensed_italic">Roboto gestaucht &amp; kursiv</string>
+    <string name="lock_clock_font_condensed_bold">Roboto gestaucht &amp; fett</string>
+    <string name="lock_clock_font_condensed_bold_italic">Roboto gestaucht, fett, kursiv</string>
+    <string name="lock_clock_font_medium_normal">Roboto mittel</string>
+    <string name="lock_clock_font_medium_italic">Roboto mittel &amp; kursiv</string>
+    <string name="lock_clock_font_black_normal">Roboto schwarz</string>
+    <string name="lock_clock_font_black_italic">Roboto schwarz &amp; kursiv</string>
+    <string name="lock_clock_font_condensed_light_normal">Roboto gestaucht &amp; leicht</string>
+    <string name="lock_clock_font_condensed_light_italic">Roboto gestaucht, leicht, kursiv</string>
 
     <!-- Lockscreen see through -->
     <string name="lockscreen_see_through_title">Sperrbildschirm-Trübung</string>
@@ -412,7 +425,7 @@
     <string name="recents_use_omniswitch_title">Als Anwendungsverlauf verwenden</string>
     <string name="recents_use_omniswitch_summary">Benutze OmniSwitch anstatt der Standardansicht für den Anwendungsverlauf</string>
     <string name="omniswitch_start_settings_title">Einstellungen</string>
-    <string name="omniswitch_start_settings_summary">Öffne die Einstellungen von OmniSwitch</string>
+    <string name="omniswitch_start_settings_summary">Öffnet die Einstellungen von OmniSwitch</string>
     <string name="omniswitch_first_time_title">Information</string>
     <string name="omniswitch_first_time_message">Stellen Sie sicher, dass Omniswitch aktiviert ist. Sie können dies mit Hilfe der \"Einstellungen\" unten tun.</string>
 
@@ -443,7 +456,6 @@
     <string name="pa_pie_size_gigantic">Gigantisch</string>
     <string name="pa_pie_size_monster">Monströs</string>
     <string name="pa_pie_size_enormous">Enorm</string>
-    <string name="pa_pie_mode_default">Standard</string>
     <string name="pa_pie_gravity_title">PIE Auslösung</string>
     <string name="pa_pie_gravity_summary">Auswählen auf welcher Displayseite PIE platziert wird</string>
     <string name="pa_pie_gravity_bottom">Unten</string>
@@ -496,7 +508,7 @@
 
     <!-- Task Manager -->
     <string name="enable_task_manager_title">Task Manager</string>
-    <string name="enable_task_manager_summary">Ein-/Ausschalten der Anzeige des Task Manager-Icons im Bereich der erweiterten Statusleiste.</string>
+    <string name="enable_task_manager_summary">Ein-/Ausschalten der Anzeige des Task Manager-Symbole im Bereich der erweiterten Statusleiste.</string>
 
     <!-- SlimSizer  -->
     <!-- Do not translate listsystem string. -->
@@ -504,7 +516,6 @@
     <string name="sizer_title">App Entferner</string>
     <string name="caution">Vorsicht!</string>
     <string name="sizer_message_startup">Dieses Werkzeug erlaubt das Löschen von Systemanwendungen. Mit Vorsicht benutzen und nur Apps löschen, bei denen Sie sich sicher sind.</string>
-    <string name="cancel">Abbruch</string>
     <string name="sizer_message_delete">Sind Sie sicher, dass diese App gelöscht werden soll?</string>
     <string name="btn_delete">Jetzt ausgewählte Apps löschen!</string>
     <string name="delete_progress_title">Lösche</string>
@@ -512,12 +523,12 @@
     <string name="delete_success">Gelöscht</string>
     <string name="delete_fail">Löschen nicht möglich</string>
     <string name="btn_profile">Profil</string>
-    <string name="sizer_message_sdnowrite">Kann nicht auf SD Karte schreiben.</string>
-    <string name="sizer_message_sdnoread">Kann SD Karte nicht lesen.</string>
+    <string name="sizer_message_sdnowrite">Kann nicht auf SD-Karte schreiben.</string>
+    <string name="sizer_message_sdnoread">Kann SD-Karte nicht lesen.</string>
     <string name="sizer_message_filesuccess">Profil erstellt.</string>
     <string name="sizer_message_filefail">Konnte Profil nicht erstellen.</string>
     <string name="sizer_message_noselect">Nichts ausgewählt.</string>
-    <string name="system_app_remover">System App Entferner</string>
+    <string name="system_app_remover">System-App Entferner</string>
 
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Drei-Finger-Geste</string>
@@ -553,11 +564,11 @@
     <string name="wallpaper_intra_close_title">Animation für Bildhintergrund intra schließen</string>
     <string name="task_open_behind_title">Animation hinter offener Aufgabe</string>
     <string name="animation_duration_title">Animationsdauer</string>
-    <string name="animation_duration_default">Dauer (in Millisekunden) der oben gewählten Animationen</string>
+    <string name="animation_duration_default">Standard</string>>
     <string name="title_animation_no_override">Verhindere App-Überschreibungen</string>
     <string name="summary_animation_no_override">Verhindere, dass Anwendungen die Überblendeffekte überschreiben.</string>
     <string name="animation_exit_only_title">Animation nur fürs Ausführen (Starten)</string>
-    <string name="animation_reverse_exit_title">Umgekehrte Beenden-Animation</string>
+    <string name="animation_reverse_exit_title">Umgekehrte Animation fürs Beenden</string>
 
     <!-- Toast Animation -->
     <string name="toast_animation_title">Toast Animation</string>
@@ -586,13 +597,20 @@
     <string name="power_menu_animation_bottom">Unten</string>
     <string name="power_menu_animation_top">Oben</string>
     <string name="power_menu_animation_rotate">Rotation</string>
+    <string name="power_menu_animation_xylon">Fliegen</string>
+    <string name="power_menu_animation_slide">Gleiten</string>
+    <string name="power_menu_animation_turn">Drehen</string>
+    <string name="power_menu_animation_fly">Glühen</string>
+    <string name="power_menu_animation_card">3D</string>
+    <string name="power_menu_animation_translucent_top">Transparent (oben)</string>
+    <string name="power_menu_animation_translucent_bottom">Transparent (unten)</string>
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">Statusleisten-Logo</string>
     <string name="status_bar_aicp_logo_title">AICP Logo</string>
     <string name="status_bar_aicp_logo_summary">Aktivieren, um das AICP Logo in der Statusleiste anzuzeigen</string>
     <string name="status_bar_aicp_logo_color">Farbe des AICP Logos</string>
-    <string name="status_bar_aicp_logo_position">Logo Position</string>
+    <string name="status_bar_aicp_logo_position">Position des Logos</string>
     <string name="status_bar_aicp_logo_position_summary">Wähle auf welcher Seite das Logo angezeigt wird, rechts oder links</string>
     <string name="status_bar_logo_position_right">Rechts</string>
     <string name="status_bar_logo_position_left">Links</string>
@@ -616,10 +634,10 @@
     <string name="listview_interpolator_title">Interpolation der Listenansicht</string>
     <string name="listview_accelerate_interpolator">Beschleunigen</string>
     <string name="listview_decelerate_interpolator">Verlangsamen</string>
-    <string name="listview_accelerate_decelerate_interpolator">Beschleunigen und verlangsamen</string>
+    <string name="listview_accelerate_decelerate_interpolator">Beschleunigen &amp; verlangsamen</string>
     <string name="listview_anticipate_interpolator">Vorgreifen</string>
     <string name="listview_overshoot_interpolator">Überschwingen</string>
-    <string name="listview_anticipate_overshoot_interpolator">Vorgreifen und überschwingen</string>
+    <string name="listview_anticipate_overshoot_interpolator">Vorgreifen &amp; überschwingen</string>
     <string name="listview_bounce_interpolator">Hüpfen</string>
 
     <!-- IME animations -->
@@ -645,7 +663,7 @@
     <string name="ime_enter_animation_title">Animation beim Auftauchen</string>
     <string name="ime_exit_animation_title">Animation beim Verlassen</string>
     <string name="ime_interpolator_title">Interpolation</string>
-    <string name="ime_duration_title">Dauer der Animation</string>
+    <string name="ime_duration_title">Dauer der IME Animation</string>
     <string name="animation_duration_summary">Setze Dauer</string>
 
     <!-- Launch music player when headset is connected -->
@@ -654,7 +672,7 @@
 
     <!-- Recent panel -->
     <string name="recent_panel_category">Slim Anwendungsverlauf</string>
-    <string name="use_slim_recents_title">Slim Verlauf</string>
+    <string name="use_slim_recents_title">Slim Anwendungsverlauf</string>
     <string name="show_running_tasks_title">Zeige nur laufende Apps</string>
     <string name="recents_max_apps_title">max. zulässige Anzahl Apps</string>
     <string name="recent_panel_scale_title">Größe</string>
@@ -669,7 +687,7 @@
     <string name="recent_card_bg_color_title">Hintergrundfarbe der Karten</string>
     <string name="recent_card_text_color_title">Textfarbe der Karten</string>
     <string name="recent_reset_value_title">Werte zurücksetzen</string>
-    <string name="recent_app_sidebar_title">App-Seitenleiste</string>
+    <string name="recent_app_sidebar_title">Seitenleiste für Apps</string>
 
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Anzeige auf der linken Seite</string>
@@ -681,13 +699,50 @@
 
     <!-- Show/Hide Search Bar -->
     <string name="recents_show_searchbar">Zeige Suchleiste im Anwendungsverlauf</string>
-    <string name="keywords_recents_show_searchbar">verlauf aktivieren deaktivieren zeigen verstecken Suchleiste such leiste</string>
+    <string name="keywords_recents_show_searchbar">Verlauf verlauf deaktivieren aktivieren zeigen verstecken Suchleiste such leiste</string>
 
     <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Ton bei Bildschirmfoto</string>
     <string name="screenshot_sound_summary">Spielt einen Ton ab, wenn ein Bildschirmfoto aufgenommen wird</string>
 
-    <string name="brightness_icon_title">Icon für Helligkeit</string>
+    <string name="brightness_icon_title">Symbol für Helligkeit</string>
     <string name="brightness_icon_summary">Zeigt ein Symbol für die Helligkeit auf der linken Seite des Helligkeitsreglers, um die Auto-Helligkeit anzupassen</string>
+
+    <!-- App sidebar -->
+    <string name="app_sidebar_title">Seitenleiste für Apps</string>
+    <string name="app_sidebar_enable_title">App-Leiste einschalten</string>
+    <string name="app_sidebar_enable_summaryOn">App-Leiste ist eingeschaltet</string>
+    <string name="app_sidebar_enable_summaryOff">App-Leiste ist ausgeschaltet</string>
+    <string name="app_sidebar_setup_items_title">Inhalt der App-Leiste einrichten</string>
+    <string name="app_sidebar_setup_items_summary">Hinzufügen, Entfernen und Position von Apps in der Leiste</string>
+    <string name="app_sidebar_transparency_title">Transparenz der App-Leiste</string>
+    <string name="app_sidebar_transparency_summary">Anpassen der Transparenz-Stufe der App-Leiste</string>
+    <string name="app_sidebar_position_title">Position der App-Leiste</string>
+    <string name="app_sidebar_position_summary">Position der Leiste auf der linken oder rechten Bildschirmseite festlegen</string>
+    <string name="app_sidebar_position_left">Links</string>
+    <string name="app_sidebar_position_right">Rechts</string>
+    <string name="app_sidebar_hide_labels_title">Verstecke Beschriftung</string>
+    <string name="app_sidebar_hide_labels_summary">Blendet die Beschriftung der Symbole aus</string>
+    <string name="tab_category">Sichtbarer Auslösebereich</string>
+    <string name="use_tab_title">Auslösebereich anzeigen</string>
+    <string name="use_tab_summary">Stelle einen Auslösebereich an der Bildschirmseite dar, der die Leiste bei Berührung anzeigt.</string>
+    <string name="tab_position_title">Position des Auslösers</string>
+    <string name="tab_position_summary">Zeige den Auslösebereich oben, in der Mitte oder unten auf der Bildschirmseite an.</string>
+    <string name="tab_size_title">Größe des Auslösers</string>
+    <string name="tab_size_summary">Verändere die Größe des Auslösebereichs.</string>
+    <string name="trigger_category">Auslösebereich</string>
+    <string name="trigger_width_title">Breite des Auslösers</string>
+    <string name="trigger_width_summary">Breite des Auslösebereichs einstellen</string>
+    <string name="trigger_top_title">Position des Auslösers</string>
+    <string name="trigger_top_summary">Stelle die vertikale Position ein</string>
+    <string name="trigger_bottom_title">Höhe des Auslösers</string>
+    <string name="trigger_bottom_summary">Höhe des Auslösebereichs einstellen</string>
+
+    <!-- Wakelock blocker -->
+    <string name="wakelock_blocker_title">Wakelock Blockierer</string>
+
+    <!-- Quick settings disable on lockscreen -->
+    <string name="block_on_secure_keyguard_title">Keine Schnelleinstellungen auf dem Sperrbildschirm</string>
+    <string name="block_on_secure_keyguard_summary">Deaktiviert die Anzeige von Schnelleinstellungen bei Bildschirmsperre zur Sicherheit</string>
 
 </resources>
