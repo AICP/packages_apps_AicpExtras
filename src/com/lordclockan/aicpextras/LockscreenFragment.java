@@ -7,18 +7,20 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
-import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
-
 import com.lordclockan.R;
+import com.lordclockan.aicpextras.utils.Utils;
+import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 public class LockscreenFragment extends Fragment {
 
@@ -45,12 +47,14 @@ public class LockscreenFragment extends Fragment {
         private static final String KEY_WALLPAPER_SET = "lockscreen_wallpaper_set";
         private static final String KEY_WALLPAPER_CLEAR = "lockscreen_wallpaper_clear";
         private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
+        private static final String KEYGUARD_TOGGLE_TORCH = "keyguard_toggle_torch";
 
         private SeekBarPreferenceCham mBlurRadius;
         private Preference mLockscreenWeather;
         private Preference mSetWallpaper;
         private Preference mClearWallpaper;
         private ListPreference mLockClockFonts;
+        private SwitchPreference mKeyguardTorch;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -77,6 +81,7 @@ public class LockscreenFragment extends Fragment {
                     resolver, Settings.System.LOCK_CLOCK_FONTS, 0)));
             mLockClockFonts.setSummary(mLockClockFonts.getEntry());
             mLockClockFonts.setOnPreferenceChangeListener(this);
+
         }
 
         @Override
