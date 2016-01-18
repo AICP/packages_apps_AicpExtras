@@ -41,18 +41,18 @@ public class RecentsPanelFragment extends Fragment {
         private static final String RECENTS_CLEAR_ALL_DISMISS_ALL = "recents_clear_all_dismiss_all";
         private static final String RECENTS_SHOW_SEARCH_BAR = "recents_show_search_bar";
         private static final String RECENTS_MEM_DISPLAY = "systemui_recents_mem_display";
-        private static final String RECENTS_FULL_SCREEN = "recents_full_screen";
         private static final String RECENTS_FULL_SCREEN_CLOCK = "recents_full_screen_clock";
         private static final String RECENTS_FULL_SCREEN_DATE = "recents_full_screen_date";
+        private static final String IMMERSIVE_RECENTS = "immersive_recents";
 
         private SwitchPreference mRecentsClearAll;
         private ListPreference mRecentsClearAllLocation;
         private SwitchPreference mRecentsClearAllDismissAll;
         private SwitchPreference mRecentsShowSearchBar;
         private SwitchPreference mRecentsMemDisplay;
-        private SwitchPreference mRecentsFullScreen;
         private SwitchPreference mRecentsFullScreenClock;
         private SwitchPreference mRecentsFullScreenDate;
+        private ListPreference mImmersiveRecents;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -76,10 +76,16 @@ public class RecentsPanelFragment extends Fragment {
             mRecentsClearAllDismissAll = (SwitchPreference) prefSet.findPreference(RECENTS_CLEAR_ALL_DISMISS_ALL);
             mRecentsShowSearchBar = (SwitchPreference) prefSet.findPreference(RECENTS_SHOW_SEARCH_BAR);
             mRecentsMemDisplay = (SwitchPreference) prefSet.findPreference(RECENTS_MEM_DISPLAY);
-            mRecentsFullScreen = (SwitchPreference) prefSet.findPreference(RECENTS_FULL_SCREEN);
             mRecentsFullScreenClock = (SwitchPreference) prefSet.findPreference(RECENTS_FULL_SCREEN_CLOCK);
             mRecentsFullScreenDate = (SwitchPreference) prefSet.findPreference(RECENTS_FULL_SCREEN_DATE);
 
+            mImmersiveRecents = (ListPreference) prefSet.findPreference(IMMERSIVE_RECENTS);
+            mImmersiveRecents.setValue(String.valueOf(Settings.System.getInt(
+                    resolver, Settings.System.IMMERSIVE_RECENTS, 0)));
+            mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
+            mImmersiveRecents.setOnPreferenceChangeListener(this);
+
+            updateImmersiveDateClock();
             updateSettingsVisibility();
 
         }
@@ -93,6 +99,13 @@ public class RecentsPanelFragment extends Fragment {
                 Settings.System.putIntForUser(resolver,
                         Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
                 mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
+                return true;
+            } else if (preference == mImmersiveRecents) {
+                Settings.System.putInt(resolver, Settings.System.IMMERSIVE_RECENTS,
+                        Integer.valueOf((String) newValue));
+                mImmersiveRecents.setValue(String.valueOf(newValue));
+                mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
+                updateImmersiveDateClock();
                 return true;
             }
             return false;
@@ -109,11 +122,24 @@ public class RecentsPanelFragment extends Fragment {
                 mRecentsClearAllDismissAll.setEnabled(false);
                 mRecentsShowSearchBar.setEnabled(false);
                 mRecentsMemDisplay.setEnabled(false);
-                mRecentsFullScreen.setEnabled(false);
+                mImmersiveRecents.setEnabled(false);
                 mRecentsFullScreenClock.setEnabled(false);
                 mRecentsFullScreenDate.setEnabled(false);
                 Toast.makeText(getActivity(), getString(R.string.stock_recents_disabled),
                     Toast.LENGTH_LONG).show();
+            }
+        }
+
+        private void updateImmersiveDateClock() {
+            if ((Settings.System.getInt(getActivity().getContentResolver(),
+                    Settings.System.IMMERSIVE_RECENTS, 0) == 0) ||
+                    (Settings.System.getInt(getActivity().getContentResolver(),
+                    Settings.System.IMMERSIVE_RECENTS, 0) == 2)) {
+                mRecentsFullScreenClock.setEnabled(false);
+                mRecentsFullScreenDate.setEnabled(false);
+            } else {
+                mRecentsFullScreenClock.setEnabled(true);
+                mRecentsFullScreenDate.setEnabled(true);
             }
         }
     }
