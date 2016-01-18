@@ -12,13 +12,14 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
-import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
-
 import com.lordclockan.R;
+import com.lordclockan.aicpextras.utils.Utils;
+import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 public class LockscreenFragment extends Fragment {
 
@@ -45,12 +46,14 @@ public class LockscreenFragment extends Fragment {
         private static final String KEY_WALLPAPER_SET = "lockscreen_wallpaper_set";
         private static final String KEY_WALLPAPER_CLEAR = "lockscreen_wallpaper_clear";
         private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
+        private static final String KEYGUARD_TOGGLE_TORCH = "keyguard_toggle_torch";
 
         private SeekBarPreferenceCham mBlurRadius;
         private Preference mLockscreenWeather;
         private Preference mSetWallpaper;
         private Preference mClearWallpaper;
         private ListPreference mLockClockFonts;
+        private SwitchPreference mKeyguardTorch;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -77,6 +80,14 @@ public class LockscreenFragment extends Fragment {
                     resolver, Settings.System.LOCK_CLOCK_FONTS, 0)));
             mLockClockFonts.setSummary(mLockClockFonts.getEntry());
             mLockClockFonts.setOnPreferenceChangeListener(this);
+
+            mKeyguardTorch = (SwitchPreference) findPreference(KEYGUARD_TOGGLE_TORCH);
+            if (!Utils.isWifiOnly(getActivity())) {
+                prefSet.removePreference(mKeyguardTorch);
+            } else {
+                mKeyguardTorch.setChecked((Settings.System.getInt(resolver,
+                        Settings.System.KEYGUARD_TOGGLE_TORCH, 0) == 1));
+            }
         }
 
         @Override
@@ -92,6 +103,11 @@ public class LockscreenFragment extends Fragment {
                         Integer.valueOf((String) newValue));
                 mLockClockFonts.setValue(String.valueOf(newValue));
                 mLockClockFonts.setSummary(mLockClockFonts.getEntry());
+                return true;
+            } else if (preference == mKeyguardTorch) {
+                Settings.System.putInt(resolver,
+                        Settings.System.KEYGUARD_TOGGLE_TORCH,
+                        (Boolean) newValue ? 1 : 0);
                 return true;
             }
             return false;
