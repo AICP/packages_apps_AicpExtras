@@ -7,18 +7,22 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
+import com.lordclockan.R;
+import com.lordclockan.aicpextras.utils.Utils;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
-import com.lordclockan.R;
+import org.cyanogenmod.internal.util.CmLockPatternUtils;
 
 public class LockscreenFragment extends Fragment {
 
@@ -45,12 +49,16 @@ public class LockscreenFragment extends Fragment {
         private static final String KEY_WALLPAPER_SET = "lockscreen_wallpaper_set";
         private static final String KEY_WALLPAPER_CLEAR = "lockscreen_wallpaper_clear";
         private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
+        private static final String KEYGUARD_TOGGLE_TORCH = "keyguard_toggle_torch";
 
         private SeekBarPreferenceCham mBlurRadius;
         private Preference mLockscreenWeather;
         private Preference mSetWallpaper;
         private Preference mClearWallpaper;
         private ListPreference mLockClockFonts;
+        private SwitchPreference mKeyguardTorch;
+
+        private static final int MY_USER_ID = UserHandle.myUserId();
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -61,6 +69,7 @@ public class LockscreenFragment extends Fragment {
 
             PreferenceScreen prefSet = getPreferenceScreen();
             ContentResolver resolver = getActivity().getContentResolver();
+            final CmLockPatternUtils lockPatternUtils = new CmLockPatternUtils(getActivity());
 
             mBlurRadius = (SeekBarPreferenceCham) findPreference(KEY_LOCKSCREEN_BLUR_RADIUS);
             mBlurRadius.setValue(Settings.System.getInt(resolver,
@@ -77,6 +86,18 @@ public class LockscreenFragment extends Fragment {
                     resolver, Settings.System.LOCK_CLOCK_FONTS, 0)));
             mLockClockFonts.setSummary(mLockClockFonts.getEntry());
             mLockClockFonts.setOnPreferenceChangeListener(this);
+
+            mKeyguardTorch = (SwitchPreference) findPreference(KEYGUARD_TOGGLE_TORCH);
+            if (Utils.isWifiOnly(getActivity())) {
+                prefSet.removePreference(mKeyguardTorch);
+            } else {
+                if (lockPatternUtils.isSecure(MY_USER_ID)) {
+                    mKeyguardTorch.setChecked((Settings.System.getInt(resolver,
+                            Settings.System.KEYGUARD_TOGGLE_TORCH, 0) == 1));
+                } else if (mKeyguardTorch != null) {
+                    prefSet.removePreference(mKeyguardTorch);
+                }
+            }
         }
 
         @Override
@@ -92,6 +113,11 @@ public class LockscreenFragment extends Fragment {
                         Integer.valueOf((String) newValue));
                 mLockClockFonts.setValue(String.valueOf(newValue));
                 mLockClockFonts.setSummary(mLockClockFonts.getEntry());
+                return true;
+            } else if (preference == mKeyguardTorch) {
+                Settings.System.putInt(resolver,
+                        Settings.System.KEYGUARD_TOGGLE_TORCH,
+                        (Boolean) newValue ? 1 : 0);
                 return true;
             }
             return false;
