@@ -43,10 +43,12 @@ public class NotificationsFragment extends Fragment {
         private static final String PREF_QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
         private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
         private static final String PREF_QS_TRANSPARENT_SHADE = "qs_transparent_shade";
+        private static final String PREF_QS_TRANSPARENT_HEADER = "qs_transparent_header";
 
         private SwitchPreference mBrightnessSlider;
         private SwitchPreference mBlockOnSecureKeyguard;
         private SeekBarPreferenceCham mQSShadeAlpha;
+        private SeekBarPreferenceCham mQSHeaderAlpha;
 
         private static final int MY_USER_ID = UserHandle.myUserId();
 
@@ -90,6 +92,14 @@ public class NotificationsFragment extends Fragment {
                     Settings.System.QS_TRANSPARENT_SHADE, 255);
             mQSShadeAlpha.setValue(qSShadeAlpha / 1);
             mQSShadeAlpha.setOnPreferenceChangeListener(this);
+
+            // QS header alpha
+            mQSHeaderAlpha =
+                    (SeekBarPreferenceCham) prefSet.findPreference(PREF_QS_TRANSPARENT_HEADER);
+            int qSHeaderAlpha = Settings.System.getInt(resolver,
+                    Settings.System.QS_TRANSPARENT_HEADER, 255);
+            mQSHeaderAlpha.setValue(qSHeaderAlpha / 1);
+            mQSHeaderAlpha.setOnPreferenceChangeListener(this);
         }
 
         @Override
@@ -113,6 +123,11 @@ public class NotificationsFragment extends Fragment {
                 int alpha = (Integer) newValue;
                 Settings.System.putInt(resolver,
                         Settings.System.QS_TRANSPARENT_SHADE, alpha * 1);
+                return true;
+            } else if (preference == mQSHeaderAlpha) {
+                int alpha = (Integer) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.QS_TRANSPARENT_HEADER, alpha * 1);
                 return true;
             }
             return false;
