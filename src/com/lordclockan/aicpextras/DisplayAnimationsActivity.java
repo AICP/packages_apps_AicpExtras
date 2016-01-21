@@ -33,6 +33,7 @@ import android.view.WindowManagerImpl;
 import android.widget.Toast;
 
 import com.lordclockan.R;
+import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 public class DisplayAnimationsActivity extends Fragment {
 
@@ -60,6 +61,7 @@ public class DisplayAnimationsActivity extends Fragment {
         private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
         private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
         private static final String PREF_IME_ANIMATIONS = "ime_animations";
+        private static final String PREF_TRANSPARENT_VOLUME_DIALOG = "transparent_volume_dialog";
 
         private ListPreference mLcdDensityPreference;
         private Preference mAokpAnimation;
@@ -68,6 +70,7 @@ public class DisplayAnimationsActivity extends Fragment {
         private ListPreference mListViewAnimation;
         private ListPreference mListViewInterpolator;
         private Preference mImeAnimations;
+        private SeekBarPreferenceCham mVolumeDialogAlpha;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -153,6 +156,14 @@ public class DisplayAnimationsActivity extends Fragment {
             mListViewInterpolator.setOnPreferenceChangeListener(this);
             mListViewInterpolator.setEnabled(listviewanimation > 0);
 
+            // Volume dialog alpha
+            mVolumeDialogAlpha =
+                    (SeekBarPreferenceCham) prefSet.findPreference(PREF_TRANSPARENT_VOLUME_DIALOG);
+            int volumeDialogAlpha = Settings.System.getInt(resolver,
+                    Settings.System.TRANSPARENT_VOLUME_DIALOG, 255);
+            mVolumeDialogAlpha.setValue(volumeDialogAlpha / 1);
+            mVolumeDialogAlpha.setOnPreferenceChangeListener(this);
+
         }
 
         @Override
@@ -189,6 +200,11 @@ public class DisplayAnimationsActivity extends Fragment {
                 Settings.System.putInt(resolver,
                         Settings.System.LISTVIEW_INTERPOLATOR, value);
                 mListViewInterpolator.setSummary(mListViewInterpolator.getEntries()[index]);
+            } else if (preference == mVolumeDialogAlpha) {
+                int alpha = (Integer) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.TRANSPARENT_VOLUME_DIALOG, alpha * 1);
+                return true;
             }
             return true;
         }
