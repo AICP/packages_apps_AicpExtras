@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
 
    <ListPreference
         android:key="lcd_density"
@@ -52,5 +53,14 @@
         android:key="aokp_animation"
         android:title="@string/aokp_animation_title"
         android:summary="@string/aokp_animation_summary" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="transparent_volume_dialog"
+        android:title="@string/volume_dialog_transparency"
+        android:max="255"
+        aicpextras:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight=""
+        android:persistent="false" />
 
 </PreferenceScreen>
