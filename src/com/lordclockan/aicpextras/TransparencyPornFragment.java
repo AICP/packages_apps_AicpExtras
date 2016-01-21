@@ -40,10 +40,12 @@ public class TransparencyPornFragment extends Fragment {
         private static final String PREF_QS_TRANSPARENT_SHADE = "qs_transparent_shade";
         private static final String PREF_QS_TRANSPARENT_HEADER = "qs_transparent_header";
         private static final String PREF_TRANSPARENT_VOLUME_DIALOG = "transparent_volume_dialog";
+        private static final String PREF_TRANSPARENT_POWER_MENU = "transparent_power_menu";
 
         private SeekBarPreferenceCham mQSShadeAlpha;
         private SeekBarPreferenceCham mQSHeaderAlpha;
         private SeekBarPreferenceCham mVolumeDialogAlpha;
+        private SeekBarPreferenceCham mPowerMenuAlpha;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -78,25 +80,35 @@ public class TransparencyPornFragment extends Fragment {
                     Settings.System.TRANSPARENT_VOLUME_DIALOG, 255);
             mVolumeDialogAlpha.setValue(volumeDialogAlpha / 1);
             mVolumeDialogAlpha.setOnPreferenceChangeListener(this);
+
+            // Power menu alpha
+            mPowerMenuAlpha =
+                    (SeekBarPreferenceCham) prefSet.findPreference(PREF_TRANSPARENT_POWER_MENU);
+            int powerMenuAlpha = Settings.System.getInt(resolver,
+                    Settings.System.TRANSPARENT_POWER_MENU, 100);
+            mPowerMenuAlpha.setValue(powerMenuAlpha / 1);
+            mPowerMenuAlpha.setOnPreferenceChangeListener(this);
         }
 
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getActivity().getContentResolver();
+            int alpha = (Integer) newValue;
             if (preference == mQSShadeAlpha) {
-                int alpha = (Integer) newValue;
                 Settings.System.putInt(resolver,
                         Settings.System.QS_TRANSPARENT_SHADE, alpha * 1);
                 return true;
             } else if (preference == mQSHeaderAlpha) {
-                int alpha = (Integer) newValue;
                 Settings.System.putInt(resolver,
                         Settings.System.QS_TRANSPARENT_HEADER, alpha * 1);
                 return true;
             } else if (preference == mVolumeDialogAlpha) {
-                int alpha = (Integer) newValue;
                 Settings.System.putInt(resolver,
                         Settings.System.TRANSPARENT_VOLUME_DIALOG, alpha * 1);
+                return true;
+            } else if (preference == mPowerMenuAlpha) {
+                Settings.System.putInt(resolver,
+                        Settings.System.TRANSPARENT_POWER_MENU, alpha * 1);
                 return true;
             }
             return false;
