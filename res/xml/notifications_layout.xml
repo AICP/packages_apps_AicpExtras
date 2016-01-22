@@ -30,24 +30,6 @@
         android:dependency="qs_show_brightness_slider"
         android:defaultValue="true"/>
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-        android:key="qs_transparent_shade"
-        android:title="@string/qs_transparent_shade"
-        android:max="255"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight=""
-        android:persistent="false" />
-
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-        android:key="qs_transparent_header"
-        android:title="@string/qs_transparent_header"
-        android:max="255"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight=""
-        android:persistent="false" />
-
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="disable_immersive_message"
         android:title="@string/disable_immersive_message_title"

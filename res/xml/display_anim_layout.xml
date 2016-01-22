@@ -54,13 +54,4 @@
         android:title="@string/aokp_animation_title"
         android:summary="@string/aokp_animation_summary" />
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-        android:key="transparent_volume_dialog"
-        android:title="@string/volume_dialog_transparency"
-        android:max="255"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight=""
-        android:persistent="false" />
-
 </PreferenceScreen>
