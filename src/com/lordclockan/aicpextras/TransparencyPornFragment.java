@@ -41,11 +41,13 @@ public class TransparencyPornFragment extends Fragment {
         private static final String PREF_QS_TRANSPARENT_HEADER = "qs_transparent_header";
         private static final String PREF_TRANSPARENT_VOLUME_DIALOG = "transparent_volume_dialog";
         private static final String PREF_TRANSPARENT_POWER_MENU = "transparent_power_menu";
+        private static final String PREF_TRANSPARENT_POWER_DIALOG_DIM = "transparent_power_dialog_dim";
 
         private SeekBarPreferenceCham mQSShadeAlpha;
         private SeekBarPreferenceCham mQSHeaderAlpha;
         private SeekBarPreferenceCham mVolumeDialogAlpha;
         private SeekBarPreferenceCham mPowerMenuAlpha;
+        private SeekBarPreferenceCham mPowerDialogDim;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -88,6 +90,14 @@ public class TransparencyPornFragment extends Fragment {
                     Settings.System.TRANSPARENT_POWER_MENU, 100);
             mPowerMenuAlpha.setValue(powerMenuAlpha / 1);
             mPowerMenuAlpha.setOnPreferenceChangeListener(this);
+
+            // Power/reboot dialog dim
+            mPowerDialogDim =
+                    (SeekBarPreferenceCham) prefSet.findPreference(PREF_TRANSPARENT_POWER_DIALOG_DIM);
+            int powerDialogDim = Settings.System.getInt(resolver,
+                    Settings.System.TRANSPARENT_POWER_DIALOG_DIM, 50);
+            mPowerDialogDim.setValue(powerDialogDim / 1);
+            mPowerDialogDim.setOnPreferenceChangeListener(this);
         }
 
         @Override
@@ -109,6 +119,10 @@ public class TransparencyPornFragment extends Fragment {
             } else if (preference == mPowerMenuAlpha) {
                 Settings.System.putInt(resolver,
                         Settings.System.TRANSPARENT_POWER_MENU, alpha * 1);
+                return true;
+            } else if (preference == mPowerDialogDim) {
+                Settings.System.putInt(resolver,
+                        Settings.System.TRANSPARENT_POWER_DIALOG_DIM, alpha * 1);
                 return true;
             }
             return false;
