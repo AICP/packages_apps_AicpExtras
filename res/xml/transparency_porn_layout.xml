@@ -53,5 +53,14 @@
         aicpextras:unitsRight="%"
         android:persistent="false" />
 
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="transparent_power_dialog_dim"
+        android:title="@string/power_menu_dialog_dim"
+        android:max="100"
+        aicpextras:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="%"
+        android:persistent="false" />
+
 </PreferenceScreen>
 
