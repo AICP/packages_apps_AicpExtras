@@ -21,6 +21,7 @@
     <string name="logo">logo</string>
     <string name="display_animations_title">Affichage et animations</string>
     <string name="multishit_title">Multiples merdes</string>
+    <string name="transparency_porn_title">Transparence</string>
     <string name="notificaitons_title">Tiroir de notification</string>
     <string name="statubar_title">Barre d\'état</string>
     <string name="lockscreen_title">Écran de déverrouillage</string>
@@ -128,6 +129,8 @@
     <string name="show_network_traffic_2000">2000 ms</string>
     <string name="network_traffic_autohide">Masquer automatiquement</string>
     <string name="network_traffic_autohide_summary">Ne pas afficher l\'indicateur de vitesse de réseau lorsqu\'il n\'y a pas de trafic</string>
+    <string name="network_traffic_hidearrow">Masquer les flèches</string>
+    <string name="network_traffic_hidearrow_summary">Masquer les flèches de l\'indicateur de trafic</string>
     <string name="network_traffic_autohide_threshold">Seuil d\'inactivité</string>
     <string name="ok">OK</string>
     <string name="cancel">Annuler</string>
@@ -742,8 +745,27 @@
     <!-- QS shade transparency -->
     <string name="qs_transparent_shade">Transparence des réglages rapides</string>
 
+    <!-- QS header transparency -->
+    <string name="qs_transparent_header">Transparence de l\'en-tête dans les réglages rapides</string>
+
+    <!-- Volume dialog transparency -->
+    <string name="volume_dialog_transparency">Transparence du panneau de volume</string>
+
+    <!-- Power menu and dialogs transparency -->
+    <string name="power_menu_transparency">Transparence du menu d\'alimentation</string>
+
+    <!-- Power/reboot dialogs dim amount -->
+    <string name="power_menu_dialog_dim">Transparence des dialogues du menu d\'alimentation</string>
+
     <!-- Lockscreen Torch -->
     <string name="keyguard_torch_title">Lampe torche sur l\'écran de vérouillage</string>
     <string name="keyguard_torch_summary">Un appui long sur le bouton d\'alimentation pendant que l\'écran est éteint allumera la lampe torche</string>
 
+    <!-- Breathing Notifications -->
+    <string name="breathing_notifications_category">Notifications clignotantes</string>
+    <string name="breathing_notifications_title">Notifications clignotantes</string>
+    <string name="missed_call_breath_title">Appel Manqué</string>
+    <string name="missed_call_breath_summary">Faire clignoter la notification d\'appel manqué, dans la barre d\'état</string>
+    <string name="voicemail_breath_title">Messagerie Vocale</string>
+    <string name="voicemail_breath_summary">Faire clignoter la notification de la messagerie vocale, dans la barre d\'état</string>
 </resources>
