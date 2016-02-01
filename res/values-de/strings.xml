@@ -1,5 +1,4 @@
 <resources>
-    <!-- Do not translate app_name string. -->
     <string name="app_name">Aicp Extras</string>
 
     <string name="navigation_drawer_open">Öffne Navigationsbereich</string>
@@ -19,10 +18,10 @@
     <string name="builtin_title">Intern</string>
     <string name="addons_title">Extern</string>
     <string name="welcome_title">WELCOME\nto the real world!!!</string>
-    <!-- Do not translate logo string. -->
     <string name="logo">logo</string>
     <string name="display_animations_title">Display und Animationen</string>
     <string name="multishit_title">Zusätze</string>
+    <string name="transparency_porn_title">UI-Transparenz</string>
     <string name="notificaitons_title">Benachrichtigungsleiste</string>
     <string name="statubar_title">Statusleiste</string>
     <string name="lockscreen_title">Sperrbildschirm</string>
@@ -62,7 +61,8 @@
     <string name="recents_clear_all_dismiss_all_title">Lösche alle laufenden Anwendungen</string>
     <string name="recents_clear_all_dismiss_all_summary">Lösche auch die Anwendung im Vordergrund, wenn alle gelöscht werden.</string>
     <string name="stock_recents_disabled">Der eingebaute Anwendungsverlauf ist deaktiviert!</string>
-
+    <string name="alternatives_title">Alternativen</string>
+    
     <!-- Change Log -->
     <string name="changelog_title">Änderungsprotokoll</string>
     <string name="changelog_title_summary">Zeige letzte Änderungen im ROM</string>
@@ -93,8 +93,8 @@
     <string name="force_expanded_notifications_summary">Nur für Anwendungen verfügbar, welche dies unterstützen</string>
 
     <!-- Disabling immersive mode messages -->
-    <string name="disable_immersive_message_title">Deaktiviere Benachrichtigungen für Immersive-Modus</string>
-    <string name="disable_immersive_message_summary">Dies versteckt alle Benachrichtigungen im Immersive-Modus (Full Screen)</string>
+    <string name="disable_immersive_message_title">Deaktiviere Benachrichtigung für Vollbildmodus</string>
+    <string name="disable_immersive_message_summary">Dies versteckt alle Benachrichtigungen für den Vollbildmodus</string>
 
     <!-- Disabling FC notifications -->
     <string name="disable_fc_notifications_title">FC Benachrichtigungen abschalten</string>
@@ -103,9 +103,7 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">Farbwähler</string>
     <string name="press_color_to_apply">Wähle unten eine Farbe</string>
-    <!-- Do not translate arrow. -->
     <string name="arrow_right">→</string>
-    <!-- Do not translate arrow. -->
     <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
@@ -131,8 +129,10 @@
     <string name="show_network_traffic_2000">2000 ms</string>
     <string name="network_traffic_autohide">Automatisch ausblenden</string>
     <string name="network_traffic_autohide_summary">Versteckt den Datenmonitor, wenn keine Aktivität vorhanden ist</string>
+    <string name="network_traffic_hidearrow">Verberge Pfeile</string>
+    <string name="network_traffic_hidearrow_summary">Versteckt die Pfeile des Netzwerk-Datenverkehrs</string>
     <string name="network_traffic_autohide_threshold">Inaktivitätsschwelle</string>
-    <string name="ok">OK</string>
+    <string name="ok">Ok</string>
     <string name="cancel">Abbruch</string>
     <string name="default_string">Standard</string>
 
@@ -163,6 +163,7 @@
     <!-- Battery Bar -->
     <string name="battery_bar_title">Akkustandleiste</string>
     <string name="battery_bar">Position der Akkustandleiste</string>
+    <string name="battery_bar_no_navbar">Position der Akkustandleiste</string>
     <string name="battery_bar_color">Farbe der Akkustandleiste</string>
     <string name="battery_bar_cat">Stil der Akkustandleiste</string>
     <string name="battery_bar_style_title">Ausrichtung der Akkustandleiste</string>
@@ -263,11 +264,18 @@
     <string name="status_bar_weather_font_medium_italic">Mittel &amp; kursiv</string>
     <string name="status_bar_weather_font_black">Schwarz</string>
     <string name="status_bar_weather_font_black_italic">Schwarz &amp; kursiv</string>
+    <string name="status_bar_weather_font_dancingscript">DancingScript</string>
+    <string name="status_bar_weather_font_dancingscript_bold">DancingScript fett</string>
+    <string name="status_bar_weather_font_comingsoon">ComingSoon</string>
+    <string name="status_bar_weather_font_notoserif">NotoSerif Normal</string>
+    <string name="status_bar_weather_font_notoserif_italic">NotoSerif kursiv</string>
+    <string name="status_bar_weather_font_notoserif_bold">NotoSerif fett</string>
+    <string name="status_bar_weather_font_notoserif_bold_italic">NotoSerif fett &amp; kursiv</string>
 
     <!-- Recents Fullscreen -->
-    <string name="recents_show_fullscreen">Anwendungsverlauf bei Vollbild</string>
-    <string name="recents_fullscreen_summary_enabled">Anwendungsverlauf bei Vollbild ist aktiviert</string>
-    <string name="recents_fullscreen_summary_disabled">Anwendungsverlauf bei Vollbild ist deaktiviert</string>
+    <string name="recents_show_fullscreen">Anwendungsverlauf als Vollbild</string>
+    <string name="recents_fullscreen_summary_enabled">Anwendungsverlauf als Vollbild ist aktiviert</string>
+    <string name="recents_fullscreen_summary_disabled">Anwendungsverlauf als Vollbild ist deaktiviert</string>
     <string name="recents_full_screen_clock_title">Uhrzeit anzeigen</string>
     <string name="recents_full_screen_clock_summary">Zeigt die Uhrzeit im Vollbildmodus oben an</string>
     <string name="recents_full_screen_date_title">Datum anzeigen</string>
@@ -275,6 +283,7 @@
 
     <!-- Weather settings -->
     <string name="weahter_lockscreen_category">Optionen für Wetter auf Sperrbildschirm</string>
+    <string name="weather_cat_notifications_title">Benachrichtigungen</string>
     <string name="weather_settings_title">LockClock Einstellungen</string>
     <string name="weather_settings_summary">Konfiguration des Standorts im Wetter Widget und andere Einstellungen</string>
     <string name="weather_lockscreen_show_title">Wetterlage auf Sperrbildschirm</string>
@@ -285,8 +294,6 @@
     <string name="status_bar_show_weather_summary">Wetterdaten über den Schnelleinstellungen anzeigen</string>
     <string name="weather_show_location_title">Standort anzeigen</string>
     <string name="weather_show_location_summary">Aktivieren, um den Standort anzuzeigen</string>
-    <string name="weather_show_timestamp_title">Zeitstempel anzeigen</string>
-    <string name="weather_show_timestamp_summary">Aktivieren, um Zeitstempel der Daten anzuzeigen</string>
     <string name="weather_condition_icon_title">Symbol für Wetterlage</string>
     <string name="weather_condition_icon_dlg_title">Auswahl eines Symbols zur Anzeige der Wetterlage</string>
     <string name="weather_condition_icon_monochrome_title">Einfarbig</string>
@@ -314,7 +321,7 @@
     <string name="icons_title">Symbole</string>
     <string name="text_title">Text</string>
     <string name="reset">Zurücksetzen</string>
-    <string name="reset_lockscreen_weather">OK</string>
+    <string name="reset_lockscreen_weather">Ok</string>
     <string name="reset_values_message">Werte zurücksetzen?</string>
     <string name="weather_reset_title">Wetterwerte zurücksetzen</string>
 
@@ -322,13 +329,13 @@
     <string name="lock_clock_font_title">cLock Schriftart</string>
     <string name="lock_clock_font_summary">Ändert die Schriftart der Uhr auf dem Sperrbildschirm</string>
     <string name="lock_clock_font_dialog_title">Wähle die cLock Schriftart</string>
-    <string name="lock_clock_font_stock">Roboto (Standard)</string>
+    <string name="lock_clock_font_normal">Roboto</string>
     <string name="lock_clock_font_bold">Roboto fett</string>
     <string name="lock_clock_font_italic">Roboto kursiv</string>
     <string name="lock_clock_font_bold_italic">Roboto fett &amp; kursiv</string>
-    <string name="lock_clock_font_light">Roboto leicht</string>
+    <string name="lock_clock_font_light_normal">Roboto leicht (Standard)</string>
     <string name="lock_clock_font_light_italic">Roboto leicht &amp; kursiv</string>
-    <string name="lock_clock_font_thin">Roboto dünn</string>
+    <string name="lock_clock_font_thin_normal">Roboto dünn</string>
     <string name="lock_clock_font_thin_italic">Roboto dünn &amp; kursiv</string>
     <string name="lock_clock_font_condensed_normal">Roboto gestaucht</string>
     <string name="lock_clock_font_condensed_italic">Roboto gestaucht &amp; kursiv</string>
@@ -646,12 +653,12 @@
     <string name="animation_settings_reset_message">Animation auf Standard zurücksetzen?</string>
     <string name="animation_default">Standard</string>
     <string name="animation_fade">Verblassen</string>
-    <string name="animation_slide_right">von rechts hereingleiten</string>
-    <string name="animation_slide_left">von links hereingleiten</string>
-    <string name="animation_slide_right_no_fade">von rechts hereingleiten (ohne verblassen)</string>
-    <string name="animation_slide_left_no_fade">von links hereingleiten (ohne verblassen)</string>
-    <string name="animation_slide_up">von unten hereingleiten</string>
-    <string name="animation_slide_down">von oben hereingleiten</string>
+    <string name="animation_slide_right">Gleiten von rechts</string>
+    <string name="animation_slide_left">Gleiten von links</string>
+    <string name="animation_slide_right_no_fade">Gleiten von rechts (ohne)</string>
+    <string name="animation_slide_left_no_fade">Gleiten von links (ohne)</string>
+    <string name="animation_slide_up">Gleiten von unten</string>
+    <string name="animation_slide_down">Gleiten von oben</string>
     <string name="animation_translucent">Transparent</string>
     <string name="animation_grow_shrink">Zoom-in (von oben)</string>
     <string name="animation_grow_shrink_center">Zoom-in (aus der Mitte)</string>
@@ -744,5 +751,32 @@
     <!-- Quick settings disable on lockscreen -->
     <string name="block_on_secure_keyguard_title">Keine Schnelleinstellungen auf dem Sperrbildschirm</string>
     <string name="block_on_secure_keyguard_summary">Deaktiviert die Anzeige von Schnelleinstellungen bei Bildschirmsperre zur Sicherheit</string>
+
+    <!-- QS shade transparency -->
+    <string name="qs_transparent_shade">Kachelhintergund</string>
+
+    <!-- QS header transparency -->
+    <string name="qs_transparent_header">Kopfzeilen Schnelleinstellungen</string>
+
+    <!-- Volume dialog transparency -->
+    <string name="volume_dialog_transparency">Lautstärkedialog</string>
+
+    <!-- Power menu and dialogs transparency -->
+    <string name="power_menu_transparency">Ein-/Aus- und Neustart-Menü</string>
+
+    <!-- Power/reboot dialogs dim amount -->
+    <string name="power_menu_dialog_dim">Ein-/Aus- und Neustart-Dialog Hintergrundabdunklung</string>
+
+    <!-- Lockscreen Torch -->
+    <string name="keyguard_torch_title">Taschenlampe bei Sperrbildschirm</string>
+    <string name="keyguard_torch_summary">Ein/Aus-Taste während der Bildschirmsperre lange drücken, um die Taschenlampe einzuschalten</string>
+
+    <!-- Breathing Notifications -->
+    <string name="breathing_notifications_category">Pulsierende Benachrichtigungen</string>
+    <string name="breathing_notifications_title">Pulsierende Benachrichtigungen</string>
+    <string name="missed_call_breath_title">Pulsierende verpasste Anrufe</string>
+    <string name="missed_call_breath_summary">Gibt ihren Benachrichtigungen bei verpassten Anrufen einen pulsierenden Effekt in der Statusleiste</string>
+    <string name="voicemail_breath_title">Pulsierende Sprachnachrichten</string>
+    <string name="voicemail_breath_summary">Gibt ihren Benachrichtigungen für Sprachnachrichten einen pulsierenden Effekt in der Statusleiste</string>
 
 </resources>
