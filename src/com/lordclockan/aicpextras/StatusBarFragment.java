@@ -47,11 +47,13 @@ public class StatusBarFragment extends Fragment {
         private static final String KEY_AICP_LOGO_STYLE = "status_bar_aicp_logo_style";
         private static final String MISSED_CALL_BREATH = "missed_call_breath";
         private static final String VOICEMAIL_BREATH = "voicemail_breath";
+        private static final String KEY_CAT_BREATHING_NOTIFICATIONS = "breathing_notifications_category";
 
         private Preference mTraffic;
         private Preference mCarrierLabel;
         private Preference mBatteryBar;
         private Preference mStatusbarWeather;
+        private PreferenceCategory categoryBreathingNotifications;
         private ColorPickerPreference mAicpLogoColor;
         private ListPreference mAicpLogoStyle;
         private SwitchPreference mMissedCallBreath;
@@ -93,6 +95,9 @@ public class StatusBarFragment extends Fragment {
             mAicpLogoColor.setNewPreviewColor(intColor);
 
             // Breathing Notifications
+            categoryBreathingNotifications =
+                (PreferenceCategory) prefSet.findPreference(KEY_CAT_BREATHING_NOTIFICATIONS);
+
             mMissedCallBreath = (SwitchPreference) findPreference(MISSED_CALL_BREATH);
             mVoicemailBreath = (SwitchPreference) findPreference(VOICEMAIL_BREATH);
 
@@ -109,9 +114,10 @@ public class StatusBarFragment extends Fragment {
                         Settings.System.KEY_VOICEMAIL_BREATH, 0) == 1);
                 mVoicemailBreath.setOnPreferenceChangeListener(this);
             } else {
+                prefSet.removePreference(mCarrierLabel);
                 prefSet.removePreference(mMissedCallBreath);
                 prefSet.removePreference(mVoicemailBreath);
-                prefSet.removePreference(mCarrierLabel);
+                prefSet.removePreference(categoryBreathingNotifications);
             }
         }
 
