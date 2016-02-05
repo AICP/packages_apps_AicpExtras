@@ -111,6 +111,7 @@ public class StatusBarFragment extends Fragment {
             } else {
                 prefSet.removePreference(mMissedCallBreath);
                 prefSet.removePreference(mVoicemailBreath);
+                prefSet.removePreference(mCarrierLabel);
             }
         }
 
