@@ -41,9 +41,11 @@ public class NotificationsFragment extends Fragment {
 
         private static final String PREF_QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
         private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
+        private static final String PREF_STATUS_BAR_HEADER_FONT_STYLE = "status_bar_header_font_style";
 
         private SwitchPreference mBrightnessSlider;
         private SwitchPreference mBlockOnSecureKeyguard;
+        private ListPreference mStatusBarHeaderFontStyle;
 
         private static final int MY_USER_ID = UserHandle.myUserId();
 
@@ -80,6 +82,13 @@ public class NotificationsFragment extends Fragment {
                     CMSettings.System.QS_SHOW_BRIGHTNESS_SLIDER, 1, UserHandle.USER_CURRENT);
             updateBrightnessSliderSummary(brightnessSlider);
 
+            // Status bar header font style
+            mStatusBarHeaderFontStyle = (ListPreference) findPreference(PREF_STATUS_BAR_HEADER_FONT_STYLE);
+            mStatusBarHeaderFontStyle.setOnPreferenceChangeListener(this);
+            mStatusBarHeaderFontStyle.setValue(Integer.toString(Settings.System.getIntForUser(resolver,
+                    Settings.System.STATUS_BAR_HEADER_FONT_STYLE, 0, UserHandle.USER_CURRENT)));
+            mStatusBarHeaderFontStyle.setSummary(mStatusBarHeaderFontStyle.getEntry());
+
         }
 
         @Override
@@ -98,6 +107,13 @@ public class NotificationsFragment extends Fragment {
                 Settings.Secure.putInt(resolver,
                         Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
                         (Boolean) newValue ? 1 : 0);
+                return true;
+            } else if (preference == mStatusBarHeaderFontStyle) {
+                int val = Integer.parseInt((String) newValue);
+                int index = mStatusBarHeaderFontStyle.findIndexOfValue((String) newValue);
+                Settings.System.putIntForUser(resolver,
+                        Settings.System.STATUS_BAR_HEADER_FONT_STYLE, val, UserHandle.USER_CURRENT);
+                mStatusBarHeaderFontStyle.setSummary(mStatusBarHeaderFontStyle.getEntries()[index]);
                 return true;
             }
             return false;
