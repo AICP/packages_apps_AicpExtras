@@ -66,6 +66,9 @@ public class LockscreenFragment extends Fragment {
             mBlurRadius.setValue(Settings.System.getInt(resolver,
                     Settings.System.LOCKSCREEN_BLUR_RADIUS, 14));
             mBlurRadius.setOnPreferenceChangeListener(this);
+            if(!getResources().getBoolean(com.android.internal.R.bool.config_use_stackblur)) {
+                prefSet.removePreference(mBlurRadius);
+            }
 
             mLockscreenWeather = prefSet.findPreference(PREF_LOCKSCREEN_WEATHER);
 
