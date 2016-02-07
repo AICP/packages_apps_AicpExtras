@@ -45,6 +45,7 @@ public class LockscreenFragment extends Fragment {
         private static final String KEY_WALLPAPER_SET = "lockscreen_wallpaper_set";
         private static final String KEY_WALLPAPER_CLEAR = "lockscreen_wallpaper_clear";
         private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
+        private static final String STACK_BLUR_PREF = "pref_scrollingcache";
 
         private SeekBarPreferenceCham mBlurRadius;
         private Preference mLockscreenWeather;
@@ -66,6 +67,9 @@ public class LockscreenFragment extends Fragment {
             mBlurRadius.setValue(Settings.System.getInt(resolver,
                     Settings.System.LOCKSCREEN_BLUR_RADIUS, 14));
             mBlurRadius.setOnPreferenceChangeListener(this);
+            if(!getResources().getBoolean(com.android.internal.R.bool.config_use_stackblur)) {
+                prefSet.removePreference(mBlurRadius);
+            }
 
             mLockscreenWeather = prefSet.findPreference(PREF_LOCKSCREEN_WEATHER);
 
