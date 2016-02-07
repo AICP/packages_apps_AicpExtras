@@ -159,6 +159,8 @@
     <string name="show_carrier_keyguard">Nur auf Sperrbildschirm</string>
     <string name="show_carrier_statusbar">Nur in Statusleiste</string>
     <string name="show_carrier_enabled">Aktiviert</string>
+    <string name="status_bar_carrier_position">Position</string>
+    <string name="status_bar_carrier_font_style_title">Schriftstil</string>
 
     <!-- Battery Bar -->
     <string name="battery_bar_title">Akkustandleiste</string>
@@ -256,7 +258,7 @@
     <string name="status_bar_weather_font_thin_italic">Dünn &amp; kursiv</string>
     <string name="status_bar_weather_font_condensed">Gestaucht</string>
     <string name="status_bar_weather_font_condensed_italic">Gestaucht &amp; kursiv</string>
-   <string name="status_bar_weather_font_condensed_light">Gestaucht &amp; leicht</string>
+    <string name="status_bar_weather_font_condensed_light">Gestaucht &amp; leicht</string>
     <string name="status_bar_weather_font_condensed_light_italic">Gestaucht, leicht, kursiv</string>
     <string name="status_bar_weather_font_condensed_bold">Gestaucht &amp; fett</string>
     <string name="status_bar_weather_font_condensed_bold_italic">Gestaucht, fett, kursiv</string>
@@ -267,7 +269,7 @@
     <string name="status_bar_weather_font_dancingscript">DancingScript</string>
     <string name="status_bar_weather_font_dancingscript_bold">DancingScript fett</string>
     <string name="status_bar_weather_font_comingsoon">ComingSoon</string>
-    <string name="status_bar_weather_font_notoserif">NotoSerif Normal</string>
+    <string name="status_bar_weather_font_notoserif">NotoSerif normal</string>
     <string name="status_bar_weather_font_notoserif_italic">NotoSerif kursiv</string>
     <string name="status_bar_weather_font_notoserif_bold">NotoSerif fett</string>
     <string name="status_bar_weather_font_notoserif_bold_italic">NotoSerif fett &amp; kursiv</string>
@@ -347,7 +349,13 @@
     <string name="lock_clock_font_black_italic">Roboto schwarz &amp; kursiv</string>
     <string name="lock_clock_font_condensed_light_normal">Roboto gestaucht &amp; leicht</string>
     <string name="lock_clock_font_condensed_light_italic">Roboto gestaucht, leicht, kursiv</string>
-
+    <string name="lock_clock_font_dancingscript">DancingScript</string>
+    <string name="lock_clock_font_dancingscript_bold">DancingScript fett</string>
+    <string name="lock_clock_font_comingsoon">ComingSoon</string>
+    <string name="lock_clock_font_notoserif">NotoSerif normal</string>
+    <string name="lock_clock_font_notoserif_italic">NotoSerif kursiv</string>
+    <string name="lock_clock_font_notoserif_bold">NotoSerif fett</string>
+    <string name="lock_clock_font_notoserif_bold_italic">NotoSerif fett &amp; kursiv</string>
     <!-- Lockscreen see through -->
     <string name="lockscreen_see_through_title">Sperrbildschirm-Trübung</string>
     <string name="lockscreen_see_through_summary">Eintrübung und Anzeige des Inhalts hinter dem Sperrbildschirm.</string>
@@ -518,8 +526,6 @@
     <string name="enable_task_manager_summary">Ein-/Ausschalten der Anzeige des Task Manager-Symbole im Bereich der erweiterten Statusleiste.</string>
 
     <!-- SlimSizer  -->
-    <!-- Do not translate listsystem string. -->
-    <string name="listsystem">list</string>
     <string name="sizer_title">App Entferner</string>
     <string name="caution">Vorsicht!</string>
     <string name="sizer_message_startup">Dieses Werkzeug erlaubt das Löschen von Systemanwendungen. Mit Vorsicht benutzen und nur Apps löschen, bei denen Sie sich sicher sind.</string>
@@ -651,12 +657,12 @@
     <string name="ime_animation_title">IME Animationen</string>
     <string name="ime_animation_summary">Lege eine andere Animation für die System-Tastatur fest</string>
     <string name="animation_settings_reset_message">Animation auf Standard zurücksetzen?</string>
-    <string name="animation_default">Standard</string>
+    <!-- <string name="animation_default">Standard</string> -->
     <string name="animation_fade">Verblassen</string>
     <string name="animation_slide_right">Gleiten von rechts</string>
     <string name="animation_slide_left">Gleiten von links</string>
-    <string name="animation_slide_right_no_fade">Gleiten von rechts (ohne)</string>
-    <string name="animation_slide_left_no_fade">Gleiten von links (ohne)</string>
+    <string name="animation_slide_right_no_fade">Gleiten von rechts (ohne Verblassen)</string>
+    <string name="animation_slide_left_no_fade">Gleiten von links (ohne Verblassen)</string>
     <string name="animation_slide_up">Gleiten von unten</string>
     <string name="animation_slide_down">Gleiten von oben</string>
     <string name="animation_translucent">Transparent</string>
@@ -756,7 +762,7 @@
     <string name="qs_transparent_shade">Kachelhintergund</string>
 
     <!-- QS header transparency -->
-    <string name="qs_transparent_header">Kopfzeilen Schnelleinstellungen</string>
+    <string name="qs_transparent_header">Kopfzeilen der Schnelleinstellungen</string>
 
     <!-- Volume dialog transparency -->
     <string name="volume_dialog_transparency">Lautstärkedialog</string>
@@ -778,5 +784,13 @@
     <string name="missed_call_breath_summary">Gibt ihren Benachrichtigungen bei verpassten Anrufen einen pulsierenden Effekt in der Statusleiste</string>
     <string name="voicemail_breath_title">Pulsierende Sprachnachrichten</string>
     <string name="voicemail_breath_summary">Gibt ihren Benachrichtigungen für Sprachnachrichten einen pulsierenden Effekt in der Statusleiste</string>
+
+    <!-- Hide Lockscreen clock & date -->
+    <string name="hide_lockscreen_items_title">Sperrbildschirmanzeigen</string>
+    <string name="hide_lockscreen_clock_title">Zeige Uhrzeit auf Sperrbildschirm</string>
+    <string name="hide_lockscreen_date_title">Zeige Datum auf Sperrbildschirm</string>
+
+    <!-- Status bar header font style -->
+    <string name="status_bar_header_font_style_title">Schriftstil des Statusleistenkopfs</string>
 
 </resources>
