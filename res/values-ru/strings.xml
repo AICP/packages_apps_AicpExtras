@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AICP настройки</string>
+
     <string name="navigation_drawer_open">Открыть панель навигации</string>
     <string name="navigation_drawer_close">Закрыть панель навигации</string>
+
     <string name="action_settings">Настройки</string>
     <string name="first_layout_title">"Место для различных модификации!!!"</string>
     <string name="second_layout_title">Во-вторых компоновка</string>
@@ -27,8 +29,7 @@
     <string name="systemui_tuner_title">SystemUI Tuner</string>
     <string name="systemui_tuner_summary">Эксперементальная настройка</string>
     <string name="systemui_tuner_dilog_title">Внимание</string>
-    <string name="systemui_tuner_dilog_warning">Настройщик предлагает ограниченные модификации SystemUI. 
-       Ссылка была добавлена Расширенные настройки для более легкого доступа .Здесь вы можете добавить новые плитки.</string>
+    <string name="systemui_tuner_dilog_warning">Настройщик предлагает ограниченные модификации SystemUI. Ссылка была добавлена Расширенные настройки для более легкого доступа. Здесь вы можете добавить новые плитки.</string>
     <string name="aicp_downloads_title">Скачать прошивку</string>
     <string name="aicp_gerrit_title">Исходники</string>
     <string name="send_mail_intent">Отправить сообщение...</string>
@@ -36,17 +37,18 @@
     <string name="hidden_anim_more_title">Больше?</string>
     <string name="hidden_anim_more_nice">Хорошо</string>
     <string name="continue_title">Продолжить</string>
+
     <string name="nothing_title">Ничего не увидеть здесь</string>
 
-	<!-- Switch On/Off  -->
+    <!-- Switch On/Off  -->
     <string name="switch_on_text">Вкл</string>
     <string name="switch_off_text">Выкл</string>
 
-	<!-- Permissions -->
+    <!-- Permissions -->
     <string name="storage_permission_granted">Permission Granted, Now you can write to storage.</string>
-    <string name="storage_permission_not_granted">Отказано , Вы не можете записать в храненилище.</string>
+    <string name="storage_permission_not_granted">Отказано, Вы не можете записать в храненилище.</string>
 
-	<!-- Recents panel -->
+    <!-- Recents panel -->
     <string name="recents_panel_title">Панель недавних приложений</string>
     <string name="show_clear_all_recents_button_title">Кнопка очистки</string>
     <string name="show_clear_all_recents_button_summary">Показывать кнопку очистки</string>
@@ -62,21 +64,21 @@
     <string name="stock_recents_disabled">Стоковые недавние отключены!</string>
     <string name="alternatives_title">Альтернативы</string>
 
-	<!-- Change Log -->
+    <!-- Change Log -->
     <string name="changelog_title">Список изменений</string>
     <string name="changelog_title_summary">Посмотреть последние изменения в прошивке</string>
     <string name="changelog_error">Не удается загрузить изменений</string>
 
-	<!-- Toast Icons -->
+    <!-- Toast Icons -->
     <string name="toast_icon_title">Иконка приложения в уведомлении</string>
-    <string name="toast_icon_summary">Отображение значка приложении , в уведомлениях</string>
+    <string name="toast_icon_summary">Отображение значка приложении, в уведомлениях</string>
 
-	<!-- Brightness slider -->
+    <!-- Brightness slider -->
     <string name="qs_brightness_slider_title">Слайдер яркости</string>
     <string name="qs_brightness_slider_enabled">Включен</string>
     <string name="qs_brightness_slider_disabled">Отключен</string>
 
-	<!-- Display & Lights screen, setting options for LCD density -->
+    <!-- Display & Lights screen, setting options for LCD density -->
     <string name="lcd_density">Плотность экрана</string>
     <string name="dialog_title_lcd_density">Плотность экрана</string>
     <string name="lcd_density_value_format">%d DPI</string>
@@ -84,22 +86,22 @@
     <string name="restarting_ui">Перезапуск интерфейса…</string>
     <string name="lcd_density_prompt_message">"Некоторые приложения могут не работать в нестандартных DPI. Это перезагрузить телефон."</string>
 
-	<!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
+    <!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
     <string name="print_restart">Перезагрузка</string>
 
-	<!-- Force expanded notifications -->
+    <!-- Force expanded notifications -->
     <string name="force_expanded_notifications_title">Расширенные уведомления</string>
-    <string name="force_expanded_notifications_summary">Доступно только для приложений , которые поддерживают расширенные уведомления</string>
+    <string name="force_expanded_notifications_summary">Доступно только для приложений, которые поддерживают расширенные уведомления</string>
 
-	<!-- Disabling immersive mode messages -->
+    <!-- Disabling immersive mode messages -->
     <string name="disable_immersive_message_title">Отключить сообщения Immersive </string>
     <string name="disable_immersive_message_summary">Это скроет все сообщения Immersive  </string>
 
-	<!-- Disabling FC notifications -->
-    <string name="disable_fc_notifications_title">Отключить уведомления о принудительном закрытии (FC)</string>
+    <!-- Disabling FC notifications -->
+    <string name="disable_fc_notifications_title">(FC) уведомления</string>
     <string name="disable_fc_notifications_summary">Это спрячет все уведомления связанные с FC (принудительное закрытие)</string>
 
-	<!-- Color Picker -->
+    <!-- Color Picker -->
     <string name="dialog_color_picker">Изменить цвет</string>
     <string name="press_color_to_apply">Нажать на цвет, что бы принять</string>
     <string name="arrow_right">→</string>
@@ -109,7 +111,7 @@
     <string name="set">Выбрать</string>
     <string name="color_default">По умолчанию</string>
 
-	<!-- Network traffic -->
+    <!-- Network traffic -->
     <string name="traffic_category">Сетевой трафик</string>
     <string name="traffic_title">Трафик</string>
     <string name="network_traffic_title">Сетевой трафик</string>
@@ -128,23 +130,25 @@
     <string name="show_network_traffic_2000">2000 мс</string>
     <string name="network_traffic_autohide">Автоматически скрывать</string>
     <string name="network_traffic_autohide_summary">Скрывать отображение трафика, когда нет сетевой активности</string>
-    <string name="network_traffic_autohide_threshold">порог неактивности</string>
+    <string name="network_traffic_autohide_threshold">Порог неактивности</string>
     <string name="ok">OK</string>
     <string name="cancel">Отмена</string>
     <string name="default_string">По умолчанию</string>
+    <string name="network_traffic_hidearrow">Скрыть стрелки</string>
+    <string name="network_traffic_hidearrow_summary">Скрыть стрелки индикатора трафика</string>
 
-	<!-- Superuser indicator on status bar -->
+    <!-- Superuser indicator on status bar -->
     <string name="su_indicator">Индикатор суперпользователя</string>
-    <string name="su_indicator_summary_on">Индикатор Суперпользователя  виден , когда сессия активна</string>
-    <string name="su_indicator_summary_off">Переключение чтобы показать индикатор суперпользователя , когда сессия активна</string>
+    <string name="su_indicator_summary_on">Индикатор Суперпользователя  виден, когда сессия активна</string>
+    <string name="su_indicator_summary_off">Переключение чтобы показать индикатор суперпользователя, когда сессия активна</string>
 
-	<!--Time Contexual Header -->
+    <!--Time Contexual Header -->
     <string name="status_bar_custom_header_title">Изображение в заголовка панели уведомлении</string>
     <string name="status_bar_custom_header_summary">Включить изображение в заголовка панели уведомлении</string>
     <string name="status_bar_custom_header_default_title">Использовать HD изображение</string>
-    <string name="status_bar_custom_header_default_summary">Включить для полиграфических изображений HD . Отключить для оригинальных изображений.</string>
+    <string name="status_bar_custom_header_default_summary">Включить для полиграфических изображений HD. Отключить для оригинальных изображений.</string>
 
-	<!-- Carrier Label -->
+    <!-- Carrier Label -->
     <string name="carrier_options">Логотип оператора</string>
     <string name="custom_carrier_label_title">Свой логотип</string>
     <string name="custom_carrier_label_explain">Пожалуйста, введите своё имя оператора. Оставить пустым для отображения по умолчанию.</string>
@@ -156,8 +160,10 @@
     <string name="show_carrier_keyguard">Только на экране блокировки</string>
     <string name="show_carrier_statusbar">Только в строке состояния</string>
     <string name="show_carrier_enabled">Везде</string>
+    <string name="status_bar_carrier_position">Положение лого</string>
+    <string name="status_bar_carrier_font_style_title">Стиль шрифта</string>
 
-	<!-- Battery Bar -->
+    <!-- Battery Bar -->
     <string name="battery_bar_title">Полоса заряда</string>
     <string name="battery_bar">Положение</string>
     <string name="battery_bar_no_navbar">Положение</string>
@@ -168,7 +174,7 @@
     <string name="battery_bar_animate_title">Анимация зарядки</string>
     <string name="battery_bar_animate_summary">Анимация заряда может снижать производительность. Включить по своему усмотрению.!</string>
 
-	<!-- Scrolling Cache -->
+    <!-- Scrolling Cache -->
     <string name="pref_scrollingcache_title">Кэш прокрутки</string>
     <string name="pref_scrollingcache_summary">Кэш прокрутки улучшает производительность, но при этом использует больше памяти</string>
     <string name="pref_scrollingcache_force_enable">Принудительно включить</string>
@@ -176,11 +182,11 @@
     <string name="pref_scrollingcache_default_disable">Выключить по умолчанию</string>
     <string name="pref_scrollingcache_force_disable">Принудительно выключить</string>
 
-	<!-- Headphones icon switch -->
+    <!-- Headphones icon switch -->
     <string name="show_headset_icon_title">Значок гарнитуры</string>
     <string name="show_headset_icon_summary">Показывать значок, когда гарнитура подключена.</string>
 
-	<!-- Gesture Anywhere -->
+    <!-- Gesture Anywhere -->
     <string name="gesture_anywhere_title">Жесты</string>
     <string name="gesture_anywhere_enabled_title">Жесты</string>
     <string name="gesture_anywhere_enabled_summary">Включить поддержку управления жестами</string>
@@ -213,7 +219,7 @@
     <string name="select_custom_activity_title">Выберите пользовательскую деятельность</string>
     <string name="profile_applist_title">Приложения</string>
 
-	<!-- Status bar temperature -->
+    <!-- Status bar temperature -->
     <string name="status_bar_temperature_title">Температура воздуха</string>
     <string name="status_bar_temperature_hidden">Не показывать</string>
     <string name="status_bar_temperature_show_scale">Показывать с единицами измерения</string>
@@ -241,8 +247,15 @@
     <string name="status_bar_weather_font_medium_italic">Средний курсив</string>
     <string name="status_bar_weather_font_black">Затемненный</string>
     <string name="status_bar_weather_font_black_italic">Затемненный курсив</string>
+    <string name="status_bar_weather_font_dancingscript">Рукописный</string>
+    <string name="status_bar_weather_font_dancingscript_bold">Рукописный жирный</string>
+    <string name="status_bar_weather_font_comingsoon">Комикс</string>
+    <string name="status_bar_weather_font_notoserif">НотоШериф</string>
+    <string name="status_bar_weather_font_notoserif_italic">НотоШериф курсив</string>
+    <string name="status_bar_weather_font_notoserif_bold">НотоШериф жирный</string>
+    <string name="status_bar_weather_font_notoserif_bold_italic">НотоШериф жирный курсив</string>
 
-	<!-- Recents Fullscreen -->
+    <!-- Recents Fullscreen -->
     <string name="recents_show_fullscreen">Панель недавних во весь экран</string>
     <string name="recents_fullscreen_summary_enabled">Недавно запущеные во весь включено</string>
     <string name="recents_fullscreen_summary_disabled">Недавно запущеные во весь выключено</string>
@@ -251,7 +264,7 @@
     <string name="recents_full_screen_date_title">Показывать дату во время полноэкранного режима</string>
     <string name="recents_full_screen_date_summary">Показывать дату</string>
 
-	<!-- Weather settings -->
+    <!-- Weather settings -->
     <string name="weahter_lockscreen_category">Погода на экране блокировки</string>
     <string name="weather_cat_notifications_title">Уведомления</string>
     <string name="weather_settings_title">Погода на экране блокировки</string>
@@ -295,7 +308,7 @@
     <string name="reset_values_message">Сбросить значения?</string>
     <string name="weather_reset_title">Сброс погодных значения</string>
 
-	<!-- Lock Clock Fonts -->
+    <!-- Lock Clock Fonts -->
     <string name="lock_clock_font_title">Шрифт</string>
     <string name="lock_clock_font_summary">Изменить шрифт часов виджетов, на экране блокировки</string>
     <string name="lock_clock_font_dialog_title">Выбрать шрифр Lock Clock</string>
@@ -317,37 +330,44 @@
     <string name="lock_clock_font_black_italic">Затемненный курсив</string>
     <string name="lock_clock_font_condensed_light_normal">Уплотненный светлый</string>
     <string name="lock_clock_font_condensed_light_italic">Уплотненный светлый курсив</string>
+    <string name="lock_clock_font_dancingscript">Рукописный</string>
+    <string name="lock_clock_font_dancingscript_bold">Рукописный жирный</string>
+    <string name="lock_clock_font_comingsoon">Комикс</string>
+    <string name="lock_clock_font_notoserif">НотоШериф</string>
+    <string name="lock_clock_font_notoserif_italic">НотоШериф курсив</string>
+    <string name="lock_clock_font_notoserif_bold">НотоШериф жирный</string>
+    <string name="lock_clock_font_notoserif_bold_italic">НотоШериф жирный курсив</string>
 
-	<!-- Lockscreen see through -->
+    <!-- Lockscreen see through -->
     <string name="lockscreen_see_through_title">Размытие экрана блокировки</string>
     <string name="lockscreen_see_through_summary">Размывать и отображать содержимое за экраном блокировки.</string>
     <string name="lockscreen_blur_radius">Интенсивность размытия</string>
 
-	<!-- Notificatio drawer weather -->
+    <!-- Notificatio drawer weather -->
     <string name="notif_drawer_weather_title">Погода</string>
     <string name="notif_drawer_weather_summary">Включение погоды в панели уведомлении</string>
 
-	<!-- Power menu on lock screen -->
-    <string name="powermenu_lockscreen_title">Меню выключения на экране блокировки</string>
-    <string name="powermenu_lockscreen_summary">Показывать меню при долгом нажатии на экране блокировки</string>
+    <!-- Power menu on lock screen -->
+    <string name="powermenu_lockscreen_title">Меню выключения</string>
+    <string name="powermenu_lockscreen_summary">Показывать меню выключения на экране блокировки</string>
 
-	<!-- ROm Stats -->
+    <!-- ROm Stats -->
     <!-- Main -->
     <string name="stats_title">Статистика</string>
 
-	<!-- Notification -->
+    <!-- Notification -->
     <string name="notification_ticker">Статистика  opted-In</string>
     <string name="notification_title">AICP статистика</string>
     <string name="notification_desc">Включение или отключение анонимную статистику</string>
     <string name="main_link">&lt;a href=http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in>Learn More&lt;/a></string>
 
-	<!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
     <string name="anonymous_statistics_title">AICP статистика</string>
-    <string name="anonymous_statistics_summary">Помощь AICP , анонимной статистической отчетностью</string>
+    <string name="anonymous_statistics_summary">Помощь AICP, анонимной статистической отчетностью</string>
     <string name="anonymous_statistics_warning_title">Об</string>
     <string name="anonymous_statistics_warning">"Отказ в AICP Статистика позволит без личные данные должны быть представлены к нашим серверам. 
-       Информация, представленная включает в себя уникальный идентификатор, который не идет на компромисс вашу частную жизнь или личные данные. 
-       Данные представлены каждые 7 дней. В качестве примера данных, которые представлены, нажмите на превью данных."</string>
+      Информация, представленная включает в себя уникальный идентификатор, который не идет на компромисс вашу частную жизнь или личные данные.
+      Данные представлены каждые 7 дней. В качестве примера данных, которые представлены, нажмите на превью данных."</string>
     <string name="pref_settings">Настройки</string>
     <string name="enable_reporting_title">Включить отчетность</string>
     <string name="disable_reporting_persistent">Отключить отчетность</string>
@@ -359,7 +379,7 @@
     <string name="reporting_interval">Интервал отчетности</string>
     <string name="next_report_on">Следущий отчет</string>
 
-	<!-- Anonymous Statistics - Preview -->
+    <!-- Anonymous Statistics - Preview -->
     <string name="preview_id_title">ID устройства</string>
     <string name="preview_device_title">Устройство</string>
     <string name="preview_version_title">Версия</string>
@@ -369,7 +389,7 @@
     <string name="preview_romversion_title">Версия AICP</string>
     <string name="preview_buildtype_title">Номер сборки AICP</string>
 
-	<!-- Circle app bar -->
+    <!-- Circle app bar -->
     <string name="category_app_circle_bar_title">Панель приложений</string>
     <string name="app_circle_bar_title">Круговая панель приложений</string>
     <string name="app_circle_bar_summary">Показывать круговую панель приложений при касании правой стороны экрана</string>
@@ -382,7 +402,7 @@
     <string name="trigger_bottom_title">Высота области вызова</string>
     <string name="trigger_bottom_summary">Установите высоту области вызова</string>
 
-	<!-- Lock screen wallpaper -->
+    <!-- Lock screen wallpaper -->
     <string name="lockscreen_category_title">Изображение</string>
     <string name="lockscreen_wallpaper_title">Обои</string>
     <string name="lockscreen_wallpaper_set_title">Задать обои экрана блокировки</string>
@@ -390,7 +410,7 @@
     <string name="lockscreen_wallpaper_clear_title">Стандартное изображение</string>
     <string name="reset_lockscreen_wallpaper">Обои экран блокировки установить по умолчанию</string>
 
-	<!-- OmniSwitch -->
+    <!-- OmniSwitch -->
     <string name="omniswitch_category_title">OmniSwitch</string>
     <string name="recents_use_omniswitch_title">Использовать в недавних</string>
     <string name="recents_use_omniswitch_summary">Используйте OmniSwitch вместо настройки по умолчанию </string>
@@ -399,15 +419,15 @@
     <string name="omniswitch_first_time_title">Информация</string>
     <string name="omniswitch_first_time_message">Убедитесь, что вы включили OmniSwitch . Вы можете сделать это с помощью \ "Настройки \ " ниже</string>
 
-	<!-- Double Tap Navbar to Sleep -->
+    <!-- Double Tap Navbar to Sleep -->
     <string name="double_tap_sleep_nav_bar_title">DT2S Нав. панель</string>
     <string name="double_tap_sleep_nav_bar_summary">Двойное нажатие на нав бар для перевода устройства в спящий режим</string>
 
-	<!-- Double tap to sleep on lockscreen -->
+    <!-- Double tap to sleep on lockscreen -->
     <string name="double_tap_sleep_anywhere_title">DT2S на экране блокировки</string>
     <string name="double_tap_sleep_anywhere_summary">Двойное нажатие на экран блокировки для перевода устройства в спящий режим</string>
 
-	<!-- PA Pie control -->
+    <!-- PA Pie control -->
     <string name="pa_piecontrol_settings_summary">Кастомизация PA Pie 2.0 целей, стиль, размер и цвет</string>
     <string name="pa_pie_control_title">Pie панель</string>
     <string name="pa_pie_control_enable_title">Включить Pie контроль</string>
@@ -416,7 +436,7 @@
     <string name="pa_pie_targets_title">Pie цели</string>
     <string name="pa_pie_style_title">Pie стиль</string>
     <string name="pa_pie_menu_title">Всегда показывать кнопку меню</string>
-    <string name="pa_pie_menu_summary">Будь или нет, Кнопка меню всегда должны быть показаны , даже когда не требуется</string>
+    <string name="pa_pie_menu_summary">Будь или нет, Кнопка меню всегда должны быть показаны, даже когда не требуется</string>
     <string name="pa_pie_size_title">Pie размер</string>
     <string name="pa_pie_size_summary">Определить размер Pie панели</string>
     <string name="pa_pie_size_small">Маленьний</string>
@@ -431,7 +451,7 @@
     <string name="pa_pie_gravity_right">Справа</string>
     <string name="pa_pie_gravity_left">Слева</string>
     <string name="pa_pie_gap_title">В промежутке</string>
-    <string name="pa_pie_gap_summary">Отрегулируйте зазор , который отделяет Pie панель</string>
+    <string name="pa_pie_gap_summary">Отрегулируйте зазор, который отделяет Pie панель</string>
     <string name="pa_pie_angle_title">Pie Angle</string>
     <string name="pa_pie_angle_summary">"Отрегулируйте угол Pie панели"</string>
     <string name="pa_pie_angle_none">Нет (устарело)</string>
@@ -475,16 +495,15 @@
     <string name="reset_paranoid">AICP</string>
     <string name="reset_android">Android</string>
 
-	<!-- Task Manager -->
+    <!-- Task Manager -->
     <string name="enable_task_manager_title">Диспетчер задач</string>
     <string name="enable_task_manager_summary">Включить / выключить действие для кнопки диспетчера задач в строке состояния</string>
 
-	<!-- SlimSizer  -->
+    <!-- SlimSizer  -->
     <string name="listsystem">Список</string>
-    <string name="sizer_title">Удаление преложений</string>
+    <string name="sizer_title">Удаление приложений</string>
     <string name="caution">Внимание!</string>
-    <string name="sizer_message_startup">Этот инструмент позволяет удалять системные приложения. 
-       Используйте с осторожностью и только удаляйте приложения, которые вы знаете.</string>
+    <string name="sizer_message_startup">Этот инструмент позволяет удалять системные приложения. Используйте с осторожностью и только удаляйте приложения, которые вы знаете.</string>
     <string name="sizer_message_delete">Вы уверены, что хотите удалить это приложение ?</string>
     <string name="btn_delete">Удалить выбранные приложения сейчас</string>
     <string name="delete_progress_title">Удаление</string>
@@ -497,16 +516,16 @@
     <string name="sizer_message_filesuccess">Созданный профиль.</string>
     <string name="sizer_message_filefail">Не удалось создать профиль.</string>
     <string name="sizer_message_noselect">Ничего не выбрано.</string>
-    <string name="system_app_remover">Удаление системных преложений</string>
+    <string name="system_app_remover">Удаление системных приложений</string>
 
-	<!-- Three-fingers-swipe to screenshot -->
+    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Жест тремя пальцами</string>
     <string name="three_finger_gesture_summary">Проведите тремя пальцами вниз для создания скриншота</string>
 
-	<!-- SU -->
+    <!-- SU -->
     <string name="cannot_get_su">Не удается получить доступ суперпользователя.</string>
 
-	<!-- Aicp logcat -->
+    <!-- Aicp logcat -->
     <string name="logcat_title">Logcat</string>
     <string name="kmesg_title">Kmesg</string>
     <string name="dmesg_title">Dmesg</string>
@@ -518,7 +537,7 @@
     <string name="log_it_share_subject">Aicp лог</string>
     <string name="log_it_summary">Ждите пока создается лог</string>
 
-	<!-- AOKP custom system animations -->
+    <!-- AOKP custom system animations -->
     <string name="aokp_animation_title">Анимация системы</string>
     <string name="aokp_animation_summary">Настройки анимаций от «AOKP»</string>
     <string name="activity_open_title">Анимация открытия активности</string>
@@ -539,7 +558,7 @@
     <string name="animation_exit_only_title">Только анимация входа</string>
     <string name="animation_reverse_exit_title">Обратная анимация выхода</string>
 
-	<!-- Toast Animation -->
+    <!-- Toast Animation -->
     <string name="toast_animation_title">Анимация всплывающих уведомлений</string>
     <string name="toast_none_animation">Отсутствует</string>
     <string name="toast_default_animation">По умолчанию</string>
@@ -558,7 +577,7 @@
     <string name="toast_SlideLeftRight_animation">Скольжение слева направо</string>
     <string name="toast_SlideRightLeft_animation">Скольжение справа налево</string>
 
-	<!-- Power menu Animations  -->
+    <!-- Power menu Animations  -->
     <string name="power_menu_animation_title">Анимация меню при долгом нажатии</string>
     <string name="power_menu_animation_summary">Изменение входа / выхода анимации меню питания</string>
     <string name="power_menu_animation_dialog_title">Анимация меню при долгом нажатии</string>
@@ -574,7 +593,7 @@
     <string name="power_menu_animation_translucent_top">Просвечивание (сверху)</string>
     <string name="power_menu_animation_translucent_bottom">Translucent (снизу)</string>
 
-	<!-- Statusbar AICP logo -->
+    <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">Лого в статус баре</string>
     <string name="status_bar_aicp_logo_title">Логотип AICP</string>
     <string name="status_bar_aicp_logo_summary">Включить отображение логотипа AICP в строке состояния</string>
@@ -584,7 +603,7 @@
     <string name="status_bar_logo_position_right">Справа</string>
     <string name="status_bar_logo_position_left">Слева</string>
 
-	<!-- ListView animation -->
+    <!-- ListView animation -->
     <string name="interface_settings_animation_title">Настройки анимации</string>
     <string name="listview_animation_title">Анимация списка</string>
     <string name="listview_off">По умолчанию</string>
@@ -598,7 +617,7 @@
     <string name="listview_fold">Свернуть</string>
     <string name="listview_translate_left">Сдвиг (слева)</string>
 
-	<!-- ListView interpolator -->
+    <!-- ListView interpolator -->
     <string name="listview_interpolator_title">Эффекты списка</string>
     <string name="listview_accelerate_interpolator">Ускорить</string>
     <string name="listview_decelerate_interpolator">Замедлить</string>
@@ -608,7 +627,7 @@
     <string name="listview_anticipate_overshoot_interpolator">Приблизить и выбросить</string>
     <string name="listview_bounce_interpolator">Отскакивать</string>
 
-	<!-- IME animations -->
+    <!-- IME animations -->
     <string name="ime_animation_title">Анимация клавиатуры</string>
     <string name="ime_animation_summary">Установить пользовательскую анимациию для системной клавиатуры</string>
     <string name="animation_settings_reset_message">Сброс анимации по умолчанию ?</string>
@@ -634,11 +653,11 @@
     <string name="ime_duration_title">Продолжительность анимации</string>
     <string name="animation_duration_summary">Выбрать</string>
 
-	<!-- Launch music player when headset is connected -->
+    <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Запуск плеера</string>
     <string name="headset_connect_player_summary">Запуск плеера при подключении гарнитуры</string>
 
-	<!-- Recent panel -->
+    <!-- Recent panel -->
     <string name="recent_panel_category">Панель Slim в недавних приложениях</string>
     <string name="use_slim_recents_title">Slim недавних</string>
     <string name="show_running_tasks_title">Показать только Запущ.прилож</string>
@@ -657,25 +676,26 @@
     <string name="recent_reset_value_title">Reset values</string>
     <string name="recent_app_sidebar_title">Приложения боковой панели</string>
 
-	<!-- ATTENTION: RTL languages need to replace left with right -->
+    <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Показывать с лева</string>
     <string name="recent_panel_lefty_mode_summary">Показать панель недавних приложения с лева</string>
 
-	<!-- Membar recents -->
+    <!-- Membar recents -->
     <string name="recents_show_membar_title">Отображение памяти</string>
     <string name="recents_show_membar_summary">"Показывать панель памяти в недавно-запущеных"</string>
 
-	<!-- Show/Hide Search Bar -->
+    <!-- Show/Hide Search Bar -->
     <string name="recents_show_searchbar">Строка поиска в списке недавних</string>
     <string name="keywords_recents_show_searchbar">Включение и выключение строки поиска</string>
 
-	<!-- Screenshot sound -->
+    <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Звук при скриншоте</string>
     <string name="screenshot_sound_summary">Воспроизведение звукового эфекта при скриншоте</string>
+
     <string name="brightness_icon_title">Иконка авто-яркости</string>
     <string name="brightness_icon_summary">Показывать иконку рядом с слайдером яркости</string>
 
-	<!-- App sidebar -->
+    <!-- App sidebar -->
     <string name="app_sidebar_title">Боковая панель приложений</string>
     <string name="app_sidebar_enable_title">Включить панель приложений</string>
     <string name="app_sidebar_enable_summaryOn">Панель приложений включена</string>
@@ -698,37 +718,37 @@
     <string name="tab_size_title">Размер вкладки</string>
     <string name="tab_size_summary">Изменить размер вкладки.</string>
 
-	<!-- Wakelock blocker -->
+    <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Блокировка пробуждении</string>
 
-	<!-- Quick settings disable on lockscreen -->
+    <!-- Quick settings disable on lockscreen -->
     <string name="block_on_secure_keyguard_title">Отключить настройку быстрых вкладок на LockScreen</string>
     <string name="block_on_secure_keyguard_summary">Отключение параметров быстрых вкладок для безопасного</string>
 
-	<!-- QS shade transparency -->
+    <!-- QS shade transparency -->
     <string name="qs_transparent_shade">Прозрачность панели уведомлении</string>
 
-	<!-- QS header transparency -->
+    <!-- QS header transparency -->
     <string name="qs_transparent_header">Прозрачность заголовка панели уведомлении</string>
 
-	<!-- Volume dialog transparency -->
+    <!-- Volume dialog transparency -->
     <string name="volume_dialog_transparency">Прозрачность панели громкости</string>
 
-	<!-- Power menu and dialogs transparency -->
+    <!-- Power menu and dialogs transparency -->
     <string name="power_menu_transparency">Прозрачность меню выключения</string>
 
-	<!-- Power/reboot dialogs dim amount -->
+    <!-- Power/reboot dialogs dim amount -->
     <string name="power_menu_dialog_dim">Прозрачность фона меню выключения</string>
 
-	<!-- Lockscreen Torch -->
+    <!-- Lockscreen Torch -->
     <string name="keyguard_torch_title">Фонарик на экране блокировки</string>
     <string name="keyguard_torch_summary">Долгое нажатие на значок блокировки включает фонарик</string>
 
-	<!-- Breathing Notifications -->
+    <!-- Breathing Notifications -->
     <string name="breathing_notifications_category">\"Живые\" уведомления</string>
     <string name="breathing_notifications_title">\"Живые\" уведомления</string>
-    <string name="missed_call_breath_title">Уведомления пропущеный вызов</string>
-    <string name="missed_call_breath_summary">\"Живые\" уведомления в строке состояния</string>
-    <string name="voicemail_breath_title">Уведомления голосовой почты</string>
-    <string name="voicemail_breath_summary">\"Живые\" уведомления в строке состояния</string> 
+    <string name="missed_call_breath_title">Пропущеный вызов</string>
+    <string name="missed_call_breath_summary">Уведомления в строке состояния</string>
+    <string name="voicemail_breath_title">Голосовая почта</string>
+    <string name="voicemail_breath_summary">Уведомления в строке состояния</string> 
 </resources>
