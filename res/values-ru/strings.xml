@@ -29,7 +29,8 @@
     <string name="systemui_tuner_title">SystemUI Tuner</string>
     <string name="systemui_tuner_summary">Эксперементальная настройка</string>
     <string name="systemui_tuner_dilog_title">Внимание</string>
-    <string name="systemui_tuner_dilog_warning">Настройщик предлагает ограниченные модификации SystemUI. Ссылка была добавлена Расширенные настройки для более легкого доступа. Здесь вы можете добавить новые плитки.</string>
+    <string name="systemui_tuner_dilog_warning">Настройщик предлагает ограниченные модификации SystemUI.
+       Ссылка была добавлена Расширенные настройки для более легкого доступа. Здесь вы можете добавить новые плитки.</string>
     <string name="aicp_downloads_title">Скачать прошивку</string>
     <string name="aicp_gerrit_title">Исходники</string>
     <string name="send_mail_intent">Отправить сообщение...</string>
@@ -37,6 +38,7 @@
     <string name="hidden_anim_more_title">Больше?</string>
     <string name="hidden_anim_more_nice">Хорошо</string>
     <string name="continue_title">Продолжить</string>
+    <string name="status_bar_header_font_style_title">Стиль шрифта заголовка панели уведомлении</string>
 
     <string name="nothing_title">Ничего не увидеть здесь</string>
 
@@ -71,7 +73,7 @@
 
     <!-- Toast Icons -->
     <string name="toast_icon_title">Иконка приложения в уведомлении</string>
-    <string name="toast_icon_summary">Отображение значка приложении, в уведомлениях</string>
+    <string name="toast_icon_summary">Отображение значка приложении , в уведомлениях</string>
 
     <!-- Brightness slider -->
     <string name="qs_brightness_slider_title">Слайдер яркости</string>
@@ -139,14 +141,14 @@
 
     <!-- Superuser indicator on status bar -->
     <string name="su_indicator">Индикатор суперпользователя</string>
-    <string name="su_indicator_summary_on">Индикатор Суперпользователя  виден, когда сессия активна</string>
-    <string name="su_indicator_summary_off">Переключение чтобы показать индикатор суперпользователя, когда сессия активна</string>
+    <string name="su_indicator_summary_on">Индикатор Суперпользователя  виден , когда сессия активна</string>
+    <string name="su_indicator_summary_off">Переключение чтобы показать индикатор суперпользователя , когда сессия активна</string>
 
     <!--Time Contexual Header -->
     <string name="status_bar_custom_header_title">Изображение в заголовка панели уведомлении</string>
     <string name="status_bar_custom_header_summary">Включить изображение в заголовка панели уведомлении</string>
     <string name="status_bar_custom_header_default_title">Использовать HD изображение</string>
-    <string name="status_bar_custom_header_default_summary">Включить для полиграфических изображений HD. Отключить для оригинальных изображений.</string>
+    <string name="status_bar_custom_header_default_summary">Включить для полиграфических изображений HD . Отключить для оригинальных изображений.</string>
 
     <!-- Carrier Label -->
     <string name="carrier_options">Логотип оператора</string>
@@ -363,11 +365,11 @@
 
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
     <string name="anonymous_statistics_title">AICP статистика</string>
-    <string name="anonymous_statistics_summary">Помощь AICP, анонимной статистической отчетностью</string>
+    <string name="anonymous_statistics_summary">Помощь AICP , анонимной статистической отчетностью</string>
     <string name="anonymous_statistics_warning_title">Об</string>
     <string name="anonymous_statistics_warning">"Отказ в AICP Статистика позволит без личные данные должны быть представлены к нашим серверам. 
-      Информация, представленная включает в себя уникальный идентификатор, который не идет на компромисс вашу частную жизнь или личные данные.
-      Данные представлены каждые 7 дней. В качестве примера данных, которые представлены, нажмите на превью данных."</string>
+      Информация, представленная включает в себя уникальный идентификатор, который не идет на компромисс вашу частную жизнь или личные данные. 
+      Данные представлены каждые 7 дней. В качестве примера данных, которые представлены, нажмите на превью данных ."</string>
     <string name="pref_settings">Настройки</string>
     <string name="enable_reporting_title">Включить отчетность</string>
     <string name="disable_reporting_persistent">Отключить отчетность</string>
@@ -436,7 +438,7 @@
     <string name="pa_pie_targets_title">Pie цели</string>
     <string name="pa_pie_style_title">Pie стиль</string>
     <string name="pa_pie_menu_title">Всегда показывать кнопку меню</string>
-    <string name="pa_pie_menu_summary">Будь или нет, Кнопка меню всегда должны быть показаны, даже когда не требуется</string>
+    <string name="pa_pie_menu_summary">Будь или нет, Кнопка меню всегда должны быть показаны , даже когда не требуется</string>
     <string name="pa_pie_size_title">Pie размер</string>
     <string name="pa_pie_size_summary">Определить размер Pie панели</string>
     <string name="pa_pie_size_small">Маленьний</string>
@@ -451,7 +453,7 @@
     <string name="pa_pie_gravity_right">Справа</string>
     <string name="pa_pie_gravity_left">Слева</string>
     <string name="pa_pie_gap_title">В промежутке</string>
-    <string name="pa_pie_gap_summary">Отрегулируйте зазор, который отделяет Pie панель</string>
+    <string name="pa_pie_gap_summary">Отрегулируйте зазор , который отделяет Pie панель</string>
     <string name="pa_pie_angle_title">Pie Angle</string>
     <string name="pa_pie_angle_summary">"Отрегулируйте угол Pie панели"</string>
     <string name="pa_pie_angle_none">Нет (устарело)</string>
@@ -503,7 +505,7 @@
     <string name="listsystem">Список</string>
     <string name="sizer_title">Удаление приложений</string>
     <string name="caution">Внимание!</string>
-    <string name="sizer_message_startup">Этот инструмент позволяет удалять системные приложения. Используйте с осторожностью и только удаляйте приложения, которые вы знаете.</string>
+    <string name="sizer_message_startup">Этот инструмент позволяет удалять системные приложения . Используйте с осторожностью и только удаляйте приложения, которые вы знаете.</string>
     <string name="sizer_message_delete">Вы уверены, что хотите удалить это приложение ?</string>
     <string name="btn_delete">Удалить выбранные приложения сейчас</string>
     <string name="delete_progress_title">Удаление</string>
@@ -751,4 +753,10 @@
     <string name="missed_call_breath_summary">Уведомления в строке состояния</string>
     <string name="voicemail_breath_title">Голосовая почта</string>
     <string name="voicemail_breath_summary">Уведомления в строке состояния</string> 
+
+    <!-- Lockscreen items -->
+    <string name="hide_lockscreen_items_title">Часы и дата на экране блокировки</string>
+    <string name="hide_lockscreen_clock_title">Часы</string>
+    <string name="hide_lockscreen_date_title">Дата</string>
+
 </resources>
