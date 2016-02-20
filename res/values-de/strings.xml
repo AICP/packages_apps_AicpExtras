@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Aicp Extras</string>
+    <!-- <string name="app_name" translatable="false">Aicp Extras</string> -->
 
     <string name="navigation_drawer_open">Öffne Navigationsbereich</string>
     <string name="navigation_drawer_close">Schließe Navigationsbereich</string>
@@ -103,8 +103,8 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">Farbwähler</string>
     <string name="press_color_to_apply">Wähle unten eine Farbe</string>
-    <string name="arrow_right">→</string>
-    <string name="arrow_down">↓</string>
+    <!-- <string name="arrow_right" translatable="false">→</string>
+    <string name="arrow_down" translatable="false">↓</string> -->
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Setzen</string>
@@ -356,6 +356,7 @@
     <string name="lock_clock_font_notoserif_italic">NotoSerif kursiv</string>
     <string name="lock_clock_font_notoserif_bold">NotoSerif fett</string>
     <string name="lock_clock_font_notoserif_bold_italic">NotoSerif fett &amp; kursiv</string>
+
     <!-- Lockscreen see through -->
     <string name="lockscreen_see_through_title">Sperrbildschirm-Trübung</string>
     <string name="lockscreen_see_through_summary">Eintrübung und Anzeige des Inhalts hinter dem Sperrbildschirm.</string>
@@ -465,7 +466,6 @@
     <string name="pa_pie_size_title">PIE Größe</string>
     <string name="pa_pie_size_summary">Größe der PIE Navigation definieren</string>
     <string name="pa_pie_size_small">Klein</string>
-    <!-- Do not translate size_default string. -->
     <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
     <string name="pa_pie_size_large">Groß</string>
     <string name="pa_pie_size_gigantic">Gigantisch</string>
@@ -526,6 +526,7 @@
     <string name="enable_task_manager_summary">Ein-/Ausschalten der Anzeige des Task Manager-Symbole im Bereich der erweiterten Statusleiste.</string>
 
     <!-- SlimSizer  -->
+    <string name="listsystem">list</string>
     <string name="sizer_title">App Entferner</string>
     <string name="caution">Vorsicht!</string>
     <string name="sizer_message_startup">Dieses Werkzeug erlaubt das Löschen von Systemanwendungen. Mit Vorsicht benutzen und nur Apps löschen, bei denen Sie sich sicher sind.</string>
@@ -721,36 +722,6 @@
     <string name="brightness_icon_title">Symbol für Helligkeit</string>
     <string name="brightness_icon_summary">Zeigt ein Symbol für die Helligkeit auf der linken Seite des Helligkeitsreglers, um die Auto-Helligkeit anzupassen</string>
 
-    <!-- App sidebar -->
-    <string name="app_sidebar_title">Seitenleiste für Apps</string>
-    <string name="app_sidebar_enable_title">App-Leiste einschalten</string>
-    <string name="app_sidebar_enable_summaryOn">App-Leiste ist eingeschaltet</string>
-    <string name="app_sidebar_enable_summaryOff">App-Leiste ist ausgeschaltet</string>
-    <string name="app_sidebar_setup_items_title">Inhalt der App-Leiste einrichten</string>
-    <string name="app_sidebar_setup_items_summary">Hinzufügen, Entfernen und Position von Apps in der Leiste</string>
-    <string name="app_sidebar_transparency_title">Transparenz der App-Leiste</string>
-    <string name="app_sidebar_transparency_summary">Anpassen der Transparenz-Stufe der App-Leiste</string>
-    <string name="app_sidebar_position_title">Position der App-Leiste</string>
-    <string name="app_sidebar_position_summary">Position der Leiste auf der linken oder rechten Bildschirmseite festlegen</string>
-    <string name="app_sidebar_position_left">Links</string>
-    <string name="app_sidebar_position_right">Rechts</string>
-    <string name="app_sidebar_hide_labels_title">Verstecke Beschriftung</string>
-    <string name="app_sidebar_hide_labels_summary">Blendet die Beschriftung der Symbole aus</string>
-    <string name="tab_category">Sichtbarer Auslösebereich</string>
-    <string name="use_tab_title">Auslösebereich anzeigen</string>
-    <string name="use_tab_summary">Stelle einen Auslösebereich an der Bildschirmseite dar, der die Leiste bei Berührung anzeigt.</string>
-    <string name="tab_position_title">Position des Auslösers</string>
-    <string name="tab_position_summary">Zeige den Auslösebereich oben, in der Mitte oder unten auf der Bildschirmseite an.</string>
-    <string name="tab_size_title">Größe des Auslösers</string>
-    <string name="tab_size_summary">Verändere die Größe des Auslösebereichs.</string>
-    <string name="trigger_category">Auslösebereich</string>
-    <string name="trigger_width_title">Breite des Auslösers</string>
-    <string name="trigger_width_summary">Breite des Auslösebereichs einstellen</string>
-    <string name="trigger_top_title">Position des Auslösers</string>
-    <string name="trigger_top_summary">Stelle die vertikale Position ein</string>
-    <string name="trigger_bottom_title">Höhe des Auslösers</string>
-    <string name="trigger_bottom_summary">Höhe des Auslösebereichs einstellen</string>
-
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Wakelock Blockierer</string>
 
@@ -785,17 +756,18 @@
     <string name="voicemail_breath_title">Pulsierende Sprachnachrichten</string>
     <string name="voicemail_breath_summary">Gibt ihren Benachrichtigungen für Sprachnachrichten einen pulsierenden Effekt in der Statusleiste</string>
 
-    <!-- Hide Lockscreen clock & date -->
+    <!-- Hide Lockscreen clock, date & alarm -->
     <string name="hide_lockscreen_items_title">Sperrbildschirmanzeigen</string>
     <string name="hide_lockscreen_clock_title">Zeige Uhrzeit auf Sperrbildschirm</string>
     <string name="hide_lockscreen_date_title">Zeige Datum auf Sperrbildschirm</string>
-    <string name="hide_lockscreen_alarm_title">Zeige Wecker auf Sperrbildschirm</string>
+    <string name="hide_lockscreen_alarm_title">Zeige Weckalarm auf Sperrbildschirm</string>
+
 
     <!-- Status bar header font style -->
     <string name="status_bar_header_font_style_title">Schriftstil des Statusleistenkopfs</string>
 
     <!-- QS Tiles Columns -->
-    <string name="qs_num_columns_title">Anzahl von QS Kacheln pro Reihe</string>
-    <string name="qs_num_columns_showing">%1$s Kacheln werden pro Reihe angezeigt</string>
+    <string name="qs_num_columns_title">Kachelanzahl pro Zeile</string>
+    <string name="qs_num_columns_showing">Es werden %1$s Kacheln pro Zeile angezeigt</string>
 
 </resources>
