@@ -38,7 +38,6 @@
     <string name="hidden_anim_more_title">Больше?</string>
     <string name="hidden_anim_more_nice">Хорошо</string>
     <string name="continue_title">Продолжить</string>
-    <string name="status_bar_header_font_style_title">Стиль шрифта заголовка панели уведомлении</string>
 
     <string name="nothing_title">Ничего не увидеть здесь</string>
 
@@ -117,7 +116,7 @@
     <string name="traffic_category">Сетевой трафик</string>
     <string name="traffic_title">Трафик</string>
     <string name="network_traffic_title">Сетевой трафик</string>
-    <string name="show_network_traffic_state">Включить отображение сетевого трафика в строке состояния</string>
+    <string name="show_network_traffic_state">Отображение сетевого трафика</string>
     <string name="show_network_traffic_unit">Единицы измерения</string>
     <string name="show_network_traffic_frequency">Обновление интервала</string>
     <string name="show_network_traffic_disable">Отлючен</string>
@@ -145,7 +144,7 @@
     <string name="su_indicator_summary_off">Переключение чтобы показать индикатор суперпользователя , когда сессия активна</string>
 
     <!--Time Contexual Header -->
-    <string name="status_bar_custom_header_title">Изображение в заголовка панели уведомлении</string>
+    <string name="status_bar_custom_header_title">Изображение в заголовке панели уведомлении</string>
     <string name="status_bar_custom_header_summary">Включить изображение в заголовка панели уведомлении</string>
     <string name="status_bar_custom_header_default_title">Использовать HD изображение</string>
     <string name="status_bar_custom_header_default_summary">Включить для полиграфических изображений HD . Отключить для оригинальных изображений.</string>
@@ -267,7 +266,7 @@
     <string name="recents_full_screen_date_summary">Показывать дату</string>
 
     <!-- Weather settings -->
-    <string name="weahter_lockscreen_category">Погода на экране блокировки</string>
+    <string name="weather_lockscreen_category">Погода на экране блокировки</string>
     <string name="weather_cat_notifications_title">Уведомления</string>
     <string name="weather_settings_title">Погода на экране блокировки</string>
     <string name="weather_settings_summary">Настройка места для виджета погоды и других параметров</string>
@@ -754,9 +753,34 @@
     <string name="voicemail_breath_title">Голосовая почта</string>
     <string name="voicemail_breath_summary">Уведомления в строке состояния</string> 
 
-    <!-- Lockscreen items -->
-    <string name="hide_lockscreen_items_title">Часы и дата на экране блокировки</string>
+    <!-- Hide Lockscreen clock, date & alarm -->
+    <string name="hide_lockscreen_items_title">Предметы экрана блокировки</string>
     <string name="hide_lockscreen_clock_title">Часы</string>
+    <string name="hide_lockscreen_clock_summary">Показывать часы</string>
     <string name="hide_lockscreen_date_title">Дата</string>
+    <string name="hide_lockscreen_date_summary">Показывать дату</string>
+    <string name="hide_lockscreen_alarm_title">Будильник</string>
+    <string name="hide_lockscreen_alarm_summary">Показывать будильник</string>
+
+    <!-- Status bar header font style -->
+    <string name="status_bar_header_font_style_title">Стиль шрифта заголовка панели уведомлении</string>
+
+    <!-- QS Tiles Columns -->
+    <string name="qs_num_columns_title">Количество плиток в ряду</string>
+    <string name="qs_num_columns_showing">Установлено %1$s плитки в ряду</string>
+
+    <!-- QS Tiles Rows -->
+    <string name="qs_num_rows_title">Количество плиток в колонке</string>
+    <string name="qs_num_rows_showing">Установлено %1$s плитки в колонке</string>
+
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors_title">Тематизация экрана блокировки</string>
+    <string name="lockscreen_owner_info_color">Текст сведений о владельце</string>
+    <string name="lockscreen_alarm_color">Будильник</string>
+    <string name="lockscreen_clock_color">Часы</string>
+    <string name="lockscreen_clock_date_color">Дата</string>
+    <string name="lockscreen_colors_reset_title">Сброс цветов экрана блокировки</string>
+    <string name="lockscreen_colors_reset_message">Вы уверены, что хотите сбросить эти цвета по умолчанию?</string>
+    <string name="yes">Да</string>
 
 </resources>
