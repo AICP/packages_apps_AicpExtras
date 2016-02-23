@@ -129,6 +129,8 @@
     <string name="show_network_traffic_2000">2000 ms</string>
     <string name="network_traffic_autohide">Auto rejtés</string>
     <string name="network_traffic_autohide_summary">Rejti a hálózati forgalom felügyeletet, ha nincs aktivítás</string>
+    <string name="network_traffic_hidearrow">Nyílak rejtése</string>
+    <string name="network_traffic_hidearrow_summary">Nyílak rejtése a hálózati kijelzésnél</string>
     <string name="network_traffic_autohide_threshold">Inaktivítási időköz</string>
     <string name="ok">OK</string>
     <string name="cancel">Törlés</string>
@@ -154,17 +156,20 @@
     <string name="status_bar_carrier_size">Szolgáltatói felírat mérete</string>
     <string name="show_carrier_title">Szolgáltatói felírat</string>
     <string name="show_carrier_disabled">Tiltva</string>
-    <string name="show_carrier_keyguard">Zárképernyőn csak</string>
-    <string name="show_carrier_statusbar">Állapot sávon csak</string>
-    <string name="show_carrier_enabled">Engedélyezve</string>
+    <string name="show_carrier_keyguard">Zárképernyőn</string>
+    <string name="show_carrier_statusbar">Állapot sávon</string>
+    <string name="show_carrier_enabled">Együtt</string>
+    <string name="status_bar_carrier_position">Felírat helyzete</string>
+    <string name="status_bar_carrier_font_style_title">Betű stílus</string>
 
     <!-- Battery Bar -->
-    <string name="battery_bar_title">Akkumulátor Sáv</string>
-    <string name="battery_bar">Akkumulátor Sáv helye</string>
-    <string name="battery_bar_color">Akkumulátor Sáv színe</string>
-    <string name="battery_bar_cat">Akkumulátor Sáv stíusa</string>
-    <string name="battery_bar_style_title">Akkumulátor Sáv igazítása</string>
-    <string name="battery_bar_thickness_title">Akkumulátor Sáv vastagsága</string>
+    <string name="battery_bar_title">Akkumulátor sáv</string>
+    <string name="battery_bar">Akkumulátor sáv helye</string>
+    <string name="battery_bar_no_navbar">Akkumulátor sáv helyzete</string>
+    <string name="battery_bar_color">Akkumulátor sáv színe</string>
+    <string name="battery_bar_cat">Akkumulátor sáv stíusa</string>
+    <string name="battery_bar_style_title">Akkumulátor sáv igazítása</string>
+    <string name="battery_bar_thickness_title">Akkumulátor sáv vastagsága</string>
     <string name="battery_bar_animate_title">Töltési animáció</string>
     <string name="battery_bar_animate_summary">A töltési animáció csökkentheti a felhasználói élményt. Engedélyezd saját belátásod szerint.</string>
 
@@ -189,8 +194,6 @@
     <string name="gesture_anywhere_position_right">Jobb szélen</string>
     <string name="gesture_anywhere_gestures_title">Gesztusok</string>
     <string name="gesture_anywhere_gestures_summary">Hozzáad, eltávolít és szerkeszti a gesztusokat</string>
-    <string name="gesture_anywhere_floating">Lebegő Mód</string>
-    <string name="gesture_anywhere_floating_summary">Parancsikon indítása lebegő módban</string>
     <!-- Label, button used to add a gesture -->
     <string name="ga_button_add">Gesztus hozzáadás</string>
     <!-- Label, button used to reload all gestures -->
@@ -199,6 +202,7 @@
     <string name="ga_button_discard">Elvet</string>
     <!-- Label, button used to save a gesture newly created -->
     <string name="ga_button_done">Kész</string>
+    <!-- Label, prompt asking the user to enter the name of the gesture -->
     <string name="ga_prompt_gesture_name">Név</string>
     <!-- Error message, informs the user he needs to enter a name before saving a gesture -->
     <string name="ga_error_missing_name">Adj nevet</string>
@@ -262,6 +266,13 @@
     <string name="status_bar_weather_font_medium_italic">Közepes dőlt</string>
     <string name="status_bar_weather_font_black">Fekete</string>
     <string name="status_bar_weather_font_black_italic">Fekete dőlt</string>
+    <string name="status_bar_weather_font_dancingscript">DancingScript</string>
+    <string name="status_bar_weather_font_dancingscript_bold">DancingScript Bold</string>
+    <string name="status_bar_weather_font_comingsoon">ComingSoon</string>
+    <string name="status_bar_weather_font_notoserif">NotoSerif Normal</string>
+    <string name="status_bar_weather_font_notoserif_italic">NotoSerif Italic</string>
+    <string name="status_bar_weather_font_notoserif_bold">NotoSerif Bold</string>
+    <string name="status_bar_weather_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
 
     <!-- Recents Fullscreen -->
     <string name="recents_show_fullscreen">Legutóbbiak teljes képernyőn</string>
@@ -338,6 +349,13 @@
     <string name="lock_clock_font_black_italic">Roboto Fekete dőlt</string>
     <string name="lock_clock_font_condensed_light_normal">Roboto keskeny könnyű</string>
     <string name="lock_clock_font_condensed_light_italic">Roboto keskeny könnyű dőlt</string>
+    <string name="lock_clock_font_dancingscript">DancingScript</string>
+    <string name="lock_clock_font_dancingscript_bold">DancingScript kővér</string>
+    <string name="lock_clock_font_comingsoon">ComingSoon</string>
+    <string name="lock_clock_font_notoserif">NotoSerif Normál</string>
+    <string name="lock_clock_font_notoserif_italic">NotoSerif dőlt</string>
+    <string name="lock_clock_font_notoserif_bold">NotoSerif kővér</string>
+    <string name="lock_clock_font_notoserif_bold_italic">NotoSerif Bold dőlt</string>
 
     <!-- Lockscreen see through -->
     <string name="lockscreen_see_through_title">Zárképernyő homályosítás</string>
@@ -437,7 +455,7 @@
 
     <!-- PA Pie control -->
     <string name="pa_piecontrol_settings_summary">Customize PA Pie 2.0 targets, sytle, size and color</string>
-    <string name="pa_pie_control_title">Pie Control</string>
+    <string name="pa_pie_control_title">Pie Vezérlés</string>
     <string name="pa_pie_control_enable_title">Enable Pie Control</string>
     <string name="pa_pie_always_right_title">Pie always on the right</string>
     <string name="pa_pie_always_right_summary">Pie will be always shown on the right while in landscape</string>
@@ -652,7 +670,8 @@
     <string name="animation_grow_shrink">Felvillan (felül)</string>
     <string name="animation_grow_shrink_center">Felvillan (középen)</string>
     <string name="animation_grow_shrink_bottom">Felvillan (alul)</string>
-    <string name="animation_grow_shrink_left">Felvillan (bal)jobbright)</string>
+    <string name="animation_grow_shrink_left">Felvillan (bal)</string>
+    <string name="animation_grow_shrink_right">Felvillan (jobb)</string>
     <string name="animation_random">Véletlenszerű</string>
     <string name="ime_animation_test_title">Billentyűzet váltó teszt animáció</string>
     <string name="ime_enter_animation_title">Belépő animáció</string>
@@ -703,42 +722,12 @@
     <string name="brightness_icon_title">Fényerő ikon</string>
     <string name="brightness_icon_summary">Mutassa a fényerő ikont a fényerő állító csúszka bal oldalán</string>
 
-    <!-- App sidebar -->
-    <string name="app_sidebar_title">Alkalmazás oldalsáv</string>
-    <string name="app_sidebar_enable_title">Alkalmazás sáv engedélyezése</string>
-    <string name="app_sidebar_enable_summaryOn">Alkalmazás sáv engedélyezve</string>
-    <string name="app_sidebar_enable_summaryOff">Alkalmazás sáv tiltva</string>
-    <string name="app_sidebar_setup_items_title">Alkalmazás sáv tartalmának beállítása</string>
-    <string name="app_sidebar_setup_items_summary">Hozzáadás, eltávolítás és elem pozicíók az alkalmazás sávon</string>
-    <string name="app_sidebar_transparency_title">Alkalmazás sáv áttetszőssége</string>
-    <string name="app_sidebar_transparency_summary">Beállítja az Alkalmazás sáv áttetszősségét</string>
-    <string name="app_sidebar_position_title">Alkalmazás sáv pozicíója</string>
-    <string name="app_sidebar_position_summary">Alkalmazás sáv a képernyő jobb vagy bal oldalán</string>
-    <string name="app_sidebar_position_left">Bal</string>
-    <string name="app_sidebar_position_right">Jobb</string>
-    <string name="app_sidebar_hide_labels_title">Ikon szöveg rejtése</string>
-    <string name="app_sidebar_hide_labels_summary">Alkalmazás sáv ikon szövegeinek rejtése</string>
-    <string name="tab_category">Látható fül</string>
-    <string name="use_tab_title">Kijelző fül</string>
-    <string name="use_tab_summary">Megjelenít egy látható fület az alkalmazás sávnak azon az oldalon ahol a kijelzőt megérinted.</string>
-    <string name="tab_position_title">Fül helyzete</string>
-    <string name="tab_position_summary">Fül megjelenítése a kijelző alján, tetején vagy középen.</string>
-    <string name="tab_size_title">Fül méret</string>
-    <string name="tab_size_summary">Látható fül méretének változtatása.</string>
-    <string name="trigger_category">Kapcsoló terület</string>
-    <string name="trigger_width_title">Kapcsoló szélessége</string>
-    <string name="trigger_width_summary">Állítsd be a kapcsolási terület szélességét</string>
-    <string name="trigger_top_title">Kapcsoló helyzete</string>
-    <string name="trigger_top_summary">Állítsd be a kapcsolási terület függőleges helyzetét</string>
-    <string name="trigger_bottom_title">Kapcsoló magassága</string>
-    <string name="trigger_bottom_summary">Állítsd be a kapcsolási terület magasságát</string>
-
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Ébrentartás blokkoló</string>
 
     <!-- Quick settings disable on lockscreen -->
     <string name="block_on_secure_keyguard_title">Gyors beállítások tiltása a zárképernyőn</string>
-    <string name="block_on_secure_keyguard_summary">Disables quick settings in the keyguard for a secure lock only</string>
+    <string name="block_on_secure_keyguard_summary">Tiltja a gyors beállításokat a zárképernyőn csak a biztonsági feloldáshoz</string>
 
     <!-- QS shade transparency -->
     <string name="qs_transparent_shade">Gyors beállítások áttetszőssége</string>
@@ -752,6 +741,9 @@
     <!-- Power menu and dialogs transparency -->
     <string name="power_menu_transparency">Kikapcsoló/újraindító menü áttetszőssége</string>
 
+    <!-- Power/reboot dialogs dim amount -->
+    <string name="power_menu_dialog_dim">Kikapcsoló/újraindító dialógus háttér halványítás mértéke</string>
+
     <!-- Lockscreen Torch -->
     <string name="keyguard_torch_title">Zárképernyő zseblámpa</string>
     <string name="keyguard_torch_summary">Hosszan nyomva a bekapcsoló gombot, mialatt a képernyő ki van kapcsolva, bekapcsolja a zseblámpát</string>
@@ -763,5 +755,35 @@
     <string name="missed_call_breath_summary">Lüktető nem fogadott hívás értesítés az állapot sávon</string>
     <string name="voicemail_breath_title">Lüktető hangüzenet</string>
     <string name="voicemail_breath_summary">Lüktető hangüzenet értesítés az állapot sávon</string>
+
+    <!-- Hide Lockscreen clock, date & alarm -->
+    <string name="hide_lockscreen_items_title">Zárképernyő elemek</string>
+    <string name="hide_lockscreen_clock_title">Óra</string>
+    <string name="hide_lockscreen_clock_summary">Zárképernyő óra mutatása</string>
+    <string name="hide_lockscreen_date_title">Dátum</string>
+    <string name="hide_lockscreen_date_summary">Zárképernyő dátum mutatása</string>
+    <string name="hide_lockscreen_alarm_title">Riasztás</string>
+    <string name="hide_lockscreen_alarm_summary">Zárképernyő riasztás mutatása</string>
+
+    <!-- Status bar header font style -->
+    <string name="status_bar_header_font_style_title">Fejléc betű stílus</string>
+
+    <!-- QS Tiles Columns -->
+    <string name="qs_num_columns_title">Gyors beállítások csempe szám soronként</string>
+    <string name="qs_num_columns_showing">%1$s csempét mutat soronként</string>
+
+    <!-- QS Tiles Rows -->
+    <string name="qs_num_rows_title">Gyors beállítások sorok száma</string>
+    <string name="qs_num_rows_showing">%1$s sort fog mutatni</string>
+
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors_title">Zárképernyő színek</string>
+    <string name="lockscreen_owner_info_color">Tulajdonos info</string>
+    <string name="lockscreen_alarm_color">Riasztás</string>
+    <string name="lockscreen_clock_color">Óra</string>
+    <string name="lockscreen_clock_date_color">Dátum</string>
+    <string name="lockscreen_colors_reset_title">Zárképernyő színek alaphelyzetbe</string>
+    <string name="lockscreen_colors_reset_message">Vissza akarod állítani a színeket alaphelyzetbe?</string>
+    <string name="yes">IGEN</string>
 
 </resources>
