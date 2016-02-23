@@ -284,7 +284,7 @@
     <string name="recents_full_screen_date_summary">Zeigt das Datum im Vollbildmodus oben an</string>
 
     <!-- Weather settings -->
-    <string name="weahter_lockscreen_category">Optionen für Wetter auf Sperrbildschirm</string>
+    <string name="weather_lockscreen_category">Optionen für Wetter auf Sperrbildschirm</string>
     <string name="weather_cat_notifications_title">Benachrichtigungen</string>
     <string name="weather_settings_title">LockClock Einstellungen</string>
     <string name="weather_settings_summary">Konfiguration des Standorts im Wetter Widget und andere Einstellungen</string>
@@ -758,10 +758,12 @@
 
     <!-- Hide Lockscreen clock, date & alarm -->
     <string name="hide_lockscreen_items_title">Sperrbildschirmanzeigen</string>
-    <string name="hide_lockscreen_clock_title">Zeige Uhrzeit auf Sperrbildschirm</string>
-    <string name="hide_lockscreen_date_title">Zeige Datum auf Sperrbildschirm</string>
-    <string name="hide_lockscreen_alarm_title">Zeige Weckalarm auf Sperrbildschirm</string>
-
+    <string name="hide_lockscreen_clock_title">Uhr</string>
+    <string name="hide_lockscreen_clock_summary">Zeige die Uhrzeit auf dem Sperrbildschirm</string>
+    <string name="hide_lockscreen_date_title">Datum</string>
+    <string name="hide_lockscreen_date_summary">Zeige das Datum auf dem Sperrbildschirm</string>
+    <string name="hide_lockscreen_alarm_title">Wecker</string>
+    <string name="hide_lockscreen_alarm_summary">Zeige Weckalarm auf dem Sperrbildschirm</string>
 
     <!-- Status bar header font style -->
     <string name="status_bar_header_font_style_title">Schriftstil des Statusleistenkopfs</string>
@@ -769,5 +771,15 @@
     <!-- QS Tiles Columns -->
     <string name="qs_num_columns_title">Kachelanzahl pro Zeile</string>
     <string name="qs_num_columns_showing">Es werden %1$s Kacheln pro Zeile angezeigt</string>
+
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors_title">Sperrbildschirm-Farben</string>
+    <string name="lockscreen_owner_info_color">Eigentümer-Information</string>
+    <string name="lockscreen_alarm_color">Wecker</string>
+    <string name="lockscreen_clock_color">Uhr</string>
+    <string name="lockscreen_clock_date_color">Datum</string>
+    <string name="lockscreen_colors_reset_title">Sperrbildschirm-Farben zurücksetzen</string>
+    <string name="lockscreen_colors_reset_message">Wollen Sie diese Farben auf den Standard zurücksetzen?</string>
+    <string name="yes">JA</string>
 
 </resources>
