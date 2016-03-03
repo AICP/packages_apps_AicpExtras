@@ -430,8 +430,8 @@
     <string name="trigger_bottom_summary">Ajuster la hauteur de la zone de déclenchement</string>
 
    <!-- Lock screen wallpaper -->
-   <string name="lockscreen_category_title">Fond d\'écran sur l\'écran de vérouillage</string>
-   <string name="lockscreen_wallpaper_title">Fond d\'écran de l\'écran de vérouillage</string>
+   <string name="lockscreen_category_title">Fond d\'écran sur l\'écran de verrouillage</string>
+   <string name="lockscreen_wallpaper_title">Fond d\'écran de l\'écran de verrouillage</string>
    <string name="lockscreen_wallpaper_set_title">Définir un fond d\'écran</string>
    <string name="lockscreen_wallpaper_set_summary">Un redémarrage est nécessaire</string>
    <string name="lockscreen_wallpaper_clear_title">Configuration d\'origine</string>
@@ -723,35 +723,6 @@
     <string name="brightness_icon_title">Icône de luminosité</string>
     <string name="brightness_icon_summary">Afficher l\'icône de luminosité à gauche du urseur de luminosité permettant d\'ajuster automatiquement la luminosité</string>
 
-    <!-- App sidebar -->
-    <string name="app_sidebar_title">Barre d\'application latérale</string>
-    <string name="app_sidebar_enable_title">Activer le barre d\'application latérale</string>	<string name="app_sidebar_enable_summaryOn">La barre d\'application latérale est activée.</string>
-    <string name="app_sidebar_enable_summaryOff">La barre d\'application latérale est désactivée.</string>
-    <string name="app_sidebar_setup_items_title">Configurer le contenu de la barre d\'application latérale</string>
-    <string name="app_sidebar_setup_items_summary">Ajoutez, supprimez et positionnez des éléments dans la barre d\'application latérale.</string>
-    <string name="app_sidebar_transparency_title">Transparence de la barre d\'application latérale</string>
-    <string name="app_sidebar_transparency_summary">Ajustez le niveau de transparence de la barre d\'application latérale.</string>
-    <string name="app_sidebar_position_title">Position de la barre d\'application latérale</string>
-    <string name="app_sidebar_position_summary">Positionnez la barre d\'application latérale sur le côté gauche ou droit de l\'écran.</string>
-    <string name="app_sidebar_position_left">Gauche</string>
-    <string name="app_sidebar_position_right">Droit</string>
-    <string name="app_sidebar_hide_labels_title">Masquer les noms des icônes</string>
-    <string name="app_sidebar_hide_labels_summary">Masquer les noms des icônes dans la barre d\'application latérale.</string>
-    <string name="tab_category">Onglet visible</string>
-    <string name="use_tab_title">Affichage de l\'onglet</string>
-    <string name="use_tab_summary">Afficher un onglet visible sur le côté qui permet d\'afficher la barre d\'application latérale quand ont la touche.</string>
-    <string name="tab_position_title">Emplacement de l\'onglet</string>
-    <string name="tab_position_summary">Affichez l\'onglet sur le haut, milieu ou bas sur le côté de l\'écran.</string>
-    <string name="tab_size_title">Taille des onglets</string>
-    <string name="tab_size_summary">Modifier la taille de l\'onglet visible.</string>
-    <string name="trigger_category">Région de déclenchement</string>
-    <string name="trigger_width_title">Largeur de déclenchement</string>
-    <string name="trigger_width_summary">Régler la largeur de la zone de déclenchement</string>
-    <string name="trigger_top_title">Position de déclenchement</string>
-    <string name="trigger_top_summary">Ajuster la position verticale de la zone de déclenchement</string>
-    <string name="trigger_bottom_title">Hauteur de déclenchement</string>
-    <string name="trigger_bottom_summary">Réglez la hauteur de la zone de déclenchement</string>
-
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Bloqueur de Wakelock</string>
 
@@ -775,7 +746,7 @@
     <string name="power_menu_dialog_dim">Transparence des dialogues du menu d\'alimentation</string>
 
     <!-- Lockscreen Torch -->
-    <string name="keyguard_torch_title">Lampe torche sur l\'écran de vérouillage</string>
+    <string name="keyguard_torch_title">Lampe torche sur l\'écran de verrouillage</string>
     <string name="keyguard_torch_summary">Un appui long sur le bouton d\'alimentation pendant que l\'écran est éteint allumera la lampe torche</string>
 
     <!-- Breathing Notifications -->
@@ -798,4 +769,18 @@
     <!-- QS Tiles Columns -->
     <string name="qs_num_columns_title">Nombre de tuiles des réglages rapide par rangée</string>
     <string name="qs_num_columns_showing">%1$s tuiles par rangée affichées</string>
+
+    <!-- QS Tiles Rows -->
+    <string name="qs_num_rows_title">Nombre de ligne des réglages rapides</string>
+    <string name="qs_num_rows_showing">%1$s lignes sont affichées</string>
+
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors_title">Couleurs de l\'écran de déverrouillage</string>
+    <string name="lockscreen_owner_info_color">Informations du propriétaire</string>
+    <string name="lockscreen_alarm_color">Alarme</string>
+    <string name="lockscreen_clock_color">Horloge</string>
+    <string name="lockscreen_clock_date_color">Date</string>
+    <string name="lockscreen_colors_reset_title">Réinitialiser les couleurs</string>
+    <string name="lockscreen_colors_reset_message">Réinitialiser les couleurs de l\'écran de déverrouillage ?</string>
+    <string name="yes">OUI</string>
 </resources>
