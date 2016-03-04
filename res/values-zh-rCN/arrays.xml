@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="recents_clear_all_location_entries">
+        <item>@string/recents_clear_all_location_top_right</item>
+        <item>@string/recents_clear_all_location_top_left</item>
+        <item>@string/recents_clear_all_location_top_center</item>
+        <item>@string/recents_clear_all_location_bottom_right</item>
+        <item>@string/recents_clear_all_location_bottom_left</item>
+        <item>@string/recents_clear_all_location_bottom_center</item>
+    </string-array>
+    <string-array name="recents_clear_all_location_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="show_network_traffic_state_entries">
+        <item>@string/show_network_traffic_disable</item>
+        <item>@string/show_network_traffic_up</item>
+        <item>@string/show_network_traffic_down</item>
+        <item>@string/show_network_traffic_all</item>
+    </string-array>
+    <string-array name="show_network_traffic_state_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="show_network_traffic_unit_entries">
+        <item>@string/show_network_traffic_bit</item>
+        <item>@string/show_network_traffic_byte</item>
+    </string-array>
+    <string-array name="show_network_traffic_unit_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="show_network_traffic_frequency_entries">
+        <item>@string/show_network_traffic_500</item>
+        <item>@string/show_network_traffic_1000</item>
+        <item>@string/show_network_traffic_1500</item>
+        <item>@string/show_network_traffic_2000</item>
+    </string-array>
+    <string-array name="show_network_traffic_frequency_values">
+        <item>500</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+    </string-array>
+    <string-array name="carrier_label_entries">
+        <item>@string/show_carrier_disabled</item>
+        <item>@string/show_carrier_keyguard</item>
+        <item>@string/show_carrier_statusbar</item>
+        <item>@string/show_carrier_enabled</item>
+    </string-array>
+    <string-array name="carrier_label_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="battery_bar_entries">
+        <item>Hide</item>
+        <item>Statusbar</item>
+        <item>Top of navbar</item>
+        <item>Bottom of navbar</item>
+    </string-array>
+    <string-array name="battery_bar_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="battery_bar_no_navbar_entries">
+        <item>Hide</item>
+        <item>Statusbar</item>
+    </string-array>
+    <string-array name="battery_bar_no_navbar_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="battery_bar_style_entries">
+        <item>Regular</item>
+        <item>Center-mirrored</item>
+    </string-array>
+    <string-array name="battery_bar_style_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="battery_bar_thickness_entries">
+        <item>1 dp</item>
+        <item>2 dp</item>
+        <item>3 dp</item>
+        <item>4 dp</item>
+    </string-array>
+    <string-array name="battery_bar_thickness_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="entries_scrollingcache">
+        <item>@string/pref_scrollingcache_force_enable</item>
+        <item>@string/pref_scrollingcache_default_enable</item>
+        <item>@string/pref_scrollingcache_default_disable</item>
+        <item>@string/pref_scrollingcache_force_disable</item>
+    </string-array>
+    <string-array name="values_scrollingcache">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="gesture_anywhere_position_entries">
+        <item>@string/gesture_anywhere_position_left</item>
+        <item>@string/gesture_anywhere_position_right</item>
+    </string-array>
+    <string-array name="gesture_anywhere_position_values">
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="status_bar_temperature_entries">
+        <item>@string/status_bar_temperature_hidden</item>
+        <item>@string/status_bar_temperature_show_scale</item>
+        <item>@string/status_bar_temperature_hide_scale</item>
+    </string-array>
+    <string-array name="status_bar_temperature_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="status_bar_temperature_location_entries">
+        <item>@string/status_bar_temperature_location_right</item>
+        <item>@string/status_bar_temperature_location_left</item>
+    </string-array>
+    <string-array name="status_bar_temperature_location_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="status_bar_weather_font_style_entries">
+        <item>@string/status_bar_weather_font_normal</item>
+        <item>@string/status_bar_weather_font_italic</item>
+        <item>@string/status_bar_weather_font_bold</item>
+        <item>@string/status_bar_weather_font_bold_italic</item>
+        <item>@string/status_bar_weather_font_light</item>
+        <item>@string/status_bar_weather_font_light_italic</item>
+        <item>@string/status_bar_weather_font_thin</item>
+        <item>@string/status_bar_weather_font_thin_italic</item>
+        <item>@string/status_bar_weather_font_condensed</item>
+        <item>@string/status_bar_weather_font_condensed_italic</item>
+        <item>@string/status_bar_weather_font_condensed_light</item>
+        <item>@string/status_bar_weather_font_condensed_light_italic</item>
+        <item>@string/status_bar_weather_font_condensed_bold</item>
+        <item>@string/status_bar_weather_font_condensed_bold_italic</item>
+        <item>@string/status_bar_weather_font_medium</item>
+        <item>@string/status_bar_weather_font_medium_italic</item>
+        <item>@string/status_bar_weather_font_black</item>
+        <item>@string/status_bar_weather_font_black_italic</item>
+        <item>@string/status_bar_weather_font_dancingscript</item>
+        <item>@string/status_bar_weather_font_dancingscript_bold</item>
+        <item>@string/status_bar_weather_font_comingsoon</item>
+        <item>@string/status_bar_weather_font_notoserif</item>
+        <item>@string/status_bar_weather_font_notoserif_italic</item>
+        <item>@string/status_bar_weather_font_notoserif_bold</item>
+        <item>@string/status_bar_weather_font_notoserif_bold_italic</item>
+    </string-array>
+    <string-array name="status_bar_weather_font_style_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+    </string-array>
+    <string-array name="weather_condition_icon_entries">
+        <item>@string/weather_condition_icon_monochrome_title</item>
+        <item>@string/weather_condition_icon_colored_title</item>
+        <item>@string/weather_condition_icon_vclouds_title</item>
+    </string-array>
+    <string-array name="weather_condition_icon_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="weather_hide_panel_entries">
+        <item>@string/weather_hide_panel_auto_title</item>
+        <item>@string/weather_hide_panel_custom_title</item>
+        <item>@string/weather_hide_panel_never_title</item>
+    </string-array>
+    <string-array name="weather_hide_panel_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="weather_number_of_notifications_entries">
+        <item>@string/weather_number_of_notifications_always_title</item>
+        <item>@string/weather_number_of_notifications_two_title</item>
+        <item>@string/weather_number_of_notifications_three_title</item>
+        <item>@string/weather_number_of_notifications_four_title</item>
+        <item>@string/weather_number_of_notifications_five_title</item>
+        <item>@string/weather_number_of_notifications_six_title</item>
+    </string-array>
+    <string-array name="weather_number_of_notifications_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="entries_pa_pie_size">
+        <item>@string/pa_pie_size_small</item>
+        <item>@string/pa_pie_size_default</item>
+        <item>@string/pa_pie_size_large</item>
+        <item>@string/pa_pie_size_gigantic</item>
+        <item>@string/pa_pie_size_monster</item>
+        <item>@string/pa_pie_size_enormous</item>
+    </string-array>
+    <string-array name="values_pa_pie_size">
+        <item>0.9</item>
+        <item>1.0</item>
+        <item>1.1</item>
+        <item>1.2</item>
+        <item>1.3</item>
+        <item>1.4</item>
+    </string-array>
+    <string-array name="entries_pa_pie_gravity">
+        <item>@string/pa_pie_gravity_left</item>
+        <item>@string/pa_pie_gravity_right</item>
+        <item>@string/pa_pie_gravity_bottom</item>
+    </string-array>
+    <string-array name="values_pa_pie_gravity">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="entries_pa_pie_mode">
+        <item>@string/pa_pie_mode_bare</item>
+        <item>@string/pa_pie_mode_quick</item>
+        <item>@string/pa_pie_mode_default</item>
+        <item>@string/pa_pie_mode_slow</item>
+    </string-array>
+    <string-array name="values_pa_pie_mode">
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="entries_pa_pie_angle">
+        <item>@string/pa_pie_angle_none</item>
+        <item>@string/pa_pie_angle_small</item>
+        <item>@string/pa_pie_angle_big</item>
+        <item>@string/pa_pie_angle_huge</item>
+        <item>@string/pa_pie_angle_super</item>
+    </string-array>
+    <string-array name="values_pa_pie_angle">
+        <item>0</item>
+        <item>6</item>
+        <item>12</item>
+        <item>18</item>
+        <item>24</item>
+    </string-array>
+    <string-array name="entries_pa_pie_gap">
+        <item>@string/pa_pie_gap_none</item>
+        <item>@string/pa_pie_gap_small</item>
+        <item>@string/pa_pie_gap_big</item>
+        <item>@string/pa_pie_gap_huge</item>
+    </string-array>
+    <string-array name="values_pa_pie_gap">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="slimsizer_profile_array">
+        <item>Load Profile</item>
+        <item>Save Profile</item>
+    </string-array>
+    <string-array name="toast_animation_entries">
+        <item>@string/toast_none_animation</item>
+        <item>@string/toast_default_animation</item>
+        <item>@string/toast_fade_animation</item>
+        <item>@string/toast_SlideRight_animation</item>
+        <item>@string/toast_SlideLeft_animation</item>
+        <item>@string/toast_Xylon_animation</item>
+        <item>@string/toast_Toko_animation</item>
+        <item>@string/toast_Tn_animation</item>
+        <item>@string/toast_Honami_animation</item>
+        <item>@string/toast_FastFade_animation</item>
+        <item>@string/toast_GrowFade_animation</item>
+        <item>@string/toast_GrowFadeCenter_animation</item>
+        <item>@string/toast_GrowFadeBottom_animation</item>
+        <item>@string/toast_Translucent_animation</item>
+        <item>@string/toast_SlideLeftRight_animation</item>
+        <item>@string/toast_SlideRightLeft_animation</item>
+    </string-array>
+    <string-array name="toast_animation_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="power_menu_animations_entries">
+        <item>@string/power_menu_animation_aosp</item>
+        <item>@string/power_menu_animation_bottom</item>
+        <item>@string/power_menu_animation_top</item>
+        <item>@string/power_menu_animation_rotate</item>
+        <item>@string/power_menu_animation_xylon</item>
+        <item>@string/power_menu_animation_slide</item>
+        <item>@string/power_menu_animation_turn</item>
+        <item>@string/power_menu_animation_fly</item>
+        <item>@string/power_menu_animation_card</item>
+        <item>@string/power_menu_animation_translucent_top</item>
+        <item>@string/power_menu_animation_translucent_bottom</item>
+    </string-array>
+    <string-array name="power_menu_animations_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="listview_animation_entries">
+        <item>@string/listview_off</item>
+        <item>@string/listview_wave_left</item>
+        <item>@string/listview_wave_right</item>
+        <item>@string/listview_scale</item>
+        <item>@string/listview_alpha</item>
+        <item>@string/listview_stack_top</item>
+        <item>@string/listview_stack_bottom</item>
+        <item>@string/listview_unfold</item>
+        <item>@string/listview_fold</item>
+        <item>@string/listview_translate_left</item>
+        <item>@string/listview_translate_right</item>
+    </string-array>
+    <string-array name="listview_animation_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="listview_interpolator_entries">
+        <item>@string/listview_off</item>
+        <item>@string/listview_accelerate_interpolator</item>
+        <item>@string/listview_decelerate_interpolator</item>
+        <item>@string/listview_accelerate_decelerate_interpolator</item>
+        <item>@string/listview_anticipate_interpolator</item>
+        <item>@string/listview_overshoot_interpolator</item>
+        <item>@string/listview_anticipate_overshoot_interpolator</item>
+        <item>@string/listview_bounce_interpolator</item>
+    </string-array>
+    <string-array name="listview_interpolator_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="anim_controls_entries">
+        <item>@string/animation_default</item>
+        <item>@string/animation_fade</item>
+        <item>@string/animation_slide_right</item>
+        <item>@string/animation_slide_left</item>
+        <item>@string/animation_slide_right_no_fade</item>
+        <item>@string/animation_slide_left_no_fade</item>
+        <item>@string/animation_slide_up</item>
+        <item>@string/animation_slide_down</item>
+        <item>@string/animation_translucent</item>
+        <item>@string/animation_grow_shrink</item>
+        <item>@string/animation_grow_shrink_center</item>
+        <item>@string/animation_grow_shrink_bottom</item>
+        <item>@string/animation_grow_shrink_left</item>
+        <item>@string/animation_grow_shrink_right</item>
+    </string-array>
+    <string-array name="anim_controls_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="status_bar_logo_position_entries">
+        <item>@string/status_bar_logo_position_left</item>
+        <item>@string/status_bar_logo_position_right</item>
+    </string-array>
+    <string-array name="status_bar_logo_position_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="recent_panel_expanded_mode_entries">
+        <item>@string/recent_panel_expanded_mode_auto</item>
+        <item>@string/recent_panel_expanded_mode_always</item>
+        <item>@string/recent_panel_expanded_mode_never</item>
+    </string-array>
+    <string-array name="recent_panel_expanded_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="lock_clock_fonts_entries">
+        <item>@string/lock_clock_font_normal</item>
+        <item>@string/lock_clock_font_bold</item>
+        <item>@string/lock_clock_font_italic</item>
+        <item>@string/lock_clock_font_bold_italic</item>
+        <item>@string/lock_clock_font_light_normal</item>
+        <item>@string/lock_clock_font_light_italic</item>
+        <item>@string/lock_clock_font_thin_normal</item>
+        <item>@string/lock_clock_font_thin_italic</item>
+        <item>@string/lock_clock_font_condensed_normal</item>
+        <item>@string/lock_clock_font_condensed_bold</item>
+        <item>@string/lock_clock_font_condensed_italic</item>
+        <item>@string/lock_clock_font_condensed_bold_italic</item>
+        <item>@string/lock_clock_font_medium_normal</item>
+        <item>@string/lock_clock_font_medium_italic</item>
+        <item>@string/lock_clock_font_black_normal</item>
+        <item>@string/lock_clock_font_black_italic</item>
+        <item>@string/lock_clock_font_condensed_light_normal</item>
+        <item>@string/lock_clock_font_condensed_light_italic</item>
+        <item>@string/lock_clock_font_dancingscript</item>
+        <item>@string/lock_clock_font_dancingscript_bold</item>
+        <item>@string/lock_clock_font_comingsoon</item>
+        <item>@string/lock_clock_font_notoserif</item>
+        <item>@string/lock_clock_font_notoserif_italic</item>
+        <item>@string/lock_clock_font_notoserif_bold</item>
+        <item>@string/lock_clock_font_notoserif_bold_italic</item>
+    </string-array>
+    <string-array name="lock_clock_fonts_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+    </string-array>
+    <string-array name="qs_num_columns_values">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="qs_num_columns_entries">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="qs_num_rows_values">
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="qs_num_rows_entries">
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+</resources>
