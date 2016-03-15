@@ -117,8 +117,8 @@ public class BatteryBar extends AppCompatActivity {
 
             boolean hasNavBarByDefault = getResources().getBoolean(
                     com.android.internal.R.bool.config_showNavigationBar);
-            boolean enableNavigationBar = Settings.System.getInt(resolver,
-                Settings.System.NAVIGATION_BAR_SHOW, hasNavBarByDefault ? 1 : 0) == 1;
+            boolean enableNavigationBar = Settings.Secure.getInt(resolver,
+                Settings.Secure.NAVIGATION_BAR_VISIBLE, hasNavBarByDefault ? 1 : 0) == 1;
 
             if (!hasNavBarByDefault || !enableNavigationBar) {
                 prefSet.removePreference(mBatteryBar);
