@@ -20,6 +20,7 @@ import android.support.v4.app.Fragment;
 import cyanogenmod.providers.CMSettings;
 
 import org.cyanogenmod.internal.util.CmLockPatternUtils;
+import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 import com.lordclockan.R;
 
 public class NotificationsFragment extends Fragment {
@@ -42,12 +43,14 @@ public class NotificationsFragment extends Fragment {
         private static final String PREF_QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
         private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
         private static final String PREF_STATUS_BAR_HEADER_FONT_STYLE = "status_bar_header_font_style";
+        private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
 
         private SwitchPreference mBrightnessSlider;
         private SwitchPreference mBlockOnSecureKeyguard;
         private ListPreference mStatusBarHeaderFontStyle;
         private ListPreference mNumColumns;
         private ListPreference mNumRows;
+        private SeekBarPreferenceCham mHeaderShadow;
 
         private static final int MY_USER_ID = UserHandle.myUserId();
 
@@ -89,6 +92,12 @@ public class NotificationsFragment extends Fragment {
             mStatusBarHeaderFontStyle.setValue(Integer.toString(Settings.System.getIntForUser(resolver,
                     Settings.System.STATUS_BAR_HEADER_FONT_STYLE, 0, UserHandle.USER_CURRENT)));
             mStatusBarHeaderFontStyle.setSummary(mStatusBarHeaderFontStyle.getEntry());
+
+            mHeaderShadow = (SeekBarPreferenceCham) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
+            final int headerShadow = Settings.System.getInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, 0);
+            mHeaderShadow.setValue((int)((headerShadow / 255) * 100));
+            mHeaderShadow.setOnPreferenceChangeListener(this);
 
             // Number of QS Columns 3,4,5
             mNumColumns = (ListPreference) findPreference("sysui_qs_num_columns");
@@ -145,6 +154,12 @@ public class NotificationsFragment extends Fragment {
                         numRows, UserHandle.USER_CURRENT);
                 updateNumRowsSummary(numRows);
                 return true;
+            } else if (preference == mHeaderShadow) {
+               Integer headerShadow = (Integer) newValue;
+               int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
+               Settings.System.putInt(getContentResolver(),
+                       Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
+               return true;
             }
             return false;
         }
