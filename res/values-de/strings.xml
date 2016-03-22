@@ -32,7 +32,7 @@
     <string name="aicp_downloads_title">Downloads</string>
     <string name="aicp_gerrit_title">Gerrit</string>
     <string name="send_mail_intent">Sende E-Mail...</string>
-    <string name="hidden_anim_activity_title">"Yoga"-zeit!!!</string>
+    <string name="hidden_anim_activity_title">Zeit für \"Yoga\"!!!</string>
     <string name="hidden_anim_more_title">MEHR?</string>
     <string name="hidden_anim_more_nice">SCHÖN</string>
     <string name="continue_title">Weiter</string>
@@ -284,7 +284,7 @@
     <string name="recents_full_screen_date_summary">Zeigt das Datum im Vollbildmodus oben an</string>
 
     <!-- Weather settings -->
-    <string name="weather_lockscreen_category">Optionen für Wetter auf Sperrbildschirm</string>
+    <string name="weahter_lockscreen_category">Optionen für Wetter auf Sperrbildschirm</string>
     <string name="weather_cat_notifications_title">Benachrichtigungen</string>
     <string name="weather_settings_title">LockClock Einstellungen</string>
     <string name="weather_settings_summary">Konfiguration des Standorts im Wetter Widget und andere Einstellungen</string>
@@ -758,12 +758,9 @@
 
     <!-- Hide Lockscreen clock, date & alarm -->
     <string name="hide_lockscreen_items_title">Sperrbildschirmanzeigen</string>
-    <string name="hide_lockscreen_clock_title">Uhr</string>
-    <string name="hide_lockscreen_clock_summary">Zeige die Uhrzeit auf dem Sperrbildschirm</string>
-    <string name="hide_lockscreen_date_title">Datum</string>
-    <string name="hide_lockscreen_date_summary">Zeige das Datum auf dem Sperrbildschirm</string>
-    <string name="hide_lockscreen_alarm_title">Wecker</string>
-    <string name="hide_lockscreen_alarm_summary">Zeige Weckalarm auf dem Sperrbildschirm</string>
+    <string name="hide_lockscreen_clock_title">Zeige Uhrzeit auf Sperrbildschirm</string>
+    <string name="hide_lockscreen_date_title">Zeige Datum auf Sperrbildschirm</string>
+    <string name="hide_lockscreen_alarm_title">Zeige Weckalarm auf Sperrbildschirm</string>
 
     <!-- Status bar header font style -->
     <string name="status_bar_header_font_style_title">Schriftstil des Statusleistenkopfs</string>
@@ -771,6 +768,10 @@
     <!-- QS Tiles Columns -->
     <string name="qs_num_columns_title">Kachelanzahl pro Zeile</string>
     <string name="qs_num_columns_showing">Es werden %1$s Kacheln pro Zeile angezeigt</string>
+
+    <!-- QS Tiles Rows -->
+    <string name="qs_num_rows_title">Anzahl der Reihen für Kacheln</string>
+    <string name="qs_num_rows_showing">%1$s Reihen werden angezeigt</string>
 
     <!-- Lockscreen Colors -->
     <string name="lockscreen_colors_title">Sperrbildschirm-Farben</string>
@@ -781,5 +782,10 @@
     <string name="lockscreen_colors_reset_title">Sperrbildschirm-Farben zurücksetzen</string>
     <string name="lockscreen_colors_reset_message">Wollen Sie diese Farben auf den Standard zurücksetzen?</string>
     <string name="yes">JA</string>
+
+    <!-- Header image shadow -->
+    <string name="status_bar_custom_header_shadow_title">Hintergrundbild-Schatten</string>
+    <string name="status_bar_custom_header_shadow_summary">Für eine bessere Sichtbarkeit bei hellen Hintergrundbildern</string>
+    <string name="unit_percent">\u0025</string>
 
 </resources>
