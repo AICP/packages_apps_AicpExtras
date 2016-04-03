@@ -42,7 +42,6 @@ public class StatusBarFragment extends Fragment {
         private String PREF_TRAFFIC = "traffic";
         private String PREF_CARRIE_LABEL = "carrierlabel";
         private String PREF_BATTERY_BAR = "batterybar";
-        private String PREF_STATUSBAR_WEATHER = "statusbar_weather";
         private static final String KEY_AICP_LOGO_COLOR = "status_bar_aicp_logo_color";
         private static final String KEY_AICP_LOGO_STYLE = "status_bar_aicp_logo_style";
         private static final String MISSED_CALL_BREATH = "missed_call_breath";
@@ -52,7 +51,6 @@ public class StatusBarFragment extends Fragment {
         private Preference mTraffic;
         private Preference mCarrierLabel;
         private Preference mBatteryBar;
-        private Preference mStatusbarWeather;
         private PreferenceCategory categoryBreathingNotifications;
         private ColorPickerPreference mAicpLogoColor;
         private ListPreference mAicpLogoStyle;
@@ -74,7 +72,6 @@ public class StatusBarFragment extends Fragment {
             mTraffic = prefSet.findPreference(PREF_TRAFFIC);
             mCarrierLabel = prefSet.findPreference(PREF_CARRIE_LABEL);
             mBatteryBar = prefSet.findPreference(PREF_BATTERY_BAR);
-            mStatusbarWeather = prefSet.findPreference(PREF_STATUSBAR_WEATHER);
 
             mAicpLogoStyle = (ListPreference) findPreference(KEY_AICP_LOGO_STYLE);
             int aicpLogoStyle = Settings.System.getIntForUser(resolver,
@@ -131,9 +128,6 @@ public class StatusBarFragment extends Fragment {
                 getActivity().startActivity(intent);
             } else if (preference == mBatteryBar) {
                 Intent intent = new Intent(getActivity(), BatteryBar.class);
-                getActivity().startActivity(intent);
-            } else if (preference == mStatusbarWeather) {
-                Intent intent = new Intent(getActivity(), StatusBarWeather.class);
                 getActivity().startActivity(intent);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
