@@ -28,7 +28,7 @@
     <string name="systemui_tuner_title">SystemUI Tuner</string>
     <string name="systemui_tuner_summary">Marshmallow übernimmt das Tuning der SystemUI</string>
     <string name="systemui_tuner_dilog_title">Achtung</string>
-    <string name="systemui_tuner_dilog_warning">Der Tuner bietet begrenzte SystemUI Modificationen. Eine Verknüpfung hierfür wurde zu AICP Extras hinzugefügt.\nHier könne auch neue Kacheln hinzugefügt werden.</string>
+    <string name="systemui_tuner_dilog_warning">Der Tuner bietet begrenzte SystemUI Modifikationen. Eine Verknüpfung hierfür wurde zu AICP Extras hinzugefügt.\nHier können auch neue Kacheln hinzugefügt werden.</string>
     <string name="aicp_downloads_title">Downloads</string>
     <string name="aicp_gerrit_title">Gerrit</string>
     <string name="send_mail_intent">Sende E-Mail...</string>
@@ -98,7 +98,7 @@
 
     <!-- Disabling FC notifications -->
     <string name="disable_fc_notifications_title">FC Benachrichtigungen abschalten</string>
-    <string name="disable_fc_notifications_summary">Dies versteckt alle Absturz-Benachrichtungen</string>
+    <string name="disable_fc_notifications_summary">Dies versteckt alle Absturz-Benachrichtigungen</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Farbwähler</string>
@@ -163,13 +163,13 @@
     <string name="status_bar_carrier_font_style_title">Schriftstil</string>
 
     <!-- Battery Bar -->
-    <string name="battery_bar_title">Akkustandleiste</string>
-    <string name="battery_bar">Position der Akkustandleiste</string>
-    <string name="battery_bar_no_navbar">Position der Akkustandleiste</string>
-    <string name="battery_bar_color">Farbe der Akkustandleiste</string>
-    <string name="battery_bar_cat">Stil der Akkustandleiste</string>
-    <string name="battery_bar_style_title">Ausrichtung der Akkustandleiste</string>
-    <string name="battery_bar_thickness_title">Dicke der Akkustandleiste</string>
+    <string name="battery_bar_title">Akkustandbalken</string>
+    <string name="battery_bar">Position des Akkustandbalkens</string>
+    <string name="battery_bar_no_navbar">Position des Akkustandbalkens</string>
+    <string name="battery_bar_color">Farbe des Akkustandbalkens</string>
+    <string name="battery_bar_cat">Stil des Akkustandbalkens</string>
+    <string name="battery_bar_style_title">Ausrichtung des Akkustandbalkens</string>
+    <string name="battery_bar_thickness_title">Dicke des Akkustandbalkens</string>
     <string name="battery_bar_animate_title">Animation beim Laden</string>
     <string name="battery_bar_animate_summary">Die Animation beim Laden könnte zu einer schwachen Benutzererfahrung führen. Nach eigenem Ermessen einschalten!</string>
 
@@ -443,7 +443,7 @@
     <string name="omniswitch_start_settings_title">Einstellungen</string>
     <string name="omniswitch_start_settings_summary">Öffnet die Einstellungen von OmniSwitch</string>
     <string name="omniswitch_first_time_title">Information</string>
-    <string name="omniswitch_first_time_message">Stellen Sie sicher, dass Omniswitch aktiviert ist. Sie können dies mit Hilfe der \"Einstellungen\" unten tun.</string>
+    <string name="omniswitch_first_time_message">Stellen Sie sicher, dass OmniSwitch aktiviert ist. Sie können dies mit Hilfe der \"Einstellungen\" unten tun.</string>
 
     <!-- Double Tap Navbar to Sleep -->
     <string name="double_tap_sleep_nav_bar_title">DT2S auf Navigationsleiste</string>
@@ -522,12 +522,12 @@
     <string name="reset_android">Android</string>
 
     <!-- Task Manager -->
-    <string name="enable_task_manager_title">Task Manager</string>
-    <string name="enable_task_manager_summary">Ein-/Ausschalten der Anzeige des Task Manager-Symbole im Bereich der erweiterten Statusleiste.</string>
+    <string name="enable_task_manager_title">Prozess-Manager</string>
+    <string name="enable_task_manager_summary">Ein-/Ausschalten der Anzeige des Prozess-Manager-Symbols im Bereich der erweiterten Statusleiste.</string>
 
     <!-- SlimSizer  -->
     <string name="listsystem">list</string>
-    <string name="sizer_title">App Entferner</string>
+    <string name="sizer_title">System-App Entferner</string>
     <string name="caution">Vorsicht!</string>
     <string name="sizer_message_startup">Dieses Werkzeug erlaubt das Löschen von Systemanwendungen. Mit Vorsicht benutzen und nur Apps löschen, bei denen Sie sich sicher sind.</string>
     <string name="sizer_message_delete">Sind Sie sicher, dass diese App gelöscht werden soll?</string>
@@ -701,7 +701,7 @@
     <string name="recent_card_bg_color_title">Hintergrundfarbe der Karten</string>
     <string name="recent_card_text_color_title">Textfarbe der Karten</string>
     <string name="recent_reset_value_title">Werte zurücksetzen</string>
-    <string name="recent_app_sidebar_title">Seitenleiste für Apps</string>
+    <string name="recent_app_sidebar_title">Seitenleiste mit Anwendungsverlauf</string>
 
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Anzeige auf der linken Seite</string>
@@ -756,22 +756,25 @@
     <string name="voicemail_breath_title">Pulsierende Sprachnachrichten</string>
     <string name="voicemail_breath_summary">Gibt ihren Benachrichtigungen für Sprachnachrichten einen pulsierenden Effekt in der Statusleiste</string>
 
-    <!-- Hide Lockscreen clock, date & alarm -->
+   <!-- Hide Lockscreen clock, date & alarm -->
     <string name="hide_lockscreen_items_title">Sperrbildschirmanzeigen</string>
-    <string name="hide_lockscreen_clock_title">Zeige Uhrzeit auf Sperrbildschirm</string>
-    <string name="hide_lockscreen_date_title">Zeige Datum auf Sperrbildschirm</string>
-    <string name="hide_lockscreen_alarm_title">Zeige Weckalarm auf Sperrbildschirm</string>
+    <string name="hide_lockscreen_clock_title">Uhr</string>
+    <string name="hide_lockscreen_clock_summary">Zeige Uhrzeit</string>
+    <string name="hide_lockscreen_date_title">Datum</string>
+    <string name="hide_lockscreen_date_summary">Zeige Datum</string>
+    <string name="hide_lockscreen_alarm_title">Wecker</string>
+    <string name="hide_lockscreen_alarm_summary">Zeige Weckalarm</string>
 
     <!-- Status bar header font style -->
     <string name="status_bar_header_font_style_title">Schriftstil des Statusleistenkopfs</string>
 
     <!-- QS Tiles Columns -->
     <string name="qs_num_columns_title">Kachelanzahl pro Zeile</string>
-    <string name="qs_num_columns_showing">Es werden %1$s Kacheln pro Zeile angezeigt</string>
+    <string name="qs_num_columns_showing">%1$s Kacheln pro Zeile werden angezeigt</string>
 
     <!-- QS Tiles Rows -->
-    <string name="qs_num_rows_title">Anzahl der Reihen für Kacheln</string>
-    <string name="qs_num_rows_showing">%1$s Reihen werden angezeigt</string>
+    <string name="qs_num_rows_title">Anzahl der Zeilen für Kacheln</string>
+    <string name="qs_num_rows_showing">%1$s Zeilen werden angezeigt</string>
 
     <!-- Lockscreen Colors -->
     <string name="lockscreen_colors_title">Sperrbildschirm-Farben</string>
