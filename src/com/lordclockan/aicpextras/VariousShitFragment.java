@@ -21,6 +21,7 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 
 import com.lordclockan.R;
+import com.lordclockan.aicpextras.utils.Helpers;
 
 public class VariousShitFragment extends Fragment {
 
@@ -46,6 +47,7 @@ public class VariousShitFragment extends Fragment {
         private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
         private static final String SCROLLINGCACHE_DEFAULT = "1";
         private static final String PREF_SYSTEMUI_TUNER = "systemui_tuner";
+        private static final String PREF_ADAWAY_START = "adaway_start";
 
         // Package name of the SystemUI tuner
         public static final String SYSTEMUITUNER_PACKAGE_NAME = "com.android.systemui";
@@ -59,6 +61,12 @@ public class VariousShitFragment extends Fragment {
         public static Intent INTENT_AICPSETTINGS_SETTINGS = new Intent(Intent.ACTION_MAIN)
                 .setClassName(AICPSETTINGS_PACKAGE_NAME, AICPSETTINGS_PACKAGE_NAME + ".Settings$AicpSettingsExternalActivity");
 
+        // Package name of the AdAway app
+        public static final String ADAWAY_PACKAGE_NAME = "org.adaway";
+        // Intent for launching the AdAway main actvity
+        public static Intent INTENT_ADAWAY = new Intent(Intent.ACTION_MAIN)
+                .setClassName(ADAWAY_PACKAGE_NAME, ADAWAY_PACKAGE_NAME + ".ui.BaseActivity");
+
         private ListPreference mScrollingCachePref;
         private Preference mSystemUITuner;
         private String mTunerFirstRun = "true";
@@ -68,6 +76,7 @@ public class VariousShitFragment extends Fragment {
 
         private Preference mSystemappRemover;
         private Preference mWakelockBlocker;
+        private Preference mAdAway;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -89,6 +98,11 @@ public class VariousShitFragment extends Fragment {
             mSystemUITuner = prefSet.findPreference(PREF_SYSTEMUI_TUNER);
             mSystemappRemover = prefSet.findPreference(PREF_SYSTEMAPP_REMOVER);
             mWakelockBlocker = prefSet.findPreference(PREF_WAKELOCK_BLOCKER);
+
+            mAdAway = (Preference) prefSet.findPreference(KEY_ADAWAY_START);
+            if (!Helpers.isPackageInstalled(ADAWAY_PACKAGE_NAME, pm)) {
+                prefSet.removePreference(mAdAway);
+            }
 
             sharedPreferences();
 
@@ -123,6 +137,8 @@ public class VariousShitFragment extends Fragment {
                 startActivity(intent);
             } else if (preference == mWakelockBlocker) {
                 getActivity().startActivity(INTENT_AICPSETTINGS_SETTINGS);
+            } else if (preference == mAdAway) {
+                getActivity().startActivity(INTENT_ADAWAY);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
