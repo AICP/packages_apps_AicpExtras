@@ -52,6 +52,10 @@
         android:summary="@string/systemui_tuner_summary" />
 
     <Preference
+        android:key="adaway_start"
+        android:title="@string/adaway_settings_title" />
+
+    <Preference
         android:key="wakelock_blocker"
         android:title="@string/wakelock_blocker_title" />
 
