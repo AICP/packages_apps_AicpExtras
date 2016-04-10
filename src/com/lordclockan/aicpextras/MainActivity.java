@@ -38,32 +38,32 @@ public class MainActivity extends AppCompatActivity
 	    new AsyncTask<Void, Void, Boolean>() {
 
             @Override
-	    protected void onPreExecute() {
-		    setProgressBarIndeterminateVisibility(true);
-	    }
-
-	    @Override
-	    protected Boolean doInBackground(Void... params) {
-	           try {
-	           	boolean canGainSu = SuShell.canGainSu(getApplicationContext());
-	                return canGainSu;
-		   } catch (Exception e) {
-		        Log.e(TAG, "Error: " + e.getMessage(), e);
-		        return false;
-		   }
+            protected void onPreExecute() {
+                setProgressBarIndeterminateVisibility(true);
             }
 
-	    @Override
-	    protected void onPostExecute(Boolean result) {
-		setProgressBarIndeterminateVisibility(false);
+            @Override
+            protected Boolean doInBackground(Void... params) {
+	            try {
+                    boolean canGainSu = SuShell.canGainSu(getApplicationContext());
+                    return canGainSu;
+                } catch (Exception e) {
+                    Log.e(TAG, "Error: " + e.getMessage(), e);
+                    return true; // I want to start the app regardles of having root or not
+                }
+            }
 
-		if (!result) {
+            @Override
+            protected void onPostExecute(Boolean result) {
+                setProgressBarIndeterminateVisibility(false);
+
+                if (!result) {
                     Toast.makeText(MainActivity.this, R.string.cannot_get_su,
-				    Toast.LENGTH_LONG).show();
-		    finish();
-		}
-	    }
-	}.execute();
+                    Toast.LENGTH_LONG).show();
+                    finish();
+                }
+            }
+        }.execute();
     }
 
 		
