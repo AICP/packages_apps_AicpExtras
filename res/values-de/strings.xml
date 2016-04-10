@@ -416,8 +416,8 @@
     <string name="preview_buildtype_title">AICP Bau-Typ</string>
 
     <!-- Circle app bar -->
-    <string name="category_app_circle_bar_title">App-Starter (Ring)</string>
-    <string name="app_circle_bar_title">Ringleiste für Apps</string>
+    <string name="category_app_circle_bar_title">App-Kreisleiste</string>
+    <string name="app_circle_bar_title">Ringförmige Startleiste für Apps</string>
     <string name="app_circle_bar_summary">Zeige den Ring bei Berührung des rechten Displayrandes</string>
     <string name="app_circle_bar_included_apps_title">Enthaltene Apps</string>
     <string name="app_circle_bar_included_apps_summary">Angezeigte Apps in der Ringleiste</string>
@@ -722,6 +722,36 @@
     <string name="brightness_icon_title">Symbol für Helligkeit</string>
     <string name="brightness_icon_summary">Zeigt ein Symbol für die Helligkeit auf der linken Seite des Helligkeitsreglers, um die Auto-Helligkeit anzupassen</string>
 
+    <!-- App sidebar -->
+    <string name="app_sidebar_title">App-Seitenleiste</string>
+    <string name="app_sidebar_enable_title">App-Leiste einschalten</string>
+    <string name="app_sidebar_enable_summaryOn">App-Leiste ist eingeschaltet</string>
+    <string name="app_sidebar_enable_summaryOff">App-Leiste ist ausgeschaltet</string>
+    <string name="app_sidebar_setup_items_title">Inhalt der App-Leiste einrichten</string>
+    <string name="app_sidebar_setup_items_summary">Hinzufügen, Entfernen und Position von Apps in der Leiste</string>
+    <string name="app_sidebar_transparency_title">Transparenz der App-Leiste</string>
+    <string name="app_sidebar_transparency_summary">Anpassen der Transparenz-Stufe der App-Leiste</string>
+    <string name="app_sidebar_position_title">Position der App-Leiste</string>
+    <string name="app_sidebar_position_summary">Position der Leiste auf der linken oder rechten Bildschirmseite festlegen</string>
+    <string name="app_sidebar_position_left">Links</string>
+    <string name="app_sidebar_position_right">Rechts</string>
+    <string name="app_sidebar_hide_labels_title">Verstecke Beschriftung</string>
+    <string name="app_sidebar_hide_labels_summary">Blendet die Beschriftung der Symbole aus</string>
+    <string name="tab_category">Sichtbarer Auslösebereich</string>
+    <string name="use_tab_title">Auslösebereich anzeigen</string>
+    <string name="use_tab_summary">Stelle einen Auslösebereich an der Bildschirmseite dar, der die Leiste bei Berührung anzeigt.</string>
+    <string name="tab_position_title">Position des Auslösers</string>
+    <string name="tab_position_summary">Zeige den Auslösebereich oben, in der Mitte oder unten auf der Bildschirmseite an.</string>
+    <string name="tab_size_title">Größe des Auslösers</string>
+    <string name="tab_size_summary">Verändere die Größe des Auslösebereichs.</string>
+    <string name="trigger_category">Auslösebereich</string>
+    <string name="trigger_width_title">Breite des Auslösers</string>
+    <string name="trigger_width_summary">Breite des Auslösebereichs einstellen</string>
+    <string name="trigger_top_title">Position des Auslösers</string>
+    <string name="trigger_top_summary">Stelle die vertikale Position ein</string>
+    <string name="trigger_bottom_title">Höhe des Auslösers</string>
+    <string name="trigger_bottom_summary">Höhe des Auslösebereichs einstellen</string>
+
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Wakelock Blockierer</string>
 
@@ -790,5 +820,8 @@
     <string name="status_bar_custom_header_shadow_title">Hintergrundbild-Schatten</string>
     <string name="status_bar_custom_header_shadow_summary">Für eine bessere Sichtbarkeit bei hellen Hintergrundbildern</string>
     <string name="unit_percent">\u0025</string>
+
+    <!-- AdAway -->
+    <string name="adaway_settings_title">AdAway (Werbeblocker)</string>
 
 </resources>
