@@ -48,12 +48,20 @@ public class RecentsPanelFragment extends Fragment {
         private static final String RECENTS_FULL_SCREEN = "recents_full_screen";
         private static final String RECENTS_FULL_SCREEN_CLOCK = "recents_full_screen_clock";
         private static final String RECENTS_FULL_SCREEN_DATE = "recents_full_screen_date";
+        private static final String PREF_HIDDEN_RECENTS_APPS_START = "hide_app_from_recents";
 
         // Package name of the omnniswitch app
         public static final String OMNISWITCH_PACKAGE_NAME = "org.omnirom.omniswitch";
         // Intent for launching the omniswitch settings actvity
         public static Intent INTENT_OMNISWITCH_SETTINGS = new Intent(Intent.ACTION_MAIN)
                 .setClassName(OMNISWITCH_PACKAGE_NAME, OMNISWITCH_PACKAGE_NAME + ".SettingsActivity");
+
+        // Package name of the hidden recetns apps activity
+        public static final String HIDDEN_RECENTS_PACKAGE_NAME = "com.android.settings";
+        // Intent for launching the hidden recents actvity
+        public static Intent INTENT_HIDDEN_RECENTS_SETTINGS = new Intent(Intent.ACTION_MAIN)
+                .setClassName(HIDDEN_RECENTS_PACKAGE_NAME,
+                HIDDEN_RECENTS_PACKAGE_NAME + ".aicp.HAFRAppListActivity");
 
         private SwitchPreference mRecentsClearAll;
         private ListPreference mRecentsClearAllLocation;
@@ -63,6 +71,7 @@ public class RecentsPanelFragment extends Fragment {
         private SwitchPreference mRecentsFullScreen;
         private SwitchPreference mRecentsFullScreenClock;
         private SwitchPreference mRecentsFullScreenDate;
+        private Preference mHiddenRecentsApps;
 
         ViewGroup viewGroup;
 
@@ -94,6 +103,8 @@ public class RecentsPanelFragment extends Fragment {
             mRecentsFullScreenClock = (SwitchPreference) prefSet.findPreference(RECENTS_FULL_SCREEN_CLOCK);
             mRecentsFullScreenDate = (SwitchPreference) prefSet.findPreference(RECENTS_FULL_SCREEN_DATE);
 
+            mHiddenRecentsApps = (Preference) prefSet.findPreference(PREF_HIDDEN_RECENTS_APPS_START);
+
             updateSettingsVisibility();
 
         }
@@ -108,6 +119,16 @@ public class RecentsPanelFragment extends Fragment {
                         Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
                 mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
                 return true;
+            }
+            return false;
+        }
+
+        @Override
+        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+            if (preference == mHiddenRecentsApps) {
+                getActivity().startActivity(INTENT_HIDDEN_RECENTS_SETTINGS);
+            } else {
+                return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
             return false;
         }
