@@ -67,6 +67,12 @@
         android:summary="@string/hide_lockscreen_alarm_summary"
         android:defaultValue="true" />
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="lock_screen_show_current"
+        android:title="@string/lock_screen_show_current"
+        android:summary="@string/lock_screen_show_current_summary"
+        android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <!-- Lockscreen colors -->
