@@ -368,7 +368,7 @@
     <string name="anonymous_statistics_warning_title">Об</string>
     <string name="anonymous_statistics_warning">"Отказ в AICP Статистика позволит без личные данные должны быть представлены к нашим серверам. 
       Информация, представленная включает в себя уникальный идентификатор, который не идет на компромисс вашу частную жизнь или личные данные. 
-      Данные представлены каждые 7 дней. В качестве примера данных, которые представлены, нажмите на превью данных ."</string>
+      Данные представлены каждые 7 дней. В качестве примера данных, которые представлены, нажмите на превью данных."</string>
     <string name="pref_settings">Настройки</string>
     <string name="enable_reporting_title">Включить отчетность</string>
     <string name="disable_reporting_persistent">Отключить отчетность</string>
@@ -525,6 +525,7 @@
 
     <!-- SU -->
     <string name="cannot_get_su">Не удается получить доступ суперпользователя.</string>
+    <string name="cannot_get_su_start">Cannot get superuser access.</string>
 
     <!-- Aicp logcat -->
     <string name="logcat_title">Logcat</string>
@@ -787,5 +788,12 @@
     <string name="status_bar_custom_header_shadow_title">Затемнение изображение заголовка</string>
     <string name="status_bar_custom_header_shadow_summary">Для лучшей видимости на ярких изображениях</string>
     <string name="unit_percent">\u0025</string>
+
+    <!-- AdAway -->
+    <string name="adaway_settings_title">Блокировка рекламы</string>
+
+    <!-- Hide Apps from Recents -->
+    <string name="hide_apps_from_recents_title">Скрыть приложения</string>
+    <string name="hide_apps_from_recents_summary">Выберите, какие приложения следует исключить из панели недавних.</string>
 
 </resources>
