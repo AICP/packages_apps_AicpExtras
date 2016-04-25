@@ -134,6 +134,11 @@
         </activity>
         <activity
             android:name=".aicpextras.KeyboardAnimationInterfaceSettings"
+            android:label="@string/floating_windows"
+            android:theme="@style/FragmentTheme">
+        </activity>
+        <activity
+            android:name=".aicpextras.FloatingWindows"
             android:label="@string/ime_animation_title"
             android:theme="@style/FragmentTheme">
         </activity>
