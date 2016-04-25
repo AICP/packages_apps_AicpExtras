@@ -75,7 +75,7 @@
     <string name="stock_recents_disabled">已禁用最近任务面板!</string>
     <string name="alternatives_title">查看替代品</string>
     <string name="changelog_title">更新日志</string>
-    <string name="changelog_title_summary">查看系统固件的更新日志</string>
+    <string name="changelog_title_summary">查看ROM的更新日志</string>
     <string name="changelog_error">不能查看改动日志</string>
     <string name="toast_icon_title">提示栏显示图标</string>
     <string name="toast_icon_summary">提示栏显示相应的应用程序图标</string>
@@ -86,6 +86,10 @@
     <string name="dialog_title_lcd_density">屏幕显示密度</string>
     <string name="lcd_density_value_format">%dDPI</string>
     <string name="lcd_density_default_value_format">%dDPI(默认)</string>
+    <string name="restarting_ui">重新启动界面…</string>
+    <string name="lcd_density_prompt_message">"有些应用程序可能无法在非标准的DPI上使用.
+
+这将重启你的手机."</string>
     <string name="print_restart">重新启动</string>
     <string name="force_expanded_notifications_title">强行扩大所有通知</string>
     <string name="force_expanded_notifications_summary">仅可用于支持扩展通知的应用程序</string>
@@ -132,8 +136,6 @@
     <string name="status_bar_custom_header_summary">允许在通知面板顶部显示图片</string>
     <string name="status_bar_custom_header_default_title">使用高清图片</string>
     <string name="status_bar_custom_header_default_summary">使用高清图像代替默认图像。</string>
-    <string name="status_bar_custom_header_shadow_title">顶部图像阴影</string>
-    <string name="status_bar_custom_header_shadow_summary">在清晰的图像上有更好的可见性</string>
     <string name="carrier_options">运营商名称</string>
     <string name="custom_carrier_label_title">自定义运营商名称</string>
     <string name="custom_carrier_label_explain">请输入一个新的名称，不输入将恢复为默认。</string>
@@ -191,6 +193,10 @@
     <string name="ga_gestures_rename_label">手势名称</string>
     <string name="ga_gestures_error_loading">不能读取%s.请确认你是否已顺利保存</string>
     <string name="trigger_category">触发区域</string>
+    <string name="picker_activities">活动</string>
+    <string name="select_custom_app_title">选择自定义应用程序</string>
+    <string name="select_custom_activity_title">选择自定义活动</string>
+    <string name="profile_applist_title">应用程序</string>
     <string name="status_bar_temperature_title">状态栏天气</string>
     <string name="status_bar_temperature_hidden">隐藏</string>
     <string name="status_bar_temperature_show_scale">显示℃</string>
@@ -240,7 +246,8 @@
     <string name="weather_settings_summary">设置天气的位置以及一些其他设置</string>
     <string name="weather_lockscreen_show_title">锁屏天气</string>
     <string name="weather_lockscreen_show_summary">锁屏时显示天气</string>
-    <string name="weather_show_weather_summary">启用显示天气信息</string>
+    <string name="weather_show_weather_title">启用显示天气信息</string>
+    <string name="weather_show_weather_summary">随着待机时钟显示天气</string>
     <string name="status_bar_show_weather_title">扩展状态栏的天气</string>
     <string name="status_bar_show_weather_summary">在状态条扩展区域显示基本天气</string>
     <string name="weather_show_location_title">显示位置</string>
@@ -336,16 +343,16 @@
     <string name="preview_romname_title">ROM名称</string>
     <string name="preview_romversion_title">AICP版本</string>
     <string name="preview_buildtype_title">AICP版本类型</string>
-    <string name="category_app_circle_bar_title">应用程序侧边栏设置</string>
-    <string name="app_circle_bar_title">应用程序侧边栏</string>
-    <string name="app_circle_bar_summary">触摸屏幕右边缘启动应用程序侧边栏</string>
-    <string name="app_circle_bar_included_apps_title">侧边栏包括的应用</string>
-    <string name="app_circle_bar_included_apps_summary">勾选的应用将会在应用程序侧边栏中显示</string>
-    <string name="trigger_width_title">侧边栏的宽度</string>
+    <string name="category_app_circle_bar_title">应用程序侧边圆栏设置</string>
+    <string name="app_circle_bar_title">应用程序侧边圆栏</string>
+    <string name="app_circle_bar_summary">触摸屏幕右边缘启动应用程序侧边圆栏</string>
+    <string name="app_circle_bar_included_apps_title">侧边圆栏包括的应用</string>
+    <string name="app_circle_bar_included_apps_summary">勾选的应用将会在应用程序侧边圆栏中显示</string>
+    <string name="trigger_width_title">侧边圆栏的宽度</string>
     <string name="trigger_width_summary">调整触发区域的宽度</string>
-    <string name="trigger_top_title">侧边栏的位置</string>
+    <string name="trigger_top_title">侧边圆栏的位置</string>
     <string name="trigger_top_summary">调整触发区域的垂直位置</string>
-    <string name="trigger_bottom_title">侧边栏高度</string>
+    <string name="trigger_bottom_title">侧边圆栏高度</string>
     <string name="trigger_bottom_summary">调整触发区域的高度</string>
     <string name="lockscreen_category_title">壁纸</string>
     <string name="lockscreen_wallpaper_title">锁屏壁纸</string>
@@ -551,7 +558,7 @@
     <string name="animation_slide_down">顶部滑入</string>
     <string name="animation_translucent">半透明</string>
     <string name="animation_grow_shrink">顶部放大</string>
-    <string name="animation_grow_shrink_center">"居中放大"</string>
+    <string name="animation_grow_shrink_center">居中放大</string>
     <string name="animation_grow_shrink_bottom">底部放大</string>
     <string name="animation_grow_shrink_left">左侧放大</string>
     <string name="animation_grow_shrink_right">右侧放大</string>
@@ -591,6 +598,27 @@
     <string name="screenshot_sound_summary">截图时的声音(在某些国家它可能违法)</string>
     <string name="brightness_icon_title">亮度图标</string>
     <string name="brightness_icon_summary">显示亮度条旁边的自动亮度</string>
+    <string name="app_sidebar_title">应用程序侧边栏</string>
+    <string name="app_sidebar_enable_title">启用应用程序侧边栏</string>
+    <string name="app_sidebar_enable_summaryOn">已开启应用程序侧边栏</string>
+    <string name="app_sidebar_enable_summaryOff">已关闭应用程序侧边栏</string>
+    <string name="app_sidebar_setup_items_title">设置侧边栏的内容</string>
+    <string name="app_sidebar_setup_items_summary">增加，删除，或者调整应用程序的位置</string>
+    <string name="app_sidebar_transparency_title">侧边栏的透明度</string>
+    <string name="app_sidebar_transparency_summary">调整侧边栏透明度的等级</string>
+    <string name="app_sidebar_position_title">侧边栏位置</string>
+    <string name="app_sidebar_position_summary">侧边栏在屏幕的左边还是右边</string>
+    <string name="app_sidebar_position_left">左</string>
+    <string name="app_sidebar_position_right">右</string>
+    <string name="app_sidebar_hide_labels_title">隐藏图标标签</string>
+    <string name="app_sidebar_hide_labels_summary">隐藏侧边栏中图标的标签</string>
+    <string name="tab_category">可见标签</string>
+    <string name="use_tab_title">显示标签</string>
+    <string name="use_tab_summary">当点击侧边栏时在旁边显示标签</string>
+    <string name="tab_position_title">调整标签显示的位置</string>
+    <string name="tab_position_summary">显示标签在屏幕的左边、右边或者中间</string>
+    <string name="tab_size_title">标签大小</string>
+    <string name="tab_size_summary">调整可视标签的大小.</string>
     <string name="wakelock_blocker_title">唤醒拦截器</string>
     <string name="block_on_secure_keyguard_title">禁用锁屏时的快速设置</string>
     <string name="block_on_secure_keyguard_summary">仅在安全锁屏界面禁用快速设置</string>
@@ -627,5 +655,7 @@
     <string name="lockscreen_colors_reset_title">重置所有锁屏字体颜色</string>
     <string name="lockscreen_colors_reset_message">你确定你想要重新设置默认这些颜色吗?</string>
     <string name="yes">确定</string>
+    <string name="status_bar_custom_header_shadow_title">顶部图像阴影</string>
+    <string name="status_bar_custom_header_shadow_summary">在清晰的图像上有更好的可见性</string>
     <string name="unit_percent">%</string>
 </resources>
