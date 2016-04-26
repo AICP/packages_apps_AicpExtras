@@ -2,6 +2,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <Preference
+        android:key="floating_windows"
+        android:title="@string/floating_windows" />
+
+    <Preference
         android:key="app_circle_bar"
         android:title="@string/app_circle_bar_title" />
 
