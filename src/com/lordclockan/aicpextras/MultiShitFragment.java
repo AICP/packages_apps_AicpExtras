@@ -49,7 +49,6 @@ public class MultiShitFragment extends Fragment {
         private static final String CAT_OMNISWITCH = "omniswitch_category";
         private static final String RECENTS_USE_OMNISWITCH = "recents_use_omniswitch";
         private static final String OMNISWITCH_START_SETTINGS = "omniswitch_start_settings";
-        private static final String PREF_FLOATING_WINDOWS = "floating_windows";
 
         // Package name of the omnniswitch app
         public static final String OMNISWITCH_PACKAGE_NAME = "org.omnirom.omniswitch";
@@ -66,7 +65,6 @@ public class MultiShitFragment extends Fragment {
         private SwitchPreference mRecentsUseOmniSwitch;
         private Preference mOmniSwitchSettings;
         private boolean mOmniSwitchInitCalled;
-        private Preference mFloatingWindows;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -84,7 +82,6 @@ public class MultiShitFragment extends Fragment {
             mAppCircleBar = prefSet.findPreference(PREF_APP_CIRCLE_BAR);
             mAppSideBar = prefSet.findPreference(PREF_APP_SIDE_BAR);
             mSlimRecentsPanel = prefSet.findPreference(PREF_SLIM_RECENTS);
-            mFloatingWindows = prefSet.findPreference(PREF_FLOATING_WINDOWS);
 
             mRecentsUseOmniSwitch = (SwitchPreference)
                     findPreference(RECENTS_USE_OMNISWITCH);
@@ -125,9 +122,6 @@ public class MultiShitFragment extends Fragment {
                 getActivity().startActivity(INTENT_OMNISWITCH_SETTINGS);
             } else if (preference == mPie) {
                 Intent intent = new Intent(getActivity(), PieControl.class);
-                getActivity().startActivity(intent);
-            } else if (preference == mFloatingWindows) {
-                Intent intent = new Intent(getActivity(), FloatingWindows.class);
                 getActivity().startActivity(intent);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
