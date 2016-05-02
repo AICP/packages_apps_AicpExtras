@@ -368,7 +368,7 @@
     <string name="anonymous_statistics_warning_title">Об</string>
     <string name="anonymous_statistics_warning">"Отказ в AICP Статистика позволит без личные данные должны быть представлены к нашим серверам. 
       Информация, представленная включает в себя уникальный идентификатор, который не идет на компромисс вашу частную жизнь или личные данные. 
-      Данные представлены каждые 7 дней. В качестве примера данных, которые представлены, нажмите на превью данных."</string>
+      Данные представлены каждые 7 дней. В качестве примера данных, которые представлены, нажмите на превью данных ."</string>
     <string name="pref_settings">Настройки</string>
     <string name="enable_reporting_title">Включить отчетность</string>
     <string name="disable_reporting_persistent">Отключить отчетность</string>
@@ -743,8 +743,8 @@
     <string name="power_menu_dialog_dim">Прозрачность фона меню выключения</string>
 
     <!-- Lockscreen Torch -->
-    <string name="keyguard_torch_title">Фонарик на экране блокировки</string>
-    <string name="keyguard_torch_summary">Включение фонарика в заблокированом состоянии</string>
+    <string name="keyguard_torch_title">Уведомления фонарика</string>
+    <string name="keyguard_torch_summary">Включение уведомления фонарика в заблокированом состоянии</string>
 
     <!-- Breathing Notifications -->
     <string name="breathing_notifications_category">\"Живые\" уведомления</string>
@@ -795,5 +795,20 @@
     <!-- Hide Apps from Recents -->
     <string name="hide_apps_from_recents_title">Скрыть приложения</string>
     <string name="hide_apps_from_recents_summary">Выберите, какие приложения следует исключить из панели недавних.</string>
+
+    <!-- Current on Lockscreen -->
+    <string name="lock_screen_show_current">Зарядка батареи</string>
+    <string name="lock_screen_show_current_summary">Отображать надписи заряд батареи на экране блокировки</string>
+
+    <!-- Floating Windows -->
+    <string name="shortcut_action_floating_windows">Плавающие окна</string>
+    <string name="floating_master_switch">Плавающие окна</string>
+    <string name="floating_additional_options">Дополнительные настройки</string>
+    <string name="floating_windows">Плавающие окна</string>
+    <string name="floating_windows_switch">Разрешать ли глобальное использование плавающего режима, если ни один из вариантов ниже не будет работать !!!</string>
+    <string name="slim_action_floats">Slim и Pie</string>
+    <string name="slim_action_floats_summary">Выполнять действия узкой панели и Pie в режиме плавающего окна</string>
+    <string name="gesture_anywhere_floating">Жесты</string>
+    <string name="gesture_anywhere_floating_summary">Использовать жесты в плавающем режиме</string>
 
 </resources>
