@@ -284,7 +284,7 @@
     <string name="recents_full_screen_date_summary">Mutatja a dátumot teljes képernyős módban</string>
 
     <!-- Weather settings -->
-    <string name="weahter_lockscreen_category">Zárképernyő időjárás beállítások</string>
+    <string name="weather_lockscreen_category">Zárképernyő időjárás beállítások</string>
     <string name="weather_cat_notifications_title">Értesítések</string>
     <string name="weather_settings_title">LockClock beállítások</string>
     <string name="weather_settings_summary">Időjárás widget helyének beállítása és egyéb beállítások</string>
@@ -445,79 +445,75 @@
     <string name="omniswitch_first_time_title">Információ</string>
     <string name="omniswitch_first_time_message">Győződjön meg, hogy engedélyezte az OmniSwitch-et. Megteheti a "Beállítások"alatt</string>
 
-    <!-- Double Tap Navbar to Sleep -->
-    <string name="double_tap_sleep_nav_bar_title">DT2S a navigációs sávon</string>
-    <string name="double_tap_sleep_nav_bar_summary">Duplán érintve a navigációs sávot alvó módba kerül</string>
-
     <!-- Double tap to sleep on lockscreen -->
     <string name="double_tap_sleep_anywhere_title">DT2S a zárképernyőn</string>
     <string name="double_tap_sleep_anywhere_summary">Duplán érintve a zárképernyőt alvó módba kerül</string>
 
     <!-- PA Pie control -->
-    <string name="pa_piecontrol_settings_summary">Customize PA Pie 2.0 targets, sytle, size and color</string>
+    <string name="pa_piecontrol_settings_summary">PA Pie 2.0 elemek, stílus, méret és szín testreszabása</string>
     <string name="pa_pie_control_title">Pie Vezérlés</string>
-    <string name="pa_pie_control_enable_title">Enable Pie Control</string>
-    <string name="pa_pie_always_right_title">Pie always on the right</string>
+    <string name="pa_pie_control_enable_title">Pie vezérlés engedélyezése</string>
+    <string name="pa_pie_always_right_title">Pie mindig a jobb oldalon</string>
     <string name="pa_pie_always_right_summary">Pie will be always shown on the right while in landscape</string>
-    <string name="pa_pie_targets_title">Pie Targets</string>
-    <string name="pa_pie_style_title">Pie Style</string>
-    <string name="pa_pie_menu_title">Always show menu button</string>
+    <string name="pa_pie_targets_title">Pie Elemek</string>
+    <string name="pa_pie_style_title">Pie Stílus</string>
+    <string name="pa_pie_menu_title">Mindig mutatja a menü gombot</string>
     <string name="pa_pie_menu_summary">Whether or not the menu button should always be shown, even when its not needed</string>
-    <string name="pa_pie_size_title">Pie Size</string>
-    <string name="pa_pie_size_summary">Define Pie controls size</string>
-    <string name="pa_pie_size_small">Small</string>
+    <string name="pa_pie_size_title">Pie Méret</string>
+    <string name="pa_pie_size_summary">Pie vezérlő méretek meghatározása</string>
+    <string name="pa_pie_size_small">Kicsi</string>
     <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
-    <string name="pa_pie_size_large">Large</string>
-    <string name="pa_pie_size_gigantic">Gigantic</string>
-    <string name="pa_pie_size_monster">Monster</string>
-    <string name="pa_pie_size_enormous">Enormous</string>
-    <string name="pa_pie_gravity_title">Pie Gravity</string>
+    <string name="pa_pie_size_large">Nagy</string>
+    <string name="pa_pie_size_gigantic">Gigantikus</string>
+    <string name="pa_pie_size_monster">Óriás</string>
+    <string name="pa_pie_size_enormous">Hatalmas</string>
+    <string name="pa_pie_gravity_title">Pie Helyzete</string>
     <string name="pa_pie_gravity_summary">Select the location where the Pie will be placed</string>
-    <string name="pa_pie_gravity_bottom">Bottom</string>
-    <string name="pa_pie_gravity_right">Right</string>
-    <string name="pa_pie_gravity_left">Left</string>
-    <string name="pa_pie_gap_title">Item gap</string>
-    <string name="pa_pie_gap_summary">Adjust the gap that separates the Pie elements</string>
-    <string name="pa_pie_angle_title">Pie Angle</string>
-    <string name="pa_pie_angle_summary">Adjust the angle of pie\'s egdes from the attachment</string>
-    <string name="pa_pie_angle_none">None (old)</string>
-    <string name="pa_pie_angle_small">Small</string>
-    <string name="pa_pie_angle_big">Normal (default)</string>
-    <string name="pa_pie_angle_huge">Big</string>
-    <string name="pa_pie_angle_super">Huge</string>
-    <string name="pa_pie_gap_none">None</string>
-    <string name="pa_pie_gap_small">Small</string>
-    <string name="pa_pie_gap_big">Big (default)</string>
-    <string name="pa_pie_gap_huge">Huge</string>
-    <string name="pa_pie_mode_title">Pie Style</string>
+    <string name="pa_pie_gravity_bottom">Alul</string>
+    <string name="pa_pie_gravity_right">Jobb</string>
+    <string name="pa_pie_gravity_left">Bal</string>
+    <string name="pa_pie_gap_title">Elem távolság</string>
+    <string name="pa_pie_gap_summary">Add meg a távolságot ami elválasztja a PIE elemeket</string>
+    <string name="pa_pie_angle_title">Pie Hajlítás</string>
+    <string name="pa_pie_angle_summary">Add meg a pie szélének a hajlítását a kellékektől</string>
+    <string name="pa_pie_angle_none">Nincs (régi)</string>
+    <string name="pa_pie_angle_small">Kicsi</string>
+    <string name="pa_pie_angle_big">Normál (alapértelmezett)</string>
+    <string name="pa_pie_angle_huge">Nagy</string>
+    <string name="pa_pie_angle_super">Hatalmas</string>
+    <string name="pa_pie_gap_none">Nincs</string>
+    <string name="pa_pie_gap_small">Kicsi</string>
+    <string name="pa_pie_gap_big">Nagy (alapértelmezett)</string>
+    <string name="pa_pie_gap_huge">Hatalmas</string>
+    <string name="pa_pie_mode_title">Pie Stílus</string>
     <string name="pa_pie_mode_summary">Manage how animations and status additions will be handled</string>
-    <string name="pa_pie_mode_bare">Bare</string>
-    <string name="pa_pie_mode_quick">Quick</string>
-    <string name="pa_pie_mode_default">Default</string>
-    <string name="pa_pie_mode_slow">Slow</string>
-    <string name="pa_pie_lastapp_title">Last App</string>
-    <string name="pa_pie_lastapp_summary">Enable last app button</string>
-    <string name="pa_pie_killtask_title">Kill Task</string>
-    <string name="pa_pie_killtask_summary">Enable kill task button</string>
-    <string name="pa_pie_notifications_title">Notifications</string>
-    <string name="pa_pie_notifications_summary">Enable notifications button</string>
-    <string name="pa_pie_settings_panel_title">Quick Settings Panel</string>
-    <string name="pa_pie_settings_panel_summary">Enable expand quick settings panel button</string>
-    <string name="pa_pie_screenshot_title">Screenshot</string>
-    <string name="pa_pie_screenshot_summary">Enable screenshot button</string>
-    <string name="pa_pie_color_title">Pie Color Settings</string>
-    <string name="pa_pie_color_style_title">Pie Color Style</string>
-    <string name="pa_pie_background_title">Background Color</string>
-    <string name="pa_pie_select_title">Selection Color</string>
-    <string name="pa_pie_outlines_title">Outlines Color</string>
-    <string name="pa_pie_status_clock_title">Clock Color</string>
-    <string name="pa_pie_status_title">Status Color</string>
-    <string name="pa_pie_chevron_title">Chevron Color</string>
-    <string name="pa_pie_juice_title">Battery Juice Color</string>
-    <string name="pa_pie_button_color">Button Color</string>
-    <string name="pa_pie_button_color_title">Buttons Color</string>
-    <string name="pa_pie_color_reset_title">Reset Colors</string>
-    <string name="reset_message">Reset all entries to default?</string>
+    <string name="pa_pie_mode_bare">Csupasz</string>
+    <string name="pa_pie_mode_quick">Gyors</string>
+    <string name="pa_pie_mode_default">Alapértelmezett</string>
+    <string name="pa_pie_mode_slow">Lassú</string>
+    <string name="pa_pie_lastapp_title">Utolsó Alkalmazás</string>
+    <string name="pa_pie_lastapp_summary">Engedélyezi az utolsó alkalmazás gombot</string>
+    <string name="pa_pie_killtask_title">Feladat kilővése</string>
+    <string name="pa_pie_killtask_summary">Engedélyezi a feladat kilővése gombot</string>
+    <string name="pa_pie_notifications_title">Értesítések</string>
+    <string name="pa_pie_notifications_summary">Engedélyezi az értesítések gombot</string>
+    <string name="pa_pie_settings_panel_title">Gyors Beállítások Panel</string>
+    <string name="pa_pie_settings_panel_summary">Engedélyezi a kiterjesztett gyors beállítások panel gombot</string>
+    <string name="pa_pie_screenshot_title">Képernyőkép</string>
+    <string name="pa_pie_screenshot_summary">Engedélyezi a képernyőkép gombot</string>
+    <string name="pa_pie_color_title">Pie Szín Beállítások</string>
+    <string name="pa_pie_color_style_title">Pie Szín Stílus</string>
+    <string name="pa_pie_background_title">Háttér szín</string>
+    <string name="pa_pie_select_title">Kiválasztó szín</string>
+    <string name="pa_pie_outlines_title">Kontur szín</string>
+    <string name="pa_pie_status_clock_title">Óra szín</string>
+    <string name="pa_pie_status_title">Állapot szín</string>
+    <string name="pa_pie_chevron_title">Ék szín</string>
+    <string name="pa_pie_juice_title">Akkumulátor töltés szín</string>
+    <string name="pa_pie_button_color">Gomb szín</string>
+    <string name="pa_pie_button_color_title">Gombok színe</string>
+    <string name="pa_pie_color_reset_title">Színek alaphelyzetbe</string>
+    <string name="reset_message">Összes értéket alaphelyzetbe állítod?</string>
     <string name="reset_paranoid">AICP</string>
     <string name="reset_android">Android</string>
 
@@ -550,6 +546,7 @@
 
     <!-- SU -->
     <string name="cannot_get_su">Nem tud a superuser hozzáférni, kilép.</string>
+    <string name="cannot_get_su_start">Nem tud a superuser hozzáférni.</string>
 
     <!-- Aicp logcat -->
     <string name="logcat_title">Logcat</string>
@@ -722,6 +719,36 @@
     <string name="brightness_icon_title">Fényerő ikon</string>
     <string name="brightness_icon_summary">Mutassa a fényerő ikont a fényerő állító csúszka bal oldalán</string>
 
+    <!-- App sidebar -->
+    <string name="app_sidebar_title">Alkalmazás Oldalsáv</string>
+    <string name="app_sidebar_enable_title">Alkalmazás Oldalsáv engedélyezése</string>
+    <string name="app_sidebar_enable_summaryOn">Alkalmazás Oldalsáv engedélyezve</string>
+    <string name="app_sidebar_enable_summaryOff">Alkalmazás Oldalsáv tiltva</string>
+    <string name="app_sidebar_setup_items_title">Oldalsáv elemeinek beállítása</string>
+    <string name="app_sidebar_setup_items_summary">Hozzáadás, eltávolítás, és elemek helyzete az oldalsávon</string>
+    <string name="app_sidebar_transparency_title">Oldalsáv áttetszősége</string>
+    <string name="app_sidebar_transparency_summary">Oldalsáv áttetszőség mértékének beállítása</string>
+    <string name="app_sidebar_position_title">Oldalsáv helyzete</string>
+    <string name="app_sidebar_position_summary">Oldalsáv helyzete a képernyő jobb vagy bal oldalán</string>
+    <string name="app_sidebar_position_left">Bal</string>
+    <string name="app_sidebar_position_right">Jobb</string>
+    <string name="app_sidebar_hide_labels_title">Ikon szöveg rejtése</string>
+    <string name="app_sidebar_hide_labels_summary">Rejti az oldalsáv ikon szövegeit</string>
+    <string name="tab_category">Látható fül</string>
+    <string name="use_tab_title">Kijelző fül</string>
+    <string name="use_tab_summary">Display a visible tab on the side which will display the sidebar when touched.</string>
+    <string name="tab_position_title">Fül helyzete</string>
+    <string name="tab_position_summary">Display the tab on the top, middle, or bottom on the side of the screen.</string>
+    <string name="tab_size_title">Fül méret</string>
+    <string name="tab_size_summary">Látható fül méretének változtatása.</string>
+    <string name="trigger_category">Kapcsoló helyzete</string>
+    <string name="trigger_width_title">Kapcsoló szélessége</string>
+    <string name="trigger_width_summary">Beállítja a kapcsoló terület szélességét</string>
+    <string name="trigger_top_title">Kapcsoló helyzete</string>
+    <string name="trigger_top_summary">Beállítja a kapcsoló terület függőleges helyzetét</string>
+    <string name="trigger_bottom_title">Kapcsoló magassága</string>
+    <string name="trigger_bottom_summary">Beállítja a kapcsoló terület magasságát</string>
+
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Ébrentartás blokkoló</string>
 
@@ -785,5 +812,32 @@
     <string name="lockscreen_colors_reset_title">Zárképernyő színek alaphelyzetbe</string>
     <string name="lockscreen_colors_reset_message">Vissza akarod állítani a színeket alaphelyzetbe?</string>
     <string name="yes">IGEN</string>
+
+    <!-- Header image shadow -->
+    <string name="status_bar_custom_header_shadow_title">Fejléc kép sötétítés</string>
+    <string name="status_bar_custom_header_shadow_summary">Jobb láthatóság a világos képeknek</string>
+    <string name="unit_percent">\u0025</string>
+
+    <!-- AdAway -->
+    <string name="adaway_settings_title">AdAway</string>
+
+    <!-- Hide Apps from Recents -->
+    <string name="hide_apps_from_recents_title">Rejtett alkalmazások</string>
+    <string name="hide_apps_from_recents_summary">Jelöld ki, hogy mely alkalmazások ne jelenjenek meg a legutóbbi panelen.</string>
+
+    <!-- Current on Lockscreen -->
+    <string name="lock_screen_show_current">Töltőáram</string>
+    <string name="lock_screen_show_current_summary">Mutatja a töltőáram nagyságát a zárképernyőn</string>
+
+    <!-- Floating Windows -->
+    <string name="shortcut_action_floating_windows">Lebegő Ablakok</string>
+    <string name="floating_master_switch">Mester Kapcsoló</string>
+    <string name="floating_additional_options">További Lebegő Beállítások</string>
+    <string name="floating_windows">Lebegő Ablakok</string>
+    <string name="floating_windows_switch">Whether to allow global use of float mode, if this is off none of the below options will work DUH!!!</string>
+    <string name="slim_action_floats">Slim Műveletek &amp; Pie</string>
+    <string name="slim_action_floats_summary">Slim Indító&amp; Pie Műveletek Lebegő Ablakok Módban</string>
+    <string name="gesture_anywhere_floating">Gesztusok Bárhol</string>
+    <string name="gesture_anywhere_floating_summary">Indítsd a Gesztusok Bárhol gyorsparancsokat lebegő módban</string>
 
 </resources>
