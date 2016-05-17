@@ -35,6 +35,16 @@
         android:title="@string/battery_bar_color"
         android:defaultValue="0xffffffff" />
 
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="battery_bar_charging_color"
+        android:title="@string/battery_bar_charging_color"
+        android:defaultValue="0xffffffff" />
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="battery_bar_battery_low_color"
+        android:title="@string/battery_bar_battery_low_color"
+        android:defaultValue="0xffffffff" />
+
     <ListPreference
         android:key="battery_bar_style"
         android:title="@string/battery_bar_style_title"
@@ -49,7 +59,6 @@
 
     <SwitchPreference
         android:key="battery_bar_animate"
-        android:title="@string/battery_bar_animate_title"
-        android:summary="@string/battery_bar_animate_summary" />
+        android:title="@string/battery_bar_animate_title" />
 
-</PreferenceScreen> 
+</PreferenceScreen>
