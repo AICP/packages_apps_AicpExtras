@@ -72,13 +72,6 @@
         android:summary="@string/status_bar_custom_header_summary"
         android:defaultValue="false"/>
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="status_bar_custom_header_default"
-        android:title="@string/status_bar_custom_header_default_title"
-        android:summary="@string/status_bar_custom_header_default_summary"
-        android:dependency="status_bar_custom_header"
-        android:defaultValue="false"/>
-
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
          android:key="status_bar_custom_header_shadow"
          android:title="@string/status_bar_custom_header_shadow_title"
@@ -104,4 +97,3 @@
         android:title="@string/status_bar_header_font_style_title" />
 
 </PreferenceScreen>
-
