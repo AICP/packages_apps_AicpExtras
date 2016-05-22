@@ -167,11 +167,15 @@
     <string name="battery_bar">Position des Akkustandbalkens</string>
     <string name="battery_bar_no_navbar">Position des Akkustandbalkens</string>
     <string name="battery_bar_color">Farbe des Akkustandbalkens</string>
+    <string name="battery_bar_charging_color">Farbe des Akkustandbalkens beim Laden</string>
+    <string name="battery_bar_battery_low_color">Farbe des Akkustandbalkens bei schwachem Akku</string>
     <string name="battery_bar_cat">Stil des Akkustandbalkens</string>
     <string name="battery_bar_style_title">Ausrichtung des Akkustandbalkens</string>
     <string name="battery_bar_thickness_title">Dicke des Akkustandbalkens</string>
     <string name="battery_bar_animate_title">Animation beim Laden</string>
-    <string name="battery_bar_animate_summary">Die Animation beim Laden könnte zu einer schwachen Benutzererfahrung führen. Nach eigenem Ermessen einschalten!</string>
+    <string name="battery_bar_style_regular">Normal</string>
+    <string name="battery_bar_style_center_mirrored">Mittig gespiegelt</string>
+    <string name="battery_bar_style_reversed">Umgekehrt</string>
 
     <!-- Scrolling Cache -->
     <string name="pref_scrollingcache_title">Scroll-Cache</string>
@@ -284,7 +288,7 @@
     <string name="recents_full_screen_date_summary">Zeigt das Datum im Vollbildmodus oben an</string>
 
     <!-- Weather settings -->
-    <string name="weahter_lockscreen_category">Optionen für Wetter auf Sperrbildschirm</string>
+    <string name="weather_lockscreen_category">LockClock-Optionen für den Sperrbildschirm</string>
     <string name="weather_cat_notifications_title">Benachrichtigungen</string>
     <string name="weather_settings_title">LockClock Einstellungen</string>
     <string name="weather_settings_summary">Konfiguration des Standorts im Wetter Widget und andere Einstellungen</string>
@@ -783,7 +787,7 @@
     <string name="voicemail_breath_title">Pulsierende Sprachnachrichten</string>
     <string name="voicemail_breath_summary">Gibt ihren Benachrichtigungen für Sprachnachrichten einen pulsierenden Effekt in der Statusleiste</string>
 
-   <!-- Hide Lockscreen clock, date & alarm -->
+    <!-- Hide Lockscreen clock, date & alarm -->
     <string name="hide_lockscreen_items_title">Sperrbildschirmanzeigen</string>
     <string name="hide_lockscreen_clock_title">Uhr</string>
     <string name="hide_lockscreen_clock_summary">Zeige Uhrzeit</string>
