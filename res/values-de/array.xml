@@ -1,603 +1,303 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Carrier Label -->
-    <string-array name="carrier_label_entries">
-        <item>@string/show_carrier_disabled</item>
-        <item>@string/show_carrier_keyguard</item>
-        <item>@string/show_carrier_statusbar</item>
-        <item>@string/show_carrier_enabled</item>
-    </string-array>
+  <!-- Carrier Label -->
+  <string-array name="carrier_label_entries">
+      <item>@string/show_carrier_disabled</item>
+      <item>@string/show_carrier_keyguard</item>
+      <item>@string/show_carrier_statusbar</item>
+      <item>@string/show_carrier_enabled</item>
+  </string-array>
 
-    <!-- Battery bar -->
-    <string-array name="battery_bar_entries">
-        <item>Verbergen</item>
-        <item>Statusleiste</item>
-        <item>Über Navigationsleiste</item>
-        <item>Unter Navigationsleiste</item>
-    </string-array>
+  <!-- Battery bar -->
+  <string-array name="battery_bar_entries">
+      <item>Verbergen</item>
+      <item>Statusleiste</item>
+      <item>Über Navigationsleiste</item>
+      <item>Unter Navigationsleiste</item>
+  </string-array>
 
-    <string-array name="battery_bar_no_navbar_entries">
-        <item>Verbergen</item>
-        <item>Statusleiste</item>
-    </string-array>
+  <string-array name="battery_bar_no_navbar_entries">
+      <item>Verbergen</item>
+      <item>Statusleiste</item>
+  </string-array>
 
-    <!-- Statusbar weather font style -->
-    <string-array name="status_bar_weather_font_style_entries">
-        <item>@string/status_bar_weather_font_normal</item>
-        <item>@string/status_bar_weather_font_italic</item>
-        <item>@string/status_bar_weather_font_bold</item>
-        <item>@string/status_bar_weather_font_bold_italic</item>
-        <item>@string/status_bar_weather_font_light</item>
-        <item>@string/status_bar_weather_font_light_italic</item>
-        <item>@string/status_bar_weather_font_thin</item>
-        <item>@string/status_bar_weather_font_thin_italic</item>
-        <item>@string/status_bar_weather_font_condensed</item>
-        <item>@string/status_bar_weather_font_condensed_italic</item>
-        <item>@string/status_bar_weather_font_condensed_light</item>
-        <item>@string/status_bar_weather_font_condensed_light_italic</item>
-        <item>@string/status_bar_weather_font_condensed_bold</item>
-        <item>@string/status_bar_weather_font_condensed_bold_italic</item>
-        <item>@string/status_bar_weather_font_medium</item>
-        <item>@string/status_bar_weather_font_medium_italic</item>
-        <item>@string/status_bar_weather_font_black</item>
-        <item>@string/status_bar_weather_font_black_italic</item>
-        <item>@string/status_bar_weather_font_dancingscript</item>
-        <item>@string/status_bar_weather_font_dancingscript_bold</item>
-        <item>@string/status_bar_weather_font_comingsoon</item>
-        <item>@string/status_bar_weather_font_notoserif</item>
-        <item>@string/status_bar_weather_font_notoserif_italic</item>
-        <item>@string/status_bar_weather_font_notoserif_bold</item>
-        <item>@string/status_bar_weather_font_notoserif_bold_italic</item>
-    </string-array>
+  <!-- Statusbar weather font style -->
+  <string-array name="status_bar_weather_font_style_entries">
+      <item>@string/status_bar_weather_font_normal</item>
+      <item>@string/status_bar_weather_font_italic</item>
+      <item>@string/status_bar_weather_font_bold</item>
+      <item>@string/status_bar_weather_font_bold_italic</item>
+      <item>@string/status_bar_weather_font_light</item>
+      <item>@string/status_bar_weather_font_light_italic</item>
+      <item>@string/status_bar_weather_font_thin</item>
+      <item>@string/status_bar_weather_font_thin_italic</item>
+      <item>@string/status_bar_weather_font_condensed</item>
+      <item>@string/status_bar_weather_font_condensed_italic</item>
+      <item>@string/status_bar_weather_font_condensed_light</item>
+      <item>@string/status_bar_weather_font_condensed_light_italic</item>
+      <item>@string/status_bar_weather_font_condensed_bold</item>
+      <item>@string/status_bar_weather_font_condensed_bold_italic</item>
+      <item>@string/status_bar_weather_font_medium</item>
+      <item>@string/status_bar_weather_font_medium_italic</item>
+      <item>@string/status_bar_weather_font_black</item>
+      <item>@string/status_bar_weather_font_black_italic</item>
+      <item>@string/status_bar_weather_font_dancingscript</item>
+      <item>@string/status_bar_weather_font_dancingscript_bold</item>
+      <item>@string/status_bar_weather_font_comingsoon</item>
+      <item>@string/status_bar_weather_font_notoserif</item>
+      <item>@string/status_bar_weather_font_notoserif_italic</item>
+      <item>@string/status_bar_weather_font_notoserif_bold</item>
+      <item>@string/status_bar_weather_font_notoserif_bold_italic</item>
+  </string-array>
 
-    <!-- Lockscreen Weather -->
-    <string-array name="weather_condition_icon_entries">
-        <item>@string/weather_condition_icon_monochrome_title</item>
-        <item>@string/weather_condition_icon_colored_title</item>
-        <item>@string/weather_condition_icon_vclouds_title</item>
-    </string-array>
+  <!-- Lockscreen Weather -->
+  <string-array name="weather_condition_icon_entries">
+      <item>@string/weather_condition_icon_monochrome_title</item>
+      <item>@string/weather_condition_icon_colored_title</item>
+      <item>@string/weather_condition_icon_vclouds_title</item>
+  </string-array>
 
-    <string-array name="weather_hide_panel_entries">
-        <item>@string/weather_hide_panel_auto_title</item>
-        <item>@string/weather_hide_panel_custom_title</item>
-        <item>@string/weather_hide_panel_never_title</item>
-    </string-array>
+  <string-array name="weather_hide_panel_entries">
+      <item>@string/weather_hide_panel_auto_title</item>
+      <item>@string/weather_hide_panel_custom_title</item>
+      <item>@string/weather_hide_panel_never_title</item>
+  </string-array>
 
-    <string-array name="weather_number_of_notifications_entries">
-        <item>@string/weather_number_of_notifications_always_title</item>
-        <item>@string/weather_number_of_notifications_two_title</item>
-        <item>@string/weather_number_of_notifications_three_title</item>
-        <item>@string/weather_number_of_notifications_four_title</item>
-        <item>@string/weather_number_of_notifications_five_title</item>
-        <item>@string/weather_number_of_notifications_six_title</item>
-    </string-array>
+  <string-array name="weather_number_of_notifications_entries">
+      <item>@string/weather_number_of_notifications_always_title</item>
+      <item>@string/weather_number_of_notifications_two_title</item>
+      <item>@string/weather_number_of_notifications_three_title</item>
+      <item>@string/weather_number_of_notifications_four_title</item>
+      <item>@string/weather_number_of_notifications_five_title</item>
+      <item>@string/weather_number_of_notifications_six_title</item>
+   </string-array>
 
-    <!-- PA PIE -->
-     <string-array name="entries_pa_pie_size">
-         <item>@string/pa_pie_size_small</item>
-         <item>@string/pa_pie_size_default</item>
-         <item>@string/pa_pie_size_large</item>
-         <item>@string/pa_pie_size_gigantic</item>
-         <item>@string/pa_pie_size_monster</item>
-         <item>@string/pa_pie_size_enormous</item>
-     </string-array>
+   <!-- PA PIE -->
+   <string-array name="entries_pa_pie_size">
+       <item>@string/pa_pie_size_small</item>
+       <item>@string/pa_pie_size_default</item>
+       <item>@string/pa_pie_size_large</item>
+       <item>@string/pa_pie_size_gigantic</item>
+       <item>@string/pa_pie_size_monster</item>
+       <item>@string/pa_pie_size_enormous</item>
+   </string-array>
 
-     <string-array name="entries_pa_pie_gravity">
-         <item>@string/pa_pie_gravity_left</item>
-         <item>@string/pa_pie_gravity_right</item>
-         <item>@string/pa_pie_gravity_bottom</item>
-     </string-array>
+   <string-array name="entries_pa_pie_gravity">
+       <item>@string/pa_pie_gravity_left</item>
+       <item>@string/pa_pie_gravity_right</item>
+       <item>@string/pa_pie_gravity_bottom</item>
+   </string-array>
 
-     <string-array name="entries_pa_pie_mode">
-         <item>@string/pa_pie_mode_bare</item>
-         <item>@string/pa_pie_mode_quick</item>
-         <item>@string/pa_pie_mode_default</item>
-         <item>@string/pa_pie_mode_slow</item>
-     </string-array>
+   <string-array name="entries_pa_pie_mode">
+       <item>@string/pa_pie_mode_bare</item>
+       <item>@string/pa_pie_mode_quick</item>
+       <item>@string/pa_pie_mode_default</item>
+       <item>@string/pa_pie_mode_slow</item>
+   </string-array>
 
-     <string-array name="entries_pa_pie_angle">
-         <item>@string/pa_pie_angle_none</item>
-         <item>@string/pa_pie_angle_small</item>
-         <item>@string/pa_pie_angle_big</item>
-         <item>@string/pa_pie_angle_huge</item>
-         <item>@string/pa_pie_angle_super</item>
-     </string-array>
+   <string-array name="entries_pa_pie_angle">
+       <item>@string/pa_pie_angle_none</item>
+       <item>@string/pa_pie_angle_small</item>
+       <item>@string/pa_pie_angle_big</item>
+       <item>@string/pa_pie_angle_huge</item>
+       <item>@string/pa_pie_angle_super</item>
+   </string-array>
 
-     <string-array name="entries_pa_pie_gap">
-         <item>@string/pa_pie_gap_none</item>
-         <item>@string/pa_pie_gap_small</item>
-         <item>@string/pa_pie_gap_big</item>
-         <item>@string/pa_pie_gap_huge</item>
-     </string-array>
+   <string-array name="entries_pa_pie_gap">
+       <item>@string/pa_pie_gap_none</item>
+       <item>@string/pa_pie_gap_small</item>
+       <item>@string/pa_pie_gap_big</item>
+       <item>@string/pa_pie_gap_huge</item>
+   </string-array>
 
-     <!-- SlimSizer -->
-     <string-array name="slimsizer_profile_array">
-         <item >Load Profile</item>
-         <item >Save Profile</item>
-     </string-array>
+   <!-- SlimSizer -->
+   <string-array name="slimsizer_profile_array">
+       <item >Profil laden</item>
+       <item >Profil speichern</item>
+   </string-array>
 
-    <!-- Toast Animation -->
-    <string-array name="toast_animation_entries">
-        <item>@string/toast_none_animation</item>
-        <item>@string/toast_default_animation</item>
-        <item>@string/toast_fade_animation</item>
-        <item>@string/toast_SlideRight_animation</item>
-        <item>@string/toast_SlideLeft_animation</item>
-        <item>@string/toast_Xylon_animation</item>
-        <item>@string/toast_Toko_animation</item>
-        <item>@string/toast_Tn_animation</item>
-        <item>@string/toast_Honami_animation</item>
-        <item>@string/toast_FastFade_animation</item>
-        <item>@string/toast_GrowFade_animation</item>
-        <item>@string/toast_GrowFadeCenter_animation</item>
-        <item>@string/toast_GrowFadeBottom_animation</item>
-        <item>@string/toast_Translucent_animation</item>
-        <item>@string/toast_SlideLeftRight_animation</item>
-        <item>@string/toast_SlideRightLeft_animation</item>
-    </string-array>
+  <!-- Toast Animation -->
+  <string-array name="toast_animation_entries">
+      <item>@string/toast_none_animation</item>
+      <item>@string/toast_default_animation</item>
+      <item>@string/toast_fade_animation</item>
+      <item>@string/toast_SlideRight_animation</item>
+      <item>@string/toast_SlideLeft_animation</item>
+      <item>@string/toast_Xylon_animation</item>
+      <item>@string/toast_Toko_animation</item>
+      <item>@string/toast_Tn_animation</item>
+      <item>@string/toast_Honami_animation</item>
+      <item>@string/toast_FastFade_animation</item>
+      <item>@string/toast_GrowFade_animation</item>
+      <item>@string/toast_GrowFadeCenter_animation</item>
+      <item>@string/toast_GrowFadeBottom_animation</item>
+      <item>@string/toast_Translucent_animation</item>
+      <item>@string/toast_SlideLeftRight_animation</item>
+      <item>@string/toast_SlideRightLeft_animation</item>
+  </string-array>
 
-    <string-array name="toast_animation_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-        <item>14</item>
-        <item>15</item>
-    </string-array>
+  <string-array name="toast_animation_values">
+      <item>0</item>
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>6</item>
+      <item>7</item>
+      <item>8</item>
+      <item>9</item>
+      <item>10</item>
+      <item>11</item>
+      <item>12</item>
+      <item>13</item>
+      <item>14</item>
+      <item>15</item>
+  </string-array>
 
-    <!-- Power menu Animations  -->
-    <string-array name="power_menu_animations_entries">
-        <item>@string/power_menu_animation_aosp</item>
-        <item>@string/power_menu_animation_bottom</item>
-        <item>@string/power_menu_animation_top</item>
-        <item>@string/power_menu_animation_rotate</item>
-        <item>@string/power_menu_animation_xylon</item>
-        <item>@string/power_menu_animation_slide</item>
-        <item>@string/power_menu_animation_turn</item>
-        <item>@string/power_menu_animation_fly</item>
-        <item>@string/power_menu_animation_card</item>
-        <item>@string/power_menu_animation_translucent_top</item>
-        <item>@string/power_menu_animation_translucent_bottom</item>
-    </string-array>
+  <!-- Power menu Animations  -->
+  <string-array name="power_menu_animations_entries">
+      <item>@string/power_menu_animation_aosp</item>
+      <item>@string/power_menu_animation_bottom</item>
+      <item>@string/power_menu_animation_top</item>
+      <item>@string/power_menu_animation_rotate</item>
+      <item>@string/power_menu_animation_xylon</item>
+      <item>@string/power_menu_animation_slide</item>
+      <item>@string/power_menu_animation_turn</item>
+      <item>@string/power_menu_animation_fly</item>
+      <item>@string/power_menu_animation_card</item>
+      <item>@string/power_menu_animation_translucent_top</item>
+      <item>@string/power_menu_animation_translucent_bottom</item>
+  </string-array>
 
-    <!-- Listview animation -->
-    <string-array name="listview_animation_entries">
-        <item>@string/listview_off</item>
-        <item>@string/listview_wave_left</item>
-        <item>@string/listview_wave_right</item>
-        <item>@string/listview_scale</item>
-        <item>@string/listview_alpha</item>
-        <item>@string/listview_stack_top</item>
-        <item>@string/listview_stack_bottom</item>
-        <item>@string/listview_unfold</item>
-        <item>@string/listview_fold</item>
-        <item>@string/listview_translate_left</item>
-        <item>@string/listview_translate_right</item>
-    </string-array>
+  <!-- Listview animation -->
+  <string-array name="listview_animation_entries">
+      <item>@string/listview_off</item>
+      <item>@string/listview_wave_left</item>
+      <item>@string/listview_wave_right</item>
+      <item>@string/listview_scale</item>
+      <item>@string/listview_alpha</item>
+      <item>@string/listview_stack_top</item>
+      <item>@string/listview_stack_bottom</item>
+      <item>@string/listview_unfold</item>
+      <item>@string/listview_fold</item>
+      <item>@string/listview_translate_left</item>
+      <item>@string/listview_translate_right</item>
+  </string-array>
 
-    <string-array name="listview_animation_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-    </string-array>
+  <string-array name="listview_animation_values">
+      <item>0</item>
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>6</item>
+      <item>7</item>
+      <item>8</item>
+      <item>9</item>
+      <item>10</item>
+  </string-array>
 
-    <!-- Listview Interpolator -->
-    <string-array name="listview_interpolator_entries">
-        <item>@string/listview_off</item>
-        <item>@string/listview_accelerate_interpolator</item>
-        <item>@string/listview_decelerate_interpolator</item>
-        <item>@string/listview_accelerate_decelerate_interpolator</item>
-        <item>@string/listview_anticipate_interpolator</item>
-        <item>@string/listview_overshoot_interpolator</item>
-        <item>@string/listview_anticipate_overshoot_interpolator</item>
-        <item>@string/listview_bounce_interpolator</item>
-    </string-array>
+  <!-- Listview Interpolator -->
+  <string-array name="listview_interpolator_entries">
+      <item>@string/listview_off</item>
+      <item>@string/listview_accelerate_interpolator</item>
+      <item>@string/listview_decelerate_interpolator</item>
+      <item>@string/listview_accelerate_decelerate_interpolator</item>
+      <item>@string/listview_anticipate_interpolator</item>
+      <item>@string/listview_overshoot_interpolator</item>
+      <item>@string/listview_anticipate_overshoot_interpolator</item>
+      <item>@string/listview_bounce_interpolator</item>
+  </string-array>
 
-    <string-array name="listview_interpolator_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-    </string-array>
+  <string-array name="listview_interpolator_values">
+      <item>0</item>
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>6</item>
+      <item>7</item>
+  </string-array>
 
-    <!-- IME animations -->
-    <string-array name="anim_controls_entries">
-        <item>@string/animation_default</item>
-        <item>@string/animation_fade</item>
-        <item>@string/animation_slide_right</item>
-        <item>@string/animation_slide_left</item>
-        <item>@string/animation_slide_right_no_fade</item>
-        <item>@string/animation_slide_left_no_fade</item>
-        <item>@string/animation_slide_up</item>
-        <item>@string/animation_slide_down</item>
-        <item>@string/animation_translucent</item>
-        <item>@string/animation_grow_shrink</item>
-        <item>@string/animation_grow_shrink_center</item>
-        <item>@string/animation_grow_shrink_bottom</item>
-        <item>@string/animation_grow_shrink_left</item>
-        <item>@string/animation_grow_shrink_right</item>
-    </string-array>
+  <!-- IME animations -->
+  <string-array name="anim_controls_entries">
+      <item>@string/animation_default</item>
+      <item>@string/animation_fade</item>
+      <item>@string/animation_slide_right</item>
+      <item>@string/animation_slide_left</item>
+      <item>@string/animation_slide_right_no_fade</item>
+      <item>@string/animation_slide_left_no_fade</item>
+      <item>@string/animation_slide_up</item>
+      <item>@string/animation_slide_down</item>
+      <item>@string/animation_translucent</item>
+      <item>@string/animation_grow_shrink</item>
+      <item>@string/animation_grow_shrink_center</item>
+      <item>@string/animation_grow_shrink_bottom</item>
+      <item>@string/animation_grow_shrink_left</item>
+      <item>@string/animation_grow_shrink_right</item>
+  </string-array>
 
-    <string-array name="anim_controls_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-    </string-array>
+  <string-array name="anim_controls_values">
+      <item>0</item>
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>6</item>
+      <item>7</item>
+      <item>8</item>
+      <item>9</item>
+      <item>10</item>
+      <item>11</item>
+      <item>12</item>
+      <item>13</item>
+  </string-array>
 
-    <!-- Recent panel -->
-    <string-array name="recent_panel_expanded_mode_entries">
-        <item>@string/recent_panel_expanded_mode_auto</item>
-        <item>@string/recent_panel_expanded_mode_always</item>
-        <item>@string/recent_panel_expanded_mode_never</item>
-    </string-array>
+  <!-- Recent panel -->
+  <string-array name="recent_panel_expanded_mode_entries">
+      <item>@string/recent_panel_expanded_mode_auto</item>
+      <item>@string/recent_panel_expanded_mode_always</item>
+      <item>@string/recent_panel_expanded_mode_never</item>
+  </string-array>
 
-    <string-array name="tab_position_entries">
-        <item>Top</item>
-        <item>Middle</item>
-        <item>Bottom</item>
-    </string-array>
-    <string-array name="tab_position_entryValues">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
+  <string-array name="tab_position_entries">
+      <item>Oben</item>
+      <item>Mitte</item>
+      <item>Unten</item>
+  </string-array>
 
-    <string-array name="tab_size_entries">
-        <item>Small</item>
-        <item>Medium</item>
-        <item>Large</item>
-    </string-array>
-    <string-array name="tab_size_entryValues">
-        <item>1.0</item>
-        <item>1.5</item>
-        <item>2.0</item>
-    </string-array>
+  <string-array name="tab_position_entryValues">
+      <item>0</item>
+      <item>1</item>
+      <item>2</item>
+  </string-array>
 
-    <string-array name="qs_num_columns_entries">
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-    </string-array>
+  <string-array name="tab_size_entries">
+      <item>Klein</item>
+      <item>Mittel</item>
+      <item>Groß</item>
+  </string-array>
 
-    <string-array name="qs_num_rows_entries">
-        <item>3</item>
-        <item>4</item>
-    </string-array>
+  <string-array name="tab_size_entryValues">
+      <item>1.0</item>
+      <item>1.5</item>
+      <item>2.0</item>
+  </string-array>
 
-    <!-- Carrier Label -->
-    <string-array name="carrier_label_entries">
-        <item>@string/show_carrier_disabled</item>
-        <item>@string/show_carrier_keyguard</item>
-        <item>@string/show_carrier_statusbar</item>
-        <item>@string/show_carrier_enabled</item>
-    </string-array>
+  <string-array name="qs_num_columns_entries">
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+  </string-array>
 
-    <!-- Battery bar -->
-    <string-array name="battery_bar_entries">
-        <item>Verbergen</item>
-        <item>Statusleiste</item>
-        <item>Über Navigationsleiste</item>
-        <item>Unter Navigationsleiste</item>
-    </string-array>
-
-    <string-array name="battery_bar_no_navbar_entries">
-        <item>Verbergen</item>
-        <item>Statusleiste</item>
-    </string-array>
-
-    <string-array name="battery_bar_style_entries">
-        <item>Normal</item>
-        <item>Mittig-gespiegelt</item>
-    </string-array>
-
-    <!-- Statusbar weather font style -->
-    <string-array name="status_bar_weather_font_style_entries">
-        <item>@string/status_bar_weather_font_normal</item>
-        <item>@string/status_bar_weather_font_italic</item>
-        <item>@string/status_bar_weather_font_bold</item>
-        <item>@string/status_bar_weather_font_bold_italic</item>
-        <item>@string/status_bar_weather_font_light</item>
-        <item>@string/status_bar_weather_font_light_italic</item>
-        <item>@string/status_bar_weather_font_thin</item>
-        <item>@string/status_bar_weather_font_thin_italic</item>
-        <item>@string/status_bar_weather_font_condensed</item>
-        <item>@string/status_bar_weather_font_condensed_italic</item>
-        <item>@string/status_bar_weather_font_condensed_light</item>
-        <item>@string/status_bar_weather_font_condensed_light_italic</item>
-        <item>@string/status_bar_weather_font_condensed_bold</item>
-        <item>@string/status_bar_weather_font_condensed_bold_italic</item>
-        <item>@string/status_bar_weather_font_medium</item>
-        <item>@string/status_bar_weather_font_medium_italic</item>
-        <item>@string/status_bar_weather_font_black</item>
-        <item>@string/status_bar_weather_font_black_italic</item>
-        <item>@string/status_bar_weather_font_dancingscript</item>
-        <item>@string/status_bar_weather_font_dancingscript_bold</item>
-        <item>@string/status_bar_weather_font_comingsoon</item>
-        <item>@string/status_bar_weather_font_notoserif</item>
-        <item>@string/status_bar_weather_font_notoserif_italic</item>
-        <item>@string/status_bar_weather_font_notoserif_bold</item>
-        <item>@string/status_bar_weather_font_notoserif_bold_italic</item>
-    </string-array>
-
-    <!-- Lockscreen Weather -->
-    <string-array name="weather_condition_icon_entries">
-        <item>@string/weather_condition_icon_monochrome_title</item>
-        <item>@string/weather_condition_icon_colored_title</item>
-        <item>@string/weather_condition_icon_vclouds_title</item>
-    </string-array>
-
-    <string-array name="weather_hide_panel_entries">
-        <item>@string/weather_hide_panel_auto_title</item>
-        <item>@string/weather_hide_panel_custom_title</item>
-        <item>@string/weather_hide_panel_never_title</item>
-    </string-array>
-
-    <string-array name="weather_number_of_notifications_entries">
-        <item>@string/weather_number_of_notifications_always_title</item>
-        <item>@string/weather_number_of_notifications_two_title</item>
-        <item>@string/weather_number_of_notifications_three_title</item>
-        <item>@string/weather_number_of_notifications_four_title</item>
-        <item>@string/weather_number_of_notifications_five_title</item>
-        <item>@string/weather_number_of_notifications_six_title</item>
-     </string-array>
-
-     <!-- PA PIE -->
-     <string-array name="entries_pa_pie_size">
-         <item>@string/pa_pie_size_small</item>
-         <item>@string/pa_pie_size_default</item>
-         <item>@string/pa_pie_size_large</item>
-         <item>@string/pa_pie_size_gigantic</item>
-         <item>@string/pa_pie_size_monster</item>
-         <item>@string/pa_pie_size_enormous</item>
-     </string-array>
-
-     <string-array name="entries_pa_pie_gravity">
-         <item>@string/pa_pie_gravity_left</item>
-         <item>@string/pa_pie_gravity_right</item>
-         <item>@string/pa_pie_gravity_bottom</item>
-     </string-array>
-
-     <string-array name="entries_pa_pie_mode">
-         <item>@string/pa_pie_mode_bare</item>
-         <item>@string/pa_pie_mode_quick</item>
-         <item>@string/pa_pie_mode_default</item>
-         <item>@string/pa_pie_mode_slow</item>
-     </string-array>
-
-     <string-array name="entries_pa_pie_angle">
-         <item>@string/pa_pie_angle_none</item>
-         <item>@string/pa_pie_angle_small</item>
-         <item>@string/pa_pie_angle_big</item>
-         <item>@string/pa_pie_angle_huge</item>
-         <item>@string/pa_pie_angle_super</item>
-     </string-array>
-
-     <string-array name="entries_pa_pie_gap">
-         <item>@string/pa_pie_gap_none</item>
-         <item>@string/pa_pie_gap_small</item>
-         <item>@string/pa_pie_gap_big</item>
-         <item>@string/pa_pie_gap_huge</item>
-     </string-array>
-
-     <!-- SlimSizer -->
-     <string-array name="slimsizer_profile_array">
-         <item >Profil laden</item>
-         <item >Profil speichern</item>
-     </string-array>
-
-    <!-- Toast Animation -->
-    <string-array name="toast_animation_entries">
-        <item>@string/toast_none_animation</item>
-        <item>@string/toast_default_animation</item>
-        <item>@string/toast_fade_animation</item>
-        <item>@string/toast_SlideRight_animation</item>
-        <item>@string/toast_SlideLeft_animation</item>
-        <item>@string/toast_Xylon_animation</item>
-        <item>@string/toast_Toko_animation</item>
-        <item>@string/toast_Tn_animation</item>
-        <item>@string/toast_Honami_animation</item>
-        <item>@string/toast_FastFade_animation</item>
-        <item>@string/toast_GrowFade_animation</item>
-        <item>@string/toast_GrowFadeCenter_animation</item>
-        <item>@string/toast_GrowFadeBottom_animation</item>
-        <item>@string/toast_Translucent_animation</item>
-        <item>@string/toast_SlideLeftRight_animation</item>
-        <item>@string/toast_SlideRightLeft_animation</item>
-    </string-array>
-
-    <string-array name="toast_animation_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-        <item>14</item>
-        <item>15</item>
-    </string-array>
-
-    <!-- Power menu Animations  -->
-    <string-array name="power_menu_animations_entries">
-        <item>@string/power_menu_animation_aosp</item>
-        <item>@string/power_menu_animation_bottom</item>
-        <item>@string/power_menu_animation_top</item>
-        <item>@string/power_menu_animation_rotate</item>
-        <item>@string/power_menu_animation_xylon</item>
-        <item>@string/power_menu_animation_slide</item>
-        <item>@string/power_menu_animation_turn</item>
-        <item>@string/power_menu_animation_fly</item>
-        <item>@string/power_menu_animation_card</item>
-        <item>@string/power_menu_animation_translucent_top</item>
-        <item>@string/power_menu_animation_translucent_bottom</item>
-    </string-array>
-
-    <!-- Listview animation -->
-    <string-array name="listview_animation_entries">
-        <item>@string/listview_off</item>
-        <item>@string/listview_wave_left</item>
-        <item>@string/listview_wave_right</item>
-        <item>@string/listview_scale</item>
-        <item>@string/listview_alpha</item>
-        <item>@string/listview_stack_top</item>
-        <item>@string/listview_stack_bottom</item>
-        <item>@string/listview_unfold</item>
-        <item>@string/listview_fold</item>
-        <item>@string/listview_translate_left</item>
-        <item>@string/listview_translate_right</item>
-    </string-array>
-
-    <string-array name="listview_animation_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-    </string-array>
-
-    <!-- Listview Interpolator -->
-    <string-array name="listview_interpolator_entries">
-        <item>@string/listview_off</item>
-        <item>@string/listview_accelerate_interpolator</item>
-        <item>@string/listview_decelerate_interpolator</item>
-        <item>@string/listview_accelerate_decelerate_interpolator</item>
-        <item>@string/listview_anticipate_interpolator</item>
-        <item>@string/listview_overshoot_interpolator</item>
-        <item>@string/listview_anticipate_overshoot_interpolator</item>
-        <item>@string/listview_bounce_interpolator</item>
-    </string-array>
-
-    <string-array name="listview_interpolator_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-    </string-array>
-
-    <!-- IME animations -->
-    <string-array name="anim_controls_entries">
-        <item>@string/animation_default</item>
-        <item>@string/animation_fade</item>
-        <item>@string/animation_slide_right</item>
-        <item>@string/animation_slide_left</item>
-        <item>@string/animation_slide_right_no_fade</item>
-        <item>@string/animation_slide_left_no_fade</item>
-        <item>@string/animation_slide_up</item>
-        <item>@string/animation_slide_down</item>
-        <item>@string/animation_translucent</item>
-        <item>@string/animation_grow_shrink</item>
-        <item>@string/animation_grow_shrink_center</item>
-        <item>@string/animation_grow_shrink_bottom</item>
-        <item>@string/animation_grow_shrink_left</item>
-        <item>@string/animation_grow_shrink_right</item>
-    </string-array>
-
-    <string-array name="anim_controls_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-    </string-array>
-
-    <!-- Recent panel -->
-    <string-array name="recent_panel_expanded_mode_entries">
-        <item>@string/recent_panel_expanded_mode_auto</item>
-        <item>@string/recent_panel_expanded_mode_always</item>
-        <item>@string/recent_panel_expanded_mode_never</item>
-    </string-array>
-
-    <string-array name="tab_position_entries">
-        <item>Oben</item>
-        <item>Mitte</item>
-        <item>Unten</item>
-    </string-array>
-    <string-array name="tab_position_entryValues">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-
-    <string-array name="tab_size_entries">
-        <item>Klein</item>
-        <item>Mittel</item>
-        <item>Groß</item>
-    </string-array>
-    <string-array name="tab_size_entryValues">
-        <item>1.0</item>
-        <item>1.5</item>
-        <item>2.0</item>
-    </string-array>
-
-    <string-array name="qs_num_columns_entries">
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-    </string-array>
-
-    <string-array name="qs_num_rows_entries">
-        <item>3</item>
-        <item>4</item>
-    </string-array>
+  <string-array name="qs_num_rows_entries">
+      <item>3</item>
+      <item>4</item>
+  </string-array>
 
 </resources>
