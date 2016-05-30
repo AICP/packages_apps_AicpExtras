@@ -174,7 +174,7 @@ public class AnonymousStats extends PreferenceActivity implements
 			}
 		} else if (preference == mViewStats) {
 			// Display the stats page
-			Uri uri = Uri.parse(Utilities.getStatsUrl() + "stats");
+			Uri uri = Uri.parse(Utilities.getStatsUrl());
 			startActivity(new Intent(Intent.ACTION_VIEW, uri));
 		} else {
 			// If we didn't handle it, let preferences handle it.
