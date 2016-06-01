@@ -19,6 +19,8 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import java.lang.System;
+
 import com.lordclockan.R;
 
 public class MainActivity extends AppCompatActivity
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity
 
     private DrawerLayout mDrawer;
     private int id;
+    private long startTime;
+    private boolean secondBack=false;
 
     @Override
     protected void onStart() {
@@ -109,9 +113,8 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-    
 
-   } 
+   }
 
     @Override
     public void onBackPressed() {
@@ -119,7 +122,22 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
+            /*
+            **If back was pressed the first time,only show toast
+            **else exit the app provided the user presses back
+            **the second time within 2.5 seconds of the first
+            */
+            if(!secondBack) {
+            Toast.makeText(MainActivity.this, "Press back again to exit",
+            Toast.LENGTH_SHORT).show();
+            secondBack=!secondBack;
+            startTime = System.currentTimeMillis();
+            } else if( System.currentTimeMillis()-startTime < 2500)
             super.onBackPressed();
+            else {
+            secondBack=!secondBack;
+            onBackPressed();
+           }
         }
     }
 
