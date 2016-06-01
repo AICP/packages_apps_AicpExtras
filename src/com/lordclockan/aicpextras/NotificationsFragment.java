@@ -44,12 +44,16 @@ public class NotificationsFragment extends Fragment {
         private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
         private static final String PREF_STATUS_BAR_HEADER_FONT_STYLE = "status_bar_header_font_style";
         private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
+        private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
+        private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
 
         private SwitchPreference mBrightnessSlider;
         private SwitchPreference mBlockOnSecureKeyguard;
         private ListPreference mStatusBarHeaderFontStyle;
         private ListPreference mNumColumns;
         private ListPreference mNumRows;
+        private ListPreference mTileAnimationStyle;
+        private ListPreference mTileAnimationDuration;
         private SeekBarPreferenceCham mHeaderShadow;
 
         private static final int MY_USER_ID = UserHandle.myUserId();
@@ -116,6 +120,24 @@ public class NotificationsFragment extends Fragment {
             mNumRows.setValue(String.valueOf(numRows));
             updateNumRowsSummary(numRows);
             mNumRows.setOnPreferenceChangeListener(this);
+
+            mTileAnimationStyle = (ListPreference) findPreference(PREF_TILE_ANIM_STYLE);
+            int tileAnimationStyle = Settings.System.getIntForUser(resolver,
+                    Settings.System.ANIM_TILE_STYLE, 0,
+                    UserHandle.USER_CURRENT);
+            mTileAnimationStyle.setValue(String.valueOf(tileAnimationStyle));
+            updateTileAnimationStyleSummary(tileAnimationStyle);
+            updateAnimTileDuration(tileAnimationStyle);
+            mTileAnimationStyle.setOnPreferenceChangeListener(this);
+
+            mTileAnimationDuration = (ListPreference) findPreference(PREF_TILE_ANIM_DURATION);
+            int tileAnimationDuration = Settings.System.getIntForUser(resolver,
+                    Settings.System.ANIM_TILE_DURATION, 1500,
+                    UserHandle.USER_CURRENT);
+            mTileAnimationDuration.setValue(String.valueOf(tileAnimationDuration));
+            updateTileAnimationDurationSummary(tileAnimationDuration);
+            mTileAnimationDuration.setOnPreferenceChangeListener(this);
+
         }
 
         @Override
@@ -160,6 +182,19 @@ public class NotificationsFragment extends Fragment {
                Settings.System.putInt(resolver,
                        Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
                return true;
+            } else if (preference == mTileAnimationStyle) {
+                int tileAnimationStyle = Integer.valueOf((String) newValue);
+                Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_STYLE,
+                        tileAnimationStyle, UserHandle.USER_CURRENT);
+                updateTileAnimationStyleSummary(tileAnimationStyle);
+                updateAnimTileDuration(tileAnimationStyle);
+                return true;
+            } else if (preference == mTileAnimationDuration) {
+                int tileAnimationDuration = Integer.valueOf((String) newValue);
+                Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_DURATION,
+                        tileAnimationDuration, UserHandle.USER_CURRENT);
+                updateTileAnimationDurationSummary(tileAnimationDuration);
+                return true;
             }
             return false;
         }
@@ -181,6 +216,28 @@ public class NotificationsFragment extends Fragment {
             String prefix = (String) mNumRows.getEntries()[mNumRows.findIndexOfValue(String
                     .valueOf(numRows))];
             mNumRows.setSummary(getResources().getString(R.string.qs_num_rows_showing, prefix));
+        }
+
+        private void updateTileAnimationStyleSummary(int tileAnimationStyle) {
+            String prefix = (String) mTileAnimationStyle.getEntries()[mTileAnimationStyle.findIndexOfValue(String
+                    .valueOf(tileAnimationStyle))];
+            mTileAnimationStyle.setSummary(getResources().getString(R.string.qs_set_animation_style, prefix));
+        }
+
+        private void updateTileAnimationDurationSummary(int tileAnimationDuration) {
+            String prefix = (String) mTileAnimationDuration.getEntries()[mTileAnimationDuration.findIndexOfValue(String
+                    .valueOf(tileAnimationDuration))];
+            mTileAnimationDuration.setSummary(getResources().getString(R.string.qs_set_animation_duration, prefix));
+        }
+
+        private void updateAnimTileDuration(int tileAnimationStyle) {
+            if (mTileAnimationDuration != null) {
+                if (tileAnimationStyle == 0) {
+                    mTileAnimationDuration.setSelectable(false);
+                } else {
+                    mTileAnimationDuration.setSelectable(true);
+                }
+            }
         }
 
         private int getDefaultNumColumns() {
