@@ -17,6 +17,47 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
 
+    <PreferenceCategory
+        android:key="quicksettings_tiles_category"
+        android:title="@string/quicksettings_tiles_category">
+
+        <ListPreference
+            android:key="sysui_qs_num_rows"
+            android:title="@string/qs_num_rows_title"
+            android:entries="@array/qs_num_rows_entries"
+            android:entryValues="@array/qs_num_rows_values"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="sysui_qs_num_columns"
+            android:title="@string/qs_num_columns_title"
+            android:entries="@array/qs_num_columns_entries"
+            android:entryValues="@array/qs_num_columns_values"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="qs_tile_animation_style"
+            android:title="@string/qs_tile_animation_style_title"
+            android:entries="@array/qs_tile_animation_style_entries"
+            android:entryValues="@array/qs_tile_animation_style_values"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="qs_tile_animation_duration"
+            android:title="@string/qs_tile_animation_duration_title"
+            android:entries="@array/qs_tile_animation_duration_entries"
+            android:entryValues="@array/qs_tile_animation_duration_values"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="qs_tile_animation_interpolator"
+            android:title="@string/qs_tile_animation_interpolator_title"
+            android:entries="@array/qs_tile_animation_interpolator_entries"
+            android:entryValues="@array/qs_tile_animation_interpolator_values"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
     <SwitchPreference
         android:key="qs_show_brightness_slider"
         android:title="@string/qs_brightness_slider_title"
@@ -34,34 +75,6 @@
         android:key="disable_immersive_message"
         android:title="@string/disable_immersive_message_title"
         android:summary="@string/disable_immersive_message_summary" />
-
-    <ListPreference
-        android:key="sysui_qs_num_rows"
-        android:title="@string/qs_num_rows_title"
-        android:entries="@array/qs_num_rows_entries"
-        android:entryValues="@array/qs_num_rows_values"
-        android:persistent="false" />
-
-     <ListPreference
-         android:key="qs_tile_animation_style"
-         android:title="@string/qs_tile_animation_style_title"
-         android:entries="@array/qs_tile_animation_style_entries"
-         android:entryValues="@array/qs_tile_animation_style_values"
-         android:persistent="false" />
- 
-     <ListPreference
-         android:key="qs_tile_animation_duration"
-         android:title="@string/qs_tile_animation_duration_title"
-         android:entries="@array/qs_tile_animation_duration_entries"
-         android:entryValues="@array/qs_tile_animation_duration_values"
-         android:persistent="false" />
-
-    <ListPreference
-        android:key="sysui_qs_num_columns"
-        android:title="@string/qs_num_columns_title"
-        android:entries="@array/qs_num_columns_entries"
-        android:entryValues="@array/qs_num_columns_values"
-        android:persistent="false" />
 
     <SwitchPreference
         android:key="block_on_secure_keyguard"
