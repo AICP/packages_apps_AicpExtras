@@ -15,19 +15,6 @@
         android:summary="@string/headset_connect_player_summary"
         android:defaultValue="false" />
 
-    <!-- Screenshot tone -->
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="screenshot_sound"
-        android:title="@string/screenshot_sound_title"
-        android:summary="@string/screenshot_sound_summary"
-        android:defaultValue="true" />
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="three_finger_gesture"
-        android:title="@string/three_finger_gesture"
-        android:summary="@string/three_finger_gesture_summary"
-        android:defaultValue="true" />
-
     <ListPreference
         android:key="pref_scrollingcache"
         android:dialogTitle="@string/pref_scrollingcache_title"
@@ -52,5 +39,36 @@
     <Preference
         android:key="wakelock_blocker"
         android:title="@string/wakelock_blocker_title" />
+
+    <PreferenceCategory
+        android:key="screenshot_category"
+        android:title="@string/screenshot_cat_title">
+
+        <!-- Screenshot tone -->
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="screenshot_sound"
+            android:title="@string/screenshot_sound_title"
+            android:summary="@string/screenshot_sound_summary"
+            android:defaultValue="true" />
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="three_finger_gesture"
+            android:title="@string/three_finger_gesture"
+            android:summary="@string/three_finger_gesture_summary"
+            android:defaultValue="true" />
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="screenshot_crop_and_share"
+            android:title="@string/screenshot_crop_and_share_title"
+            android:summary="@string/screenshot_crop_and_share_summary"
+            android:defaultValue="false" />
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="screenshot_crop_behavior"
+            android:title="@string/screenshot_crop_behavior_title"
+            android:summary="@string/screenshot_crop_behavior_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
