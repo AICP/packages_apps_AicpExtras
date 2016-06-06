@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
     <string name="navigation_drawer_open">Open navigatiezone</string>
     <string name="navigation_drawer_close">Sluit navigatiezone</string>
@@ -9,11 +10,11 @@
     <string name="third_layout_title">Derde layout</string>
     <string name="aicp_extras_title">AICP Extras</string>
     <string name="pun_title">One ROM to rule them all</string>
-    <string name="various_shit_title">Diversen</string>
+    <string name="various_shit_title">Overige instellingen</string>
     <string name="about_title">Over</string>
     <string name="other_title">Overig</string>
     <string name="g_community">G+ community</string>
-    <string name="ui_title">UI</string>
+    <string name="ui_title">Instellingen</string>
     <string name="builtin_title">Intern</string>
     <string name="addons_title">Extern</string>
     <string name="welcome_title">Welkom in de echte wereld!</string>
@@ -26,14 +27,14 @@
     <string name="lockscreen_title">Vergrendelscherm</string>
     <string name="systemui_tuner_title">SystemUI Tuner</string>
     <string name="systemui_tuner_summary">Marshmallow neemt de SystemUI tuning over</string>
-    <string name="systemui_tuner_dilog_title">Attentie</string>
-    <string name="systemui_tuner_dilog_warning">De tuner biedt beperkte mogelijkheden om de SystemUI te wijzigen. Er is een link toegevoegd aan AicpExtras for eenvoudige toegang.\nHier kunnen ook nieuwe tegels worden toegevoegd.</string>
+    <string name="systemui_tuner_dilog_title">LET OP!</string>
+    <string name="systemui_tuner_dilog_warning">De tuner biedt beperkte mogelijkheden om de SystemUI te wijzigen.\nEr is een link toegevoegd aan Aicp Extras voor eenvoudige toegang. Hier kunnen ook nieuwe tegels worden toegevoegd.</string>
     <string name="aicp_downloads_title">Downloads</string>
-    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="aicp_gerrit_title">Bezoek Gerrit</string>
     <string name="send_mail_intent">Stuur e-mail...</string>
-    <string name="hidden_anim_activity_title">Yoga time!</string>
-    <string name="hidden_anim_more_title">Meer?</string>
-    <string name="hidden_anim_more_nice">Mooi!</string>
+    <string name="hidden_anim_activity_title">YOGA TIME!</string>
+    <string name="hidden_anim_more_title">WANT MORE?</string>
+    <string name="hidden_anim_more_nice">LIKE IT!</string>
     <string name="continue_title">Doorgaan</string>
 
     <string name="nothing_title">Hier is nog niks te zien, dus ga maar wat anders doen...</string>
@@ -126,7 +127,7 @@
     <string name="show_network_traffic_2000">2000 ms</string>
     <string name="network_traffic_autohide">Automatisch verbergen</string>
     <string name="network_traffic_autohide_summary">Verberg dataverkeer-monitor als er geen activiteit is</string>
-    <string name="network_traffic_hidearrow">Ververg pijlen</string>
+    <string name="network_traffic_hidearrow">Verberg pijlen</string>
     <string name="network_traffic_hidearrow_summary">Verberg de pijlen in de dataverkeer indicators</string>
     <string name="network_traffic_autohide_threshold">Drempel voor inactiviteit</string>
     <string name="ok">OK</string>
@@ -141,8 +142,6 @@
     <!--Time Contexual Header -->
     <string name="status_bar_custom_header_title">Tijdsafhankelijke header</string>
     <string name="status_bar_custom_header_summary">Inschakelen achtergrondbeelden voor meldingenpaneel</string>
-    <string name="status_bar_custom_header_default_title">Gebruik Poly-HD beelden</string>
-    <string name="status_bar_custom_header_default_summary">Inschakelen voor Poly-HD beelden. Uitschakelen voor de originele beelden.</string>
 
     <!-- Carrier Label -->
     <string name="carrier_options">Providernaam</string>
@@ -184,7 +183,7 @@
 
     <!-- Headphones icon switch -->
     <string name="show_headset_icon_title">Koptelefoon icoon</string>
-    <string name="show_headset_icon_summary">Toont icoon als koptelefoon is aangesloten.</string>
+    <string name="show_headset_icon_summary">Toont icoon als koptelefoon is aangesloten</string>
 
     <!-- Gesture Anywhere -->
     <string name="gesture_anywhere_title">Gebaar Overal</string>
@@ -243,7 +242,7 @@
     <string name="status_bar_temperature_show_scale">Tonen met eenheid</string>
     <string name="status_bar_temperature_hide_scale">Tonen zonder eenheid</string>
     <string name="status_bar_temperature_location_title">Plaatsing</string>
-    <string name="status_bar_temperature_location_summary">Bepaal waar de temperatuur in de statusbalk moet worden getoond</string>
+    <string name="status_bar_temperature_location_summary">Bepaal waar in de statusbalk de temperatuur moet worden getoond</string>
     <string name="status_bar_temperature_location_right">Toon rechts</string>
     <string name="status_bar_temperature_location_left">Toon links</string>
     <string name="status_bar_weather_color_title">Kleur van de temperatuur</string>
@@ -277,8 +276,8 @@
 
     <!-- Recents Fullscreen -->
     <string name="recents_show_fullscreen">Toon recente apps in volledig scherm</string>
-    <string name="recents_fullscreen_summary_enabled">Recente apps in volledig scherm staat aan</string>
-    <string name="recents_fullscreen_summary_disabled">Recente apps in volledig scherm staat uit</string>
+    <string name="recents_fullscreen_summary_enabled">Recente apps in volledig scherm ingeschakeld</string>
+    <string name="recents_fullscreen_summary_disabled">Recente apps in volledig scherm uitgeschakeld</string>
     <string name="recents_full_screen_clock_title">Toon klok</string>
     <string name="recents_full_screen_clock_summary">Toon klok bovenop bij volledig scherm weergave</string>
     <string name="recents_full_screen_date_title">Toon datum</string>
@@ -288,7 +287,7 @@
     <string name="weather_lockscreen_category">LockClock-opties op vergrendelscherm</string>
     <string name="weather_cat_notifications_title">Notificaties</string>
     <string name="weather_settings_title">LockClock instellingen</string>
-    <string name="weather_settings_summary">Bepaal locatie for weer-widget en andere instellingen</string>
+    <string name="weather_settings_summary">Bepaal locatie voor weer-widget en andere instellingen</string>
     <string name="weather_lockscreen_show_title">Weer-info op vergrendelscherm</string>
     <string name="weather_lockscreen_show_summary">Toon weer-info op vergrendelscherm</string>
     <string name="weather_show_weather_title">Toon weer-opties</string>
@@ -360,7 +359,7 @@
 
     <!-- Lockscreen see through -->
     <string name="lockscreen_see_through_title">Vergrendelscherm-vervaging</string>
-    <string name="lockscreen_see_through_summary">Vervaagt en toont de inhoud achter het vergrendelscherm.</string>
+    <string name="lockscreen_see_through_summary">Vervaagt en toont de inhoud achter het vergrendelscherm</string>
     <string name="lockscreen_blur_radius">Intensiteit van de vervaging</string>
 
     <!-- Notificatio drawer weather -->
@@ -444,7 +443,7 @@
     <string name="omniswitch_start_settings_title">Instellingen</string>
     <string name="omniswitch_start_settings_summary">Open OmniSwitch instellingen</string>
     <string name="omniswitch_first_time_title">Informatie</string>
-    <string name="omniswitch_first_time_message">Zorg dat OmniSwitch is ingeschakeld. Dit ku je doen door onderstaand voor \"Settings\" te kiezen.</string>
+    <string name="omniswitch_first_time_message">Zorg dat OmniSwitch is ingeschakeld. Dit kun je doen door onderstaand voor \"Settings\" te kiezen.</string>
 
     <!-- Double tap to sleep on lockscreen -->
     <string name="double_tap_sleep_anywhere_title">DT2S op vergrendelscherm</string>
@@ -475,7 +474,7 @@
     <string name="pa_pie_gravity_left">Links</string>
     <string name="pa_pie_gap_title">Afstand tussen elementen</string>
     <string name="pa_pie_gap_summary">De afstand tussen de PIE elementen aanpassen</string>
-	<string name="pa_pie_angle_title">PIE hoek</string>
+    <string name="pa_pie_angle_title">PIE hoek</string>
     <string name="pa_pie_angle_summary">De hoek van de PIE randen aanpsssen</string>
     <string name="pa_pie_angle_none">Geen (oud)</string>
     <string name="pa_pie_angle_small">Klein</string>
@@ -525,8 +524,8 @@
     <!-- SlimSizer  -->
     <string name="listsystem">lijst</string>
     <string name="sizer_title">Systeem App Remover</string>
-    <string name="caution">Pas op!</string>
-    <string name="sizer_message_startup">Met deze tool kun je systeem apps verwijderen. Gebruik deze tool voorzichtig en verwijder alleen apps waarvan je zeker weet dat het veilig is om ze te verwijderen.</string>
+    <string name="caution">PAS OP!</string>
+    <string name="sizer_message_startup">Met deze tool kun je systeem apps verwijderen.\nGebruik deze tool voorzichtig en verwijder alleen apps waarvan je zeker weet dat het veilig is om ze te verwijderen.</string>
     <string name="sizer_message_delete">Weet je zeker dat je deze app wil verwijderen?</string>
     <string name="btn_delete">Verwijder de geselecteerde apps NU!</string>
     <string name="delete_progress_title">Verwijderen...</string>
@@ -534,11 +533,11 @@
     <string name="delete_success">Verwijderd</string>
     <string name="delete_fail">Verwijderen niet mogelijk</string>
     <string name="btn_profile">Profiel</string>
-    <string name="sizer_message_sdnowrite">Kan niet naar SD-card schrijven.</string>
-    <string name="sizer_message_sdnoread">Kan SD-card niet lezen.</string>
-    <string name="sizer_message_filesuccess">Profiel aangemaakt.</string>
-    <string name="sizer_message_filefail">Profiel niet aangemaakt.</string>
-    <string name="sizer_message_noselect">Niets geselecteerd.</string>
+    <string name="sizer_message_sdnowrite">Kan niet naar SD-card schrijven</string>
+    <string name="sizer_message_sdnoread">Kan SD-card niet lezen</string>
+    <string name="sizer_message_filesuccess">Profiel aangemaakt</string>
+    <string name="sizer_message_filefail">Profiel niet aangemaakt</string>
+    <string name="sizer_message_noselect">Niets geselecteerd</string>
     <string name="system_app_remover">Systeem App Remover</string>
 
     <!-- Three-fingers-swipe to screenshot -->
@@ -546,8 +545,8 @@
     <string name="three_finger_gesture_summary">Veeg met 3 vingers om een schermafbeelding te maken</string>
 
     <!-- SU -->
-    <string name="cannot_get_su">Kan geen Superuser toegang krijgen, nu afsluiten.</string>
-    <string name="cannot_get_su_start">Kan geen Superuser toegang krijgen.</string>
+    <string name="cannot_get_su">Kan geen Superuser toegang krijgen, nu afsluiten</string>
+    <string name="cannot_get_su_start">Kan geen Superuser toegang krijgen</string>
 
     <!-- Aicp logcat -->
     <string name="logcat_title">Logcat</string>
@@ -555,11 +554,11 @@
     <string name="dmesg_title">Dmesg</string>
     <string name="log_it_title">Aan de slag</string>
     <string name="log_it_dialog_title">Aan de slag</string>
-    <string name="log_that_shit_title">Leg vast die zooi</string>
+    <string name="log_that_shit_title">Leg vast die zooi!</string>
     <string name="logcat_warning">Deel het of GTFO!</string>
     <string name="share_title">Delen...</string>
     <string name="log_it_share_subject">AICP logs</string>
-    <string name="log_it_summary">Momentje, de logbestanden worden aangemaakt</string>
+    <string name="log_it_summary">Tik hier om de logbestanden aan te maken</string>
 
     <!-- AOKP custom system animations -->
     <string name="aokp_animation_title">Systeemanimaties</string>
@@ -578,7 +577,7 @@
     <string name="animation_duration_title">Duur van de animatie</string>
     <string name="animation_duration_default">Standaard</string>
     <string name="title_animation_no_override">Verhinder app-overschrijving</string>
-    <string name="summary_animation_no_override">Verhinder dat apps overgangen overschrijven.</string>
+    <string name="summary_animation_no_override">Verhinder dat apps overgangen overschrijven</string>
     <string name="animation_exit_only_title">Animatie voor alleen uitvoeren</string>
     <string name="animation_reverse_exit_title">Omgekeerde animatie voor stoppen</string>
 
@@ -655,7 +654,7 @@
     <!-- IME animations -->
     <string name="ime_animation_title">IME animaties</string>
     <string name="ime_animation_summary">Animatie voor toetsenbord instellen</string>
-    <string name="animation_settings_reset_message">Animations terugzetten naar standaard?</string>
+    <string name="animation_settings_reset_message">Animaties terugzetten naar standaard?</string>
     <string name="animation_default">Standaard</string>
     <string name="animation_fade">Vervagen</string>
     <string name="animation_slide_right">Schuiven vanaf rechts</string>
@@ -679,8 +678,8 @@
     <string name="animation_duration_summary">Stel animatie-duur in</string>
 
     <!-- Launch music player when headset is connected -->
-    <string name="headset_connect_player_title">Muziek app opstarten</string>
-    <string name="headset_connect_player_summary">Start de standaard muziek app als een koptelefoon wordt aangeloten</string>
+    <string name="headset_connect_player_title">Muziek-app opstarten</string>
+    <string name="headset_connect_player_summary">Start de standaard muziek-app als een koptelefoon wordt aangeloten</string>
 
     <!-- Recent panel -->
     <string name="recent_panel_category">Slim recents apps overzicht</string>
@@ -718,7 +717,7 @@
     <string name="screenshot_sound_summary">Speelt een geluid af bij het maken van een schermafbeelding</string>
 
     <string name="brightness_icon_title">Helderheid icoon</string>
-    <string name="brightness_icon_summary">Toon een icoon aan de linkerkant van de helderheids schuifregelaar om de automatische helderheid in te stellen</string>
+    <string name="brightness_icon_summary">Toon een icoon aan de linkerkant van de helderheids-schuifregelaar om de automatische helderheid in te stellen</string>
 
     <!-- App sidebar -->
     <string name="app_sidebar_title">App zijbalk</string>
@@ -737,11 +736,11 @@
     <string name="app_sidebar_hide_labels_summary">Verberg zijbalk icoon labels</string>
     <string name="tab_category">Zichtbaar aanraakgebied</string>
     <string name="use_tab_title">Toon aanraakgebied</string>
-    <string name="use_tab_summary">Toon het aanraakgebied aan de kant van het scherm dat is ingesteld voor de zijbalk.</string>
+    <string name="use_tab_summary">Toon het aanraakgebied aan de kant van het scherm dat is ingesteld voor de zijbalk</string>
     <string name="tab_position_title">Locatie aanraakgebied</string>
-    <string name="tab_position_summary">Toon het aanraakgebied bovenaan, in het midden of aan de onderkant van het scherm.</string>
+    <string name="tab_position_summary">Toon het aanraakgebied bovenaan, in het midden of aan de onderkant van het scherm</string>
     <string name="tab_size_title">Grootte aanraakgebied</string>
-    <string name="tab_size_summary">Pas de grootte van het aanraakgebied aan.</string>
+    <string name="tab_size_summary">Pas de grootte van het aanraakgebied aan</string>
     <string name="trigger_category">Aanraakgebied</string>
     <string name="trigger_width_title">Breedte aanraakgebied</string>
     <string name="trigger_width_summary">Pas de breedte van het aanraakgebied aan</string>
@@ -824,7 +823,7 @@
 
     <!-- Hide Apps from Recents -->
     <string name="hide_apps_from_recents_title">Verborgen apps</string>
-    <string name="hide_apps_from_recents_summary">Kies welke apps moeten worden uitgesloten van het overzicht van recente apps.</string>
+    <string name="hide_apps_from_recents_summary">Kies welke apps moeten worden uitgesloten van het overzicht van recente apps</string>
 
     <!-- Current on Lockscreen -->
     <string name="lock_screen_show_current">Laadstroom</string>
@@ -840,5 +839,32 @@
     <string name="slim_action_floats_summary">Start Slim &amp; PIE Acties in zweefmodus</string>
     <string name="gesture_anywhere_floating">Gebaar Overal</string>
     <string name="gesture_anywhere_floating_summary">Start \"Gebaar Overal\" snelkoppelingen in zweefmodusmodus</string>
+
+    <!-- Tiles animation style  -->
+    <string name="quicksettings_tiles_category">Animatie-opties snelle instellingen-tegels</string>
+    <string name="qs_tile_animation_style_title">Animatiestijl snelle instellingen-tegels</string>
+    <string name="qs_tile_animation_duration_title">Animatieduur snelle instellingen-tegels</string>
+    <string name="qs_tile_animation_interpolator_title">Animatie-interpolatie snelle instellingen-tegels</string>
+    <string name="qs_tile_animation_style_off">Geen animatie</string>
+    <string name="qs_tile_animation_style_flip">Omkeren</string>
+    <string name="qs_tile_animation_style_rotate">Draaien</string>
+    <string name="qs_tile_animation_duration_low">Traag</string>
+    <string name="qs_tile_animation_duration_default">Standaard</string>
+    <string name="qs_tile_animation_duration_fast">Snel</string>
+    <string name="qs_tile_animation_duration_superfast">Supersnel</string>
+    <string name="qs_tile_animation_interpolator_linearInterpolator">Lineair</string>
+    <string name="qs_tile_animation_interpolator_accelerateInterpolator">Versnellen</string>
+    <string name="qs_tile_animation_interpolator_decelerateInterpolator">Vertragen</string>
+    <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">Versnellen vertragen</string>
+    <string name="qs_tile_animation_interpolator_bounceInterpolator">Stuiteren</string>
+    <string name="qs_tile_animation_interpolator_overshootInterpolator">Voorbij schieten</string>
+    <string name="qs_tile_animation_interpolator_anticipateInterpolator">Anticiperen</string>
+    <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Anticipate overshoot</string>
+    <string name="qs_set_animation_style">animatie %1$s</string>
+    <string name="qs_set_animation_duration">tijdsduur %1$s</string>
+    <string name="qs_set_animation_interpolator">%1$s</string>
+
+    <!-- App Exit Toast -->
+    <string name="app_exit_toast">Druk nogmaals om af te sluiten</string>
 
 </resources>
