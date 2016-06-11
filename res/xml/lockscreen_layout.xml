@@ -12,6 +12,12 @@
         android:summary="@string/powermenu_lockscreen_summary"
         android:defaultValue="true" />
 
+    <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
+        android:key="lockscreen_qs_disabled"
+        android:title="@string/lockscreen_qs_disabled_title"
+        android:summary="@string/lockscreen_qs_disabled_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:title="@string/Misc"
         android:key="lockscreen_misc_category">
