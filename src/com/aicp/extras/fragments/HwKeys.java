@@ -107,4 +107,8 @@ public class HwKeys extends ActionFragment {
         onPreferenceScreenLoaded(ActionConstants.getDefaults(ActionConstants.HWKEYS));
     }
 
+    @Override
+    protected boolean usesExtendedActionsList() {
+        return true;
+    }
 }
