@@ -62,7 +62,7 @@
     <string name="recents_clear_all_dismiss_all_summary">Lösche auch die Anwendung im Vordergrund, wenn alle gelöscht werden.</string>
     <string name="stock_recents_disabled">Der eingebaute Anwendungsverlauf ist deaktiviert!</string>
     <string name="alternatives_title">Alternativen</string>
-    
+
     <!-- Change Log -->
     <string name="changelog_title">Änderungsprotokoll</string>
     <string name="changelog_title_summary">Zeige letzte Änderungen im ROM</string>
@@ -144,8 +144,6 @@
     <!--Time Contexual Header -->
     <string name="status_bar_custom_header_title">Benutzerdefinierter Hintergrund nach Zeit</string>
     <string name="status_bar_custom_header_summary">Aktiviere Hintergrundbild für die Benachrichtigungsleiste</string>
-    <string name="status_bar_custom_header_default_title">Benutze Poly HD Bilder</string>
-    <string name="status_bar_custom_header_default_summary">Einschalten für Polygraphische HD Bilder. Ausschalten für die originalen Bilder.</string>
 
     <!-- Carrier Label -->
     <string name="carrier_options">Anzeige des Anbieters</string>
@@ -382,17 +380,17 @@
     <string name="notification_ticker">Statistiken freigeben</string>
     <string name="notification_title">AICP Statistiken</string>
     <string name="notification_desc">Aktiviere oder deaktiviere die Übertragung anonymer Statistiken</string>
-    
+
     <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
-    
+
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
     <string name="anonymous_statistics_title">AICP Statistiken</string>
     <string name="anonymous_statistics_summary">Hilf AICP, indem du die Übertragung anonymer Datenreporte zuläßt.</string>
     <string name="anonymous_statistics_warning_title">Über</string>
-    <string name="anonymous_statistics_warning">Der Beitritt zu AICP Stats erlaubt die Übersendung nicht-personenbezogener Daten an unsere Server. 
-         Die übertragenen Informationen erhalten einen eindeutigen Identifizierungscode (ID), der nicht die Privatsphäre oder persönliche Daten verletzt. 
+    <string name="anonymous_statistics_warning">Der Beitritt zu AICP Stats erlaubt die Übersendung nicht-personenbezogener Daten an unsere Server.
+         Die übertragenen Informationen erhalten einen eindeutigen Identifizierungscode (ID), der nicht die Privatsphäre oder persönliche Daten verletzt.
          Die Daten werden alle 7 Tage übermittelt.\n\nUm ein Beispiel der übertragenen Daten zu sehen, tippe auf Datenvorschau.</string>
- 
+
     <string name="pref_settings">Einstellungen</string>
     <string name="enable_reporting_title">Übertragung aktivieren</string>
     <string name="disable_reporting_persistent">Andauernde Verweigerung</string>
@@ -414,8 +412,8 @@
     <string name="preview_device_title">Gerät</string>
     <string name="preview_version_title">Version</string>
     <string name="preview_country_title">Land</string>
-    <string name="preview_carrier_title">Anbieter</string>    
-    <string name="preview_romname_title">ROM Name</string>    
+    <string name="preview_carrier_title">Anbieter</string>
+    <string name="preview_romname_title">ROM Name</string>
     <string name="preview_romversion_title">AICP Version</string>
     <string name="preview_buildtype_title">AICP Bau-Typ</string>
 
@@ -843,5 +841,32 @@
     <string name="slim_action_floats_summary">Starte Slim &amp; PIE-Aktionen im Schwebemodus</string>
     <string name="gesture_anywhere_floating">Gesten überall</string>
     <string name="gesture_anywhere_floating_summary">Starte \"Gesten überall\"-Verknüpfungen im Schwebemodus</string>
+
+    <!-- Tiles animation style  -->
+    <string name="quicksettings_tiles_category">Optionen für Kachelanimationen</string>
+    <string name="qs_tile_animation_style_title">Stil der Kachelanimation</string>
+    <string name="qs_tile_animation_duration_title">Dauer der Kachelanimation</string>
+    <string name="qs_tile_animation_interpolator_title">Art der Kachelanimation</string>
+    <string name="qs_tile_animation_style_off">Keine Animation</string>
+    <string name="qs_tile_animation_style_flip">Drehen</string>
+    <string name="qs_tile_animation_style_rotate">Rotieren</string>
+    <string name="qs_tile_animation_duration_low">Langsam</string>
+    <string name="qs_tile_animation_duration_default">Standard</string>
+    <string name="qs_tile_animation_duration_fast">Schnell</string>
+    <string name="qs_tile_animation_duration_superfast">Superschnell</string>
+    <string name="qs_tile_animation_interpolator_linearInterpolator">Gleichmäßig</string>
+    <string name="qs_tile_animation_interpolator_accelerateInterpolator">Beschleunigen</string>
+    <string name="qs_tile_animation_interpolator_decelerateInterpolator">Verlangsamen</string>
+    <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">Beschleunigen &amp; Verlangsamen</string>
+    <string name="qs_tile_animation_interpolator_bounceInterpolator">Hüpfen</string>
+    <string name="qs_tile_animation_interpolator_overshootInterpolator">Überschwingen</string>
+    <string name="qs_tile_animation_interpolator_anticipateInterpolator">Schwung holen</string>
+    <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Schwung holen &amp; Überschwingen</string>
+    <string name="qs_set_animation_style">%1$s</string>
+    <string name="qs_set_animation_duration">%1$s</string>
+    <string name="qs_set_animation_interpolator">%1$s</string>
+
+    <!-- App Exit Toast -->
+    <string name="app_exit_toast">Zum Beenden erneut &quot;Zurück&quot; drücken</string>
 
 </resources>
