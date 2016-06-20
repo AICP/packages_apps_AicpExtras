@@ -102,7 +102,7 @@
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Kleurkiezer</string>
-    <string name="press_color_to_apply">Kies hieronder een kleur</string>
+    <string name="press_color_to_apply">Kies hieronder een kleur:</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Instellen</string>
@@ -474,7 +474,7 @@
     <string name="pa_pie_gravity_left">Links</string>
     <string name="pa_pie_gap_title">Afstand tussen elementen</string>
     <string name="pa_pie_gap_summary">De afstand tussen de PIE elementen aanpassen</string>
-    <string name="pa_pie_angle_title">PIE hoek</string>
+	<string name="pa_pie_angle_title">PIE hoek</string>
     <string name="pa_pie_angle_summary">De hoek van de PIE randen aanpsssen</string>
     <string name="pa_pie_angle_none">Geen (oud)</string>
     <string name="pa_pie_angle_small">Klein</string>
@@ -499,8 +499,8 @@
     <string name="pa_pie_notifications_summary">Inschakelen button voor notificaties</string>
     <string name="pa_pie_settings_panel_title">Snelle instellingen</string>
     <string name="pa_pie_settings_panel_summary">Inschakelen button voor weergave snelle instellingen</string>
-    <string name="pa_pie_screenshot_title">Screenshot</string>
-    <string name="pa_pie_screenshot_summary">Inschakelen button voor screenshot</string>
+    <string name="pa_pie_screenshot_title">Schermafbeelding</string>
+    <string name="pa_pie_screenshot_summary">Inschakelen button voor schermafbeelding</string>
     <string name="pa_pie_color_title">Instellen PIE kleuren</string>
     <string name="pa_pie_color_style_title">PIE kleurstijl</string>
     <string name="pa_pie_background_title">Achtergrondkleur</string>
@@ -859,12 +859,11 @@
     <string name="qs_tile_animation_interpolator_bounceInterpolator">Stuiteren</string>
     <string name="qs_tile_animation_interpolator_overshootInterpolator">Voorbij schieten</string>
     <string name="qs_tile_animation_interpolator_anticipateInterpolator">Anticiperen</string>
-    <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Anticipate overshoot</string>
-    <string name="qs_set_animation_style">animatie %1$s</string>
-    <string name="qs_set_animation_duration">tijdsduur %1$s</string>
+    <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Anticiperen voorbij schieten</string>
+    <string name="qs_set_animation_style">%1$s</string>
+    <string name="qs_set_animation_duration">%1$s</string>
     <string name="qs_set_animation_interpolator">%1$s</string>
 
     <!-- App Exit Toast -->
     <string name="app_exit_toast">Druk nogmaals om af te sluiten</string>
-
 </resources>
