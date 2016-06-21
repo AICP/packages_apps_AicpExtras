@@ -2,6 +2,7 @@ package com.lordclockan.aicpextras;
 
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.os.Bundle;
@@ -47,6 +48,7 @@ public class NotificationsFragment extends Fragment {
         private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
         private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
         private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
+        private static final String LOCKCLOCK_WEATHER = "lock_clock_weather";
 
         private SwitchPreference mBrightnessSlider;
         private SwitchPreference mBlockOnSecureKeyguard;
@@ -56,6 +58,7 @@ public class NotificationsFragment extends Fragment {
         private ListPreference mTileAnimationStyle;
         private ListPreference mTileAnimationDuration;
         private ListPreference mTileAnimationInterpolator;
+        private Preference mWeatherSettings;
         private SeekBarPreferenceCham mHeaderShadow;
 
         private static final int MY_USER_ID = UserHandle.myUserId();
@@ -72,6 +75,9 @@ public class NotificationsFragment extends Fragment {
 
             final ContentResolver resolver = getActivity().getContentResolver();
             final CmLockPatternUtils lockPatternUtils = new CmLockPatternUtils(getActivity());
+
+            // Settings for Notification Drawer Weather
+            mWeatherSettings = (Preference) findPreference(LOCKCLOCK_WEATHER);
 
             // Block QS on secure LockScreen
             mBlockOnSecureKeyguard = (SwitchPreference) findPreference(PREF_BLOCK_ON_SECURE_KEYGUARD);
@@ -148,6 +154,20 @@ public class NotificationsFragment extends Fragment {
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
             mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
 
+        }
+
+        @Override
+        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+            if (preference == mWeatherSettings) {
+                launchWeatherSettings();
+                return true;
+            }
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
+        }
+
+        private void launchWeatherSettings() {
+            Intent intent = new Intent(getActivity(), Weather.class);
+            getActivity().startActivity(intent);
         }
 
         @Override
