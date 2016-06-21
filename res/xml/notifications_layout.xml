@@ -117,6 +117,12 @@
         android:summary="@string/notif_drawer_weather_summary"
         android:defaultValue="true"/>
 
+    <Preference
+        android:key="lock_clock_weather"
+        android:title="@string/weather_settings"
+        android:persistent="false"
+        android:dependency="status_bar_show_weather" />
+
     <ListPreference
         android:key="status_bar_header_font_style"
         android:entries="@array/status_bar_weather_font_style_entries"
