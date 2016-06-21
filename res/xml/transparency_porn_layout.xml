@@ -36,15 +36,6 @@
         android:persistent="false" />
 
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-        android:key="transparent_volume_dialog"
-        android:title="@string/volume_dialog_transparency"
-        android:max="255"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight=""
-        android:persistent="false" />
-
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="transparent_power_menu"
         android:title="@string/power_menu_transparency"
         android:max="100"
@@ -62,5 +53,35 @@
         aicpextras:unitsRight="%"
         android:persistent="false" />
 
-</PreferenceScreen>
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="transparent_volume_dialog"
+        android:title="@string/volume_dialog_transparency"
+        android:max="255"
+        aicpextras:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight=""
+        android:persistent="false" />
 
+    <ListPreference
+        android:key="volume_dialog_stroke"
+        android:title="@string/volume_dialog_stroke_title"
+        android:dialogTitle="@string/volume_dialog_stroke_title"
+        android:entries="@array/volume_dialog_stroke_entries"
+        android:entryValues="@array/volume_dialog_stroke_values"
+        android:defaultValue="1" />
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="volume_dialog_stroke_color"
+        android:title="@string/volume_dialog_stroke_color_title"
+        android:defaultValue="0xffffffff" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="volume_dialog_stroke_thickness"
+        android:title="@string/volume_dialog_stroke_thickness_title"
+        android:max="25"
+        aicpextras:min="1"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="px"
+        android:persistent="false" />
+
+</PreferenceScreen>
