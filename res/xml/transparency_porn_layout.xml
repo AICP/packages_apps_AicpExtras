@@ -18,6 +18,15 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
 
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="qs_transparent_header"
+        android:title="@string/qs_transparent_header"
+        android:max="255"
+        aicpextras:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight=""
+        android:persistent="false" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="qs_transparent_shade"
         android:title="@string/qs_transparent_shade"
         android:max="255"
@@ -26,13 +35,34 @@
         aicpextras:unitsRight=""
         android:persistent="false" />
 
+    <ListPreference
+        android:key="qs_stroke"
+        android:title="@string/qs_stroke_title"
+        android:dialogTitle="@string/qs_stroke_title"
+        android:entries="@array/qs_stroke_entries"
+        android:entryValues="@array/qs_stroke_values"
+        android:defaultValue="1" />
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="qs_stroke_color"
+        android:title="@string/qs_stroke_color_title" />
+
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-        android:key="qs_transparent_header"
-        android:title="@string/qs_transparent_header"
-        android:max="255"
+        android:key="qs_stroke_thickness"
+        android:title="@string/qs_stroke_thickness_title"
+        android:max="25"
+        aicpextras:min="1"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="px"
+        android:persistent="false" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="qs_corner_radius"
+        android:title="@string/qs_corner_radius_title"
+        android:max="50"
         aicpextras:min="0"
         aicpextras:unitsLeft=""
-        aicpextras:unitsRight=""
+        aicpextras:unitsRight="px"
         android:persistent="false" />
 
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
