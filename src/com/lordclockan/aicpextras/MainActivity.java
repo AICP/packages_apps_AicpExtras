@@ -1,5 +1,6 @@
 package com.lordclockan.aicpextras;
 
+import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity
 
 
     private DrawerLayout mDrawer;
+    private ActionBarDrawerToggle toggle;
+    private Toolbar toolbar;
     private int id;
     private long startTime;
     private boolean secondBack=false;
@@ -72,7 +75,7 @@ public class MainActivity extends AppCompatActivity
         }.execute();
     }
 
-		
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +83,7 @@ public class MainActivity extends AppCompatActivity
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
@@ -105,8 +108,7 @@ public class MainActivity extends AppCompatActivity
         });*/
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, mDrawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        toggle = setupDrawerToggle();
         mDrawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -139,6 +141,23 @@ public class MainActivity extends AppCompatActivity
             onBackPressed();
            }
         }
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        toggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        toggle.onConfigurationChanged(newConfig);
+    }
+
+    private ActionBarDrawerToggle setupDrawerToggle() {
+        return new ActionBarDrawerToggle(
+                this, mDrawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
     }
 
     /* @Override
