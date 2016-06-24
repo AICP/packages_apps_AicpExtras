@@ -4,6 +4,7 @@ import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -15,10 +16,10 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import java.lang.System;
 
@@ -30,13 +31,14 @@ public class MainActivity extends AppCompatActivity
     private static final String NAV_ITEM_ID = "navItemId";
     static final String TAG = MainActivity.class.getSimpleName();
 
-
     private DrawerLayout mDrawer;
     private ActionBarDrawerToggle toggle;
     private Toolbar toolbar;
     private int id;
     private long startTime;
     private boolean secondBack=false;
+
+    private View mView;
 
     @Override
     protected void onStart() {
@@ -56,8 +58,9 @@ public class MainActivity extends AppCompatActivity
                     return canGainSu;
                 } catch (Exception e) {
                     Log.e(TAG, "Error: " + e.getMessage(), e);
-                    Toast.makeText(MainActivity.this, R.string.cannot_get_su_start,
-                    Toast.LENGTH_LONG).show();
+                    Snackbar.make(mView, R.string.cannot_get_su_start,
+                            Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
                     return true; // I want to start the app regardles of having root or not
                 }
             }
@@ -65,10 +68,10 @@ public class MainActivity extends AppCompatActivity
             @Override
             protected void onPostExecute(Boolean result) {
                 setProgressBarIndeterminateVisibility(false);
-
                 if (!result) {
-                    Toast.makeText(MainActivity.this, R.string.cannot_get_su,
-                    Toast.LENGTH_LONG).show();
+                    Snackbar.make(mView, R.string.cannot_get_su,
+                            Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
                     finish();
                 }
             }
@@ -85,6 +88,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        mView = (View) findViewById(R.id.drawer_layout);
 
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
         tx.replace(R.id.content_main, new AboutFragment());
@@ -125,13 +130,14 @@ public class MainActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             /*
-            **If back was pressed the first time,only show toast
+            **If back was pressed the first time,only show snackbar
             **else exit the app provided the user presses back
             **the second time within 2.5 seconds of the first
             */
             if(!secondBack) {
-            Toast.makeText(MainActivity.this, R.string.app_exit_toast,
-            Toast.LENGTH_SHORT).show();
+            Snackbar.make(mView, R.string.app_exit_toast,
+                    Snackbar.LENGTH_SHORT)
+                .setAction("Action", null).show();
             secondBack=!secondBack;
             startTime = System.currentTimeMillis();
             } else if( System.currentTimeMillis()-startTime < 2500)
