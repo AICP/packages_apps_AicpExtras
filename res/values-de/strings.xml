@@ -21,7 +21,7 @@
     <string name="logo">logo</string>
     <string name="display_animations_title">Display und Animationen</string>
     <string name="multishit_title">Zusätze</string>
-    <string name="transparency_porn_title">UI-Transparenz</string>
+    <string name="transparency_porn_title">UI-Anpassungen</string>
     <string name="notificaitons_title">Benachrichtigungsleiste</string>
     <string name="statubar_title">Statusleiste</string>
     <string name="lockscreen_title">Sperrbildschirm</string>
@@ -328,6 +328,7 @@
     <string name="reset_lockscreen_weather">Ok</string>
     <string name="reset_values_message">Werte zurücksetzen?</string>
     <string name="weather_reset_title">Wetterwerte zurücksetzen</string>
+    <string name="weather_settings">Einstellungen für Wetteranzeige</string>
 
     <!-- Lock Clock Fonts -->
     <string name="lock_clock_font_title">cLock Schriftart</string>
@@ -867,6 +868,30 @@
     <string name="qs_set_animation_interpolator">%1$s</string>
 
     <!-- App Exit Toast -->
-    <string name="app_exit_toast">Zum Beenden erneut &quot;Zurück&quot; drücken</string>
+    <string name="app_exit_toast">Zum Beenden erneut \"Zurück\" drücken</string>
+
+    <!-- Volume dialog stroke settings -->
+    <string name="volume_dialog_stroke_title">Rand der Lautstärkenanzeige</string>
+    <string name="volume_dialog_stroke_disabled">Deaktiviert</string>
+    <string name="volume_dialog_stroke_accent">Akzentfarbe</string>
+    <string name="volume_dialog_stroke_custom">Eigene Farbe</string>
+    <string name="volume_dialog_stroke_color_title">Farbe des Randes der Lautstärkenanzeige</string>
+    <string name="volume_dialog_stroke_thickness_title">Dicke des Randes der Lautstärkenanzeige</string>
+    <string name="volume_dialog_corner_radius_title">Radius der Ecken des Lautstärkenanzeige</string>
+
+    <!-- QS stroke settings -->
+    <string name="qs_stroke_title">Randschatten der Schnelleinstellungen</string>
+    <string name="qs_stroke_disabled">Deaktiviert</string>
+    <string name="qs_stroke_accent">Akzentfarbe</string>
+    <string name="qs_stroke_custom">Eigene Farbe</string>
+    <string name="qs_stroke_color_title">Farbe des Randes der Schnelleinstellungen</string>
+    <string name="qs_stroke_thickness_title">Dicke des Randes der Schnelleinstellungen</string>
+    <string name="qs_corner_radius_title">Radius der Ecken der Schnelleinstellungen</string>
+
+    <!-- MediaScanner behavior on boot -->
+    <string name="media_scanner_on_boot_title">Verhalten des MediaScanners beim Start</string>
+    <string name="media_scanner_on_boot_enabled">Nach Mediendateien suchen</string>
+    <string name="media_scanner_on_boot_ask">Nachfragen (Benachrichtigung)</string>
+    <string name="media_scanner_on_boot_disabled">Nicht nach Mediendateien suchen</string>
 
 </resources>
