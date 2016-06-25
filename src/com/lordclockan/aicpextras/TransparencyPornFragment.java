@@ -53,6 +53,8 @@ public class TransparencyPornFragment extends Fragment {
         private static final String PREF_QS_STROKE_COLOR = "qs_stroke_color";
         private static final String PREF_QS_STROKE_THICKNESS = "qs_stroke_thickness";
         private static final String PREF_QS_CORNER_RADIUS = "qs_corner_radius";
+        private static final String PREF_QS_STROKE_DASH_WIDTH = "qs_dash_width";
+        private static final String PREF_QS_STROKE_DASH_GAP = "qs_dash_gap";
 
         private SeekBarPreferenceCham mQSShadeAlpha;
         private SeekBarPreferenceCham mQSHeaderAlpha;
@@ -69,6 +71,8 @@ public class TransparencyPornFragment extends Fragment {
         private ColorPickerPreference mQSStrokeColor;
         private SeekBarPreferenceCham mQSStrokeThickness;
         private SeekBarPreferenceCham mQSCornerRadius;
+        private SeekBarPreferenceCham mQSDashWidth;
+        private SeekBarPreferenceCham mQSDashGap;
 
         static final int DEFAULT_VOLUME_DIALOG_STROKE_COLOR = 0xFF80CBC4;
         static final int DEFAULT_QS_STROKE_COLOR = 0xFF80CBC4;
@@ -215,6 +219,26 @@ public class TransparencyPornFragment extends Fragment {
             mQSCornerRadius.setValue(qSCornerRadius / 1);
             mQSCornerRadius.setOnPreferenceChangeListener(this);
 
+            // QS dash width
+            mQSDashWidth =
+                    (SeekBarPreferenceCham) findPreference(PREF_QS_STROKE_DASH_WIDTH);
+            int qSDialogDashWidth = Settings.System.getInt(resolver,
+                    Settings.System.QS_STROKE_DASH_WIDTH, 0);
+            if (qSDialogDashWidth != 0) {
+                mQSDashWidth.setValue(qSDialogDashWidth / 1);
+            } else {
+                mQSDashWidth.setValue(0);
+            }
+            mQSDashWidth.setOnPreferenceChangeListener(this);
+
+            // QS dash gap
+            mQSDashGap =
+                    (SeekBarPreferenceCham) findPreference(PREF_QS_STROKE_DASH_GAP);
+            int qSDialogDashGap = Settings.System.getInt(resolver,
+                    Settings.System.QS_STROKE_DASH_GAP, 10);
+            mQSDashGap.setValue(qSDialogDashGap / 1);
+            mQSDashGap.setOnPreferenceChangeListener(this);
+
             VolumeDialogSettingsDisabler(volumeDialogStroke);
             QSSettingsDisabler(qSStroke);
 
@@ -310,6 +334,16 @@ public class TransparencyPornFragment extends Fragment {
                 Settings.System.putInt(resolver,
                         Settings.System.QS_CORNER_RADIUS, val * 1);
                 return true;
+            } else if (preference == mQSDashWidth) {
+                int val = (Integer) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.QS_STROKE_DASH_WIDTH, val * 1);
+                return true;
+            } else if (preference == mQSDashGap) {
+                int val = (Integer) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.QS_STROKE_DASH_GAP, val * 1);
+                return true;
             }
             return false;
         }
@@ -337,12 +371,18 @@ public class TransparencyPornFragment extends Fragment {
             if (qSStroke == 0) {
                 mQSStrokeColor.setEnabled(false);
                 mQSStrokeThickness.setEnabled(false);
+                mQSDashWidth.setEnabled(false);
+                mQSDashGap.setEnabled(false);
             } else if (qSStroke == 1) {
                 mQSStrokeColor.setEnabled(false);
                 mQSStrokeThickness.setEnabled(true);
+                mQSDashWidth.setEnabled(true);
+                mQSDashGap.setEnabled(true);
             } else {
                 mQSStrokeColor.setEnabled(true);
                 mQSStrokeThickness.setEnabled(true);
+                mQSDashWidth.setEnabled(true);
+                mQSDashGap.setEnabled(true);
             }
         }
 

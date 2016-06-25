@@ -66,6 +66,24 @@
         android:persistent="false" />
 
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="qs_dash_width"
+        android:title="@string/qs_dash_width_title"
+        android:max="50"
+        aicpextras:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="px"
+        android:persistent="false" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="qs_dash_gap"
+        android:title="@string/qs_dash_gap_title"
+        android:max="50"
+        aicpextras:min="1"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="px"
+        android:persistent="false" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="transparent_power_menu"
         android:title="@string/power_menu_transparency"
         android:max="100"
