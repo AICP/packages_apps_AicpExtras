@@ -3,6 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan.aicpextras">
 
+    <Preference
+        android:key="three_finger_gesture"
+        android:title="@string/three_finger_gesture_title" />
+
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="disable_fc_notifications"
         android:title="@string/disable_fc_notifications_title"
@@ -20,12 +24,6 @@
         android:key="screenshot_sound"
         android:title="@string/screenshot_sound_title"
         android:summary="@string/screenshot_sound_summary"
-        android:defaultValue="true" />
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="three_finger_gesture"
-        android:title="@string/three_finger_gesture"
-        android:summary="@string/three_finger_gesture_summary"
         android:defaultValue="true" />
 
     <ListPreference
