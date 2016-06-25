@@ -47,6 +47,8 @@ public class TransparencyPornFragment extends Fragment {
         private static final String PREF_VOLUME_DIALOG_STROKE_COLOR = "volume_dialog_stroke_color";
         private static final String PREF_VOLUME_DIALOG_STROKE_THICKNESS = "volume_dialog_stroke_thickness";
         private static final String PREF_VOLUME_DIALOG_CORNER_RADIUS = "volume_dialog_corner_radius";
+        private static final String PREF_VOLUME_DIALOG_STROKE_DASH_WIDTH = "volume_dialog_dash_width";
+        private static final String PREF_VOLUME_DIALOG_STROKE_DASH_GAP = "volume_dialog_dash_gap";
         private static final String PREF_QS_STROKE = "qs_stroke";
         private static final String PREF_QS_STROKE_COLOR = "qs_stroke_color";
         private static final String PREF_QS_STROKE_THICKNESS = "qs_stroke_thickness";
@@ -61,6 +63,8 @@ public class TransparencyPornFragment extends Fragment {
         private ColorPickerPreference mVolumeDialogStrokeColor;
         private SeekBarPreferenceCham mVolumeDialogStrokeThickness;
         private SeekBarPreferenceCham mVolumeDialogCornerRadius;
+        private SeekBarPreferenceCham mVolumeDialogDashWidth;
+        private SeekBarPreferenceCham mVolumeDialogDashGap;
         private ListPreference mQSStroke;
         private ColorPickerPreference mQSStrokeColor;
         private SeekBarPreferenceCham mQSStrokeThickness;
@@ -154,6 +158,26 @@ public class TransparencyPornFragment extends Fragment {
                     Settings.System.VOLUME_DIALOG_CORNER_RADIUS, 10);
             mVolumeDialogCornerRadius.setValue(volumeDialogCornerRadius / 1);
             mVolumeDialogCornerRadius.setOnPreferenceChangeListener(this);
+
+            // Volume dialog dash width
+            mVolumeDialogDashWidth =
+                    (SeekBarPreferenceCham) findPreference(PREF_VOLUME_DIALOG_STROKE_DASH_WIDTH);
+            int volumeDialogDashWidth = Settings.System.getInt(resolver,
+                    Settings.System.VOLUME_DIALOG_STROKE_DASH_WIDTH, 0);
+            if (volumeDialogDashWidth != 0) {
+                mVolumeDialogDashWidth.setValue(volumeDialogDashWidth / 1);
+            } else {
+                mVolumeDialogDashWidth.setValue(0);
+            }
+            mVolumeDialogDashWidth.setOnPreferenceChangeListener(this);
+
+            // Volume dialog dash gap
+            mVolumeDialogDashGap =
+                    (SeekBarPreferenceCham) findPreference(PREF_VOLUME_DIALOG_STROKE_DASH_GAP);
+            int volumeDialogDashGap = Settings.System.getInt(resolver,
+                    Settings.System.VOLUME_DIALOG_STROKE_DASH_GAP, 10);
+            mVolumeDialogDashGap.setValue(volumeDialogDashGap / 1);
+            mVolumeDialogDashGap.setOnPreferenceChangeListener(this);
 
             // QS stroke
             mQSStroke =
@@ -250,6 +274,16 @@ public class TransparencyPornFragment extends Fragment {
                 Settings.System.putInt(resolver,
                         Settings.System.VOLUME_DIALOG_CORNER_RADIUS, val * 1);
                 return true;
+            } else if (preference == mVolumeDialogDashWidth) {
+                int val = (Integer) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.VOLUME_DIALOG_STROKE_DASH_WIDTH, val * 1);
+                return true;
+            } else if (preference == mVolumeDialogDashGap) {
+                int val = (Integer) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.VOLUME_DIALOG_STROKE_DASH_GAP, val * 1);
+                return true;
             } else if (preference == mQSStroke) {
                 int qSStroke = Integer.parseInt((String) newValue);
                 int index = mQSStroke.findIndexOfValue((String) newValue);
@@ -284,12 +318,18 @@ public class TransparencyPornFragment extends Fragment {
             if (volumeDialogStroke == 0) {
                 mVolumeDialogStrokeColor.setEnabled(false);
                 mVolumeDialogStrokeThickness.setEnabled(false);
+                mVolumeDialogDashWidth.setEnabled(false);
+                mVolumeDialogDashGap.setEnabled(false);
             } else if (volumeDialogStroke == 1) {
                 mVolumeDialogStrokeColor.setEnabled(false);
                 mVolumeDialogStrokeThickness.setEnabled(true);
+                mVolumeDialogDashWidth.setEnabled(true);
+                mVolumeDialogDashGap.setEnabled(true);
             } else {
                 mVolumeDialogStrokeColor.setEnabled(true);
                 mVolumeDialogStrokeThickness.setEnabled(true);
+                mVolumeDialogDashWidth.setEnabled(true);
+                mVolumeDialogDashGap.setEnabled(true);
             }
         }
 
