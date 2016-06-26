@@ -24,6 +24,8 @@ import org.cyanogenmod.internal.util.CmLockPatternUtils;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 import com.lordclockan.R;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 public class NotificationsFragment extends Fragment {
 
     @Override
@@ -49,6 +51,9 @@ public class NotificationsFragment extends Fragment {
         private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
         private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
         private static final String LOCKCLOCK_WEATHER = "lock_clock_weather";
+        private static final String PREF_QS_PANEL_LOGO = "qs_panel_logo";
+        private static final String PREF_QS_PANEL_LOGO_COLOR = "qs_panel_logo_color";
+        private static final String PREF_QS_PANEL_LOGO_ALPHA = "qs_panel_logo_alpha";
 
         private SwitchPreference mBrightnessSlider;
         private SwitchPreference mBlockOnSecureKeyguard;
@@ -60,6 +65,11 @@ public class NotificationsFragment extends Fragment {
         private ListPreference mTileAnimationInterpolator;
         private Preference mWeatherSettings;
         private SeekBarPreferenceCham mHeaderShadow;
+        private ListPreference mQSPanelLogo;
+        private ColorPickerPreference mQSPanelLogoColor;
+        private SeekBarPreferenceCham mQSPanelLogoAlpha;
+
+        static final int DEFAULT_QS_PANEL_LOGO_COLOR = 0xFF80CBC4;
 
         private static final int MY_USER_ID = UserHandle.myUserId();
 
@@ -154,6 +164,34 @@ public class NotificationsFragment extends Fragment {
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
             mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
 
+            // QS panel AICP logo
+            mQSPanelLogo =
+                    (ListPreference) findPreference(PREF_QS_PANEL_LOGO);
+            int qSPanelLogo = Settings.System.getIntForUser(resolver,
+                            Settings.System.QS_PANEL_LOGO, 0,
+                            UserHandle.USER_CURRENT);
+            mQSPanelLogo.setValue(String.valueOf(qSPanelLogo));
+            mQSPanelLogo.setSummary(mQSPanelLogo.getEntry());
+            mQSPanelLogo.setOnPreferenceChangeListener(this);
+
+            // QS panel AICP logo color
+            mQSPanelLogoColor =
+                    (ColorPickerPreference) findPreference(PREF_QS_PANEL_LOGO_COLOR);
+            mQSPanelLogoColor.setOnPreferenceChangeListener(this);
+            int qSPanelLogoColor = Settings.System.getInt(resolver,
+                    Settings.System.QS_PANEL_LOGO_COLOR, DEFAULT_QS_PANEL_LOGO_COLOR);
+            String qSHexLogoColor = String.format("#%08x", (0xFF80CBC4 & qSPanelLogoColor));
+            mQSPanelLogoColor.setSummary(qSHexLogoColor);
+            mQSPanelLogoColor.setNewPreviewColor(qSPanelLogoColor);
+
+            // QS panel AICP logo alpha
+            mQSPanelLogoAlpha =
+                    (SeekBarPreferenceCham) findPreference(PREF_QS_PANEL_LOGO_ALPHA);
+            int qSPanelLogoAlpha = Settings.System.getInt(resolver,
+                    Settings.System.QS_PANEL_LOGO_ALPHA, 51);
+            mQSPanelLogoAlpha.setValue(qSPanelLogoAlpha / 1);
+            mQSPanelLogoAlpha.setOnPreferenceChangeListener(this);
+
         }
 
         @Override
@@ -231,6 +269,27 @@ public class NotificationsFragment extends Fragment {
                         tileAnimationInterpolator, UserHandle.USER_CURRENT);
                 updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
                 return true;
+            } else if (preference == mQSPanelLogo) {
+                int qSPanelLogo = Integer.parseInt((String) newValue);
+                int index = mQSPanelLogo.findIndexOfValue((String) newValue);
+                Settings.System.putIntForUser(resolver, Settings.System.
+                        QS_PANEL_LOGO, qSPanelLogo, UserHandle.USER_CURRENT);
+                mQSPanelLogo.setSummary(mQSPanelLogo.getEntries()[index]);
+                QSPanelLogoSettingsDisabler(qSPanelLogo);
+                return true;
+            } else if (preference == mQSPanelLogoColor) {
+                String hex = ColorPickerPreference.convertToARGB(
+                        Integer.valueOf(String.valueOf(newValue)));
+                preference.setSummary(hex);
+                int intHex = ColorPickerPreference.convertToColorInt(hex);
+                Settings.System.putInt(resolver,
+                        Settings.System.QS_PANEL_LOGO_COLOR, intHex);
+                return true;
+            } else if (preference == mQSPanelLogoAlpha) {
+                int val = (Integer) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.QS_PANEL_LOGO_ALPHA, val * 1);
+                return true;
             }
             return false;
         }
@@ -307,6 +366,19 @@ public class NotificationsFragment extends Fragment {
                 return Math.max(1, val);
             } catch (Exception e) {
                 return 3;
+            }
+        }
+
+        private void QSPanelLogoSettingsDisabler(int qSPanelLogo) {
+            if (qSPanelLogo == 0) {
+                mQSPanelLogoColor.setEnabled(false);
+                mQSPanelLogoAlpha.setEnabled(false);
+            } else if (qSPanelLogo == 1) {
+                mQSPanelLogoColor.setEnabled(false);
+                mQSPanelLogoAlpha.setEnabled(true);
+            } else {
+                mQSPanelLogoColor.setEnabled(true);
+                mQSPanelLogoAlpha.setEnabled(true);
             }
         }
     }
