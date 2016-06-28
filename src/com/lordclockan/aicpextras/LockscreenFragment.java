@@ -54,6 +54,8 @@ public class LockscreenFragment extends Fragment {
         private static final String LOCKSCREEN_CLOCK_COLOR = "lockscreen_clock_color";
         private static final String LOCKSCREEN_CLOCK_DATE_COLOR = "lockscreen_clock_date_color";
         private static final String LOCKSCREEN_COLORS_RESET = "lockscreen_colors_reset";
+        private static final String PREF_LOCKSCREEN_CLOCK_FONT_SIZE = "lockscreen_clock_font_size";
+        private static final String PREF_LOCKSCREEN_DATE_FONT_SIZE = "lockscreen_date_font_size";
 
         private SeekBarPreferenceCham mBlurRadius;
         private Preference mLockscreenWeather;
@@ -65,6 +67,8 @@ public class LockscreenFragment extends Fragment {
         private ColorPickerPreference mLockscreenClockColorPicker;
         private ColorPickerPreference mLockscreenClockDateColorPicker;
         private Preference mLockscreenColorsReset;
+        private SeekBarPreferenceCham mLockClockFontSize;
+        private SeekBarPreferenceCham mLockDateFontSize;
 
         static final int DEFAULT = 0xffffffff;
 
@@ -132,6 +136,22 @@ public class LockscreenFragment extends Fragment {
             mLockscreenClockDateColorPicker.setSummary(hexColor);
             mLockscreenClockDateColorPicker.setNewPreviewColor(intColor);
 
+            // Lockscreen clock font size
+            mLockClockFontSize =
+                    (SeekBarPreferenceCham) findPreference(PREF_LOCKSCREEN_CLOCK_FONT_SIZE);
+            int lockClockFontSize = Settings.System.getInt(resolver,
+                    Settings.System.LOCKSCREEN_CLOCK_FONT_SIZE, 88);
+            mLockClockFontSize.setValue(lockClockFontSize / 1);
+            mLockClockFontSize.setOnPreferenceChangeListener(this);
+
+            // Lockscreen date font size
+            mLockDateFontSize =
+                    (SeekBarPreferenceCham) findPreference(PREF_LOCKSCREEN_DATE_FONT_SIZE);
+            int lockDateFontSize = Settings.System.getInt(resolver,
+                    Settings.System.LOCKSCREEN_DATE_FONT_SIZE, 14);
+            mLockDateFontSize.setValue(lockDateFontSize / 1);
+            mLockDateFontSize.setOnPreferenceChangeListener(this);
+
             mLockscreenColorsReset = (Preference) findPreference(LOCKSCREEN_COLORS_RESET);
         }
 
@@ -180,6 +200,16 @@ public class LockscreenFragment extends Fragment {
                 int intHex = ColorPickerPreference.convertToColorInt(hex);
                 Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                         Settings.System.LOCKSCREEN_CLOCK_DATE_COLOR, intHex);
+                return true;
+            } else if (preference == mLockClockFontSize) {
+                int val = (Integer) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.LOCKSCREEN_CLOCK_FONT_SIZE, val * 1);
+                return true;
+            } else if (preference == mLockDateFontSize) {
+                int val = (Integer) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.LOCKSCREEN_DATE_FONT_SIZE, val * 1);
                 return true;
             }
             return false;

@@ -44,6 +44,28 @@
         android:dependency="hide_lockscreen_clock"
         android:persistent="false" />
 
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="lockscreen_clock_font_size"
+        android:title="@string/lockscreen_clock_font_size_title"
+        android:max="150"
+        aicpextras:min="1"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="sp"
+        aicpextras:defaultVal="88"
+        android:persistent="false"
+        android:dependency="hide_lockscreen_clock" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="lockscreen_date_font_size"
+        android:title="@string/lockscreen_date_font_size_title"
+        android:max="25"
+        aicpextras:min="1"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="sp"
+        aicpextras:defaultVal="14"
+        android:persistent="false"
+        android:dependency="hide_lockscreen_date" />
+
     <!-- Hide Lockscreen clock, date & alarm -->
     <PreferenceCategory
         android:key="hide_lockscreen_items_category"
