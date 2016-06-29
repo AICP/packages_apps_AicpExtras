@@ -47,6 +47,7 @@ public class NotificationsFragment extends Fragment {
         private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
         private static final String PREF_STATUS_BAR_HEADER_FONT_STYLE = "status_bar_header_font_style";
         private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
+        private static final String CUSTOM_HEADER_TEXT_SHADOW = "status_bar_custom_header_text_shadow";
         private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
         private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
         private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
@@ -64,6 +65,7 @@ public class NotificationsFragment extends Fragment {
         private ListPreference mTileAnimationDuration;
         private ListPreference mTileAnimationInterpolator;
         private Preference mWeatherSettings;
+        private SeekBarPreferenceCham mTextShadow;
         private SeekBarPreferenceCham mHeaderShadow;
         private ListPreference mQSPanelLogo;
         private ColorPickerPreference mQSPanelLogoColor;
@@ -115,6 +117,14 @@ public class NotificationsFragment extends Fragment {
                     Settings.System.STATUS_BAR_HEADER_FONT_STYLE, 0, UserHandle.USER_CURRENT)));
             mStatusBarHeaderFontStyle.setSummary(mStatusBarHeaderFontStyle.getEntry());
 
+			// Status Bar header text shadow
+            mTextShadow = (SeekBarPreferenceCham) findPreference(CUSTOM_HEADER_TEXT_SHADOW);
+            final float textShadow = Settings.System.getFloat(resolver,
+                    Settings.System.STATUS_BAR_CUSTOM_HEADER_TEXT_SHADOW, 0);
+            mTextShadow.setValue((int)(textShadow));
+            mTextShadow.setOnPreferenceChangeListener(this);
+
+			// Status Bar header shadow on custom header images
             mHeaderShadow = (SeekBarPreferenceCham) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
             final int headerShadow = Settings.System.getInt(resolver,
                     Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, 0);
@@ -244,6 +254,12 @@ public class NotificationsFragment extends Fragment {
                         numRows, UserHandle.USER_CURRENT);
                 updateNumRowsSummary(numRows);
                 return true;
+            } else if (preference == mTextShadow) {
+                float textShadow = (Integer) newValue;
+                float realHeaderValue = (float) ((double) textShadow);
+                Settings.System.putFloat(resolver,
+                      Settings.System.STATUS_BAR_CUSTOM_HEADER_TEXT_SHADOW, realHeaderValue);
+                 return true;
             } else if (preference == mHeaderShadow) {
                Integer headerShadow = (Integer) newValue;
                int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
