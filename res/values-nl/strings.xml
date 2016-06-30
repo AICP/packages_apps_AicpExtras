@@ -9,7 +9,7 @@
     <string name="second_layout_title">Tweede layout</string>
     <string name="third_layout_title">Derde layout</string>
     <string name="aicp_extras_title">AICP Extras</string>
-    <string name="pun_title">One ROM to rule them all</string>
+    <string name="pun_title">One ROM to rule them all!</string>
     <string name="various_shit_title">Overige instellingen</string>
     <string name="about_title">Over</string>
     <string name="other_title">Overig</string>
@@ -21,7 +21,7 @@
     <string name="logo">logo</string>
     <string name="display_animations_title">Display en animaties</string>
     <string name="multishit_title">Diverse shit</string>
-    <string name="transparency_porn_title">Transparantie zone</string>
+    <string name="transparency_porn_title">Paneelporno</string>
     <string name="notificaitons_title">Notificatie zone</string>
     <string name="statubar_title">Statusbalk</string>
     <string name="lockscreen_title">Vergrendelscherm</string>
@@ -102,7 +102,7 @@
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Kleurkiezer</string>
-    <string name="press_color_to_apply">Kies hieronder een kleur:</string>
+    <string name="press_color_to_apply">Kies hieronder een kleur</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Instellen</string>
@@ -326,6 +326,7 @@
     <string name="reset_lockscreen_weather">OK</string>
     <string name="reset_values_message">Waardes terugzetten?</string>
     <string name="weather_reset_title">Weer-waardes terugzetten</string>
+    <string name="weather_settings">Weer-instellingen</string>
 
     <!-- Lock Clock Fonts -->
     <string name="lock_clock_font_title">Lock Clock lettertype</string>
@@ -370,7 +371,7 @@
     <string name="powermenu_lockscreen_title">Aan-/Uit-menu op vergrendelscherm</string>
     <string name="powermenu_lockscreen_summary">Toon Aan-/Uit-menu op het vergrendelscherm</string>
 
-    <!-- ROm Stats -->
+    <!-- ROM Stats -->
     <!-- Main -->
     <string name="stats_title">Statistieken</string>
 
@@ -428,13 +429,13 @@
     <string name="trigger_bottom_title">Hoogte aanraakgebied</string>
     <string name="trigger_bottom_summary">Aanpassen van de hoogte van het aanraakgebied</string>
 
-   <!-- Lock screen wallpaper -->
-   <string name="lockscreen_category_title">Achtergrond</string>
-   <string name="lockscreen_wallpaper_title">Achtergrond vergrendelscherm</string>
-   <string name="lockscreen_wallpaper_set_title">Nieuwe achtergrond instellen</string>
-   <string name="lockscreen_wallpaper_set_summary">Herstart is vereist</string>
-   <string name="lockscreen_wallpaper_clear_title">Terug naar standaardinstellingen</string>
-   <string name="reset_lockscreen_wallpaper">Achtergrond vergrendelscherm teruggezet naar standaard</string>
+    <!-- Lock screen wallpaper -->
+    <string name="lockscreen_category_title">Achtergrond</string>
+    <string name="lockscreen_wallpaper_title">Achtergrond vergrendelscherm</string>
+    <string name="lockscreen_wallpaper_set_title">Nieuwe achtergrond instellen</string>
+    <string name="lockscreen_wallpaper_set_summary">Herstart is vereist</string>
+    <string name="lockscreen_wallpaper_clear_title">Terug naar standaardinstellingen</string>
+    <string name="reset_lockscreen_wallpaper">Achtergrond vergrendelscherm teruggezet naar standaard</string>
 
     <!-- OmniSwitch -->
     <string name="omniswitch_category_title">OmniSwitch</string>
@@ -474,7 +475,7 @@
     <string name="pa_pie_gravity_left">Links</string>
     <string name="pa_pie_gap_title">Afstand tussen elementen</string>
     <string name="pa_pie_gap_summary">De afstand tussen de PIE elementen aanpassen</string>
-	<string name="pa_pie_angle_title">PIE hoek</string>
+    <string name="pa_pie_angle_title">PIE hoek</string>
     <string name="pa_pie_angle_summary">De hoek van de PIE randen aanpsssen</string>
     <string name="pa_pie_angle_none">Geen (oud)</string>
     <string name="pa_pie_angle_small">Klein</string>
@@ -814,8 +815,14 @@
     <string name="yes">JA</string>
 
     <!-- Header image shadow -->
-    <string name="status_bar_custom_header_shadow_title">Achtergrond schaduw</string>
+    <string name="status_bar_custom_header_shadow_title">Achtergrondschaduw</string>
     <string name="status_bar_custom_header_shadow_summary">Voor een betere zichtbaarheid bij heldere achtergrondbeelden</string>
+    <string name="unit_percent">\u0025</string>
+
+	    <!-- Header text shadow and color -->
+    <string name="status_bar_custom_header_text_shadow_title">Headertekst schaduw</string>
+    <string name="status_bar_custom_header_text_shadow_summary">Voor een betere zichtbaarheid bij thematische headers</string>
+    <string name="status_bar_custom_header_text_shadow_color_title">Headertekst schaduwkleur</string>
     <string name="unit_percent">\u0025</string>
 
     <!-- AdAway -->
@@ -866,4 +873,45 @@
 
     <!-- App Exit Toast -->
     <string name="app_exit_toast">Druk nogmaals om af te sluiten</string>
+
+    <!-- Volume dialog stroke settings -->
+    <string name="volume_dialog_stroke_title">Omlijning dialoogvenster volume</string>
+    <string name="volume_dialog_stroke_disabled">Uitgeschakeld</string>
+    <string name="volume_dialog_stroke_accent">Accent kleur</string>
+    <string name="volume_dialog_stroke_custom">Aangepaste kleur</string>
+    <string name="volume_dialog_stroke_color_title">Lijnkleur dialoogvenster volume</string>
+    <string name="volume_dialog_stroke_thickness_title">Lijndikte dialoogvenster volume</string>
+    <string name="volume_dialog_corner_radius_title">Hoekradius dialoogvenster volume</string>
+    <string name="volume_dialog_dash_width_title">Breedte stippellijn dialoogvenster volume</string>
+    <string name="volume_dialog_dash_gap_title">Tussenruimte stippellijn dialoogvenster volume</string>
+
+    <!-- QS stroke settings -->
+    <string name="qs_stroke_title">Schaduwlijn Snelle instellingen</string>
+    <string name="qs_stroke_disabled">Uitgeschakeld</string>
+    <string name="qs_stroke_accent">Accent kleur</string>
+    <string name="qs_stroke_custom">Aangepaste kleur</string>
+    <string name="qs_stroke_color_title">Kleur schaduwlijn Snelle instellingen</string>
+    <string name="qs_stroke_thickness_title">Lijndikte schaduwlijn Snelle instellingen</string>
+    <string name="qs_corner_radius_title">Hoekradius schaduwlijn Snelle instellingen</string>
+    <string name="qs_dash_width_title">Breedte stippellijn Snelle instellingen</string>
+    <string name="qs_dash_gap_title">Tussenruimte stippellijn Snelle instellingen</string>
+
+    <!-- MediaScanner behavior on boot -->
+    <string name="media_scanner_on_boot_title">Gedrag MediaScanner bij opstarten</string>
+    <string name="media_scanner_on_boot_enabled">Scan media</string>
+    <string name="media_scanner_on_boot_ask">Vragen om te scannen (notificatie)</string>
+    <string name="media_scanner_on_boot_disabled">Media niet scannen</string>
+
+    <!-- QS stroke settings -->
+    <string name="qs_panel_logo_category">Snelle instellingen logo</string>
+    <string name="qs_panel_logo_title">Snelle instellingen AICP logo</string>
+    <string name="qs_panel_logo_disabled">Uitgeschakeld</string>
+    <string name="qs_panel_logo_accent">Accentkleur</string>
+    <string name="qs_panel_logo_custom">Aangepaste kleur</string>
+    <string name="qs_panel_logo_color_title">Snelle instellingen logo kleur</string>
+    <string name="qs_panel_logo_alpha_title">Snelle instellingen logo transparantie</string>
+
+    <!-- Lockscreen clock and date font size -->
+    <string name="lockscreen_clock_font_size_title">Lock Clock lettergrootte</string>
+    <string name="lockscreen_date_font_size_title">Lock Date lettergrootte</string>
 </resources>
