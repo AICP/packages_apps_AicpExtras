@@ -23,6 +23,18 @@
         android:defaultValue="true" />
 
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="screenshot_crop_and_share"
+        android:title="@string/screenshot_crop_and_share_title"
+        android:summary="@string/screenshot_crop_and_share_summary"
+        android:defaultValue="false" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="screenshot_crop_behavior"
+        android:title="@string/screenshot_crop_behavior_title"
+        android:summary="@string/screenshot_crop_behavior_summary"
+        android:defaultValue="false" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="three_finger_gesture"
         android:title="@string/three_finger_gesture"
         android:summary="@string/three_finger_gesture_summary"
