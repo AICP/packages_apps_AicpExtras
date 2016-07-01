@@ -21,6 +21,19 @@
         android:title="@string/screenshot_sound_title"
         android:summary="@string/screenshot_sound_summary"
         android:defaultValue="true" />
+        
+
+     <com.dirtyunicorns.dutweaks.preference.SystemSettingSwitchPreference
+            android:key="screenshot_crop_and_share"
+            android:title="@string/screenshot_crop_and_share_title"
+            android:summary="@string/screenshot_crop_and_share_summary"
+            android:defaultValue="false" />
+
+     <com.dirtyunicorns.dutweaks.preference.SystemSettingSwitchPreference
+            android:key="screenshot_crop_behavior"
+            android:title="@string/screenshot_crop_behavior_title"
+            android:summary="@string/screenshot_crop_behavior_summary"
+            android:defaultValue="false" />
 
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="three_finger_gesture"
