@@ -21,7 +21,7 @@
     <string name="logo">logo</string>
     <string name="display_animations_title">Display und Animationen</string>
     <string name="multishit_title">Zusätze</string>
-    <string name="transparency_porn_title">UI-Anpassungen</string>
+    <string name="transparency_porn_title">UI-Transparenz, -Ränder &amp; -Schatten</string>
     <string name="notificaitons_title">Benachrichtigungsleiste</string>
     <string name="statubar_title">Statusleiste</string>
     <string name="lockscreen_title">Sperrbildschirm</string>
@@ -488,7 +488,7 @@
     <string name="pa_pie_angle_big">Normal (Standard)</string>
     <string name="pa_pie_angle_huge">Groß</string>
     <string name="pa_pie_angle_super">Riesig</string>
-    <string name="pa_pie_mode_title">PIE Stil</string>
+    <string name="pa_pie_mode_title">PIE-Stil</string>
     <string name="pa_pie_mode_summary">Verwalten, wie Animationen und Statuszusätze gehandhabt werden</string>
     <string name="pa_pie_mode_bare">Knapp</string>
     <string name="pa_pie_mode_quick">Schnell</string>
@@ -821,6 +821,12 @@
     <string name="status_bar_custom_header_shadow_summary">Für eine bessere Sichtbarkeit bei hellen Hintergrundbildern</string>
     <string name="unit_percent">\u0025</string>
 
+    <!-- Header text shadow and color -->
+    <string name="status_bar_custom_header_text_shadow_title">Schatten des Kopfzeilentextes</string>
+    <string name="status_bar_custom_header_text_shadow_summary">Für eine bessere Sichtbarkeit bei Hintergrundbildern</string>
+    <string name="status_bar_custom_header_text_shadow_color_title">Farbe des Textschattens</string>
+    <string name="unit_percent">\u0025</string>
+
     <!-- AdAway -->
     <string name="adaway_settings_title">AdAway (Werbeblocker)</string>
 
@@ -878,6 +884,8 @@
     <string name="volume_dialog_stroke_color_title">Farbe des Randes der Lautstärkenanzeige</string>
     <string name="volume_dialog_stroke_thickness_title">Dicke des Randes der Lautstärkenanzeige</string>
     <string name="volume_dialog_corner_radius_title">Radius der Ecken des Lautstärkenanzeige</string>
+    <string name="volume_dialog_dash_width_title">Strichlänge der Randlinie der Lautstärkenanzeige</string>
+    <string name="volume_dialog_dash_gap_title">Zwischenraumbreite der Randlinie der Lautstärkenanzeige</string>
 
     <!-- QS stroke settings -->
     <string name="qs_stroke_title">Randschatten der Schnelleinstellungen</string>
@@ -887,11 +895,26 @@
     <string name="qs_stroke_color_title">Farbe des Randes der Schnelleinstellungen</string>
     <string name="qs_stroke_thickness_title">Dicke des Randes der Schnelleinstellungen</string>
     <string name="qs_corner_radius_title">Radius der Ecken der Schnelleinstellungen</string>
+    <string name="qs_dash_width_title">Strichlänge der Randlinie der Schnelleinstellungen</string>
+    <string name="qs_dash_gap_title">Zwischenraumbreite der Randlinie der Schnelleinstellungen</string>
 
     <!-- MediaScanner behavior on boot -->
     <string name="media_scanner_on_boot_title">Verhalten des MediaScanners beim Start</string>
     <string name="media_scanner_on_boot_enabled">Nach Mediendateien suchen</string>
     <string name="media_scanner_on_boot_ask">Nachfragen (Benachrichtigung)</string>
     <string name="media_scanner_on_boot_disabled">Nicht nach Mediendateien suchen</string>
+
+    <!-- QS stroke settings -->
+    <string name="qs_panel_logo_category">Hintergund-Logo der Schnelleinstellungen</string>
+    <string name="qs_panel_logo_title">AICP Hintergrund-Logo</string>
+    <string name="qs_panel_logo_disabled">Deaktiviert</string>
+    <string name="qs_panel_logo_accent">Akzentfarbe</string>
+    <string name="qs_panel_logo_custom">Eigene Farbe</string>
+    <string name="qs_panel_logo_color_title">Farbe des Hintergrund-Logos</string>
+    <string name="qs_panel_logo_alpha_title">Transparenz des Hintergrund-Logos</string>
+
+    <!-- Lockscreen clock and date font size -->
+    <string name="lockscreen_clock_font_size_title">Schriftgröße der Uhrzeit</string>
+    <string name="lockscreen_date_font_size_title">Schriftgröße des Datums</string>
 
 </resources>
