@@ -56,6 +56,8 @@ public class LockscreenFragment extends Fragment {
         private static final String LOCKSCREEN_COLORS_RESET = "lockscreen_colors_reset";
         private static final String PREF_LOCKSCREEN_CLOCK_FONT_SIZE = "lockscreen_clock_font_size";
         private static final String PREF_LOCKSCREEN_DATE_FONT_SIZE = "lockscreen_date_font_size";
+        private static final String PREF_LOCKSCREEN_ALPHA = "lockscreen_alpha";
+        private static final String PREF_LOCKSCREEN_SECURITY_ALPHA = "lockscreen_security_alpha";
 
         private SeekBarPreferenceCham mBlurRadius;
         private Preference mLockscreenWeather;
@@ -69,6 +71,8 @@ public class LockscreenFragment extends Fragment {
         private Preference mLockscreenColorsReset;
         private SeekBarPreferenceCham mLockClockFontSize;
         private SeekBarPreferenceCham mLockDateFontSize;
+        private SeekBarPreferenceCham mLsAlpha;
+        private SeekBarPreferenceCham mLsSecurityAlpha;
 
         static final int DEFAULT = 0xffffffff;
 
@@ -152,6 +156,21 @@ public class LockscreenFragment extends Fragment {
             mLockDateFontSize.setValue(lockDateFontSize / 1);
             mLockDateFontSize.setOnPreferenceChangeListener(this);
 
+            // LS alpha
+            mLsAlpha =
+                    (SeekBarPreferenceCham) findPreference(PREF_LOCKSCREEN_ALPHA);
+            float alpha = Settings.System.getFloat(resolver,
+                    Settings.System.LOCKSCREEN_ALPHA, 0.45f);
+            mLsAlpha.setValue((int)(100 * alpha));
+            mLsAlpha.setOnPreferenceChangeListener(this);
+
+            mLsSecurityAlpha =
+                    (SeekBarPreferenceCham) findPreference(PREF_LOCKSCREEN_SECURITY_ALPHA);
+            float alpha2 = Settings.System.getFloat(resolver,
+                    Settings.System.LOCKSCREEN_SECURITY_ALPHA, 0.75f);
+            mLsSecurityAlpha.setValue((int)(100 * alpha2));
+            mLsSecurityAlpha.setOnPreferenceChangeListener(this);
+
             mLockscreenColorsReset = (Preference) findPreference(LOCKSCREEN_COLORS_RESET);
         }
 
@@ -210,6 +229,16 @@ public class LockscreenFragment extends Fragment {
                 int val = (Integer) newValue;
                 Settings.System.putInt(resolver,
                         Settings.System.LOCKSCREEN_DATE_FONT_SIZE, val * 1);
+                return true;
+            } else if (preference == mLsAlpha) {
+                int alpha = (Integer) newValue;
+                Settings.System.putFloat(resolver,
+                        Settings.System.LOCKSCREEN_ALPHA, alpha / 100.0f);
+                return true;
+            } else if (preference == mLsSecurityAlpha) {
+                int alpha2 = (Integer) newValue;
+                Settings.System.putFloat(resolver,
+                        Settings.System.LOCKSCREEN_SECURITY_ALPHA, alpha2 / 100.0f);
                 return true;
             }
             return false;
