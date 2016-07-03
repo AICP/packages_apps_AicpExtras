@@ -28,6 +28,26 @@
         aicpextras:defaultValue="14"
         android:dependency="lockscreen_see_through" />
 
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+         android:key="lockscreen_alpha"
+         android:title="@string/lockscreen_alpha"
+         aicpextras:max="100"
+         aicpextras:minimum="0"
+         aicpextras:interval="1"
+         aicpextras:unitsLeft=""
+         aicpextras:unitsRight="%"
+         android:persistent="false" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+         android:key="lockscreen_security_alpha"
+         android:title="@string/lockscreen_security_alpha"
+         aicpextras:max="100"
+         aicpextras:minimum="0"
+         aicpextras:interval="1"
+         aicpextras:unitsLeft=""
+         aicpextras:unitsRight="%"
+         android:persistent="false" />
+
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="keyguard_toggle_torch"
         android:title="@string/keyguard_torch_title"
