@@ -56,7 +56,6 @@
             android:entryValues="@array/qs_tile_animation_interpolator_values"
             android:persistent="false" />
 
-    </PreferenceCategory>
 
     <SwitchPreference
         android:key="qs_show_brightness_slider"
@@ -70,24 +69,10 @@
         android:summary="@string/brightness_icon_summary"
         android:dependency="qs_show_brightness_slider"
         android:defaultValue="true"/>
+    </PreferenceCategory>
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="disable_immersive_message"
-        android:title="@string/disable_immersive_message_title"
-        android:summary="@string/disable_immersive_message_summary" />
-
-    <SwitchPreference
-        android:key="block_on_secure_keyguard"
-        android:title="@string/block_on_secure_keyguard_title"
-        android:summary="@string/block_on_secure_keyguard_summary"
-        android:persistent="false"
-        android:defaultValue="true"/>
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="force_expanded_notifications"
-        android:title="@string/force_expanded_notifications_title"
-        android:summary="@string/force_expanded_notifications_summary" />
-
+    <PreferenceCategory
+        android:title="@string/header_tweaks">
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="enable_task_manager"
         android:title="@string/enable_task_manager_title"
@@ -143,6 +128,7 @@
         android:entries="@array/status_bar_weather_font_style_entries"
         android:entryValues="@array/status_bar_weather_font_style_values"
         android:title="@string/status_bar_header_font_style_title" />
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="qs_panel_logo_category"
@@ -170,5 +156,25 @@
             android:title="@string/qs_panel_logo_color_title" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/Misc">
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="disable_immersive_message"
+        android:title="@string/disable_immersive_message_title"
+        android:summary="@string/disable_immersive_message_summary" />
+
+    <SwitchPreference
+        android:key="block_on_secure_keyguard"
+        android:title="@string/block_on_secure_keyguard_title"
+        android:summary="@string/block_on_secure_keyguard_summary"
+        android:persistent="false"
+        android:defaultValue="true"/>
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="force_expanded_notifications"
+        android:title="@string/force_expanded_notifications_title"
+        android:summary="@string/force_expanded_notifications_summary" />
+      </PreferenceCategory>
 
 </PreferenceScreen>
