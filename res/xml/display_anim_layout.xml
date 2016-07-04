@@ -2,16 +2,8 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
 
-   <ListPreference
-        android:key="lcd_density"
-        android:title="@string/lcd_density"
-        android:persistent="false" />
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="toast_icon"
-        android:title="@string/toast_icon_title"
-        android:summary="@string/toast_icon_summary" />
-
+    <PreferenceCategory
+        android:title="@string/anim">
     <ListPreference
         android:key="toast_animation"
         android:title="@string/toast_animation_title"
@@ -53,5 +45,19 @@
         android:key="aokp_animation"
         android:title="@string/aokp_animation_title"
         android:summary="@string/aokp_animation_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/Misc">
+    <ListPreference
+        android:key="lcd_density"
+        android:title="@string/lcd_density"
+        android:persistent="false" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="toast_icon"
+        android:title="@string/toast_icon_title"
+        android:summary="@string/toast_icon_summary" />
+    </PreferenceCategory>
 
 </PreferenceScreen>

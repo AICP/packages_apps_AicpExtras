@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <PreferenceCategory
+        android:title="@string/indicators">
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="show_su_indicator"
         android:title="@string/su_indicator"
@@ -30,6 +32,7 @@
    <Preference
         android:key="traffic"
         android:title="@string/traffic_category" />
+   </PreferenceCategory>
 
    <!-- Status bar AICP logo -->
    <PreferenceCategory
@@ -56,7 +59,7 @@
 
     <PreferenceCategory
         android:key="breathing_notifications_category"
-        android:title="@string/breathing_notifications_category" />
+        android:title="@string/breathing_notifications_category" >
 
     <SwitchPreference
         android:key="missed_call_breath"
@@ -69,5 +72,6 @@
         android:title="@string/voicemail_breath_title"
         android:summary="@string/voicemail_breath_summary"
         android:persistent="false"/>
+    </PreferenceCategory>
 
 </PreferenceScreen>

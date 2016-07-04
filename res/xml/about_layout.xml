@@ -7,15 +7,18 @@
 
     <Preference
         android:key="gplus"
-        android:title="@string/g_community" />
+        android:title="@string/g_community"
+        android:summary="@string/g_plus_summary"/>
 
     <Preference
         android:key="aicp_downloads"
-        android:title="@string/aicp_downloads_title" />
+        android:title="@string/aicp_downloads_title"
+        android:summary="@string/dwnld_summary"/>
 
     <Preference
         android:key="aicp_gerrit"
-        android:title="@string/aicp_gerrit_title" />
+        android:title="@string/aicp_gerrit_title"
+        android:summary="@string/gerrit_summary"/>
 
     <Preference
         android:key="aicp_changelog"
@@ -24,6 +27,7 @@
 
     <Preference
         android:key="aicp_stats"
-        android:title="@string/stats_title" />
+        android:title="@string/stats_title"
+        android:summary="@string/stats_summary"/>
 
 </PreferenceScreen>
