@@ -14,6 +14,7 @@
     <string name="about_title">About</string>
     <string name="other_title">Other</string>
     <string name="g_community">G+ community</string>
+    <string name="g_plus_summary">Visit Our Google+ Community</string>
     <string name="ui_title">UI</string>
     <string name="builtin_title">BUILT-IN</string>
     <string name="addons_title">ADDONS</string>
@@ -30,7 +31,9 @@
     <string name="systemui_tuner_dilog_title">Attention</string>
     <string name="systemui_tuner_dilog_warning">Tuner offers limited SystemUI modifications. Link has been added to AicpExtras for easier access.\nHere you can also add new tiles.</string>
     <string name="aicp_downloads_title">Downloads</string>
+    <string name="dwnld_summary">Visit the AICP download page for your device</string>
     <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="gerrit_summary">Visit our Gerrit to know what we are working on</string>
     <string name="send_mail_intent">Send mail...</string>
     <string name="hidden_anim_activity_title">Yoga time!!!</string>
     <string name="hidden_anim_more_title">MORE?</string>
@@ -380,6 +383,7 @@
     <!-- ROm Stats -->
     <!-- Main -->
     <string name="stats_title">Stats</string>
+    <string name="stats_summary">Opt in/out for anonymous stats</string>
 
     <!-- Notification -->
     <string name="notification_ticker">Statistics opted-In</string>
@@ -854,7 +858,6 @@
     <string name="gesture_anywhere_floating_summary">Launch Gesture Anywhere shortcuts in float mode</string>
 
     <!-- Tiles animation style  -->
-    <string name="quicksettings_tiles_category">Tile animation options</string>
     <string name="qs_tile_animation_style_title">Tiles animation style</string>
     <string name="qs_tile_animation_duration_title">Tiles animation duration</string>
     <string name="qs_tile_animation_interpolator_title">Tiles animation interpolator</string>
@@ -920,5 +923,19 @@
     <!-- Lockscreen clock and date font size -->
     <string name="lockscreen_clock_font_size_title">Lock clock font size</string>
     <string name="lockscreen_date_font_size_title">Lock date font size</string>
+
+    <!--Preference Categories-->
+    <string name ="anim">Animation Tweaks</string>
+    <string name ="indicators">Status Bar Indicators</string>
+    <string name="quicksettings_tiles_category">QuickSettings Panel Configurations</string>
+    <string name ="header_tweaks">Header Tweaks</string>
+    <string name ="Misc">Miscellaneous</string>
+    <string name ="cab">Clear All Button Tweaks</string>
+    <string name ="visuals">Recents Extra Visuals</string>
+    <string name = "ls_blur">LockScreen Blur</string>
+    <string name = "lclock_tweaks">LockClock Font Tweaks</string>
+    <string name = "qs">Quick Settings Tweaks</string>
+    <string name = "vol_diag">Volume Dialog Tweaks</string>
+    <string name = "power">Power Menu Tweaks</string>
 
 </resources>
