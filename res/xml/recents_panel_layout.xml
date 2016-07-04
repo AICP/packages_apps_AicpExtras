@@ -17,6 +17,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:pure="http://schemas.android.com/apk/res-auto" >
 
+    <PreferenceCategory
+        android:title="@string/cab">
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="show_clear_all_recents"
         android:title="@string/show_clear_all_recents_button_title"
@@ -37,12 +39,10 @@
         android:summary="@string/recents_clear_all_dismiss_all_summary"
         android:defaultValue="true"
         android:dependency="show_clear_all_recents" />
+    </PreferenceCategory>
 
-    <Preference
-        android:key="hide_app_from_recents"
-        android:title="@string/hide_apps_from_recents_title"
-        android:summary="@string/hide_apps_from_recents_summary" />
-
+    <PreferenceCategory
+        android:title="@string/visuals">
     <!-- Search in Recents -->
     <com.lordclockan.aicpextras.preferences.CMSystemSettingSwitchPreference
         android:key="recents_show_search_bar"
@@ -75,5 +75,13 @@
         android:summary="@string/recents_full_screen_date_summary"
         android:defaultValue="false"
         android:dependency="recents_full_screen" />
+    </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/Misc">
+    <Preference
+        android:key="hide_app_from_recents"
+        android:title="@string/hide_apps_from_recents_title"
+        android:summary="@string/hide_apps_from_recents_summary" />
+    </PreferenceCategory>
 </PreferenceScreen>

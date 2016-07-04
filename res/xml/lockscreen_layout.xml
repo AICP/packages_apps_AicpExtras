@@ -3,89 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="double_tap_sleep_anywhere"
-        android:title="@string/double_tap_sleep_anywhere_title"
-        android:summary="@string/double_tap_sleep_anywhere_summary" />
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="power_menu_lockscreen"
-        android:title="@string/powermenu_lockscreen_title"
-        android:summary="@string/powermenu_lockscreen_summary"
-        android:defaultValue="true" />
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="lockscreen_see_through"
-        android:title="@string/lockscreen_see_through_title"
-        android:summary="@string/lockscreen_see_through_summary"
-        android:defaultValue="false" />
-
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-        android:key="lockscreen_blur_radius"
-        android:title="@string/lockscreen_blur_radius"
-        aicpextras:max="25"
-        aicpextras:min="0"
-        aicpextras:defaultValue="14"
-        android:dependency="lockscreen_see_through" />
-
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-         android:key="lockscreen_alpha"
-         android:title="@string/lockscreen_alpha"
-         aicpextras:max="100"
-         aicpextras:minimum="0"
-         aicpextras:interval="1"
-         aicpextras:unitsLeft=""
-         aicpextras:unitsRight="%"
-         android:persistent="false" />
-
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-         android:key="lockscreen_security_alpha"
-         android:title="@string/lockscreen_security_alpha"
-         aicpextras:max="100"
-         aicpextras:minimum="0"
-         aicpextras:interval="1"
-         aicpextras:unitsLeft=""
-         aicpextras:unitsRight="%"
-         android:persistent="false" />
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="keyguard_toggle_torch"
-        android:title="@string/keyguard_torch_title"
-        android:summary="@string/keyguard_torch_summary"
-        android:defaultValue="false" />
-
-    <ListPreference
-        android:key="lock_clock_fonts"
-        android:title="@string/lock_clock_font_title"
-        android:dialogTitle="@string/lock_clock_font_dialog_title"
-        android:entries="@array/lock_clock_fonts_entries"
-        android:entryValues="@array/lock_clock_fonts_values"
-        android:summary="@string/lock_clock_font_summary"
-        android:dependency="hide_lockscreen_clock"
-        android:persistent="false" />
-
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-        android:key="lockscreen_clock_font_size"
-        android:title="@string/lockscreen_clock_font_size_title"
-        android:max="150"
-        aicpextras:min="1"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="sp"
-        aicpextras:defaultVal="88"
-        android:persistent="false"
-        android:dependency="hide_lockscreen_clock" />
-
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-        android:key="lockscreen_date_font_size"
-        android:title="@string/lockscreen_date_font_size_title"
-        android:max="25"
-        aicpextras:min="1"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="sp"
-        aicpextras:defaultVal="14"
-        android:persistent="false"
-        android:dependency="hide_lockscreen_date" />
-
     <!-- Hide Lockscreen clock, date & alarm -->
     <PreferenceCategory
         android:key="hide_lockscreen_items_category"
@@ -149,6 +66,81 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/lclock_tweaks">
+    <ListPreference
+        android:key="lock_clock_fonts"
+        android:title="@string/lock_clock_font_title"
+        android:dialogTitle="@string/lock_clock_font_dialog_title"
+        android:entries="@array/lock_clock_fonts_entries"
+        android:entryValues="@array/lock_clock_fonts_values"
+        android:summary="@string/lock_clock_font_summary"
+        android:dependency="hide_lockscreen_clock"
+        android:persistent="false" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="lockscreen_clock_font_size"
+        android:title="@string/lockscreen_clock_font_size_title"
+        android:max="150"
+        aicpextras:min="1"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="sp"
+        aicpextras:defaultVal="88"
+        android:persistent="false"
+        android:dependency="hide_lockscreen_clock" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="lockscreen_date_font_size"
+        android:title="@string/lockscreen_date_font_size_title"
+        android:max="25"
+        aicpextras:min="1"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="sp"
+        aicpextras:defaultVal="14"
+        android:persistent="false"
+        android:dependency="hide_lockscreen_date" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/ls_blur">
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_see_through"
+        android:title="@string/lockscreen_see_through_title"
+        android:summary="@string/lockscreen_see_through_summary"
+        android:defaultValue="false" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="lockscreen_blur_radius"
+        android:title="@string/lockscreen_blur_radius"
+        aicpextras:max="25"
+        aicpextras:min="0"
+        aicpextras:defaultValue="14"
+        android:dependency="lockscreen_see_through" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+         android:key="lockscreen_alpha"
+         android:title="@string/lockscreen_alpha"
+         aicpextras:max="100"
+         aicpextras:minimum="0"
+         aicpextras:interval="1"
+         aicpextras:unitsLeft=""
+         aicpextras:unitsRight="%"
+         android:persistent="false" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+         android:key="lockscreen_security_alpha"
+         android:title="@string/lockscreen_security_alpha"
+         aicpextras:max="100"
+         aicpextras:minimum="0"
+         aicpextras:interval="1"
+         aicpextras:unitsLeft=""
+         aicpextras:unitsRight="%"
+         android:persistent="false" />
+
+    </PreferenceCategory>
+
+
     <Preference
         android:key="lockscreen_weather"
         android:title="@string/weather_lockscreen_category" />
@@ -167,6 +159,27 @@
             android:key="lockscreen_wallpaper_clear"
             android:title="@string/lockscreen_wallpaper_clear_title"
             android:persistent="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/Misc">
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_anywhere"
+        android:title="@string/double_tap_sleep_anywhere_title"
+        android:summary="@string/double_tap_sleep_anywhere_summary" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="power_menu_lockscreen"
+        android:title="@string/powermenu_lockscreen_title"
+        android:summary="@string/powermenu_lockscreen_summary"
+        android:defaultValue="true" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="keyguard_toggle_torch"
+        android:title="@string/keyguard_torch_title"
+        android:summary="@string/keyguard_torch_summary"
+        android:defaultValue="false" />
 
     </PreferenceCategory>
 
