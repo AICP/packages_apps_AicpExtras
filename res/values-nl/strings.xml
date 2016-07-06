@@ -14,6 +14,7 @@
     <string name="about_title">Over</string>
     <string name="other_title">Overig</string>
     <string name="g_community">G+ community</string>
+    <string name="g_plus_summary">Bezoek onze Google+ Community</string>
     <string name="ui_title">Instellingen</string>
     <string name="builtin_title">Intern</string>
     <string name="addons_title">Extern</string>
@@ -30,7 +31,9 @@
     <string name="systemui_tuner_dilog_title">LET OP!</string>
     <string name="systemui_tuner_dilog_warning">De tuner biedt beperkte mogelijkheden om de SystemUI te wijzigen.\nEr is een link toegevoegd aan Aicp Extras voor eenvoudige toegang. Hier kunnen ook nieuwe tegels worden toegevoegd.</string>
     <string name="aicp_downloads_title">Downloads</string>
+    <string name="dwnld_summary">Bezoek de AICP downloadpagina voor je apparaat</string>
     <string name="aicp_gerrit_title">Bezoek Gerrit</string>
+    <string name="gerrit_summary">Bzeoek onze Gerrit om te zien waar we aan werken</string>
     <string name="send_mail_intent">Stuur e-mail...</string>
     <string name="hidden_anim_activity_title">YOGA TIME!</string>
     <string name="hidden_anim_more_title">WANT MORE?</string>
@@ -363,6 +366,10 @@
     <string name="lockscreen_see_through_summary">Vervaagt en toont de inhoud achter het vergrendelscherm</string>
     <string name="lockscreen_blur_radius">Intensiteit van de vervaging</string>
 
+    <!-- Lockscreen alpha -->
+    <string name="lockscreen_alpha">Transparantie-instellingen</string>
+    <string name="lockscreen_security_alpha">Transparantie-instellingen aanmeldscherm</string>
+
     <!-- Notificatio drawer weather -->
     <string name="notif_drawer_weather_title">Weer</string>
     <string name="notif_drawer_weather_summary">Weer-info in notificatiezone in- of uitschakelen</string>
@@ -374,6 +381,7 @@
     <!-- ROM Stats -->
     <!-- Main -->
     <string name="stats_title">Statistieken</string>
+    <string name="stats_summary">Aan- of afmelden voor anonieme statistieken</string>
 
     <!-- Notification -->
     <string name="notification_ticker">Statistieken inschakelen</string>
@@ -680,7 +688,7 @@
 
     <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Muziek-app opstarten</string>
-    <string name="headset_connect_player_summary">Start de standaard muziek-app als een koptelefoon wordt aangeloten</string>
+    <string name="headset_connect_player_summary">Start de standaard muziek-app als een koptelefoon wordt aangesloten</string>
 
     <!-- Recent panel -->
     <string name="recent_panel_category">Slim recents apps overzicht</string>
@@ -764,7 +772,7 @@
     <string name="qs_transparent_header">Koptekst snelle instellingen-paneel</string>
 
     <!-- Volume dialog transparency -->
-    <string name="volume_dialog_transparency">Dialoogvenster volume</string>
+    <string name="volume_dialog_transparency">Dialoogvenster Volume</string>
 
     <!-- Power menu and dialogs transparency -->
     <string name="power_menu_transparency">Aan-/Uit-menu</string>
@@ -774,7 +782,7 @@
 
     <!-- Lockscreen Torch -->
     <string name="keyguard_torch_title">Zaklamp op vergrendelscherm</string>
-    <string name="keyguard_torch_summary">Houd bij uitgeschakeld scherm de powerknop lang ingedrukt om zaklamp in te schakelen</string>
+    <string name="keyguard_torch_summary">Houd, bij uitgeschakeld scherm, de powerknop lang ingedrukt om zaklamp in te schakelen</string>
 
     <!-- Breathing Notifications -->
     <string name="breathing_notifications_category">Pulserende notificaties</string>
@@ -848,7 +856,6 @@
     <string name="gesture_anywhere_floating_summary">Start \"Gebaar Overal\" snelkoppelingen in zweefmodusmodus</string>
 
     <!-- Tiles animation style  -->
-    <string name="quicksettings_tiles_category">Animatie-opties snelle instellingen-tegels</string>
     <string name="qs_tile_animation_style_title">Animatiestijl snelle instellingen-tegels</string>
     <string name="qs_tile_animation_duration_title">Animatieduur snelle instellingen-tegels</string>
     <string name="qs_tile_animation_interpolator_title">Animatie-interpolatie snelle instellingen-tegels</string>
@@ -875,15 +882,15 @@
     <string name="app_exit_toast">Druk nogmaals om af te sluiten</string>
 
     <!-- Volume dialog stroke settings -->
-    <string name="volume_dialog_stroke_title">Omlijning dialoogvenster volume</string>
+    <string name="volume_dialog_stroke_title">Omlijning dialoogvenster Volume</string>
     <string name="volume_dialog_stroke_disabled">Uitgeschakeld</string>
     <string name="volume_dialog_stroke_accent">Accent kleur</string>
     <string name="volume_dialog_stroke_custom">Aangepaste kleur</string>
-    <string name="volume_dialog_stroke_color_title">Lijnkleur dialoogvenster volume</string>
-    <string name="volume_dialog_stroke_thickness_title">Lijndikte dialoogvenster volume</string>
-    <string name="volume_dialog_corner_radius_title">Hoekradius dialoogvenster volume</string>
-    <string name="volume_dialog_dash_width_title">Breedte stippellijn dialoogvenster volume</string>
-    <string name="volume_dialog_dash_gap_title">Tussenruimte stippellijn dialoogvenster volume</string>
+    <string name="volume_dialog_stroke_color_title">Lijnkleur dialoogvenster Volume</string>
+    <string name="volume_dialog_stroke_thickness_title">Lijndikte dialoogvenster Volume</string>
+    <string name="volume_dialog_corner_radius_title">Hoekradius dialoogvenster Volume</string>
+    <string name="volume_dialog_dash_width_title">Breedte stippellijn dialoogvenster Volume</string>
+    <string name="volume_dialog_dash_gap_title">Tussenruimte stippellijn dialoogvenster Volume</string>
 
     <!-- QS stroke settings -->
     <string name="qs_stroke_title">Schaduwlijn Snelle instellingen</string>
@@ -914,4 +921,19 @@
     <!-- Lockscreen clock and date font size -->
     <string name="lockscreen_clock_font_size_title">Lock Clock lettergrootte</string>
     <string name="lockscreen_date_font_size_title">Lock Date lettergrootte</string>
+
+    <!--Preference Categories-->
+    <string name ="anim">Animatie-aanpassingen</string>
+    <string name ="indicators">Statusbalk indicatoren</string>
+    <string name="quicksettings_tiles_category">Paneelinstellingen Snelle Instellingen</string>
+    <string name ="header_tweaks">Header-aanpassingen</string>
+    <string name ="Misc">Diversen</string>
+    <string name ="cab">Aanpassen van Clear All toets</string>
+    <string name ="visuals">Extra vormen Recent apps</string>
+    <string name = "ls_blur">Vervagen vergrendelscherm</string>
+    <string name = "lclock_tweaks">LockClock lettertype-aanpasingen</string>
+    <string name = "qs">Aanpassingen Snelle Instellingen</string>
+    <string name = "vol_diag">Aanpassingen dialoogvenster Volume</string>
+    <string name = "power">Aanpassingen Aan-/Uit-menu</string>
+
 </resources>
