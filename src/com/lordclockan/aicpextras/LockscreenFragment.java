@@ -7,6 +7,7 @@ import android.app.WallpaperManager;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.hardware.fingerprint.FingerprintManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemProperties;
@@ -16,6 +17,7 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
@@ -170,6 +172,12 @@ public class LockscreenFragment extends Fragment {
                     Settings.System.LOCKSCREEN_SECURITY_ALPHA, 0.75f);
             mLsSecurityAlpha.setValue((int)(100 * alpha2));
             mLsSecurityAlpha.setOnPreferenceChangeListener(this);
+
+            mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+            mFingerprintVib = (SwitchPreference) prefScreen.findPreference("fingerprint_success_vib");
+            if (!mFingerprintManager.isHardwareDetected()){
+                prefScreen.removePreference(mFingerprintVib);
+            }
 
             mLockscreenColorsReset = (Preference) findPreference(LOCKSCREEN_COLORS_RESET);
         }
