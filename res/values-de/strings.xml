@@ -14,6 +14,7 @@
     <string name="about_title">Über</string>
     <string name="other_title">Sonstiges</string>
     <string name="g_community">G+ Community</string>
+    <string name="g_plus_summary">Besuche unsere Google+ Community</string>
     <string name="ui_title">UI</string>
     <string name="builtin_title">Intern</string>
     <string name="addons_title">Extern</string>
@@ -21,7 +22,7 @@
     <string name="logo">logo</string>
     <string name="display_animations_title">Display und Animationen</string>
     <string name="multishit_title">Zusätze</string>
-    <string name="transparency_porn_title">UI-Transparenz, -Ränder &amp; -Schatten</string>
+    <string name="transparency_porn_title">UI-Anpassungen</string>
     <string name="notificaitons_title">Benachrichtigungsleiste</string>
     <string name="statubar_title">Statusleiste</string>
     <string name="lockscreen_title">Sperrbildschirm</string>
@@ -30,8 +31,10 @@
     <string name="systemui_tuner_dilog_title">Achtung</string>
     <string name="systemui_tuner_dilog_warning">Der Tuner bietet begrenzte SystemUI Modifikationen. Eine Verknüpfung hierfür wurde zu AICP Extras hinzugefügt.\nHier können auch neue Kacheln hinzugefügt werden.</string>
     <string name="aicp_downloads_title">Downloads</string>
+    <string name="dwnld_summary">Besuche die AICP Webseite mit Downloads für dein Gerät</string>
     <string name="aicp_gerrit_title">Gerrit</string>
-    <string name="send_mail_intent">Sende E-Mail...</string>
+    <string name="gerrit_summary">Besuche unsere Review-System online, um zu erfahren, an was wir gerade arbeiten</string>
+    <string name="send_mail_intent">E-Mail senden...</string>
     <string name="hidden_anim_activity_title">Zeit für \"Yoga\"!!!</string>
     <string name="hidden_anim_more_title">MEHR?</string>
     <string name="hidden_anim_more_nice">SCHÖN</string>
@@ -365,6 +368,10 @@
     <string name="lockscreen_see_through_summary">Eintrübung und Anzeige des Inhalts hinter dem Sperrbildschirm.</string>
     <string name="lockscreen_blur_radius">Intensität der Trübung</string>
 
+    <!-- Lockscreen alpha -->
+    <string name="lockscreen_alpha">Abdunklungseinstellung</string>
+    <string name="lockscreen_security_alpha">Abdunklungseinstellungen für Symbole</string>
+
     <!-- Notification drawer weather -->
     <string name="notif_drawer_weather_title">Wetter</string>
     <string name="notif_drawer_weather_summary">Anzeige von Wetter-Infos über den Schnelleinstellungen umschalten</string>
@@ -376,6 +383,7 @@
     <!-- ROm Stats -->
     <!-- Main -->
     <string name="stats_title">Statistiken</string>
+    <string name="stats_summary">Ein-/Austragen für anonyme Statistiken</string>
 
     <!-- Notification -->
     <string name="notification_ticker">Statistiken freigeben</string>
@@ -435,7 +443,7 @@
    <string name="lockscreen_category_title">Displayhintergrund</string>
    <string name="lockscreen_wallpaper_title">Sperrbildschirm-Hintergrund</string>
    <string name="lockscreen_wallpaper_set_title">Setze neues Hintergrundbild</string>
-   <string name="lockscreen_wallpaper_set_summary">Ein Neustart ist erforderlich</string>
+   <string name="lockscreen_wallpaper_set_summary">Ein Neustart ist eventuell erforderlich</string>
    <string name="lockscreen_wallpaper_clear_title">Standard wieder herstellen</string>
    <string name="reset_lockscreen_wallpaper">Sperrbildschirm-Hintergrund zurückgesetzt</string>
 
@@ -763,16 +771,16 @@
     <string name="qs_transparent_shade">Kachelhintergund</string>
 
     <!-- QS header transparency -->
-    <string name="qs_transparent_header">Kopfzeilen der Schnelleinstellungen</string>
+    <string name="qs_transparent_header">Transparenz: Kopfzeilen der Schnelleinstellungen</string>
 
     <!-- Volume dialog transparency -->
-    <string name="volume_dialog_transparency">Lautstärkedialog</string>
+    <string name="volume_dialog_transparency">Transparenz: Lautstärkedialog</string>
 
     <!-- Power menu and dialogs transparency -->
-    <string name="power_menu_transparency">Ein-/Aus- und Neustart-Menü</string>
+    <string name="power_menu_transparency">Transparenz: Ein-/Aus- und Neustart-Menü</string>
 
     <!-- Power/reboot dialogs dim amount -->
-    <string name="power_menu_dialog_dim">Ein-/Aus- und Neustart-Dialog Hintergrundabdunklung</string>
+    <string name="power_menu_dialog_dim">Displayabdunklung: Ein-/Aus- und Neustart-Menü</string>
 
     <!-- Lockscreen Torch -->
     <string name="keyguard_torch_title">Taschenlampe bei Sperrbildschirm</string>
@@ -850,7 +858,6 @@
     <string name="gesture_anywhere_floating_summary">Starte \"Gesten überall\"-Verknüpfungen im Schwebemodus</string>
 
     <!-- Tiles animation style  -->
-    <string name="quicksettings_tiles_category">Optionen für Kachelanimationen</string>
     <string name="qs_tile_animation_style_title">Stil der Kachelanimation</string>
     <string name="qs_tile_animation_duration_title">Dauer der Kachelanimation</string>
     <string name="qs_tile_animation_interpolator_title">Art der Kachelanimation</string>
@@ -877,26 +884,26 @@
     <string name="app_exit_toast">Zum Beenden erneut \"Zurück\" drücken</string>
 
     <!-- Volume dialog stroke settings -->
-    <string name="volume_dialog_stroke_title">Rand der Lautstärkenanzeige</string>
+    <string name="volume_dialog_stroke_title">Rand: Lautstärkedialog</string>
     <string name="volume_dialog_stroke_disabled">Deaktiviert</string>
     <string name="volume_dialog_stroke_accent">Akzentfarbe</string>
     <string name="volume_dialog_stroke_custom">Eigene Farbe</string>
-    <string name="volume_dialog_stroke_color_title">Farbe des Randes der Lautstärkenanzeige</string>
-    <string name="volume_dialog_stroke_thickness_title">Dicke des Randes der Lautstärkenanzeige</string>
-    <string name="volume_dialog_corner_radius_title">Radius der Ecken des Lautstärkenanzeige</string>
-    <string name="volume_dialog_dash_width_title">Strichlänge der Randlinie der Lautstärkenanzeige</string>
-    <string name="volume_dialog_dash_gap_title">Zwischenraumbreite der Randlinie der Lautstärkenanzeige</string>
+    <string name="volume_dialog_stroke_color_title">Randfarbe: Lautstärkedialog</string>
+    <string name="volume_dialog_stroke_thickness_title">Randbreite: Lautstärkedialog</string>
+    <string name="volume_dialog_corner_radius_title">Eckenabrundung: Lautstärkedialog</string>
+    <string name="volume_dialog_dash_width_title">Rand-Strichlänge: Lautstärkedialog</string>
+    <string name="volume_dialog_dash_gap_title">Rand-Unterbrecchungsbreite: Lautstärkedialog</string>
 
     <!-- QS stroke settings -->
-    <string name="qs_stroke_title">Randschatten der Schnelleinstellungen</string>
+    <string name="qs_stroke_title">Rand: Schnelleinstellungen</string>
     <string name="qs_stroke_disabled">Deaktiviert</string>
     <string name="qs_stroke_accent">Akzentfarbe</string>
     <string name="qs_stroke_custom">Eigene Farbe</string>
-    <string name="qs_stroke_color_title">Farbe des Randes der Schnelleinstellungen</string>
-    <string name="qs_stroke_thickness_title">Dicke des Randes der Schnelleinstellungen</string>
-    <string name="qs_corner_radius_title">Radius der Ecken der Schnelleinstellungen</string>
-    <string name="qs_dash_width_title">Strichlänge der Randlinie der Schnelleinstellungen</string>
-    <string name="qs_dash_gap_title">Zwischenraumbreite der Randlinie der Schnelleinstellungen</string>
+    <string name="qs_stroke_color_title">Randfarbe: Schnelleinstellungen</string>
+    <string name="qs_stroke_thickness_title">Randbreite: Schnelleinstellungen</string>
+    <string name="qs_corner_radius_title">Eckenabrundung: Schnelleinstellungen</string>
+    <string name="qs_dash_width_title">Rand-Strichlänge: Schnelleinstellungen</string>
+    <string name="qs_dash_gap_title">ZRand-Unterbrecchungsbreite: Schnelleinstellungen</string>
 
     <!-- MediaScanner behavior on boot -->
     <string name="media_scanner_on_boot_title">Verhalten des MediaScanners beim Start</string>
@@ -905,16 +912,34 @@
     <string name="media_scanner_on_boot_disabled">Nicht nach Mediendateien suchen</string>
 
     <!-- QS stroke settings -->
-    <string name="qs_panel_logo_category">Hintergund-Logo der Schnelleinstellungen</string>
+    <string name="qs_panel_logo_category">Logo im Kachelhintergrund</string>
     <string name="qs_panel_logo_title">AICP Hintergrund-Logo</string>
     <string name="qs_panel_logo_disabled">Deaktiviert</string>
     <string name="qs_panel_logo_accent">Akzentfarbe</string>
     <string name="qs_panel_logo_custom">Eigene Farbe</string>
-    <string name="qs_panel_logo_color_title">Farbe des Hintergrund-Logos</string>
-    <string name="qs_panel_logo_alpha_title">Transparenz des Hintergrund-Logos</string>
+    <string name="qs_panel_logo_color_title">Farbe: Hintergrund-Logo</string>
+    <string name="qs_panel_logo_alpha_title">Transparenz: Hintergrund-Logos</string>
 
     <!-- Lockscreen clock and date font size -->
     <string name="lockscreen_clock_font_size_title">Schriftgröße der Uhrzeit</string>
     <string name="lockscreen_date_font_size_title">Schriftgröße des Datums</string>
+
+    <!--Preference Categories-->
+    <string name ="anim">Anpassung von Animationen</string>
+    <string name ="indicators">Anzeigen in der Statusleisten</string>
+    <string name="quicksettings_tiles_category">Konfiguration der Schnelleinstellungen</string>
+    <string name ="header_tweaks">Anpassung der Kopfzeilen</string>
+    <string name ="Misc">Verschiedenes</string>
+    <string name ="cab">Anpassung der Lösch-Taste des Verlaufs</string>
+    <string name ="visuals">Zusatzanzeigen im Anwendungsverlauf</string>
+    <string name = "ls_blur">Sperrbildschirm-Trübung</string>
+    <string name = "lclock_tweaks">Anpassung der cLock-Schriftart und -größe</string>
+    <string name = "qs">Anpassung der Schnelleinstellungen</string>
+    <string name = "vol_diag">Anpassung des Lautstärkedialogs</string>
+    <string name = "power">Anpassung des Ein-/Aus-Menüs</string>
+
+    <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">Vibration bei Authentifizierung per Fingerabdruck</string>
+    <string name="fprint_sucess_vib_summary">Nach erfolgreicher Authentifizierung per Fingerabdruck vibrieren</string>
 
 </resources>
