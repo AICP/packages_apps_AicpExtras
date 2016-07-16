@@ -51,6 +51,7 @@ public class VariousShitFragment extends Fragment {
         private static final String PREF_SYSTEMUI_TUNER = "systemui_tuner";
         private static final String PREF_ADAWAY_START = "adaway_start";
         private static final String PREF_MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
+        private static final String PREF_BOOT_DIALOG_PIMPING = "boot_dialog_pimping";
 
         // Package name of the SystemUI tuner
         public static final String SYSTEMUITUNER_PACKAGE_NAME = "com.android.systemui";
@@ -81,6 +82,7 @@ public class VariousShitFragment extends Fragment {
         private Preference mSystemappRemover;
         private Preference mWakelockBlocker;
         private Preference mAdAway;
+        private Preference mBootDialogPimping;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -109,6 +111,7 @@ public class VariousShitFragment extends Fragment {
             mSystemUITuner = prefSet.findPreference(PREF_SYSTEMUI_TUNER);
             mSystemappRemover = prefSet.findPreference(PREF_SYSTEMAPP_REMOVER);
             mWakelockBlocker = prefSet.findPreference(PREF_WAKELOCK_BLOCKER);
+            mBootDialogPimping = prefSet.findPreference(PREF_BOOT_DIALOG_PIMPING);
 
             mAdAway = (Preference) prefSet.findPreference(PREF_ADAWAY_START);
             if (!Helpers.isPackageInstalled(ADAWAY_PACKAGE_NAME, pm)) {
@@ -158,6 +161,9 @@ public class VariousShitFragment extends Fragment {
                 getActivity().startActivity(INTENT_AICPSETTINGS_SETTINGS);
             } else if (preference == mAdAway) {
                 getActivity().startActivity(INTENT_ADAWAY);
+            } else if (preference == mBootDialogPimping) {
+                Intent intent = new Intent(getActivity(), BootDialog.class);
+                startActivity(intent);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
