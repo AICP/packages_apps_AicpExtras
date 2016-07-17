@@ -44,6 +44,10 @@
         android:entryValues="@array/media_scanner_on_boot_values" />
 
     <Preference
+        android:key="boot_dialog_pimping"
+        android:title="@string/boot_dialog_title" />
+
+    <Preference
         android:key="system_app_remover"
         android:title="@string/system_app_remover" />
 
