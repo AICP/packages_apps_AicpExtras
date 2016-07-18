@@ -29,6 +29,7 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
@@ -62,8 +63,13 @@ public class BootDialog extends AppCompatActivity {
         private static final String PREF_BOOT_DIALOG_CORNER_RADIUS = "boot_dialog_corner_radius";
         private static final String PREF_BOOT_DIALOG_TITLE = "boot_dialog_title";
         private static final String PREF_BOOT_DIALOG_TEST = "boot_dialog_test";
+        private static final String PREF_BOOT_DIALOG_MESSAGE_COLOR = "boot_dialog_message_color";
+        private static final String PREF_BOOT_DIALOG_TITLE_COLOR = "boot_dialog_title_color";
+        private static final String PREF_BOOT_DIALOG_PACKAGES_RANDOM_COLOR = "boot_dialog_packages_random_color";
 
         static final int DEFAULT_BOOT_DIALOG_BG_COLOR = 0xFF000000;
+        static final int DEFAULT_BOOT_DIALOG_MESSAGE_COLOR = 0xFF000000;
+        static final int DEFAULT_BOOT_DIALOG_TITLE_COLOR = 0xFF000000;
         static final int DEFAULT_BOOT_DIALOG_STROKE_COLOR = 0xFF33B5E5;
 
         private ColorPickerPreference mBootDialogBgColor;
@@ -73,6 +79,8 @@ public class BootDialog extends AppCompatActivity {
         private PreferenceScreen mBootDialogTitle;
         private String mBootDialogTitleText;
         private PreferenceScreen mBootDialogTest;
+        private ColorPickerPreference mBootDialogMessageColor;
+        private ColorPickerPreference mBootDialogTitleColor;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -120,6 +128,26 @@ public class BootDialog extends AppCompatActivity {
             mBootDialogCornerRadius.setValue(dialogCornerRadius / 1);
             mBootDialogCornerRadius.setOnPreferenceChangeListener(this);
 
+            // Boot dialog message color
+            mBootDialogMessageColor =
+                    (ColorPickerPreference) findPreference(PREF_BOOT_DIALOG_MESSAGE_COLOR);
+            mBootDialogMessageColor.setOnPreferenceChangeListener(this);
+            int dialogMessageColor = Settings.System.getInt(resolver,
+                    Settings.System.BOOT_DIALOG_MESSAGE_COLOR, DEFAULT_BOOT_DIALOG_MESSAGE_COLOR);
+            String dialogMessageHexColor = String.format("#%08x", (0xFF000000 & dialogMessageColor));
+            mBootDialogMessageColor.setSummary(dialogMessageHexColor);
+            mBootDialogMessageColor.setNewPreviewColor(dialogMessageColor);
+
+            // Boot dialog title color
+            mBootDialogTitleColor =
+                    (ColorPickerPreference) findPreference(PREF_BOOT_DIALOG_TITLE_COLOR);
+            mBootDialogTitleColor.setOnPreferenceChangeListener(this);
+            int dialogTitleColor = Settings.System.getInt(resolver,
+                    Settings.System.BOOT_DIALOG_TITLE_COLOR, DEFAULT_BOOT_DIALOG_TITLE_COLOR);
+            String dialogTitleHexColor = String.format("#%08x", (0xFF000000 & dialogTitleColor));
+            mBootDialogTitleColor.setSummary(dialogTitleHexColor);
+            mBootDialogTitleColor.setNewPreviewColor(dialogTitleColor);
+
             mBootDialogTitle = (PreferenceScreen) prefSet.findPreference(PREF_BOOT_DIALOG_TITLE);
             mBootDialogTest = (PreferenceScreen) prefSet.findPreference(PREF_BOOT_DIALOG_TEST);
 
@@ -154,6 +182,22 @@ public class BootDialog extends AppCompatActivity {
                 int val = (Integer) newValue;
                 Settings.System.putInt(resolver,
                         Settings.System.BOOT_DIALOG_CORNER_RADIUS, val * 1);
+                return true;
+            } else if (preference == mBootDialogMessageColor) {
+                String hex = ColorPickerPreference.convertToARGB(
+                        Integer.valueOf(String.valueOf(newValue)));
+                preference.setSummary(hex);
+                int intHex = ColorPickerPreference.convertToColorInt(hex);
+                Settings.System.putInt(resolver,
+                        Settings.System.BOOT_DIALOG_MESSAGE_COLOR, intHex);
+                return true;
+            } else if (preference == mBootDialogTitleColor) {
+                String hex = ColorPickerPreference.convertToARGB(
+                        Integer.valueOf(String.valueOf(newValue)));
+                preference.setSummary(hex);
+                int intHex = ColorPickerPreference.convertToColorInt(hex);
+                Settings.System.putInt(resolver,
+                        Settings.System.BOOT_DIALOG_TITLE_COLOR, intHex);
                 return true;
             }
             return false;
@@ -197,12 +241,15 @@ public class BootDialog extends AppCompatActivity {
                 dialog.show();
                 int textViewTitle = dialog.getContext().getResources().getIdentifier("android:id/alertTitle", null, null);
                 if (textViewTitle != 0) {
+                    int dialogTitleColor = Settings.System.getInt(resolver,
+                            Settings.System.BOOT_DIALOG_TITLE_COLOR, 0xFF000000);
                     TextView tvTitle = (TextView) dialog.findViewById(textViewTitle);
-                    if ((Settings.System.getInt(resolver,
-                            Settings.System.BOOT_DIALOG_BG_COLOR, 0xFFFFFFFF)) == 0xFF000000) {
+                    if (((Settings.System.getInt(resolver,
+                            Settings.System.BOOT_DIALOG_BG_COLOR, 0xFF000000)) == 0xFF000000) &&
+                            (dialogTitleColor == 0xFF000000)) {
                         tvTitle.setTextColor(0xFFFFFFFF);
                     } else {
-                        tvTitle.setTextColor(0xFF000000);
+                        tvTitle.setTextColor(dialogTitleColor);
                     }
                     String dialogTitle = Build.MODEL + " " + getContext().getResources().getString(
                             R.string.boot_dialog_starting);
@@ -216,12 +263,15 @@ public class BootDialog extends AppCompatActivity {
                 }
                 int textViewMessage = dialog.getContext().getResources().getIdentifier("android:id/message", null, null);
                 if (textViewMessage != 0) {
+                    int dialogMessageColor = Settings.System.getInt(resolver,
+                        Settings.System.BOOT_DIALOG_MESSAGE_COLOR, 0xFF000000);
                     TextView tvMessage = (TextView) dialog.findViewById(textViewMessage);
-                    if ((Settings.System.getInt(resolver,
-                            Settings.System.BOOT_DIALOG_BG_COLOR, 0xFFFFFFFF)) == 0xFF000000) {
+                    if (((Settings.System.getInt(resolver,
+                            Settings.System.BOOT_DIALOG_BG_COLOR, 0xFF000000)) == 0xFF000000) &&
+                            (dialogMessageColor == 0xFF000000)) {
                         tvMessage.setTextColor(0xFFFFFFFF);
                     } else {
-                        tvMessage.setTextColor(0xFF000000);
+                        tvMessage.setTextColor(dialogMessageColor);
                     }
                 }
                 int dialogIcon = dialog.getContext().getResources().getIdentifier("android:id/icon", null, null);
