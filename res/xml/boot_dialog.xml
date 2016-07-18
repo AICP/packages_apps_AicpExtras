@@ -52,9 +52,22 @@
         android:persistent="false"
         android:dependency="boot_dialog_bg_pimping" />
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="boot_dialog_packages_random_color"
+        android:title="@string/boot_dialog_random_title"
+        android:defaultValue="true" />
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="boot_dialog_message_color"
+        android:title="@string/boot_dialog_mesage_color_title" />
+
     <PreferenceScreen
         android:key="boot_dialog_title"
         android:title="@string/boot_dialog_custom_title" />
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="boot_dialog_title_color"
+        android:title="@string/boot_dialog_title_color_title" />
 
     <PreferenceScreen
         android:key="boot_dialog_test"
