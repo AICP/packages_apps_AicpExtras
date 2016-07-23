@@ -771,16 +771,16 @@
     <string name="qs_transparent_shade">Kachelhintergund</string>
 
     <!-- QS header transparency -->
-    <string name="qs_transparent_header">Transparenz: Kopfzeilen der Schnelleinstellungen</string>
+    <string name="qs_transparent_header">Transparenz</string>
 
     <!-- Volume dialog transparency -->
-    <string name="volume_dialog_transparency">Transparenz: Lautstärkedialog</string>
+    <string name="volume_dialog_transparency">Transparenz</string>
 
     <!-- Power menu and dialogs transparency -->
-    <string name="power_menu_transparency">Transparenz: Ein-/Aus- und Neustart-Menü</string>
+    <string name="power_menu_transparency">Transparenz</string>
 
     <!-- Power/reboot dialogs dim amount -->
-    <string name="power_menu_dialog_dim">Displayabdunklung: Ein-/Aus- und Neustart-Menü</string>
+    <string name="power_menu_dialog_dim">Displayabdunklung</string>
 
     <!-- Lockscreen Torch -->
     <string name="keyguard_torch_title">Taschenlampe bei Sperrbildschirm</string>
@@ -830,9 +830,9 @@
     <string name="unit_percent">\u0025</string>
 
     <!-- Header text shadow and color -->
-    <string name="status_bar_custom_header_text_shadow_title">Schatten des Kopfzeilentextes</string>
+    <string name="status_bar_custom_header_text_shadow_title">Text-Schatten</string>
     <string name="status_bar_custom_header_text_shadow_summary">Für eine bessere Sichtbarkeit bei Hintergrundbildern</string>
-    <string name="status_bar_custom_header_text_shadow_color_title">Farbe des Textschattens</string>
+    <string name="status_bar_custom_header_text_shadow_color_title">Farbe</string>
     <string name="unit_percent">\u0025</string>
 
     <!-- AdAway -->
@@ -884,26 +884,26 @@
     <string name="app_exit_toast">Zum Beenden erneut \"Zurück\" drücken</string>
 
     <!-- Volume dialog stroke settings -->
-    <string name="volume_dialog_stroke_title">Rand: Lautstärkedialog</string>
+    <string name="volume_dialog_stroke_title">Rand</string>
     <string name="volume_dialog_stroke_disabled">Deaktiviert</string>
     <string name="volume_dialog_stroke_accent">Akzentfarbe</string>
     <string name="volume_dialog_stroke_custom">Eigene Farbe</string>
-    <string name="volume_dialog_stroke_color_title">Randfarbe: Lautstärkedialog</string>
-    <string name="volume_dialog_stroke_thickness_title">Randbreite: Lautstärkedialog</string>
-    <string name="volume_dialog_corner_radius_title">Eckenabrundung: Lautstärkedialog</string>
-    <string name="volume_dialog_dash_width_title">Rand-Strichlänge: Lautstärkedialog</string>
-    <string name="volume_dialog_dash_gap_title">Rand-Unterbrecchungsbreite: Lautstärkedialog</string>
+    <string name="volume_dialog_stroke_color_title">Rand-Farbe</string>
+    <string name="volume_dialog_stroke_thickness_title">Rand-Breite</string>
+    <string name="volume_dialog_corner_radius_title">Eckenabrundung</string>
+    <string name="volume_dialog_dash_width_title">Rand-Strichlänge</string>
+    <string name="volume_dialog_dash_gap_title">Rand-Unterbrechungsbreite</string>
 
     <!-- QS stroke settings -->
-    <string name="qs_stroke_title">Rand: Schnelleinstellungen</string>
+    <string name="qs_stroke_title">Rand</string>
     <string name="qs_stroke_disabled">Deaktiviert</string>
     <string name="qs_stroke_accent">Akzentfarbe</string>
     <string name="qs_stroke_custom">Eigene Farbe</string>
-    <string name="qs_stroke_color_title">Randfarbe: Schnelleinstellungen</string>
-    <string name="qs_stroke_thickness_title">Randbreite: Schnelleinstellungen</string>
-    <string name="qs_corner_radius_title">Eckenabrundung: Schnelleinstellungen</string>
-    <string name="qs_dash_width_title">Rand-Strichlänge: Schnelleinstellungen</string>
-    <string name="qs_dash_gap_title">ZRand-Unterbrecchungsbreite: Schnelleinstellungen</string>
+    <string name="qs_stroke_color_title">Rand-Farbe</string>
+    <string name="qs_stroke_thickness_title">Rand-Breite</string>
+    <string name="qs_corner_radius_title">Eckenabrundung</string>
+    <string name="qs_dash_width_title">Rand-Strichlänge</string>
+    <string name="qs_dash_gap_title">Rand-Unterbrechungsbreite</string>
 
     <!-- MediaScanner behavior on boot -->
     <string name="media_scanner_on_boot_title">Verhalten des MediaScanners beim Start</string>
@@ -917,8 +917,8 @@
     <string name="qs_panel_logo_disabled">Deaktiviert</string>
     <string name="qs_panel_logo_accent">Akzentfarbe</string>
     <string name="qs_panel_logo_custom">Eigene Farbe</string>
-    <string name="qs_panel_logo_color_title">Farbe: Hintergrund-Logo</string>
-    <string name="qs_panel_logo_alpha_title">Transparenz: Hintergrund-Logos</string>
+    <string name="qs_panel_logo_color_title">Farbe</string>
+    <string name="qs_panel_logo_alpha_title">Transparenz</string>
 
     <!-- Lockscreen clock and date font size -->
     <string name="lockscreen_clock_font_size_title">Schriftgröße der Uhrzeit</string>
@@ -936,10 +936,29 @@
     <string name = "lclock_tweaks">Anpassung der cLock-Schriftart und -größe</string>
     <string name = "qs">Anpassung der Schnelleinstellungen</string>
     <string name = "vol_diag">Anpassung des Lautstärkedialogs</string>
-    <string name = "power">Anpassung des Ein-/Aus-Menüs</string>
+    <string name = "power">Anpassung des Ein-/Aus- &amp; Neustart-Menüs</string>
 
     <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Vibration bei Authentifizierung per Fingerabdruck</string>
     <string name="fprint_sucess_vib_summary">Nach erfolgreicher Authentifizierung per Fingerabdruck vibrieren</string>
+
+    <!-- YBoot dialog -->
+    <string name="boot_dialog_title">Boot-Dialog</string>
+    <string name="boot_dialog_bg_category_title">Hintergund</string>
+    <string name="boot_dialog_pimping_title">Anpassung des Hintergrunds</string>
+    <string name="boot_dialog_bg_color_title">Hintergrundfarbe</string>
+    <string name="boot_dialog_stroke_color_title">Rand-Farbe</string>
+    <string name="boot_dialog_stroke_thickness_title">Rand-Breite</string>
+    <string name="boot_dialog_corner_radius_title">Eckenabrundung</string>
+    <string name="boot_dialog_pimping_test_title">Hier Drücken für eine Testanzeige</string>
+    <string name="boot_dialog_test_title">AICP wird gestartet</string>
+    <string name="boot_dialog_test_message">Anwendungen werden optimiert...</string>
+    <string name="boot_dialog_custom_title">Eigene Überschrift</string>
+    <string name="boot_dialog_custom_title_notset">Zur Zeit keine eigene Überschrift eingegeben</string>
+    <string name="boot_dialog_custom_explain">Please enter a new label. Leave blank to revert to stock label.</string>
+    <string name="boot_dialog_starting">wird gestartet\u2026</string>
+    <string name="boot_dialog_title_color_title">Farbe des Überschrift</string>
+    <string name="boot_dialog_mesage_color_title">Farbe der Nachricht</string>
+    <string name="boot_dialog_random_title">Paketnamen in zufälliger Farbe</string>
 
 </resources>
