@@ -18,7 +18,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
 
     <PreferenceCategory
-		android:title = "@string/qs">
+		android:title="@string/qs">
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="qs_transparent_header"
         android:title="@string/qs_transparent_header"
@@ -168,5 +168,14 @@
         aicpextras:unitsRight="%"
         android:persistent="false" />
     </PreferenceCategory>
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="notification_alpha"
+        android:title="@string/notifications_transparency"
+        android:max="255"
+        aicpextras:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight=""
+        android:persistent="false" />
 
 </PreferenceScreen>
