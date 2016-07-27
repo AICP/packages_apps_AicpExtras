@@ -56,7 +56,6 @@ public class TransparencyPornFragment extends Fragment {
         private static final String PREF_QS_STROKE_DASH_WIDTH = "qs_dash_width";
         private static final String PREF_QS_STROKE_DASH_GAP = "qs_dash_gap";
         private static final String PREF_NOTIFICATION_ALPHA = "notification_alpha";
-        private static final String PREF_NOTIFICATION_COLOR = "notification_color";
 
         private SeekBarPreferenceCham mQSShadeAlpha;
         private SeekBarPreferenceCham mQSHeaderAlpha;
@@ -76,11 +75,9 @@ public class TransparencyPornFragment extends Fragment {
         private SeekBarPreferenceCham mQSDashWidth;
         private SeekBarPreferenceCham mQSDashGap;
         private SeekBarPreferenceCham mNotificationsAlpha;
-        private ColorPickerPreference mNotificationsBgColor;
 
         static final int DEFAULT_VOLUME_DIALOG_STROKE_COLOR = 0xFF80CBC4;
         static final int DEFAULT_QS_STROKE_COLOR = 0xFF80CBC4;
-        static final int DEFAULT_NOTIFICATION_BG_COLOR = 0xFFFFFFFF;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -252,16 +249,6 @@ public class TransparencyPornFragment extends Fragment {
             mNotificationsAlpha.setValue(notificationsAlpha / 1);
             mNotificationsAlpha.setOnPreferenceChangeListener(this);
 
-            // Notifications bg color
-            mNotificationsBgColor =
-                    (ColorPickerPreference) findPreference(PREF_NOTIFICATION_COLOR);
-            mNotificationsBgColor.setOnPreferenceChangeListener(this);
-            int notifColor = Settings.System.getInt(resolver,
-                    Settings.System.NOTIFICATION_COLOR, DEFAULT_NOTIFICATION_BG_COLOR);
-            String hexNotifColor = String.format("#%08x", (0xFFFFFFFF & notifColor));
-            mNotificationsBgColor.setSummary(hexNotifColor);
-            mNotificationsBgColor.setNewPreviewColor(notifColor);
-
             VolumeDialogSettingsDisabler(volumeDialogStroke);
             QSSettingsDisabler(qSStroke);
 
@@ -371,14 +358,6 @@ public class TransparencyPornFragment extends Fragment {
                 int alpha = (Integer) newValue;
                 Settings.System.putInt(resolver,
                         Settings.System.NOTIFICATION_ALPHA, alpha * 1);
-                return true;
-            } else if (preference == mNotificationsBgColor) {
-                String hex = ColorPickerPreference.convertToARGB(
-                        Integer.valueOf(String.valueOf(newValue)));
-                preference.setSummary(hex);
-                int intHex = ColorPickerPreference.convertToColorInt(hex);
-                Settings.System.putInt(resolver,
-                        Settings.System.NOTIFICATION_COLOR, intHex);
                 return true;
             }
             return false;
