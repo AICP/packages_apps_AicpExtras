@@ -26,6 +26,7 @@
         aicpextras:min="0"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight=""
+        aicpextras:defaultVal="255"
         android:persistent="false" />
 
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
@@ -35,6 +36,7 @@
         aicpextras:min="0"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight=""
+        aicpextras:defaultVal="255"
         android:persistent="false" />
 
     <ListPreference
@@ -56,6 +58,7 @@
         aicpextras:min="1"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="px"
+        aicpextras:defaultVal="4"
         android:persistent="false" />
 
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
@@ -65,6 +68,7 @@
         aicpextras:min="0"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="px"
+        aicpextras:defaultVal="5"
         android:persistent="false" />
 
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
@@ -74,6 +78,7 @@
         aicpextras:min="0"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="px"
+        aicpextras:defaultVal="0"
         android:persistent="false" />
 
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
@@ -83,12 +88,14 @@
         aicpextras:min="1"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="px"
+        aicpextras:defaultVal="10"
         android:persistent="false" />
 
    </PreferenceCategory>
 
    <PreferenceCategory
         android:title="@string/vol_diag">
+
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="transparent_volume_dialog"
         android:title="@string/volume_dialog_transparency"
@@ -96,6 +103,7 @@
         aicpextras:min="0"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight=""
+        aicpextras:defaultVal="255"
         android:persistent="false" />
 
     <ListPreference
@@ -118,6 +126,7 @@
         aicpextras:min="1"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="px"
+        aicpextras:defaultVal="4"
         android:persistent="false" />
 
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
@@ -127,6 +136,7 @@
         aicpextras:min="0"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="px"
+        aicpextras:defaultVal="10"
         android:persistent="false" />
 
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
@@ -136,6 +146,7 @@
         aicpextras:min="0"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="px"
+        aicpextras:defaultVal="0"
         android:persistent="false" />
 
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
@@ -145,11 +156,13 @@
         aicpextras:min="1"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="px"
+        aicpextras:defaultVal="10"
         android:persistent="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/power">
+
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="transparent_power_menu"
         android:title="@string/power_menu_transparency"
@@ -157,6 +170,7 @@
         aicpextras:min="0"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="%"
+        aicpextras:defaultVal="100"
         android:persistent="false" />
 
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
@@ -166,6 +180,7 @@
         aicpextras:min="0"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="%"
+        aicpextras:defaultVal="50"
         android:persistent="false" />
     </PreferenceCategory>
 
@@ -176,6 +191,7 @@
         aicpextras:min="0"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight=""
+        aicpextras:defaultVal="255"
         android:persistent="false" />
 
 </PreferenceScreen>
