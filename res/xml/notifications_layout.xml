@@ -82,7 +82,7 @@
         android:key="status_bar_custom_header_text_shadow"
         android:title="@string/status_bar_custom_header_text_shadow_title"
         android:summary="@string/status_bar_custom_header_text_shadow_summary"
-        android:defaultValue="0"
+        aicpextras:defaultVal="0"
         android:max="25"
         aicpextras:min="0"
         aicpextras:unitsLeft=""
@@ -103,7 +103,7 @@
          android:key="status_bar_custom_header_shadow"
          android:title="@string/status_bar_custom_header_shadow_title"
          android:summary="@string/status_bar_custom_header_shadow_summary"
-         android:defaultValue="0"
+         aicpextras:defaultVal="0"
          android:max="100"
          aicpextras:min="0"
          aicpextras:unitsLeft=""
@@ -149,6 +149,7 @@
             aicpextras:min="0"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="%"
+            aicpextras:defaultVal="51"
             android:persistent="false" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
