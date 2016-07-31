@@ -1,5 +1,6 @@
 package com.lordclockan.aicpextras;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -166,7 +167,7 @@ public class MainActivity extends AppCompatActivity
                 this, mDrawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
     }
 
-    /* @Override
+     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
@@ -182,11 +183,13 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, com.lordclockan.SettingsActivity.class);
+            this.startActivity(intent);
             return true;
         }
 
         return super.onOptionsItemSelected(item);
-    } */
+    }
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {

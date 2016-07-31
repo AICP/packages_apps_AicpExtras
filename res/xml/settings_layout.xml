@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
+
+    <PreferenceScreen android:key="aicp_logo"
+        android:enabled="false"
+        android:layout="@layout/about_logo" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="nav_drawer_alpha"
+        android:title="Navigation Drawer Transparency"
+        android:max="255"
+        aicpextras:min="0"
+        android:persistent="false" />
+
+</PreferenceScreen>
