@@ -70,4 +70,11 @@
         android:entries="@array/media_scanner_on_boot_entries"
         android:entryValues="@array/media_scanner_on_boot_values" />
 
+    <!-- Package Install overlay -->
+    <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
+        android:key="package_install_overlay_check_disabled"
+        android:title="@string/toggle_package_install_overlay_check_title"
+        android:summary="@string/toggle_package_install_overlay_check_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
