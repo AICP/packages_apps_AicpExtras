@@ -55,14 +55,18 @@
             android:label="@string/changelog_title">
         </activity>
         <activity
+            android:name=".aicpextras.SettingsActivity"
+            android:label="@string/settings_activity_title">
+        </activity>
+        <activity
             android:name=".aicpextras.Traffic"
             android:label="@string/traffic_category">
         </activity>
-	<activity
-	    android:name=".aicpextras.SystemappRemover"
-	    android:label="@string/system_app_remover"
-	    android:excludeFromRecents="true">
-	</activity>
+	    <activity
+	        android:name=".aicpextras.SystemappRemover"
+	        android:label="@string/system_app_remover"
+	        android:excludeFromRecents="true">
+	    </activity>
         <activity
             android:name=".aicpextras.CarrierLabel"
             android:label="@string/carrier_options">
