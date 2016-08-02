@@ -48,11 +48,13 @@ public class SettingsActivity extends AppCompatActivity {
         private static final String PREF_AE_NAV_DRAWER_OPACITY = "ae_drawer_opacity";
         private static final String PREF_AE_NAV_DRAWER_BG_COLOR = "ae_drawer_bg_color";
         private static final String PREF_AE_SETTINGS_RESTORE_DEFAULTS = "ae_settings_restore_defaults";
+        private static final String PREF_AE_NAV_HEADER_BG_IMAGE_OPACITY = "ae_header_bg_image_opacity";
 
         private static final int DEFAULT_NAV_HEADER_COLOR = 0xFF303030;
 
         private SeekBarPreferenceCham mNavDrawerOpacity;
         private ColorPickerPreference mNavDrawerBgColor;
+        private SeekBarPreferenceCham mNavHeaderBgImageOpacity;
         private Preference mAeRestoreDefaults;
 
         @Override
@@ -81,6 +83,11 @@ public class SettingsActivity extends AppCompatActivity {
             mNavDrawerBgColor.setSummary(hexColor);
             mNavDrawerBgColor.setNewPreviewColor(intColor);
 
+            mNavHeaderBgImageOpacity = (SeekBarPreferenceCham) prefSet.findPreference(PREF_AE_NAV_HEADER_BG_IMAGE_OPACITY);
+            mNavHeaderBgImageOpacity.setValue(Settings.System.getInt(resolver,
+                    Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, 255));
+            mNavHeaderBgImageOpacity.setOnPreferenceChangeListener(this);
+
             mAeRestoreDefaults = prefSet.findPreference(PREF_AE_SETTINGS_RESTORE_DEFAULTS);
         }
 
@@ -98,6 +105,11 @@ public class SettingsActivity extends AppCompatActivity {
                 int intHex = ColorPickerPreference.convertToColorInt(hex);
                 Settings.System.putInt(resolver,
                         Settings.System.AE_NAV_DRAWER_BG_COLOR, intHex);
+                return true;
+            } else if (preference == mNavHeaderBgImageOpacity) {
+                int alpha = ((Integer) newValue).intValue();
+                Settings.System.putInt(resolver,
+                        Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, alpha);
                 return true;
             }
             return false;
@@ -118,6 +130,8 @@ public class SettingsActivity extends AppCompatActivity {
                         Settings.System.AE_NAV_DRAWER_OPACITY, 178));
                 Settings.System.putInt(resolver,
                         Settings.System.AE_NAV_DRAWER_BG_COLOR, DEFAULT_NAV_HEADER_COLOR);
+                Settings.System.putInt(resolver,
+                        Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, 255);
                 int intColor = Settings.System.getInt(resolver,
                         Settings.System.AE_NAV_DRAWER_BG_COLOR, DEFAULT_NAV_HEADER_COLOR);
                 String hexColor = String.format("#%08x", (DEFAULT_NAV_HEADER_COLOR & intColor));
