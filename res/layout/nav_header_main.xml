@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="80dp"
-    android:paddingTop="@dimen/nav_header_vertical_spacing"
+    android:layout_height="wrap_content"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:background="@drawable/swirl2_80px"
     android:orientation="horizontal">
 
     <ImageView
@@ -12,7 +12,8 @@
         android:layout_height="fill_parent"
         android:contentDescription="@string/logo"
         android:src="@drawable/ic_nav_header_logo"
-        android:tint="@color/itemIconTint" />
+        android:tint="@color/itemIconTint"
+        android:layout_margin="5dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,13 +25,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/aicp_extras_title"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pun_title" />
+            android:text="@string/pun_title"
+            android:textSize="16sp" />
 
     </LinearLayout>
 
