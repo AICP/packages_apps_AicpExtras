@@ -40,6 +40,15 @@
         android:title="@string/ae_drawer_bg_color_title"
         android:defaultValue="@color/navDrawerBg" />
 
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="ae_header_bg_image_opacity"
+        android:title="@string/ae_header_bg_image_opacity_title"
+        aicpextras:defaultVal="200"
+        android:max="255"
+        aicpextras:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="" />
+
     <Preference
         android:key="ae_settings_restore_defaults"
         android:title="@string/ae_settings_restore_defaults_title" />
