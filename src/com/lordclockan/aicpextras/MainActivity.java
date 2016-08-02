@@ -130,6 +130,11 @@ public class MainActivity extends AppCompatActivity
                 getApplicationContext().getContentResolver(),
                 Settings.System.AE_NAV_DRAWER_OPACITY, 178));
 
+        navigationView.getHeaderView(0).findViewById(R.id.nav_header_layout).
+                getBackground().setAlpha(Settings.System.getInt(this.
+                getApplicationContext().getContentResolver(),
+                Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, 255));
+
    }
 
     @Override
