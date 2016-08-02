@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="80dp"
-    android:paddingTop="@dimen/nav_header_vertical_spacing"
+    android:layout_height="wrap_content"
+    android:paddingTop="7dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    android:orientation="horizontal">
+    android:background="@drawable/header_bg"
+    android:orientation="horizontal"
+    android:id="@+id/nav_header_layout">
 
     <ImageView
         android:id="@+id/nav_header_logo"
@@ -24,13 +26,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/aicp_extras_title"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pun_title" />
+            android:text="@string/pun_title"
+            android:textSize="16sp" />
 
     </LinearLayout>
 
