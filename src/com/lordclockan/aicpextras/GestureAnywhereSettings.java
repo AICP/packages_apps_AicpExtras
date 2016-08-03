@@ -16,6 +16,7 @@
 
 package com.lordclockan.aicpextras;
 
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,13 +27,12 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
-public class GestureAnywhereSettings extends AppCompatActivity {
+public class GestureAnywhereSettings extends Activity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)
@@ -165,5 +165,5 @@ public class GestureAnywhereSettings extends AppCompatActivity {
                     Settings.System.GESTURE_ANYWHERE_SHOW_TRIGGER, 1);
         }
 
-    }    
+    }
 }

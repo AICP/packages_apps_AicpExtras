@@ -17,6 +17,7 @@
 
 package com.lordclockan.aicpextras;
 
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.net.TrafficStats;
@@ -28,12 +29,11 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
-public class Traffic extends AppCompatActivity {
+public class Traffic extends Activity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)
