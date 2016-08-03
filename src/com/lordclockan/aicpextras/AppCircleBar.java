@@ -16,6 +16,7 @@
 
 package com.lordclockan.aicpextras;
 
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
@@ -27,7 +28,6 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.WindowManagerGlobal;
@@ -44,7 +44,7 @@ import com.lordclockan.aicpextras.preferences.AppMultiSelectListPreference;
 import com.lordclockan.aicpextras.utils.Helpers;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
-public class AppCircleBar extends AppCompatActivity {
+public class AppCircleBar extends Activity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)

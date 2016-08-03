@@ -18,6 +18,7 @@
 
 package com.lordclockan.aicpextras;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -32,7 +33,6 @@ import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.text.TextUtils;
 
@@ -41,7 +41,7 @@ import com.android.internal.util.aicp.AwesomeAnimationHelper;
 
 import com.lordclockan.R;
 
-public class KeyboardAnimationInterfaceSettings extends AppCompatActivity {
+public class KeyboardAnimationInterfaceSettings extends Activity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {

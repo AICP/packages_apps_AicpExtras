@@ -34,7 +34,6 @@ import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import android.widget.SeekBar;
@@ -44,7 +43,7 @@ import com.lordclockan.R;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class PieColor extends AppCompatActivity {
+public class PieColor extends Activity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)

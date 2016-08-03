@@ -30,12 +30,11 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.lordclockan.R;
 
-public class PieTargets extends AppCompatActivity {
+public class PieTargets extends Activity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)
