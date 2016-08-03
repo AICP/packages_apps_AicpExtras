@@ -17,6 +17,7 @@
 
 package com.lordclockan.aicpextras;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -32,13 +33,12 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 
 import com.lordclockan.R;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class Weather extends AppCompatActivity {
+public class Weather extends Activity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)

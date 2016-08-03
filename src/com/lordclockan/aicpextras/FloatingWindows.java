@@ -16,6 +16,7 @@
 
 package com.lordclockan.aicpextras;
 
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
@@ -28,11 +29,10 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 
 import com.lordclockan.R;
 
-public class FloatingWindows extends AppCompatActivity {
+public class FloatingWindows extends Activity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)
