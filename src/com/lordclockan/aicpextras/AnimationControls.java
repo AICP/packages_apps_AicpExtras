@@ -31,7 +31,6 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 
 import com.android.internal.util.aicp.AwesomeAnimationHelper;
 import com.lordclockan.R;
@@ -41,7 +40,7 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AnimationControls extends AppCompatActivity {
+public class AnimationControls extends Activity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {

@@ -52,92 +52,114 @@
 
         <activity
             android:name=".aicpextras.ChangeLogActivity"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/changelog_title">
         </activity>
         <activity
             android:name=".aicpextras.SettingsActivity"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/settings_activity_title">
         </activity>
         <activity
             android:name=".aicpextras.Traffic"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/traffic_category">
         </activity>
 	    <activity
 	        android:name=".aicpextras.SystemappRemover"
 	        android:label="@string/system_app_remover"
+            android:theme="@style/PreferenceTheme"
 	        android:excludeFromRecents="true">
 	    </activity>
         <activity
             android:name=".aicpextras.CarrierLabel"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/carrier_options">
         </activity>
         <activity
             android:name=".aicpextras.BatteryBar"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/battery_bar_title">
         </activity>
         <activity
             android:name=".aicpextras.GestureAnywhereSettings"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/gesture_anywhere_title">
         </activity>
         <activity
             android:name=".aicpextras.GestureAnywhereCreateGestureActivity"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/gesture_anywhere_title">
         </activity>
         <activity
             android:name=".aicpextras.GestureAnywhereBuilderActivity"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/gesture_anywhere_title">
         </activity>
         <activity
             android:name=".aicpextras.StatusBarWeather"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/status_bar_temperature_title">
         </activity>
         <activity
             android:name=".aicpextras.Weather"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/weahter_lockscreen_category">
         </activity>
         <activity
             android:name=".aicpextras.AppCircleBar"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/category_app_circle_bar_title">
         </activity>
         <activity
             android:name=".aicpextras.AppSidebar"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/app_sidebar_title">
         </activity>
         <activity
             android:name=".aicpextras.SlimRecentPanel"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/use_slim_recents_title">
         </activity>
         <activity
             android:name=".aicpextras.PieControl"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/pa_pie_control_title">
         </activity>
         <activity
             android:name=".aicpextras.PieColor"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/pa_pie_control_title">
         </activity>
         <activity
             android:name=".aicpextras.PieTargets"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/pa_pie_control_title">
         </activity>
         <activity
             android:name=".aicpextras.AnimationControls"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/aokp_animation_title">
         </activity>
         <activity
             android:name=".aicpextras.KeyboardAnimationInterfaceSettings"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/ime_animation_title">
         </activity>
         <activity
             android:name=".aicpextras.FloatingWindows"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/floating_windows">
         </activity>
         <activity
             android:name=".aicpextras.BootDialog"
+            android:theme="@style/PreferenceTheme"
             android:label="@string/boot_dialog_title">
         </activity>
         <activity
             android:name=".aicpextras.HiddenAnimActivity"
             android:label="@string/hidden_anim_activity_title"
+            android:theme="@style/PreferenceTheme"
             android:excludeFromRecents="true">
         </activity>
 

@@ -16,6 +16,7 @@
 
 package com.lordclockan.aicpextras;
 
+import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -33,7 +34,6 @@ import android.preference.SlimSeekBarPreference;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 
@@ -43,7 +43,7 @@ import com.android.internal.util.aicp.DeviceUtils;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class SlimRecentPanel extends AppCompatActivity {
+public class SlimRecentPanel extends Activity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
