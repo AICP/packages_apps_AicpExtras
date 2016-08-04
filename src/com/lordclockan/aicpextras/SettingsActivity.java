@@ -48,12 +48,16 @@ public class SettingsActivity extends SubActivity {
         private static final String PREF_AE_NAV_DRAWER_BG_COLOR = "ae_drawer_bg_color";
         private static final String PREF_AE_SETTINGS_RESTORE_DEFAULTS = "ae_settings_restore_defaults";
         private static final String PREF_AE_NAV_HEADER_BG_IMAGE_OPACITY = "ae_header_bg_image_opacity";
+        private static final String PREF_AE_NAV_DRAWER_CHECKED_TEXT = "ae_nav_drawer_checked_text";
+        private static final String PREF_AE_NAV_DRAWER_UNCHECKED_TEXT = "ae_nav_drawer_unchecked_text";
 
         private static final int DEFAULT_NAV_HEADER_COLOR = 0xFF303030;
 
         private SeekBarPreferenceCham mNavDrawerOpacity;
         private ColorPickerPreference mNavDrawerBgColor;
         private SeekBarPreferenceCham mNavHeaderBgImageOpacity;
+        private ColorPickerPreference mNavDrawerTextCheckedColor;
+        private ColorPickerPreference mNavDrawerTextUncheckedColor;
         private Preference mAeRestoreDefaults;
 
         @Override
@@ -87,6 +91,22 @@ public class SettingsActivity extends SubActivity {
                     Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, 200));
             mNavHeaderBgImageOpacity.setOnPreferenceChangeListener(this);
 
+            mNavDrawerTextCheckedColor = (ColorPickerPreference) prefSet.findPreference(PREF_AE_NAV_DRAWER_CHECKED_TEXT);
+            mNavDrawerTextCheckedColor.setOnPreferenceChangeListener(this);
+            intColor = Settings.System.getInt(resolver,
+                    Settings.System.AE_NAV_DRAWER_CHECKED_TEXT, 0xffffab00);
+            hexColor = String.format("#%08x", (0xffffab00 & intColor));
+            mNavDrawerTextCheckedColor.setSummary(hexColor);
+            mNavDrawerTextCheckedColor.setNewPreviewColor(intColor);
+
+            mNavDrawerTextUncheckedColor = (ColorPickerPreference) prefSet.findPreference(PREF_AE_NAV_DRAWER_UNCHECKED_TEXT);
+            mNavDrawerTextUncheckedColor.setOnPreferenceChangeListener(this);
+            intColor = Settings.System.getInt(resolver,
+                    Settings.System.AE_NAV_DRAWER_UNCHECKED_TEXT, 0xFFFFFFFF);
+            hexColor = String.format("#%08x", (0xFFFFFFFF & intColor));
+            mNavDrawerTextUncheckedColor.setSummary(hexColor);
+            mNavDrawerTextUncheckedColor.setNewPreviewColor(intColor);
+
             mAeRestoreDefaults = prefSet.findPreference(PREF_AE_SETTINGS_RESTORE_DEFAULTS);
         }
 
@@ -110,6 +130,22 @@ public class SettingsActivity extends SubActivity {
                 Settings.System.putInt(resolver,
                         Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, alpha);
                 return true;
+            } else if (preference == mNavDrawerTextCheckedColor) {
+                String hex = ColorPickerPreference.convertToARGB(
+                        Integer.valueOf(String.valueOf(newValue)));
+                preference.setSummary(hex);
+                int intHex = ColorPickerPreference.convertToColorInt(hex);
+                Settings.System.putInt(resolver,
+                        Settings.System.AE_NAV_DRAWER_CHECKED_TEXT, intHex);
+                return true;
+            } else if (preference == mNavDrawerTextUncheckedColor) {
+                String hex = ColorPickerPreference.convertToARGB(
+                        Integer.valueOf(String.valueOf(newValue)));
+                preference.setSummary(hex);
+                int intHex = ColorPickerPreference.convertToColorInt(hex);
+                Settings.System.putInt(resolver,
+                        Settings.System.AE_NAV_DRAWER_UNCHECKED_TEXT, intHex);
+                return true;
             }
             return false;
         }
@@ -123,19 +159,43 @@ public class SettingsActivity extends SubActivity {
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
             ContentResolver resolver = getActivity().getContentResolver();
             if (preference == mAeRestoreDefaults) {
+                int intColor;
+                String hexColor;
+
                 Settings.System.putInt(resolver,
                         Settings.System.AE_NAV_DRAWER_OPACITY, 178);
                 mNavDrawerOpacity.setValue(Settings.System.getInt(resolver,
                         Settings.System.AE_NAV_DRAWER_OPACITY, 178));
-                Settings.System.putInt(resolver,
-                        Settings.System.AE_NAV_DRAWER_BG_COLOR, DEFAULT_NAV_HEADER_COLOR);
+
                 Settings.System.putInt(resolver,
                         Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, 200);
-                int intColor = Settings.System.getInt(resolver,
+                mNavHeaderBgImageOpacity.setValue(Settings.System.getInt(resolver,
+                        Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, 200));
+
+                Settings.System.putInt(resolver,
                         Settings.System.AE_NAV_DRAWER_BG_COLOR, DEFAULT_NAV_HEADER_COLOR);
-                String hexColor = String.format("#%08x", (DEFAULT_NAV_HEADER_COLOR & intColor));
+                intColor = Settings.System.getInt(resolver,
+                        Settings.System.AE_NAV_DRAWER_BG_COLOR, DEFAULT_NAV_HEADER_COLOR);
+                hexColor = String.format("#%08x", (DEFAULT_NAV_HEADER_COLOR & intColor));
                 mNavDrawerBgColor.setSummary(hexColor);
                 mNavDrawerBgColor.setNewPreviewColor(intColor);
+
+                Settings.System.putInt(resolver,
+                        Settings.System.AE_NAV_DRAWER_CHECKED_TEXT, 0xffffab00);
+                intColor = Settings.System.getInt(resolver,
+                        Settings.System.AE_NAV_DRAWER_CHECKED_TEXT, 0xffffab00);
+                hexColor = String.format("#%08x", (0xffffab00 & intColor));
+                mNavDrawerTextCheckedColor.setSummary(hexColor);
+                mNavDrawerTextCheckedColor.setNewPreviewColor(intColor);
+
+                Settings.System.putInt(resolver,
+                        Settings.System.AE_NAV_DRAWER_UNCHECKED_TEXT, 0xffffffff);
+                intColor = Settings.System.getInt(resolver,
+                        Settings.System.AE_NAV_DRAWER_UNCHECKED_TEXT, 0xffffffff);
+                hexColor = String.format("#%08x", (0xffffffff & intColor));
+                mNavDrawerTextUncheckedColor.setSummary(hexColor);
+                mNavDrawerTextUncheckedColor.setNewPreviewColor(intColor);
+
                 Snackbar.make(getView(), R.string.values_restored_title,
                         Snackbar.LENGTH_LONG).show();
             } else {

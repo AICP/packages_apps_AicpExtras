@@ -49,6 +49,16 @@
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="" />
 
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="ae_nav_drawer_checked_text"
+        android:title="@string/ae_nav_drawer_checked_text_title"
+        android:defaultValue="@color/navDrawerTextChecked" />
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="ae_nav_drawer_unchecked_text"
+        android:title="@string/ae_nav_drawer_unchecked_text_title"
+        android:defaultValue="@color/navDrawerText" />
+
     <Preference
         android:key="ae_settings_restore_defaults"
         android:title="@string/ae_settings_restore_defaults_title" />
