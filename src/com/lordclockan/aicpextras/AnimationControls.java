@@ -19,7 +19,6 @@
 
 package com.lordclockan.aicpextras;
 
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -40,7 +39,7 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AnimationControls extends Activity {
+public class AnimationControls extends SubActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {

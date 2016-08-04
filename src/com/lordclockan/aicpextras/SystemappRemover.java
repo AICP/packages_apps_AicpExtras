@@ -32,7 +32,6 @@ import java.util.Collections;
 import java.util.ListIterator;
 import java.util.Scanner;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.app.Fragment;
@@ -54,7 +53,7 @@ import android.widget.Toast;
 
 import com.lordclockan.R;
 
-public class SystemappRemover extends Activity {
+public class SystemappRemover extends SubActivity {
 
     private static final String TAG = "SystemappRemover";
 
