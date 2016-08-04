@@ -1,7 +1,9 @@
 package com.lordclockan.aicpextras;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -134,6 +136,13 @@ public class MainActivity extends AppCompatActivity
                 getBackground().setAlpha(Settings.System.getInt(this.
                 getApplicationContext().getContentResolver(),
                 Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, 255));
+
+
+
+        // apply to text color
+        navigationView.setItemTextColor(navDrawerItemColor());
+        // apply to icon color
+        navigationView.setItemIconTintList(navDrawerItemColor());
 
    }
 
@@ -276,5 +285,28 @@ public class MainActivity extends AppCompatActivity
     protected void onSaveInstanceState(final Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(NAV_ITEM_ID, id);
+    }
+
+    private ColorStateList navDrawerItemColor() {
+
+        String checkedColor = "#" + Integer.toHexString(getResources().getColor(R.color.navDrawerText, null)); // white
+        String uncheckedColor = "#" + Integer.toHexString(getResources().getColor(R.color.navDrawerTextChecked, null)); //amber
+        String defaultColor = "#" + Integer.toHexString(getResources().getColor(R.color.navDrawerText, null)); //white
+
+        int[][] states = new int[][]{
+                new int[]{-android.R.attr.state_checked},  // unchecked
+                new int[]{android.R.attr.state_checked},   // checked
+                new int[]{}                                // default
+        };
+
+        int[] colors = new int[]{
+                Color.parseColor(checkedColor),
+                Color.parseColor(uncheckedColor),
+                Color.parseColor(defaultColor),
+        };
+
+        ColorStateList navigationViewColorStateList = new ColorStateList(states, colors);
+
+        return navigationViewColorStateList;
     }
 }
