@@ -16,7 +16,6 @@
 
 package com.lordclockan.aicpextras;
 
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.os.Bundle;
 import android.preference.Preference;
@@ -31,7 +30,7 @@ import com.lordclockan.R;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class SettingsActivity extends Activity {
+public class SettingsActivity extends SubActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {

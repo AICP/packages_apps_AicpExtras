@@ -16,7 +16,6 @@
 
 package com.lordclockan.aicpextras;
 
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -43,7 +42,7 @@ import com.android.internal.util.aicp.DeviceUtils;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class SlimRecentPanel extends Activity {
+public class SlimRecentPanel extends SubActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {

@@ -18,7 +18,6 @@
 
 package com.lordclockan.aicpextras;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -41,7 +40,7 @@ import com.android.internal.util.aicp.AwesomeAnimationHelper;
 
 import com.lordclockan.R;
 
-public class KeyboardAnimationInterfaceSettings extends Activity {
+public class KeyboardAnimationInterfaceSettings extends SubActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {

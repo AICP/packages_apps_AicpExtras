@@ -16,7 +16,6 @@
 
 package com.lordclockan.aicpextras;
 
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
@@ -32,7 +31,7 @@ import android.provider.Settings;
 
 import com.lordclockan.R;
 
-public class FloatingWindows extends Activity {
+public class FloatingWindows extends SubActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)
