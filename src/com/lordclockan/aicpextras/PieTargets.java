@@ -17,7 +17,6 @@
 
 package com.lordclockan.aicpextras;
 
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.content.Context;
@@ -34,7 +33,7 @@ import android.util.Log;
 
 import com.lordclockan.R;
 
-public class PieTargets extends Activity {
+public class PieTargets extends SubActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)

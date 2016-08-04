@@ -16,7 +16,6 @@
 
 package com.lordclockan.aicpextras;
 
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.database.ContentObserver;
@@ -38,7 +37,7 @@ import com.lordclockan.aicpextras.utils.Utils;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class BatteryBar extends Activity {
+public class BatteryBar extends SubActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)

@@ -16,7 +16,6 @@
 
 package com.lordclockan.aicpextras;
 
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,7 +31,7 @@ import android.view.Gravity;
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
-public class GestureAnywhereSettings extends Activity {
+public class GestureAnywhereSettings extends SubActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)

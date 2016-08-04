@@ -16,7 +16,6 @@
 
 package com.lordclockan.aicpextras;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
@@ -43,7 +42,7 @@ import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class CarrierLabel extends Activity {
+public class CarrierLabel extends SubActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {

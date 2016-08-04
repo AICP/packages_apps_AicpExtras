@@ -16,7 +16,6 @@
 
 package com.lordclockan.aicpextras;
 
-import android.app.Activity;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -33,7 +32,7 @@ import android.provider.Settings;
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
-public class AppSidebar extends Activity {
+public class AppSidebar extends SubActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)

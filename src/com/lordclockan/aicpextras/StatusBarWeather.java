@@ -15,7 +15,6 @@
  */
 package com.lordclockan.aicpextras;
 
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.os.Bundle;
 import android.os.UserHandle;
@@ -30,7 +29,7 @@ import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class StatusBarWeather extends Activity {
+public class StatusBarWeather extends SubActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState)
