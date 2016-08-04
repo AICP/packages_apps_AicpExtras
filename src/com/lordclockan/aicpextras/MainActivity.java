@@ -124,10 +124,20 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        int navBgColor = Settings.System.getInt(this.getApplicationContext().getContentResolver(),
+                Settings.System.AE_NAV_DRAWER_BG_COLOR, getResources().getColor(R.color.navDrawerBg, null));
+
+        if (navBgColor != getResources().getColor(R.color.navDrawerBg)) {
+            navigationView.setBackgroundColor(navBgColor);
+        } else {
+            navigationView.setBackgroundColor(getResources().getColor(R.color.navDrawerBg));
+        }
+
         navigationView.setBackgroundColor(Settings.System.getInt(this.
                 getApplicationContext().getContentResolver(),
                 Settings.System.AE_NAV_DRAWER_BG_COLOR,
                 getResources().getColor(R.color.navDrawerBg)));
+
         navigationView.getBackground().setAlpha(Settings.System.getInt(this.
                 getApplicationContext().getContentResolver(),
                 Settings.System.AE_NAV_DRAWER_OPACITY, 178));
