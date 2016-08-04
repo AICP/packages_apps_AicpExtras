@@ -1,7 +1,9 @@
 package com.lordclockan.aicpextras;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -134,6 +136,9 @@ public class MainActivity extends AppCompatActivity
                 getBackground().setAlpha(Settings.System.getInt(this.
                 getApplicationContext().getContentResolver(),
                 Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, 255));
+
+        navigationView.setItemTextColor(navDrawerItemColor());
+        navigationView.setItemIconTintList(navDrawerItemColor());
 
    }
 
@@ -276,5 +281,46 @@ public class MainActivity extends AppCompatActivity
     protected void onSaveInstanceState(final Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(NAV_ITEM_ID, id);
+    }
+
+    private ColorStateList navDrawerItemColor() {
+        int checkedColor = Settings.System.getInt(this.getApplicationContext().getContentResolver(),
+                Settings.System.AE_NAV_DRAWER_CHECKED_TEXT, getResources().getColor(R.color.navDrawerTextChecked, null));
+        int uncheckedColor = Settings.System.getInt(this.getApplicationContext().getContentResolver(),
+                Settings.System.AE_NAV_DRAWER_UNCHECKED_TEXT, getResources().getColor(R.color.navDrawerText, null));
+
+        String hexCheckedColor = String.format("#%08x", (checkedColor));
+        String hexUncheckedColor = String.format("#%08x", (uncheckedColor));
+
+        /*Log.v(TAG, "checked:" + hexCheckedColor);
+        Log.v(TAG, "unchecked: " + hexUncheckedColor);
+        Log.v(TAG, "default: " + defaultColor);*/
+
+        String defaultCheckedColor = "#" + Integer.toHexString(getResources().getColor(R.color.navDrawerTextChecked, null)); // amber
+        String defaultUncheckedColor = "#" + Integer.toHexString(getResources().getColor(R.color.navDrawerText, null)); // white
+        String defaultColor = "#" + Integer.toHexString(getResources().getColor(R.color.navDrawerText, null)); // white
+
+        if (hexCheckedColor == defaultCheckedColor) {
+            hexCheckedColor = defaultCheckedColor;
+        }
+        if (hexUncheckedColor == defaultUncheckedColor) {
+            hexUncheckedColor = defaultUncheckedColor;
+        }
+
+        int[][] states = new int[][]{
+                new int[]{-android.R.attr.state_checked},  // unchecked
+                new int[]{android.R.attr.state_checked},   // checked
+                new int[]{}                                // default
+        };
+
+        int[] colors = new int[]{
+                Color.parseColor(hexUncheckedColor),
+                Color.parseColor(hexCheckedColor),
+                Color.parseColor(defaultColor),
+        };
+
+        ColorStateList navigationViewColorStateList = new ColorStateList(states, colors);
+
+        return navigationViewColorStateList;
     }
 }
