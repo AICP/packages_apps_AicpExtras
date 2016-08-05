@@ -121,10 +121,11 @@ public class NotificationsFragment extends Fragment {
             mStatusBarHeaderFontStyle.setSummary(mStatusBarHeaderFontStyle.getEntry());
 
             // Status Bar header text shadow
-            mTextShadow = (SeekBarPreferenceCham) findPreference(CUSTOM_HEADER_TEXT_SHADOW);
-            final float textShadow = Settings.System.getFloat(resolver,
+            mTextShadow =
+                    (SeekBarPreferenceCham) findPreference(CUSTOM_HEADER_TEXT_SHADOW);
+            int textShadow = Settings.System.getInt(resolver,
                     Settings.System.STATUS_BAR_CUSTOM_HEADER_TEXT_SHADOW, 0);
-            mTextShadow.setValue((int)(textShadow));
+            mTextShadow.setValue(textShadow / 1);
             mTextShadow.setOnPreferenceChangeListener(this);
 
             //Status Bar header text shadow color
@@ -138,10 +139,11 @@ public class NotificationsFragment extends Fragment {
             mTShadowColor.setNewPreviewColor(shadowColor);
 
             // Status Bar header shadow on custom header images
-            mHeaderShadow = (SeekBarPreferenceCham) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
-            final int headerShadow = Settings.System.getInt(resolver,
+            mHeaderShadow =
+                    (SeekBarPreferenceCham) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
+            int headerShadow = Settings.System.getInt(resolver,
                     Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, 0);
-            mHeaderShadow.setValue((int)((headerShadow / 255) * 100));
+            mHeaderShadow.setValue(headerShadow / 1);
             mHeaderShadow.setOnPreferenceChangeListener(this);
 
             // Number of QS Columns 3,4,5
@@ -268,11 +270,10 @@ public class NotificationsFragment extends Fragment {
                 updateNumRowsSummary(numRows);
                 return true;
             } else if (preference == mTextShadow) {
-                float textShadow = (Integer) newValue;
-                float realHeaderValue = (float) ((double) textShadow);
-                Settings.System.putFloat(resolver,
-                      Settings.System.STATUS_BAR_CUSTOM_HEADER_TEXT_SHADOW, realHeaderValue);
-                 return true;
+                int textShadow = (Integer) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.STATUS_BAR_CUSTOM_HEADER_TEXT_SHADOW, textShadow * 1);
+                return true;
             } else if (preference == mTShadowColor) {
                 String hex = ColorPickerPreference.convertToARGB(
                         Integer.valueOf(String.valueOf(newValue)));
@@ -282,10 +283,9 @@ public class NotificationsFragment extends Fragment {
                         Settings.System.STATUS_BAR_CUSTOM_HEADER_TEXT_SHADOW_COLOR, intHex);
                 return true;
             } else if (preference == mHeaderShadow) {
-               Integer headerShadow = (Integer) newValue;
-               int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
+               int headerValue = (Integer) newValue;
                Settings.System.putInt(resolver,
-                       Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
+                       Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, headerValue * 1);
                return true;
             } else if (preference == mTileAnimationStyle) {
                 int tileAnimationStyle = Integer.valueOf((String) newValue);

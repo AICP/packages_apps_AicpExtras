@@ -86,7 +86,7 @@
         android:max="25"
         aicpextras:min="0"
         aicpextras:unitsLeft=""
-        aicpextras:unitsRight="@string/unit_percent"
+        aicpextras:unitsRight="%"
         android:persistent="false" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
@@ -107,7 +107,7 @@
          android:max="100"
          aicpextras:min="0"
          aicpextras:unitsLeft=""
-         aicpextras:unitsRight="@string/unit_percent"
+         aicpextras:unitsRight="%"
          android:persistent="false"
          android:dependency="status_bar_custom_header" />
 
