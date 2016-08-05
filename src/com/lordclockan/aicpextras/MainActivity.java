@@ -248,6 +248,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_multishit:
                 fragmentClass = MultiShitFragment.class;
                 break;
+            case R.id.nav_halo:
+                fragmentClass = HaloFragment.class;
+                break;
             case R.id.nav_transparency_porn:
                 fragmentClass = TransparencyPornFragment.class;
                 break;
