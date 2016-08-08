@@ -26,6 +26,12 @@
         android:summary="@string/settings_info_summary"
         android:title="@string/settings_info_title" />
 
+    <SwitchPreference
+            android:key="ae_custom_colors"
+            android:title="@string/ae_custom_colors_title"
+            android:summary="@string/ae_custom_colors_summaries"
+            android:defaultValue="false" />
+
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="ae_drawer_opacity"
         android:title="@string/ae_drawer_opacity_title"
@@ -38,7 +44,8 @@
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="ae_drawer_bg_color"
         android:title="@string/ae_drawer_bg_color_title"
-        android:defaultValue="@color/navDrawerBg" />
+        android:defaultValue="@color/navDrawerBg"
+        android:dependency="ae_custom_colors" />
 
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="ae_header_bg_image_opacity"
@@ -52,12 +59,14 @@
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="ae_nav_drawer_checked_text"
         android:title="@string/ae_nav_drawer_checked_text_title"
-        android:defaultValue="@color/navDrawerTextChecked" />
+        android:defaultValue="@color/navDrawerTextChecked"
+        android:dependency="ae_custom_colors" />
 
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="ae_nav_drawer_unchecked_text"
         android:title="@string/ae_nav_drawer_unchecked_text_title"
-        android:defaultValue="@color/navDrawerText" />
+        android:defaultValue="@color/navDrawerText"
+        android:dependency="ae_custom_colors" />
 
     <Preference
         android:key="ae_settings_restore_defaults"

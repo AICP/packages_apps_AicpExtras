@@ -22,6 +22,7 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.design.widget.Snackbar;
 
@@ -44,6 +45,7 @@ public class SettingsActivity extends SubActivity {
 
         private static final String TAG = "SettingsActivity";
 
+        private static final String PREF_AE_CUSTOM_COLORS = "ae_custom_colors";
         private static final String PREF_AE_NAV_DRAWER_OPACITY = "ae_drawer_opacity";
         private static final String PREF_AE_NAV_DRAWER_BG_COLOR = "ae_drawer_bg_color";
         private static final String PREF_AE_SETTINGS_RESTORE_DEFAULTS = "ae_settings_restore_defaults";
@@ -53,6 +55,7 @@ public class SettingsActivity extends SubActivity {
 
         private static final int DEFAULT_NAV_HEADER_COLOR = 0xFF303030;
 
+        private SwitchPreference mCustomColors;
         private SeekBarPreferenceCham mNavDrawerOpacity;
         private ColorPickerPreference mNavDrawerBgColor;
         private SeekBarPreferenceCham mNavHeaderBgImageOpacity;
@@ -72,6 +75,11 @@ public class SettingsActivity extends SubActivity {
 
             int intColor;
             String hexColor;
+
+            mCustomColors = (SwitchPreference) prefSet.findPreference(PREF_AE_CUSTOM_COLORS);
+            mCustomColors.setChecked(Settings.System.getInt(resolver,
+                    Settings.System.AE_CUSTOM_COLORS, 0) != 0);
+            mCustomColors.setOnPreferenceChangeListener(this);
 
             mNavDrawerOpacity = (SeekBarPreferenceCham) prefSet.findPreference(PREF_AE_NAV_DRAWER_OPACITY);
             mNavDrawerOpacity.setValue(Settings.System.getInt(resolver,
@@ -112,7 +120,12 @@ public class SettingsActivity extends SubActivity {
 
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getActivity().getContentResolver();
-            if (preference == mNavDrawerOpacity) {
+            if (preference == mCustomColors) {
+                int enabled = ((Boolean) newValue) ? 1 : 0;
+                Settings.System.putInt(resolver,
+                        Settings.System.AE_CUSTOM_COLORS, enabled);
+                return true;
+            } else if (preference == mNavDrawerOpacity) {
                 int alpha = ((Integer) newValue).intValue();
                 Settings.System.putInt(resolver,
                         Settings.System.AE_NAV_DRAWER_OPACITY, alpha);
