@@ -124,19 +124,16 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        int navBgColor = Settings.System.getInt(this.getApplicationContext().getContentResolver(),
-                Settings.System.AE_NAV_DRAWER_BG_COLOR, getResources().getColor(R.color.navDrawerBg, null));
+        int navBgColor = getResources().getColor(R.color.navDrawerBg, null);
 
-        if (navBgColor != getResources().getColor(R.color.navDrawerBg)) {
-            navigationView.setBackgroundColor(navBgColor);
-        } else {
-            navigationView.setBackgroundColor(getResources().getColor(R.color.navDrawerBg));
+        if (Settings.System.getInt(getApplicationContext().getContentResolver(),
+                Settings.System.AE_CUSTOM_COLORS, 0) != 0) {
+            // Use colors from settings
+            navBgColor = Settings.System.getInt(this.getApplicationContext().getContentResolver(),
+                Settings.System.AE_NAV_DRAWER_BG_COLOR, navBgColor);
         }
 
-        navigationView.setBackgroundColor(Settings.System.getInt(this.
-                getApplicationContext().getContentResolver(),
-                Settings.System.AE_NAV_DRAWER_BG_COLOR,
-                getResources().getColor(R.color.navDrawerBg)));
+        navigationView.setBackgroundColor(navBgColor);
 
         navigationView.getBackground().setAlpha(Settings.System.getInt(this.
                 getApplicationContext().getContentResolver(),
@@ -297,27 +294,16 @@ public class MainActivity extends AppCompatActivity
     }
 
     private ColorStateList navDrawerItemColor() {
-        int checkedColor = Settings.System.getInt(this.getApplicationContext().getContentResolver(),
-                Settings.System.AE_NAV_DRAWER_CHECKED_TEXT, getResources().getColor(R.color.navDrawerTextChecked, null));
-        int uncheckedColor = Settings.System.getInt(this.getApplicationContext().getContentResolver(),
-                Settings.System.AE_NAV_DRAWER_UNCHECKED_TEXT, getResources().getColor(R.color.navDrawerText, null));
-
-        String hexCheckedColor = String.format("#%08x", (checkedColor));
-        String hexUncheckedColor = String.format("#%08x", (uncheckedColor));
-
-        /*Log.v(TAG, "checked:" + hexCheckedColor);
-        Log.v(TAG, "unchecked: " + hexUncheckedColor);
-        Log.v(TAG, "default: " + defaultColor);*/
-
-        String defaultCheckedColor = "#" + Integer.toHexString(getResources().getColor(R.color.navDrawerTextChecked, null)); // amber
-        String defaultUncheckedColor = "#" + Integer.toHexString(getResources().getColor(R.color.navDrawerText, null)); // white
-        String defaultColor = "#" + Integer.toHexString(getResources().getColor(R.color.navDrawerText, null)); // white
-
-        if (hexCheckedColor == defaultCheckedColor) {
-            hexCheckedColor = defaultCheckedColor;
-        }
-        if (hexUncheckedColor == defaultUncheckedColor) {
-            hexUncheckedColor = defaultUncheckedColor;
+        int checkedColor = getResources().getColor(R.color.navDrawerTextChecked, null);
+        int uncheckedColor = getResources().getColor(R.color.navDrawerText, null);
+        int defaultColor = uncheckedColor;
+        if (Settings.System.getInt(getApplicationContext().getContentResolver(),
+                Settings.System.AE_CUSTOM_COLORS, 0) != 0) {
+            // Use colors from settings
+            checkedColor = Settings.System.getInt(this.getApplicationContext().getContentResolver(),
+                    Settings.System.AE_NAV_DRAWER_CHECKED_TEXT, checkedColor);
+            uncheckedColor = Settings.System.getInt(this.getApplicationContext().getContentResolver(),
+                    Settings.System.AE_NAV_DRAWER_UNCHECKED_TEXT, uncheckedColor);
         }
 
         int[][] states = new int[][]{
@@ -327,9 +313,9 @@ public class MainActivity extends AppCompatActivity
         };
 
         int[] colors = new int[]{
-                Color.parseColor(hexUncheckedColor),
-                Color.parseColor(hexCheckedColor),
-                Color.parseColor(defaultColor),
+                uncheckedColor,
+                checkedColor,
+                defaultColor,
         };
 
         ColorStateList navigationViewColorStateList = new ColorStateList(states, colors);
