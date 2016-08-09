@@ -23,6 +23,7 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
 
@@ -48,10 +49,12 @@ public class HaloFragment extends Fragment {
         private static final String KEY_HALO_SIZE = "halo_size";
         private static final String KEY_HALO_MSGBOX_ANIMATION = "halo_msgbox_animation";
         private static final String KEY_HALO_NOTIFY_COUNT = "halo_notify_count";
+        private static final String KEY_HALO_FLOAT_NOTIFICATIONS = "halo_float_notifications";
 
         private ListPreference mHaloSize;
         private ListPreference mHaloNotifyCount;
         private ListPreference mHaloMsgAnimate;
+        private SwitchPreference mHaloFloat;
 
         private Context mContext;
 
@@ -92,6 +95,13 @@ public class HaloFragment extends Fragment {
                 // fail...
             }
             mHaloMsgAnimate.setOnPreferenceChangeListener(this);
+
+            mHaloFloat = (SwitchPreference) prefSet.findPreference(KEY_HALO_FLOAT_NOTIFICATIONS);
+            if (Settings.System.getInt(mContext.getContentResolver(),
+                    Settings.System.FLOATING_WINDOW_MODE, 0) == 0) {
+                mHaloFloat.setEnabled(false);
+                mHaloFloat.setSummary(R.string.halo_enable_float_summary);
+            }
         }
 
         @Override
