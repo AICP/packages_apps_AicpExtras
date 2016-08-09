@@ -17,6 +17,12 @@ limitations under the License.
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
 
+    <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
+        android:key="halo_enable"
+        android:title="@string/halo_enable_title"
+        android:summary="@string/halo_enable_summary"
+        android:defaultValue="false" />
+
     <ListPreference
         android:key="halo_size"
         android:dialogTitle="@string/halo_size_title"
