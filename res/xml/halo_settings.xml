@@ -29,15 +29,13 @@ limitations under the License.
         android:title="@string/halo_size_title"
         android:summary="@string/halo_size_summary"
         android:entries="@array/entries_halo_size"
-        android:entryValues="@array/values_halo_size"
-        android:dependency="halo_enable" />
+        android:entryValues="@array/values_halo_size" />
 
     <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
         android:key="halo_hide"
         android:title="@string/halo_hide_title"
         android:summary="@string/halo_hide_summary"
-        android:defaultValue="false"
-        android:dependency="halo_enable" />
+        android:defaultValue="false" />
 
     <ListPreference
         android:key="halo_notify_count"
@@ -45,22 +43,19 @@ limitations under the License.
         android:title="@string/halo_notification_count_title"
         android:summary="@string/halo_notification_count_summary"
         android:entries="@array/entries_halo_notification_count"
-        android:entryValues="@array/values_halo_notification_count"
-        android:dependency="halo_enable" />
+        android:entryValues="@array/values_halo_notification_count" />
 
     <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
         android:key="halo_float_notifications"
         android:title="@string/halo_floating_notifications_title"
         android:summary="@string/halo_floating_notifications_summary"
-        android:defaultValue="false"
-        android:dependency="halo_enable" />
+        android:defaultValue="false" />
 
     <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
         android:key="halo_msgbox"
         android:title="@string/halo_notification_msgbox_title"
         android:summary="@string/halo_notification_msgbox_summary"
-        android:defaultValue="true"
-        android:dependency="halo_enable" />
+        android:defaultValue="true" />
 
     <ListPreference
         android:key="halo_msgbox_animation"
@@ -68,20 +63,17 @@ limitations under the License.
         android:title="@string/halo_msgbox_animation_title"
         android:summary="@string/halo_msgbox_animation_summary"
         android:entries="@array/entries_halo_msgbox_animation"
-        android:entryValues="@array/values_halo_msgbox_animation"
-        android:dependency="halo_enable" />
+        android:entryValues="@array/values_halo_msgbox_animation" />
 
     <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
         android:key="halo_pause"
         android:title="@string/halo_pause_title"
-        android:summary="@string/halo_pause_summary"
-        android:dependency="halo_enable" />
+        android:summary="@string/halo_pause_summary" />
 
     <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
         android:key="halo_unlock_ping"
         android:title="@string/halo_unlock_ping_title"
         android:summary="@string/halo_unlock_ping_summary"
-        android:defaultValue="false"
-        android:dependency="halo_enable" />
+        android:defaultValue="false" />
 
 </PreferenceScreen>

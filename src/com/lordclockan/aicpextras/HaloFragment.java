@@ -17,6 +17,7 @@
 package com.lordclockan.aicpextras;
 
 import android.content.Context;
+import android.content.ContentResolver;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -25,7 +26,9 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.view.ViewGroup;
 
 import com.lordclockan.R;
 
@@ -50,25 +53,37 @@ public class HaloFragment extends Fragment {
         private static final String KEY_HALO_MSGBOX_ANIMATION = "halo_msgbox_animation";
         private static final String KEY_HALO_NOTIFY_COUNT = "halo_notify_count";
         private static final String KEY_HALO_FLOAT_NOTIFICATIONS = "halo_float_notifications";
+        private static final String KEY_HALO_HIDE = "halo_hide";
+        private static final String KEY_HALO_MSGBOX = "halo_msgbox";
+        private static final String KEY_HALO_PAUSE = "halo_pause";
+        private static final String KEY_HALO_UNLOCK_PING = "halo_unlock_ping";
 
         private ListPreference mHaloSize;
         private ListPreference mHaloNotifyCount;
         private ListPreference mHaloMsgAnimate;
         private SwitchPreference mHaloFloat;
+        private SwitchPreference mHaloHide;
+        private SwitchPreference mHaloMsgBox;
+        private SwitchPreference mHaloPause;
+        private SwitchPreference mHaloUnlockPing;
 
-        private Context mContext;
+        ViewGroup viewGroup;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
             addPreferencesFromResource(R.xml.halo_settings);
+
+            viewGroup = (ViewGroup) ((ViewGroup) getActivity()
+                    .findViewById(android.R.id.content)).getChildAt(0);
+
             PreferenceScreen prefSet = getPreferenceScreen();
-            mContext = getActivity();
+            ContentResolver resolver = getActivity().getContentResolver();
 
             mHaloSize = (ListPreference) prefSet.findPreference(KEY_HALO_SIZE);
             try {
-                float haloSize = Settings.Secure.getFloat(mContext.getContentResolver(),
+                float haloSize = Settings.Secure.getFloat(resolver,
                         Settings.Secure.HALO_SIZE, 1.0f);
                 mHaloSize.setValue(String.valueOf(haloSize));
             } catch(Exception ex) {
@@ -78,7 +93,7 @@ public class HaloFragment extends Fragment {
 
             mHaloNotifyCount = (ListPreference) prefSet.findPreference(KEY_HALO_NOTIFY_COUNT);
             try {
-                int haloCounter = Settings.Secure.getInt(mContext.getContentResolver(),
+                int haloCounter = Settings.Secure.getInt(resolver,
                         Settings.Secure.HALO_NOTIFY_COUNT, 4);
                 mHaloNotifyCount.setValue(String.valueOf(haloCounter));
             } catch(Exception ex) {
@@ -88,7 +103,7 @@ public class HaloFragment extends Fragment {
 
             mHaloMsgAnimate = (ListPreference) prefSet.findPreference(KEY_HALO_MSGBOX_ANIMATION);
             try {
-                int haloMsgAnimation = Settings.Secure.getInt(mContext.getContentResolver(),
+                int haloMsgAnimation = Settings.Secure.getInt(resolver,
                         Settings.Secure.HALO_MSGBOX_ANIMATION, 2);
                 mHaloMsgAnimate.setValue(String.valueOf(haloMsgAnimation));
             } catch(Exception ex) {
@@ -97,10 +112,28 @@ public class HaloFragment extends Fragment {
             mHaloMsgAnimate.setOnPreferenceChangeListener(this);
 
             mHaloFloat = (SwitchPreference) prefSet.findPreference(KEY_HALO_FLOAT_NOTIFICATIONS);
-            if (Settings.System.getInt(mContext.getContentResolver(),
+            mHaloHide = (SwitchPreference) prefSet.findPreference(KEY_HALO_HIDE);
+            mHaloMsgBox = (SwitchPreference) prefSet.findPreference(KEY_HALO_MSGBOX);
+            mHaloPause = (SwitchPreference) prefSet.findPreference(KEY_HALO_PAUSE);
+            mHaloUnlockPing = (SwitchPreference) prefSet.findPreference(KEY_HALO_UNLOCK_PING);
+
+            if (Settings.System.getInt(resolver,
                     Settings.System.FLOATING_WINDOW_MODE, 0) == 0) {
                 mHaloFloat.setEnabled(false);
                 mHaloFloat.setSummary(R.string.halo_enable_float_summary);
+            }
+
+            if (Settings.Secure.getInt(resolver,
+                    Settings.Secure.HALO_ACTIVE, 0) == 0) {
+                mHaloSize.setEnabled(false);
+                mHaloNotifyCount.setEnabled(false);
+                mHaloMsgAnimate.setEnabled(false);
+                mHaloFloat.setEnabled(false);
+                mHaloHide.setEnabled(false);
+                mHaloMsgBox.setEnabled(false);
+                mHaloPause.setEnabled(false);
+                mHaloUnlockPing.setEnabled(false);
+                callSnackbarInfo();
             }
         }
 
@@ -127,6 +160,10 @@ public class HaloFragment extends Fragment {
                 return true;
             }
             return false;
+        }
+
+        private void callSnackbarInfo() {
+            Snackbar.make(viewGroup, R.string.halo_disabled_info, Snackbar.LENGTH_LONG).show();
         }
     }
 }
