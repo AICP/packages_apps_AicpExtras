@@ -32,6 +32,9 @@ import com.lordclockan.R;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public static final String INTENT_EXTRA_INIT_FRAGMENT = "init_fragment";
+    public static final String INIT_FRAGMENT_HALO = "halo";
+
     private static final String NAV_ITEM_ID = "navItemId";
     static final String TAG = MainActivity.class.getSimpleName();
 
@@ -95,8 +98,16 @@ public class MainActivity extends AppCompatActivity
 
         mView = (View) findViewById(R.id.drawer_layout);
 
+        Fragment fragment;
+        String fragmentExtra = getIntent().getStringExtra(INTENT_EXTRA_INIT_FRAGMENT);
+        if (INIT_FRAGMENT_HALO.equals(fragmentExtra)) {
+            fragment = new HaloFragment();
+        } else {
+            fragment = new AboutFragment();
+        }
+
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
-        tx.replace(R.id.content_main, new AboutFragment());
+        tx.replace(R.id.content_main, fragment);
         tx.commit();
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
