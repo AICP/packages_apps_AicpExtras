@@ -1,7 +1,6 @@
 <resources>
     <string name="navigation_drawer_open">Gezinme çekmecesini aç</string>
     <string name="navigation_drawer_close">Gezinme çekmecesini kapat</string>
-
     <string name="action_settings">Ayarlar</string>
     <string name="first_layout_title">Burada sizleri hoş sürprizler beklemektedir!!</string>
     <string name="second_layout_title">İkinci katman</string>
@@ -165,11 +164,15 @@
     <string name="battery_bar_no_navbar">Pil çubuğu konumu</string>
     <string name="battery_bar_color">Pil çubuğu rengi</string>
     <string name="battery_bar_cat">Pil çubuğu stili</string>
+    <string name="battery_bar_battery_low_color">Pil çubuğu düşük pil rengi</string>
+    <string name="battery_bar_cat">Pil çubuğu stili</string>
     <string name="battery_bar_style_title">Pil çubuğu hizası</string>
     <string name="battery_bar_thickness_title">Pil çubuğu kalınlığı</string>
     <string name="battery_bar_animate_title">Şarj animasyonu</string>
     <string name="battery_bar_animate_summary">Şarj animasyonu kötü bir kullanıcı deneyimine neden olabilir. Lütfen kendi isteğiniz doğrultusunda etkinleştirin!</string>
-
+    <string name="battery_bar_style_regular">Normal</string>
+    <string name="battery_bar_style_center_mirrored">Ortalanmış</string>
+    <string name="battery_bar_style_reversed">Reversed</string>
     <!-- Scrolling Cache -->
     <string name="pref_scrollingcache_title">Kaydırma önbelleği</string>
     <string name="pref_scrollingcache_summary">Kaydırma önbelleği, hafızayı etkilese bile kayfırma performansını arttırabilir</string>
@@ -359,6 +362,9 @@
     <string name="lockscreen_see_through_summary">Kilit ekranının arkasındaki içeriği bulanıklaştırarak görüntüler</string>
     <string name="lockscreen_blur_radius">Bulanıklık yoğunluğu</string>
 
+    <!-- Lockscreen alpha -->
+    <string name="lockscreen_alpha">Alfa ayarı</string>
+    <string name="lockscreen_security_alpha">Bouncer alpha setting</string>
     <!-- Notificatio drawer weather -->
     <string name="notif_drawer_weather_title">Hava durumu</string>
     <string name="notif_drawer_weather_summary">Bildirim çekmecesi hava durumu bilgisi</string>
@@ -367,7 +373,7 @@
     <string name="powermenu_lockscreen_title">Kilit ekranında güç menüsü</string>
     <string name="powermenu_lockscreen_summary">Kilit ekranında güç menüsünü göster</string>
 
-    <!-- ROm Stats -->
+    <!-- ROM Stats -->
     <!-- Main -->
     <string name="stats_title">İstatistikler</string>
 
@@ -375,7 +381,6 @@
     <string name="notification_ticker">Statistics opted-In</string>
     <string name="notification_title">AICP İstatistikleri</string>
     <string name="notification_desc">Anonim istatistikleri etkinleştir veya devre dışı bırak</string>
-
     <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
 
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
@@ -714,11 +719,10 @@
     <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Ekran görüntüsü sesi</string>
     <string name="screenshot_sound_summary">Ekran görüntüsü alındığında ses efekti verir</string>
-
     <string name="brightness_icon_title">Parlaklık simgesi</string>
     <string name="brightness_icon_summary">Otomatik parlaklığı ayarlamak için parlaklık kaydırıcısının sağında simge göster</string>
 
-	<!-- App sidebar -->
+    <!-- App sidebar -->
     <string name="app_sidebar_title">Uygulama Kenar Çubuğu</string>
     <string name="app_sidebar_enable_title">Uygulama kenar çubuğunu etkinleştir</string>
     <string name="app_sidebar_enable_summaryOn">Uygulama kenar çubuğu etkin</string>
@@ -796,7 +800,7 @@
 
     <!-- QS Tiles Columns -->
     <string name="qs_num_columns_title">Hızlı Ayarlar Panelinde her satırdaki kısayol sayısı</string>
-    <string name="qs_num_columns_showing">satır başına %1$s kısayol gösteriliyor</string>
+    <string name="qs_num_columns_showing">Satır başına %1$s kısayol gösteriliyor</string>
 
     <!-- QS Tiles Rows -->
     <string name="qs_num_rows_title">Hızlı Ayarlar Paneli satır sayısı</string>
@@ -815,6 +819,12 @@
     <!-- Header image shadow -->
     <string name="status_bar_custom_header_shadow_title">Başlık resminin gölgesi</string>
     <string name="status_bar_custom_header_shadow_summary">Parlak görüntülerde daha net görüş için</string>
+    <string name="unit_percent">\u0025</string>
+
+    <!-- Header text shadow and color -->
+    <string name="status_bar_custom_header_text_shadow_title">Başlık metni gölgesi</string>
+    <string name="status_bar_custom_header_text_shadow_summary">Temalı başlıklarda daha iyi bir görünüm için</string>
+    <string name="status_bar_custom_header_text_shadow_color_title">Başlık metni gölge rengi</string>
     <string name="unit_percent">\u0025</string>
 
     <!-- AdAway -->
@@ -838,4 +848,108 @@
     <string name="slim_action_floats_summary">Slim &amp; Pie eylemlerini Yüzen Pencere Modunda aç</string>
     <string name="gesture_anywhere_floating">Heryerde Hareket</string>
     <string name="gesture_anywhere_floating_summary">Heryerde hareket kısayollarını yüzen pencerelerde görüntüle</string>
+
+    <!-- Tiles animation style  -->
+    <string name="qs_tile_animation_style_title">Kısayol animasyonu stili</string>
+    <string name="qs_tile_animation_duration_title">Kısayol animasyonu süresi</string>
+    <string name="qs_tile_animation_interpolator_title">Kısayol animasyonu çeşidi</string>
+    <string name="qs_tile_animation_style_off">Animasyon yok</string>
+    <string name="qs_tile_animation_style_flip">Çevirme</string>
+    <string name="qs_tile_animation_style_rotate">Döndürme</string>
+    <string name="qs_tile_animation_duration_low">Yavaş</string>
+    <string name="qs_tile_animation_duration_default">Varsayılan</string>
+    <string name="qs_tile_animation_duration_fast">Hızlı</string>
+    <string name="qs_tile_animation_duration_superfast">Çok Hızlı</string>
+    <string name="qs_tile_animation_interpolator_linearInterpolator">Doğrusal</string>
+    <string name="qs_tile_animation_interpolator_accelerateInterpolator">Hızlandır</string>
+    <string name="qs_tile_animation_interpolator_decelerateInterpolator">Yavaşlat</string>
+    <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">Hızlandır ve yavaşlat</string>
+    <string name="qs_tile_animation_interpolator_bounceInterpolator">Sektirme</string>
+    <string name="qs_tile_animation_interpolator_overshootInterpolator">Yavaşlayan ivmeyle</string>
+    <string name="qs_tile_animation_interpolator_anticipateInterpolator">Hızlanan ivmeyle</string>
+    <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Değişken ivmeyle</string>
+    <string name="qs_set_animation_style">%1$s</string>
+    <string name="qs_set_animation_duration">%1$s</string>
+    <string name="qs_set_animation_interpolator">%1$s</string>
+
+    <!-- App Exit Toast -->
+    <string name="app_exit_toast">Çıkmak için geri tuşuna tekrar dokunun</string>
+
+    <!-- Volume dialog stroke settings -->
+    <string name="volume_dialog_stroke_title">Ses paneli çerçevesi</string>
+    <string name="volume_dialog_stroke_disabled">Devre dışı</string>
+    <string name="volume_dialog_stroke_accent">Varsayılan renk</string>
+    <string name="volume_dialog_stroke_custom">Özel renk</string>
+    <string name="volume_dialog_stroke_color_title">Ses paneli çerçeve rengi</string>
+    <string name="volume_dialog_stroke_thickness_title">Ses paneli çerçeve kalınlığı</string>
+    <string name="volume_dialog_corner_radius_title">Ses paneli çerçevesi köşe yarıçapı</string>
+    <string name="volume_dialog_dash_width_title">Ses paneli çerçevesi çizgi genişliği</string>
+    <string name="volume_dialog_dash_gap_title">Ses paneli çerçevesi çizgi boşlukları</string>
+
+    <!-- QS stroke settings -->
+    <string name="qs_stroke_title">Hızlı ayar paneli çerçevesi</string>
+    <string name="qs_stroke_disabled">Devre dışı</string>
+    <string name="qs_stroke_accent">Varsayılan renk</string>
+    <string name="qs_stroke_custom">Özel renk</string>
+    <string name="qs_stroke_color_title">Hızlı ayar paneli çerçeve rengi</string>
+    <string name="qs_stroke_thickness_title">Hızlı ayar paneli çerçeve kalınlığı</string>
+    <string name="qs_corner_radius_title">Hızlı ayar paneli çerçevesi köşe yarıçapı</string>
+    <string name="qs_dash_width_title">Hızlı ayar paneli çerçevesi çizgi genişliği</string>
+    <string name="qs_dash_gap_title">Hızlı ayar paneli çerçevesi çizgi boşlukları</string>
+
+    <!-- MediaScanner behavior on boot -->
+    <string name="media_scanner_on_boot_title">Başlangışta medya taraması</string>
+    <string name="media_scanner_on_boot_enabled">Medyayı tara</string>
+    <string name="media_scanner_on_boot_ask">Taramak için izin iste (bildirim)</string>
+    <string name="media_scanner_on_boot_disabled">Medyayı tarama</string>
+
+    <!-- QS stroke settings -->
+    <string name="qs_panel_logo_category">Hızlı Ayar paneli logosu</string>
+    <string name="qs_panel_logo_title">Hızlı Ayar panelinde AICP logosu</string>
+    <string name="qs_panel_logo_disabled">Devre dışı</string>
+    <string name="qs_panel_logo_accent">Vurgu rengi</string>
+    <string name="qs_panel_logo_custom">Özel renk</string>
+    <string name="qs_panel_logo_color_title">Hızlı Ayar paneli logo rengi</string>
+    <string name="qs_panel_logo_alpha_title">Hızlı Ayar paneli logo saydamlığı</string>
+
+    <!-- Lockscreen clock and date font size -->
+    <string name="lockscreen_clock_font_size_title">Kilit ekranı saati yazı boyutu</string>
+    <string name="lockscreen_date_font_size_title">Kilit ekranı tarihi yazı boyutu</string>
+
+    <!--Preference Categories-->
+    <string name ="anim">Animasyon özelleştirmeleri</string>
+    <string name ="indicators">Durum çubuğu göstergeleri</string>
+    <string name="quicksettings_tiles_category">Hızlı Ayar paneli yapılandırmaları</string>
+    <string name ="header_tweaks">Başlık Özelleştirmeleri</string>
+    <string name ="Misc">Çeşitli düzeltmeler</string>
+    <string name ="cab">Hepsini temizle butonu özelleştirmeleri</string>
+    <string name ="visuals">Son uygulamalar paneli ekstra görsel efektler</string>
+    <string name = "ls_blur">Kilit ekranı bulanıklığı</string>
+    <string name = "lclock_tweaks">Kilit ekranı saati yazı tipi özelleştirmeleri</string>
+    <string name = "qs">Hızlı ayar özelleştirmeleri</string>
+    <string name = "vol_diag">Ses paneli özelleştirmeleri</string>
+    <string name = "power">Güç menüsü özelleştirmeleri</string>
+
+    <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">Parmak izi doğrulama titreşimi</string>
+    <string name="fprint_sucess_vib_summary">Parmak izi doğrulandığında titret</string>
+
+    <!-- YBoot dialog -->
+    <string name="boot_dialog_title">Önyükleme Penceresi</string>
+    <string name="boot_dialog_bg_category_title">Arkaplan</string>
+    <string name="boot_dialog_pimping_title">Arkaplan özelleştirmesi</string>
+    <string name="boot_dialog_bg_color_title">Arkaplan rengi</string>
+    <string name="boot_dialog_stroke_color_title">Çerçeve rengi</string>
+    <string name="boot_dialog_stroke_thickness_title">Kenar çubuğu kalınlığı</string>
+    <string name="boot_dialog_corner_radius_title">Kenar belirginliği</string>
+    <string name="boot_dialog_pimping_test_title">Test et</string>
+    <string name="boot_dialog_test_title">Aicp başlatılıyor</string>
+    <string name="boot_dialog_test_message">Uygulamalar optimize ediliyor...</string>
+    <string name="boot_dialog_custom_title">Özel başlık</string>
+    <string name="boot_dialog_custom_title_notset">Özel başlık ayarlanmamış</string>
+    <string name="boot_dialog_custom_explain">Lütfen yeni bir etiket girin. Stok etikete dönmek için boş bırakın.</string>
+    <string name="boot_dialog_starting">başlatılıyor\u2026</string>
+    <string name="boot_dialog_title_color_title">Başlık rengi</string>
+    <string name="boot_dialog_mesage_color_title">İleti rengi</string>
+    <string name="boot_dialog_random_title">Rasgele renkler ile uygulama isimleri</string>
 </resources>
