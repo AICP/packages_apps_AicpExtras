@@ -162,6 +162,11 @@
             android:label="@string/ticker_screen_title">
         </activity>
         <activity
+            android:name=".aicpextras.BlurPersonalizations"
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/blur_ui_category_title">
+        </activity>
+        <activity
             android:name=".aicpextras.HiddenAnimActivity"
             android:label="@string/hidden_anim_activity_title"
             android:theme="@style/PreferenceTheme"
