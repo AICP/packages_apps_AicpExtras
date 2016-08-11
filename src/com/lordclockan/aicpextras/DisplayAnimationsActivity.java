@@ -42,9 +42,11 @@ public class DisplayAnimationsActivity extends Fragment {
 
         private static final String POWER_MENU_ANIMATIONS = "power_menu_animations";
         private static final String KEY_TOAST_ANIMATION = "toast_animation";
+        private static final String PREF_BLUR_PERSONALIZATIONS = "blur_personalizations";
 
         private ListPreference mPowerMenuAnimations;
         private ListPreference mToastAnimation;
+        private Preference mBlurPersonalizations;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -71,6 +73,8 @@ public class DisplayAnimationsActivity extends Fragment {
             mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
             mToastAnimation.setOnPreferenceChangeListener(this);
 
+            mBlurPersonalizations = prefSet.findPreference(PREF_BLUR_PERSONALIZATIONS);
+
         }
 
         @Override
@@ -94,7 +98,13 @@ public class DisplayAnimationsActivity extends Fragment {
 
         @Override
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
+            if (preference == mBlurPersonalizations) {
+                Intent intent = new Intent(getActivity(), BlurPersonalizations.class);
+                getActivity().startActivity(intent);
+            } else {
+                return super.onPreferenceTreeClick(preferenceScreen, preference);
+            }
+            return false;
         }
     }
 }
