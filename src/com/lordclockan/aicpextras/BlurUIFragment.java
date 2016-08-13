@@ -30,24 +30,29 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.preference.TwoStatePreference;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class BlurPersonalizations extends SubActivity {
+public class BlurUIFragment extends Fragment {
 
     @Override
-    protected void onCreate(final Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(android.R.id.content,
-                new BlurPersonalizationsFragment()).commit();
+
+        getActivity().getFragmentManager().beginTransaction()
+                .replace(R.id.content_main, new BlurUISettingsFragment())
+                .commit();
     }
 
-    public static class BlurPersonalizationsFragment extends PreferenceFragment
+    public static class BlurUISettingsFragment extends PreferenceFragment
             implements OnPreferenceChangeListener {
+
+        public BlurUISettingsFragment() {
+        }
 
         private static final String TAG = "BlurUI";
 
