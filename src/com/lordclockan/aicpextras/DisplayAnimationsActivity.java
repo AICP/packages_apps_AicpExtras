@@ -61,7 +61,6 @@ public class DisplayAnimationsActivity extends Fragment {
         private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
         private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
         private static final String PREF_IME_ANIMATIONS = "ime_animations";
-        private static final String PREF_BLUR_PERSONALIZATIONS = "blur_personalizations";
 
         private ListPreference mLcdDensityPreference;
         private Preference mAokpAnimation;
@@ -70,7 +69,6 @@ public class DisplayAnimationsActivity extends Fragment {
         private ListPreference mListViewAnimation;
         private ListPreference mListViewInterpolator;
         private Preference mImeAnimations;
-        private Preference mBlurPersonalizations;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -156,8 +154,6 @@ public class DisplayAnimationsActivity extends Fragment {
             mListViewInterpolator.setOnPreferenceChangeListener(this);
             mListViewInterpolator.setEnabled(listviewanimation > 0);
 
-            mBlurPersonalizations = prefSet.findPreference(PREF_BLUR_PERSONALIZATIONS);
-
         }
 
         @Override
@@ -205,9 +201,6 @@ public class DisplayAnimationsActivity extends Fragment {
                 getActivity().startActivity(intent);
             } else if (preference == mImeAnimations) {
                 Intent intent = new Intent(getActivity(), KeyboardAnimationInterfaceSettings.class);
-                getActivity().startActivity(intent);
-            } else if (preference == mBlurPersonalizations) {
-                Intent intent = new Intent(getActivity(), BlurPersonalizations.class);
                 getActivity().startActivity(intent);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
