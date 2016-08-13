@@ -26,10 +26,6 @@
     <PreferenceCategory
         android:title="@string/Misc">
 
-        <Preference
-             android:key="blur_personalizations"
-             android:title="@string/blur_ui_category_title" />
-
         <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
             android:key="toast_icon"
             android:title="@string/toast_icon_title"
