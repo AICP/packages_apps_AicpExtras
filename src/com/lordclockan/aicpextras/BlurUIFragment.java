@@ -232,17 +232,26 @@ public class BlurUIFragment extends Fragment {
                     Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY, 0) == 1) {
                 Settings.System.putInt(resolver,
                         Settings.System.TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY, tempNotification ? 1:0);
+                mNotiTrans.setChecked((Settings.System.getInt(resolver,
+                        Settings.System.TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY, 0) == 1));
                 Settings.System.putInt(resolver,
                         Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY, tempHeader ? 1:0);
+                mHeadSett.setChecked((Settings.System.getInt(resolver,
+                        Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY, 0) == 1));
                 Settings.System.putInt(resolver,
                         Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY, tempQuickSett ? 1:0);
+                mQuickSett.setChecked((Settings.System.getInt(resolver,
+                        Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY, 0) == 1));
             } else {
                 Settings.System.putInt(resolver,
                         Settings.System.TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY, 0);
+                mNotiTrans.setChecked(false);
                 Settings.System.putInt(resolver,
                         Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY, 0);
+                mHeadSett.setChecked(false);
                 Settings.System.putInt(resolver,
                         Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY, 0);
+                mQuickSett.setChecked(false);
             }
         }
     }
