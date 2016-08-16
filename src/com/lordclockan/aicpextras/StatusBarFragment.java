@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -33,7 +34,7 @@ public class StatusBarFragment extends Fragment {
                 .commit();
     }
 
-    public static class SettingsPreferenceFragment extends PreferenceFragment 
+    public static class SettingsPreferenceFragment extends PreferenceFragment
             implements OnPreferenceChangeListener {
 
         public SettingsPreferenceFragment() {
@@ -48,6 +49,7 @@ public class StatusBarFragment extends Fragment {
         private static final String MISSED_CALL_BREATH = "missed_call_breath";
         private static final String VOICEMAIL_BREATH = "voicemail_breath";
         private static final String KEY_CAT_BREATHING_NOTIFICATIONS = "breathing_notifications_category";
+        private static final String KEY_SHOW_4G_FOR_LTE = "show_fourg";
 
         private Preference mTraffic;
         private Preference mCarrierLabel;
@@ -58,6 +60,7 @@ public class StatusBarFragment extends Fragment {
         private ListPreference mAicpLogoStyle;
         private SwitchPreference mMissedCallBreath;
         private SwitchPreference mVoicemailBreath;
+        private SwitchPreference mShowFourG;
 
 
         @Override
@@ -118,6 +121,15 @@ public class StatusBarFragment extends Fragment {
                 prefSet.removePreference(mMissedCallBreath);
                 prefSet.removePreference(mVoicemailBreath);
                 prefSet.removePreference(categoryBreathingNotifications);
+            }
+
+            // Show 4G
+            mShowFourG = (SwitchPreference) prefSet.findPreference(KEY_SHOW_4G_FOR_LTE);
+            mShowFourG.setChecked((Settings.System.getInt(resolver,
+                    Settings.System.SHOW_4G_FOR_LTE, 0) == 1));
+            PackageManager pm = getActivity().getPackageManager();
+            if (!pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
+                prefSet.removePreference(mShowFourG);
             }
         }
 
