@@ -23,6 +23,7 @@ import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
+import com.android.internal.util.aicp.AicpUtils;
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
@@ -61,6 +62,7 @@ public class LockscreenFragment extends Fragment {
         private static final String PREF_LOCKSCREEN_DATE_FONT_SIZE = "lockscreen_date_font_size";
         private static final String PREF_LOCKSCREEN_ALPHA = "lockscreen_alpha";
         private static final String PREF_LOCKSCREEN_SECURITY_ALPHA = "lockscreen_security_alpha";
+        private static final String PREF_KEYGUARD_TORCH = "keyguard_toggle_torch";
 
         private SeekBarPreferenceCham mBlurRadius;
         private Preference mLockscreenWeather;
@@ -78,6 +80,7 @@ public class LockscreenFragment extends Fragment {
         private SeekBarPreferenceCham mLsSecurityAlpha;
         private FingerprintManager mFingerprintManager;
         private SwitchPreference mFingerprintVib;
+        private SwitchPreference mKeyguardTorch;
 
         static final int DEFAULT = 0xffffffff;
 
@@ -175,6 +178,12 @@ public class LockscreenFragment extends Fragment {
                     Settings.System.LOCKSCREEN_SECURITY_ALPHA, 0.75f);
             mLsSecurityAlpha.setValue((int)(100 * alpha2));
             mLsSecurityAlpha.setOnPreferenceChangeListener(this);
+
+            // Keyguard Torch
+            mKeyguardTorch = (SwitchPreference) prefSet.findPreference(PREF_KEYGUARD_TORCH);
+            if (!AicpUtils.deviceSupportsFlashLight(getActivity())) {
+                prefSet.removePreference(mKeyguardTorch);
+            }
 
             mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
             mFingerprintVib = (SwitchPreference) prefSet.findPreference("fingerprint_success_vib");
