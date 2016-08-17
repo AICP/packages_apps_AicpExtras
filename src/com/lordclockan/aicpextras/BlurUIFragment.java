@@ -59,6 +59,7 @@ public class BlurUIFragment extends Fragment {
 
         private static final String TAG = "BlurUI";
 
+        private boolean oneTimeOnly = false;
         private SharedPreferences mBlurUISettings;
         private Editor toEditBlurUISettings;
         private String sNotifications = "false";
@@ -93,6 +94,20 @@ public class BlurUIFragment extends Fragment {
             mExpand = (SwitchPreference) prefSet.findPreference("blurred_status_bar_expanded_enabled_pref");
             mExpand.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                     Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY, 0) == 1));
+
+            /*
+            ** Due to a bug, blur is not being enabled sometimes unitl QS Blur is checked for the first
+            ** time. As a dirty hack, the first time Blur is enabled, turn QS Blur on and off so that
+            ** it actually works.
+            */
+            if(mExpand.setChecked(true) && !oneTimeOnly){
+               mQuickSett.setChecked(true);
+               long int past = System.currentTimeMillis();
+               while(System.currentTimeMillis() - past <= 600){
+               }
+               mQuickSett.setChecked(false);
+               oneTimeOnly=!oneTimeOnly;
+            }
 
             mScale = (SeekBarPreferenceCham) findPreference("statusbar_blur_scale");
             mScale.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_SCALE_PREFERENCE_KEY, 10));
