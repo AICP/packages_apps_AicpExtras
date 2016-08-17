@@ -24,6 +24,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import java.lang.System;
 
@@ -180,9 +181,14 @@ public class MainActivity extends AppCompatActivity
             **the second time within 2.5 seconds of the first
             */
             if(!secondBack) {
-            Snackbar.make(mView, R.string.app_exit_toast,
-                    Snackbar.LENGTH_SHORT)
-                .setAction("Action", null).show();
+            Snackbar snackbar = Snackbar
+            .make(mView, R.string.app_exit_toast, Snackbar.LENGTH_SHORT)
+            .setAction("Action", null);
+            View sbView = snackbar.getView();
+            sbView.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+            textView.setTextColor(getResources().getColor(R.color.primary_text_material_dark));
+            snackbar.show();
             secondBack=!secondBack;
             startTime = System.currentTimeMillis();
             } else if( System.currentTimeMillis()-startTime < 2500)
