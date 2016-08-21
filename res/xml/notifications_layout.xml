@@ -56,6 +56,15 @@
             android:entryValues="@array/qs_tile_animation_interpolator_values"
             android:persistent="false" />
 
+        <MultiSelectListPreferenceFix
+            android:defaultValue="@array/themes_tile_default_values"
+            android:entries="@array/themes_tile_entries"
+            android:entryValues="@array/themes_tile_values"
+            android:key="themes_tile_components"
+            android:summary="@string/themes_tile_summary"
+            android:title="@string/themes_tile_title"
+            android:persistent="false" />
+
 
     <SwitchPreference
         android:key="qs_show_brightness_slider"
