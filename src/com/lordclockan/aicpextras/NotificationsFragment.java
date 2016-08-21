@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.preference.ListPreference;
-import android.preference.ListPreference;
+import android.preference.MultiSelectListPreferenceFix;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
@@ -17,6 +17,12 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
+import android.util.Log;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 import cyanogenmod.providers.CMSettings;
 
@@ -43,6 +49,8 @@ public class NotificationsFragment extends Fragment {
         public SettingsPreferenceFragment() {
         }
 
+        private static final String TAG = NotificationsFragment.class.getSimpleName();
+
         private static final String PREF_QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
         private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
         private static final String PREF_STATUS_BAR_HEADER_FONT_STYLE = "status_bar_header_font_style";
@@ -56,6 +64,7 @@ public class NotificationsFragment extends Fragment {
         private static final String PREF_QS_PANEL_LOGO = "qs_panel_logo";
         private static final String PREF_QS_PANEL_LOGO_COLOR = "qs_panel_logo_color";
         private static final String PREF_QS_PANEL_LOGO_ALPHA = "qs_panel_logo_alpha";
+        private static final String PREF_THEMES_TILE = "themes_tile_components";
 
         private SwitchPreference mBrightnessSlider;
         private SwitchPreference mBlockOnSecureKeyguard;
@@ -72,6 +81,7 @@ public class NotificationsFragment extends Fragment {
         private ListPreference mQSPanelLogo;
         private ColorPickerPreference mQSPanelLogoColor;
         private SeekBarPreferenceCham mQSPanelLogoAlpha;
+        private MultiSelectListPreferenceFix mThemesTile;
 
         static final int DEFAULT_QS_PANEL_LOGO_COLOR = 0xFF80CBC4;
         static final int DEFAULT_HEADER_SHADOW_COLOR = 0xFF000000;
@@ -217,6 +227,10 @@ public class NotificationsFragment extends Fragment {
             mQSPanelLogoAlpha.setValue(qSPanelLogoAlpha / 1);
             mQSPanelLogoAlpha.setOnPreferenceChangeListener(this);
 
+            mThemesTile = (MultiSelectListPreferenceFix) findPreference(PREF_THEMES_TILE);
+            mThemesTile.setValues(getThemesTileValues());
+            mThemesTile.setOnPreferenceChangeListener(this);
+
         }
 
         @Override
@@ -327,6 +341,11 @@ public class NotificationsFragment extends Fragment {
                 Settings.System.putInt(resolver,
                         Settings.System.QS_PANEL_LOGO_ALPHA, val * 1);
                 return true;
+            } else if (preference == mThemesTile) {
+            Set<String> vals = (Set<String>) newValue;
+//            Log.e(TAG, "mThemesTileChanged " + vals.toString());
+            setThemesTileValues(vals);
+            return true;
             }
             return false;
         }
@@ -417,6 +436,56 @@ public class NotificationsFragment extends Fragment {
                 mQSPanelLogoColor.setEnabled(true);
                 mQSPanelLogoAlpha.setEnabled(true);
             }
+        }
+
+        private void setThemesTileValues(Set<String> vals) {
+            if (vals.isEmpty()) {
+                // if user unchecks everything, reset to default
+                vals.addAll(Arrays.asList(getResources().getStringArray(
+                        R.array.themes_tile_default_values)));
+//                Log.e(TAG, "setThemesTileValues called but is empty list = " + vals.toString());
+                mThemesTile.setValues(vals);
+            }
+//            Log.e(TAG, "setThemesTileValues called = " + vals.toString());
+            StringBuilder b = new StringBuilder();
+            for (String val : vals) {
+                b.append(val);
+                b.append("|");
+            }
+            String newVal = b.toString();
+            if (newVal.endsWith("|")) {
+                newVal = removeLastChar(newVal);
+            }
+//            Log.e(TAG, "Themes tile components writing to provider = " + newVal);
+            Settings.Secure.putStringForUser(getActivity().getContentResolver(),
+                    Settings.Secure.THEMES_TILE_COMPONENTS,
+                    newVal, UserHandle.USER_CURRENT);
+        }
+
+        private Set<String> getThemesTileValues() {
+            Set<String> vals = new HashSet<>();
+            String components = Settings.Secure.getStringForUser(getActivity().getContentResolver(),
+                    Settings.Secure.THEMES_TILE_COMPONENTS,
+                    UserHandle.USER_CURRENT);
+            if (components != null) {
+//                Log.e(TAG, "Themes tile components from provider raw = " + components);
+            }
+            if (TextUtils.isEmpty(components)) {
+                vals.addAll(Arrays.asList(getResources().getStringArray(
+                        R.array.themes_tile_default_values)));
+//                Log.e(TAG, "Themes tile components from provider is empty. get defaults = " + vals.toString());
+            } else {
+                vals.addAll(Arrays.asList(components.split("\\|")));
+//                Log.e(TAG, "Themes tile components from provider = " + vals.toString());
+            }
+            return vals;
+        }
+
+        static String removeLastChar(String s) {
+            if (s == null || s.length() == 0) {
+                return s;
+            }
+            return s.substring(0, s.length() - 1);
         }
     }
 }
