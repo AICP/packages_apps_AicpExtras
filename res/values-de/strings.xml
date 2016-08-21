@@ -39,6 +39,7 @@
     <string name="hidden_anim_more_title">MEHR?</string>
     <string name="hidden_anim_more_nice">SCHÖN</string>
     <string name="continue_title">Weiter</string>
+    <string name="settings_activity_title">AE Einstellungen</string>
 
     <string name="nothing_title">Hier gibt es noch nichts zu sehen, also weiter.</string>
 
@@ -364,9 +365,9 @@
     <string name="lock_clock_font_notoserif_bold_italic">NotoSerif fett &amp; kursiv</string>
 
     <!-- Lockscreen see through -->
-    <string name="lockscreen_see_through_title">Sperrbildschirm-Trübung</string>
-    <string name="lockscreen_see_through_summary">Eintrübung und Anzeige des Inhalts hinter dem Sperrbildschirm.</string>
-    <string name="lockscreen_blur_radius">Intensität der Trübung</string>
+    <string name="lockscreen_see_through_title">Unschärfe Sperrbildschirm</string>
+    <string name="lockscreen_see_through_summary">Anzeige des verwischten Inhalts hinter dem Sperrbildschirm.</string>
+    <string name="lockscreen_blur_radius">Intensität der Unschärfe</string>
 
     <!-- Lockscreen alpha -->
     <string name="lockscreen_alpha">Abdunklungseinstellung</string>
@@ -945,7 +946,7 @@
     <string name="fprint_sucess_vib_title">Vibration bei Authentifizierung per Fingerabdruck</string>
     <string name="fprint_sucess_vib_summary">Nach erfolgreicher Authentifizierung per Fingerabdruck vibrieren</string>
 
-    <!-- YBoot dialog -->
+    <!-- Boot dialog -->
     <string name="boot_dialog_title">Boot-Dialog</string>
     <string name="boot_dialog_bg_category_title">Hintergund</string>
     <string name="boot_dialog_pimping_title">Anpassung des Hintergrunds</string>
@@ -963,5 +964,123 @@
     <string name="boot_dialog_title_color_title">Farbe des Überschrift</string>
     <string name="boot_dialog_mesage_color_title">Farbe der Nachricht</string>
     <string name="boot_dialog_random_title">Paketnamen in zufälliger Farbe</string>
+
+    <!-- AE settings -->
+    <string name="ae_settings_title">Einstellungen für AicpExtras</string>
+    <string name="ae_custom_colors_title">Farbanpassungen</string>
+    <string name="ae_custom_colors_summaries">Benutze die unteren Einstellungen, um das Aussehen von AE zu verändern</string>
+    <string name="ae_drawer_opacity_title">Deckkraft des Navigationsmenüs</string>
+    <string name="ae_drawer_bg_color_title">Hintergundfarbe des Navigationsmenüs</string>
+    <string name="settings_info_title">AicpExtras-Einstellungen</string>
+    <string name="settings_info_summary">AE muss neu gestartet werden, damit die Änderungen wirksam werden.</string>
+    <string name="ae_settings_restore_defaults_title">Standard wieder herstellen</string>
+    <string name="values_restored_title">Werte wiederhergestellt</string>
+    <string name="ae_header_bg_image_opacity_title">Deckkraft des Hintergrundbildes im Navigationsmenü</string>
+    <string name="ae_nav_drawer_checked_text_title">Textfarbe der Auswahl</string>
+    <string name="ae_nav_drawer_unchecked_text_title">Textfarbe</string>
+
+    <!-- Halo -->
+    <string name="halo_settings_title">HALO</string>
+    <string name="halo_behavior_title">Verhalten von HALO</string>
+    <string name="halo_hide_title">Verstecke HALO nach einer Aktivität</string>
+    <string name="halo_hide_summary">HALO wrid bei anfallender Aufgabe erscheinen und nach einger Zeit ausgeblendet</string>
+    <string name="halo_pause_title">Pausiere aktive App</string>
+    <string name="halo_pause_summary">Wenn eine App mittels HALO geöffnet wird, pausiert die bisher aktive Anwendung</string>
+    <string name="halo_notification_msgbox_title">Pop-up für Nachrichten aktivieren</string>
+    <string name="halo_notification_msgbox_summary">Zeige ein Nachrichtenfenster bei eingehenden Benachrichtigungen</string>
+    <string name="halo_unlock_ping_title">Ton beim Entsperren</string>
+    <string name="halo_unlock_ping_summary">HALO wird einen Ton nach dem Entsperren abspielen, wenn zuvor neue Benachrichtigungen empfangen wurden</string>
+    <string name="halo_enable_title">Zeige HALO-Taste</string>
+    <string name="halo_enable_summary">Aktiviert die Anzeige der HALO-Taste im Statusleistenkopf</string>
+    <string name="halo_floating_notifications_title">Schwebe-Modus verwenden</string>
+    <string name="halo_floating_notifications_summary">Beim Start der App einer Benachrichtigung wird diese immer im Fenster-Modus geöffnet.</string>
+    <string name="halo_enable_float_summary">Zuerst müssen \"Schwebende Fenster\" aktiviert werden.</string>
+    <string name="halo_disabled_info">HALO muss erst aktiviert werden, um alle Optionen wählen zu können</string>
+
+    <string name="halo_size_title">HALO-Größe</string>
+    <string name="halo_size_summary">Definiert wie groß HALO angezeigt wird</string>
+    <string name="halo_size_miniscule">Winzig</string>
+    <string name="halo_size_small">Klein</string>
+    <string name="halo_size_default">Normal (Standard)</string>
+    <string name="halo_size_large">Groß</string>
+    <string name="halo_size_gigantic">Gigantisch</string>
+    <string name="halo_size_monster">Montrös</string>
+
+    <string name="halo_notification_count_title">Benachrichtigungszähler</string>
+    <string name="halo_notification_count_summary">Anzahl der Benachrichtungen auf HALO anzeigen</string>
+    <string name="halo_notification_count_none">Keine</string>
+    <string name="halo_notification_count_total">Gesamt</string>
+    <string name="halo_notification_count_individual">Pro App</string>
+    <string name="halo_notification_count_both">Beides</string>
+
+    <string name="halo_msgbox_animation_title">Animation Nachrichtenfenster</string>
+    <string name="halo_msgbox_animation_summary">Animation des HALO-Nachrichtenfensters bei eingehenden Benachrichtigungen</string>
+    <string name="halo_msgbox_animation_none">Keine</string>
+    <string name="halo_msgbox_animation_flip">Drehen</string>
+
+    <!-- Blur UI -->
+    <string name="nav_blur_ui_title">Unschärfe-Anpassungen</string>
+    <string name="blur_ui_category_title">Unschärfe-Anpassungen</string>
+    <string name="blurred_status_bar_expanded_enabled_pref">Unschärfe Statusleiste</string>
+    <string name="blurred_status_bar_expanded_enabled_pref_summary">Verwischt den Hintergrund, wenn die Statusleiste heruntergezogen wird</string>
+    <string name="translucent_notifications_pref">Durchsichtige Benachrichtigungen</string>
+    <string name="translucent_notifications_pref_summary">Transparenz des Benachrichtigungshintergrunds erlauben</string>
+    <string name="translucent_header_pref">Unschärfe Statusleistenkopf</string>
+    <string name="translucent_header_pref_summary">Verwischt den Hintergrund der Statusleisten-Kopfzeilen</string>
+    <string name="translucent_quick_settings_pref">Unschärfe Schnelleinstellungsbereich</string>
+    <string name="translucent_quick_settings_pref_summary">Verwischt den Hintergrund der Schnelleinstellungen</string>
+    <string name="transluency_level_universal">Transparenz</string>
+    <string name="blur_expstatus_cat">Statusleiste</string>
+    <string name="blur_notifications_cat">Benachrichtigungen</string>
+    <string name="blur_header_cat">Statusleisten-Kopfzeilen</string>
+    <string name="blur_qs_cat">Schnelleinstellungen</string>
+    <string name="blur_recents_cat">Verlauf</string>
+    <string name="blurred_recent_app_enabled_pref">Unschärfe Anwendungsverlauf</string>
+    <string name="blurred_recent_app_enabled_pref_summary">Verwischt den Hintergrund des Anwendungsverlaufs</string>
+    <string name="blurred_scale">Größenordnung der Unschärfe</string>
+    <string name="blurred_scale_summary">Qualität des verwischten Bildes</string>
+    <string name="blurred_radius">Intensität der Unschärfe</string>
+    <string name="blurred_radius_summary">Stärke des Verwischens</string>
+    <string name="blur_cat_notice">Anmerkung</string>
+    <string name="blur_cat_notice_summary">Unschärfe-Anpassungen werden während Sicherheitsabfragen deaktiviert! Nur durchsichtige Benachrichtigungen bleiben aktiviert! Die Transparenz der Statusleiste und der Schnelleinstellungen werden automatisch deaktiviert!</string>
+
+    <!-- Statusbar 4G LTE switch -->
+    <string name="show_fourg_title">Zeige 4G an Stelle von LTE</string>
+    <string name="show_fourg_summary">Ersetzt den LTE Indiktor in der Statusleiste durch 4G</string>
+
+    <!-- Zen icon in statusbar -->
+    <string name="show_zen_icon_title">\"Nicht stören\"-Symbol</string>
+    <string name="show_zen_icon_summary">Verbergen/Anzeigen des \"Nicht stören\"-Symbols in der Statusleiste.</string>
+
+    <!-- specific tile configurations -->
+    <string name="themes_tile_title">Designpaket-Komponeten</string>
+    <string name="themes_tile_summary">Zu ändernde Teile des Designs, wenn ein neues Designpaket gewählt wird</string>
+
+    <!-- Themes tile entries and values -->
+    <string name="themes_tile_mods_style_entry">Stil</string>
+    <string name="themes_tile_mods_statusbar_entry">Statusleiste</string>
+    <string name="themes_tile_mods_headers_entry">Headers</string>
+    <string name="themes_tile_mods_navbar_entry">Navigationsleiste</string>
+    <string name="themes_tile_mods_launcher_entry">Hintergründe</string>
+    <string name="themes_tile_mods_lockscreen_entry">Sperrbildschirm-Hintergründe</string>
+    <string name="themes_tile_mods_font_entry">Schriftarten</string>
+    <string name="themes_tile_mods_icons_entry">Symbole</string>
+    <string name="themes_tile_mods_bootanim_entry">Boot-Animationen</string>
+    <string name="themes_tile_mods_notification_entry">Benachrichtigungen</string>
+    <string name="themes_tile_mods_alarm_entry">Wecker</string>
+    <string name="themes_tile_mods_ringtone_entry">Klingeltöne</string>
+
+    <!-- <string name="themes_tile_mods_style_value" translatable="false">mods_overlays</string>
+    <string name="themes_tile_mods_statusbar_value" translatable="false">mods_status_bar</string>
+    <string name="themes_tile_mods_headers_value" translatable="false">mods_statusbar_headers</string>
+    <string name="themes_tile_mods_navbar_value" translatable="false">mods_navigation_bar</string>
+    <string name="themes_tile_mods_launcher_value" translatable="false">mods_homescreen</string>
+    <string name="themes_tile_mods_lockscreen_value" translatable="false">mods_lockscreen</string>
+    <string name="themes_tile_mods_font_value" translatable="false">mods_fonts</string>
+    <string name="themes_tile_mods_icons_value" translatable="false">mods_icons</string>
+    <string name="themes_tile_mods_bootanim_value" translatable="false">mods_bootanim</string>
+    <string name="themes_tile_mods_notification_value" translatable="false">mods_notifications</string>
+    <string name="themes_tile_mods_alarm_value" translatable="false">mods_alarms</string>
+    <string name="themes_tile_mods_ringtone_value" translatable="false">mods_ringtones</string> -->
 
 </resources>
