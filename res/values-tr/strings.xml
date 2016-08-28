@@ -11,6 +11,7 @@
     <string name="about_title">Hakkında</string>
     <string name="other_title">Diğer</string>
     <string name="g_community">G+ toğluluğu</string>
+	<string name="g_plus_summary">Google+ topluluğumuzu ziyaret edin</string>
     <string name="ui_title">Arayüz</string>
     <string name="builtin_title">Roma gömülenler</string>
     <string name="addons_title">Eklentiler</string>
@@ -28,12 +29,16 @@
     <string name="systemui_tuner_dilog_warning">Sistem arayüzü modifikasyonları kısıtlamıştır.
         Bu özelleştirme, kolay erişim için AicpExtras bölümüne eklenmiştir. Etkinleştirmek için tıklayın.</string>
     <string name="aicp_downloads_title">İndirmeler</string>
+	<string name="dwnld_summary">Cihazınız için AICP indirme sayfasını ziyaret edin</string>
     <string name="aicp_gerrit_title">Gerrit</string>
+	
+    <string name="gerrit_summary">Neler üzerinde çalıştığımızı görmek için Gerrit sayfamızı ziyaret edin</string>
     <string name="send_mail_intent">Posta gönder...</string>
     <string name="hidden_anim_activity_title">Yoga zamanı!!!</string>
     <string name="hidden_anim_more_title">DAHA?</string>
     <string name="hidden_anim_more_nice">GÜZEL</string>
     <string name="continue_title">Devam</string>
+	<string name="settings_activity_title">AE ayarları</string>
 
     <string name="nothing_title">Henüz burada gösterilecek bir şey yok, devam edin</string>
 
@@ -168,11 +173,12 @@
     <string name="battery_bar_cat">Pil çubuğu stili</string>
     <string name="battery_bar_style_title">Pil çubuğu hizası</string>
     <string name="battery_bar_thickness_title">Pil çubuğu kalınlığı</string>
-    <string name="battery_bar_animate_title">Şarj animasyonu</string>
     <string name="battery_bar_animate_summary">Şarj animasyonu kötü bir kullanıcı deneyimine neden olabilir. Lütfen kendi isteğiniz doğrultusunda etkinleştirin!</string>
+    <string name="battery_bar_animate_title">Şarj animasyonu</string>
     <string name="battery_bar_style_regular">Normal</string>
     <string name="battery_bar_style_center_mirrored">Ortalanmış</string>
     <string name="battery_bar_style_reversed">Reversed</string>
+	
     <!-- Scrolling Cache -->
     <string name="pref_scrollingcache_title">Kaydırma önbelleği</string>
     <string name="pref_scrollingcache_summary">Kaydırma önbelleği, hafızayı etkilese bile kayfırma performansını arttırabilir</string>
@@ -363,7 +369,7 @@
     <string name="lockscreen_blur_radius">Bulanıklık yoğunluğu</string>
 
     <!-- Lockscreen alpha -->
-    <string name="lockscreen_alpha">Alfa ayarı</string>
+    <string name="lockscreen_alpha">Karartma yoğunluğu</string>
     <string name="lockscreen_security_alpha">Bouncer alpha setting</string>
     <!-- Notificatio drawer weather -->
     <string name="notif_drawer_weather_title">Hava durumu</string>
@@ -376,6 +382,7 @@
     <!-- ROM Stats -->
     <!-- Main -->
     <string name="stats_title">İstatistikler</string>
+    <string name="stats_summary">Anonim istatistikler</string>
 
     <!-- Notification -->
     <string name="notification_ticker">Statistics opted-In</string>
@@ -390,6 +397,9 @@
     <string name="anonymous_statistics_warning">AICP durum raporlarına izin verirseniz, şahsi olmayan verileriniz sunucularımıza yüklenecek. 
         Hıfzedilen veriler, kişisel bilgilerinizin sızmasına izin vermeyecek eşsiz bir anahtar ile korunmaktadır. Bu işlem 7 günde bir tekrarlanır. 
         \n\nSaklanan verileriniz hakkında fikir sahibi olmak için Verileri Önizle\'ye tıklayınız. </string>
+
+
+
     <string name="pref_settings">Ayarlar</string>
     <string name="enable_reporting_title">Raporlamayı etkinleştir</string>
     <string name="disable_reporting_persistent">Persistent opt-out</string>
@@ -446,9 +456,6 @@
     <string name="omniswitch_first_time_title">Bilgi</string>
     <string name="omniswitch_first_time_message">OmniSwitch\'i etkinleştirdiğinize emin olun. Bunu \"Ayarlar\" sekmesi altında yapabilirsiniz</string>
 
-    <!-- Double Tap Navbar to Sleep -->
-    <string name="double_tap_sleep_nav_bar_title">Navigasyon çubuğunda çift dokunuşla uykuya geç</string>
-    <string name="double_tap_sleep_nav_bar_summary">Cihazı uykuya geçirmek için sanal tuşlara çift dokun.</string>
 
     <!-- Double tap to sleep on lockscreen -->
     <string name="double_tap_sleep_anywhere_title">Kilit ekranında çift dokunuşla uykuya geç</string>
@@ -527,7 +534,7 @@
     <string name="enable_task_manager_summary">Genişletilmiş durum çubuğunda görev yöneticisini etkinleştirin</string>
 
     <!-- SlimSizer  -->
-    <string name="listsystem">list</string>
+    <string name="listsystem">liste</string>
     <string name="sizer_title">Uygulama kaldırıcı</string>
     <string name="caution">Dikkat!</string>
     <string name="sizer_message_startup">Bu araç sistem uygulamalarını silmenize izin verir. Dikkatli kullanın ve sadece kaldırılmasının güvenli olduğunu bildiğiniz uygulamaları silin.</string>
@@ -551,6 +558,7 @@
 
     <!-- SU -->
     <string name="cannot_get_su">Superuser(root) erişimi sağlanamadı, geri dönülüyor.</string>
+    <string name="cannot_get_su_start">Superuser(root) erişimi sağlanamadı</string>
 
     <!-- Aicp logcat -->
     <string name="logcat_title">Logcat</string>
@@ -642,8 +650,8 @@
     <string name="listview_stack_bottom">Stack (bottom)</string>
     <string name="listview_unfold">Unfold</string>
     <string name="listview_fold">Fold</string>
-    <string name="listview_translate_left">Translate (left)</string>
-    <string name="listview_translate_right">Translate (right)</string>
+    <string name="listview_translate_left">Çevir (sol)</string>
+    <string name="listview_translate_right">Çevir (sağ)</string>
 
     <!-- ListView interpolator -->
     <string name="listview_interpolator_title">ListView interpolator</string>
@@ -692,7 +700,7 @@
     <string name="recents_max_apps_title">İzin verilen maksimum uygulama</string>
     <string name="recent_panel_scale_title">Boyut</string>
     <string name="recent_panel_expanded_mode_title">Genişletilmiş mod</string>
-    <string name="recent_panel_expanded_mode_summary">Recent tasks expanded preview mode</string>
+    <string name="recent_panel_expanded_mode_summary">Son uygulamalar paneli genişletilmiş ekran modu</string>
     <string name="recent_panel_expanded_mode_auto">Otomatik (varsayılan)</string>
     <string name="recent_panel_expanded_mode_always">Her zaman</string>
     <string name="recent_panel_expanded_mode_never">Asla</string>
@@ -720,8 +728,8 @@
     <string name="screenshot_sound_title">Ekran görüntüsü sesi</string>
     <string name="screenshot_sound_summary">Ekran görüntüsü alındığında ses efekti verir</string>
     <string name="brightness_icon_title">Parlaklık simgesi</string>
+	
     <string name="brightness_icon_summary">Otomatik parlaklığı ayarlamak için parlaklık kaydırıcısının sağında simge göster</string>
-
     <!-- App sidebar -->
     <string name="app_sidebar_title">Uygulama Kenar Çubuğu</string>
     <string name="app_sidebar_enable_title">Uygulama kenar çubuğunu etkinleştir</string>
@@ -774,6 +782,10 @@
     <!-- Power/reboot dialogs dim amount -->
     <string name="power_menu_dialog_dim">Güç Menüsü arka plan karartma yoğunluğu</string>
 
+    <!-- Notifications transparency -->
+    <string name="notifications_transparency">Bildirim şeffaflığı</string>
+
+	
     <!-- Lockscreen Torch -->
     <string name="keyguard_torch_title">Kilit ekranı feneri</string>
     <string name="keyguard_torch_summary">El fenerini açmak için ekran kapalıyken güç tuşuna basılı tutun</string>
@@ -828,7 +840,7 @@
     <string name="unit_percent">\u0025</string>
 
     <!-- AdAway -->
-    <string name="adaway_settings_title">AdAway</string>
+    <string name="adaway_settings_title">Reklam Engelleyici</string>
 
     <!-- Hide Apps from Recents -->
     <string name="hide_apps_from_recents_title">Gizli Uygulamalar</string>
@@ -843,6 +855,8 @@
     <string name="floating_master_switch">Master Switch</string>
     <string name="floating_additional_options">İlave Seçenekler</string>
     <string name="floating_windows">Yüzen Pencereler</string>
+	
+	
     <string name="floating_windows_switch">Yüzen Pencereler modunu tüm eylemlerde etkinleştirin. Aksi halde aşağıdakiler, Yüzen Pencereler modunda çalışmaz</string>
     <string name="slim_action_floats">Slim Actions &amp; Pie</string>
     <string name="slim_action_floats_summary">Slim &amp; Pie eylemlerini Yüzen Pencere Modunda aç</string>
@@ -952,4 +966,109 @@
     <string name="boot_dialog_title_color_title">Başlık rengi</string>
     <string name="boot_dialog_mesage_color_title">İleti rengi</string>
     <string name="boot_dialog_random_title">Rasgele renkler ile uygulama isimleri</string>
+
+    <!-- AE settings -->
+    <string name="ae_settings_title">AicpExtas ayarları</string>
+    <string name="ae_custom_colors_title">Özel renkler</string>
+    <string name="ae_custom_colors_summaries">AE görünümünü değiştirmek için aşağıdaki ayarları kullanın</string>
+    <string name="ae_drawer_opacity_title">Gezinme çekmecesi saydamlığı</string>
+    <string name="ae_drawer_bg_color_title">Gezinme çekmecesi arkaplan rengi</string>
+    <string name="settings_info_title">AicpExtras Ayarları</string>
+    <string name="settings_info_summary">Değişikliklerin etkili olması için AE\'nin yeniden başlatılması gerekir</string>
+    <string name="ae_settings_restore_defaults_title">Varsayılanları geri yükle</string>
+    <string name="values_restored_title">Varsayılan değerler geri yüklendi</string>
+    <string name="ae_header_bg_image_opacity_title">Gezinme çubuğu başlığı arkaplan resmi saydamlığı</string>
+    <string name="ae_nav_drawer_checked_text_title">Seçilen öğe metni rengi</string>
+    <string name="ae_nav_drawer_unchecked_text_title">Öğe metin rengi</string>
+
+    <!-- Halo -->
+    <string name="halo_settings_title">Halo</string>
+    <string name="halo_behavior_title">Halo Davranışı</string>
+    <string name="halo_hide_title">Halo'yu geçerli faaliyetten sonra kapat</string>
+    <string name="halo_hide_summary">Bildirim geldiğinde Halo bir süre görünür ve ardından kaybolur</string>
+    <string name="halo_pause_title">Etkin uygulamayı durdur</string>
+    <string name="halo_pause_summary">Halo ile bir uygulamayı açarkan etkin uygulamayı durdurur</string>
+    <string name="halo_notification_msgbox_title">Mesaj bildirimini etkinleştir</string>
+    <string name="halo_notification_msgbox_summary">Gelen bildirimler için mesaj kutusu göster</string>
+    <string name="halo_unlock_ping_title">Ping on unlock</string>
+    <string name="halo_unlock_ping_summary">Ekran kilidi açıldığında eğer yeni bildirimler varsa Haloyu belirginleştirir</string>
+    <string name="halo_enable_title">Halo butonunu göster</string>
+    <string name="halo_enable_summary">Halo butonunu genişletilmiş durum çubuğunda göster</string>
+    <string name="halo_floating_notifications_title">Yüzdürme modunu kullan</string>
+    <string name="halo_floating_notifications_summary">Bildirim ile açılan uygulamaları yüzer modda aç</string>
+    <string name="halo_enable_float_summary">Yüzer modu etkinleştirin</string>
+    <string name="halo_disabled_info">Ayarları kullanabilmek için Halo\'yu durum çubuğundaki butondan aktif etmelisiniz</string>
+
+    <string name="halo_size_title">Halo boyutu</string>
+    <string name="halo_size_summary">Halonun ne kadar büyük olacağını tanımlar</string>
+    <string name="halo_size_miniscule">Minik</string>
+    <string name="halo_size_small">Küçük</string>
+    <string name="halo_size_default">Normal (varsayılan)</string>
+    <string name="halo_size_large">Büyük</string>
+    <string name="halo_size_gigantic">Devasa</string>
+    <string name="halo_size_monster">Kocaman</string>
+
+    <string name="halo_notification_count_title">Bildirim sayısı</string>
+    <string name="halo_notification_count_summary">Bildirim sayısını Halo\'da belirt</string>
+    <string name="halo_notification_count_none">Yok</string>
+    <string name="halo_notification_count_total">Toplam</string>
+    <string name="halo_notification_count_individual">Uygulama başına</string>
+    <string name="halo_notification_count_both">Her ikisi</string>
+
+    <string name="halo_msgbox_animation_title">Mesaj kutusu animasyonu</string>
+    <string name="halo_msgbox_animation_summary">Gelen bildirimler için Halo mesaj kutusu animasyonu</string>
+    <string name="halo_msgbox_animation_none">Yok</string>
+    <string name="halo_msgbox_animation_flip">Çevir</string>
+
+    <!-- Blur UI -->
+    <string name="nav_blur_ui_title">Blur UI</string>
+    <string name="blur_ui_category_title">Bulanıklık özelleştirmeleri</string>
+    <string name="blurred_status_bar_expanded_enabled_pref">Genişletilmiş durum çubuğu arkaplan bulanıklığı</string>
+    <string name="blurred_status_bar_expanded_enabled_pref_summary">Durum çubuğunu indirince arkaplanı bulanıklaştır</string>
+    <string name="translucent_notifications_pref">Yarı saydam bildirimler</string>
+    <string name="translucent_notifications_pref_summary">Bildirimlerin arkaplanlarını bulanıklaştır</string>
+    <string name="translucent_header_pref">Bulanış durum çubuğu başlığı</string>
+    <string name="translucent_header_pref_summary">Durum çubuğu başlığını bulanıklaştır</string>
+    <string name="translucent_quick_settings_pref">Bulanık hızlı ayar paneli</string>
+    <string name="translucent_quick_settings_pref_summary">Hızlı ayar paneli arka planını bulanıklaştır</string>
+    <string name="transluency_level_universal">Saydamlık düzeyi</string>
+    <string name="blur_expstatus_cat">Genişletilmiş durum çubuğu</string>
+    <string name="blur_notifications_cat">Bildirimler</string>
+    <string name="blur_header_cat">Durum çubuğu başlığı</string>
+    <string name="blur_qs_cat">Hızlı Ayarlar</string>
+    <string name="blur_recents_cat">Son Uygulamalar</string>
+    <string name="blurred_recent_app_enabled_pref">Bulanıklaştırılmış son uygulamalar arka planı</string>
+    <string name="blurred_recent_app_enabled_pref_summary">Son uygulamalar paneli arka planının bulaknıklaştır</string>
+    <string name="blurred_scale">Blur Scale</string>
+    <string name="blurred_scale_summary">Bulanık görüntünün kalitesi</string>
+    <string name="blurred_radius">Blur Radius</string>
+    <string name="blurred_radius_summary">Amount of blur</string>
+    <string name="blur_cat_notice">Uyarı</string>
+    <string name="blur_cat_notice_summary">Blur özelleştirmeleri tuş kilidi görünümünde devre dışı bırakılmıştır! Sadece yarısaydam bildirimler aktiftir! QS header and panel transparency are automatically disabled!</string>
+
+    <!-- Statusbar 4G LTE switch -->
+    <string name="show_fourg_title">LTE yerine 4G göster</string>
+    <string name="show_fourg_summary">Durum çubuğundaki LTE göstergesini 4G ile değiştirir</string>
+
+    <!-- Zen icon in statusbar -->
+    <string name="show_zen_icon_title">Zen icon</string>
+    <string name="show_zen_icon_summary">Show/hide priority icon in statusbar.</string>
+
+    <!-- specific tile configurations -->
+    <string name="themes_tile_title">Themes tile components</string>
+    <string name="themes_tile_summary">Theme elements to change when a new theme is selected</string>
+
+    <!-- Themes tile entries and values -->
+    <string name="themes_tile_mods_style_entry">Stil</string>
+    <string name="themes_tile_mods_statusbar_entry">Durum çubuğu</string>
+    <string name="themes_tile_mods_headers_entry">Başlıklar</string>
+    <string name="themes_tile_mods_navbar_entry">Gezinme çubuğu</string>
+    <string name="themes_tile_mods_launcher_entry">Duvar kağıdı</string>
+    <string name="themes_tile_mods_lockscreen_entry">Kilit ekranı duvar kağıdı</string>
+    <string name="themes_tile_mods_font_entry">Yazı tipi</string>
+    <string name="themes_tile_mods_icons_entry">Simgeler</string>
+    <string name="themes_tile_mods_bootanim_entry">Açılış animasyonu</string>
+    <string name="themes_tile_mods_notification_entry">Bildirimler</string>
+    <string name="themes_tile_mods_alarm_entry">Alarmlar</string>
+    <string name="themes_tile_mods_ringtone_entry">Zil sesleri</string>
 </resources>
