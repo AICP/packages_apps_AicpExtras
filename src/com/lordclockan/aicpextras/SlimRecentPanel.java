@@ -93,8 +93,9 @@ public class SlimRecentPanel extends SubActivity {
         // Package name of the SystemUI tuner
         public static final String AICPSETTINGS_PACKAGE_NAME = "com.android.settings";
         // Intent for launching the SystemUI tuner actvity
-        public static Intent INTENT_AICPSETTINGS_SETTINGS = new Intent(Intent.ACTION_MAIN)
-                .setClassName(AICPSETTINGS_PACKAGE_NAME, AICPSETTINGS_PACKAGE_NAME + ".Settings$AicpSettingsExternalActivity");
+        public static Intent INTENT_AICPSETTINGS_RECENT_APP_SIDEBAR_SETTINGS = new Intent(Intent.ACTION_MAIN)
+                .setClassName(AICPSETTINGS_PACKAGE_NAME, AICPSETTINGS_PACKAGE_NAME + ".Settings$AicpSettingsExternalActivity")
+                .putExtra("aicp.settings.external.shortcut", "recent_app_sidebar");
 
         private static final int DEFAULT_BACKGROUND_COLOR = 0x00ffffff;
 
@@ -191,7 +192,7 @@ public class SlimRecentPanel extends SubActivity {
             if (preference == mRecentsResetValue) {
                 resetValues();
             } else if (preference == mRecentAppSidebar) {
-                getActivity().startActivity(INTENT_AICPSETTINGS_SETTINGS);
+                getActivity().startActivity(INTENT_AICPSETTINGS_RECENT_APP_SIDEBAR_SETTINGS);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
