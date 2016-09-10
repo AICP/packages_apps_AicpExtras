@@ -62,8 +62,9 @@ public class VariousShitFragment extends Fragment {
         // Package name of the SystemUI tuner
         public static final String AICPSETTINGS_PACKAGE_NAME = "com.android.settings";
         // Intent for launching the SystemUI tuner actvity
-        public static Intent INTENT_AICPSETTINGS_SETTINGS = new Intent(Intent.ACTION_MAIN)
-                .setClassName(AICPSETTINGS_PACKAGE_NAME, AICPSETTINGS_PACKAGE_NAME + ".Settings$AicpSettingsExternalActivity");
+        public static Intent INTENT_AICPSETTINGS_WAKELOCK_BLOCKER_SETTINGS = new Intent(Intent.ACTION_MAIN)
+                .setClassName(AICPSETTINGS_PACKAGE_NAME, AICPSETTINGS_PACKAGE_NAME + ".Settings$AicpSettingsExternalActivity")
+                .putExtra("aicp.settings.external.shortcut", "wakelock_blocker");
 
         // Package name of the AdAway app
         public static final String ADAWAY_PACKAGE_NAME = "org.adaway";
@@ -158,7 +159,7 @@ public class VariousShitFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), SystemappRemover.class);
                 startActivity(intent);
             } else if (preference == mWakelockBlocker) {
-                getActivity().startActivity(INTENT_AICPSETTINGS_SETTINGS);
+                getActivity().startActivity(INTENT_AICPSETTINGS_WAKELOCK_BLOCKER_SETTINGS);
             } else if (preference == mAdAway) {
                 getActivity().startActivity(INTENT_ADAWAY);
             } else if (preference == mBootDialogPimping) {
