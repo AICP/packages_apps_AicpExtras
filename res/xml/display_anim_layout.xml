@@ -10,6 +10,11 @@
     <PreferenceCategory
         android:title="@string/Misc">
 
+        <ListPreference
+            android:key="lcd_density"
+            android:title="@string/lcd_density"
+            android:persistent="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
