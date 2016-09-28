@@ -21,170 +21,22 @@
         android:key="quicksettings_tiles_category"
         android:title="@string/quicksettings_tiles_category">
 
-        <ListPreference
-            android:key="sysui_qs_num_rows"
-            android:title="@string/qs_num_rows_title"
-            android:entries="@array/qs_num_rows_entries"
-            android:entryValues="@array/qs_num_rows_values"
-            android:persistent="false" />
-
-        <ListPreference
-            android:key="sysui_qs_num_columns"
-            android:title="@string/qs_num_columns_title"
-            android:entries="@array/qs_num_columns_entries"
-            android:entryValues="@array/qs_num_columns_values"
-            android:persistent="false" />
-
-        <ListPreference
-            android:key="qs_tile_animation_style"
-            android:title="@string/qs_tile_animation_style_title"
-            android:entries="@array/qs_tile_animation_style_entries"
-            android:entryValues="@array/qs_tile_animation_style_values"
-            android:persistent="false" />
-
-        <ListPreference
-            android:key="qs_tile_animation_duration"
-            android:title="@string/qs_tile_animation_duration_title"
-            android:entries="@array/qs_tile_animation_duration_entries"
-            android:entryValues="@array/qs_tile_animation_duration_values"
-            android:persistent="false" />
-
-        <ListPreference
-            android:key="qs_tile_animation_interpolator"
-            android:title="@string/qs_tile_animation_interpolator_title"
-            android:entries="@array/qs_tile_animation_interpolator_entries"
-            android:entryValues="@array/qs_tile_animation_interpolator_values"
-            android:persistent="false" />
-
-        <MultiSelectListPreferenceFix
-            android:defaultValue="@array/themes_tile_default_values"
-            android:entries="@array/themes_tile_entries"
-            android:entryValues="@array/themes_tile_values"
-            android:key="themes_tile_components"
-            android:summary="@string/themes_tile_summary"
-            android:title="@string/themes_tile_title"
-            android:persistent="false" />
-
-
-    <SwitchPreference
-        android:key="qs_show_brightness_slider"
-        android:title="@string/qs_brightness_slider_title"
-        android:persistent="false"
-        android:defaultValue="true" />
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="brightness_icon"
-        android:title="@string/brightness_icon_title"
-        android:summary="@string/brightness_icon_summary"
-        android:dependency="qs_show_brightness_slider"
-        android:defaultValue="true"/>
     </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/header_tweaks">
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="enable_task_manager"
-        android:title="@string/enable_task_manager_title"
-        android:summary="@string/enable_task_manager_summary" />
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-        android:key="status_bar_custom_header_text_shadow"
-        android:title="@string/status_bar_custom_header_text_shadow_title"
-        android:summary="@string/status_bar_custom_header_text_shadow_summary"
-        aicpextras:defaultVal="0"
-        android:max="25"
-        aicpextras:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="%"
-        android:persistent="false" />
-
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="status_bar_custom_header_text_shadow_color"
-            android:title="@string/status_bar_custom_header_text_shadow_color_title" />
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="status_bar_custom_header"
-        android:title="@string/status_bar_custom_header_title"
-        android:summary="@string/status_bar_custom_header_summary"
-        android:defaultValue="false"/>
-
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-         android:key="status_bar_custom_header_shadow"
-         android:title="@string/status_bar_custom_header_shadow_title"
-         android:summary="@string/status_bar_custom_header_shadow_summary"
-         aicpextras:defaultVal="0"
-         android:max="100"
-         aicpextras:min="0"
-         aicpextras:unitsLeft=""
-         aicpextras:unitsRight="%"
-         android:persistent="false"
-         android:dependency="status_bar_custom_header" />
-
-    <com.lordclockan.aicpextras.preferences.CMSystemSettingSwitchPreference
-        android:key="status_bar_show_weather"
-        android:title="@string/notif_drawer_weather_title"
-        android:summary="@string/notif_drawer_weather_summary"
-        android:defaultValue="true"/>
-
-    <Preference
-        android:key="lock_clock_weather"
-        android:title="@string/weather_settings"
-        android:persistent="false"
-        android:dependency="status_bar_show_weather" />
-
-    <ListPreference
-        android:key="status_bar_header_font_style"
-        android:entries="@array/status_bar_weather_font_style_entries"
-        android:entryValues="@array/status_bar_weather_font_style_values"
-        android:title="@string/status_bar_header_font_style_title" />
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="qs_panel_logo_category"
         android:title="@string/qs_panel_logo_category">
 
-        <ListPreference
-            android:key="qs_panel_logo"
-            android:title="@string/qs_panel_logo_title"
-            android:dialogTitle="@string/qs_panel_logo_title"
-            android:entries="@array/qs_panel_logo_entries"
-            android:entryValues="@array/qs_panel_logo_values"
-            android:defaultValue="0" />
-
-        <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-            android:key="qs_panel_logo_alpha"
-            android:title="@string/qs_panel_logo_alpha_title"
-            android:max="255"
-            aicpextras:min="0"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight=""
-            aicpextras:defaultVal="51"
-            android:persistent="false" />
-
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="qs_panel_logo_color"
-            android:title="@string/qs_panel_logo_color_title" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/Misc">
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="disable_immersive_message"
-        android:title="@string/disable_immersive_message_title"
-        android:summary="@string/disable_immersive_message_summary" />
 
-    <SwitchPreference
-        android:key="block_on_secure_keyguard"
-        android:title="@string/block_on_secure_keyguard_title"
-        android:summary="@string/block_on_secure_keyguard_summary"
-        android:persistent="false"
-        android:defaultValue="true"/>
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="force_expanded_notifications"
-        android:title="@string/force_expanded_notifications_title"
-        android:summary="@string/force_expanded_notifications_summary" />
       </PreferenceCategory>
 
 </PreferenceScreen>
