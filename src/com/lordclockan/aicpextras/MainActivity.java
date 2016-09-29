@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity
     private int id;
     private long startTime;
     private boolean secondBack=false;
+    private boolean restartRequired = false;
 
     private View mView;
 
@@ -170,6 +171,17 @@ public class MainActivity extends AppCompatActivity
    }
 
     @Override
+    public void onResume() {
+        super.onResume();
+
+        if (restartRequired) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
+    }
+
+    @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -235,6 +247,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             Intent intent = new Intent(this, SettingsActivity.class);
             this.startActivity(intent);
+            restartRequired = true;
             return true;
         }
 
