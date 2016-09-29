@@ -49,6 +49,10 @@ public class NotificationsFragment extends Fragment {
 
         private static final String TAG = NotificationsFragment.class.getSimpleName();
 
+        private static final String PREF_QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
+
+        private SwitchPreference mBrightnessSlider;
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -60,6 +64,15 @@ public class NotificationsFragment extends Fragment {
 
             final ContentResolver resolver = getActivity().getContentResolver();
 
+            // Brightness slider
+            mBrightnessSlider = (SwitchPreference) prefSet.findPreference(PREF_QS_SHOW_BRIGHTNESS_SLIDER);
+            mBrightnessSlider.setChecked(Settings.System.getIntForUser(resolver,
+                    Settings.System.QS_SHOW_BRIGHTNESS_SLIDER, 1, UserHandle.USER_CURRENT) == 1);
+            mBrightnessSlider.setOnPreferenceChangeListener(this);
+            int brightnessSlider = Settings.System.getIntForUser(resolver,
+                    Settings.System.QS_SHOW_BRIGHTNESS_SLIDER, 1, UserHandle.USER_CURRENT);
+            updateBrightnessSliderSummary(brightnessSlider);
+
         }
 
         @Override
@@ -70,7 +83,24 @@ public class NotificationsFragment extends Fragment {
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getActivity().getContentResolver();
+            if (preference == mBrightnessSlider) {
+                Settings.System.putIntForUser(resolver,
+                        Settings.System.QS_SHOW_BRIGHTNESS_SLIDER,
+                        (Boolean) newValue ? 1 : 0, UserHandle.USER_CURRENT);
+                int brightnessSlider = Settings.System.getIntForUser(resolver,
+                        Settings.System.QS_SHOW_BRIGHTNESS_SLIDER, 1,
+                        UserHandle.USER_CURRENT);
+                updateBrightnessSliderSummary(brightnessSlider);
+                return true;
+            }
             return false;
+        }
+
+        private void updateBrightnessSliderSummary(int value) {
+            String summary = value != 0
+                    ? getResources().getString(R.string.qs_brightness_slider_enabled)
+                    : getResources().getString(R.string.qs_brightness_slider_disabled);
+            mBrightnessSlider.setSummary(summary);
         }
     }
 }
