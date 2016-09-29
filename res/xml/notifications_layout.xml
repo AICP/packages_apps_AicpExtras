@@ -21,6 +21,12 @@
         android:key="quicksettings_tiles_category"
         android:title="@string/quicksettings_tiles_category">
 
+    <SwitchPreference
+        android:key="qs_show_brightness_slider"
+        android:title="@string/qs_brightness_slider_title"
+        android:persistent="false"
+        android:defaultValue="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
