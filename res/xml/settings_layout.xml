@@ -19,13 +19,6 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <Preference
-        style="?android:preferenceInformationStyle"
-        android:key="settings_info"
-        android:selectable="false"
-        android:summary="@string/settings_info_summary"
-        android:title="@string/settings_info_title" />
-
     <SwitchPreference
             android:key="ae_custom_colors"
             android:title="@string/ae_custom_colors_title"
