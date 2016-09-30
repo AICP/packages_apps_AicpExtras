@@ -21,17 +21,18 @@
         android:key="quicksettings_tiles_category"
         android:title="@string/quicksettings_tiles_category">
 
-    <SwitchPreference
-        android:key="qs_show_brightness_slider"
+    <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
+        android:key="qs_show_brightness"
         android:title="@string/qs_brightness_slider_title"
-        android:persistent="false"
+        android:summaryOn="@string/qs_brightness_slider_enabled"
+        android:summaryOff="@string/qs_brightness_slider_disabled"
         android:defaultValue="true" />
 
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="brightness_icon"
         android:title="@string/brightness_icon_title"
         android:summary="@string/brightness_icon_summary"
-        android:dependency="qs_show_brightness_slider"
+        android:dependency="qs_show_brightness"
         android:defaultValue="true"/>
 
     </PreferenceCategory>
