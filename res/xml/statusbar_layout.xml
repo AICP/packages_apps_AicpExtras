@@ -4,6 +4,13 @@
     <PreferenceCategory
         android:title="@string/indicators">
 
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="show_su_indicator"
+            android:title="@string/su_indicator"
+            android:summaryOn="@string/su_indicator_summary_on"
+            android:summaryOff="@string/su_indicator_summary_off"
+            android:defaultValue="false" />
+
    </PreferenceCategory>
 
    <!-- Status bar AICP logo -->
