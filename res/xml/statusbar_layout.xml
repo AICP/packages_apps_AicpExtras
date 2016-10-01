@@ -11,6 +11,9 @@
             android:summaryOff="@string/su_indicator_summary_off"
             android:defaultValue="false" />
 
+        <Preference
+            android:key="traffic"
+            android:title="@string/traffic_category" />
    </PreferenceCategory>
 
    <!-- Status bar AICP logo -->
@@ -24,5 +27,10 @@
         android:title="@string/breathing_notifications_category" >
 
     </PreferenceCategory>
+
+    <Preference
+        android:key="traffic"
+        android:fragment="com.lordclockan.aicpextras.Traffic"
+        android:title="@string/traffic_category" />
 
 </PreferenceScreen>
