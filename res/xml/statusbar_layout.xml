@@ -11,6 +11,9 @@
             android:summaryOff="@string/su_indicator_summary_off"
             android:defaultValue="false" />
 
+        <Preference
+            android:key="traffic"
+            android:title="@string/traffic_category" />
    </PreferenceCategory>
 
    <!-- Status bar AICP logo -->
