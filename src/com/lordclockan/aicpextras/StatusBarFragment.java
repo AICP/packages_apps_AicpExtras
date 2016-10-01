@@ -37,8 +37,13 @@ public class StatusBarFragment extends Fragment {
     public static class SettingsPreferenceFragment extends PreferenceFragment
             implements OnPreferenceChangeListener {
 
+        private static final String PREF_TRAFFIC = "traffic";
+
+        private Preference mTraffic;
+
         public SettingsPreferenceFragment() {
         }
+
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -49,10 +54,17 @@ public class StatusBarFragment extends Fragment {
             PreferenceScreen prefSet = getPreferenceScreen();
             final ContentResolver resolver = getActivity().getContentResolver();
             Context context = getActivity();
+
+            mTraffic = prefSet.findPreference(PREF_TRAFFIC);
         }
 
         @Override
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+            if (preference == mTraffic) {
+                Intent intent = new Intent(getActivity(), Traffic.class);
+                getActivity().startActivity(intent);
+                return true;
+            }
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
 
