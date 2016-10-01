@@ -274,6 +274,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_notif_drawer:
                 fragmentClass = NotificationsFragment.class;
                 break;
+            case R.id.nav_lockscreen:
+-                fragmentClass = LockscreenFragment.class;
+-                break;
             case R.id.nav_log_it:
                 fragmentClass = LogThatShitFragment.class;
                 break;
