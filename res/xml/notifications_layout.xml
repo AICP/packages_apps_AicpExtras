@@ -35,6 +35,18 @@
         android:dependency="qs_show_brightness"
         android:defaultValue="true"/>
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="quick_settings_vibrate"
+        android:title="@string/quick_settings_vibrate_title"
+        android:summary="@string/quick_settings_vibrate_summary"
+        android:defaultValue="false"/>
+
+    <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
+        android:key="qs_data_advanced"
+        android:title="@string/qs_advanced_data_title"
+        android:summary="@string/qs_advanced_data_summary"
+        android:defaultValue="false" />
+
     <ListPreference
         android:key="qs_tile_animation_style"
         android:title="@string/qs_tile_animation_style_title"
@@ -55,12 +67,6 @@
         android:entries="@array/qs_tile_animation_interpolator_entries"
         android:entryValues="@array/qs_tile_animation_interpolator_values"
         android:persistent="false" />
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="quick_settings_vibrate"
-        android:title="@string/quick_settings_vibrate_title"
-        android:summary="@string/quick_settings_vibrate_summary"
-        android:defaultValue="false"/>
 
     </PreferenceCategory>
 
