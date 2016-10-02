@@ -38,8 +38,10 @@ public class StatusBarFragment extends Fragment {
             implements OnPreferenceChangeListener {
 
         private static final String PREF_TRAFFIC = "traffic";
+        private String PREF_BATTERY_BAR = "batterybar";
 
         private Preference mTraffic;
+        private Preference mBatteryBar;
 
         public SettingsPreferenceFragment() {
         }
@@ -56,12 +58,17 @@ public class StatusBarFragment extends Fragment {
             Context context = getActivity();
 
             mTraffic = prefSet.findPreference(PREF_TRAFFIC);
+            mBatteryBar = prefSet.findPreference(PREF_BATTERY_BAR);
         }
 
         @Override
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
             if (preference == mTraffic) {
                 Intent intent = new Intent(getActivity(), Traffic.class);
+                getActivity().startActivity(intent);
+                return true;
+            } else if (preference == mBatteryBar) {
+                Intent intent = new Intent(getActivity(), BatteryBar.class);
                 getActivity().startActivity(intent);
                 return true;
             }
