@@ -18,8 +18,9 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
 
     <PreferenceCategory
-		android:title="@string/qs">
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:title="@string/qs">
+
+    <!--<com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="qs_transparent_header"
         android:title="@string/qs_transparent_header"
         android:max="255"
@@ -27,7 +28,7 @@
         aicpextras:unitsLeft=""
         aicpextras:unitsRight=""
         aicpextras:defaultVal="255"
-        android:persistent="false" />
+        android:persistent="false" />-->
 
     <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="qs_transparent_shade"
@@ -37,7 +38,7 @@
         aicpextras:unitsLeft=""
         aicpextras:unitsRight=""
         aicpextras:defaultVal="255"
-        android:persistent="false" />
+        android:persistent="false" /> -->
 
     <ListPreference
         android:key="qs_stroke"
@@ -45,7 +46,7 @@
         android:dialogTitle="@string/qs_stroke_title"
         android:entries="@array/qs_stroke_entries"
         android:entryValues="@array/qs_stroke_values"
-        android:defaultValue="1" />
+        android:defaultValue="0" />
 
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="qs_stroke_color"
@@ -112,7 +113,7 @@
         android:dialogTitle="@string/volume_dialog_stroke_title"
         android:entries="@array/volume_dialog_stroke_entries"
         android:entryValues="@array/volume_dialog_stroke_values"
-        android:defaultValue="1" />
+        android:defaultValue="0" />
 
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="volume_dialog_stroke_color"
@@ -184,7 +185,7 @@
         android:persistent="false" />
     </PreferenceCategory>
 
-    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+    <!--<com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="notification_alpha"
         android:title="@string/notifications_transparency"
         android:max="255"
@@ -192,6 +193,6 @@
         aicpextras:unitsLeft=""
         aicpextras:unitsRight=""
         aicpextras:defaultVal="255"
-        android:persistent="false" />
+        android:persistent="false" />-->
 
 </PreferenceScreen>
