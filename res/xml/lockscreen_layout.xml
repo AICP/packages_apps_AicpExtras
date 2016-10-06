@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_anywhere"
+        android:title="@string/double_tap_sleep_anywhere_title"
+        android:summary="@string/double_tap_sleep_anywhere_summary" />
+
     <PreferenceCategory
         android:title="@string/Misc">
 
