@@ -48,6 +48,8 @@ public class LockscreenFragment extends Fragment {
         private static final String PREF_KEYGUARD_TORCH = "keyguard_toggle_torch";
 
         private SwitchPreference mKeyguardTorch;
+        private FingerprintManager mFingerprintManager;
+        private SwitchPreference mFingerprintVib;
 
         static final int DEFAULT = 0xffffffff;
 
@@ -64,6 +66,13 @@ public class LockscreenFragment extends Fragment {
             mKeyguardTorch = (SwitchPreference) prefSet.findPreference(PREF_KEYGUARD_TORCH);
             if (!AicpUtils.deviceSupportsFlashLight(getActivity())) {
                 prefSet.removePreference(mKeyguardTorch);
+            }
+
+            // Fingerprint vibration
+            mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+            mFingerprintVib = (SwitchPreference) prefSet.findPreference("fingerprint_success_vib");
+            if (!mFingerprintManager.isHardwareDetected()){
+                prefSet.removePreference(mFingerprintVib);
             }
         }
 
