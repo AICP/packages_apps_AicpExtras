@@ -38,8 +38,10 @@ public class StatusBarFragment extends Fragment {
             implements OnPreferenceChangeListener {
 
         private static final String PREF_TRAFFIC = "traffic";
+        private static final String KEY_SHOW_FOURG = "show_fourg";
 
         private Preference mTraffic;
+        private SwitchPreference mShowFourG;
 
         public SettingsPreferenceFragment() {
         }
@@ -56,6 +58,13 @@ public class StatusBarFragment extends Fragment {
             Context context = getActivity();
 
             mTraffic = prefSet.findPreference(PREF_TRAFFIC);
+
+            // Show 4G
+            mShowFourG = (SwitchPreference) prefSet.findPreference(KEY_SHOW_FOURG);
+            PackageManager pm = getActivity().getPackageManager();
+            if (!pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
+                prefSet.removePreference(mShowFourG);
+            }
         }
 
         @Override
