@@ -19,6 +19,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    android:key="ambient_media_ticker"
     android:title="@string/force_ambient_for_media_pref_title">
 
     <com.android.settingslib.widget.FooterPreference
