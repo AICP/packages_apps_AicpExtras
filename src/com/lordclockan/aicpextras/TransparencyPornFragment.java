@@ -17,6 +17,7 @@ import android.provider.Settings;
 import android.support.v4.app.Fragment;
 
 import com.lordclockan.R;
+import com.lordclockan.aicpextras.utils.Helpers;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
@@ -325,6 +326,9 @@ public class TransparencyPornFragment extends Fragment {
                         QS_STROKE, qSStroke, UserHandle.USER_CURRENT);
                 mQSStroke.setSummary(mQSStroke.getEntries()[index]);
                 QSSettingsDisabler(qSStroke);
+                if (index == 0) {
+                    Helpers.showSystemUIrestartDialog(getActivity());
+                }
                 return true;
             } else if (preference == mQSStrokeColor) {
                 String hex = ColorPickerPreference.convertToARGB(
