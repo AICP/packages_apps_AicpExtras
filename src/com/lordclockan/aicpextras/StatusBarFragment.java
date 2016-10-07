@@ -22,6 +22,7 @@ import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import android.support.v4.app.Fragment;
 
 import com.lordclockan.R;
+import com.lordclockan.aicpextras.utils.Helpers;
 
 public class StatusBarFragment extends Fragment {
 
@@ -64,6 +65,10 @@ public class StatusBarFragment extends Fragment {
             PackageManager pm = getActivity().getPackageManager();
             if (!pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
                 prefSet.removePreference(mShowFourG);
+            } else {
+                mShowFourG.setChecked((Settings.System.getInt(resolver,
+                        Settings.System.SHOW_FOURG, 0) == 1));
+                mShowFourG.setOnPreferenceChangeListener(this);
             }
         }
 
@@ -80,6 +85,10 @@ public class StatusBarFragment extends Fragment {
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getActivity().getContentResolver();
+            if (preference == mShowFourG) {
+                Helpers.showSystemUIrestartDialog(getActivity());
+                return true;
+            }
             return false;
         }
     }
