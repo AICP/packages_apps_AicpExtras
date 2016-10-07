@@ -19,7 +19,9 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
-    android:title="@string/theming_title">
+    android:key="theming"
+    android:title="@string/theming_title"
+    android:summary="@string/theming_summary">
 
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="theming_base"

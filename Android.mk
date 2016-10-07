@@ -15,11 +15,17 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
+# Auto-generate AeFragmentList for searchable fragments
+$(LOCAL_PATH)/src/com/aicp/extras/search/AeFragmentList.java: $(LOCAL_PATH)/gather_search_fragments.sh $(LOCAL_PATH)/AeFragmentList.java $(foreach dir, res/xml/ src/com/aicp/extras/fragments/, $(wildcard $(LOCAL_PATH)/$(dir)/*))
+	sh $<
+
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_PROGUARD_ENABLED := disabled
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
+# Depend on auto-generated source file
+LOCAL_SRC_FILES += src/com/aicp/extras/search/AeFragmentList.java
 
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 
