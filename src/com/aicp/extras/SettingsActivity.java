@@ -47,9 +47,15 @@ public class SettingsActivity extends BaseActivity {
     private SwitchBar mSwitchBar;
     private MasterSwitchPreferenceDependencyHandler mMasterSwitchDependencyHandler;
 
+    // Action prefix for launching specific fragments without using intent extras
+    public static final String AE_FRAGMENT_ACTION_PREFIX = "com.aicp.extras.fragmentaction";
+
     // String extra containing the fragment class
     private static final String EXTRA_FRAGMENT_CLASS =
             PreferenceActivity.EXTRA_SHOW_FRAGMENT;
+    // String extra containing the preference key to highlight (same as EXTRA_FRAGMENT_ARG_KEY
+    // from Settings' SettingsActivity)
+    public static final String EXTRA_PREFERENCE_KEY = ":settings:fragment_args_key";
     // Bundle extra containing arguments for the fragment
     private static final String EXTRA_FRAGMENT_ARGUMENTS =
             PreferenceActivity.EXTRA_SHOW_FRAGMENT_ARGUMENTS;
@@ -95,11 +101,25 @@ public class SettingsActivity extends BaseActivity {
         mFragment = getFragmentManager().findFragmentByTag(FRAGMENT_TAG);
         if (mFragment == null) {
             // Get new fragment
-            String fragmentClass = mIntent.getStringExtra(EXTRA_FRAGMENT_CLASS);
-            mFragment = getNewFragment(fragmentClass);
-            if (mIntent.hasExtra(EXTRA_FRAGMENT_ARGUMENTS)) {
-                mFragment.setArguments(mIntent.getBundleExtra(EXTRA_FRAGMENT_ARGUMENTS));
+            String action = mIntent.getAction();
+            String fragmentClass;
+            if (action != null && action.startsWith(AE_FRAGMENT_ACTION_PREFIX)) {
+                fragmentClass = action.substring(AE_FRAGMENT_ACTION_PREFIX.length()+1);
+            } else {
+                fragmentClass = mIntent.getStringExtra(EXTRA_FRAGMENT_CLASS);
             }
+            mFragment = getNewFragment(fragmentClass);
+            Bundle arguments;
+            if (mIntent.hasExtra(EXTRA_FRAGMENT_ARGUMENTS)) {
+                arguments = mIntent.getBundleExtra(EXTRA_FRAGMENT_ARGUMENTS);
+            } else {
+                arguments = new Bundle();
+            }
+            if (mIntent.hasExtra(EXTRA_PREFERENCE_KEY)) {
+                arguments.putString(EXTRA_PREFERENCE_KEY,
+                        mIntent.getStringExtra(EXTRA_PREFERENCE_KEY));
+            }
+            mFragment.setArguments(arguments);
             getFragmentManager().beginTransaction()
                     .replace(R.id.main_content, mFragment, FRAGMENT_TAG).commit();
         }
