@@ -13,6 +13,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    android:key="battery_light"
     android:title="@string/battery_light_title" >
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
