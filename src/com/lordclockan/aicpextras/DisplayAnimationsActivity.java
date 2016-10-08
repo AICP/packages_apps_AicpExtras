@@ -148,7 +148,8 @@ public class DisplayAnimationsActivity extends Fragment {
                 Settings.System.putString(resolver,
                         Settings.System.TOAST_ANIMATION, (String) newValue);
                 mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
-                Toast.makeText(getActivity(), "Toast test!!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), mToastAnimation.getEntries()[index],
+                        Toast.LENGTH_SHORT).show();
             }
             return true;
         }
