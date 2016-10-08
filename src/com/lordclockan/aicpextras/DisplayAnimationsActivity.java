@@ -56,9 +56,11 @@ public class DisplayAnimationsActivity extends Fragment {
 
         private static final String KEY_LCD_DENSITY = "lcd_density";
         private static final String POWER_MENU_ANIMATIONS = "power_menu_animations";
+        private static final String KEY_TOAST_ANIMATION = "toast_animation";
 
         private ListPreference mLcdDensityPreference;
         private ListPreference mPowerMenuAnimations;
+        private ListPreference mToastAnimation;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -115,6 +117,15 @@ public class DisplayAnimationsActivity extends Fragment {
             mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
             mPowerMenuAnimations.setOnPreferenceChangeListener(this);
 
+            // Toast Animations
+            mToastAnimation = (ListPreference) prefSet.findPreference(KEY_TOAST_ANIMATION);
+            mToastAnimation.setSummary(mToastAnimation.getEntry());
+            int CurrentToastAnimation = Settings.System.getInt(
+                    resolver, Settings.System.TOAST_ANIMATION, 1);
+            mToastAnimation.setValueIndex(CurrentToastAnimation); //set to index of default value
+            mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
+            mToastAnimation.setOnPreferenceChangeListener(this);
+
         }
 
         @Override
@@ -132,6 +143,12 @@ public class DisplayAnimationsActivity extends Fragment {
                         Integer.valueOf((String) newValue));
                 mPowerMenuAnimations.setValue(String.valueOf(newValue));
                 mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
+            } else if (preference == mToastAnimation) {
+                int index = mToastAnimation.findIndexOfValue((String) newValue);
+                Settings.System.putString(resolver,
+                        Settings.System.TOAST_ANIMATION, (String) newValue);
+                mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
+                Toast.makeText(getActivity(), "Toast test!!!", Toast.LENGTH_SHORT).show();
             }
             return true;
         }
