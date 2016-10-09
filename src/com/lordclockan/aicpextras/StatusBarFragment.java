@@ -43,6 +43,7 @@ public class StatusBarFragment extends Fragment {
         private static final String PREF_BATTERY_BAR = "batterybar";
 
         private Preference mTraffic;
+        private SwitchPreference mShowFourG;
         private Preference mBatteryBar;
 
         public SettingsPreferenceFragment() {
