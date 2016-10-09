@@ -22,6 +22,7 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
+import android.text.Spannable;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -30,6 +31,7 @@ import android.view.IWindowManager;
 import android.view.WindowManager;
 import android.view.WindowManagerGlobal;
 import android.view.WindowManagerImpl;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.lordclockan.R;
@@ -86,8 +88,8 @@ public class DisplayAnimationsActivity extends Fragment {
                     int factor = defaultDensity >= 480 ? 40 : 20;
                     int minimumDensity = defaultDensity - 4 * factor;
                     int currentIndex = -1;
-                    String[] densityEntries = new String[7];
-                    String[] densityValues = new String[7];
+                    String[] densityEntries = new String[8];
+                    String[] densityValues = new String[8];
                     for (int idx = 0; idx < 7; ++idx) {
                         int val = minimumDensity + factor * idx;
                         int valueFormatResId = val == defaultDensity
@@ -100,10 +102,14 @@ public class DisplayAnimationsActivity extends Fragment {
                             currentIndex = idx;
                         }
                     }
+                    densityEntries[7] = getString(R.string.custom_density);
+                    densityValues[7] = getString(R.string.custom_density_value);
                     mLcdDensityPreference.setEntries(densityEntries);
                     mLcdDensityPreference.setEntryValues(densityValues);
                     if (currentIndex != -1) {
                         mLcdDensityPreference.setValueIndex(currentIndex);
+                    } else {
+                        mLcdDensityPreference.setValueIndex(7);
                     }
                     mLcdDensityPreference.setOnPreferenceChangeListener(this);
                     updateLcdDensityPreferenceDescription(currentDensity);
@@ -133,9 +139,14 @@ public class DisplayAnimationsActivity extends Fragment {
             ContentResolver resolver = getActivity().getContentResolver();
             if (preference == mLcdDensityPreference) {
                 String tempValue = (String) newValue;
-                String oldValue = mLcdDensityPreference.getValue();
-                if (!TextUtils.equals(tempValue, oldValue)) {
-                    showLcdConfirmationDialog((String) newValue);
+                int index = mLcdDensityPreference.findIndexOfValue((String) newValue);
+                if (index == 7) {
+                    customDpiDialog();
+                } else {
+                    String oldValue = mLcdDensityPreference.getValue();
+                    if (!TextUtils.equals(tempValue, oldValue)) {
+                        showLcdConfirmationDialog((String) newValue);
+                    }
                 }
                 return false;
             } else if (preference == mPowerMenuAnimations) {
@@ -165,16 +176,16 @@ public class DisplayAnimationsActivity extends Fragment {
             builder.setMessage(R.string.lcd_density_prompt_message);
             builder.setPositiveButton(R.string.print_restart,
                     new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-                    try {
-                        int value = Integer.parseInt(lcdDensity);
-                        writeLcdDensityPreference(getActivity(), value);
-                        updateLcdDensityPreferenceDescription(value);
-                    } catch (NumberFormatException e) {
-                        Log.e(TAG, "could not persist display density setting", e);
-                    }
-                }
-            });
+                        public void onClick(DialogInterface dialog, int id) {
+                            try {
+                                int value = Integer.parseInt(lcdDensity);
+                                writeLcdDensityPreference(getActivity(), value);
+                                updateLcdDensityPreferenceDescription(value);
+                            } catch (NumberFormatException e) {
+                                Log.e(TAG, "could not persist display density setting", e);
+                            }
+                        }
+                    });
             builder.setNegativeButton(android.R.string.cancel, null);
             builder.show();
         }
@@ -246,6 +257,31 @@ public class DisplayAnimationsActivity extends Fragment {
                 }
             };
             task.execute();
+        }
+
+        private void customDpiDialog() {
+            AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+            alert.setTitle(R.string.custom_density_dialog_title);
+            alert.setMessage(R.string.custom_density_dialog_summary);
+
+            final EditText input = new EditText(getActivity());
+            input.setSelection(input.getText().length());
+            alert.setView(input);
+            alert.setPositiveButton(getString(android.R.string.ok),
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            String editText = ((Spannable) input.getText()).toString().trim();
+                            try {
+                                int value = Integer.parseInt(editText);
+                                writeLcdDensityPreference(getActivity(), value);
+                                updateLcdDensityPreferenceDescription(value);
+                            } catch (NumberFormatException e) {
+                                Log.e(TAG, "could not persist display density setting", e);
+                            }
+                        }
+                    });
+            alert.setNegativeButton(getString(android.R.string.cancel), null);
+            alert.show();
         }
     }
 }
