@@ -43,8 +43,7 @@ public class MainActivity extends AppCompatActivity
     private ActionBarDrawerToggle toggle;
     private Toolbar toolbar;
     private int id;
-    private long startTime;
-    private boolean secondBack=false;
+    private boolean firstPage = true;
     private boolean restartRequired = false;
 
     private View mView;
@@ -188,27 +187,22 @@ public class MainActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             /*
-            **If back was pressed the first time,only show snackbar
-            **else exit the app provided the user presses back
-            **the second time within 2.5 seconds of the first
+            **If back was pressed after changing to a new fragment,
+            **first return to about page before closing
             */
-            if(!secondBack) {
-            Snackbar snackbar = Snackbar
-            .make(mView, R.string.app_exit_toast, Snackbar.LENGTH_SHORT)
-            .setAction("Action", null);
-            View sbView = snackbar.getView();
-            sbView.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-            TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
-            textView.setTextColor(getResources().getColor(R.color.primary_text_material_dark));
-            snackbar.show();
-            secondBack=!secondBack;
-            startTime = System.currentTimeMillis();
-            } else if( System.currentTimeMillis()-startTime < 2500)
-            super.onBackPressed();
-            else {
-            secondBack=!secondBack;
-            onBackPressed();
-           }
+            if(firstPage) {
+                super.onBackPressed();
+            } else {
+                NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+                // Uncheck previous selected item
+                MenuItem oldItem = navigationView.getMenu().findItem(id);
+                if (oldItem != null) {
+                    oldItem.setChecked(false);
+                }
+                MenuItem newItem = navigationView.getMenu().findItem(R.id.nav_about);
+                onNavigationItemSelected(newItem);
+                newItem.setChecked(false);
+            }
         }
     }
 
@@ -305,6 +299,8 @@ public class MainActivity extends AppCompatActivity
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content_main, fragment).commit();
+
+        firstPage = id == R.id.nav_about;
 
         // Highlight the selected item, update the title, and close the drawer
         item.setChecked(true);
