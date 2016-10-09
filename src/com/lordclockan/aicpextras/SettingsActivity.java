@@ -16,7 +16,9 @@
 
 package com.lordclockan.aicpextras;
 
+import android.app.AlertDialog;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -25,6 +27,9 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.design.widget.Snackbar;
+import android.text.Spannable;
+import android.text.TextUtils;
+import android.widget.EditText;
 
 import com.lordclockan.R;
 
@@ -52,6 +57,7 @@ public class SettingsActivity extends SubActivity {
         private static final String PREF_AE_NAV_HEADER_BG_IMAGE_OPACITY = "ae_header_bg_image_opacity";
         private static final String PREF_AE_NAV_DRAWER_CHECKED_TEXT = "ae_nav_drawer_checked_text";
         private static final String PREF_AE_NAV_DRAWER_UNCHECKED_TEXT = "ae_nav_drawer_unchecked_text";
+        private static final String PREF_AE_SETTINGS_SUMMARY = "ae_settings_summary";
 
         private static final int DEFAULT_NAV_HEADER_COLOR = 0xFF303030;
 
@@ -62,6 +68,8 @@ public class SettingsActivity extends SubActivity {
         private ColorPickerPreference mNavDrawerTextCheckedColor;
         private ColorPickerPreference mNavDrawerTextUncheckedColor;
         private Preference mAeRestoreDefaults;
+        private PreferenceScreen mCustomSummary;
+        private String mCustomSummaryText;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -116,6 +124,9 @@ public class SettingsActivity extends SubActivity {
             mNavDrawerTextUncheckedColor.setNewPreviewColor(intColor);
 
             mAeRestoreDefaults = prefSet.findPreference(PREF_AE_SETTINGS_RESTORE_DEFAULTS);
+
+            mCustomSummary = (PreferenceScreen) prefSet.findPreference(PREF_AE_SETTINGS_SUMMARY);
+            updateCustomSummaryTextString();
         }
 
         public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -211,10 +222,41 @@ public class SettingsActivity extends SubActivity {
 
                 Snackbar.make(getView(), R.string.values_restored_title,
                         Snackbar.LENGTH_LONG).show();
+            } else if (preference == mCustomSummary) {
+                AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+                alert.setTitle(R.string.custom_summary_title);
+                alert.setMessage(R.string.custom_summary_explain);
+
+                // Set an EditText view to get user input
+                final EditText input = new EditText(getActivity());
+                input.setText(TextUtils.isEmpty(mCustomSummaryText) ? "" : mCustomSummaryText);
+                input.setSelection(input.getText().length());
+                alert.setView(input);
+                alert.setPositiveButton(getString(android.R.string.ok),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                String value = ((Spannable) input.getText()).toString().trim();
+                                Settings.System.putString(resolver, Settings.System.AE_SETTINGS_SUMMARY, value);
+                                updateCustomSummaryTextString();
+                            }
+                        });
+                alert.setNegativeButton(getString(android.R.string.cancel), null);
+                alert.show();
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
             return false;
+        }
+
+        private void updateCustomSummaryTextString() {
+            mCustomSummaryText = Settings.System.getString(
+                    getActivity().getContentResolver(), Settings.System.AE_SETTINGS_SUMMARY);
+
+            if (TextUtils.isEmpty(mCustomSummaryText)) {
+                mCustomSummary.setSummary(R.string.custom_summary_notset);
+            } else {
+                mCustomSummary.setSummary(mCustomSummaryText);
+            }
         }
     }
 }
