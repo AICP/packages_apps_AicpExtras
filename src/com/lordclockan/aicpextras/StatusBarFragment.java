@@ -72,10 +72,6 @@ public class StatusBarFragment extends Fragment {
             PackageManager pm = getActivity().getPackageManager();
             if (!pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
                 prefSet.removePreference(mShowFourG);
-            } else {
-                mShowFourG.setChecked((Settings.System.getInt(resolver,
-                        Settings.System.SHOW_FOURG, 0) == 1));
-                mShowFourG.setOnPreferenceChangeListener(this);
             }
 
             mAicpLogoStyle = (ListPreference) findPreference(KEY_AICP_LOGO_STYLE);
@@ -114,10 +110,7 @@ public class StatusBarFragment extends Fragment {
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getActivity().getContentResolver();
-            if (preference == mShowFourG) {
-                Helpers.showSystemUIrestartDialog(getActivity());
-                return true;
-            } else if (preference == mAicpLogoColor) {
+            if (preference == mAicpLogoColor) {
                 String hex = ColorPickerPreference.convertToARGB(
                         Integer.valueOf(String.valueOf(newValue)));
                 preference.setSummary(hex);
