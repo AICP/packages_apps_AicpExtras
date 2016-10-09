@@ -26,11 +26,6 @@
     <PreferenceCategory
         android:title="@string/Misc">
 
-        <ListPreference
-            android:key="lcd_density"
-            android:title="@string/lcd_density"
-            android:persistent="false" />
-
         <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
             android:key="toast_icon"
             android:title="@string/toast_icon_title"
