@@ -41,10 +41,14 @@ public class StatusBarFragment extends Fragment {
         private static final String PREF_TRAFFIC = "traffic";
         private static final String KEY_SHOW_FOURG = "show_fourg";
         private static final String PREF_BATTERY_BAR = "batterybar";
+        private static final String KEY_AICP_LOGO_COLOR = "status_bar_aicp_logo_color";
+        private static final String KEY_AICP_LOGO_STYLE = "status_bar_aicp_logo_style";
 
         private Preference mTraffic;
         private SwitchPreference mShowFourG;
         private Preference mBatteryBar;
+        private ColorPickerPreference mAicpLogoColor;
+        private ListPreference mAicpLogoStyle;
 
         public SettingsPreferenceFragment() {
         }
@@ -73,6 +77,24 @@ public class StatusBarFragment extends Fragment {
                         Settings.System.SHOW_FOURG, 0) == 1));
                 mShowFourG.setOnPreferenceChangeListener(this);
             }
+
+            mAicpLogoStyle = (ListPreference) findPreference(KEY_AICP_LOGO_STYLE);
+            int aicpLogoStyle = Settings.System.getIntForUser(resolver,
+                    Settings.System.STATUS_BAR_AICP_LOGO_STYLE, 0,
+                    UserHandle.USER_CURRENT);
+            mAicpLogoStyle.setValue(String.valueOf(aicpLogoStyle));
+            mAicpLogoStyle.setSummary(mAicpLogoStyle.getEntry());
+            mAicpLogoStyle.setOnPreferenceChangeListener(this);
+
+            // Aicp logo color
+            mAicpLogoColor =
+                (ColorPickerPreference) prefSet.findPreference(KEY_AICP_LOGO_COLOR);
+            mAicpLogoColor.setOnPreferenceChangeListener(this);
+            int intColor = Settings.System.getInt(resolver,
+                    Settings.System.STATUS_BAR_AICP_LOGO_COLOR, 0xffffffff);
+            String hexColor = String.format("#%08x", (0xffffffff & intColor));
+            mAicpLogoColor.setSummary(hexColor);
+            mAicpLogoColor.setNewPreviewColor(intColor);
         }
 
         @Override
@@ -94,6 +116,23 @@ public class StatusBarFragment extends Fragment {
             ContentResolver resolver = getActivity().getContentResolver();
             if (preference == mShowFourG) {
                 Helpers.showSystemUIrestartDialog(getActivity());
+                return true;
+            } else if (preference == mAicpLogoColor) {
+                String hex = ColorPickerPreference.convertToARGB(
+                        Integer.valueOf(String.valueOf(newValue)));
+                preference.setSummary(hex);
+                int intHex = ColorPickerPreference.convertToColorInt(hex);
+                Settings.System.putInt(resolver,
+                        Settings.System.STATUS_BAR_AICP_LOGO_COLOR, intHex);
+                return true;
+            } else if (preference == mAicpLogoStyle) {
+                int aicpLogoStyle = Integer.valueOf((String) newValue);
+                int index = mAicpLogoStyle.findIndexOfValue((String) newValue);
+                Settings.System.putIntForUser(
+                        resolver, Settings.System.STATUS_BAR_AICP_LOGO_STYLE, aicpLogoStyle,
+                        UserHandle.USER_CURRENT);
+                mAicpLogoStyle.setSummary(
+                        mAicpLogoStyle.getEntries()[index]);
                 return true;
             }
             return false;
