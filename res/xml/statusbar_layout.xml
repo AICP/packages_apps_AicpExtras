@@ -18,6 +18,10 @@
             android:defaultValue="false" />
 
         <Preference
+            android:key="batterybar"
+            android:title="@string/battery_bar_title" />
+
+        <Preference
             android:key="traffic"
             android:title="@string/traffic_category" />
    </PreferenceCategory>
