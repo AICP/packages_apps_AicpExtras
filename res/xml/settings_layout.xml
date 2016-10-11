@@ -62,6 +62,10 @@
         android:dependency="ae_custom_colors" />
 
     <Preference
+        android:key="ae_settings_summary"
+        android:title="@string/ae_settings_summary_title" />
+
+    <Preference
         android:key="ae_settings_restore_defaults"
         android:title="@string/ae_settings_restore_defaults_title" />
 
