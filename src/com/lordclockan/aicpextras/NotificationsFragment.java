@@ -25,6 +25,7 @@ import java.util.Set;
 
 import cyanogenmod.providers.CMSettings;
 
+import com.lordclockan.aicpextras.utils.Utils;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 import com.lordclockan.R;
 
@@ -56,6 +57,7 @@ public class NotificationsFragment extends Fragment {
         private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
         private static final String PREF_COLUMNS = "qs_columns";
         private static final String PREF_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
+        private static final String PREF_QS_DATA_ADVANCED = "qs_data_advanced";
 
         private ListPreference mTileAnimationStyle;
         private ListPreference mTileAnimationDuration;
@@ -64,6 +66,7 @@ public class NotificationsFragment extends Fragment {
         private ListPreference mRowsLandscape;
         private ListPreference mQsColumns;
         private ListPreference mSysuiQqsCount;
+        private SwitchPreference mQsDataAdvanced;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -132,6 +135,15 @@ public class NotificationsFragment extends Fragment {
             mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntry());
             mSysuiQqsCount.setOnPreferenceChangeListener(this);
 
+            mQsDataAdvanced = (SwitchPreference) findPreference(PREF_QS_DATA_ADVANCED);
+            mQsDataAdvanced.setOnPreferenceChangeListener(this);
+            if (Utils.isWifiOnly(getActivity())) {
+                prefSet.removePreference(mQsDataAdvanced);
+            } else {
+                mQsDataAdvanced.setChecked((Settings.Secure.getInt(resolver,
+                        Settings.Secure.QS_DATA_ADVANCED, 0) == 1));
+            }
+
         }
 
         @Override
@@ -187,11 +199,15 @@ public class NotificationsFragment extends Fragment {
             } else if (preference == mSysuiQqsCount) {
                 String SysuiQqsCount = (String) newValue;
                 int SysuiQqsCountValue = Integer.parseInt(SysuiQqsCount);
-                Settings.Secure.putInt(resolver,
-                        Settings.Secure.QQS_COUNT, SysuiQqsCountValue);
+                Settings.Secure.putInt(resolver, Settings.Secure.QQS_COUNT, SysuiQqsCountValue);
                 int SysuiQqsCountIndex = mSysuiQqsCount.findIndexOfValue(SysuiQqsCount);
                 mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntries()[SysuiQqsCountIndex]);
-            return true;
+                return true;
+            } else if  (preference == mQsDataAdvanced) {
+                boolean checked = ((SwitchPreference) preference).isChecked();
+                Settings.Secure.putInt(resolver,
+                        Settings.Secure.QS_DATA_ADVANCED, checked ? 1:0);
+                return true;
             }
             return false;
         }
