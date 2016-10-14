@@ -52,10 +52,16 @@ public class NotificationsFragment extends Fragment {
         private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
         private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
         private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
+        private static final String PREF_ROWS_PORTRAIT = "qs_rows_portrait";
+        private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
+        private static final String PREF_COLUMNS = "qs_columns";
 
         private ListPreference mTileAnimationStyle;
         private ListPreference mTileAnimationDuration;
         private ListPreference mTileAnimationInterpolator;
+        private ListPreference mRowsPortrait;
+        private ListPreference mRowsLandscape;
+        private ListPreference mQsColumns;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -65,8 +71,9 @@ public class NotificationsFragment extends Fragment {
 
             PreferenceScreen prefSet = getPreferenceScreen();
             Activity activity = getActivity();
-
             final ContentResolver resolver = getActivity().getContentResolver();
+
+            int defaultValue;
 
             // QS tile animation
             mTileAnimationStyle = (ListPreference) findPreference(PREF_TILE_ANIM_STYLE);
@@ -94,6 +101,28 @@ public class NotificationsFragment extends Fragment {
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
             mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
 
+            mRowsPortrait = (ListPreference) findPreference(PREF_ROWS_PORTRAIT);
+            int rowsPortrait = Settings.Secure.getInt(resolver,
+                    Settings.Secure.QS_ROWS_PORTRAIT, 3);
+            mRowsPortrait.setValue(String.valueOf(rowsPortrait));
+            mRowsPortrait.setSummary(mRowsPortrait.getEntry());
+            mRowsPortrait.setOnPreferenceChangeListener(this);
+
+            defaultValue = getResources().getInteger(com.android.internal.R.integer.config_qs_num_rows_landscape_default);
+            mRowsLandscape = (ListPreference) findPreference(PREF_ROWS_LANDSCAPE);
+            int rowsLandscape = Settings.Secure.getInt(resolver,
+                    Settings.Secure.QS_ROWS_LANDSCAPE, defaultValue);
+            mRowsLandscape.setValue(String.valueOf(rowsLandscape));
+            mRowsLandscape.setSummary(mRowsLandscape.getEntry());
+            mRowsLandscape.setOnPreferenceChangeListener(this);
+
+            mQsColumns = (ListPreference) findPreference(PREF_COLUMNS);
+            int columnsQs = Settings.Secure.getInt(resolver,
+                    Settings.Secure.QS_COLUMNS, 3);
+            mQsColumns.setValue(String.valueOf(columnsQs));
+            mQsColumns.setSummary(mQsColumns.getEntry());
+            mQsColumns.setOnPreferenceChangeListener(this);
+
         }
 
         @Override
@@ -104,6 +133,8 @@ public class NotificationsFragment extends Fragment {
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getActivity().getContentResolver();
+            int intValue;
+            int index;
             if (preference == mTileAnimationStyle) {
                 int tileAnimationStyle = Integer.valueOf((String) newValue);
                 Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_STYLE,
@@ -122,6 +153,27 @@ public class NotificationsFragment extends Fragment {
                 Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_INTERPOLATOR,
                         tileAnimationInterpolator, UserHandle.USER_CURRENT);
                 updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
+                return true;
+            } else if (preference == mRowsPortrait) {
+                intValue = Integer.valueOf((String) newValue);
+                index = mRowsPortrait.findIndexOfValue((String) newValue);
+                Settings.Secure.putInt(resolver,
+                        Settings.Secure.QS_ROWS_PORTRAIT, intValue);
+                preference.setSummary(mRowsPortrait.getEntries()[index]);
+                return true;
+            } else if (preference == mRowsLandscape) {
+                intValue = Integer.valueOf((String) newValue);
+                index = mRowsLandscape.findIndexOfValue((String) newValue);
+                Settings.Secure.putInt(resolver,
+                        Settings.Secure.QS_ROWS_LANDSCAPE, intValue);
+                preference.setSummary(mRowsLandscape.getEntries()[index]);
+                return true;
+            } else if (preference == mQsColumns) {
+                intValue = Integer.valueOf((String) newValue);
+                index = mQsColumns.findIndexOfValue((String) newValue);
+                Settings.Secure.putInt(resolver,
+                        Settings.Secure.QS_COLUMNS, intValue);
+                preference.setSummary(mQsColumns.getEntries()[index]);
                 return true;
             }
             return false;

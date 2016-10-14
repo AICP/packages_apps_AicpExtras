@@ -626,30 +626,6 @@
         <item>2.0</item>
     </string-array>
 
-    <!-- QS Tiles Columns -->
-    <string-array name="qs_num_columns_values" translatable="false">
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-    </string-array>
-
-    <string-array name="qs_num_columns_entries">
-        <item>Three</item>
-        <item>Four</item>
-        <item>Five</item>
-    </string-array>
-
-    <!-- QS Tiles Rows -->
-    <string-array name="qs_num_rows_values" translatable="false">
-        <item>3</item>
-        <item>4</item>
-    </string-array>
-
-    <string-array name="qs_num_rows_entries">
-        <item>Three</item>
-        <item>Four</item>
-    </string-array>
-
     <!-- Tiles animation style -->
     <string-array name="qs_tile_animation_style_entries" translatable="false">
         <item>@string/qs_tile_animation_style_off</item>
@@ -832,6 +808,51 @@
         <item>@string/themes_tile_mods_statusbar_value</item>
         <item>@string/themes_tile_mods_headers_value</item>
         <item>@string/themes_tile_mods_navbar_value</item>
+    </string-array>
+
+    <!-- Quick settings tiles columns and rows config -->
+    <string-array name="qs_rows_portrait_entries">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="qs_rows_portrait_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="qs_rows_landscape_entries">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="qs_rows_landscape_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="qs_columns_entries">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="qs_columns_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
     </string-array>
 
 </resources>
