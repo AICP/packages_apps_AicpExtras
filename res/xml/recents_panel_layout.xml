@@ -18,7 +18,8 @@
     xmlns:pure="http://schemas.android.com/apk/res-auto" >
 
     <PreferenceCategory
-        android:title="@string/cab">
+        android:key="stock_recents"
+        android:title="@string/aosp_recents_title">
 
         <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
             android:key="show_clear_all_recents"
@@ -33,11 +34,6 @@
             android:entryValues="@array/recents_clear_all_location_values"
             android:defaultValue="3"
             android:dependency="show_clear_all_recents" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/visuals">
 
         <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
             android:key="systemui_recents_mem_display"
@@ -57,4 +53,22 @@
 
     </PreferenceCategory>
 
+        <PreferenceCategory
+            android:key="omni_recents"
+            android:title="@string/omniswitch_recents_title" >
+
+        <SwitchPreference
+            android:key="recents_use_omniswitch"
+            android:title="@string/recents_use_omniswitch_title"
+            android:summary="@string/recents_use_omniswitch_summary"
+            android:persistent="false" />
+
+        <Preference
+            android:key="omniswitch_start_settings"
+            android:title="@string/omniswitch_start_settings_title"
+            android:summary="@string/omniswitch_start_settings_summary"
+            android:dependency="recents_use_omniswitch"
+            android:persistent="false" />
+
+        </PreferenceCategory>
 </PreferenceScreen>
