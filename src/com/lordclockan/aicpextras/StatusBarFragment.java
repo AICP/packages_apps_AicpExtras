@@ -43,12 +43,14 @@ public class StatusBarFragment extends Fragment {
         private static final String PREF_BATTERY_BAR = "batterybar";
         private static final String KEY_AICP_LOGO_COLOR = "status_bar_aicp_logo_color";
         private static final String KEY_AICP_LOGO_STYLE = "status_bar_aicp_logo_style";
+        private static final String PREF_CARRIE_LABEL = "carrierlabel";
 
         private Preference mTraffic;
         private SwitchPreference mShowFourG;
         private Preference mBatteryBar;
         private ColorPickerPreference mAicpLogoColor;
         private ListPreference mAicpLogoStyle;
+        private Preference mCarrierLabel;
 
         public SettingsPreferenceFragment() {
         }
@@ -63,9 +65,12 @@ public class StatusBarFragment extends Fragment {
             PreferenceScreen prefSet = getPreferenceScreen();
             final ContentResolver resolver = getActivity().getContentResolver();
             Context context = getActivity();
+            ConnectivityManager cm = (ConnectivityManager)
+                    context.getSystemService(Context.CONNECTIVITY_SERVICE);
 
             mTraffic = prefSet.findPreference(PREF_TRAFFIC);
             mBatteryBar = prefSet.findPreference(PREF_BATTERY_BAR);
+            mCarrierLabel = prefSet.findPreference(PREF_CARRIE_LABEL);
 
             // Show 4G
             mShowFourG = (SwitchPreference) prefSet.findPreference(KEY_SHOW_FOURG);
@@ -91,6 +96,10 @@ public class StatusBarFragment extends Fragment {
             String hexColor = String.format("#%08x", (0xffffffff & intColor));
             mAicpLogoColor.setSummary(hexColor);
             mAicpLogoColor.setNewPreviewColor(intColor);
+
+            if (!cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE)) {
+                prefSet.removePreference(mCarrierLabel);
+            }
         }
 
         @Override
@@ -103,6 +112,9 @@ public class StatusBarFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), BatteryBar.class);
                 getActivity().startActivity(intent);
                 return true;
+            } else if (preference == mCarrierLabel) {
+                Intent intent = new Intent(getActivity(), CarrierLabel.class);
+                getActivity().startActivity(intent);
             }
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
