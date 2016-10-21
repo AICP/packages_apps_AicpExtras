@@ -44,6 +44,7 @@ public class StatusBarFragment extends Fragment {
         private static final String KEY_AICP_LOGO_COLOR = "status_bar_aicp_logo_color";
         private static final String KEY_AICP_LOGO_STYLE = "status_bar_aicp_logo_style";
         private static final String PREF_CARRIE_LABEL = "carrierlabel";
+        private static final String PREF_TICKER = "ticker";
 
         private Preference mTraffic;
         private SwitchPreference mShowFourG;
@@ -51,6 +52,7 @@ public class StatusBarFragment extends Fragment {
         private ColorPickerPreference mAicpLogoColor;
         private ListPreference mAicpLogoStyle;
         private Preference mCarrierLabel;
+        private Preference mTicker;
 
         public SettingsPreferenceFragment() {
         }
@@ -71,6 +73,7 @@ public class StatusBarFragment extends Fragment {
             mTraffic = prefSet.findPreference(PREF_TRAFFIC);
             mBatteryBar = prefSet.findPreference(PREF_BATTERY_BAR);
             mCarrierLabel = prefSet.findPreference(PREF_CARRIE_LABEL);
+            mTicker = prefSet.findPreference(PREF_TICKER);
 
             // Show 4G
             mShowFourG = (SwitchPreference) prefSet.findPreference(KEY_SHOW_FOURG);
@@ -114,6 +117,9 @@ public class StatusBarFragment extends Fragment {
                 return true;
             } else if (preference == mCarrierLabel) {
                 Intent intent = new Intent(getActivity(), CarrierLabel.class);
+                getActivity().startActivity(intent);
+            } else if (preference == mTicker) {
+                Intent intent = new Intent(getActivity(), Ticker.class);
                 getActivity().startActivity(intent);
             }
             return super.onPreferenceTreeClick(preferenceScreen, preference);
