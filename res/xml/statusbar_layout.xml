@@ -28,7 +28,11 @@
         <Preference
             android:key="carrierlabel"
             android:title="@string/carrier_options" />
-            
+
+        <Preference
+            android:key="ticker"
+            android:title="@string/ticker_screen_title" />
+
    </PreferenceCategory>
 
    <!-- Status bar AICP logo -->
