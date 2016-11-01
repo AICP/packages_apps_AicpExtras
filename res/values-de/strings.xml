@@ -160,7 +160,7 @@
     <string name="show_carrier_disabled">Deaktiviert</string>
     <string name="show_carrier_keyguard">Nur auf Sperrbildschirm</string>
     <string name="show_carrier_statusbar">Nur in Statusleiste</string>
-    <string name="show_carrier_enabled">Aktiviert</string>
+    <string name="show_carrier_enabled">Sperrbildschirm &amp; Statusleiste</string>
     <string name="status_bar_carrier_position">Position</string>
     <string name="status_bar_carrier_font_style_title">Schriftstil</string>
 
@@ -534,7 +534,7 @@
     <string name="enable_task_manager_summary">Ein-/Ausschalten der Anzeige des Prozess-Manager-Symbols im Bereich der erweiterten Statusleiste.</string>
 
     <!-- SlimSizer  -->
-    <string name="listsystem">list</string>
+    <!-- <string name="listsystem">list</string> -->
     <string name="sizer_title">System-App Entferner</string>
     <string name="caution">Vorsicht!</string>
     <string name="sizer_message_startup">Dieses Werkzeug erlaubt das Löschen von Systemanwendungen. Mit Vorsicht benutzen und nur Apps löschen, bei denen Sie sich sicher sind.</string>
@@ -810,13 +810,11 @@
     <!-- Status bar header font style -->
     <string name="status_bar_header_font_style_title">Schriftstil des Statusleistenkopfs</string>
 
-    <!-- QS Tiles Columns -->
-    <string name="qs_num_columns_title">Kachelanzahl pro Zeile</string>
-    <string name="qs_num_columns_showing">%1$s Kacheln pro Zeile werden angezeigt</string>
-
-    <!-- QS Tiles Rows -->
-    <string name="qs_num_rows_title">Anzahl der Zeilen für Kacheln</string>
-    <string name="qs_num_rows_showing">%1$s Zeilen werden angezeigt</string>
+    <!-- Quick settings tiles columns and rows config -->
+    <string name="qs_rows_portrait_title">Zeilenanzahl (Hochformat)</string>
+    <string name="qs_rows_landscape_title">Zeilenanzahl (Querformat)</string>
+    <string name="qs_columns_title">Kachelanzahl pro Zeile</string>
+    <string name="sysui_qqs_count_title">Anzahl der Mini-Kacheln</string>
 
     <!-- Lockscreen Colors -->
     <string name="lockscreen_colors_title">Sperrbildschirm-Farben</string>
@@ -976,6 +974,9 @@
     <string name="ae_header_bg_image_opacity_title">Deckkraft des Hintergrundbildes im Navigationsmenü</string>
     <string name="ae_nav_drawer_checked_text_title">Textfarbe der Auswahl</string>
     <string name="ae_nav_drawer_unchecked_text_title">Textfarbe</string>
+    <string name="custom_summary_title">Eigene AE Beschreibung</string>
+    <string name="custom_summary_explain">Bitte eine neue Beschreibung eingeben. Für den Vorgabetext einfach leer lassen.</string>
+    <string name="custom_summary_notset">Custom ROM Anpassungen</string>
 
     <!-- Halo -->
     <string name="halo_settings_title">HALO</string>
@@ -1080,5 +1081,31 @@
     <string name="themes_tile_mods_notification_value" translatable="false">mods_notifications</string>
     <string name="themes_tile_mods_alarm_value" translatable="false">mods_alarms</string>
     <string name="themes_tile_mods_ringtone_value" translatable="false">mods_ringtones</string> -->
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Kachel-Vibration</string>
+    <string name="quick_settings_vibrate_summary">Bei Berührung einer Kachel vibrieren</string>
+
+    <!-- Advanced data tile -->
+    <string name="qs_advanced_data_title">Erweiterte Daten-Kachel</string>
+    <string name="qs_advanced_data_summary">Aktiviert das Ein-/Ausschalten der Datenverbindung mit nur einem Tastendruck</string>
+
+    <!-- SystemUI restart prompt -->
+    <string name="systemui_restart_title">WARNUNG</string>
+    <string name="systemui_restart_message">Die SystemUI wird neu gestartet, um die gewählte Einstellung zu übernehmen.</string>
+
+    <!-- Status Bar Ticker -->
+    <string name="ticker_screen_title">Ticker</string>
+    <string name="ticker_title">Statusleisten-Ticker</string>
+    <string name="ticker_screen_summary">Stil des Tickers anpassen</string>
+    <string name="ticker_summary">Aktiviert den altbekannten Statusleisten-Ticker</string>
+    <string name="ticker_restore_defaults_title">Standard wiederherstellen</string>
+    <string name="text_title">Text</string>
+    <string name="icon_title">Symbol</string>
+    <string name="colors_title">Farben</string>
+
+    <!-- Heads up switch -->
+    <string name="heads_up_switch_title">Pop-up-Benachrichtigungen</string>
+    <string name="heads_up_switch_summary">Pop-up-Benachrichtungen global umschalten, nicht pro App.</string>
 
 </resources>
