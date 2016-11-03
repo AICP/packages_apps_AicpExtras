@@ -21,12 +21,6 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/notifications_title">
 
-    <com.aicp.gear.preference.GlobalSettingSwitchPreference
-        android:key="heads_up_notifications_enabled"
-        android:title="@string/notification_heads_up_title"
-        android:summary="@string/notification_heads_up_summary"
-        android:defaultValue="true" />
-
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="notification_sound_vib_screen_on"
         android:title="@string/notification_sound_vib_screen_on_title"
@@ -46,7 +40,29 @@
         android:defaultValue="false" />
 
     <PreferenceCategory
+        android:key="category_headsup"
+        android:title="@string/heads_up_category">
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="heads_up_notifications_enabled"
+            android:title="@string/notification_heads_up_title"
+            android:summary="@string/notification_heads_up_summary"
+            android:defaultValue="true" />
+
+        <com.aicp.gear.preference.SystemSettingIntListPreference
+            android:key="heads_up_notification_snooze"
+            android:title="@string/heads_up_snooze_title"
+            android:summary="%s"
+            android:entries="@array/heads_up_snooze_entries"
+            android:entryValues="@array/heads_up_snooze_values"
+            android:defaultValue="0"
+            android:dependency="heads_up_notifications_enabled" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/status_bar_ticker_category_title">
+
 
         <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="status_bar_show_ticker"
