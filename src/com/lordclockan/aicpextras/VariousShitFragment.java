@@ -42,6 +42,10 @@ public class VariousShitFragment extends Fragment {
         public SettingsPreferenceFragment() {
         }
 
+        private static final String SCREENSHOT_TYPE = "screenshot_type";
+
+        private ListPreference mScreenshotType;
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -51,11 +55,27 @@ public class VariousShitFragment extends Fragment {
             PreferenceScreen prefSet = getPreferenceScreen();
             ContentResolver resolver = getActivity().getContentResolver();
 
+            mScreenshotType = (ListPreference) findPreference(SCREENSHOT_TYPE);
+            int mScreenshotTypeValue = Settings.System.getInt(resolver,
+                    Settings.System.SCREENSHOT_TYPE, 0);
+            mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
+            mScreenshotType.setSummary(mScreenshotType.getEntry());
+            mScreenshotType.setOnPreferenceChangeListener(this);
+
         }
 
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getActivity().getContentResolver();
+            if  (preference == mScreenshotType) {
+                int mScreenshotTypeValue = Integer.parseInt(((String) newValue).toString());
+                mScreenshotType.setSummary(
+                        mScreenshotType.getEntries()[mScreenshotTypeValue]);
+                Settings.System.putInt(resolver,
+                        Settings.System.SCREENSHOT_TYPE, mScreenshotTypeValue);
+                mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
+                return true;
+            }
             return false;
         }
 
