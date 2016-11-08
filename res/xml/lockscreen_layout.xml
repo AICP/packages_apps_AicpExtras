@@ -18,6 +18,12 @@
         android:summary="@string/lockscreen_qs_disabled_summary"
         android:defaultValue="false" />
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_charging_current"
+        android:title="@string/lockscreen_charging_current_title"
+        android:summary="@string/lockscreen_charging_current_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:title="@string/Misc"
         android:key="lockscreen_misc_category">
