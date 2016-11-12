@@ -281,51 +281,6 @@
     <string name="recents_full_screen_date_title">Show date</string>
     <string name="recents_full_screen_date_summary">Shows date at the top while in fullscreen</string>
 
-    <!-- Weather settings -->
-    <string name="weather_lockscreen_category">Lock screen weather options</string>
-    <string name="weather_cat_notifications_title">Notifications</string>
-    <string name="weather_settings_title">LockClock settings</string>
-    <string name="weather_settings_summary">Configure location for weather widget and other settings</string>
-    <string name="weather_lockscreen_show_title">Lock screen weather</string>
-    <string name="weather_lockscreen_show_summary">Show weather on lock screen</string>
-    <string name="weather_show_weather_title">Show weather options</string>
-    <string name="weather_show_weather_summary">Enable to show weather options that go along with LockClock</string>
-    <string name="status_bar_show_weather_title">Extended statusbar weather</string>
-    <string name="status_bar_show_weather_summary">Show basic weather in the extended statusbar area</string>
-    <string name="weather_show_location_title">Show location</string>
-    <string name="weather_show_location_summary">Enable to show the location</string>
-    <string name="weather_condition_icon_title">Condition icon</string>
-    <string name="weather_condition_icon_dlg_title">Pick an icon for displaying the weather condition</string>
-    <string name="weather_condition_icon_monochrome_title">Monochrome</string>
-    <string name="weather_condition_icon_colored_title">Colored</string>
-    <string name="weather_condition_icon_vclouds_title">VClouds</string>
-    <string name="weather_colorize_all_icons_title">Colorize all icons</string>
-    <string name="weather_colorize_all_icons_summary">Enable to colorize all icons, disable to colorize only the monochrome icons</string>
-    <string name="weather_hide_panel_title">Hide weather panel</string>
-    <string name="weather_hide_panel_dlg_title">Choose when the weather panel should be hidden</string>
-    <string name="weather_hide_panel_auto_title">Auto</string>
-    <string name="weather_hide_panel_custom_title">Custom</string>
-    <string name="weather_hide_panel_never_title">Never</string>
-    <string name="weather_hide_panel_auto_summary">The weather panel will be hidden, when the visible notifications will reach the maximum allowed notifications on the lock screen</string>
-    <string name="weather_hide_panel_custom_summary">The weather panel will be hidden, when the visible notifications will reach the choosen number of notifications (%s)</string>
-    <string name="weather_hide_panel_never_summary">The weather panel won\'t be hidden</string>
-    <string name="weather_number_of_notifications_title">Number of notifications</string>
-    <string name="weather_number_of_notifications_dlg_title">Choose the number of notifications to hide the weather panel</string>
-    <string name="weather_number_of_notifications_always_title">Always</string>
-    <string name="weather_number_of_notifications_two_title">2</string>
-    <string name="weather_number_of_notifications_three_title">3</string>
-    <string name="weather_number_of_notifications_four_title">4</string>
-    <string name="weather_number_of_notifications_five_title">5</string>
-    <string name="weather_number_of_notifications_six_title">6</string>
-    <string name="colors_title">Colors</string>
-    <string name="icons_title">Icons</string>
-    <string name="text_title">Text</string>
-    <string name="reset">Reset</string>
-    <string name="reset_lockscreen_weather">OK</string>
-    <string name="reset_values_message">Reset values?</string>
-    <string name="weather_reset_title">Reset weather values</string>
-    <string name="weather_settings">Weather settings</string>
-
     <!-- Lock Clock Fonts -->
     <string name="lock_clock_font_title">Lock Clock fonts</string>
     <string name="lock_clock_font_summary">Change the default font of the lockscreen clock widget</string>
@@ -355,15 +310,6 @@
     <string name="lock_clock_font_notoserif_italic">NotoSerif Italic</string>
     <string name="lock_clock_font_notoserif_bold">NotoSerif Bold</string>
     <string name="lock_clock_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
-
-    <!-- Lockscreen see through -->
-    <string name="lockscreen_see_through_title">Lock screen blur</string>
-    <string name="lockscreen_see_through_summary">Blurs and displays the content behind your lock screen.</string>
-    <string name="lockscreen_blur_radius">Blur effect intensity</string>
-
-    <!-- Lockscreen alpha -->
-    <string name="lockscreen_alpha">Alpha setting</string>
-    <string name="lockscreen_security_alpha">Bouncer alpha setting</string>
 
     <!-- Notificatio drawer weather -->
     <string name="notif_drawer_weather_title">Weather</string>
@@ -1105,5 +1051,10 @@
     <string name="screenshot_type_title">Screenshot type</string>
     <string name="screenshot_type_fullscreen">Take fullscreen screenshots</string>
     <string name="screenshot_type_partial">Drag selection on the area you want to take as a screenshot</string>
+
+    <!-- Lock screen Am/Pm switch -->
+    <string name="lock_screen_hide_ampm_title">Hide AM/PM</string>
+    <string name="lock_screen_hide_ampm_summary_on">AM/PM shown</string>
+    <string name="lock_screen_hide_ampm_summary_off">AM/PM hidden</string>
 
 </resources>
