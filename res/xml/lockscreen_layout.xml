@@ -16,6 +16,13 @@
         android:title="@string/Misc">
 
         <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="lock_screen_hide_ampm"
+            android:title="@string/lock_screen_hide_ampm_title"
+            android:summaryOn="@string/lock_screen_hide_ampm_summary_on"
+            android:summaryOff="@string/lock_screen_hide_ampm_summary_off"
+            android:defaultValue="false" />
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
             android:key="keyguard_toggle_torch"
             android:title="@string/keyguard_torch_title"
             android:summary="@string/keyguard_torch_summary"
