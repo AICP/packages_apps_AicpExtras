@@ -21,6 +21,7 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
+import android.text.format.DateFormat;
 import android.widget.Toast;
 
 import com.android.internal.util.aicp.AicpUtils;
@@ -46,10 +47,12 @@ public class LockscreenFragment extends Fragment {
         }
 
         private static final String PREF_KEYGUARD_TORCH = "keyguard_toggle_torch";
+        private static final String PREF_LOCK_SCREEN_HIDE_AMPM = "lock_screen_hide_ampm";
 
         private SwitchPreference mKeyguardTorch;
         private FingerprintManager mFingerprintManager;
         private SwitchPreference mFingerprintVib;
+        private SwitchPreference mHideAmPm;
 
         static final int DEFAULT = 0xffffffff;
 
@@ -71,8 +74,14 @@ public class LockscreenFragment extends Fragment {
             // Fingerprint vibration
             mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
             mFingerprintVib = (SwitchPreference) prefSet.findPreference("fingerprint_success_vib");
-            if (!mFingerprintManager.isHardwareDetected()){
+            if (!mFingerprintManager.isHardwareDetected()) {
                 prefSet.removePreference(mFingerprintVib);
+            }
+
+            // Hide AM/PM
+            mHideAmPm = (SwitchPreference) prefSet.findPreference(PREF_LOCK_SCREEN_HIDE_AMPM);
+            if (DateFormat.is24HourFormat(getActivity())) {
+                prefSet.removePreference(mHideAmPm);
             }
         }
 
