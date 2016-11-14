@@ -16,6 +16,7 @@ import android.os.UserHandle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
@@ -53,6 +54,7 @@ public class LockscreenFragment extends Fragment {
         private FingerprintManager mFingerprintManager;
         private SwitchPreference mFingerprintVib;
         private SwitchPreference mHideAmPm;
+        private PreferenceCategory mMiscCategory;
 
         static final int DEFAULT = 0xffffffff;
 
@@ -65,23 +67,25 @@ public class LockscreenFragment extends Fragment {
             PreferenceScreen prefSet = getPreferenceScreen();
             ContentResolver resolver = getActivity().getContentResolver();
 
+            mMiscCategory = (PreferenceCategory) prefSet.findPreference("lockscreen_misc_category");
+
             // Keyguard Torch
-            mKeyguardTorch = (SwitchPreference) prefSet.findPreference(PREF_KEYGUARD_TORCH);
+            mKeyguardTorch = (SwitchPreference) findPreference(PREF_KEYGUARD_TORCH);
             if (!AicpUtils.deviceSupportsFlashLight(getActivity())) {
-                prefSet.removePreference(mKeyguardTorch);
+                mMiscCategory.removePreference(mKeyguardTorch);
             }
 
             // Fingerprint vibration
             mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
-            mFingerprintVib = (SwitchPreference) prefSet.findPreference("fingerprint_success_vib");
+            mFingerprintVib = (SwitchPreference) findPreference("fingerprint_success_vib");
             if (!mFingerprintManager.isHardwareDetected()) {
-                prefSet.removePreference(mFingerprintVib);
+                mMiscCategory.removePreference(mFingerprintVib);
             }
 
             // Hide AM/PM
-            mHideAmPm = (SwitchPreference) prefSet.findPreference(PREF_LOCK_SCREEN_HIDE_AMPM);
+            mHideAmPm = (SwitchPreference) findPreference(PREF_LOCK_SCREEN_HIDE_AMPM);
             if (DateFormat.is24HourFormat(getActivity())) {
-                prefSet.removePreference(mHideAmPm);
+                mMiscCategory.removePreference(mHideAmPm);
             }
         }
 

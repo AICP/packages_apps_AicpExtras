@@ -13,7 +13,8 @@
         android:defaultValue="true" />
 
     <PreferenceCategory
-        android:title="@string/Misc">
+        android:title="@string/Misc"
+        android:key="lockscreen_misc_category">
 
         <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
             android:key="lock_screen_hide_ampm"
