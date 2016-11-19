@@ -35,6 +35,15 @@
             android:defaultValue="3"
             android:dependency="show_clear_all_recents" />
 
+       <PreferenceScreen
+           android:key="hide_app_from_recents"
+           android:title="@string/hide_apps_from_recents_title"
+           android:summary="@string/hide_apps_from_recents_summary" >
+               <intent android:action="android.intent.action.MAIN"
+                       android:targetPackage="org.aospextended.extensions"
+                        android:targetClass="org.aospextended.extensionsHAFRAppListActivity" />
+       </PreferenceScreen>
+
         <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
             android:key="systemui_recents_mem_display"
             android:title="@string/systemui_recents_mem_display_title"
