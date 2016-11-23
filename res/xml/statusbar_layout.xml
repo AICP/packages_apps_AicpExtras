@@ -11,12 +11,6 @@
             android:summaryOff="@string/su_indicator_summary_off"
             android:defaultValue="false" />
 
-        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-            android:key="show_fourg"
-            android:title="@string/show_fourg_title"
-            android:summary="@string/show_fourg_summary"
-            android:defaultValue="false" />
-
         <Preference
             android:key="batterybar"
             android:title="@string/battery_bar_title" />

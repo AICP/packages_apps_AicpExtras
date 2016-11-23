@@ -39,7 +39,6 @@ public class StatusBarFragment extends Fragment {
             implements OnPreferenceChangeListener {
 
         private static final String PREF_TRAFFIC = "traffic";
-        private static final String KEY_SHOW_FOURG = "show_fourg";
         private static final String PREF_BATTERY_BAR = "batterybar";
         private static final String KEY_AICP_LOGO_COLOR = "status_bar_aicp_logo_color";
         private static final String KEY_AICP_LOGO_STYLE = "status_bar_aicp_logo_style";
@@ -47,7 +46,6 @@ public class StatusBarFragment extends Fragment {
         private static final String PREF_TICKER = "ticker";
 
         private Preference mTraffic;
-        private SwitchPreference mShowFourG;
         private Preference mBatteryBar;
         private ColorPickerPreference mAicpLogoColor;
         private ListPreference mAicpLogoStyle;
@@ -74,13 +72,6 @@ public class StatusBarFragment extends Fragment {
             mBatteryBar = prefSet.findPreference(PREF_BATTERY_BAR);
             mCarrierLabel = prefSet.findPreference(PREF_CARRIE_LABEL);
             mTicker = prefSet.findPreference(PREF_TICKER);
-
-            // Show 4G
-            mShowFourG = (SwitchPreference) prefSet.findPreference(KEY_SHOW_FOURG);
-            PackageManager pm = getActivity().getPackageManager();
-            if (!pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
-                prefSet.removePreference(mShowFourG);
-            }
 
             mAicpLogoStyle = (ListPreference) findPreference(KEY_AICP_LOGO_STYLE);
             int aicpLogoStyle = Settings.System.getIntForUser(resolver,
