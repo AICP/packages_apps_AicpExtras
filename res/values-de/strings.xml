@@ -81,13 +81,7 @@
     <string name="qs_brightness_slider_enabled">Aktiviert</string>
     <string name="qs_brightness_slider_disabled">Deaktiviert</string>
 
-    <!-- Display & Lights screen, setting options for LCD density -->
-    <string name="lcd_density">LCD Dichte</string>
-    <string name="dialog_title_lcd_density">LCD Dichte</string>
-    <string name="lcd_density_value_format">%d DPI</string>
-    <string name="lcd_density_default_value_format">%d DPI (Standard)</string>
     <string name="restarting_ui">Neustart der UI\u2026</string>
-    <string name="lcd_density_prompt_message">Einige Anwendungen könnten mit eigenem DPI-Wert nicht mehr funktionieren.\n\nDies wird ihr Gerät neustarten.</string>
 
     <!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
     <string name="print_restart">Neustart</string>
@@ -154,15 +148,13 @@
     <string name="custom_carrier_label_title">Eigene Anbieterbezeichnung</string>
     <string name="custom_carrier_label_explain">Bitte eine neue Bezeichnung eingeben. Leerlassen für die Standardanzeige.</string>
     <string name="custom_carrier_label_notset">Eigene Bezeichnung zur Zeit nicht gesetzt</string>
-    <string name="status_bar_carrier_color">Farbe der Anbieterbezeichnung</string>
-    <string name="status_bar_carrier_size">Textgröße der Anbieterbezeichnung</string>
     <string name="show_carrier_title">Anbieteranzeige</string>
     <string name="show_carrier_disabled">Deaktiviert</string>
     <string name="show_carrier_keyguard">Nur auf Sperrbildschirm</string>
     <string name="show_carrier_statusbar">Nur in Statusleiste</string>
     <string name="show_carrier_enabled">Sperrbildschirm &amp; Statusleiste</string>
-    <string name="status_bar_carrier_position">Position</string>
-    <string name="status_bar_carrier_font_style_title">Schriftstil</string>
+    <string name="status_bar_carrier_color">Farbe der Anbieterbezeichnung</string>
+    <string name="status_bar_carrier_size">Textgröße der Anbieterbezeichnung</string>
 
     <!-- Battery Bar -->
     <string name="battery_bar_title">Akkustandbalken</string>
@@ -188,7 +180,7 @@
     <string name="pref_scrollingcache_force_disable">Immer deaktiviert</string>
 
     <!-- Headphones icon switch -->
-    <string name="show_headset_icon_title">Symbol für Kopfhörer</string>
+    <string name="show_headset_icon_title">Kopfhörersymbol</string>
     <string name="show_headset_icon_summary">Zeigt ein Symbol, wenn ein Kopfhörer oder Headset verbunden ist.</string>
 
     <!-- Gesture Anywhere -->
@@ -289,51 +281,6 @@
     <string name="recents_full_screen_date_title">Datum anzeigen</string>
     <string name="recents_full_screen_date_summary">Zeigt das Datum im Vollbildmodus oben an</string>
 
-    <!-- Weather settings -->
-    <string name="weather_lockscreen_category">LockClock-Optionen für den Sperrbildschirm</string>
-    <string name="weather_cat_notifications_title">Benachrichtigungen</string>
-    <string name="weather_settings_title">LockClock Einstellungen</string>
-    <string name="weather_settings_summary">Konfiguration des Standorts im Wetter Widget und andere Einstellungen</string>
-    <string name="weather_lockscreen_show_title">Wetterlage auf Sperrbildschirm</string>
-    <string name="weather_lockscreen_show_summary">Wetter auf Sperrbildschirm anzeigen</string>
-    <string name="weather_show_weather_title">Zeige Optionen für Wetteranzeige</string>
-    <string name="weather_show_weather_summary">Aktivieren, um Wetteroptionen von LockClock anzuzeigen</string>
-    <string name="status_bar_show_weather_title">Wetteranzeige in erweiterter Statusleiste</string>
-    <string name="status_bar_show_weather_summary">Wetterdaten über den Schnelleinstellungen anzeigen</string>
-    <string name="weather_show_location_title">Standort anzeigen</string>
-    <string name="weather_show_location_summary">Aktivieren, um den Standort anzuzeigen</string>
-    <string name="weather_condition_icon_title">Symbol für Wetterlage</string>
-    <string name="weather_condition_icon_dlg_title">Auswahl eines Symbols zur Anzeige der Wetterlage</string>
-    <string name="weather_condition_icon_monochrome_title">Einfarbig</string>
-    <string name="weather_condition_icon_colored_title">Farbig</string>
-    <string name="weather_condition_icon_vclouds_title">VClouds</string>
-    <string name="weather_colorize_all_icons_title">Alle Symbole einfärben</string>
-    <string name="weather_colorize_all_icons_summary">Einschalten um alle Symbole farbig darzustellen; ausschalten um nur einfarbige Symbole einzufärben</string>
-    <string name="weather_hide_panel_title">Wetteranzeige ausblenden</string>
-    <string name="weather_hide_panel_dlg_title">Wähle, wann die Anzeige ausgeblendet werden soll</string>
-    <string name="weather_hide_panel_auto_title">Automatisch</string>
-    <string name="weather_hide_panel_custom_title">Eigene Vorgabe</string>
-    <string name="weather_hide_panel_never_title">Niemals</string>
-    <string name="weather_hide_panel_auto_summary">Die Wetteranzeige wird ausgeblendet, wenn die max. Anzahl von Benachrichtigungen auf dem Sperrbildschirm erreicht wird</string>
-    <string name="weather_hide_panel_custom_summary">Die Wetteranzeige wird ausgeblendet, wenn die gewählte Anzahl von Benachrichtigungen (%s) erreicht wird</string>
-    <string name="weather_hide_panel_never_summary">Die Wetteranzeige wird nicht ausgeblendet</string>
-    <string name="weather_number_of_notifications_title">Anzahl der Benachrichtigungen</string>
-    <string name="weather_number_of_notifications_dlg_title">Wähle die Anzahl von Benachrichtigungen, bevor die Wetteranzeige ausgeblendet wird</string>
-    <string name="weather_number_of_notifications_always_title">Immer</string>
-    <string name="weather_number_of_notifications_two_title">2</string>
-    <string name="weather_number_of_notifications_three_title">3</string>
-    <string name="weather_number_of_notifications_four_title">4</string>
-    <string name="weather_number_of_notifications_five_title">5</string>
-    <string name="weather_number_of_notifications_six_title">6</string>
-    <string name="colors_title">Farben</string>
-    <string name="icons_title">Symbole</string>
-    <string name="text_title">Text</string>
-    <string name="reset">Zurücksetzen</string>
-    <string name="reset_lockscreen_weather">Ok</string>
-    <string name="reset_values_message">Werte zurücksetzen?</string>
-    <string name="weather_reset_title">Wetterwerte zurücksetzen</string>
-    <string name="weather_settings">Einstellungen für Wetteranzeige</string>
-
     <!-- Lock Clock Fonts -->
     <string name="lock_clock_font_title">cLock Schriftart</string>
     <string name="lock_clock_font_summary">Ändert die Schriftart der Uhr auf dem Sperrbildschirm</string>
@@ -363,15 +310,6 @@
     <string name="lock_clock_font_notoserif_italic">NotoSerif kursiv</string>
     <string name="lock_clock_font_notoserif_bold">NotoSerif fett</string>
     <string name="lock_clock_font_notoserif_bold_italic">NotoSerif fett &amp; kursiv</string>
-
-    <!-- Lockscreen see through -->
-    <string name="lockscreen_see_through_title">Unschärfe Sperrbildschirm</string>
-    <string name="lockscreen_see_through_summary">Anzeige des verwischten Inhalts hinter dem Sperrbildschirm.</string>
-    <string name="lockscreen_blur_radius">Intensität der Unschärfe</string>
-
-    <!-- Lockscreen alpha -->
-    <string name="lockscreen_alpha">Abdunklungseinstellung</string>
-    <string name="lockscreen_security_alpha">Abdunklungseinstellungen für Symbole</string>
 
     <!-- Notification drawer weather -->
     <string name="notif_drawer_weather_title">Wetter</string>
@@ -724,6 +662,10 @@
     <string name="recents_show_searchbar">Zeige Suchleiste im Anwendungsverlauf</string>
     <string name="keywords_recents_show_searchbar">Verlauf verlauf deaktivieren aktivieren zeigen verstecken Suchleiste such leiste</string>
 
+    <!-- Camera shutter sound -->
+    <string name="camera_sounds_title">Ton für Kamera-Auslöser</string>
+    <string name="camera_sounds_summary">Die Deaktivierung funktioniert eventuell nicht mit fremden Kamera Apps und im HDR+ Modus</string>
+
     <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Ton bei Bildschirmfoto</string>
     <string name="screenshot_sound_summary">Spielt einen Ton ab, wenn ein Bildschirmfoto aufgenommen wird</string>
@@ -974,6 +916,7 @@
     <string name="ae_header_bg_image_opacity_title">Deckkraft des Hintergrundbildes im Navigationsmenü</string>
     <string name="ae_nav_drawer_checked_text_title">Textfarbe der Auswahl</string>
     <string name="ae_nav_drawer_unchecked_text_title">Textfarbe</string>
+    <string name="ae_settings_summary_title">Eigene AE Beschreibung in den Einstellungen</string>
     <string name="custom_summary_title">Eigene AE Beschreibung</string>
     <string name="custom_summary_explain">Bitte eine neue Beschreibung eingeben. Für den Vorgabetext einfach leer lassen.</string>
     <string name="custom_summary_notset">Custom ROM Anpassungen</string>
@@ -1107,5 +1050,15 @@
     <!-- Heads up switch -->
     <string name="heads_up_switch_title">Pop-up-Benachrichtigungen</string>
     <string name="heads_up_switch_summary">Pop-up-Benachrichtungen global umschalten, nicht pro App.</string>
+
+    <!-- Optional screenshot type -->
+    <string name="screenshot_type_title">Screenshot-Art</string>
+    <string name="screenshot_type_fullscreen">Screenshot des gesamten Bildschirms</string>
+    <string name="screenshot_type_partial">Einen Bereich des Bildschirms als Screenshot auswählen</string>
+
+    <!-- Lock screen Am/Pm switch -->
+    <string name="lock_screen_hide_ampm_title">Verstecke AM/PM</string>
+    <string name="lock_screen_hide_ampm_summary_on">AM/PM werden nicht angezeigt</string>
+    <string name="lock_screen_hide_ampm_summary_off">AM/PM werden angezeigt</string>
 
 </resources>
