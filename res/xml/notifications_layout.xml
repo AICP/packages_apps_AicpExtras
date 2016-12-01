@@ -95,6 +95,11 @@
             android:summary="@string/qs_expand_indicator_summary"
             android:defaultValue="false" />
 
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="qs_date_time_center"
+            android:title="@string/qs_date_time_center_title"
+            android:summary="@string/qs_date_time_center_summary"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
