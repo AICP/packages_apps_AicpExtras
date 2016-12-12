@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.net.Uri;
@@ -45,6 +46,7 @@ public class VariousShitFragment extends Fragment {
         private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
         private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
         private static final String SCREENSHOT_TYPE = "screenshot_type";
+        private static final String USE_ROUND_ICONS = "config_use_round_icon";
 
         private SwitchPreference mCameraSounds;
         private ListPreference mScreenshotType;
@@ -69,6 +71,14 @@ public class VariousShitFragment extends Fragment {
             mScreenshotType.setSummary(mScreenshotType.getEntry());
             mScreenshotType.setOnPreferenceChangeListener(this);
 
+            // Set default value for round icons
+            SwitchPreference roundIconsPref = (SwitchPreference) findPreference(USE_ROUND_ICONS);
+            roundIconsPref.setChecked(0 !=
+                Settings.System.getInt(getActivity().getContentResolver(),
+                        Settings.System.CONFIG_USE_ROUND_ICON,
+                        Resources.getSystem().getBoolean(
+                                com.android.internal.R.bool.config_useRoundIcon) ? 1 : 0)
+            );
         }
 
         @Override
