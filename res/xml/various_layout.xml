@@ -21,6 +21,13 @@
         android:title="@string/disable_immersive_message_title"
         android:summary="@string/disable_immersive_message_summary" />
 
+    <!-- Three finger screenshot -->
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="three_finger_gesture"
+        android:title="@string/three_finger_gesture"
+        android:summary="@string/three_finger_gesture_summary"
+        android:defaultValue="false" />
+
     <!-- Screenshot tone -->
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="screenshot_sound"
