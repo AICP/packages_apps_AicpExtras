@@ -53,6 +53,12 @@
         android:summary="@string/qs_menu_item_titles_summary"
         android:defaultValue="false" />
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="music_tile_title"
+        android:title="@string/qs_music_tile_track_optional_title"
+        android:summary="@string/qs_music_tile_track_optional_summary"
+        android:defaultValue="false"/>
+
     <ListPreference
         android:key="sysui_qqs_count_key"
         android:title="@string/sysui_qqs_count_title"
