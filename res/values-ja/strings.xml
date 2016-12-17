@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2015-2016 AICP
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="action_settings">設定</string>
+    <string name="aicp_extras_title">AICP Extras</string>
+    <string name="various_shit_title">その他の設定</string>
+    <string name="about_title">AICP Extrasについて</string>
+    <string name="other_title">その他</string>
+    <string name="g_community">Google+ コミュニティ</string>
+    <string name="g_plus_summary">Google+ コミュニティにアクセス</string>
+    <string name="ui_title">インターフェース</string>
+    <string name="display_animations_title">表示とアニメーション</string>
+    <string name="transparency_porn_title">パネル</string>
+    <string name="notificaitons_title">通知ドロワー</string>
+    <string name="statubar_title">ステータスバー</string>
+    <string name="lockscreen_title">ロック画面</string>
+    <string name="aicp_downloads_title">ダウンロード</string>
+    <string name="dwnld_summary">最新のビルドをダウンロードする</string>
+    <string name="aicp_gerrit_title">Gerrit Code Review</string>
+    <string name="gerrit_summary">GerritでAICPの開発の最前線を知る</string>
+    <string name="hidden_anim_more_title">もっと？</string>
+    <string name="hidden_anim_more_nice">いいぞ</string>
+    <string name="settings_activity_title">AICP Extrasの設定</string>
+
+    <!-- Switch On/Off  -->
+    <string name="switch_on_text">ON</string>
+    <string name="switch_off_text">OFF</string>
+
+    <!-- Permissions -->
+    <string name="storage_permission_granted">権限が与えられました。書き込み可能です。</string>
+    <string name="storage_permission_not_granted">権限が足りません。書き込み不可能です。</string>
+
+    <!-- Change Log -->
+    <string name="changelog_title">更新履歴</string>
+    <string name="changelog_title_summary">ROMの最近の更新を確認します</string>
+    <string name="changelog_error">更新履歴の読み込みに失敗しました</string>
+
+    <!-- Toast Icons -->
+    <string name="toast_icon_title">トースト通知のアイコン</string>
+    <string name="toast_icon_summary">トースト通知と共にアプリのアイコンを表示します</string>
+
+    <!-- Brightness slider -->
+    <string name="qs_brightness_slider_title">画面の明るさスライダー</string>
+    <string name="qs_brightness_slider_enabled">有効</string>
+    <string name="qs_brightness_slider_disabled">無効</string>
+
+    <string name="restarting_ui">UIの再起動中\u2026</string>
+
+    <!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
+    <string name="print_restart">再起動</string>
+
+    <!-- Force expanded notifications -->
+    <string name="force_expanded_notifications_title">通知の展開を強制する</string>
+    <string name="force_expanded_notifications_summary">通知の展開をサポートするアプリでのみ利用可能です</string>
+
+    <!-- Disabling immersive mode messages -->
+    <string name="disable_immersive_message_title">全画面モードのメッセージを表示しない</string>
+    <string name="disable_immersive_message_summary">全画面モード時のメッセージを全て無効化する</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">カラーピッカー</string>
+    <string name="press_color_to_apply">下の表示色をタップすると設定します</string>
+    <string name="hex">Hex値: </string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">設定</string>
+    <string name="color_default">デフォルト</string>
+
+    <!-- Network traffic -->
+    <string name="traffic_category">ネットワークトラフィック</string>
+    <string name="traffic_title">トラフィック</string>
+    <string name="network_traffic_title">ネットワークトラフィック</string>
+    <string name="show_network_traffic_state">ステータスバー上のトラフィックモニター</string>
+    <string name="show_network_traffic_unit">表示単位</string>
+    <string name="show_network_traffic_frequency">更新頻度</string>
+    <string name="show_network_traffic_disable">無効</string>
+    <string name="show_network_traffic_up">送信</string>
+    <string name="show_network_traffic_down">受信</string>
+    <string name="show_network_traffic_all">送受信</string>
+    <string name="show_network_traffic_bit">ビット/秒</string>
+    <string name="show_network_traffic_byte">バイト/秒</string>
+    <string name="show_network_traffic_500">500 ms</string>
+    <string name="show_network_traffic_1000">1000 ms</string>
+    <string name="show_network_traffic_1500">1500 ms</string>
+    <string name="show_network_traffic_2000">2000 ms</string>
+    <string name="network_traffic_autohide">自動的に隠す</string>
+    <string name="network_traffic_autohide_summary">非アクティブ時にトラフィックモニターを非表示にする</string>
+    <string name="network_traffic_hidearrow">矢印を非表示</string>
+    <string name="network_traffic_hidearrow_summary">トラフィックモニターの矢印を隠す</string>
+    <string name="network_traffic_autohide_threshold">非アクティブ判定のしきい値</string>
+    <string name="ok">OK</string>
+    <string name="cancel">キャンセル</string>
+    <string name="default_string">デフォルト</string>
+
+    <!-- Superuser indicator on status bar -->
+    <string name="su_indicator">スーパーユーザーインジケーター</string>
+    <string name="su_indicator_summary_on">スーパーユーザー権限を使用するセッションがアクティブな時にインジケーターを表示する</string>
+    <string name="su_indicator_summary_off">スーパーユーザー権限を使用するセッションがアクティブな時にインジケーターを表示するよう切り替える</string>
+
+    <!-- Carrier Label -->
+    <string name="carrier_options">キャリアラベル</string>
+    <string name="custom_carrier_label_title">カスタムキャリアラベル</string>
+    <string name="custom_carrier_label_explain">新しいラベル名を入力してください。空白のままにすると標準のラベルに戻ります。</string>
+    <string name="custom_carrier_label_notset">カスタムラベルは設定されていません</string>
+    <string name="show_carrier_title">キャリアラベル</string>
+    <string name="show_carrier_disabled">無効</string>
+    <string name="show_carrier_keyguard">ロック画面で表示</string>
+    <string name="show_carrier_statusbar">ステータスバーで表示</string>
+    <string name="show_carrier_enabled">両方で表示</string>
+    <string name="status_bar_carrier_color">ラベルの色</string>
+    <string name="status_bar_carrier_size">キャリアラベルの文字サイズ</string>
+
+    <!-- Battery Bar -->
+    <string name="battery_bar_title">バッテリーバー</string>
+    <string name="battery_bar">バッテリーバーの位置</string>
+    <string name="battery_bar_no_navbar">バッテリーバーの位置</string>
+    <string name="battery_bar_color">バッテリーバーの色</string>
+    <string name="battery_bar_charging_color">充電時のバーの色</string>
+    <string name="battery_bar_battery_low_color">残量低下時の色</string>
+    <string name="battery_bar_cat">バッテリーバーのスタイル</string>
+    <string name="battery_bar_style_title">バッテリーバーのスタイル</string>
+    <string name="battery_bar_thickness_title">バッテリーバーの太さ</string>
+    <string name="battery_bar_animate_title">充電時のアニメーション</string>
+    <string name="battery_bar_style_regular">デフォルト</string>
+    <string name="battery_bar_style_center_mirrored">中央</string>
+    <string name="battery_bar_style_reversed">反転</string>
+
+    <!-- Activity and App Picker -->
+    <string name="picker_activities">アクティビティ</string>
+    <!-- Power menu on lock screen -->
+    <string name="powermenu_lockscreen_title">ロック画面での電源メニュー</string>
+    <string name="powermenu_lockscreen_summary">ロック画面でも電源メニューを表示する</string>
+
+    <!-- ROM Stats -->
+    <!-- Main -->
+    <string name="stats_title">利用統計</string>
+    <string name="stats_summary">匿名の統計をオプトイン/アウトします</string>
+
+    <!-- Notification -->
+    <string name="notification_ticker">統計をオプトインしました</string>
+    <string name="notification_title">AICP 統計</string>
+    <string name="notification_desc">匿名の統計を有効/無効にします</string>
+
+    <string name="pref_settings">設定</string>
+    <string name="enable_reporting_title">レポートを有効にする</string>
+    <string name="disable_reporting_persistent">オプトアウトする</string>
+    <string name="preview_data_title">データのプレビュー</string>
+    <string name="preview_data_summary">%s</string>
+    <string name="view_stats_title">統計ページへアクセス</string>
+    <string name="anonymous_learn_more">もっと知る</string>
+
+    <string name="last_report_on">最後に送信した日</string>
+    <string name="reporting_interval">レポート間隔</string>
+    <plurals name="reporting_interval_days">
+        <item quantity="other">%d日ごと</item>
+    </plurals>
+    <string name="next_report_on">次の送信日</string>
+
+    <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">ユニークID</string>
+    <string name="preview_device_title">端末名</string>
+    <string name="preview_version_title">バージョン</string>
+    <string name="preview_country_title">国/地域</string>
+    <string name="preview_carrier_title">携帯キャリア</string>
+    <string name="preview_romname_title">ROM名</string>
+    <string name="preview_romversion_title">AICPバージョン</string>
+    <string name="preview_buildtype_title">ビルド種別</string>
+
+    <!-- Double tap to sleep on lockscreen -->
+    <string name="double_tap_sleep_anywhere_title">ダブルタップしてスリープ</string>
+    <string name="double_tap_sleep_anywhere_summary">ロック画面をダブルタップして端末をスリープさせる</string>
+
+    <!-- AOKP custom system animations -->
+    <string name="animation_duration_default">デフォルト</string>
+
+    <!-- Toast Animation -->
+    <string name="toast_animation_title">トースト通知のアニメーション</string>
+    <string name="toast_none_animation">なし</string>
+    <string name="toast_default_animation">デフォルト</string>
+    <string name="toast_fade_animation">Fade</string>
+    <string name="toast_SlideRight_animation">Slide right</string>
+    <string name="toast_SlideLeft_animation">Slide left</string>
+    <string name="toast_Xylon_animation">Xylon</string>
+    <string name="toast_Toko_animation">Toko</string>
+    <string name="toast_Tn_animation">Tn</string>
+    <string name="toast_Honami_animation">Honami</string>
+    <string name="toast_FastFade_animation">Fast fade</string>
+    <string name="toast_GrowFade_animation">Grow fade</string>
+    <string name="toast_GrowFadeCenter_animation">Grow fade center</string>
+    <string name="toast_GrowFadeBottom_animation">Grow fade bottom</string>
+    <string name="toast_Translucent_animation">Translucent</string>
+    <string name="toast_SlideLeftRight_animation">Slide left to right</string>
+    <string name="toast_SlideRightLeft_animation">Slide right to left</string>
+
+    <!-- Power menu Animations  -->
+    <string name="power_menu_animation_title">電源メニューのアニメーション</string>
+    <string name="power_menu_animation_summary">Change the enter/exit animation of the power menu</string>
+    <string name="power_menu_animation_dialog_title">電源メニューのアニメーションを選択</string>
+    <string name="power_menu_animation_aosp">AOSP (デフォルト)</string>
+    <string name="power_menu_animation_bottom">Bottom</string>
+    <string name="power_menu_animation_top">Top</string>
+    <string name="power_menu_animation_rotate">Rotation</string>
+    <string name="power_menu_animation_xylon">Fly</string>
+    <string name="power_menu_animation_slide">Slide</string>
+    <string name="power_menu_animation_turn">Turn</string>
+    <string name="power_menu_animation_fly">Glow</string>
+    <string name="power_menu_animation_card">3D</string>
+    <string name="power_menu_animation_translucent_top">Translucent (top)</string>
+    <string name="power_menu_animation_translucent_bottom">Translucent (bottom)</string>
+
+    <!-- Statusbar AICP logo -->
+    <string name="status_bar_logo_category_title">ステータスバー上のロゴ</string>
+    <string name="status_bar_aicp_logo_title">AICP ロゴ</string>
+    <string name="status_bar_aicp_logo_summary">ステータスバー上にAICPのロゴを表示する</string>
+    <string name="status_bar_aicp_logo_color">ロゴの色</string>
+    <string name="status_bar_aicp_logo_position">ロゴの位置</string>
+    <string name="status_bar_aicp_logo_position_summary">どこにロゴを表示するか選択してください</string>
+    <string name="status_bar_logo_position_right">右</string>
+    <string name="status_bar_logo_position_left">左</string>
+
+    <!-- Launch music player when headset is connected -->
+    <string name="headset_connect_player_title">音楽アプリを起動</string>
+    <string name="headset_connect_player_summary">ヘッドセットが接続された時にデフォルトの音楽アプリを起動します</string>
+
+    <!-- Camera shutter sound -->
+    <string name="camera_sounds_title">カメラのシャッター音</string>
+    <string name="camera_sounds_summary">無効化はサードパーティ製のカメラアプリやHDR+モードでは機能しないことがあります</string>
+
+    <!-- Screenshot sound -->
+    <string name="screenshot_sound_title">スクリーンショットの音</string>
+    <string name="screenshot_sound_summary">スクリーンショットの取得時に音を鳴らします</string>
+
+    <string name="brightness_icon_title">画面の明るさアイコン</string>
+    <string name="brightness_icon_summary">明るさスライダーの左に「画面の明るさ」ボタンを表示する</string>
+
+    <!-- Lockscreen Torch -->
+    <string name="keyguard_torch_title">ロック画面のトーチ</string>
+    <string name="keyguard_torch_summary">画面の消灯中に電源ボタンを長押ししてフラッシュを点灯</string>
+
+    <!-- Tiles animation style  -->
+    <string name="qs_tile_animation_style_title">タイルタップ時のアニメーション</string>
+    <string name="qs_tile_animation_duration_title">タイルタップ時のアニメーション時間</string>
+    <string name="qs_tile_animation_style_off">アニメーションなし</string>
+    <string name="qs_tile_animation_style_flip">左右に回転</string>
+    <string name="qs_tile_animation_style_rotate">上下に回転</string>
+    <string name="qs_tile_animation_duration_default">デフォルト</string>
+    <string name="Misc">その他の設定</string>
+    <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">指紋認証のバイブレーション</string>
+    <string name="fprint_sucess_vib_summary">指紋認証に成功した際にバイブレーションを作動させる</string>
+
+    <!-- AE settings -->
+    <string name="ae_settings_title">AicpExtrasの設定</string>
+    <string name="ae_custom_colors_title">外観を変更する</string>
+    <string name="ae_custom_colors_summaries">AICP Extrasの外観を変更する</string>
+    <string name="ae_drawer_opacity_title">ドロワーの不透明度</string>
+    <string name="ae_drawer_bg_color_title">ドロワーの色</string>
+    <string name="ae_settings_restore_defaults_title">デフォルトに戻す</string>
+    <string name="ae_header_bg_image_opacity_title">ドロワーに表示されるヘッダーの不透明度</string>
+    <string name="ae_nav_drawer_checked_text_title">選択中の設定の色</string>
+    <string name="ae_nav_drawer_unchecked_text_title">選択していない設定の色</string>
+    <string name="ae_settings_summary_title">AICP Extras説明文の変更</string>
+    <string name="custom_summary_title">AE説明文の変更</string>
+    <string name="custom_summary_explain">表示したい説明文を入力してください。デフォルトに戻すには空欄のままOKを押します。</string>
+    <string name="custom_summary_notset">設定アプリに表示されるAICP Extrasの説明文を変更する</string>
+
+    <!-- Statusbar 4G LTE switch -->
+    <string name="show_fourg_title">LTE表示の代わりに4G表示を使用する</string>
+    <string name="show_fourg_summary">ステータスバーの表示をLTEから4Gに置き換える</string>
+
+    <!-- Advanced data tile -->
+    <string name="qs_advanced_data_title">高度なデータ通信タイル</string>
+    <string name="qs_advanced_data_summary">タップした際にデータ通信の詳細を表示する</string>
+
+    <!-- SystemUI restart prompt -->
+    <string name="systemui_restart_title">警告</string>
+    <string name="systemui_restart_message">設定を正しく反映させるためにシステムUIは再起動します。</string>
+
+    <!-- Status Bar Ticker -->
+    <string name="ticker_screen_title">ティッカー</string>
+    <string name="ticker_title">ステータスバー上のティッカー</string>
+    <string name="ticker_screen_summary">ティッカーをカスタマイズする</string>
+    <string name="ticker_summary">旧来のステータスバー上のティッカーを有効にする</string>
+    <string name="ticker_restore_defaults_title">デフォルトに戻す</string>
+    <string name="text_title">テキスト</string>
+    <string name="icon_title">アイコン</string>
+    <string name="colors_title">色の設定</string>
+
+    <!-- Heads up switch -->
+    <string name="heads_up_switch_title">ヘッドアップ通知</string>
+    <string name="heads_up_switch_summary">切り替えはシステムレベルで反映されます。アプリごとではありません</string>
+
+    <!-- Optional screenshot type -->
+    <string name="screenshot_type_title">スクリーンショットの種類</string>
+    <string name="screenshot_type_fullscreen">画面全体のスクリーンショットを取得する</string>
+    <string name="screenshot_type_partial">スクリーンショットを撮りたい範囲をドラッグで選択する</string>
+
+    <!-- Lock screen Am/Pm switch -->
+    <string name="lock_screen_hide_ampm_title">午前/午後の非表示</string>
+    <string name="lock_screen_hide_ampm_summary_on">ロック画面の午前/午後は非表示になっています</string>
+    <string name="lock_screen_hide_ampm_summary_off">ロック画面に午前/午後が表示されます</string>
+
+    <!-- Hostname setting -->
+    <string name="device_hostname">端末のホスト名</string>
+
+    </resources>
