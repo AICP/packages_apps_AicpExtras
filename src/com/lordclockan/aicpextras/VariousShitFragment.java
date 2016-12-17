@@ -20,7 +20,11 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.View;
+
+import java.io.File;
+import java.io.IOException;
 
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.utils.Helpers;
@@ -46,12 +50,14 @@ public class VariousShitFragment extends Fragment {
         private static final int MIN_DELAY_VALUE = 1;
         private static final int MAX_DELAY_VALUE = 30;
 
+        private static final String CONFIG_USE_ROUND_ICON = "config_use_round_icon";
         private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
         private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
         private static final String SCREENSHOT_TYPE = "screenshot_type";
         private static final String SCREENSHOT_DELAY = "screenshot_delay";
         private static final String SCREENSHOT_SUMMARY = "Delay is set to ";
 
+        private SwitchPreference mRoundIcon;
         private SwitchPreference mCameraSounds;
         private ListPreference mScreenshotType;
         private NumberPickerPreference mScreenshotDelay;
@@ -64,6 +70,13 @@ public class VariousShitFragment extends Fragment {
 
             PreferenceScreen prefSet = getPreferenceScreen();
             ContentResolver resolver = getActivity().getContentResolver();
+
+            mRoundIcon = (SwitchPreference) findPreference(CONFIG_USE_ROUND_ICON);
+            mRoundIcon.setChecked(
+                    !new File(android.content.pm.PackageParser.DISABLE_CONFIG_ROUND_ICONS_FILE)
+                            .exists()
+            );
+            mRoundIcon.setOnPreferenceChangeListener(this);
 
             mCameraSounds = (SwitchPreference) findPreference(KEY_CAMERA_SOUNDS);
             mCameraSounds.setChecked(SystemProperties.getBoolean(PROP_CAMERA_SOUND, true));
@@ -91,7 +104,27 @@ public class VariousShitFragment extends Fragment {
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             final String key = preference.getKey();
             ContentResolver resolver = getActivity().getContentResolver();
-            if (preference == mCameraSounds) {
+            if (preference == mRoundIcon) {
+                File f = new File(android.content.pm.PackageParser.DISABLE_CONFIG_ROUND_ICONS_FILE);
+                if ((Boolean) newValue) {
+                    if (!f.delete()) {
+                        mRoundIcon.setChecked(false);
+                        Log.e("Various Shit", "Unknown problem while trying to delete " +
+                                android.content.pm.PackageParser.DISABLE_CONFIG_ROUND_ICONS_FILE);
+                    }
+                } else {
+                    try {
+                        if (!f.createNewFile()) {
+                            mRoundIcon.setChecked(true);
+                            Log.e("Various Shit", "Unknown problem while trying to create " +
+                                    android.content.pm.PackageParser.DISABLE_CONFIG_ROUND_ICONS_FILE);
+                        }
+                    } catch(IOException e) {
+                        e.printStackTrace();
+                        mRoundIcon.setChecked(true);
+                    }
+                }
+            } else if (preference == mCameraSounds) {
                if (KEY_CAMERA_SOUNDS.equals(key)) {
                    if ((Boolean) newValue) {
                        SystemProperties.set(PROP_CAMERA_SOUND, "1");
