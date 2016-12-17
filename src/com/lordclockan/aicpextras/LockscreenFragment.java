@@ -90,6 +90,10 @@ public class LockscreenFragment extends Fragment {
             } else {
                 mHideAmPm.setOnPreferenceChangeListener(this);
             }
+
+            if (mMiscCategory.getPreferenceCount() == 0) {
+                prefSet.removePreference(mMiscCategory);
+            }
         }
 
         @Override
