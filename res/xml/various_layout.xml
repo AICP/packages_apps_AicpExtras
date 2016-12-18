@@ -16,6 +16,11 @@
         android:summary="@string/camera_sounds_summary"
         android:defaultValue="true" />
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="disable_immersive_message"
+        android:title="@string/disable_immersive_message_title"
+        android:summary="@string/disable_immersive_message_summary" />
+
     <!-- Screenshot tone -->
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="screenshot_sound"
@@ -29,10 +34,9 @@
         android:key="screenshot_type"
         android:title="@string/screenshot_type_title" />
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="disable_immersive_message"
-        android:title="@string/disable_immersive_message_title"
-        android:summary="@string/disable_immersive_message_summary" />
+    <com.lordclockan.aicpextras.widget.NumberPickerPreference
+        android:key="screenshot_delay"
+        android:title="@string/powermenu_screenshot_delay_title" />
 
     <com.lordclockan.aicpextras.preferences.HostnamePreference
         android:key="device_hostname"
