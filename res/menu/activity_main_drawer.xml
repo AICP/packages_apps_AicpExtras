@@ -14,6 +14,11 @@
                 android:icon="@drawable/ic_statusbar"
                 android:title="@string/statubar_title" />
             <item
+                android:id="@+id/nav_headsup"
+                android:checkable="true"
+                android:icon="@drawable/ic_notif"
+                android:title="@string/nav_headsup_title" />
+            <item
                 android:id="@+id/nav_notif_drawer"
                 android:checkable="true"
                 android:icon="@drawable/ic_notif"
