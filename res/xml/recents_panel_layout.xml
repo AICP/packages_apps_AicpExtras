@@ -25,6 +25,12 @@
     <PreferenceCategory
         android:title="@string/visuals">
 
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="systemui_recents_mem_display"
+            android:title="@string/systemui_recents_mem_display_title"
+            android:summary="@string/systemui_recents_mem_display_summary"
+            android:defaultValue="false" />
+
         <ListPreference
             android:key="immersive_recents"
             android:title="@string/immersive_recents_title"
