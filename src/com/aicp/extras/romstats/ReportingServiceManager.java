@@ -22,14 +22,17 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.util.Log;
 
 public class ReportingServiceManager extends BroadcastReceiver {
 
 	private static final long MILLIS_PER_HOUR = 60L * 60L * 1000L;
 	private static final long MILLIS_PER_DAY = 24L * MILLIS_PER_HOUR;
+	private static final long UPDATE_INTERVAL = 1L * MILLIS_PER_DAY;
+
+	public static final String ACTION_LAUNCH_SERVICE =
+					"com.android.settings.action.TRIGGER_REPORT_METRICS";
+	public static final String EXTRA_FORCE = "force";
 
 	// UPDATE_INTERVAL days is set in the build.prop file
 	// private static final long UPDATE_INTERVAL = 1L * MILLIS_PER_DAY;
@@ -45,9 +48,9 @@ public class ReportingServiceManager extends BroadcastReceiver {
 			}
 
 			setAlarm(context, 0);
-		} else {
+		} else if (intent.getAction().equals(ACTION_LAUNCH_SERVICE)){
 			Log.d(Const.TAG, "[onReceive] CONNECTIVITY_CHANGE");
-			launchService(context);
+      launchService(context, intent.getBooleanExtra(EXTRA_FORCE, false));
 		}
 	}
 
@@ -70,8 +73,6 @@ public class ReportingServiceManager extends BroadcastReceiver {
 			return;
 		}
 
-		long UPDATE_INTERVAL = Long.valueOf(Utilities.getTimeFrame()) * MILLIS_PER_DAY;
-
 		if (millisFromNow <= 0) {
 			long lastSynced = prefs.getLong(Const.ANONYMOUS_LAST_CHECKED, 0);
 			if (lastSynced == 0) {
@@ -85,7 +86,7 @@ public class ReportingServiceManager extends BroadcastReceiver {
 			millisFromNow = (lastSynced + UPDATE_INTERVAL) - System.currentTimeMillis();
 		}
 
-		Intent intent = new Intent(ConnectivityManager.CONNECTIVITY_ACTION);
+		Intent intent = new Intent(ACTION_LAUNCH_SERVICE);
 		intent.setClass(context, ReportingServiceManager.class);
 
 		long nextAlarm = System.currentTimeMillis() + millisFromNow;
@@ -94,18 +95,10 @@ public class ReportingServiceManager extends BroadcastReceiver {
 		alarmManager.set(AlarmManager.RTC_WAKEUP, nextAlarm, PendingIntent.getBroadcast(context, 0, intent, 0));
 		Log.d(Const.TAG, "[setAlarm] Next sync attempt in : " + millisFromNow / MILLIS_PER_HOUR + " hours");
 
-        prefs.edit().putLong(Const.ANONYMOUS_NEXT_ALARM, nextAlarm).apply();
+		prefs.edit().putLong(Const.ANONYMOUS_NEXT_ALARM, nextAlarm).apply();
 	}
 
-	public static void launchService(Context context) {
-		ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-
-		NetworkInfo networkInfo = cm.getActiveNetworkInfo();
-		Log.d(Const.TAG, "[launchService] networkInfo: " + networkInfo);
-		if (networkInfo == null || !networkInfo.isConnected()) {
-			return;
-		}
-
+  public static void launchService(Context context, boolean force) {
 		SharedPreferences prefs = AnonymousStats.getPreferences(context);
 
 		boolean optedIn = prefs.getBoolean(Const.ANONYMOUS_OPT_IN, true);
@@ -126,23 +119,24 @@ public class ReportingServiceManager extends BroadcastReceiver {
 		}
 
 		long lastSynced = prefs.getLong(Const.ANONYMOUS_LAST_CHECKED, 0);
-		if (lastSynced == 0) {
-			setAlarm(context, 0);
-			return;
+		if (!force) {
+				if (lastSynced == 0) {
+						setAlarm(context, 0);
+						return;
+				}
+				long timeElapsed = System.currentTimeMillis() - lastSynced;
+				if (timeElapsed < UPDATE_INTERVAL) {
+						long timeLeft = UPDATE_INTERVAL - timeElapsed;
+						Log.d(ReportingService.TAG, "Waiting for next sync : "
+										+ timeLeft / MILLIS_PER_HOUR + " hours");
+						return;
+				}
 		}
 
 		String lastReportedVersion = prefs.getString(Const.ANONYMOUS_LAST_REPORT_VERSION, null);
 		if (!Utilities.getRomVersionHash().equals(lastReportedVersion)) {
 			// if rom version has changed since last reporting, do an immediate reporting
 			lastSynced = 1;
-		}
-
-		long UPDATE_INTERVAL = Long.valueOf(Utilities.getTimeFrame()) * MILLIS_PER_DAY;
-
-		long timeLeft = System.currentTimeMillis() - lastSynced;
-		if (timeLeft < UPDATE_INTERVAL) {
-			Log.d(Const.TAG, "Waiting for next sync : " + timeLeft / MILLIS_PER_HOUR + " hours");
-			return;
 		}
 
 		Intent intent = new Intent();
