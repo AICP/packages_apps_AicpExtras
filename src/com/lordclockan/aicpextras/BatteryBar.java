@@ -173,14 +173,14 @@ public class BatteryBar extends SubActivity {
                         Settings.System.STATUSBAR_BATTERY_BAR_BATTERY_LOW_COLOR, intHex);
                 return true;
             } else if (preference == mBatteryBar) {
-                int val = Integer.valueOf((String) newValue);
+                int val = Integer.parseInt((String) newValue);
                 int index = mBatteryBar.findIndexOfValue((String) newValue);
                 Settings.System.putInt(resolver,
                         Settings.System.STATUSBAR_BATTERY_BAR, val);
                 mBatteryBar.setSummary(mBatteryBar.getEntries()[index]);
                 updateBatteryBarOptions();
             } else if (preference == mBatteryBarNoNavbar) {
-                int val = Integer.valueOf((String) newValue);
+                int val = Integer.parseInt((String) newValue);
                 int index = mBatteryBarNoNavbar.findIndexOfValue((String) newValue);
                 Settings.System.putInt(resolver,
                         Settings.System.STATUSBAR_BATTERY_BAR, val);
@@ -188,14 +188,14 @@ public class BatteryBar extends SubActivity {
                 updateBatteryBarOptions();
                 return true;
             } else if (preference == mBatteryBarStyle) {
-                int val = Integer.valueOf((String) newValue);
+                int val = Integer.parseInt((String) newValue);
                 int index = mBatteryBarStyle.findIndexOfValue((String) newValue);
                 Settings.System.putInt(resolver,
                         Settings.System.STATUSBAR_BATTERY_BAR_STYLE, val);
                 mBatteryBarStyle.setSummary(mBatteryBarStyle.getEntries()[index]);
                 return true;
             } else if (preference == mBatteryBarThickness) {
-                int val = Integer.valueOf((String) newValue);
+                int val = Integer.parseInt((String) newValue);
                 int index = mBatteryBarThickness.findIndexOfValue((String) newValue);
                 Settings.System.putInt(resolver,
                         Settings.System.STATUSBAR_BATTERY_BAR_THICKNESS, val);

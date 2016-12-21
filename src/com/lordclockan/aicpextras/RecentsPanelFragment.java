@@ -83,12 +83,12 @@ public class RecentsPanelFragment extends Fragment {
             ContentResolver resolver = getActivity().getContentResolver();
             if (preference == mImmersiveRecents) {
                 Settings.System.putInt(resolver, Settings.System.IMMERSIVE_RECENTS,
-                        Integer.valueOf((String) newValue));
+                        Integer.parseInt((String) newValue));
                 mImmersiveRecents.setValue(String.valueOf(newValue));
                 mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
                 return true;
             } else if (preference == mRecentsClearAllLocation) {
-                int location = Integer.valueOf((String) newValue);
+                int location = Integer.parseInt((String) newValue);
                 int index = mRecentsClearAllLocation.findIndexOfValue((String) newValue);
                 Settings.System.putIntForUser(resolver,
                         Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
