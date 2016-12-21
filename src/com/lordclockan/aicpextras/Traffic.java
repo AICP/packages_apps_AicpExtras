@@ -144,7 +144,7 @@ public class Traffic extends SubActivity {
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getActivity().getContentResolver();
             if (preference == mNetTrafficState) {
-                int intState = Integer.valueOf((String)newValue);
+                int intState = Integer.parseInt((String)newValue);
                 mNetTrafficVal = setBit(mNetTrafficVal, MASK_UP, getBit(intState, MASK_UP));
                 mNetTrafficVal = setBit(mNetTrafficVal, MASK_DOWN, getBit(intState, MASK_DOWN));
                 Settings.System.putInt(resolver,
@@ -161,7 +161,7 @@ public class Traffic extends SubActivity {
                 mNetTrafficUnit.setSummary(mNetTrafficUnit.getEntries()[index]);
                 return true;
             } else if (preference == mNetTrafficPeriod) {
-                int intState = Integer.valueOf((String)newValue);
+                int intState = Integer.parseInt((String)newValue);
                 mNetTrafficVal = setBit(mNetTrafficVal, MASK_PERIOD, false) + (intState << 16);
                 Settings.System.putInt(resolver,
                         Settings.System.NETWORK_TRAFFIC_STATE, mNetTrafficVal);

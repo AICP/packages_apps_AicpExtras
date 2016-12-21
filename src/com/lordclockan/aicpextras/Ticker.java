@@ -102,7 +102,7 @@ public class Ticker extends SubActivity {
                 return true;
             } else if (preference == mTextColor) {
                 String hex = ColorPickerPreference.convertToARGB(
-                        Integer.valueOf(String.valueOf(newValue)));
+                        Integer.parseInt(String.valueOf(newValue)));
                 preference.setSummary(hex);
                 int intHex = ColorPickerPreference.convertToColorInt(hex);
                 Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
@@ -110,7 +110,7 @@ public class Ticker extends SubActivity {
                 return true;
             } else if (preference == mIconColor) {
                 String hex = ColorPickerPreference.convertToARGB(
-                        Integer.valueOf(String.valueOf(newValue)));
+                        Integer.parseInt(String.valueOf(newValue)));
                 preference.setSummary(hex);
                 int intHex = ColorPickerPreference.convertToColorInt(hex);
                 Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),

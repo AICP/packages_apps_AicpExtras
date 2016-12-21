@@ -130,14 +130,14 @@ public class StatusBarFragment extends Fragment {
             ContentResolver resolver = getActivity().getContentResolver();
             if (preference == mAicpLogoColor) {
                 String hex = ColorPickerPreference.convertToARGB(
-                        Integer.valueOf(String.valueOf(newValue)));
+                        Integer.parseInt(String.valueOf(newValue)));
                 preference.setSummary(hex);
                 int intHex = ColorPickerPreference.convertToColorInt(hex);
                 Settings.System.putInt(resolver,
                         Settings.System.STATUS_BAR_AICP_LOGO_COLOR, intHex);
                 return true;
             } else if (preference == mAicpLogoStyle) {
-                int aicpLogoStyle = Integer.valueOf((String) newValue);
+                int aicpLogoStyle = Integer.parseInt((String) newValue);
                 int index = mAicpLogoStyle.findIndexOfValue((String) newValue);
                 Settings.System.putIntForUser(
                         resolver, Settings.System.STATUS_BAR_AICP_LOGO_STYLE, aicpLogoStyle,

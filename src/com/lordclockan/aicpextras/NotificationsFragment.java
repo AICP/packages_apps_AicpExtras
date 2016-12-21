@@ -164,40 +164,40 @@ public class NotificationsFragment extends Fragment {
             int intValue;
             int index;
             if (preference == mTileAnimationStyle) {
-                int tileAnimationStyle = Integer.valueOf((String) newValue);
+                int tileAnimationStyle = Integer.parseInt((String) newValue);
                 Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_STYLE,
                         tileAnimationStyle, UserHandle.USER_CURRENT);
                 updateTileAnimationStyleSummary(tileAnimationStyle);
                 updateAnimTileStyle(tileAnimationStyle);
                 return true;
             } else if (preference == mTileAnimationDuration) {
-                int tileAnimationDuration = Integer.valueOf((String) newValue);
+                int tileAnimationDuration = Integer.parseInt((String) newValue);
                 Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_DURATION,
                         tileAnimationDuration, UserHandle.USER_CURRENT);
                 updateTileAnimationDurationSummary(tileAnimationDuration);
                 return true;
             } else if (preference == mTileAnimationInterpolator) {
-                int tileAnimationInterpolator = Integer.valueOf((String) newValue);
+                int tileAnimationInterpolator = Integer.parseInt((String) newValue);
                 Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_INTERPOLATOR,
                         tileAnimationInterpolator, UserHandle.USER_CURRENT);
                 updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
                 return true;
             } else if (preference == mRowsPortrait) {
-                intValue = Integer.valueOf((String) newValue);
+                intValue = Integer.parseInt((String) newValue);
                 index = mRowsPortrait.findIndexOfValue((String) newValue);
                 Settings.Secure.putInt(resolver,
                         Settings.Secure.QS_ROWS_PORTRAIT, intValue);
                 preference.setSummary(mRowsPortrait.getEntries()[index]);
                 return true;
             } else if (preference == mRowsLandscape) {
-                intValue = Integer.valueOf((String) newValue);
+                intValue = Integer.parseInt((String) newValue);
                 index = mRowsLandscape.findIndexOfValue((String) newValue);
                 Settings.Secure.putInt(resolver,
                         Settings.Secure.QS_ROWS_LANDSCAPE, intValue);
                 preference.setSummary(mRowsLandscape.getEntries()[index]);
                 return true;
             } else if (preference == mQsColumns) {
-                intValue = Integer.valueOf((String) newValue);
+                intValue = Integer.parseInt((String) newValue);
                 index = mQsColumns.findIndexOfValue((String) newValue);
                 Settings.Secure.putInt(resolver,
                         Settings.Secure.QS_COLUMNS, intValue);
