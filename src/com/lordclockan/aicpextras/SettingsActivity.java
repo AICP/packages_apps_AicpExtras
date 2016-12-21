@@ -143,7 +143,7 @@ public class SettingsActivity extends SubActivity {
                 return true;
             } else if (preference == mNavDrawerBgColor) {
                 String hex = ColorPickerPreference.convertToARGB(
-                        Integer.valueOf(String.valueOf(newValue)));
+                        Integer.parseInt(String.valueOf(newValue)));
                 preference.setSummary(hex);
                 int intHex = ColorPickerPreference.convertToColorInt(hex);
                 Settings.System.putInt(resolver,
@@ -156,7 +156,7 @@ public class SettingsActivity extends SubActivity {
                 return true;
             } else if (preference == mNavDrawerTextCheckedColor) {
                 String hex = ColorPickerPreference.convertToARGB(
-                        Integer.valueOf(String.valueOf(newValue)));
+                        Integer.parseInt(String.valueOf(newValue)));
                 preference.setSummary(hex);
                 int intHex = ColorPickerPreference.convertToColorInt(hex);
                 Settings.System.putInt(resolver,
@@ -164,7 +164,7 @@ public class SettingsActivity extends SubActivity {
                 return true;
             } else if (preference == mNavDrawerTextUncheckedColor) {
                 String hex = ColorPickerPreference.convertToARGB(
-                        Integer.valueOf(String.valueOf(newValue)));
+                        Integer.parseInt(String.valueOf(newValue)));
                 preference.setSummary(hex);
                 int intHex = ColorPickerPreference.convertToColorInt(hex);
                 Settings.System.putInt(resolver,

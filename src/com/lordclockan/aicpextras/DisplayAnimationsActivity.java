@@ -78,7 +78,7 @@ public class DisplayAnimationsActivity extends Fragment {
             ContentResolver resolver = getActivity().getContentResolver();
             if (preference == mPowerMenuAnimations) {
                 Settings.System.putInt(resolver, Settings.System.POWER_MENU_ANIMATIONS,
-                        Integer.valueOf((String) newValue));
+                        Integer.parseInt((String) newValue));
                 mPowerMenuAnimations.setValue(String.valueOf(newValue));
                 mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
             } else if (preference == mToastAnimation) {

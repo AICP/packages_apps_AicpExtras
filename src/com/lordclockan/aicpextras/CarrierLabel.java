@@ -124,7 +124,7 @@ public class CarrierLabel extends SubActivity {
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             ContentResolver resolver = getActivity().getContentResolver();
             if (preference == mShowCarrierLabel) {
-                int showCarrierLabel = Integer.valueOf((String) newValue);
+                int showCarrierLabel = Integer.parseInt((String) newValue);
                 int index = mShowCarrierLabel.findIndexOfValue((String) newValue);
                 Settings.System.putIntForUser(resolver, Settings.System.
                         STATUS_BAR_SHOW_CARRIER, showCarrierLabel, UserHandle.USER_CURRENT);
@@ -132,7 +132,7 @@ public class CarrierLabel extends SubActivity {
                 return true;
             } else if (preference == mCarrierColorPicker) {
                 String hex = ColorPickerPreference.convertToARGB(
-                        Integer.valueOf(String.valueOf(newValue)));
+                        Integer.parseInt(String.valueOf(newValue)));
                 preference.setSummary(hex);
                 int intHex = ColorPickerPreference.convertToColorInt(hex);
                 Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
