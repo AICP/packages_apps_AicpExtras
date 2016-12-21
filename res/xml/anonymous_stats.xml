@@ -18,12 +18,13 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/anonymous_statistics_title" >
 
-    <CheckBoxPreference
-        android:defaultValue="true"
-        android:disableDependentsState="true"
+    <SwitchPreference
         android:key="pref_anonymous_opt_in"
+        android:defaultValue="false"
+        android:disableDependentsState="true"
         android:title="@string/enable_reporting_title" />
-    <CheckBoxPreference
+
+    <SwitchPreference
         android:defaultValue="false"
         android:dependency="pref_anonymous_opt_in"
         android:key="pref_anonymous_opt_out_persist"
