@@ -1945,16 +1945,6 @@ public class Utilities {
 		return signingCertHash;
 	}
 
-	public static String getGaTracking() {
-		String gaTracking = SystemProperties.get("ro.romstats.ga");
-
-		if (gaTracking.isEmpty()) {
-			return null;
-		}
-
-		return gaTracking;
-	}
-
 	/**
 	 * Gets the Ask First value
 	 * 0: RomStats will behave like CMStats, starts reporting automatically after the tframe (default)

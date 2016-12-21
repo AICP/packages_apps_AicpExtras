@@ -2,7 +2,7 @@ package com.aicp.extras.romstats;
 
 public class Const {
 
-    public static final String TAG = "ROMStats";
+    public static final String TAG = "AicpStats";
 
     static final boolean SKIP_CERTIFICATE_CHECK = false;
 

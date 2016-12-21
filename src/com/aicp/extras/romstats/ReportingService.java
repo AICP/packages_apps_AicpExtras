@@ -16,76 +16,49 @@
 
 package com.aicp.extras.romstats;
 
-import java.io.IOException;
-import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
-import java.security.KeyManagementException;
-import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.UnrecoverableKeyException;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
-
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpVersion;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.conn.ClientConnectionManager;
-import org.apache.http.conn.scheme.PlainSocketFactory;
-import org.apache.http.conn.scheme.Scheme;
-import org.apache.http.conn.scheme.SchemeRegistry;
-import org.apache.http.conn.ssl.SSLSocketFactory;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.HttpProtocolParams;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.EntityUtils;
-
+import android.app.IntentService;
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.Service;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.AsyncTask;
-import android.os.IBinder;
+import android.os.PersistableBundle;
+import android.preference.PreferenceActivity;
 import android.util.Log;
 
+import java.util.List;
+
+import com.aicp.extras.R;
 /*
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 */
 
-public class ReportingService extends Service {
+public class ReportingService extends IntentService {
+    private static final boolean DEBUG = false;
 
-	private StatsUploadTask mTask;
+    private static final int NOTIFICATION_ID = 1;
 
-    /*
-    private static GoogleAnalytics analytics;
-    private static Tracker tracker;
-    */
+    private static final String CHANNEL_ID = "notification_romstats";
 
+    private static final String AE_SETTINGSACTIVITY = "com.aicp.extras.SettingsActivity";
+    private static final String SETTINGS_PACKAGE_NAME = "com.aicp.extras";
+    private static final String ROMSTATS_SETTINGS = "com.aicp.extras.romstats.AnonymousStats";
 
-	@Override
-	public IBinder onBind(Intent intent) {
-		return null;
-	}
+    public ReportingService() {
+        super(ReportingService.class.getSimpleName());
+    }
 
     @Override
-    public int onStartCommand (Intent intent, int flags, int startId) {
-    	boolean canReport = true;
+    protected void onHandleIntent(Intent intent) {
+        JobScheduler js = (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
+
+        boolean canReport = true;
         if (intent.getBooleanExtra("promptUser", false)) {
         	Log.d(Const.TAG, "Prompting user for opt-in.");
             promptUser();
@@ -99,200 +72,115 @@ public class ReportingService extends Service {
         }
 
         if (canReport) {
-	    	Log.d(Const.TAG, "User has opted in -- reporting.");
+		        Log.d(Const.TAG, "User has opted in -- reporting.");
+		        if (AnonymousStats.getNextJobId(this) == -1) {
+		            // if we've filled up to the threshold, we may have some stale job queue ids, purge them
+		            // then re-add what hasn't executed yet
+		            AnonymousStats.clearJobQueue(this);
 
-	        if (mTask == null || mTask.getStatus() == AsyncTask.Status.FINISHED) {
-	            mTask = new StatsUploadTask();
-	            mTask.execute();
-	        }
+		            final List<JobInfo> allPendingJobs = js.getAllPendingJobs();
+
+		            // add one extra job to the size for what we will schedule below so we *always*
+		            // have room.
+		            if (js.getAllPendingJobs().size() + 1 >= AnonymousStats.QUEUE_MAX_THRESHOLD) {
+		                // there are still as many actual pending jobs as our threshold allows.
+		                // since we are past the threshold we will be losing data if we don't schedule
+		                // another job here, so just clear out all the old data and start fresh
+		                js.cancelAll();
+		            } else {
+		                for (JobInfo pendingJob : allPendingJobs) {
+		                    AnonymousStats.addJob(this, pendingJob.getId());
+		                }
+		            }
+		        }
+		        int aicpJobId;
+		        AnonymousStats.addJob(this, aicpJobId = AnonymousStats.getNextJobId(this));
+
+		        if (DEBUG) Log.d(Const.TAG, "scheduling jobs id: " + aicpJobId);
+
+		        String deviceId = Utilities.getUniqueID(getApplicationContext());
+		        String deviceName = Utilities.getDevice();
+		        String deviceVersion = Utilities.getModVersion();
+		        String deviceBuildType = Utilities.getBuildType();
+		        String deviceCountry = Utilities.getCountryCode(getApplicationContext());
+		        String deviceCarrier = Utilities.getCarrier(getApplicationContext());
+		        String deviceCarrierId = Utilities.getCarrierId(getApplicationContext());
+		        String romName = Utilities.getRomName();
+		        String romVersion = Utilities.getRomVersion();
+		        String romStatsSignCert = Utilities.getSigningCert(getApplicationContext());
+		        String romStatsUrl = Utilities.getStatsUrl();
+
+		        Log.d(Const.TAG, "SERVICE: Report URL=" + romStatsUrl);
+		        Log.d(Const.TAG, "SERVICE: Device ID=" + deviceId);
+		        Log.d(Const.TAG, "SERVICE: Device Name=" + deviceName);
+		        Log.d(Const.TAG, "SERVICE: Device BuildType=" + deviceBuildType);
+		        Log.d(Const.TAG, "SERVICE: Device Version=" + deviceVersion);
+		        Log.d(Const.TAG, "SERVICE: Country=" + deviceCountry);
+		        Log.d(Const.TAG, "SERVICE: Carrier=" + deviceCarrier);
+		        Log.d(Const.TAG, "SERVICE: Carrier ID=" + deviceCarrierId);
+		        Log.d(Const.TAG, "SERVICE: ROM Name=" + romName);
+		        Log.d(Const.TAG, "SERVICE: ROM Version=" + romVersion);
+		        Log.d(Const.TAG, "SERVICE: Sign Cert=" + romStatsSignCert);
+
+		        PersistableBundle aicpBundle = new PersistableBundle();
+		        aicpBundle.putString(StatsUploadJobService.KEY_DEVICE_NAME, deviceId);
+		        aicpBundle.putString(StatsUploadJobService.KEY_UNIQUE_ID, deviceName);
+		        aicpBundle.putString(StatsUploadJobService.KEY_VERSION, deviceVersion);
+		        aicpBundle.putString(StatsUploadJobService.KEY_BUILDTYPE, deviceBuildType);
+		        aicpBundle.putString(StatsUploadJobService.KEY_COUNTRY, deviceCountry);
+		        aicpBundle.putString(StatsUploadJobService.KEY_CARRIER, deviceCarrier);
+		        aicpBundle.putString(StatsUploadJobService.KEY_CARRIER_ID, deviceCarrierId);
+		        aicpBundle.putString(StatsUploadJobService.KEY_ROM_NAME, romName);
+		        aicpBundle.putString(StatsUploadJobService.KEY_ROM_VERSION, romVersion);
+		        aicpBundle.putString(StatsUploadJobService.KEY_SIGN_CERT, romStatsSignCert);
+		        //aicpBundle.putLong(StatsUploadJobService.KEY_TIMESTAMP, System.currentTimeMillis());
+
+		        // set job type
+		        aicpBundle.putInt(StatsUploadJobService.KEY_JOB_TYPE,
+		                StatsUploadJobService.JOB_TYPE_AICP);
+
+		        // schedule aicp stats upload
+		        js.schedule(new JobInfo.Builder(aicpJobId, new ComponentName(getPackageName(),
+		                StatsUploadJobService.class.getName()))
+		                .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
+		                .setMinimumLatency(1000)
+		                .setExtras(aicpBundle)
+		                .setPersisted(true)
+		                .build());
+
+		        // reschedule
+		        final SharedPreferences prefs = AnonymousStats.getPreferences(this);
+		        prefs.edit().putLong(Const.ANONYMOUS_LAST_CHECKED,
+		                System.currentTimeMillis()).apply();
+		        ReportingServiceManager.setAlarm(this, 0);
         }
+	  }
 
-        return Service.START_REDELIVER_INTENT;
-    }
+    private void promptUser() {
+        Intent mainActivity = new Intent(Intent.ACTION_MAIN);
+        mainActivity.setClassName(SETTINGS_PACKAGE_NAME, AE_SETTINGSACTIVITY);
+        mainActivity.putExtra(PreferenceActivity.EXTRA_SHOW_FRAGMENT, ROMSTATS_SETTINGS);
 
-    private class StatsUploadTask extends AsyncTask<Void, Void, Boolean> {
-        @Override
-        protected Boolean doInBackground(Void... unused) {
-    		String deviceId = Utilities.getUniqueID(getApplicationContext());
-    		String deviceName = Utilities.getDevice();
-    		String deviceVersion = Utilities.getModVersion();
-                String deviceBuildType = Utilities.getBuildType();
-    		String deviceCountry = Utilities.getCountryCode(getApplicationContext());
-    		String deviceCarrier = Utilities.getCarrier(getApplicationContext());
-    		String deviceCarrierId = Utilities.getCarrierId(getApplicationContext());
-    		String romName = Utilities.getRomName();
-    		String romVersion = Utilities.getRomVersion();
-    		String romStatsSignCert = Utilities.getSigningCert(getApplicationContext());
+        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, mainActivity, 0);
 
-    		String romStatsUrl = Utilities.getStatsUrl();
+        NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,
+                getApplicationContext().getString(R.string.notification_romstats_name),
+                NotificationManager.IMPORTANCE_LOW);
 
-    		Log.d(Const.TAG, "SERVICE: Report URL=" + romStatsUrl);
-    		Log.d(Const.TAG, "SERVICE: Device ID=" + deviceId);
-    		Log.d(Const.TAG, "SERVICE: Device Name=" + deviceName);
-                Log.d(Const.TAG, "SERVICE: Device BuildType=" + deviceBuildType);
-    		Log.d(Const.TAG, "SERVICE: Device Version=" + deviceVersion);
-    		Log.d(Const.TAG, "SERVICE: Country=" + deviceCountry);
-    		Log.d(Const.TAG, "SERVICE: Carrier=" + deviceCarrier);
-    		Log.d(Const.TAG, "SERVICE: Carrier ID=" + deviceCarrierId);
-    		Log.d(Const.TAG, "SERVICE: ROM Name=" + romName);
-    		Log.d(Const.TAG, "SERVICE: ROM Version=" + romVersion);
-    		Log.d(Const.TAG, "SERVICE: Sign Cert=" + romStatsSignCert);
+        Notification.Builder builder = new Notification.Builder(getApplicationContext(), CHANNEL_ID)
+            .setContentTitle(getString(R.string.notification_title))
+            .setContentText(getString(R.string.notification_desc))
+            .setWhen(System.currentTimeMillis())
+            .setSmallIcon(R.drawable.notification_aicp_stats);
 
-            /*
-			if (Utilities.getGaTracking() != null) {
-				Log.d(Const.TAG, "Reporting to Google Analytics is enabled");
+        builder.setContentIntent(pendingIntent);
 
-			    analytics = GoogleAnalytics.getInstance(ReportingService.this);
-                            analytics.setLocalDispatchPeriod(1800);
+        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.createNotificationChannel(notificationChannel);
+        Notification notif = builder.build();
+        notif.flags    |= Notification.FLAG_AUTO_CANCEL;
+        notif.priority  = Notification.PRIORITY_HIGH;
 
-                            tracker = analytics.newTracker("UA-48128535-2");
-                            tracker.enableExceptionReporting(true);
-			    tracker.enableAdvertisingIdCollection(true);
-			    tracker.enableAutoActivityTracking(true);
-
-			}
-            */
-
-            // report to the stats service
-
-            HttpClient httpClient;
-            if (Const.SKIP_CERTIFICATE_CHECK) {
-                try {
-                    KeyStore trustStore = KeyStore.getInstance(KeyStore.getDefaultType());
-                    trustStore.load(null, null);
-
-                    SSLSocketFactory socketFactory = new InsecureSSLSocketFactory(trustStore);
-                    socketFactory.setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
-
-                    HttpParams params = new BasicHttpParams();
-                    HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
-                    HttpProtocolParams.setContentCharset(params, HTTP.UTF_8);
-
-                    SchemeRegistry schReg = new SchemeRegistry();
-                    schReg.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
-                    schReg.register(new Scheme("https", socketFactory, 443));
-
-                    ClientConnectionManager ccm = new ThreadSafeClientConnManager(params, schReg);
-
-                    httpClient = new DefaultHttpClient(ccm, params);
-                } catch (KeyStoreException|IOException|NoSuchAlgorithmException
-                        |CertificateException|KeyManagementException|UnrecoverableKeyException e) {
-                    Log.w(Const.TAG, "Could not set up custom truststore", e);
-                    httpClient = new DefaultHttpClient();
-                }
-            } else {
-                httpClient = new DefaultHttpClient();
-            }
-            HttpPost httpPost = new HttpPost(romStatsUrl + "submit");
-            boolean success = false;
-
-            try {
-                List<NameValuePair> kv = new ArrayList<NameValuePair>(5);
-    			kv.add(new BasicNameValuePair("device_hash", deviceId));
-    			kv.add(new BasicNameValuePair("device_name", deviceName));
-    			kv.add(new BasicNameValuePair("device_version", deviceVersion));
-                        kv.add(new BasicNameValuePair("device_buildtype", deviceBuildType));
-    			kv.add(new BasicNameValuePair("device_country", deviceCountry));
-    			kv.add(new BasicNameValuePair("device_carrier", deviceCarrier));
-    			kv.add(new BasicNameValuePair("device_carrier_id", deviceCarrierId));
-    			kv.add(new BasicNameValuePair("rom_name", romName));
-    			kv.add(new BasicNameValuePair("rom_version", romVersion));
-    			kv.add(new BasicNameValuePair("sign_cert", romStatsSignCert));
-
-                httpPost.setEntity(new UrlEncodedFormEntity(kv));
-                HttpResponse response = httpClient.execute(httpPost);
-
-                Log.d(Const.TAG, "RESULT: code=" + response.getStatusLine().getStatusCode());
-                Log.d(Const.TAG, "RESULT: message=" + EntityUtils.toString(response.getEntity()));
-
-                success = true;
-            } catch (IOException e) {
-                Log.w(Const.TAG, "Could not upload stats checkin", e);
-            }
-
-            return success;
-        }
-
-        @Override
-		protected void onPostExecute(Boolean result) {
-			final Context context = ReportingService.this;
-			long interval;
-
-			if (result) {
-				final SharedPreferences prefs = AnonymousStats.getPreferences(context);
-
-				// save the current date for future checkins
-				prefs.edit().putLong(Const.ANONYMOUS_LAST_CHECKED, System.currentTimeMillis()).apply();
-
-				// save a hashed rom version (used to to an immediate checkin in case of new rom version
-	    		prefs.edit().putString(Const.ANONYMOUS_LAST_REPORT_VERSION, Utilities.getRomVersionHash()).apply();
-
-				// set interval = 0; this causes setAlarm to schedule next report after UPDATE_INTERVAL
-				interval = 0;
-			} else {
-				// error, try again in 3 hours
-				interval = 3L * 60L * 60L * 1000L;
-			}
-
-			ReportingServiceManager.setAlarm(context, interval);
-			stopSelf();
-		}
-	}
-
-	private void promptUser() {
-/*		NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
-		Intent mainActivity = new Intent(getApplicationContext(), AnonymousStats.class);
-		PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, mainActivity, 0);
-
-		Notification notification = new NotificationCompat.Builder(getBaseContext())
-				.setSmallIcon(R.drawable.ic_launcher)
-				.setTicker(getString(R.string.notification_ticker))
-				.setContentTitle(getString(R.string.notification_title))
-				.setContentText(getString(R.string.notification_desc))
-				.setWhen(System.currentTimeMillis())
-				.setContentIntent(pendingIntent)
-				.setAutoCancel(true)
-				.build();
-
-		nm.notify(Utilities.NOTIFICATION_ID, notification);*/
-	}
-
-    private class InsecureSSLSocketFactory extends SSLSocketFactory{
-        private SSLContext sslContext = SSLContext.getInstance("TLS");
-        public InsecureSSLSocketFactory(KeyStore trustStore) throws NoSuchAlgorithmException,
-                KeyManagementException, KeyStoreException, UnrecoverableKeyException{
-            super(trustStore);
-
-            TrustManager trustManager = new X509TrustManager() {
-                @Override
-                public void checkClientTrusted(X509Certificate[] chain, String authType)
-                        throws CertificateException {
-                }
-
-                @Override
-                public void checkServerTrusted(X509Certificate[] chain, String authType)
-                        throws CertificateException {
-                }
-
-                @Override
-                public X509Certificate[] getAcceptedIssuers() {
-                    return null;
-                }
-            };
-
-            sslContext.init(null, new TrustManager[]{trustManager}, null);
-        }
-
-        @Override
-        public Socket createSocket(Socket socket, String host, int port, boolean autoClose)
-                throws IOException{
-            return sslContext.getSocketFactory().createSocket(socket, host, port, autoClose);
-        }
-
-        @Override
-        public Socket createSocket() throws IOException{
-            return sslContext.getSocketFactory().createSocket();
-        }
+        notificationManager.notify(NOTIFICATION_ID, notif);
     }
 }
