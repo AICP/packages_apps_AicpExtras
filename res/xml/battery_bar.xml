@@ -45,6 +45,18 @@
         android:title="@string/battery_bar_battery_low_color"
         android:defaultValue="0xffffffff" />
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="battery_bar_blend_color"
+        android:title="@string/battery_bar_blend_color_title"
+        android:summary="@string/battery_bar_blend_color_summary" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="battery_bar_blend_color_reverse"
+        android:title="@string/battery_bar_blend_color_reverse_title"
+        android:summaryOn="@string/battery_bar_blend_color_reverse_summary_on"
+        android:summaryOff="@string/battery_bar_blend_color_reverse_summary_off"
+        android:dependency="battery_bar_blend_color" />
+
     <ListPreference
         android:key="battery_bar_style"
         android:title="@string/battery_bar_style_title"
