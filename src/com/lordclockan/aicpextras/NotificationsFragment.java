@@ -58,7 +58,6 @@ public class NotificationsFragment extends Fragment {
         private static final String PREF_COLUMNS = "qs_columns";
         private static final String PREF_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
         private static final String PREF_QS_DATA_ADVANCED = "qs_data_advanced";
-        private static final String PREF_QS_TILE_TITLE_VISIBILITY = "qs_tile_title_visibility";
 
         private ListPreference mTileAnimationStyle;
         private ListPreference mTileAnimationDuration;
@@ -68,7 +67,6 @@ public class NotificationsFragment extends Fragment {
         private ListPreference mQsColumns;
         private ListPreference mSysuiQqsCount;
         private SwitchPreference mQsDataAdvanced;
-        private SwitchPreference mQsTileTitleVisibility;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -138,19 +136,10 @@ public class NotificationsFragment extends Fragment {
             mSysuiQqsCount.setOnPreferenceChangeListener(this);
 
             mQsDataAdvanced = (SwitchPreference) findPreference(PREF_QS_DATA_ADVANCED);
-            mQsDataAdvanced.setOnPreferenceChangeListener(this);
             if (Utils.isWifiOnly(getActivity())) {
                 prefSet.removePreference(mQsDataAdvanced);
-            } else {
-                mQsDataAdvanced.setChecked((Settings.Secure.getInt(resolver,
-                        Settings.Secure.QS_DATA_ADVANCED, 0) == 1));
             }
 
-            mQsTileTitleVisibility = (SwitchPreference) findPreference(PREF_QS_TILE_TITLE_VISIBILITY);
-            mQsTileTitleVisibility.setOnPreferenceChangeListener(this);
-            mQsTileTitleVisibility.setChecked((Settings.System.getIntForUser(resolver,
-               Settings.System.QS_TILE_TITLE_VISIBILITY, 0,
-               UserHandle.USER_CURRENT) == 1));
         }
 
         @Override
@@ -209,16 +198,6 @@ public class NotificationsFragment extends Fragment {
                 Settings.Secure.putInt(resolver, Settings.Secure.QQS_COUNT, SysuiQqsCountValue);
                 int SysuiQqsCountIndex = mSysuiQqsCount.findIndexOfValue(SysuiQqsCount);
                 mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntries()[SysuiQqsCountIndex]);
-                return true;
-            } else if  (preference == mQsDataAdvanced) {
-                boolean checked = ((SwitchPreference) preference).isChecked();
-                Settings.Secure.putInt(resolver,
-                        Settings.Secure.QS_DATA_ADVANCED, checked ? 1:0);
-                return true;
-            } else if  (preference == mQsTileTitleVisibility) {
-                boolean checked = ((SwitchPreference) preference).isChecked();
-                Settings.System.putIntForUser(resolver,
-                        Settings.System.QS_TILE_TITLE_VISIBILITY, checked ? 1:0, UserHandle.USER_CURRENT);
                 return true;
             }
             return false;
