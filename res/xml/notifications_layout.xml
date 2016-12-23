@@ -60,6 +60,12 @@
         android:summary="@string/qs_music_tile_track_optional_summary"
         android:defaultValue="false"/>
 
+    <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
+        android:key="qs_battery_easy_toggle"
+        android:title="@string/qs_battery_easy_toggle_title"
+        android:summary="@string/qs_battery_easy_toggle_summary"
+        android:defaultValue="false" />
+
     <ListPreference
         android:key="sysui_qqs_count_key"
         android:title="@string/sysui_qqs_count_title"
