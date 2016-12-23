@@ -61,6 +61,9 @@ public class BatteryBar extends SubActivity {
         private static final String PREF_BATT_BAR_BATTERY_LOW_COLOR = "battery_bar_battery_low_color";
         private static final String PREF_BATT_BAR_WIDTH = "battery_bar_thickness";
         private static final String PREF_BATT_ANIMATE = "battery_bar_animate";
+        private static final String PREF_BATT_USE_CHARGING_COLOR = "battery_bar_enable_charging_color";
+        private static final String PREF_BATT_BLEND_COLORS = "battery_bar_blend_color";
+        private static final String PREF_BATT_BLEND_COLORS_REVERSE = "battery_bar_blend_color_reverse";
 
         static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
 
@@ -69,6 +72,9 @@ public class BatteryBar extends SubActivity {
         private ListPreference mBatteryBarStyle;
         private ListPreference mBatteryBarThickness;
         private SwitchPreference mBatteryBarChargingAnimation;
+        private SwitchPreference mBatteryBarUseChargingColor;
+        private SwitchPreference mBatteryBarBlendColors;
+        private SwitchPreference mBatteryBarBlendColorsReverse;
         private ColorPickerPreference mBatteryBarColor;
         private ColorPickerPreference mBatteryBarChargingColor;
         private ColorPickerPreference mBatteryBarBatteryLowColor;
@@ -130,16 +136,22 @@ public class BatteryBar extends SubActivity {
                     Settings.System.STATUSBAR_BATTERY_BAR_THICKNESS, 1)) + "");
             mBatteryBarThickness.setSummary(mBatteryBarThickness.getEntry());
 
+            mBatteryBarUseChargingColor = (SwitchPreference) findPreference(PREF_BATT_USE_CHARGING_COLOR);
+            mBatteryBarBlendColors = (SwitchPreference) findPreference(PREF_BATT_BLEND_COLORS);
+            mBatteryBarBlendColorsReverse = (SwitchPreference) findPreference(PREF_BATT_BLEND_COLORS_REVERSE);
+
             boolean hasNavBarByDefault = getResources().getBoolean(
                     com.android.internal.R.bool.config_showNavigationBar);
-            //boolean enableNavigationBar = Settings.Secure.getInt(resolver,
-            //    Settings.Secure.NAVIGATION_BAR_VISIBLE, hasNavBarByDefault ? 1 : 0) == 1;
+            boolean enableNavigationBar = Settings.Secure.getInt(resolver,
+                    Settings.Secure.NAVIGATION_BAR_VISIBLE, hasNavBarByDefault ? 1 : 0) == 1;
+            boolean batteryBarSupported = Settings.Secure.getInt(resolver,
+                    Settings.Secure.NAVIGATION_BAR_MODE, 0) == 0;
 
-            //if (!hasNavBarByDefault || !enableNavigationBar) {
+            if (!enableNavigationBar || !batteryBarSupported) {
                 prefSet.removePreference(mBatteryBar);
-            //} else {
-            //    prefSet.removePreference(mBatteryBarNoNavbar);
-            //}
+            } else {
+                prefSet.removePreference(mBatteryBarNoNavbar);
+            }
 
             updateBatteryBarOptions();
 
@@ -225,6 +237,9 @@ public class BatteryBar extends SubActivity {
                 mBatteryBarColor.setEnabled(false);
                 mBatteryBarChargingColor.setEnabled(false);
                 mBatteryBarBatteryLowColor.setEnabled(false);
+                mBatteryBarUseChargingColor.setEnabled(false);
+                mBatteryBarBlendColors.setEnabled(false);
+                mBatteryBarBlendColorsReverse.setEnabled(false);
             } else {
                 mBatteryBarStyle.setEnabled(true);
                 mBatteryBarThickness.setEnabled(true);
@@ -232,6 +247,9 @@ public class BatteryBar extends SubActivity {
                 mBatteryBarColor.setEnabled(true);
                 mBatteryBarChargingColor.setEnabled(true);
                 mBatteryBarBatteryLowColor.setEnabled(true);
+                mBatteryBarUseChargingColor.setEnabled(true);
+                mBatteryBarBlendColors.setEnabled(true);
+                mBatteryBarBlendColorsReverse.setEnabled(true);
             }
         }
 
