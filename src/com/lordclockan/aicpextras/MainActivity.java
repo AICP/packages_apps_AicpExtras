@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -145,6 +146,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         int navBgColor = getResources().getColor(R.color.navDrawerBg, null);
+        int colorAccent = getResources().getColor(R.color.colorAccent, null);
 
         if (Settings.System.getInt(getApplicationContext().getContentResolver(),
                 Settings.System.AE_CUSTOM_COLORS, 0) != 0) {
@@ -158,6 +160,12 @@ public class MainActivity extends AppCompatActivity
         navigationView.getBackground().setAlpha(Settings.System.getInt(this.
                 getApplicationContext().getContentResolver(),
                 Settings.System.AE_NAV_DRAWER_OPACITY, 178));
+
+        navigationView.getHeaderView(0).findViewById(R.id.nav_header_layout).
+                getBackground().setColorFilter(Settings.System.getInt(this.
+                getApplicationContext().getContentResolver(),
+                Settings.System.AE_NAV_HEADER_BG_IMAGE_COLOR, colorAccent),
+                PorterDuff.Mode.SRC_ATOP);
 
         navigationView.getHeaderView(0).findViewById(R.id.nav_header_layout).
                 getBackground().setAlpha(Settings.System.getInt(this.

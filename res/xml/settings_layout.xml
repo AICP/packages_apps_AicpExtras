@@ -50,6 +50,12 @@
         aicpextras:unitsRight="" />
 
     <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="ae_header_bg_image_color"
+        android:title="@string/ae_header_bg_image_color_title"
+        android:defaultValue="@color/colorAccent"
+        android:dependency="ae_custom_colors" />
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="ae_nav_drawer_checked_text"
         android:title="@string/ae_nav_drawer_checked_text_title"
         android:defaultValue="@color/navDrawerTextChecked"
