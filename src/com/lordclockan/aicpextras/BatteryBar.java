@@ -132,14 +132,16 @@ public class BatteryBar extends SubActivity {
 
             boolean hasNavBarByDefault = getResources().getBoolean(
                     com.android.internal.R.bool.config_showNavigationBar);
-            //boolean enableNavigationBar = Settings.Secure.getInt(resolver,
-            //    Settings.Secure.NAVIGATION_BAR_VISIBLE, hasNavBarByDefault ? 1 : 0) == 1;
+            boolean enableNavigationBar = Settings.Secure.getInt(resolver,
+                Settings.Secure.NAVIGATION_BAR_VISIBLE, hasNavBarByDefault ? 1 : 0) == 1;
 
-            //if (!hasNavBarByDefault || !enableNavigationBar) {
+            // Show navbar entries only if smartbar is showing
+            if (Settings.Secure.getInt(resolver, Settings.Secure.NAVIGATION_BAR_VISIBLE, 1) == 0 ||
+                    Settings.Secure.getInt(resolver, Settings.Secure.NAVIGATION_BAR_MODE, 0) != 0) {
                 prefSet.removePreference(mBatteryBar);
-            //} else {
-            //    prefSet.removePreference(mBatteryBarNoNavbar);
-            //}
+            } else {
+                prefSet.removePreference(mBatteryBarNoNavbar);
+            }
 
             updateBatteryBarOptions();
 
