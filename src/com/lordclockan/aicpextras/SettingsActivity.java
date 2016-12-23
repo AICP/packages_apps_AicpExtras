@@ -55,16 +55,19 @@ public class SettingsActivity extends SubActivity {
         private static final String PREF_AE_NAV_DRAWER_BG_COLOR = "ae_drawer_bg_color";
         private static final String PREF_AE_SETTINGS_RESTORE_DEFAULTS = "ae_settings_restore_defaults";
         private static final String PREF_AE_NAV_HEADER_BG_IMAGE_OPACITY = "ae_header_bg_image_opacity";
+        private static final String PREF_AE_NAV_HEADER_BG_IMAGE_COLOR = "ae_header_bg_image_color";
         private static final String PREF_AE_NAV_DRAWER_CHECKED_TEXT = "ae_nav_drawer_checked_text";
         private static final String PREF_AE_NAV_DRAWER_UNCHECKED_TEXT = "ae_nav_drawer_unchecked_text";
         private static final String PREF_AE_SETTINGS_SUMMARY = "ae_settings_summary";
 
         private static final int DEFAULT_NAV_HEADER_COLOR = 0xFF303030;
+        private static final int DEFAULT_NAV_HEADER_BG_IMAGE_COLOR = 0xFFFFAB00;
 
         private SwitchPreference mCustomColors;
         private SeekBarPreferenceCham mNavDrawerOpacity;
         private ColorPickerPreference mNavDrawerBgColor;
         private SeekBarPreferenceCham mNavHeaderBgImageOpacity;
+        private ColorPickerPreference mNavHeaderBgImageColor;
         private ColorPickerPreference mNavDrawerTextCheckedColor;
         private ColorPickerPreference mNavDrawerTextUncheckedColor;
         private Preference mAeRestoreDefaults;
@@ -106,6 +109,14 @@ public class SettingsActivity extends SubActivity {
             mNavHeaderBgImageOpacity.setValue(Settings.System.getInt(resolver,
                     Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, 200));
             mNavHeaderBgImageOpacity.setOnPreferenceChangeListener(this);
+
+            mNavHeaderBgImageColor = (ColorPickerPreference) prefSet.findPreference(PREF_AE_NAV_HEADER_BG_IMAGE_COLOR);
+            mNavHeaderBgImageColor.setOnPreferenceChangeListener(this);
+            intColor = Settings.System.getInt(resolver,
+                    Settings.System.AE_NAV_HEADER_BG_IMAGE_COLOR, DEFAULT_NAV_HEADER_BG_IMAGE_COLOR);
+            hexColor = String.format("#%08x", (DEFAULT_NAV_HEADER_BG_IMAGE_COLOR & intColor));
+            mNavHeaderBgImageColor.setSummary(hexColor);
+            mNavHeaderBgImageColor.setNewPreviewColor(intColor);
 
             mNavDrawerTextCheckedColor = (ColorPickerPreference) prefSet.findPreference(PREF_AE_NAV_DRAWER_CHECKED_TEXT);
             mNavDrawerTextCheckedColor.setOnPreferenceChangeListener(this);
@@ -154,6 +165,14 @@ public class SettingsActivity extends SubActivity {
                 Settings.System.putInt(resolver,
                         Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, alpha);
                 return true;
+            } else if (preference == mNavHeaderBgImageColor) {
+                String hex = ColorPickerPreference.convertToARGB(
+                        Integer.parseInt(String.valueOf(newValue)));
+                preference.setSummary(hex);
+                int intHex = ColorPickerPreference.convertToColorInt(hex);
+                Settings.System.putInt(resolver,
+                        Settings.System.AE_NAV_HEADER_BG_IMAGE_COLOR, intHex);
+                return true;
             } else if (preference == mNavDrawerTextCheckedColor) {
                 String hex = ColorPickerPreference.convertToARGB(
                         Integer.parseInt(String.valueOf(newValue)));
@@ -201,6 +220,15 @@ public class SettingsActivity extends SubActivity {
                 intColor = Settings.System.getInt(resolver,
                         Settings.System.AE_NAV_DRAWER_BG_COLOR, DEFAULT_NAV_HEADER_COLOR);
                 hexColor = String.format("#%08x", (DEFAULT_NAV_HEADER_COLOR & intColor));
+                mNavDrawerBgColor.setSummary(hexColor);
+                mNavDrawerBgColor.setNewPreviewColor(intColor);
+
+
+                Settings.System.putInt(resolver,
+                        Settings.System.AE_NAV_HEADER_BG_IMAGE_COLOR, DEFAULT_NAV_HEADER_BG_IMAGE_COLOR);
+                intColor = Settings.System.getInt(resolver,
+                        Settings.System.AE_NAV_HEADER_BG_IMAGE_COLOR, DEFAULT_NAV_HEADER_BG_IMAGE_COLOR);
+                hexColor = String.format("#%08x", (DEFAULT_NAV_HEADER_BG_IMAGE_COLOR & intColor));
                 mNavDrawerBgColor.setSummary(hexColor);
                 mNavDrawerBgColor.setNewPreviewColor(intColor);
 
