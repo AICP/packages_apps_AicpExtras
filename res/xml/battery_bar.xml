@@ -36,14 +36,34 @@
         android:defaultValue="0xffffffff" />
 
     <net.margaritov.preference.colorpicker.ColorPickerPreference
-        android:key="battery_bar_charging_color"
-        android:title="@string/battery_bar_charging_color"
-        android:defaultValue="0xffffffff" />
-
-    <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="battery_bar_battery_low_color"
         android:title="@string/battery_bar_battery_low_color"
         android:defaultValue="0xffffffff" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="battery_bar_enable_charging_color"
+        android:title="@string/battery_bar_use_charging_color"
+        android:defaultValue="true" />
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="battery_bar_charging_color"
+        android:title="@string/battery_bar_charging_color"
+        android:defaultValue="0xffffffff"
+        android:dependency="battery_bar_enable_charging_color" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="battery_bar_blend_color"
+        android:title="@string/battery_bar_blend_color_title"
+        android:summary="@string/battery_bar_blend_color_summary"
+        android:defaultValue="false" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="battery_bar_blend_color_reverse"
+        android:title="@string/battery_bar_blend_color_reverse_title"
+        android:summaryOn="@string/battery_bar_blend_color_reverse_summary_on"
+        android:summaryOff="@string/battery_bar_blend_color_reverse_summary_off"
+        android:dependency="battery_bar_blend_color"
+        android:defaultValue="false" />
 
     <ListPreference
         android:key="battery_bar_style"
