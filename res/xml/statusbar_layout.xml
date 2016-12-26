@@ -33,13 +33,6 @@
             android:key="ticker"
             android:title="@string/ticker_screen_title" />
 
-        <!-- Heads Up switch -->
-        <com.lordclockan.aicpextras.preferences.GlobalSettingSwitchPreference
-            android:key="heads_up_notifications_enabled"
-            android:title="@string/heads_up_switch_title"
-            android:summary="@string/heads_up_switch_summary"
-            android:defaultValue="true" />
-
    </PreferenceCategory>
 
    <!-- Status bar AICP logo -->
