@@ -49,4 +49,11 @@
         android:inputType="textNoSuggestions"
         android:persistent="false" />
 
+    <ListPreference
+        android:key="media_scanner_on_boot"
+        android:dialogTitle="@string/media_scanner_on_boot_title"
+        android:title="@string/media_scanner_on_boot_title"
+        android:entries="@array/media_scanner_on_boot_entries"
+        android:entryValues="@array/media_scanner_on_boot_values" />
+
 </PreferenceScreen>
