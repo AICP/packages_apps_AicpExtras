@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2015-2016 AICP
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="navigation_drawer_open">Abrir panel de aplicaciones</string>
+    <string name="navigation_drawer_close">Cerrar panel de aplicaciones</string>
+
+    <string name="action_settings">Ajustes</string>
+    <string name="aicp_extras_title">Extras AICP</string>
+    <string name="pun_title">Una rom para gobernarlos a todosOne rom to rule them all</string>
+    <string name="various_shit_title">Varios</string>
+    <string name="about_title">Acerca de</string>
+    <string name="other_title">Otros</string>
+    <string name="g_community">Conunidad G+</string>
+    <string name="g_plus_summary">Visitar nuestra comunidad en Google+</string>
+    <string name="ui_title">Interfaz de usuario</string>
+    <string name="logo">logo</string>
+    <string name="display_animations_title">Pantalla y animaciones</string>
+    <string name="transparency_porn_title">Personalización de paneles</string>
+    <string name="notificaitons_title">Panel de notificación</string>
+    <string name="statubar_title">Barra de estado</string>
+    <string name="lockscreen_title">Pantalla de bloqueo</string>
+    <string name="aicp_downloads_title">Descargas</string>
+    <string name="dwnld_summary">Visitar la página de descargas de AICP para tu dispositivo</string>
+    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="gerrit_summary">Visitar nuestro Gerrit para saber en qué estamos trabajando</string>
+    <string name="hidden_anim_activity_title">Hora de Yoga!!!</string>
+    <string name="hidden_anim_more_title">MÁS?</string>
+    <string name="hidden_anim_more_nice">AGRADABLE</string>
+    <string name="continue_title">Continuar</string>
+    <string name="settings_activity_title">Ajustes de Extras AICP</string>
+    <string name="recents_panel_title">Panel de aps. recientes</string>
+
+    <string name="nothing_title">Nada que ver aquí</string>
+
+    <!-- Switch On/Off  -->
+    <string name="switch_on_text">Activado</string>
+    <string name="switch_off_text">Desactivado</string>
+
+    <!-- Permissions -->
+    <string name="storage_permission_granted">Permiso concedido, ya se puede escribir en el almacenamiento.</string>
+    <string name="storage_permission_not_granted">Permiso denegado, no se puede escribir en el almacenamiento.</string>
+
+    <!-- Change Log -->
+    <string name="changelog_title">Lista de cambios</string>
+    <string name="changelog_title_summary">Ver la lista de cambios recientes de la ROM</string>
+    <string name="changelog_error">No se pudo cargar la lista de cambios</string>
+
+    <!-- Toast Icons -->
+    <string name="toast_icon_title">Icono de notificaciones</string>
+    <string name="toast_icon_summary">Muestra el icono de la aplicación que dispara la notificación</string>
+
+    <!-- Brightness slider -->
+    <string name="qs_brightness_slider_title">Barra de brillo</string>
+    <string name="qs_brightness_slider_enabled">Habilitada</string>
+    <string name="qs_brightness_slider_disabled">Deshabilitada</string>
+
+    <string name="restarting_ui">Reiniciando IU\u2026</string>
+
+    <!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
+    <string name="print_restart">Reinicar</string>
+
+    <!-- Force expanded notifications -->
+    <string name="force_expanded_notifications_title">Forzar notificaciones expandidas</string>
+    <string name="force_expanded_notifications_summary">Sólo disponible para aplicaciones que soportes notificaciones expandidas</string>
+
+    <!-- Disabling immersive mode messages -->
+    <string name="disable_immersive_message_title">Deshabilitar mensajes en pantalla completa</string>
+    <string name="disable_immersive_message_summary">Oculta todos los mensajes si estamos en modo pantalla completa</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Selector de color</string>
+    <string name="press_color_to_apply">Seleccione el color para aplicarlo</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Aplicar</string>
+    <string name="color_default">Predeterminado</string>
+
+    <!-- Network traffic -->
+    <string name="traffic_category">Monitor de tráfico de red</string>
+    <string name="traffic_title">Tráfico</string>
+    <string name="network_traffic_title">Monitor de tráfico de red</string>
+    <string name="show_network_traffic_state">Monitor de trádico en barra de estado</string>
+    <string name="show_network_traffic_unit">Unidades a mostrar</string>
+    <string name="show_network_traffic_frequency">Intervalo de actualización</string>
+    <string name="show_network_traffic_disable">Deshabilitado</string>
+    <string name="show_network_traffic_up">Salida</string>
+    <string name="show_network_traffic_down">Entrada</string>
+    <string name="show_network_traffic_all">Salida y entrada</string>
+    <string name="show_network_traffic_bit">Bits por segundo</string>
+    <string name="show_network_traffic_byte">Bytes por segundo</string>
+    <string name="show_network_traffic_500">500 ms</string>
+    <string name="show_network_traffic_1000">1000 ms</string>
+    <string name="show_network_traffic_1500">1500 ms</string>
+    <string name="show_network_traffic_2000">2000 ms</string>
+    <string name="network_traffic_autohide">Auto ocultar</string>
+    <string name="network_traffic_autohide_summary">Oculta el monitor de tráfico cunado no hay actividad</string>
+    <string name="network_traffic_hidearrow">Ocultar flechas</string>
+    <string name="network_traffic_hidearrow_summary">Oculta las flechas del monitor de tráfico</string>
+    <string name="network_traffic_autohide_threshold">Umbral de inactividad</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancelar</string>
+    <string name="default_string">Predeterminado</string>
+
+    <!-- Superuser indicator on status bar -->
+    <string name="su_indicator">Notificación de Superusuario</string>
+    <string name="su_indicator_summary_on">Notificación de Superusuario cunado hay una sesión activa</string>
+    <string name="su_indicator_summary_off">Activar para mostrar la notificación de superusuario cunado haya una sesión activa</string>
+
+    <!-- Carrier Label -->
+    <string name="carrier_options">Nombre de operador</string>
+    <string name="custom_carrier_label_title">Nombre de operador personalizado</string>
+    <string name="custom_carrier_label_explain">Introduzca un nuevo nombre. Dejar en blanco para restablecer al predeterminado.</string>
+    <string name="custom_carrier_label_notset">Nombre personalizado no establecido actualmente</string>
+    <string name="show_carrier_title">Nombre de operador</string>
+    <string name="show_carrier_disabled">Deshabilitado</string>
+    <string name="show_carrier_keyguard">Sólo en pantalla de bloqueo</string>
+    <string name="show_carrier_statusbar">Sólo en barra de estado</string>
+    <string name="show_carrier_enabled">Pantalla de bloqueo &amp; barra de estado</string>
+    <string name="status_bar_carrier_color">Color del nombre de operador</string>
+    <string name="status_bar_carrier_size">Tamaño del texto del nombre de operador</string>
+
+    <!-- Battery Bar -->
+    <string name="battery_bar_title">Barra de batería</string>
+    <string name="battery_bar">Ubicación de la barra de batería</string>
+    <string name="battery_bar_no_navbar">Ubicación de la barra de batería</string>
+    <string name="battery_bar_color">Color de la batta de batería</string>
+    <string name="battery_bar_charging_color">Color de la barra te batería durante la carga</string>
+    <string name="battery_bar_battery_low_color">Color de la barra de batería con batería baja</string>
+    <string name="battery_bar_cat">Estilo de la barra de la batería</string>
+    <string name="battery_bar_style_title">Alineación de la barra de batería</string>
+    <string name="battery_bar_thickness_title">Grosor de la barra de batería</string>
+    <string name="battery_bar_animate_title">Animación de carga</string>
+    <string name="battery_bar_style_regular">Regular</string>
+    <string name="battery_bar_style_center_mirrored">Centrada-espejo</string>
+    <string name="battery_bar_style_reversed">Invertida</string>
+    <string name="battery_bar_use_charging_color">Color personalizado durante la carga</string>
+    <string name="battery_bar_blend_color_title">Mezcla de colores</string>
+    <string name="battery_bar_blend_color_summary">Mexclar colores lleno/vacío en consonancia con el nivel de batería</string>
+    <string name="battery_bar_blend_color_reverse_title">Direción de la inversión de colores</string>
+    <string name="battery_bar_blend_color_reverse_summary_off">Lleno &#8594; vacío: rojo &#8592; verde &#8592; azul &#8592; rojo</string>
+    <string name="battery_bar_blend_color_reverse_summary_on">Lleno &#8594; vacío: rojo &#8594; verde &#8594; azul &#8594; rojo</string>
+
+    <!-- Activity and App Picker -->
+    <string name="picker_activities">Acciones</string>
+    <string name="select_custom_app_title">Elegir ap. personalizada</string>
+    <string name="select_custom_activity_title">Elegir acción personalizada</string>
+    <string name="profile_applist_title">Aplicaciones</string>
+
+    <!-- Power menu on lock screen -->
+    <string name="powermenu_lockscreen_title">Menú de apagado en pantalla de bloqueo</string>
+    <string name="powermenu_lockscreen_summary">Mostrar menú de apagado en la pantalla de bloqueo</string>
+
+    <!-- ROM Stats -->
+    <!-- Main -->
+    <string name="stats_title">Estadísticas</string>
+    <string name="stats_summary">Activar/Desactivar envío de estadísticas anónimas</string>
+
+    <!-- Notification -->
+    <string name="notification_ticker">Estadísticas habilitadas</string>
+    <string name="notification_title">Estadísticas AICP</string>
+    <string name="notification_desc">Habilitar o deshabilitar estadísticas anónimas</string>
+
+    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
+
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">Estadísticas AICP</string>
+    <string name="anonymous_statistics_summary">Ayuda a AICP activando el envío de estadísticas anónimas</string>
+    <string name="anonymous_statistics_warning_title">Acerca de</string>
+    <string name="anonymous_statistics_warning">Activando las estadísticas AICP permitirá el envío de datos no personales a nuestros servidores.
+         la información enviada incluye un identificador único que no compromete su privacidad ni la de sus datos personales.
+         Los datos se envían cada 7 días.\n\nPara ver un ejemplo de datos que se envían pulse en Previsualizar Datos.</string>
+
+    <string name="pref_settings">Ajustes</string>
+    <string name="enable_reporting_title">Habilitar envío</string>
+    <string name="disable_reporting_persistent">Deshabilitar de forma permanente</string>
+    <string name="preview_data_title">Previsualizar Datos</string>
+    <string name="preview_data_summary">%s</string>
+    <string name="view_stats_title">Ver página de estadísticas</string>
+    <string name="anonymous_learn_more">Saber más</string>
+
+    <string name="last_report_on">Último envío</string>
+    <string name="reporting_interval">Intervalo de envío</string>
+    <plurals name="reporting_interval_days">
+        <item quantity="one">1 día</item>
+        <item quantity="other">%d días</item>
+    </plurals>
+    <string name="next_report_on">Siguiente envío</string>
+
+    <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">ID único</string>
+    <string name="preview_device_title">Dispositivo</string>
+    <string name="preview_version_title">Versión</string>
+    <string name="preview_country_title">País</string>
+    <string name="preview_carrier_title">Operador</string>
+    <string name="preview_romname_title">Nombre de ROM</string>
+    <string name="preview_romversion_title">Versión AICP</string>
+    <string name="preview_buildtype_title">Tipo de Build AICP</string>
+
+    <!-- Double tap to sleep on lockscreen -->
+    <string name="double_tap_sleep_anywhere_title">DT2S en pantalla de bloqueo</string>
+    <string name="double_tap_sleep_anywhere_summary">Doble toque en la pantalla de bloqueo apaga la pantalla</string>
+
+    <!-- SU -->
+    <string name="cannot_get_su">No se consiguió acceso de superusuario, saliendo.</string>
+    <string name="cannot_get_su_start">No se puede acceder como supersusuario.</string>
+
+    <!-- Aicp logcat -->
+    <string name="logcat_title">Logcat</string>
+    <string name="kmesg_title">Kmesg</string>
+    <string name="dmesg_title">Dmesg</string>
+    <string name="log_it_title">Acoplar</string>
+    <string name="log_it_dialog_title">Acoplar</string>
+    <string name="log_that_shit_title">Log de datos</string>
+    <string name="logcat_warning">Compartir o desechar!</string>
+    <string name="share_title">Compartir...</string>
+    <string name="log_it_share_subject">logs Aicp</string>
+    <string name="log_it_summary">Se paciente hasta que los logs se creen</string>
+
+    <!-- AOKP custom system animations -->
+    <string name="animation_duration_default">Predeterminada</string>
+
+    <!-- Toast Animation -->
+    <string name="toast_animation_title">Animación Toast</string>
+    <string name="toast_none_animation">Ninguna</string>
+    <string name="toast_default_animation">Predeterminada</string>
+    <string name="toast_fade_animation">Transición</string>
+    <string name="toast_SlideRight_animation">Deslizar hacia la derecha</string>
+    <string name="toast_SlideLeft_animation">Deslizar hacia la izquierda</string>
+    <string name="toast_Xylon_animation">Xylon</string>
+    <string name="toast_Toko_animation">Toko</string>
+    <string name="toast_Tn_animation">Tn</string>
+    <string name="toast_Honami_animation">Honami</string>
+    <string name="toast_FastFade_animation">Transición rápida</string>
+    <string name="toast_GrowFade_animation">Transición ascendente</string>
+    <string name="toast_GrowFadeCenter_animation">Transición ascendente desde el centro</string>
+    <string name="toast_GrowFadeBottom_animation">Transición ascendente desde abajo</string>
+    <string name="toast_Translucent_animation">Translúcida</string>
+    <string name="toast_SlideLeftRight_animation">Deslizar de izquierda a derecha</string>
+    <string name="toast_SlideRightLeft_animation">Deslizar de derecha a izquierda</string>
+
+    <!-- Power menu Animations  -->
+    <string name="power_menu_animation_title">Animación del menú de apagado</string>
+    <string name="power_menu_animation_summary">Cambia la animación de entrada/salida del menúde apagado</string>
+    <string name="power_menu_animation_dialog_title">Seleccionar animación del menú de apagado</string>
+    <string name="power_menu_animation_aosp">AOSP (predeterminada)</string>
+    <string name="power_menu_animation_bottom">Abajo</string>
+    <string name="power_menu_animation_top">Arriba</string>
+    <string name="power_menu_animation_rotate">Rotación</string>
+    <string name="power_menu_animation_xylon">Vuelo</string>
+    <string name="power_menu_animation_slide">Deslizante</string>
+    <string name="power_menu_animation_turn">Giro</string>
+    <string name="power_menu_animation_fly">Brillo</string>
+    <string name="power_menu_animation_card">3D</string>
+    <string name="power_menu_animation_translucent_top">Translúcida (arriba)</string>
+    <string name="power_menu_animation_translucent_bottom">Translúcida (abajo)</string>
+
+    <!-- Statusbar AICP logo -->
+    <string name="status_bar_logo_category_title">Logo en barra de estado</string>
+    <string name="status_bar_aicp_logo_title">Logo de AICP</string>
+    <string name="status_bar_aicp_logo_summary">Activa el logo de AICP en el lado izquierdo de la barra de estado</string>
+    <string name="status_bar_aicp_logo_color">Color del logo AICP</string>
+    <string name="status_bar_aicp_logo_position">Ubicación del logo</string>
+    <string name="status_bar_aicp_logo_position_summary">Elegir en qué lado mostrar el logo, izquierda o derecha</string>
+    <string name="status_bar_logo_position_right">Derecha</string>
+    <string name="status_bar_logo_position_left">Izquierda</string>
+
+    <!-- Launch music player when headset is connected -->
+    <string name="headset_connect_player_title">Abrir ap. de música</string>
+    <string name="headset_connect_player_summary">Abre la aplicación de música predeterminada cuando se conectan los auriculares</string>
+
+    <!-- Camera shutter sound -->
+    <string name="camera_sounds_title">Sonido del obturador de cámara</string>
+    <string name="camera_sounds_summary">Deshabilitarlo no funcionará en aps. de cámara de terceros no en modo HDR+</string>
+
+    <!-- Screenshot sound -->
+    <string name="screenshot_sound_title">Sonido al capturar pantalla</string>
+    <string name="screenshot_sound_summary">Reproduce un sonido cuando se hace una captura de pantalla</string>
+
+    <string name="brightness_icon_title">Icono de brillo </string>
+    <string name="brightness_icon_summary">Muestra un icono a la izquierda de la barra de brillo para ajustar el brillo automático</string>
+
+    <!-- QS shade transparency -->
+    <string name="qs_transparent_shade">Transparencia de panel de ajustes rápidos</string>
+
+    <!-- QS header transparency -->
+    <string name="qs_transparent_header">Transparencia de cabecera de ajustes rápidos</string>
+
+    <!-- QS tile labels visibility -->
+    <string name="qs_menu_item_titles">Nombres de ajustes rápidos</string>
+    <string name="qs_menu_item_titles_summaryOn">Se muestran los nombres</string>
+    <string name="qs_menu_item_titles_summaryOff">Nombres ocultos</string>
+
+    <!-- Volume dialog transparency -->
+    <string name="volume_dialog_transparency">Transparencia del panel de volumen</string>
+
+    <!-- Power menu and dialogs transparency -->
+    <string name="power_menu_transparency">Transparencia del menú de apagado</string>
+
+    <!-- Power/reboot dialogs dim amount -->
+    <string name="power_menu_dialog_dim">Umbral de difuminado del menú de apagado</string>
+
+    <!-- Notifications transparency -->
+    <string name="notifications_transparency">Transparencia de notificaciones</string>
+
+    <!-- Lockscreen Torch -->
+    <string name="keyguard_torch_title">Linterna en pantalla de bloqueo</string>
+    <string name="keyguard_torch_summary">Pulsación larga en el botón de encendido cuando la pantalla está apagada enciende la linterna</string>
+
+    <!-- Quick settings tiles columns and rows config -->
+    <string name="qs_rows_portrait_title">Filas (vertical)</string>
+    <string name="qs_rows_landscape_title">Filas (horizontal)</string>
+    <string name="qs_columns_title">Columnas</string>
+    <string name="sysui_qqs_count_title">Ajustes rápidos pequeños</string>
+
+    <!-- Tiles animation style  -->
+    <string name="qs_tile_animation_style_title">Estilo de animación de ajustes rápidos</string>
+    <string name="qs_tile_animation_duration_title">Duración de la animación</string>
+    <string name="qs_tile_animation_interpolator_title">Interpolador de animación</string>
+    <string name="qs_tile_animation_style_off">Sin animación</string>
+    <string name="qs_tile_animation_style_flip">Voltear</string>
+    <string name="qs_tile_animation_style_rotate">Rotar</string>
+    <string name="qs_tile_animation_duration_low">Lento</string>
+    <string name="qs_tile_animation_duration_default">Predeterminado</string>
+    <string name="qs_tile_animation_duration_fast">Rápido</string>
+    <string name="qs_tile_animation_duration_superfast">Superrápido</string>
+    <string name="qs_tile_animation_interpolator_linearInterpolator">Lineal</string>
+    <string name="qs_tile_animation_interpolator_accelerateInterpolator">Acelerar</string>
+    <string name="qs_tile_animation_interpolator_decelerateInterpolator">Decelerar</string>
+    <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">Accelerar decelerar</string>
+    <string name="qs_tile_animation_interpolator_bounceInterpolator">Rebotar</string>
+    <string name="qs_tile_animation_interpolator_overshootInterpolator">Excedido</string>
+    <string name="qs_tile_animation_interpolator_anticipateInterpolator">Anticipado</string>
+    <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Anticipado excedido</string>
+    <string name="qs_set_animation_style">%1$s</string>
+    <string name="qs_set_animation_duration">%1$s</string>
+    <string name="qs_set_animation_interpolator">%1$s</string>
+
+    <!-- App Exit Toast -->
+    <string name="app_exit_toast">Presione atrás de nuevo para salir</string>
+
+    <!-- Volume dialog stroke settings -->
+
+    <!-- QS stroke settings -->
+
+    <!--Preference Categories-->
+    <string name="anim">Configuración de animaciones</string>
+    <string name="indicators">Indicadores de la barra de estado</string>
+    <string name="quicksettings_tiles_category">Configuración del panel de ajustes rápidos</string>
+    <string name="header_tweaks">Configuración de la cabecera</string>
+    <string name="Misc">Misceláneos</string>
+    <string name="qs">Configuración de ajustes rápidos</string>
+    <string name="vol_diag">Configuración del panel de volumen</string>
+    <string name="power">Configuración del menú de apagado</string>
+    <string name="cab">Configuración del botón Cerrar Todo</string>
+    <string name="visuals">Configuración visual de pantalla de aps. recientes</string>
+
+    <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">Vibración al autenticar con huella</string>
+    <string name="fprint_sucess_vib_summary">Vibrar cuando la autenticación con la huella es correcta</string>
+
+    <!-- AE settings -->
+    <string name="ae_settings_title">Configuración de Extras AICP</string>
+    <string name="ae_custom_colors_title">Colores personalizados</string>
+    <string name="ae_custom_colors_summaries">Configuración que modifica la apariencia de los Extras AICP</string>
+    <string name="ae_drawer_opacity_title">Opacidad del menú lateral de opciones</string>
+    <string name="ae_header_bg_image_color_title">Color de fondo de la imágen de cabecera</string>
+    <string name="ae_drawer_bg_color_title">Color de fondo del menú lateral de opciones</string>
+    <string name="ae_settings_restore_defaults_title">Restaurar predeterminados</string>
+    <string name="values_restored_title">Valores restaurados</string>
+    <string name="ae_header_bg_image_opacity_title">Opacidad del fondo de la imágen de cabecera</string>
+    <string name="ae_nav_drawer_checked_text_title">Color del texto de la opción seleccionada</string>
+    <string name="ae_nav_drawer_unchecked_text_title">Color del texto de las opciones</string>
+    <string name="ae_settings_summary_title">Custom AE summary text in Settings application</string>
+    <string name="custom_summary_title">Texto a mostrar bajo Extras AICP en Ajustes</string>
+    <string name="custom_summary_explain">Escriba el texto que desee. En blanco para usar el predeterminado.</string>
+    <string name="custom_summary_notset">Personalizaciones de la rom</string>
+
+    <!-- Statusbar 4G LTE switch -->
+    <string name="show_fourg_title">Mostrar 4G en lugar de LTE</string>
+    <string name="show_fourg_summary">Reemplazar LTE por 4G en el indicador de la barra de estado</string>
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Vibrar al tocar</string>
+    <string name="quick_settings_vibrate_summary">Vibrar al tocar un ajuste rápidos</string>
+
+    <!-- Advanced data tile -->
+    <string name="qs_advanced_data_title">Ajuste de datos avanzado</string>
+    <string name="qs_advanced_data_summary">Habilita tocar una sola vez para activar o desactivar los datos</string>
+
+    <!-- SystemUI restart prompt -->
+    <string name="systemui_restart_title">ATENCIÓN</string>
+    <string name="systemui_restart_message">SystemUI se reiniciará para que los cambios se apliquen correctamente.</string>
+
+    <!-- Status Bar Ticker -->
+    <string name="ticker_screen_title">Ticker</string>
+    <string name="ticker_title">Ticker en la barra de estado</string>
+    <string name="ticker_screen_summary">Personalizar el esstilo del ticker</string>
+    <string name="ticker_summary">Habilita el antiguo ticker en la barra de estado</string>
+    <string name="ticker_restore_defaults_title">Restarurar valores predeterminados</string>
+    <string name="text_title">Texto</string>
+    <string name="icon_title">Icono</string>
+    <string name="colors_title">Colores</string>
+
+    <!-- Optional screenshot type -->
+    <string name="screenshot_type_title">Tipo de captura de pantalla</string>
+    <string name="screenshot_type_fullscreen">Captura toda la pantalla</string>
+    <string name="screenshot_type_partial">Arrastra la selección al área que quieras que contenga la captura de pantalla</string>
+
+    <!-- Screenshot delay -->
+    <string name="powermenu_screenshot_delay_title">Retardo al capturar pantalla</string>
+    <string name="powermenu_screenshot_delay_message">El retardo actual es de %1$s segundos</string>
+
+    <!-- Lock screen Am/Pm switch -->
+    <string name="lock_screen_hide_ampm_title">Ocultar AM/PM</string>
+    <string name="lock_screen_hide_ampm_summary_on">Se oculta AM/PM</string>
+    <string name="lock_screen_hide_ampm_summary_off">Se muestra AM/PM</string>
+
+    <!-- Hostname setting -->
+    <string name="device_hostname">Nombre del dispositivo</string>
+
+    <!-- Disable quick settings on lock screen switch -->
+    <string name="lockscreen_qs_disabled_title">Ajustes rápidos deshabilitados en pantalla de bloqueo</string>
+    <string name="lockscreen_qs_disabled_summary">Deshabilita los ajustes rápidos y los accesos directos en la pantalla de bloqueo</string>
+
+    <!-- Disable music track title in QS tile -->
+    <string name="qs_music_tile_track_optional_title">Título de la pista de audio en ajuste rápido</string>
+    <string name="qs_music_tile_track_optional_summary">Muestra el título de la pista de audio en el nombre del ajuste rápido</string>
+
+    <!-- Immersive Recents -->
+    <string name="immersive_recents_title">Recientes en pantalla completa</string>
+    <string name="immersive_recents_summary">Cambiar la vista de la pantalla de aps. recientes</string>
+    <string name="immersive_recents_dialog_title">Elegir la vista de aps. recientes</string>
+    <string name="immersive_recents_default">Predeterminada</string>
+    <string name="immersive_recents_fullscreen">Pantalla completa</string>
+    <string name="immersive_recents_statusbar">Sólo barra de estado</string>
+    <string name="immersive_recents_navbar">Sólo barra de navegación</string>
+
+    <!-- Recents Membar -->
+    <string name="systemui_recents_mem_display_title">Mostrar barra de memoria RAM</string>
+    <string name="systemui_recents_mem_display_summaryOn">Barra de memoria RAM habilitada</string>
+    <string name="systemui_recents_mem_display_summaryOff">Barra de memoria RAM deshabilitada</string>
+
+    <!-- Recents panel settings -->
+    <string name="show_clear_all_recents_button_title">Habilitar botón de cerrar todo</string>
+    <string name="show_clear_all_recents_button_summary">Muestra el botón Cerrar Todo en la pantalla de aps. recientes</string>
+    <string name="recents_clear_all_location_title">Ubicación del botón Cerrar Todo</string>
+    <string name="recents_clear_all_location_top_right">Arriba a la derecha</string>
+    <string name="recents_clear_all_location_top_left">Arriba a la izquierda</string>
+    <string name="recents_clear_all_location_top_center">Arriba en el centro</string>
+    <string name="recents_clear_all_location_bottom_right">Abajo a la derecha</string>
+    <string name="recents_clear_all_location_bottom_left">Abajo a la izquierda</string>
+    <string name="recents_clear_all_location_bottom_center">Abajo en el centro</string>
+
+    <!-- Heads up settings -->
+    <string name="nav_headsup_title">Notificaciones intrusivas</string>
+    <string name="headsup_settings_category">Notificaciones intrusivas</string>
+    <string name="headsup_settings_title">Habilitar Notificaciones intrusivas</string>
+    <string name="headsup_settings_summary">Permite mostrar notificaciones interactivas en una ventana nueva en la pantalla.</string>
+    <string name="summary_heads_up_enabled">Notificaciones intrusivas habilitadas</string>
+    <string name="summary_heads_up_disabled">Notificaciones intrusivas deshabilitadas</string>
+
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">Tiempo de espera</string>
+    <string name="heads_up_time_out_summary">Las Notificaciones intrusivas se mostrarán durante <xliff:g id="number">%d</xliff:g> segundos</string>
+    <string name="heads_up_time_out_2sec">2 segundos</string>
+    <string name="heads_up_time_out_4sec">4 segundos</string>
+    <string name="heads_up_time_out_5sec">5 segundos</string>
+    <string name="heads_up_time_out_6sec">6 segundos</string>
+    <string name="heads_up_time_out_8sec">8 segundos</string>
+    <string name="heads_up_time_out_10sec">10 segundos</string>
+
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">Intervalo al deshabilitar</string>
+    <string name="heads_up_snooze_summary_one_minute">Deslizando hacia arriba una notificación intrusiva deshabilitará dichas notificaciones para esa aplicación durante 1 minuto</string>
+    <string name="heads_up_snooze_summary">Deslizando hacia arriba una notificación intrusiva deshabilitará dichas notificaciones para esa aplicación durante <xliff:g id="number">%d</xliff:g> minutos</string>
+    <string name="heads_up_snooze_disabled">Deshabilitado</string>
+    <string name="heads_up_snooze_disabled_summary">Intervalo para deshabilitar no está activo</string>
+    <string name="heads_up_snooze_1min">1 minuto</string>
+    <string name="heads_up_snooze_3min">3 minutos</string>
+    <string name="heads_up_snooze_5min">5 minutos</string>
+    <string name="heads_up_snooze_10min">10 minutos</string>
+    <string name="heads_up_snooze_15min">15 minutos</string>
+    <string name="heads_up_snooze_20min">20 minutos</string>
+
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">Información de batería en la pantalla de bloqueo</string>
+    <string name="lockscreen_battery_info_summary">Muestra el voltaje y la temperatura de la batería en la pantalla de bloqueo mientras se carga</string>
+
+    <!-- Battery Saver easy toggle -->
+    <string name="qs_battery_easy_toggle_title">Batería en ajustes rápidos</string>
+    <string name="qs_battery_easy_toggle_summary">Un toque activará el modo Ahorro de Batería en lugar de abrir los ajustes</string>
+
+    <!-- OmniSwitch Recents -->
+    <string name="aosp_recents_title">Pantalla recientes AICP</string>
+    <string name="omniswitch_recents_title">Pantalla recientes OmniSwitch</string>
+    <string name="recents_use_omniswitch_title">Usarpantalla de aps recientes alternativa</string>
+    <string name="recents_use_omniswitch_summary">Usar OmniSwitch en lugar de la pantalla de aps. recientes predeterminada</string>
+    <string name="omniswitch_start_settings_title">Ajustes OmniSwitch</string>
+    <string name="omniswitch_start_settings_summary">Ver los ajustes de OmniSwitch</string>
+    <string name="omniswitch_first_time_title">Atención</string>
+    <string name="omniswitch_first_time_message">Si se usa OmniSwitch como alternativa a la pantalla de aps recientes debe asegurarse deuqe OmniSwitch está habilitado</string>
+
+</resources>
