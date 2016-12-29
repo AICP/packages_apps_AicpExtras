@@ -89,8 +89,6 @@
     <string name="hex_hint">#ff000000</string>
     <string name="set">Imposta</string>
     <string name="color_default">Predefinito</string>
-
-	
 	
     <!-- Network traffic -->
     <string name="traffic_category">Indicatori di traffico</string>
@@ -150,6 +148,12 @@
     <string name="battery_bar_style_regular">Regolare</string>
     <string name="battery_bar_style_center_mirrored">Centro rispecchiato</string>
     <string name="battery_bar_style_reversed">Invertita</string>
+    <string name="battery_bar_use_charging_color">Colore di ricarica personalizzato</string>
+    <string name="battery_bar_blend_color_title">Miscela colori</string>
+    <string name="battery_bar_blend_color_summary">Miscela i colori pieni/vuoti corrispondenti alla percentuale della batteria</string>
+    <string name="battery_bar_blend_color_reverse_title">Inverti la direzione del colore</string>
+    <string name="battery_bar_blend_color_reverse_summary_off">Pieno &#8594; vuoto: rosso &#8592; verde &#8592; blu &#8592; rosso</string>
+    <string name="battery_bar_blend_color_reverse_summary_on">Pieno &#8594; vuoto: rosso &#8594; verde &#8594; blu &#8594; rosso</string>
   
     <!-- Activity and App Picker -->
     <string name="picker_activities">Attività</string>
@@ -212,7 +216,6 @@
     <string name="cannot_get_su">Non posso ottenere privilegi di superuser, sto uscendo.</string>
     <string name="cannot_get_su_start">Non posso ottenere privilegi di superuser.</string>
 
-
     <!-- Aicp logcat -->
     <string name="logcat_title">Logcat</string>
     <string name="kmesg_title">Kmesg</string>
@@ -255,7 +258,6 @@
     <string name="power_menu_animation_bottom">Dal basso</string>
     <string name="power_menu_animation_top">Dall\'alto</string>
     <string name="power_menu_animation_rotate">Rotazione</string>
-
     <string name="power_menu_animation_xylon">Volante</string>
     <string name="power_menu_animation_slide">Diapositiva</string>
     <string name="power_menu_animation_turn">Paginatura</string>
@@ -277,7 +279,8 @@
     <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Avvio applicazione musicale</string>
     <string name="headset_connect_player_summary">Avvia l\'applicazione musicale predefinita quando le cuffie sono connesse.</string>
-	<!-- Camera shutter sound -->
+    
+    <!-- Camera shutter sound -->
     <string name="camera_sounds_title">Suono otturatore fotocamera</string>
     <string name="camera_sounds_summary">La disabilitazione potrebbe non funzionare su app di terze parti e in modalità HDR +</string>
 
@@ -294,9 +297,10 @@
     <!-- QS header transparency -->
     <string name="qs_transparent_header">Trasparenza intestazione impostazioni rapide</string>
 
-   <!-- QS tile labels visibility -->
+    <!-- QS tile labels visibility -->
     <string name="qs_menu_item_titles">Nascondi etichetta dei tile</string>
-    <string name="qs_menu_item_titles_summary">L\'etichette dei tile dell\'area di notifica saranno nascosti se attivato</string>
+    <string name="qs_menu_item_titles_summaryOn">Etichette visibili</string>
+    <string name="qs_menu_item_titles_summaryOff">Etichette nascoste</string>
 
     <!-- Volume dialog transparency -->
     <string name="volume_dialog_transparency">Dialogo volume</string>
@@ -377,6 +381,8 @@
     <string name ="Misc">Varie</string>
     <string name = "vol_diag">Finestra di dialogo volume </string>
     <string name = "power">Menù accensione</string>
+    <string name="cab">Pulsante cancella tutti  Tweaks</string>
+    <string name="visuals">Immagini recenti extra</string>
 
    <!-- Fingerprint vibrate -->
    <string name="fprint_sucess_vib_title">Autenticazione impronta digitale con vibrazione</string>
@@ -401,7 +407,6 @@
     <!-- Statusbar 4G LTE switch -->
     <string name="show_fourg_title">Visualizza 4G invece di LTE</string>
     <string name="show_fourg_summary">Sostituisce l\'indicatore LTE nella baar di stato con 4G</string>
-
    
     <!-- QuickSettings haptic feedback -->
     <string name="quick_settings_vibrate_title">Vibrazione al tocco</string>
@@ -425,14 +430,14 @@
     <string name="icon_title">Icona</string>
     <string name="colors_title">Colori</string>
 
-    <!-- Heads up switch -->
-    <string name="heads_up_switch_title">Notifiche Fluttuanti</string>
-    <string name="heads_up_switch_summary">Modifica le impostazioni per le notifiche fluttuanti a livello globale, non per la singola applicazione.</string>
-  
     <!-- Optional screenshot type -->
     <string name="screenshot_type_title">Tipo di screenshot</string>
     <string name="screenshot_type_fullscreen">Screenshot a schermo intero</string>
     <string name="screenshot_type_partial">Trascinare la selezione sulla zona che si vuole catturare</string>
+   
+    <!-- Screenshot delay -->
+    <string name="powermenu_screenshot_delay_title">Ritardo Screenshot</string>
+    <string name="powermenu_screenshot_delay_message">Attualmente impostato su %1$s secondi di ritardo</string>
   
     <!-- Lock screen Am/Pm switch -->
     <string name="lock_screen_hide_ampm_title">Nascondi AM/PM</string>
@@ -449,6 +454,69 @@
     <!-- Disable music track title in QS tile -->
     <string name="qs_music_tile_track_optional_title">Titolo brano musicale nel tile</string>
     <string name="qs_music_tile_track_optional_summary">Visualizza il titolo del brano musicale come titolo nel tile delle impostazioni rapide</string>
+  
+  <!-- Immersive Recents -->
+  <string name="immersive_recents_title">Recenti immersivi</string>
+  <string name="immersive_recents_summary">Cambia la visualizzazione della schermata dei recenti</string>
+  <string name="immersive_recents_dialog_title">Seleziona l\'aspetto dei recenti</string>
+  <string name="immersive_recents_default">Predefinita</string>
+  <string name="immersive_recents_fullscreen">Schermo intero</string>
+  <string name="immersive_recents_statusbar">Solo barra di stato</string>
+  <string name="immersive_recents_navbar">Solo barra di navigazione</string>
+
+  <!-- Recents Membar -->
+  <string name="systemui_recents_mem_display_title">Mostra barra di memoria</string>
+  <string name="systemui_recents_mem_display_summaryOn">Barra di memoria abilitata</string>
+  <string name="systemui_recents_mem_display_summaryOff">Barra di memoria disabilitata</string>
+
+  <!-- Recents panel settings -->
+  <string name="show_clear_all_recents_button_title">Pulsante cancella tutto</string>
+  <string name="show_clear_all_recents_button_summary">Mostra il pulsante cancella tutto</string>
+  <string name="recents_clear_all_location_title">Posizione pulsante cancella tutto</string>
+  <string name="recents_clear_all_location_top_right">In alto a destra</string>
+  <string name="recents_clear_all_location_top_left">In alto a sinistra</string>
+  <string name="recents_clear_all_location_top_center">In alto al centro</string>
+  <string name="recents_clear_all_location_bottom_right">In basso a destra</string>
+  <string name="recents_clear_all_location_bottom_left">In basso a sinistra</string>
+  <string name="recents_clear_all_location_bottom_center">In basso al centro</string>
+
+  <!-- Heads up settings -->
+  <string name="nav_headsup_title">Visualizzazione notifiche</string>
+  <string name="headsup_settings_category">Visualizzazione notifiche</string>
+  <string name="headsup_settings_title">Consenti la visualizzazione notifiche</string>
+  <string name="headsup_settings_summary">Per consentire alle applicazioni di visualizzare le notifiche interattive in una finestra pop-up sullo schermo, attivare la visualizzazione delle notifiche.</string>
+  <string name="summary_heads_up_enabled">Visualizzazione notifiche abilitate</string>
+  <string name="summary_heads_up_disabled">Visualizzazione notifiche disabilitate</string>
+    
+  <!-- Heads up timeout -->
+  <string name="heads_up_time_out_title">Tempo di visualizzazione</string>
+  <string name="heads_up_time_out_summary">Le notifiche saranno mostrate per <xliff:g id="number">%d</xliff:g> secondi</string>
+  <string name="heads_up_time_out_2sec">2 secondi</string>
+  <string name="heads_up_time_out_4sec">4 secondi</string>
+  <string name="heads_up_time_out_5sec">5 secondi</string>
+  <string name="heads_up_time_out_6sec">6 secondi</string>
+  <string name="heads_up_time_out_8sec">8 secondi</string>
+  <string name="heads_up_time_out_10sec">10 secondi</string>
+
+  <!-- Heads up snooze -->
+  <string name="heads_up_snooze_title">Tempo di posticipo</string>
+  <string name="heads_up_snooze_summary_one_minute">Scorri verso l\'alto sulle notifiche per posticipare l\'applicazione per 1 minuto</string>
+  <string name="heads_up_snooze_summary">Le notifiche non verranno mostrate per i prossimi <xliff:g id="number">%d</xliff:g> minuti</string>
+  <string name="heads_up_snooze_disabled_summary">Posticipo disattivato</string>
+  <string name="heads_up_snooze_1min">1 minuto</string>
+  <string name="heads_up_snooze_3min">3 minuti</string>
+  <string name="heads_up_snooze_5min">5 minuti</string>
+  <string name="heads_up_snooze_10min">10 minuti</string>
+  <string name="heads_up_snooze_15min">15 minuti</string>
+  <string name="heads_up_snooze_20min">20 minuti</string>
+  
+  <!-- Lockscreen battery info indicator  -->
+  <string name="lockscreen_battery_info_title">Info batteria nella schermata di blocco</string>
+  <string name="lockscreen_battery_info_summary">Indicatore del livello di carica massima di corrente-tensione e la temperatura della batteria sulla schermata di blocco durante la ricarica</string>
+
+  <!-- Battery Saver easy toggle -->
+  <string name="qs_battery_easy_toggle_title">Tile della batteria</string>
+  <string name="qs_battery_easy_toggle_summary">Fa in modo che con un solo click puoi attivare o disattivare il risparmio energetico, senza entrare nelle impostazioni</string>
 
 </resources>
 
