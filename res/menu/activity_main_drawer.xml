@@ -34,6 +34,11 @@
                 android:icon="@drawable/ic_lockscreen"
                 android:title="@string/lockscreen_title" />
             <item
+                android:id="@+id/nav_extensions"
+                android:checkable="true"
+                android:icon="@drawable/ic_extensions"
+                android:title="@string/extensions_title" />
+            <item
                 android:id="@+id/nav_transparency_porn"
                 android:checkable="true"
                 android:icon="@drawable/ic_opacity"
