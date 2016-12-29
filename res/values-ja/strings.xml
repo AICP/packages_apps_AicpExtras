@@ -37,7 +37,9 @@
     <string name="gerrit_summary">GerritでAICPの開発の最前線を知る</string>
     <string name="hidden_anim_more_title">もっと？</string>
     <string name="hidden_anim_more_nice">いいぞ</string>
+    <string name="continue_title">続ける</string>
     <string name="settings_activity_title">AICP Extrasの設定</string>
+    <string name="recents_panel_title">アプリ履歴</string>
 
     <!-- Switch On/Off  -->
     <string name="switch_on_text">ON</string>
@@ -143,6 +145,10 @@
 
     <!-- Activity and App Picker -->
     <string name="picker_activities">アクティビティ</string>
+    <string name="select_custom_app_title">アプリを選択</string>
+    <string name="select_custom_activity_title">アクティビティを選択</string>
+    <string name="profile_applist_title">アプリ</string>
+
     <!-- Power menu on lock screen -->
     <string name="powermenu_lockscreen_title">ロック画面での電源メニュー</string>
     <string name="powermenu_lockscreen_summary">ロック画面でも電源メニューを表示する</string>
@@ -157,6 +163,9 @@
     <string name="notification_title">AICP 統計</string>
     <string name="notification_desc">匿名の統計を有効/無効にします</string>
 
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">AICP 統計</string>
+    <string name="anonymous_statistics_summary">匿名の統計のレポートに同意してAICPに協力する</string>
     <string name="pref_settings">設定</string>
     <string name="enable_reporting_title">レポートを有効にする</string>
     <string name="disable_reporting_persistent">オプトアウトする</string>
@@ -186,6 +195,14 @@
     <string name="double_tap_sleep_anywhere_title">ダブルタップしてスリープ</string>
     <string name="double_tap_sleep_anywhere_summary">ロック画面をダブルタップして端末をスリープさせる</string>
 
+    <!-- SU -->
+    <string name="cannot_get_su">スーパーユーザー権限を確認できませんでした。終了します。</string>
+    <string name="cannot_get_su_start">スーパーユーザー権限を確認できませんでした。</string>
+
+    <string name="log_that_shit_title">ログを取得</string>
+    <string name="share_title">共有する...</string>
+    <string name="log_it_share_subject">AICP ログ</string>
+
     <!-- AOKP custom system animations -->
     <string name="animation_duration_default">デフォルト</string>
 
@@ -193,36 +210,11 @@
     <string name="toast_animation_title">トースト通知のアニメーション</string>
     <string name="toast_none_animation">なし</string>
     <string name="toast_default_animation">デフォルト</string>
-    <string name="toast_fade_animation">Fade</string>
-    <string name="toast_SlideRight_animation">Slide right</string>
-    <string name="toast_SlideLeft_animation">Slide left</string>
-    <string name="toast_Xylon_animation">Xylon</string>
-    <string name="toast_Toko_animation">Toko</string>
-    <string name="toast_Tn_animation">Tn</string>
-    <string name="toast_Honami_animation">Honami</string>
-    <string name="toast_FastFade_animation">Fast fade</string>
-    <string name="toast_GrowFade_animation">Grow fade</string>
-    <string name="toast_GrowFadeCenter_animation">Grow fade center</string>
-    <string name="toast_GrowFadeBottom_animation">Grow fade bottom</string>
-    <string name="toast_Translucent_animation">Translucent</string>
-    <string name="toast_SlideLeftRight_animation">Slide left to right</string>
-    <string name="toast_SlideRightLeft_animation">Slide right to left</string>
 
     <!-- Power menu Animations  -->
     <string name="power_menu_animation_title">電源メニューのアニメーション</string>
-    <string name="power_menu_animation_summary">Change the enter/exit animation of the power menu</string>
     <string name="power_menu_animation_dialog_title">電源メニューのアニメーションを選択</string>
     <string name="power_menu_animation_aosp">AOSP (デフォルト)</string>
-    <string name="power_menu_animation_bottom">Bottom</string>
-    <string name="power_menu_animation_top">Top</string>
-    <string name="power_menu_animation_rotate">Rotation</string>
-    <string name="power_menu_animation_xylon">Fly</string>
-    <string name="power_menu_animation_slide">Slide</string>
-    <string name="power_menu_animation_turn">Turn</string>
-    <string name="power_menu_animation_fly">Glow</string>
-    <string name="power_menu_animation_card">3D</string>
-    <string name="power_menu_animation_translucent_top">Translucent (top)</string>
-    <string name="power_menu_animation_translucent_bottom">Translucent (bottom)</string>
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">ステータスバー上のロゴ</string>
@@ -260,6 +252,7 @@
     <string name="qs_tile_animation_style_flip">左右に回転</string>
     <string name="qs_tile_animation_style_rotate">上下に回転</string>
     <string name="qs_tile_animation_duration_default">デフォルト</string>
+    <string name="quicksettings_tiles_category">クイック設定パネルの設定</string>
     <string name="Misc">その他の設定</string>
     <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">指紋認証のバイブレーション</string>
@@ -311,6 +304,10 @@
     <string name="screenshot_type_fullscreen">画面全体のスクリーンショットを取得する</string>
     <string name="screenshot_type_partial">スクリーンショットを撮りたい範囲をドラッグで選択する</string>
 
+    <!-- Screenshot delay -->
+    <string name="powermenu_screenshot_delay_title">スクリーンショットの待ち時間</string>
+    <string name="powermenu_screenshot_delay_message">待ち時間は %1$s 秒に設定されています</string>
+
     <!-- Lock screen Am/Pm switch -->
     <string name="lock_screen_hide_ampm_title">午前/午後の非表示</string>
     <string name="lock_screen_hide_ampm_summary_on">ロック画面の午前/午後は非表示になっています</string>
@@ -319,4 +316,57 @@
     <!-- Hostname setting -->
     <string name="device_hostname">端末のホスト名</string>
 
-    </resources>
+    <!-- Immersive Recents -->
+    <string name="immersive_recents_title">アプリ履歴の全画面表示</string>
+    <string name="immersive_recents_summary">アプリ履歴の表示を変更します</string>
+    <string name="immersive_recents_dialog_title">表示方法を選択する</string>
+    <string name="immersive_recents_default">デフォルト</string>
+    <string name="immersive_recents_fullscreen">フルスクリーン</string>
+    <string name="immersive_recents_statusbar">ステータスバーのみ</string>
+    <string name="immersive_recents_navbar">ナビゲーションバーのみ</string>
+
+    <!-- Recents Membar -->
+    <string name="systemui_recents_mem_display_title">メモリ使用量バーの表示</string>
+    <string name="systemui_recents_mem_display_summaryOn">RAMバーが有効です</string>
+    <string name="systemui_recents_mem_display_summaryOff">RAMバーは無効になっています</string>
+
+    <!-- Recents panel settings -->
+    <string name="show_clear_all_recents_button_title">「全てを終了」ボタンを使用する</string>
+    <string name="show_clear_all_recents_button_summary">アプリ履歴に「全てを終了」ボタンを表示する</string>
+    <string name="recents_clear_all_location_title">「全てを終了」ボタンの位置</string>
+    <string name="recents_clear_all_location_top_right">右上</string>
+    <string name="recents_clear_all_location_top_left">左上</string>
+    <string name="recents_clear_all_location_top_center">中央上</string>
+    <string name="recents_clear_all_location_bottom_right">右下</string>
+    <string name="recents_clear_all_location_bottom_left">左下</string>
+    <string name="recents_clear_all_location_bottom_center">中央下</string>
+
+    <!-- Heads up settings -->
+    <string name="nav_headsup_title">ヘッドアップ通知</string>
+    <string name="headsup_settings_category">ヘッドアップ通知</string>
+    <string name="headsup_settings_title">ヘッドアップ通知を有効にする</string>
+    <string name="headsup_settings_summary">ヘッドアップ通知を有効にすることで、アプリが対話型の通知をポップアップウィンドウで表示することを許可します。</string>
+    <string name="summary_heads_up_enabled">ヘッドアップ通知が有効です</string>
+    <string name="summary_heads_up_disabled">ヘッドアップ通知は無効になっています</string>
+
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">タイムアウト</string>
+    <string name="heads_up_time_out_summary">ヘッドアップ通知は<xliff:g id="number">%d</xliff:g>秒間表示されます</string>
+    <string name="heads_up_time_out_2sec">2秒</string>
+    <string name="heads_up_time_out_4sec">4秒</string>
+    <string name="heads_up_time_out_5sec">5秒</string>
+    <string name="heads_up_time_out_6sec">6秒</string>
+    <string name="heads_up_time_out_8sec">8秒</string>
+    <string name="heads_up_time_out_10sec">10秒</string>
+
+    <!-- OmniSwitch Recents -->
+    <string name="aosp_recents_title">アプリ履歴</string>
+    <string name="omniswitch_recents_title">OmniSwitch</string>
+    <string name="recents_use_omniswitch_title">アプリ履歴として使用</string>
+    <string name="recents_use_omniswitch_summary">OmniSwitchをデフォルトのアプリ履歴表示に使用します</string>
+    <string name="omniswitch_start_settings_title">OmniSwitchの設定</string>
+    <string name="omniswitch_start_settings_summary">OmniSwitchの設定を開きます</string>
+    <string name="omniswitch_first_time_title">警告</string>
+    <string name="omniswitch_first_time_message">OmniSwitchをアプリ履歴に使用する場合、あらかじめOmniSwitchを有効化していることを確認してください</string>
+
+</resources>
