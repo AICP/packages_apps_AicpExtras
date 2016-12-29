@@ -152,7 +152,7 @@ public class SystemappRemover extends Activity {
                 String item = null;
                 int len = lv.getCount();
                 SparseBooleanArray checked = lv.getCheckedItemPositions();
-                for (int i = lv.getCount() - 1; i > 0; i--) {
+                for (int i = lv.getCount() - 1; i >= 0; i--) {
                     if (checked.get(i)) {
                         item = mSysApp.get(i);
                     }
