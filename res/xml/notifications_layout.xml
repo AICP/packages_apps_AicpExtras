@@ -61,6 +61,12 @@
         android:defaultValue="false"/>
 
     <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
+        android:key="qs_bt_easy_toggle"
+        android:title="@string/qs_bt_easy_toggle_title"
+        android:summary="@string/qs_bt_easy_toggle_summary"
+        android:defaultValue="false" />
+
+    <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
         android:key="qs_battery_easy_toggle"
         android:title="@string/qs_battery_easy_toggle_title"
         android:summary="@string/qs_battery_easy_toggle_summary"
