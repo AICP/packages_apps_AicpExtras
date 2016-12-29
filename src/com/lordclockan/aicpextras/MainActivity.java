@@ -285,6 +285,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_lockscreen:
                 fragmentClass = LockscreenFragment.class;
                 break;
+            case R.id.nav_extensions:
+                fragmentClass = ExtensionsFragment.class;
+                break;
             case R.id.nav_transparency_porn:
                 fragmentClass = TransparencyPornFragment.class;
                 break;
