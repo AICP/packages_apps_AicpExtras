@@ -17,6 +17,12 @@
             android:summary="@string/show_fourg_summary"
             android:defaultValue="false" />
 
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+           android:key="bluetooth_show_battery"
+           android:title="@string/bluetooth_battery_title"
+           android:summary="@string/bluetooth_battery_summary"
+           android:defaultValue="false" />
+
         <Preference
             android:key="batterybar"
             android:title="@string/battery_bar_title" />
