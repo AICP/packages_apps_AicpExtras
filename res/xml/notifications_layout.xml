@@ -41,12 +41,6 @@
         android:summary="@string/quick_settings_vibrate_summary"
         android:defaultValue="false"/>
 
-    <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
-        android:key="qs_data_advanced"
-        android:title="@string/qs_advanced_data_title"
-        android:summary="@string/qs_advanced_data_summary"
-        android:defaultValue="false" />
-
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
         android:title="@string/qs_menu_item_titles"
@@ -64,6 +58,12 @@
         android:key="qs_wifi_easy_toggle"
         android:title="@string/qs_wifi_easy_toggle_title"
         android:summary="@string/qs_wifi_easy_toggle_summary"
+        android:defaultValue="false" />
+
+    <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
+        android:key="qs_data_advanced"
+        android:title="@string/qs_advanced_data_title"
+        android:summary="@string/qs_advanced_data_summary"
         android:defaultValue="false" />
 
     <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
