@@ -23,7 +23,7 @@
 
     <string name="action_settings">Ajustes</string>
     <string name="aicp_extras_title">Extras AICP</string>
-    <string name="pun_title">Una rom para gobernarlos a todosOne rom to rule them all</string>
+    <string name="pun_title">Una rom para gobernarlos a todos</string>
     <string name="various_shit_title">Varios</string>
     <string name="about_title">Acerca de</string>
     <string name="other_title">Otros</string>
@@ -32,7 +32,7 @@
     <string name="ui_title">Interfaz de usuario</string>
     <string name="logo">logo</string>
     <string name="display_animations_title">Pantalla y animaciones</string>
-    <string name="transparency_porn_title">Personalización de paneles</string>
+    <string name="transparency_porn_title">Estilo de paneles</string>
     <string name="notificaitons_title">Panel de notificación</string>
     <string name="statubar_title">Barra de estado</string>
     <string name="lockscreen_title">Pantalla de bloqueo</string>
@@ -498,14 +498,24 @@
     <string name="heads_up_snooze_10min">10 minutos</string>
     <string name="heads_up_snooze_15min">15 minutos</string>
     <string name="heads_up_snooze_20min">20 minutos</string>
+    <string name="heads_up_snooze_30min">30 minutos</string>
+    <string name="heads_up_snooze_60min">60 minutos</string>
 
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Información de batería en la pantalla de bloqueo</string>
     <string name="lockscreen_battery_info_summary">Muestra el voltaje y la temperatura de la batería en la pantalla de bloqueo mientras se carga</string>
 
     <!-- Battery Saver easy toggle -->
-    <string name="qs_battery_easy_toggle_title">Batería en ajustes rápidos</string>
+    <string name="qs_battery_easy_toggle_title">Interruptor rápido de Batería</string>
     <string name="qs_battery_easy_toggle_summary">Un toque activará el modo Ahorro de Batería en lugar de abrir los ajustes</string>
+
+    <!-- BT easy toggle -->
+    <string name="qs_bt_easy_toggle_title">Interruptor rápido de Bluetooth</string>
+    <string name="qs_bt_easy_toggle_summary">Un toque activará o desactivará el Bluetooth en lugar de llevarnos a los ajustes</string>
+
+    <!-- WiFi easy toggle -->
+    <string name="qs_wifi_easy_toggle_title">Interruptor rápido de WiFi</string>
+    <string name="qs_wifi_easy_toggle_summary">Un toque activará o desactivará el WiFi en lugar de llevarnos a los ajustes</string>
 
     <!-- OmniSwitch Recents -->
     <string name="aosp_recents_title">Pantalla recientes AICP</string>
@@ -516,5 +526,42 @@
     <string name="omniswitch_start_settings_summary">Ver los ajustes de OmniSwitch</string>
     <string name="omniswitch_first_time_title">Atención</string>
     <string name="omniswitch_first_time_message">Si se usa OmniSwitch como alternativa a la pantalla de aps recientes debe asegurarse deuqe OmniSwitch está habilitado</string>
+
+    <!-- MediaScanner behavior on boot -->
+    <string name="media_scanner_on_boot_title">Escáner multimedia en el inicio</string>
+    <string name="media_scanner_on_boot_enabled">Escanear fichero multimedia</string>
+    <string name="media_scanner_on_boot_ask">Preguntar (notificación)</string>
+    <string name="media_scanner_on_boot_disabled">No escanear ficheros multimedia</string>
+
+    <!-- SlimSizer  -->
+    <string name="listsystem">lista</string>
+    <string name="sizer_title">Gestor de aps. de sistema</string>
+    <string name="caution">¡Cuidado!</string>
+    <string name="sizer_message_startup">Esta herramienta permite eliminar aplicaciones de sistema. Utilizar con cuidado y eliminar solamente aplicaciones que sabemos que no causarán problemas en el sistema.</string>
+    <string name="cancel">Cancelar</string>
+    <string name="sizer_message_delete">¿Confirma querer eliminar esta aplicación?</string>
+    <string name="btn_delete">¡Eliminar aplicaciones seleccionadas!</string>
+    <string name="delete_progress_title">Eliminando</string>
+    <string name="delete_progress">Los ficheros seleccionados se están eliminando...</string>
+    <string name="delete_success">Eliminados</string>
+    <string name="delete_fail">Imposible eliminard</string>
+    <string name="btn_profile">Perfil</string>
+    <string name="sizer_message_sdnowrite">No se pudo escribir en la tarjeta SD.</string>
+    <string name="sizer_message_sdnoread">No se pudo leer de la tarjeta SD.</string>
+    <string name="sizer_message_filesuccess">Perfil creado.</string>
+    <string name="sizer_message_filefail">Error al crear el perfil.</string>
+    <string name="sizer_message_noselect">No hay nada seleccionado.</string>
+    <string name="system_app_remover">Gestor de aps. de sistema</string>
+
+    <!-- Extensions settings -->
+    <string name="extensions_title">Extensiones del sistema</string>
+
+    <!-- Bluetooth status -->
+    <string name="bluetooth_battery_title">Mostrar estado de la batería en Blueetooth</string>
+    <string name="bluetooth_battery_summary">Muestra, si está disponible, el estado de la batería del dispositivo conectado por bluetooth.</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Deslizar para capturar pantallaSwipe to screenshot</string>
+    <string name="three_finger_gesture_summary">Desliza tres dedos por la pantalla para hacer una captura</string>
 
 </resources>
