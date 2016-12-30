@@ -30,7 +30,7 @@
     <string name="g_community">Comunità G+</string>
     <string name="g_plus_summary">Visita la nostra Comunità di Google +</string>
     <string name="ui_title">UI</string>
-    <string name="logo">logo</string>
+    <string name="logo">Logo</string>
     <string name="display_animations_title">Display e animazioni</string>
     <string name="transparency_porn_title">Trasparenze</string>
     <string name="notificaitons_title">Pannello Notifiche</string>
@@ -517,6 +517,57 @@
   <!-- Battery Saver easy toggle -->
   <string name="qs_battery_easy_toggle_title">Tile della batteria</string>
   <string name="qs_battery_easy_toggle_summary">Fa in modo che con un solo click puoi attivare o disattivare il risparmio energetico, senza entrare nelle impostazioni</string>
+  
+  <!-- BT easy toggle -->
+  <string name="qs_bt_easy_toggle_title">Bluetooth attivo al tocco</string>
+  <string name="qs_bt_easy_toggle_summary">Attiva o disattiva con la sola azione di un tocco il Bluetooth</string>
+	
+  <!-- WiFi easy toggle -->
+  <string name="qs_wifi_easy_toggle_title">WiFi attivo al tocco</string>
+  <string name="qs_wifi_easy_toggle_summary">Attiva o disattiva con la sola azione di un tocco il WiFi</string>
+
+  <!-- OmniSwitch Recents -->
+  <string name="aosp_recents_title">AICP recenti</string>
+  <string name="omniswitch_recents_title">OmniSwitch recenti</string>
+  <string name="recents_use_omniswitch_title">Utilizzare come recenti alterativi</string>
+  <string name="recents_use_omniswitch_summary">Usa OmniSwitch invece di visualizzare il pannello recenti predefinito</string>
+  <string name="omniswitch_start_settings_title">Impostazioni OmniSwitch</string>
+  <string name="omniswitch_start_settings_summary">Visualizza le impostazioni per OmniSwitch</string>
+  <string name="omniswitch_first_time_title">Attenzione</string>
+  <string name="omniswitch_first_time_message">Se si utilizza OmniSwitch come recenti alterativi, assicurarsi di avere attivato OmniSwitch</string>
+
+  <!-- MediaScanner behavior on boot -->
+  <string name="media_scanner_on_boot_title">Comportamento della Scansione multimediale all\'avvio</string>
+  <string name="media_scanner_on_boot_enabled">Scansione multimediale</string>
+  <string name="media_scanner_on_boot_ask">Chiedi per scansione (notifica)</string>
+  <string name="media_scanner_on_boot_disabled">Non eseguire scansione multimediale</string>
+
+  <!-- SlimSizer  -->
+  <string name="listsystem">Elenco</string>
+  <string name="sizer_title">Rimozione app</string>
+  <string name="caution">Attenzione!</string>
+  <string name="sizer_message_startup">Questo strumento consente di eliminare le applicazioni di sistema. Usalo con cautela e elimina solo le applicazioni che possono essere rimosse con sicurezza.</string>
+  <string name="cancel">Cancella</string>
+  <string name="sizer_message_delete">Sei sicuro di voler eliminare questa applicazione?</string>
+  <string name="btn_delete">Elimina le applicazioni selezionate ora!</string>
+  <string name="delete_progress_title">Eliminazione</string>
+  <string name="delete_progress">I file selezionati vengono eliminati...</string>
+  <string name="delete_success">Eliminati</string>
+  <string name="delete_fail">Impossibile da eliminare</string>
+  <string name="btn_profile">Profilo</string>
+  <string name="sizer_message_sdnowrite">Impossibile scrivere sulla scheda SD.</string>
+  <string name="sizer_message_sdnoread">Impossibile leggere la scheda SD.</string>
+  <string name="sizer_message_filesuccess">Profilo creato.</string>
+  <string name="sizer_message_filefail">Impossibile creare il profilo.</string>
+  <string name="sizer_message_noselect">Nessuna selezione.</string>
+  <string name="system_app_remover">Rimozione applicazioni di sistema</string>
+
+  <!-- Extensions settings -->
+  <string name="extensions_title">Estensioni di sistema</string>
+  
+  <!-- Bluetooth status -->
+  <string name="bluetooth_battery_title">Mostra stato batteria bluetooth</string>
+  <string name="bluetooth_battery_summary">Mostra lo stato della batteria per il dispositivo bluetooth attualmente connesso, se disponibile.</string>
 
 </resources>
 
