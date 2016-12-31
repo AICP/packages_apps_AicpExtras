@@ -42,12 +42,14 @@
     <string name="dwnld_summary">Besuche die AICP Webseite mit Downloads für dein Gerät</string>
     <string name="aicp_gerrit_title">Gerrit</string>
     <string name="gerrit_summary">Besuche unsere Review-System online, um zu erfahren, an was wir gerade arbeiten</string>
-    <string name="send_mail_intent">E-Mail senden...</string>
+    <string name="ae_version_title">AICP Extras Version</string>
+    <string name="ae_version_summary">0.3.0</string>
     <string name="hidden_anim_activity_title">Zeit für \"Yoga\"!!!</string>
     <string name="hidden_anim_more_title">MEHR?</string>
     <string name="hidden_anim_more_nice">SCHÖN</string>
     <string name="continue_title">Weiter</string>
     <string name="settings_activity_title">AE Einstellungen</string>
+    <string name="recents_panel_title">Anwendungsverlauf</string>
 
     <string name="nothing_title">Hier gibt es noch nichts zu sehen, also weiter.</string>
 
@@ -220,7 +222,6 @@
     <!-- Double tap to sleep on lockscreen -->
     <string name="double_tap_sleep_anywhere_title">DT2S auf Sperrbildschirm</string>
     <string name="double_tap_sleep_anywhere_summary">Zweimal auf das Display tippen, um das Gerät in den Ruhezustand zu versetzen</string>
-
 
     <!-- SU -->
     <string name="cannot_get_su">Keinen Superuser-Zugriff erhalten, beende.</string>
@@ -403,6 +404,7 @@
     <string name="ae_custom_colors_title">Farbanpassungen</string>
     <string name="ae_custom_colors_summaries">Benutze die unteren Einstellungen, um das Aussehen von AE zu verändern</string>
     <string name="ae_drawer_opacity_title">Deckkraft des Navigationsmenüs</string>
+    <string name="ae_header_bg_image_color_title">Hintergrundfarbe des Bilds über dem Menü</string>
     <string name="ae_drawer_bg_color_title">Hintergundfarbe des Navigationsmenüs</string>
     <string name="ae_settings_restore_defaults_title">Standard wiederherstellen</string>
     <string name="values_restored_title">Werte wiederhergestellt</string>
@@ -520,6 +522,8 @@
     <string name="heads_up_snooze_10min">10 Minuten</string>
     <string name="heads_up_snooze_15min">15 Minuten</string>
     <string name="heads_up_snooze_20min">20 Minuten</string>
+    <string name="heads_up_snooze_30min">30 Minuten</string>
+    <string name="heads_up_snooze_60min">60 Minuten</string>
 
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Auflade-Infos auf dem Sperrbildschirm</string>
@@ -527,7 +531,15 @@
 
     <!-- Battery Saver easy toggle -->
     <string name="qs_battery_easy_toggle_title">Schnelleinstellung per Akku-Kachel</string>
-    <string name="qs_battery_easy_toggle_summary">Wenn aktiviert, schaltet der Tastendruck auf die Kachel den Energiesparmodus direkt ein oder aus und führt nicht in die Einstellungen</string>
+    <string name="qs_battery_easy_toggle_summary">Wenn aktiviert, schaltet ein Tastendruck den Energiesparmodus direkt ein oder aus und führt nicht in die Einstellungen</string>
+
+    <!-- BT easy toggle -->
+    <string name="qs_bt_easy_toggle_title">Schnelleinstellung per Bluetooth-Kachel</string>
+    <string name="qs_bt_easy_toggle_summary">Wenn aktiviert, schaltet ein Tastendruck Bluetooth ein bzw. aus</string>
+
+    <!-- WiFi easy toggle -->
+    <string name="qs_wifi_easy_toggle_title">Schnelleinstellung per WLAN-Kachel</string>
+    <string name="qs_wifi_easy_toggle_summary">Wenn aktiviert, schaltet ein Tastendruck WLAN ein bzw. aus</string>
 
     <!-- OmniSwitch Recents -->
     <string name="aosp_recents_title">AICP Verlauf</string>
@@ -544,5 +556,36 @@
     <string name="media_scanner_on_boot_enabled">Nach Mediendateien suchen</string>
     <string name="media_scanner_on_boot_ask">Nachfragen (Benachrichtigung)</string>
     <string name="media_scanner_on_boot_disabled">Nicht nach Mediendateien suchen</string>
+
+    <!-- SlimSizer  -->
+    <!-- <string name="listsystem">list</string> -->
+    <string name="sizer_title">System-App Entferner</string>
+    <string name="caution">Vorsicht!</string>
+    <string name="sizer_message_startup">Dieses Werkzeug erlaubt das Löschen von Systemanwendungen. Mit Vorsicht benutzen und nur Apps löschen, bei denen Sie sich sicher sind.</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="sizer_message_delete">Sind Sie sicher, dass diese App gelöscht werden soll?</string>
+    <string name="btn_delete">Jetzt ausgewählte Apps löschen!</string>
+    <string name="delete_progress_title">Lösche</string>
+    <string name="delete_progress">Ausgewählte Dateien werden gelöscht...</string>
+    <string name="delete_success">Gelöscht</string>
+    <string name="delete_fail">Löschen nicht möglich</string>
+    <string name="btn_profile">Profil</string>
+    <string name="sizer_message_sdnowrite">Kann nicht auf SD-Karte schreiben.</string>
+    <string name="sizer_message_sdnoread">Kann SD-Karte nicht lesen.</string>
+    <string name="sizer_message_filesuccess">Profil erstellt.</string>
+    <string name="sizer_message_filefail">Konnte Profil nicht erstellen.</string>
+    <string name="sizer_message_noselect">Nichts ausgewählt.</string>
+    <string name="system_app_remover">System-App Entferner</string>
+
+    <!-- Extensions settings -->
+    <string name="extensions_title">Systemerweiterungen</string>
+
+    <!-- Bluetooth status -->
+    <string name="bluetooth_battery_title">Zeige Akkuladung für Bluetoothgeräte</string>
+    <string name="bluetooth_battery_summary">Zeigt die Akkuladung für momentan verbundene Bluetoothgeräte an, wenn möglich.</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Drei-Finger-Geste</string>
+    <string name="three_finger_gesture_summary">Wische mit drei Fingern, um ein Bildschirmfoto aufzunehmen</string>
 
 </resources>
