@@ -20,7 +20,7 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="abc_capital_on">开启</string>
     <string name="abc_capital_off">关闭</string>
-    <string name="app_name">Aicp 设置</string>
+    <string name="app_name">ACIP附加设置</string>
     <string name="navigation_drawer_open">打开导航抽屉</string>
     <string name="navigation_drawer_close">关闭导航抽屉</string>
     <string name="action_settings">设置</string>
@@ -32,7 +32,8 @@
     <string name="various_shit_title">其他设置</string>
     <string name="about_title">关于</string>
     <string name="other_title">其他</string>
-    <string name="g_community">G+社区 (汉化作者</string>
+    <string name="g_community">G+社区（汉化 Twitter:Sakura_Sa233</string>
+	<string name="g_plus_summary">参观我们的G+社区</string>
     <string name="ui_title">界面</string>
     <string name="builtin_title">内置</string>
     <string name="addons_title">扩展</string>
@@ -41,7 +42,7 @@
     <string name="display_animations_title">显示和动画</string>
     <string name="multishit_title">个性设置</string>
     <string name="transparency_porn_title">界面颜色设置</string>
-    <string name="notificaitons_title">通知抽屉</string>
+    <string name="notificaitons_title">快速设置</string>
     <string name="statubar_title">状态栏</string>
     <string name="lockscreen_title">锁屏</string>
     <string name="systemui_tuner_title">系统界面调谐器</string>
@@ -49,7 +50,9 @@
     <string name="systemui_tuner_dilog_title">注意</string>
     <string name="systemui_tuner_dilog_warning">“调谐器提供有限的系统界面修改。为了方便访问特将此选项加入到 AICP 设置。 在这里你可以添加或隐藏新图块。”</string>
     <string name="aicp_downloads_title">下载地址</string>
+	<string name="dwnld_summary">查看你的设备的ACIP下载页面</string>
     <string name="aicp_gerrit_title">代码审查</string>
+	<string name="gerrit_summary">到Gerrit来查看我们在干什么<(￣︶￣)></string>
     <string name="send_mail_intent">发送邮件...</string>
     <string name="hidden_anim_activity_title">休息时间!!!</string>
     <string name="hidden_anim_more_title">更多?</string>
@@ -277,10 +280,6 @@
     <string name="weather_number_of_notifications_four_title">4</string>
     <string name="weather_number_of_notifications_five_title">5</string>
     <string name="weather_number_of_notifications_six_title">6</string>
-    <string name="colors_title">设置颜色</string>
-    <string name="icons_title">图标颜色</string>
-    <string name="text_title">文本颜色</string>
-    <string name="reset">重置</string>
     <string name="reset_lockscreen_weather">确定</string>
     <string name="reset_values_message">重置设置？</string>
     <string name="weather_reset_title">重置天气设置</string>
@@ -321,6 +320,7 @@
     <string name="powermenu_lockscreen_title">锁屏电源菜单</string>
     <string name="powermenu_lockscreen_summary">锁屏时长按电源键显示电源菜单</string>
     <string name="stats_title">统计(N击上图有惊喜)</string>
+	<string name="stats_summary">别担心，我们的统计是匿名的!(ノω<。)ノ))☆.。</string>
     <string name="notification_ticker">统计选择</string>
     <string name="notification_title">AICP统计</string>
     <string name="notification_desc">启用或禁用匿名统计数据</string>
@@ -328,9 +328,9 @@
     <string name="anonymous_statistics_title">AICP统计</string>
     <string name="anonymous_statistics_summary">帮助AICP选择为匿名统计报告</string>
     <string name="anonymous_statistics_warning_title">关于</string>
-    <string name="anonymous_statistics_warning">"选择加入AICP将允许非个人数据提交给我们的服务器。提交的信息包括唯一的标识符，它不会危及您的隐私和个人数据。该数据每7天提交。
+    <string name="anonymous_statistics_warning">"选择加入AICP将允许非个人数据提交给我们的服务器。提交的信息包括唯一的标识符，它不会危及您的隐私和个人数据。该数据定期提交。
 
-对于已提交的数据的一个例子，点击预览数据。"</string>
+查看已提交的数据的预览，请点击预览数据。"</string>
     <string name="pref_settings">设置</string>
     <string name="enable_reporting_title">启用统计</string>
     <string name="disable_reporting_persistent">不启用</string>
@@ -340,6 +340,10 @@
     <string name="anonymous_learn_more">了解更多</string>
     <string name="last_report_on">上次统计报告</string>
     <string name="reporting_interval">报告间隔</string>
+	<plurals name="reporting_interval_days">
+        <item quantity="one">1天</item>
+        <item quantity="other">%d天</item>
+    </plurals>
     <string name="next_report_on">下次统计报告</string>
     <string name="preview_id_title">唯一 ID</string>
     <string name="preview_device_title">设备</string>
@@ -367,12 +371,6 @@
     <string name="lockscreen_wallpaper_clear_title">将壁纸恢复为默认</string>
     <string name="reset_lockscreen_wallpaper">已恢复默认的锁屏壁纸</string>
     <string name="omniswitch_category_title">滑动任务管理器</string>
-    <string name="recents_use_omniswitch_title">最近应用面板</string>
-    <string name="recents_use_omniswitch_summary">用滑动任务管理器替代默认最近应用面板</string>
-    <string name="omniswitch_start_settings_title">设置</string>
-    <string name="omniswitch_start_settings_summary">打开滑动任务管理器设置</string>
-    <string name="omniswitch_first_time_title">信息</string>
-    <string name="omniswitch_first_time_message">请确保您已启用滑动任务管理器。你可以通过下面的\"设置\"启用</string>
     <string name="double_tap_sleep_anywhere_title">锁屏双击睡眠</string>
     <string name="double_tap_sleep_anywhere_summary">锁屏时双击屏幕使设备睡眠</string>
     <string name="pa_piecontrol_settings_summary">自定义Pie触发、大小和颜色</string>
@@ -627,11 +625,7 @@
     <string name="wakelock_blocker_title">唤醒拦截器</string>
     <string name="block_on_secure_keyguard_title">禁用锁屏时的快速设置</string>
     <string name="block_on_secure_keyguard_summary">仅在安全锁屏界面禁用快速设置</string>
-    <string name="qs_transparent_shade">下拉开关栏透明度</string>
     <string name="qs_transparent_header">下拉标题栏透明度</string>
-    <string name="volume_dialog_transparency">音量控制栏透明度</string>
-    <string name="power_menu_transparency">电源键菜单透明度</string>
-    <string name="power_menu_dialog_dim">电源键菜单背景阴影度</string>
     <string name="keyguard_torch_title">锁屏下快速开启手电筒</string>
     <string name="keyguard_torch_summary">息屏状态下长按电源键打开手电筒</string>
     <string name="breathing_notifications_category">呼吸灯通知</string>
@@ -700,19 +694,6 @@
     <string name="qs_set_animation_duration">%1$s</string>
     <string name="qs_set_animation_interpolator">%1$s</string>
     <string name="app_exit_toast">按返回退出</string>
-    <string name="volume_dialog_stroke_title">音量栏边缘设置</string>
-    <string name="volume_dialog_stroke_disabled">关闭</string>
-    <string name="volume_dialog_stroke_accent">重点颜色</string>
-    <string name="volume_dialog_stroke_custom">自定义颜色</string>
-    <string name="volume_dialog_stroke_color_title">音量栏边缘颜色</string>
-    <string name="volume_dialog_stroke_thickness_title">音量栏边缘厚度</string>
-    <string name="volume_dialog_corner_radius_title">音量栏边缘圆角限制</string>
-    <string name="qs_stroke_title">开关栏边缘设置</string>
-    <string name="qs_stroke_disabled">关闭</string>
-    <string name="qs_stroke_accent">重点颜色</string>
-    <string name="qs_stroke_custom">自定义颜色</string>
-    <string name="qs_stroke_color_title">开关栏边缘颜色</string>
-    <string name="qs_stroke_thickness_title">开关栏边缘厚度</string>
     <string name="qs_corner_radius_title">开关栏边缘圆角限制</string>
     <string name="media_scanner_on_boot_title">媒体扫描态度</string>
     <string name="media_scanner_on_boot_enabled">扫描媒体</string>
@@ -725,4 +706,187 @@
     <string name="qs_panel_logo_custom">自定义颜色</string>
     <string name="qs_panel_logo_color_title">开关栏AICP标志颜色</string>
     <string name="qs_panel_logo_alpha_title">开关栏AICP标志透明度</string>
+	<string name="extensions_title">系统扩展</string>
+	
+    <!-- Optional screenshot type -->
+	<string name="screenshot_type_title">截图类型</string>
+    <string name="screenshot_type_fullscreen">全屏截图</string>
+    <string name="screenshot_type_partial">滑动选择需要截图的区域</string>
+	
+    <!-- Screenshot delay -->
+	<string name="powermenu_screenshot_delay_title">截图延迟</string>
+    <string name="powermenu_screenshot_delay_message">延迟%1$s秒后截图</string>
+	
+    <!-- Hostname setting -->
+	<string name="device_hostname">设备主机名</string>
+	
+    <!-- Camera shutter sound -->
+	<string name="camera_sounds_title">相机拍照声</string>
+    <string name="camera_sounds_summary">可能在第三方相机和HDR+模式下无法禁用</string>
+	
+    <!-- Heads up settings -->
+    <string name="nav_headsup_title">浮动通知</string>
+    <string name="headsup_settings_category">浮动通知</string>
+    <string name="headsup_settings_title">启用浮动通知</string>
+    <string name="headsup_settings_summary">允许应用程度在屏幕顶部弹出浮动通知</string>
+    <string name="summary_heads_up_enabled">浮动通知已启用</string>
+    <string name="summary_heads_up_disabled">浮动通知未启用</string>
+	
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">超时</string>
+    <string name="heads_up_time_out_summary">浮动通知将会显示<xliff:g id="number">%d</xliff:g>秒</string>
+    <string name="heads_up_time_out_2sec">2 秒</string>
+    <string name="heads_up_time_out_4sec">4 秒</string>
+    <string name="heads_up_time_out_5sec">5 秒</string>
+    <string name="heads_up_time_out_6sec">6 秒</string>
+    <string name="heads_up_time_out_8sec">8 秒</string>
+    <string name="heads_up_time_out_10sec">10 秒</string>
+	
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">通知打盹</string>
+    <string name="heads_up_snooze_summary_one_minute">浮动通知将会针对特定应用暂停1分钟</string>
+    <string name="heads_up_snooze_summary">浮动通知将会针对特定应用暂停<xliff:g id="number">%d</xliff:g>分钟</string>
+    <string name="heads_up_snooze_disabled">禁用</string>
+    <string name="heads_up_snooze_disabled_summary">通知打盹已禁用</string>
+    <string name="heads_up_snooze_1min">1分钟</string>
+    <string name="heads_up_snooze_3min">3分钟</string>
+    <string name="heads_up_snooze_5min">5分钟</string>
+    <string name="heads_up_snooze_10min">10分钟</string>
+    <string name="heads_up_snooze_15min">15分钟</string>
+    <string name="heads_up_snooze_20min">20分钟</string>
+    <string name="heads_up_snooze_30min">30分钟</string>
+    <string name="heads_up_snooze_60min">60分钟</string>
+	
+    <!--Preference Categories-->
+	<string name="anim">动画调整</string>
+    <string name="indicators">状态栏图标</string>
+    <string name="quicksettings_tiles_category">快速设置面板配置</string>
+    <string name="header_tweaks">标题调整</string>
+    <string name="Misc">其他</string>
+    <string name="qs">快速设置调整</string>
+    <string name="vol_diag">音量对话框调整</string>
+    <string name="power">电源菜单调整</string>
+    <string name="cab">重置所有按键调整</string>
+	<string name="visuals">Recents Extra Visuals</string>
+	
+    <!-- Statusbar 4G LTE switch -->
+	<string name="show_fourg_title">用4G代替LTE显示</string>
+    <string name="show_fourg_summary">将LTE图标用4G替换</string>
+	
+    <!-- Bluetooth status -->
+	<string name="bluetooth_battery_title">显示蓝牙设备电量图标</string>
+    <string name="bluetooth_battery_summary">显示连接蓝牙设备的电量（如果可用</string>
+	
+	<!-- Status Bar Ticker -->
+    <string name="ticker_screen_title">文本图标调整</string>
+    <string name="ticker_title">状态栏文本图标调整</string>
+    <string name="ticker_screen_summary">自定义风格</string>
+    <string name="ticker_summary">启用文本图标调整</string>
+    <string name="ticker_restore_defaults_title">重置为默认</string>
+    <string name="text_title">文本</string>
+    <string name="icon_title">图标</string>
+    <string name="colors_title">颜色</string>
+	
+	<!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">触摸震动</string>
+    <string name="quick_settings_vibrate_summary">当触摸图标时震动</string>
+	
+    <!-- QS tile labels visibility -->
+    <string name="qs_menu_item_titles">快速设置图标标签</string>
+    <string name="qs_menu_item_titles_summaryOn">显示标签</string>
+    <string name="qs_menu_item_titles_summaryOff">不显示标签</string>
+	
+    <!-- Disable music track title in QS tile -->
+    <string name="qs_music_tile_track_optional_title">音乐曲目标题</string>
+    <string name="qs_music_tile_track_optional_summary">将音乐曲目标题显示为快速设置图标标题</string>
+	
+    <!-- WiFi easy toggle -->
+    <string name="qs_wifi_easy_toggle_title">WiFi开关</string>
+    <string name="qs_wifi_easy_toggle_summary">单击启用或禁用WiFi </string>
+	
+    <!-- Advanced data tile -->
+    <string name="qs_advanced_data_title">数据开关</string>
+    <string name="qs_advanced_data_summary">单击启用或禁用数据</string>
+	
+    <!-- BT easy toggle -->
+    <string name="qs_bt_easy_toggle_title">蓝牙开关</string>
+    <string name="qs_bt_easy_toggle_summary">单击启用或禁用蓝牙</string>
+	
+    <!-- Battery Saver easy toggle -->
+    <string name="qs_battery_easy_toggle_title">电池开关</string>
+    <string name="qs_battery_easy_toggle_summary">单击启用或禁用省电模式</string>
+	
+    <!-- Quick settings tiles columns and rows config -->
+    <string name="qs_rows_portrait_title">行(纵向)</string>
+    <string name="qs_rows_landscape_title">行(横向)</string>
+    <string name="qs_columns_title">列</string>
+    <string name="sysui_qqs_count_title">快速设置图标数量</string>
+	
+    <!-- Recents Membar -->
+    <string name="systemui_recents_mem_display_title">显示内存栏</string>
+    <string name="systemui_recents_mem_display_summaryOn">启用内存栏</string>
+    <string name="systemui_recents_mem_display_summaryOff">禁用内存栏</string>
+	
+    <!-- Immersive Recents -->
+    <string name="immersive_recents_title">沉浸近期任务</string>
+    <string name="immersive_recents_summary">更改近期屏幕的视图</string>
+    <string name="immersive_recents_dialog_title">选择近期屏幕的视图</string>
+    <string name="immersive_recents_default">默认</string>
+    <string name="immersive_recents_fullscreen">全屏</string>
+    <string name="immersive_recents_statusbar">仅状态栏</string>
+    <string name="immersive_recents_navbar">仅虚拟键</string>
+	
+    <!-- OmniSwitch Recents -->
+    <string name="aosp_recents_title">AICP近期任务</string>
+    <string name="omniswitch_recents_title">OmniSwitch近期任务</string>
+    <string name="recents_use_omniswitch_title">最近应用面板</string>
+    <string name="recents_use_omniswitch_summary">用滑动任务管理器替代默认最近应用面板</string>
+    <string name="omniswitch_start_settings_title">OmniSwitch设置</string>
+    <string name="omniswitch_start_settings_summary">打开滑动任务管理器设置</string>
+    <string name="omniswitch_first_time_title">警告</string>
+    <string name="omniswitch_first_time_message">请确保您已启用滑动任务管理器。你可以通过下面的"设置"启用</string>
+	
+    <!-- Disable quick settings on lock screen switch -->
+    <string name="lockscreen_qs_disabled_title">在锁屏界面禁用快速设置</string>
+    <string name="lockscreen_qs_disabled_summary">在安全锁定屏幕上禁用快速设置和键盘快捷键</string>
+	
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">锁屏电池信息</string>
+    <string name="lockscreen_battery_info_summary">充电时在锁屏界面显示协定充电器的最大电流电压和电池温度</string>
+	
+    <!-- Lock screen Am/Pm switch -->
+    <string name="lock_screen_hide_ampm_title">隐藏上午/下午</string>
+    <string name="lock_screen_hide_ampm_summary_on">上午/下午已隐藏</string>
+    <string name="lock_screen_hide_ampm_summary_off">上午/下午已显示</string>
+	
+    <!-- QS stroke settings -->
+    <string name="qs_stroke_title">快速设置边缘</string>
+    <string name="qs_stroke_disabled">禁用</string>
+    <string name="qs_stroke_accent">主题颜色</string>
+    <string name="qs_stroke_custom">自定义颜色</string>
+    <string name="qs_stroke_color_title">快速设置边缘颜色</string>
+    <string name="qs_stroke_thickness_title">快速设置边缘厚度</string>
+    <string name="qs_corner_radius_title">快速设置边缘角弧度</string>
+    <string name="qs_dash_width_title">快速设置边缘虚线宽度</string>
+    <string name="qs_dash_gap_title">快速设置边缘虚线间距</string>
+	
+    <!-- QS shade transparency -->
+    <string name="qs_transparent_shade">快速设置透明度</string>
+	
+    <!-- Volume dialog stroke settings -->
+    <string name="volume_dialog_stroke_title">音量栏边缘</string>
+    <string name="volume_dialog_stroke_disabled">禁用</string>
+    <string name="volume_dialog_stroke_accent">主题颜色</string>
+    <string name="volume_dialog_stroke_custom">自定义颜色</string>
+    <string name="volume_dialog_stroke_color_title">音量栏边缘颜色</string>
+    <string name="volume_dialog_stroke_thickness_title">音量栏边缘厚度</string>
+    <string name="volume_dialog_corner_radius_title">音量栏边缘角弧度</string>
+    <string name="volume_dialog_dash_width_title">音量栏边缘虚线宽度</string>
+    <string name="volume_dialog_dash_gap_title">音量栏边缘虚线间距</string>
+	
+    <!-- Power menu and dialogs transparency -->
+    <string name="power_menu_transparency">电源菜单透明度</string>
+	
+    <!-- Power/reboot dialogs dim amount -->
+    <string name="power_menu_dialog_dim">电源菜单背景阴影</string>
 </resources>
