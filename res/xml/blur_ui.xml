@@ -84,5 +84,24 @@
          android:summary="@string/blurred_recent_app_enabled_pref_summary"
          android:defaultValue="false"
          android:dependency="blurred_status_bar_expanded_enabled_pref" />
+
+        <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+            android:key="recents_blur_scale"
+            android:title="@string/blurred_scale"
+            android:summary="@string/blurred_scale_summary"
+            android:max="20"
+            aicpextras:min="1"
+            android:dependency="blurred_recent_app_enabled_pref"
+            aicpextras:defaultValue="6" />
+
+        <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+            android:key="recents_blur_radius"
+            android:title="@string/blurred_radius"
+            android:summary="@string/blurred_radius_summary"
+            android:max="25"
+            aicpextras:min="1"
+            android:dependency="blurred_recent_app_enabled_pref"
+            aicpextras:defaultValue="3" />
+
     </PreferenceCategory>
 </PreferenceScreen>

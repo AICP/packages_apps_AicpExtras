@@ -73,6 +73,10 @@ public class BlurUIFragment extends Fragment {
         private SeekBarPreferenceCham mRadius;
         private SeekBarPreferenceCham mQuickSettPerc;
 
+        //Recents Radius and Scale
+        private SeekBarPreferenceCham mRecentsScale;
+        private SeekBarPreferenceCham mRecentsRadius;
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -104,6 +108,14 @@ public class BlurUIFragment extends Fragment {
             mQuickSettPerc.setValue(Settings.System.getInt(resolver, Settings.System.TRANSLUCENT_QUICK_SETTINGS_PRECENTAGE_PREFERENCE_KEY, 60));
             mQuickSettPerc.setOnPreferenceChangeListener(this);
 
+            mRecentsScale = (SeekBarPreferenceCham) findPreference("recents_blur_scale");
+            mRecentsScale.setValue(Settings.System.getInt(resolver, Settings.System.RECENT_APPS_SCALE_PREFERENCE_KEY, 6));
+            mRecentsScale.setOnPreferenceChangeListener(this);
+
+            mRecentsRadius = (SeekBarPreferenceCham) findPreference("recents_blur_radius");
+            mRecentsRadius.setValue(Settings.System.getInt(resolver, Settings.System.RECENT_APPS_RADIUS_PREFERENCE_KEY, 3));
+            mRecentsRadius.setOnPreferenceChangeListener(this);
+
         }
 
         public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -122,6 +134,16 @@ public class BlurUIFragment extends Fragment {
                 int value = ((Integer)newValue).intValue();
                 Settings.System.putInt(
                         resolver, Settings.System.TRANSLUCENT_QUICK_SETTINGS_PRECENTAGE_PREFERENCE_KEY, value);
+                return true;
+            } else if (preference == mRecentsScale) {
+                int value = ((Integer)newValue).intValue();
+                Settings.System.putInt(
+                    resolver, Settings.System.RECENT_APPS_SCALE_PREFERENCE_KEY, value);
+                return true;
+            } else if(preference == mRecentsRadius) {
+                int value = ((Integer)newValue).intValue();
+                Settings.System.putInt(
+                    resolver, Settings.System.RECENT_APPS_RADIUS_PREFERENCE_KEY, value);
                 return true;
             }
             return false;
