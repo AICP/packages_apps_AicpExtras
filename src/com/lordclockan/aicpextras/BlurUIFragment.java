@@ -61,14 +61,10 @@ public class BlurUIFragment extends Fragment {
 
         private SharedPreferences mBlurUISettings;
         private Editor toEditBlurUISettings;
-        private String sNotifications = "false";
-        private String sHeader = "false";
         private String sQuickSett = "false";
 
         //Switch Preferences
         private SwitchPreference mExpand;
-        private SwitchPreference mNotiTrans;
-        private SwitchPreference mHeadSett;
         private SwitchPreference mQuickSett;
         private TwoStatePreference mRecentsSett;
 
@@ -76,8 +72,6 @@ public class BlurUIFragment extends Fragment {
         private SeekBarPreferenceCham mScale;
         private SeekBarPreferenceCham mRadius;
         private SeekBarPreferenceCham mQuickSettPerc;
-        private SeekBarPreferenceCham mHeaderSettPerc;
-        private SeekBarPreferenceCham mNotSettPerc;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -102,14 +96,6 @@ public class BlurUIFragment extends Fragment {
             mRadius.setValue(Settings.System.getInt(resolver, Settings.System.BLUR_RADIUS_PREFERENCE_KEY, 5));
             mRadius.setOnPreferenceChangeListener(this);
 
-            mNotiTrans = (SwitchPreference) prefSet.findPreference("translucent_notifications_pref");
-            mNotiTrans.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
-                    Settings.System.TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY, 0) == 1));
-
-            mHeadSett = (SwitchPreference) prefSet.findPreference("translucent_header_pref");
-            mHeadSett.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
-                    Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY, 0) == 1));
-
             mQuickSett = (SwitchPreference) prefSet.findPreference("translucent_quick_settings_pref");
             mQuickSett.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
                     Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY, 0) == 1));
@@ -117,14 +103,6 @@ public class BlurUIFragment extends Fragment {
             mQuickSettPerc = (SeekBarPreferenceCham) findPreference("quick_settings_transluency");
             mQuickSettPerc.setValue(Settings.System.getInt(resolver, Settings.System.TRANSLUCENT_QUICK_SETTINGS_PRECENTAGE_PREFERENCE_KEY, 60));
             mQuickSettPerc.setOnPreferenceChangeListener(this);
-
-            mHeaderSettPerc = (SeekBarPreferenceCham) findPreference("header_transluency");
-            mHeaderSettPerc.setValue(Settings.System.getInt(resolver, Settings.System.TRANSLUCENT_HEADER_PRECENTAGE_PREFERENCE_KEY, 60));
-            mHeaderSettPerc.setOnPreferenceChangeListener(this);
-
-            mNotSettPerc = (SeekBarPreferenceCham) findPreference("notifications_transluency");
-            mNotSettPerc.setValue(Settings.System.getInt(resolver, Settings.System.TRANSLUCENT_NOTIFICATIONS_PRECENTAGE_PREFERENCE_KEY, 60));
-            mNotSettPerc.setOnPreferenceChangeListener(this);
 
         }
 
@@ -145,16 +123,6 @@ public class BlurUIFragment extends Fragment {
                 Settings.System.putInt(
                         resolver, Settings.System.TRANSLUCENT_QUICK_SETTINGS_PRECENTAGE_PREFERENCE_KEY, value);
                 return true;
-            } else if (preference == mHeaderSettPerc) {
-                int value = ((Integer)newValue).intValue();
-                Settings.System.putInt(
-                        resolver, Settings.System.TRANSLUCENT_HEADER_PRECENTAGE_PREFERENCE_KEY, value);
-                return true;
-            } else if (preference == mNotSettPerc) {
-                int value = ((Integer)newValue).intValue();
-                Settings.System.putInt(
-                        resolver, Settings.System.TRANSLUCENT_NOTIFICATIONS_PRECENTAGE_PREFERENCE_KEY, value);
-                return true;
             }
             return false;
         }
@@ -173,30 +141,6 @@ public class BlurUIFragment extends Fragment {
                 Settings.System.putInt(resolver,
                         Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY, enabled ? 1:0);
                 updatePrefs();
-            } else if (preference == mNotiTrans) {
-                boolean enabled = ((SwitchPreference)preference).isChecked();
-                Settings.System.putInt(resolver,
-                        Settings.System.TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY, enabled ? 1:0);
-                if (enabled) {
-                    sNotifications = "true";
-                } else {
-                    sNotifications = "false";
-                }
-                toEditBlurUISettings = mBlurUISettings.edit();
-                toEditBlurUISettings.putString("notifications_transluency", sNotifications);
-                toEditBlurUISettings.commit();
-            } else if (preference == mHeadSett) {
-                boolean enabled = ((SwitchPreference)preference).isChecked();
-                Settings.System.putInt(resolver,
-                        Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY, enabled ? 1:0);
-                if (enabled) {
-                    sHeader = "true";
-                } else {
-                    sHeader = "false";
-                }
-                toEditBlurUISettings = mBlurUISettings.edit();
-                toEditBlurUISettings.putString("header_transluency", sHeader);
-                toEditBlurUISettings.commit();
             } else if (preference == mQuickSett) {
                 boolean enabled = ((SwitchPreference)preference).isChecked();
                 Settings.System.putInt(resolver,
@@ -215,8 +159,6 @@ public class BlurUIFragment extends Fragment {
 
         public void sharedPreferences() {
             toEditBlurUISettings = mBlurUISettings.edit();
-            toEditBlurUISettings.putString("notifications_transluency", sNotifications);
-            toEditBlurUISettings.putString("header_transluency", sHeader);
             toEditBlurUISettings.putString("quick_settings_transluency", sQuickSett);
             toEditBlurUISettings.commit();
         }
@@ -224,23 +166,13 @@ public class BlurUIFragment extends Fragment {
         private void updatePrefs() {
             final ContentResolver resolver = getActivity().getContentResolver();
 
-            boolean tempNotification = mBlurUISettings.getString("notifications_transluency", "").equals("true");
-            boolean tempHeader = mBlurUISettings.getString("header_transluency", "").equals("true");
             boolean tempQuickSett = mBlurUISettings.getString("quick_settings_transluency", "").equals("true");
 
             if (Settings.System.getInt(resolver,
                     Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY, 0) == 1) {
                 Settings.System.putInt(resolver,
-                        Settings.System.TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY, tempNotification ? 1:0);
-                Settings.System.putInt(resolver,
-                        Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY, tempHeader ? 1:0);
-                Settings.System.putInt(resolver,
                         Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY, tempQuickSett ? 1:0);
             } else {
-                Settings.System.putInt(resolver,
-                        Settings.System.TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY, 0);
-                Settings.System.putInt(resolver,
-                        Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY, 0);
                 Settings.System.putInt(resolver,
                         Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY, 0);
             }
