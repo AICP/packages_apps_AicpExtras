@@ -18,338 +18,340 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="navigation_drawer_open">Apri pannello di navigazione</string>
-    <string name="navigation_drawer_close">Chiudi pannello di navigazione</string>
+  <string name="navigation_drawer_open">Apri pannello di navigazione</string>
+  <string name="navigation_drawer_close">Chiudi pannello di navigazione</string>
 
-    <string name="action_settings">Impostazioni</string>
-    <string name="aicp_extras_title">AICP Extras</string>
-    <string name="pun_title">\"Una rom per domarla di tutto\"</string>
-    <string name="various_shit_title">Bizzarrie varie</string>
-    <string name="about_title">Informazioni</string>
-    <string name="other_title">Altro</string>
-    <string name="g_community">Comunità G+</string>
-    <string name="g_plus_summary">Visita la nostra Comunità di Google +</string>
-    <string name="ui_title">UI</string>
-    <string name="logo">Logo</string>
-    <string name="display_animations_title">Display e animazioni</string>
-    <string name="transparency_porn_title">Trasparenze</string>
-    <string name="notificaitons_title">Pannello Notifiche</string>
-    <string name="statubar_title">Barra di stato</string>
-    <string name="lockscreen_title">Schermata di blocco</string>
-    <string name="aicp_downloads_title">Downloads</string>
-    <string name="dwnld_summary">Visita la pagina di download AICP per il dispositivo</string>
-    <string name="aicp_gerrit_title">Gerrit</string>
-    <string name="gerrit_summary">Visita la nostra pagina su Gerrit per sapere su che cosa stiamo lavorando</string>
-    <string name="hidden_anim_activity_title">Tempo per lo Yoga!!!</string>
-    <string name="hidden_anim_more_title">ANCORA?</string>
-    <string name="hidden_anim_more_nice">BENE</string>
-    <string name="continue_title">Continua</string>
-    <string name="settings_activity_title">Impostazioni AE</string>
+  <string name="action_settings">Impostazioni</string>
+  <string name="aicp_extras_title">AICP Extras</string>
+  <string name="pun_title">\"Una rom per domarla di tutto\"</string>
+  <string name="various_shit_title">Bizzarrie varie</string>
+  <string name="about_title">Informazioni</string>
+  <string name="other_title">Altro</string>
+  <string name="g_community">Comunità G+</string>
+  <string name="g_plus_summary">Visita la nostra Comunità di Google +</string>
+  <string name="ui_title">UI</string>
+  <string name="logo">Logo</string>
+  <string name="display_animations_title">Display e animazioni</string>
+  <string name="transparency_porn_title">Trasparenze</string>
+  <string name="notificaitons_title">Pannello Notifiche</string>
+  <string name="statubar_title">Barra di stato</string>
+  <string name="lockscreen_title">Schermata di blocco</string>
+  <string name="aicp_downloads_title">Downloads</string>
+  <string name="dwnld_summary">Visita la pagina di download AICP per il dispositivo</string>
+  <string name="aicp_gerrit_title">Gerrit</string>
+  <string name="ae_version_title">Versione AICP Extras</string>
+  <string name="ae_version_summary">0.3.0</string>
+  <string name="gerrit_summary">Visita la nostra pagina su Gerrit per sapere su che cosa stiamo lavorando</string>
+  <string name="hidden_anim_activity_title">Tempo per lo Yoga!!!</string>
+  <string name="hidden_anim_more_title">ANCORA?</string>
+  <string name="hidden_anim_more_nice">BENE</string>
+  <string name="continue_title">Continua</string>
+  <string name="settings_activity_title">Impostazioni AE</string>
+  <string name="recents_panel_title">Pannello recenti</string>
+  <string name="nothing_title">Ancora nulla da mostrare qui, passa oltre</string>
 
-    <string name="nothing_title">Ancora nulla da mostrare qui, passa oltre</string>
+  <!-- Switch On/Off  -->
+  <string name="switch_on_text">On</string>
+  <string name="switch_off_text">Off</string>
 
-    <!-- Switch On/Off  -->
-    <string name="switch_on_text">On</string>
-    <string name="switch_off_text">Off</string>
+  <!-- Permissions -->
+  <string name="storage_permission_granted">Permesso Garantito, ora puoi scrivere sulla memoria esterna.</string>
+  <string name="storage_permission_not_granted">Permesso Negato, non puoi scrivere sulla memoria esterna.</string>
 
-    <!-- Permissions -->
-    <string name="storage_permission_granted">Permesso Garantito, ora puoi scrivere sulla memoria esterna.</string>
-    <string name="storage_permission_not_granted">Permesso Negato, non puoi scrivere sulla memoria esterna.</string>
+  <!-- Change Log -->
+  <string name="changelog_title">Registro Modifiche</string>
+  <string name="changelog_title_summary">Vedi le recenti modifiche alla ROM</string>
+  <string name="changelog_error">Impossibile caricare il registro</string>
 
-    <!-- Change Log -->
-    <string name="changelog_title">Registro Modifiche</string>
-    <string name="changelog_title_summary">Vedi le recenti modifiche alla ROM</string>
-    <string name="changelog_error">Impossibile caricare il registro</string>
+  <!-- Toast Icons -->
+  <string name="toast_icon_title">Icona sul Toast</string>
+  <string name="toast_icon_summary">Mostra con il toast l\'icona corrispondente all\'applicazione</string>
 
-    <!-- Toast Icons -->
-    <string name="toast_icon_title">Icona sul Toast</string>
-    <string name="toast_icon_summary">Mostra con il toast l\'icona corrispondente all\'applicazione</string>
+  <!-- Brightness slider -->
+  <string name="qs_brightness_slider_title">Cursore luminosità</string>
+  <string name="qs_brightness_slider_enabled">Abilitato</string>
+  <string name="qs_brightness_slider_disabled">Disabilitato</string>
+  <string name="restarting_ui">Riavvia UI\u2026</string>
 
-    <!-- Brightness slider -->
-    <string name="qs_brightness_slider_title">Cursore luminosità</string>
-    <string name="qs_brightness_slider_enabled">Abilitato</string>
-    <string name="qs_brightness_slider_disabled">Disabilitato</string>
-    <string name="restarting_ui">Riavvia UI\u2026</string>
+  <!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
+  <string name="print_restart">Riavvia</string>
 
-    <!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
-    <string name="print_restart">Riavvia</string>
+  <!-- Force expanded notifications -->
+  <string name="force_expanded_notifications_title">Forza notifiche estese</string>
+  <string name="force_expanded_notifications_summary">Disponibile solo per applicazioni che supportino notifiche estese</string>
 
-    <!-- Force expanded notifications -->
-    <string name="force_expanded_notifications_title">Forza notifiche estese</string>
-    <string name="force_expanded_notifications_summary">Disponibile solo per applicazioni che supportino notifiche estese</string>
+  <!-- Disabling immersive mode messages -->
+  <string name="disable_immersive_message_title">Disabilita Messaggi a Tutto Schermo</string>
+  <string name="disable_immersive_message_summary">Disabilita tutti i messagi in Modalità Tutto Schermo</string>
 
-    <!-- Disabling immersive mode messages -->
-    <string name="disable_immersive_message_title">Disabilita Messaggi a Tutto Schermo</string>
-    <string name="disable_immersive_message_summary">Disabilita tutti i messagi in Modalità Tutto Schermo</string>
-
-    <!-- Color Picker -->
-    <string name="dialog_color_picker">Selettore del colore</string>
-    <string name="press_color_to_apply">Premi sul colore sotto per applicare</string>
-    <string name="hex">Esadecimale:</string>
-    <string name="hex_hint">#ff000000</string>
-    <string name="set">Imposta</string>
-    <string name="color_default">Predefinito</string>
+  <!-- Color Picker -->
+  <string name="dialog_color_picker">Selettore del colore</string>
+  <string name="press_color_to_apply">Premi sul colore sotto per applicare</string>
+  <string name="hex">Esadecimale:</string>
+  <string name="hex_hint">#ff000000</string>
+  <string name="set">Imposta</string>
+  <string name="color_default">Predefinito</string>
 	
-    <!-- Network traffic -->
-    <string name="traffic_category">Indicatori di traffico</string>
-    <string name="traffic_title">Traffico</string>
-    <string name="network_traffic_title">Traffico  dati</string>
-    <string name="show_network_traffic_state">Monitor di traffico sulla barra di stato</string>
-    <string name="show_network_traffic_unit">Mostra unità</string>
-    <string name="show_network_traffic_frequency">Intervallo di aggiornamento</string>
-    <string name="show_network_traffic_disable">Disabilitato</string>
-    <string name="show_network_traffic_up">In uscita</string>
-    <string name="show_network_traffic_down">In ingresso</string>
-    <string name="show_network_traffic_all">In uscita e in ingresso</string>
-    <string name="show_network_traffic_bit">Bit per secondo</string>
-    <string name="show_network_traffic_byte">Byte per secondo</string>
-    <string name="show_network_traffic_500">500 ms</string>
-    <string name="show_network_traffic_1000">1000 ms</string>
-    <string name="show_network_traffic_1500">1500 ms</string>
-    <string name="show_network_traffic_2000">2000 ms</string>
-    <string name="network_traffic_autohide">Nascondi automaticamente</string>
-    <string name="network_traffic_autohide_summary">Nasconde il monitor di traffico quando non ci sia attività</string>
-    <string name="network_traffic_hidearrow">Nascondi le frecce</string>
-    <string name="network_traffic_hidearrow_summary">Nasconde le frecce negli indicatori di traffico</string>
-    <string name="network_traffic_autohide_threshold">Soglia di inattività</string>
-    <string name="ok">OK</string>
-    <string name="cancel">Cancella</string>
-    <string name="default_string">Predefinito</string>
+  <!-- Network traffic -->
+  <string name="traffic_category">Indicatori di traffico</string>
+  <string name="traffic_title">Traffico</string>
+  <string name="network_traffic_title">Traffico  dati</string>
+  <string name="show_network_traffic_state">Monitor di traffico sulla barra di stato</string>
+  <string name="show_network_traffic_unit">Mostra unità</string>
+  <string name="show_network_traffic_frequency">Intervallo di aggiornamento</string>
+  <string name="show_network_traffic_disable">Disabilitato</string>
+  <string name="show_network_traffic_up">In uscita</string>
+  <string name="show_network_traffic_down">In ingresso</string>
+  <string name="show_network_traffic_all">In uscita e in ingresso</string>
+  <string name="show_network_traffic_bit">Bit per secondo</string>
+  <string name="show_network_traffic_byte">Byte per secondo</string>
+  <string name="show_network_traffic_500">500 ms</string>
+  <string name="show_network_traffic_1000">1000 ms</string>
+  <string name="show_network_traffic_1500">1500 ms</string>
+  <string name="show_network_traffic_2000">2000 ms</string>
+  <string name="network_traffic_autohide">Nascondi automaticamente</string>
+  <string name="network_traffic_autohide_summary">Nasconde il monitor di traffico quando non ci sia attività</string>
+  <string name="network_traffic_hidearrow">Nascondi le frecce</string>
+  <string name="network_traffic_hidearrow_summary">Nasconde le frecce negli indicatori di traffico</string>
+  <string name="network_traffic_autohide_threshold">Soglia di inattività</string>
+  <string name="ok">OK</string>
+  <string name="cancel">Cancella</string>
+  <string name="default_string">Predefinito</string>
 
-    <!-- Superuser indicator on status bar -->
-    <string name="su_indicator">Indicatore Superuser</string>
-    <string name="su_indicator_summary_on">L\'indicatore Superuser è visible quando una sessione è attiva</string>
-    <string name="su_indicator_summary_off">Attiva per mostrare l\'indicatore superuser quando una sessione è attiva</string>
+  <!-- Superuser indicator on status bar -->
+  <string name="su_indicator">Indicatore Superuser</string>
+  <string name="su_indicator_summary_on">L\'indicatore Superuser è visible quando una sessione è attiva</string>
+  <string name="su_indicator_summary_off">Attiva per mostrare l\'indicatore superuser quando una sessione è attiva</string>
     
-    <!-- Carrier Label -->
-    <string name="carrier_options">Etichetta operatore</string>
-    <string name="custom_carrier_label_title">Etichetta operatore personalizzata</string>
-    <string name="custom_carrier_label_explain">Inserisci un\'etichetta. Lascia in bianco per tornare all\'etichetta di default.</string>
-    <string name="custom_carrier_label_notset">Etichetta personalizzata non settata</string>
-    <string name="show_carrier_title">Etichetta operatore</string>
-    <string name="show_carrier_disabled">Disabilitata</string>
-    <string name="show_carrier_keyguard">Schermata di blocco</string>
-    <string name="show_carrier_statusbar">Barra di stato</string>
-    <string name="show_carrier_enabled">Entrambe</string>
-    <string name="status_bar_carrier_color">Colore etichetta operatore</string>
-    <string name="status_bar_carrier_size">Dimensione testo etichetta operatore</string>
+  <!-- Carrier Label -->
+  <string name="carrier_options">Etichetta operatore</string>
+  <string name="custom_carrier_label_title">Etichetta operatore personalizzata</string>
+  <string name="custom_carrier_label_explain">Inserisci un\'etichetta. Lascia in bianco per tornare all\'etichetta di default.</string>
+  <string name="custom_carrier_label_notset">Etichetta personalizzata non settata</string>
+  <string name="show_carrier_title">Etichetta operatore</string>
+  <string name="show_carrier_disabled">Disabilitata</string>
+  <string name="show_carrier_keyguard">Schermata di blocco</string>
+  <string name="show_carrier_statusbar">Barra di stato</string>
+  <string name="show_carrier_enabled">Entrambe</string>
+  <string name="status_bar_carrier_color">Colore etichetta operatore</string>
+  <string name="status_bar_carrier_size">Dimensione testo etichetta operatore</string>
 
-    <!-- Battery Bar -->
-    <string name="battery_bar_title">Barra batteria</string>
-    <string name="battery_bar">Posizione barra batteria</string>
-    <string name="battery_bar_no_navbar">Posizione barra batteria</string>
-    <string name="battery_bar_color">Colore barra batteria</string>
-    <string name="battery_bar_charging_color">Colore di ricarica</string>
-    <string name="battery_bar_battery_low_color">Colore della batteria scarica</string>
-    <string name="battery_bar_cat">Stile barra batteria</string>
-    <string name="battery_bar_style_title">Allineamento barra batteria</string>
-    <string name="battery_bar_thickness_title">Spessore barra batteria</string>
-    <string name="battery_bar_animate_title">Animazione di carica</string>
-    <string name="battery_bar_style_regular">Regolare</string>
-    <string name="battery_bar_style_center_mirrored">Centro rispecchiato</string>
-    <string name="battery_bar_style_reversed">Invertita</string>
-    <string name="battery_bar_use_charging_color">Colore di ricarica personalizzato</string>
-    <string name="battery_bar_blend_color_title">Miscela colori</string>
-    <string name="battery_bar_blend_color_summary">Miscela i colori pieni/vuoti corrispondenti alla percentuale della batteria</string>
-    <string name="battery_bar_blend_color_reverse_title">Inverti la direzione del colore</string>
-    <string name="battery_bar_blend_color_reverse_summary_off">Pieno &#8594; vuoto: rosso &#8592; verde &#8592; blu &#8592; rosso</string>
-    <string name="battery_bar_blend_color_reverse_summary_on">Pieno &#8594; vuoto: rosso &#8594; verde &#8594; blu &#8594; rosso</string>
+  <!-- Battery Bar -->
+  <string name="battery_bar_title">Barra batteria</string>
+  <string name="battery_bar">Posizione barra batteria</string>
+  <string name="battery_bar_no_navbar">Posizione barra batteria</string>
+  <string name="battery_bar_color">Colore barra batteria</string>
+  <string name="battery_bar_charging_color">Colore di ricarica</string>
+  <string name="battery_bar_battery_low_color">Colore della batteria scarica</string>
+  <string name="battery_bar_cat">Stile barra batteria</string>
+  <string name="battery_bar_style_title">Allineamento barra batteria</string>
+  <string name="battery_bar_thickness_title">Spessore barra batteria</string>
+  <string name="battery_bar_animate_title">Animazione di carica</string>
+  <string name="battery_bar_style_regular">Regolare</string>
+  <string name="battery_bar_style_center_mirrored">Centro rispecchiato</string>
+  <string name="battery_bar_style_reversed">Invertita</string>
+  <string name="battery_bar_use_charging_color">Colore di ricarica personalizzato</string>
+  <string name="battery_bar_blend_color_title">Miscela colori</string>
+  <string name="battery_bar_blend_color_summary">Miscela i colori pieni/vuoti corrispondenti alla percentuale della batteria</string>
+  <string name="battery_bar_blend_color_reverse_title">Inverti la direzione del colore</string>
+  <string name="battery_bar_blend_color_reverse_summary_off">Pieno &#8594; vuoto: rosso &#8592; verde &#8592; blu &#8592; rosso</string>
+  <string name="battery_bar_blend_color_reverse_summary_on">Pieno &#8594; vuoto: rosso &#8594; verde &#8594; blu &#8594; rosso</string>
   
-    <!-- Activity and App Picker -->
-    <string name="picker_activities">Attività</string>
-    <string name="select_custom_app_title">Seleziona applicazione</string>
-    <string name="select_custom_activity_title">Seleziona attività</string>
-    <string name="profile_applist_title">Applicazioni</string>
+  <!-- Activity and App Picker -->
+  <string name="picker_activities">Attività</string>
+  <string name="select_custom_app_title">Seleziona applicazione</string>
+  <string name="select_custom_activity_title">Seleziona attività</string>
+  <string name="profile_applist_title">Applicazioni</string>
 
-    <!-- Power menu on lock screen -->
-    <string name="powermenu_lockscreen_title">Menù accensione</string>
-    <string name="powermenu_lockscreen_summary">Mostra menù accensione su schermata di blocco</string>
+  <!-- Power menu on lock screen -->
+  <string name="powermenu_lockscreen_title">Menù accensione</string>
+  <string name="powermenu_lockscreen_summary">Mostra menù accensione su schermata di blocco</string>
 
-    <!-- ROm Stats -->
-    <!-- Main -->
-    <string name="stats_title">Statistiche</string>
-    <string name="stats_summary">Opzione in/out per le statistiche anonime</string>
+  <!-- ROm Stats -->
+  <!-- Main -->
+  <string name="stats_title">Statistiche</string>
+  <string name="stats_summary">Opzione in/out per le statistiche anonime</string>
 
-    <!-- Notification -->
-    <string name="notification_ticker">Statistiche optionali</string>
-    <string name="notification_title">Satistiche AICP</string>
-    <string name="notification_desc">Abilita o Disabilita Statistiche Anonime</string>
+  <!-- Notification -->
+  <string name="notification_ticker">Statistiche optionali</string>
+  <string name="notification_title">Satistiche AICP</string>
+  <string name="notification_desc">Abilita o Disabilita Statistiche Anonime</string>
 
-    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
+  <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
 
-    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">Statistiche AICP</string>
-    <string name="anonymous_statistics_summary">Aiuta AICP attivando report di statistiche anonime</string>
-    <string name="anonymous_statistics_warning_title">Informazioni</string>
-    <string name="anonymous_statistics_warning">Attivando le statistiche AICP, si acconsente alla trasmissione di informazioni non personali ai nostri server. Le informazioni trsmesse includono un identificatore unico, che non mette a rischio la tua privacy o i tuoi dati personali. I dati sono trasmessi ogni 7 giorni.\n\nPer un esempio di informazioni trasmesse, premi su Anteprima Dati.</string>
-    <string name="pref_settings">Impostazioni</string>
-    <string name="enable_reporting_title">Abilita rapporti</string>
-    <string name="disable_reporting_persistent">Opt-out persistente</string>
-    <string name="preview_data_title">Anteprima dati</string>
-    <string name="preview_data_summary">%s</string>
-    <string name="view_stats_title">Visualizza pagina statistiche</string>
-    <string name="anonymous_learn_more">Per saperne di più</string>
+  <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+  <string name="anonymous_statistics_title">Statistiche AICP</string>
+  <string name="anonymous_statistics_summary">Aiuta AICP attivando report di statistiche anonime</string>
+  <string name="anonymous_statistics_warning_title">Informazioni</string>
+  <string name="anonymous_statistics_warning">Attivando le statistiche AICP, si acconsente alla trasmissione di informazioni non personali ai nostri server. Le informazioni trsmesse includono un identificatore unico, che non mette a rischio la tua privacy o i tuoi dati personali. I dati sono trasmessi ogni 7 giorni.\n\nPer un esempio di informazioni trasmesse, premi su Anteprima Dati.</string>
+  <string name="pref_settings">Impostazioni</string>
+  <string name="enable_reporting_title">Abilita rapporti</string>
+  <string name="disable_reporting_persistent">Opt-out persistente</string>
+  <string name="preview_data_title">Anteprima dati</string>
+  <string name="preview_data_summary">%s</string>
+  <string name="view_stats_title">Visualizza pagina statistiche</string>
+  <string name="anonymous_learn_more">Per saperne di più</string>
 
-    <string name="last_report_on">Ultima trasmissione</string>
-    <string name="reporting_interval">Intervallo di trasmissione</string>
+  <string name="last_report_on">Ultima trasmissione</string>
+  <string name="reporting_interval">Intervallo di trasmissione</string>
     <plurals name="reporting_interval_days">
         <item quantity="one">1 giorno</item>
         <item quantity="other">%d giorni</item>
     </plurals>
-    <string name="next_report_on">Prossima trasmissione</string>
+  <string name="next_report_on">Prossima trasmissione</string>
 
-    <!-- Anonymous Statistics - Preview -->
-    <string name="preview_id_title">ID unico</string>
-    <string name="preview_device_title">Dispositivo</string>
-    <string name="preview_version_title">Versione</string>
-    <string name="preview_country_title">Paese</string>
-    <string name="preview_carrier_title">Operatore</string>
-    <string name="preview_romname_title">Nome ROM</string>
-    <string name="preview_romversion_title">Versione AICP</string>
-    <string name="preview_buildtype_title">Tipo di AICP Build</string>
+  <!-- Anonymous Statistics - Preview -->
+  <string name="preview_id_title">ID unico</string>
+  <string name="preview_device_title">Dispositivo</string>
+  <string name="preview_version_title">Versione</string>
+  <string name="preview_country_title">Paese</string>
+  <string name="preview_carrier_title">Operatore</string>
+  <string name="preview_romname_title">Nome ROM</string>
+  <string name="preview_romversion_title">Versione AICP</string>
+  <string name="preview_buildtype_title">Tipo di AICP Build</string>
 
-    <!-- Double tap to sleep on lockscreen -->
-    <string name="double_tap_sleep_anywhere_title">Doppio tocco</string>
-    <string name="double_tap_sleep_anywhere_summary">Doppio tocco sulla schermata di blocco per porre il dispositivo in sleep</string>
+  <!-- Double tap to sleep on lockscreen -->
+  <string name="double_tap_sleep_anywhere_title">Doppio tocco</string>
+  <string name="double_tap_sleep_anywhere_summary">Doppio tocco sulla schermata di blocco per porre il dispositivo in sleep</string>
 
-    <!-- SU -->
-    <string name="cannot_get_su">Non posso ottenere privilegi di superuser, sto uscendo.</string>
-    <string name="cannot_get_su_start">Non posso ottenere privilegi di superuser.</string>
+  <!-- SU -->
+  <string name="cannot_get_su">Non posso ottenere privilegi di superuser, sto uscendo.</string>
+  <string name="cannot_get_su_start">Non posso ottenere privilegi di superuser.</string>
 
-    <!-- Aicp logcat -->
-    <string name="logcat_title">Logcat</string>
-    <string name="kmesg_title">Kmesg</string>
-    <string name="dmesg_title">Dmesg</string>
-    <string name="log_it_title">Attiva</string>
-    <string name="log_it_dialog_title">Attiva</string>
-    <string name="log_that_shit_title">Registra il tutto</string>
-    <string name="logcat_warning">Condividi o vattene!</string>
-    <string name="share_title">Condividi...</string>
-    <string name="log_it_share_subject">Aicp logs</string>
-    <string name="log_it_summary"> Aspetta pazientemente che il log sia generato</string>
+  <!-- Aicp logcat -->
+  <string name="logcat_title">Logcat</string>
+  <string name="kmesg_title">Kmesg</string>
+  <string name="dmesg_title">Dmesg</string>
+  <string name="log_it_title">Attiva</string>
+  <string name="log_it_dialog_title">Attiva</string>
+  <string name="log_that_shit_title">Registra il tutto</string>
+  <string name="logcat_warning">Condividi o vattene!</string>
+  <string name="share_title">Condividi...</string>
+  <string name="log_it_share_subject">Aicp logs</string>
+  <string name="log_it_summary"> Aspetta pazientemente che il log sia generato</string>
 
-    <!-- AOKP custom system animations -->
-    <string name="animation_duration_default">Predefinito</string>
+  <!-- AOKP custom system animations -->
+  <string name="animation_duration_default">Predefinito</string>
     
-    <!-- Toast Animation -->
-    <string name="toast_animation_title">Animazione toast</string>
-    <string name="toast_none_animation">Nessuna</string>
-    <string name="toast_default_animation">Predefinita</string>
-    <string name="toast_fade_animation">Dissolvenza</string>
-    <string name="toast_SlideRight_animation">Scorri a destra</string>
-    <string name="toast_SlideLeft_animation">Scorri a sinistra</string>
-    <string name="toast_Xylon_animation">Xylon</string>
-    <string name="toast_Toko_animation">Toko</string>
-    <string name="toast_Tn_animation">Tn</string>
-    <string name="toast_Honami_animation">Honami</string>
-    <string name="toast_FastFade_animation">Dissolvenza rapida</string>
-    <string name="toast_GrowFade_animation">Dissolvenza crescente</string>
-    <string name="toast_GrowFadeCenter_animation">Dissolvenza crescente centrale</string>
-    <string name="toast_GrowFadeBottom_animation">Dissolvenza crescente dal basso</string>
-    <string name="toast_Translucent_animation">Trasparenza</string>
-    <string name="toast_SlideLeftRight_animation">Scorri da sinistra a destra</string>
-    <string name="toast_SlideRightLeft_animation">Scorri da destra a sinistra</string>
+  <!-- Toast Animation -->
+  <string name="toast_animation_title">Animazione toast</string>
+  <string name="toast_none_animation">Nessuna</string>
+  <string name="toast_default_animation">Predefinita</string>
+  <string name="toast_fade_animation">Dissolvenza</string>
+  <string name="toast_SlideRight_animation">Scorri a destra</string>
+  <string name="toast_SlideLeft_animation">Scorri a sinistra</string>
+  <string name="toast_Xylon_animation">Xylon</string>
+  <string name="toast_Toko_animation">Toko</string>
+  <string name="toast_Tn_animation">Tn</string>
+  <string name="toast_Honami_animation">Honami</string>
+  <string name="toast_FastFade_animation">Dissolvenza rapida</string>
+  <string name="toast_GrowFade_animation">Dissolvenza crescente</string>
+  <string name="toast_GrowFadeCenter_animation">Dissolvenza crescente centrale</string>
+  <string name="toast_GrowFadeBottom_animation">Dissolvenza crescente dal basso</string>
+  <string name="toast_Translucent_animation">Trasparenza</string>
+  <string name="toast_SlideLeftRight_animation">Scorri da sinistra a destra</string>
+  <string name="toast_SlideRightLeft_animation">Scorri da destra a sinistra</string>
 
-    <!-- Power menu Animations  -->
-    <string name="power_menu_animation_title">Animazione menù alimentazione</string>
-    <string name="power_menu_animation_summary">Cambia l\'animazione per l\'entrata e l\'uscita dal menù alimentazione</string>
-    <string name="power_menu_animation_dialog_title">Seleziona animazione menù alimentazione</string>
-    <string name="power_menu_animation_aosp">AOSP (predefinita)</string>
-    <string name="power_menu_animation_bottom">Dal basso</string>
-    <string name="power_menu_animation_top">Dall\'alto</string>
-    <string name="power_menu_animation_rotate">Rotazione</string>
-    <string name="power_menu_animation_xylon">Volante</string>
-    <string name="power_menu_animation_slide">Diapositiva</string>
-    <string name="power_menu_animation_turn">Paginatura</string>
-    <string name="power_menu_animation_fly">Bagliore</string>
-    <string name="power_menu_animation_card">3D</string>
-    <string name="power_menu_animation_translucent_top">Traslucido (alto)</string>
-    <string name="power_menu_animation_translucent_bottom">Traslucido (basso)</string>
+  <!-- Power menu Animations  -->
+  <string name="power_menu_animation_title">Animazione menù alimentazione</string>
+  <string name="power_menu_animation_summary">Cambia l\'animazione per l\'entrata e l\'uscita dal menù alimentazione</string>
+  <string name="power_menu_animation_dialog_title">Seleziona animazione menù alimentazione</string>
+  <string name="power_menu_animation_aosp">AOSP (predefinita)</string>
+  <string name="power_menu_animation_bottom">Dal basso</string>
+  <string name="power_menu_animation_top">Dall\'alto</string>
+  <string name="power_menu_animation_rotate">Rotazione</string>
+  <string name="power_menu_animation_xylon">Volante</string>
+  <string name="power_menu_animation_slide">Diapositiva</string>
+  <string name="power_menu_animation_turn">Paginatura</string>
+  <string name="power_menu_animation_fly">Bagliore</string>
+  <string name="power_menu_animation_card">3D</string>
+  <string name="power_menu_animation_translucent_top">Traslucido (alto)</string>
+  <string name="power_menu_animation_translucent_bottom">Traslucido (basso)</string>
 
-    <!-- Statusbar AICP logo -->
-    <string name="status_bar_logo_category_title">Logo barra di stato</string>
-    <string name="status_bar_aicp_logo_title">Logo AICP</string>
-    <string name="status_bar_aicp_logo_summary">Abilita visualizzazione del logo AICP sulla parte sinistra della barra di stato</string>
-    <string name="status_bar_aicp_logo_color">Colore del logo AICP</string>
-    <string name="status_bar_aicp_logo_position">Posizione del logo</string>
-    <string name="status_bar_aicp_logo_position_summary">Scegliere su quale lato della barra di stato visualizzare il logo, sinistro o destro</string>
-    <string name="status_bar_logo_position_right">Destro</string>
-    <string name="status_bar_logo_position_left">Sinistro</string>
+  <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_category_title">Logo barra di stato</string>
+  <string name="status_bar_aicp_logo_title">Logo AICP</string>
+  <string name="status_bar_aicp_logo_summary">Abilita visualizzazione del logo AICP sulla parte sinistra della barra di stato</string>
+  <string name="status_bar_aicp_logo_color">Colore del logo AICP</string>
+  <string name="status_bar_aicp_logo_position">Posizione del logo</string>
+  <string name="status_bar_aicp_logo_position_summary">Scegliere su quale lato della barra di stato visualizzare il logo, sinistro o destro</string>
+  <string name="status_bar_logo_position_right">Destro</string>
+  <string name="status_bar_logo_position_left">Sinistro</string>
 
-    <!-- Launch music player when headset is connected -->
-    <string name="headset_connect_player_title">Avvio applicazione musicale</string>
-    <string name="headset_connect_player_summary">Avvia l\'applicazione musicale predefinita quando le cuffie sono connesse.</string>
+  <!-- Launch music player when headset is connected -->
+  <string name="headset_connect_player_title">Avvio applicazione musicale</string>
+  <string name="headset_connect_player_summary">Avvia l\'applicazione musicale predefinita quando le cuffie sono connesse.</string>
     
-    <!-- Camera shutter sound -->
-    <string name="camera_sounds_title">Suono otturatore fotocamera</string>
-    <string name="camera_sounds_summary">La disabilitazione potrebbe non funzionare su app di terze parti e in modalità HDR +</string>
+  <!-- Camera shutter sound -->
+  <string name="camera_sounds_title">Suono otturatore fotocamera</string>
+  <string name="camera_sounds_summary">La disabilitazione potrebbe non funzionare su app di terze parti e in modalità HDR +</string>
 
-    <!-- Screenshot sound -->
-    <string name="screenshot_sound_title">Suono cattura schermata</string>
-    <string name="screenshot_sound_summary">Genera un effetto sonoro quando viene catturata una schermata</string>
+  <!-- Screenshot sound -->
+  <string name="screenshot_sound_title">Suono cattura schermata</string>
+  <string name="screenshot_sound_summary">Genera un effetto sonoro quando viene catturata una schermata</string>
 
-    <string name="brightness_icon_title">Icona luminosità </string>
-    <string name="brightness_icon_summary">Mostra l\'icona di luminosità alla sinistra del cursore di luminosità per regolare la luminosità automatica</string>
+  <string name="brightness_icon_title">Icona luminosità </string>
+  <string name="brightness_icon_summary">Mostra l\'icona di luminosità alla sinistra del cursore di luminosità per regolare la luminosità automatica</string>
 
-    <!-- QS shade transparency -->
-    <string name="qs_transparent_shade">Trasparenza impostazioni rapide</string>
+  <!-- QS shade transparency -->
+  <string name="qs_transparent_shade">Trasparenza impostazioni rapide</string>
 
-    <!-- QS header transparency -->
-    <string name="qs_transparent_header">Trasparenza intestazione impostazioni rapide</string>
+  <!-- QS header transparency -->
+  <string name="qs_transparent_header">Trasparenza intestazione impostazioni rapide</string>
 
-    <!-- QS tile labels visibility -->
-    <string name="qs_menu_item_titles">Nascondi etichetta dei tile</string>
-    <string name="qs_menu_item_titles_summaryOn">Etichette visibili</string>
-    <string name="qs_menu_item_titles_summaryOff">Etichette nascoste</string>
+  <!-- QS tile labels visibility -->
+  <string name="qs_menu_item_titles">Nascondi etichetta dei tile</string>
+  <string name="qs_menu_item_titles_summaryOn">Etichette visibili</string>
+  <string name="qs_menu_item_titles_summaryOff">Etichette nascoste</string>
 
-    <!-- Volume dialog transparency -->
-    <string name="volume_dialog_transparency">Dialogo volume</string>
+  <!-- Volume dialog transparency -->
+  <string name="volume_dialog_transparency">Dialogo volume</string>
 
-    <!-- Power menu and dialogs transparency -->
-    <string name="power_menu_transparency">Trasparenza del menù accensione</string>
+  <!-- Power menu and dialogs transparency -->
+  <string name="power_menu_transparency">Trasparenza del menù accensione</string>
   
-    <!-- Power/reboot dialogs dim amount -->
-    <string name="power_menu_dialog_dim">Imposta lo sfondo scuro sotto il menù accensione</string>
+  <!-- Power/reboot dialogs dim amount -->
+  <string name="power_menu_dialog_dim">Imposta lo sfondo scuro sotto il menù accensione</string>
 	
-    <!-- Notifications transparency -->
-    <string name="notifications_transparency">Trasparenza delle notifice</string>
+  <!-- Notifications transparency -->
+  <string name="notifications_transparency">Trasparenza delle notifice</string>
 
-    <!-- Lockscreen Torch -->
-    <string name="keyguard_torch_title">Torcia</string>
-    <string name="keyguard_torch_summary">Premi a lungo il tasto accensione, quando lo schermo è spento, per accendere la torcia</string>
+  <!-- Lockscreen Torch -->
+  <string name="keyguard_torch_title">Torcia</string>
+  <string name="keyguard_torch_summary">Premi a lungo il tasto accensione, quando lo schermo è spento, per accendere la torcia</string>
 
-    <!-- Quick settings tiles columns and rows config -->
-    <string name="qs_rows_portrait_title">Righe (verticale)</string>
-    <string name="qs_rows_landscape_title">Righe (orizzontale)</string>
-    <string name="qs_columns_title">Colonne</string>
-    <string name="sysui_qqs_count_title">Tile piccoli</string>
+  <!-- Quick settings tiles columns and rows config -->
+  <string name="qs_rows_portrait_title">Righe (verticale)</string>
+  <string name="qs_rows_landscape_title">Righe (orizzontale)</string>
+  <string name="qs_columns_title">Colonne</string>
+  <string name="sysui_qqs_count_title">Tile piccoli</string>
 
-     <!-- Tiles animation style  -->
-    <string name="qs_tile_animation_style_title">Stile animazione</string>
-    <string name="qs_tile_animation_duration_title">Durata animazione</string>
-    <string name="qs_tile_animation_interpolator_title">Interpolazione animazione</string>
-    <string name="qs_tile_animation_style_off">Nessuna animazione</string>
-    <string name="qs_tile_animation_style_flip">Capovolgi</string>
-    <string name="qs_tile_animation_style_rotate">Ruota</string>
-    <string name="qs_tile_animation_duration_low">Bassa</string>
-    <string name="qs_tile_animation_duration_default">Predefinita</string>
-    <string name="qs_tile_animation_duration_fast">Veloce</string>
-    <string name="qs_tile_animation_duration_superfast">Super veloce</string>
-    <string name="qs_tile_animation_interpolator_linearInterpolator">Lineare</string>
-    <string name="qs_tile_animation_interpolator_accelerateInterpolator">Accelera</string>
-    <string name="qs_tile_animation_interpolator_decelerateInterpolator">Decelera</string>
-    <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">Accelera e decelera</string>
-    <string name="qs_tile_animation_interpolator_bounceInterpolator">Rimbalzo</string>
-    <string name="qs_tile_animation_interpolator_overshootInterpolator">Supera</string>
-    <string name="qs_tile_animation_interpolator_anticipateInterpolator">Anticipa</string>
-    <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Anticipa e supera</string>
-    <string name="qs_set_animation_style">%1$s</string>
-    <string name="qs_set_animation_duration">%1$s</string>
-    <string name="qs_set_animation_interpolator">%1$s</string>
+  <!-- Tiles animation style  -->
+  <string name="qs_tile_animation_style_title">Stile animazione</string>
+  <string name="qs_tile_animation_duration_title">Durata animazione</string>
+  <string name="qs_tile_animation_interpolator_title">Interpolazione animazione</string>
+  <string name="qs_tile_animation_style_off">Nessuna animazione</string>
+  <string name="qs_tile_animation_style_flip">Capovolgi</string>
+  <string name="qs_tile_animation_style_rotate">Ruota</string>
+  <string name="qs_tile_animation_duration_low">Bassa</string>
+  <string name="qs_tile_animation_duration_default">Predefinita</string>
+  <string name="qs_tile_animation_duration_fast">Veloce</string>
+  <string name="qs_tile_animation_duration_superfast">Super veloce</string>
+  <string name="qs_tile_animation_interpolator_linearInterpolator">Lineare</string>
+  <string name="qs_tile_animation_interpolator_accelerateInterpolator">Accelera</string>
+  <string name="qs_tile_animation_interpolator_decelerateInterpolator">Decelera</string>
+  <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">Accelera e decelera</string>
+  <string name="qs_tile_animation_interpolator_bounceInterpolator">Rimbalzo</string>
+  <string name="qs_tile_animation_interpolator_overshootInterpolator">Supera</string>
+  <string name="qs_tile_animation_interpolator_anticipateInterpolator">Anticipa</string>
+  <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Anticipa e supera</string>
+  <string name="qs_set_animation_style">%1$s</string>
+  <string name="qs_set_animation_duration">%1$s</string>
+  <string name="qs_set_animation_interpolator">%1$s</string>
 
-    <!-- App Exit Toast -->
-    <string name="app_exit_toast">Premi di nuovo per uscire</string>
-
+  <!-- App Exit Toast -->
+  <string name="app_exit_toast">Premi di nuovo per uscire</string>
+  
   <!-- Volume dialog stroke settings -->
   <string name="volume_dialog_stroke_title">Bordo finestra</string>
   <string name="volume_dialog_stroke_disabled">Disattivato</string>
@@ -372,88 +374,89 @@
   <string name="qs_dash_width_title">Larghezza del bordo tratteggiato</string>
   <string name="qs_dash_gap_title">Spessore del bordo tratteggiato</string>
   
-    <!--Preference Categories-->
-    <string name ="anim">Animazione</string>
-    <string name ="indicators">Indicatori della barra di stato</string>
-    <string name="quicksettings_tiles_category">Configurazioni del pannello impostazioni rapide</string>
-    <string name ="header_tweaks">Modifiche intestazione</string>
-    <string name="qs">Impostazioni rapide Tweaks</string>
-    <string name ="Misc">Varie</string>
-    <string name = "vol_diag">Finestra di dialogo volume </string>
-    <string name = "power">Menù accensione</string>
-    <string name="cab">Pulsante cancella tutti  Tweaks</string>
-    <string name="visuals">Immagini recenti extra</string>
+  <!--Preference Categories-->
+  <string name ="anim">Animazione</string>
+  <string name ="indicators">Indicatori della barra di stato</string>
+  <string name="quicksettings_tiles_category">Configurazioni del pannello impostazioni rapide</string>
+  <string name ="header_tweaks">Modifiche intestazione</string>
+  <string name="qs">Impostazioni rapide Tweaks</string>
+  <string name ="Misc">Varie</string>
+  <string name = "vol_diag">Finestra di dialogo volume </string>
+  <string name = "power">Menù accensione</string>
+  <string name="cab">Pulsante cancella tutti  Tweaks</string>
+  <string name="visuals">Immagini recenti extra</string>
 
-   <!-- Fingerprint vibrate -->
-   <string name="fprint_sucess_vib_title">Autenticazione impronta digitale con vibrazione</string>
-   <string name="fprint_sucess_vib_summary">Vibra all\'avvenuta autenticazione tramite impronta digitale</string>
+  <!-- Fingerprint vibrate -->
+  <string name="fprint_sucess_vib_title">Autenticazione impronta digitale con vibrazione</string>
+  <string name="fprint_sucess_vib_summary">Vibra all\'avvenuta autenticazione tramite impronta digitale</string>
    
-    <!-- AE settings -->
-    <string name="ae_settings_title">Impostazioni Aicp</string>
-    <string name="ae_custom_colors_title">Colori personalizzati</string>
-    <string name="ae_custom_colors_summaries">Utilizzare le seguenti impostazioni per modificare l\'aspetto di AE</string>
-    <string name="ae_drawer_opacity_title">Opacità del drawer di navigazione</string>
-    <string name="ae_drawer_bg_color_title">Colore di spostamento drawer bg</string>
-    <string name="ae_settings_restore_defaults_title">Ripristino predefinito</string>
-    <string name="values_restored_title">Valori ripristinati</string>
-    <string name="ae_header_bg_image_opacity_title">Opacità dell\'immagine di navigazione intestazione bg del drawer</string>
-    <string name="ae_nav_drawer_checked_text_title">Colore del testo selezionato</string>
-    <string name="ae_nav_drawer_unchecked_text_title">Colore del testo di elenco</string>
-    <string name="ae_settings_summary_title">Testo di riepilogo AE personalizzato nell\'applicazione delle regolazioni</string>
-    <string name="custom_summary_title">Testo personalizzato AE</string>
-    <string name="custom_summary_explain">Si prega di inserire una nuovo testo. Lasciare vuoto per tornare al testo predefinito.</string>
-    <string name="custom_summary_notset">Personalizzazione della rom personalizzata</string>
+  <!-- AE settings -->
+  <string name="ae_settings_title">Impostazioni Aicp</string>
+  <string name="ae_custom_colors_title">Colori personalizzati</string>
+  <string name="ae_custom_colors_summaries">Utilizzare le seguenti impostazioni per modificare l\'aspetto di AE</string>
+  <string name="ae_drawer_opacity_title">Opacità del drawer di navigazione</string>
+  <string name="ae_drawer_bg_color_title">Colore di spostamento drawer bg</string>
+  <string name="ae_header_bg_image_color_title">Colore immagine di navigazione intestazione bg</string>
+  <string name="ae_settings_restore_defaults_title">Ripristino predefinito</string>
+  <string name="values_restored_title">Valori ripristinati</string>
+  <string name="ae_header_bg_image_opacity_title">Opacità dell\'immagine di navigazione intestazione bg del drawer</string>
+  <string name="ae_nav_drawer_checked_text_title">Colore del testo selezionato</string>
+  <string name="ae_nav_drawer_unchecked_text_title">Colore del testo di elenco</string>
+  <string name="ae_settings_summary_title">Testo di riepilogo AE personalizzato nell\'applicazione delle regolazioni</string>
+  <string name="custom_summary_title">Testo personalizzato AE</string>
+  <string name="custom_summary_explain">Si prega di inserire una nuovo testo. Lasciare vuoto per tornare al testo predefinito.</string>
+  <string name="custom_summary_notset">Personalizzazione della rom personalizzata</string>
 
-    <!-- Statusbar 4G LTE switch -->
-    <string name="show_fourg_title">Visualizza 4G invece di LTE</string>
-    <string name="show_fourg_summary">Sostituisce l\'indicatore LTE nella baar di stato con 4G</string>
+  <!-- Statusbar 4G LTE switch -->
+  <string name="show_fourg_title">Visualizza 4G invece di LTE</string>
+  <string name="show_fourg_summary">Sostituisce l\'indicatore LTE nella baar di stato con 4G</string>
    
-    <!-- QuickSettings haptic feedback -->
-    <string name="quick_settings_vibrate_title">Vibrazione al tocco</string>
-    <string name="quick_settings_vibrate_summary">Vibra quando i tile vengono toccati</string>
+  <!-- QuickSettings haptic feedback -->
+  <string name="quick_settings_vibrate_title">Vibrazione al tocco</string>
+  <string name="quick_settings_vibrate_summary">Vibra quando i tile vengono toccati</string>
 
-    <!-- Advanced data tile -->
-    <string name="qs_advanced_data_title">Dati attivi al tocco</string>
-    <string name="qs_advanced_data_summary">Fa in modo che con un clic verranno attivati o disattivati i dati invece di entrare nelle impostazioni</string>
+  <!-- Advanced data tile -->
+  <string name="qs_advanced_data_title">Dati attivi al tocco</string>
+  <string name="qs_advanced_data_summary">Fa in modo che con un clic verranno attivati o disattivati i dati invece di entrare nelle impostazioni</string>
   
-    <!-- SystemUI restart prompt -->
-    <string name="systemui_restart_title">ATTENZIONE</string>
-    <string name="systemui_restart_message">Il systemUI verrà riavviato in modo che l\'impostazione selezionata può essere applicata in modo corretto.</string>
+  <!-- SystemUI restart prompt -->
+  <string name="systemui_restart_title">ATTENZIONE</string>
+  <string name="systemui_restart_message">Il systemUI verrà riavviato in modo che l\'impostazione selezionata può essere applicata in modo corretto.</string>
 
-    <!-- Status Bar Ticker -->
-    <string name="ticker_screen_title">Ticker</string>
-    <string name="ticker_title">Ticker barra di stato</string>
-    <string name="ticker_screen_summary">Personalizza lo stile dei ticker nella barra di stato</string>
-    <string name="ticker_summary">Attivare il vecchio ticker della barra di stato</string>
-    <string name="ticker_restore_defaults_title">Ripristina predefinite</string>
-    <string name="text_title">Testo</string>
-    <string name="icon_title">Icona</string>
-    <string name="colors_title">Colori</string>
+  <!-- Status Bar Ticker -->
+  <string name="ticker_screen_title">Ticker</string>
+  <string name="ticker_title">Ticker barra di stato</string>
+  <string name="ticker_screen_summary">Personalizza lo stile dei ticker nella barra di stato</string>
+  <string name="ticker_summary">Attivare il vecchio ticker della barra di stato</string>
+  <string name="ticker_restore_defaults_title">Ripristina predefinite</string>
+  <string name="text_title">Testo</string>
+  <string name="icon_title">Icona</string>
+  <string name="colors_title">Colori</string>
 
-    <!-- Optional screenshot type -->
-    <string name="screenshot_type_title">Tipo di screenshot</string>
-    <string name="screenshot_type_fullscreen">Screenshot a schermo intero</string>
-    <string name="screenshot_type_partial">Trascinare la selezione sulla zona che si vuole catturare</string>
+  <!-- Optional screenshot type -->
+  <string name="screenshot_type_title">Tipo di screenshot</string>
+  <string name="screenshot_type_fullscreen">Screenshot a schermo intero</string>
+  <string name="screenshot_type_partial">Trascinare la selezione sulla zona che si vuole catturare</string>
    
-    <!-- Screenshot delay -->
-    <string name="powermenu_screenshot_delay_title">Ritardo Screenshot</string>
-    <string name="powermenu_screenshot_delay_message">Attualmente impostato su %1$s secondi di ritardo</string>
+  <!-- Screenshot delay -->
+  <string name="powermenu_screenshot_delay_title">Ritardo Screenshot</string>
+  <string name="powermenu_screenshot_delay_message">Attualmente impostato su %1$s secondi di ritardo</string>
   
-    <!-- Lock screen Am/Pm switch -->
-    <string name="lock_screen_hide_ampm_title">Nascondi AM/PM</string>
-    <string name="lock_screen_hide_ampm_summary_on">AM / PM nascosto</string>
-    <string name="lock_screen_hide_ampm_summary_off">AM/PM visualizzato</string>
+  <!-- Lock screen Am/Pm switch -->
+  <string name="lock_screen_hide_ampm_title">Nascondi AM/PM</string>
+  <string name="lock_screen_hide_ampm_summary_on">AM / PM nascosto</string>
+  <string name="lock_screen_hide_ampm_summary_off">AM/PM visualizzato</string>
 
-    <!-- Hostname setting -->
-    <string name="device_hostname">Hostname dispositivo</string>
+  <!-- Hostname setting -->
+  <string name="device_hostname">Hostname dispositivo</string>
 
-    <!-- Disable quick settings on lock screen switch -->
-    <string name="lockscreen_qs_disabled_title">Impostazioni rapide disattivate nella schermata di blocco</string>
-    <string name="lockscreen_qs_disabled_summary">Disabilitare l\'espansione delle impostazioni rapide e le scorciatoie blocco tastiera su schermi con blocco sicuro</string>
+  <!-- Disable quick settings on lock screen switch -->
+  <string name="lockscreen_qs_disabled_title">Impostazioni rapide disattivate nella schermata di blocco</string>
+  <string name="lockscreen_qs_disabled_summary">Disabilitare l\'espansione delle impostazioni rapide e le scorciatoie blocco tastiera su schermi con blocco sicuro</string>
   
-    <!-- Disable music track title in QS tile -->
-    <string name="qs_music_tile_track_optional_title">Titolo brano musicale nel tile</string>
-    <string name="qs_music_tile_track_optional_summary">Visualizza il titolo del brano musicale come titolo nel tile delle impostazioni rapide</string>
+  <!-- Disable music track title in QS tile -->
+  <string name="qs_music_tile_track_optional_title">Titolo brano musicale nel tile</string>
+  <string name="qs_music_tile_track_optional_summary">Visualizza il titolo del brano musicale come titolo nel tile delle impostazioni rapide</string>
   
   <!-- Immersive Recents -->
   <string name="immersive_recents_title">Recenti immersivi</string>
@@ -509,6 +512,8 @@
   <string name="heads_up_snooze_10min">10 minuti</string>
   <string name="heads_up_snooze_15min">15 minuti</string>
   <string name="heads_up_snooze_20min">20 minuti</string>
+  <string name="heads_up_snooze_30min">30 minuti</string>
+  <string name="heads_up_snooze_60min">60 minuti</string>
   
   <!-- Lockscreen battery info indicator  -->
   <string name="lockscreen_battery_info_title">Info batteria nella schermata di blocco</string>
@@ -569,5 +574,39 @@
   <string name="bluetooth_battery_title">Mostra stato batteria bluetooth</string>
   <string name="bluetooth_battery_summary">Mostra lo stato della batteria per il dispositivo bluetooth attualmente connesso, se disponibile.</string>
 
+  <!-- Three-fingers-swipe to screenshot -->
+  <string name="three_finger_gesture">Striscia per screenshot</string>
+  <string name="three_finger_gesture_summary">Striscia con tre dita per prendere uno screenshot</string>
+
+  <!-- Blur UI -->
+  <string name="nav_blur_ui_title">Sfocatura UI</string>
+  <string name="blur_ui_category_title">Personalizzazioni di sfocatura</string>
+  <string name="blurred_status_bar_expanded_enabled_pref">Sfocatura sfondo barra di stato</string>
+  <string name="blurred_status_bar_expanded_enabled_pref_summary">Sfoca lo sfondo quando si tira giù la barra di stato</string>
+  <string name="translucent_notifications_pref">Notifiche semitrasparenti</string>
+  <string name="translucent_notifications_pref_summary">Imposta lo sfondo della notifica semitrasparente</string>
+  <string name="translucent_header_pref">Sfocatura intestazione barra di stato</string>
+  <string name="translucent_header_pref_summary">Sfoca lo sfondo dell\'intestazione della barra di stato</string>
+  <string name="translucent_quick_settings_pref">Sfocatura barra di stato estesa</string>
+  <string name="translucent_quick_settings_pref_summary">Rendi trasparente lo sfondo delle impostazioni rapide</string>
+  <string name="transluency_level_universal">Livello di trasparenza</string>
+  <string name="blur_expstatus_cat">Barra di stato estesa </string>
+  <string name="blur_notifications_cat">Notifiche</string>
+  <string name="blur_header_cat">Intestazione barra di stato</string>
+  <string name="blur_qs_cat">Impostazioni rapide</string>
+  <string name="blur_recents_cat">Recenti</string>
+  <string name="blurred_recent_app_enabled_pref">Sfondo app recenti sfocate</string>
+  <string name="blurred_recent_app_enabled_pref_summary">Sfoca lo sfondo delle applicazioni recenti</string>
+  <string name="blurred_scale">Scala sfocatura</string>
+  <string name="blurred_scale_summary">Qualità di sfocatura immagine</string>
+  <string name="blurred_radius">Raggio sfocatura</string>
+  <string name="blurred_radius_summary">Quantità di sfocatura</string>
+  <string name="blur_cat_notice">Avviso</string>
+  <string name="blur_cat_notice_summary">Le personalizzazioni di sfocatura sono disabilitate durante la visualizzazione della tastiera! Solo le notifiche semitrasparenti sono abilitate! Le trasparenze dell\'intestazione del pannello delle impostazioni rapide vengono automaticamente disattivate!</string>
+  <string name="blurred_scale">Scala sfocatura</string>
+  <string name="blurred_scale_summary">Qualità di sfocatura immagine</string>
+  <string name="blurred_radius">Raggio sfocatura</string>
+  <string name="blurred_radius_summary">Quantità di sfocatura</string>
+  
 </resources>
 
