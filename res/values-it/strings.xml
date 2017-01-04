@@ -89,7 +89,7 @@
     <string name="hex_hint">#ff000000</string>
     <string name="set">Imposta</string>
     <string name="color_default">Predefinito</string>
-	
+  
     <!-- Network traffic -->
     <string name="traffic_category">Indicatori di traffico</string>
     <string name="traffic_title">Traffico</string>
@@ -115,7 +115,7 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancella</string>
     <string name="default_string">Predefinito</string>
-
+  
     <!-- Superuser indicator on status bar -->
     <string name="su_indicator">Indicatore Superuser</string>
     <string name="su_indicator_summary_on">L\'indicatore Superuser è visible quando una sessione è attiva</string>
@@ -230,7 +230,7 @@
 
     <!-- AOKP custom system animations -->
     <string name="animation_duration_default">Predefinito</string>
-    
+ 
     <!-- Toast Animation -->
     <string name="toast_animation_title">Animazione toast</string>
     <string name="toast_none_animation">Nessuna</string>
@@ -310,7 +310,7 @@
   
     <!-- Power/reboot dialogs dim amount -->
     <string name="power_menu_dialog_dim">Imposta lo sfondo scuro sotto il menù accensione</string>
-	
+  
     <!-- Notifications transparency -->
     <string name="notifications_transparency">Trasparenza delle notifice</string>
 
@@ -349,7 +349,7 @@
 
     <!-- App Exit Toast -->
     <string name="app_exit_toast">Premi di nuovo per uscire</string>
-
+ 
   <!-- Volume dialog stroke settings -->
   <string name="volume_dialog_stroke_title">Bordo finestra</string>
   <string name="volume_dialog_stroke_disabled">Disattivato</string>
@@ -371,7 +371,7 @@
   <string name="qs_corner_radius_title">Raggio d\'angolo</string>
   <string name="qs_dash_width_title">Larghezza del bordo tratteggiato</string>
   <string name="qs_dash_gap_title">Spessore del bordo tratteggiato</string>
-  
+
     <!--Preference Categories-->
     <string name ="anim">Animazione</string>
     <string name ="indicators">Indicatori della barra di stato</string>
@@ -383,7 +383,7 @@
     <string name = "power">Menù accensione</string>
     <string name="cab">Pulsante cancella tutti  Tweaks</string>
     <string name="visuals">Immagini recenti extra</string>
-
+  
    <!-- Fingerprint vibrate -->
    <string name="fprint_sucess_vib_title">Autenticazione impronta digitale con vibrazione</string>
    <string name="fprint_sucess_vib_summary">Vibra all\'avvenuta autenticazione tramite impronta digitale</string>
@@ -394,6 +394,7 @@
     <string name="ae_custom_colors_summaries">Utilizzare le seguenti impostazioni per modificare l\'aspetto di AE</string>
     <string name="ae_drawer_opacity_title">Opacità del drawer di navigazione</string>
     <string name="ae_drawer_bg_color_title">Colore di spostamento drawer bg</string>
+    <string name="ae_header_bg_image_color_title">Colore immagine di navigazione intestazione bg</string>
     <string name="ae_settings_restore_defaults_title">Ripristino predefinito</string>
     <string name="values_restored_title">Valori ripristinati</string>
     <string name="ae_header_bg_image_opacity_title">Opacità dell\'immagine di navigazione intestazione bg del drawer</string>
@@ -446,15 +447,15 @@
 
     <!-- Hostname setting -->
     <string name="device_hostname">Hostname dispositivo</string>
-
+  
     <!-- Disable quick settings on lock screen switch -->
     <string name="lockscreen_qs_disabled_title">Impostazioni rapide disattivate nella schermata di blocco</string>
     <string name="lockscreen_qs_disabled_summary">Disabilitare l\'espansione delle impostazioni rapide e le scorciatoie blocco tastiera su schermi con blocco sicuro</string>
-  
+
     <!-- Disable music track title in QS tile -->
     <string name="qs_music_tile_track_optional_title">Titolo brano musicale nel tile</string>
     <string name="qs_music_tile_track_optional_summary">Visualizza il titolo del brano musicale come titolo nel tile delle impostazioni rapide</string>
-  
+
   <!-- Immersive Recents -->
   <string name="immersive_recents_title">Recenti immersivi</string>
   <string name="immersive_recents_summary">Cambia la visualizzazione della schermata dei recenti</string>
@@ -487,7 +488,7 @@
   <string name="headsup_settings_summary">Per consentire alle applicazioni di visualizzare le notifiche interattive in una finestra pop-up sullo schermo, attivare la visualizzazione delle notifiche.</string>
   <string name="summary_heads_up_enabled">Visualizzazione notifiche abilitate</string>
   <string name="summary_heads_up_disabled">Visualizzazione notifiche disabilitate</string>
-    
+
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Tempo di visualizzazione</string>
   <string name="heads_up_time_out_summary">Le notifiche saranno mostrate per <xliff:g id="number">%d</xliff:g> secondi</string>
@@ -497,6 +498,8 @@
   <string name="heads_up_time_out_6sec">6 secondi</string>
   <string name="heads_up_time_out_8sec">8 secondi</string>
   <string name="heads_up_time_out_10sec">10 secondi</string>
+  <string name="heads_up_snooze_30min">30 minuti</string>
+  <string name="heads_up_snooze_60min">60 minuti</string>
 
   <!-- Heads up snooze -->
   <string name="heads_up_snooze_title">Tempo di posticipo</string>
@@ -509,7 +512,7 @@
   <string name="heads_up_snooze_10min">10 minuti</string>
   <string name="heads_up_snooze_15min">15 minuti</string>
   <string name="heads_up_snooze_20min">20 minuti</string>
-  
+
   <!-- Lockscreen battery info indicator  -->
   <string name="lockscreen_battery_info_title">Info batteria nella schermata di blocco</string>
   <string name="lockscreen_battery_info_summary">Indicatore del livello di carica massima di corrente-tensione e la temperatura della batteria sulla schermata di blocco durante la ricarica</string>
@@ -517,11 +520,11 @@
   <!-- Battery Saver easy toggle -->
   <string name="qs_battery_easy_toggle_title">Tile della batteria</string>
   <string name="qs_battery_easy_toggle_summary">Fa in modo che con un solo click puoi attivare o disattivare il risparmio energetico, senza entrare nelle impostazioni</string>
-  
+
   <!-- BT easy toggle -->
   <string name="qs_bt_easy_toggle_title">Bluetooth attivo al tocco</string>
   <string name="qs_bt_easy_toggle_summary">Attiva o disattiva con la sola azione di un tocco il Bluetooth</string>
-	
+
   <!-- WiFi easy toggle -->
   <string name="qs_wifi_easy_toggle_title">WiFi attivo al tocco</string>
   <string name="qs_wifi_easy_toggle_summary">Attiva o disattiva con la sola azione di un tocco il WiFi</string>
@@ -541,7 +544,7 @@
   <string name="media_scanner_on_boot_enabled">Scansione multimediale</string>
   <string name="media_scanner_on_boot_ask">Chiedi per scansione (notifica)</string>
   <string name="media_scanner_on_boot_disabled">Non eseguire scansione multimediale</string>
-
+  
   <!-- SlimSizer  -->
   <string name="listsystem">Elenco</string>
   <string name="sizer_title">Rimozione app</string>
@@ -564,10 +567,43 @@
 
   <!-- Extensions settings -->
   <string name="extensions_title">Estensioni di sistema</string>
-  
+
   <!-- Bluetooth status -->
   <string name="bluetooth_battery_title">Mostra stato batteria bluetooth</string>
   <string name="bluetooth_battery_summary">Mostra lo stato della batteria per il dispositivo bluetooth attualmente connesso, se disponibile.</string>
 
+  <!-- Three-fingers-swipe to screenshot -->
+  <string name="three_finger_gesture">Striscia per screenshot</string>
+  <string name="three_finger_gesture_summary">Striscia con tre dita per prendere uno screenshot</string>
+
+  <!-- Blur UI -->
+  <string name="nav_blur_ui_title">Sfocatura UI</string>
+  <string name="blur_ui_category_title">Personalizzazioni di sfocatura</string>
+  <string name="blurred_status_bar_expanded_enabled_pref">Sfocatura sfondo barra di stato</string>
+  <string name="blurred_status_bar_expanded_enabled_pref_summary">Sfoca lo sfondo quando si tira giù la barra di stato</string>
+  <string name="translucent_notifications_pref">Notifiche semitrasparenti</string>
+  <string name="translucent_notifications_pref_summary">Imposta lo sfondo della notifica semitrasparente</string>
+  <string name="translucent_header_pref">Sfocatura intestazione barra di stato</string>
+  <string name="translucent_header_pref_summary">Sfoca lo sfondo dell\'intestazione della barra di stato</string>
+  <string name="translucent_quick_settings_pref">Sfocatura barra di stato estesa</string>
+  <string name="translucent_quick_settings_pref_summary">Rendi trasparente lo sfondo delle impostazioni rapide</string>
+  <string name="transluency_level_universal">Livello di trasparenza</string>
+  <string name="blur_expstatus_cat">Barra di stato estesa </string>
+  <string name="blur_notifications_cat">Notifiche</string>
+  <string name="blur_header_cat">Intestazione barra di stato</string>
+  <string name="blur_qs_cat">Impostazioni rapide</string>
+  <string name="blur_recents_cat">Recenti</string>
+  <string name="blurred_recent_app_enabled_pref">Sfondo app recenti sfocate</string>
+  <string name="blurred_recent_app_enabled_pref_summary">Sfoca lo sfondo delle applicazioni recenti</string>
+  <string name="blurred_scale">Scala sfocatura</string>
+  <string name="blurred_scale_summary">Qualità di sfocatura immagine</string>
+  <string name="blurred_radius">Raggio sfocatura</string>
+  <string name="blurred_radius_summary">Quantità di sfocatura</string>
+  <string name="blur_cat_notice">Avviso</string>
+  <string name="blur_cat_notice_summary">Le personalizzazioni di sfocatura sono disabilitate durante la visualizzazione della tastiera! Solo le notifiche semitrasparenti sono abilitate! Le trasparenze dell\'intestazione del pannello delle impostazioni rapide vengono automaticamente disattivate!</string>
+  <string name="blurred_scale">Scala sfocatura</string>
+  <string name="blurred_scale_summary">Qualità di sfocatura immagine</string>
+  <string name="blurred_radius">Raggio sfocatura</string>
+  <string name="blurred_radius_summary">Quantità di sfocatura</string>
 </resources>
 
