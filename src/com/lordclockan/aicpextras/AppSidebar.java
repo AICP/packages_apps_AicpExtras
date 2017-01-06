@@ -56,6 +56,7 @@ public class AppSidebar extends Activity {
         private static final String KEY_TRIGGER_WIDTH = "trigger_width";
         private static final String KEY_TRIGGER_TOP = "trigger_top";
         private static final String KEY_TRIGGER_BOTTOM = "trigger_bottom";
+        private static final String KEY_HIDE_TIMEOUT = "app_sidebar_hide_timeout";
 
         private SwitchPreference mEnabledPref;
         private SeekBarPreferenceCham mTransparencyPref;
@@ -64,6 +65,7 @@ public class AppSidebar extends Activity {
         private SeekBarPreferenceCham mTriggerWidthPref;
         private SeekBarPreferenceCham mTriggerTopPref;
         private SeekBarPreferenceCham mTriggerBottomPref;
+        private SeekBarPreferenceCham mHideTimeoutPref;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -109,6 +111,11 @@ public class AppSidebar extends Activity {
                 Settings.System.APP_SIDEBAR_TRIGGER_HEIGHT, 100));
             mTriggerBottomPref.setOnPreferenceChangeListener(this);
 
+            mHideTimeoutPref = (SeekBarPreferenceCham) findPreference(KEY_HIDE_TIMEOUT);
+            mHideTimeoutPref.setValue(Settings.System.getInt(resolver,
+                Settings.System.APP_SIDEBAR_HIDE_TIMEOUT, 3000));
+            mHideTimeoutPref.setOnPreferenceChangeListener(this);
+
             findPreference(KEY_SETUP_ITEMS).setOnPreferenceClickListener(this);
         }
 
@@ -143,6 +150,11 @@ public class AppSidebar extends Activity {
                 Settings.System.putInt(resolver,
                     Settings.System.APP_SIDEBAR_ENABLED,
                     value ? 1 : 0);
+                return true;
+            } else if (preference == mHideTimeoutPref) {
+                int timeout = ((Integer)newValue).intValue();
+                Settings.System.putInt(resolver,
+                    Settings.System.APP_SIDEBAR_HIDE_TIMEOUT, timeout);
                 return true;
             }
             return false;
