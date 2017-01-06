@@ -59,6 +59,17 @@
         android:defaultValue="0"
         android:dependency="sidebar_enable" />
 
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="app_sidebar_hide_timeout"
+        android:title="@string/app_sidebar_hide_timeout_title"
+        android:summary="@string/app_sidebar_hide_timeout_summary"
+        android:max="10000"
+        aicpextras:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="ms"
+        android:defaultValue="3000"
+        android:dependency="sidebar_enable" />
+
     <PreferenceCategory
         android:title="@string/trigger_category" />
 
