@@ -3,6 +3,8 @@ package com.lordclockan.aicpextras;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -13,11 +15,14 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.view.animation.AccelerateInterpolator;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.utils.Utils;
+import com.plattysoft.leonids.ParticleSystem;
 
 public class AboutFragment extends Fragment {
 
@@ -43,6 +48,7 @@ public class AboutFragment extends Fragment {
         private String PREF_AICP_DOWNLOADS = "aicp_downloads";
         private String PREF_AICP_GERRIT = "aicp_gerrit";
         private String PREF_AICP_CHANGELOG = "aicp_changelog";
+        private String PREF_AICP_VERSION = "ae_version";
 
         private PreferenceScreen mAicpLogo;
         private long[] mHits = new long[3];
@@ -51,6 +57,7 @@ public class AboutFragment extends Fragment {
         private Preference mAicpGerrit;
         private Preference mAicpChangeLog;
         private Preference mStatsAicp;
+        private Preference mAicpVersion;
 
         private static final String PREF_STATS_AICP = "aicp_stats";
 
@@ -83,6 +90,7 @@ public class AboutFragment extends Fragment {
             mAicpGerrit = prefSet.findPreference(PREF_AICP_GERRIT);
             mAicpChangeLog = prefSet.findPreference(PREF_AICP_CHANGELOG);
             mStatsAicp = prefSet.findPreference(PREF_STATS_AICP);
+            mAicpVersion = prefSet.findPreference(PREF_AICP_VERSION);
 
         }
 
@@ -115,6 +123,30 @@ public class AboutFragment extends Fragment {
                 if  (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
                     startActivity(INTENT_YOGA);
                 }
+            } else if (preference == mAicpVersion) {
+                Random rand = new Random();
+
+
+                int firstRandom = rand.nextInt(91 - 0);
+                int secondRandom = rand.nextInt(181 - 90) + 90;
+                int thirdRandom = rand.nextInt(181 - 0);
+
+                // Let's color the star randomly
+                Drawable star = super.getResources().getDrawable(R.drawable.star_white_border, null);
+                int randomColor;
+                randomColor = Color.rgb(
+                        Color.red(rand.nextInt(0xFFFFFF)),
+                        Color.green(rand.nextInt(0xFFFFFF)),
+                        Color.blue(rand.nextInt(0xFFFFFF)));
+                star.setTint(randomColor);
+
+                ParticleSystem ps = new ParticleSystem(getActivity(), 100, star, 3000);
+                ps.setScaleRange(0.7f, 1.3f);
+                ps.setSpeedRange(0.1f, 0.25f);
+                ps.setAcceleration(0.0001f, thirdRandom);
+                ps.setRotationSpeedRange(firstRandom, secondRandom);
+                ps.setFadeOut(200, new AccelerateInterpolator());
+                ps.oneShot(this.getView(), 100);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
