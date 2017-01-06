@@ -131,10 +131,35 @@
 
     </PreferenceCategory>
 
-    <!--PreferenceCategory
+    <PreferenceCategory
         android:title="@string/header_tweaks">
 
-    </PreferenceCategory-->
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="status_bar_custom_header"
+            android:title="@string/status_bar_custom_header_title"
+            android:summary="@string/status_bar_custom_header_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="daylight_header_pack"
+            android:title="@string/daylight_header_pack_title"
+            android:persistent="false"
+            android:dependency="status_bar_custom_header" />
+
+        <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+            android:key="status_bar_custom_header_shadow"
+            android:title="@string/status_bar_custom_header_shadow_title"
+            android:summary="@string/status_bar_custom_header_shadow_summary"
+            android:max="100"
+            aicpextras:min="0"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight="@string/unit_percent"
+            aicpextras:defaultVal="0"
+            android:persistent="false"
+            android:dependency="status_bar_custom_header" />
+
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/Misc">
