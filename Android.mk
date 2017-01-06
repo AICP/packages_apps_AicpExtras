@@ -44,7 +44,9 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-design \
     libsuperuser \
     play \
-    org.cyanogenmod.platform.internal
+    org.cyanogenmod.platform.internal \
+    particles
+
 LOCAL_JAVA_LIBRARIES := org.cyanogenmod.hardware
 
 LOCAL_JAVA_LIBRARIES := org.apache.http.legacy
@@ -58,7 +60,7 @@ include $(BUILD_PACKAGE)
 
 include $(CLEAR_VARS)
 
-LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := libsuperuser:lib/libsuperuser.jar
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := libsuperuser:lib/libsuperuser.jar \
+    particles:lib/LeonidsLib-1.3.2.jar
 
 include $(BUILD_MULTI_PREBUILT)
-
