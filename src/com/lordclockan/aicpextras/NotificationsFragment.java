@@ -140,6 +140,37 @@ public class NotificationsFragment extends Fragment {
                 prefSet.removePreference(mQsDataAdvanced);
             }
 
+            String settingHeaderPackage = Settings.System.getString(getContentResolver(),
+                    Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK);
+            if (settingHeaderPackage == null) {
+                settingHeaderPackage = DEFAULT_HEADER_PACKAGE;
+            }
+            mDaylightHeaderPack = (ListPreference) findPreference(DAYLIGHT_HEADER_PACK);
+
+            List<String> entries = new ArrayList<String>();
+            List<String> values = new ArrayList<String>();
+            getAvailableHeaderPacks(entries, values);
+            mDaylightHeaderPack.setEntries(entries.toArray(new String[entries.size()]));
+            mDaylightHeaderPack.setEntryValues(values.toArray(new String[values.size()]));
+
+            int valueIndex = mDaylightHeaderPack.findIndexOfValue(settingHeaderPackage);
+            if (valueIndex == -1) {
+                // no longer found
+                settingHeaderPackage = DEFAULT_HEADER_PACKAGE;
+                Settings.System.putString(getContentResolver(),
+                        Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, settingHeaderPackage);
+                valueIndex = mDaylightHeaderPack.findIndexOfValue(settingHeaderPackage);
+            }
+            mDaylightHeaderPack.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
+            mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntry());
+            mDaylightHeaderPack.setOnPreferenceChangeListener(this);
+
+            mHeaderShadow = (SeekBarPreference) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
+            final int headerShadow = Settings.System.getInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, 80);
+            mHeaderShadow.setValue((int)(((double) headerShadow / 255) * 100));
+            mHeaderShadow.setOnPreferenceChangeListener(this);
+
         }
 
         @Override
@@ -199,6 +230,19 @@ public class NotificationsFragment extends Fragment {
                 int SysuiQqsCountIndex = mSysuiQqsCount.findIndexOfValue(SysuiQqsCount);
                 mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntries()[SysuiQqsCountIndex]);
                 return true;
+            } else if (preference == mDaylightHeaderPack) {
+                String value = (String) newValue;
+                Settings.System.putString(getContentResolver(),
+                        Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, value);
+                int valueIndex = mDaylightHeaderPack.findIndexOfValue(value);
+                mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntries()[valueIndex]);
+                return true;
+            } else if (preference == mHeaderShadow) {
+                Integer headerShadow = (Integer) newValue;
+                int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
+                return true;
             }
             return false;
         }
@@ -230,6 +274,40 @@ public class NotificationsFragment extends Fragment {
                     mTileAnimationDuration.setSelectable(true);
                     mTileAnimationInterpolator.setSelectable(true);
                 }
+            }
+        }
+
+        private void getAvailableHeaderPacks(List<String> entries, List<String> values) {
+            Intent i = new Intent();
+            PackageManager packageManager = getPackageManager();
+            i.setAction("org.omnirom.DaylightHeaderPack");
+            for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
+                String packageName = r.activityInfo.packageName;
+                if (packageName.equals(DEFAULT_HEADER_PACKAGE)) {
+                    values.add(0, packageName);
+                } else {
+                    values.add(packageName);
+                }
+                String label = r.activityInfo.loadLabel(getPackageManager()).toString();
+                if (label == null) {
+                    label = r.activityInfo.packageName;
+                }
+                if (packageName.equals(DEFAULT_HEADER_PACKAGE)) {
+                    entries.add(0, label);
+                } else {
+                    entries.add(label);
+                }
+            }
+            i.setAction("org.omnirom.DaylightHeaderPack1");
+            for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
+                String packageName = r.activityInfo.packageName;
+                values.add(packageName  + "/" + r.activityInfo.name);
+
+                String label = r.activityInfo.loadLabel(getPackageManager()).toString();
+                if (label == null) {
+                    label = packageName;
+                }
+                entries.add(label);
             }
         }
     }
