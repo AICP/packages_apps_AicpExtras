@@ -84,6 +84,12 @@
         android:entries="@array/sysui_qqs_count_entries"
         android:entryValues="@array/sysui_qqs_count_values" />
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="qs_quickbar_scroll_enabled"
+        android:title="@string/qqs_scroll_title"
+        android:summary="@string/qqs_scroll_summary"
+        android:defaultValue="false"/>
+
     <ListPreference
         android:key="qs_rows_portrait"
         android:title="@string/qs_rows_portrait_title"
