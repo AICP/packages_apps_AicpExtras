@@ -52,18 +52,29 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
     }
 
     private void initPreference(Context context, AttributeSet attrs) {
-        setValuesFromXml(attrs);
+        setValuesFromXml(attrs, context);
         mSeekBar = new SeekBar(context, attrs);
         mSeekBar.setMax(mMaxValue - mMinValue);
         mSeekBar.setOnSeekBarChangeListener(this);
     }
 
-    private void setValuesFromXml(AttributeSet attrs) {
+    private void setValuesFromXml(AttributeSet attrs, Context context) {
+        final TypedArray a = context.obtainStyledAttributes(
+                attrs, R.styleable.SeekBarPreference);
+
         mMaxValue = attrs.getAttributeIntValue(ANDROIDNS, "max", 100);
         mMinValue = attrs.getAttributeIntValue(AICPEXTRAS, "minimum", 0);
         mDefaultValue = attrs.getAttributeIntValue(AICPEXTRAS, "defaultVal", -1);
         mUnitsLeft = getAttributeStringValue(attrs, AICPEXTRAS, "unitsLeft", "");
         mUnitsRight = getAttributeStringValue(attrs, AICPEXTRAS, "unitsRight", "");
+        Integer idR = a.getResourceId(R.styleable.SeekBarPreference_unitsRight, 0);
+        if (idR > 0) {
+            mUnitsRight = context.getResources().getString(idR);
+        }
+        Integer idL = a.getResourceId(R.styleable.SeekBarPreference_unitsLeft, 0);
+        if (idL > 0) {
+            mUnitsLeft = context.getResources().getString(idL);
+        }
         try {
             String newInterval = attrs.getAttributeValue(AICPEXTRAS, "interval");
             if(newInterval != null)
