@@ -39,13 +39,17 @@
     <string name="aicp_downloads_title">Downloads</string>
     <string name="dwnld_summary">Visita la pagina di download AICP per il dispositivo</string>
     <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="ae_version_title">Versione AICP Extras</string>
+    <string name="ae_version_summary">0.3.0</string>
     <string name="gerrit_summary">Visita la nostra pagina su Gerrit per sapere su che cosa stiamo lavorando</string>
     <string name="hidden_anim_activity_title">Tempo per lo Yoga!!!</string>
     <string name="hidden_anim_more_title">ANCORA?</string>
     <string name="hidden_anim_more_nice">BENE</string>
     <string name="continue_title">Continua</string>
     <string name="settings_activity_title">Impostazioni AE</string>
-
+    <string name="recents_panel_title">Pannello recenti</string>
+  
     <string name="nothing_title">Ancora nulla da mostrare qui, passa oltre</string>
 
     <!-- Switch On/Off  -->
@@ -403,7 +407,7 @@
     <string name="ae_settings_summary_title">Testo di riepilogo AE personalizzato nell\'applicazione delle regolazioni</string>
     <string name="custom_summary_title">Testo personalizzato AE</string>
     <string name="custom_summary_explain">Si prega di inserire una nuovo testo. Lasciare vuoto per tornare al testo predefinito.</string>
-    <string name="custom_summary_notset">Personalizzazione della rom personalizzata</string>
+    <string name="custom_summary_notset">Personalizzazioni della rom</string>
 
     <!-- Statusbar 4G LTE switch -->
     <string name="show_fourg_title">Visualizza 4G invece di LTE</string>
@@ -498,9 +502,7 @@
   <string name="heads_up_time_out_6sec">6 secondi</string>
   <string name="heads_up_time_out_8sec">8 secondi</string>
   <string name="heads_up_time_out_10sec">10 secondi</string>
-  <string name="heads_up_snooze_30min">30 minuti</string>
-  <string name="heads_up_snooze_60min">60 minuti</string>
-
+  
   <!-- Heads up snooze -->
   <string name="heads_up_snooze_title">Tempo di posticipo</string>
   <string name="heads_up_snooze_summary_one_minute">Scorri verso l\'alto sulle notifiche per posticipare l\'applicazione per 1 minuto</string>
@@ -512,6 +514,8 @@
   <string name="heads_up_snooze_10min">10 minuti</string>
   <string name="heads_up_snooze_15min">15 minuti</string>
   <string name="heads_up_snooze_20min">20 minuti</string>
+  <string name="heads_up_snooze_30min">30 minuti</string>
+  <string name="heads_up_snooze_60min">60 minuti</string>
 
   <!-- Lockscreen battery info indicator  -->
   <string name="lockscreen_battery_info_title">Info batteria nella schermata di blocco</string>
@@ -605,5 +609,120 @@
   <string name="blurred_scale_summary">Qualità di sfocatura immagine</string>
   <string name="blurred_radius">Raggio sfocatura</string>
   <string name="blurred_radius_summary">Quantità di sfocatura</string>
-</resources>
+  
+  <!-- App sidebar -->
+  <string name="app_sidebar_title">App barra laterale</string>
+  <string name="app_sidebar_enable_title">Abilita Appbar</string>
+  <string name="app_sidebar_enable_summaryOn">Appbar è abilitato</string>
+  <string name="app_sidebar_enable_summaryOff">Appbar è disabilitato</string>
+  <string name="app_sidebar_setup_items_title">Imposta contenuti appbar</string>
+  <string name="app_sidebar_setup_items_summary">Aggiungi, rimuovi, e posiziona gli elementi nell\'appbar</string>
+  <string name="app_sidebar_transparency_title">Trasparenza appbar</string>
+  <string name="app_sidebar_transparency_summary">Regolare il livello di trasparenza dell\'appbar</string>
+  <string name="app_sidebar_position_title">Posizione appbar</string>
+  <string name="app_sidebar_position_summary">Posiziona l\'appbar sul lato sinistro o destro dello schermo</string>
+  <string name="app_sidebar_position_left">Sinistra</string>
+  <string name="app_sidebar_position_right">Destra</string>
+  <string name="app_sidebar_hide_labels_title">Nascondi etichette icona</string>
+  <string name="app_sidebar_hide_labels_summary">Nascondere le etichette delle icone dell\'appbar</string>
+  <string name="tab_category">Scheda visibile</string>
+  <string name="use_tab_title">Visualizzazione scheda</string>
+  <string name="use_tab_summary">Visualizzare una scheda visibile sul lato che visualizzerà l\'appbar quando viene toccato.</string>
+  <string name="tab_position_title">Posizione scheda</string>
+  <string name="tab_position_summary">Visualizza la scheda sulla parte superiore, centrale o inferiore sul lato dello schermo.</string>
+  <string name="tab_size_title">Dimensioni scheda</string>
+  <string name="tab_size_summary">Modifica le dimensioni della scheda visibile.</string>
+  <string name="trigger_category">Area di attivazione</string>
+  <string name="trigger_width_title">Larghezza area attivazione</string>
+  <string name="trigger_width_summary">Regola la larghezza dell\'area di attivazione</string>
+  <string name="trigger_top_title">Posizione area attivazione</string>
+  <string name="trigger_top_summary">Regola la posizione verticale dell\'area di attivazione</string>
+  <string name="trigger_bottom_title">Altezza area attivazione</string>
+  <string name="trigger_bottom_summary">Regola l\'altezza dell\'area di attivazione</string>
+  <string name="app_sidebar_hide_timeout_title">Nascondi automaticamente l\'appbar</string>
+  <string name="app_sidebar_hide_timeout_summary">Tempo per nascondere automaticamente l\'appbar.</string>
 
+  <!-- Header images -->
+  <string name="status_bar_custom_header_title">Immagine d\'intestazione personalizzata</string>
+  <string name="status_bar_custom_header_summary">Abilita l\'immagine d\'intestazione del pannello di notifica</string>
+  <string name="daylight_header_pack_title">Pacchetto immagini intestazione</string>
+  <string name="status_bar_custom_header_shadow_title">Ombra immagine intestazione</string>
+  <string name="status_bar_custom_header_shadow_summary">Per una migliore visibilità su immagini luminose</string>
+  <string name="unit_percent">\u0025</string>
+
+  <!-- qqs scroller -->
+  <string name="qqs_scroll_title">Scorrimento piccoli tile</string>
+  <string name="qqs_scroll_summary">Consente di far scorrere i piccoli tile delle impostazioni rapide</string>
+
+
+  <!-- PA Pie control -->
+  <string name="pa_piecontrol_settings_summary">Personalizza, stile, dimensione e colore del Pie</string>
+  <string name="pa_pie_control_title">Controlli Pie</string>
+  <string name="pa_pie_control_enable_title">Attiva i controlli Pie</string>
+  <string name="pa_pie_always_right_title">Pie sempre a destra</string>
+  <string name="pa_pie_always_right_summary">Il Pie verrà sempre visualizzato a destra, mentre in modalità orizzontale</string>
+  <string name="pa_pie_targets_title">Pulsanti Pie</string>
+  <string name="pa_pie_style_title">Stile Pie</string>
+  <string name="pa_pie_menu_title">Mostra sempre il pulsante menù</string>
+  <string name="pa_pie_menu_summary">Il pulsante menù deve sempre essere visualizzato, anche quando non necessario</string>
+  <string name="pa_pie_size_title">Dimensioni Pie</string>
+  <string name="pa_pie_size_summary">Definisci la dimensione dei controlli del Pie</string>
+  <string name="pa_pie_size_small">Piccola</string>
+  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
+  <string name="pa_pie_size_large">Grande</string>
+  <string name="pa_pie_size_gigantic">Gigantesco</string>
+  <string name="pa_pie_size_monster">Mostruoso</string>
+  <string name="pa_pie_size_enormous">Enorme</string>
+  <string name="pa_pie_mode_default">Predefinito</string>
+  <string name="pa_pie_gravity_title">Gravità Pie</string>
+  <string name="pa_pie_gravity_summary">Seleziona la posizione in cui verrà collocato il Pie</string>
+  <string name="pa_pie_gravity_bottom">In Basso</string>
+  <string name="pa_pie_gravity_right">A destra</string>
+  <string name="pa_pie_gravity_left">A sinistra</string>
+  <string name="pa_pie_gap_title">Distanza elementi</string>
+  <string name="pa_pie_gap_summary">Regola la distanza che separa gli elementi nel Pie</string>
+  <string name="pa_pie_angle_title">Angolo Pie</string>
+  <string name="pa_pie_angle_summary">Regola l\'angolo dei bordi del Pie dal collegamento</string>
+  <string name="pa_pie_angle_none">Nessuno (vecchio)</string>
+  <string name="pa_pie_angle_small">Piccola</string>
+  <string name="pa_pie_angle_big">Normale (predefinito)</string>
+  <string name="pa_pie_angle_huge">Grande</string>
+  <string name="pa_pie_angle_super">Enorme</string>
+  <string name="pa_pie_gap_none">Niente</string>
+  <string name="pa_pie_gap_small">Piccola</string>
+  <string name="pa_pie_gap_big">Grande (predefinito)</string>
+  <string name="pa_pie_gap_huge">Enorme</string>
+  <string name="pa_pie_mode_title">Stile Pie</string>
+  <string name="pa_pie_mode_summary">Gestisci come animazioni e stati aggiuntivi verranno gestiti</string>
+  <string name="pa_pie_mode_bare">Base</string>
+  <string name="pa_pie_mode_quick">Veloce</string>
+  <string name="pa_pie_mode_default">Predefinito</string>
+  <string name="pa_pie_mode_slow">Lento</string>
+  <string name="pa_pie_lastapp_title">Ultima App</string>
+  <string name="pa_pie_lastapp_summary">Abilita il pulsante ultima app</string>
+  <string name="pa_pie_killtask_title">Termina processo</string>
+  <string name="pa_pie_killtask_summary">Abilita il pulsante termina processo</string>
+  <string name="pa_pie_notifications_title">Notifiche</string>
+  <string name="pa_pie_notifications_summary">Abilita pulsante notifiche</string>
+  <string name="pa_pie_settings_panel_title">Pannello impostazioni rapide</string>
+  <string name="pa_pie_settings_panel_summary">Abilita il pulsante espandi pannello impostazioni rapide</string>
+  <string name="pa_pie_screenshot_title">Cattura schermo</string>
+  <string name="pa_pie_screenshot_summary">Abilita il pulsante Cattura schermo</string>
+  <string name="pa_pie_color_title">Impostazioni colore Pie</string>
+  <string name="pa_pie_color_style_title">Stile colore Pie</string>
+  <string name="pa_pie_background_title">Colore sfondo</string>
+  <string name="pa_pie_select_title">Selezione colore</string>
+  <string name="pa_pie_outlines_title">Colore contorni</string>
+  <string name="pa_pie_status_clock_title">Colore orologio</string>
+  <string name="pa_pie_status_title">Colore stati</string>
+  <string name="pa_pie_chevron_title">Colore bordo esterno</string>
+  <string name="pa_pie_juice_title">Colore interno batteria</string>
+  <string name="pa_pie_button_color">Colore pulsante</string>
+  <string name="pa_pie_button_color_title">Colore pulsanti</string>
+  <string name="pa_pie_color_reset_title">Ripristino colori</string>
+  <string name="reset_message">Ripristinare tutte le voci alle impostazioni predefinite?</string>
+  <string name="reset_paranoid">AICP</string>
+  <string name="reset_android">Android</string>
+  <string name="reset">Ripristino</string>
+  
+</resources>
