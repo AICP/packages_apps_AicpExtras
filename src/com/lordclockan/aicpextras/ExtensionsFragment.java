@@ -32,9 +32,11 @@ public class ExtensionsFragment extends Fragment {
         }
 
         private static final String PREF_APP_SIDE_BAR = "app_side_bar";
+        private static final String PREF_PIE = "pa_pie_control";
         private static final String PREF_SYSTEMAPP_REMOVER = "system_app_remover";
 
         private Preference mAppSideBar;
+        private Preference mPie;
         private Preference mSystemappRemover;
 
         @Override
@@ -47,6 +49,7 @@ public class ExtensionsFragment extends Fragment {
             ContentResolver resolver = getActivity().getContentResolver();
 
             mAppSideBar = prefSet.findPreference(PREF_APP_SIDE_BAR);
+            mPie = prefSet.findPreference(PREF_PIE);
             mSystemappRemover = prefSet.findPreference(PREF_SYSTEMAPP_REMOVER);
 
         }
@@ -65,6 +68,9 @@ public class ExtensionsFragment extends Fragment {
                 startActivity(intent);
             } else if (preference == mAppSideBar) {
                 Intent intent = new Intent(getActivity(), AppSidebar.class);
+                getActivity().startActivity(intent);
+            } else if (preference == mPie) {
+                Intent intent = new Intent(getActivity(), PieControl.class);
                 getActivity().startActivity(intent);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
