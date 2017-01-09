@@ -127,5 +127,9 @@
             android:title="@string/blur_mixed_color"
             android:defaultValue="0xff888888" />
 
+        <Preference
+            android:key="blur_default_colors"
+            android:title="@string/blur_default_colors_title"/>
+
     </PreferenceCategory>
 </PreferenceScreen>
