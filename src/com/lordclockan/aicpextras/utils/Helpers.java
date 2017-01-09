@@ -9,6 +9,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.SystemProperties;
@@ -98,5 +99,30 @@ public class Helpers {
             }
             fileReader.close();
         return stringBuffer.toString();
+    }
+
+    /**
+    // DelayCallback usage
+    int secs = 2; // Delay in seconds
+    Helpers.delay(secs, new Utils.DelayCallback() {
+        @Override
+        public void afterDelay() {
+            // Do something after delay
+        }
+    });
+    */
+
+    public interface DelayCallback{
+        void afterDelay();
+    }
+
+    public static void delay(int secs, final DelayCallback delayCallback){
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                delayCallback.afterDelay();
+            }
+        }, secs * 1000);
     }
 }
