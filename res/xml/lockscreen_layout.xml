@@ -49,4 +49,36 @@
 
     </PreferenceCategory>
 
+    <!-- Lockscreen colors -->
+    <PreferenceCategory
+            android:key="lockscreen_colors_category"
+            android:title="@string/lockscreen_colors_title" >
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="lockscreen_owner_info_color"
+            android:title="@string/lockscreen_owner_info_color"
+            android:defaultValue="0xffffffff" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="lockscreen_alarm_color"
+            android:title="@string/lockscreen_alarm_color"
+            android:defaultValue="0xffffffff" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="lockscreen_clock_color"
+            android:title="@string/lockscreen_clock_color"
+            android:dependency="hide_lockscreen_clock"
+            android:defaultValue="0xffffffff" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="lockscreen_clock_date_color"
+            android:title="@string/lockscreen_clock_date_color"
+            android:defaultValue="0xffffffff" />
+
+        <Preference
+            android:key="lockscreen_colors_reset"
+            android:title="@string/lockscreen_colors_reset_title" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
