@@ -566,4 +566,172 @@
     <string name="three_finger_gesture">Deslizar para capturar pantalla</string>
     <string name="three_finger_gesture_summary">Desliza tres dedos por la pantalla para hacer una captura</string>
 
+    <!-- Blur UI -->
+    <string name="nav_blur_ui_title">Efecto difuminado</string>
+    <string name="blur_ui_category_title">Personalización de difuminado</string>
+    <string name="blurred_status_bar_expanded_enabled_pref">Difuminado barra de estado</string>
+    <string name="blurred_status_bar_expanded_enabled_pref_summary">Difumina el fondo cuando despliegas la barra de estado</string>
+    <string name="translucent_notifications_pref">Notificaciones translúcidas</string>
+    <string name="translucent_notifications_pref_summary">Hace translúcido el fondo de las notificaciones</string>
+    <string name="translucent_header_pref">Cabecera barra de estado difuminada </string>
+    <string name="translucent_header_pref_summary">Difumina el fondo de la cabecera de la barra de estado</string>
+    <string name="translucent_quick_settings_pref">Barra de estado expandida transparente</string>
+    <string name="translucent_quick_settings_pref_summary">Fondo de ajustes rápidos transparente</string>
+    <string name="transluency_level_universal">Nivel de transparencia</string>
+    <string name="blur_expstatus_cat">Barra de estado expandida </string>
+    <string name="blur_notifications_cat">Notificaciones</string>
+    <string name="blur_header_cat">Cabecera barra de estado</string>
+    <string name="blur_qs_cat">Ajustes rápidos</string>
+    <string name="blur_recents_cat">Aps. recientes</string>
+    <string name="blurred_recent_app_enabled_pref">Fondo aps recientes difuminado </string>
+    <string name="blurred_recent_app_enabled_pref_summary">El fondo de la pantalla de aps recientes se difumina</string>
+    <string name="blurred_scale">Escala de difuminado</string>
+    <string name="blurred_scale_summary">Calidad de imágenes difuminadas</string>
+    <string name="blurred_radius">Radio de difuminado</string>
+    <string name="blurred_radius_summary">Nivel de difuminado</string>
+    <string name="blur_cat_notice">Advertencia</string>
+    <string name="blur_cat_notice_summary">Las personalizaciones de difuminado se deshabilitan automáticamente en la pantalla de bloqueo!</string>
+    <string name="blur_colors_cat">Filtros de colores de difuminado</string>
+    <string name="blur_light_color">Imágen clara</string>
+    <string name="blur_dark_color">Imágen oscura</string>
+    <string name="blur_mixed_color">Imágen mixta</string>
+    <string name="blur_colors_notice">¿Para qué son estos colores?</string>
+    <string name="blur_colors_notice_summary">Estos colores pintan el fondo difuminado. En vez de usar el color gris, se pueden elegir los colores que
+se deseen.\nHay tres filtros de colores disponibles para: Fondos claros, Fondos oscuros y Fondos claros/oscuros.\n¿Cómo funcionan estos colores?\n
+Simple, como el título indica, el filtro claro se usará en fondos claros, el filtro oscuro en fondos oscuros y el filtro mixo para fondos que no son ni demasiado claros ni demasiado oscuros.\nEstos colores se usan para los dos fondos difuminados: Panel de notificaciones y panel de aps. recientes </string>
+
+    <!-- App sidebar -->
+    <string name="app_sidebar_title">Barra de aplicaciones</string>
+    <string name="app_sidebar_enable_title">Habilita barra de aplicaciones</string>
+    <string name="app_sidebar_enable_summaryOn">Barra habilitada</string>
+    <string name="app_sidebar_enable_summaryOff">Barra deshabilitada</string>
+    <string name="app_sidebar_setup_items_title">Contenido de la barra</string>
+    <string name="app_sidebar_setup_items_summary">Añadir, quitar y posicionar items en la barra</string>
+    <string name="app_sidebar_transparency_title">Transparencia de la barra</string>
+    <string name="app_sidebar_transparency_summary">Ajusta el nivel de transparencia de la barra</string>
+    <string name="app_sidebar_position_title">Posición de la barran</string>
+    <string name="app_sidebar_position_summary">Posición de la barra en la izquierda o la derecha de la pantalla</string>
+    <string name="app_sidebar_position_left">Izquierda</string>
+    <string name="app_sidebar_position_right">Derecha</string>
+    <string name="app_sidebar_hide_labels_title">Ocultar etiquetas de iconos</string>
+    <string name="app_sidebar_hide_labels_summary">Oculta las etiquetas de los iconos de la barra</string>
+    <string name="tab_category">Pestaña visible</string>
+    <string name="use_tab_title">Mostrar la pestaña</string>
+    <string name="use_tab_summary">Muestra una pestaña visible en un laqdo que desplegará la barra al tocarla.</string>
+    <string name="tab_position_title">Posición de pestaña</string>
+    <string name="tab_position_summary">Mostrar la pestaña arriba, en el centro o abajo en la pantalla.</string>
+    <string name="tab_size_title">Tamaño de la pestaña</string>
+    <string name="tab_size_summary">Cambia el tamaño de la pestaña visible.</string>
+    <string name="trigger_category">Zona de activado</string>
+    <string name="trigger_width_title">Ancho de la zona</string>
+    <string name="trigger_width_summary">Ajusta el ancho de la zona de activado</string>
+    <string name="trigger_top_title">Posición zona de activación</string>
+    <string name="trigger_top_summary">Ajusta la posición vertival de la zona de activación</string>
+    <string name="trigger_bottom_title">Altura de la zona</string>
+    <string name="trigger_bottom_summary">Ajusta la altura de la zona de activación</string>
+    <string name="app_sidebar_hide_timeout_title">Auto ocultar barra</string>
+    <string name="app_sidebar_hide_timeout_summary">Tiempo de espera para ocultar la barra.</string>
+
+    <!-- Header images -->
+    <string name="status_bar_custom_header_title">Imágen cabecera personalizada</string>
+    <string name="status_bar_custom_header_summary">Habilita una imágen de cabecera en el panel de notificaciones</string>
+    <string name="daylight_header_pack_title">Paquete de imágenes</string>
+    <string name="status_bar_custom_header_shadow_title">Sombra de imágen de cabecera</string>
+    <string name="status_bar_custom_header_shadow_summary">Para mejorar la visibilidad en imágenes brillantes</string>
+    <string name="unit_percent">\u0025</string>
+
+    <!-- qqs scroller -->
+    <string name="qqs_scroll_title">Desplazamiento de ajustes rápidos</string>
+    <string name="qqs_scroll_summary">Permite desplazarse a través de los ajustes rápidos pequeños</string>
+
+    <!-- PA Pie control -->
+    <string name="pa_piecontrol_settings_summary">Personalizar botones, estilo, tamaño y color de PA Pie 2.0</string>
+    <string name="pa_pie_control_title">Controles Pie</string>
+    <string name="pa_pie_control_enable_title">Habilitar controles Pie</string>
+    <string name="pa_pie_always_right_title">Pie siempre en la derecha</string>
+    <string name="pa_pie_always_right_summary">Pie se mostrará siempre en la derecha en modo apaisado</string>
+    <string name="pa_pie_targets_title">Botones de Pie</string>
+    <string name="pa_pie_style_title">Estilo de Pie</string>
+    <string name="pa_pie_menu_title">Mostrar siempre el botón menú</string>
+    <string name="pa_pie_menu_summary">Se mostrará o no el botón menú auqnue no sea necesario</string>
+    <string name="pa_pie_size_title">Tamaño de Pie</string>
+    <string name="pa_pie_size_summary">Definir el tamaño de los controls Pie</string>
+    <string name="pa_pie_size_small">Pequeño</string>
+    <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
+    <string name="pa_pie_size_large">Grande</string>
+    <string name="pa_pie_size_gigantic">Gigante</string>
+    <string name="pa_pie_size_monster">Mosntruoso</string>
+    <string name="pa_pie_size_enormous">Enorme</string>
+    <string name="pa_pie_mode_default">Predeterminado</string>
+    <string name="pa_pie_gravity_title">Posición de Pie</string>
+    <string name="pa_pie_gravity_summary">Elegir la posición en la que se colocará PIE</string>
+    <string name="pa_pie_gravity_bottom">Abajo</string>
+    <string name="pa_pie_gravity_right">Derecha</string>
+    <string name="pa_pie_gravity_left">Izquierda</string>
+    <string name="pa_pie_gap_title">Separación de los items</string>
+    <string name="pa_pie_gap_summary">Ajustar la separación de los elementos de Pie</string>
+    <string name="pa_pie_angle_title">Ángulo de Pie</string>
+    <string name="pa_pie_angle_summary">Ajustar el ángulo de los lados desde la zona de anclaje</string>
+    <string name="pa_pie_angle_none">Ninguno (antiguo)</string>
+    <string name="pa_pie_angle_small">Pequeño</string>
+    <string name="pa_pie_angle_big">Normal (predeterminado)</string>
+    <string name="pa_pie_angle_huge">Grande</string>
+    <string name="pa_pie_angle_super">Enorme</string>
+    <string name="pa_pie_gap_none">Ninguna</string>
+    <string name="pa_pie_gap_small">Pequeña</string>
+    <string name="pa_pie_gap_big">Grande (predeterminada)</string>
+    <string name="pa_pie_gap_huge">Enorme</string>
+    <string name="pa_pie_mode_title">Estilo dePie</string>
+    <string name="pa_pie_mode_summary">Cómo se gestionaran las animaciones y elementos del estado</string>
+    <string name="pa_pie_mode_bare">Simple</string>
+    <string name="pa_pie_mode_quick">Rápido</string>
+    <string name="pa_pie_mode_default">Predeterminado</string>
+    <string name="pa_pie_mode_slow">Lento</string>
+    <string name="pa_pie_lastapp_title">Última ap.</string>
+    <string name="pa_pie_lastapp_summary">Habilita el botón de última aplicación</string>
+    <string name="pa_pie_killtask_title">Cerrar proceso</string>
+    <string name="pa_pie_killtask_summary">Habilita el botón cerrar proceso</string>
+    <string name="pa_pie_notifications_title">Notificaciones</string>
+    <string name="pa_pie_notifications_summary">Habilita el botón notificaciones</string>
+    <string name="pa_pie_settings_panel_title">Panel de ajustes rápidos</string>
+    <string name="pa_pie_settings_panel_summary">Habilita el botón para desplegar los ajustes rápidos</string>
+    <string name="pa_pie_screenshot_title">Captura de pantalla</string>
+    <string name="pa_pie_screenshot_summary">Habilita el botón captura de pantalla</string>
+    <string name="pa_pie_color_title">Ajustes de color de Pie</string>
+    <string name="pa_pie_color_style_title">Estilo del color de Pie</string>
+    <string name="pa_pie_background_title">Color de fondo</string>
+    <string name="pa_pie_select_title">Color de selección</string>
+    <string name="pa_pie_outlines_title">Color del borde</string>
+    <string name="pa_pie_status_clock_title">Color del reloj</string>
+    <string name="pa_pie_status_title">Color del estado</string>
+    <string name="pa_pie_chevron_title">Color de Chevron</string>
+    <string name="pa_pie_juice_title">Color contenido de batería</string>
+    <string name="pa_pie_button_color">Color del botón</string>
+    <string name="pa_pie_button_color_title">Color de los botones</string>
+    <string name="pa_pie_color_reset_title">Restablecer colores</string>
+    <string name="reset_message">¿Restablecer a los valores predeterminados?</string>
+    <string name="reset_paranoid">AICP</string>
+    <string name="reset_android">Android</string>
+    <string name="reset">Restablecer</string>
+
+    <!-- Settings drawer switch -->
+    <string name="show_settings_drawer_title">Mostrar panel de ajustes</string>
+    <string name="show_settings_drawer_enabled">Panel de ajustes habilitado</string>
+    <string name="show_settings_drawer_disabled">Panel de ajustes deshabilitado</string>
+
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors_title">Colorespantalla bloqueo</string>
+    <string name="lockscreen_owner_info_color">Información de propietario</string>
+    <string name="lockscreen_alarm_color">Alarma</string>
+    <string name="lockscreen_clock_color">Reloj</string>
+    <string name="lockscreen_clock_date_color">Fecha</string>
+    <string name="lockscreen_colors_reset_title">Restablecer colores de pantalla de bloqueo</string>
+    <string name="lockscreen_colors_reset_message">¿Restablecer colores de pantalla de bloqueo a los predeterminados?</string>
+    <string name="yes">SI</string>
+
+    <!-- Hide Lockscreen clock & date -->
+    <string name="hide_lockscreen_items_title">Items de pantalla de bloqueo</string>
+    <string name="hide_lockscreen_clock_title">Mostrar reloj en pantalla de bloqueo</string>
+    <string name="hide_lockscreen_date_title">Mostrar fecha en pantalla de bloqueo</string>
+
 </resources>
