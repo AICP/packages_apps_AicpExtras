@@ -276,6 +276,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_notif_drawer:
                 fragmentClass = NotificationsFragment.class;
                 break;
+            case R.id.nav_quick_settings:
+                fragmentClass = QuickSettingsFragment.class;
+                break;
             case R.id.nav_headsup:
                 fragmentClass = HeadsUpSettingsFragment.class;
                 break;
