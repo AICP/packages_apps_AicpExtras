@@ -34,6 +34,7 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.preference.TwoStatePreference;
 import android.provider.Settings;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 
 import com.lordclockan.R;
@@ -83,9 +84,12 @@ public class BlurUIFragment extends Fragment {
         private ColorPickerPreference mLightBlurColor;
         private ColorPickerPreference mMixedBlurColor;
 
-        public static int BLUR_LIGHT_COLOR_PREFERENCE_DEFAULT = Color.DKGRAY;
-        public static int BLUR_MIXED_COLOR_PREFERENCE_DEFAULT = Color.GRAY;
-        public static int BLUR_DARK_COLOR_PREFERENCE_DEFAULT = Color.LTGRAY;
+        private static final int BLUR_LIGHT_COLOR_PREFERENCE_DEFAULT = Color.DKGRAY;
+        private static final int BLUR_MIXED_COLOR_PREFERENCE_DEFAULT = Color.GRAY;
+        private static final int BLUR_DARK_COLOR_PREFERENCE_DEFAULT = Color.LTGRAY;
+        private static final String PREF_BLUR_COLORS_DEFAULTS = "blur_default_colors";
+
+        private Preference mBlurDefaultColors;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -154,6 +158,8 @@ public class BlurUIFragment extends Fragment {
             hexMixedColor = String.format("#%08x", (0xffffffff & intMixedColor));
             mMixedBlurColor.setSummary(hexMixedColor);
             mMixedBlurColor.setNewPreviewColor(intMixedColor);
+
+            mBlurDefaultColors = findPreference(PREF_BLUR_COLORS_DEFAULTS);
         }
 
         public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -237,6 +243,37 @@ public class BlurUIFragment extends Fragment {
                 toEditBlurUISettings = mBlurUISettings.edit();
                 toEditBlurUISettings.putString("quick_settings_transluency", sQuickSett);
                 toEditBlurUISettings.commit();
+            } else if (preference == mBlurDefaultColors) {
+                int intColor;
+                String hexColor;
+
+                Settings.System.putInt(resolver,
+                        Settings.System.BLUR_LIGHT_COLOR_PREFERENCE_KEY, BLUR_LIGHT_COLOR_PREFERENCE_DEFAULT);
+                intColor = Settings.System.getInt(resolver,
+                        Settings.System.BLUR_LIGHT_COLOR_PREFERENCE_KEY, BLUR_LIGHT_COLOR_PREFERENCE_DEFAULT);
+                hexColor = String.format("#%08x", (BLUR_LIGHT_COLOR_PREFERENCE_DEFAULT & intColor));
+                mLightBlurColor.setSummary(hexColor);
+                mLightBlurColor.setNewPreviewColor(intColor);
+
+
+                Settings.System.putInt(resolver,
+                        Settings.System.BLUR_MIXED_COLOR_PREFERENCE_KEY, BLUR_MIXED_COLOR_PREFERENCE_DEFAULT);
+                intColor = Settings.System.getInt(resolver,
+                        Settings.System.BLUR_MIXED_COLOR_PREFERENCE_KEY, BLUR_MIXED_COLOR_PREFERENCE_DEFAULT);
+                hexColor = String.format("#%08x", (BLUR_MIXED_COLOR_PREFERENCE_DEFAULT & intColor));
+                mMixedBlurColor.setSummary(hexColor);
+                mMixedBlurColor.setNewPreviewColor(intColor);
+
+                Settings.System.putInt(resolver,
+                        Settings.System.BLUR_DARK_COLOR_PREFERENCE_KEY, BLUR_DARK_COLOR_PREFERENCE_DEFAULT);
+                intColor = Settings.System.getInt(resolver,
+                        Settings.System.BLUR_DARK_COLOR_PREFERENCE_KEY, BLUR_DARK_COLOR_PREFERENCE_DEFAULT);
+                hexColor = String.format("#%08x", (BLUR_DARK_COLOR_PREFERENCE_DEFAULT & intColor));
+                mDarkBlurColor.setSummary(hexColor);
+                mDarkBlurColor.setNewPreviewColor(intColor);
+
+                Snackbar.make(getView(), R.string.values_restored_title,
+                        Snackbar.LENGTH_LONG).show();
             }
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
