@@ -6,14 +6,14 @@
         android:layout="@layout/about_logo" />
 
     <Preference
+        android:key="aicp_changelog"
+        android:title="@string/changelog_title"
+        android:summary="@string/changelog_title_summary"/>
+
+    <Preference
         android:key="gplus"
         android:title="@string/g_community"
         android:summary="@string/g_plus_summary"/>
-
-    <Preference
-        android:key="aicp_downloads"
-        android:title="@string/aicp_downloads_title"
-        android:summary="@string/dwnld_summary"/>
 
     <Preference
         android:key="aicp_gerrit"
@@ -21,9 +21,19 @@
         android:summary="@string/gerrit_summary"/>
 
     <Preference
-        android:key="aicp_changelog"
-        android:title="@string/changelog_title"
-        android:summary="@string/changelog_title_summary"/>
+        android:key="aicp_ota"
+        android:title="@string/aicp_ota_title"
+        android:summary="@string/ota_summary"/>
+
+    <Preference
+        android:key="aicp_downloads"
+        android:title="@string/aicp_downloads_title"
+        android:summary="@string/dwnld_summary"/>
+
+    <Preference
+        android:key="aicp_ota"
+        android:title="@string/aicp_ota_title"
+        android:summary="@string/ota_summary"/>
 
     <Preference
         android:key="aicp_stats"
