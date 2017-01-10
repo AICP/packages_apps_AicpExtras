@@ -3,6 +3,8 @@ package com.lordclockan.aicpextras;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.ComponentName;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -45,7 +47,7 @@ public class AboutFragment extends Fragment {
         private static final String PREF_HIDDEN_YOGA = "hidden_anim";
         private static final String PREF_AICPLOGO_IMG = "aicp_logo";
         private String PREF_GCOMMUNITY = "gplus";
-        private String PREF_AICP_DOWNLOADS = "aicp_downloads";
+        private String PREF_AICP_OTA = "aicp_ota";
         private String PREF_AICP_GERRIT = "aicp_gerrit";
         private String PREF_AICP_CHANGELOG = "aicp_changelog";
         private String PREF_AICP_VERSION = "ae_version";
@@ -53,7 +55,7 @@ public class AboutFragment extends Fragment {
         private PreferenceScreen mAicpLogo;
         private long[] mHits = new long[3];
         private Preference mGcommunity;
-        private Preference mAicpDownloads;
+        private Preference mAicpOTA;
         private Preference mAicpGerrit;
         private Preference mAicpChangeLog;
         private Preference mStatsAicp;
@@ -70,6 +72,9 @@ public class AboutFragment extends Fragment {
         // Intent for launching the yoga actvity
         public static Intent INTENT_YOGA = new Intent(Intent.ACTION_MAIN)
                 .setClassName(YOGA_PACKAGE_NAME, YOGA_PACKAGE_NAME + ".aicpextras.HiddenAnimActivity");
+        //Intent for launching AICP OTA
+        private static final Intent INTENT_OTA = new Intent().setComponent(new ComponentName(
+            "com.aicp.aicpota", "com.aicp.aicpota.MainActivity"));
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -86,7 +91,7 @@ public class AboutFragment extends Fragment {
             mAicpLogo = (PreferenceScreen) findPreference(PREF_AICPLOGO_IMG);
 
             mGcommunity = prefSet.findPreference(PREF_GCOMMUNITY);
-            mAicpDownloads = prefSet.findPreference(PREF_AICP_DOWNLOADS);
+            mAicpOTA = prefSet.findPreference(PREF_AICP_OTA);
             mAicpGerrit = prefSet.findPreference(PREF_AICP_GERRIT);
             mAicpChangeLog = prefSet.findPreference(PREF_AICP_CHANGELOG);
             mStatsAicp = prefSet.findPreference(PREF_STATS_AICP);
@@ -101,12 +106,10 @@ public class AboutFragment extends Fragment {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
-            } else if (preference == mAicpDownloads) {
-                String mDevice = Utils.getDevice(getContext());
-                String url = "http://dwnld.aicp-rom.com/?device=" + mDevice;
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
+            } else if (preference == mAicpOTA) {
+                if(INTENT_OTA!=null){
+                    startActivity(INTENT_OTA);
+                }
             } else if (preference == mAicpGerrit) {
                 String url = "http://gerrit.aicp-rom.com/#/q/status:open";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
