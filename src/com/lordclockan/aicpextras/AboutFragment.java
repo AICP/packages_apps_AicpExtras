@@ -131,7 +131,7 @@ public class AboutFragment extends Fragment {
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
             } else if (preference == mAicpChangeLog) {
-                Intent intent = new Intent(getActivity(), ChangeLogActivity.class);
+                Intent intent = new Intent(getActivity(), ChangelogActivity.class);
                 getActivity().startActivity(intent);
             } else if (preference == mStatsAicp) {
                 startActivity(INTENT_STATS);
