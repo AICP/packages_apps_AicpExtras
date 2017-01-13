@@ -168,6 +168,11 @@
             android:excludeFromRecents="true">
         </activity>
 
+        <activity android:name=".aicpextras.ChangelogActivity"
+            android:label="@string/stats_title"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+
         <activity android:name=".romstats.AnonymousStats"
             android:label="@string/stats_title" >
             <intent-filter>
@@ -199,6 +204,10 @@
             android:exported="false"
             android:label="ReportingService" >
         </service>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="d89ae088b2672fcdcfddbe98ad7e338886bf8997" />
 
     </application>
 </manifest>
