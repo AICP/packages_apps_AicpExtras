@@ -40,11 +40,14 @@
     <string name="lockscreen_title">Sperrbildschirm</string>
     <string name="aicp_downloads_title">Downloads</string>
     <string name="dwnld_summary">Besuche die AICP Webseite mit Downloads für dein Gerät</string>
+    <string name="aicp_ota_title">OTA Aktualisierung</string>
+    <string name="ota_summary">Aktualisierungsprüfung für die installierte ROM Version</string>
     <string name="aicp_gerrit_title">Gerrit</string>
     <string name="gerrit_summary">Besuche unsere Review-System online, um zu erfahren, an was wir gerade arbeiten</string>
     <string name="ae_version_title">AICP Extras Version</string>
     <string name="ae_version_summary">0.3.0</string>
-    <string name="hidden_anim_activity_title">Zeit für \"Yoga\"!!!</string>
+    <string name="gerrit_summary">Visit our Gerrit to know what we are working on.</string>
+    <string name="hidden_anim_activity_title">Zeit für \'Yoga\'!!!</string>
     <string name="hidden_anim_more_title">MEHR?</string>
     <string name="hidden_anim_more_nice">SCHÖN</string>
     <string name="continue_title">Weiter</string>
@@ -302,7 +305,7 @@
     <string name="brightness_icon_title">Symbol für Helligkeit</string>
     <string name="brightness_icon_summary">Zeigt ein Symbol für die Helligkeit auf der linken Seite des Helligkeitsreglers, um die Auto-Helligkeit anzupassen</string>
 
-    <!-- QS shade transparency -->
+    <!-- QS shade opacity -->
     <string name="qs_transparent_shade">Kachelhintergund</string>
 
     <!-- QS header transparency -->
@@ -313,10 +316,10 @@
     <string name="qs_menu_item_titles_summaryOn">Bezeichnungen werden anzeigt</string>
     <string name="qs_menu_item_titles_summaryOff">Bezeichnungen werden verborgen</string>
 
-    <!-- Volume dialog transparency -->
+    <!-- Volume dialog opacity -->
     <string name="volume_dialog_transparency">Transparenz</string>
 
-    <!-- Power menu and dialogs transparency -->
+    <!-- Power menu and dialogs opacity -->
     <string name="power_menu_transparency">Transparenz</string>
 
     <!-- Power/reboot dialogs dim amount -->
@@ -384,16 +387,16 @@
     <string name="qs_dash_gap_title">Rand-Unterbrechungsbreite</string>
 
     <!--Preference Categories-->
-    <string name ="anim">Anpassung von Animationen</string>
-    <string name ="indicators">Anzeigen in der Statusleisten</string>
+    <string name="anim">Anpassung von Animationen</string>
+    <string name="indicators">Anzeigen in der Statusleisten</string>
     <string name="quicksettings_tiles_category">Konfiguration der Schnelleinstellungen</string>
-    <string name ="header_tweaks">Anpassung der Kopfzeilen</string>
-    <string name ="Misc">Verschiedenes</string>
-    <string name ="cab">Anpassung der Lösch-Taste des Verlaufs</string>
-    <string name ="visuals">Zusatzanzeigen im Anwendungsverlauf</string>
-    <string name = "qs">Anpassung der Schnelleinstellungen</string>
-    <string name = "vol_diag">Anpassung des Lautstärkedialogs</string>
-    <string name = "power">Anpassung des Ein-/Aus- &amp; Neustart-Menüs</string>
+    <string name="header_tweaks">Anpassung der Kopfzeilen</string>
+    <string name="Misc">Verschiedenes</string>
+    <string name="qs">Anpassung der Schnelleinstellungen</string>
+    <string name="vol_diag">Anpassung des Lautstärkedialogs</string>
+    <string name="power">Anpassung des Ein/Aus- &amp; Neustart-Menüs</string>
+    <string name="cab">Anpassung der Lösch-Taste des Verlaufs</string>
+    <string name="visuals">Zusatzanzeigen im Anwendungsverlauf</string>
 
     <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Vibration bei Authentifizierung per Fingerabdruck</string>
@@ -498,7 +501,7 @@
     <string name="headsup_settings_title">Pop-Up Benachrichtigungen aktivieren</string>
     <string name="headsup_settings_summary">Pop-Up Benachrichtigungen aktivieren, damit Anwendungen interaktive Benachrichtigungen in einem Bildschirmfenster anzeigen können.</string>
     <string name="summary_heads_up_enabled">Pop-Up Benachrichtigungen aktiviert</string>
-    <string name="summary_heads_up_disabled">PPop-Up Benachrichtigungen deaktiviert</string>
+    <string name="summary_heads_up_disabled">Pop-Up Benachrichtigungen deaktiviert</string>
 
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Unterbrechung</string>
@@ -613,10 +616,13 @@
     <string name="blurred_radius_summary">Stärke des Verwischens</string>
     <string name="blur_cat_notice">Anmerkung</string>
     <string name="blur_cat_notice_summary">Unschärfe-Anpassungen werden während Sicherheitsabfragen deaktiviert! Nur durchsichtige Benachrichtigungen bleiben aktiviert! Die Transparenz der Statusleiste und der Schnelleinstellungen werden automatisch deaktiviert!</string>
-    <string name="blurred_scale">Blur Scale</string>
-    <string name="blurred_scale_summary">Quality of blur image</string>
-    <string name="blurred_radius">Blur Radius</string>
-    <string name="blurred_radius_summary">Amount of blur</string>
+    <string name="blur_colors_cat">Unschärfe-Farbfilter</string>
+    <string name="blur_light_color">Farbfilter für helle Bilder</string>
+    <string name="blur_dark_color">Farbfilter für dunkle Bilder</string>
+    <string name="blur_mixed_color">Farbfilter für bunte Bilder</string>
+    <string name="blur_colors_notice">Wofür sind diese Farben?</string>
+    <string name="blur_colors_notice_summary">Diese Farben dunkeln den unscharfen Hintergrund ab. Anstatt des normalen Grautons, können nun die Abdunklungsfarben selbst gewählt werden.\nEs sind drei Farbfilter verfügbar für helle, dunkle und hell-dunkle Hintergründe.\nWie funktionieren nun die Farbfilter?? \nSo einfach wie ihr Titel, d.h. der helle Filter für helle Hintergründe, der dunkle Filter für dunkle Hintergründe und der bunte Filter für nicht zu helle oder dunkle Hintergründe.\nDie Farbauswahl wird genutzt für den Displayhintergrund beim App-Verlauf und der Benachrichtungsleiste</string>
+    <string name="blur_default_colors_title">Farben auf Standard zurücksetzen</string>
 
     <!-- App sidebar -->
     <string name="app_sidebar_title">App-Seitenleiste</string>
@@ -651,14 +657,117 @@
     <string name="app_sidebar_hide_timeout_summary">Zeitspanne bis die Leiste sich automatisch ausblendet.</string>
 
     <!-- Header images -->
-    <string name="status_bar_custom_header_title">Eigens Hintergrundbild</string>
+    <string name="status_bar_custom_header_title">Eigenes Hintergrundbild</string>
     <string name="status_bar_custom_header_summary">Hintergrundbild für die Benachrichtigungsleiste aktivieren</string>
     <string name="daylight_header_pack_title">Hintergrundbild-Paket</string>
     <string name="status_bar_custom_header_shadow_title">Hintergrundbild-Schatten</string>
     <string name="status_bar_custom_header_shadow_summary">Für eine bessere Sichtbarkeit bei hellen Hintergrundbildern</string>
-    <!-- <string name="unit_percent">\u0025</string> -->
+    <!-- <string name="unit_percent">\u0025</string>
+    <string name="static_header_provider" translatable="false">static</string>
+    <string name="daylight_header_provider" translatable="false">daylight</string> -->
+    <string name="static_header_provider_title">Statisch (Einzelbild)</string>
+    <string name="daylight_header_provider_title">Dynamisch (nach Zeit)</string>
+    <string name="custom_header_provider_title">Hintergrundbild-Anbieter</string>
+    <string name="custom_header_browse_title">Blättere durch installierte Pakete</string>
+    <string name="custom_header_browse_summary">Lange auf ein Bild drücken, um es als statisches Bild zu nutzen</string>
 
     <!-- qqs scroller -->
     <string name="qqs_scroll_title">Mini-Kacheln blättern</string>
     <string name="qqs_scroll_summary">Erlaubt das Blättern durch die Mini-Kacheln</string>
+
+    <!-- PA Pie control -->
+    <string name="pa_piecontrol_settings_summary">Anpassung von PA PIE 3.0 Zielen, Stil, Größe und Farbe</string>
+    <string name="pa_pie_control_title">PIE Displaynavigation</string>
+    <string name="pa_pie_control_enable_title">Schaltet die PIE Displaynavigation ein</string>
+    <string name="pa_pie_always_right_title">PIE immer am rechten Displayrand</string>
+    <string name="pa_pie_always_right_summary">PIE wird bei horizontaler Drehung des Geräts immer auf der rechten Seite angezeigt</string>
+    <string name="pa_pie_targets_title">PIE Ziele</string>
+    <string name="pa_pie_style_title">PIE Stil</string>
+    <string name="pa_pie_menu_title">Menü-Taste immer anzeigen</string>
+    <string name="pa_pie_menu_summary">Einstellen ob die Menü-Taste angezeigt wird, auch wenn sie nicht gebraucht wird</string>
+    <string name="pa_pie_size_title">PIE Größe</string>
+    <string name="pa_pie_size_summary">Größe der PIE Navigation definieren</string>
+    <string name="pa_pie_size_small">Klein</string>
+    <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
+    <string name="pa_pie_size_large">Groß</string>
+    <string name="pa_pie_size_gigantic">Gigantisch</string>
+    <string name="pa_pie_size_monster">Monströs</string>
+    <string name="pa_pie_size_enormous">Enorm</string>
+    <string name="pa_pie_mode_default">Standard</string>
+    <string name="pa_pie_gravity_title">PIE Auslösung</string>
+    <string name="pa_pie_gravity_summary">Auswählen auf welcher Displayseite PIE platziert wird</string>
+    <string name="pa_pie_gravity_bottom">Unten</string>
+    <string name="pa_pie_gravity_right">Rechts</string>
+    <string name="pa_pie_gravity_left">Links</string>
+    <string name="pa_pie_gap_title">Element-Abstand</string>
+    <string name="pa_pie_gap_summary">Abstand der PIE Elemente zueinander anpassen</string>
+    <string name="pa_pie_gap_none">Keiner</string>
+    <string name="pa_pie_gap_small">Klein</string>
+    <string name="pa_pie_gap_big">Groß (Standard)</string>
+    <string name="pa_pie_gap_huge">Riesig</string>
+    <string name="pa_pie_angle_title">PIE Winkel</string>
+    <string name="pa_pie_angle_summary">Winkel der PIE Ecken zum Auslösepunkt einstellen</string>
+    <string name="pa_pie_angle_none">Keiner (Alt)</string>
+    <string name="pa_pie_angle_small">Klein</string>
+    <string name="pa_pie_angle_big">Normal (Standard)</string>
+    <string name="pa_pie_angle_huge">Groß</string>
+    <string name="pa_pie_angle_super">Riesig</string>
+    <string name="pa_pie_mode_title">PIE-Stil</string>
+    <string name="pa_pie_mode_summary">Verwalten, wie Animationen und Statuszusätze gehandhabt werden</string>
+    <string name="pa_pie_mode_bare">Knapp</string>
+    <string name="pa_pie_mode_quick">Schnell</string>
+    <string name="pa_pie_mode_default">Standard</string>
+    <string name="pa_pie_mode_slow">Langsam</string>
+    <string name="pa_pie_lastapp_title">Letzte App</string>
+    <string name="pa_pie_lastapp_summary">Taste für letzte App anzeigen</string>
+    <string name="pa_pie_killtask_title">Task löschen</string>
+    <string name="pa_pie_killtask_summary">Taste zum Löschen von Tasks anzeigen</string>
+    <string name="pa_pie_notifications_title">Benachrichtigungen</string>
+    <string name="pa_pie_notifications_summary">Taste für Benachrichtigungen anzeigen</string>
+    <string name="pa_pie_settings_panel_title">Schnelleinstellungen</string>
+    <string name="pa_pie_settings_panel_summary">Taste für Anzeige der Schnelleinstellungen anzeigen</string>
+    <string name="pa_pie_screenshot_title">Bildschirmfoto</string>
+    <string name="pa_pie_screenshot_summary">Taste für Bildschirmfoto anzeigen</string>
+    <string name="pa_pie_color_title">PIE Farbeinstellungen</string>
+    <string name="pa_pie_color_style_title">PIE Farbstil</string>
+    <string name="pa_pie_background_title">Hintergrundfarbe</string>
+    <string name="pa_pie_select_title">Auswahlfarbe</string>
+    <string name="pa_pie_outlines_title">Rahmenfarbe</string>
+    <string name="pa_pie_status_clock_title">Uhrfarbe</string>
+    <string name="pa_pie_status_title">Farbe der Statusanzeigen</string>
+    <string name="pa_pie_chevron_title">Farbe des Winkelrahmens</string>
+    <string name="pa_pie_juice_title">Farbe des Akkuverbrauchs</string>
+    <string name="pa_pie_button_color">Tastenfarbe</string>
+    <string name="pa_pie_button_color_title">Tastenfarbe</string>
+    <string name="pa_pie_color_reset_title">Farben zurücksetzen</string>
+    <string name="reset_message">Alle Änderungen auf Standard zurücksetzen?</string>
+    <string name="reset_paranoid">AICP</string>
+    <string name="reset_android">Android</string>
+    <string name="reset">Zurücksetzen</string>
+
+    <!-- Settings drawer switch -->
+    <string name="show_settings_drawer_title">Zeige Übersichts-Menü in Einstellungen</string>
+    <string name="show_settings_drawer_enabled">Übersichts-Menü aktiviert</string>
+    <string name="show_settings_drawer_disabled">Übersichts-Menü deaktiviert</string>
+
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors_title">Sperrbildschirm-Farben</string>
+    <string name="lockscreen_owner_info_color">Besitzer Info</string>
+    <string name="lockscreen_alarm_color">Wecker</string>
+    <string name="lockscreen_clock_color">Uhrzeit</string>
+    <string name="lockscreen_clock_date_color">Datum</string>
+    <string name="lockscreen_colors_reset_title">Sperrbildschirm-Farben zurücksetzen</string>
+    <string name="lockscreen_colors_reset_message">Sind Sie sicher, dass die Farben auf den Standardwert zurückgesetzt werden sollen?</string>
+    <string name="yes">JA</string>
+
+	<!-- Hide Lockscreen clock & date -->
+    <string name="hide_lockscreen_items_title">Sperrbildschirm-Anzeigen</string>
+    <string name="hide_lockscreen_clock_title">Zeige Uhrzeit auf Sperrbildschirm</string>
+    <string name="hide_lockscreen_date_title">Zeige Datum auf Sperrbildschirm</string>
+
+    <!-- Hide Lockscreen clock & date -->
+    <string name="changelog_name">Changelog</string>
+    <string name="commit_id">Änderungs-ID</string>
+    <string name="commit_message">Änderungsbeschreibung</string>
+
 </resources>
