@@ -18,8 +18,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="app_name" translatable="false">Aicp Extras</string>
-
     <string name="navigation_drawer_open">打开导航抽屉</string>
     <string name="navigation_drawer_close">关闭导航抽屉</string>
 
@@ -40,18 +38,20 @@
     <string name="lockscreen_title">锁屏</string>
     <string name="aicp_downloads_title">下载地址</string>
     <string name="dwnld_summary">访问您设备的AICP下载页面</string>
+    <string name="aicp_ota_title">OTA中心</string>
+    <string name="ota_summary">检查当前ROM的更新</string>
     <string name="aicp_gerrit_title">Gerrit代码审查</string>
     <string name="ae_version_title">AICP设置版本</string>
 
-    <string name="gerrit_summary">访问我们的Gerrit来知道我们正在做什么</string>
-    <string name="hidden_anim_activity_title">休息时间!!!（AICP交流群：539345278）</string>
-    <string name="hidden_anim_more_title">更多?</string>
+    <string name="gerrit_summary">访问我们的Gerrit来知道我们在为什么而工作</string>
+    <string name="hidden_anim_activity_title">休息时间!!!</string>
+    <string name="hidden_anim_more_title">还要更多?</string>
     <string name="hidden_anim_more_nice">漂亮</string>
     <string name="continue_title">继续</string>
     <string name="settings_activity_title">AICP 设置</string>
     <string name="recents_panel_title">最近应用面板</string>
-
-    <string name="nothing_title">这里现在什么都没有= =</string>
+    <string name="quick_settings_title">快速设置</string>
+    <string name="nothing_title">这里现在什么都没有</string>
 
     <!-- Switch On/Off  -->
     <string name="switch_on_text">开启</string>
@@ -92,7 +92,6 @@
     <string name="dialog_color_picker">颜色拾取器</string>
     <string name="press_color_to_apply">选择颜色进行应用</string>
 
-  
     <string name="hex">十六进制:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">设置</string>
@@ -175,8 +174,8 @@
 
     <!-- ROM Stats -->
     <!-- Main -->
-    <string name="stats_title">统计(N击上图有惊喜)</string>
-    <string name="stats_summary">Opt in/out for anonymous stats.</string>
+    <string name="stats_title">统计</string>
+    <string name="stats_summary">提交匿名统计</string>
 
     <!-- Notification -->
     <string name="notification_ticker">统计选择</string>
@@ -233,11 +232,11 @@
     <string name="dmesg_title">Dmesg</string>
     <string name="log_it_title">执行</string>
     <string name="log_it_dialog_title">执行</string>
-    <string name="log_that_shit_title">Log that shit</string>
-    <string name="logcat_warning">Share it or GTFO!</string>
+    <string name="log_that_shit_title">日志抓取</string>
+    <string name="logcat_warning">分享或者离开</string>
     <string name="share_title">分享...</string>
-    <string name="log_it_share_subject">Aicp logs</string>
-    <string name="log_it_summary">Be patient for the logs to be created</string>
+    <string name="log_it_share_subject">Aicp日志</string>
+    <string name="log_it_summary">请耐心等待日志创建</string>
 
     <!-- AOKP custom system animations -->
     <string name="animation_duration_default">默认</string>
@@ -372,7 +371,7 @@
     <string name="volume_dialog_dash_width_title">音量面板边缘虚线宽度</string>
     <string name="volume_dialog_dash_gap_title">音量面板边缘虚线间隔</string>
 
-	<!-- QS stroke settings -->
+    <!-- QS stroke settings -->
     <string name="qs_stroke_title">快捷设置面板边缘设置</string>
     <string name="qs_stroke_disabled">关闭</string>
     <string name="qs_stroke_accent">强调色</string>
@@ -493,16 +492,16 @@
     <string name="recents_clear_all_location_bottom_center">底部中心</string>
 
     <!-- Heads up settings -->
-    <string name="nav_headsup_title">抬头通知</string>
-    <string name="headsup_settings_category">抬头通知</string>
-    <string name="headsup_settings_title">启用抬头通知</string>
-    <string name="headsup_settings_summary">要允许应用程序在屏幕上的弹出窗口中显示交互式通知，请启用抬头通知。</string>
-    <string name="summary_heads_up_enabled">抬头通知已启用</string>
-    <string name="summary_heads_up_disabled">抬头通知已禁用</string>
+    <string name="nav_headsup_title">浮动通知</string>
+    <string name="headsup_settings_category">浮动通知</string>
+    <string name="headsup_settings_title">启用浮动通知</string>
+    <string name="headsup_settings_summary">要允许应用程序在屏幕上的弹出窗口中显示交互式通知，请启用浮动通知。</string>
+    <string name="summary_heads_up_enabled">浮动通知已启用</string>
+    <string name="summary_heads_up_disabled">浮动通知已禁用</string>
 
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">超时</string>
-    <string name="heads_up_time_out_summary">抬头通知将显示<xliff:g id="number">%d</xliff:g>秒</string>
+    <string name="heads_up_time_out_summary">浮动通知将显示<xliff:g id="number">%d</xliff:g>秒</string>
     <string name="heads_up_time_out_2sec">2秒</string>
     <string name="heads_up_time_out_4sec">4秒</string>
     <string name="heads_up_time_out_5sec">5秒</string>
@@ -511,11 +510,11 @@
     <string name="heads_up_time_out_10sec">10秒</string>
 
     <!-- Heads up snooze -->
-    <string name="heads_up_snooze_title">打盹计时器</string>
-    <string name="heads_up_snooze_summary_one_minute">在抬头通知上向上滑动将临时禁用该应用的抬头通知1分钟</string>
-    <string name="heads_up_snooze_summary">在抬头通知上向上滑动将临时禁用该应用的抬头通知<xliff:g id="number">%d</xliff:g>分钟</string>
+    <string name="heads_up_snooze_title">暂停计时器</string>
+    <string name="heads_up_snooze_summary_one_minute">在浮动通知上向上滑动将临时禁用该应用的浮动通知1分钟</string>
+    <string name="heads_up_snooze_summary">在浮动通知上向上滑动将临时禁用该应用的浮动通知<xliff:g id="number">%d</xliff:g>分钟</string>
     <string name="heads_up_snooze_disabled">禁用</string>
-    <string name="heads_up_snooze_disabled_summary">打盹计时器已禁用</string>
+    <string name="heads_up_snooze_disabled_summary">暂停计时器已禁用</string>
     <string name="heads_up_snooze_1min">1分钟</string>
     <string name="heads_up_snooze_3min">3分钟</string>
     <string name="heads_up_snooze_5min">5分钟</string>
@@ -527,7 +526,7 @@
 
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">锁屏电池信息</string>
-    <string name="lockscreen_battery_info_summary">在充电时在锁定屏幕上显示协商的充电器最大电流电压和电池温度</string>
+    <string name="lockscreen_battery_info_summary">在充电时在锁定屏幕上显示充电器最大电流电压和电池温度</string>
 
     <!-- Battery Saver easy toggle -->
     <string name="qs_battery_easy_toggle_title">电池瓷块快速切换</string>
@@ -614,6 +613,41 @@
     <string name="blur_cat_notice">注意</string>
     <string name="blur_cat_notice_summary">键盘锁视图期间模糊个性化设置将被禁用，只启用半透明通知，快捷设置顶部和面板透明度将被自动禁用！</string>
 
+    <!-- Header images -->
+    <string name="status_bar_custom_header_title">自定义顶部图像</string>
+    <string name="status_bar_custom_header_summary">启用通知栏顶部图像调整</string>
+    <string name="daylight_header_pack_title">顶部图像包</string>
+    <string name="status_bar_custom_header_shadow_title">顶部图像阴影</string>
+    <string name="status_bar_custom_header_shadow_summary">在较明亮的图片下可以取得较好的可见性</string>
+    <string name="unit_percent">\u0025</string>
+    <string name="static_header_provider_title">静态</string>
+    <string name="daylight_header_provider_title">动态</string>
+    <string name="custom_header_provider_title">顶部图像提供者</string>
+    <string name="custom_header_browse_title">浏览以选用</string>
+    <string name="custom_header_browse_summary">长按一张图像来选用</string>
 
+    <!-- qqs scroller -->
+    <string name="qqs_scroll_title">滚动QS瓷块</string>
+    <string name="qqs_scroll_summary">允许QS瓷块滚动</string>
+
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors_title">锁屏颜色</string>
+    <string name="lockscreen_owner_info_color">拥有者信息</string>
+    <string name="lockscreen_alarm_color">闹钟</string>
+    <string name="lockscreen_clock_color">时钟</string>
+    <string name="lockscreen_clock_date_color">日期</string>
+    <string name="lockscreen_colors_reset_title">重置锁屏颜色</string>
+    <string name="lockscreen_colors_reset_message">你确定要把锁屏颜色重置为默认吗</string>
+    <string name="yes">确定</string>
+
+    <!-- Hide Lockscreen clock & date -->
+    <string name="hide_lockscreen_items_title">锁屏内容</string>
+    <string name="hide_lockscreen_clock_title">显示锁屏时钟</string>
+    <string name="hide_lockscreen_date_title">显示锁屏日期</string>
+
+    <!-- Hide Lockscreen clock & date -->
+    <string name="changelog_name">更新日志</string>
+    <string name="commit_id">锁屏提交ID</string>
+    <string name="commit_message">提交信息</string>
 
 </resources>
