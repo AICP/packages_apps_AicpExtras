@@ -37,4 +37,16 @@
     <attr name="switchBarMarginStart" format="dimension" />
     <attr name="switchBarMarginEnd" format="dimension" />
 
+    <!-- Base attributes available to SlimSeekBarPreference. -->
+    <declare-styleable name="SlimSeekBarPreference">
+        <!-- note: originally naming "defaultValue" caused clash with IntervalSeekBar (float - integer) -->
+        <attr name="defaultValueInt" format="integer" />
+        <attr name="useMilliSeconds" format="boolean" />
+        <attr name="usePercentage" format="boolean" />
+        <attr name="disableText" format="boolean" />
+        <attr name="interval" format="integer" />
+        <attr name="minValue" format="integer" />
+        <attr name="multiplyValue" format="integer" />
+    </declare-styleable>
+
 </resources>

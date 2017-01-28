@@ -46,20 +46,26 @@ public class RecentsPanelFragment extends Fragment {
         private static final String IMMERSIVE_RECENTS = "immersive_recents";
         private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
         private static final String RECENTS_USE_OMNISWITCH = "recents_use_omniswitch";
+        private static final String RECENTS_USE_SLIM= "use_slim_recents";
         private static final String OMNISWITCH_START_SETTINGS = "omniswitch_start_settings";
         public static final String OMNISWITCH_PACKAGE_NAME = "org.omnirom.omniswitch";
         public static Intent INTENT_OMNISWITCH_SETTINGS = new Intent(Intent.ACTION_MAIN).setClassName(OMNISWITCH_PACKAGE_NAME,
                                     OMNISWITCH_PACKAGE_NAME + ".SettingsActivity");
+        private static final String SLIM_RECENTS_SETTINGS = "slim_recent_panel";
         private static final String CATEGORY_STOCK_RECENTS = "stock_recents";
         private static final String CATEGORY_OMNI_RECENTS = "omni_recents";
+        private static final String CATEGORY_SLIM_RECENTS = "slim_recents";
 
         private ListPreference mImmersiveRecents;
         private ListPreference mRecentsClearAllLocation;
         private Preference mOmniSwitchSettings;
+        private Preference mSlimRecentsSettings;
         private PreferenceCategory mOmniRecents;
+        private PreferenceCategory mSlimRecents;
         private PreferenceCategory mStockRecents;
         private SwitchPreference mRecentsClearAll;
         private SwitchPreference mRecentsUseOmniSwitch;
+        private SwitchPreference mRecentsUseSlim;
 
         private boolean mOmniSwitchInitCalled;
 
@@ -80,6 +86,7 @@ public class RecentsPanelFragment extends Fragment {
 
             mStockRecents = (PreferenceCategory) findPreference(CATEGORY_STOCK_RECENTS);
             mOmniRecents = (PreferenceCategory) findPreference(CATEGORY_OMNI_RECENTS);
+            mSlimRecents = (PreferenceCategory) findPreference(CATEGORY_SLIM_RECENTS);
 
             // Immersive recents
             mImmersiveRecents = (ListPreference) prefSet.findPreference(IMMERSIVE_RECENTS);
@@ -109,6 +116,10 @@ public class RecentsPanelFragment extends Fragment {
 
             mOmniSwitchSettings = (Preference) prefSet.findPreference(OMNISWITCH_START_SETTINGS);
             mOmniSwitchSettings.setEnabled(mRecentsUseOmniSwitch.isChecked());
+
+            mRecentsUseSlim = (SwitchPreference) prefSet.findPreference(RECENTS_USE_SLIM);
+            mRecentsUseSlim.setOnPreferenceChangeListener(this);
+            mSlimRecentsSettings = (Preference) prefSet.findPreference(SLIM_RECENTS_SETTINGS);
             updateRecents();
 
         }
@@ -140,16 +151,27 @@ public class RecentsPanelFragment extends Fragment {
                 mOmniSwitchSettings.setEnabled(value);
                 updateRecents();
                 return true;
+            } else if (preference == mRecentsUseSlim) {
+                boolean value = (Boolean) newValue;
+                Settings.System.putInt(
+                        resolver, Settings.System.USE_SLIM_RECENTS, value ? 1 : 0);
+                updateRecents();
+                return true;
             }
             return false;
         }
 
         @Override
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-            if (preference == mOmniSwitchSettings){
+            if (preference == mOmniSwitchSettings) {
                 startActivity(INTENT_OMNISWITCH_SETTINGS);
                 return true;
-            }            return super.onPreferenceTreeClick(preferenceScreen, preference);
+            } else if (preference == mSlimRecentsSettings) {
+                Intent intent = new Intent(getActivity(), SlimRecents.class);
+                getActivity().startActivity(intent);
+                return true;
+            }
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
 
         private void openOmniSwitchFirstTimeWarning() {
@@ -165,14 +187,14 @@ public class RecentsPanelFragment extends Fragment {
         private void updateRecents() {
             boolean omniRecents = Settings.System.getInt(getActivity().getContentResolver(),
                     Settings.System.RECENTS_USE_OMNISWITCH, 0) == 1;
+            boolean slimRecents = Settings.System.getInt(getActivity().getContentResolver(),
+                    Settings.System.USE_SLIM_RECENTS, 0) == 1;
 
-            if (omniRecents) {
-                mOmniRecents.setEnabled(true);
-                mStockRecents.setEnabled(false);
-            } else {
-                mOmniRecents.setEnabled(true);
-                mStockRecents.setEnabled(true);
-            }
+            mStockRecents.setEnabled(!omniRecents && !slimRecents);
+            // Slim recents overwrites omni recents
+            mOmniRecents.setEnabled(omniRecents || !slimRecents);
+            // Don't allow OmniSwitch if we're already using slim recents
+            mSlimRecents.setEnabled(slimRecents || !omniRecents);
         }
     }
 }
