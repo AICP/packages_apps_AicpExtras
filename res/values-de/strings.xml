@@ -43,16 +43,16 @@
     <string name="aicp_ota_title">OTA Aktualisierung</string>
     <string name="ota_summary">Aktualisierungsprüfung für die installierte ROM Version</string>
     <string name="aicp_gerrit_title">Gerrit</string>
-    <string name="gerrit_summary">Besuche unsere Review-System online, um zu erfahren, an was wir gerade arbeiten</string>
     <string name="ae_version_title">AICP Extras Version</string>
     <string name="ae_version_summary">0.3.0</string>
-    <string name="gerrit_summary">Visit our Gerrit to know what we are working on.</string>
+    <string name="gerrit_summary">Besuche unsere Review-System online, um zu erfahren, an was wir gerade arbeiten</string>
     <string name="hidden_anim_activity_title">Zeit für \'Yoga\'!!!</string>
     <string name="hidden_anim_more_title">MEHR?</string>
     <string name="hidden_anim_more_nice">SCHÖN</string>
     <string name="continue_title">Weiter</string>
     <string name="settings_activity_title">AE Einstellungen</string>
     <string name="recents_panel_title">Anwendungsverlauf</string>
+    <string name="quick_settings_title">Kacheln</string>
 
     <string name="nothing_title">Hier gibt es noch nichts zu sehen, also weiter.</string>
 
@@ -592,15 +592,15 @@
     <string name="three_finger_gesture_summary">Wische mit drei Fingern, um ein Bildschirmfoto aufzunehmen</string>
 
     <!-- Blur UI -->
-    <string name="nav_blur_ui_title">Unschärfe-Anpassungen</string>
-    <string name="blur_ui_category_title">Unschärfe-Anpassungen</string>
-    <string name="blurred_status_bar_expanded_enabled_pref">Unschärfe Statusleiste</string>
+    <string name="nav_blur_ui_title">UI-Trübung</string>
+    <string name="blur_ui_category_title">Anpassung der UI-Trübung</string>
+    <string name="blurred_status_bar_expanded_enabled_pref">Trübung der Statusleiste</string>
     <string name="blurred_status_bar_expanded_enabled_pref_summary">Verwischt den Hintergrund, wenn die Statusleiste heruntergezogen wird</string>
     <string name="translucent_notifications_pref">Durchsichtige Benachrichtigungen</string>
     <string name="translucent_notifications_pref_summary">Transparenz des Benachrichtigungshintergrunds erlauben</string>
-    <string name="translucent_header_pref">Unschärfe Statusleistenkopf</string>
+    <string name="translucent_header_pref">Trübung des Statusleistenkopfs</string>
     <string name="translucent_header_pref_summary">Verwischt den Hintergrund der Statusleisten-Kopfzeilen</string>
-    <string name="translucent_quick_settings_pref">Unschärfe Schnelleinstellungsbereich</string>
+    <string name="translucent_quick_settings_pref">Trübung des Schnelleinstellungsbereichs</string>
     <string name="translucent_quick_settings_pref_summary">Verwischt den Hintergrund der Schnelleinstellungen</string>
     <string name="transluency_level_universal">Transparenz</string>
     <string name="blur_expstatus_cat">Statusleiste</string>
@@ -608,20 +608,20 @@
     <string name="blur_header_cat">Statusleisten-Kopfzeilen</string>
     <string name="blur_qs_cat">Schnelleinstellungen</string>
     <string name="blur_recents_cat">Verlauf</string>
-    <string name="blurred_recent_app_enabled_pref">Unschärfe Anwendungsverlauf</string>
+    <string name="blurred_recent_app_enabled_pref">Trübung des Anwendungsverlaufs</string>
     <string name="blurred_recent_app_enabled_pref_summary">Verwischt den Hintergrund des Anwendungsverlaufs</string>
-    <string name="blurred_scale">Größenordnung der Unschärfe</string>
+    <string name="blurred_scale">Größenordnung der Trübung</string>
     <string name="blurred_scale_summary">Qualität des verwischten Bildes</string>
-    <string name="blurred_radius">Intensität der Unschärfe</string>
+    <string name="blurred_radius">Intensität der Trübung</string>
     <string name="blurred_radius_summary">Stärke des Verwischens</string>
     <string name="blur_cat_notice">Anmerkung</string>
-    <string name="blur_cat_notice_summary">Unschärfe-Anpassungen werden während Sicherheitsabfragen deaktiviert! Nur durchsichtige Benachrichtigungen bleiben aktiviert! Die Transparenz der Statusleiste und der Schnelleinstellungen werden automatisch deaktiviert!</string>
-    <string name="blur_colors_cat">Unschärfe-Farbfilter</string>
+    <string name="blur_cat_notice_summary">Die Trübung ist während Sicherheitsabfragen deaktiviert! Nur durchsichtige Benachrichtigungen bleiben aktiviert! Die Transparenz der Statusleiste und der Schnelleinstellungen werden automatisch deaktiviert!</string>
+    <string name="blur_colors_cat">Farbfilter</string>
     <string name="blur_light_color">Farbfilter für helle Bilder</string>
     <string name="blur_dark_color">Farbfilter für dunkle Bilder</string>
     <string name="blur_mixed_color">Farbfilter für bunte Bilder</string>
     <string name="blur_colors_notice">Wofür sind diese Farben?</string>
-    <string name="blur_colors_notice_summary">Diese Farben dunkeln den unscharfen Hintergrund ab. Anstatt des normalen Grautons, können nun die Abdunklungsfarben selbst gewählt werden.\nEs sind drei Farbfilter verfügbar für helle, dunkle und hell-dunkle Hintergründe.\nWie funktionieren nun die Farbfilter?? \nSo einfach wie ihr Titel, d.h. der helle Filter für helle Hintergründe, der dunkle Filter für dunkle Hintergründe und der bunte Filter für nicht zu helle oder dunkle Hintergründe.\nDie Farbauswahl wird genutzt für den Displayhintergrund beim App-Verlauf und der Benachrichtungsleiste</string>
+    <string name="blur_colors_notice_summary">Diese Farben dunkeln den getrübten Hintergrund ab. Anstatt des normalen Grautons, können nun die Abdunklungsfarben selbst gewählt werden.\nEs sind drei Farbfilter verfügbar für helle, dunkle und hell-dunkle Hintergründe.\nWie funktionieren nun die Farbfilter?? \nSo einfach wie ihr Titel, d.h. der helle Filter für helle Hintergründe, der dunkle Filter für dunkle Hintergründe und der bunte Filter für nicht zu helle oder dunkle Hintergründe.\nDie Farbauswahl wird genutzt für den Displayhintergrund beim App-Verlauf und der Benachrichtungsleiste</string>
     <string name="blur_default_colors_title">Farben auf Standard zurücksetzen</string>
 
     <!-- App sidebar -->
@@ -766,8 +766,30 @@
     <string name="hide_lockscreen_date_title">Zeige Datum auf Sperrbildschirm</string>
 
     <!-- Hide Lockscreen clock & date -->
-    <string name="changelog_name">Changelog</string>
+    <string name="changelog_name">Änderungsprotokoll</string>
     <string name="commit_id">Änderungs-ID</string>
     <string name="commit_message">Änderungsbeschreibung</string>
+
+    <!-- SlimRecents -->
+    <string name="recent_panel_category">Slim Anwendungsverlauf</string>
+    <string name="use_slim_recents_title">Slim Anwendungsverlauf</string>
+    <string name="show_running_tasks_title">Zeige nur laufende Apps</string>
+    <string name="recents_max_apps_title">max. zulässige Anzahl Apps</string>
+    <string name="recent_panel_scale_title">Größe</string>
+    <string name="recent_panel_expanded_mode_title">Erweiterter Modus</string>
+    <string name="recent_panel_expanded_mode_summary">Erweiterter Vorschaumodus des Verlaufs</string>
+    <string name="recent_panel_expanded_mode_auto">Auto (Standard)</string>
+    <string name="recent_panel_expanded_mode_always">Immer</string>
+    <string name="recent_panel_expanded_mode_never">Niemals</string>
+    <string name="recent_panel_show_topmost_title">Zeige aktuelle App</string>
+    <string name="recent_panel_show_topmost_summary">Aktuelle App nicht von der Verlaufsanzeige ausschließen</string>
+    <string name="recent_panel_bg_color_title">Hintergrundfarbe des Paneels</string>
+    <string name="recent_card_bg_color_title">Hintergrundfarbe der Karten</string>
+    <string name="recent_card_text_color_title">Textfarbe der Karten</string>
+    <string name="recent_reset_value_title">Werte zurücksetzen</string>
+    <string name="recent_app_sidebar_title">Seitenleiste mit Anwendungsverlauf</string>
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Anzeige auf der linken Seite</string>
+    <string name="recent_panel_lefty_mode_summary">Zeige das Paneel des App-Verlaufs auf der linken Seite</string>
 
 </resources>
