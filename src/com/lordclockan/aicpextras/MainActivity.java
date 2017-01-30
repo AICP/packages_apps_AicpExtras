@@ -153,6 +153,16 @@ public class MainActivity extends AppCompatActivity
             // Use colors from settings
             navBgColor = Settings.System.getInt(this.getApplicationContext().getContentResolver(),
                 Settings.System.AE_NAV_DRAWER_BG_COLOR, navBgColor);
+
+            navigationView.getHeaderView(0).findViewById(R.id.nav_header_layout).
+                    getBackground().setColorFilter(Settings.System.getInt(this.
+                    getApplicationContext().getContentResolver(),
+                    Settings.System.AE_NAV_HEADER_BG_IMAGE_COLOR, colorAccent),
+                    PorterDuff.Mode.SRC_ATOP);
+        } else {
+            // Use colors from resources
+            navigationView.getHeaderView(0).findViewById(R.id.nav_header_layout).
+                    getBackground().setColorFilter(colorAccent, PorterDuff.Mode.SRC_ATOP);
         }
 
         navigationView.setBackgroundColor(navBgColor);
@@ -160,12 +170,6 @@ public class MainActivity extends AppCompatActivity
         navigationView.getBackground().setAlpha(Settings.System.getInt(this.
                 getApplicationContext().getContentResolver(),
                 Settings.System.AE_NAV_DRAWER_OPACITY, 178));
-
-        navigationView.getHeaderView(0).findViewById(R.id.nav_header_layout).
-                getBackground().setColorFilter(Settings.System.getInt(this.
-                getApplicationContext().getContentResolver(),
-                Settings.System.AE_NAV_HEADER_BG_IMAGE_COLOR, colorAccent),
-                PorterDuff.Mode.SRC_ATOP);
 
         navigationView.getHeaderView(0).findViewById(R.id.nav_header_layout).
                 getBackground().setAlpha(Settings.System.getInt(this.
