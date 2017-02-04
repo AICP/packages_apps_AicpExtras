@@ -102,6 +102,7 @@ public class ChangelogActivity extends AppCompatActivity {
                         final String re = "^([a-f0-9]{1,12}) ";
                         line = line.replaceFirst(re, "");
                         commits += line + "\n\n";
+                        checknext = true;
                     }
                 }
             }
