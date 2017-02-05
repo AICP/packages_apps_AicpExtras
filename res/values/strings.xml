@@ -173,8 +173,9 @@
     <string name="profile_applist_title">Applications</string>
 
     <!-- Power menu on lock screen -->
-    <string name="powermenu_lockscreen_title">Power menu on lock screen</string>
-    <string name="powermenu_lockscreen_summary">Show power menu on the lock screen</string>
+    <string name="powermenu_lockscreen_title">Power menu</string>
+    <string name="powermenu_lockscreen_summary_on">Power menu on the lock screen enabled</string>
+    <string name="powermenu_lockscreen_summary_off">Power menu on the lock screen disabled</string>
 
     <!-- ROM Stats -->
     <!-- Main -->
@@ -223,8 +224,9 @@
     <string name="preview_buildtype_title">AICP Build Type</string>
 
     <!-- Double tap to sleep on lockscreen -->
-    <string name="double_tap_sleep_anywhere_title">DT2S on Lockscreen</string>
-    <string name="double_tap_sleep_anywhere_summary">Double tap lockscreen to put the device to sleep</string>
+    <string name="double_tap_sleep_anywhere_title">Double-tap-to-sleep</string>
+    <string name="double_tap_sleep_anywhere_summary_on">Double tap lockscreen to put the device to sleep enabled</string>
+    <string name="double_tap_sleep_anywhere_summary_off">Double tap lock screen to put the device to sleep disabled</string>
 
     <!-- SU -->
     <string name="cannot_get_su">Cannot get superuser access, exiting.</string>
@@ -329,8 +331,9 @@
     <string name="notifications_transparency">Notifications transparency</string>
 
     <!-- Lockscreen Torch -->
-    <string name="keyguard_torch_title">Lockscreen torch</string>
-    <string name="keyguard_torch_summary">Longpress power button while screen is off to turn on flashlight</string>
+    <string name="keyguard_torch_title">Torch on power button longpress</string>
+    <string name="keyguard_torch_summary_on">Turning on flashlight on longpress power button while screen-off is enabled</string>
+    <string name="keyguard_torch_summary_off">Turning on flashlight on longpress power button while screen-off is disabled</string>
 
     <!-- Quick settings tiles columns and rows config -->
     <string name="qs_rows_portrait_title">Rows (portrait)</string>
@@ -400,7 +403,8 @@
 
     <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
-    <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
+    <string name="fprint_sucess_vib_summary_on">Vibrate on successful fingerprint authentication enabled</string>
+    <string name="fprint_sucess_vib_summary_off">Vibrate on successful fingerprint authentication disabled</string>
 
     <!-- AE settings -->
     <string name="ae_settings_title">AicpExtras settings</string>
@@ -464,7 +468,8 @@
 
     <!-- Disable quick settings on lock screen switch -->
     <string name="lockscreen_qs_disabled_title">Quick settings disabled on lock screen</string>
-    <string name="lockscreen_qs_disabled_summary">Disable expanding quick settings and keyguard shortcuts on secure lock screens</string>
+    <string name="lockscreen_qs_disabled_summary_on">Expanding quick settings and keyguard shortcuts on secure lock screens disabled</string>
+    <string name="lockscreen_qs_disabled_summary_off">Expanding quick settings and keyguard shortcuts on secure lock screens enabled</string>
 
     <!-- Disable music track title in QS tile -->
     <string name="qs_music_tile_track_optional_title">Music tile track title</string>
@@ -529,7 +534,7 @@
     <string name="heads_up_snooze_60min">60 minutes</string>
 
     <!-- Lockscreen battery info indicator  -->
-    <string name="lockscreen_battery_info_title">Lockscreen battery info</string>
+    <string name="lockscreen_battery_info_title">Battery info</string>
     <string name="lockscreen_battery_info_summary">Display negotiated charger max current-voltage and battery temperature on lockscreen while charging</string>
 
     <!-- Battery Saver easy toggle -->
@@ -751,22 +756,22 @@
     <string name="show_settings_drawer_disabled">Settings drawer disabled</string>
 
     <!-- Lockscreen Colors -->
-    <string name="lockscreen_colors_title">Lockscreen colors</string>
+    <string name="lockscreen_colors_title">Item colors</string>
     <string name="lockscreen_owner_info_color">Owner info</string>
     <string name="lockscreen_alarm_color">Alarm</string>
     <string name="lockscreen_clock_color">Clock</string>
     <string name="lockscreen_clock_date_color">Date</string>
-    <string name="lockscreen_colors_reset_title">Reset lockscreen colors</string>
+    <string name="lockscreen_colors_reset_title">Reset colors</string>
     <string name="lockscreen_colors_reset_message">Are you sure you want to reset these colors to default?</string>
     <string name="yes">YES</string>
 
-	<!-- Hide Lockscreen clock & date -->
-    <string name="hide_lockscreen_items_title">Lockscreen items</string>
-    <string name="hide_lockscreen_clock_title">Show lockscreen clock</string>
-    <string name="hide_lockscreen_date_title">Show lockscreen date</string>
+    <!-- Hide Lockscreen clock & date -->
+    <string name="hide_lockscreen_items_title">Items</string>
+    <string name="hide_lockscreen_clock_title">Show clock</string>
+    <string name="hide_lockscreen_date_title">Show date</string>
     <string name="hide_lockscreen_alarm_title">Show alarm text</string>
 
-    <!-- Hide Lockscreen clock & date -->
+    <!-- Changelog -->
     <string name="changelog_name">Changelog</string>
     <string name="commit_id">Lockscreen Commit ID</string>
     <string name="commit_message">Commit message</string>
