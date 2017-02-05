@@ -1,51 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="double_tap_sleep_anywhere"
-        android:title="@string/double_tap_sleep_anywhere_title"
-        android:summary="@string/double_tap_sleep_anywhere_summary" />
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="power_menu_lockscreen"
-        android:title="@string/powermenu_lockscreen_title"
-        android:summary="@string/powermenu_lockscreen_summary"
-        android:defaultValue="true" />
-
-    <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
-        android:key="lockscreen_qs_disabled"
-        android:title="@string/lockscreen_qs_disabled_title"
-        android:summary="@string/lockscreen_qs_disabled_summary"
-        android:defaultValue="false" />
-
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="lockscreen_battery_info"
-        android:title="@string/lockscreen_battery_info_title"
-        android:summary="@string/lockscreen_battery_info_summary" 
-        android:defaultValue="false" />
-
+    <!-- Lockscreen clock, date, alarm, battery info -->
     <PreferenceCategory
-        android:title="@string/Misc"
-        android:key="lockscreen_misc_category">
+        android:key="hide_lockscreen_items_category"
+        android:title="@string/hide_lockscreen_items_title" >
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="hide_lockscreen_alarm"
+            android:title="@string/hide_lockscreen_alarm_title"
+            android:defaultValue="true" />
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="hide_lockscreen_clock"
+            android:title="@string/hide_lockscreen_clock_title"
+            android:defaultValue="true" />
 
         <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
             android:key="lock_screen_hide_ampm"
             android:title="@string/lock_screen_hide_ampm_title"
             android:summaryOn="@string/lock_screen_hide_ampm_summary_on"
             android:summaryOff="@string/lock_screen_hide_ampm_summary_off"
+            android:dependency="hide_lockscreen_clock"
             android:defaultValue="false" />
 
         <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-            android:key="keyguard_toggle_torch"
-            android:title="@string/keyguard_torch_title"
-            android:summary="@string/keyguard_torch_summary"
-            android:defaultValue="false" />
-
-        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-            android:key="fingerprint_success_vib"
-            android:title="@string/fprint_sucess_vib_title"
-            android:summary="@string/fprint_sucess_vib_summary"
+            android:key="hide_lockscreen_date"
+            android:title="@string/hide_lockscreen_date_title"
             android:defaultValue="true" />
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_battery_info"
+            android:title="@string/lockscreen_battery_info_title"
+            android:summary="@string/lockscreen_battery_info_summary" 
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 
@@ -83,24 +71,39 @@
 
     </PreferenceCategory>
 
-	<!-- Hide Lockscreen clock & date -->
     <PreferenceCategory
-        android:key="hide_lockscreen_items_category"
-        android:title="@string/hide_lockscreen_items_title" />
+        android:title="@string/Misc"
+        android:key="lockscreen_misc_category">
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="hide_lockscreen_clock"
-        android:title="@string/hide_lockscreen_clock_title"
-        android:defaultValue="true" />
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="keyguard_toggle_torch"
+            android:title="@string/keyguard_torch_title"
+            android:summary="@string/keyguard_torch_summary"
+            android:defaultValue="false" />
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="hide_lockscreen_date"
-        android:title="@string/hide_lockscreen_date_title"
-        android:defaultValue="true" />
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="fingerprint_success_vib"
+            android:title="@string/fprint_sucess_vib_title"
+            android:summary="@string/fprint_sucess_vib_summary"
+            android:defaultValue="true" />
 
-    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-        android:key="hide_lockscreen_alarm"
-        android:title="@string/hide_lockscreen_alarm_title"
-        android:defaultValue="true" />
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_anywhere"
+            android:title="@string/double_tap_sleep_anywhere_title"
+            android:summary="@string/double_tap_sleep_anywhere_summary" />
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="power_menu_lockscreen"
+            android:title="@string/powermenu_lockscreen_title"
+            android:summary="@string/powermenu_lockscreen_summary"
+            android:defaultValue="true" />
+
+        <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
+            android:key="lockscreen_qs_disabled"
+            android:title="@string/lockscreen_qs_disabled_title"
+            android:summary="@string/lockscreen_qs_disabled_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
