@@ -62,6 +62,7 @@
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="lockscreen_alarm_color"
             android:title="@string/lockscreen_alarm_color"
+            android:dependency="hide_lockscreen_alarm"
             android:defaultValue="0xffffffff" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
@@ -73,6 +74,7 @@
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="lockscreen_clock_date_color"
             android:title="@string/lockscreen_clock_date_color"
+            android:dependency="hide_lockscreen_date"
             android:defaultValue="0xffffffff" />
 
         <Preference
