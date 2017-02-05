@@ -122,6 +122,13 @@
             android:summary="@string/lockscreen_hide_status_bar_summary"
             android:defaultValue="false" />
 
+        <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
+            android:key="hide_lockscreen_shortcuts"
+            android:title="@string/hide_lockscreen_bottom_shortcuts_title"
+            android:summaryOn="@string/hide_lockscreen_bottom_shortcuts_summary_on"
+            android:summaryOff="@string/hide_lockscreen_bottom_shortcuts_summary_off"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
