@@ -96,4 +96,9 @@
         android:title="@string/hide_lockscreen_date_title"
         android:defaultValue="true" />
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="hide_lockscreen_alarm"
+        android:title="@string/hide_lockscreen_alarm_title"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
