@@ -26,6 +26,7 @@ import android.text.format.DateFormat;
 import android.widget.Toast;
 
 import com.android.internal.util.aicp.AicpUtils;
+import com.android.internal.widget.LockPatternUtils;
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.utils.Helpers;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
@@ -48,6 +49,7 @@ public class LockscreenFragment extends Fragment {
         public SettingsPreferenceFragment() {
         }
 
+        private static final String PREF_HIDE_BOTTOM_SHORTCUTS = "hide_lockscreen_shortcuts";
         private static final String PREF_KEYGUARD_TORCH = "keyguard_toggle_torch";
         private static final String PREF_LOCK_SCREEN_HIDE_AMPM = "lock_screen_hide_ampm";
         private static final String LOCKSCREEN_OWNER_INFO_COLOR = "lockscreen_owner_info_color";
@@ -58,8 +60,11 @@ public class LockscreenFragment extends Fragment {
         private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
         private static final String FP_UNLOCK_KEYSTORE = "fp_unlock_keystore";
 
+        private static final int MY_USER_ID = UserHandle.myUserId();
+
         private SwitchPreference mKeyguardTorch;
         private FingerprintManager mFingerprintManager;
+        private SwitchPreference mBottomShortcuts;
         private SwitchPreference mFingerprintVib;
         private SwitchPreference mFpKeystore;
         private SwitchPreference mHideAmPm;
@@ -110,6 +115,17 @@ public class LockscreenFragment extends Fragment {
                 mMiscCategory.removePreference(mHideAmPm);
             } else {
                 mHideAmPm.setOnPreferenceChangeListener(this);
+            }
+
+            // Hide bottom shortcuts preference on secure lockscreens
+            final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
+
+            mBottomShortcuts = (SwitchPreference) findPreference(PREF_HIDE_BOTTOM_SHORTCUTS);
+            if (!lockPatternUtils.isSecure(MY_USER_ID)) {
+                mBottomShortcuts.setChecked((Settings.Secure.getInt(resolver,
+                    Settings.Secure.HIDE_LOCKSCREEN_SHORTCUTS, 0) == 1));
+            } else {
+                mMiscCategory.removePreference(mBottomShortcuts);
             }
 
             if (mMiscCategory.getPreferenceCount() == 0) {
