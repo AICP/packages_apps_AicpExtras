@@ -56,6 +56,13 @@
             android:summary="@string/recent_panel_show_topmost_summary"
             android:defaultValue="false" />
 
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="slim_recents_aicp_empty_drawable"
+            android:title="@string/slim_recents_aicp_empty_drawable_title"
+            android:summary="@string/slim_recents_aicp_empty_drawable_summary"
+            android:defaultValue="true" />
+
         <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
             android:key="recent_panel_scale"
             android:title="@string/recent_panel_scale_title"
