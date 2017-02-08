@@ -18,6 +18,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <string name="navigation_drawer_open">ナビゲーションドロワーを開く</string>
+    <string name="navigation_drawer_close">ナビゲーションドロワーを閉じる</string>
+
     <string name="action_settings">設定</string>
     <string name="aicp_extras_title">AICP Extras</string>
     <string name="various_shit_title">その他の設定</string>
@@ -33,13 +36,19 @@
     <string name="lockscreen_title">ロック画面</string>
     <string name="aicp_downloads_title">ダウンロード</string>
     <string name="dwnld_summary">最新のビルドをダウンロードする</string>
+    <string name="aicp_ota_title">OTAセンター</string>
+    <string name="ota_summary">ROMの最新のアップデートを確認する</string>
     <string name="aicp_gerrit_title">Gerrit Code Review</string>
+    <string name="ae_version_title">AICP Extras バージョン</string>
     <string name="gerrit_summary">GerritでAICPの開発の最前線を知る</string>
     <string name="hidden_anim_more_title">もっと？</string>
     <string name="hidden_anim_more_nice">いいぞ</string>
     <string name="continue_title">続ける</string>
     <string name="settings_activity_title">AICP Extrasの設定</string>
     <string name="recents_panel_title">アプリ履歴</string>
+    <string name="quick_settings_title">クイック設定パネル</string>
+
+    <string name="nothing_title">ここにはなにもありません</string>
 
     <!-- Switch On/Off  -->
     <string name="switch_on_text">ON</string>
@@ -51,7 +60,7 @@
 
     <!-- Change Log -->
     <string name="changelog_title">更新履歴</string>
-    <string name="changelog_title_summary">ROMの最近の更新を確認します</string>
+    <string name="changelog_title_summary">AICPの最近の更新を確認します</string>
     <string name="changelog_error">更新履歴の読み込みに失敗しました</string>
 
     <!-- Toast Icons -->
@@ -63,7 +72,7 @@
     <string name="qs_brightness_slider_enabled">有効</string>
     <string name="qs_brightness_slider_disabled">無効</string>
 
-    <string name="restarting_ui">UIの再起動中\u2026</string>
+    <string name="restarting_ui">UIの再起動中...</string>
 
     <!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
     <string name="print_restart">再起動</string>
@@ -142,6 +151,12 @@
     <string name="battery_bar_style_regular">デフォルト</string>
     <string name="battery_bar_style_center_mirrored">中央</string>
     <string name="battery_bar_style_reversed">反転</string>
+    <string name="battery_bar_use_charging_color">充電時のバーの色を変更する</string>
+    <string name="battery_bar_blend_color_title">色のブレンド</string>
+    <string name="battery_bar_blend_color_summary">バッテリー残量に応じてフル/残量低下時の色をブレンドする</string>
+    <string name="battery_bar_blend_color_reverse_title">色の順番を逆転させる</string>
+    <string name="battery_bar_blend_color_reverse_summary_off">フル &#8594; 残量低下: 赤 &#8592; 緑 &#8592; 青 &#8592; 赤</string>
+    <string name="battery_bar_blend_color_reverse_summary_on">フル &#8594; 残量低下: 赤 &#8594; 緑 &#8594; 青 &#8594; 赤</string>
 
     <!-- Activity and App Picker -->
     <string name="picker_activities">アクティビティ</string>
@@ -156,7 +171,7 @@
     <!-- ROM Stats -->
     <!-- Main -->
     <string name="stats_title">利用統計</string>
-    <string name="stats_summary">匿名の統計をオプトイン/アウトします</string>
+    <string name="stats_summary">匿名の統計をオプトイン/アウトする</string>
 
     <!-- Notification -->
     <string name="notification_ticker">統計をオプトインしました</string>
@@ -166,13 +181,15 @@
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
     <string name="anonymous_statistics_title">AICP 統計</string>
     <string name="anonymous_statistics_summary">匿名の統計のレポートに同意してAICPに協力する</string>
+    <string name="anonymous_statistics_warning_title">利用統計について</string>
+    <string name="anonymous_statistics_warning">AICP の利用統計にオプトインすると、匿名のデータがサーバーに送信されます。送信されるデータにはユニークな識別情報が含まれますが、プライバシーや個人情報に影響するものではありません。データは7日ごとに送信されます。\n\n送信されるデータの例を見るには、「データのプレビュー」をタップしてください。</string>
     <string name="pref_settings">設定</string>
     <string name="enable_reporting_title">レポートを有効にする</string>
     <string name="disable_reporting_persistent">オプトアウトする</string>
     <string name="preview_data_title">データのプレビュー</string>
     <string name="preview_data_summary">%s</string>
     <string name="view_stats_title">統計ページへアクセス</string>
-    <string name="anonymous_learn_more">もっと知る</string>
+    <string name="anonymous_learn_more">もっと詳しく</string>
 
     <string name="last_report_on">最後に送信した日</string>
     <string name="reporting_interval">レポート間隔</string>
@@ -199,9 +216,13 @@
     <string name="cannot_get_su">スーパーユーザー権限を確認できませんでした。終了します。</string>
     <string name="cannot_get_su_start">スーパーユーザー権限を確認できませんでした。</string>
 
+    <!-- Aicp logcat -->
+    <string name="log_it_title">ログの取得</string>
+    <string name="log_it_dialog_title">ログの取得</string>
     <string name="log_that_shit_title">ログを取得</string>
     <string name="share_title">共有する...</string>
     <string name="log_it_share_subject">AICP ログ</string>
+    <string name="log_it_summary">ログが作成されるまでお待ちください</string>
 
     <!-- AOKP custom system animations -->
     <string name="animation_duration_default">デフォルト</string>
@@ -210,11 +231,31 @@
     <string name="toast_animation_title">トースト通知のアニメーション</string>
     <string name="toast_none_animation">なし</string>
     <string name="toast_default_animation">デフォルト</string>
+    <string name="toast_fade_animation">フェード</string>
+    <string name="toast_SlideRight_animation">右にスライド</string>
+    <string name="toast_SlideLeft_animation">左にスライド</string>
+    <string name="toast_FastFade_animation">速いフェード</string>
+    <string name="toast_GrowFade_animation">グローフェード</string>
+    <string name="toast_GrowFadeCenter_animation">中央からグローフェード</string>
+    <string name="toast_GrowFadeBottom_animation">下からグローフェード</string>
+    <string name="toast_Translucent_animation">半透明</string>
+    <string name="toast_SlideLeftRight_animation">左から右にスライド</string>
+    <string name="toast_SlideRightLeft_animation">右から左にスライド</string>
 
     <!-- Power menu Animations  -->
     <string name="power_menu_animation_title">電源メニューのアニメーション</string>
+    <string name="power_menu_animation_summary">電源メニューを表示する際のアニメーションを変更します</string>
     <string name="power_menu_animation_dialog_title">電源メニューのアニメーションを選択</string>
     <string name="power_menu_animation_aosp">AOSP (デフォルト)</string>
+    <string name="power_menu_animation_bottom">下</string>
+    <string name="power_menu_animation_top">上</string>
+    <string name="power_menu_animation_rotate">回転</string>
+    <string name="power_menu_animation_xylon">フライ</string>
+    <string name="power_menu_animation_slide">スライド</string>
+    <string name="power_menu_animation_turn">ターン</string>
+    <string name="power_menu_animation_fly">グロー</string>
+    <string name="power_menu_animation_translucent_top">半透明（上）</string>
+    <string name="power_menu_animation_translucent_bottom">半透明（下）</string>
 
     <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">ステータスバー上のロゴ</string>
@@ -241,19 +282,94 @@
     <string name="brightness_icon_title">画面の明るさアイコン</string>
     <string name="brightness_icon_summary">明るさスライダーの左に「画面の明るさ」ボタンを表示する</string>
 
+    <!-- QS shade opacity -->
+    <string name="qs_transparent_shade">クイック設定シェードの不透明度</string>
+
+    <!-- QS header transparency -->
+    <string name="qs_transparent_header">クイック設定ヘッダの透明度</string>
+
+    <!-- QS tile labels visibility -->
+    <string name="qs_menu_item_titles">クイック設定タイルのラベル</string>
+    <string name="qs_menu_item_titles_summaryOn">ラベルを表示します</string>
+    <string name="qs_menu_item_titles_summaryOff">ラベルを非表示にします</string>
+
+    <!-- Volume dialog opacity -->
+    <string name="volume_dialog_transparency">音量ダイアログの不透明度</string>
+
+    <!-- Power menu and dialogs opacity -->
+    <string name="power_menu_transparency">電源/再起動メニューの不透明度</string>
+
+    <!-- Power/reboot dialogs dim amount -->
+    <string name="power_menu_dialog_dim">電源/再起動メニューの背景を暗くする量</string>
+
+    <!-- Notifications transparency -->
+    <string name="notifications_transparency">通知領域の透明度</string>
+
     <!-- Lockscreen Torch -->
     <string name="keyguard_torch_title">ロック画面のトーチ</string>
     <string name="keyguard_torch_summary">画面の消灯中に電源ボタンを長押ししてフラッシュを点灯</string>
 
+    <!-- Quick settings tiles columns and rows config -->
+    <string name="qs_rows_portrait_title">行数（縦向き）</string>
+    <string name="qs_rows_landscape_title">行数（横向き）</string>
+    <string name="qs_columns_title">列数</string>
+    <string name="sysui_qqs_count_title">小さいクイック設定タイル数</string>
+
     <!-- Tiles animation style  -->
     <string name="qs_tile_animation_style_title">タイルタップ時のアニメーション</string>
     <string name="qs_tile_animation_duration_title">タイルタップ時のアニメーション時間</string>
+    <string name="qs_tile_animation_interpolator_title">タイルアニメーションの補間</string>
     <string name="qs_tile_animation_style_off">アニメーションなし</string>
     <string name="qs_tile_animation_style_flip">左右に回転</string>
     <string name="qs_tile_animation_style_rotate">上下に回転</string>
+    <string name="qs_tile_animation_duration_low">遅い</string>
     <string name="qs_tile_animation_duration_default">デフォルト</string>
+    <string name="qs_tile_animation_duration_fast">速い</string>
+    <string name="qs_tile_animation_duration_superfast">とても速い</string>
+    <string name="qs_tile_animation_interpolator_linearInterpolator">等間隔</string>
+    <string name="qs_tile_animation_interpolator_accelerateInterpolator">加速</string>
+    <string name="qs_tile_animation_interpolator_decelerateInterpolator">減速</string>
+    <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">加速と減速</string>
+    <string name="qs_tile_animation_interpolator_bounceInterpolator">バウンス</string>
+    <string name="qs_tile_animation_interpolator_overshootInterpolator">オーバーシュート</string>
+    <string name="qs_tile_animation_interpolator_anticipateInterpolator">逆方向に溜める</string>
+    <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">逆方向に溜めてオーバーシュート</string>
+    <!-- App Exit Toast -->
+    <string name="app_exit_toast">もう一度押すと終了します</string>
+
+    <!-- Volume dialog stroke settings -->
+    <string name="volume_dialog_stroke_title">音量ダイアログの枠線</string>
+    <string name="volume_dialog_stroke_disabled">無効</string>
+    <string name="volume_dialog_stroke_accent">アクセントカラー</string>
+    <string name="volume_dialog_stroke_custom">カスタムカラー</string>
+    <string name="volume_dialog_stroke_color_title">音量ダイアログの枠線の色</string>
+    <string name="volume_dialog_stroke_thickness_title">音量ダイアログの枠線の太さ</string>
+    <string name="volume_dialog_corner_radius_title">音量ダイアログの角の丸み</string>
+    <string name="volume_dialog_dash_width_title">音量ダイアログの枠線の破線幅</string>
+    <string name="volume_dialog_dash_gap_title">音量ダイアログの枠線の破線間隔</string>
+
+    <!-- QS stroke settings -->
+    <string name="qs_stroke_title">クイック設定シェードの枠線</string>
+    <string name="qs_stroke_disabled">無効</string>
+    <string name="qs_stroke_accent">アクセントカラー</string>
+    <string name="qs_stroke_custom">カスタムカラー</string>
+    <string name="qs_stroke_color_title">クイック設定シェードの枠線の色</string>
+    <string name="qs_stroke_thickness_title">クイック設定シェードの枠線の太さ</string>
+    <string name="qs_corner_radius_title">クイック設定シェードの角の丸み</string>
+    <string name="qs_dash_width_title">クイック設定枠線の破線幅</string>
+    <string name="qs_dash_gap_title">クイック設定枠線の破線間隔</string>
+
+    <!--Preference Categories-->
+    <string name="anim">アニメーションの設定</string>
+    <string name="indicators">ステータスバー上のインジケーター</string>
     <string name="quicksettings_tiles_category">クイック設定パネルの設定</string>
+    <string name="header_tweaks">ヘッダーの設定</string>
     <string name="Misc">その他の設定</string>
+    <string name="qs">クイック設定パネル</string>
+    <string name="vol_diag">音量ダイアログの設定</string>
+    <string name="power">電源メニューの設定</string>
+    <string name="cab">「すべてを終了」ボタンの設定</string>
+
     <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">指紋認証のバイブレーション</string>
     <string name="fprint_sucess_vib_summary">指紋認証に成功した際にバイブレーションを作動させる</string>
@@ -263,22 +379,28 @@
     <string name="ae_custom_colors_title">外観を変更する</string>
     <string name="ae_custom_colors_summaries">AICP Extrasの外観を変更する</string>
     <string name="ae_drawer_opacity_title">ドロワーの不透明度</string>
+    <string name="ae_header_bg_image_color_title">ナビゲーションヘッダー背景画像色</string>
     <string name="ae_drawer_bg_color_title">ドロワーの色</string>
     <string name="ae_settings_restore_defaults_title">デフォルトに戻す</string>
+    <string name="values_restored_title">復元しました</string>
     <string name="ae_header_bg_image_opacity_title">ドロワーに表示されるヘッダーの不透明度</string>
     <string name="ae_nav_drawer_checked_text_title">選択中の設定の色</string>
     <string name="ae_nav_drawer_unchecked_text_title">選択していない設定の色</string>
     <string name="ae_settings_summary_title">AICP Extras説明文の変更</string>
     <string name="custom_summary_title">AE説明文の変更</string>
     <string name="custom_summary_explain">表示したい説明文を入力してください。デフォルトに戻すには空欄のままOKを押します。</string>
-    <string name="custom_summary_notset">設定アプリに表示されるAICP Extrasの説明文を変更する</string>
+    <string name="custom_summary_notset">ROM の詳細設定を開きます</string>
 
     <!-- Statusbar 4G LTE switch -->
     <string name="show_fourg_title">LTE表示の代わりに4G表示を使用する</string>
     <string name="show_fourg_summary">ステータスバーの表示をLTEから4Gに置き換える</string>
 
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">タッチ操作時のバイブ</string>
+    <string name="quick_settings_vibrate_summary">タイルをタッチした時バイブします</string>
+
     <!-- Advanced data tile -->
-    <string name="qs_advanced_data_title">高度なデータ通信タイル</string>
+    <string name="qs_advanced_data_title">データタイルをワンタップトグルにする</string>
     <string name="qs_advanced_data_summary">タップした際にデータ通信の詳細を表示する</string>
 
     <!-- SystemUI restart prompt -->
@@ -316,6 +438,14 @@
     <!-- Hostname setting -->
     <string name="device_hostname">端末のホスト名</string>
 
+    <!-- Disable quick settings on lock screen switch -->
+    <string name="lockscreen_qs_disabled_title">ロック画面でのクイック設定を無効化</string>
+    <string name="lockscreen_qs_disabled_summary">クイック設定とショートカットをロック画面で無効化します</string>
+
+    <!-- Disable music track title in QS tile -->
+    <string name="qs_music_tile_track_optional_title">音楽タイルに曲名を表示する</string>
+    <string name="qs_music_tile_track_optional_summary">曲名をクイック設定タイルのタイトルとして表示します</string>
+
     <!-- Immersive Recents -->
     <string name="immersive_recents_title">アプリ履歴の全画面表示</string>
     <string name="immersive_recents_summary">アプリ履歴の表示を変更します</string>
@@ -331,9 +461,9 @@
     <string name="systemui_recents_mem_display_summaryOff">RAMバーは無効になっています</string>
 
     <!-- Recents panel settings -->
-    <string name="show_clear_all_recents_button_title">「全てを終了」ボタンを使用する</string>
-    <string name="show_clear_all_recents_button_summary">アプリ履歴に「全てを終了」ボタンを表示する</string>
-    <string name="recents_clear_all_location_title">「全てを終了」ボタンの位置</string>
+    <string name="show_clear_all_recents_button_title">「すべてを終了」ボタンを使用する</string>
+    <string name="show_clear_all_recents_button_summary">アプリ履歴に「すべてを終了」ボタンを表示する</string>
+    <string name="recents_clear_all_location_title">「すべてを終了」ボタンの位置</string>
     <string name="recents_clear_all_location_top_right">右上</string>
     <string name="recents_clear_all_location_top_left">左上</string>
     <string name="recents_clear_all_location_top_center">中央上</string>
@@ -359,6 +489,37 @@
     <string name="heads_up_time_out_8sec">8秒</string>
     <string name="heads_up_time_out_10sec">10秒</string>
 
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">スヌーズタイマー</string>
+    <string name="heads_up_snooze_summary_one_minute">ヘッドアップ通知を上にスワイプすると、そのアプリからのヘッドアップ通知を1分間スヌーズします</string>
+    <string name="heads_up_snooze_summary">ヘッドアップ通知を上にスワイプすると、そのアプリからのヘッドアップ通知を<xliff:g id="number">%d</xliff:g>分間スヌーズします</string>
+    <string name="heads_up_snooze_disabled">無効</string>
+    <string name="heads_up_snooze_disabled_summary">スヌーズタイマーは無効です</string>
+    <string name="heads_up_snooze_1min">1分</string>
+    <string name="heads_up_snooze_3min">3分</string>
+    <string name="heads_up_snooze_5min">5分</string>
+    <string name="heads_up_snooze_10min">10分</string>
+    <string name="heads_up_snooze_15min">15分</string>
+    <string name="heads_up_snooze_20min">20分</string>
+    <string name="heads_up_snooze_30min">30分</string>
+    <string name="heads_up_snooze_60min">60分</string>
+
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">ロック画面のバッテリー情報</string>
+    <string name="lockscreen_battery_info_summary">充電中のロック画面に接続した充電器の最大電流/電圧とバッテリーの温度を表示する</string>
+
+    <!-- Battery Saver easy toggle -->
+    <string name="qs_battery_easy_toggle_title">バッテリータイルをワンタップトグルにする</string>
+    <string name="qs_battery_easy_toggle_summary">タップした際にバッテリーセーバーを有効/無効にする</string>
+
+    <!-- BT easy toggle -->
+    <string name="qs_bt_easy_toggle_title">Bluetoothタイルをワンタップトグルにする</string>
+    <string name="qs_bt_easy_toggle_summary">タップした際にBluetoothを有効/無効にする</string>
+
+    <!-- WiFi easy toggle -->
+    <string name="qs_wifi_easy_toggle_title">Wi-Fiタイルをワンタップトグルにする</string>
+    <string name="qs_wifi_easy_toggle_summary">タップした際にWi-Fiを有効/無効にする</string>
+
     <!-- OmniSwitch Recents -->
     <string name="aosp_recents_title">アプリ履歴</string>
     <string name="omniswitch_recents_title">OmniSwitch</string>
@@ -368,5 +529,219 @@
     <string name="omniswitch_start_settings_summary">OmniSwitchの設定を開きます</string>
     <string name="omniswitch_first_time_title">警告</string>
     <string name="omniswitch_first_time_message">OmniSwitchをアプリ履歴に使用する場合、あらかじめOmniSwitchを有効化していることを確認してください</string>
+
+    <!-- MediaScanner behavior on boot -->
+    <string name="media_scanner_on_boot_title">起動時のメディアスキャナの動作</string>
+    <string name="media_scanner_on_boot_enabled">メディアをスキャンする</string>
+    <string name="media_scanner_on_boot_ask">スキャンするか通知で尋ねる</string>
+    <string name="media_scanner_on_boot_disabled">メディアをスキャンしない</string>
+
+    <!-- SlimSizer  -->
+    <string name="listsystem">リスト</string>
+    <string name="sizer_title">システムアプリの削除ツール</string>
+    <string name="caution">警告！</string>
+    <string name="sizer_message_startup">このツールはシステムアプリの削除を可能にします。削除しても問題がないことを把握しているアプリに限り、細心の注意を払って使用してください。</string>
+    <string name="sizer_message_delete">本当にこのアプリを削除しますか？</string>
+    <string name="btn_delete">選択したアプリを削除する</string>
+    <string name="delete_progress_title">削除中</string>
+    <string name="delete_progress">選択されたファイルを削除しています...</string>
+    <string name="delete_success">削除しました</string>
+    <string name="delete_fail">削除に失敗しました</string>
+    <string name="btn_profile">プロファイル</string>
+    <string name="sizer_message_sdnowrite">SDカードに書き込めませんでした</string>
+    <string name="sizer_message_sdnoread">SDカードを読み込めませんでした</string>
+    <string name="sizer_message_filesuccess">プロファイルを作成しました。</string>
+    <string name="sizer_message_filefail">プロファイルの作成に失敗しました。</string>
+    <string name="sizer_message_noselect">何も選択されていません。</string>
+    <string name="system_app_remover">システムアプリの削除ツール</string>
+
+    <!-- Extensions settings -->
+    <string name="extensions_title">システム拡張ツール</string>
+
+    <!-- Bluetooth status -->
+    <string name="bluetooth_battery_title">Bluetoothデバイスのバッテリ情報を表示</string>
+    <string name="bluetooth_battery_summary">利用可能な場合、現在接続しているBluetoothデバイスのバッテリ情報を表示します。</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">スワイプでスクリーンショット</string>
+    <string name="three_finger_gesture_summary">3本指でスワイプしてスクリーンショットを取得する</string>
+
+    <!-- Blur UI -->
+    <string name="nav_blur_ui_title">UI のぼかし効果</string>
+    <string name="blur_ui_category_title">ぼかし効果の設定</string>
+    <string name="blurred_status_bar_expanded_enabled_pref">通知領域の背景をぼかす</string>
+    <string name="blurred_status_bar_expanded_enabled_pref_summary">ステータスバーをプルダウンした時の背景をぼかします</string>
+    <string name="translucent_notifications_pref">通知を半透明にする</string>
+    <string name="translucent_notifications_pref_summary">通知の背景を半透明にします</string>
+    <string name="translucent_header_pref">通知領域のヘッダーをぼかす</string>
+    <string name="translucent_header_pref_summary">通知領域のヘッダーの背景をぼかします</string>
+    <string name="translucent_quick_settings_pref">クイック設定パネルを半透明にする</string>
+    <string name="translucent_quick_settings_pref_summary">クイック設定パネルの背景を半透明にします</string>
+    <string name="transluency_level_universal">透明度</string>
+    <string name="blur_expstatus_cat">通知領域</string>
+    <string name="blur_notifications_cat">通知</string>
+    <string name="blur_header_cat">通知領域のヘッダー</string>
+    <string name="blur_qs_cat">クイック設定</string>
+    <string name="blur_recents_cat">アプリ履歴</string>
+    <string name="blurred_recent_app_enabled_pref">アプリ履歴の背景をぼかす</string>
+    <string name="blurred_recent_app_enabled_pref_summary">アプリ履歴の背景をぼかします</string>
+    <string name="blurred_scale">ぼかしの大きさ</string>
+    <string name="blurred_scale_summary">ぼかしの品質を設定します</string>
+    <string name="blurred_radius">ぼかしの半径</string>
+    <string name="blurred_radius_summary">ぼかしの量を設定します</string>
+    <string name="blur_cat_notice">注意</string>
+    <string name="blur_cat_notice_summary">ぼかし効果の設定はロック画面では自動的に無効になります！</string>
+    <string name="blur_colors_cat">ぼかしのカラーフィルタ</string>
+    <string name="blur_light_color">明るい画像のカラーフィルタ</string>
+    <string name="blur_dark_color">暗い画像のカラーフィルタ</string>
+    <string name="blur_mixed_color">混ざった画像のカラーフィルタ</string>
+    <string name="blur_colors_notice">この色が使われる場所</string>
+    <string name="blur_colors_notice_summary">ここで設定した色はぼかしの背景を色付けするために使用します。通常はグレーが使用されますが、ここで自由に変更できます。\n明るい背景、暗い背景、両方混ざった背景に使用する3種類のカラーフィルタがあります。\nカラーフィルタの動作はシンプルです。\nタイトルの通り、「明るい画像のカラーフィルタ」は明るい背景に、「暗い画像のカラーフィルタ」は暗い背景に、「混ざった画像のカラーフィルタ」は暗くはないが明るくもない背景に使用されます。\nここで設定した色はぼかしの背景、通知ドロワーやアプリ履歴でも使用されます。</string>
+    <string name="blur_default_colors_title">カラーをデフォルトに戻す</string>
+
+    <!-- App sidebar -->
+    <string name="app_sidebar_title">アプリバー</string>
+    <string name="app_sidebar_enable_title">アプリバーを有効にする</string>
+    <string name="app_sidebar_enable_summaryOn">アプリバーが有効です</string>
+    <string name="app_sidebar_enable_summaryOff">アプリバーが無効です</string>
+    <string name="app_sidebar_setup_items_title">アプリバーコンテンツのセットアップ</string>
+    <string name="app_sidebar_setup_items_summary">アプリバーのアイテムの追加、削除、位置の変更をします</string>
+    <string name="app_sidebar_transparency_title">アプリバーの透明度</string>
+    <string name="app_sidebar_transparency_summary">アプリバーの透明度を設定します</string>
+    <string name="app_sidebar_position_title">アプリバーの位置</string>
+    <string name="app_sidebar_position_summary">アプリバーを配置する場所を設定します</string>
+    <string name="app_sidebar_position_left">左</string>
+    <string name="app_sidebar_position_right">右</string>
+    <string name="app_sidebar_hide_labels_title">アイコンラベルを非表示にする</string>
+    <string name="app_sidebar_hide_labels_summary">アプリバーのアイコンラベルを非表示にします</string>
+    <string name="tab_category">タブの表示</string>
+    <string name="use_tab_title">タブの表示</string>
+    <string name="use_tab_summary">タッチするとアプリバーを表示するタブを、画面の端に表示します</string>
+    <string name="tab_position_title">タブの位置</string>
+    <string name="tab_position_summary">タブを画面のどこの端に表示するか設定します</string>
+    <string name="tab_size_title">タブのサイズ</string>
+    <string name="tab_size_summary">表示するタブのサイズを変更します</string>
+    <string name="trigger_category">トリガー領域</string>
+    <string name="trigger_width_title">トリガーの幅</string>
+    <string name="trigger_width_summary">トリガー領域の幅を調整します</string>
+    <string name="trigger_top_title">トリガーの位置</string>
+    <string name="trigger_top_summary">トリガー領域の位置を調整します</string>
+    <string name="trigger_bottom_title">トリガーの高さ</string>
+    <string name="trigger_bottom_summary">トリガー領域の高さを調整します</string>
+    <string name="app_sidebar_hide_timeout_title">アプリバーを自動的に隠す</string>
+    <string name="app_sidebar_hide_timeout_summary">アプリバーを自動的に隠すまでの時間を設定します</string>
+
+    <!-- Header images -->
+    <string name="status_bar_custom_header_title">カスタムヘッダー画像</string>
+    <string name="status_bar_custom_header_summary">通知パネルのヘッダー画像を設定します</string>
+    <string name="daylight_header_pack_title">ヘッダー画像パック</string>
+    <string name="status_bar_custom_header_shadow_title">ヘッダー画像の影</string>
+    <string name="status_bar_custom_header_shadow_summary">明るい画像の時に見やすくします</string>
+    <string name="static_header_provider_title">固定</string>
+    <string name="daylight_header_provider_title">ダイナミック</string>
+    <string name="custom_header_provider_title">ヘッダープロパイダ</string>
+    <string name="custom_header_browse_title">インストール済みのヘッダーを表示する</string>
+    <string name="custom_header_browse_summary">画像を長押しすると固定モードに使用します</string>
+
+    <!-- qqs scroller -->
+    <string name="qqs_scroll_title">小さいクイック設定タイルのスクロール</string>
+    <string name="qqs_scroll_summary">小さいクイック設定タイルをスクロールできるようにします</string>
+
+    <string name="pa_pie_control_title">Pie コントロール</string>
+    <string name="pa_pie_control_enable_title">Pie を有効化</string>
+    <string name="pa_pie_always_right_title">Pie を常に右に表示する</string>
+    <string name="pa_pie_always_right_summary">横向きの時、Pie を常に右に表示するようにします</string>
+    <string name="pa_pie_targets_title">Pie ターゲット</string>
+    <string name="pa_pie_style_title">Pie のスタイル</string>
+    <string name="pa_pie_menu_title">メニューボタンを常に表示する</string>
+    <string name="pa_pie_menu_summary">メニューボタンが必要ないときでも、メニューボタンを常に表示するようにします</string>
+    <string name="pa_pie_size_title">Pie のサイズ</string>
+    <string name="pa_pie_size_summary">Pie のサイズを指定します</string>
+    <string name="pa_pie_size_small">小</string>
+    <string name="pa_pie_size_large">大</string>
+    <string name="pa_pie_size_gigantic">特大</string>
+    <string name="pa_pie_size_monster">超特大</string>
+    <string name="pa_pie_size_enormous">極大</string>
+    <string name="pa_pie_gravity_title">Pie の位置</string>
+    <string name="pa_pie_gravity_summary">Pie の位置を選択します</string>
+    <string name="pa_pie_gravity_bottom">下</string>
+    <string name="pa_pie_gravity_right">右</string>
+    <string name="pa_pie_gravity_left">左</string>
+    <string name="pa_pie_gap_title">アイテムの間隔</string>
+    <string name="pa_pie_gap_summary">Pie アイテムの間隔を調整します</string>
+    <string name="pa_pie_angle_title">Pie の角度</string>
+    <string name="pa_pie_angle_summary">Pie の端の角度を調整します</string>
+    <string name="pa_pie_angle_none">なし</string>
+    <string name="pa_pie_angle_small">小</string>
+    <string name="pa_pie_angle_big">通常（デフォルト）</string>
+    <string name="pa_pie_angle_huge">大</string>
+    <string name="pa_pie_angle_super">特大</string>
+    <string name="pa_pie_gap_none">なし</string>
+    <string name="pa_pie_gap_small">小</string>
+    <string name="pa_pie_gap_big">大（デフォルト）</string>
+    <string name="pa_pie_gap_huge">特大</string>
+    <string name="pa_pie_mode_title">Pie のスタイル</string>
+    <string name="pa_pie_mode_summary">ステータスとアニメーションの動作を指定します</string>
+    <string name="pa_pie_mode_bare">なし</string>
+    <string name="pa_pie_mode_quick">速い</string>
+    <string name="pa_pie_mode_default">デフォルト</string>
+    <string name="pa_pie_mode_slow">遅い</string>
+    <string name="pa_pie_lastapp_title">最後に使用したアプリ</string>
+    <string name="pa_pie_lastapp_summary">最後に使用したアプリを開くボタンを有効化します</string>
+    <string name="pa_pie_killtask_title">アプリの終了</string>
+    <string name="pa_pie_killtask_summary">アプリを終了するボタンを有効化します</string>
+    <string name="pa_pie_notifications_title">通知</string>
+    <string name="pa_pie_notifications_summary">通知ボタンを有効化します</string>
+    <string name="pa_pie_settings_panel_title">クイック設定パネル</string>
+    <string name="pa_pie_settings_panel_summary">クイック設定パネルを開くボタンを有効化します</string>
+    <string name="pa_pie_screenshot_title">スクリーンショット</string>
+    <string name="pa_pie_screenshot_summary">スクリーンショットボタンを有効化します</string>
+    <string name="pa_pie_color_title">Pie カラーの設定</string>
+    <string name="pa_pie_color_style_title">Pie のカラースタイル</string>
+    <string name="pa_pie_background_title">背景色</string>
+    <string name="pa_pie_select_title">選択中の色</string>
+    <string name="pa_pie_outlines_title">輪郭の色</string>
+    <string name="pa_pie_status_clock_title">時計の色</string>
+    <string name="pa_pie_status_title">ステータスの色</string>
+    <string name="pa_pie_chevron_title">外枠の色</string>
+    <string name="pa_pie_juice_title">バッテリーバーの色</string>
+    <string name="pa_pie_button_color">ボタンの色</string>
+    <string name="pa_pie_button_color_title">ボタンの色</string>
+    <string name="pa_pie_color_reset_title">カラーをデフォルトに戻す</string>
+    <string name="reset_message">すべてのカラーをデフォルトに戻しますか？</string>
+    <string name="reset">リセット</string>
+
+    <!-- Settings drawer switch -->
+    <string name="show_settings_drawer_title">設定ドロワーを表示する</string>
+    <string name="show_settings_drawer_enabled">設定ドロワーは有効です</string>
+    <string name="show_settings_drawer_disabled">設定ドロワーは無効です</string>
+
+    <!-- Lockscreen Colors -->
+    <string name="lockscreen_colors_title">ロック画面の色</string>
+    <string name="lockscreen_owner_info_color">ロック画面メッセージ</string>
+    <string name="lockscreen_alarm_color">アラーム</string>
+    <string name="lockscreen_clock_color">時計</string>
+    <string name="lockscreen_clock_date_color">日付</string>
+    <string name="lockscreen_colors_reset_title">ロック画面のカラーをデフォルトに戻す</string>
+    <string name="lockscreen_colors_reset_message">本当にカラーをデフォルトに戻しますか？</string>
+    <string name="yes">はい</string>
+
+	<!-- Hide Lockscreen clock & date -->
+    <string name="hide_lockscreen_items_title">ロック画面のアイテム</string>
+    <string name="hide_lockscreen_clock_title">ロック画面に時計を表示する</string>
+    <string name="hide_lockscreen_date_title">ロック画面に日付を表示する</string>
+
+    <!-- Changelog -->
+    <string name="changelog_name">更新履歴</string>
+    <string name="commit_id">ロック画面コミット ID</string>
+    <string name="commit_message">コミットメッセージ</string>
+
+    <!-- QS Header Icons -->
+    <string name="qs_settings_icon_title">設定へのショートカット</string>
+    <string name="qs_settings_icon_summary">設定へのショートカットをヘッダーに表示しない</string>
+    <string name="qs_edit_title">編集アイコン</string>
+    <string name="qs_edit_summary">通知ドロワーの編集アイコンをヘッダーに表示しない</string>
+    <string name="qs_multiuser_switch_title">ユーザー切り替え</string>
+    <string name="qs_multiuser_switch_summary">マルチユーザーの切り替えスイッチをヘッダーに表示しない</string>
 
 </resources>
