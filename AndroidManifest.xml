@@ -117,9 +117,13 @@
             android:label="@string/app_sidebar_title">
         </activity>
         <activity
-            android:name=".aicpextras.SlimRecents"
+            android:name=".aicpextras.SubActivity"
+            android:theme="@style/PreferenceTheme">
+        </activity>
+        <activity
+            android:name=".aicpextras.SlimRecentAppSidebarActivity"
             android:theme="@style/PreferenceTheme"
-            android:label="@string/recent_panel_category">
+            android:label="@string/recent_app_sidebar_title">
         </activity>
         <activity
             android:name=".aicpextras.PieControl"
