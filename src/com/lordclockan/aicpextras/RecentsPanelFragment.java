@@ -171,7 +171,10 @@ public class RecentsPanelFragment extends Fragment {
                 startActivity(INTENT_OMNISWITCH_SETTINGS);
                 return true;
             } else if (preference == mSlimRecentsSettings) {
-                Intent intent = new Intent(getActivity(), SlimRecents.class);
+                Intent intent = new Intent(getActivity(), SubActivity.class);
+                intent.putExtra(SubActivity.EXTRA_FRAGMENT_CLASS, SlimRecentPanel.class.getName());
+                intent.putExtra(SubActivity.EXTRA_TITLE,
+                        getResources().getString(R.string.recent_panel_category));
                 getActivity().startActivity(intent);
                 return true;
             } else if (preference == mHideAppsFromRecents) {
