@@ -21,6 +21,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
@@ -65,6 +66,8 @@ public class SlimRecentPanel extends /*Slim*/PreferenceFragment implements /*Dia
             "recent_card_bg_color";
     private static final String RECENT_CARD_TEXT_COLOR =
             "recent_card_text_color";
+    private static final String APP_SIDEBAR_CONTENT =
+            "recent_app_sidebar_content";
 
     private SeekBarPreferenceCham mMaxApps;
     private SystemSettingSwitchPreference mRecentPanelLeftyMode;
@@ -73,6 +76,7 @@ public class SlimRecentPanel extends /*Slim*/PreferenceFragment implements /*Dia
     private ColorPickerPreference mRecentPanelBgColor;
     private ColorPickerPreference mRecentCardBgColor;
     private ColorPickerPreference mRecentCardTextColor;
+    private Preference mAppSidebarContent;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -235,5 +239,17 @@ public class SlimRecentPanel extends /*Slim*/PreferenceFragment implements /*Dia
         mRecentPanelExpandedMode =
                 (ListPreference) findPreference(RECENT_PANEL_EXPANDED_MODE);
         mRecentPanelExpandedMode.setOnPreferenceChangeListener(this);
+
+        mAppSidebarContent = findPreference(APP_SIDEBAR_CONTENT);
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mAppSidebarContent) {
+            Intent intent = new Intent(getActivity(), SlimRecentAppSidebarActivity.class);
+            getActivity().startActivity(intent);
+            return true;
+        }
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 }
