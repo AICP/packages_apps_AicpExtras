@@ -238,7 +238,7 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
             }
             int[] loc = new int[2];
             seekBar.getLocationInWindow(loc);
-            mToast.setText(mUnitsLeft + String.valueOf(progress) + mUnitsRight);
+            mToast.setText(mUnitsLeft + String.valueOf(mCurrentValue) + mUnitsRight);
             mToast.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.TOP, 0, loc[1] - mToastOffset);
             mToast.show();
             persistInt(newValue);
