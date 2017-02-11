@@ -55,6 +55,7 @@ public class RecentsPanelFragment extends Fragment {
         private static final String CATEGORY_STOCK_RECENTS = "stock_recents";
         private static final String CATEGORY_OMNI_RECENTS = "omni_recents";
         private static final String CATEGORY_SLIM_RECENTS = "slim_recents";
+        private static final String PREF_HIDE_APP_FROM_RECENTS = "hide_app_from_recents";
 
         private ListPreference mImmersiveRecents;
         private ListPreference mRecentsClearAllLocation;
@@ -66,6 +67,7 @@ public class RecentsPanelFragment extends Fragment {
         private SwitchPreference mRecentsClearAll;
         private SwitchPreference mRecentsUseOmniSwitch;
         private SwitchPreference mRecentsUseSlim;
+        private Preference mHideAppsFromRecents;
 
         private boolean mOmniSwitchInitCalled;
 
@@ -122,6 +124,8 @@ public class RecentsPanelFragment extends Fragment {
             mSlimRecentsSettings = (Preference) prefSet.findPreference(SLIM_RECENTS_SETTINGS);
             updateRecents();
 
+            mHideAppsFromRecents = prefSet.findPreference(PREF_HIDE_APP_FROM_RECENTS);
+
         }
 
         @Override
@@ -170,6 +174,9 @@ public class RecentsPanelFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), SlimRecents.class);
                 getActivity().startActivity(intent);
                 return true;
+            } else if (preference == mHideAppsFromRecents) {
+                Intent intent = new Intent(getActivity(), HAFRAppListActivity.class);
+                getActivity().startActivity(intent);
             }
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
