@@ -3,6 +3,7 @@ package com.lordclockan.aicpextras.widget;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.PorterDuff;
+import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.preference.Preference;
 import android.util.AttributeSet;
@@ -40,6 +41,7 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
     private Drawable mProgressThumb;
 
     private TextView mStatusText;
+    private TextView mPopupValue;
 
     public SeekBarPreferenceCham(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -145,6 +147,9 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
                 }
             });
             mProgressThumb = mSeekBar.getThumb();
+
+            mPopupValue = (TextView) layout.findViewById(R.id.value);
+            mPopupValue.setVisibility(View.GONE);
         }
         catch(Exception e)
         {
@@ -227,6 +232,22 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
             mStatusText.setText(String.valueOf(newValue));
             mProgressThumb.clearColorFilter();
         }
+
+        if (fromUser) {
+            mPopupValue.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT);
+            p.addRule(RelativeLayout.ABOVE, seekBar.getId());
+            Rect thumbRect = getSeekBarThumb().getBounds();
+            p.setMargins(
+                    thumbRect.centerX() + 76, 0, 0, 0);
+            mPopupValue.setLayoutParams(p);
+            mPopupValue.setText(mUnitsLeft + String.valueOf(progress) + mUnitsRight);
+        } else {
+            mPopupValue.setVisibility(View.GONE);
+        }
+
         persistInt(newValue);
     }
 
@@ -264,5 +285,9 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
 
     public void setValue(int value) {
         mCurrentValue = value;
+    }
+
+    public Drawable getSeekBarThumb() {
+        return mProgressThumb;
     }
 }
