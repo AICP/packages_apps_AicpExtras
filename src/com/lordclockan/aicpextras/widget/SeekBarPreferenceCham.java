@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.preference.Preference;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.lordclockan.R;
 
@@ -33,6 +35,7 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
     private int mCurrentValue;
     private String mUnitsLeft  = "";
     private String mUnitsRight = "";
+    private int mToastOffset = 180;
     private SeekBar mSeekBar;
     private TextView mTitle;
     private ImageView mImagePlus;
@@ -40,6 +43,7 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
     private Drawable mProgressThumb;
 
     private TextView mStatusText;
+    private Toast mToast;
 
     public SeekBarPreferenceCham(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -227,6 +231,23 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
             mStatusText.setText(String.valueOf(newValue));
             mProgressThumb.clearColorFilter();
         }
+
+        if (fromUser) {
+            if (mToast == null) {
+                mToast = Toast.makeText(getContext(), "", Toast.LENGTH_LONG);
+            }
+            int[] loc = new int[2];
+            seekBar.getLocationInWindow(loc);
+            mToast.setText(mUnitsLeft + String.valueOf(progress) + mUnitsRight);
+            mToast.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.TOP, 0, loc[1] - mToastOffset);
+            mToast.show();
+            persistInt(newValue);
+        } else {
+            if (mToast != null) {
+                mToast.cancel();
+            }
+        }
+
         persistInt(newValue);
     }
 
@@ -236,6 +257,9 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
         notifyChanged();
+        if (mToast != null) {
+            mToast.cancel();
+        }
     }
 
     @Override
