@@ -59,7 +59,8 @@ public class QuickSettingsFragment extends Fragment {
         private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
         private static final String PREF_ROWS_PORTRAIT = "qs_rows_portrait";
         private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
-        private static final String PREF_COLUMNS = "qs_columns";
+        private static final String PREF_COLUMNS_PORTRAIT = "qs_columns_portrait";
+        private static final String PREF_COLUMNS_LANDSCAPE = "qs_columns_landscape";
         private static final String PREF_QS_DATA_ADVANCED = "qs_data_advanced";
 
         private ListPreference mTileAnimationStyle;
@@ -67,7 +68,8 @@ public class QuickSettingsFragment extends Fragment {
         private ListPreference mTileAnimationInterpolator;
         private ListPreference mRowsPortrait;
         private ListPreference mRowsLandscape;
-        private ListPreference mQsColumns;
+        private ListPreference mQsColumnsPortrait;
+        private ListPreference mQsColumnsLandscape;
         private SwitchPreference mQsDataAdvanced;
 
         @Override
@@ -123,12 +125,19 @@ public class QuickSettingsFragment extends Fragment {
             mRowsLandscape.setSummary(mRowsLandscape.getEntry());
             mRowsLandscape.setOnPreferenceChangeListener(this);
 
-            mQsColumns = (ListPreference) findPreference(PREF_COLUMNS);
-            int columnsQs = Settings.Secure.getInt(resolver,
-                    Settings.Secure.QS_COLUMNS, 3);
-            mQsColumns.setValue(String.valueOf(columnsQs));
-            mQsColumns.setSummary(mQsColumns.getEntry());
-            mQsColumns.setOnPreferenceChangeListener(this);
+            mQsColumnsPortrait = (ListPreference) findPreference(PREF_COLUMNS_PORTRAIT);
+            int columnsQsPortrait = Settings.Secure.getInt(resolver,
+                    Settings.Secure.QS_COLUMNS_PORTRAIT, 3);
+            mQsColumnsPortrait.setValue(String.valueOf(columnsQsPortrait));
+            mQsColumnsPortrait.setSummary(mQsColumnsPortrait.getEntry());
+            mQsColumnsPortrait.setOnPreferenceChangeListener(this);
+
+            mQsColumnsLandscape = (ListPreference) findPreference(PREF_COLUMNS_LANDSCAPE);
+            int columnsQsLandscape = Settings.Secure.getInt(resolver,
+                    Settings.Secure.QS_COLUMNS_LANDSCAPE, 3);
+            mQsColumnsLandscape.setValue(String.valueOf(columnsQsLandscape));
+            mQsColumnsLandscape.setSummary(mQsColumnsLandscape.getEntry());
+            mQsColumnsLandscape.setOnPreferenceChangeListener(this);
 
             mQsDataAdvanced = (SwitchPreference) findPreference(PREF_QS_DATA_ADVANCED);
             if (Utils.isWifiOnly(getActivity())) {
@@ -180,12 +189,19 @@ public class QuickSettingsFragment extends Fragment {
                         Settings.Secure.QS_ROWS_LANDSCAPE, intValue);
                 preference.setSummary(mRowsLandscape.getEntries()[index]);
                 return true;
-            } else if (preference == mQsColumns) {
+            } else if (preference == mQsColumnsPortrait) {
                 intValue = Integer.parseInt((String) newValue);
-                index = mQsColumns.findIndexOfValue((String) newValue);
+                index = mQsColumnsPortrait.findIndexOfValue((String) newValue);
                 Settings.Secure.putInt(resolver,
-                        Settings.Secure.QS_COLUMNS, intValue);
-                preference.setSummary(mQsColumns.getEntries()[index]);
+                        Settings.Secure.QS_COLUMNS_PORTRAIT, intValue);
+                preference.setSummary(mQsColumnsPortrait.getEntries()[index]);
+                return true;
+            } else if (preference == mQsColumnsLandscape) {
+                intValue = Integer.parseInt((String) newValue);
+                index = mQsColumnsLandscape.findIndexOfValue((String) newValue);
+                Settings.Secure.putInt(resolver,
+                        Settings.Secure.QS_COLUMNS_LANDSCAPE, intValue);
+                preference.setSummary(mQsColumnsLandscape.getEntries()[index]);
                 return true;
             }
             return false;
