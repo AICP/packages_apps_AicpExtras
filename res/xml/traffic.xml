@@ -60,7 +60,7 @@
         android:key="network_traffic_autohide_threshold"
         android:title="@string/network_traffic_autohide_threshold"
         aicpextras:max="100"
-        aicpextras:min="0"
+        aicpextras:minimum="0"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="kB/s"
         android:dependency="network_traffic_autohide"
