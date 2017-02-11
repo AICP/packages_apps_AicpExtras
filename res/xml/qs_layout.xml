@@ -84,29 +84,45 @@
         android:summary="@string/qqs_scroll_summary"
         android:defaultValue="false"/>
 
-    <ListPreference
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="qs_rows_portrait"
         android:title="@string/qs_rows_portrait_title"
-        android:entries="@array/qs_rows_portrait_entries"
-        android:entryValues="@array/qs_rows_portrait_values" />
+        android:summary="@string/qs_rows_portrait_summary"
+        android:max="4"
+        aicpextras:minimum="1"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight=""
+        aicpextras:defaultVal="3" />
 
-    <ListPreference
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="qs_rows_landscape"
         android:title="@string/qs_rows_landscape_title"
-        android:entries="@array/qs_rows_landscape_entries"
-        android:entryValues="@array/qs_rows_landscape_values" />
+        android:summary="@string/qs_rows_landscape_summary"
+        android:max="3"
+        aicpextras:minimum="1"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight=""
+        aicpextras:defaultVal="2" />
 
-    <ListPreference
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="qs_columns_portrait"
         android:title="@string/qs_columns_portrait_title"
-        android:entries="@array/qs_columns_portrait_entries"
-        android:entryValues="@array/qs_columns_portrait_values" />
+        android:summary="@string/qs_columns_portrait_summary"
+        android:max="6"
+        aicpextras:minimum="3"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight=""
+        aicpextras:defaultVal="3" />
 
-    <ListPreference
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
         android:key="qs_columns_landscape"
         android:title="@string/qs_columns_landscape_title"
-        android:entries="@array/qs_columns_landscape_entries"
-        android:entryValues="@array/qs_columns_landscape_values" />
+        android:summary="@string/qs_columns_landscape_summary"
+        android:max="9"
+        aicpextras:minimum="3"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight=""
+        aicpextras:defaultVal="3" />
 
     <ListPreference
         android:key="qs_tile_animation_style"
