@@ -31,6 +31,7 @@ import cyanogenmod.providers.CMSettings;
 
 import com.lordclockan.aicpextras.utils.Utils;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
+
 import com.lordclockan.R;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
@@ -66,10 +67,10 @@ public class QuickSettingsFragment extends Fragment {
         private ListPreference mTileAnimationStyle;
         private ListPreference mTileAnimationDuration;
         private ListPreference mTileAnimationInterpolator;
-        private ListPreference mRowsPortrait;
-        private ListPreference mRowsLandscape;
-        private ListPreference mQsColumnsPortrait;
-        private ListPreference mQsColumnsLandscape;
+        private SeekBarPreferenceCham mRowsPortrait;
+        private SeekBarPreferenceCham mRowsLandscape;
+        private SeekBarPreferenceCham mQsColumnsPortrait;
+        private SeekBarPreferenceCham mQsColumnsLandscape;
         private SwitchPreference mQsDataAdvanced;
 
         @Override
@@ -110,33 +111,29 @@ public class QuickSettingsFragment extends Fragment {
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
             mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
 
-            mRowsPortrait = (ListPreference) findPreference(PREF_ROWS_PORTRAIT);
+            mRowsPortrait = (SeekBarPreferenceCham) findPreference(PREF_ROWS_PORTRAIT);
             int rowsPortrait = Settings.Secure.getInt(resolver,
                     Settings.Secure.QS_ROWS_PORTRAIT, 3);
-            mRowsPortrait.setValue(String.valueOf(rowsPortrait));
-            mRowsPortrait.setSummary(mRowsPortrait.getEntry());
+            mRowsPortrait.setValue((int) rowsPortrait);
             mRowsPortrait.setOnPreferenceChangeListener(this);
 
             defaultValue = getResources().getInteger(com.android.internal.R.integer.config_qs_num_rows_landscape_default);
-            mRowsLandscape = (ListPreference) findPreference(PREF_ROWS_LANDSCAPE);
+            mRowsLandscape = (SeekBarPreferenceCham) findPreference(PREF_ROWS_LANDSCAPE);
             int rowsLandscape = Settings.Secure.getInt(resolver,
                     Settings.Secure.QS_ROWS_LANDSCAPE, defaultValue);
-            mRowsLandscape.setValue(String.valueOf(rowsLandscape));
-            mRowsLandscape.setSummary(mRowsLandscape.getEntry());
+            mRowsLandscape.setValue((int) rowsLandscape);
             mRowsLandscape.setOnPreferenceChangeListener(this);
 
-            mQsColumnsPortrait = (ListPreference) findPreference(PREF_COLUMNS_PORTRAIT);
+            mQsColumnsPortrait = (SeekBarPreferenceCham) findPreference(PREF_COLUMNS_PORTRAIT);
             int columnsQsPortrait = Settings.Secure.getInt(resolver,
                     Settings.Secure.QS_COLUMNS_PORTRAIT, 3);
-            mQsColumnsPortrait.setValue(String.valueOf(columnsQsPortrait));
-            mQsColumnsPortrait.setSummary(mQsColumnsPortrait.getEntry());
+            mQsColumnsPortrait.setValue((int) columnsQsPortrait);
             mQsColumnsPortrait.setOnPreferenceChangeListener(this);
 
-            mQsColumnsLandscape = (ListPreference) findPreference(PREF_COLUMNS_LANDSCAPE);
+            mQsColumnsLandscape = (SeekBarPreferenceCham) findPreference(PREF_COLUMNS_LANDSCAPE);
             int columnsQsLandscape = Settings.Secure.getInt(resolver,
                     Settings.Secure.QS_COLUMNS_LANDSCAPE, 3);
-            mQsColumnsLandscape.setValue(String.valueOf(columnsQsLandscape));
-            mQsColumnsLandscape.setSummary(mQsColumnsLandscape.getEntry());
+            mQsColumnsLandscape.setValue((int) columnsQsLandscape);
             mQsColumnsLandscape.setOnPreferenceChangeListener(this);
 
             mQsDataAdvanced = (SwitchPreference) findPreference(PREF_QS_DATA_ADVANCED);
@@ -176,32 +173,24 @@ public class QuickSettingsFragment extends Fragment {
                 updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
                 return true;
             } else if (preference == mRowsPortrait) {
-                intValue = Integer.parseInt((String) newValue);
-                index = mRowsPortrait.findIndexOfValue((String) newValue);
+                intValue = (Integer) newValue;
                 Settings.Secure.putInt(resolver,
                         Settings.Secure.QS_ROWS_PORTRAIT, intValue);
-                preference.setSummary(mRowsPortrait.getEntries()[index]);
                 return true;
             } else if (preference == mRowsLandscape) {
-                intValue = Integer.parseInt((String) newValue);
-                index = mRowsLandscape.findIndexOfValue((String) newValue);
+                intValue = (Integer) newValue;
                 Settings.Secure.putInt(resolver,
                         Settings.Secure.QS_ROWS_LANDSCAPE, intValue);
-                preference.setSummary(mRowsLandscape.getEntries()[index]);
                 return true;
             } else if (preference == mQsColumnsPortrait) {
-                intValue = Integer.parseInt((String) newValue);
-                index = mQsColumnsPortrait.findIndexOfValue((String) newValue);
+                intValue = (Integer) newValue;
                 Settings.Secure.putInt(resolver,
                         Settings.Secure.QS_COLUMNS_PORTRAIT, intValue);
-                preference.setSummary(mQsColumnsPortrait.getEntries()[index]);
                 return true;
             } else if (preference == mQsColumnsLandscape) {
-                intValue = Integer.parseInt((String) newValue);
-                index = mQsColumnsLandscape.findIndexOfValue((String) newValue);
+                intValue = (Integer) newValue;
                 Settings.Secure.putInt(resolver,
                         Settings.Secure.QS_COLUMNS_LANDSCAPE, intValue);
-                preference.setSummary(mQsColumnsLandscape.getEntries()[index]);
                 return true;
             }
             return false;
