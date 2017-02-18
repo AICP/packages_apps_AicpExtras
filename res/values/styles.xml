@@ -52,4 +52,17 @@
         <item name="android:textStyle">normal</item>
     </style>
 
+    <!-- SeekBarPreferenceCham value popup -->
+    <style name="SeekBarPreferenceChamValueView">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textAppearance">@*android:style/TextAppearance.Toast</item>
+        <item name="android:shadowColor">#BB000000</item>
+        <item name="android:shadowRadius">2.75</item>
+        <item name="android:background">@*android:drawable/toast_frame</item>
+        <item name="android:layout_marginTop">-16dp</item>
+        <item name="android:layout_marginStart">-16dp</item>
+        <!-- Fix weird text within background offset when using it along with AppTheme -->
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+
 </resources>
