@@ -2,15 +2,20 @@ package com.lordclockan.aicpextras.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.PixelFormat;
 import android.graphics.PorterDuff;
+import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.preference.Preference;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
@@ -40,6 +45,10 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
     private Drawable mProgressThumb;
 
     private TextView mStatusText;
+    private TextView mPopupValue;
+    private boolean mTrackingTouch = false;
+    private boolean mPopupAdded = false;
+    private int mPopupWidth = 0;
 
     public SeekBarPreferenceCham(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -145,6 +154,17 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
                 }
             });
             mProgressThumb = mSeekBar.getThumb();
+            mPopupValue = (TextView) mInflater.inflate(R.layout.seek_bar_value_popup, null, false);
+            mPopupValue.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
+                    @Override
+                    public void onGlobalLayout() {
+                        int width = mPopupValue.getWidth();
+                        if (width != mPopupWidth) {
+                            mPopupWidth = mPopupValue.getWidth();
+                            startUpdateViewValue();
+                        }
+                    }
+            });
         }
         catch(Exception e)
         {
@@ -227,15 +247,27 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
             mStatusText.setText(String.valueOf(newValue));
             mProgressThumb.clearColorFilter();
         }
+
+        if (fromUser) {
+            startUpdateViewValue();
+        } else {
+            stopUpdateViewValue();
+        }
+
         persistInt(newValue);
     }
 
     @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {}
+    public void onStartTrackingTouch(SeekBar seekBar) {
+        startUpdateViewValue();
+        mTrackingTouch = true;
+    }
 
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
         notifyChanged();
+        stopUpdateViewValue();
+        mTrackingTouch = false;
     }
 
     @Override
@@ -264,5 +296,59 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
 
     public void setValue(int value) {
         mCurrentValue = value;
+    }
+
+    private Drawable getSeekBarThumb() {
+        return mProgressThumb;
+    }
+
+    private void startUpdateViewValue() {
+        if (!mTrackingTouch) return;
+        Rect thumbRect = getSeekBarThumb().getBounds();
+        int[] seekbarPos = new int[2];
+        int[] offsetPos = new int[2];
+        mSeekBar.getLocationInWindow(seekbarPos);
+        View mainContentView = mSeekBar.getRootView().findViewById(R.id.content_main);
+        if (mainContentView == null) {
+            mainContentView = mSeekBar.getRootView().findViewById(android.R.id.content);
+        }
+        if (mainContentView == null) {
+            Log.w(TAG, "Could not find main content view to calculate value view offset");
+            offsetPos[0] = 0;
+            offsetPos[1] = 0;
+        } else {
+            mainContentView.getLocationInWindow(offsetPos);
+        }
+        mPopupValue.setText(mUnitsLeft + mCurrentValue + mUnitsRight);
+        WindowManager.LayoutParams wp = new WindowManager.LayoutParams(
+                WindowManager.LayoutParams.WRAP_CONTENT,
+                WindowManager.LayoutParams.WRAP_CONTENT,
+                WindowManager.LayoutParams.TYPE_APPLICATION,
+                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
+                PixelFormat.TRANSLUCENT);
+        wp.gravity = Gravity.LEFT | Gravity.TOP;
+        wp.x = thumbRect.centerX() + seekbarPos[0] - offsetPos[0] - (mPopupWidth-thumbRect.width()) / 2 +
+                (int) getContext().getResources()
+                        .getDimension(R.dimen.seek_bar_preference_cham_value_x_offset);
+        wp.y = seekbarPos[1] - offsetPos[1] +
+                (int) getContext().getResources()
+                        .getDimension(R.dimen.seek_bar_preference_cham_value_y_offset);
+        mPopupValue.setLayoutParams(wp);
+        if (mPopupAdded) {
+            wp = (WindowManager.LayoutParams) mPopupValue.getLayoutParams();
+            ((WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE))
+                    .updateViewLayout(mPopupValue, wp);
+        } else {
+            ((WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE))
+                    .addView(mPopupValue, wp);
+            mPopupAdded = true;
+        }
+        mPopupValue.setVisibility(View.VISIBLE);
+    }
+
+    private void stopUpdateViewValue() {
+        if (!mPopupAdded) return;
+        ((WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE)).removeView(mPopupValue);
+        mPopupAdded = false;
     }
 }
