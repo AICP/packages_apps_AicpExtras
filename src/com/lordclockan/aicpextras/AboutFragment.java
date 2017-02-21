@@ -5,6 +5,7 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -106,6 +107,14 @@ public class AboutFragment extends Fragment {
                 prefSet.removePreference(mAicpDownloads);
             else
                 prefSet.removePreference(mAicpOTA);
+
+            try {
+                mAicpVersion.setSummary(
+                        pm.getPackageInfo(getActivity().getPackageName(), 0)
+                                .versionName);
+            } catch (NameNotFoundException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override
