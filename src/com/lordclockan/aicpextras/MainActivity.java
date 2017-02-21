@@ -1,8 +1,10 @@
 package com.lordclockan.aicpextras;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.AsyncTask;
@@ -13,6 +15,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -39,6 +42,8 @@ public class MainActivity extends AppCompatActivity
 
     private static final String NAV_ITEM_ID = "navItemId";
     static final String TAG = MainActivity.class.getSimpleName();
+
+    private static final int PERMISSION_REQUEST_READ_PHONE_STATE = 1;
 
     private DrawerLayout mDrawer;
     private ActionBarDrawerToggle toggle;
@@ -178,6 +183,11 @@ public class MainActivity extends AppCompatActivity
 
         navigationView.setItemTextColor(navDrawerItemColor());
         navigationView.setItemIconTintList(navDrawerItemColor());
+
+        if (!hasReadPhoneStatePermission()) {
+            // TODO explanation?
+            requestReadPhoneStatePermission();
+        }
 
    }
 
@@ -373,5 +383,15 @@ public class MainActivity extends AppCompatActivity
         ColorStateList navigationViewColorStateList = new ColorStateList(states, colors);
 
         return navigationViewColorStateList;
+    }
+
+    public boolean hasReadPhoneStatePermission() {
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE)
+                == PackageManager.PERMISSION_GRANTED;
+    }
+
+    public void requestReadPhoneStatePermission() {
+        requestPermissions(new String[]{Manifest.permission.READ_PHONE_STATE},
+                PERMISSION_REQUEST_READ_PHONE_STATE);
     }
 }
