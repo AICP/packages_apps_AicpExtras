@@ -61,9 +61,7 @@ public class PreviewActivity extends PreferenceActivity {
         prefSet.findPreference(ROMNAME).setSummary(Utilities.getRomName());
         prefSet.findPreference(ROMVERSION).setSummary(Utilities.getRomVersion());
 
+    }
 
-	}
-
-
-  /* Last Bracket */
-  }
+/* Last Bracket */
+}
