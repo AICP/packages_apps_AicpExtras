@@ -134,7 +134,11 @@ public class AboutFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), ChangelogActivity.class);
                 getActivity().startActivity(intent);
             } else if (preference == mStatsAicp) {
-                startActivity(INTENT_STATS);
+                if (((MainActivity) getActivity()).hasReadPhoneStatePermission()) {
+                    startActivity(INTENT_STATS);
+                } else {
+                    ((MainActivity) getActivity()).showReadPhoneStatePermissionExplanation(true);
+                }
             } else if (preference == mAicpLogo) {
                 java.lang.System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
                 mHits[mHits.length-1] = SystemClock.uptimeMillis();
