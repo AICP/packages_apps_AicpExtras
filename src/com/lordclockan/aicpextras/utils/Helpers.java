@@ -83,7 +83,7 @@ public class Helpers {
                 return false;
             }
         } catch (NameNotFoundException notFound) {
-            Log.e(TAG, "Package could not be found!", notFound);
+            Log.i(TAG, "Package could not be found!", notFound);
             return false;
         }
         return true;
