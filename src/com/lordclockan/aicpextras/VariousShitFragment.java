@@ -75,7 +75,7 @@ public class VariousShitFragment extends Fragment {
             mMsob.setOnPreferenceChangeListener(this);
 
             mCameraSounds = (SwitchPreference) findPreference(KEY_CAMERA_SOUNDS);
-            mCameraSounds.setChecked(SystemProperties.getBoolean(PROP_CAMERA_SOUND, true));
+            mCameraSounds.setChecked(Integer.parseInt(System.getProperty(PROP_CAMERA_SOUND, "1")) != 0);
             mCameraSounds.setOnPreferenceChangeListener(this);
 
             mScreenshotType = (ListPreference) findPreference(SCREENSHOT_TYPE);
@@ -103,9 +103,9 @@ public class VariousShitFragment extends Fragment {
             if (preference == mCameraSounds) {
                if (KEY_CAMERA_SOUNDS.equals(key)) {
                    if ((Boolean) newValue) {
-                       SystemProperties.set(PROP_CAMERA_SOUND, "1");
+                       System.setProperty(PROP_CAMERA_SOUND, "1");
                    } else {
-                       SystemProperties.set(PROP_CAMERA_SOUND, "0");
+                       System.setProperty(PROP_CAMERA_SOUND, "0");
                    }
                 }
                 return true;
