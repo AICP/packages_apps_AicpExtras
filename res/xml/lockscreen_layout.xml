@@ -91,6 +91,12 @@
             android:defaultValue="true" />
 
         <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="fp_unlock_keystore"
+            android:title="@string/fp_unlock_keystore_title"
+            android:summary="@string/fp_unlock_keystore_summary"
+            android:defaultValue="false" />
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
             android:key="double_tap_sleep_anywhere"
             android:title="@string/double_tap_sleep_anywhere_title"
             android:summaryOn="@string/double_tap_sleep_anywhere_summary_on"
