@@ -55,10 +55,13 @@ public class LockscreenFragment extends Fragment {
         private static final String LOCKSCREEN_CLOCK_COLOR = "lockscreen_clock_color";
         private static final String LOCKSCREEN_CLOCK_DATE_COLOR = "lockscreen_clock_date_color";
         private static final String LOCKSCREEN_COLORS_RESET = "lockscreen_colors_reset";
+        private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
+        private static final String FP_UNLOCK_KEYSTORE = "fp_unlock_keystore";
 
         private SwitchPreference mKeyguardTorch;
         private FingerprintManager mFingerprintManager;
         private SwitchPreference mFingerprintVib;
+        private SwitchPreference mFpKeystore;
         private SwitchPreference mHideAmPm;
         private PreferenceCategory mMiscCategory;
         private ColorPickerPreference mLockscreenOwnerInfoColorPicker;
@@ -88,9 +91,17 @@ public class LockscreenFragment extends Fragment {
 
             // Fingerprint vibration
             mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
-            mFingerprintVib = (SwitchPreference) findPreference("fingerprint_success_vib");
+            mFingerprintVib = (SwitchPreference) findPreference(FP_SUCCESS_VIBRATION);
             if (!mFingerprintManager.isHardwareDetected()) {
                 mMiscCategory.removePreference(mFingerprintVib);
+            }
+            // Fingerprint unlock keystore
+            mFpKeystore = (SwitchPreference) findPreference(FP_UNLOCK_KEYSTORE);
+            if (!mFingerprintManager.isHardwareDetected()){
+                mMiscCategory.removePreference(mFpKeystore);
+            } else {
+                mFpKeystore.setChecked((Settings.System.getInt(resolver,
+                    Settings.System.FP_UNLOCK_KEYSTORE, 0) == 1));
             }
 
             // Hide AM/PM
