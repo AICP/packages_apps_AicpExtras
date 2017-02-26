@@ -46,12 +46,14 @@ public class Dashboard extends BaseSettingsFragment {
     private static final String PREF_AICP_LOGO = "aicp_logo";
     private static final String PREF_AICP_OTA = "aicp_ota";
     private static final String PREF_LOG_IT = "log_it";
+    private static final String PREF_WEATHER = "weather_option";
 
     private static final Intent INTENT_OTA = new Intent().setComponent(new ComponentName(
             Constants.AICP_OTA_PACKAGE, Constants.AICP_OTA_ACTIVITY));
 
     private LongClickablePreference mAicpLogo;
     private Preference mAicpOTA;
+    private Preference mWeatherOption;
 
     private Random mRandom = new Random();
     private int mLogoClickCount = 0;
@@ -68,6 +70,11 @@ public class Dashboard extends BaseSettingsFragment {
         PackageManager pm = getActivity().getPackageManager();
 
         mAicpLogo = (LongClickablePreference) findPreference(PREF_AICP_LOGO);
+
+        mWeatherOption = findPreference(PREF_WEATHER);
+        if (!Util.isPackageInstalled(Constants.WEATHER_SERVICE_PACKAGE, pm)) {
+            mWeatherOption.getParent().removePreference(mWeatherOption);
+        }
 
         mAicpOTA = findPreference(PREF_AICP_OTA);
         if (!Util.isPackageEnabled(Constants.AICP_OTA_PACKAGE, pm)) {
