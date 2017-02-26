@@ -63,6 +63,11 @@
     <string name="storage_permission_granted">Zugriff gestattet. Du kannst jetzt auf den Speicher zugreifen.</string>
     <string name="storage_permission_not_granted">Zugriff verweigert. Du kannst nicht auf den Speicher zugreifen.</string>
 
+    <!-- Seekbar strings -->
+    <string name="seekbar_no_default_value">Kein Standardwert festgelegt</string>
+    <string name="seekbar_default_value_set">Wert auf den Standard von <xliff:g id="number">%d</xliff:g> festgelegt</string>
+    <string name="seekbar_default_value_already_set">Standardwert bereits festgelegt</string>
+
     <!-- Change Log -->
     <string name="changelog_title">Änderungsprotokoll</string>
     <string name="changelog_title_summary">Zeige letzte Änderungen im ROM</string>
@@ -173,7 +178,8 @@
 
     <!-- Power menu on lock screen -->
     <string name="powermenu_lockscreen_title">Ein/Aus-Menü auf Sperrbildschirm</string>
-    <string name="powermenu_lockscreen_summary">Ein/Aus-Menü bei gesperrtem Display anzeigen</string>
+    <string name="powermenu_lockscreen_summary_on">Ein/Aus-Menü bei gesperrtem Display anzeigen</string>
+    <string name="powermenu_lockscreen_summary_off">Ein/Aus-Menü bei gesperrtem Display nicht anzeigen</string>
 
     <!-- ROm Stats -->
     <!-- Main -->
@@ -185,7 +191,7 @@
     <string name="notification_title">AICP Statistiken</string>
     <string name="notification_desc">Aktiviere oder deaktiviere die Übertragung anonymer Statistiken</string>
 
-    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
+    <string name="main_link">&lt;a href=&quot;http://lineageos.org/legal/&quot;&gt;Learn More&lt;/a&gt;</string>
 
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
     <string name="anonymous_statistics_title">AICP Statistiken</string>
@@ -223,7 +229,8 @@
 
     <!-- Double tap to sleep on lockscreen -->
     <string name="double_tap_sleep_anywhere_title">DT2S auf Sperrbildschirm</string>
-    <string name="double_tap_sleep_anywhere_summary">Zweimal auf das Display tippen, um das Gerät in den Ruhezustand zu versetzen</string>
+    <string name="double_tap_sleep_anywhere_summary_on">Zweimal auf das Display tippen, um das Gerät in den Ruhezustand zu versetzen, ist AN</string>
+    <string name="double_tap_sleep_anywhere_summary_off">weimal auf das Display tippen, um das Gerät in den Ruhezustand zu versetzen, ist AUS</string>
 
     <!-- SU -->
     <string name="cannot_get_su">Keinen Superuser-Zugriff erhalten, beende.</string>
@@ -329,13 +336,21 @@
 
     <!-- Lockscreen Torch -->
     <string name="keyguard_torch_title">Taschenlampe bei Sperrbildschirm</string>
-    <string name="keyguard_torch_summary">Ein/Aus-Taste während der Bildschirmsperre lange drücken, um die Taschenlampe einzuschalten</string>
+    <string name="keyguard_torch_summary_on">Ein/Aus-Taste während der Bildschirmsperre lange drücken, um die Taschenlampe einzuschalten, ist AN</string>
+    <string name="keyguard_torch_summary_off">Ein/Aus-Taste während der Bildschirmsperre lange drücken, um die Taschenlampe einzuschalten, ist AUS</string>
 
     <!-- Quick settings tiles columns and rows config -->
     <string name="qs_rows_portrait_title">Zeilenanzahl (Hochformat)</string>
+    <string name="qs_rows_portrait_summary">Auswahl der Anzahl von Zeilen mit Kacheln, die im Hochformat angezeigt werden</string>
     <string name="qs_rows_landscape_title">Zeilenanzahl (Querformat)</string>
-    <string name="qs_columns_title">Kachelanzahl pro Zeile</string>
+    <string name="qs_rows_landscape_summary">Auswahl der Anzahl von Zeilen mit Kacheln, die im Querformat angezeigt werden</string>
+    <string name="qs_columns_portrait_title">Spalten (Hochformat)</string>
+    <string name="qs_columns_portrait_summary">Auswahl der Kachelanzahl pro Zeile, die im Hochformat angezeigt werden</string>
+    <string name="qs_columns_landscape_title">Spalten (Querformat)</string>
+    <string name="qs_columns_landscape_summary">Auswahl der Kachelanzahl pro Zeile, die im Querformat angezeigt werden</string>
     <string name="sysui_qqs_count_title">Anzahl der Mini-Kacheln</string>
+    <string name="qs_rows_prefix">Zeilen: </string>
+    <string name="qs_cols_prefix">Spalten: </string>
 
     <!-- Tiles animation style  -->
     <string name="qs_tile_animation_style_title">Stil der Kachelanimation</string>
@@ -399,7 +414,8 @@
 
     <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Vibration bei Authentifizierung per Fingerabdruck</string>
-    <string name="fprint_sucess_vib_summary">Nach erfolgreicher Authentifizierung per Fingerabdruck vibrieren</string>
+    <string name="fprint_sucess_vib_summary_on">Nach erfolgreicher Authentifizierung per Fingerabdruck vibrieren</string>
+    <string name="fprint_sucess_vib_summary_off">Nach erfolgreicher Authentifizierung per Fingerabdruck nicht vibrieren</string>
 
     <!-- AE settings -->
     <string name="ae_settings_title">Einstellungen für AicpExtras</string>
@@ -463,7 +479,8 @@
 
     <!-- Disable quick settings on lock screen switch -->
     <string name="lockscreen_qs_disabled_title">Schnelleinstellungen auf Sperrrbildschirm deaktivieren</string>
-    <string name="lockscreen_qs_disabled_summary">Deaktiviert das Herunterziehen der Schnelleinstellungen bei gesichertem Sperrbildschirm</string>
+    <string name="lockscreen_qs_disabled_summary_on">Das Herunterziehen der Schnelleinstellungen bei gesichertem Sperrbildschirm ist deaktiviert</string>
+    <string name="lockscreen_qs_disabled_summary_off">Das Herunterziehen der Schnelleinstellungen bei gesichertem Sperrbildschirm ist aktiviert</string>
 
     <!-- Disable music track title in QS tile -->
     <string name="qs_music_tile_track_optional_title">Musiktitelanzeige</string>
@@ -544,11 +561,11 @@
     <string name="qs_wifi_easy_toggle_summary">Wenn aktiviert, schaltet ein Tastendruck WLAN ein bzw. aus</string>
 
     <!-- OmniSwitch Recents -->
-    <string name="aosp_recents_title">AICP Verlauf</string>
-    <string name="omniswitch_recents_title">OmniSwitch Verlauf</string>
+    <string name="aosp_recents_title">Standardansicht</string>
+    <string name="omniswitch_recents_title">OmniSwitch</string>
     <string name="recents_use_omniswitch_title">Als Anwendungsverlauf verwenden</string>
     <string name="recents_use_omniswitch_summary">Benutze OmniSwitch anstatt der Standardansicht für den Anwendungsverlauf</string>
-    <string name="omniswitch_start_settings_title">Einstellungen</string>
+    <string name="omniswitch_start_settings_title">OmniSwitch Einstellungen</string>
     <string name="omniswitch_start_settings_summary">Öffnet die Einstellungen von OmniSwitch</string>
     <string name="omniswitch_first_time_title">Warnung</string>
     <string name="omniswitch_first_time_message">Stellen Sie sicher, dass OmniSwitch aktiviert ist. Sie müssen dies in den \"Einstellungen\" von Omniswitch tun</string>
@@ -763,17 +780,34 @@
     <string name="hide_lockscreen_items_title">Sperrbildschirm-Anzeigen</string>
     <string name="hide_lockscreen_clock_title">Zeige Uhrzeit auf Sperrbildschirm</string>
     <string name="hide_lockscreen_date_title">Zeige Datum auf Sperrbildschirm</string>
+    <string name="hide_lockscreen_alarm_title">Zeige Weckereinstellung</string>
 
     <!-- Hide Lockscreen clock & date -->
     <string name="changelog_name">Änderungsprotokoll</string>
     <string name="commit_id">Änderungs-ID</string>
     <string name="commit_message">Änderungsbeschreibung</string>
 
+    <!-- QS Header Icons -->
+    <string name="qs_settings_icon_title">Einstellungsverknüpfung</string>
+    <string name="qs_settings_icon_summary">Deaktiviert das Verknüpfungssymbol zu den Einstellungen in der Kopfzeile</string>
+    <string name="qs_running_services_title">\"Task Manager\"-Symbol</string>
+    <string name="qs_running_services_summary">Deaktiviert das Verknüpfungssymbol zu den \'laufenden Programmen\' in der Kopfzeile</string>
+    <string name="qs_edit_title">Symbol \"Bearbeiten\"</string>
+    <string name="qs_edit_summary">Deaktiviert das Symbol zur Kacheländerung in der Kopfzeile</string>
+    <string name="qs_multiuser_switch_title">\"Mehrbenutzer\"-Schalter</string>
+    <string name="qs_multiuser_switch_summary">Deaktiviert den Schalter zur Benutzerumschaltung in der Kopfzeile</string>
+    <string name="qs_expand_indicator_title">Erweiterungsanzeige (\"Pfeil\"))</string>
+    <string name="qs_expand_indicator_summary">Deaktiviert die Erweiterungsanzeige in der Kopfzeile</string>
+
     <!-- SlimRecents -->
+    <string name="slim_recents_title">Slim Anwendungsverlauf</string>
+    <string name="use_slim_recents_title">Als Anwendungsverlauf verwenden</string>
+    <string name="use_slim_recents_summary">Slim Anwendungsverlauf anstatt der Standardansicht für den Anwendungsverlauf benutzen</string>
+    <string name="slim_recents_settings_title">Slim Einstellungen</string>
+    <string name="slim_recents_settings_summary">Öffnet die Einstellungen des Slim Anwendungsverlaufs</string>
     <string name="recent_panel_category">Slim Anwendungsverlauf</string>
-    <string name="use_slim_recents_title">Slim Anwendungsverlauf</string>
     <string name="show_running_tasks_title">Zeige nur laufende Apps</string>
-    <string name="recents_max_apps_title">max. zulässige Anzahl Apps</string>
+    <string name="recents_max_apps_title">max. zulässige App-Anzahl</string>
     <string name="recent_panel_scale_title">Größe</string>
     <string name="recent_panel_expanded_mode_title">Erweiterter Modus</string>
     <string name="recent_panel_expanded_mode_summary">Erweiterter Vorschaumodus des Verlaufs</string>
@@ -785,10 +819,82 @@
     <string name="recent_panel_bg_color_title">Hintergrundfarbe des Paneels</string>
     <string name="recent_card_bg_color_title">Hintergrundfarbe der Karten</string>
     <string name="recent_card_text_color_title">Textfarbe der Karten</string>
-    <string name="recent_reset_value_title">Werte zurücksetzen</string>
-    <string name="recent_app_sidebar_title">Seitenleiste mit Anwendungsverlauf</string>
+
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Anzeige auf der linken Seite</string>
     <string name="recent_panel_lefty_mode_summary">Zeige das Paneel des App-Verlaufs auf der linken Seite</string>
+
+    <string name="slim_recents_aicp_empty_drawable_title">Bild bei leerem Verlauf</string>
+    <string name="slim_recents_aicp_empty_drawable_summary">Zeige das AICP-Bild, wenn keine Apps im Verlauf sind</string>
+
+    <!-- Hide Apps from Recents -->
+    <string name="hide_apps_from_recents_title">Apps verbergen</string>
+    <string name="hide_from_recents_add_app">App hinzufügen</string>
+    <string name="hide_apps_from_recents_summary">Auswählen, welche Apps nicht im Verlauf angezeigt werden</string>
+
+    <!-- Fingerprint unlock keystore -->
+    <string name="fp_unlock_keystore_title">Mit Fingerabdruck entsperren</string>
+    <string name="fp_unlock_keystore_summary">Das Gerät nur mittels Fingerabdruck (ohne PIN/Passwort/Muster) nach dem Neustart entsperren\nHinweis: auf eigene Verantwortung!</string>
+
+    <!-- Slim Recent App Sidebar  -->
+    <string name="recent_app_sidebar_title">Appverlauf-Seitenleiste</string>
+    <string name="use_recent_app_sidebar_title">Appverlauf-Seitenleiste aktivieren</string>
+    <string name="use_recent_app_sidebar_summary">App-Verknüpfungen auf der anderen Seite anzeigen</string>
+    <string name="recent_app_sidebar_content_title">Inhalt der Appverlauf-Seitenleiste</string>
+    <string name="recent_app_sidebar_content_summary">Konfiguriert den Inhalt der Seitenleiste</string>
+    <string name="recent_app_sidebar_style_title">Stil der Seitenleiste</string>
+    <string name="recent_app_sidebar_style_summary">Stil der Appverlauf-Seitenleiste ändern</string>
+    <string name="recent_app_sidebar_hide_labels_title">Symbolbezeichnung verbergen</string>
+    <string name="recent_app_sidebar_label_color_title">Farbe der Bezeichnung</string>
+    <string name="recent_app_sidebar_bg_color_title">Hintergrundfarbe</string>
+    <string name="recent_app_sidebar_scale_title">Größe</string>
+    <string name="recent_app_sidebar_open_simultaneously_title">Zusammen mit dem Verlauf öffnen</string>
+    <string name="recent_app_sidebar_open_simultaneously_summary">Reduziert bei Aktivierung die Verzögerung beim Öffnen</string>
+
+    <!-- Slim lockscreen shortcuts -->
+    <string name="shortcut_action_none">Keine</string>
+    <string name="shortcut_action_longpress">Lange Drücken:</string>
+    <string name="shortcut_action_select_action_longpress">Aktion für Langes Drücken wählen:</string>
+    <string name="shortcut_action_select_action">Aktion wählen:</string>
+    <string name="shortcut_action_select_action_newaction">Neue Aktion wählen:</string>
+    <string name="shortcut_action_reset">Zurück</string>
+    <string name="shortcut_action_add">Hinzu</string>
+    <string name="shortcut_action_reset_message">Alle Einträge auf Standard zurücksetzen?</string>
+    <string name="shortcut_action_max">Die Maximalanzahl der Einträge wurde erreicht</string>
+    <string name="shortcut_action_warning">Warnung</string>
+    <string name="shortcut_action_warning_message">Es ist unmöglich den letzten Eintrag zu löschen</string>
+    <string name="shortcut_action_disable_message">Deaktiviert\nEinen Eintrag hinzufügen, um die Funktion zu aktivieren</string>
+    <string name="shortcut_image_not_valid">Die gewählte App hat keine gültiges Symbol oder unterstützt keine Bildbeschneidung. Bitte eine andere App benutzen.</string>
+    <string name="shortcut_duplicate_entry">Die ausgewählte Aktion kann nicht zweimal hinzugefügt werden.</string>
+    <string name="shortcut_action_help_shortcut">Verknüpfung</string>
+    <string name="shortcut_action_help_button">Taste</string>
+    <string name="shortcut_action_help_app">App</string>
+    <string name="shortcut_action_help_icon">während die Auswahl des Symbols die Anpassungseinstellungen startet.</string>
+    <string name="shortcut_action_help_main">Um eine %1$s hinzuzufügen, bitte das \"Plus\"-Symbol wählen. Wenn eine %1$s hinzugefügt wurde, ändert die Zeilenauswahl das Ziel%2$s\n\nUm eine %1$s zu Entfernen, bitte über die Zeile von links nach rechts wischen. Um eine %1$s in der Liste neu anzuordnen, bitte am Ankerpunkt vertikal nach links verschieben.\n\nZum Löschen oder zum Zurücksetzen auf den Standard, bitte das \"Zurück\"-Symbol auswählen.</string>
+    <string name="shortcut_action_help_delete_last_entry">Das Löschen jeder %1$s in der Liste deaktiviert diese Funktion komplett.</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Das Löschen jeder %1$s in der Liste deaktiviert den zweiten PIE-Ring komplett.</string>
+    <string name="shortcuts_applications">Anwendungen</string>
+    <string name="shortcuts_select_custom_app_title">Eigene Anwendung wählen</string>
+    <string name="shortcuts_icon_picker_type">Symboltyp wählen:</string>
+    <string name="shortcuts_icon_default">Standard</string>
+    <string name="shortcuts_icon_custom">Galerie</string>
+    <string name="shortcuts_icon_picker_choose_icon_title">Symbol wählen</string>
+    <string name="reset_message">Alle Einträge auf Standard zurücksetzen?</string>
+    <string name="lockscreen_shortcuts_title">Verknüpfungen in der Displaymitte</string>
+    <string name="lockscreen_shortcuts_summary">Ansehen/Ändern der eigenen Sperrbildschirmverknüpfungen</string>
+    <string name="lockscreen_shorcuts_launch_type_title">Auslösung der Verknüpfung</string>
+    <string name="lockscreen_shortcuts_single_tap">Einmal Tippen</string>
+    <string name="lockscreen_shortcuts_double_tap">Doppelt Tippen</string>
+    <string name="lockscreen_shortcuts_longpress">Lange Drücken</string>
+    <string name="help">Hilfe</string>
+    <string name="shortcut_action_app">Eigene App</string>
+    <string name="shortcut_action_home">Start</string>
+    <string name="shortcut_action_back">Zurück</string>
+    <string name="shortcut_action_menu">Menü</string>
+    <string name="shortcut_action_ime">Öffne Eingabe-Umschalter</string>
+    <string name="shortcut_action_power_menu">Ein/Aus-Menü</string>
+    <string name="shortcut_action_recent">Anwendungsverlauf</string>
+    <string name="shortcut_action_power">Bildschirm ausschalten</string>
+    <string name="shortcut_action_search">In der der App suchen</string>
 
 </resources>
