@@ -560,10 +560,24 @@
     <string name="sensor_block_title">Sensor block per-package</string>
     <string name="sensor_block_summary">Block access to certain sensors for some apps to save battery.</string>
     <!-- Weather - OmniJaws Settings -->
-
     <string name="weather_title">Weather</string>
     <string name="weather_config_title">Service settings</string>
+    <string name="weather_config_summary"></string>
+    <string name="header_weather_title">Header view weather</string>
+    <string name="header_weather_summary">Enable notification panel header weather display</string>
+    <string name="weather_icon_pack_title">Condition icon pack</string>
+    <string name="weather_icon_pack_note">Note\u003a you can install new icon packs from play store by searching for \"Chronus icons\"</string>
     <!-- Lockscreen Weather -->
+    <string name="lock_screen_weather_category_title">Lockscreen</string>
+    <string name="lock_screen_show_weather_title">Weather display</string>
+    <string name="lock_screen_show_weather_summaryOn">Weather is shown on Lockscreen</string>
+    <string name="lock_screen_show_weather_summaryOff">Weather is hidden on Lockscreen</string>
+    <string name="lock_screen_show_location_title">Location display</string>
+    <string name="lock_screen_show_location_summaryOn">Location is shown on Lockscreen</string>
+    <string name="lock_screen_show_location_summaryOff">Location is hidden on Lockscreen</string>
+    <string name="lock_screen_weather_condition_icon_title">Condition icon display</string>
+    <string name="lock_screen_weather_condition_icon_summaryOn">Condition icon is shown on Lockscreen</string>
+    <string name="lock_screen_weather_condition_icon_summaryOff">Condition icon is hidden on Lockscreen</string>
     <!-- Statusbar ticker -->
     <string name="status_bar_ticker_title">Ticker</string>
     <string name="status_bar_show_ticker_title">Ticker</string>
@@ -1033,5 +1047,4 @@
     <string name="battery_light_blend_summary">Gradually change colors between full and empty</string>
     <string name="battery_light_blend_colors_title">Color selection</string>
     <string name="battery_light_blend_colors_summary">Color range used when blending colors</string>
-
 </resources>

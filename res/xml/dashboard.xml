@@ -81,6 +81,13 @@
             android:fragment="com.aicp.extras.fragments.PanelPorn" />
 
         <PreferenceScreen
+            android:key="weather_option"
+            android:title="@string/weather_title"
+            android:summary="@string/weather_config_title"
+            android:icon="@drawable/ic_settings_weather"
+            android:fragment="com.aicp.extras.fragments.Weather" />
+
+        <PreferenceScreen
             android:title="@string/theming_title"
             android:summary="@string/theming_summary"
             android:icon="@drawable/ic_settings_theming"
