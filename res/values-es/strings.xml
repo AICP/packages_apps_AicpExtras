@@ -740,4 +740,119 @@
     <string name="hide_lockscreen_clock_title">Mostrar reloj en pantalla de bloqueo</string>
     <string name="hide_lockscreen_date_title">Mostrar fecha en pantalla de bloqueo</string>
 
+    <!-- Changelog -->
+    <string name="changelog_name">Lista de cambios</string>
+    <string name="commit_id">Lockscreen Commit ID</string>
+    <string name="commit_message">Mensaje del commit</string>
+
+    <!-- QS Header Icons -->
+    <string name="qs_settings_icon_title">Acceso directo a ajustes</string>
+    <string name="qs_settings_icon_summary">Deshabilitar el acceso directo a ajustes en la cabecera</string>
+    <string name="qs_running_services_title">Icono de servicios en ejecución</string>
+    <string name="qs_running_services_summary">Deshabilita acceso directo a los servicios en ejecución de la cabecera</string>
+    <string name="qs_edit_title">Editar Icono</string>
+    <string name="qs_edit_summary">Deshabilita el acceso directo de edición en la cabecera</string>
+    <string name="qs_multiuser_switch_title">Gestor de usuarios</string>
+    <string name="qs_multiuser_switch_summary">Deshabilita el gestor de usuarios en la cabecera</string>
+    <string name="qs_expand_indicator_title">Indicador de expansión</string>
+    <string name="qs_expand_indicator_summary">Deshabilita el indicador de expansión en la cabecera</string>
+
+    <!-- Slim Recent panel -->
+    <string name="slim_recents_title">Aps. recientes Slim</string>
+    <string name="use_slim_recents_title">Usar como alternativa al panel de aps. recientes</string>
+    <string name="use_slim_recents_summary">Usar aps. recientes Slim en lugar del panel de aps. recientes predeterminado</string>
+    <string name="slim_recents_settings_title">Ajustes</string>
+    <string name="slim_recents_settings_summary">Ver la configuraqción de aps. recientes Slim</string>
+    <string name="recent_panel_category">Aps. recientes Slim</string>
+    <string name="show_running_tasks_title">Mostrar sólo las aplicaciones en ejecución</string>
+    <string name="recents_max_apps_title">Máximo de aplicaciones permitido</string>
+    <string name="recent_panel_scale_title">Tamaño</string>
+    <string name="recent_panel_expanded_mode_title">Modo expandido</string>
+    <string name="recent_panel_expanded_mode_summary">Las apps. recientes aparecerán expandidas</string>
+    <string name="recent_panel_expanded_mode_auto">Automático (predeterminado)</string>
+    <string name="recent_panel_expanded_mode_always">Siempre</string>
+    <string name="recent_panel_expanded_mode_never">Nunca</string>
+    <string name="recent_panel_show_topmost_title">Mostrar aplicación en primer plano</string>
+    <string name="recent_panel_show_topmost_summary">No excluir la aplicación en primer planos en la vista de aps. recientes</string>
+    <string name="recent_panel_bg_color_title">Color de fondo del panel</string>
+    <string name="recent_card_bg_color_title">Color de fondo de las tarjetas</string>
+    <string name="recent_card_text_color_title">Color del texto de las tarjetas</string>
+
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Mostrar en la lado izquierdo</string>
+    <string name="recent_panel_lefty_mode_summary">Muestra el panel en el lado izquierdo de la pantalla</string>
+
+    <string name="slim_recents_aicp_empty_drawable_title">Panel vacío AICP</string>
+    <string name="slim_recents_aicp_empty_drawable_summary">Imágen a mostrar cuando no hay aps. recientes que mostrar</string>
+
+    <!-- Hide Apps from Recents -->
+    <string name="hide_apps_from_recents_title">Aplicaciones ocultas</string>
+    <string name="hide_from_recents_add_app">Añadir aplicación</string>
+    <string name="hide_apps_from_recents_summary">Seleccionar que aplicaciones serán exluidas del panel de aps. recientes</string>
+
+    <!-- Fingerprint unlock keystore -->
+    <string name="fp_unlock_keystore_title">Desbloqueo con lectos de huellas</string>
+    <string name="fp_unlock_keystore_summary">Desbloquear el dispositivo con el lector de huellas tras un reinicio sin PIN/Contraseña/Patrón\nNota: Bajo su responsabilidad!</string>
+
+    <!-- Slim Recent App Sidebar  -->
+    <string name="recent_app_sidebar_title">Barra de aplicaciones lateral</string>
+    <string name="use_recent_app_sidebar_title">Habilitar barra de aplicaciones</string>
+    <string name="use_recent_app_sidebar_summary">Mostrar accesos directos en el otro lado</string>
+    <string name="recent_app_sidebar_content_title">Contenido de la barra</string>
+    <string name="recent_app_sidebar_content_summary">Configurar el contenido de la barra de aplicacionesr</string>
+    <string name="recent_app_sidebar_style_title">Estilo</string>
+    <string name="recent_app_sidebar_style_summary">Cambia el estilo de la barra de aplicaciones</string>
+    <string name="recent_app_sidebar_hide_labels_title">Ocultar etiquetas de los iconos</string>
+    <string name="recent_app_sidebar_label_color_title">Color de etiqueta</string>
+    <string name="recent_app_sidebar_bg_color_title">Color de fondo</string>
+    <string name="recent_app_sidebar_scale_title">Tamaño</string>
+    <string name="recent_app_sidebar_open_simultaneously_title">Abrir a la vez que el panel de aps. recientes</string>
+    <string name="recent_app_sidebar_open_simultaneously_summary">Deshabilitando esto reduce el lag al abrir el panel de aps. recientes</string>
+
+    <!-- Slim lockscreen shortcuts -->
+    <string name="shortcut_action_none">Ninguno</string>
+    <string name="shortcut_action_longpress">Pulsación larga:</string>
+    <string name="shortcut_action_select_action_longpress">Elegir acción de pulsación larga:</string>
+    <string name="shortcut_action_select_action">Elegir acción:</string>
+    <string name="shortcut_action_select_action_newaction">Elegir nueva acción:</string>
+    <string name="shortcut_action_reset">Restablecer</string>
+    <string name="shortcut_action_add">Añadir</string>
+    <string name="shortcut_action_reset_message">¿Restablecer a valores predeterminados?</string>
+    <string name="shortcut_action_max">Se ha alcanzado el número máximo de elementos</string>
+    <string name="shortcut_action_warning">Atención</string>
+    <string name="shortcut_action_warning_message">No se puede eliminar el último elemento</string>
+    <string name="shortcut_action_disable_message">Deshabilitado\nAñade un elemento para habilitar esta opción</string>
+    <string name="shortcut_image_not_valid">La aplicación seleccionada no tiene un icono válido o no soporta el recorte de la imágen. Usar otra aplicación.</string>
+    <string name="shortcut_duplicate_entry">La aplicación seleccionada no se puede añadir dos veces</string>
+    <string name="shortcut_action_help_shortcut">acceso directo</string>
+    <string name="shortcut_action_help_button">botón</string>
+    <string name="shortcut_action_help_app">aplicación</string>
+    <string name="shortcut_action_help_icon">, al seleccionar el icono aparecerán las opciones de personalización</string>
+    <string name="shortcut_action_help_main">Para añadir un %1$s, seleccionar Añadir icono. Una vez se ha añadido un %1$s, seleccionado la fila se cambia el destino%2$s\n\nPara eliminar un %1$s, deslizar la fila horizontalment a la izquierda o a la derecha. Para reordenar un %1$s de la lista arrastrarlo verticalmente desde el lado izquierdo.\n\nPara limpiar o restablecer a los valores predeterminados seleccionar el icono Restablecer.</string>
+    <string name="shortcut_action_help_delete_last_entry">Si se eliminan todos los %1$s de la lista esta característica se deshabilitará toltamente.</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Si se elimina cada %1$s de la lista se deshabilitará la cape pie completamente.</string>
+    <string name="shortcuts_applications">Applicaciones</string>
+    <string name="shortcuts_select_custom_app_title">Elegir aplicación personalizada</string>
+    <string name="shortcuts_icon_picker_type">Elegit tipo de icono:</string>
+    <string name="shortcuts_icon_default">Predeterminado</string>
+    <string name="shortcuts_icon_custom">Galería</string>
+    <string name="shortcuts_icon_picker_choose_icon_title">Elegir icono</string>
+    <string name="reset_message">¿Restablecer a valores por defecto?</string>
+    <string name="lockscreen_shortcuts_title">Accesos directos en el centro de la pantalla</string>
+    <string name="lockscreen_shortcuts_summary">Ver o cambiar los accesos directos de la pantalla de bloqueo</string>
+    <string name="lockscreen_shorcuts_launch_type_title">Tipo de toque en el acceso directo</string>
+    <string name="lockscreen_shortcuts_single_tap">Toque</string>
+    <string name="lockscreen_shortcuts_double_tap">Doble toque</string>
+    <string name="lockscreen_shortcuts_longpress">Pulsación larga</string>
+    <string name="help">Ayuda</string>
+    <string name="shortcut_action_app">Ap. personalizada</string>
+    <string name="shortcut_action_home">Inicio</string>
+    <string name="shortcut_action_back">Atrás</string>
+    <string name="shortcut_action_menu">Menú</string>
+    <string name="shortcut_action_ime">Abrir selector de teclado</string>
+    <string name="shortcut_action_power_menu">Menú de apagado</string>
+    <string name="shortcut_action_recent">Aps. recientes</string>
+    <string name="shortcut_action_power">Apagar pantalla</string>
+    <string name="shortcut_action_search">Búsqueda en ap.</string>
+
 </resources>
