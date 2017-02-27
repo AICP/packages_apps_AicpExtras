@@ -32,6 +32,7 @@ import java.util.Set;
 
 import cyanogenmod.providers.CMSettings;
 
+import com.lordclockan.aicpextras.utils.Helpers;
 import com.lordclockan.aicpextras.utils.Utils;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 import com.lordclockan.R;
@@ -63,12 +64,14 @@ public class NotificationsFragment extends Fragment {
         private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
         private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
         private static final String CUSTOM_HEADER_BROWSE = "custom_header_browse";
+        private static final String NOTIFICATION_GUTS_KILL_APP_BUTTON = "notification_guts_kill_app_button";
 
         private ListPreference mDaylightHeaderPack;
         private SeekBarPreferenceCham mHeaderShadow;
         private ListPreference mHeaderProvider;
         private String mDaylightHeaderProvider;
         private PreferenceScreen mHeaderBrowse;
+        private Preference mNotificationKill;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -127,6 +130,8 @@ public class NotificationsFragment extends Fragment {
             mHeaderBrowse = (PreferenceScreen) findPreference(CUSTOM_HEADER_BROWSE);
             mHeaderBrowse.setEnabled(isBrowseHeaderAvailable());
 
+            mNotificationKill = findPreference(NOTIFICATION_GUTS_KILL_APP_BUTTON);
+            mNotificationKill.setOnPreferenceChangeListener(this);
         }
 
         @Override
@@ -157,6 +162,11 @@ public class NotificationsFragment extends Fragment {
                 int valueIndex = mHeaderProvider.findIndexOfValue(value);
                 mHeaderProvider.setSummary(mHeaderProvider.getEntries()[valueIndex]);
                 mDaylightHeaderPack.setEnabled(value.equals(mDaylightHeaderProvider));
+            } else if (preference == mNotificationKill) {
+                // Setting will only apply to new created notifications.
+                // By restarting SystemUI, we can re-create all notifications
+                Helpers.showSystemUIrestartDialog(getActivity());
+                return true;
             }
             return false;
         }
