@@ -116,6 +116,12 @@
             android:summaryOff="@string/lockscreen_qs_disabled_summary_off"
             android:defaultValue="false" />
 
+        <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
+            android:key="lockscreen_hide_status_bar"
+            android:title="@string/lockscreen_hide_status_bar_title"
+            android:summary="@string/lockscreen_hide_status_bar_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
