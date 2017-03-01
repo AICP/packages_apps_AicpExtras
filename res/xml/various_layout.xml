@@ -70,4 +70,10 @@
         android:entries="@array/media_scanner_on_boot_entries"
         android:entryValues="@array/media_scanner_on_boot_values" />
 
+    <!-- Custom bootanim -->
+    <Preference
+        android:key="custom_bootanimation"
+        android:title="@string/custom_bootanimation_title"
+        android:summary="@string/custom_bootanimation_summary" />
+
 </PreferenceScreen>
