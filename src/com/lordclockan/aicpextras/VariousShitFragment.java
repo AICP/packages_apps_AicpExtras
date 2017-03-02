@@ -96,6 +96,9 @@ public class VariousShitFragment extends Fragment {
         private static final String BOOTANIMATION_SYSTEM_PATH = "/system/media/bootanimation.zip";
         private static final String BACKUP_PATH = new File(Environment
                 .getExternalStorageDirectory(), "/AICP_ota").getAbsolutePath();
+        private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
+        private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
+        private static final String SCROLLINGCACHE_DEFAULT = "1";
 
         private SwitchPreference mCameraSounds;
         private ListPreference mMsob;
@@ -109,6 +112,7 @@ public class VariousShitFragment extends Fragment {
         private AnimationDrawable mAnimationPart2;
         private String mErrormsg;
         private String mBootAnimationPath;
+        private ListPreference mScrollingCachePref;
 
         private Context mContext;
 
@@ -154,6 +158,10 @@ public class VariousShitFragment extends Fragment {
 
             resetBootAnimation();
 
+            mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
+            mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
+                    SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
+            mScrollingCachePref.setOnPreferenceChangeListener(this);
         }
 
         @Override
@@ -191,6 +199,11 @@ public class VariousShitFragment extends Fragment {
                 mMsob.setValue(String.valueOf(newValue));
                 mMsob.setSummary(mMsob.getEntry());
                 return true;
+            } else if (preference == mScrollingCachePref) {
+                if (newValue != null) {
+                    SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String)newValue);
+                    return true;
+                }
             }
             return false;
         }
