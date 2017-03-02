@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan.aicpextras">
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
 
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="show_settings_drawer"
@@ -75,6 +75,16 @@
         android:title="@string/media_scanner_on_boot_title"
         android:entries="@array/media_scanner_on_boot_entries"
         android:entryValues="@array/media_scanner_on_boot_values" />
+
+    <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+        android:key="volume_dialog_timeout"
+        android:title="@string/volume_dialog_timeout_title"
+        android:max="10000"
+        aicpextras:minimum="100"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="ms"
+        aicpextras:defaultVal="3000"
+        android:persistent="false" />
 
     <ListPreference
         android:key="pref_scrollingcache"
