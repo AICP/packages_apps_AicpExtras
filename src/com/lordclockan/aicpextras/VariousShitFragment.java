@@ -62,6 +62,7 @@ import com.lordclockan.aicpextras.utils.Helpers;
 import com.lordclockan.aicpextras.utils.AbstractAsyncSuCMDProcessor;
 import com.lordclockan.aicpextras.utils.CMDProcessor;
 import com.lordclockan.aicpextras.widget.NumberPickerPreference;
+import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 public class VariousShitFragment extends Fragment {
 
@@ -99,6 +100,7 @@ public class VariousShitFragment extends Fragment {
         private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
         private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
         private static final String SCROLLINGCACHE_DEFAULT = "1";
+        private static final String KEY_VOLUME_DIALOG_TIMEOUT = "volume_dialog_timeout";
 
         private SwitchPreference mCameraSounds;
         private ListPreference mMsob;
@@ -113,6 +115,7 @@ public class VariousShitFragment extends Fragment {
         private String mErrormsg;
         private String mBootAnimationPath;
         private ListPreference mScrollingCachePref;
+        private SeekBarPreferenceCham mVolumeDialogTimeout;
 
         private Context mContext;
 
@@ -162,6 +165,13 @@ public class VariousShitFragment extends Fragment {
             mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                     SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
             mScrollingCachePref.setOnPreferenceChangeListener(this);
+
+            // Volume dialog timeout seekbar
+            mVolumeDialogTimeout = (SeekBarPreferenceCham) findPreference(KEY_VOLUME_DIALOG_TIMEOUT);
+            int volumeDialogTimeout = System.getInt(resolver,
+                    System.VOLUME_DIALOG_TIMEOUT, 3000);
+            mVolumeDialogTimeout.setValue(volumeDialogTimeout / 1);
+            mVolumeDialogTimeout.setOnPreferenceChangeListener(this);
         }
 
         @Override
@@ -204,6 +214,11 @@ public class VariousShitFragment extends Fragment {
                     SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String)newValue);
                     return true;
                 }
+            } else if (preference == mVolumeDialogTimeout) {
+                int volDialogTimeout = (Integer) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.VOLUME_DIALOG_TIMEOUT, volDialogTimeout * 1);
+                return true;
             }
             return false;
         }
