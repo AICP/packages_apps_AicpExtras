@@ -781,6 +781,13 @@
     <string name="hide_lockscreen_clock_title">Zeige Uhrzeit auf Sperrbildschirm</string>
     <string name="hide_lockscreen_date_title">Zeige Datum auf Sperrbildschirm</string>
     <string name="hide_lockscreen_alarm_title">Zeige Weckereinstellung</string>
+    <string name="hide_lockscreen_bottom_shortcuts_title">Verknüpfungen verbergen</string>
+    <string name="hide_lockscreen_bottom_shortcuts_summary_on">Verknüpfungen bei gesichertem Gerät ausblendet</string>
+    <string name="hide_lockscreen_bottom_shortcuts_summary_off">Verknüpfungen bei gesichertem Gerät anzeigen</string>
+
+    <!-- Hide Statusbar on Lockscreen -->
+    <string name="lockscreen_hide_status_bar_title">Statusleiste verbergen</string>
+    <string name="lockscreen_hide_status_bar_summary">Statusleiste berühren, um die Sichtbarekeit zu wechseln</string>
 
     <!-- Hide Lockscreen clock & date -->
     <string name="changelog_name">Änderungsprotokoll</string>
@@ -796,7 +803,7 @@
     <string name="qs_edit_summary">Deaktiviert das Symbol zur Kacheländerung in der Kopfzeile</string>
     <string name="qs_multiuser_switch_title">\"Mehrbenutzer\"-Schalter</string>
     <string name="qs_multiuser_switch_summary">Deaktiviert den Schalter zur Benutzerumschaltung in der Kopfzeile</string>
-    <string name="qs_expand_indicator_title">Erweiterungsanzeige (\"Pfeil\"))</string>
+    <string name="qs_expand_indicator_title">Erweiterungsanzeige (\"Pfeil\")</string>
     <string name="qs_expand_indicator_summary">Deaktiviert die Erweiterungsanzeige in der Kopfzeile</string>
 
     <!-- SlimRecents -->
@@ -819,6 +826,8 @@
     <string name="recent_panel_bg_color_title">Hintergrundfarbe des Paneels</string>
     <string name="recent_card_bg_color_title">Hintergrundfarbe der Karten</string>
     <string name="recent_card_text_color_title">Textfarbe der Karten</string>
+    <string name="slim_recents_mem_display_long_click_clear_title">RAM-Anzeige lange drücken</string>
+    <string name="slim_recents_mem_display_long_click_clear_summary">Verlauf leeren, indem die Arbeitsspeicher-Anzeige lange gedrückt wird</string>
 
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Anzeige auf der linken Seite</string>
@@ -869,7 +878,7 @@
     <string name="shortcut_action_help_shortcut">Verknüpfung</string>
     <string name="shortcut_action_help_button">Taste</string>
     <string name="shortcut_action_help_app">App</string>
-    <string name="shortcut_action_help_icon">während die Auswahl des Symbols die Anpassungseinstellungen startet.</string>
+    <string name="shortcut_action_help_icon"> während die Auswahl des Symbols die Anpassungseinstellungen startet.</string>
     <string name="shortcut_action_help_main">Um eine %1$s hinzuzufügen, bitte das \"Plus\"-Symbol wählen. Wenn eine %1$s hinzugefügt wurde, ändert die Zeilenauswahl das Ziel%2$s\n\nUm eine %1$s zu Entfernen, bitte über die Zeile von links nach rechts wischen. Um eine %1$s in der Liste neu anzuordnen, bitte am Ankerpunkt vertikal nach links verschieben.\n\nZum Löschen oder zum Zurücksetzen auf den Standard, bitte das \"Zurück\"-Symbol auswählen.</string>
     <string name="shortcut_action_help_delete_last_entry">Das Löschen jeder %1$s in der Liste deaktiviert diese Funktion komplett.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Das Löschen jeder %1$s in der Liste deaktiviert den zweiten PIE-Ring komplett.</string>
@@ -896,5 +905,48 @@
     <string name="shortcut_action_recent">Anwendungsverlauf</string>
     <string name="shortcut_action_power">Bildschirm ausschalten</string>
     <string name="shortcut_action_search">In der der App suchen</string>
+
+    <!-- Notification guts kill app button -->
+    <string name="notification_guts_kill_app_button_title">\"App beenden\"-Taste</string>
+    <string name="notification_guts_kill_app_button_summary">Zeige eine Taste zum Beenden der App, wenn deren Benachrichtigung lange gedrückt wird</string>
+
+    <!-- Custom bootanim -->
+    <string name="custom_bootanimation_title">Bootanimation</string>
+    <string name="custom_bootanimation_summary">Bitte die neue Bootanimation auswählen.\nBei jdem Wechsel wird die momentane Animation im Verzeichnis AICP_ota des Telefonspeichers (mit aktuellem Datum) gesichert. Alte Animationen müssen händisch bei Bedarf gelöscht werden, wenn sie nicht mehr benötigt werden!</string>
+    <string name="bootanimation_preview">Vorschau der Bootanimation</string>
+    <string name="set_custom_bootanimation">Eigene aktivieren...</string>
+    <string name="creating_preview">Erzeuge Vorschau...</string>
+    <string name="error_reading_zip_file">Fehler beim Lesen der ZIP-Datei</string>
+    <string name="error_creating_preview">Fehler beim Erzeugen der Vorschau</string>
+    <string name="install_file_manager_error">Keine App zur Auswahl der ZIP-Datei gefunden. Bitte einen Dateimanager installieren.</string>
+    <string name="apply">Anwenden</string>
+
+    <!-- Circle app bar -->
+    <string name="category_app_circle_bar_title">App-Kreisleiste</string>
+    <string name="app_circle_bar_title">App-Kreisleiste</string>
+    <string name="app_circle_bar_summary">Zeige den Ring bei Berührung des rechten Displayrandes</string>
+    <string name="app_circle_bar_included_apps_title">Enthaltene Apps</string>
+    <string name="app_circle_bar_included_apps_summary">Angezeigte Apps in der Ringleiste</string>
+    <string name="trigger_width_title">Breite des Auslösers</string>
+    <string name="trigger_width_summary">Breite des Auslösebereichs einstellen</string>
+    <string name="trigger_top_title">Position des Auslösers</string>
+    <string name="trigger_top_summary">Stelle die vertikale Position ein</string>
+    <string name="trigger_bottom_title">Höhe des Auslösers</string>
+    <string name="trigger_bottom_summary">Höhe des Auslösebereichs einstellen</string>
+
+    <!-- Disabling FC notifications -->
+    <string name="disable_fc_notifications_title">Absturz-Benachrichtigungen abschalten</string>
+    <string name="disable_fc_notifications_summary">Dies versteckt alle Absturz-Benachrichtigungen</string>
+
+    <!-- Scrolling Cache -->
+    <string name="pref_scrollingcache_title">Scroll-Cache</string>
+    <string name="pref_scrollingcache_summary">Der Scroll-Cache verbessert die Performance beim Blättern, auf Kosten des Speicherplatzes</string>
+    <string name="pref_scrollingcache_force_enable">Immer aktiviert</string>
+    <string name="pref_scrollingcache_default_enable">Standardmäßig aktiviert</string>
+    <string name="pref_scrollingcache_default_disable">Standardmäßig deaktiviert</string>
+    <string name="pref_scrollingcache_force_disable">Immer deaktiviert</string>
+
+    <!-- Volume dialog timeout -->
+    <string name="volume_dialog_timeout_title"> Anzeigezeit des Lautstärkedialogs</string>
 
 </resources>
