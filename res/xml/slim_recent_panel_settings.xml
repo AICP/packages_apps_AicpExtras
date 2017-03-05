@@ -69,6 +69,13 @@
             android:summaryOff="@string/systemui_recents_mem_display_summaryOff"
             android:defaultValue="false" />
 
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="slim_recents_mem_display_long_click_clear"
+            android:title="@string/slim_recents_mem_display_long_click_clear_title"
+            android:summary="@string/slim_recents_mem_display_long_click_clear_summary"
+            android:defaultValue="false"
+            android:dependency="slim_recents_mem_display" />
+
         <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
             android:key="recent_panel_scale"
             android:title="@string/recent_panel_scale_title"
