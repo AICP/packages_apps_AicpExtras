@@ -7,11 +7,14 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.database.ContentObserver;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
@@ -24,6 +27,7 @@ import android.util.Log;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
+import android.util.Log;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -63,6 +67,11 @@ public class QuickSettingsFragment extends Fragment {
         private static final String PREF_COLUMNS_PORTRAIT = "qs_columns_portrait";
         private static final String PREF_COLUMNS_LANDSCAPE = "qs_columns_landscape";
         private static final String PREF_QS_DATA_ADVANCED = "qs_data_advanced";
+        private static final String CATEGORY_WEATHER = "weather_category";
+        private static final String WEATHER_ICON_PACK = "weather_icon_pack";
+        private static final String DEFAULT_WEATHER_ICON_PACKAGE = "org.omnirom.omnijaws";
+        private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
+        private static final String CHRONUS_ICON_PACK_INTENT = "com.dvtonder.chronus.ICON_PACK";
 
         private ListPreference mTileAnimationStyle;
         private ListPreference mTileAnimationDuration;
@@ -72,6 +81,8 @@ public class QuickSettingsFragment extends Fragment {
         private SeekBarPreferenceCham mQsColumnsPortrait;
         private SeekBarPreferenceCham mQsColumnsLandscape;
         private SwitchPreference mQsDataAdvanced;
+        private PreferenceCategory mWeatherCategory;
+        private ListPreference mWeatherIconPack;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -141,6 +152,36 @@ public class QuickSettingsFragment extends Fragment {
                 prefSet.removePreference(mQsDataAdvanced);
             }
 
+            mWeatherCategory = (PreferenceCategory) prefSet.findPreference(CATEGORY_WEATHER);
+            if (mWeatherCategory != null && !isOmniJawsServiceInstalled()) {
+              prefSet.removePreference(mWeatherCategory);
+            } else {
+              String settingsJaws = Settings.System.getString(getContentResolver(),
+                      Settings.System.OMNIJAWS_WEATHER_ICON_PACK);
+              if (settingsJaws == null) {
+                  settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE;
+              }
+              mWeatherIconPack = (ListPreference) findPreference(WEATHER_ICON_PACK);
+
+              List<String> entriesJaws = new ArrayList<String>();
+              List<String> valuesJaws = new ArrayList<String>();
+              getAvailableWeatherIconPacks(entriesJaws, valuesJaws);
+              mWeatherIconPack.setEntries(entries.toArray(new String[entriesJaws.size()]));
+              mWeatherIconPack.setEntryValues(values.toArray(new String[valuesJaws.size()]));
+
+              int valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingHeaderPackage);
+              if (valueJawsIndex == -1) {
+                  // no longer found
+                  settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE;
+                  Settings.System.putString(getContentResolver(),
+                          Settings.System.OMNIJAWS_WEATHER_ICON_PACK, settingHeaderPackage);
+                  valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingHeaderPackage);
+              }
+              mWeatherIconPack.setValueIndex(valueJawsIndex >= 0 ? valueJawsIndex : 0);
+              mWeatherIconPack.setSummary(mWeatherIconPack.getEntry());
+              mWeatherIconPack.setOnPreferenceChangeListener(this);
+          }
+
         }
 
         @Override
@@ -192,8 +233,17 @@ public class QuickSettingsFragment extends Fragment {
                 Settings.Secure.putInt(resolver,
                         Settings.Secure.QS_COLUMNS_LANDSCAPE, intValue);
                 return true;
+            } else if (preference == mWeatherIconPack) {
+              String value = (String) newValue;
+              Settings.System.putString(getContentResolver(),
+                      Settings.System.OMNIJAWS_WEATHER_ICON_PACK, value);
+              int valueIndex = mWeatherIconPack.findIndexOfValue(value);
+              mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[valueIndex]);
+              return true;
             }
             return false;
+
+
         }
 
         private void updateTileAnimationStyleSummary(int tileAnimationStyle) {
@@ -226,4 +276,65 @@ public class QuickSettingsFragment extends Fragment {
             }
         }
     }
+
+         private boolean isOmniJawsServiceInstalled() {
+          return PackageUtils.isAvailableApp(WEATHER_SERVICE_PACKAGE, getActivity());
+      }
+
+      private void getAvailableWeatherIconPacks(List<String> entries, List<String> values) {
+          Intent i = new Intent();
+          PackageManager packageManager = getPackageManager();
+          i.setAction("org.omnirom.WeatherIconPack");
+          for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
+              String packageName = r.activityInfo.packageName;
+              Log.d("maxwen", packageName);
+              if (packageName.equals(DEFAULT_WEATHER_ICON_PACKAGE)) {
+                  values.add(0, r.activityInfo.name);
+              } else {
+                  values.add(r.activityInfo.name);
+              }
+              String label = r.activityInfo.loadLabel(getPackageManager()).toString();
+              if (label == null) {
+                  label = r.activityInfo.packageName;
+              }
+              if (packageName.equals(DEFAULT_WEATHER_ICON_PACKAGE)) {
+                  entries.add(0, label);
+              } else {
+                  entries.add(label);
+              }
+          }
+          i = new Intent(Intent.ACTION_MAIN);
+          i.addCategory(CHRONUS_ICON_PACK_INTENT);
+          for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
+              String packageName = r.activityInfo.packageName;
+              values.add(packageName   ".weather");
+              String label = r.activityInfo.loadLabel(getPackageManager()).toString();
+              if (label == null) {
+                  label = r.activityInfo.packageName;
+              }
+              entries.add(label);
+          }
+      }
+
+      private boolean isOmniJawsEnabled() {
+          final Uri SETTINGS_URI
+              = Uri.parse("content://org.omnirom.omnijaws.provider/settings");
+
+          final String[] SETTINGS_PROJECTION = new String[] {
+              "enabled"
+          };
+
+          final Cursor c = getContentResolver().query(SETTINGS_URI, SETTINGS_PROJECTION,
+                  null, null, null);
+          if (c != null) {
+              int count = c.getCount();
+              if (count == 1) {
+                  c.moveToPosition(0);
+                  boolean enabled = c.getInt(0) == 1;
+                  return enabled;
+              }
+          }
+          return true;
+      }
+
 }
