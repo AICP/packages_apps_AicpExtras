@@ -94,6 +94,12 @@
         android:entries="@array/entries_scrollingcache"
         android:entryValues="@array/values_scrollingcache" />
 
+    <!-- LockClock settings -->
+    <Preference
+        android:key="lockclock_settings"
+        android:title="@string/locksclock_settings_title"
+        android:summary="@string/locksclock_settings_summary" />
+
     <!-- Custom bootanim -->
     <Preference
         android:key="custom_bootanimation"
