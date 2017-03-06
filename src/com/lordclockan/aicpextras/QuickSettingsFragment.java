@@ -84,6 +84,7 @@ public class QuickSettingsFragment extends Fragment {
         private SwitchPreference mQsDataAdvanced;
         private PreferenceCategory mWeatherCategory;
         private ListPreference mWeatherIconPack;
+        private String mWeatherIconPackNote;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -95,6 +96,7 @@ public class QuickSettingsFragment extends Fragment {
             Activity activity = getActivity();
             final ContentResolver resolver = getActivity().getContentResolver();
             final PackageManager pm = getActivity().getPackageManager();
+            mWeatherIconPackNote = getResources().getString(R.string.weather_icon_pack_note);
 
             int defaultValue;
 
@@ -180,7 +182,7 @@ public class QuickSettingsFragment extends Fragment {
                     valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
                 }
                 mWeatherIconPack.setValueIndex(valueJawsIndex >= 0 ? valueJawsIndex : 0);
-                mWeatherIconPack.setSummary(mWeatherIconPack.getEntry());
+                mWeatherIconPack.setSummary(mWeatherIconPackNote + "\n\n" + mWeatherIconPack.getEntry());
                 mWeatherIconPack.setOnPreferenceChangeListener(this);
             }
         }
@@ -239,7 +241,7 @@ public class QuickSettingsFragment extends Fragment {
               Settings.System.putString(resolver,
                       Settings.System.OMNIJAWS_WEATHER_ICON_PACK, value);
               int valueIndex = mWeatherIconPack.findIndexOfValue(value);
-              mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[valueIndex]);
+              mWeatherIconPack.setSummary(mWeatherIconPackNote + " \n\n" + mWeatherIconPack.getEntries()[valueIndex]);
               return true;
             }
             return false;
