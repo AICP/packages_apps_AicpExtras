@@ -101,6 +101,10 @@ public class VariousShitFragment extends Fragment {
         private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
         private static final String SCROLLINGCACHE_DEFAULT = "1";
         private static final String KEY_VOLUME_DIALOG_TIMEOUT = "volume_dialog_timeout";
+        private static final String LOCKCLOCK_START_SETTINGS = "lockclock_settings";
+        private static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
+        private static Intent INTENT_LOCKCLOCK_SETTINGS = new Intent(Intent.ACTION_MAIN)
+                .setClassName(LOCKCLOCK_PACKAGE_NAME, LOCKCLOCK_PACKAGE_NAME + ".preference.Preferences");
 
         private SwitchPreference mCameraSounds;
         private ListPreference mMsob;
@@ -116,6 +120,7 @@ public class VariousShitFragment extends Fragment {
         private String mBootAnimationPath;
         private ListPreference mScrollingCachePref;
         private SeekBarPreferenceCham mVolumeDialogTimeout;
+        private Preference mLockClockSettings;
 
         private Context mContext;
 
@@ -127,6 +132,7 @@ public class VariousShitFragment extends Fragment {
 
             PreferenceScreen prefSet = getPreferenceScreen();
             ContentResolver resolver = getActivity().getContentResolver();
+            PackageManager pm = getActivity().getPackageManager();
 
             mContext = getActivity();
 
@@ -172,6 +178,11 @@ public class VariousShitFragment extends Fragment {
                     Settings.System.VOLUME_DIALOG_TIMEOUT, 3000);
             mVolumeDialogTimeout.setValue(volumeDialogTimeout / 1);
             mVolumeDialogTimeout.setOnPreferenceChangeListener(this);
+
+            mLockClockSettings = (Preference) prefSet.findPreference(LOCKCLOCK_START_SETTINGS);
+            if (!Helpers.isPackageInstalled(LOCKCLOCK_PACKAGE_NAME, pm)) {
+                prefSet.removePreference(mLockClockSettings);
+            }
         }
 
         @Override
@@ -227,6 +238,9 @@ public class VariousShitFragment extends Fragment {
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
             if (preference == mCustomBootAnimation) {
                 openBootAnimationDialog();
+            } else if (preference == mLockClockSettings) {
+                startActivity(INTENT_LOCKCLOCK_SETTINGS);
+                return true;
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
