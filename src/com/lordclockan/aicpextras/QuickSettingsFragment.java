@@ -141,7 +141,7 @@ public class QuickSettingsFragment extends Fragment {
 
             mQsColumnsPortrait = (SeekBarPreferenceCham) findPreference(PREF_COLUMNS_PORTRAIT);
             int columnsQsPortrait = Settings.Secure.getInt(resolver,
-                    Settings.Secure.QS_COLUMNS_PORTRAIT, 3);
+                    Settings.Secure.QS_COLUMNS_PORTRAIT, 5);
             mQsColumnsPortrait.setValue((int) columnsQsPortrait);
             mQsColumnsPortrait.setOnPreferenceChangeListener(this);
 
