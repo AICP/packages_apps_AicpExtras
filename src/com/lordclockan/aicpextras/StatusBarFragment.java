@@ -45,6 +45,7 @@ public class StatusBarFragment extends Fragment {
         private static final String KEY_AICP_LOGO_STYLE = "status_bar_aicp_logo_style";
         private static final String PREF_CARRIE_LABEL = "carrierlabel";
         private static final String PREF_TICKER = "ticker";
+        private static final String PREF_STATUS_BAR_WEATHER = "status_bar_weather";
 
         private Preference mTraffic;
         private SwitchPreference mShowFourG;
@@ -53,6 +54,7 @@ public class StatusBarFragment extends Fragment {
         private ListPreference mAicpLogoStyle;
         private Preference mCarrierLabel;
         private Preference mTicker;
+        private ListPreference mStatusBarWeather;
 
         public SettingsPreferenceFragment() {
         }
@@ -103,6 +105,15 @@ public class StatusBarFragment extends Fragment {
             if (!cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE)) {
                 prefSet.removePreference(mCarrierLabel);
             }
+
+            // Status bar weather
+            mStatusBarWeather = (ListPreference) findPreference(PREF_STATUS_BAR_WEATHER);
+            int temperatureShow = Settings.System.getIntForUser(resolver,
+                    Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP, 0,
+                    UserHandle.USER_CURRENT);
+            mStatusBarWeather.setValue(String.valueOf(temperatureShow));
+            mStatusBarWeather.setSummary(mStatusBarWeather.getEntry());
+            mStatusBarWeather.setOnPreferenceChangeListener(this);
         }
 
         @Override
@@ -144,6 +155,15 @@ public class StatusBarFragment extends Fragment {
                         UserHandle.USER_CURRENT);
                 mAicpLogoStyle.setSummary(
                         mAicpLogoStyle.getEntries()[index]);
+                return true;
+            } else if (preference == mStatusBarWeather) {
+                int temperatureShow = Integer.valueOf((String) newValue);
+                int index = mStatusBarWeather.findIndexOfValue((String) newValue);
+                Settings.System.putIntForUser(resolver,
+                        Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP,
+                        temperatureShow, UserHandle.USER_CURRENT);
+                mStatusBarWeather.setSummary(
+                        mStatusBarWeather.getEntries()[index]);
                 return true;
             }
             return false;
