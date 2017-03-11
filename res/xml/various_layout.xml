@@ -11,6 +11,12 @@
         android:defaultValue="true" />
 
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="confirm_shutdown_switch"
+        android:title="@string/confirm_shutdown_switch_title"
+        android:summary="@string/confirm_shutdown_switch_desc"
+        android:defaultValue="true" />
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="headset_connect_player"
         android:title="@string/headset_connect_player_title"
         android:summary="@string/headset_connect_player_summary"
