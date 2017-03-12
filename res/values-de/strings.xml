@@ -912,7 +912,7 @@
 
     <!-- Custom bootanim -->
     <string name="custom_bootanimation_title">Bootanimation</string>
-    <string name="custom_bootanimation_summary">Bitte die neue Bootanimation auswählen.\nBei jdem Wechsel wird die momentane Animation im Verzeichnis AICP_ota des Telefonspeichers (mit aktuellem Datum) gesichert. Alte Animationen müssen händisch bei Bedarf gelöscht werden, wenn sie nicht mehr benötigt werden!</string>
+    <string name="custom_bootanimation_summary">Bitte die neue Bootanimation auswählen.\nBei jedem Wechsel wird die momentane Animation im Verzeichnis \"AICP_ota\" des Telefonspeichers (mit aktuellem Datum) gesichert. Alte Animationen müssen händisch gelöscht werden, wenn sie nicht mehr benötigt werden!</string>
     <string name="bootanimation_preview">Vorschau der Bootanimation</string>
     <string name="set_custom_bootanimation">Eigene aktivieren...</string>
     <string name="creating_preview">Erzeuge Vorschau...</string>
@@ -955,9 +955,21 @@
 
     <!-- OmniJaws -->
     <string name="weather_title">Wetter</string>
-    <string name="weather_config_title">Service-Einstellungen</string>
-    <string name="weather_config_summary"></string>
-    <string name="weather_icon_pack_title">Wetter-Symbolpaket</string>
-    <string name="weather_icon_pack_note">Anmerkung\u003a Es können zusätzliche Symbolpakete installiert werden, indem im Play Store nach \"Chronus icons\" gesucht wird.</string>
+    <string name="weather_config_title">Wetterkachel-Einstellungen</string>
+
+   <!-- StatusBar weather settings -->
+    <string name="statusbar_weather_title">Statusleisten-Wetter</string>
+    <string name="statusbar_weather_summary">Die Anzeige nutzt die Einstellungen der Wetter-Kachel!</string>
+    <string name="statusbar_weather_dialog_title">Anzeigestil des Wetters</string>
+    <string name="status_bar_weather_hidden">Keine Wetteranzeige</string>
+    <string name="status_bar_temperature_image_show_scale">Temperatur mit Einheit und Bild</string>
+    <string name="status_bar_temperature_image_hide_scale">Temperatur ohne Einheit und Bild</string>
+    <string name="status_bar_temperature_show_scale_hide_image">Temperatur mit Einheit</string>
+    <string name="status_bar_temperature_hide_scale_hide_image">Temperatur ohne Einheit</string>
+    <string name="status_bar_show_image">Bild</string>
+
+   <!-- Confirm Power Off selection on Power menu-->
+    <string name="confirm_shutdown_switch_title">Bestätigung zum Ausschalten</string>
+    <string name="confirm_shutdown_switch_desc">Wenn \"Ausschalten\" im Ein/Aus-Menü gedrückt wird, wird ein Bestätigungsdialog angezeigt</string>
 
 </resources>
