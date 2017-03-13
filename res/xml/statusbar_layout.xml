@@ -2,6 +2,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
+        android:key="pref_category_indicators"
         android:title="@string/indicators">
 
         <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
