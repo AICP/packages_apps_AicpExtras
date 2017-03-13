@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2017-2018 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 
 package com.aicp.extras.fragments;
 
@@ -47,12 +46,14 @@ public class Dashboard extends BaseSettingsFragment {
     private static final String PREF_AICP_LOGO = "aicp_logo";
     private static final String PREF_AICP_OTA = "aicp_ota";
     private static final String PREF_LOG_IT = "log_it";
-
-    private LongClickablePreference mAicpLogo;
-    private Preference mAicpOTA;
+    private static final String PREF_WEATHER = "weather_option";
 
     private static final Intent INTENT_OTA = new Intent().setComponent(new ComponentName(
             Constants.AICP_OTA_PACKAGE, Constants.AICP_OTA_ACTIVITY));
+
+    private LongClickablePreference mAicpLogo;
+    private Preference mAicpOTA;
+    private Preference mWeatherOption;
 
     private Random mRandom = new Random();
     private int mLogoClickCount = 0;
@@ -66,18 +67,22 @@ public class Dashboard extends BaseSettingsFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mAicpLogo = (LongClickablePreference) findPreference(PREF_AICP_LOGO);
-        mAicpOTA = findPreference(PREF_AICP_OTA);
-
         PackageManager pm = getActivity().getPackageManager();
+
+        mAicpLogo = (LongClickablePreference) findPreference(PREF_AICP_LOGO);
+
+        mWeatherOption = findPreference(PREF_WEATHER);
+        if (!Util.isPackageEnabled(Constants.WEATHER_SERVICE_PACKAGE, pm)) {
+            mWeatherOption.getParent().removePreference(mWeatherOption);
+        }
+
+        mAicpOTA = findPreference(PREF_AICP_OTA);
         if (!Util.isPackageEnabled(Constants.AICP_OTA_PACKAGE, pm)) {
             mAicpOTA.getParent().removePreference(mAicpOTA);
         }
 
-
         Preference logIt = findPreference(PREF_LOG_IT);
         Util.requireRoot(logIt);
-
 
         mAicpLogo.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override

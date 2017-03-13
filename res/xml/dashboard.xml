@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2017-2018 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,16 +16,13 @@
  * limitations under the License.
  */
 -->
-
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/app_name">
-
 
     <!-- AICP logo -->
     <com.aicp.gear.preference.LongClickablePreference
         android:key="aicp_logo"
         android:layout="@layout/dashboard_logo" />
-
 
     <PreferenceCategory
         android:title="@string/navigation_category">
@@ -52,7 +49,6 @@
 
     <PreferenceCategory
         android:title="@string/user_interface_category">
-
 
         <PreferenceScreen
             android:title="@string/status_bar_title"
@@ -85,6 +81,7 @@
             android:fragment="com.aicp.extras.fragments.PanelPorn" />
 
         <PreferenceScreen
+            android:key="weather_option"
             android:title="@string/weather_title"
             android:summary="@string/weather_config_title"
             android:icon="@drawable/ic_settings_weather"
@@ -97,7 +94,6 @@
             android:fragment="com.aicp.extras.fragments.OtherUi" />
 
     </PreferenceCategory>
-
 
     <PreferenceCategory
         android:title="@string/system_category">
@@ -121,7 +117,6 @@
             android:fragment="com.aicp.extras.fragments.SystemExtensions" />
 
     </PreferenceCategory>
-
 
     <PreferenceCategory
         android:title="@string/other_category">
@@ -152,5 +147,4 @@
             android:fragment="com.aicp.extras.fragments.AeSettings" />
 
     </PreferenceCategory>
-
 </PreferenceScreen>
