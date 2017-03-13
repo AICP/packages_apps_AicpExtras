@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2017-2018 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,11 +14,9 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras;
 
 public abstract class Constants {
-
     /**
      * Package name of AICP OTA
      */
@@ -39,4 +37,8 @@ public abstract class Constants {
      */
     public static final String PREF_SELINUX_PERSISTENCE = "selinux_persistence";
 
+    /**
+     * Package name of weather service
+     */
+    public static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
 }
