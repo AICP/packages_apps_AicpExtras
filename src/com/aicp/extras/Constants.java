@@ -18,7 +18,6 @@
 package com.aicp.extras;
 
 public abstract class Constants {
-
     /**
      * Package name of AICP OTA
      */
@@ -39,4 +38,8 @@ public abstract class Constants {
      */
     public static final String PREF_SELINUX_PERSISTENCE = "selinux_persistence";
 
+    /**
+     * Package name of weather service
+     */
+    private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
 }
