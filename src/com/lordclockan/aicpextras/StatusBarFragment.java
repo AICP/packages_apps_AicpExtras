@@ -46,6 +46,7 @@ public class StatusBarFragment extends Fragment {
         private static final String PREF_CARRIE_LABEL = "carrierlabel";
         private static final String PREF_TICKER = "ticker";
         private static final String PREF_STATUS_BAR_WEATHER = "status_bar_weather";
+        private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
 
         private Preference mTraffic;
         private SwitchPreference mShowFourG;
@@ -107,17 +108,21 @@ public class StatusBarFragment extends Fragment {
             }
 
             // Status bar weather
-            mStatusBarWeather = (ListPreference) findPreference(PREF_STATUS_BAR_WEATHER);
-            int temperatureShow = Settings.System.getIntForUser(resolver,
+            mStatusBarWeather = (ListPreference) prefSet.findPreference(PREF_STATUS_BAR_WEATHER);
+            if (mStatusBarWeather != null && (!Helpers.isPackageInstalled(WEATHER_SERVICE_PACKAGE, pm))) {
+                prefSet.removePreference(mStatusBarWeather);
+            } else {
+                int temperatureShow = Settings.System.getIntForUser(resolver,
                     Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP, 0,
                     UserHandle.USER_CURRENT);
-            mStatusBarWeather.setValue(String.valueOf(temperatureShow));
-            if (temperatureShow == 0) {
-                mStatusBarWeather.setSummary(R.string.statusbar_weather_summary);
-            } else {
-                mStatusBarWeather.setSummary(mStatusBarWeather.getEntry());
+                mStatusBarWeather.setValue(String.valueOf(temperatureShow));
+                if (temperatureShow == 0) {
+                    mStatusBarWeather.setSummary(R.string.statusbar_weather_summary);
+                } else {
+                    mStatusBarWeather.setSummary(mStatusBarWeather.getEntry());
+                }
+                mStatusBarWeather.setOnPreferenceChangeListener(this);
             }
-            mStatusBarWeather.setOnPreferenceChangeListener(this);
         }
 
         @Override
