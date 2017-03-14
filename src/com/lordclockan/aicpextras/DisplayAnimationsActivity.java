@@ -83,8 +83,8 @@ public class DisplayAnimationsActivity extends Fragment {
                 mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
             } else if (preference == mToastAnimation) {
                 int index = mToastAnimation.findIndexOfValue((String) newValue);
-                Settings.System.putString(resolver,
-                        Settings.System.TOAST_ANIMATION, (String) newValue);
+                Settings.System.putInt(resolver,
+                        Settings.System.TOAST_ANIMATION, index);
                 mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
                 Toast.makeText(getActivity(), mToastAnimation.getEntries()[index],
                         Toast.LENGTH_SHORT).show();
