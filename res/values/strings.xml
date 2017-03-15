@@ -33,15 +33,15 @@
     <string name="g_plus_summary">Visit our Google+ Community.</string>
     <string name="ui_title">UI</string>
     <string name="logo">logo</string>
-    <string name="display_animations_title">Display and animations</string>
+    <string name="display_animations_title">Animations</string>
     <string name="transparency_porn_title">Panel porn</string>
     <string name="notificaitons_title">Notification drawer</string>
     <string name="statubar_title">Status bar</string>
     <string name="lockscreen_title">Lock screen</string>
     <string name="aicp_downloads_title">Downloads</string>
     <string name="dwnld_summary">Visit the AICP download page for your device.</string>
-    <string name="aicp_ota_title">OTA Center</string>
-    <string name="ota_summary">Check for updates to the current ROM</string>
+    <string name="aicp_ota_title">Update Center</string>
+    <string name="ota_summary">Check for AICP updates</string>
     <string name="aicp_gerrit_title">Gerrit</string>
     <string name="ae_version_title">AICP Extras version</string>
     <string name="gerrit_summary">Visit our Gerrit to know what we are working on.</string>
@@ -72,12 +72,6 @@
     <string name="changelog_title">Changelog</string>
     <string name="changelog_title_summary">View recent changes made to AICP.</string>
     <string name="changelog_error">Unable to load changelog.</string>
-
-    <!-- Toast Icons -->
-    <string name="toast_icon_title">Toast icon</string>
-    <string name="toast_icon_summary">Display the app icon corresponding with the toast</string>
-    <string name="toast_text_color">Toast text color</string>
-    <string name="toast_icon_color">Toast icon color</string>
 
     <!-- Brightness slider -->
     <string name="qs_brightness_slider_title">Brightness slider</string>
@@ -255,6 +249,7 @@
 
     <!-- Toast Animation -->
     <string name="toast_animation_title">Toast animation</string>
+    <string name="toast_animation_style_title">Selected animation syle</string>
     <string name="toast_none_animation">None</string>
     <string name="toast_default_animation">Default</string>
     <string name="toast_fade_animation">Fade</string>
@@ -272,9 +267,16 @@
     <string name="toast_SlideLeftRight_animation">Slide left to right</string>
     <string name="toast_SlideRightLeft_animation">Slide right to left</string>
 
+    <!-- Toast Icons -->
+    <string name="toast_icon_title">Toast icon</string>
+    <string name="toast_icon_summary">Display the app icon corresponding with the toast</string>
+    <string name="toast_text_color">Toast text color</string>
+    <string name="toast_icon_color">Toast icon color</string>
+
     <!-- Power menu Animations  -->
     <string name="power_menu_animation_title">Power menu animation</string>
-    <string name="power_menu_animation_summary">Change the enter/exit animation of the power menu</string>
+    <string name="power_menu_animation_style_title">Selected animation style</string>
+    <string name="power_menu_animation_style_summary">Change the enter/exit animation of the power menu</string>
     <string name="power_menu_animation_dialog_title">Select power menu animation</string>
     <string name="power_menu_animation_aosp">AOSP (default)</string>
     <string name="power_menu_animation_bottom">Bottom</string>
@@ -355,9 +357,10 @@
     <string name="qs_cols_prefix">Cols: </string>
 
     <!-- Tiles animation style  -->
-    <string name="qs_tile_animation_style_title">Tiles animation style</string>
-    <string name="qs_tile_animation_duration_title">Tiles animation duration</string>
-    <string name="qs_tile_animation_interpolator_title">Tiles animation interpolator</string>
+    <string name="qs_tile_animation_title">Quicksetting tiles animation</string>
+    <string name="qs_tile_animation_style_title">Selected animation style</string>
+    <string name="qs_tile_animation_duration_title">Animation duration</string>
+    <string name="qs_tile_animation_interpolator_title">Animation interpolator</string>
     <string name="qs_tile_animation_style_off">No animation</string>
     <string name="qs_tile_animation_style_flip">Flip</string>
     <string name="qs_tile_animation_style_rotate">Rotate</string>
