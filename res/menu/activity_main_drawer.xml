@@ -4,6 +4,40 @@
     <item android:title="@string/ui_title">
         <menu>
             <item
+                android:id="@+id/nav_headsup"
+                android:checkable="true"
+                android:icon="@drawable/ic_headsup"
+                android:title="@string/nav_headsup_title" />
+            <item
+                android:id="@+id/nav_statusbar"
+                android:checkable="true"
+                android:icon="@drawable/ic_statusbar"
+                android:title="@string/statubar_title" />
+            <item
+                android:id="@+id/nav_notif_drawer"
+                android:checkable="true"
+                android:icon="@drawable/ic_notif"
+                android:title="@string/notificaitons_title" />
+            <item
+                android:id="@+id/nav_quick_settings"
+                android:checkable="true"
+                android:icon="@drawable/ic_quick_settings"
+                android:title="@string/quick_settings_title" />
+            <item
+                android:id="@+id/nav_lockscreen"
+                android:checkable="true"
+                android:icon="@drawable/ic_lockscreen"
+                android:title="@string/lockscreen_title" />
+            <item
+                android:id="@+id/nav_recents"
+                android:checkable="true"
+                android:icon="@drawable/ic_recents"
+                android:title="@string/recents_panel_title" />
+        </menu>
+    </item>
+    <item android:title="@string/design_title">
+        <menu>
+            <item
                 android:id="@+id/nav_display_animations"
                 android:checkable="true"
                 android:icon="@drawable/ic_display_animation"
@@ -14,40 +48,14 @@
                 android:icon="@drawable/ic_blur_ui"
                 android:title="@string/nav_blur_ui_title" />
             <item
-                android:id="@+id/nav_headsup"
+                android:id="@+id/nav_transparency_porn"
                 android:checkable="true"
-                android:icon="@drawable/ic_headsup"
-                android:title="@string/nav_headsup_title" />
-            <item
-                android:id="@+id/nav_lockscreen"
-                android:checkable="true"
-                android:icon="@drawable/ic_lockscreen"
-                android:title="@string/lockscreen_title" />
-          <item
-              android:id="@+id/nav_notif_drawer"
-              android:checkable="true"
-              android:icon="@drawable/ic_notif"
-              android:title="@string/notificaitons_title" />
-          <item
-              android:id="@+id/nav_transparency_porn"
-              android:checkable="true"
-              android:icon="@drawable/ic_opacity"
-              android:title="@string/transparency_porn_title" />
-          <item
-              android:id="@+id/nav_quick_settings"
-              android:checkable="true"
-              android:icon="@drawable/ic_quick_settings"
-              android:title="@string/quick_settings_title" />
-          <item
-              android:id="@+id/nav_recents"
-              android:checkable="true"
-              android:icon="@drawable/ic_recents"
-              android:title="@string/recents_panel_title" />
-          <item
-              android:id="@+id/nav_statusbar"
-              android:checkable="true"
-              android:icon="@drawable/ic_statusbar"
-              android:title="@string/statubar_title" />
+                android:icon="@drawable/ic_opacity"
+                android:title="@string/transparency_porn_title" />
+        </menu>
+    </item>
+    <item android:title="@string/various_title">
+        <menu>
             <item
                 android:id="@+id/nav_extensions"
                 android:checkable="true"
