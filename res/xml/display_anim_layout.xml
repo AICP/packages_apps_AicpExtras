@@ -71,4 +71,15 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/other_title">
+
+        <!-- Custom bootanim -->
+        <Preference
+            android:key="custom_bootanimation"
+            android:title="@string/custom_bootanimation_title"
+            android:summary="@string/custom_bootanimation_summary" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
