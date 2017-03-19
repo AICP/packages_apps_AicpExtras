@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="changelog"
+        android:enabled="true"
+        android:icon="@drawable/ic_list"
+        android:shortcutDisabledMessage="@string/static_shortcut_disabled_message"
+        android:shortcutLongLabel="@string/changelog_title"
+        android:shortcutShortLabel="@string/changelog_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.lordclockan.aicpextras.MainActivity"
+            android:targetPackage="com.lordclockan" />
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.lordclockan.aicpextras.ChangelogActivity"
+            android:targetPackage="com.lordclockan" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="gerrit"
+        android:enabled="true"
+        android:icon="@drawable/ic_gerrit"
+        android:shortcutDisabledMessage="@string/static_shortcut_disabled_message"
+        android:shortcutLongLabel="@string/aicp_gerrit_title"
+        android:shortcutShortLabel="@string/aicp_gerrit_title">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://gerrit.aicp-rom.com/#/q/status:open"/>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="gcommunity"
+        android:enabled="true"
+        android:icon="@drawable/ic_gcommunity"
+        android:shortcutDisabledMessage="@string/static_shortcut_disabled_message"
+        android:shortcutLongLabel="@string/g_community"
+        android:shortcutShortLabel="@string/g_community">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://plus.google.com/communities/101008638920580274588"/>
+    </shortcut>
+
+
+</shortcuts>
