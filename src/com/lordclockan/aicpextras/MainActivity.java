@@ -1,10 +1,16 @@
 package com.lordclockan.aicpextras;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ShortcutInfo;
+import android.content.pm.ShortcutManager;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
+import android.graphics.drawable.Icon;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -28,17 +34,20 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.lang.System;
+import java.util.Arrays;
 
 import com.lordclockan.R;
+import com.lordclockan.aicpextras.utils.Helpers;
+import com.lordclockan.aicpextras.utils.Utils;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    static final String TAG = MainActivity.class.getSimpleName();
+
     public static final String INTENT_EXTRA_INIT_FRAGMENT = "init_fragment";
     public static final String INIT_FRAGMENT_HALO = "halo";
-
     private static final String NAV_ITEM_ID = "navItemId";
-    static final String TAG = MainActivity.class.getSimpleName();
 
     private DrawerLayout mDrawer;
     private ActionBarDrawerToggle toggle;
@@ -178,6 +187,8 @@ public class MainActivity extends AppCompatActivity
 
         navigationView.setItemTextColor(navDrawerItemColor());
         navigationView.setItemIconTintList(navDrawerItemColor());
+
+        initShortcutManager();
 
    }
 
@@ -373,5 +384,45 @@ public class MainActivity extends AppCompatActivity
         ColorStateList navigationViewColorStateList = new ColorStateList(states, colors);
 
         return navigationViewColorStateList;
+    }
+
+    private void initShortcutManager() {
+        final ShortcutManager shortcutManager = getSystemService(ShortcutManager.class);
+
+        if (Helpers.isPackageInstalled("com.aicp.aicpota", this.getPackageManager())) {
+            //Intent for launching AICP OTA
+            final Intent INTENT_OTA = new Intent().setComponent(new ComponentName(
+                    "com.aicp.aicpota", "com.aicp.aicpota.MainActivity"));
+            INTENT_OTA.setAction(Intent.ACTION_VIEW);
+
+            ShortcutInfo aicpotaShortcut = new ShortcutInfo.Builder(this, "shortcut_aicpota")
+                    .setShortLabel(getString(R.string.aicp_ota_title))
+                    .setLongLabel(getString(R.string.aicp_ota_title))
+                    .setIcon(Icon.createWithResource(this, R.drawable.ic_aicpota))
+                    .setIntent(INTENT_OTA)
+                    .setRank(0)
+                    .build();
+            shortcutManager.setDynamicShortcuts(Arrays.asList(aicpotaShortcut));
+        } else {
+            ShortcutInfo downloadsShortcut = new ShortcutInfo.Builder(this, "shortcut_downloads")
+                    .setShortLabel(getString(R.string.aicp_downloads_title))
+                    .setLongLabel(getString(R.string.aicp_downloads_title))
+                    .setIcon(Icon.createWithResource(this, R.drawable.ic_download))
+                    .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("http://dwnld.aicp-rom.com/?device=" + Utils.getDevice(this))))
+                    .setRank(0)
+                    .build();
+            shortcutManager.setDynamicShortcuts(Arrays.asList(downloadsShortcut));
+        }
+
+
+        /*ShortcutInfo gCommunityShortcut = new ShortcutInfo.Builder(this, "shortcut_gcommunity")
+                .setShortLabel(R.string.g_community)
+                .setLongLabel(R.string.g_community)
+                .setIcon(Icon.createWithResource(this, R.drawable.ic_gcommunity))
+                .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/communities/101008638920580274588")))
+                .setRank(1)
+                .build();
+
+        shortcutManager.setDynamicShortcuts(Arrays.asList(downloadsShortcut, gCommunityShortcut));*/
     }
 }
