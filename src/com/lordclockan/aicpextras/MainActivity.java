@@ -1,10 +1,14 @@
 package com.lordclockan.aicpextras;
 
 import android.content.Intent;
+import android.content.pm.ShortcutInfo;
+import android.content.pm.ShortcutManager;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
+import android.graphics.drawable.Icon;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -28,17 +32,19 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.lang.System;
+import java.util.Arrays;
 
 import com.lordclockan.R;
+import com.lordclockan.aicpextras.utils.Utils;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    static final String TAG = MainActivity.class.getSimpleName();
+
     public static final String INTENT_EXTRA_INIT_FRAGMENT = "init_fragment";
     public static final String INIT_FRAGMENT_HALO = "halo";
-
     private static final String NAV_ITEM_ID = "navItemId";
-    static final String TAG = MainActivity.class.getSimpleName();
 
     private DrawerLayout mDrawer;
     private ActionBarDrawerToggle toggle;
@@ -178,6 +184,8 @@ public class MainActivity extends AppCompatActivity
 
         navigationView.setItemTextColor(navDrawerItemColor());
         navigationView.setItemIconTintList(navDrawerItemColor());
+
+        initShortcutManager();
 
    }
 
@@ -373,5 +381,29 @@ public class MainActivity extends AppCompatActivity
         ColorStateList navigationViewColorStateList = new ColorStateList(states, colors);
 
         return navigationViewColorStateList;
+    }
+
+    private void initShortcutManager() {
+        final ShortcutManager shortcutManager = getSystemService(ShortcutManager.class);
+
+        ShortcutInfo downloadsShortcut = new ShortcutInfo.Builder(this, "shortcut_downloads")
+                .setShortLabel(getString(R.string.aicp_downloads_title))
+                .setLongLabel(getString(R.string.aicp_downloads_title))
+                .setIcon(Icon.createWithResource(this, R.drawable.ic_download))
+                .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("http://dwnld.aicp-rom.com/?device=" + Utils.getDevice(this))))
+                .setRank(0)
+                .build();
+
+        /*ShortcutInfo gCommunityShortcut = new ShortcutInfo.Builder(this, "shortcut_gcommunity")
+                .setShortLabel(R.string.g_community)
+                .setLongLabel(R.string.g_community)
+                .setIcon(Icon.createWithResource(this, R.drawable.ic_gcommunity))
+                .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/communities/101008638920580274588")))
+                .setRank(1)
+                .build();
+
+        shortcutManager.setDynamicShortcuts(Arrays.asList(downloadsShortcut, gCommunityShortcut));*/
+
+        shortcutManager.setDynamicShortcuts(Arrays.asList(downloadsShortcut));
     }
 }
