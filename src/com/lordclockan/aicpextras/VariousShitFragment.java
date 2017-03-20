@@ -24,6 +24,7 @@ import android.view.View;
 
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.utils.Helpers;
+import com.lordclockan.aicpextras.utils.Utils;
 import com.lordclockan.aicpextras.widget.NumberPickerPreference;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
@@ -49,6 +50,7 @@ public class VariousShitFragment extends Fragment {
         private static final int MIN_DELAY_VALUE = 1;
         private static final int MAX_DELAY_VALUE = 30;
 
+        private static final String PREF_INCALL_DND = "dnd_when_call";
         private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
         private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
         private static final String SCREENSHOT_TYPE = "screenshot_type";
@@ -71,6 +73,7 @@ public class VariousShitFragment extends Fragment {
         private ListPreference mScrollingCachePref;
         private SeekBarPreferenceCham mVolumeDialogTimeout;
         private Preference mLockClockSettings;
+        private SwitchPreference mInCallDND;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -123,6 +126,11 @@ public class VariousShitFragment extends Fragment {
             mLockClockSettings = (Preference) prefSet.findPreference(LOCKCLOCK_START_SETTINGS);
             if (!Helpers.isPackageInstalled(LOCKCLOCK_PACKAGE_NAME, pm)) {
                 prefSet.removePreference(mLockClockSettings);
+            }
+
+            mInCallDND = (SwitchPreference) prefSet.findPreference(PREF_INCALL_DND);
+            if (!Utils.isVoiceCapable(getActivity())) {
+                prefSet.removePreference(mInCallDND);
             }
         }
 
