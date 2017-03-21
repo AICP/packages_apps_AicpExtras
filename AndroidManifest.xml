@@ -180,6 +180,11 @@
             android:label="@string/hide_apps_from_recents_title">
         </activity>
         <activity
+            android:name=".aicpextras.SuspendActions"
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/screen_state_toggles_title">
+        </activity>
+        <activity
             android:name=".aicpextras.HiddenAnimActivity"
             android:label="@string/hidden_anim_activity_title"
             android:theme="@style/PreferenceTheme"
