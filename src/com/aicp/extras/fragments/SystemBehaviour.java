@@ -39,8 +39,11 @@ public class SystemBehaviour extends BaseSettingsFragment
 
     private static final String SELINUX_CATEGORY = "selinux";
 
+    private static final String PREF_SUSPEND_ACTIONS = "suspend_actions";
+
     private SwitchPreference mSelinuxMode;
     private SwitchPreference mSelinuxPersistence;
+    private Preference mSuspendActions;
 
     @Override
     protected int getPreferenceResource() {
@@ -64,6 +67,17 @@ public class SystemBehaviour extends BaseSettingsFragment
                 .contains(Constants.PREF_SELINUX_MODE));
         Util.requireRoot(selinuxCategory);
     }
+
+        @Override
+        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+           if (preference == mSuspendActions) {
+                Intent intent = new Intent(getActivity(), SuspendActions.class);
+                getActivity().startActivity(intent);
+            } else {
+                return super.onPreferenceTreeClick(preferenceScreen, preference);
+            }
+            return true;
+        }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
