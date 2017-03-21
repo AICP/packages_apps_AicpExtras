@@ -3,6 +3,7 @@ package com.lordclockan.aicpextras;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,13 +36,20 @@ class ChangeLogAdapter extends RecyclerView.Adapter<ChangeLogAdapter.ViewHolder>
 
         commitID.setText(changelogItem.getCommit_id());
         if (changelogItem.getCommit_message() != null) {
+            commitID.setTextAlignment(View.TEXT_ALIGNMENT_INHERIT);
+            commitMessage.setVisibility(View.VISIBLE);
             commitMessage.setText(changelogItem.getCommit_message());
             commitID.setTextColor(getContext().getResources().getColor(R.color.colorWhite));
-            commitID.setTextSize(16);
+            commitID.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                    getContext().getResources().getDimension(R.dimen.changelog_header_small));
             commitID.setTypeface(Typeface.DEFAULT_BOLD);
         } else {
             commitID.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             commitMessage.setVisibility(View.GONE);
+            commitID.setTextColor(getContext().getResources().getColor(R.color.colorAccent));
+            commitID.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                    getContext().getResources().getDimension(R.dimen.changelog_header_big));
+            commitID.setTypeface(Typeface.DEFAULT);
         }
     }
 
