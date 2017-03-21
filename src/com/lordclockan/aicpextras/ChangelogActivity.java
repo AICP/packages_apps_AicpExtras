@@ -40,7 +40,6 @@ public class ChangelogActivity extends AppCompatActivity {
         imageView.setImageDrawable(getResources().getDrawable(R.drawable.aicp_wall));
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.changelog);
-        recyclerView.setNestedScrollingEnabled(false);
         recyclerView.setHasFixedSize(true);
         ArrayList<ChangelogItem> changeLogArray = new ArrayList<>();
 
@@ -112,7 +111,6 @@ public class ChangelogActivity extends AppCompatActivity {
 
         ChangeLogAdapter adapter = new ChangeLogAdapter(this, changeLogArray);
         recyclerView.setAdapter(adapter);
-        recyclerView.setNestedScrollingEnabled(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
