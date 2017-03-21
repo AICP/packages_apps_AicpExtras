@@ -106,4 +106,9 @@
         android:title="@string/locksclock_settings_title"
         android:summary="@string/locksclock_settings_summary" />
 
+    <!-- Suspend actions -->
+    <Preference
+        android:key="suspend_actions"
+        android:title="@string/screen_state_toggles_title" />
+
 </PreferenceScreen>
