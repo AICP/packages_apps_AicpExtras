@@ -52,6 +52,11 @@
         </activity>
 
         <activity
+            android:name=".SuspendActions"
+            android:theme="@style/PreferenceTheme"
+            android:label="@string/screen_state_toggles_title">
+        </activity>
+        <activity
             android:name=".HiddenAnimActivity"
             android:label="@string/hidden_anim_activity_title"
             android:excludeFromRecents="true" />
