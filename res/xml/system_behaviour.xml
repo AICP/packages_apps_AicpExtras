@@ -22,6 +22,11 @@
     xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     android:title="@string/system_behaviour_title">
 
+    <PreferenceScreen
+        android:key="suspend_actions"
+        android:title="@string/screen_state_toggles_title"
+        android:fragment="com.aicp.extras.fragments.SuspendActions" />
+
     <!-- SELinux -->
     <PreferenceCategory
         android:key="selinux"
