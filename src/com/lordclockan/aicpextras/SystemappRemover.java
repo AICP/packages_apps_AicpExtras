@@ -203,10 +203,11 @@ public class SystemappRemover extends Activity {
                                         int id) {
                                     // action for ok
                                     // call delete
-                                    new SystemappRemover.Deleter().execute(item);
-                                      // remove list entry
-                                      adapter.remove(item);
-                                      adapter.notifyDataSetChanged();
+                                    if (startDelete(item)) {
+                                        // remove list entry
+                                        adapter.remove(item);
+                                        adapter.notifyDataSetChanged();
+                                    }
                                 }
                             })
                     .setNegativeButton(R.string.cancel,
@@ -228,15 +229,19 @@ public class SystemappRemover extends Activity {
                                     SparseBooleanArray checked = lv.getCheckedItemPositions();
                                     for (int i = lv.getCount() - 1; i > 0; i--) {
                                         if (checked.get(i)) {
-                                              String appName = mSysApp.get(i);
-                                              itemsList.add(appName);
-                                              // remove list entry
-                                              lv.setItemChecked(i, false);
-                                              adapter.remove(appName);
+                                                String appName = mSysApp.get(i);
+                                                itemsList.add(appName);
+                                                // remove list entry pt.1
+                                                lv.setItemChecked(i, false);
                                         }
                                     }
-                                   adapter.notifyDataSetChanged();
-                                      new SystemappRemover.Deleter().execute(itemsList.toArray(new String[itemsList.size()]));
+                                    if (startDelete(itemsList.toArray(new String[itemsList.size()]))) {
+                                        for (String appName: itemsList) {
+                                            // remove list entry pt.2
+                                            adapter.remove(appName);
+                                        }
+                                        adapter.notifyDataSetChanged();
+                                    }
                                 }
                             })
                     .setNegativeButton(R.string.cancel,
@@ -304,13 +309,17 @@ public class SystemappRemover extends Activity {
                                     // delete all entries in deleteList
                                      ArrayList<String> itemsList = new ArrayList<String>();
                                      for (int i = deleteList.size() - 1; i > 0; i--) {
-                                        String item = deleteList.get(i);
+                                         String item = deleteList.get(i);
                                          itemsList.add(item);
-                                         // remove list entry
-                                         adapter.remove(item);
                                     }
-                                    adapter.notifyDataSetChanged();
                                     new SystemappRemover.Deleter().execute(itemsList.toArray(new String[itemsList.size()]));
+                                    if (startDelete(itemsList.toArray(new String[itemsList.size()]))) {
+                                        for (String item: itemsList) {
+                                            // remove list entry
+                                            adapter.remove(item);
+                                        }
+                                        adapter.notifyDataSetChanged();
+                                    }
                                 } catch (FileNotFoundException e) {
                                     // TODO Auto-generated catch block
                                     e.printStackTrace();
@@ -399,6 +408,18 @@ public class SystemappRemover extends Activity {
             SuShell.runWithSu("mount -o remount,ro /system");
     }
 
+    private boolean startDelete(String... params) {
+        try {
+            // Check for SU
+            SuShell.runWithSuCheck();
+        } catch (SuShell.SuDeniedException e) {
+            toast(getString(R.string.cannot_get_su_start));
+            return false;
+        }
+        new SystemappRemover.Deleter().execute(params);
+        return true;
+    }
+
     public class Deleter extends AsyncTask<String, String, Void> {
 
         private ProgressDialog progress;
@@ -407,8 +428,7 @@ public class SystemappRemover extends Activity {
         protected void onPreExecute() {
             super.onPreExecute();
             if (dos == null) {
-		    SuShell.runWithSu("mount -o remount,rw /system");
-
+                SuShell.runWithSu("mount -o remount,rw /system");
             }
             progress = new ProgressDialog(SystemappRemover.this);
             progress.setTitle(getString(R.string.delete_progress_title));

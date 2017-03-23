@@ -126,80 +126,86 @@ public class LogThatShitFragment extends Fragment {
                 }
             } else if (preference == mAicpLogIt) {
                 checkedPreferenceValues();
-                switch (value) {
-                    case 1:
-                        makeLogcat();
-                        try {
-                            sharingIntentString = "Logcat: " + Helpers.readStringFromFile(logcatHasteKey);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case 4:
-                        makeKmsg();
-                        try {
-                            sharingIntentString = "Kmsg: " + Helpers.readStringFromFile(kmsgHasteKey);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case 8:
-                        makeDmesg();
-                        try {
-                            sharingIntentString = "Dmesg: " + Helpers.readStringFromFile(dmesgHasteKey);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case 5:
-                        makeLogcat();
-                        makeKmsg();
-                        try {
-                            sharingIntentString = "Logcat: " + Helpers.readStringFromFile(logcatHasteKey) +
-                                    "\nKmsg: " + Helpers.readStringFromFile(kmsgHasteKey);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case 9:
-                        makeLogcat();
-                        makeDmesg();
-                        try {
-                            sharingIntentString = "Logcat: " + Helpers.readStringFromFile(logcatHasteKey) +
-                                    "\nDmesg: " + Helpers.readStringFromFile(dmesgHasteKey);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case 13:
-                        makeLogcat();
-                        makeKmsg();
-                        makeDmesg();
-                        try {
-                            sharingIntentString = "Logcat: " + Helpers.readStringFromFile(logcatHasteKey) +
-                                    "\nKmsg: " + Helpers.readStringFromFile(kmsgHasteKey) +
-                                    "\nDmesg: " + Helpers.readStringFromFile(dmesgHasteKey);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case 12:
-                        makeKmsg();
-                        makeDmesg();
-                        try {
-                            sharingIntentString = "Kmsg: " + Helpers.readStringFromFile(kmsgHasteKey) +
-                                    "\nDmesg: " + Helpers.readStringFromFile(dmesgHasteKey);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    default:
-                        Toast.makeText(getActivity(), "What??", Toast.LENGTH_LONG).show();
-                        break;
+                try {
+                    switch (value) {
+                        case 1:
+                            makeLogcat();
+                            try {
+                                sharingIntentString = "Logcat: " + Helpers.readStringFromFile(logcatHasteKey);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            break;
+                        case 4:
+                            makeKmsg();
+                            try {
+                                sharingIntentString = "Kmsg: " + Helpers.readStringFromFile(kmsgHasteKey);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            break;
+                        case 8:
+                            makeDmesg();
+                            try {
+                                sharingIntentString = "Dmesg: " + Helpers.readStringFromFile(dmesgHasteKey);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            break;
+                        case 5:
+                            makeLogcat();
+                            makeKmsg();
+                            try {
+                                sharingIntentString = "Logcat: " + Helpers.readStringFromFile(logcatHasteKey) +
+                                        "\nKmsg: " + Helpers.readStringFromFile(kmsgHasteKey);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            break;
+                        case 9:
+                            makeLogcat();
+                            makeDmesg();
+                            try {
+                                sharingIntentString = "Logcat: " + Helpers.readStringFromFile(logcatHasteKey) +
+                                        "\nDmesg: " + Helpers.readStringFromFile(dmesgHasteKey);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            break;
+                        case 13:
+                            makeLogcat();
+                            makeKmsg();
+                            makeDmesg();
+                            try {
+                                sharingIntentString = "Logcat: " + Helpers.readStringFromFile(logcatHasteKey) +
+                                        "\nKmsg: " + Helpers.readStringFromFile(kmsgHasteKey) +
+                                        "\nDmesg: " + Helpers.readStringFromFile(dmesgHasteKey);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            break;
+                        case 12:
+                            makeKmsg();
+                            makeDmesg();
+                            try {
+                                sharingIntentString = "Kmsg: " + Helpers.readStringFromFile(kmsgHasteKey) +
+                                        "\nDmesg: " + Helpers.readStringFromFile(dmesgHasteKey);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            break;
+                        default:
+                            Toast.makeText(getActivity(), "What??", Toast.LENGTH_LONG).show();
+                            break;
+                    }
+                } catch (SuShell.SuDeniedException e) {
+                    Toast.makeText(getActivity(), getString(R.string.cannot_get_su_start), Toast.LENGTH_SHORT).show();
+                    return true;
                 }
                 if (value != 0) {
                     logItDialog();
                 }
+                return true;
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
@@ -226,16 +232,16 @@ public class LogThatShitFragment extends Fragment {
             alertDialog.show();
         }
 
-        public void makeLogcat() {
-            SuShell.runWithSu("logcat -d > " + LOGCAT_FILE +  "&& curl -s -X POST -T " + LOGCAT_FILE + " " + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_LOGCAT_KEY);
+        public void makeLogcat() throws SuShell.SuDeniedException {
+            SuShell.runWithSuCheck("logcat -d > " + LOGCAT_FILE +  "&& curl -s -X POST -T " + LOGCAT_FILE + " " + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_LOGCAT_KEY);
         }
 
-        public void makeKmsg() {
-            SuShell.runWithSu("cat /proc/last_kmsg > " + KMSG_FILE +  "&& curl -s -X POST -T " + KMSG_FILE + " " + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_KMSG_KEY);
+        public void makeKmsg() throws SuShell.SuDeniedException {
+            SuShell.runWithSuCheck("cat /proc/last_kmsg > " + KMSG_FILE +  "&& curl -s -X POST -T " + KMSG_FILE + " " + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_KMSG_KEY);
         }
 
-        public void makeDmesg() {
-            SuShell.runWithSu("dmesg > " + DMESG_FILE +  "&& curl -s -X POST -T " + DMESG_FILE + " " + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_DMESG_KEY);
+        public void makeDmesg() throws SuShell.SuDeniedException {
+            SuShell.runWithSuCheck("dmesg > " + DMESG_FILE +  "&& curl -s -X POST -T " + DMESG_FILE + " " + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_DMESG_KEY);
         }
 
         public void checkedPreferenceValues() {
