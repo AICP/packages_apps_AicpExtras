@@ -396,20 +396,17 @@ public class SystemappRemover extends Activity {
 
     // mount /system as ro on close
     protected void onStop(Bundle savedInstanceState) throws IOException {
-            SuShell.runWithSu("mount -o remount,ro /system");
+        SuShell.runWithSu("mount -o remount,ro /system");
     }
 
     public class Deleter extends AsyncTask<String, String, Void> {
 
         private ProgressDialog progress;
+        private Exception mException = null;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            if (dos == null) {
-		    SuShell.runWithSu("mount -o remount,rw /system");
-
-            }
             progress = new ProgressDialog(SystemappRemover.this);
             progress.setTitle(getString(R.string.delete_progress_title));
             progress.setMessage(getString(R.string.delete_progress));
@@ -417,6 +414,14 @@ public class SystemappRemover extends Activity {
         }
 
         protected Void doInBackground(String... params) {
+            if (dos == null) {
+                try {
+                    SuShell.runWithSuCheck("mount -o remount,rw /system");
+                } catch (SuShell.SuDeniedException e) {
+                    mException = e;
+                    return null;
+                }
+            }
             for (String appName : params) {
                 String basePath = systemPath;
                 File app = new File(basePath + appName);
@@ -425,7 +430,12 @@ public class SystemappRemover extends Activity {
                            basePath = systemPrivPath;
                     }
                     File app2rm = new File(basePath + appName);
-                    SuShell.runWithSu("rm -Rf " + app2rm + "\n" );
+                    try {
+                        SuShell.runWithSuCheck("rm -Rf " + app2rm + "\n");
+                    } catch (SuShell.SuDeniedException e) {
+                        mException = e;
+                        return null;
+                    }
             }
             return null;
         }
@@ -434,6 +444,12 @@ public class SystemappRemover extends Activity {
         protected void onPostExecute(Void param) {
             super.onPreExecute();
             progress.dismiss();
+            if (mException instanceof SuShell.SuDeniedException) {
+                Toast.makeText(getApplicationContext(),
+                        getString(R.string.cannot_get_su_start), Toast.LENGTH_LONG).show();
+                // Restart activity to reload list
+                recreate();
+            }
         }
     }
 }
