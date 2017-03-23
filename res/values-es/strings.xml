@@ -48,7 +48,7 @@
     <string name="hidden_anim_more_nice">AGRADABLE</string>
     <string name="continue_title">Continuar</string>
     <string name="settings_activity_title">Ajustes de Extras AICP</string>
-    <string name="recents_panel_title">Panel de aps. recientes</string>
+    <string name="recents_panel_title">Panel recientes</string>
     <string name="quick_settings_title">Ajustes rápidos</string>
 
     <string name="nothing_title">Nada que ver aquí por ahora.</string>
@@ -853,5 +853,72 @@
     <string name="shortcut_action_recent">Aps. recientes</string>
     <string name="shortcut_action_power">Apagar pantalla</string>
     <string name="shortcut_action_search">Búsqueda en ap.</string>
+
+    <!-- Notification guts kill app button -->
+    <string name="notification_guts_kill_app_button_title">Botón cerrar aplicación</string>
+    <string name="notification_guts_kill_app_button_summary">Muestra el botón de cerrar aplicación en el menú de pulsación prolongada</string>
+
+    <!-- Custom bootanim -->
+    <string name="custom_bootanimation_title">Animación de inicio</string>
+    <string name="custom_bootanimation_select_title">Elegir animación de inicio</string>
+    <string name="custom_bootanimation_summary">Al cambiarla, se hace una copia de la animación actual en sdcard/AICP_ota con la fecha actual. Estas copias se tienen que borrar de forma manual si no son necesarias.</string>
+    <string name="bootanimation_preview">Previsualización de la animación</string>
+    <string name="set_custom_bootanimation">Establecer personalizada...</string>
+    <string name="creating_preview">Creando precisualización...</string>
+    <string name="error_reading_zip_file">Error al leer el fichero zip</string>
+    <string name="error_creating_preview">Error al crear la previsualización</string>
+    <string name="install_file_manager_error">No se encontró ninguna aplicación para elegir el fichero zip. Instalar un explorador de ficheros.</string>
+    <string name="apply">Aplicar</string>
+
+    <!-- Circle app bar -->
+    <string name="category_app_circle_bar_title">Lanzador de aps.</string>
+    <string name="app_circle_bar_title">Barra circular de aps.</string>
+    <string name="app_circle_bar_summary">Muestra un lanzador de aps. circular al tocar el lado derecho de la pantalla</string>
+    <string name="app_circle_bar_included_apps_title">Aplicaciones incluidas</string>
+    <string name="app_circle_bar_included_apps_summary">Las aplicaciones se mostrarán en la barra circular</string>
+    <string name="trigger_width_title">Anchura del disparador</string>
+    <string name="trigger_width_summary">Ajusta la anchura del área del disparador</string>
+    <string name="trigger_top_title">Posición del disparador</string>
+    <string name="trigger_top_summary">Ajusta la posición vertical del área del disparador</string>
+    <string name="trigger_bottom_title">Altura del disparador</string>
+    <string name="trigger_bottom_summary">Ajusta la altura del área del disparador</string>
+
+    <!-- Disabling FC notifications -->
+    <string name="disable_fc_notifications_title">Deshabilitar notificaciones de FC</string>
+    <string name="disable_fc_notifications_summary">Esto ocultará todas las notificaciones de cierre inesperados de las aps</string>
+
+    <!-- Scrolling Cache -->
+    <string name="pref_scrollingcache_title">Caché de desplazamiento</string>
+    <string name="pref_scrollingcache_summary">La velocidad de desplazamiento aumentará pero se usará más memoria</string>
+    <string name="pref_scrollingcache_force_enable">Habilitado forzado</string>
+    <string name="pref_scrollingcache_default_enable">Habilitado predeterminado</string>
+    <string name="pref_scrollingcache_default_disable">Deshabilitado predeterminado</string>
+    <string name="pref_scrollingcache_force_disable">Deshabilitado forzado</string>
+
+    <!-- Volume dialog timeout -->
+    <string name="volume_dialog_timeout_title">Tiempo de espera panel de volumen</string>
+
+    <!-- LockClock settings -->
+    <string name="locksclock_settings_title">Ajustes de LockClock</string>
+    <string name="locksclock_settings_summary">Acceso directo a los ajustes de LockClock.</string>
+
+    <!-- OmniJaws -->
+    <string name="weather_title">Clima</string>
+    <string name="weather_config_title">Configuración del ajuste rápido del clima</string>
+
+    <!-- StatusBar weather settings -->
+    <string name="statusbar_weather_title">Clima en barra de estado</string>
+    <string name="statusbar_weather_summary">Configurar desde ajustes rápidos/Clima.</string>
+    <string name="statusbar_weather_dialog_title">Estilo del clima en barra de estado</string>
+    <string name="status_bar_weather_hidden">Clima oculto</string>
+    <string name="status_bar_temperature_image_show_scale">Mostrar la temperatura con escala e imágen</string>
+    <string name="status_bar_temperature_image_hide_scale">Mostrar temperatura con imágen sin escala</string>
+    <string name="status_bar_temperature_show_scale_hide_image">Mostrar temperatura con escala</string>
+    <string name="status_bar_temperature_hide_scale_hide_image">Mostrar temperatura sin escala</string>
+    <string name="status_bar_show_image">Mostrar imágen</string>
+
+    <!-- Confirm Power Off selection on Power menu-->
+    <string name="confirm_shutdown_switch_title">Ventana de confirmación de apagado</string>
+    <string name="confirm_shutdown_switch_desc">Cuando se apaga el teléfono desde el menú de apagado aparecerá una ventana de confirmación</string>
 
 </resources>
