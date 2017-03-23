@@ -3,6 +3,7 @@ package com.lordclockan.aicpextras.utils;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -25,6 +26,7 @@ import java.io.IOException;
 import java.util.Date;
 
 import com.lordclockan.R;
+import com.lordclockan.aicpextras.SuShell;
 
 public class Helpers {
     // avoids hardcoding the tag
@@ -34,8 +36,8 @@ public class Helpers {
         // dummy constructor
     }
 
-    public static void restartSystemUI() {
-        CMDProcessor.startSuCommand("pkill -f com.android.systemui");
+    public static void restartSystemUI(Context context) {
+        new RestartSystemUITask().execute(context);
     }
 
     public static void showSystemUIrestartDialog(Activity a) {
@@ -45,17 +47,19 @@ public class Helpers {
         builder.setPositiveButton(R.string.print_restart,
                 new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
+                RestartSystemUITask task = new RestartSystemUITask() {
+                    private ProgressDialog dialog;
                     @Override
                     protected void onPreExecute() {
-                        ProgressDialog dialog = new ProgressDialog(a);
+                        super.onPreExecute();
+                        dialog = new ProgressDialog(a);
                         dialog.setMessage(a.getResources().getString(R.string.restarting_ui));
                         dialog.setCancelable(false);
                         dialog.setIndeterminate(true);
                         dialog.show();
                     }
                     @Override
-                    protected Void doInBackground(Void... params) {
+                    protected Void doInBackground(Context... params) {
                         // Give the user a second to see the dialog
                         try {
                             Thread.sleep(1000);
@@ -64,16 +68,50 @@ public class Helpers {
                         }
 
                         // Restart the UI
-                        CMDProcessor.startSuCommand("pkill -f com.android.systemui");
-                        a.finish();
+                        super.doInBackground(params);
                         return null;
                     }
+                    @Override
+                    protected void onPostExecute(Void param) {
+                        super.onPostExecute(param);
+                        dialog.dismiss();
+                    }
                 };
-                task.execute();
+                task.execute(a);
             }
         });
         builder.setNegativeButton(android.R.string.cancel, null);
         builder.show();
+    }
+
+    private static class RestartSystemUITask extends AsyncTask<Context, Void, Void> {
+        private Context mContext;
+        private Exception mException;
+        @Override
+        protected Void doInBackground(Context... params) {
+            if (params.length > 0) {
+                mContext = params[0].getApplicationContext();
+            }
+            try {
+                SuShell.runWithSuCheck("pkill -f com.android.systemui");
+            } catch (SuShell.SuDeniedException e) {
+                mException = e;
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void param) {
+            super.onPreExecute();
+            if (mException instanceof SuShell.SuDeniedException) {
+                if (mContext != null) {
+                    Toast.makeText(mContext, mContext.getString(R.string.systemui_restart_missing_su),
+                            Toast.LENGTH_LONG).show();
+                } else {
+                    Log.e(TAG, "Could not restart systemui due to missing SU permission");
+                }
+            }
+        }
     }
 
     public static boolean isPackageInstalled(String packageName, PackageManager pm) {

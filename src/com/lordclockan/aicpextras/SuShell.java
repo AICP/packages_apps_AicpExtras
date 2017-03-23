@@ -1,7 +1,6 @@
 
 package com.lordclockan.aicpextras;
 
-import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.util.Log;
@@ -26,37 +25,36 @@ public class SuShell {
     private SuShell() {
     }
 
-    public static boolean canGainSu(Context context) {
+    public static ArrayList<String> runWithSuCheck(String... commands) throws SuDeniedException {
         String suTestScript = "#!/system/bin/sh\necho ";
         String suTestScriptValid = "AICPSuPermsOk";
 
-        ArrayList<String> output = run("su", suTestScript + suTestScriptValid);
-        if (output.size() == 1
+        String[] commandsWithCheck = new String[commands.length+1];
+        commandsWithCheck[0] = suTestScript + suTestScriptValid;
+        System.arraycopy(commands, 0, commandsWithCheck, 1, commands.length);
+
+        ArrayList<String> output = runWithSu(commandsWithCheck);
+        if (output.size() >= 1
                 && output.get(0).trim().equals(suTestScriptValid)) {
             if (DEBUG) {
                 Log.d(TAG, "Superuser command auth confirmed");
             }
-            return true;
+            output.remove(0);
+            return output;
         } else {
             if (DEBUG) {
                 Log.d(TAG, "Superuser command auth refused");
             }
-            return false;
+            throw new SuDeniedException();
         }
     }
 
-    public static ArrayList<String> runWithShell(String command) {
+    public static ArrayList<String> runWithShell(String... command) {
         return run("/system/bin/sh", command);
     }
 
-    public static ArrayList<String> runWithSu(String command) {
+    public static ArrayList<String> runWithSu(String... command) {
         return run("su", command);
-    }
-
-    public static ArrayList<String> run(String shell, String command) {
-        return run(shell, new String[] {
-                command
-        });
     }
 
     public static ArrayList<String> run(String shell, ArrayList<String> commands) {
@@ -65,7 +63,7 @@ public class SuShell {
         return run(shell, commandsArray);
     }
 
-    public static ArrayList<String> run(String shell, String[] commands) {
+    public static ArrayList<String> run(String shell, String... commands) {
         ArrayList<String> output = new ArrayList<String>();
 
         try {
@@ -163,4 +161,5 @@ public class SuShell {
         return false;
     }
 
+    public static class SuDeniedException extends Exception {};
 }
