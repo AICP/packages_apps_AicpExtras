@@ -63,6 +63,7 @@ public class VariousShitFragment extends Fragment {
         private static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
         private static Intent INTENT_LOCKCLOCK_SETTINGS = new Intent(Intent.ACTION_MAIN)
                 .setClassName(LOCKCLOCK_PACKAGE_NAME, LOCKCLOCK_PACKAGE_NAME + ".preference.Preferences");
+        private static final String PREF_SUSPEND_ACTIONS = "suspend_actions";
 
         private SwitchPreference mCameraSounds;
         private ListPreference mMsob;
@@ -71,6 +72,7 @@ public class VariousShitFragment extends Fragment {
         private ListPreference mScrollingCachePref;
         private SeekBarPreferenceCham mVolumeDialogTimeout;
         private Preference mLockClockSettings;
+        private Preference mSuspendActions;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -124,6 +126,8 @@ public class VariousShitFragment extends Fragment {
             if (!Helpers.isPackageInstalled(LOCKCLOCK_PACKAGE_NAME, pm)) {
                 prefSet.removePreference(mLockClockSettings);
             }
+
+            mSuspendActions = (Preference) prefSet.findPreference(PREF_SUSPEND_ACTIONS);
         }
 
         @Override
@@ -179,6 +183,9 @@ public class VariousShitFragment extends Fragment {
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
             if (preference == mLockClockSettings) {
                 startActivity(INTENT_LOCKCLOCK_SETTINGS);
+            } else if (preference == mSuspendActions) {
+                Intent intent = new Intent(getActivity(), SuspendActions.class);
+                getActivity().startActivity(intent);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
