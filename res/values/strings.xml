@@ -233,7 +233,6 @@
     <string name="double_tap_sleep_anywhere_summary_off">Double tap lock screen to put the device to sleep disabled</string>
 
     <!-- SU -->
-    <string name="cannot_get_su">Cannot get superuser access, exiting.</string>
     <string name="cannot_get_su_start">Cannot get superuser access.</string>
 
     <!-- Aicp logcat -->
@@ -458,6 +457,7 @@
     <!-- SystemUI restart prompt -->
     <string name="systemui_restart_title">WARNING</string>
     <string name="systemui_restart_message">SystemUI will be restarted so that selected setting can be applied correctly.</string>
+    <string name="systemui_restart_missing_su">SystemUI restart failed due to missing superuser access, please restart manually</string>
 
     <!-- Status Bar Ticker -->
     <string name="ticker_screen_title">Ticker</string>

@@ -12,6 +12,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.Point;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -59,8 +60,6 @@ import java.util.zip.ZipFile;
 
 
 import com.lordclockan.R;
-import com.lordclockan.aicpextras.utils.AbstractAsyncSuCMDProcessor;
-import com.lordclockan.aicpextras.utils.CMDProcessor;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -548,15 +547,39 @@ public class DisplayAnimationsActivity extends Fragment {
             DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy_HHmmss");
             Date date = new Date();
             String current = (dateFormat.format(date));
-            new AbstractAsyncSuCMDProcessor() {
-                @Override
-                protected void onPostExecute(String result) {
+            new InstallBootAnimTask().execute(current, bootAnimationPath);
+        }
+
+        private class InstallBootAnimTask extends AsyncTask<String, Void, Void> {
+            private Exception mException = null;
+
+            @Override
+            protected Void doInBackground(String... params) {
+                if (params.length != 2) {
+                    Log.e(TAG, "InstallBootAnimTask: invalid params count");
+                    return null;
                 }
-            }.execute("mount -o rw,remount /system",
-                    "cp -f /system/media/bootanimation.zip " + BACKUP_PATH + "/bootanimation_backup_" + current + ".zip",
-                    "cp -f " + bootAnimationPath + " /system/media/bootanimation.zip",
-                    "chmod 644 /system/media/bootanimation.zip",
-                    "mount -o ro,remount /system");
+                String current = params[0];
+                String bootAnimationPath = params[1];
+                try {
+                    SuShell.runWithSuCheck("mount -o rw,remount /system",
+                            "cp -f /system/media/bootanimation.zip " + BACKUP_PATH + "/bootanimation_backup_" + current + ".zip",
+                            "cp -f " + bootAnimationPath + " /system/media/bootanimation.zip",
+                            "chmod 644 /system/media/bootanimation.zip",
+                            "mount -o ro,remount /system");
+                } catch (SuShell.SuDeniedException e) {
+                    mException = e;
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void param) {
+                super.onPreExecute();
+                if (mException instanceof SuShell.SuDeniedException) {
+                    Toast.makeText(getActivity(), getString(R.string.cannot_get_su_start), Toast.LENGTH_LONG).show();
+                }
+            }
         }
     }
 }
