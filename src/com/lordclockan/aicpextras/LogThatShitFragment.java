@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.SystemClock;
@@ -16,6 +17,7 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.io.File;
@@ -29,6 +31,8 @@ import com.lordclockan.aicpextras.utils.Utils;
 import com.lordclockan.aicpextras.SuShell;
 
 public class LogThatShitFragment extends Fragment {
+
+    private static final String TAG = LogThatShitFragment.class.getSimpleName();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -75,14 +79,10 @@ public class LogThatShitFragment extends Fragment {
         private static final File kmsgHasteKey = new File(sdCardDirectory, "aicp_haste_kmsg_key");
 
         private CheckBoxPreference mLogcat;
-        private int logcat = 0;
         private CheckBoxPreference mKmsg;
-        private int kmsg = 0;
         private CheckBoxPreference mDmesg;
-        private int dmesg = 0;
         private Preference mAicpLogIt;
 
-        private int value = 0;
         private String sharingIntentString;
 
         @Override
@@ -106,105 +106,12 @@ public class LogThatShitFragment extends Fragment {
 
         @Override
         public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-            if (preference == mLogcat) {
-                if (mLogcat.isChecked()) {
-                    logcat = 1;
-                } else {
-                    logcat = 0;
-                }
-            } else if (preference == mKmsg) {
-                if (mKmsg.isChecked()) {
-                    kmsg = 4;
-                } else {
-                    kmsg = 0;
-                }
-            } else if (preference == mDmesg) {
-                if (mDmesg.isChecked()) {
-                    dmesg = 8;
-                } else {
-                    dmesg = 0;
-                }
-            } else if (preference == mAicpLogIt) {
-                checkedPreferenceValues();
-                switch (value) {
-                    case 1:
-                        makeLogcat();
-                        try {
-                            sharingIntentString = "Logcat: " + Helpers.readStringFromFile(logcatHasteKey);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case 4:
-                        makeKmsg();
-                        try {
-                            sharingIntentString = "Kmsg: " + Helpers.readStringFromFile(kmsgHasteKey);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case 8:
-                        makeDmesg();
-                        try {
-                            sharingIntentString = "Dmesg: " + Helpers.readStringFromFile(dmesgHasteKey);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case 5:
-                        makeLogcat();
-                        makeKmsg();
-                        try {
-                            sharingIntentString = "Logcat: " + Helpers.readStringFromFile(logcatHasteKey) +
-                                    "\nKmsg: " + Helpers.readStringFromFile(kmsgHasteKey);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case 9:
-                        makeLogcat();
-                        makeDmesg();
-                        try {
-                            sharingIntentString = "Logcat: " + Helpers.readStringFromFile(logcatHasteKey) +
-                                    "\nDmesg: " + Helpers.readStringFromFile(dmesgHasteKey);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case 13:
-                        makeLogcat();
-                        makeKmsg();
-                        makeDmesg();
-                        try {
-                            sharingIntentString = "Logcat: " + Helpers.readStringFromFile(logcatHasteKey) +
-                                    "\nKmsg: " + Helpers.readStringFromFile(kmsgHasteKey) +
-                                    "\nDmesg: " + Helpers.readStringFromFile(dmesgHasteKey);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    case 12:
-                        makeKmsg();
-                        makeDmesg();
-                        try {
-                            sharingIntentString = "Kmsg: " + Helpers.readStringFromFile(kmsgHasteKey) +
-                                    "\nDmesg: " + Helpers.readStringFromFile(dmesgHasteKey);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                    default:
-                        Toast.makeText(getActivity(), "What??", Toast.LENGTH_LONG).show();
-                        break;
-                }
-                if (value != 0) {
-                    logItDialog();
-                }
+            if (preference == mAicpLogIt) {
+                new CreateLogTask().execute(mLogcat.isChecked(), mKmsg.isChecked(), mDmesg.isChecked());
+                return true;
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
-
-            return false;
         }
 
         public void logItDialog() {
@@ -226,30 +133,69 @@ public class LogThatShitFragment extends Fragment {
             alertDialog.show();
         }
 
-        public void makeLogcat() {
-            SuShell.runWithSu("logcat -d > " + LOGCAT_FILE +  "&& curl -s -X POST -T " + LOGCAT_FILE + " " + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_LOGCAT_KEY);
+        public void makeLogcat() throws SuShell.SuDeniedException {
+            SuShell.runWithSuCheck("logcat -d > " + LOGCAT_FILE +  "&& curl -s -X POST -T " + LOGCAT_FILE + " " + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_LOGCAT_KEY);
         }
 
-        public void makeKmsg() {
-            SuShell.runWithSu("cat /proc/last_kmsg > " + KMSG_FILE +  "&& curl -s -X POST -T " + KMSG_FILE + " " + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_KMSG_KEY);
+        public void makeKmsg() throws SuShell.SuDeniedException {
+            SuShell.runWithSuCheck("cat /proc/last_kmsg > " + KMSG_FILE +  "&& curl -s -X POST -T " + KMSG_FILE + " " + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_KMSG_KEY);
         }
 
-        public void makeDmesg() {
-            SuShell.runWithSu("dmesg > " + DMESG_FILE +  "&& curl -s -X POST -T " + DMESG_FILE + " " + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_DMESG_KEY);
+        public void makeDmesg() throws SuShell.SuDeniedException {
+            SuShell.runWithSuCheck("dmesg > " + DMESG_FILE +  "&& curl -s -X POST -T " + DMESG_FILE + " " + AICP_HASTE + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > " + HASTE_DMESG_KEY);
         }
 
-        public void checkedPreferenceValues() {
-            value = logcat + kmsg + dmesg;
+        private class CreateLogTask extends AsyncTask<Boolean, Void, String> {
+
+            private Exception mException = null;
+
+            @Override
+            protected String doInBackground(Boolean... params) {
+                String sharingIntentString = "";
+                if (params.length != 3) {
+                    Log.e(TAG, "CreateLogTask: invalid argument count");
+                    return sharingIntentString;
+                }
+                try {
+                    if (params[0]) {
+                        makeLogcat();
+                        sharingIntentString += "\nLogcat: " + Helpers.readStringFromFile(logcatHasteKey);
+                    }
+                    if (params[1]) {
+                        makeKmsg();
+                        sharingIntentString += "\nKmsg: " + Helpers.readStringFromFile(kmsgHasteKey);
+                    }
+                    if (params[2]) {
+                        makeDmesg();
+                        sharingIntentString += "\nDmesg: " + Helpers.readStringFromFile(dmesgHasteKey);
+                    }
+                } catch (SuShell.SuDeniedException e) {
+                    mException = e;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    mException = e;
+                }
+                return sharingIntentString;
+            }
+
+            @Override
+            protected void onPostExecute(String param) {
+                super.onPreExecute();
+                if (mException instanceof SuShell.SuDeniedException) {
+                    Toast.makeText(getActivity(), getString(R.string.cannot_get_su_start), Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (param != null && param.length() > 1) {
+                    sharingIntentString = param.substring(1);
+                    logItDialog();
+                }
+            }
         }
 
         public void resetValues() {
             mLogcat.setChecked(false);
             mKmsg.setChecked(false);
             mDmesg.setChecked(false);
-            logcat = 0;
-            kmsg = 0;
-            dmesg = 0;
-            value = 0;
         }
     }
 }
