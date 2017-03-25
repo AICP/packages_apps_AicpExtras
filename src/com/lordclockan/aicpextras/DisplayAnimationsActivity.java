@@ -578,6 +578,9 @@ public class DisplayAnimationsActivity extends Fragment {
                 super.onPreExecute();
                 if (mException instanceof SuShell.SuDeniedException) {
                     Toast.makeText(getActivity(), getString(R.string.cannot_get_su_start), Toast.LENGTH_LONG).show();
+                } else if (mException == null) {
+                    Snackbar.make(getView(), R.string.bootanim_install_successful,
+                            Snackbar.LENGTH_LONG).show();
                 }
             }
         }
