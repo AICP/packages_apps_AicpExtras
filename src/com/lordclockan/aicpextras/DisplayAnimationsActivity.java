@@ -567,6 +567,8 @@ public class DisplayAnimationsActivity extends Fragment {
                             "cp -f " + bootAnimationPath + " /system/media/bootanimation.zip",
                             "chmod 644 /system/media/bootanimation.zip",
                             "mount -o ro,remount /system");
+                    Snackbar.make(getView(), R.string.bootanim_install_successful,
+                            Snackbar.LENGTH_LONG).show();
                 } catch (SuShell.SuDeniedException e) {
                     mException = e;
                 }
