@@ -28,6 +28,12 @@ import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.telephony.TelephonyManager;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;//todo remove
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -109,4 +115,58 @@ public class Utils {
                 Context.CONNECTIVITY_SERVICE);
         return (cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE) == false);
     }
+
+    public static void filterLanguage(Context context, View view, boolean withListener) {
+        //todo setting, hide if translated replacement arrays are empty
+        if (view instanceof TextView) {
+            TextView textView = (TextView) view;
+            String[] array1 = new String[]{"shit", "porn"};//todo from resources with note to translators
+            String[] array2 = new String[]{"😃", "happiness"};//todo from resources with note to translators
+            String text1 = textView.getText().toString();
+            String text2 = text1;
+            for (int i = 0; i < array1.length; i++) {
+                text2 = text2.replaceAll(array1[i], array2[i]);
+            }
+            if (!text1.equals(text2)) {
+                textView.setText(text2);
+            }
+            if (withListener) {
+                textView.addTextChangedListener(new FilterListener(context, textView));//todo only if it hasn't already, deprecate arg withListener
+            }
+        }
+        if (view instanceof ViewGroup) {
+            ViewGroup viewGroup = (ViewGroup) view;
+            for (int i = viewGroup.getChildCount() - 1; i >= 0; i--) {
+                filterLanguage(context, viewGroup.getChildAt(i), withListener);
+            }
+            if (withListener) {
+                viewGroup.setOnHierarchyChangeListener(new FilterListener(context, viewGroup));
+            }
+        }
+    }
+
+    private static class FilterListener implements TextWatcher, ViewGroup.OnHierarchyChangeListener {
+        private Context mContext;
+        private View mView;
+        public FilterListener(Context context, View v) {
+            mContext = context;
+            mView = v;
+        }
+        @Override
+        public void afterTextChanged(Editable s) {
+            filterLanguage(mContext, mView, false);
+        }
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
+        @Override
+        public void onChildViewAdded(View parent, View child) {
+            filterLanguage(mContext, child, true);
+        }
+        @Override
+        public void onChildViewRemoved(View parent, View child) {
+            //todo remove listeners if textview or viewgroup
+        }
+    };
 }

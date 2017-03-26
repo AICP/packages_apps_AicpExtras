@@ -150,6 +150,7 @@ public class MainActivity extends AppCompatActivity
 
         initShortcutManager();
 
+        Utils.filterLanguage(this, mView.getRootView(), true);
    }
 
     @Override
