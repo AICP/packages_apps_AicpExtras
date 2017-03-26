@@ -6,6 +6,8 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.lordclockan.aicpextras.utils.Utils;
+
 public class SubActivity extends Activity {
 
     public static final String EXTRA_TITLE =
@@ -39,6 +41,8 @@ public class SubActivity extends Activity {
         if (title != null  && !title.isEmpty()) {
             setTitle(title);
         }
+
+        Utils.enableLanguageFilter(this);
     }
 
     @Override

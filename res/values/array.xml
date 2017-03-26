@@ -698,4 +698,20 @@
         <item>5</item>
     </string-array>
 
+    <!-- NOTE FOR TRANSLATORS: Those following arrays represent all words that could be considered inappropriate language
+        (first array) and their replacement (second array). Please don't simply translate the content of those arrays,
+        but check your translations and add as many entries as you see fit. If the translations don't contain any
+        inappropriate wordings, leave those arrays empty in your translation, and the setting to filter out inappropriate
+        language will automatically get disabled.
+    -->
+    <string-array name="ae_inappropriate_wordings">
+        <item>shit</item>
+        <item>porn</item>
+    </string-array>
+
+    <string-array name="ae_inappropriate_wordings_replacements">
+        <item>magic</item>
+        <item>happiness</item>
+    </string-array>
+
 </resources>

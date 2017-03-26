@@ -33,6 +33,7 @@ import android.widget.EditText;
 
 import com.lordclockan.R;
 
+import com.lordclockan.aicpextras.utils.Utils;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -59,6 +60,7 @@ public class SettingsActivity extends SubActivity {
         private static final String PREF_AE_NAV_DRAWER_CHECKED_TEXT = "ae_nav_drawer_checked_text";
         private static final String PREF_AE_NAV_DRAWER_UNCHECKED_TEXT = "ae_nav_drawer_unchecked_text";
         private static final String PREF_AE_SETTINGS_SUMMARY = "ae_settings_summary";
+        private static final String PREF_AE_MODERATE_LANGUAGE = "ae_moderate_language";
 
         private static final int DEFAULT_NAV_HEADER_COLOR = 0xFF303030;
         private static final int DEFAULT_NAV_HEADER_BG_IMAGE_COLOR = 0xFFFFAB00;
@@ -72,6 +74,8 @@ public class SettingsActivity extends SubActivity {
         private ColorPickerPreference mNavDrawerTextUncheckedColor;
         private Preference mAeRestoreDefaults;
         private Preference mCustomSummary;
+        private SwitchPreference mModerateLanguage;
+
         private String mCustomSummaryText;
 
         @Override
@@ -83,21 +87,20 @@ public class SettingsActivity extends SubActivity {
             PreferenceScreen prefSet = getPreferenceScreen();
             ContentResolver resolver = getActivity().getContentResolver();
 
-
             int intColor;
             String hexColor;
 
-            mCustomColors = (SwitchPreference) prefSet.findPreference(PREF_AE_CUSTOM_COLORS);
+            mCustomColors = (SwitchPreference) findPreference(PREF_AE_CUSTOM_COLORS);
             mCustomColors.setChecked(Settings.System.getInt(resolver,
                     Settings.System.AE_CUSTOM_COLORS, 0) != 0);
             mCustomColors.setOnPreferenceChangeListener(this);
 
-            mNavDrawerOpacity = (SeekBarPreferenceCham) prefSet.findPreference(PREF_AE_NAV_DRAWER_OPACITY);
+            mNavDrawerOpacity = (SeekBarPreferenceCham) findPreference(PREF_AE_NAV_DRAWER_OPACITY);
             mNavDrawerOpacity.setValue(Settings.System.getInt(resolver,
                     Settings.System.AE_NAV_DRAWER_OPACITY, 178));
             mNavDrawerOpacity.setOnPreferenceChangeListener(this);
 
-            mNavDrawerBgColor = (ColorPickerPreference) prefSet.findPreference(PREF_AE_NAV_DRAWER_BG_COLOR);
+            mNavDrawerBgColor = (ColorPickerPreference) findPreference(PREF_AE_NAV_DRAWER_BG_COLOR);
             mNavDrawerBgColor.setOnPreferenceChangeListener(this);
             intColor = Settings.System.getInt(resolver,
                     Settings.System.AE_NAV_DRAWER_BG_COLOR, DEFAULT_NAV_HEADER_COLOR);
@@ -105,12 +108,12 @@ public class SettingsActivity extends SubActivity {
             mNavDrawerBgColor.setSummary(hexColor);
             mNavDrawerBgColor.setNewPreviewColor(intColor);
 
-            mNavHeaderBgImageOpacity = (SeekBarPreferenceCham) prefSet.findPreference(PREF_AE_NAV_HEADER_BG_IMAGE_OPACITY);
+            mNavHeaderBgImageOpacity = (SeekBarPreferenceCham) findPreference(PREF_AE_NAV_HEADER_BG_IMAGE_OPACITY);
             mNavHeaderBgImageOpacity.setValue(Settings.System.getInt(resolver,
                     Settings.System.AE_NAV_HEADER_BG_IMAGE_OPACITY, 200));
             mNavHeaderBgImageOpacity.setOnPreferenceChangeListener(this);
 
-            mNavHeaderBgImageColor = (ColorPickerPreference) prefSet.findPreference(PREF_AE_NAV_HEADER_BG_IMAGE_COLOR);
+            mNavHeaderBgImageColor = (ColorPickerPreference) findPreference(PREF_AE_NAV_HEADER_BG_IMAGE_COLOR);
             mNavHeaderBgImageColor.setOnPreferenceChangeListener(this);
             intColor = Settings.System.getInt(resolver,
                     Settings.System.AE_NAV_HEADER_BG_IMAGE_COLOR, DEFAULT_NAV_HEADER_BG_IMAGE_COLOR);
@@ -118,7 +121,7 @@ public class SettingsActivity extends SubActivity {
             mNavHeaderBgImageColor.setSummary(hexColor);
             mNavHeaderBgImageColor.setNewPreviewColor(intColor);
 
-            mNavDrawerTextCheckedColor = (ColorPickerPreference) prefSet.findPreference(PREF_AE_NAV_DRAWER_CHECKED_TEXT);
+            mNavDrawerTextCheckedColor = (ColorPickerPreference) findPreference(PREF_AE_NAV_DRAWER_CHECKED_TEXT);
             mNavDrawerTextCheckedColor.setOnPreferenceChangeListener(this);
             intColor = Settings.System.getInt(resolver,
                     Settings.System.AE_NAV_DRAWER_CHECKED_TEXT, 0xffffab00);
@@ -126,7 +129,7 @@ public class SettingsActivity extends SubActivity {
             mNavDrawerTextCheckedColor.setSummary(hexColor);
             mNavDrawerTextCheckedColor.setNewPreviewColor(intColor);
 
-            mNavDrawerTextUncheckedColor = (ColorPickerPreference) prefSet.findPreference(PREF_AE_NAV_DRAWER_UNCHECKED_TEXT);
+            mNavDrawerTextUncheckedColor = (ColorPickerPreference) findPreference(PREF_AE_NAV_DRAWER_UNCHECKED_TEXT);
             mNavDrawerTextUncheckedColor.setOnPreferenceChangeListener(this);
             intColor = Settings.System.getInt(resolver,
                     Settings.System.AE_NAV_DRAWER_UNCHECKED_TEXT, 0xFFFFFFFF);
@@ -134,10 +137,16 @@ public class SettingsActivity extends SubActivity {
             mNavDrawerTextUncheckedColor.setSummary(hexColor);
             mNavDrawerTextUncheckedColor.setNewPreviewColor(intColor);
 
-            mAeRestoreDefaults = prefSet.findPreference(PREF_AE_SETTINGS_RESTORE_DEFAULTS);
+            mAeRestoreDefaults = findPreference(PREF_AE_SETTINGS_RESTORE_DEFAULTS);
 
-            mCustomSummary = (Preference) prefSet.findPreference(PREF_AE_SETTINGS_SUMMARY);
+            mCustomSummary = findPreference(PREF_AE_SETTINGS_SUMMARY);
             updateCustomSummaryTextString();
+
+            mModerateLanguage = (SwitchPreference) findPreference(PREF_AE_MODERATE_LANGUAGE);
+            // Remove the preference if translation doesn't have inappropriate language
+            if (!Utils.supportsLanguageFilter(getActivity())) {
+                prefSet.removePreference(mModerateLanguage);
+            }
         }
 
         public boolean onPreferenceChange(Preference preference, Object newValue) {
