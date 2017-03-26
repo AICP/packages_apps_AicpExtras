@@ -27,13 +27,22 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
+import android.provider.Settings;
 import android.telephony.TelephonyManager;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Properties;
+
+import com.lordclockan.R;
 
 public class Utils {
 
@@ -108,5 +117,102 @@ public class Utils {
         ConnectivityManager cm = (ConnectivityManager)context.getSystemService(
                 Context.CONNECTIVITY_SERVICE);
         return (cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE) == false);
+    }
+
+
+    public static boolean supportsLanguageFilter(Context context) {
+        return context.getResources().getStringArray(R.array.ae_inappropriate_wordings).length > 0;
+    }
+
+    public static void enableLanguageFilter(Activity activity) {
+        if (Settings.System.getInt(activity.getContentResolver(), Settings.System.AE_MODERATE_LANGUAGE, 0) == 1 &&
+                supportsLanguageFilter(activity)) {
+            filterLanguage(activity, activity.findViewById(android.R.id.content).getRootView(), true);
+        }
+    }
+
+    private static void filterLanguage(Context context, View view, boolean withListener) {
+        if (view instanceof TextView) {
+            TextView textView = (TextView) view;
+            String[] array1 = context.getResources().getStringArray(R.array.ae_inappropriate_wordings);
+            String[] array2 = context.getResources().getStringArray(R.array.ae_inappropriate_wordings_replacements);
+            String text1 = textView.getText().toString();
+            String text2 = text1;
+            for (int i = 0; i < array1.length; i++) {
+                text2 = text2.replaceAll(array1[i], array2[i]);
+            }
+            if (!text1.equals(text2)) {
+                textView.setText(text2);
+            }
+            if (withListener) {
+                removeFilterListener(textView);
+                textView.addTextChangedListener(new FilterListener(context, textView));
+            }
+        }
+        if (view instanceof ViewGroup) {
+            ViewGroup viewGroup = (ViewGroup) view;
+            for (int i = viewGroup.getChildCount() - 1; i >= 0; i--) {
+                filterLanguage(context, viewGroup.getChildAt(i), withListener);
+            }
+            if (withListener) {
+                Log.d("filterLanguage", "setting onHierarchyChangeListener; developer warning: " +
+                        "this might overwrite an already set listener!");
+                viewGroup.setOnHierarchyChangeListener(new FilterListener(context, viewGroup));
+            }
+        }
+    }
+
+    private static class FilterListener implements TextWatcher, ViewGroup.OnHierarchyChangeListener {
+        private Context mContext;
+        private View mView;
+        private boolean mAlwaysSame;
+        public FilterListener(Context context, View v) {
+            mContext = context;
+            mView = v;
+            mAlwaysSame = false;
+        }
+        public static FilterListener getFakeFilterListener() {
+            // Return a filter listener that can be used to remove others
+            FilterListener listener = new FilterListener(null, null);
+            listener.mAlwaysSame = true;
+            return listener;
+        }
+        @Override
+        public void afterTextChanged(Editable s) {
+            filterLanguage(mContext, mView, false);
+        }
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
+        @Override
+        public void onChildViewAdded(View parent, View child) {
+            filterLanguage(mContext, child, true);
+        }
+        @Override
+        public void onChildViewRemoved(View parent, View child) {
+            removeFilterListener(child);
+        }
+        @Override
+        public boolean equals(Object o) {
+            if (mAlwaysSame && o instanceof FilterListener) {
+                return true;
+            } else {
+                return super.equals(o);
+            }
+        }
+    };
+
+    private static void removeFilterListener(View v) {
+        if (v instanceof TextView) {
+            ((TextView) v).removeTextChangedListener(FilterListener.getFakeFilterListener());
+        }
+        if (v instanceof ViewGroup) {
+            ViewGroup viewGroup = (ViewGroup) v;
+            viewGroup.setOnHierarchyChangeListener(null);
+            for (int i = viewGroup.getChildCount() - 1; i >= 0; i--) {
+                removeFilterListener(viewGroup.getChildAt(i));
+            }
+        }
     }
 }
