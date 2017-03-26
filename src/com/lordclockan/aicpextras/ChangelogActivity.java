@@ -68,24 +68,24 @@ public class ChangelogActivity extends AppCompatActivity {
                             timeString = "Yesterday";
                         } else if (diff < 1000 * 60 * 60 * 24 * 3) {
                             timeString = "Two days ago";
-                        } else if (diff < 1000 * 60 * 60 * 24 * 3) {
-                            timeString = "Three days ago";
                         } else if (diff < 1000 * 60 * 60 * 24 * 4) {
-                            timeString = "Four days ago";
+                            timeString = "Three days ago";
                         } else if (diff < 1000 * 60 * 60 * 24 * 5) {
-                            timeString = "Five days ago";
+                            timeString = "Four days ago";
                         } else if (diff < 1000 * 60 * 60 * 24 * 6) {
-                            timeString = "Six days ago";
+                            timeString = "Five days ago";
                         } else if (diff < 1000 * 60 * 60 * 24 * 7) {
+                            timeString = "Six days ago";
+                        } else if (diff < 1000 * 60 * 60 * 24 * 8) {
                             timeString = "A week ago";
-                        } else if (diff < 1000 * 60 * 60 * 24 * 14) {
-                            timeString = "Two weeks ago";
-                        } else if (diff < 1000 * 60 * 60 * 24 * 21) {
-                            timeString = "Three weeks ago";
+                        } else if (diff < 1000 * 60 * 60 * 24 * 10) {
+                            timeString = null;
                         } else {
                             timeString = line.trim().replaceAll("-", "/");
                         }
-                        changeLogArray.add(new ChangelogItem(timeString));
+                        if (timeString != null) {
+                            changeLogArray.add(new ChangelogItem(timeString));
+                        }
                     } else if (line.matches("^\\s*(   \\* )\\S*")) {//it's directory
                         if (checknext) {
                             commits = commits.substring(0, commits.lastIndexOf("\n\n"));//remove lf on end
