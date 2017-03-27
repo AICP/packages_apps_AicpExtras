@@ -50,6 +50,8 @@
     <string name="settings_activity_title">Ajustes de Extras AICP</string>
     <string name="recents_panel_title">Panel recientes</string>
     <string name="quick_settings_title">Ajustes rápidos</string>
+    <string name="design_title">Diseño</string>
+    <string name="various_title">Varios</string>
 
     <string name="nothing_title">Nada que ver aquí por ahora.</string>
 
@@ -261,6 +263,7 @@
 
     <!-- Power menu Animations  -->
     <string name="power_menu_animation_title">Animación del menú de apagado</string>
+    <string name="power_menu_animation_style_title">Estilo de animación seleccionada</string>
     <string name="power_menu_animation_summary">Cambia la animación de entrada/salida del menúde apagado</string>
     <string name="power_menu_animation_dialog_title">Seleccionar animación del menú de apagado</string>
     <string name="power_menu_animation_aosp">AOSP (predeterminada)</string>
@@ -286,7 +289,7 @@
     <string name="status_bar_logo_position_left">Izquierda</string>
 
     <!-- Launch music player when headset is connected -->
-    <string name="headset_connect_player_title">Abrir ap. de música</string>
+    <string name="headset_connect_player_title">Abrir aplicación de música</string>
     <string name="headset_connect_player_summary">Abre la aplicación de música predeterminada cuando se conectan los auriculares</string>
 
     <!-- Camera shutter sound -->
@@ -329,9 +332,16 @@
 
     <!-- Quick settings tiles columns and rows config -->
     <string name="qs_rows_portrait_title">Filas (vertical)</string>
+    <string name="qs_rows_portrait_summary">Elegir el número de filas a mostrar en modo vertical</string>
     <string name="qs_rows_landscape_title">Filas (horizontal)</string>
-    <string name="qs_columns_title">Columnas</string>
+    <string name="qs_rows_landscape_summary">Elegir el número de filas a mostrar en modo horizontal</string>
+    <string name="qs_columns_portrait_title">Columnas (vertical)</string>
+    <string name="qs_columns_portrait_summary">Elegir el número de columnas a mostrar en modo vertical</string>
+    <string name="qs_columns_landscape_title">Columnas (horizontal)</string>
+    <string name="qs_columns_landscape_summary">Elegir el número de columnas a mostrar en modo horizontal</string>
     <string name="sysui_qqs_count_title">Ajustes rápidos pequeños</string>
+    <string name="qs_rows_prefix">Filas: </string>
+    <string name="qs_cols_prefix">Columnas: </string>
 
     <!-- Tiles animation style  -->
     <string name="qs_tile_animation_style_title">Estilo de animación de ajustes rápidos</string>
@@ -440,7 +450,7 @@
     <string name="device_hostname">Nombre del dispositivo</string>
 
     <!-- Disable quick settings on lock screen switch -->
-    <string name="lockscreen_qs_disabled_title">Deshabilitar ajustes rápidos pant.bloqueo</string>
+    <string name="lockscreen_qs_disabled_title">Deshabilitar ajustes rápidos pant. bloqueo</string>
     <string name="lockscreen_qs_disabled_summary">Deshabilita los ajustes rápidos y los accesos directos en la pantalla de bloqueo</string>
 
     <!-- Disable music track title in QS tile -->
@@ -736,9 +746,17 @@
     <string name="yes">SI</string>
 
     <!-- Hide Lockscreen clock & date -->
-    <string name="hide_lockscreen_items_title">Items de pantalla de bloqueo</string>
-    <string name="hide_lockscreen_clock_title">Mostrar reloj en pantalla de bloqueo</string>
-    <string name="hide_lockscreen_date_title">Mostrar fecha en pantalla de bloqueo</string>
+    <string name="hide_lockscreen_items_title">Items</string>
+    <string name="hide_lockscreen_clock_title">Mostrar reloj</string>
+    <string name="hide_lockscreen_date_title">Mostrar fecha</string>
+    <string name="hide_lockscreen_alarm_title">Mostrar alarma</string>
+    <string name="hide_lockscreen_bottom_shortcuts_title">Ocultar accesos directos inferiores</string>
+    <string name="hide_lockscreen_bottom_shortcuts_summary_on">Accesos directos inferiores ocultos</string>
+    <string name="hide_lockscreen_bottom_shortcuts_summary_off">Accesos directos inferiores habilitados</string>
+
+    <!-- Hide Statusbar on Lockscreen -->
+    <string name="lockscreen_hide_status_bar_title">Ocultar barra de estado</string>
+    <string name="lockscreen_hide_status_bar_summary">Toca la barra de estado para hacerla visible</string>
 
     <!-- Changelog -->
     <string name="changelog_name">Lista de cambios</string>
@@ -920,5 +938,23 @@
     <!-- Confirm Power Off selection on Power menu-->
     <string name="confirm_shutdown_switch_title">Ventana de confirmación de apagado</string>
     <string name="confirm_shutdown_switch_desc">Cuando se apaga el teléfono desde el menú de apagado aparecerá una ventana de confirmación</string>
+
+    <!-- Screen state service -->
+    <string name="screen_state_toggles_summary">@null</string>
+    <string name="screen_state_toggles_title">Acciones al apagar pantalla</string>
+    <string name="screen_state_toggles_enable_title">Habilitar</string>
+    <string name="screen_state_toggles_enable_summary">Acciones que se ejecutarán cuando se apague la pantalla. Al encender la pantalla se restaurarán al estado anterior.</string>
+    <string name="screen_state_toggles_mobile_title">Redes móviles</string>
+    <string name="screen_state_toggles_location_title">Ubicación</string>
+    <string name="screen_state_toggles_twog">Cambiar a 2G</string>
+    <string name="screen_state_toggles_twog_summary">El modo de red se cambiará a 2G al apagar la pantalla</string>
+    <string name="screen_state_toggles_gps">Deshabilitar GPS</string>
+    <string name="screen_state_toggles_gps_summary">El servicio de ubicación con GPS se deshabilitará al apagar la pantalla</string>
+    <string name="screen_state_toggles_mobile_data">Deshabilitar datos móviles</string>
+    <string name="screen_state_toggles_mobile_data_summary">Se deshabilitarán los datos moviles al apagar la pantalla</string>
+    <string name="screen_state_off_delay_title">Tiempo de espera al apagar pantalla</string>
+    <string name="screen_state_off_delay_summary">Minutos después de los que se ejecutarán las acciones tras apagar la pantalla</string>
+    <string name="screen_state_on_delay_title">Tiempo de espera al encender pantalla</string>
+    <string name="screen_state_on_delay_summary">Minutos después de los que se ejecutarán las acciones tras encender la pantalla</string>
 
 </resources>
