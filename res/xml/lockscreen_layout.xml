@@ -32,7 +32,7 @@
         <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_battery_info"
             android:title="@string/lockscreen_battery_info_title"
-            android:summary="@string/lockscreen_battery_info_summary" 
+            android:summary="@string/lockscreen_battery_info_summary"
             android:defaultValue="false" />
 
     </PreferenceCategory>
@@ -127,6 +127,12 @@
             android:title="@string/hide_lockscreen_bottom_shortcuts_title"
             android:summaryOn="@string/hide_lockscreen_bottom_shortcuts_summary_on"
             android:summaryOff="@string/hide_lockscreen_bottom_shortcuts_summary_off"
+            android:defaultValue="false" />
+
+        <com.lordclockan.aicpextras.preferences.SecureSettingSwitchPreference
+            android:key="show_camera_intent"
+            android:title="@string/show_camera_intent_title"
+            android:summary="@string/show_camera_intent_summary"
             android:defaultValue="false" />
 
     </PreferenceCategory>

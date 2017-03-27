@@ -50,6 +50,7 @@ public class LockscreenFragment extends Fragment {
         }
 
         private static final String PREF_HIDE_BOTTOM_SHORTCUTS = "hide_lockscreen_shortcuts";
+        private static final String PREF_SHOW_CAMERA_INTENT = "show_camera_intent";
         private static final String PREF_KEYGUARD_TORCH = "keyguard_toggle_torch";
         private static final String PREF_LOCK_SCREEN_HIDE_AMPM = "lock_screen_hide_ampm";
         private static final String LOCKSCREEN_OWNER_INFO_COLOR = "lockscreen_owner_info_color";
@@ -65,6 +66,7 @@ public class LockscreenFragment extends Fragment {
         private SwitchPreference mKeyguardTorch;
         private FingerprintManager mFingerprintManager;
         private SwitchPreference mBottomShortcuts;
+        private SwitchPreference mShowCameraIntent;
         private SwitchPreference mFingerprintVib;
         private SwitchPreference mFpKeystore;
         private SwitchPreference mHideAmPm;
@@ -121,11 +123,15 @@ public class LockscreenFragment extends Fragment {
             final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
 
             mBottomShortcuts = (SwitchPreference) findPreference(PREF_HIDE_BOTTOM_SHORTCUTS);
+            mShowCameraIntent = (SwitchPreference) findPreference(PREF_SHOW_CAMERA_INTENT);
             if (!lockPatternUtils.isSecure(MY_USER_ID)) {
                 mBottomShortcuts.setChecked((Settings.Secure.getInt(resolver,
-                    Settings.Secure.HIDE_LOCKSCREEN_SHORTCUTS, 0) == 1));
+                        Settings.Secure.HIDE_LOCKSCREEN_SHORTCUTS, 0) == 1));
+                mMiscCategory.removePreference(mShowCameraIntent);
             } else {
                 mMiscCategory.removePreference(mBottomShortcuts);
+                mBottomShortcuts.setChecked((Settings.Secure.getInt(resolver,
+                        Settings.Secure.SHOW_CAMERA_INTENT, 0) == 1));
             }
 
             if (mMiscCategory.getPreferenceCount() == 0) {
