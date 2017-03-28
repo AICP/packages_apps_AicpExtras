@@ -10,7 +10,7 @@
     <string name="third_layout_title">Troisième disposition</string>
     <string name="aicp_extras_title">Aicp Extras</string>
     <string name="pun_title">Une ROM pour les gouverner tous</string>
-    <string name="various_shit_title">Diverses merdes</string>
+    <string name="various_shit_title">Outils divers</string>
     <string name="about_title">A propos</string>
     <string name="other_title">Autre</string>
     <string name="g_community">Communauté G+</string>
@@ -18,18 +18,18 @@
     <string name="builtin_title">BUILT-IN</string>
     <string name="addons_title">ADDONS</string>
     <string name="welcome_title">BIENVENUE dans le monde réel !</string>
-    <string name="logo">logo</string>
     <string name="display_animations_title">Affichage et animations</string>
-    <string name="multishit_title">Multimerdes</string>
+    <string name="multishit_title">Multioutils</string>
     <string name="transparency_porn_title">Transparence</string>
     <string name="notificaitons_title">Tiroir de notification</string>
     <string name="statubar_title">Barre d\'état</string>
     <string name="lockscreen_title">Écran de déverrouillage</string>
     <string name="systemui_tuner_title">SystemUI Tuner</string>
-    <string name="systemui_tuner_summary">Marshmallow take on SystemUI tuning</string>
+    <string name="systemui_tuner_summary">Marshmallow impose sur le custom SystemUI</string>
     <string name="systemui_tuner_dilog_title">Attention</string>
-    <string name="systemui_tuner_dilog_warning">Tuner offers limited SystemUI modifications. Link has been added to AicpExtras for easier access.\nHere you can also add new tiles.</string>
+    <string name="systemui_tuner_dilog_warning">Le Tuner offre des modifications limitées du SystemUI limitées. Lien ajouté à AICPExtras pour un accès plus simple.\Ici vous pouvez également ajouter de nouvelles mosaiques.</string>
     <string name="aicp_downloads_title">Téléchargements</string>
+    <string name="dwnld_summary">Visiter la page de DL d\'AICP pour votre téléphone</string>
     <string name="aicp_gerrit_title">Gerrit</string>
     <string name="send_mail_intent">Envoyer un mail...</string>
     <string name="hidden_anim_activity_title">L\'heure du yoga !!!</string>
@@ -60,7 +60,7 @@
     <string name="recents_clear_all_location_bottom_center">En bas au milieu</string>
     <string name="recents_clear_all_dismiss_all_title">Effacer toutes les tâches</string>
     <string name="recents_clear_all_dismiss_all_summary">Inclure les tâches de premier plan lors de l\'effacement de toutes les tâches</string>
-    <string name="stock_recents_disabled">Le panneau des applications récentes de base est désactivé !</string>
+    <string name="stock_recents_disabled">Panneau des applis récentes de base est désactivé !</string>
     <string name="alternatives_title">Alternatives</string>
 
     <!-- Change Log -->
@@ -103,8 +103,6 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">Sélecteur de couleur</string>
     <string name="press_color_to_apply">Appuyer sur la couleur pour valider</string>
-    <string name="arrow_right">→</string>
-    <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Définir</string>
@@ -165,7 +163,7 @@
 
     <!-- Battery Bar -->
     <string name="battery_bar_title">Barre de batterie</string>
-    <string name="battery_bar">Barre de batterie</string>
+    <string name="battery_bar">Emplacement de la barre de batterie</string>
     <string name="battery_bar_no_navbar">Emplacement</string>
     <string name="battery_bar_color">Couleur</string>
     <string name="battery_bar_cat">Style</string>
@@ -279,10 +277,10 @@
     <string name="recents_show_fullscreen">Applications récentes en plein écran</string>
     <string name="recents_fullscreen_summary_enabled">Applications récentes en plein écran activées</string>
     <string name="recents_fullscreen_summary_disabled">Applications récentes en plein écran désactivées</string>
-    <string name="recents_full_screen_clock_title">Montrer l\'horloge</string>
-    <string name="recents_full_screen_clock_summary">Montrer l\'horloge en haut en mode plein écran</string>
-    <string name="recents_full_screen_date_title">Montrer la date</string>
-    <string name="recents_full_screen_date_summary">Montrer la date en haut en mode plein écran</string>
+    <string name="recents_full_screen_clock_title">Afficher l\'horloge</string>
+    <string name="recents_full_screen_clock_summary">Afficher l\'horloge en haut en mode plein écran</string>
+    <string name="recents_full_screen_date_title">Afficher la date</string>
+    <string name="recents_full_screen_date_summary">Afficher la date en haut en mode plein écran</string>
 
     <!-- Weather settings -->
     <string name="weahter_lockscreen_category">Affiche les options météo sur l\'écran de déverrouillage</string>
@@ -292,7 +290,7 @@
     <string name="weather_lockscreen_show_title">Options météo sur l\'écran de déverrouillage</string>
     <string name="weather_lockscreen_show_summary">Voir la météo sur l\'écran de déverrouillage</string>
     <string name="weather_show_weather_title">Afficher les options météo</string>
-    <string name="weather_show_weather_summary">Activer pour montrer la météo</string>
+    <string name="weather_show_weather_summary">Activer pour afficher la météo</string>
     <string name="status_bar_show_weather_title">Météo sur la barre d\'état étendue</string>
     <string name="status_bar_show_weather_summary">Afficher les informations météo dans la barre d\'état étendue</string>
     <string name="weather_show_location_title">Localisation</string>
@@ -313,7 +311,7 @@
     <string name="weather_hide_panel_custom_summary">Le panneau de météo sera masqué quand les notifications visibles atteignent le nombre choisi de notifications (%s).</string>
     <string name="weather_hide_panel_never_summary">Le panneau de météo ne sera pas masqué.</string>
     <string name="weather_number_of_notifications_title">Nombre de notifications</string>
-    <string name="weather_number_of_notifications_dlg_title">Choisir le nombre de notifications a caché sur le panneau de météo</string>
+    <string name="weather_number_of_notifications_dlg_title">Choisir le nombre de notifications a cacher sur le panneau de météo</string>
     <string name="weather_number_of_notifications_always_title">Toujours</string>
     <string name="weather_number_of_notifications_two_title">2</string>
     <string name="weather_number_of_notifications_three_title">3</string>
