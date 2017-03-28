@@ -25,69 +25,6 @@
             android:defaultValue="true" />
     -->
 
-        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-            android:key="show_running_tasks"
-            android:title="@string/show_running_tasks_title"
-            android:defaultValue="false" />
-
-        <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
-            android:key="recents_max_apps"
-            android:title="@string/recents_max_apps_title"
-            aicpextras:minimum="5"
-            android:max="105"
-            android:persistent="false" />
-
-        <ListPreference
-            android:key="recent_panel_expanded_mode"
-            android:entries="@array/recent_panel_expanded_mode_entries"
-            android:entryValues="@array/recent_panel_expanded_mode_values"
-            android:title="@string/recent_panel_expanded_mode_title"
-            android:summary="@string/recent_panel_expanded_mode_summary" />
-
-        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-            android:key="recent_panel_lefty_mode"
-            android:title="@string/recent_panel_lefty_mode_title"
-            android:summary="@string/recent_panel_lefty_mode_summary"
-            android:defaultValue="false" />
-
-        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-            android:key="recent_panel_show_topmost"
-            android:title="@string/recent_panel_show_topmost_title"
-            android:summary="@string/recent_panel_show_topmost_summary"
-            android:defaultValue="false" />
-
-        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-            android:key="slim_recents_aicp_empty_drawable"
-            android:title="@string/slim_recents_aicp_empty_drawable_title"
-            android:summary="@string/slim_recents_aicp_empty_drawable_summary"
-            android:defaultValue="true" />
-
-        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-            android:key="slim_recents_mem_display"
-            android:title="@string/systemui_recents_mem_display_title"
-            android:summaryOn="@string/systemui_recents_mem_display_summaryOn"
-            android:summaryOff="@string/systemui_recents_mem_display_summaryOff"
-            android:defaultValue="false" />
-
-        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-            android:key="slim_recents_mem_display_long_click_clear"
-            android:title="@string/slim_recents_mem_display_long_click_clear_title"
-            android:summary="@string/slim_recents_mem_display_long_click_clear_summary"
-            android:defaultValue="false"
-            android:dependency="slim_recents_mem_display" />
-
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="slim_mem_bar_color"
-            android:title="@string/systemui_recents_mem_display_color"
-            defaultColor="#ffffffff"
-            android:dependency="slim_recents_mem_display"/>
-
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="slim_mem_text_color"
-            android:title="@string/systemui_recents_mem_display_text_color"
-            defaultColor="#ffffffff"
-            android:dependency="slim_recents_mem_display"/>
-
         <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
             android:key="recent_panel_scale"
             android:title="@string/recent_panel_scale_title"
@@ -110,10 +47,78 @@
             defaultColor="#00ffffff"
             alphaSliderEnabled="true" />
 
+        <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+            android:key="recents_max_apps"
+            android:title="@string/recents_max_apps_title"
+            aicpextras:minimum="5"
+            android:max="105"
+            android:persistent="false" />
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="show_running_tasks"
+            android:title="@string/show_running_tasks_title"
+            android:defaultValue="false" />
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="recent_panel_show_topmost"
+            android:title="@string/recent_panel_show_topmost_title"
+            android:summary="@string/recent_panel_show_topmost_summary"
+            android:defaultValue="false" />
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="slim_recents_aicp_empty_drawable"
+            android:title="@string/slim_recents_aicp_empty_drawable_title"
+            android:summary="@string/slim_recents_aicp_empty_drawable_summary"
+            android:defaultValue="true" />
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="recent_panel_lefty_mode"
+            android:title="@string/recent_panel_lefty_mode_title"
+            android:summary="@string/recent_panel_lefty_mode_summary"
+            android:defaultValue="false" />
+
         <Preference
             android:key="slim_icon_pack"
             android:title="@string/slim_icon_pack_title"
             android:summary="@string/slim_icon_pack_summary" />
+
+        <ListPreference
+            android:key="recent_panel_expanded_mode"
+            android:entries="@array/recent_panel_expanded_mode_entries"
+            android:entryValues="@array/recent_panel_expanded_mode_values"
+            android:title="@string/recent_panel_expanded_mode_title"
+            android:summary="@string/recent_panel_expanded_mode_summary" />
+
+        <PreferenceCategory
+            android:title="@string/systemui_recents_mem_display_category_title">
+
+            <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+                android:key="slim_recents_mem_display"
+                android:title="@string/systemui_recents_mem_display_title"
+                android:summaryOn="@string/systemui_recents_mem_display_summaryOn"
+                android:summaryOff="@string/systemui_recents_mem_display_summaryOff"
+                android:defaultValue="false" />
+
+            <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+                android:key="slim_recents_mem_display_long_click_clear"
+                android:title="@string/slim_recents_mem_display_long_click_clear_title"
+                android:summary="@string/slim_recents_mem_display_long_click_clear_summary"
+                android:defaultValue="false"
+                android:dependency="slim_recents_mem_display" />
+
+            <net.margaritov.preference.colorpicker.ColorPickerPreference
+                android:key="slim_mem_bar_color"
+                android:title="@string/systemui_recents_mem_display_color"
+                defaultColor="#ffffffff"
+                android:dependency="slim_recents_mem_display"/>
+
+            <net.margaritov.preference.colorpicker.ColorPickerPreference
+                android:key="slim_mem_text_color"
+                android:title="@string/systemui_recents_mem_display_text_color"
+                defaultColor="#ffffffff"
+                android:dependency="slim_recents_mem_display"/>
+
+        </PreferenceCategory>
 
         <PreferenceCategory
             android:title="@string/recent_app_sidebar_title">
