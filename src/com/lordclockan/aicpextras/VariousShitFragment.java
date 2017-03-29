@@ -64,6 +64,7 @@ public class VariousShitFragment extends Fragment {
         private static Intent INTENT_LOCKCLOCK_SETTINGS = new Intent(Intent.ACTION_MAIN)
                 .setClassName(LOCKCLOCK_PACKAGE_NAME, LOCKCLOCK_PACKAGE_NAME + ".preference.Preferences");
         private static final String PREF_SUSPEND_ACTIONS = "suspend_actions";
+        private static final String WIRED_RINGTONE_FOCUS_MODE = "wired_ringtone_focus_mode";
 
         private SwitchPreference mCameraSounds;
         private ListPreference mMsob;
@@ -73,6 +74,7 @@ public class VariousShitFragment extends Fragment {
         private SeekBarPreferenceCham mVolumeDialogTimeout;
         private Preference mLockClockSettings;
         private Preference mSuspendActions;
+        private ListPreference mWiredHeadsetRingtoneFocus;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -128,6 +130,13 @@ public class VariousShitFragment extends Fragment {
             }
 
             mSuspendActions = (Preference) prefSet.findPreference(PREF_SUSPEND_ACTIONS);
+
+            mWiredHeadsetRingtoneFocus = (ListPreference) findPreference(WIRED_RINGTONE_FOCUS_MODE);
+            int mWiredHeadsetRingtoneFocusValue = Settings.Global.getInt(resolver,
+                    Settings.Global.WIRED_RINGTONE_FOCUS_MODE, 1);
+            mWiredHeadsetRingtoneFocus.setValue(Integer.toString(mWiredHeadsetRingtoneFocusValue));
+            mWiredHeadsetRingtoneFocus.setSummary(mWiredHeadsetRingtoneFocus.getEntry());
+            mWiredHeadsetRingtoneFocus.setOnPreferenceChangeListener(this);
         }
 
         @Override
@@ -167,13 +176,21 @@ public class VariousShitFragment extends Fragment {
                 return true;
             } else if (preference == mScrollingCachePref) {
                 if (newValue != null) {
-                    SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String)newValue);
+                    SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) newValue);
                     return true;
                 }
             } else if (preference == mVolumeDialogTimeout) {
                 int volDialogTimeout = (Integer) newValue;
                 Settings.System.putInt(resolver,
                         Settings.System.VOLUME_DIALOG_TIMEOUT, volDialogTimeout * 1);
+                return true;
+            } else if (preference == mWiredHeadsetRingtoneFocus) {
+                int mWiredHeadsetRingtoneFocusValue = Integer.valueOf((String) newValue);
+                int index = mWiredHeadsetRingtoneFocus.findIndexOfValue((String) newValue);
+                mWiredHeadsetRingtoneFocus.setSummary(
+                        mWiredHeadsetRingtoneFocus.getEntries()[index]);
+                Settings.Global.putInt(resolver, Settings.Global.WIRED_RINGTONE_FOCUS_MODE,
+                        mWiredHeadsetRingtoneFocusValue);
                 return true;
             }
             return false;
