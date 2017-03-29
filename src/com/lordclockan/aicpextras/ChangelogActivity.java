@@ -68,19 +68,19 @@ public class ChangelogActivity extends AppCompatActivity {
                             timeString = "Yesterday";
                         } else if (diff < 1000 * 60 * 60 * 24 * 3) {
                             timeString = "Two days ago";
-                        } else if (diff < 1000 * 60 * 60 * 24 * 3) {
-                            timeString = "Three days ago";
                         } else if (diff < 1000 * 60 * 60 * 24 * 4) {
-                            timeString = "Four days ago";
+                            timeString = "Three days ago";
                         } else if (diff < 1000 * 60 * 60 * 24 * 5) {
-                            timeString = "Five days ago";
+                            timeString = "Four days ago";
                         } else if (diff < 1000 * 60 * 60 * 24 * 6) {
-                            timeString = "Six days ago";
+                            timeString = "Five days ago";
                         } else if (diff < 1000 * 60 * 60 * 24 * 7) {
-                            timeString = "A week ago";
+                            timeString = "Six days ago";
                         } else if (diff < 1000 * 60 * 60 * 24 * 14) {
-                            timeString = "Two weeks ago";
+                            timeString = "A week ago";
                         } else if (diff < 1000 * 60 * 60 * 24 * 21) {
+                            timeString = "Two weeks ago";
+                        } else if (diff < 1000L * 60 * 60 * 24 * 28) {
                             timeString = "Three weeks ago";
                         } else {
                             timeString = line.trim().replaceAll("-", "/");
