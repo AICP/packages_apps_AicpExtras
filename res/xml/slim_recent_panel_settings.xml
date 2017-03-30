@@ -76,6 +76,18 @@
             android:defaultValue="false"
             android:dependency="slim_recents_mem_display" />
 
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="slim_mem_bar_color"
+            android:title="@string/systemui_recents_mem_display_color"
+            defaultColor="#ffffffff"
+            android:dependency="slim_recents_mem_display"/>
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="slim_mem_text_color"
+            android:title="@string/systemui_recents_mem_display_text_color"
+            defaultColor="#ffffffff"
+            android:dependency="slim_recents_mem_display"/>
+
         <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
             android:key="recent_panel_scale"
             android:title="@string/recent_panel_scale_title"
