@@ -22,6 +22,12 @@
         android:summary="@string/headset_connect_player_summary"
         android:defaultValue="false" />
 
+    <ListPreference
+        android:key="wired_ringtone_focus_mode"
+        android:title="@string/wired_ringtone_focus_mode_title"
+        android:entries="@array/wired_ringtone_focus_mode_entries"
+        android:entryValues="@array/wired_ringtone_focus_mode_values" />
+
     <!-- Camera shutter -->
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="camera_sounds"
