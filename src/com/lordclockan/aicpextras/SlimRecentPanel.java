@@ -282,10 +282,13 @@ public class SlimRecentPanel extends /*Slim*/PreferenceFragment implements /*Dia
                 (ColorPickerPreference) findPreference(MEMBAR_COLOR);
         mMemBarColor.setOnPreferenceChangeListener(this);
         final int intColorBar = Settings.System.getInt(getContext().getContentResolver(),
-                Settings.System.SLIM_MEM_BAR_COLOR,
-                getDefaultColorFromPackage("com.android.systemui", "system_accent_color"));
+                Settings.System.SLIM_MEM_BAR_COLOR, 0x00ffffff);
         String hexColorBar = String.format("#%08x", (0x00ffffff & intColorBar));
-        mMemBarColor.setSummary(hexColorBar);
+        if (hexColorBar.equals("#00ffffff")) {
+            mMemBarColor.setSummary(R.string.default_string);
+        } else {
+            mMemBarColor.setSummary(hexColorBar);
+        }
         mMemBarColor.setNewPreviewColor(intColorBar);
 
         // Recents memory bar text color
@@ -293,26 +296,16 @@ public class SlimRecentPanel extends /*Slim*/PreferenceFragment implements /*Dia
                 (ColorPickerPreference) findPreference(MEM_TEXT_COLOR);
         mMemTextColor.setOnPreferenceChangeListener(this);
         final int intColorText = Settings.System.getInt(getContext().getContentResolver(),
-                Settings.System.SLIM_MEM_TEXT_COLOR,
-                getDefaultColorFromPackage("com.android.systemui", "recents_membar_text_color"));
+                Settings.System.SLIM_MEM_TEXT_COLOR, 0x00ffffff);
         String hexColorText = String.format("#%08x", (0x00ffffff & intColorText));
-        mMemTextColor.setSummary(hexColorText);
+        if (hexColorText.equals("#00ffffff")) {
+            mMemTextColor.setSummary(R.string.default_string);
+        } else {
+            mMemTextColor.setSummary(hexColorText);
+        }
         mMemTextColor.setNewPreviewColor(intColorText);
 
         mAppSidebarContent = findPreference(APP_SIDEBAR_CONTENT);
-    }
-
-    private int getDefaultColorFromPackage(String packageName, String colorName){
-        try {
-          Context context = getActivity().createPackageContext(packageName, 0);
-          Resources mSystemuiResources = context.getResources();
-          int id = mSystemuiResources.getIdentifier(colorName,
-                  "color", packageName);
-          return id;
-        } catch (PackageManager.NameNotFoundException e) {
-          e.printStackTrace();
-        }
-        return -1;
     }
 
     @Override
