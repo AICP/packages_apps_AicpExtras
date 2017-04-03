@@ -71,6 +71,8 @@
     <!-- Toast Icons -->
     <string name="toast_icon_title">Icono de notificaciones</string>
     <string name="toast_icon_summary">Muestra el icono de la aplicación que dispara la notificación</string>
+    <string name="toast_text_color">Color del texto</string>
+    <string name="toast_icon_color">Color del icono</string>
 
     <!-- Brightness slider -->
     <string name="qs_brightness_slider_title">Barra de brillo</string>
@@ -171,7 +173,8 @@
 
     <!-- Power menu on lock screen -->
     <string name="powermenu_lockscreen_title">Menú de apagado en pantalla de bloqueo</string>
-    <string name="powermenu_lockscreen_summary">Mostrar menú de apagado en la pantalla de bloqueo</string>
+    <string name="powermenu_lockscreen_summary_on">Menú de apagado en la pantalla de bloqueo habilitado</string>
+    <string name="powermenu_lockscreen_summary_off">Menú de apagado en la pantalla de bloqueo deshabilitado</string>
 
     <!-- ROM Stats -->
     <!-- Main -->
@@ -244,6 +247,7 @@
 
     <!-- Toast Animation -->
     <string name="toast_animation_title">Animación Toast</string>
+    <string name="toast_animation_style_title">Estilo de animación seleccionado</string>
     <string name="toast_none_animation">Ninguna</string>
     <string name="toast_default_animation">Predeterminada</string>
     <string name="toast_fade_animation">Transición</string>
@@ -328,7 +332,8 @@
 
     <!-- Lockscreen Torch -->
     <string name="keyguard_torch_title">Linterna en pantalla de bloqueo</string>
-    <string name="keyguard_torch_summary">Pulsación larga en el botón de encendido cuando la pantalla está apagada enciende la linterna</string>
+    <string name="keyguard_torch_summary_on">Pulsación larga en botón de encendido con pantalla apagada para encender la linterna habilitada</string>
+    <string name="keyguard_torch_summary_off">Pulsación larga en botón de encendido con pantalla apagada para encender la linterna deshabilitada</string>
 
     <!-- Quick settings tiles columns and rows config -->
     <string name="qs_rows_portrait_title">Filas (vertical)</string>
@@ -451,7 +456,8 @@
 
     <!-- Disable quick settings on lock screen switch -->
     <string name="lockscreen_qs_disabled_title">Deshabilitar ajustes rápidos pant. bloqueo</string>
-    <string name="lockscreen_qs_disabled_summary">Deshabilita los ajustes rápidos y los accesos directos en la pantalla de bloqueo</string>
+    <string name="lockscreen_qs_disabled_summary_on">Ajustes rápidos y accesos directos en pantalla de bloqueo habilitados</string>
+    <string name="lockscreen_qs_disabled_summary_off">Ajustes rápidos y accesos directos en pantalla de bloqueo deshabilitados</string>
 
     <!-- Disable music track title in QS tile -->
     <string name="qs_music_tile_track_optional_title">Título de la pista de audio en ajuste rápido</string>
@@ -467,9 +473,12 @@
     <string name="immersive_recents_navbar">Sólo barra de navegación</string>
 
     <!-- Recents Membar -->
+    <string name="systemui_recents_mem_display_category_title">Barra de memoria</string>
     <string name="systemui_recents_mem_display_title">Mostrar barra de memoria RAM</string>
     <string name="systemui_recents_mem_display_summaryOn">Barra de memoria RAM habilitada</string>
     <string name="systemui_recents_mem_display_summaryOff">Barra de memoria RAM deshabilitada</string>
+    <string name="systemui_recents_mem_display_color">Color de la barra</string>
+    <string name="systemui_recents_mem_display_text_color">Color del texto</string>
 
     <!-- Recents panel settings -->
     <string name="show_clear_all_recents_button_title">Habilitar botón de cerrar todo</string>
@@ -794,6 +803,13 @@
     <string name="recent_panel_show_topmost_summary">No excluir la aplicación en primer planos en la vista de aps. recientes</string>
     <string name="recent_panel_bg_color_title">Color de fondo del panel</string>
     <string name="recent_card_bg_color_title">Color de fondo de las tarjetas</string>
+    <string name="slim_recents_mem_display_long_click_clear_title">Pulsación larga en barra de memoria</string>
+    <string name="slim_recents_mem_display_long_click_clear_summary">Cierra aps. recientes con pulsación larga en la barra de memoria</string>
+    <string name="slim_icon_pack_title">Paquetes de iconos</string>
+    <string name="slim_icon_pack_summary">Aplicar un paquete de iconos personalizado para las aplicaciones del panel</string>
+    <string name="no_iconpacks_summary">No hay paquetes de iconos instalados</string>
+    <string name="dialog_pick_iconpack_title">Seleccionar paquete de iconos</string>
+    <string name="default_iconpack_title">Iconos predeterminados</string>
 
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Mostrar en la lado izquierdo</string>
@@ -956,5 +972,13 @@
     <string name="screen_state_off_delay_summary">Minutos después de los que se ejecutarán las acciones tras apagar la pantalla</string>
     <string name="screen_state_on_delay_title">Tiempo de espera al encender pantalla</string>
     <string name="screen_state_on_delay_summary">Minutos después de los que se ejecutarán las acciones tras encender la pantalla</string>
+
+    <!-- Show camera intent on secure lock screen -->
+    <string name="show_camera_intent_title">Mostrar acceso directo a la cámara en pantalla de bloqueo</string>
+
+    <!-- Wired headset ringtone audio focus -->
+    <string name="wired_ringtone_focus_mode_title">Dónde reproducir el tono de llamada</string>
+    <string name="wired_ringtone_focus_mode_dynamic">Auriculares con cable si están conectados y reproduciendo música</string>
+    <string name="wired_ringtone_focus_mode_stock">Auriculares y altavoz del teléfono (predeterminado)</string>
 
 </resources>
