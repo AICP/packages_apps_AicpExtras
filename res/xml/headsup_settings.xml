@@ -23,6 +23,12 @@
         android:summary="@string/headsup_settings_summary"
         android:defaultValue="true"/>
 
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="always_headsup_dialer"
+        android:title="@string/always_headsup_dialer_title"
+        android:summary="@string/always_headsup_dialer_summary"
+        android:defaultValue="false" />
+
     <ListPreference
         android:key="heads_up_time_out"
         android:title="@string/heads_up_time_out_title"
