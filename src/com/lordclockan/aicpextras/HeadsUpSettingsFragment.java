@@ -18,6 +18,7 @@ import android.support.v4.app.Fragment;
 
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.utils.Helpers;
+import com.lordclockan.aicpextras.utils.Utils;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 public class HeadsUpSettingsFragment extends Fragment {
@@ -39,9 +40,11 @@ public class HeadsUpSettingsFragment extends Fragment {
 
         private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
         private static final String PREF_HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
+        private static final String PREF_ALWAYS_HEADSUP_DIALER = "always_headsup_dialer";
 
         private ListPreference mHeadsUpTimeOut;
         private ListPreference mHeadsUpSnoozeTime;
+        private SwitchPreference mAlwaysHeadsupDialer;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -77,6 +80,11 @@ public class HeadsUpSettingsFragment extends Fragment {
                    Settings.System.HEADS_UP_NOTIFICATION_SNOOZE, defaultSnooze);
             mHeadsUpSnoozeTime.setValue(String.valueOf(headsUpSnooze));
             updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
+
+            mAlwaysHeadsupDialer = (SwitchPreference) findPreference(PREF_ALWAYS_HEADSUP_DIALER);
+            if(Utils.isWifiOnly(getActivity())) {
+                prefSet.removePreference(mAlwaysHeadsupDialer);
+            }
         }
 
         @Override
