@@ -55,6 +55,7 @@ public class AboutFragment extends Fragment {
         private String PREF_AICP_GERRIT = "aicp_gerrit";
         private String PREF_AICP_CHANGELOG = "aicp_changelog";
         private String PREF_AICP_VERSION = "ae_version";
+        private static final String KEY_DEVICE_MAINTAINER = "device_maintainer";
 
         private PreferenceScreen mAicpLogo;
         private long[] mHits = new long[3];
@@ -115,6 +116,8 @@ public class AboutFragment extends Fragment {
             } catch (NameNotFoundException e) {
                 e.printStackTrace();
             }
+
+            setMaintainerSummary(KEY_DEVICE_MAINTAINER, "ro.aicp.maintainer");
         }
 
         @Override
@@ -179,6 +182,20 @@ public class AboutFragment extends Fragment {
             }
 
             return false;
+        }
+
+        private void setMaintainerSummary(String preference, String property) {
+            try {
+                String maintainers = SystemProperties.get(property,
+                        getResources().getString(R.string.device_info_default));
+                findPreference(preference).setSummary(maintainers);
+                if (maintainers.contains(",")) {
+                    findPreference(preference).setTitle(
+                            getResources().getString(R.string.device_maintainers));
+                }
+            } catch (RuntimeException e) {
+                // No recovery
+            }
         }
     }
 }
