@@ -319,14 +319,38 @@ public class DisplayAnimationsActivity extends Fragment {
                         //Nothing returned by user, probably pressed back button in file manager
                         return;
                     }
-                    mBootAnimationPath = data.getData().getPath();
+                    // We want to know the path for copying it later as root; data might contain
+                    // an URI that's not a path though, so save it locally to work around that
+                    mBootAnimationPath = BACKUP_PATH + File.separator + "tmpbootanim.zip";
+
+                    InputStream inputStream = null;
+                    FileOutputStream outputStream = null;
+
+                    try {
+                        inputStream = getActivity().getContentResolver().openInputStream(data.getData());
+                        outputStream = new FileOutputStream(mBootAnimationPath, false);
+                        byte[] buffer = new byte[1024];
+                        int length ;
+                        while ((length = inputStream.read(buffer)) > 0) {
+                            outputStream.write(buffer, 0, length);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } finally {
+                        try {
+                            if (inputStream != null) inputStream.close();
+                            if (outputStream != null) outputStream.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
                     openBootAnimationDialog();
                 }
             }
         }
 
         private void openBootAnimationDialog() {
-            Log.e(TAG, "boot animation path: " + mBootAnimationPath);
+            Log.d(TAG, "boot animation path: " + mBootAnimationPath);
             if (mCustomBootAnimationDialog != null) {
                 mCustomBootAnimationDialog.cancel();
                 mCustomBootAnimationDialog = null;
@@ -348,12 +372,12 @@ public class DisplayAnimationsActivity extends Fragment {
                         public void onClick(DialogInterface dialog, int which) {
                             PackageManager packageManager = getActivity().getPackageManager();
                             Intent test = new Intent(Intent.ACTION_GET_CONTENT);
-                            test.setType("file/*");
+                            test.setType("application/zip");
                             List<ResolveInfo> list = packageManager.queryIntentActivities(test,
                                     PackageManager.GET_ACTIVITIES);
                             if (!list.isEmpty()) {
                                 Intent intent = new Intent(Intent.ACTION_GET_CONTENT, null);
-                                intent.setType("file/*");
+                                intent.setType("application/zip");
                                 startActivityForResult(intent, REQUEST_PICK_BOOT_ANIMATION);
                             } else {
                                 //No app installed to handle the intent - file explorer required
@@ -419,6 +443,7 @@ public class DisplayAnimationsActivity extends Fragment {
                 }
                 desc = sb.toString();
             } catch (Exception handleAllException) {
+                handleAllException.printStackTrace();
                 mErrormsg = getActivity().getString(R.string.error_reading_zip_file);
                 errorHandler.sendEmptyMessage(0);
                 return;
