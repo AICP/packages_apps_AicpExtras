@@ -2,6 +2,7 @@ package com.lordclockan.aicpextras;
 
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
@@ -9,6 +10,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.SystemClock;
@@ -49,13 +51,13 @@ public class AboutFragment extends Fragment {
         private static final String PREF_HIDDEN_YOGA = "hidden_anim";
         private static final String PREF_AICPLOGO_IMG = "aicp_logo";
         private static final String OTA_PCKG_NAME = "com.aicp.aicpota";
-        private String PREF_GCOMMUNITY = "gplus";
-        private String PREF_AICP_DOWNLOADS = "aicp_downloads";
-        private String PREF_AICP_OTA = "aicp_ota";
-        private String PREF_AICP_GERRIT = "aicp_gerrit";
-        private String PREF_AICP_CHANGELOG = "aicp_changelog";
-        private String PREF_AICP_VERSION = "ae_version";
-        private static final String KEY_DEVICE_MAINTAINER = "device_maintainer";
+        private static final String PREF_GCOMMUNITY = "gplus";
+        private static final String PREF_AICP_DOWNLOADS = "aicp_downloads";
+        private static final String PREF_AICP_OTA = "aicp_ota";
+        private static final String PREF_AICP_GERRIT = "aicp_gerrit";
+        private static final String PREF_AICP_CHANGELOG = "aicp_changelog";
+        private static final String PREF_AICP_VERSION = "ae_version";
+        private static final String PREF_DEVICE_INFO = "device_info";
 
         private PreferenceScreen mAicpLogo;
         private long[] mHits = new long[3];
@@ -66,6 +68,7 @@ public class AboutFragment extends Fragment {
         private Preference mAicpChangeLog;
         private Preference mStatsAicp;
         private Preference mAicpVersion;
+        private Preference mDeviceInfo;
 
         private static final String PREF_STATS_AICP = "aicp_stats";
 
@@ -117,7 +120,8 @@ public class AboutFragment extends Fragment {
                 e.printStackTrace();
             }
 
-            setMaintainerSummary(KEY_DEVICE_MAINTAINER, "ro.aicp.maintainer");
+            mDeviceInfo = prefSet.findPreference(PREF_DEVICE_INFO);
+            setDeviceInfoSummary(PREF_DEVICE_INFO, Build.MODEL);
         }
 
         @Override
@@ -177,6 +181,23 @@ public class AboutFragment extends Fragment {
                 ps.setRotationSpeedRange(firstRandom, secondRandom);
                 ps.setFadeOut(200, new AccelerateInterpolator());
                 ps.oneShot(this.getView(), 100);
+            } if (preference == mDeviceInfo) {
+                AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+                alert.setTitle(setDialogTitle("ro.aicp.maintainer"));
+                alert.setMessage(setDialogMessage("ro.aicp.maintainer"));
+                alert.setPositiveButton(getString(android.R.string.ok),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                /*String value = ((Spannable) input.getText()).toString().trim();
+                                Settings.System.putString(resolver, Settings.System.CUSTOM_CARRIER_LABEL, value);
+                                updateCustomLabelTextSummary();
+                                Intent i = new Intent();
+                                i.setAction(Intent.ACTION_CUSTOM_CARRIER_LABEL_CHANGED);
+                                getActivity().sendBroadcast(i);*/
+                            }
+                        });
+                // alert.setNegativeButton(getString(android.R.string.cancel), null);
+                alert.show();
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
@@ -184,17 +205,40 @@ public class AboutFragment extends Fragment {
             return false;
         }
 
-        private void setMaintainerSummary(String preference, String property) {
+        private String setDialogTitle(String property) {
+            String retTitle = "";
             try {
-                String maintainers = SystemProperties.get(property,
+                String title = SystemProperties.get(property,
                         getResources().getString(R.string.device_info_default));
-                findPreference(preference).setSummary(maintainers);
-                if (maintainers.contains(",")) {
-                    findPreference(preference).setTitle(
-                            getResources().getString(R.string.device_maintainers));
+                if (title.contains(",")) {
+                    title = getResources().getString(R.string.device_maintainers);
+                } else {
+                    title = getResources().getString(R.string.device_maintainer);
                 }
+                retTitle = title;
             } catch (RuntimeException e) {
                 // No recovery
+            }
+            return retTitle;
+        }
+
+        private String setDialogMessage(String property) {
+            String retMaintainers = "";
+            try {
+                String maintainers = SystemProperties.get(property);
+                retMaintainers = maintainers;
+            } catch (RuntimeException e) {
+                // No recovery
+            }
+            return retMaintainers;
+        }
+
+        private void setDeviceInfoSummary(String preference, String value) {
+            try {
+                findPreference(preference).setSummary(value);
+            } catch (RuntimeException e) {
+                findPreference(preference).setSummary(
+                    getResources().getString(R.string.device_info_default));
             }
         }
     }
