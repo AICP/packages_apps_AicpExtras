@@ -106,10 +106,6 @@ public class StatusBarFragment extends Fragment {
             mAicpLogoColor.setSummary(hexColor);
             mAicpLogoColor.setNewPreviewColor(intColor);
 
-            if (!cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE)) {
-                categoryIndicators.removePreference(mCarrierLabel);
-            }
-
             // Status bar weather
             mStatusBarWeather = (ListPreference) prefSet.findPreference(PREF_STATUS_BAR_WEATHER);
             if (mStatusBarWeather != null && (!Helpers.isPackageInstalled(WEATHER_SERVICE_PACKAGE, pm))) {
