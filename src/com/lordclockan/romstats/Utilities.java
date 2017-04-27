@@ -1892,7 +1892,7 @@ public class Utilities {
 	}
 
 	public static String getDevice() {
-		return SystemProperties.get("ro.product.model");
+		return SystemProperties.get("ro.aicp.device");
 	}
 
 	public static String getModVersion() {
