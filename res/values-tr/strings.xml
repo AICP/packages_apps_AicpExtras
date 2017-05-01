@@ -1,17 +1,18 @@
 <resources>
     <string name="navigation_drawer_open">Gezinme çekmecesini aç</string>
     <string name="navigation_drawer_close">Gezinme çekmecesini kapat</string>
+
     <string name="action_settings">Ayarlar</string>
     <string name="first_layout_title">Burada sizleri hoş sürprizler beklemektedir!!</string>
     <string name="second_layout_title">İkinci katman</string>
     <string name="third_layout_title">Üçüncü Katman</string>
-    <string name="aicp_extras_title">AICP Extras</string>
+    <string name="aicp_extras_title">AICP Ekstra</string>
     <string name="pun_title">Herşeye hükmettiren tek rom</string>
     <string name="various_shit_title">Çeşitli Düzenlemeler</string>
     <string name="about_title">Hakkında</string>
     <string name="other_title">Diğer</string>
-    <string name="g_community">G+ toğluluğu</string>
-	<string name="g_plus_summary">Google+ topluluğumuzu ziyaret edin</string>
+    <string name="g_community">G+ topluluğu</string>
+    <string name="g_plus_summary">Google+ topluluğumuzu ziyaret edin</string>
     <string name="ui_title">Arayüz</string>
     <string name="builtin_title">Roma gömülenler</string>
     <string name="addons_title">Eklentiler</string>
@@ -24,12 +25,13 @@
     <string name="statubar_title">Durum Çubuğu</string>
     <string name="lockscreen_title">Kilit Ekranı</string>
     <string name="systemui_tuner_title">SystemUI ayarlayıcısı</string>
-    <string name="systemui_tuner_summary">Marshmallow\'a özel SystemUI ayarlayıcısı</string>
     <string name="systemui_tuner_dilog_title">Dikkat</string>
     <string name="systemui_tuner_dilog_warning">Sistem arayüzü modifikasyonları kısıtlamıştır.
         Bu özelleştirme, kolay erişim için AicpExtras bölümüne eklenmiştir. Etkinleştirmek için tıklayın.</string>
     <string name="aicp_downloads_title">İndirmeler</string>
-	<string name="dwnld_summary">Cihazınız için AICP indirme sayfasını ziyaret edin</string>
+    <string name="dwnld_summary">Cihazınız için AICP indirme sayfasını ziyaret edin</string>
+    <string name="aicp_ota_title">Güncelleme Merkezi</string>
+    <string name="ota_summary">AICP güncellemelerini kontrol et</string>
     <string name="aicp_gerrit_title">Gerrit</string>
 
     <string name="gerrit_summary">Neler üzerinde çalıştığımızı görmek için Gerrit sayfamızı ziyaret edin</string>
@@ -38,11 +40,13 @@
     <string name="hidden_anim_more_title">DAHA?</string>
     <string name="hidden_anim_more_nice">GÜZEL</string>
     <string name="continue_title">Devam</string>
-	<string name="settings_activity_title">AE ayarları</string>
+    <string name="settings_activity_title">AE ayarları</string>
 
     <string name="nothing_title">Henüz burada gösterilecek bir şey yok, devam edin</string>
 
-    <!-- Switch On/Off  -->
+    <string name="static_shortcut_disabled_message">Kısayollar devre dışı</string>
+    
+	<!-- Switch On/Off  -->
     <string name="switch_on_text">Açık</string>
     <string name="switch_off_text">Kapalı</string>
 
@@ -50,6 +54,11 @@
     <string name="storage_permission_granted">İzin verildi, artık depolama alanına erişebilirsiniz</string>
     <string name="storage_permission_not_granted">İzin verilmedi, depolama alanına erişemezsiniz</string>
 
+	<!-- Seekbar strings -->
+    <string name="seekbar_no_default_value">Varsayılan değer yok</string>
+    <string name="seekbar_default_value_set">Varsayılan değer  <xliff:g id="number">%d</xliff:g></string>
+    <string name="seekbar_default_value_already_set">Varsayılan değer zaten ayarlandı</string>
+	
     <!-- Recents panel -->
     <string name="recents_panel_title">Son Uygulamalar Paneli</string>
     <string name="show_clear_all_recents_button_title">Hepsini temizle butonu</string>
@@ -74,7 +83,9 @@
     <!-- Toast Icons -->
     <string name="toast_icon_title">Toast simgesi</string>
     <string name="toast_icon_summary">Toast ile bildirilen uygulama simgesini görüntüle</string>
-
+    <string name="toast_text_color">Toast metin rengi</string>
+    <string name="toast_icon_color">Toast ikon rengi</string>
+	
     <!-- Brightness slider -->
     <string name="qs_brightness_slider_title">Parlaklık kaydırıcısı</string>
     <string name="qs_brightness_slider_enabled">Etkin</string>
@@ -85,7 +96,7 @@
     <string name="dialog_title_lcd_density">LCD yoğunluğu</string>
     <string name="lcd_density_value_format">%d DPI</string>
     <string name="lcd_density_default_value_format">%d DPI (varsayılan)</string>
-    <string name="restarting_ui">Yeniden başlatılıyor UI\u2026</string>
+    <string name="restarting_ui">Yeniden başlatılıyor Arayüz\u2026</string>
     <string name="lcd_density_prompt_message">Bazı uygulamalar özel dpi ile çalışmayabilir, cihazınız yeniden başlatılacaktır.</string>
 
     <!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
@@ -237,7 +248,9 @@
     <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
     <string name="ga_gestures_error_loading">%s yüklenemedi. Mevcut depolama alanınız olduğuna emin olun</string>
     <string name="trigger_category">Tetikleme alanı</string>
-    <string name="picker_activities">Etkinlikler</string>
+    
+	<!-- Activity and App Picker -->
+	<string name="picker_activities">Etkinlikler</string>
     <string name="select_custom_app_title">Bir uygulama seçin</string>
     <string name="select_custom_activity_title">Bir etkinlik seçin</string>
     <string name="profile_applist_title">Uygulamalar</string>
@@ -388,7 +401,8 @@
     <string name="notification_ticker">Statistics opted-In</string>
     <string name="notification_title">AICP İstatistikleri</string>
     <string name="notification_desc">Anonim istatistikleri etkinleştir veya devre dışı bırak</string>
-    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
+    
+	<string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
 
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
     <string name="anonymous_statistics_title">AICP İstatistikleri</string>
@@ -398,8 +412,7 @@
         Hıfzedilen veriler, kişisel bilgilerinizin sızmasına izin vermeyecek eşsiz bir anahtar ile korunmaktadır. Bu işlem 7 günde bir tekrarlanır. 
         \n\nSaklanan verileriniz hakkında fikir sahibi olmak için Verileri Önizle\'ye tıklayınız. </string>
 
-
-
+		
     <string name="pref_settings">Ayarlar</string>
     <string name="enable_reporting_title">Raporlamayı etkinleştir</string>
     <string name="disable_reporting_persistent">Persistent opt-out</string>
@@ -564,8 +577,8 @@
     <string name="logcat_title">Logcat</string>
     <string name="kmesg_title">Kmesg</string>
     <string name="dmesg_title">Dmesg</string>
-    <string name="log_it_title">Engage</string>
-    <string name="log_it_dialog_title">Engage</string>
+    <string name="log_it_title">Oluştur</string>
+    <string name="log_it_dialog_title">Oluştur</string>
     <string name="log_that_shit_title">Veri günlüğü oluştur</string>
     <string name="logcat_warning">Paylaş veya GTFO!</string>
     <string name="share_title">Paylaş...</string>
@@ -573,25 +586,7 @@
     <string name="log_it_summary">Veriler oluşturulurken sabırlı olun</string>
 
     <!-- AOKP custom system animations -->
-    <string name="aokp_animation_title">Sistem animasyonlar</string>
-    <string name="aokp_animation_summary">AOKP özel animasyonu</string>
-    <string name="activity_open_title">Aktivite açma animasyonu</string>
-    <string name="activity_close_title">Aktivite kapama animasyonu</string>
-    <string name="task_open_title">Görev açma animasyonu</string>
-    <string name="task_close_title">Görev kapanma animasyonu</string>
-    <string name="task_move_to_front_title">Öne taşıma animasyonu</string>
-    <string name="task_move_to_back_title">Arkaya taşıma animasyonu</string>
-    <string name="wallpaper_open_title">Duvar kağıdı açma animasyonu</string>
-    <string name="wallpaper_close_title">Duvar kağıdı kapama animasyonu</string>
-    <string name="wallpaper_intra_open_title">Duvar kağıdı içi açma animasyonu</string>
-    <string name="wallpaper_intra_close_title">Duvar kağıdı içi kapama animasyonu</string>
-    <string name="task_open_behind_title">Arkaplandaki görevi açma animasyonu</string>
-    <string name="animation_duration_title">Animasyon süresi</string>
     <string name="animation_duration_default">Varsayılan</string>
-    <string name="title_animation_no_override">Prevent App Overrides</string>
-    <string name="summary_animation_no_override">Prevent apps from overriding transitions.</string>
-    <string name="animation_exit_only_title">Enter only animation</string>
-    <string name="animation_reverse_exit_title">Reverse exit animation</string>
 
     <!-- Toast Animation -->
     <string name="toast_animation_title">Toast animasyonu</string>
@@ -604,13 +599,13 @@
     <string name="toast_Toko_animation">Toko</string>
     <string name="toast_Tn_animation">Tn</string>
     <string name="toast_Honami_animation">Honami</string>
-    <string name="toast_FastFade_animation">Fast fade</string>
-    <string name="toast_GrowFade_animation">Grow fade</string>
-    <string name="toast_GrowFadeCenter_animation">Grow fade center</string>
-    <string name="toast_GrowFadeBottom_animation">Grow fade bottom</string>
-    <string name="toast_Translucent_animation">Translucent</string>
-    <string name="toast_SlideLeftRight_animation">Slide left to right</string>
-    <string name="toast_SlideRightLeft_animation">Slide right to left</string>
+    <string name="toast_FastFade_animation">Hızlı solma</string>
+    <string name="toast_GrowFade_animation">Büyüyerek solma</string>
+    <string name="toast_GrowFadeCenter_animation">Büyüyüp küçül</string>
+    <string name="toast_GrowFadeBottom_animation">Büyüp alta git</string>
+    <string name="toast_Translucent_animation">Şeffaf</string>
+    <string name="toast_SlideLeftRight_animation">Soldan sağa kay</string>
+    <string name="toast_SlideRightLeft_animation">Sağdan sola kay</string>
 
     <!-- Power menu Animations  -->
     <string name="power_menu_animation_title">Güç menüsü animasyonu</string>
@@ -1047,10 +1042,22 @@
     <string name="show_fourg_title">LTE yerine 4G göster</string>
     <string name="show_fourg_summary">Durum çubuğundaki LTE göstergesini 4G ile değiştirir</string>
 
-    <!-- Zen icon in statusbar -->
-    <string name="show_zen_icon_title">Zen icon</string>
-    <string name="show_zen_icon_summary">Show/hide priority icon in statusbar.</string>
+	<!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Dokunduğumda titret</string>
+    <string name="quick_settings_vibrate_summary">Tuşa dokunduğumda titret</string>
 
+    <!-- Advanced data tile -->
+    <string name="qs_advanced_data_title">Kolay veri tuşu </string>
+    
+    <!-- Zen icon in statusbar -->
+    <string name="show_zen_icon_title">Zen ikon</string>
+    <string name="show_zen_icon_summary">Bildirim barında öncelik simgesini göster/gizle.</string>
+
+	<!-- SystemUI restart prompt -->
+    <string name="systemui_restart_title">UYARI</string>
+    <string name="systemui_restart_message">Seçilen ayarın doğru uygulanabilmesi için SystemUI yeniden başlatılacaktır.</string>
+    <string name="systemui_restart_missing_su">Süper kullanıcı erişimi yok. SystemUI yeniden başlatılamadı, lütfen el ile yeniden başlatınız</string>
+	
     <!-- specific tile configurations -->
     <string name="themes_tile_title">Themes tile components</string>
     <string name="themes_tile_summary">Theme elements to change when a new theme is selected</string>
@@ -1068,4 +1075,31 @@
     <string name="themes_tile_mods_notification_entry">Bildirimler</string>
     <string name="themes_tile_mods_alarm_entry">Alarmlar</string>
     <string name="themes_tile_mods_ringtone_entry">Zil sesleri</string>
+
+    <!-- Screenshot delay -->
+    <string name="powermenu_screenshot_delay_title">Ekran görüntüsü gecikmesi</string>
+    <string name="powermenu_screenshot_delay_message">Gecikme %1$s saniyeye ayarlandı</string>
+	
+	 <!-- Lock screen Am/Pm switch -->
+    <string name="lock_screen_hide_ampm_title">AM/PM gizle</string>
+    <string name="lock_screen_hide_ampm_summary_on">AM/PM gizli</string>
+    <string name="lock_screen_hide_ampm_summary_off">AM/PM göster</string>
+
+	<!-- Hostname setting -->
+    <string name="device_hostname">Device hostname</string>
+	
+	<!-- Show camera intent on secure lock screen -->
+    <string name="show_camera_intent_title">Kilit ekranında kamera kısayollarını göster</string>
+
+	<!-- Media art -->
+    <string name="media_art_title">Albüm kapağı</string>
+    <string name="media_art_summary">Kilit ekranında albüm kapağını aktive et </string>
+	
+	<!-- AICP device and maintainer name -->
+    <string name="device_info_title">Cihaz sahibi bilgisi</string>
+    <string name="device_maintainer">Cihaz sahibi:</string>
+    <string name="device_maintainers">Cihaz sahipleri:</string>
+    <string name="device_info_default">Bilinmeyen</string>
+	
+	
 </resources>
