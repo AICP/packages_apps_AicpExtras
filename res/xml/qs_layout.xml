@@ -36,6 +36,14 @@
         android:defaultValue="true"/>
 
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="brightness_icon_position"
+        android:title="@string/brightness_icon_position_title"
+        android:summaryOn="@string/brightness_icon_position_on_summary"
+        android:summaryOff="@string/brightness_icon_position_off_summary"
+        android:dependency="brightness_icon"
+        android:defaultValue="true"/>
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="quick_settings_vibrate"
         android:title="@string/quick_settings_vibrate_title"
         android:summary="@string/quick_settings_vibrate_summary"
