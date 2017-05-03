@@ -67,6 +67,7 @@ public class QuickSettingsFragment extends Fragment {
         private static final String PREF_QS_DATA_ADVANCED = "qs_data_advanced";
         private static final String CATEGORY_WEATHER = "weather_category";
         private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
+        private static final String PREF_BRIGHTNESS_ICON_POSITION = "brightness_icon_position";
 
         private SeekBarPreferenceCham mRowsPortrait;
         private SeekBarPreferenceCham mRowsLandscape;
@@ -74,6 +75,7 @@ public class QuickSettingsFragment extends Fragment {
         private SeekBarPreferenceCham mQsColumnsLandscape;
         private SwitchPreference mQsDataAdvanced;
         private PreferenceCategory mWeatherCategory;
+        private SwitchPreference mBrightnessIconPosition;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -122,6 +124,10 @@ public class QuickSettingsFragment extends Fragment {
             if (mWeatherCategory != null && (!Helpers.isPackageInstalled(WEATHER_SERVICE_PACKAGE, pm))) {
                 prefSet.removePreference(mWeatherCategory);
             }
+
+            mBrightnessIconPosition = (SwitchPreference) findPreference(PREF_BRIGHTNESS_ICON_POSITION);
+            mBrightnessIconPosition.setOnPreferenceChangeListener(this);
+
         }
 
         @Override
@@ -153,6 +159,9 @@ public class QuickSettingsFragment extends Fragment {
                 intValue = (Integer) newValue;
                 Settings.Secure.putInt(resolver,
                         Settings.Secure.QS_COLUMNS_LANDSCAPE, intValue);
+                return true;
+            } else if (preference == mBrightnessIconPosition) {
+                Helpers.showSystemUIrestartDialog(getActivity());
                 return true;
             }
             return false;
