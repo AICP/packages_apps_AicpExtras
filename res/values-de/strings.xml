@@ -52,8 +52,12 @@
     <string name="settings_activity_title">AE Einstellungen</string>
     <string name="recents_panel_title">Anwendungsverlauf</string>
     <string name="quick_settings_title">Kacheln</string>
+    <string name="design_title">Design</string>
+    <string name="various_title">Verschiedenes</string>
 
     <string name="nothing_title">Hier gibt es noch nichts zu sehen, also weiter.</string>
+
+    <string name="static_shortcut_disabled_message">Verknüpfungen deaktiviert</string>
 
     <!-- Switch On/Off  -->
     <string name="switch_on_text">AN</string>
@@ -73,19 +77,15 @@
     <string name="changelog_title_summary">Zeige letzte Änderungen im ROM</string>
     <string name="changelog_error">Kann Änderungsprotokoll nicht laden</string>
 
-    <!-- Toast Icons -->
-    <string name="toast_icon_title">Toast Symbol</string>
-    <string name="toast_icon_summary">Zeige das zur Meldung zugehörige Symbol der Anwendung</string>
-
     <!-- Brightness slider -->
     <string name="qs_brightness_slider_title">Helligkeitsregler</string>
     <string name="qs_brightness_slider_enabled">Aktiviert</string>
     <string name="qs_brightness_slider_disabled">Deaktiviert</string>
 
-    <string name="restarting_ui">Neustart des UI\u2026</string>
+    <string name="restarting_ui">Neustart der Oberfläche\u2026</string>
 
     <!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
-    <string name="print_restart">Neu starten</string>
+    <string name="print_restart">Neustart</string>
 
     <!-- Force expanded notifications -->
     <string name="force_expanded_notifications_title">Erzwinge erweiterte Benachrichtigungen</string>
@@ -230,10 +230,9 @@
     <!-- Double tap to sleep on lockscreen -->
     <string name="double_tap_sleep_anywhere_title">DT2S auf Sperrbildschirm</string>
     <string name="double_tap_sleep_anywhere_summary_on">Zweimal auf das Display tippen, um das Gerät in den Ruhezustand zu versetzen, ist AN</string>
-    <string name="double_tap_sleep_anywhere_summary_off">weimal auf das Display tippen, um das Gerät in den Ruhezustand zu versetzen, ist AUS</string>
+    <string name="double_tap_sleep_anywhere_summary_off">Zweimal auf das Display tippen, um das Gerät in den Ruhezustand zu versetzen, ist AUS</string>
 
     <!-- SU -->
-    <string name="cannot_get_su">Keinen Superuser-Zugriff erhalten, beende.</string>
     <string name="cannot_get_su_start">Kann keinen Superuser-Zugriff erhalten.</string>
 
     <!-- Aicp logcat -->
@@ -253,6 +252,7 @@
 
     <!-- Toast Animation -->
     <string name="toast_animation_title">Toast Animation</string>
+    <string name="toast_animation_style_title">Ausgewählter Animationstyp</string>
     <string name="toast_none_animation">Keine</string>
     <string name="toast_default_animation">Standard</string>
     <string name="toast_fade_animation">Ausblenden</string>
@@ -270,9 +270,16 @@
     <string name="toast_SlideLeftRight_animation">Gleite von links nach rechts</string>
     <string name="toast_SlideRightLeft_animation">Gleite von rechts nach links</string>
 
+    <!-- Toast Icons -->
+    <string name="toast_icon_title">Toast Symbol</string>
+    <string name="toast_icon_summary">Zeige das zur Meldung zugehörige Symbol der Anwendung</string>
+    <string name="toast_text_color">Toast Textfarbe</string>
+    <string name="toast_icon_color">Toast Symbolfarbe</string>
+
     <!-- Power menu Animations  -->
     <string name="power_menu_animation_title">Ein/Aus-Menü Animation</string>
-    <string name="power_menu_animation_summary">Wechselt die Animation beim Aufruf/Verlassen des Ein/Aus-Menüs.</string>
+    <string name="power_menu_animation_style_title">Ausgewählter Animationstyp</string>
+    <string name="power_menu_animation_style_summary">Wechselt die Animation beim Aufruf/Verlassen des Ein/Aus-Menüs.</string>
     <string name="power_menu_animation_dialog_title">Animation für Ein/Aus-Menü wählen</string>
     <string name="power_menu_animation_aosp">AOSP (Standard)</string>
     <string name="power_menu_animation_bottom">Unten</string>
@@ -310,6 +317,9 @@
 
     <string name="brightness_icon_title">Symbol für Helligkeit</string>
     <string name="brightness_icon_summary">Zeigt ein Symbol für die Helligkeit auf der linken Seite des Helligkeitsreglers, um die Auto-Helligkeit anzupassen</string>
+    <string name="brightness_icon_position_title">Position des Symbols für die Helligkeit</string>
+    <string name="brightness_icon_position_on_summary">Rechts anzeigen</string>
+    <string name="brightness_icon_position_off_summary">Links anzeigen</string>
 
     <!-- QS shade opacity -->
     <string name="qs_transparent_shade">Kachelhintergund</string>
@@ -354,6 +364,7 @@
 
     <!-- Tiles animation style  -->
     <string name="qs_tile_animation_style_title">Stil der Kachelanimation</string>
+    <string name="qs_tile_animation_style_title">Ausgewählter Animationstyp</string>
     <string name="qs_tile_animation_duration_title">Dauer der Kachelanimation</string>
     <string name="qs_tile_animation_interpolator_title">Art der Kachelanimation</string>
     <string name="qs_tile_animation_style_off">Keine Animation</string>
@@ -433,6 +444,8 @@
     <string name="custom_summary_title">Eigene AE Beschreibung</string>
     <string name="custom_summary_explain">Bitte eine neue Beschreibung eingeben. Für den Vorgabetext einfach leer lassen.</string>
     <string name="custom_summary_notset">Custom ROM Anpassungen</string>
+    <string name="ae_moderate_language_title">Modus für moderate Ausdrucksweise</string>
+    <string name="ae_moderate_language_summary">Filtert \"Unangemessene Ausdrücke\" und ersetzt diese mit alternativen Wörtern. Dies kann die Geschwindigkeit der AE verlangsamen.</string>
 
     <!-- Statusbar 4G LTE switch -->
     <string name="show_fourg_title">Zeige 4G an Stelle von LTE</string>
@@ -449,6 +462,7 @@
     <!-- SystemUI restart prompt -->
     <string name="systemui_restart_title">WARNUNG</string>
     <string name="systemui_restart_message">Das SystemUI wird neu gestartet, um die gewählte Einstellung zu übernehmen.</string>
+    <string name="systemui_restart_missing_su">Der Neustart des SystemUI schlug fehl, da keine \"Superuser\"-Zugriff erfolgen konnte. Bitte manuell neu starten.</string>
 
     <!-- Status Bar Ticker -->
     <string name="ticker_screen_title">Ticker</string>
@@ -459,6 +473,9 @@
     <string name="text_title">Text</string>
     <string name="icon_title">Symbol</string>
     <string name="colors_title">Farben</string>
+    <string name="ticker_disabled">Kein Ticker</string>
+    <string name="ticker_enabled">Ticker für Benachrichtigungen</string>
+    <string name="ticker_media_enabled">Ticker für Benachrichtigungen &amp; Musik</string>
 
     <!-- Optional screenshot type -->
     <string name="screenshot_type_title">Art des Bildschirmfotos</string>
@@ -496,9 +513,12 @@
     <string name="immersive_recents_navbar">Nur Navigationsleiste zeigen</string>
 
     <!-- Recents Membar -->
-    <string name="systemui_recents_mem_display_title">Arbeitsspeicheranzeige</string>
+    <string name="systemui_recents_mem_display_category_title">Arbeitsspeicheranzeige</string>
+    <string name="systemui_recents_mem_display_title">Arbeitsspeicher anzeigen</string>
     <string name="systemui_recents_mem_display_summaryOn">Anzeige der Leiste aktiviert</string>
     <string name="systemui_recents_mem_display_summaryOff">Anzeige der Leiste deaktiviert</string>
+    <string name="systemui_recents_mem_display_color">Farbe der Leiste</string>
+    <string name="systemui_recents_mem_display_text_color">Farbe des Leistentextes</string>
 
     <!-- Recents panel -->
     <string name="show_clear_all_recents_button_title">Lösch-Taste für den gesamten Verlauf</string>
@@ -806,7 +826,7 @@
     <string name="qs_expand_indicator_title">Erweiterungsanzeige (\"Pfeil\")</string>
     <string name="qs_expand_indicator_summary">Deaktiviert die Erweiterungsanzeige in der Kopfzeile</string>
 
-    <!-- SlimRecents -->
+    <!-- Slim Recent panel -->
     <string name="slim_recents_title">Slim Anwendungsverlauf</string>
     <string name="use_slim_recents_title">Als Anwendungsverlauf verwenden</string>
     <string name="use_slim_recents_summary">Slim Anwendungsverlauf anstatt der Standardansicht für den Anwendungsverlauf benutzen</string>
@@ -827,6 +847,11 @@
     <string name="recent_card_bg_color_title">Hintergrundfarbe der Karten</string>
     <string name="slim_recents_mem_display_long_click_clear_title">RAM-Anzeige lange drücken</string>
     <string name="slim_recents_mem_display_long_click_clear_summary">Verlauf leeren, indem die Arbeitsspeicher-Anzeige lange gedrückt wird</string>
+    <string name="slim_icon_pack_title">Symbol-Paket</string>
+    <string name="slim_icon_pack_summary">Eigenes Symbol-Paket den Apps in der Leiste zuweisen</string>
+    <string name="no_iconpacks_summary">Keine Symbol-Pakete installiert</string>
+    <string name="dialog_pick_iconpack_title">Symbol-Paket wählen</string>
+    <string name="default_iconpack_title">Standard-Symbole</string>
 
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Anzeige auf der linken Seite</string>
@@ -911,6 +936,7 @@
 
     <!-- Custom bootanim -->
     <string name="custom_bootanimation_title">Bootanimation</string>
+    <string name="custom_bootanimation_select_title">Bootanimation wählen</string>
     <string name="custom_bootanimation_summary">Bitte die neue Bootanimation auswählen.\nBei jedem Wechsel wird die momentane Animation im Verzeichnis \"AICP_ota\" des Telefonspeichers (mit aktuellem Datum) gesichert. Alte Animationen müssen händisch gelöscht werden, wenn sie nicht mehr benötigt werden!</string>
     <string name="bootanimation_preview">Vorschau der Bootanimation</string>
     <string name="set_custom_bootanimation">Eigene aktivieren...</string>
@@ -919,6 +945,7 @@
     <string name="error_creating_preview">Fehler beim Erzeugen der Vorschau</string>
     <string name="install_file_manager_error">Keine App zur Auswahl der ZIP-Datei gefunden. Bitte einen Dateimanager installieren.</string>
     <string name="apply">Anwenden</string>
+    <string name="bootanim_install_successful">Neue Bootanimation erfolgreich installiert.</string>
 
     <!-- Circle app bar -->
     <string name="category_app_circle_bar_title">App-Kreisleiste</string>
@@ -955,8 +982,15 @@
     <!-- OmniJaws -->
     <string name="weather_title">Wetter</string>
     <string name="weather_config_title">Wetterkachel-Einstellungen</string>
+    <string name="weather_config_summary"></string>
 
-   <!-- StatusBar weather settings -->
+    <!-- Header Weather -->
+    <string name="header_weather_enabled_title">Wetter</string>
+    <string name="header_weather_enabled_summary">Wetteranzeige in Kopfzeilen aktivieren</string>
+    <string name="header_weather_image_enabled_title">Wetter-Symbol</string>
+    <string name="header_weather_image_enabled_summary">Wetter-Symbol in Kopfzeile anzeigen</string>
+
+    <!-- StatusBar weather settings -->
     <string name="statusbar_weather_title">Statusleisten-Wetter</string>
     <string name="statusbar_weather_summary">Die Anzeige nutzt die Einstellungen der Wetter-Kachel!</string>
     <string name="statusbar_weather_dialog_title">Anzeigestil des Wetters</string>
@@ -967,8 +1001,50 @@
     <string name="status_bar_temperature_hide_scale_hide_image">Temperatur ohne Einheit</string>
     <string name="status_bar_show_image">Bild</string>
 
-   <!-- Confirm Power Off selection on Power menu-->
+    <!-- Confirm Power Off selection on Power menu-->
     <string name="confirm_shutdown_switch_title">Bestätigung zum Ausschalten</string>
     <string name="confirm_shutdown_switch_desc">Wenn \"Ausschalten\" im Ein/Aus-Menü gedrückt wird, wird ein Bestätigungsdialog angezeigt</string>
 
+    <!-- Screen state service -->
+    <string name="screen_state_toggles_summary">@null</string>
+    <string name="screen_state_toggles_title">Energiespar-Optionen</string>
+    <string name="screen_state_toggles_enable_title">Aktivieren</string>
+    <string name="screen_state_toggles_enable_summary">Die Optionen werden bei Displayabschaltung aktiviert. Bei Einschaltung werden die vorherigen Werte wieder hergestellt.</string>
+    <string name="screen_state_toggles_mobile_title">Mobilfunknetze</string>
+    <string name="screen_state_toggles_location_title">Standort</string>
+    <string name="screen_state_toggles_twog">Umschalten zu GPRS/EDGE (2G)</string>
+    <string name="screen_state_toggles_twog_summary">Der Netzwerkmodus wird auf 2G geschaltet, wenn das Display aus ist</string>
+    <string name="screen_state_toggles_gps">GPS deaktivieren</string>
+    <string name="screen_state_toggles_gps_summary">Die Standortbestimmung per GPS wird abgeschaltet, wenn das Display aus ist</string>
+    <string name="screen_state_toggles_mobile_data">Mobile Datenverbindung trennen</string>
+    <string name="screen_state_toggles_mobile_data_summary">Mobile Datenverbindung wird deaktiviert, wenn das Display aus ist</string>
+    <string name="screen_state_off_delay_title">Verzögerung nach der Displayabschaltung</string>
+    <string name="screen_state_off_delay_summary">Anzahl der Minuten nach Displayabschaltung bevor die gewählten Optionen in Kraft treten</string>
+    <string name="screen_state_on_delay_title">Verzögerung nach Reaktivierung des Displays</string>
+    <string name="screen_state_on_delay_summary">Anzahl der Minuten nach Wiedereinschaltung des Displays bevor die gewählten Optionen rückgängig gemacht werden</string>
+
+    <!-- Show camera intent on secure lock screen -->
+    <string name="show_camera_intent_title">Zeige Kameraverknüpfung bei gesichertem Sperrbildschirm</string>
+
+    <!-- Media art -->
+    <string name="media_art_title">Albumcover anzeigen</string>
+    <string name="media_art_summary">Zeigt Albumcover auf dem Sperrbildschirm als Hintergrund</string>
+
+    <!-- AICP device and maintainer name -->
+    <string name="device_info_title">Geräte-Maintainer Information</string>
+    <string name="device_maintainer">Geräte-Maintainer:</string>
+    <string name="device_maintainers">Geräte-Maintainer:</string>
+    <string name="device_info_default">Unbekannt</string>
+
+    <!-- Lockscreen Weather -->
+    <string name="lock_screen_weather_category_title">Wetter</string>
+    <string name="lock_screen_show_weather_title">Wetteranzeige</string>
+    <string name="lock_screen_show_weather_summaryOn">Wetteranzeige auf dem Sperrbildschirm aktiviert</string>
+    <string name="lock_screen_show_weather_summaryOff">Wetteranzeige auf dem Sperrbildschirm deaktiviert</string>
+    <string name="lock_screen_show_location_title">Anzeige des Standorts</string>
+    <string name="lock_screen_show_location_summaryOn">Standortanzeige auf dem Sperrbildschirm aktiviert</string>
+    <string name="lock_screen_show_location_summaryOff">Standortanzeige auf dem Sperrbildschirm deaktiviert</string>
+    <string name="lock_screen_weather_condition_icon_title">Anzeige des Wettersymbols</string>
+    <string name="lock_screen_weather_condition_icon_summaryOn">Symbolanzeige auf dem Sperrbildschirm aktiviert</string>
+    <string name="lock_screen_weather_condition_icon_summaryOff">Symbolanzeige auf dem Sperrbildschirm deaktiviert</string>
 </resources>
