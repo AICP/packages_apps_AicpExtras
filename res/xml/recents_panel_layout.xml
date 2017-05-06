@@ -17,6 +17,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:pure="http://schemas.android.com/apk/res-auto" >
 
+    <ListPreference
+        android:key="navigation_bar_recents"
+        android:title="@string/recents_style_title"
+        android:dialogTitle="@string/recents_style_dialog_title"
+        android:entries="@array/recents_style_entries"
+        android:entryValues="@array/recents_style_values" />
+
     <PreferenceCategory
         android:key="stock_recents"
         android:title="@string/aosp_recents_title">
@@ -58,21 +65,14 @@
 
     </PreferenceCategory>
 
-        <PreferenceCategory
-            android:key="omni_recents"
-            android:title="@string/omniswitch_recents_title" >
-
-        <SwitchPreference
-            android:key="recents_use_omniswitch"
-            android:title="@string/recents_use_omniswitch_title"
-            android:summary="@string/recents_use_omniswitch_summary"
-            android:persistent="false" />
+    <PreferenceCategory
+        android:key="omni_recents"
+        android:title="@string/omniswitch_recents_title" >
 
         <Preference
             android:key="omniswitch_start_settings"
             android:title="@string/omniswitch_start_settings_title"
             android:summary="@string/omniswitch_start_settings_summary"
-            android:dependency="recents_use_omniswitch"
             android:persistent="false" />
 
         </PreferenceCategory>
@@ -81,17 +81,10 @@
         android:key="slim_recents"
         android:title="@string/slim_recents_title">
 
-        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
-            android:key="use_slim_recents"
-            android:title="@string/use_slim_recents_title"
-            android:summary="@string/use_slim_recents_summary"
-            android:defaultValue="false" />
-
         <Preference
             android:key="slim_recent_panel"
             android:title="@string/slim_recents_settings_title"
             android:summary="@string/slim_recents_settings_summary"
-            android:dependency="use_slim_recents"
             android:persistent="false" />
 
     </PreferenceCategory>
