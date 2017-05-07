@@ -23,6 +23,7 @@ import android.support.v4.app.Fragment;
 
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.utils.Helpers;
+import com.lordclockan.aicpextras.LineageSettings;
 
 public class StatusBarFragment extends Fragment {
 

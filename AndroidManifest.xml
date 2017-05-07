@@ -64,7 +64,7 @@
             android:theme="@style/PreferenceTheme"
             android:label="@string/changelog_title">
         </activity>
-        <activity
+        <activity>
             android:name=".aicpextras.SettingsActivity"
             android:theme="@style/PreferenceTheme"
             android:label="@string/settings_activity_title">
@@ -79,6 +79,25 @@
 	    android:label="@string/system_app_remover"
             android:theme="@style/PreferenceTheme"
 	    android:excludeFromRecents="true">
+        </activity>
+
+        !-- Status bar settings (dashboard) -->
+        <activity-alias
+            android:name=".aicpextras.LineageSettings"
+            android:label="@string/status_bar_title">
+            <intent-filter android:priority="1">
+                <action android:name="com.lordclockan.aicpextras.LineageSettings" />
+                <category android:name="android.intent.category.com.lordclockan" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:name=".aicpextras.LineageSettings"
+	    android:label="@string/lineage_settings"
+            android:theme="@style/PreferenceTheme"
+	    android:excludeFromRecents="true"
+            android:key="lineage_settings"
+            android:fragment="com.lordclockan.aicpextras.LineageSettings"> 
         </activity>
         <activity
             android:name=".aicpextras.CarrierLabel"
