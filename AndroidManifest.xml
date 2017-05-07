@@ -59,12 +59,14 @@
                 android:resource="@xml/shortcuts" />
         </activity>
 
+        
+
         <activity
             android:name=".aicpextras.ChangeLogActivity"
             android:theme="@style/PreferenceTheme"
             android:label="@string/changelog_title">
         </activity>
-        <activity
+        <activity>
             android:name=".aicpextras.SettingsActivity"
             android:theme="@style/PreferenceTheme"
             android:label="@string/settings_activity_title">
@@ -79,6 +81,25 @@
 	    android:label="@string/system_app_remover"
             android:theme="@style/PreferenceTheme"
 	    android:excludeFromRecents="true">
+        </activity>
+
+        !-- Status bar settings (dashboard) -->
+        <activity-alias
+            android:name=".statusbar.StatusBarSettings"
+            android:label="@string/status_bar_title">
+            <intent-filter android:priority="1">
+                <action android:name="com.lordclockan" />
+                <category android:name="android.intent.category.com.lordclockan" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:name=".aicpextras.LineageSettings"
+	    android:label="@string/lineage_settings"
+            android:theme="@style/PreferenceTheme"
+	    android:excludeFromRecents="true"
+            android:key="lineage_settings"
+            android:fragment="org.cyanogenmod.cmparts.statusbar.StatusBarSettings"> 
         </activity>
         <activity
             android:name=".aicpextras.CarrierLabel"
