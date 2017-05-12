@@ -12,6 +12,7 @@ import android.content.SharedPreferences.Editor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -50,6 +51,7 @@ public class VariousShitFragment extends Fragment {
         private static final int MAX_DELAY_VALUE = 30;
 
         private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
+        private static final String HEADSET_CONNECT_PLAYER = "headset_connect_player";
         private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
         private static final String SCREENSHOT_TYPE = "screenshot_type";
         private static final String SCREENSHOT_DELAY = "screenshot_delay";
@@ -66,6 +68,7 @@ public class VariousShitFragment extends Fragment {
         private static final String PREF_SUSPEND_ACTIONS = "suspend_actions";
 
         private SwitchPreference mCameraSounds;
+        private ListPreference mLaunchPlayerHeadsetConnection;
         private ListPreference mMsob;
         private ListPreference mScreenshotType;
         private NumberPickerPreference mScreenshotDelay;
@@ -128,6 +131,13 @@ public class VariousShitFragment extends Fragment {
             }
 
             mSuspendActions = (Preference) prefSet.findPreference(PREF_SUSPEND_ACTIONS);
+
+            mLaunchPlayerHeadsetConnection = (ListPreference) findPreference(HEADSET_CONNECT_PLAYER);
+            int mLaunchPlayerHeadsetConnectionValue = Settings.System.getIntForUser(resolver,
+                    Settings.System.HEADSET_CONNECT_PLAYER, 0, UserHandle.USER_CURRENT);
+            mLaunchPlayerHeadsetConnection.setValue(Integer.toString(mLaunchPlayerHeadsetConnectionValue));
+            mLaunchPlayerHeadsetConnection.setSummary(mLaunchPlayerHeadsetConnection.getEntry());
+            mLaunchPlayerHeadsetConnection.setOnPreferenceChangeListener(this);
         }
 
         @Override
@@ -174,6 +184,14 @@ public class VariousShitFragment extends Fragment {
                 int volDialogTimeout = (Integer) newValue;
                 Settings.System.putInt(resolver,
                         Settings.System.VOLUME_DIALOG_TIMEOUT, volDialogTimeout * 1);
+                return true;
+            } else if (preference == mLaunchPlayerHeadsetConnection) {
+                int mLaunchPlayerHeadsetConnectionValue = Integer.valueOf((String) newValue);
+                int index = mLaunchPlayerHeadsetConnection.findIndexOfValue((String) newValue);
+                mLaunchPlayerHeadsetConnection.setSummary(
+                        mLaunchPlayerHeadsetConnection.getEntries()[index]);
+                Settings.System.putIntForUser(resolver, Settings.System.HEADSET_CONNECT_PLAYER,
+                        mLaunchPlayerHeadsetConnectionValue, UserHandle.USER_CURRENT);
                 return true;
             }
             return false;
