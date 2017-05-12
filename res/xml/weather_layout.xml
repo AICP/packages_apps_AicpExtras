@@ -76,4 +76,17 @@
             android:dependency="header_weather_enabled"
             android:defaultValue="false" />
     </PreferenceCategory>
+
+    <!-- Misc weather -->
+    <PreferenceCategory
+        android:key="misc_weather_category"
+        android:title="@string/misc_weather_category_title" >
+
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="omnijaws_windspeed_m_s"
+            android:title="@string/weather_windspeed_metric_units"
+            android:summaryOn="@string/weather_windspeed_metric_units_summaryOn"
+            android:summaryOff="@string/weather_windspeed_metric_units_summaryOff"
+            android:defaultValue="false" />
+    </PreferenceCategory>
 </PreferenceScreen>
