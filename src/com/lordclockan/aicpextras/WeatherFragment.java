@@ -42,19 +42,23 @@ public class WeatherFragment extends Fragment {
         private static final String CAT_LOCKSCREEN_WEATHER = "lock_screen_weather_category";
         private static final String CAT_HEADER_WEATHER = "header_weather_category";
         private static final String CAT_STATUSBAR_WEATHER = "statusbar_weather_category";
+        private static final String CAT_MISC_WEATHER = "misc_weather_category";
 
         private static final String PREF_LOCKSCREEN_WEATHER = "lock_screen_show_weather";
         private static final String PREF_HEADER_WEATHER = "header_weather_enabled";
         private static final String PREF_STATUS_BAR_WEATHER = "status_bar_weather";
+        private static final String PREF_MISC_WINDSPEED = "omnijaws_windspeed_m_s";
 
 
         private PreferenceCategory mLockscreenWeatherCategory;
         private PreferenceCategory mHeaderWeatherCategory;
         private PreferenceCategory mStatusBarWeatherCategory;
+        private PreferenceCategory mMiscWeatherCategory;
 
         private ListPreference mStatusBarWeather;
         private Preference mLockscreenWeather;
         private Preference mHeaderWeather;
+        private Preference mMiscWindspeed;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -68,8 +72,10 @@ public class WeatherFragment extends Fragment {
             mLockscreenWeatherCategory = (PreferenceCategory) findPreference(CAT_LOCKSCREEN_WEATHER);
             mHeaderWeatherCategory = (PreferenceCategory) findPreference(CAT_HEADER_WEATHER);
             mStatusBarWeatherCategory = (PreferenceCategory) findPreference(CAT_STATUSBAR_WEATHER);
+            mMiscWeatherCategory = (PreferenceCategory) findPreference(CAT_MISC_WEATHER);
             mLockscreenWeather = prefSet.findPreference(PREF_LOCKSCREEN_WEATHER);
             mHeaderWeather = prefSet.findPreference(PREF_HEADER_WEATHER);
+            mMiscWindspeed = prefSet.findPreference(PREF_MISC_WINDSPEED);
 
             // Status bar weather
             mStatusBarWeather = (ListPreference) prefSet.findPreference(PREF_STATUS_BAR_WEATHER);
@@ -78,6 +84,7 @@ public class WeatherFragment extends Fragment {
                 mStatusBarWeatherCategory.removePreference(mStatusBarWeather);
                 mLockscreenWeatherCategory.removePreference(mLockscreenWeather);
                 mHeaderWeatherCategory.removePreference(mHeaderWeather);
+                mMiscWeatherCategory.removePreference(mMiscWindspeed);
             } else {
                 int temperatureShow = Settings.System.getIntForUser(resolver,
                     Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP, 0,
