@@ -33,6 +33,11 @@
                 android:checkable="true"
                 android:icon="@drawable/ic_recents"
                 android:title="@string/recents_panel_title" />
+            <item
+                android:id="@+id/nav_weather"
+                android:checkable="true"
+                android:icon="@drawable/ic_weather"
+                android:title="@string/weather_title" />
         </menu>
     </item>
     <item android:title="@string/design_title">

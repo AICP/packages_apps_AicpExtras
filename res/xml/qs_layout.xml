@@ -140,16 +140,4 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="weather_category"
-        android:title="@string/weather_title" >
-
-        <PreferenceScreen
-            android:title="@string/weather_config_title" >
-        <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="org.omnirom.omnijaws"
-                android:targetClass="org.omnirom.omnijaws.SettingsActivity" />
-        </PreferenceScreen>
-    </PreferenceCategory>
-
 </PreferenceScreen>
