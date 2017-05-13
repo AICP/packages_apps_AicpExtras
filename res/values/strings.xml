@@ -981,18 +981,22 @@
 
     <!-- OmniJaws -->
     <string name="weather_title">Weather</string>
-    <string name="weather_config_title">Weather tile settings</string>
+    <string name="weather_config_title">Main settings</string>
     <string name="weather_config_summary"></string>
 
     <!-- Header Weather -->
-    <string name="header_weather_enabled_title">Weather</string>
-    <string name="header_weather_enabled_summary">Enable weather info in expanded header</string>
-    <string name="header_weather_image_enabled_title">Weather Image</string>
-    <string name="header_weather_image_enabled_summary">Enable weather image in expanded header</string>
+    <string name="header_weather_category_title">Header</string>
+    <string name="header_weather_enabled_title">Weather display</string>
+    <string name="header_weather_enabled_summaryOn">Weather is shown in expanded header</string>
+    <string name="header_weather_enabled_summaryOff">Weather is hidden in expanded header</string>
+    <string name="header_weather_image_enabled_title">Condition icon display</string>
+    <string name="header_weather_image_enabled_summaryOn">Condition icon is shown in expanded header</string>
+    <string name="header_weather_image_enabled_summaryOff">Condition icon is hidden in expanded header</string>
 
     <!-- StatusBar weather settings -->
-    <string name="statusbar_weather_title">Status bar weather</string>
-    <string name="statusbar_weather_summary">Configure from QS settings/Weather.</string>
+    <string name="statusbar_weather_category_title">Statusbar</string>
+    <string name="statusbar_weather_title">Weather display</string>
+    <string name="statusbar_weather_summary">Choose weather display options for statusbar</string>
     <string name="statusbar_weather_dialog_title">Status bar weather style</string>
     <string name="status_bar_weather_hidden">Hidden weather</string>
     <string name="status_bar_temperature_image_show_scale">Show temp with scale and image</string>
@@ -1037,7 +1041,7 @@
     <string name="device_info_default">Unknown</string>
 
     <!-- Lockscreen Weather -->
-    <string name="lock_screen_weather_category_title">Weather</string>
+    <string name="lock_screen_weather_category_title">Lockscreen</string>
     <string name="lock_screen_show_weather_title">Weather display</string>
     <string name="lock_screen_show_weather_summaryOn">Weather is shown on Lockscreen</string>
     <string name="lock_screen_show_weather_summaryOff">Weather is hidden on Lockscreen</string>

@@ -261,6 +261,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_recents:
                 fragmentClass = RecentsPanelFragment.class;
                 break;
+            case R.id.nav_weather:
+                fragmentClass = WeatherFragment.class;
+                break;
             case R.id.nav_lockscreen:
                 fragmentClass = LockscreenFragment.class;
                 break;
