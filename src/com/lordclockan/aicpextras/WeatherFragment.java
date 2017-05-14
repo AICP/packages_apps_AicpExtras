@@ -48,6 +48,7 @@ public class WeatherFragment extends Fragment {
         private static final String PREF_HEADER_WEATHER = "header_weather_enabled";
         private static final String PREF_STATUS_BAR_WEATHER = "status_bar_weather";
         private static final String PREF_MISC_WINDSPEED = "omnijaws_windspeed_m_s";
+        private static final String PREF_MISC_WINDDIRECTION = "omnijaws_winddirection_display";
 
 
         private PreferenceCategory mLockscreenWeatherCategory;
@@ -59,6 +60,7 @@ public class WeatherFragment extends Fragment {
         private Preference mLockscreenWeather;
         private Preference mHeaderWeather;
         private Preference mMiscWindspeed;
+        private Preference mMiscWindDirection;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -76,6 +78,7 @@ public class WeatherFragment extends Fragment {
             mLockscreenWeather = prefSet.findPreference(PREF_LOCKSCREEN_WEATHER);
             mHeaderWeather = prefSet.findPreference(PREF_HEADER_WEATHER);
             mMiscWindspeed = prefSet.findPreference(PREF_MISC_WINDSPEED);
+            mMiscWindDirection = prefSet.findPreference(PREF_MISC_WINDDIRECTION);
 
             // Status bar weather
             mStatusBarWeather = (ListPreference) prefSet.findPreference(PREF_STATUS_BAR_WEATHER);
@@ -85,6 +88,7 @@ public class WeatherFragment extends Fragment {
                 mLockscreenWeatherCategory.removePreference(mLockscreenWeather);
                 mHeaderWeatherCategory.removePreference(mHeaderWeather);
                 mMiscWeatherCategory.removePreference(mMiscWindspeed);
+                mMiscWeatherCategory.removePreference(mMiscWindDirection);
             } else {
                 int temperatureShow = Settings.System.getIntForUser(resolver,
                     Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP, 0,
