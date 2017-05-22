@@ -47,6 +47,12 @@
         android:summary="@string/three_finger_gesture_summary"
         android:defaultValue="false" />
 
+    <com.lordclockan.aicpextras.preferences.GlobalSettingSwitchPreference
+        android:key="signature_spoofing"
+        android:title="@string/signature_spoofing_title"
+        android:summary="@string/signature_spoofing_summary"
+        android:defaultValue="false" />
+
     <!-- Screenshot tone -->
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="screenshot_sound"
