@@ -28,14 +28,10 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 
-import com.android.internal.util.aicp.DeviceUtils;
-
 public class QuickSettings extends BaseSettingsFragment
     implements OnPreferenceChangeListener {
 
     private static final String PREF_BRIGHTNESS_ICON_POSITION = "brightness_icon_position";
-    private static final String KEY_FPC_QUICK_PULLDOWN = "status_bar_quick_qs_pulldown_fp";
-
     private SwitchPreference mBrightnessIconPosition;
 
     @Override
@@ -50,10 +46,6 @@ public class QuickSettings extends BaseSettingsFragment
         mBrightnessIconPosition = (SwitchPreference) findPreference(PREF_BRIGHTNESS_ICON_POSITION);
         mBrightnessIconPosition.setOnPreferenceChangeListener(this);
 
-        mFPQuickPullDown = (SwitchPreference) findPreference(KEY_FPC_QUICK_PULLDOWN);
-        if(!DeviceUtils.deviceSupportsFingerPrint(getActivity())){
-            mFPQuickPullDown.getParent().removePreference(mFPQuickPullDown);
-        }
     }
 
     @Override
