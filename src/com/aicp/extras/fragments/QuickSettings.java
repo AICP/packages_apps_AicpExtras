@@ -35,6 +35,8 @@ import com.aicp.extras.preference.SystemSettingSeekBarPreference;
 import com.aicp.extras.preference.SystemSettingSwitchPreference;
 import com.aicp.extras.utils.Util;
 
+import com.android.internal.util.aicp.DeviceUtils;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -53,6 +55,7 @@ public class QuickSettings extends BaseSettingsFragment
     private static final String STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
     private static final String CUSTOM_HEADER_ENABLED = "status_bar_custom_header";
     private static final String PREF_QS_STYLE_DARK = "qs_style_dark";
+    private static final String KEY_FPC_QUICK_PULLDOWN = "status_bar_quick_qs_pulldown_fp";
 
 
     private SwitchPreference mBrightnessIconPosition;
@@ -63,6 +66,7 @@ public class QuickSettings extends BaseSettingsFragment
     private String mDaylightHeaderProvider;
     private SwitchPreference mHeaderEnabled;
     private SwitchPreference mQsStyleDark;
+    private SwitchPreference mFPQuickPullDown;
 
     @Override
     protected int getPreferenceResource() {
@@ -118,6 +122,11 @@ public class QuickSettings extends BaseSettingsFragment
 
         mQsStyleDark = (SwitchPreference) findPreference(PREF_QS_STYLE_DARK);
         mQsStyleDark.setOnPreferenceChangeListener(this);
+
+        mFPQuickPullDown = (SwitchPreference) findPreference(KEY_FPC_QUICK_PULLDOWN);
+        if(!DeviceUtils.deviceSupportsFingerPrint(getActivity())){
+            mFPQuickPullDown.getParent().removePreference(mFPQuickPullDown);
+        }
     }
 
     private void updateHeaderProviderSummary(boolean headerEnabled) {
