@@ -305,7 +305,12 @@
 
     <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Starte Musik App</string>
-    <string name="headset_connect_player_summary">Starte die voreingestellte Musik App, wenn ein Kopfhörer angeschlossen ist</string>
+    <string name="headset_connect_player_disabled">Deaktiviert</string>
+    <string name="headset_connect_player_wired">Wenn Kopfhörer mit Kabel eingesteckt sind</string>
+    <string name="headset_connect_player_bt_no_carkit">Wenn ein Bluetooth-Headset (kein Automobil) verbunden ist</string>
+    <string name="headset_connect_player_bt">Wenn ein Bluetooth-Gerät verbunden ist</string>
+    <string name="headset_connect_player_both_no_carkit">Wenn Kabel-Kopfhörer oder Bluetooth-Headset (kein Auto) verbunden wurden</string>
+    <string name="headset_connect_player_both">Wenn Kabel-Kopfhörer or Bluetooth-Gerät verbunden wurden</string>
 
     <!-- Camera shutter sound -->
     <string name="camera_sounds_title">Ton für Kamera-Auslöser</string>
@@ -980,17 +985,21 @@
     <string name="locksclock_settings_summary">Direkter Zugriff auf die Optionen des cLock-Widgets.</string>
 
     <!-- OmniJaws -->
-    <string name="weather_title">Wetter</string>
-    <string name="weather_config_title">Wetterkachel-Einstellungen</string>
+    <string name="weather_title">Wetter-Kachel</string>
+    <string name="weather_config_title">Einstellungen</string>
     <string name="weather_config_summary"></string>
 
     <!-- Header Weather -->
-    <string name="header_weather_enabled_title">Wetter</string>
-    <string name="header_weather_enabled_summary">Wetteranzeige in Kopfzeilen aktivieren</string>
+    <string name="header_weather_category_title">Kopfzeilen</string>
+    <string name="header_weather_enabled_title">Wetteranzeige in Kopfzeilen</string>
+    <string name="header_weather_enabled_summaryOn">Wetteranzeige in den erweiterten Kopfzeilen aktiviert</string>
+    <string name="header_weather_enabled_summaryOff">Wetteranzeige in den erweiterten Kopfzeilen deaktiviert</string>
     <string name="header_weather_image_enabled_title">Wetter-Symbol</string>
-    <string name="header_weather_image_enabled_summary">Wetter-Symbol in Kopfzeile anzeigen</string>
+    <string name="header_weather_image_enabled_summaryOn">Wetter-Symbol in erweiterten Kopfzeilen anzeigen</string>
+    <string name="header_weather_image_enabled_summaryOff">Wetter-Symbol in erweiterten Kopfzeilen verbergen</string>
 
     <!-- StatusBar weather settings -->
+    <string name="statusbar_weather_category_title">Statusleiste</string>
     <string name="statusbar_weather_title">Statusleisten-Wetter</string>
     <string name="statusbar_weather_summary">Die Anzeige nutzt die Einstellungen der Wetter-Kachel!</string>
     <string name="statusbar_weather_dialog_title">Anzeigestil des Wetters</string>
@@ -999,7 +1008,7 @@
     <string name="status_bar_temperature_image_hide_scale">Temperatur ohne Einheit und Bild</string>
     <string name="status_bar_temperature_show_scale_hide_image">Temperatur mit Einheit</string>
     <string name="status_bar_temperature_hide_scale_hide_image">Temperatur ohne Einheit</string>
-    <string name="status_bar_show_image">Bild</string>
+    <string name="status_bar_show_image">Symbol anzeigen</string>
 
     <!-- Confirm Power Off selection on Power menu-->
     <string name="confirm_shutdown_switch_title">Bestätigung zum Ausschalten</string>
@@ -1037,7 +1046,7 @@
     <string name="device_info_default">Unbekannt</string>
 
     <!-- Lockscreen Weather -->
-    <string name="lock_screen_weather_category_title">Wetter</string>
+    <string name="lock_screen_weather_category_title">Sperrbildschirm-Wetter</string>
     <string name="lock_screen_show_weather_title">Wetteranzeige</string>
     <string name="lock_screen_show_weather_summaryOn">Wetteranzeige auf dem Sperrbildschirm aktiviert</string>
     <string name="lock_screen_show_weather_summaryOff">Wetteranzeige auf dem Sperrbildschirm deaktiviert</string>
@@ -1047,4 +1056,17 @@
     <string name="lock_screen_weather_condition_icon_title">Anzeige des Wettersymbols</string>
     <string name="lock_screen_weather_condition_icon_summaryOn">Symbolanzeige auf dem Sperrbildschirm aktiviert</string>
     <string name="lock_screen_weather_condition_icon_summaryOff">Symbolanzeige auf dem Sperrbildschirm deaktiviert</string>
+
+    <!-- QS footer warnings -->
+    <string name="qs_footer_warnings_title">Schnelleinstellungs-Warnung (Fusszeile)</string>
+    <string name="qs_footer_warnings_summary">Zeigt eine Warnmeldung unter den Schnelleinstellungen, wenn die Netzwerkverbindung von einer externen App gesteuert wird oder VPN aktiv ist.</string>
+
+    <!-- Misc Weather -->
+    <string name="misc_weather_category_title">Verschiedene Einstellungen</string>
+    <string name="weather_windspeed_metric_units">Einheit für Windgeschwindigkeit (metrisch)</string>
+    <string name="weather_windspeed_metric_units_summaryOn">Geschwindigkeit wird in Metern/Sekunde (m/s) angezeigt</string>
+    <string name="weather_windspeed_metric_units_summaryOff">Geschwindigkeit wird in Kilometern/Stunde (km/h) angezeigt</string>
+    <string name="weather_winddirection_display_title">Anzeige der Windrichtung</string>
+    <string name="weather_winddirection_display_summaryOn">Richtung wird als Himmelsrichtung angezeigt</string>
+    <string name="weather_winddirection_display_summaryOff">Richtung wird als Kompass-Gradzahl angezeigt</string>
 </resources>
