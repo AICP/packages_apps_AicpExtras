@@ -2,12 +2,14 @@ package com.lordclockan.aicpextras;
 
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.database.Cursor;
+import android.hardware.fingerprint.FingerprintManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -68,11 +70,14 @@ public class QuickSettingsFragment extends Fragment {
         private static final String CATEGORY_WEATHER = "weather_category";
         private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
         private static final String PREF_BRIGHTNESS_ICON_POSITION = "brightness_icon_position";
+        private static final String FP_SWIPE_QUICK_PULLDOWN = "quick_pulldown_fp";
 
+        private FingerprintManager mFingerprintManager;
         private SeekBarPreferenceCham mRowsPortrait;
         private SeekBarPreferenceCham mRowsLandscape;
         private SeekBarPreferenceCham mQsColumnsPortrait;
         private SeekBarPreferenceCham mQsColumnsLandscape;
+        private SwitchPreference mFingerprintSwipe;
         private SwitchPreference mQsDataAdvanced;
         private PreferenceCategory mWeatherCategory;
         private SwitchPreference mBrightnessIconPosition;
@@ -128,6 +133,12 @@ public class QuickSettingsFragment extends Fragment {
             mBrightnessIconPosition = (SwitchPreference) findPreference(PREF_BRIGHTNESS_ICON_POSITION);
             mBrightnessIconPosition.setOnPreferenceChangeListener(this);
 
+            // Fingerprint swipe for quick pulldown
+            mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+            mFingerprintSwipe = (SwitchPreference) findPreference(FP_SWIPE_QUICK_PULLDOWN);
+            if (!mFingerprintManager.isHardwareDetected()) {
+                prefSet.removePreference(mFingerprintSwipe);
+            }
         }
 
         @Override
