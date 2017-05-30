@@ -3,18 +3,9 @@ package com.lordclockan.aicpextras;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
-import android.database.ContentObserver;
-import android.database.Cursor;
 import android.hardware.fingerprint.FingerprintManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.UserHandle;
-import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -23,25 +14,12 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
-import android.text.TextUtils;
-import android.util.Log;
-
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.List;
-import android.util.Log;
-import java.util.HashSet;
-import java.util.Set;
-
-import cyanogenmod.providers.CMSettings;
 
 import com.lordclockan.aicpextras.utils.Helpers;
 import com.lordclockan.aicpextras.utils.Utils;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 import com.lordclockan.R;
-
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class QuickSettingsFragment extends Fragment {
 
@@ -67,8 +45,6 @@ public class QuickSettingsFragment extends Fragment {
         private static final String PREF_COLUMNS_PORTRAIT = "qs_columns_portrait";
         private static final String PREF_COLUMNS_LANDSCAPE = "qs_columns_landscape";
         private static final String PREF_QS_DATA_ADVANCED = "qs_data_advanced";
-        private static final String CATEGORY_WEATHER = "weather_category";
-        private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
         private static final String PREF_BRIGHTNESS_ICON_POSITION = "brightness_icon_position";
         private static final String FP_SWIPE_QUICK_PULLDOWN = "quick_pulldown_fp";
 
@@ -79,7 +55,6 @@ public class QuickSettingsFragment extends Fragment {
         private SeekBarPreferenceCham mQsColumnsLandscape;
         private SwitchPreference mFingerprintSwipe;
         private SwitchPreference mQsDataAdvanced;
-        private PreferenceCategory mWeatherCategory;
         private SwitchPreference mBrightnessIconPosition;
 
         @Override
@@ -91,7 +66,6 @@ public class QuickSettingsFragment extends Fragment {
             PreferenceScreen prefSet = getPreferenceScreen();
             Activity activity = getActivity();
             final ContentResolver resolver = getActivity().getContentResolver();
-            final PackageManager pm = getActivity().getPackageManager();
 
             int defaultValue;
 
@@ -123,11 +97,6 @@ public class QuickSettingsFragment extends Fragment {
             mQsDataAdvanced = (SwitchPreference) findPreference(PREF_QS_DATA_ADVANCED);
             if (Utils.isWifiOnly(getActivity())) {
                 prefSet.removePreference(mQsDataAdvanced);
-            }
-
-            mWeatherCategory = (PreferenceCategory) prefSet.findPreference(CATEGORY_WEATHER);
-            if (mWeatherCategory != null && (!Helpers.isPackageInstalled(WEATHER_SERVICE_PACKAGE, pm))) {
-                prefSet.removePreference(mWeatherCategory);
             }
 
             mBrightnessIconPosition = (SwitchPreference) findPreference(PREF_BRIGHTNESS_ICON_POSITION);
