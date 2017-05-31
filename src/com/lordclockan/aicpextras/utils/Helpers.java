@@ -1,10 +1,14 @@
 package com.lordclockan.aicpextras.utils;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.ComponentName;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.ConnectivityManager;
@@ -23,6 +27,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.Date;
 
 import com.lordclockan.R;
@@ -86,31 +91,31 @@ public class Helpers {
 
     private static class RestartSystemUITask extends AsyncTask<Context, Void, Void> {
         private Context mContext;
-        private Exception mException;
         @Override
         protected Void doInBackground(Context... params) {
-            if (params.length > 0) {
-                mContext = params[0].getApplicationContext();
-            }
             try {
-                SuShell.runWithSuCheck("pkill -f com.android.systemui");
-            } catch (SuShell.SuDeniedException e) {
-                mException = e;
+                if (params.length > 0) {
+                    mContext = params[0].getApplicationContext();
+                } else {
+                    throw new Exception("Called RestartSystemUITask without context");
+                }
+                ActivityManager am = (ActivityManager) mContext.getSystemService(Context.ACTIVITY_SERVICE);
+                Class ActivityManagerNative = Class.forName("android.app.ActivityManagerNative");
+                Method getDefault = ActivityManagerNative.getDeclaredMethod("getDefault", null);
+                Object amn = getDefault.invoke(null, null);
+                Method killApplicationProcess = amn.getClass().getDeclaredMethod("killApplicationProcess", String.class, int.class);
+                mContext.stopService(new Intent().setComponent(new ComponentName("com.android.systemui", "com.android.systemui.SystemUIService")));
+                am.killBackgroundProcesses("com.android.systemui");
+                for (ActivityManager.RunningAppProcessInfo app : am.getRunningAppProcesses()) {
+                    if ("com.android.systemui".equals(app.processName)) {
+                        killApplicationProcess.invoke(amn, app.processName, app.uid);
+                        break;
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
             return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void param) {
-            super.onPreExecute();
-            if (mException instanceof SuShell.SuDeniedException) {
-                if (mContext != null) {
-                    Toast.makeText(mContext, mContext.getString(R.string.systemui_restart_missing_su),
-                            Toast.LENGTH_LONG).show();
-                } else {
-                    Log.e(TAG, "Could not restart systemui due to missing SU permission");
-                }
-            }
         }
     }
 
