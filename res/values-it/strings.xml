@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
@@ -51,6 +52,11 @@
     <string name="recents_panel_title">Pannello recenti</string>
     <string name="quick_settings_title">Impostazioni rapide</string>
     <string name="nothing_title">Ancora nulla da mostrare qui, passa oltre</string>
+    <string name="various_title">Varie</string>
+
+    <string name="nothing_title">Qua non c'è ancora niente, vai via</string>
+
+    <string name="static_shortcut_disabled_message">Scorciatoie disabilitate</string>
 
     <!-- Switch On/Off  -->
     <string name="switch_on_text">On</string>
@@ -59,6 +65,11 @@
     <!-- Permissions -->
     <string name="storage_permission_granted">Permesso Garantito, ora puoi scrivere sulla memoria esterna.</string>
     <string name="storage_permission_not_granted">Permesso Negato, non puoi scrivere sulla memoria esterna.</string>
+    
+    <!-- Seekbar strings -->
+    <string name="seekbar_no_default_value">Nessun valore di default impostato</string>
+    <string name="seekbar_default_value_set">Valore settato di default a <xliff:g id="number">%d</xliff:g></string>
+    <string name="seekbar_default_value_already_set">Valore di default già impostato</string>
 
     <!-- Change Log -->
     <string name="changelog_title">Registro Modifiche</string>
@@ -188,6 +199,9 @@
     <string name="anonymous_statistics_warning_title">Informazioni</string>
     <string name="anonymous_statistics_warning">Attivando le statistiche AICP, si acconsente alla trasmissione di informazioni non personali ai nostri server. Le informazioni trsmesse includono un identificatore unico, che non mette a rischio la tua privacy o i tuoi dati personali. I dati sono trasmessi ogni 7 giorni.\n\nPer un esempio di informazioni trasmesse, premi su Anteprima Dati.</string>
     <string name="pref_settings">Impostazioni</string>
+    <string name="enable_reporting_title">Abilita segnalazione</string>
+    <string name="disable_reporting_persistent">output persistente</string>
+    <string name="preview_data_title">Anteprima dei dati</string>
     <string name="enable_reporting_title">Abilita rapporti</string>
     <string name="disable_reporting_persistent">Opt-out persistente</string>
     <string name="preview_data_title">Anteprima dati</string>
@@ -255,6 +269,12 @@
     <string name="toast_Translucent_animation">Trasparenza</string>
     <string name="toast_SlideLeftRight_animation">Scorri da sinistra a destra</string>
     <string name="toast_SlideRightLeft_animation">Scorri da destra a sinistra</string>
+    
+    <!-- Toast Icons -->
+    <string name="toast_icon_title">Icona toast</string>
+    <string name="toast_icon_summary">Mostra l'icona dell'app corrispondente al toast</string>
+    <string name="toast_text_color">Colore testo toast</string>
+    <string name="toast_icon_color">Colore icona toast</string>
 
     <!-- Power menu Animations  -->
     <string name="power_menu_animation_title">Animazione menù alimentazione</string>
@@ -284,7 +304,12 @@
 
     <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Avvio applicazione musicale</string>
-    <string name="headset_connect_player_summary">Avvia l\'applicazione musicale predefinita quando le cuffie sono connesse.</string>
+    <string name="headset_connect_player_disabled">Disabilitato</string>
+    <string name="headset_connect_player_wired">Quando le cuffie col cavo sono inserite</string>
+    <string name="headset_connect_player_bt_no_carkit">Quando le cuffie bluetooth sono inserite(no carkit)</string>
+    <string name="headset_connect_player_bt">Quando le cuffie bluetooth sono inserite</string>
+    <string name="headset_connect_player_both_no_carkit">Quando le cuffie bluetooth o cablate sono inserite(no carkit)</string>
+    <string name="headset_connect_player_both">Quando le cuffie bluetooth o cablate sono inserite</string>
 
     <!-- Camera shutter sound -->
     <string name="camera_sounds_title">Suono otturatore fotocamera</string>
@@ -296,6 +321,9 @@
 
     <string name="brightness_icon_title">Icona luminosità </string>
     <string name="brightness_icon_summary">Mostra l\'icona di luminosità alla sinistra del cursore di luminosità per regolare la luminosità automatica</string>
+    <string name="brightness_icon_position_title">Posizione icona luminosità</string>
+    <string name="brightness_icon_position_on_summary">Destra</string>
+    <string name="brightness_icon_position_off_summary">Sinistra</string>
 
     <!-- QS shade transparency -->
     <string name="qs_transparent_shade">Trasparenza impostazioni rapide</string>
@@ -327,9 +355,16 @@
 
     <!-- Quick settings tiles columns and rows config -->
     <string name="qs_rows_portrait_title">Righe (verticale)</string>
+    <string name="qs_rows_portrait_summary">Seleziona il numero delle righe dei tile da visualizzare in modalità portrait</string>
     <string name="qs_rows_landscape_title">Righe (orizzontale)</string>
-    <string name="qs_columns_title">Colonne</string>
+    <string name="qs_rows_landscape_summary">Seleziona il numero delle righe dei tile da visualizzare in modalità landscape</string>
+    <string name="qs_columns_portrait_title">Colonne (portrait)</string>
+    <string name="qs_columns_portrait_summary">Seleziona il numero delle colonne dei tile da visualizzare in modalità portrait</string>
+    <string name="qs_columns_landscape_title">Colonne (landscape)</string>
+    <string name="qs_columns_landscape_summary">Seleziona il numero delle colonne dei tile da visualizzare in modalità landscape</string>
     <string name="sysui_qqs_count_title">Tile piccoli</string>
+    <string name="qs_rows_prefix">Righe: </string>
+    <string name="qs_cols_prefix">Colonne: </string>
 
      <!-- Tiles animation style  -->
     <string name="qs_tile_animation_style_title">Stile animazione</string>
@@ -412,6 +447,8 @@
     <string name="custom_summary_title">Testo personalizzato AE</string>
     <string name="custom_summary_explain">Si prega di inserire una nuovo testo. Lasciare vuoto per tornare al testo predefinito.</string>
     <string name="custom_summary_notset">Personalizzazioni della rom</string>
+    <string name="ae_moderate_language_title">Modalità lingua moderata</string>
+    <string name="ae_moderate_language_summary">Filtra \"la lingua inappropriata\" e rimpiazzala con qualche altra parola. Questo potrebbe ridurre le performance</string>
 
     <!-- Statusbar 4G LTE switch -->
     <string name="show_fourg_title">Visualizza 4G invece di LTE</string>
@@ -438,6 +475,9 @@
     <string name="text_title">Testo</string>
     <string name="icon_title">Icona</string>
     <string name="colors_title">Colori</string>
+    <string name="ticker_disabled">Nessun ticker</string>
+    <string name="ticker_enabled">Ticker di notifica</string>
+    <string name="ticker_media_enabled">Ticker musica e notifica</string>
 
     <!-- Optional screenshot type -->
     <string name="screenshot_type_title">Tipo di screenshot</string>
@@ -478,6 +518,8 @@
     <string name="systemui_recents_mem_display_title">Mostra barra di memoria</string>
     <string name="systemui_recents_mem_display_summaryOn">Barra di memoria abilitata</string>
     <string name="systemui_recents_mem_display_summaryOff">Barra di memoria disabilitata</string>
+    <string name="systemui_recents_mem_display_color">Colore barra di memoria</string>
+    <string name="systemui_recents_mem_display_text_color">Colore testo barra di memoria</string>
 
     <!-- Recents panel settings -->
     <string name="show_clear_all_recents_button_title">Pulsante cancella tutto</string>
@@ -665,6 +707,8 @@
     <string name="custom_header_provider_title">Provider intestazione</string>
     <string name="custom_header_browse_title">Sfoglia intestazioni installate</string>
     <string name="custom_header_browse_summary">Pressione prolungata su ogni immagine da utilizzare per la modalità statica</string>
+    <string name="custom_header_browse_title">Sfoglia gli header installati</string>
+    <string name="custom_header_browse_summary">Tieni premuto su qualsiasi immagine per la modalità statica</string>
 
     <!-- qqs scroller -->
     <string name="qqs_scroll_title">Scorrimento piccoli tile</string>
@@ -760,6 +804,13 @@
     <string name="hide_lockscreen_clock_title">Mostra orologio</string>
     <string name="hide_lockscreen_date_title">Mostra data</string>
     <string name="hide_lockscreen_alarm_title">Mostra testo sveglia</string>
+    <string name="hide_lockscreen_bottom_shortcuts_title">Nascondi le scorciatoie inferiori</string>
+    <string name="hide_lockscreen_bottom_shortcuts_summary_on">Scorciatoie inferiori nascoste sul blocco tastiera</string>
+    <string name="hide_lockscreen_bottom_shortcuts_summary_off">Scorciatoie inferiori visibili sul blocco tastiera</string>
+
+    <!-- Hide Statusbar on Lockscreen -->
+    <string name="lockscreen_hide_status_bar_title">Nascondi barra di stato</string>
+    <string name="lockscreen_hide_status_bar_summary">Tocca la barra di stato per renderla visibile</string>
 
     <!-- Changelog -->
     <string name="changelog_name">Modifiche</string>
@@ -777,4 +828,243 @@
     <string name="qs_multiuser_switch_summary">Disabilita l\'icona cambio utente nell\'intestazione</string>
     <string name="qs_expand_indicator_title">Indicatore espansione</string>
     <string name="qs_expand_indicator_summary">Disabilita l\'indicatore di espansione nell\'intestazione</string>
+    
+    <!-- Slim Recent panel -->
+    <string name="slim_recents_title">Slim recents</string>
+    <string name="use_slim_recents_title">Usa come alternativa</string>
+    <string name="use_slim_recents_summary">Usa come alternativa invece che la visualizzione di default</string>
+    <string name="slim_recents_settings_title">Impostazioni slim recents</string>
+    <string name="slim_recents_settings_summary">Visualizza le impostazioni per slim recents</string>
+    <string name="recent_panel_category">Applicazioni slim recents</string>
+    <string name="show_running_tasks_title">Visualizza solo app in esecuzione</string>
+    <string name="recents_max_apps_title">Numero massimo di app</string>
+    <string name="recent_panel_scale_title">Grandezza</string>
+    <string name="recent_panel_expanded_mode_title">Modalità espansa</string>
+    <string name="recent_panel_expanded_mode_summary">Attività recenti espanse in modalità anteprima</string>
+    <string name="recent_panel_expanded_mode_auto">Automatica (default)</string>
+    <string name="recent_panel_expanded_mode_always">Sempre</string>
+    <string name="recent_panel_expanded_mode_never">Mai</string>
+    <string name="recent_panel_show_topmost_title">Visualizza topmost task</string>
+    <string name="recent_panel_show_topmost_summary">Non escludere il topmost task</string>
+    <string name="recent_panel_bg_color_title">Colore di sfondo del pannello</string>
+    <string name="recent_card_bg_color_title">Colore di sfondo delle carte</string>
+    <string name="slim_recents_mem_display_long_click_clear_title">Pressione lunga sulla barra di memoria</string>
+    <string name="slim_recents_mem_display_long_click_clear_summary">Cancella i recenti premendo  sulla barra di memoria</string>
+    <string name="slim_icon_pack_title">Icon Pack</string>
+    <string name="slim_icon_pack_summary">Applica una icon pack per le app del pannello</string>
+    <string name="no_iconpacks_summary">Nessun icon pack installato</string>
+    <string name="dialog_pick_iconpack_title">Scegli un icon pack</string>
+    <string name="default_iconpack_title">Icone di default</string>
+
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Mostra nel bordo sinistro</string>
+    <string name="recent_panel_lefty_mode_summary">Mostra le app recenti sul bordo sinistro</string>
+
+    <string name="slim_recents_aicp_empty_drawable_title">AICP recenti vuoti</string>
+    <string name="slim_recents_aicp_empty_drawable_summary">Immagine da visualizzare quando non ci sono app recenti</string>
+
+    <!-- Hide Apps from Recents -->
+    <string name="hide_apps_from_recents_title">App nascoste</string>
+    <string name="hide_from_recents_add_app">Aggiungi app</string>
+    <string name="hide_apps_from_recents_summary">Scegli quali app escludere</string>
+
+    <!-- Fingerprint unlock keystore -->
+    <string name="fp_unlock_keystore_title">Sblocca con il sensore di impronte</string>
+    <string name="fp_unlock_keystore_summary">Sblocca il telefono con il sensore di impronte(dopo il riavvio) senza PIN/Password/Pattern\nNota: a tuo rischio e pericolo!</string>
+
+    <!-- Slim Recent App Sidebar  -->
+    <string name="recent_app_sidebar_title">Barra laterale</string>
+    <string name="use_recent_app_sidebar_title">Attiva barra laterale</string>
+    <string name="use_recent_app_sidebar_summary">Mostra le scorciatoie delle app negli altri bordi</string>
+    <string name="recent_app_sidebar_content_title">Contenuti nella barra laterale</string>
+    <string name="recent_app_sidebar_content_summary">Configura i contenuti nella barra laterale</string>
+    <string name="recent_app_sidebar_style_title">Stile barra laterale</string>
+    <string name="recent_app_sidebar_style_summary">Cambia lo stile della barra laterale</string>
+    <string name="recent_app_sidebar_hide_labels_title">Nascondi i nomi delle icone</string>
+    <string name="recent_app_sidebar_label_color_title">Colore del testo</string>
+    <string name="recent_app_sidebar_bg_color_title">Colore di sfondo</string>
+    <string name="recent_app_sidebar_scale_title">Grandezza</string>
+    <string name="recent_app_sidebar_open_simultaneously_title">Apri contemporaneamente</string>
+    <string name="recent_app_sidebar_open_simultaneously_summary">Riduci il lag all\'apertura disabilitandolo</string>
+
+    <!-- Slim lockscreen shortcuts -->
+    <string name="shortcut_action_none">Nessuno</string>
+    <string name="shortcut_action_longpress">Pressione lunga:</string>
+    <string name="shortcut_action_select_action_longpress">Scegli l'azione della pressione lunga:</string>
+    <string name="shortcut_action_select_action">Scegli l'azione:</string>
+    <string name="shortcut_action_select_action_newaction">Scegli una nuova azione:</string>
+    <string name="shortcut_action_reset">Resetta</string>
+    <string name="shortcut_action_add">Aggiungi</string>
+    <string name="shortcut_action_reset_message">Resettare tutte le voci alle impostazioni di default?</string>
+    <string name="shortcut_action_max">Numero massimo di voci arrivato</string>
+    <string name="shortcut_action_warning">Attenzione</string>
+    <string name="shortcut_action_warning_message">Non è possibile cancellare l'ultima voce</string>
+    <string name="shortcut_action_disable_message">Disabilitato\nAggiungi una voce per abilitare questa funzione</string>
+    <string name="shortcut_image_not_valid">L\'app scelta non ha ritornato un icona valida o non supporta il ritaglio di immagini. Usa un altra app.</string>
+    <string name="shortcut_duplicate_entry">L\'azione scelta non può essere inserita 2 volte</string>
+    <string name="shortcut_action_help_shortcut">scorciatoia</string>
+    <string name="shortcut_action_help_button">bottone</string>
+    <string name="shortcut_action_help_app">app</string>
+    <string name="shortcut_action_help_icon">, mentre selezionando l'icona verranno visualizzate le opzioni di personalizzazione</string>
+    <string name="shortcut_action_help_main">Per aggiungere un %1$s, selezione l'icona corrispondente. Una volta che %1$s è stato aggiunto, selezionando la riga cambierà il target%2$s\n\nPer rimuovere un %1$s, sposta la riga orizziontalmente a sinistra o a destra. Riordina un %1$s nella lista trascinando verticalmente l'ancora sulla sinistra.\n\nPer cancellare o resettare, seleziona l\'icona di reset.</string>
+    <string name="shortcut_action_help_delete_last_entry">Rimuovendo un %1$s nella lista disabiliterà questa funzione.</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Rimuovendo ogni %1$s nella lista disabiliterà il secondo strato.</string>
+    <string name="shortcuts_applications">Applicazioni</string>
+    <string name="shortcuts_select_custom_app_title">Seleziona altre applicazioni</string>
+    <string name="shortcuts_icon_picker_type">Seleziona il tipo dell\'icona:</string>
+    <string name="shortcuts_icon_default">Default</string>
+    <string name="shortcuts_icon_custom">Galleria</string>
+    <string name="shortcuts_icon_picker_choose_icon_title">Scegli icona</string>
+    <string name="reset_message">Resettare tutte le voci?</string>
+    <string name="lockscreen_shortcuts_title">Scorciatoie a metà schermo</string>
+    <string name="lockscreen_shortcuts_summary">Visualizza o cambia le scorciatoie personalizzate della schermata di sblocco</string>
+    <string name="lockscreen_shorcuts_launch_type_title">Tipo di clic</string>
+    <string name="lockscreen_shortcuts_single_tap">Click</string>
+    <string name="lockscreen_shortcuts_double_tap">Doppio tocco</string>
+    <string name="lockscreen_shortcuts_longpress">Pressione lunga</string>
+    <string name="help">Aiuto</string>
+    <string name="shortcut_action_app">App personalizzata</string>
+    <string name="shortcut_action_home">Home</string>
+    <string name="shortcut_action_back">Indietro</string>
+    <string name="shortcut_action_menu">Menu</string>
+    <string name="shortcut_action_ime">Apri IME Switcher</string>
+    <string name="shortcut_action_power_menu">Menu alimentazione</string>
+    <string name="shortcut_action_recent">Recenti</string>
+    <string name="shortcut_action_power">Schermo spento</string>
+    <string name="shortcut_action_search">Cerca in app</string>
+
+    <!-- Notification guts kill app button -->
+    <string name="notification_guts_kill_app_button_title">Bottone uccidi app</string>
+    <string name="notification_guts_kill_app_button_summary">Mostra un bottone per uccidere l\'app nel menu a pressione lunga delle notifiche</string>
+
+    <!-- Custom bootanim -->
+    <string name="custom_bootanimation_title">Animazione di avvio</string>
+    <string name="custom_bootanimation_select_title">Selezione animazione di avvio</string>
+    <string name="custom_bootanimation_summary">Ad ogni cambio, l\'animazione corrente verrà salvata in storage/AICP_ota con la data corrente. Quelle vecchie devono essere cancellate manualmente se non necessarie.</string>
+    <string name="bootanimation_preview">Preview animazione</string>
+    <string name="set_custom_bootanimation">Selezione personalizzata...</string>
+    <string name="creating_preview">Creazione preview...</string>
+    <string name="error_reading_zip_file">Errore nel leggere il file zip</string>
+    <string name="error_creating_preview">Errore nella creazione della preview</string>
+    <string name="install_file_manager_error">Nessuna applicazione trovata per selezionare il file. Installa un filemanager.</string>
+    <string name="apply">Applica</string>
+    <string name="bootanim_install_successful">Nuova animazione applicata correttamente.</string>
+
+    <!-- Circle app bar -->
+    <string name="category_app_circle_bar_title">App launcher</string>
+    <string name="app_circle_bar_title">App circle bar</string>
+    <string name="app_circle_bar_summary">Mostra l\'app circle bar dopo aver toccato la parte destra dello schermo</string>
+    <string name="app_circle_bar_included_apps_title">App incluse</string>
+    <string name="app_circle_bar_included_apps_summary">App visualizzate</string>
+    <string name="trigger_width_title">Largezza area innesco</string>
+    <string name="trigger_width_summary">Aggiusta la largezza dell'area di innesco</string>
+    <string name="trigger_top_title">Poszione di innesco</string>
+    <string name="trigger_top_summary">Aggiusta la poszione verticale dell\'area di innesco</string>
+    <string name="trigger_bottom_title">Altezza area innesco</string>
+    <string name="trigger_bottom_summary">Aggiusta l\'altezza dell'area di innesco</string>
+
+    <!-- Disabling FC notifications -->
+    <string name="disable_fc_notifications_title">Dusabilita notifiche FC</string>
+    <string name="disable_fc_notifications_summary">Questo nasconderà tutte le notifiche di force close</string>
+
+    <!-- Scrolling Cache -->
+    <string name="pref_scrollingcache_title">Cache di scorrimento</string>
+    <string name="pref_scrollingcache_summary">La cache di scorrimento potrebbe aumentare la performance al costo di memoria</string>
+    <string name="pref_scrollingcache_force_enable">Forza attiva</string>
+    <string name="pref_scrollingcache_default_enable">Attiva di default</string>
+    <string name="pref_scrollingcache_default_disable">Disattivata di default</string>
+    <string name="pref_scrollingcache_force_disable">Forza disattivata</string>
+
+    <!-- Volume dialog timeout -->
+    <string name="volume_dialog_timeout_title">Timeout dialogo del volume</string>
+
+    <!-- LockClock settings -->
+    <string name="locksclock_settings_title">Impostazioni LockClock</string>
+    <string name="locksclock_settings_summary">Accedi direttamente alle impostazion di LockClock.</string>
+
+    <!-- OmniJaws -->
+    <string name="weather_title">Meteo</string>
+    <string name="weather_config_title">Impostazioni principali</string>
+    <string name="weather_config_summary"></string>
+
+    <!-- Header Weather -->
+    <string name="header_weather_category_title">Header</string>
+    <string name="header_weather_enabled_title">Visualizza meteo</string>
+    <string name="header_weather_enabled_summaryOn">Il meteo è mostrato nell\'header espanso</string>
+    <string name="header_weather_enabled_summaryOff">Il meteo è mostrato nell\'header espanso</string>
+    <string name="header_weather_image_enabled_title">Visualizza icona di condizione</string>
+    <string name="header_weather_image_enabled_summaryOn">L\'icona di condizione è mostrata nell\'header espanso</string>
+    <string name="header_weather_image_enabled_summaryOff">L\'icona di condizione è nascosta nell\'header espanso</string>
+
+    <!-- StatusBar weather settings -->
+    <string name="statusbar_weather_category_title">Barra di stato</string>
+    <string name="statusbar_weather_title">Visualizza meteo</string>
+    <string name="statusbar_weather_summary">Scegli le impostazioni di visualizzazione per la barra di stato</string>
+    <string name="statusbar_weather_dialog_title">Stile meteo nella barra di stato</string>
+    <string name="status_bar_weather_hidden">Meteo nascosto</string>
+    <string name="status_bar_temperature_image_show_scale">Mostra la temperatura con scala e immagine</string>
+    <string name="status_bar_temperature_image_hide_scale">Mostra la temperatura con l\'immagine senza la scala</string>
+    <string name="status_bar_temperature_show_scale_hide_image">Mostra la temperatura con la scala</string>
+    <string name="status_bar_temperature_hide_scale_hide_image">Mostra la temperatura senza la scala</string>
+    <string name="status_bar_show_image">Mostra immagine</string>
+
+    <!-- Confirm Power Off selection on Power menu-->
+    <string name="confirm_shutdown_switch_title">Conferma spegnimento</string>
+    <string name="confirm_shutdown_switch_desc">Quando il pulsante di spegnimento viene premuto, aggiunge una finestra per confermare</string>
+
+    <!-- Screen state service -->
+    <string name="screen_state_toggles_summary">@null</string>
+    <string name="screen_state_toggles_title">Suspend Actions</string>
+    <string name="screen_state_toggles_enable_title">Attiva</string>
+    <string name="screen_state_toggles_enable_summary">Le azioni verranno eseguite a schermo spento. A schermo acceso lo stato precedente verrà ripristinato.</string>
+    <string name="screen_state_toggles_mobile_title">Reti mobili</string>
+    <string name="screen_state_toggles_location_title">Localizzazione</string>
+    <string name="screen_state_toggles_twog">Passa al 2G</string>
+    <string name="screen_state_toggles_twog_summary">La modalità di rete passerà al 2G a schermo spento</string>
+    <string name="screen_state_toggles_gps">Disabilita GPS</string>
+    <string name="screen_state_toggles_gps_summary">La localizzazione via GPS verra disabilita a schermo spento</string>
+    <string name="screen_state_toggles_mobile_data">Disabilita dati mobili</string>
+    <string name="screen_state_toggles_mobile_data_summary">I dati mobili verranno disabilitati a schermo spento</string>
+    <string name="screen_state_off_delay_title">Tempo di attesa schermo spento</string>
+    <string name="screen_state_off_delay_summary">Numero di minuti da aspettare prima di eseguire le azioni dopo aver spento lo schermo</string>
+    <string name="screen_state_on_delay_title">Tempo di attesa schermo acceso</string>
+    <string name="screen_state_on_delay_summary">Numero di minuti da aspettare prima di eseguire le azioni dopo aver acceso lo schermo</string>
+
+    <!-- Show camera intent on secure lock screen -->
+    <string name="show_camera_intent_title">Mostra la scorciatoia della fotocamera in schermata di blocco sicura</string>
+
+    <!-- Media art -->
+    <string name="media_art_title">Media cover art</string>
+    <string name="media_art_summary">Attiva media cover art nella schermata di blocco</string>
+
+    <!-- AICP device and maintainer name -->
+    <string name="device_info_title">Info sul manutentore del telefono</string>
+    <string name="device_maintainer">Manutentore telefono:</string>
+    <string name="device_maintainers">Manutentori telefono:</string>
+    <string name="device_info_default">Sconosciute</string>
+
+    <!-- Lockscreen Weather -->
+    <string name="lock_screen_weather_category_title">Schermata di blocco</string>
+    <string name="lock_screen_show_weather_title">Mostra meteo</string>
+    <string name="lock_screen_show_weather_summaryOn">Il meteo è mostrato nella schermata di blocco</string>
+    <string name="lock_screen_show_weather_summaryOff">Il meteo è nascosto nella schermata di blocco</string>
+    <string name="lock_screen_show_location_title">Mostra localizzazione</string>
+    <string name="lock_screen_show_location_summaryOn">La localizzazione è mostrata nella schermata di blocco</string>
+    <string name="lock_screen_show_location_summaryOff">La localizzazione è nascosta nella schermata di blocco</string>
+    <string name="lock_screen_weather_condition_icon_title">Visualizza icona di condizione</string>
+    <string name="lock_screen_weather_condition_icon_summaryOn">L\'icona di condizione è mostrata nella schermata di blocco</string>
+    <string name="lock_screen_weather_condition_icon_summaryOff">L\'icona di condizione è nascosta nella schermata di blocco</string>
+
+    <!-- QS footer warnings -->
+    <string name="qs_footer_warnings_title">QS footer warnings</string>
+    <string name="qs_footer_warnings_summary">Visualizza tutti gli avvisi Nella parte inferiore del pannello QS quando la rete non è monitorata da app esterne o vpn</string>
+
+    <!-- Misc Weather -->
+    <string name="misc_weather_category_title">Impostazioni varie</string>
+    <string name="weather_windspeed_metric_units">Unità da usare per la velocità del vento</string>
+    <string name="weather_windspeed_metric_units_summaryOn">La velocità del vento è mostrata in metri al secondo (m/s)</string>
+    <string name="weather_windspeed_metric_units_summaryOff">La velocità del vento è mostrata in kilometri all\'ora (km/s)</string>
+    <string name="weather_winddirection_display_title">Visualizzazione velocità del vento</string>
+    <string name="weather_winddirection_display_summaryOn">La velocità del vento è mostrata usando le direzioni della girandola</string>
+    <string name="weather_winddirection_display_summaryOff">La velocità del vento è mostrata usando direzioni angolari</string>
 </resources>
