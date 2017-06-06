@@ -94,6 +94,8 @@ public class DisplayAnimationsActivity extends Fragment {
         private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
         private static final String PREF_CUSTOM_BOOTANIM = "custom_bootanimation";
         private static final String BOOTANIMATION_SYSTEM_PATH = "/system/media/bootanimation.zip";
+        private static final String BOOTANIMATION_TARGET_DIR = "/data/system/theme";
+        private static final String BOOTANIMATION_TARGET_FILE = BOOTANIMATION_TARGET_DIR + "/bootanimation.zip";
         private static final String BACKUP_PATH = new File(Environment
                 .getExternalStorageDirectory(), "/AICP_ota").getAbsolutePath();
 
@@ -303,7 +305,10 @@ public class DisplayAnimationsActivity extends Fragment {
          */
         private boolean resetBootAnimation() {
             boolean bootAnimationExists = false;
-            if (new File(BOOTANIMATION_SYSTEM_PATH).exists()) {
+            if (new File(BOOTANIMATION_TARGET_FILE).exists()) {
+                mBootAnimationPath = BOOTANIMATION_TARGET_FILE;
+                bootAnimationExists = true;
+            } else if (new File(BOOTANIMATION_SYSTEM_PATH).exists()) {
                 mBootAnimationPath = BOOTANIMATION_SYSTEM_PATH;
                 bootAnimationExists = true;
             } else {
@@ -362,7 +367,7 @@ public class DisplayAnimationsActivity extends Fragment {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             builder.setTitle(R.string.bootanimation_preview);
             if (!mBootAnimationPath.isEmpty()
-                    && (!BOOTANIMATION_SYSTEM_PATH.equalsIgnoreCase(mBootAnimationPath))) {
+                    && (!BOOTANIMATION_TARGET_FILE.equalsIgnoreCase(mBootAnimationPath))) {
                 builder.setPositiveButton(R.string.apply, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -573,10 +578,7 @@ public class DisplayAnimationsActivity extends Fragment {
         };
 
         private void installBootAnim(DialogInterface dialog, String bootAnimationPath) {
-            DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy_HHmmss");
-            Date date = new Date();
-            String current = (dateFormat.format(date));
-            new InstallBootAnimTask().execute(current, bootAnimationPath);
+            new InstallBootAnimTask().execute(bootAnimationPath);
         }
 
         private class InstallBootAnimTask extends AsyncTask<String, Void, Void> {
@@ -584,30 +586,46 @@ public class DisplayAnimationsActivity extends Fragment {
 
             @Override
             protected Void doInBackground(String... params) {
-                if (params.length != 2) {
-                    Log.e(TAG, "InstallBootAnimTask: invalid params count");
+                if (params.length != 1) {
+                    mException = new Exception("InstallBootAnimTask: invalid params count");
+                    mException.printStackTrace();
                     return null;
                 }
-                String current = params[0];
-                String bootAnimationPath = params[1];
+                String bootAnimationPath = params[0];
+                FileInputStream in = null;
+                FileOutputStream out = null;
                 try {
-                    SuShell.runWithSuCheck("mount -o rw,remount /system",
-                            "cp -f /system/media/bootanimation.zip " + BACKUP_PATH + "/bootanimation_backup_" + current + ".zip",
-                            "cp -f " + bootAnimationPath + " /system/media/bootanimation.zip",
-                            "chmod 644 /system/media/bootanimation.zip",
-                            "mount -o ro,remount /system");
-                } catch (SuShell.SuDeniedException e) {
-                    mException = e;
+                    // Create directory if not exists
+                    new File(BOOTANIMATION_TARGET_DIR).mkdirs();
+                    // Copy bootanimation
+                    in = new FileInputStream(bootAnimationPath);
+                    out = new FileOutputStream(BOOTANIMATION_TARGET_FILE);
+                    byte[] buffer = new byte[1024];
+                    int length;
+                    while ((length = in.read(buffer)) > 0 ) {
+                        out.write(buffer, 0, length);
+                    }
+                } catch (IOException e) {
+                    (mException = e).printStackTrace();
+                } finally {
+                    try {
+                        if (in != null) in.close();
+                        if (out != null) out.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
+
                 return null;
             }
 
             @Override
             protected void onPostExecute(Void param) {
                 super.onPreExecute();
-                if (mException instanceof SuShell.SuDeniedException) {
-                    Toast.makeText(getActivity(), getString(R.string.cannot_get_su_start), Toast.LENGTH_LONG).show();
-                } else if (mException == null) {
+                if (mException != null) {
+                    Snackbar.make(getView(), R.string.bootanim_install_failed,
+                            Snackbar.LENGTH_LONG).show();
+                } else {
                     Snackbar.make(getView(), R.string.bootanim_install_successful,
                             Snackbar.LENGTH_LONG).show();
                 }
