@@ -75,12 +75,6 @@
             android:label="@string/traffic_category">
         </activity>
         <activity
-	    android:name=".aicpextras.SystemappRemover"
-	    android:label="@string/system_app_remover"
-            android:theme="@style/PreferenceTheme"
-	    android:excludeFromRecents="true">
-        </activity>
-        <activity
             android:name=".aicpextras.CarrierLabel"
             android:theme="@style/PreferenceTheme"
             android:label="@string/carrier_options">
