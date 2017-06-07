@@ -2,18 +2,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.lordclockan">
 
-    <!-- Custom bootanim -->
-
-    <PreferenceCategory
-        android:title="@string/custom_bootanimation_title">
-
-        <Preference
-            android:key="custom_bootanimation"
-            android:title="@string/custom_bootanimation_select_title"
-            android:summary="@string/custom_bootanimation_summary" />
-
-    </PreferenceCategory>
-
     <PreferenceCategory
         android:title="@string/power_menu_animation_title">
 
