@@ -19,6 +19,8 @@ import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 import com.lordclockan.R;
 
+import cyanogenmod.providers.CMSettings;
+
 public class QuickSettingsFragment extends Fragment {
 
     @Override
@@ -38,6 +40,7 @@ public class QuickSettingsFragment extends Fragment {
 
         private static final String TAG = QuickSettingsFragment.class.getSimpleName();
 
+        private static final String BATTERY_TILE_STYLE = "battery_tile_style";
         private static final String PREF_ROWS_PORTRAIT = "qs_rows_portrait";
         private static final String PREF_ROWS_LANDSCAPE = "qs_rows_landscape";
         private static final String PREF_COLUMNS_PORTRAIT = "qs_columns_portrait";
@@ -51,6 +54,8 @@ public class QuickSettingsFragment extends Fragment {
         private SeekBarPreferenceCham mQsColumnsLandscape;
         private SwitchPreference mQsDataAdvanced;
         private SwitchPreference mBrightnessIconPosition;
+        private ListPreference mBatteryTileStyle;
+        private int mBatteryTileStyleValue;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -97,6 +102,12 @@ public class QuickSettingsFragment extends Fragment {
             mBrightnessIconPosition = (SwitchPreference) findPreference(PREF_BRIGHTNESS_ICON_POSITION);
             mBrightnessIconPosition.setOnPreferenceChangeListener(this);
 
+            mBatteryTileStyle = (ListPreference) findPreference(BATTERY_TILE_STYLE);
+            mBatteryTileStyleValue = Settings.Secure.getInt(getActivity().getContentResolver(),
+                    Settings.Secure.BATTERY_TILE_STYLE, 0);
+            mBatteryTileStyle.setValue(Integer.toString(mBatteryTileStyleValue));
+            mBatteryTileStyle.setSummary(mBatteryTileStyle.getEntry());
+            mBatteryTileStyle.setOnPreferenceChangeListener(this);
         }
 
         @Override
@@ -131,6 +142,14 @@ public class QuickSettingsFragment extends Fragment {
                 return true;
             } else if (preference == mBrightnessIconPosition) {
                 Helpers.showSystemUIrestartDialog(getActivity());
+                return true;
+            }  else if (preference == mBatteryTileStyle) {
+                mBatteryTileStyleValue = Integer.valueOf((String) newValue);
+                int index = mBatteryTileStyle.findIndexOfValue((String) newValue);
+                mBatteryTileStyle.setSummary(
+                        mBatteryTileStyle.getEntries()[index]);
+                Settings.Secure.putInt(getActivity().getContentResolver(),
+                        Settings.Secure.BATTERY_TILE_STYLE, mBatteryTileStyleValue);
                 return true;
             }
             return false;
