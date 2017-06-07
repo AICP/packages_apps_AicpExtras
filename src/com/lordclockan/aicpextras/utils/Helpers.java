@@ -31,7 +31,6 @@ import java.lang.reflect.Method;
 import java.util.Date;
 
 import com.lordclockan.R;
-import com.lordclockan.aicpextras.SuShell;
 
 public class Helpers {
     // avoids hardcoding the tag
