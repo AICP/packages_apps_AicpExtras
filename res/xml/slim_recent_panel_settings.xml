@@ -77,6 +77,16 @@
             android:summary="@string/recent_panel_lefty_mode_summary"
             android:defaultValue="false" />
 
+        <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
+            android:key="slim_recents_corner_radius"
+            android:title="@string/slim_recents_corner_radius_title"
+            aicpextras:minimum="0"
+            android:max="20"
+            android:defaultValue="5"
+            aicpextras:interval="1"
+            aicpextras:unitsRight="dp"
+            android:persistent="false" />
+
         <Preference
             android:key="slim_icon_pack"
             android:title="@string/slim_icon_pack_title"
