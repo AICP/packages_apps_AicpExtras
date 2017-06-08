@@ -77,6 +77,11 @@
             android:summary="@string/recent_panel_lefty_mode_summary"
             android:defaultValue="false" />
 
+        <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+            android:key="slim_recents_corner_radius"
+            android:title="@string/slim_recents_corner_radius_title"
+            android:defaultValue="true" />
+
         <Preference
             android:key="slim_icon_pack"
             android:title="@string/slim_icon_pack_title"
