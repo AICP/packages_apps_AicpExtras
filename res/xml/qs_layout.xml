@@ -86,6 +86,15 @@
         android:summary="@string/qs_battery_easy_toggle_summary"
         android:defaultValue="false" />
 
+    <ListPreference
+        android:key="battery_tile_style"
+        android:title="@string/battery_tile_style_title"
+        android:summary="%s"
+        android:dialogTitle="@string/battery_tile_style_title"
+        android:entries="@array/battery_tile_style_entries"
+        android:entryValues="@array/battery_tile_style_values"
+        android:defaultValue="0" />
+
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="qs_quickbar_scroll_enabled"
         android:title="@string/qqs_scroll_title"
