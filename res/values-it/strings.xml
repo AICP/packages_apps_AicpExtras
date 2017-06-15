@@ -659,7 +659,7 @@
     <string name="blurred_radius_summary">Quantità di sfocatura</string>
     <string name="blur_mixed_color">Filtro colore immagine mista</string>
     <string name="blur_colors_notice">Che cosa sono questi colori?</string>
-    <string name="blur_colors_notice_summary">Questi colori sono quelli che tingono la sfocatura dello sfondo. Invece del normale grigio, ora è possibile scegliere i colori in qualsiasi modo tu voglia.\nCi sono tre filtri di colore disponibili per: sfondi chiari, sfondi scuri e sfondi chiari/scuri.\nCosì come stanno lavorando questi colori?? \nSemplice, come dice li titolo, verrà utilizzato il filtro chiaro per sfondi più chiari, filtro scuro per sfondi scuri e il filtro misto verrà utilizzato per gli sfondi non troppo scuri e non troppo chiari.\nQuesti colori sono utilizzati per entrambi gli sfondi sfocati: Notifiche e Recenti </string>
+    <string name="blur_colors_notice_summary">Questi colori sono quelli che tingono la sfocatura dello sfondo. Invece del normale grigio, ora è possibile scegliere i colori in qualsiasi modo tu voglia.\nCi sono tre filtri di colore disponibili per: sfondi chiari, sfondi scuri e sfondi chiari/scuri.\nCome lavorano questi colori? \nSemplice, come dicono i titoli, verrà utilizzato il filtro chiaro per sfondi più chiari, filtro scuro per sfondi scuri e il filtro misto per gli sfondi non troppo scuri e non troppo chiari.\nI colori sono utilizzati per entrambi gli sfondi sfocati: Notifiche e Recenti </string>
     <string name="blur_default_colors_title">Ripristino dei colori predefiniti</string>
   
     <!-- App sidebar -->
@@ -843,8 +843,8 @@
     <string name="recent_panel_expanded_mode_auto">Automatica (default)</string>
     <string name="recent_panel_expanded_mode_always">Sempre</string>
     <string name="recent_panel_expanded_mode_never">Mai</string>
-    <string name="recent_panel_show_topmost_title">Visualizza topmost task</string>
-    <string name="recent_panel_show_topmost_summary">Non escludere il topmost task</string>
+    <string name="recent_panel_show_topmost_title">Visualizza l\'attività attuale</string>
+    <string name="recent_panel_show_topmost_summary">Non escludere l\'attività attuale</string>
     <string name="recent_panel_bg_color_title">Colore di sfondo del pannello</string>
     <string name="recent_card_bg_color_title">Colore di sfondo delle carte</string>
     <string name="slim_recents_mem_display_long_click_clear_title">Pressione lunga sulla barra di memoria</string>
@@ -906,7 +906,7 @@
     <string name="shortcut_action_help_app">app</string>
     <string name="shortcut_action_help_icon">, mentre selezionando l\'icona verranno visualizzate le opzioni di personalizzazione</string>
     <string name="shortcut_action_help_main">Per aggiungere un %1$s, selezione l\'icona corrispondente. Una volta che %1$s è stato aggiunto, selezionando la riga cambierà il target%2$s\n\nPer rimuovere un %1$s, sposta la riga orizziontalmente a sinistra o a destra. Riordina un %1$s nella lista trascinando verticalmente l\'ancora sulla sinistra.\n\nPer cancellare o resettare, seleziona l\'icona di reset.</string>
-    <string name="shortcut_action_help_delete_last_entry">Rimuovendo un %1$s nella lista disabiliterà questa funzione.</string>
+    <string name="shortcut_action_help_delete_last_entry">Se rimuovi ogni %1$s questa funzione verrà disabilitata.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Rimuovendo ogni %1$s nella lista disabiliterà il secondo strato.</string>
     <string name="shortcuts_applications">Applicazioni</string>
     <string name="shortcuts_select_custom_app_title">Seleziona altre applicazioni</string>
@@ -914,7 +914,7 @@
     <string name="shortcuts_icon_default">Default</string>
     <string name="shortcuts_icon_custom">Galleria</string>
     <string name="shortcuts_icon_picker_choose_icon_title">Scegli icona</string>
-    <string name="reset_message">Resettare tutte le voci?</string>
+    <string name="reset_message">Eliminare tutte le voci?</string>
     <string name="lockscreen_shortcuts_title">Scorciatoie a metà schermo</string>
     <string name="lockscreen_shortcuts_summary">Visualizza o cambia le scorciatoie personalizzate della schermata di sblocco</string>
     <string name="lockscreen_shorcuts_launch_type_title">Tipo di clic</string>
@@ -939,7 +939,7 @@
     <!-- Custom bootanim -->
     <string name="custom_bootanimation_title">Animazione di avvio</string>
     <string name="custom_bootanimation_select_title">Selezione animazione di avvio</string>
-    <string name="custom_bootanimation_summary">Ad ogni cambio, l\'animazione corrente verrà salvata in storage/AICP_ota con la data corrente. Quelle vecchie devono essere cancellate manualmente se non necessarie.</string>
+    <string name="custom_bootanimation_summary">Ad ogni cambiamento, l\'animazione corrente verrà salvata in storage/AICP_ota con la data corrente. Quelle vecchie devono essere cancellate manualmente se non necessarie.</string>
     <string name="bootanimation_preview">Preview animazione</string>
     <string name="set_custom_bootanimation">Selezione personalizzata...</string>
     <string name="creating_preview">Creazione preview...</string>
@@ -1064,6 +1064,6 @@
     <string name="weather_windspeed_metric_units_summaryOn">La velocità del vento è mostrata in metri al secondo (m/s)</string>
     <string name="weather_windspeed_metric_units_summaryOff">La velocità del vento è mostrata in kilometri all\'ora (km/s)</string>
     <string name="weather_winddirection_display_title">Visualizzazione velocità del vento</string>
-    <string name="weather_winddirection_display_summaryOn">La velocità del vento è mostrata usando le direzioni della girandola</string>
+    <string name="weather_winddirection_display_summaryOn">La velocità del vento è mostrata usando le direzioni della rosa dei venti</string>
     <string name="weather_winddirection_display_summaryOff">La velocità del vento è mostrata usando direzioni angolari</string>
 </resources>
