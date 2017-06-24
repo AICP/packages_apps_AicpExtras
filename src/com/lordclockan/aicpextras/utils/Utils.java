@@ -30,6 +30,7 @@ import android.net.ConnectivityManager;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
@@ -214,5 +215,23 @@ public class Utils {
                 removeFilterListener(viewGroup.getChildAt(i));
             }
         }
+    }
+
+    /**
+     * This can not reliably detect whether the user has root access,
+     * but it can detect some cases when the user hasn't.
+     */
+    public static boolean hasSu() {
+        Process p = null;
+        try {
+            p = Runtime.getRuntime().exec(new String[] { "which", "su" });
+            BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            return br.readLine() != null;
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (p != null) p.destroy();
+        }
+        return false;
     }
 }
