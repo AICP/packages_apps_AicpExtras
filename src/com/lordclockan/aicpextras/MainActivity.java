@@ -148,6 +148,9 @@ public class MainActivity extends AppCompatActivity
         navigationView.setItemTextColor(navDrawerItemColor());
         navigationView.setItemIconTintList(navDrawerItemColor());
 
+        // Try to detect devices without su
+        navigationView.getMenu().findItem(R.id.root_extras).setVisible(Utils.hasSu());
+
         initShortcutManager();
 
         Utils.enableLanguageFilter(this);
@@ -278,6 +281,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_various:
                 fragmentClass = VariousShitFragment.class;
+                break;
+            case R.id.root_extras:
+                fragmentClass = RootExtras.class;
                 break;
             case R.id.nav_about:
                 fragmentClass = AboutFragment.class;
