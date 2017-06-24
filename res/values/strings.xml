@@ -1039,4 +1039,12 @@
 
     <!-- Root extras -->
     <string name="root_extras_msg">In order to use the features on this screen, you need to be rooted; so make sure you have a root/su solution installed before trying these out!</string>
-  </resources>
+
+    <!-- Selinux Switch -->
+    <string name="selinux_switch_title">Selinux Switch options</string>
+    <string name="selinux_switch_summary">SELinux is a set of kernel modifications and user-space tools. Changing modes can cause unwanted effects. Use at your own risk.</string>
+    <string name="selinux_title">Selinux Mode</string>
+    <string name="selinux_permissive_title">Permissive</string>
+    <string name="selinux_enforcing_title">Enforcing</string>
+    <string name="selinux_permissive_toast_title">Selinux set to permissive!</string>
+</resources>
