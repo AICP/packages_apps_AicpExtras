@@ -30,7 +30,7 @@ public class RootExtras extends Fragment {
                 .commit();
     }
 
-    private class SettingsPreferenceFragment extends PreferenceFragment
+    public static class SettingsPreferenceFragment extends PreferenceFragment
             implements Preference.OnPreferenceChangeListener {
 
         private static final String TAG = "RootExtras";
@@ -62,33 +62,35 @@ public class RootExtras extends Fragment {
                     .contains("selinux"));
 
 
-            // Show a dialog to the user to inform about root requirement
-            new AlertDialog.Builder(getActivity())
-                    .setMessage(R.string.root_extras_msg)
-                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                // We're staying here, so do the rest of the initialization that
-                                // requires root
-                                new InitPrefsTask().execute();
-                            }
-                    })
-                    .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                leave();
-                            }
-                    })
-                    .setOnCancelListener(new DialogInterface.OnCancelListener() {
-                            @Override
-                            public void onCancel(DialogInterface dialog) {
-                                // User was to lazy to use the buttons to close the dialog,
-                                // so let's assume they know what they're doing and continue
-                                // with initialization, now the part that requires root
-                                new InitPrefsTask().execute();
-                            }
-                    })
-                    .show();
+            if (savedInstanceState == null) {
+                // Show a dialog to the user to inform about root requirement
+                new AlertDialog.Builder(getActivity())
+                        .setMessage(R.string.root_extras_msg)
+                        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // We're staying here, so do the rest of the initialization
+                                    // that requires root
+                                    new InitPrefsTask().execute();
+                                }
+                        })
+                        .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    leave();
+                                }
+                        })
+                        .setOnCancelListener(new DialogInterface.OnCancelListener() {
+                                @Override
+                                public void onCancel(DialogInterface dialog) {
+                                    // User was to lazy to use the buttons to close the dialog,
+                                    // so let's assume they know what they're doing and continue
+                                    // with initialization, now the part that requires root
+                                    new InitPrefsTask().execute();
+                                }
+                        })
+                        .show();
+            }
         }
 
         @Override
@@ -211,12 +213,12 @@ public class RootExtras extends Fragment {
                 }
             }
         }
-    }
 
-    private void leave() {
-        // Leave screen by restarting the activity - this should take us
-        // to the initially viewed fragment when opening the activity
-        getActivity().finish();
-        startActivity(getActivity().getIntent());
+        private void leave() {
+            // Leave screen by restarting the activity - this should take us
+            // to the initially viewed fragment when opening the activity
+            getActivity().finish();
+            startActivity(getActivity().getIntent());
+        }
     }
 }

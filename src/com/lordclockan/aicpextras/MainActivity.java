@@ -69,24 +69,28 @@ public class MainActivity extends AppCompatActivity
 
         mView = (View) findViewById(R.id.drawer_layout);
 
-        Fragment fragment;
-        String title = null;
-        String fragmentExtra = getIntent().getStringExtra(INTENT_EXTRA_INIT_FRAGMENT);
-        /*if (INIT_FRAGMENT_HALO.equals(fragmentExtra)) {
-            fragment = new HaloFragment();
-            title = getString(R.string.halo_settings_title);
-        } else {
-            if (title != null) {
-                Log.w(TAG, "Unknown init fragment: " + fragmentExtra);
-            }*/
-            fragment = new AboutFragment();
-        //}
+        // When we have saved instance, the previously current fragment
+        // should have been restored already
+        if (savedInstanceState == null) {
+            Fragment fragment;
+            String title = null;
+            String fragmentExtra = getIntent().getStringExtra(INTENT_EXTRA_INIT_FRAGMENT);
+            /*if (INIT_FRAGMENT_HALO.equals(fragmentExtra)) {
+                fragment = new HaloFragment();
+                title = getString(R.string.halo_settings_title);
+            } else {
+                if (title != null) {
+                    Log.w(TAG, "Unknown init fragment: " + fragmentExtra);
+                }*/
+                fragment = new AboutFragment();
+            //}
 
-        FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
-        tx.replace(R.id.content_main, fragment);
-        tx.commit();
-        if (title != null) {
-            setTitle(title);
+            FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
+            tx.replace(R.id.content_main, fragment);
+            tx.commit();
+            if (title != null) {
+                setTitle(title);
+            }
         }
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
