@@ -190,6 +190,12 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
 
+        <receiver android:name="com.lordclockan.aicpextras.util.OnBoot">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
         <activity android:name=".romstats.AnonymousStats"
             android:label="@string/stats_title" >
             <intent-filter>
