@@ -2,15 +2,24 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- SELinux -->
-    <Preference
-        android:key="selinux_switch"
-        android:title="@string/selinux_switch_title"
-        android:summary="@string/selinux_switch_summary"
-        android:selectable="false"/>
+    <PreferenceCategory
+        android:title="@string/selinux_switch_title">
 
-    <SwitchPreference
-        android:key="selinux"
-        android:title="@string/selinux_title"
-        android:defaultValue="false" />
+        <Preference
+            android:key="selinux_switch"
+            android:summary="@string/selinux_switch_summary"
+            android:selectable="false"/>
+
+        <SwitchPreference
+            android:key="selinux"
+            android:title="@string/selinux_title"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="selinux_persistence"
+            android:title="@string/selinux_persistence_title"
+            android:summary="@string/selinux_persistence_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
 
 </PreferenceScreen>
