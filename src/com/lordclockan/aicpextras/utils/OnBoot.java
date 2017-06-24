@@ -51,12 +51,6 @@ public class OnBoot extends BroadcastReceiver {
                         showToast(context.getString(R.string.selinux_permissive_toast_title), context);
                     }
                 }
-            } else {
-                if (SuShell.runWithSu("getenforce").contains("Enforcing")) {
-                    setSelinuxEnabled(true);
-                } else {
-                    setSelinuxEnabled(false);
-                }
             }
         }
     }

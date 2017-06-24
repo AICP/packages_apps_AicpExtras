@@ -36,8 +36,10 @@ public class RootExtras extends Fragment {
         private static final String TAG = "RootExtras";
 
         private static final String SELINUX = "selinux";
+        private static final String SELINUX_PERSISTENCE = "selinux_persistence";
 
         private SwitchPreference mSelinux;
+        private SwitchPreference mSelinuxPersistence;
 
         private Toast mSuDeniedToast;
 
@@ -53,6 +55,12 @@ public class RootExtras extends Fragment {
             //SELinux
             mSelinux = (SwitchPreference) findPreference(SELINUX);
             mSelinux.setOnPreferenceChangeListener(this);
+            mSelinuxPersistence = (SwitchPreference) findPreference(SELINUX_PERSISTENCE);
+            mSelinuxPersistence.setOnPreferenceChangeListener(this);
+            mSelinuxPersistence.setChecked(getContext()
+                    .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
+                    .contains("selinux"));
+
 
             // Show a dialog to the user to inform about root requirement
             new AlertDialog.Builder(getActivity())
@@ -88,11 +96,14 @@ public class RootExtras extends Fragment {
             if (preference == mSelinux) {
                 if (newValue.toString().equals("true")) {
                     new SwitchSelinuxTask().execute(true);
-                    setSelinuxEnabled(true);
+                    setSelinuxEnabled(true, mSelinuxPersistence.isChecked());
                 } else if (newValue.toString().equals("false")) {
                     new SwitchSelinuxTask().execute(false);
-                    setSelinuxEnabled(false);
+                    setSelinuxEnabled(false, mSelinuxPersistence.isChecked());
                 }
+                return true;
+            } else if (preference == mSelinuxPersistence) {
+                setSelinuxEnabled(mSelinux.isChecked(), (Boolean) newValue);
                 return true;
             }
             return false;
@@ -160,10 +171,14 @@ public class RootExtras extends Fragment {
             }
         }
 
-        private void setSelinuxEnabled(boolean status) {
+        private void setSelinuxEnabled(boolean status, boolean persistent) {
             SharedPreferences.Editor editor =
                     getContext().getSharedPreferences("selinux_pref", Context.MODE_PRIVATE).edit();
-            editor.putBoolean("selinux", status);
+            if (persistent) {
+                editor.putBoolean("selinux", status);
+            } else {
+                editor.remove("selinux");
+            }
             editor.apply();
             setSelinuxStatus(status);
         }
@@ -192,7 +207,7 @@ public class RootExtras extends Fragment {
                 super.onPostExecute(result);
                 if (mException instanceof SuShell.SuDeniedException) {
                     // Did not work, so return to previous value
-                    setSelinuxEnabled(!mSelinux.isChecked());
+                    setSelinuxEnabled(!mSelinux.isChecked(), mSelinuxPersistence.isChecked());
                 }
             }
         }
