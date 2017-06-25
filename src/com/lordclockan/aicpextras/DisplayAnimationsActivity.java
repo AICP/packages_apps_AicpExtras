@@ -42,8 +42,6 @@ public class DisplayAnimationsActivity extends Fragment {
 
         private static final String TAG = "AnimSettings";
 
-        private static final int REQUEST_PICK_BOOT_ANIMATION = 201;
-
         private static final String POWER_MENU_ANIMATIONS = "power_menu_animations";
         private static final String KEY_TOAST_ANIMATION = "toast_animation";
         private static final String TOAST_ICON_COLOR = "toast_icon_color";
