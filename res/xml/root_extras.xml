@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <Preference
+        android:key="system_app_remover"
+        android:title="@string/system_app_remover" />
+
     <!-- Custom bootanim -->
     <PreferenceCategory
         android:title="@string/custom_bootanimation_title">
