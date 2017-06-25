@@ -74,6 +74,7 @@ public class RootExtras extends Fragment {
         private static final String SELINUX = "selinux";
         private static final String SELINUX_PERSISTENCE = "selinux_persistence";
         private static final String PREF_CUSTOM_BOOTANIM = "custom_bootanimation";
+        private static final String PREF_SYSTEMAPP_REMOVER = "system_app_remover";
 
         // Custom bootanimation
         private static final String BOOTANIMATION_SYSTEM_PATH = "/system/media/bootanimation.zip";
@@ -83,6 +84,7 @@ public class RootExtras extends Fragment {
         private SwitchPreference mSelinux;
         private SwitchPreference mSelinuxPersistence;
         private Preference mCustomBootAnimation;
+        private Preference mSystemappRemover;
 
         // Custom bootanimation
         private ImageView mView;
@@ -119,6 +121,8 @@ public class RootExtras extends Fragment {
             mCustomBootAnimation = findPreference(PREF_CUSTOM_BOOTANIM);
             mContext = getActivity();
             resetBootAnimation();
+
+            mSystemappRemover = findPreference(PREF_SYSTEMAPP_REMOVER);
 
             if (savedInstanceState == null) {
                 // Show a dialog to the user to inform about root requirement
@@ -170,9 +174,14 @@ public class RootExtras extends Fragment {
         }
 
         @Override
-        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
+                                             Preference preference) {
             if (preference == mCustomBootAnimation) {
                 openBootAnimationDialog();
+                return true;
+            } else if (preference == mSystemappRemover) {
+                Intent intent = new Intent(getActivity(), SystemappRemover.class);
+                startActivity(intent);
                 return true;
             }
             return super.onPreferenceTreeClick(preferenceScreen, preference);
