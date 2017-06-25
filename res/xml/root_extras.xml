@@ -2,6 +2,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <Preference
+        android:key="log_it"
+        android:title="@string/log_that_shit_title" />
+
+    <Preference
         android:key="system_app_remover"
         android:title="@string/system_app_remover" />
 
