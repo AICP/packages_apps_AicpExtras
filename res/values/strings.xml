@@ -1049,4 +1049,17 @@
     <string name="selinux_permissive_toast_title">Selinux set to permissive!</string>
     <string name="selinux_persistence_title">Persist across reboots</string>
     <string name="selinux_persistence_summary">Restore the above set sepolicy mode on each boot</string>
+
+    <!-- Custom bootanim -->
+    <string name="custom_bootanimation_title">Boot animation</string>
+    <string name="custom_bootanimation_select_title">Select boot animation</string>
+    <string name="custom_bootanimation_summary">On every change, current animation will be backed up to storage/AICP_ota folder with current date stamp. Old ones must be deleted manually if not needed.</string>
+    <string name="bootanimation_preview">Bootanimation preview</string>
+    <string name="set_custom_bootanimation">Set custom...</string>
+    <string name="creating_preview">Creating preview...</string>
+    <string name="error_reading_zip_file">Error reading zip file</string>
+    <string name="error_creating_preview">Error creating preview</string>
+    <string name="install_file_manager_error">No application found to pick the zip file. Please install a filemanager.</string>
+    <string name="apply">Apply</string>
+    <string name="bootanim_install_successful">New bootanimation successfully applied.</string>
 </resources>
