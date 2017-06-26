@@ -19,6 +19,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
@@ -70,6 +71,8 @@ public class RootExtras extends Fragment {
         private static final String TAG = "RootExtras";
 
         private static final int REQUEST_PICK_BOOT_ANIMATION = 201;
+
+        private static final String SPREF_ROOT_SUCCESS = "root_success_known";
 
         private static final String SELINUX = "selinux";
         private static final String SELINUX_PERSISTENCE = "selinux_persistence";
@@ -128,33 +131,33 @@ public class RootExtras extends Fragment {
             mLogIt = findPreference(PREF_LOG_IT);
 
             if (savedInstanceState == null) {
-                // Show a dialog to the user to inform about root requirement
-                new AlertDialog.Builder(getActivity())
-                        .setMessage(R.string.root_extras_msg)
-                        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    // We're staying here, so do the rest of the initialization
-                                    // that requires root
-                                    new InitPrefsTask().execute();
-                                }
-                        })
-                        .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    leave();
-                                }
-                        })
-                        .setOnCancelListener(new DialogInterface.OnCancelListener() {
-                                @Override
-                                public void onCancel(DialogInterface dialog) {
-                                    // User was to lazy to use the buttons to close the dialog,
-                                    // so let's assume they know what they're doing and continue
-                                    // with initialization, now the part that requires root
-                                    new InitPrefsTask().execute();
-                                }
-                        })
-                        .show();
+                if (PreferenceManager.getDefaultSharedPreferences(mContext)
+                        .getBoolean(SPREF_ROOT_SUCCESS, false)) {
+                    // User has used root in the past, so probably knows what they're doing
+                    new InitPrefsTask().execute();
+                } else {
+                    // Show a dialog to the user to inform about root requirement
+                    new AlertDialog.Builder(getActivity())
+                            .setMessage(R.string.root_extras_msg)
+                            .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        // We're staying here, so do the rest of the initialization
+                                        // that requires root
+                                        new InitPrefsTask().execute();
+                                    }
+                            })
+                            .setOnCancelListener(new DialogInterface.OnCancelListener() {
+                                    @Override
+                                    public void onCancel(DialogInterface dialog) {
+                                        // User was to lazy to use the buttons to close the dialog,
+                                        // so let's assume they know what they're doing and continue
+                                        // with initialization, now the part that requires root
+                                        new InitPrefsTask().execute();
+                                    }
+                            })
+                            .show();
+                    }
             }
         }
 
@@ -260,11 +263,17 @@ public class RootExtras extends Fragment {
             @Override
             protected void onPostExecute(Void result) {
                 super.onPostExecute(result);
+                SharedPreferences.Editor editor =
+                        PreferenceManager.getDefaultSharedPreferences(mContext).edit();
                 if (mException instanceof SuShell.SuDeniedException) {
                     mSuDeniedToast.show();
+                    editor.putBoolean(SPREF_ROOT_SUCCESS, false);
                 } else {
                     mSuDeniedToast.cancel();
+                    editor.putBoolean(SPREF_ROOT_SUCCESS, true);
                 }
+                // Remember whether we had success for root required dialog
+                editor.apply();
             }
         }
 
