@@ -54,6 +54,7 @@
     <string name="quick_settings_title">Kacheln</string>
     <string name="design_title">Design</string>
     <string name="various_title">Verschiedenes</string>
+    <string name="root_extras_title">Root Extras</string>
 
     <string name="nothing_title">Hier gibt es noch nichts zu sehen, also weiter.</string>
 
@@ -246,6 +247,10 @@
     <string name="share_title">Teilen...</string>
     <string name="log_it_share_subject">AICP logs</string>
     <string name="log_it_summary">Bitte warten, während die Logdateien erzeugt werden</string>
+    <string name="log_it_logs_in_progress">Logdateien werden erzeugt&#8230;</string>
+    <string name="log_it_share_type_title">Methode zur Übermittlung</string>
+    <string name="log_it_share_type_zip">ZIP-Datei</string>
+    <string name="log_it_share_type_haste">Upload zur AICP hastebin-Seite</string>
 
     <!-- AOKP custom system animations -->
     <string name="animation_duration_default">Standard</string>
@@ -857,6 +862,7 @@
     <string name="no_iconpacks_summary">Keine Symbol-Pakete installiert</string>
     <string name="dialog_pick_iconpack_title">Symbol-Paket wählen</string>
     <string name="default_iconpack_title">Standard-Symbole</string>
+    <string name="slim_recents_corner_radius_title">Radius der Karten-Ecken</string>
 
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Anzeige auf der linken Seite</string>
@@ -938,19 +944,6 @@
     <!-- Notification guts kill app button -->
     <string name="notification_guts_kill_app_button_title">\"App beenden\"-Taste</string>
     <string name="notification_guts_kill_app_button_summary">Zeige eine Taste zum Beenden der App, wenn deren Benachrichtigung lange gedrückt wird</string>
-
-    <!-- Custom bootanim -->
-    <string name="custom_bootanimation_title">Bootanimation</string>
-    <string name="custom_bootanimation_select_title">Bootanimation wählen</string>
-    <string name="custom_bootanimation_summary">Bitte die neue Bootanimation auswählen.\nBei jedem Wechsel wird die momentane Animation im Verzeichnis \"AICP_ota\" des Telefonspeichers (mit aktuellem Datum) gesichert. Alte Animationen müssen händisch gelöscht werden, wenn sie nicht mehr benötigt werden!</string>
-    <string name="bootanimation_preview">Vorschau der Bootanimation</string>
-    <string name="set_custom_bootanimation">Eigene aktivieren...</string>
-    <string name="creating_preview">Erzeuge Vorschau...</string>
-    <string name="error_reading_zip_file">Fehler beim Lesen der ZIP-Datei</string>
-    <string name="error_creating_preview">Fehler beim Erzeugen der Vorschau</string>
-    <string name="install_file_manager_error">Keine App zur Auswahl der ZIP-Datei gefunden. Bitte einen Dateimanager installieren.</string>
-    <string name="apply">Anwenden</string>
-    <string name="bootanim_install_successful">Neue Bootanimation erfolgreich installiert.</string>
 
     <!-- Circle app bar -->
     <string name="category_app_circle_bar_title">App-Kreisleiste</string>
@@ -1069,4 +1062,40 @@
     <string name="weather_winddirection_display_title">Anzeige der Windrichtung</string>
     <string name="weather_winddirection_display_summaryOn">Richtung wird als Himmelsrichtung angezeigt</string>
     <string name="weather_winddirection_display_summaryOff">Richtung wird als Kompass-Gradzahl angezeigt</string>
+
+    <!-- Battery tile style-->
+    <string name="battery_tile_style_title">Stil der Akku-Kachel</string>
+
+    <!-- Battery strings -->
+    <string name="status_bar_battery_style_icon_portrait">Symbol (Hochformat)</string>
+    <string name="status_bar_battery_style_icon_landscape">Symbol (Querformat)</string>
+    <string name="status_bar_battery_style_circle">Kreis</string>
+    <string name="status_bar_battery_style_solid">Kreis (gefüllt)</string>
+    <string name="status_bar_battery_style_aicp">AICP</string>
+
+    <!-- Root extras -->
+    <string name="root_extras_msg">Um die hier angezeigten Funktionen zu nutzen, MUSS das Gerät gerootet sein. Bitte sicherstellen, dass eine Root/Superuser-Softwarelösung installiert wurde, BEVOR diese Funktionen ausprobiert werden!</string>
+
+    <!-- Selinux Switch -->
+    <string name="selinux_switch_title">SELinux-Schalter Optionen</string>
+    <string name="selinux_switch_summary">SELinux sind verschiedene Kernel-Modifikationen und \"user-space\" Werkzeuge. Eine Änderung des Modus kann unerwartetes Telefonverhalten auslösen. Benutzung auf eigenes Risiko!</string>
+    <string name="selinux_title">SELinux-Modus</string>
+    <string name="selinux_permissive_title">Moderat</string>
+    <string name="selinux_enforcing_title">Strikt</string>
+    <string name="selinux_permissive_toast_title">SELinux-Modus auf \"Moderat\" gesetzt!</string>
+    <string name="selinux_persistence_title">Einstellung bei Neustart behalten</string>
+    <string name="selinux_persistence_summary">Stellt den oben eingestellten SELinux-Modus bei jedem Neustart wieder her.</string>
+
+    <!-- Custom bootanim -->
+    <string name="custom_bootanimation_title">Bootanimation</string>
+    <string name="custom_bootanimation_select_title">Bootanimation wählen</string>
+    <string name="custom_bootanimation_summary">Bitte die neue Bootanimation auswählen.\nBei jedem Wechsel wird die momentane Animation im Verzeichnis \"AICP_ota\" des Telefonspeichers (mit aktuellem Datum) gesichert. Alte Animationen müssen händisch gelöscht werden, wenn sie nicht mehr benötigt werden!</string>
+    <string name="bootanimation_preview">Vorschau der Bootanimation</string>
+    <string name="set_custom_bootanimation">Eigene aktivieren...</string>
+    <string name="creating_preview">Erzeuge Vorschau...</string>
+    <string name="error_reading_zip_file">Fehler beim Lesen der ZIP-Datei</string>
+    <string name="error_creating_preview">Fehler beim Erzeugen der Vorschau</string>
+    <string name="install_file_manager_error">Keine App zur Auswahl der ZIP-Datei gefunden. Bitte einen Dateimanager installieren.</string>
+    <string name="apply">Anwenden</string>
+    <string name="bootanim_install_successful">Neue Bootanimation erfolgreich installiert.</string>
 </resources>
