@@ -226,7 +226,13 @@ public class AboutFragment extends Fragment {
             String retMaintainers = "";
             try {
                 String maintainers = SystemProperties.get(property);
-                retMaintainers = maintainers;
+                retMaintainers = maintainers
+                        .replaceAll(" , ", "\n")
+                        .replaceAll(", ", "\n")
+                        .replaceAll(",", "\n")
+                        .replaceAll(" & ", "\n")
+                        .replaceAll("& ", "\n")
+                        .replaceAll("&", "\n");;
             } catch (RuntimeException e) {
                 // No recovery
             }
