@@ -58,6 +58,7 @@ public class AboutFragment extends Fragment {
         private static final String PREF_AICP_CHANGELOG = "aicp_changelog";
         private static final String PREF_AICP_VERSION = "ae_version";
         private static final String PREF_DEVICE_INFO = "device_info";
+        private static final String PREF_LINEAGE_EXTRAS = "lineage_extras";
 
         private PreferenceScreen mAicpLogo;
         private long[] mHits = new long[3];
@@ -69,6 +70,7 @@ public class AboutFragment extends Fragment {
         private Preference mStatsAicp;
         private Preference mAicpVersion;
         private Preference mDeviceInfo;
+        private Preference mLineageExtras;
 
         private static final String PREF_STATS_AICP = "aicp_stats";
 
@@ -122,6 +124,9 @@ public class AboutFragment extends Fragment {
 
             mDeviceInfo = prefSet.findPreference(PREF_DEVICE_INFO);
             setDeviceInfoSummary(PREF_DEVICE_INFO, Build.MODEL);
+
+            mLineageExtras = prefSet.findPreference(PREF_LINEAGE_EXTRAS);
+
         }
 
         @Override
@@ -181,7 +186,7 @@ public class AboutFragment extends Fragment {
                 ps.setRotationSpeedRange(firstRandom, secondRandom);
                 ps.setFadeOut(200, new AccelerateInterpolator());
                 ps.oneShot(this.getView(), 100);
-            } if (preference == mDeviceInfo) {
+            } else if (preference == mDeviceInfo) {
                 AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
                 alert.setTitle(setDialogTitle("ro.aicp.maintainer"));
                 alert.setMessage(setDialogMessage("ro.aicp.maintainer"));
@@ -198,6 +203,11 @@ public class AboutFragment extends Fragment {
                         });
                 // alert.setNegativeButton(getString(android.R.string.cancel), null);
                 alert.show();
+            } else if (preference == mLineageExtras) {
+                String url = "https://download.lineageos.org/extras";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
             } else {
                 return super.onPreferenceTreeClick(preferenceScreen, preference);
             }
