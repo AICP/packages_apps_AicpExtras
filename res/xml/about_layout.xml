@@ -26,6 +26,11 @@
         android:summary="@string/dwnld_summary"/>
 
     <Preference
+        android:key="lineage_extras"
+        android:title="@string/lineage_extras_title"
+        android:summary="@string/lineage_extras_title_summary" />
+
+    <Preference
         android:key="aicp_ota"
         android:title="@string/aicp_ota_title"
         android:summary="@string/ota_summary"/>
