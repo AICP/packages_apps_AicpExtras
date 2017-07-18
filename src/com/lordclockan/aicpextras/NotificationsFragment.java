@@ -65,6 +65,9 @@ public class NotificationsFragment extends Fragment {
         private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
         private static final String CUSTOM_HEADER_BROWSE = "custom_header_browse";
         private static final String NOTIFICATION_GUTS_KILL_APP_BUTTON = "notification_guts_kill_app_button";
+        private static final String PREF_QS_RUNNING_SERVICES = "qs_running_services_toggle";
+        private static final String PREF_QS_MULTIUSER_SWITCH = "qs_multiuser_switch_toggle";
+        private static final String PREF_QS_DATE_TIME_CENTER = "qs_date_time_center";
 
         private ListPreference mDaylightHeaderPack;
         private SeekBarPreferenceCham mHeaderShadow;
@@ -72,6 +75,9 @@ public class NotificationsFragment extends Fragment {
         private String mDaylightHeaderProvider;
         private PreferenceScreen mHeaderBrowse;
         private Preference mNotificationKill;
+        private SwitchPreference mQSRunningServicesIcon;
+        private SwitchPreference mQSMultiUserIcon;
+        private SwitchPreference mQSDateTimeCenter;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -132,6 +138,12 @@ public class NotificationsFragment extends Fragment {
 
             mNotificationKill = findPreference(NOTIFICATION_GUTS_KILL_APP_BUTTON);
             mNotificationKill.setOnPreferenceChangeListener(this);
+
+            mQSMultiUserIcon = (SwitchPreference) findPreference(PREF_QS_MULTIUSER_SWITCH);
+            mQSRunningServicesIcon = (SwitchPreference) findPreference(PREF_QS_RUNNING_SERVICES);
+            mQSDateTimeCenter = (SwitchPreference) findPreference(PREF_QS_DATE_TIME_CENTER);
+            mQSDateTimeCenter.setOnPreferenceChangeListener(this);
+            updateNotifHeaderIcons(mQSDateTimeCenter.isChecked());
         }
 
         @Override
@@ -166,6 +178,10 @@ public class NotificationsFragment extends Fragment {
                 // Setting will only apply to new created notifications.
                 // By restarting SystemUI, we can re-create all notifications
                 Helpers.showSystemUIrestartDialog(getActivity());
+                return true;
+            } else if (preference == mQSDateTimeCenter) {
+                Boolean value = (Boolean) newValue;
+                updateNotifHeaderIcons(value);
                 return true;
             }
             return false;
@@ -214,6 +230,15 @@ public class NotificationsFragment extends Fragment {
             Intent browse = new Intent();
             browse.setClassName("org.omnirom.omnistyle", "org.omnirom.omnistyle.BrowseHeaderActivity");
             return pm.resolveActivity(browse, 0) != null;
+        }
+
+        private void updateNotifHeaderIcons(Boolean state) {
+            if (state) {
+              mQSMultiUserIcon.setChecked(state);
+              mQSRunningServicesIcon.setChecked(state);
+            }
+            mQSMultiUserIcon.setEnabled(!state);
+            mQSRunningServicesIcon.setEnabled(!state);
         }
     }
 }
