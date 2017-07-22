@@ -43,13 +43,12 @@ public class DisplayAnimationsActivity extends Fragment {
         private static final String TAG = "AnimSettings";
 
         private static final String POWER_MENU_ANIMATIONS = "power_menu_animations";
-        private static final String KEY_TOAST_ANIMATION = "toast_animation";
-        private static final String TOAST_ICON_COLOR = "toast_icon_color";
-        private static final String TOAST_TEXT_COLOR = "toast_text_color";
-
         private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
         private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
         private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
+        private static final String KEY_TOAST_ANIMATION = "toast_animation";
+        private static final String TOAST_ICON_COLOR = "toast_icon_color";
+        private static final String TOAST_TEXT_COLOR = "toast_text_color";
 
         private ColorPickerPreference mIconColor;
         private ColorPickerPreference mTextColor;
@@ -111,8 +110,7 @@ public class DisplayAnimationsActivity extends Fragment {
                     Settings.System.ANIM_TILE_STYLE, 0,
                     UserHandle.USER_CURRENT);
             mTileAnimationStyle.setValue(String.valueOf(tileAnimationStyle));
-            updateTileAnimationStyleSummary(tileAnimationStyle);
-            updateAnimTileStyle(tileAnimationStyle);
+            mTileAnimationStyle.setSummary(mTileAnimationStyle.getEntry());
             mTileAnimationStyle.setOnPreferenceChangeListener(this);
 
             mTileAnimationDuration = (ListPreference) findPreference(PREF_TILE_ANIM_DURATION);
@@ -120,7 +118,8 @@ public class DisplayAnimationsActivity extends Fragment {
                     Settings.System.ANIM_TILE_DURATION, 1500,
                     UserHandle.USER_CURRENT);
             mTileAnimationDuration.setValue(String.valueOf(tileAnimationDuration));
-            updateTileAnimationDurationSummary(tileAnimationDuration);
+            mTileAnimationDuration.setSummary(mTileAnimationDuration.getEntry());
+            mTileAnimationDuration.setEnabled(tileAnimationStyle > 0);
             mTileAnimationDuration.setOnPreferenceChangeListener(this);
 
             mTileAnimationInterpolator = (ListPreference) findPreference(PREF_TILE_ANIM_INTERPOLATOR);
@@ -128,7 +127,8 @@ public class DisplayAnimationsActivity extends Fragment {
                     Settings.System.ANIM_TILE_INTERPOLATOR, 0,
                     UserHandle.USER_CURRENT);
             mTileAnimationInterpolator.setValue(String.valueOf(tileAnimationInterpolator));
-            updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
+            mTileAnimationInterpolator.setSummary(mTileAnimationInterpolator.getEntry());
+            mTileAnimationInterpolator.setEnabled(tileAnimationStyle > 0);
             mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
 
         }
@@ -172,54 +172,29 @@ public class DisplayAnimationsActivity extends Fragment {
                 return true;
             } else if (preference == mTileAnimationStyle) {
                 int tileAnimationStyle = Integer.parseInt((String) newValue);
+                int index = mTileAnimationStyle.findIndexOfValue((String) newValue);
                 Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_STYLE,
                         tileAnimationStyle, UserHandle.USER_CURRENT);
-                updateTileAnimationStyleSummary(tileAnimationStyle);
-                updateAnimTileStyle(tileAnimationStyle);
+                mTileAnimationStyle.setSummary(mTileAnimationStyle.getEntries()[index]);
+                mTileAnimationDuration.setEnabled(tileAnimationStyle > 0);
+                mTileAnimationInterpolator.setEnabled(tileAnimationStyle > 0);
+                return true;
             } else if (preference == mTileAnimationDuration) {
                 int tileAnimationDuration = Integer.parseInt((String) newValue);
+                int index = mTileAnimationDuration.findIndexOfValue((String) newValue);
                 Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_DURATION,
                         tileAnimationDuration, UserHandle.USER_CURRENT);
-                updateTileAnimationDurationSummary(tileAnimationDuration);
+                mTileAnimationDuration.setSummary(mTileAnimationDuration.getEntries()[index]);
                 return true;
             } else if (preference == mTileAnimationInterpolator) {
                 int tileAnimationInterpolator = Integer.parseInt((String) newValue);
+                int index = mTileAnimationInterpolator.findIndexOfValue((String) newValue);
                 Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_INTERPOLATOR,
                         tileAnimationInterpolator, UserHandle.USER_CURRENT);
-                updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
+                mTileAnimationInterpolator.setSummary(mTileAnimationInterpolator.getEntries()[index]);
                 return true;
             }
             return false;
-        }
-
-        private void updateTileAnimationStyleSummary(int tileAnimationStyle) {
-            String prefix = (String) mTileAnimationStyle.getEntries()[mTileAnimationStyle.findIndexOfValue(String
-                    .valueOf(tileAnimationStyle))];
-            mTileAnimationStyle.setSummary(getResources().getString(R.string.qs_set_animation_style, prefix));
-        }
-
-        private void updateTileAnimationDurationSummary(int tileAnimationDuration) {
-            String prefix = (String) mTileAnimationDuration.getEntries()[mTileAnimationDuration.findIndexOfValue(String
-                    .valueOf(tileAnimationDuration))];
-            mTileAnimationDuration.setSummary(getResources().getString(R.string.qs_set_animation_duration, prefix));
-        }
-
-        private void updateTileAnimationInterpolatorSummary(int tileAnimationInterpolator) {
-            String prefix = (String) mTileAnimationInterpolator.getEntries()[mTileAnimationInterpolator.findIndexOfValue(String
-                    .valueOf(tileAnimationInterpolator))];
-            mTileAnimationInterpolator.setSummary(getResources().getString(R.string.qs_set_animation_interpolator, prefix));
-        }
-
-        private void updateAnimTileStyle(int tileAnimationStyle) {
-            if (mTileAnimationDuration != null) {
-                if (tileAnimationStyle == 0) {
-                    mTileAnimationDuration.setSelectable(false);
-                    mTileAnimationInterpolator.setSelectable(false);
-                } else {
-                    mTileAnimationDuration.setSelectable(true);
-                    mTileAnimationInterpolator.setSelectable(true);
-                }
-            }
         }
     }
 }
