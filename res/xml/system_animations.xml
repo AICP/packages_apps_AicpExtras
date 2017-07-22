@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2017-2018 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,9 +22,9 @@
     android:title="@string/system_animations_title">
 
     <Preference
-            android:key="custom_bootanimation"
-            android:title="@string/custom_bootanimation_title"
-            android:summary="@string/custom_bootanimation_summary" />
+        android:key="custom_bootanimation"
+        android:title="@string/custom_bootanimation_title"
+        android:summary="@string/custom_bootanimation_summary" />
 
     <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="system_default_animation"
@@ -46,42 +46,37 @@
         android:summary="%s"
         android:defaultValue="0" />
 
-    <com.aicp.gear.preference.SystemSettingIntListPreference
+    <ListPreference
         android:key="toast_animation"
         android:title="@string/toast_animation_title"
-        android:dialogTitle="@string/toast_animation_title"
         android:entries="@array/toast_animation_entries"
         android:entryValues="@array/toast_animation_values"
-        android:summary="%s"
-        android:defaultValue="1" />
+        android:persistent="false" />
 
     <PreferenceCategory
-      android:key="quick_settings_animations"
-      android:title="@string/qs_tiles">
+        android:key="quick_settings_animations"
+        android:title="@string/qs_tiles">
 
-        <com.aicp.gear.preference.SystemSettingIntListPreference
+        <ListPreference
             android:key="anim_tile_style"
             android:title="@string/qs_tile_animation_style_title"
             android:entries="@array/qs_tile_animation_style_entries"
             android:entryValues="@array/qs_tile_animation_style_values"
-            android:summary="%s"
-            android:defaultValue="0" />
+            android:persistent="false" />
 
-        <com.aicp.gear.preference.SystemSettingIntListPreference
+        <ListPreference
             android:key="anim_tile_duration"
             android:title="@string/qs_tile_animation_duration_title"
             android:entries="@array/qs_tile_animation_duration_entries"
             android:entryValues="@array/qs_tile_animation_duration_values"
-            android:summary="%s"
-            android:defaultValue="1" />
+            android:persistent="false" />
 
-        <com.aicp.gear.preference.SystemSettingIntListPreference
+        <ListPreference
             android:key="anim_tile_interpolator"
             android:title="@string/qs_tile_animation_interpolator_title"
             android:entries="@array/qs_tile_animation_interpolator_entries"
             android:entryValues="@array/qs_tile_animation_interpolator_values"
-            android:summary="%s"
-            android:defaultValue="0" />
+            android:persistent="false" />
 
     </PreferenceCategory>
 
