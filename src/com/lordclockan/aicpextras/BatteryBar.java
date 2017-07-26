@@ -191,6 +191,7 @@ public class BatteryBar extends SubActivity {
                         Settings.System.STATUSBAR_BATTERY_BAR, val);
                 mBatteryBar.setSummary(mBatteryBar.getEntries()[index]);
                 updateBatteryBarOptions();
+                return true;
             } else if (preference == mBatteryBarNoNavbar) {
                 int val = Integer.parseInt((String) newValue);
                 int index = mBatteryBarNoNavbar.findIndexOfValue((String) newValue);
