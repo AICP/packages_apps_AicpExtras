@@ -27,6 +27,12 @@
         android:title="@string/screen_state_toggles_title"
         android:fragment="com.aicp.extras.fragments.SuspendActions" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="sensor_block"
+        android:title="@string/sensor_block_title"
+        android:summary="@string/sensor_block_summary"
+        android:defaultValue="false" />
+
     <!-- SELinux -->
     <PreferenceCategory
         android:key="selinux"
