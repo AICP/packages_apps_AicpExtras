@@ -47,9 +47,6 @@ public class VariousShitFragment extends Fragment {
 
         private static final String TAG = "VariousShit";
 
-        private static final int MIN_DELAY_VALUE = 1;
-        private static final int MAX_DELAY_VALUE = 30;
-
         private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
         private static final String HEADSET_CONNECT_PLAYER = "headset_connect_player";
         private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
@@ -71,7 +68,7 @@ public class VariousShitFragment extends Fragment {
         private ListPreference mLaunchPlayerHeadsetConnection;
         private ListPreference mMsob;
         private ListPreference mScreenshotType;
-        private NumberPickerPreference mScreenshotDelay;
+        private SeekBarPreferenceCham mScreenshotDelay;
         private ListPreference mScrollingCachePref;
         private SeekBarPreferenceCham mVolumeDialogTimeout;
         private Preference mLockClockSettings;
@@ -104,13 +101,11 @@ public class VariousShitFragment extends Fragment {
             mScreenshotType.setSummary(mScreenshotType.getEntry());
             mScreenshotType.setOnPreferenceChangeListener(this);
 
-            mScreenshotDelay = (NumberPickerPreference) findPreference(SCREENSHOT_DELAY);
-            mScreenshotDelay.setOnPreferenceChangeListener(this);
-            mScreenshotDelay.setMinValue(MIN_DELAY_VALUE);
-            mScreenshotDelay.setMaxValue(MAX_DELAY_VALUE);
+            mScreenshotDelay = (SeekBarPreference) findPreference(SCREENSHOT_DELAY);
             int ssDelay = Settings.System.getInt(resolver,
-                    Settings.System.SCREENSHOT_DELAY, 1);
-            mScreenshotDelay.setCurrentValue(ssDelay);
+                    Settings.System.SCREENSHOT_DELAY, 1000);
+            mScreenshotDelay.setValue(ssDelay / 1);
+            mScreenshotDelay.setOnPreferenceChangeListener(this);
             updateScreenshotDelaySummary(ssDelay);
 
             mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
@@ -162,10 +157,9 @@ public class VariousShitFragment extends Fragment {
                 mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
                 return true;
             } else if (preference == mScreenshotDelay) {
-                int mScreenshotDelayValue = Integer.parseInt(newValue.toString());
-                Settings.System.putInt(resolver, Settings.System.SCREENSHOT_DELAY,
-                        mScreenshotDelayValue);
-                updateScreenshotDelaySummary(mScreenshotDelayValue);
+                int screenshotDelay = (Integer) objValue;
+                Settings.System.putInt(getActivity().getContentResolver(),
+                        Settings.System.SCREENSHOT_DELAY, screenshotDelay * 1);
                 return true;
             } else if (preference == mMsob) {
                 Settings.System.putInt(resolver,
