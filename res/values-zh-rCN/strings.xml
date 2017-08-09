@@ -299,6 +299,9 @@
 
     <string name="brightness_icon_title">亮度图标 </string>
     <string name="brightness_icon_summary">在亮度条左侧显示一个亮度图标以开关自动亮度调节</string>
+    <string name="brightness_icon_position_title">亮度图标的位置</string>
+    <string name="brightness_icon_position_on_summary">在右边显示</string>
+    <string name="brightness_icon_position_off_summary">在左边显示</string>
 
     <!-- QS shade transparency -->
     <string name="qs_transparent_shade">快捷设置栏透明度</string>
@@ -329,6 +332,8 @@
 
     <!-- Quick settings tiles columns and rows config -->
     <string name="qs_rows_portrait_title">行 (竖屏)</string>
+    <string name="qs_rows_portrait_summary">选择在垂直方向显示的快速设置瓷块数目</string>
+    <string name="qs_rows_landscape_summary">选择在水平方向显示的快速设置瓷块数目</string>
     <string name="qs_rows_landscape_title">行 (横屏)</string>
     <string name="qs_columns_title">列</string>
     <string name="sysui_qqs_count_title">小号快捷设置瓷块</string>
@@ -648,5 +653,28 @@
     <string name="changelog_name">更新日志</string>
     <string name="commit_id">锁屏提交ID</string>
     <string name="commit_message">提交信息</string>
+
+    <!-- Battery tile style-->
+    <string name="battery_tile_style_title">电量图标风格</string>
+
+    <!-- Battery strings -->
+    <string name="status_bar_battery_style_icon_portrait">垂直图标</string>
+    <string name="status_bar_battery_style_icon_landscape">水平图标</string>
+    <string name="status_bar_battery_style_circle">圆形图标</string>
+    <string name="status_bar_battery_style_solid">实心图标</string>
+    <string name="status_bar_battery_style_aicp">电池图标</string>
+
+    <!-- Root extras -->
+    <string name="root_extras_msg">为了使用此屏幕上的功能，你必须要有Root权限，因此在尝试使用之前，请确保你有Root权限。</string>
+
+    <!-- Selinux Switch -->
+    <string name="selinux_switch_title">Selinux开关选项</string>
+    <string name="selinux_switch_summary">SELinux是一个集修改内核和用户空间工具。改变模式可能会产生不必要的影响。请用户自行承担后果。</string>
+    <string name="selinux_title">Selinux模式</string>
+    <string name="selinux_permissive_title">许可</string>
+    <string name="selinux_enforcing_title">强制执行</string>
+    <string name="selinux_permissive_toast_title">Selinux设置为许可模式!</string>
+    <string name="selinux_persistence_title">重启后取消更改</string>
+    <string name="selinux_persistence_summary">重启后恢复以上的设置</string>
 
 </resources>
