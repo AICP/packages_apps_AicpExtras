@@ -239,9 +239,9 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
             mSeekBar.setProgress(mCurrentValue - mMinValue);
 
             TextView unitsRight = (TextView)layout.findViewById(R.id.seekBarPrefUnitsRight);
-            unitsRight.setText(mUnitsRight);
+            unitsRight.setText(" " + mUnitsRight);
             TextView unitsLeft = (TextView)layout.findViewById(R.id.seekBarPrefUnitsLeft);
-            unitsLeft.setText(mUnitsLeft);
+            unitsLeft.setText(mUnitsLeft + " ");
         }
         catch(Exception e) {
             Log.e(TAG, "Error updating seek bar preference", e);
