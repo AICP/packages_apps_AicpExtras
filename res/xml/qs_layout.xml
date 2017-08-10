@@ -50,6 +50,12 @@
         android:defaultValue="false"/>
 
     <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
+        android:key="qs_tile_tap_to_add"
+        android:title="@string/qs_tile_single_tap_title"
+        android:summary="@string/qs_tile_single_tap_summary"
+        android:defaultValue="false"/>
+
+    <com.lordclockan.aicpextras.preferences.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
         android:title="@string/qs_menu_item_titles"
         android:summaryOn="@string/qs_menu_item_titles_summaryOn"
