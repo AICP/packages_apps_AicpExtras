@@ -36,9 +36,9 @@
 
     <!-- Preference fragment -->
     <style name="PreferenceTheme" parent="Theme.AppCompat">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">?android:attr/colorPrimary</item>
+        <item name="colorPrimaryDark">?android:attr/colorPrimaryDark</item>
+        <item name="colorAccent">?android:attr/colorAccent</item>
         <item name="android:colorPrimary">@color/colorPrimary</item>
         <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="android:colorAccent">@color/colorAccent</item>
@@ -65,4 +65,19 @@
         <item name="android:fitsSystemWindows">false</item>
     </style>
 
+    <!-- Color engine: styles to add upon color engine styles -->
+    <style name="AppThemeAddition">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="PreferenceThemeAddition">
+        <!-- This is AE, we don't need to follow system theme primary colors!
+             ... or we should do everywhere, but doesn't apply to toolbar in
+             MainActivity right now. Just ensure a consistent look for now -->
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
 </resources>
