@@ -38,13 +38,13 @@
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="recent_panel_bg_color"
             android:title="@string/recent_panel_bg_color_title"
-            defaultColor="#00ffffff"
+            android:defaultValue="0x00ffffff"
             alphaSliderEnabled="true" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="recent_card_bg_color"
             android:title="@string/recent_card_bg_color_title"
-            defaultColor="#00ffffff"
+            android:defaultValue="0x00ffffff"
             alphaSliderEnabled="true" />
 
         <com.lordclockan.aicpextras.widget.SeekBarPreferenceCham
@@ -119,13 +119,13 @@
             <net.margaritov.preference.colorpicker.ColorPickerPreference
                 android:key="slim_mem_bar_color"
                 android:title="@string/systemui_recents_mem_display_color"
-                defaultColor="#00ffffff"
+                android:defaultValue="0x00ffffff"
                 android:dependency="slim_recents_mem_display"/>
 
             <net.margaritov.preference.colorpicker.ColorPickerPreference
                 android:key="slim_mem_text_color"
                 android:title="@string/systemui_recents_mem_display_text_color"
-                defaultColor="#00ffffff"
+                android:defaultValue="0x00ffffff"
                 android:dependency="slim_recents_mem_display"/>
 
         </PreferenceCategory>
