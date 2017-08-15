@@ -56,6 +56,7 @@ public class RecentsPanelFragment extends Fragment {
         private static final String CATEGORY_OMNI_RECENTS = "omni_recents";
         private static final String CATEGORY_SLIM_RECENTS = "slim_recents";
         private static final String PREF_HIDE_APP_FROM_RECENTS = "hide_app_from_recents";
+        private static final String PREF_GRID_RECENTS = "grid_recents";
 
         private ListPreference mImmersiveRecents;
         private ListPreference mRecentsClearAllLocation;
@@ -68,6 +69,7 @@ public class RecentsPanelFragment extends Fragment {
         private SwitchPreference mRecentsUseOmniSwitch;
         private SwitchPreference mRecentsUseSlim;
         private Preference mHideAppsFromRecents;
+        private static SwitchPreference mGridRecents;
 
         private boolean mOmniSwitchInitCalled;
 
@@ -125,6 +127,8 @@ public class RecentsPanelFragment extends Fragment {
             updateRecents();
 
             mHideAppsFromRecents = prefSet.findPreference(PREF_HIDE_APP_FROM_RECENTS);
+
+            mGridRecents = (SwitchPreference) prefSet.findPreference(PREF_GRID_RECENTS);
 
         }
 
