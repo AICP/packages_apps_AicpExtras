@@ -174,6 +174,7 @@ public class NotificationsFragment extends Fragment {
                 int valueIndex = mHeaderProvider.findIndexOfValue(value);
                 mHeaderProvider.setSummary(mHeaderProvider.getEntries()[valueIndex]);
                 mDaylightHeaderPack.setEnabled(value.equals(mDaylightHeaderProvider));
+                return true;
             } else if (preference == mNotificationKill) {
                 // Setting will only apply to new created notifications.
                 // By restarting SystemUI, we can re-create all notifications
