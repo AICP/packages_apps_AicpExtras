@@ -10,7 +10,6 @@ import android.os.UserHandle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
@@ -19,7 +18,6 @@ import android.support.v4.app.Fragment;
 
 import com.lordclockan.R;
 import com.lordclockan.aicpextras.utils.Helpers;
-import com.lordclockan.aicpextras.utils.Utils;
 import com.lordclockan.aicpextras.widget.SeekBarPreferenceCham;
 
 public class HeadsUpSettingsFragment extends Fragment {
@@ -39,15 +37,11 @@ public class HeadsUpSettingsFragment extends Fragment {
         public SettingsPreferenceFragment() {
         }
 
-        private static final String CAT_HEADSUP_SETTINGS = "headsup_settings_category";
         private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
         private static final String PREF_HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
-        private static final String PREF_ALWAYS_HEADSUP_DIALER = "always_headsup_dialer";
 
         private ListPreference mHeadsUpTimeOut;
         private ListPreference mHeadsUpSnoozeTime;
-        private PreferenceCategory mHeadsUpCategory;
-        private SwitchPreference mAlwaysHeadsupDialer;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -83,12 +77,6 @@ public class HeadsUpSettingsFragment extends Fragment {
                    Settings.System.HEADS_UP_NOTIFICATION_SNOOZE, defaultSnooze);
             mHeadsUpSnoozeTime.setValue(String.valueOf(headsUpSnooze));
             updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
-
-            mAlwaysHeadsupDialer = (SwitchPreference) findPreference(PREF_ALWAYS_HEADSUP_DIALER);
-            mHeadsUpCategory = (PreferenceCategory) findPreference(CAT_HEADSUP_SETTINGS);
-            if(Utils.isWifiOnly(getActivity())) {
-                mHeadsUpCategory.removePreference(mAlwaysHeadsupDialer);
-            }
         }
 
         @Override
