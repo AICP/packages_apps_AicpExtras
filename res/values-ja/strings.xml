@@ -29,15 +29,15 @@
     <string name="g_community">Google+ コミュニティ</string>
     <string name="g_plus_summary">Google+ コミュニティにアクセスします</string>
     <string name="ui_title">インターフェース</string>
-    <string name="display_animations_title">表示とアニメーション</string>
+    <string name="display_animations_title">アニメーション</string>
     <string name="transparency_porn_title">パネル</string>
     <string name="notificaitons_title">通知ドロワー</string>
     <string name="statubar_title">ステータスバー</string>
     <string name="lockscreen_title">ロック画面</string>
     <string name="aicp_downloads_title">ダウンロード</string>
     <string name="dwnld_summary">最新のビルドをダウンロードします</string>
-    <string name="aicp_ota_title">OTA センター</string>
-    <string name="ota_summary">ROMの最新のアップデートを確認します</string>
+    <string name="aicp_ota_title">アップデートセンター</string>
+    <string name="ota_summary">AICP の更新を確認します</string>
     <string name="aicp_gerrit_title">Gerrit Code Review</string>
     <string name="ae_version_title">AICP Extras バージョン</string>
     <string name="gerrit_summary">GerritでAICPの開発の最前線をチェックします</string>
@@ -47,6 +47,8 @@
     <string name="settings_activity_title">AICP Extrasの設定</string>
     <string name="recents_panel_title">アプリ履歴</string>
     <string name="quick_settings_title">クイック設定パネル</string>
+    <string name="design_title">デザイン</string>
+    <string name="root_extras_title">root 権限が必要な機能</string>
 
     <string name="nothing_title">ここにはなにもありません</string>
 
@@ -243,6 +245,10 @@
     <string name="toast_SlideLeftRight_animation">左から右にスライド</string>
     <string name="toast_SlideRightLeft_animation">右から左にスライド</string>
 
+    <!-- Toast Icons -->
+    <string name="toast_icon_title">トースト通知のアイコン</string>
+    <string name="toast_icon_summary">トースト通知と共にアプリのアイコンを表示します</string>
+
     <!-- Power menu Animations  -->
     <string name="power_menu_animation_title">電源メニューのアニメーション</string>
     <string name="power_menu_animation_summary">電源メニューを表示する際のアニメーションを変更します</string>
@@ -343,6 +349,7 @@
     <string name="qs_tile_animation_interpolator_overshootInterpolator">オーバーシュート</string>
     <string name="qs_tile_animation_interpolator_anticipateInterpolator">逆方向に溜める</string>
     <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">逆方向に溜めてオーバーシュート</string>
+
     <!-- App Exit Toast -->
     <string name="app_exit_toast">もう一度押すと終了します</string>
 
@@ -542,24 +549,9 @@
     <string name="media_scanner_on_boot_ask">スキャンするか通知で尋ねる</string>
     <string name="media_scanner_on_boot_disabled">メディアをスキャンしない</string>
 
-    <!-- SlimSizer  -->
-    <string name="listsystem">リスト</string>
-    <string name="sizer_title">システムアプリの削除ツール</string>
-    <string name="caution">警告！</string>
-    <string name="sizer_message_startup">このツールはシステムアプリの削除を可能にします。削除しても問題がないことを把握しているアプリに限り、細心の注意を払って使用してください。</string>
-    <string name="sizer_message_delete">本当にこのアプリを削除しますか？</string>
-    <string name="btn_delete">選択したアプリを削除する</string>
-    <string name="delete_progress_title">削除中</string>
-    <string name="delete_progress">選択されたファイルを削除しています...</string>
-    <string name="delete_success">削除しました</string>
-    <string name="delete_fail">削除に失敗しました</string>
-    <string name="btn_profile">プロファイル</string>
-    <string name="sizer_message_sdnowrite">SDカードに書き込めませんでした</string>
-    <string name="sizer_message_sdnoread">SDカードを読み込めませんでした</string>
-    <string name="sizer_message_filesuccess">プロファイルを作成しました。</string>
-    <string name="sizer_message_filefail">プロファイルの作成に失敗しました。</string>
-    <string name="sizer_message_noselect">何も選択されていません。</string>
+    <!-- App Remover -->
     <string name="system_app_remover">システムアプリの削除ツール</string>
+    <string name="listsystem">リスト</string>
 
     <!-- Extensions settings -->
     <string name="extensions_title">システム拡張ツール</string>
@@ -772,7 +764,7 @@
     <string name="recent_panel_show_topmost_summary">アプリ履歴から最上位のタスクを除外しません</string>
     <string name="recent_panel_bg_color_title">パネルの背景色</string>
     <string name="recent_card_bg_color_title">カードの背景色</string>
-
+    <string name="slim_icon_pack_title">アイコンパック</string>
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">左端に表示</string>
     <string name="recent_panel_lefty_mode_summary">アプリ履歴を左端から呼び出します</string>
@@ -784,5 +776,53 @@
     <string name="hide_apps_from_recents_title">非表示のアプリ</string>
     <string name="hide_from_recents_add_app">追加</string>
     <string name="hide_apps_from_recents_summary">アプリ履歴に表示しないアプリを選択します</string>
+
+    <!-- Fingerprint unlock keystore -->
+    <string name="fp_unlock_keystore_title">指紋認証でのロック解除</string>
+    <string name="fp_unlock_keystore_summary">再起動後も PIN/パスワード/パターン による認証なしで指紋認証によるロック解除を可能にします。\n注意: 自己責任で使用してください！</string>
+
+    <string name="shortcut_action_reset">リセット</string>
+    <string name="shortcut_action_add">追加</string>
+
+    <!-- OmniJaws -->
+    <string name="weather_title">天気</string>
+    <string name="weather_config_title">主要な設定</string>
+    <string name="header_weather_enabled_title">天気の表示</string>
+    <string name="header_weather_image_enabled_title">天候のアイコンを表示</string>
+    <string name="statusbar_weather_title">天気の表示</string>
+    <string name="statusbar_weather_summary">ステータスバー上の天気の表示をカスタマイズする</string>
+    <string name="statusbar_weather_dialog_title">ステータスバー上の天気</string>
+    <string name="status_bar_weather_hidden">天気を非表示</string>
+
+    <!-- Media art -->
+    <string name="media_art_title">メディアアートワーク</string>
+    <string name="media_art_summary">ロック画面に再生中のメディアのアートワークを表示します</string>
+
+    <!-- AICP device and maintainer name -->
+    <string name="device_info_title">端末のメンテナ情報</string>
+    <string name="device_maintainer">メンテナ: </string>
+    <string name="device_maintainers">メンテナ: </string>
+
+    <!-- Lockscreen Weather -->
+    <string name="lock_screen_weather_category_title">ロック画面</string>
+    <string name="lock_screen_show_weather_title">天気の表示</string>
+    <string name="lock_screen_show_weather_summaryOn">ロック画面に天気を表示する</string>
+    <string name="lock_screen_show_weather_summaryOff">ロック画面に天気を表示しない</string>
+    <string name="lock_screen_show_location_title">現在地の表示</string>
+    <string name="lock_screen_show_location_summaryOn">ロック画面に位置情報を表示する</string>
+    <string name="lock_screen_show_location_summaryOff">ロック画面に位置情報を表示しない</string>
+    <string name="lock_screen_weather_condition_icon_title">天候のアイコンを表示</string>
+    <string name="lock_screen_weather_condition_icon_summaryOn">ロック画面に天候のアイコンを表示する</string>
+    <string name="lock_screen_weather_condition_icon_summaryOff">ロック画面に天候のアイコンを表示しない</string>
+
+    <!-- Selinux Switch -->
+    <string name="selinux_switch_title">SELinux スイッチオプション</string>
+    <string name="selinux_switch_summary">SELinuxはカーネルの改変とユーザー空間ツールの組み合わせから成ります。モードの変更は望まない影響を及ぼすことがあります。自己責任の下で利用してください。</string>
+    <string name="selinux_title">SELinux モード</string>
+    <string name="selinux_permissive_toast_title">SELinuxは permissive に設定されました！</string>
+
+    <!-- Lineage extras stuff -->
+    <string name="lineage_extras_title">LineageOS Extrasのダウンロード</string>
+    <string name="lineage_extras_title_summary">rootインストーラ、アンインストーラ、天気プロバイダのダウンロード</string>
 
 </resources>
