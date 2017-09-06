@@ -65,12 +65,11 @@
                 android:textAppearance="?android:attr/textAppearanceListItemSecondary"
                 android:textColor="?android:attr/textColorSecondary" />
 
-        <LinearLayout android:id="@+id/seekBarPrefBarContainer"
-                android:layout_centerInParent="true"
+        <SeekBar android:id="@+id/seekbar"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_toLeftOf="@+id/seekBarPrefValue"
-                android:orientation="horizontal"
                 android:layout_toRightOf="@+id/imageMinus" />
 
         <TextView android:id="@+id/seekBarPrefUnitsLeft"
