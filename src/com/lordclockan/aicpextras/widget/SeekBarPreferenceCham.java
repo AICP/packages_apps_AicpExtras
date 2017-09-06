@@ -41,6 +41,8 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
     private String mUnitsRight = "";
     private SeekBar mSeekBar;
     private TextView mTitle;
+    private TextView mUnitsLeftText;
+    private TextView mUnitsRightText;
     private ImageView mImagePlus;
     private ImageView mImageMinus;
     private Drawable mProgressThumb;
@@ -53,19 +55,12 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
 
     public SeekBarPreferenceCham(Context context, AttributeSet attrs) {
         super(context, attrs);
-        initPreference(context, attrs);
+        setValuesFromXml(attrs, context);
     }
 
     public SeekBarPreferenceCham(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        initPreference(context, attrs);
-    }
-
-    private void initPreference(Context context, AttributeSet attrs) {
         setValuesFromXml(attrs, context);
-        mSeekBar = new SeekBar(context, attrs);
-        mSeekBar.setMax(mMaxValue - mMinValue);
-        mSeekBar.setOnSeekBarChangeListener(this);
     }
 
     private void setValuesFromXml(AttributeSet attrs, Context context) {
@@ -120,128 +115,104 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
     @Override
     protected View onCreateView(ViewGroup parent){
         super.onCreateView(parent);
-
-        RelativeLayout layout =  null;
-        try {
-            LayoutInflater mInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            layout = (RelativeLayout)mInflater.inflate(R.layout.seek_bar_preference, parent, false);
-            mTitle = (TextView) layout.findViewById(android.R.id.title);
-            mImagePlus = (ImageView) layout.findViewById(R.id.imagePlus);
-            mImagePlus.setOnClickListener(new View.OnClickListener() {
+        LayoutInflater mInflater = (LayoutInflater) getContext()
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mPopupValue = (TextView) mInflater.inflate(R.layout.seek_bar_value_popup, null, false);
+        mPopupValue.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
                 @Override
-                public void onClick(View view) {
-                    mSeekBar.setProgress((mCurrentValue + mInterval) - mMinValue);
-                }
-            });
-            mImagePlus.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
-                    mSeekBar.setProgress((mCurrentValue + (mMaxValue-mMinValue)/10) - mMinValue);
-                    return true;
-                }
-            });
-            mImageMinus = (ImageView) layout.findViewById(R.id.imageMinus);
-            mImageMinus.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mSeekBar.setProgress((mCurrentValue - mInterval) - mMinValue);
-                }
-            });
-            mImageMinus.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
-                    mSeekBar.setProgress((mCurrentValue - (mMaxValue-mMinValue)/10) - mMinValue);
-                    return true;
-                }
-            });
-            mProgressThumb = mSeekBar.getThumb();
-            mPopupValue = (TextView) mInflater.inflate(R.layout.seek_bar_value_popup, null, false);
-            mPopupValue.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
-                    @Override
-                    public void onGlobalLayout() {
-                        int width = mPopupValue.getWidth();
-                        if (width != mPopupWidth) {
-                            mPopupWidth = mPopupValue.getWidth();
-                            startUpdateViewValue();
-                        }
+                public void onGlobalLayout() {
+                    int width = mPopupValue.getWidth();
+                    if (width != mPopupWidth) {
+                        mPopupWidth = mPopupValue.getWidth();
+                        startUpdateViewValue();
                     }
-            });
-            mStatusText = (TextView) layout.findViewById(R.id.seekBarPrefValue);
-            mStatusText.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
-                    final String defaultValue = getContext().getString(R.string.seekbar_default_value_set,
-                            mDefaultValue);
-                    if (mDefaultValue != -1) {
-                        if (mDefaultValue != mCurrentValue) {
-                            mSeekBar.setProgress(mDefaultValue);
-                            Snackbar.make(view, defaultValue,
-                                    Snackbar.LENGTH_LONG)
-                                    .setAction("Action", null).show();
-                        } else {
-                            Snackbar.make(view, R.string.seekbar_default_value_already_set,
-                                    Snackbar.LENGTH_LONG)
-                                    .setAction("Action", null).show();
-                        }
-                    } else {
-                        Snackbar.make(view, R.string.seekbar_no_default_value,
-                                Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-                    }
-                    return true;
                 }
-            });
-        }
-        catch(Exception e)
-        {
-            Log.e(TAG, "Error creating seek bar preference", e);
-        }
-        return layout;
+        });
+        return mInflater.inflate(R.layout.seek_bar_preference, parent, false);
     }
 
     @Override
     public void onBindView(View view) {
         super.onBindView(view);
-        try
-        {
-            // move our seekbar to the new view we've been given
-            ViewParent oldContainer = mSeekBar.getParent();
-            ViewGroup newContainer = (ViewGroup) view.findViewById(R.id.seekBarPrefBarContainer);
-
-            if (oldContainer != newContainer) {
-                // remove the seekbar from the old view
-                if (oldContainer != null) {
-                    ((ViewGroup) oldContainer).removeView(mSeekBar);
-                }
-                // remove the existing seekbar (there may not be one) and add ours
-                newContainer.removeAllViews();
-                newContainer.addView(mSeekBar, ViewGroup.LayoutParams.FILL_PARENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT);
+        RelativeLayout layout = (RelativeLayout) view;
+        mSeekBar = (SeekBar) layout.findViewById(R.id.seekbar);
+        mSeekBar.setMax(mMaxValue - mMinValue);
+        mSeekBar.setOnSeekBarChangeListener(this);
+        mTitle = (TextView) layout.findViewById(android.R.id.title);
+        mUnitsLeftText = (TextView) layout.findViewById(R.id.seekBarPrefUnitsLeft);
+        mUnitsRightText = (TextView) layout.findViewById(R.id.seekBarPrefUnitsRight);
+        mImagePlus = (ImageView) layout.findViewById(R.id.imagePlus);
+        mImagePlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mSeekBar.setProgress((mCurrentValue + mInterval) - mMinValue);
             }
-        }
-        catch(Exception ex) {
-            Log.e(TAG, "Error binding view: " + ex.toString());
-        }
-        updateView(view);
+        });
+        mImagePlus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                mSeekBar.setProgress((mCurrentValue + (mMaxValue-mMinValue)/10) - mMinValue);
+                return true;
+            }
+        });
+        mImageMinus = (ImageView) layout.findViewById(R.id.imageMinus);
+        mImageMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mSeekBar.setProgress((mCurrentValue - mInterval) - mMinValue);
+            }
+        });
+        mImageMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                mSeekBar.setProgress((mCurrentValue - (mMaxValue-mMinValue)/10) - mMinValue);
+                return true;
+            }
+        });
+        mProgressThumb = mSeekBar.getThumb();
+        mStatusText = (TextView) layout.findViewById(R.id.seekBarPrefValue);
+        mStatusText.setMinimumWidth(30);
+        mStatusText.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                final String defaultValue = getContext().getString(R.string.seekbar_default_value_set,
+                        mDefaultValue);
+                if (mDefaultValue != -1) {
+                    if (mDefaultValue != mCurrentValue) {
+                        mCurrentValue = mDefaultValue;
+                        updateView();
+                        Snackbar.make(view, defaultValue,
+                                Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    } else {
+                        Snackbar.make(view, R.string.seekbar_default_value_already_set,
+                                Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+                } else {
+                    Snackbar.make(view, R.string.seekbar_no_default_value,
+                            Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+                return true;
+            }
+        });
+        updateView();
     }
 
     /**
      * Update a SeekBarPreferenceCham view with our current state
      * @param view
      */
-    protected void updateView(View view) {
-
+    protected void updateView() {
         try {
-            RelativeLayout layout = (RelativeLayout)view;
-            mStatusText = (TextView)layout.findViewById(R.id.seekBarPrefValue);
             mStatusText.setText(String.valueOf(mCurrentValue));
-            mStatusText.setMinimumWidth(30);
             mSeekBar.setProgress(mCurrentValue - mMinValue);
 
-            TextView unitsRight = (TextView)layout.findViewById(R.id.seekBarPrefUnitsRight);
-            unitsRight.setText(mUnitsRight);
-            TextView unitsLeft = (TextView)layout.findViewById(R.id.seekBarPrefUnitsLeft);
-            unitsLeft.setText(mUnitsLeft);
+            mUnitsRightText.setText(mUnitsRight);
+            mUnitsLeftText.setText(mUnitsLeft);
+
+            updateCurrentValueText();
         }
         catch(Exception e) {
             Log.e(TAG, "Error updating seek bar preference", e);
@@ -265,14 +236,7 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
         }
         // change accepted, store it
         mCurrentValue = newValue;
-        if (mCurrentValue == mDefaultValue && mDefaultValue != -1) {
-            mStatusText.setText(R.string.default_string);
-            int redColor = getContext().getResources().getColor(R.color.seekbar_dot_color);
-            mProgressThumb.setColorFilter(redColor, PorterDuff.Mode.SRC_IN);
-        } else {
-            mStatusText.setText(String.valueOf(newValue));
-            mProgressThumb.clearColorFilter();
-        }
+        updateCurrentValueText();
 
         if (fromUser) {
             startUpdateViewValue();
@@ -281,6 +245,21 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
         }
 
         persistInt(newValue);
+    }
+
+    private void updateCurrentValueText() {
+        if (mCurrentValue == mDefaultValue && mDefaultValue != -1) {
+            mStatusText.setText(R.string.default_string);
+            int redColor = getContext().getResources().getColor(R.color.seekbar_dot_color);
+            mProgressThumb.setColorFilter(redColor, PorterDuff.Mode.SRC_IN);
+            mUnitsLeftText.setVisibility(View.GONE);
+            mUnitsRightText.setVisibility(View.GONE);
+        } else {
+            mStatusText.setText(String.valueOf(mCurrentValue));
+            mProgressThumb.clearColorFilter();
+            mUnitsLeftText.setVisibility(View.VISIBLE);
+            mUnitsRightText.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
