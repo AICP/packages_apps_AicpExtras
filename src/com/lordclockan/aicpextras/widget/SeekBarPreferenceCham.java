@@ -304,20 +304,31 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
 
     @Override
     protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
-        if(restoreValue) {
-            mCurrentValue = getPersistedInt(mCurrentValue);
-        }
-        else {
-            int temp = 0;
+        if (restoreValue) {
             try {
-                temp = (Integer)defaultValue;
+                mCurrentValue = getPersistedInt(mCurrentValue);
+                return;
+            } catch (Exception e) {
+                Log.e(TAG, "Invalid persisted value: " + e);
+                try {
+                    // Delete the invalid value, or next persistInt will fail
+                    getSharedPreferences().edit()
+                            .remove(getKey()).apply();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+                // Don't return yet, try to get default value instead
             }
-            catch(Exception ex) {
-                Log.e(TAG, "Invalid default value: " + defaultValue.toString());
-            }
-            persistInt(temp);
-            mCurrentValue = temp;
         }
+        int temp = 0;
+        try {
+            temp = (Integer)defaultValue;
+        }
+        catch(Exception ex) {
+            Log.e(TAG, "Invalid default value: " + defaultValue);
+        }
+        persistInt(temp);
+        mCurrentValue = temp;
     }
 
     public void setValue(int value) {
