@@ -34,7 +34,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.lordclockan.R;
+import com.aicp.extras.R;
 
 /**
  * A preference type that allows a user to choose a time
@@ -52,7 +52,7 @@ public class ColorPickerPreference extends Preference implements
     private boolean mAlphaSliderEnabled = true;
 
     // if android:defaultValue is not set, button is not enabled
-    private static final String AICPEXTRAS = "http://schemas.android.com/apk/res/com.lordclockan";
+    private static final String AICPEXTRAS = "http://schemas.android.com/apk/res/com.aicp.extras";
     private static final String ANDROIDNS = "http://schemas.android.com/apk/res/android";
     private static final int DEF_VALUE_DEFAULT = -6;
     private static final int DEF_VALUE_DEFAULT_CHECK = -7; // != DEF_VALUE_DEFAULT
