@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2017 AICP
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/about_title">
+
+    <!-- AICP logo -->
+    <Preference
+        android:key="aicp_logo"
+        android:layout="@layout/about_logo" />
+
+    <PreferenceScreen
+        android:title="@string/aicp_changelog_title"
+        android:summary="@string/aicp_changelog_summary">
+        <intent android:action="com.aicp.extras.ViewChangelog" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="@string/stats_title"
+        android:summary="@string/stats_summary"
+        android:fragment="com.aicp.extras.romstats.AnonymousStats" />
+
+    <PreferenceCategory
+        android:title="@string/weblinks_category">
+
+        <Preference
+            android:key="aicp_downloads"
+            android:title="@string/aicp_downloads_title"
+            android:summary="@string/aicp_downloads_summary" />
+
+        <Preference
+            android:title="@string/aicp_website_title"
+            android:summary="@string/aicp_website_summary">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="@string/aicp_website_link" />
+        </Preference>
+
+        <Preference
+            android:title="@string/g_plus_title"
+            android:summary="@string/g_plus_summary">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="@string/g_plus_link" />
+        </Preference>
+
+        <Preference
+            android:title="@string/aicp_gerrit_title"
+            android:summary="@string/aicp_gerrit_summary">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="@string/aicp_gerrit_link" />
+        </Preference>
+
+        <Preference
+            android:title="@string/lineage_extras_title"
+            android:summary="@string/lineage_extras_summary">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="@string/lineage_extras_link" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/info_category">
+
+        <Preference
+            android:key="device_maintainer"
+            android:title="@string/device_maintainer_title" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
