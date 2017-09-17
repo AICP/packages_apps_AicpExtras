@@ -19,18 +19,18 @@
     android:layout_height="156dp"
     android:gravity="center">
 
+    <!--
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/aicp_logo_bg"
         android:layout_gravity="bottom"
-        android:scaleType="centerCrop"
-        />
+        android:scaleType="centerCrop" />
+    -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/aicp_logo_letters"
-        android:tint="@color/colorAccent"
-        android:layout_gravity="center_horizontal"
-        />
+        android:tint="?android:attr/colorAccent"
+        android:layout_gravity="center_horizontal" />
 </FrameLayout>
