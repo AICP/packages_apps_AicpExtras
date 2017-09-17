@@ -1,56 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2017 AICP
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
 <resources>
-
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowSharedElementsUseOverlay">false</item>
-        <item name="android:fitsSystemWindows">true</item>
-    </style>
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:background">@color/overlayBackground</item>
-    </style>
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
-
-    <!-- Dialog theming -->
-    <style name="DialogStyle" parent="android:Theme.Material.Dialog">
-        <item name="android:colorAccent">@color/colorAccent</item>
-        <item name="android:windowBackground">@color/background_material_dark</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-    </style>
-
-    <!-- Switch bar -->
-    <style name="TextAppearance.Small" parent="@android:style/TextAppearance.Material.Small" />
-    <style name="TextAppearance.Switch" parent="@android:style/TextAppearance.Material.Title" />
-    <style name="TextAppearance.Small.SwitchBar">
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
-        <item name="android:textStyle">normal</item>
-    </style>
-
-    <!-- Preference fragment -->
-    <style name="PreferenceTheme" parent="Theme.AppCompat">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:colorPrimary">@color/colorPrimary</item>
-        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="android:colorAccent">@color/colorAccent</item>
-        <item name="android:windowActionBar">true</item>
-        <item name="android:windowNoTitle">false</item>
-    </style>
-
-    <style name="CollapsedAppBar" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/colorWhite</item>
-        <item name="android:textStyle">normal</item>
-    </style>
 
     <!-- SeekBarPreferenceCham value popup -->
     <style name="SeekBarPreferenceChamValueView">
@@ -61,7 +26,6 @@
         <item name="android:background">@*android:drawable/toast_frame</item>
         <item name="android:layout_marginTop">-16dp</item>
         <item name="android:layout_marginStart">-16dp</item>
-        <!-- Fix weird text within background offset when using it along with AppTheme -->
         <item name="android:fitsSystemWindows">false</item>
     </style>
 

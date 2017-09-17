@@ -18,38 +18,31 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/anonymous_statistics_title" >
 
-    <PreferenceCategory
-        android:key="pref_settings"
-        android:title="@string/pref_settings" >
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:disableDependentsState="true"
-            android:key="pref_anonymous_opt_in"
-            android:title="@string/enable_reporting_title" />
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:dependency="pref_anonymous_opt_in"
-            android:key="pref_anonymous_opt_out_persist"
-            android:title="@string/disable_reporting_persistent" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:disableDependentsState="true"
+        android:key="pref_anonymous_opt_in"
+        android:title="@string/enable_reporting_title" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:dependency="pref_anonymous_opt_in"
+        android:key="pref_anonymous_opt_out_persist"
+        android:title="@string/disable_reporting_persistent" />
 
-        <PreferenceScreen android:title="@string/preview_data_title" >
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:targetClass="com.lordclockan.romstats.PreviewActivity"
-                android:targetPackage="com.lordclockan" />
-        </PreferenceScreen>
+    <PreferenceScreen
+        android:title="@string/preview_data_title"
+        android:fragment="com.aicp.extras.romstats.Preview" />
 
-        <Preference
-            android:key="pref_view_stats"
-            android:title="@string/view_stats_title" />
-        <Preference
-            android:key="pref_last_report_on"
-            android:title="@string/last_report_on"
-            android:selectable="false" />
-        <Preference
-            android:key="pref_reporting_interval"
-            android:title="@string/reporting_interval"
-            android:selectable="false" />
-    </PreferenceCategory>
+    <Preference
+        android:key="pref_view_stats"
+        android:title="@string/view_stats_title" />
+    <Preference
+        android:key="pref_last_report_on"
+        android:title="@string/last_report_on"
+        android:selectable="false" />
+    <Preference
+        android:key="pref_reporting_interval"
+        android:title="@string/reporting_interval"
+        android:selectable="false" />
 
 </PreferenceScreen>

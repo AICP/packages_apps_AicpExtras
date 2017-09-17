@@ -1,35 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2017 AICP
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
 <resources>
-    <color name="colorPrimary">#212121</color>
-    <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#ffab00</color>
-    <color name="overlayBackground">#00ffffff</color>
-    <color name="seekbar_dot_color">@color/colorPrimary</color>
-    <color name="navDrawerBg">@color/background_material_dark</color>
-    <color name="navDrawerText">@android:color/white</color>
-    <color name="navDrawerTextChecked">@color/colorAccent</color>
 
-    <color name="background_material_dark">#FF303030</color>
-    <color name="foreground_material_dark">#FFFFFFFF</color>
-    <color name="primary_text_material_dark">#FFFFFFFF</color>
-    <color name="primary_text_material_light">#DE000000</color>
-    <color name="secondary_text_material_dark">#B3FFFFFF</color>
-    <color name="secondary_text_material_light">#8A000000</color>
+    <!-- Color of the launcher shortcut icons -->
+    <color name="launcher_shortcut">#ffab00</color>
 
-    <!-- Gesture Anywhere -->
-    <color name="ga_gesture_color">@android:color/holo_blue_light</color>
-
-    <!-- Switch Bar Text Color -->
-    <color name="switchbar_text_color">#ffffffff</color>
-    <color name="switch_accent_color">#ff7fcac3</color>
-
-    <!-- Changelog -->
-    <color name="colorWhite">#fff</color>
-    <color name="colorHeaderBack">#455a64</color>
-    <color name="changelog_bg">#0A0E16</color>
-    <color name="commit_bg">@color/colorPrimary</color>
-
-    <!-- DSLV colors -->
-    <color name="dslv_icon_dark">#ff009688</color>
-    <color name="dslv_float_cackground_color">#ff616161</color>
 </resources>
