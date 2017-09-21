@@ -27,6 +27,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.SystemProperties;
+import android.os.Vibrator;
 import android.text.TextUtils;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
@@ -49,7 +50,6 @@ public abstract class Util {
 
     public static final String PROPERTY_DEVICE = "ro.aicp.device";
     public static final String PROPERTY_DEVICE_EXT = "ro.product.device";
-
 
     public static boolean onPreferenceTreeClick(PreferenceFragment fragment,
                                                 Preference preference) {
@@ -101,6 +101,11 @@ public abstract class Util {
             //device = translateDeviceName(context, device);
         }
         return device == null ? "" : device.toLowerCase();
+   }
+
+   public static boolean hasVibrator(Context context) {
+        Vibrator v = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+        return v.hasVibrator();
    }
 
    public static String getDownloadLinkForDevice(Context context) {
