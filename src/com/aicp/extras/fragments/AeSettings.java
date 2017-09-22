@@ -17,27 +17,45 @@
 
 package com.aicp.extras.fragments;
 
+import android.content.ComponentName;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.ListPreference;
+import android.preference.SwitchPreference;
 import android.preference.Preference;
+import android.widget.Toast;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.Constants;
+import com.aicp.extras.LauncherActivity;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 
 public class AeSettings extends BaseSettingsFragment
         implements Preference.OnPreferenceChangeListener {
 
+    private static final String PREF_AE_LAUNCHER = "ae_launcher_enabled";
+
+    private ComponentName mAeLauncherComponent;
+
     private ListPreference mTheme;
+    private SwitchPreference mAeLauncher;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.ae_settings);
 
+        PackageManager pm = getContext().getPackageManager();
+        mAeLauncherComponent = new ComponentName(getContext(),
+            LauncherActivity.class);
+
         mTheme = (ListPreference) findPreference(Constants.PREF_THEME);
         mTheme.setOnPreferenceChangeListener(this);
+        mAeLauncher = (SwitchPreference) findPreference(PREF_AE_LAUNCHER);
+        mAeLauncher.setChecked(pm.getComponentEnabledSetting(mAeLauncherComponent) !=
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED);
+        mAeLauncher.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -54,8 +72,20 @@ public class AeSettings extends BaseSettingsFragment
                 getActivity().recreate();
             }
             return true;
+        } else if (preference == mAeLauncher) {
+            setAeLauncherEnabled((Boolean) newValue);
+            return true;
         } else {
             return false;
         }
+    }
+
+    private void setAeLauncherEnabled(boolean enabled) {
+        PackageManager pm = getContext().getPackageManager();
+        pm.setComponentEnabledSetting(mAeLauncherComponent, enabled
+                ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+                : PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+        Toast.makeText(getContext(), R.string.ae_launcher_enabled_update, Toast.LENGTH_LONG)
+                .show();
     }
 }
