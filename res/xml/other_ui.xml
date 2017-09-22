@@ -21,15 +21,14 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
     android:title="@string/other_ui_title">
 
-    <com.aicp.extras.preference.SeekBarPreferenceCham
+    <com.aicp.extras.preference.SystemSettingSeekBarPreference
         android:key="volume_dialog_timeout"
         android:title="@string/volume_dialog_timeout_title"
+        android:min="500"
         android:max="10000"
-        aicpextras:minimum="100"
+        android:defaultValue="3000"
         aicpextras:unitsLeft=""
-        aicpextras:unitsRight="ms"
-        aicpextras:defaultVal="3000"
-        android:persistent="false" />
+        aicpextras:unitsRight="ms" />
 
     <!-- Screenshot tone -->
     <com.aicp.extras.preference.SystemSettingSwitchPreference
