@@ -37,4 +37,10 @@
         android:summary="@string/screenshot_sound_summary"
         android:defaultValue="true" />
 
+    <com.aicp.extras.preference.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_navbar"
+        android:title="@string/double_tap_sleep_navbar"
+        android:summary="@string/double_tap_sleep_navbar_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
