@@ -51,10 +51,18 @@
         android:summary="@string/swap_volume_buttons_summary"
         android:defaultValue="false" />
 
+    <!-- Volume keys control media stream -->
     <com.aicp.extras.preference.SystemSettingSwitchPreference
         android:key="volume_keys_control_media_stream"
         android:title="@string/volume_keys_control_media_stream_title"
         android:summary="@string/volume_keys_control_media_stream_summary"
+        android:defaultValue="false" />
+
+    <!-- Volume keys control music playback -->
+    <com.aicp.extras.preference.SystemSettingSwitchPreference
+        android:key="volume_button_music_control"
+        android:title="@string/volume_rocker_music_controls_title"
+        android:summary="@string/volume_rocker_music_controls_summary"
         android:defaultValue="false" />
 
 </PreferenceScreen>
