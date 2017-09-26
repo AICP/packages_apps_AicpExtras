@@ -40,6 +40,7 @@ LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-preference
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-recyclerview
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-v14-preference
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-design
+LOCAL_STATIC_JAVA_LIBRARIES += org.lineageos.platform.internal
 
 # Apache http for stats
 LOCAL_JAVA_LIBRARIES := org.apache.http.legacy

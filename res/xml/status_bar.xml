@@ -29,6 +29,13 @@
         android:entryValues="@array/status_bar_logo_values"
         android:defaultValue="0" />
 
+    <!-- Double tap to sleep -->
+    <lineageos.preference.LineageSystemSettingSwitchPreference
+        android:key="double_tap_sleep_gesture"
+        android:title="@string/status_bar_double_tap_to_sleep_title"
+        android:summary="@string/status_bar_double_tap_to_sleep_summary"
+        android:defaultValue="true" />
+
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:title="@string/battery_bar_title"
         android:key="statusbar_battery_bar"
