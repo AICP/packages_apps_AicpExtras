@@ -17,16 +17,53 @@
 
 package com.aicp.extras.fragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.SwitchPreference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class OtherUi extends BaseSettingsFragment {
+public class OtherUi extends BaseSettingsFragment
+        implements Preference.OnPreferenceChangeListener {
+
+    private static final String SHOW_CPU_INFO_KEY = "show_cpu_info";
+
+    private SwitchPreference mShowCpuInfo;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.other_ui);
+
+        mShowCpuInfo = (SwitchPreference) findPreference(SHOW_CPU_INFO_KEY);
+        mShowCpuInfo.setChecked(Settings.Global.getInt(getActivity().getContentResolver(),
+                Settings.Global.SHOW_CPU_OVERLAY, 0) == 1);
+        mShowCpuInfo.setOnPreferenceChangeListener(this);
+    }
+
+    private void writeCpuInfoOptions(boolean value) {
+        Settings.Global.putInt(getActivity().getContentResolver(),
+                Settings.Global.SHOW_CPU_OVERLAY, value ? 1 : 0);
+        Intent service = (new Intent())
+                .setClassName("com.android.systemui", "com.android.systemui.CPUInfoService");
+        if (value) {
+            getActivity().startService(service);
+        } else {
+            getActivity().stopService(service);
+        }
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mShowCpuInfo) {
+            writeCpuInfoOptions((Boolean) newValue);
+            return true;
+        }
+        return false;
     }
 }
