@@ -38,4 +38,11 @@
         android:summary="@string/toast_icon_summary"
         android:defaultValue="true" />
 
+    <!-- Show CPU Info overlay -->
+    <SwitchPreference
+        android:key="show_cpu_info"
+        android:title="@string/show_cpu_info"
+        android:summary="@string/show_cpu_info_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
