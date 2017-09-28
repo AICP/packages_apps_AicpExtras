@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.preference.Preference;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
@@ -58,6 +59,7 @@ public class ColorPickerPreference extends Preference implements
     private static final int DEF_VALUE_DEFAULT_CHECK = -7; // != DEF_VALUE_DEFAULT
     private boolean mUsesDefaultButton = false;
     private int mDefValue = -1;
+    private boolean mAutoSummary = false;
 
     private EditText mEditText;
 
@@ -177,6 +179,12 @@ public class ColorPickerPreference extends Preference implements
     }
 
     private void setPreviewColor() {
+
+        // Dynamic summary
+        if (mAutoSummary || TextUtils.isEmpty(getSummary())) {
+            setSummary(convertToARGB(mValue), true);
+        }
+
         if (mView == null)
             return;
 
@@ -214,6 +222,16 @@ public class ColorPickerPreference extends Preference implements
             }
         });
         */
+    }
+
+    @Override
+    public void setSummary(CharSequence summary) {
+        setSummary(summary, false);
+    }
+
+    private void setSummary(CharSequence summary, boolean autoSummary) {
+        mAutoSummary = autoSummary;
+        super.setSummary(summary);
     }
 
     private Bitmap getPreviewBitmap() {
