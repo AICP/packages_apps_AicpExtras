@@ -47,6 +47,12 @@
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.AmbientMediaTicker" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="lockscreen_battery_info"
+        android:title="@string/lockscreen_battery_info_title"
+        android:summary="@string/lockscreen_battery_info_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
           android:key="lockscreen_security_category"
           android:title="@string/lockscreen_security_category">
