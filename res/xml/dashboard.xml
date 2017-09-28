@@ -62,6 +62,12 @@
             android:fragment="com.aicp.extras.fragments.Lockscreen" />
 
         <PreferenceScreen
+            android:title="@string/panel_porn_title"
+            android:summary="@string/panel_porn_summary"
+            android:icon="@drawable/ic_settings_panel_porn"
+            android:fragment="com.aicp.extras.fragments.PanelPorn" />
+
+        <PreferenceScreen
             android:title="@string/other_ui_title"
             android:summary="@string/other_ui_summary"
             android:icon="@drawable/ic_settings_other_ui"
