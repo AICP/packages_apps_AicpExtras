@@ -18,9 +18,11 @@ package com.aicp.extras.preference;
 
 import android.content.Context;
 import android.preference.ListPreference;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 
 public class SystemSettingListPreference extends ListPreference {
+    private boolean mAutoSummary = false;
 
     public SystemSettingListPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
@@ -36,4 +38,22 @@ public class SystemSettingListPreference extends ListPreference {
         super(context, null);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
+
+    public void setValue(String value) {
+        super.setValue(value);
+        if (mAutoSummary || TextUtils.isEmpty(getSummary())) {
+            setSummary(getEntry());
+        }
+    }
+
+    @Override
+    public void setSummary(CharSequence summary) {
+        setSummary(summary, false);
+    }
+
+    private void setSummary(CharSequence summary, boolean autoSummary) {
+        mAutoSummary = autoSummary;
+        super.setSummary(summary);
+    }
+
 }
