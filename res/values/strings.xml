@@ -35,9 +35,11 @@
 
     <string name="status_bar_title">Status bar</string>
     <string name="status_bar_summary"></string>
+
     <!-- Bluetooth status -->
     <string name="bluetooth_battery_title">Show Bluetooth battery status</string>
     <string name="bluetooth_battery_summary">Show battery status for the currently connected bluetooth device, if available.</string>
+
 
 
     <!-- Notifications -->
@@ -46,16 +48,23 @@
     <string name="notifications_summary"></string>
 
 
+
     <!-- Quick settings -->
 
     <string name="quick_settings_title">Quick settings</string>
     <string name="quick_settings_summary"></string>
+
     <!-- Quick 1-finger pull down to access notifications -->
     <string name="status_bar_quick_qs_pulldown">Quick QS pulldown</string>
     <string name="status_bar_quick_qs_pulldown_summary">Pulldown on statusbar on the right side to quickly show QS panel</string>
+
     <!-- Disable music track title in QS tile -->
     <string name="qs_music_tile_track_optional_title">Music tile track title</string>
     <string name="qs_music_tile_track_optional_summary">Show the music track title as the QS tile title</string>
+
+    <!-- Small quick settings scroller -->
+    <string name="qqs_scroll_title">Scroll small QS tiles</string>
+    <string name="qqs_scroll_summary">Allow scrolling through the small QS tiles</string>
 
 
     <!-- Recents -->
@@ -69,9 +78,11 @@
 
     <string name="lockscreen_title">Lockscreen</string>
     <string name="lockscreen_summary"></string>
+
     <!-- Double tap to sleep on lockscreen -->
     <string name="double_tap_sleep_lockscreen">Double tap to sleep</string>
     <string name="double_tap_sleep_lockscreen_summary">Double tap to sleep on lockscreen to sleep device</string>
+
     <!-- Media art -->
     <string name="media_art_title">Media cover art</string>
     <string name="media_art_summary">Enable media cover art on the lockscreen</string>
@@ -82,23 +93,30 @@
 
     <string name="other_ui_title">Other UI tweaks</string>
     <string name="other_ui_summary"></string>
+
     <!-- Volume dialog timeout -->
     <string name="volume_dialog_timeout_title">Volume dialog timeout</string>
+
     <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Screenshot sound</string>
     <string name="screenshot_sound_summary">Plays sound effect when screenshot is taken</string>
+
     <!-- Double tap navbar to sleep -->
     <string name="double_tap_sleep_navbar">Double tap to sleep on navbar</string>
     <string name="double_tap_sleep_navbar_summary">Double tap on navbar causes the device to go to sleep</string>
+
     <!-- Swap volume keys based on device rotation -->
     <string name="swap_volume_buttons">Swap volume buttons</string>
     <string name="swap_volume_buttons_summary">Swap volume buttons based on device rotation</string>
+
     <!-- Volume keys control media stream -->
     <string name="volume_keys_control_media_stream_title">Volume keys control media volume</string>
     <string name="volume_keys_control_media_stream_summary">Volume panel will show media volume slider by default</string>
+
     <!-- Volume keys control music playback -->
     <string name="volume_rocker_music_controls_title">Playback control</string>
     <string name="volume_rocker_music_controls_summary">When the screen is off, long-pressing the volume keys will seek music tracks</string>
+
     <!-- setting: show CPU info-->
     <string name="show_cpu_info">Show CPU info</string>
     <string name="show_cpu_info_summary">Screen overlay showing current CPU info</string>
