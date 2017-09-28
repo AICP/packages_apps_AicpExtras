@@ -26,4 +26,10 @@
         android:summary="@string/status_bar_quick_qs_pulldown_summary"
         android:defaultValue="false" />
 
+    <com.aicp.extras.preference.SystemSettingSwitchPreference
+        android:key="music_tile_title"
+        android:title="@string/qs_music_tile_track_optional_title"
+        android:summary="@string/qs_music_tile_track_optional_summary"
+        android:defaultValue="false"/>
+
 </PreferenceScreen>
