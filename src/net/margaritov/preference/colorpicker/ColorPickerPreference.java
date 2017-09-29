@@ -85,7 +85,8 @@ public class ColorPickerPreference extends Preference implements
 
     @Override
     protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
-        onColorChanged(restoreValue ? getPersistedInt(mValue) : (Integer) defaultValue);
+        onColorChanged(restoreValue ? getPersistedInt((Integer) defaultValue)
+                : (Integer) defaultValue);
     }
 
     private void init(Context context, AttributeSet attrs) {
