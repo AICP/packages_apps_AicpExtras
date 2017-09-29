@@ -35,7 +35,7 @@ public class SystemSettingListPreference extends ListPreference {
     }
 
     public SystemSettingListPreference(Context context) {
-        super(context, null);
+        super(context);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
@@ -55,6 +55,15 @@ public class SystemSettingListPreference extends ListPreference {
     private void setSummary(CharSequence summary, boolean autoSummary) {
         mAutoSummary = autoSummary;
         super.setSummary(summary);
+    }
+
+    @Override
+    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
+        // This is what default ListPreference implementation is doing without respecting
+        // real default value:
+        //setValue(restoreValue ? getPersistedString(mValue) : (String) defaultValue);
+        // Instead, we better do
+        setValue(restoreValue ? getPersistedString((String) defaultValue) : (String) defaultValue);
     }
 
 }

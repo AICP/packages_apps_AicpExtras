@@ -34,7 +34,7 @@ public class SystemSettingColorPickerPreference extends ColorPickerPreference {
     }
 
     public SystemSettingColorPickerPreference(Context context) {
-        super(context, null);
+        super(context);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 }
