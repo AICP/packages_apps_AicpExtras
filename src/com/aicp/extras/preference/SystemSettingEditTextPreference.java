@@ -33,7 +33,16 @@ public class SystemSettingEditTextPreference extends EditTextPreference {
     }
 
     public SystemSettingEditTextPreference(Context context) {
-        super(context, null);
+        super(context);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
+    }
+
+    @Override
+    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
+        // This is what default ListPreference implementation is doing without respecting
+        // real default value:
+        //setText(restoreValue ? getPersistedString(mText) : (String) defaultValue);
+        // Instead, we better do
+        setText(restoreValue ? getPersistedString((String) defaultValue) : (String) defaultValue);
     }
 }
