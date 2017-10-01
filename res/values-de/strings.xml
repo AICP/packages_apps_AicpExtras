@@ -283,8 +283,6 @@
     <!-- Power menu Animations  -->
     <string name="power_menu_animation_title">Ein/Aus-Menü Animation</string>
     <string name="power_menu_animation_style_title">Ausgewählter Animationstyp</string>
-    <string name="power_menu_animation_style_summary">Wechselt die Animation beim Aufruf/Verlassen des Ein/Aus-Menüs.</string>
-    <string name="power_menu_animation_dialog_title">Animation für Ein/Aus-Menü wählen</string>
     <string name="power_menu_animation_aosp">AOSP (Standard)</string>
     <string name="power_menu_animation_bottom">Unten</string>
     <string name="power_menu_animation_top">Oben</string>
@@ -391,9 +389,6 @@
     <string name="qs_tile_animation_interpolator_overshootInterpolator">Überschwingen</string>
     <string name="qs_tile_animation_interpolator_anticipateInterpolator">Schwung holen</string>
     <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Schwung holen &amp; Überschwingen</string>
-    <string name="qs_set_animation_style">%1$s</string>
-    <string name="qs_set_animation_duration">%1$s</string>
-    <string name="qs_set_animation_interpolator">%1$s</string>
 
     <!-- App Exit Toast -->
     <string name="app_exit_toast">Zum Beenden erneut \"Zurück\" drücken</string>
@@ -604,25 +599,12 @@
     <string name="media_scanner_on_boot_ask">Nachfragen (Benachrichtigung)</string>
     <string name="media_scanner_on_boot_disabled">Nicht nach Mediendateien suchen</string>
 
-    <!-- SlimSizer  -->
-    <!-- <string name="listsystem">list</string> -->
-    <string name="sizer_title">System-App Entferner</string>
-    <string name="caution">Vorsicht!</string>
-    <string name="sizer_message_startup">Dieses Werkzeug erlaubt das Löschen von Systemanwendungen. Mit Vorsicht benutzen und nur Apps löschen, bei denen Sie sich sicher sind.</string>
-    <string name="cancel">Abbrechen</string>
-    <string name="sizer_message_delete">Sind Sie sicher, dass diese App gelöscht werden soll?</string>
-    <string name="btn_delete">Jetzt ausgewählte Apps löschen!</string>
-    <string name="delete_progress_title">Lösche</string>
-    <string name="delete_progress">Ausgewählte Dateien werden gelöscht...</string>
-    <string name="delete_success">Gelöscht</string>
-    <string name="delete_fail">Löschen nicht möglich</string>
-    <string name="btn_profile">Profil</string>
-    <string name="sizer_message_sdnowrite">Kann nicht auf SD-Karte schreiben.</string>
-    <string name="sizer_message_sdnoread">Kann SD-Karte nicht lesen.</string>
-    <string name="sizer_message_filesuccess">Profil erstellt.</string>
-    <string name="sizer_message_filefail">Konnte Profil nicht erstellen.</string>
-    <string name="sizer_message_noselect">Nichts ausgewählt.</string>
+    <!-- App Remover -->
     <string name="system_app_remover">System-App Entferner</string>
+    <!-- <string name="listsystem">list</string> -->
+    <string name="cancel">Abbrechen</string>
+    <string name="message_delete">Sind Sie sicher, dass diese App gelöscht werden soll?</string>
+    <string name="message_noselect">Nichts ausgewählt</string>
 
     <!-- Extensions settings -->
     <string name="extensions_title">Systemerweiterungen</string>
@@ -949,12 +931,6 @@
     <string name="app_circle_bar_summary">Zeige den Ring bei Berührung des rechten Displayrandes</string>
     <string name="app_circle_bar_included_apps_title">Enthaltene Apps</string>
     <string name="app_circle_bar_included_apps_summary">Angezeigte Apps in der Ringleiste</string>
-    <string name="trigger_width_title">Breite des Auslösers</string>
-    <string name="trigger_width_summary">Breite des Auslösebereichs einstellen</string>
-    <string name="trigger_top_title">Position des Auslösers</string>
-    <string name="trigger_top_summary">Stelle die vertikale Position ein</string>
-    <string name="trigger_bottom_title">Höhe des Auslösers</string>
-    <string name="trigger_bottom_summary">Höhe des Auslösebereichs einstellen</string>
 
     <!-- Disabling FC notifications -->
     <string name="disable_fc_notifications_title">Absturz-Benachrichtigungen abschalten</string>
@@ -1104,4 +1080,21 @@
     <!-- Center Time + Date in header -->
     <string name="qs_date_time_center_title">Zeit &amp; Datum zentrieren</string>
     <string name="qs_date_time_center_summary">Dies deaktiviert die Symbole für Mehrbenutzer und Laufende Prozesse!</string>
+
+    <!-- WakeBlock app -->
+    <string name="wakeblock_app_title">WakeBlock</string>
+    <string name="wakeblock_app_installed_summary">\"Wakelocks\" blockieren</string>
+    <string name="wakeblock_app_not_installed_summary">Lade die App aus dem PlayStore, um Wakelocks zu blockieren!</string>
+
+    <!-- Sensor block per-package -->
+    <string name="sensor_block_title">Sensorblockierung je Anwendung</string>
+    <string name="sensor_block_summary">Blockiert den Zugriff auf bestimmte Sensoren für einige Apps, um Strom zu sparen.</string>
+
+    <!-- QS Tiles single tap to add/remove -->
+    <string name="qs_tile_single_tap_title">Kacheln einmal Antippen</string>
+    <string name="qs_tile_single_tap_summary">Hinzufügen/Entfernen von Schnelleinstellungskacheln durch einmaliges Antippen im Bearbeitungsmodus</string>
+
+    <!-- Grid recents -->
+    <string name="grid_recents_title">Rasterverlauf</string>
+    <string name="grid_recents_summary">Stellt Anwendungen im Verlauf in einem Raster dar</string>
 </resources>
