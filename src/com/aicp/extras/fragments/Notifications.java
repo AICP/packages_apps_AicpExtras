@@ -17,17 +17,46 @@
 
 package com.aicp.extras.fragments;
 
+import android.content.ContentResolver;
 import android.os.Bundle;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference;
+import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
+import android.provider.Settings;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
+import com.aicp.extras.utils.Util;
 
-public class Notifications extends BaseSettingsFragment {
+public class Notifications extends BaseSettingsFragment
+        implements OnPreferenceChangeListener {
+
+    private static final String PREF_BRIGHTNESS_ICON_POSITION = "brightness_icon_position";
+
+    private SwitchPreference mBrightnessIconPosition;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.notifications);
+
+        mBrightnessIconPosition = (SwitchPreference) findPreference(PREF_BRIGHTNESS_ICON_POSITION);
+        mBrightnessIconPosition.setOnPreferenceChangeListener(this);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mBrightnessIconPosition) {
+            Util.showSystemUiRestartDialog(getContext());
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 }

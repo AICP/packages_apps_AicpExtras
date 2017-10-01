@@ -26,4 +26,12 @@
         android:summary="@string/brightness_icon_summary"
         android:defaultValue="true"/>
 
+    <com.aicp.extras.preference.SystemSettingSwitchPreference
+        android:key="brightness_icon_position"
+        android:title="@string/brightness_icon_position_title"
+        android:summaryOn="@string/brightness_icon_position_on_summary"
+        android:summaryOff="@string/brightness_icon_position_off_summary"
+        android:dependency="brightness_icon"
+        android:defaultValue="true"/>
+
 </PreferenceScreen>
