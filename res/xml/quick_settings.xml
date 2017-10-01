@@ -39,6 +39,12 @@
         android:summary="@string/qqs_scroll_summary"
         android:defaultValue="false"/>
 
+    <com.aicp.extras.preference.SystemSettingSwitchPreference
+        android:key="qs_footer_warnings"
+        android:title="@string/qs_footer_warnings_title"
+        android:summary="@string/qs_footer_warnings_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:key="qs_layout_category"
         android:title="@string/qs_layout_category_title">
