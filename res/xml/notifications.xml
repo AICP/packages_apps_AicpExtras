@@ -20,4 +20,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/notifications_title">
 
+    <com.aicp.extras.preference.SystemSettingSwitchPreference
+        android:key="brightness_icon"
+        android:title="@string/brightness_icon_title"
+        android:summary="@string/brightness_icon_summary"
+        android:defaultValue="true"/>
+
 </PreferenceScreen>
