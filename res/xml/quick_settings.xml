@@ -92,4 +92,29 @@
             android:defaultValue="3" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/brightness_slider_settings_title">
+
+        <com.aicp.extras.preference.SecureSettingSwitchPreference
+            android:key="qs_show_brightness"
+            android:title="@string/brightness_slider_switch"
+            android:defaultValue="true" />
+
+        <com.aicp.extras.preference.SystemSettingSwitchPreference
+            android:key="brightness_icon"
+            android:title="@string/brightness_icon_title"
+            android:summary="@string/brightness_icon_summary"
+            android:dependency="qs_show_brightness"
+            android:defaultValue="true" />
+
+        <com.aicp.extras.preference.SystemSettingSwitchPreference
+            android:key="brightness_icon_position"
+            android:title="@string/brightness_icon_position_title"
+            android:summaryOn="@string/brightness_icon_position_on_summary"
+            android:summaryOff="@string/brightness_icon_position_off_summary"
+            android:dependency="brightness_icon"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
