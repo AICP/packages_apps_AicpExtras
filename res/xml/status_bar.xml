@@ -21,4 +21,26 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/status_bar_title">
 
+   <PreferenceCategory
+        android:key="statusbar_icons_category"
+        android:title="@string/status_bar_icons_category_title">
+
+        <!-- Show Network Traffic State on Statusbar -->
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="network_traffic_state"
+            android:title="@string/network_traffic_state_title"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+           android:key="network_traffic_autohide_threshold"
+           android:title="@string/network_traffic_autohide_threshold_title"
+           android:max="10"
+           android:min="0"
+           aicpextras:unitsLeft=""
+           aicpextras:unitsRight=""
+           android:defaultValue="1"
+           android:dependency="network_traffic_state" />
+
+   </PreferenceCategory>
+
 </PreferenceScreen>
