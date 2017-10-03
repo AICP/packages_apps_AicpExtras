@@ -21,6 +21,12 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
     android:title="@string/status_bar_title">
 
+    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+        android:title="@string/battery_bar_title"
+        android:key="statusbar_battery_bar"
+        android:defaultValue="false"
+        android:fragment="com.aicp.extras.fragments.BatteryBar" />
+
     <!-- Show BT Battery Level on Statusbar -->
     <com.aicp.extras.preference.SystemSettingSwitchPreference
         android:key="bluetooth_show_battery"
