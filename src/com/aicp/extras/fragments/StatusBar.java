@@ -17,15 +17,35 @@
 
 package com.aicp.extras.fragments;
 
+import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v7.preference.Preference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
+import com.aicp.extras.preference.MasterSwitchPreference;
 
 public class StatusBar extends BaseSettingsFragment {
+
+    MasterSwitchPreference mBatteryBar;
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.status_bar;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        mBatteryBar = (MasterSwitchPreference)
+                findPreference(Settings.System.STATUSBAR_BATTERY_BAR);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        mBatteryBar.reloadValue();
     }
 }
