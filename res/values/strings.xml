@@ -35,18 +35,43 @@
 
     <string name="status_bar_title">Status bar</string>
     <string name="status_bar_summary"></string>
+
     <!-- Bluetooth status -->
     <string name="bluetooth_battery_title">Show Bluetooth battery status</string>
     <string name="bluetooth_battery_summary">Show battery status for the currently connected bluetooth device, if available.</string>
+
     <!-- Statusbar net monitor -->
     <string name="network_traffic_state_title">Show net activity in statusbar</string>
     <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
+
+    <!-- Battery bar -->
+    <string name="battery_bar_title">Battery bar</string>
+    <string name="battery_bar_position_title">Location</string>
+    <string name="battery_bar_position_hidden">Hidden</string>
+    <string name="battery_bar_position_statusbar">Status bar</string>
+    <string name="battery_bar_color_title">Color</string>
+    <string name="battery_bar_charging_color_title">Charging color</string>
+    <string name="battery_bar_battery_low_color_title">Low battery color</string>
+    <string name="battery_bar_style_title">Alignment</string>
+    <string name="battery_bar_thickness_title">Thickness</string>
+    <string name="battery_bar_animate_title">Charging animation</string>
+    <string name="battery_bar_style_regular">Regular</string>
+    <string name="battery_bar_style_center_mirrored">Center-mirrored</string>
+    <string name="battery_bar_style_reversed">Reversed</string>
+    <string name="battery_bar_use_charging_color_title">Custom charging color</string>
+    <string name="battery_bar_blend_color_title">Blend colors</string>
+    <string name="battery_bar_blend_color_summary">Blend full/empty colors corresponding to battery percentage</string>
+    <string name="battery_bar_blend_color_reverse_title">Reverse color direction</string>
+    <string name="battery_bar_blend_color_reverse_summary_off">Full &#8594; empty: red &#8592; green &#8592; blue &#8592; red</string>
+    <string name="battery_bar_blend_color_reverse_summary_on">Full &#8594; empty: red &#8594; green &#8594; blue &#8594; red</string>
+
 
 
     <!-- Notifications -->
 
     <string name="notifications_title">Notifications</string>
     <string name="notifications_summary"></string>
+
     <!-- Brightness slider settings -->
     <string name="brightness_slider_settings_title">Brightness slider settings</string>
     <string name="brightness_slider_switch">Show brightness slider in Quick Settings</string>
@@ -66,24 +91,31 @@
     <!-- Quick 1-finger pull down to access notifications -->
     <string name="status_bar_quick_qs_pulldown">Quick QS pulldown</string>
     <string name="status_bar_quick_qs_pulldown_summary">Pulldown on statusbar on the right side to quickly show QS panel</string>
+
     <!-- Disable music track title in QS tile -->
     <string name="qs_music_tile_track_optional_title">Music tile track title</string>
     <string name="qs_music_tile_track_optional_summary">Show the music track title as the QS tile title</string>
+
     <!-- Small quick settings scroller -->
     <string name="qqs_scroll_title">Scroll small QS tiles</string>
     <string name="qqs_scroll_summary">Allow scrolling through the small QS tiles</string>
+
     <!-- QS rows and columns -->
     <string name="qs_layout_category_title">QS Layout</string>
     <string name="qs_rows_portrait_title">Tiles rows on portrait</string>
     <string name="qs_rows_landscape_title">Tiles rows on landscape</string>
     <string name="qs_columns_portrait_title">Tiles columns on portrait</string>
     <string name="qs_columns_landscape_title">Tiles columns on landscape</string>
+
     <!-- QS footer warnings -->
     <string name="qs_footer_warnings_title">QS footer warnings</string>
     <string name="qs_footer_warnings_summary">Display a warning at bottom of QS panel when network is monitored by external apps or vpn</string>
+
     <!-- QS tiles title visibility -->
     <string name="qs_tile_title_visibility_title">Show tiles title</string>
     <string name="qs_tile_title_visibility_summary">Display tile titles underneath when checked</string>
+
+
 
     <!-- Recents -->
 
@@ -104,6 +136,7 @@
     <!-- Media art -->
     <string name="media_art_title">Media cover art</string>
     <string name="media_art_summary">Enable media cover art on the lockscreen</string>
+
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Battery info</string>
     <string name="lockscreen_battery_info_summary">Display negotiated charger max current-voltage and battery temperature on lockscreen while charging</string>
@@ -230,6 +263,7 @@
     <string name="volume_dialog_corner_radius_title">Volume dialog corner radius</string>
     <string name="volume_dialog_dash_width_title">Volume dialog stroke dash width</string>
     <string name="volume_dialog_dash_gap_title">Volume dialog stroke dash gap</string>
+
     <!-- Power menu and dialogs opacity -->
     <string name="power">Power Menu Tweaks</string>
     <string name="power_menu_transparency">Power/reboot menu opacity</string>
