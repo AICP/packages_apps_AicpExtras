@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2017 AICP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
+    android:title="@string/battery_bar_title">
+
+    <com.aicp.extras.preference.SystemSettingIntListPreference
+        android:key="statusbar_battery_bar"
+        android:title="@string/battery_bar_position_title"
+        android:entries="@array/battery_bar_position_entries"
+        android:entryValues="@array/battery_bar_position_values"
+        android:defaultValue="0" />
+
+    <com.aicp.extras.preference.SystemSettingColorPickerPreference
+        android:key="statusbar_battery_bar_color"
+        android:title="@string/battery_bar_color_title"
+        android:defaultValue="0xffffffff" />
+
+    <com.aicp.extras.preference.SystemSettingColorPickerPreference
+        android:key="statusbar_battery_bar_battery_low_color"
+        android:title="@string/battery_bar_battery_low_color_title"
+        android:defaultValue="0xffffffff" />
+
+    <com.aicp.extras.preference.SystemSettingSwitchPreference
+        android:key="statusbar_battery_bar_enable_charging_color"
+        android:title="@string/battery_bar_use_charging_color_title"
+        android:defaultValue="true" />
+
+    <com.aicp.extras.preference.SystemSettingColorPickerPreference
+        android:key="statusbar_battery_bar_charging_color"
+        android:title="@string/battery_bar_charging_color_title"
+        android:defaultValue="0xffffff00"
+        android:dependency="statusbar_battery_bar_enable_charging_color" />
+
+    <com.aicp.extras.preference.SystemSettingColorPickerPreference
+        android:key="statusbar_battery_bar_battery_low_color"
+        android:title="@string/battery_bar_battery_low_color_title"
+        android:defaultValue="0xffffffff" />
+
+    <com.aicp.extras.preference.SystemSettingSwitchPreference
+        android:key="statusbar_battery_bar_blend_color"
+        android:title="@string/battery_bar_blend_color_title"
+        android:summary="@string/battery_bar_blend_color_summary"
+        android:defaultValue="false" />
+
+    <com.aicp.extras.preference.SystemSettingIntListPreference
+        android:key="statusbar_battery_bar_style"
+        android:title="@string/battery_bar_style_title"
+        android:entries="@array/battery_bar_style_entries"
+        android:entryValues="@array/battery_bar_style_values"
+        android:defaultValue="0" />
+
+    <com.aicp.extras.preference.SystemSettingSeekBarPreference
+        android:key="statusbar_battery_bar_thickness"
+        android:title="@string/battery_bar_thickness_title"
+        android:min="1"
+        android:max="4"
+        android:defaultValue="2"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="dp" />
+
+    <com.aicp.extras.preference.SystemSettingSwitchPreference
+        android:key="statusbar_battery_bar_animate"
+        android:title="@string/battery_bar_animate_title"
+        android:defaultValue="false" />
+
+</PreferenceScreen>
