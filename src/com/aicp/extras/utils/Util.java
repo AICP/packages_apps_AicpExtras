@@ -28,10 +28,10 @@ import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.SystemProperties;
 import android.text.TextUtils;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceScreen;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
+import android.support.v14.preference.PreferenceFragment;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -52,7 +52,6 @@ public abstract class Util {
 
 
     public static boolean onPreferenceTreeClick(PreferenceFragment fragment,
-                                                PreferenceScreen preferenceScreen,
                                                 Preference preference) {
         Activity activity = fragment.getActivity();
         if (activity instanceof SettingsActivity) {

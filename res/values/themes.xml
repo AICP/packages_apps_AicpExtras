@@ -21,11 +21,13 @@
 
     <style name="AppTheme" parent="@android:style/Theme.DeviceDefault.Settings">
         <item name="color_settings_icon">?android:attr/colorControlNormal</item>
+        <item name="preferenceTheme">@style/AppPreferenceTheme</item>
     </style>
 
     <style name="AppTheme_DarkAmber" parent="@android:style/Theme.Material">
         <item name="android:colorAccent">#ffab00</item>
         <item name="color_settings_icon">?android:attr/colorControlNormal</item>
+        <item name="preferenceTheme">@style/AppPreferenceTheme</item>
     </style>
 
 

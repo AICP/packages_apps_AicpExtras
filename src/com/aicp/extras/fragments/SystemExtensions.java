@@ -18,7 +18,7 @@
 package com.aicp.extras.fragments;
 
 import android.os.Bundle;
-import android.preference.Preference;
+import android.support.v7.preference.Preference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
@@ -29,9 +29,13 @@ public class SystemExtensions extends BaseSettingsFragment {
     private static final String PREF_SYSTEM_APP_REMOVER = "system_app_remover";
 
     @Override
+    protected int getPreferenceResource() {
+        return R.xml.system_extensions;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.system_extensions);
 
         Preference systemAppRemover = findPreference(PREF_SYSTEM_APP_REMOVER);
         Util.requireRoot(systemAppRemover);
