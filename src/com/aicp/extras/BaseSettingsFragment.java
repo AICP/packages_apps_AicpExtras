@@ -17,9 +17,9 @@
 
 package com.aicp.extras;
 
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceScreen;
+import android.os.Bundle;
+import android.support.v7.preference.Preference;
+import android.support.v14.preference.PreferenceFragment;
 
 import com.aicp.extras.utils.Util;
 
@@ -27,10 +27,16 @@ public abstract class BaseSettingsFragment extends PreferenceFragment {
 
     private static final String TAG = BaseSettingsFragment.class.getSimpleName();
 
+    protected abstract int getPreferenceResource();
+
     @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
-                                         Preference preference) {
-        return Util.onPreferenceTreeClick(this, preferenceScreen, preference)
-                || super.onPreferenceTreeClick(preferenceScreen, preference);
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        addPreferencesFromResource(getPreferenceResource());
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        return Util.onPreferenceTreeClick(this, preference)
+                || super.onPreferenceTreeClick(preference);
     }
 }

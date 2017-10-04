@@ -21,9 +21,6 @@ import android.app.ActionBar;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceScreen;
 
 import com.aicp.extras.fragments.Dashboard;
 
@@ -50,9 +47,16 @@ public class SettingsActivity extends BaseActivity {
 
         ActionBar actionBar = getActionBar();
         if (actionBar != null) {
-            if (mFragment instanceof PreferenceFragment) {
-                PreferenceScreen preferenceScreen =
-                        ((PreferenceFragment) mFragment).getPreferenceScreen();
+            if (mFragment instanceof android.preference.PreferenceFragment) {
+                android.preference.PreferenceScreen preferenceScreen =
+                        ((android.preference.PreferenceFragment) mFragment).getPreferenceScreen();
+                if (preferenceScreen != null) {
+                    actionBar.setTitle(preferenceScreen.getTitle());
+                }
+            } else if (mFragment instanceof android.support.v14.preference.PreferenceFragment) {
+                android.support.v7.preference.PreferenceScreen preferenceScreen =
+                        ((android.support.v14.preference.PreferenceFragment) mFragment)
+                                .getPreferenceScreen();
                 if (preferenceScreen != null) {
                     actionBar.setTitle(preferenceScreen.getTitle());
                 }
@@ -60,8 +64,20 @@ public class SettingsActivity extends BaseActivity {
         }
     }
 
-    public boolean onPreferenceClick(Preference preference) {
-        if (preference instanceof PreferenceScreen) {
+    public boolean onPreferenceClick(android.preference.Preference preference) {
+        if (preference instanceof android.preference.PreferenceScreen) {
+            String fragmentClass = preference.getFragment();
+            if (fragmentClass != null) {
+                startActivity(new Intent(this, SubSettingsActivity.class)
+                        .putExtra(EXTRA_FRAGMENT_CLASS, fragmentClass));
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean onPreferenceClick(android.support.v7.preference.Preference preference) {
+        if (preference instanceof android.support.v7.preference.PreferenceScreen) {
             String fragmentClass = preference.getFragment();
             if (fragmentClass != null) {
                 startActivity(new Intent(this, SubSettingsActivity.class)
