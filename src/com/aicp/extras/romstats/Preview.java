@@ -20,7 +20,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.preference.PreferenceScreen;
+import android.support.v7.preference.PreferenceScreen;
 import android.widget.Toast;
 
 import com.aicp.extras.BaseSettingsFragment;
@@ -37,11 +37,14 @@ public class Preview extends BaseSettingsFragment {
     private static final String ROMNAME = "preview_romname";
     private static final String ROMVERSION = "preview_romversion";
 
+    @Override
+    protected int getPreferenceResource() {
+        return R.xml.preview_data;
+    }
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
-		addPreferencesFromResource(R.xml.preview_data);
 
 		final PreferenceScreen prefSet = getPreferenceScreen();
 		final Context context = getActivity().getApplicationContext();
