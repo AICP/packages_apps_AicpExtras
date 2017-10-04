@@ -23,8 +23,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.PreferenceScreen;
+import android.support.v7.preference.Preference;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,9 +56,13 @@ public class Dashboard extends BaseSettingsFragment {
     private Random mRandom = new Random();
 
     @Override
+    protected int getPreferenceResource() {
+        return R.xml.dashboard;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.dashboard);
 
         mAicpLogo = findPreference(PREF_AICP_LOGO);
         mAicpOTA = findPreference(PREF_AICP_OTA);
@@ -107,6 +110,7 @@ public class Dashboard extends BaseSettingsFragment {
                              Bundle savedInstanceState) {
         // Preference long click
         View view = super.onCreateView(inflater, container, savedInstanceState);
+        /* TODO
         ((ListView) view.findViewById(android.R.id.list)).setOnItemLongClickListener(
                 new ListView.OnItemLongClickListener() {
             @Override
@@ -130,17 +134,17 @@ public class Dashboard extends BaseSettingsFragment {
                 return false;
             }
         });
+        */
         return view;
     }
 
     @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
-                                         Preference preference) {
+    public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mAicpOTA || preference == mAicpLogo) {
             startActivity(INTENT_OTA);
             return true;
         } else {
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
+            return super.onPreferenceTreeClick(preference);
         }
     }
 }

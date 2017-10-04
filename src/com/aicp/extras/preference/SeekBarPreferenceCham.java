@@ -6,7 +6,8 @@ import android.graphics.PixelFormat;
 import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.preference.Preference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -40,7 +41,7 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
     private String mUnitsLeft  = "";
     private String mUnitsRight = "";
     private SeekBar mSeekBar;
-    private TextView mTitle;
+    //private TextView mTitle;
     private TextView mUnitsLeftText;
     private TextView mUnitsRightText;
     private ImageView mImagePlus;
@@ -56,11 +57,13 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
 
     public SeekBarPreferenceCham(Context context, AttributeSet attrs) {
         super(context, attrs);
+        setLayoutResource(R.layout.seek_bar_preference);
         setValuesFromXml(attrs, context);
     }
 
     public SeekBarPreferenceCham(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        setLayoutResource(R.layout.seek_bar_preference);
         setValuesFromXml(attrs, context);
     }
 
@@ -106,8 +109,8 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
     public void onDependencyChanged(Preference dependency, boolean disableDependent) {
         super.onDependencyChanged(dependency, disableDependent);
         this.setShouldDisableView(true);
-        if (mTitle != null)
-            mTitle.setEnabled(!disableDependent);
+        //if (mTitle != null)
+        //    mTitle.setEnabled(!disableDependent);
         if (mSeekBar != null)
             mSeekBar.setEnabled(!disableDependent);
         if (mImagePlus != null)
@@ -116,36 +119,17 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
             mImageMinus.setEnabled(!disableDependent);
     }
 
-    @Override
-    protected View onCreateView(ViewGroup parent){
-        super.onCreateView(parent);
-        LayoutInflater mInflater = (LayoutInflater) getContext()
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mPopupValue = (TextView) mInflater.inflate(R.layout.seek_bar_value_popup, null, false);
-        mPopupValue.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
-                @Override
-                public void onGlobalLayout() {
-                    int width = mPopupValue.getWidth();
-                    if (width != mPopupWidth) {
-                        mPopupWidth = mPopupValue.getWidth();
-                        startUpdateViewValue();
-                    }
-                }
-        });
-        return mInflater.inflate(R.layout.seek_bar_preference, parent, false);
-    }
 
     @Override
-    public void onBindView(View view) {
-        super.onBindView(view);
-        RelativeLayout layout = (RelativeLayout) view;
-        mSeekBar = (SeekBar) layout.findViewById(R.id.seekbar);
+    public void onBindViewHolder(PreferenceViewHolder holder) {
+        super.onBindViewHolder(holder);
+        mSeekBar = (SeekBar) holder.findViewById(R.id.seekbar);
         mSeekBar.setMax(mMaxValue - mMinValue);
         mSeekBar.setOnSeekBarChangeListener(this);
-        mTitle = (TextView) layout.findViewById(android.R.id.title);
-        mUnitsLeftText = (TextView) layout.findViewById(R.id.seekBarPrefUnitsLeft);
-        mUnitsRightText = (TextView) layout.findViewById(R.id.seekBarPrefUnitsRight);
-        mImagePlus = (ImageView) layout.findViewById(R.id.imagePlus);
+        //mTitle = (TextView) holder.findViewById(android.R.id.title);
+        mUnitsLeftText = (TextView) holder.findViewById(R.id.seekBarPrefUnitsLeft);
+        mUnitsRightText = (TextView) holder.findViewById(R.id.seekBarPrefUnitsRight);
+        mImagePlus = (ImageView) holder.findViewById(R.id.imagePlus);
         mImagePlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -159,7 +143,7 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
                 return true;
             }
         });
-        mImageMinus = (ImageView) layout.findViewById(R.id.imageMinus);
+        mImageMinus = (ImageView) holder.findViewById(R.id.imageMinus);
         mImageMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -174,7 +158,7 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
             }
         });
         mProgressThumb = mSeekBar.getThumb();
-        mStatusText = (TextView) layout.findViewById(R.id.seekBarPrefValue);
+        mStatusText = (TextView) holder.findViewById(R.id.seekBarPrefValue);
         mStatusText.setMinimumWidth(30);
         mStatusText.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -197,6 +181,21 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
                 return true;
             }
         });
+
+        LayoutInflater mInflater = (LayoutInflater) getContext()
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mPopupValue = (TextView) mInflater.inflate(R.layout.seek_bar_value_popup, null, false);
+        mPopupValue.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
+                @Override
+                public void onGlobalLayout() {
+                    int width = mPopupValue.getWidth();
+                    if (width != mPopupWidth) {
+                        mPopupWidth = mPopupValue.getWidth();
+                        startUpdateViewValue();
+                    }
+                }
+        });
+
         updateView();
     }
 

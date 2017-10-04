@@ -20,9 +20,9 @@ package com.aicp.extras.fragments;
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.preference.ListPreference;
-import android.preference.SwitchPreference;
-import android.preference.Preference;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
+import android.support.v14.preference.SwitchPreference;
 import android.widget.Toast;
 
 import com.aicp.extras.BaseSettingsFragment;
@@ -42,9 +42,13 @@ public class AeSettings extends BaseSettingsFragment
     private SwitchPreference mAeLauncher;
 
     @Override
+    protected int getPreferenceResource() {
+        return R.xml.ae_settings;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.ae_settings);
 
         PackageManager pm = getContext().getPackageManager();
         mAeLauncherComponent = new ComponentName(getContext(),

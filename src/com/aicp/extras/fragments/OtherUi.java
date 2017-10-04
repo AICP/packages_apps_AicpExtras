@@ -21,9 +21,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.SwitchPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v14.preference.SwitchPreference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
@@ -36,9 +36,13 @@ public class OtherUi extends BaseSettingsFragment
     private SwitchPreference mShowCpuInfo;
 
     @Override
+    protected int getPreferenceResource() {
+        return R.xml.other_ui;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.other_ui);
 
         mShowCpuInfo = (SwitchPreference) findPreference(SHOW_CPU_INFO_KEY);
         mShowCpuInfo.setChecked(Settings.Global.getInt(getActivity().getContentResolver(),
