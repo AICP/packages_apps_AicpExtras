@@ -27,8 +27,7 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.net.Uri;
-import android.preference.Preference;
-import android.preference.PreferenceScreen;
+import android.support.v7.preference.Preference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.HiddenAnimActivity;
@@ -51,9 +50,14 @@ public class About extends BaseSettingsFragment {
 
 
     @Override
+    protected int getPreferenceResource() {
+        return R.xml.about;
+    }
+
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.about);
 
         mAicpDownloads = findPreference(PREF_AICP_DOWNLOADS);
 
@@ -70,8 +74,7 @@ public class About extends BaseSettingsFragment {
     }
 
     @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
-                                         Preference preference) {
+    public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mAicpDownloads) {
             String url = Util.getDownloadLinkForDevice(getContext());
             Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -82,7 +85,7 @@ public class About extends BaseSettingsFragment {
             showMaintainerDialog();
             return true;
         } else {
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
+            return super.onPreferenceTreeClick(preference);
         }
     }
 

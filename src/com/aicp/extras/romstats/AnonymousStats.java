@@ -36,11 +36,11 @@ import android.content.pm.Signature;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.preference.CheckBoxPreference;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceClickListener;
-import android.preference.PreferenceCategory;
-import android.preference.PreferenceScreen;
+import android.support.v7.preference.CheckBoxPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.Preference.OnPreferenceClickListener;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceScreen;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -70,11 +70,14 @@ public class AnonymousStats extends BaseSettingsFragment implements
 		return context.getSharedPreferences(Utilities.SETTINGS_PREF_NAME, 0);
 	}
 
+    @Override
+    protected int getPreferenceResource() {
+        return R.xml.anonymous_stats;
+    }
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
-        addPreferencesFromResource(R.xml.anonymous_stats);
 
 		mPrefs = getPreferences(getActivity());
 
@@ -120,7 +123,7 @@ public class AnonymousStats extends BaseSettingsFragment implements
 	}
 
 	@Override
-	public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+	public boolean onPreferenceTreeClick(Preference preference) {
 		if (preference == mEnableReporting) {
 			if (mEnableReporting.isChecked()) {
 				// Display the confirmation dialog
@@ -174,7 +177,7 @@ public class AnonymousStats extends BaseSettingsFragment implements
 			startActivity(new Intent(Intent.ACTION_VIEW, uri));
 		} else {
 			// If we didn't handle it, let preferences handle it.
-			return super.onPreferenceTreeClick(preferenceScreen, preference);
+			return super.onPreferenceTreeClick(preference);
 		}
 		return true;
 	}
