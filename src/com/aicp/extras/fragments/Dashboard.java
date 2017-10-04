@@ -23,8 +23,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.PreferenceScreen;
+import android.support.v7.preference.Preference;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +35,7 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.Constants;
 import com.aicp.extras.PreferenceMultiClickHandler;
 import com.aicp.extras.R;
+import com.aicp.extras.preference.LongClickablePreference;
 import com.aicp.extras.utils.Util;
 
 import com.plattysoft.leonids.ParticleSystem;
@@ -48,20 +48,25 @@ public class Dashboard extends BaseSettingsFragment {
     private static final String PREF_AICP_OTA = "aicp_ota";
     private static final String PREF_LOG_IT = "log_it";
 
-    private Preference mAicpLogo;
+    private LongClickablePreference mAicpLogo;
     private Preference mAicpOTA;
 
     private static final Intent INTENT_OTA = new Intent().setComponent(new ComponentName(
             Constants.AICP_OTA_PACKAGE, Constants.AICP_OTA_ACTIVITY));
 
     private Random mRandom = new Random();
+    private int mLogoClickCount = 0;
+
+    @Override
+    protected int getPreferenceResource() {
+        return R.xml.dashboard;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.dashboard);
 
-        mAicpLogo = findPreference(PREF_AICP_LOGO);
+        mAicpLogo = (LongClickablePreference) findPreference(PREF_AICP_LOGO);
         mAicpOTA = findPreference(PREF_AICP_OTA);
 
         PackageManager pm = getActivity().getPackageManager();
@@ -97,50 +102,41 @@ public class Dashboard extends BaseSettingsFragment {
                 ps.setRotationSpeedRange(firstRandom, secondRandom);
                 ps.setFadeOut(200, new AccelerateInterpolator());
                 ps.oneShot(getView(), 100);
+
+                mAicpLogo.setLongClickBurst(2000/((++mLogoClickCount)%5+1));
                 return true;
             }
         });
+        mAicpLogo.setOnLongClickListener(R.id.logo_view, 1000,
+                new Preference.OnPreferenceClickListener() {
+                        @Override
+                        public boolean onPreferenceClick(Preference preference) {
+                            int firstRandom = mRandom.nextInt(91 - 0);
+                            int secondRandom = mRandom.nextInt(181 - 90) + 90;
+                            int thirdRandom = mRandom.nextInt(181 - 0);
+
+                            Drawable star =
+                                    getResources().getDrawable(R.drawable.star_alternative, null);
+
+                            ParticleSystem ps = new ParticleSystem(getActivity(), 100, star, 3000);
+                            ps.setScaleRange(0.7f, 1.3f);
+                            ps.setSpeedRange(0.1f, 0.25f);
+                            ps.setAcceleration(0.0001f, thirdRandom);
+                            ps.setRotationSpeedRange(firstRandom, secondRandom);
+                            ps.setFadeOut(1000, new AccelerateInterpolator());
+                            ps.oneShot(getView(), 100);
+                            return true;
+                        }
+                });
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Preference long click
-        View view = super.onCreateView(inflater, container, savedInstanceState);
-        ((ListView) view.findViewById(android.R.id.list)).setOnItemLongClickListener(
-                new ListView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView parent, View view, int position, long id) {
-                if (position == 0) {// mAicpLogo
-                    int firstRandom = mRandom.nextInt(91 - 0);
-                    int secondRandom = mRandom.nextInt(181 - 90) + 90;
-                    int thirdRandom = mRandom.nextInt(181 - 0);
-
-                    Drawable star = getResources().getDrawable(R.drawable.star_alternative, null);
-
-                    ParticleSystem ps = new ParticleSystem(getActivity(), 100, star, 3000);
-                    ps.setScaleRange(0.7f, 1.3f);
-                    ps.setSpeedRange(0.1f, 0.25f);
-                    ps.setAcceleration(0.0001f, thirdRandom);
-                    ps.setRotationSpeedRange(firstRandom, secondRandom);
-                    ps.setFadeOut(1000, new AccelerateInterpolator());
-                    ps.oneShot(getView(), 100);
-                    return true;
-                }
-                return false;
-            }
-        });
-        return view;
-    }
-
-    @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
-                                         Preference preference) {
+    public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mAicpOTA || preference == mAicpLogo) {
             startActivity(INTENT_OTA);
             return true;
         } else {
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
+            return super.onPreferenceTreeClick(preference);
         }
     }
 }

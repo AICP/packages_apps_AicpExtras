@@ -18,8 +18,8 @@
 package com.aicp.extras.fragments;
 
 import android.os.Bundle;
-import android.preference.ListPreference;
-import android.preference.Preference;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
 import android.provider.Settings;
 
 import com.aicp.extras.BaseSettingsFragment;
@@ -35,9 +35,13 @@ public class PanelPorn extends BaseSettingsFragment
     private Preference mVolumeDialogDashGap;
 
     @Override
+    protected int getPreferenceResource() {
+        return R.xml.panel_porn;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.panel_porn);
 
         mVolumeDialogStroke =
                 (ListPreference) findPreference(Settings.System.VOLUME_DIALOG_STROKE);
