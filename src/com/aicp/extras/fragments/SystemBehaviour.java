@@ -21,8 +21,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.SELinux;
-import android.preference.Preference;
-import android.preference.SwitchPreference;
+import android.support.v7.preference.Preference;
+import android.support.v14.preference.SwitchPreference;
 import android.util.Log;
 
 import com.aicp.extras.BaseSettingsFragment;
@@ -43,9 +43,13 @@ public class SystemBehaviour extends BaseSettingsFragment
     private SwitchPreference mSelinuxPersistence;
 
     @Override
+    protected int getPreferenceResource() {
+        return R.xml.system_behaviour;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.system_behaviour);
 
         // SELinux
         Preference selinuxCategory = findPreference(SELINUX_CATEGORY);

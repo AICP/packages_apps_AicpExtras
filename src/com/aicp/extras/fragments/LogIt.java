@@ -25,10 +25,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.StrictMode;
-import android.preference.CheckBoxPreference;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.PreferenceScreen;
+import android.support.v7.preference.CheckBoxPreference;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -94,9 +93,13 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     private boolean shareZip = true;
 
     @Override
+    protected int getPreferenceResource() {
+        return R.xml.log_it;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.log_it);
 
         mLogcat = (CheckBoxPreference) findPreference(PREF_LOGCAT);
         mLogcat.setOnPreferenceChangeListener(this);
@@ -143,12 +146,12 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     }
 
     @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+    public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mAicpLogIt) {
             new CreateLogTask().execute(mLogcat.isChecked(), mKmsg.isChecked(), mDmesg.isChecked());
             return true;
         } else {
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
+            return super.onPreferenceTreeClick(preference);
         }
     }
 
