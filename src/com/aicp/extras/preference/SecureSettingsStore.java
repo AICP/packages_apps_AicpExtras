@@ -20,7 +20,8 @@ import android.content.ContentResolver;
 import android.preference.PreferenceDataStore;
 import android.provider.Settings;
 
-public class SecureSettingsStore implements PreferenceDataStore {
+public class SecureSettingsStore extends android.support.v7.preference.PreferenceDataStore
+        implements PreferenceDataStore {
 
     private ContentResolver mContentResolver;
 

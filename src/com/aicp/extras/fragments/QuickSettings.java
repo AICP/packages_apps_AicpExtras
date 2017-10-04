@@ -17,8 +17,7 @@
 
 package com.aicp.extras.fragments;
 
-import android.os.Bundle;
-import android.preference.Preference;
+import android.support.v7.preference.Preference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
@@ -26,8 +25,7 @@ import com.aicp.extras.R;
 public class QuickSettings extends BaseSettingsFragment {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.quick_settings);
+    protected int getPreferenceResource() {
+        return R.xml.quick_settings;
     }
 }

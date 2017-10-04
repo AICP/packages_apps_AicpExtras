@@ -32,8 +32,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.preference.Preference;
-import android.preference.PreferenceScreen;
+import android.support.v7.preference.Preference;
 import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -89,9 +88,13 @@ public class SystemAnimations extends BaseSettingsFragment {
     private String mBootAnimationPath;
 
     @Override
+    protected int getPreferenceResource() {
+        return R.xml.system_animations;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.system_animations);
 
         // Custom bootanimation
         mCustomBootAnimation = findPreference(PREF_CUSTOM_BOOTANIM);
@@ -105,13 +108,12 @@ public class SystemAnimations extends BaseSettingsFragment {
     }
 
      @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
-                                         Preference preference) {
+    public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mCustomBootAnimation) {
             openBootAnimationDialog();
             return true;
         } else {
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
+            return super.onPreferenceTreeClick(preference);
         }
     }
 
