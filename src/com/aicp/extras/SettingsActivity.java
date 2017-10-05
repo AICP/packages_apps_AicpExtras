@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.aicp.extras.fragments.Dashboard;
+import com.aicp.extras.preference.MasterSwitchPreference;
 
 public class SettingsActivity extends BaseActivity {
 
@@ -77,7 +78,8 @@ public class SettingsActivity extends BaseActivity {
     }
 
     public boolean onPreferenceClick(android.support.v7.preference.Preference preference) {
-        if (preference instanceof android.support.v7.preference.PreferenceScreen) {
+        if (preference instanceof android.support.v7.preference.PreferenceScreen
+                || preference instanceof MasterSwitchPreference) {
             String fragmentClass = preference.getFragment();
             if (fragmentClass != null) {
                 startActivity(new Intent(this, SubSettingsActivity.class)
