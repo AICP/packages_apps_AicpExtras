@@ -66,11 +66,13 @@
         android:defaultValue="false" />
 
     <!-- Launch music player when headset is connected -->
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.extras.preference.SystemSettingListPreference
         android:key="headset_connect_player"
         android:title="@string/headset_connect_player_title"
-        android:summary="@string/headset_connect_player_summary"
-        android:defaultValue="false" />
+        android:dialogTitle="@string/headset_connect_player_title"
+        android:entries="@array/headset_connect_player_entries"
+        android:entryValues="@array/headset_connect_player_values"
+        android:defaultValue="4" />
 
     <!-- Show CPU Info overlay -->
     <SwitchPreference
