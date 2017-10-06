@@ -17,56 +17,14 @@
 
 package com.aicp.extras.fragments;
 
-import android.os.Bundle;
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
-import android.provider.Settings;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class BatteryBar extends BaseSettingsFragment
-        implements Preference.OnPreferenceChangeListener {
-
-    private ListPreference mBatteryBarPosition;
+public class BatteryBar extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.battery_bar;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        mBatteryBarPosition =
-                (ListPreference) findPreference(Settings.System.STATUSBAR_BATTERY_BAR);
-        mBatteryBarPosition.setOnPreferenceChangeListener(this);
-
-        updateBatteryBarDependencies(Integer.parseInt(mBatteryBarPosition.getValue()));
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mBatteryBarPosition) {
-            updateBatteryBarDependencies(Integer.parseInt((String) newValue));
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    private void updateBatteryBarDependencies(int batteryBarPosition) {
-        // All preferences within this screen that don't have explicitely set a dependency
-        // except the position preference depend on the battery bar position preference
-        boolean enabled = batteryBarPosition != 0;
-        PreferenceScreen preferenceScreen = getPreferenceScreen();
-        for (int i = 0; i < preferenceScreen.getPreferenceCount(); i++) {
-            Preference preference = preferenceScreen.getPreference(i);
-            if (preference != mBatteryBarPosition && preference.getDependency() == null) {
-                preference.setEnabled(enabled);
-            }
-        }
-    }
 }
