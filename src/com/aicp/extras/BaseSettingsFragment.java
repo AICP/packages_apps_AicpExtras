@@ -19,6 +19,7 @@ package com.aicp.extras;
 
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
 import android.support.v14.preference.PreferenceFragment;
 
 import com.aicp.extras.utils.Util;
@@ -26,6 +27,9 @@ import com.aicp.extras.utils.Util;
 public abstract class BaseSettingsFragment extends PreferenceFragment {
 
     private static final String TAG = BaseSettingsFragment.class.getSimpleName();
+
+    private Boolean mMasterDependencyEnabled;
+    private boolean mInitialized = false;
 
     protected abstract int getPreferenceResource();
 
@@ -35,8 +39,33 @@ public abstract class BaseSettingsFragment extends PreferenceFragment {
     }
 
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mInitialized = true;
+        if (mMasterDependencyEnabled != null) {
+            setMasterDependencyState(mMasterDependencyEnabled);
+        }
+    }
+
+    @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         return Util.onPreferenceTreeClick(this, preference)
                 || super.onPreferenceTreeClick(preference);
+    }
+
+    public void setMasterDependencyState(boolean enabled) {
+        mMasterDependencyEnabled = enabled;
+        if (!mInitialized) {
+            return;
+        }
+        PreferenceScreen preferenceScreen = getPreferenceScreen();
+        for (int i = 0; i < preferenceScreen.getPreferenceCount(); i++) {
+            Preference preference = preferenceScreen.getPreference(i);
+            // Preferences that have a dependency declared will be disabled by disabling
+            // the dependency, so only disable those that don't have one
+            if (preference.getDependency() == null) {
+                preference.setEnabled(enabled);
+            }
+        }
     }
 }

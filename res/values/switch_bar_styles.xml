@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="TextAppearance.Switch" parent="@android:style/TextAppearance.Material.Title" />
+
+    <style name="TextAppearance.Small.SwitchBar" parent="@android:style/TextAppearance.Material.Small">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ThemeOverlay.SwitchBar.Settings" parent="@android:style/ThemeOverlay.Material.ActionBar">
+        <item name="switchBarMarginStart">@dimen/switchbar_margin_start</item>
+        <item name="switchBarMarginEnd">@dimen/switchbar_margin_end</item>
+        <item name="switchBarBackgroundColor">?android:attr/colorSecondary</item>
+    </style>
+
+    <style name="ThemeOverlay.SwitchBar.Settings.Dark">
+        <item name="switchBarBackgroundColor">#ff424242</item>
+    </style>
+
+</resources>
