@@ -24,22 +24,47 @@ import android.os.Bundle;
 
 import com.aicp.extras.fragments.Dashboard;
 import com.aicp.extras.preference.MasterSwitchPreference;
+import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
+import com.aicp.extras.preference.SystemSettingSwitchBarController;
+import com.aicp.extras.widget.SwitchBar;
 
 public class SettingsActivity extends BaseActivity {
 
     private Fragment mFragment;
+    private SwitchBar mSwitchBar;
 
     // String extra containing the fragment class
     private static final String EXTRA_FRAGMENT_CLASS =
             "com.aicp.extras.extra.preference_fragment";
+    // String extra containing an optional system settings key to be controlled by the switch bar
+    private static final String EXTRA_SWITCH_SYSTEM_SETTINGS_KEY =
+            "com.aicp.extras.extra.preference_switch_system_settings_key";
+    // Default value for switch bar controlling the system setting
+    private static final String EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE =
+            "com.aicp.extras.extra.preference_switch_system_settings_default_value";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.settings_activity);
 
-        String fragmentClass = getIntent().getStringExtra(EXTRA_FRAGMENT_CLASS);
+        Intent mIntent = getIntent();
+
+        String fragmentClass = mIntent.getStringExtra(EXTRA_FRAGMENT_CLASS);
         mFragment = getNewFragment(fragmentClass);
-        getFragmentManager().beginTransaction().replace(android.R.id.content, mFragment).commit();
+        getFragmentManager().beginTransaction().replace(R.id.main_content, mFragment).commit();
+
+        mSwitchBar = (SwitchBar) findViewById(R.id.switch_bar);
+        if (mIntent.hasExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY)) {
+            mSwitchBar.show();
+            BaseSettingsFragment settingsFragment = mFragment instanceof BaseSettingsFragment
+                    ? (BaseSettingsFragment) mFragment : null;
+            new SystemSettingSwitchBarController(mSwitchBar,
+                    mIntent.getStringExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY),
+                    mIntent.getBooleanExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE, false),
+                    getContentResolver(),
+                    settingsFragment);
+        }
     }
 
     @Override
@@ -82,8 +107,14 @@ public class SettingsActivity extends BaseActivity {
                 || preference instanceof MasterSwitchPreference) {
             String fragmentClass = preference.getFragment();
             if (fragmentClass != null) {
-                startActivity(new Intent(this, SubSettingsActivity.class)
-                        .putExtra(EXTRA_FRAGMENT_CLASS, fragmentClass));
+                Intent intent = new Intent(this, SubSettingsActivity.class);
+                intent.putExtra(EXTRA_FRAGMENT_CLASS, fragmentClass);
+                if (preference instanceof SystemSettingMasterSwitchPreference) {
+                    intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY, preference.getKey());
+                    intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE,
+                            ((SystemSettingMasterSwitchPreference) preference).getDefaultValue());
+                }
+                startActivity(intent);
                 return true;
             }
         }

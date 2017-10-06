@@ -19,13 +19,6 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
     android:title="@string/battery_bar_title">
 
-    <com.aicp.extras.preference.SystemSettingIntListPreference
-        android:key="statusbar_battery_bar"
-        android:title="@string/battery_bar_position_title"
-        android:entries="@array/battery_bar_position_entries"
-        android:entryValues="@array/battery_bar_position_values"
-        android:defaultValue="0" />
-
     <com.aicp.extras.preference.SystemSettingColorPickerPreference
         android:key="statusbar_battery_bar_color"
         android:title="@string/battery_bar_color_title"
