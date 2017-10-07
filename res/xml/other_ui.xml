@@ -65,6 +65,13 @@
         android:summary="@string/volume_rocker_music_controls_summary"
         android:defaultValue="false" />
 
+    <!-- Launch music player when headset is connected -->
+    <com.aicp.extras.preference.SystemSettingSwitchPreference
+        android:key="headset_connect_player"
+        android:title="@string/headset_connect_player_title"
+        android:summary="@string/headset_connect_player_summary"
+        android:defaultValue="false" />
+
     <!-- Show CPU Info overlay -->
     <SwitchPreference
         android:key="show_cpu_info"
