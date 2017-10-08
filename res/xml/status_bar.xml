@@ -46,6 +46,7 @@
        android:min="0"
        aicpextras:unitsLeft=""
        aicpextras:unitsRight=""
-       android:defaultValue="1" />
+       android:defaultValue="1"
+       android:dependency="network_traffic_state" />
 
 </PreferenceScreen>
