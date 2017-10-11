@@ -79,4 +79,11 @@
         android:summary="@string/show_cpu_info_summary"
         android:defaultValue="false" />
 
+    <!-- Toast icon switch -->
+    <com.aicp.extras.preference.SystemSettingSwitchPreference
+        android:key="toast_icon"
+        android:title="@string/toast_icon_title"
+        android:summary="@string/toast_icon_summary"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
