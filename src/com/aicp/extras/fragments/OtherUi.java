@@ -33,12 +33,10 @@ public class OtherUi extends BaseSettingsFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String SHOW_CPU_INFO_KEY = "show_cpu_info";
-    private static final String KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wake_when_plugged_or_unplugged";
     private static final String KEY_VIBRATE_ON_CHARGE_STATE_CHANGED = "vibration_on_charge_state_changed";
 
     private SwitchPreference mShowCpuInfo;
     private SwitchPreference mVibrateOnPlug;
-    private SwitchPreference mWakeWhenPluggedOrUnplugged;
 
     @Override
     protected int getPreferenceResource() {
@@ -54,29 +52,11 @@ public class OtherUi extends BaseSettingsFragment
                 Settings.Global.SHOW_CPU_OVERLAY, 0) == 1);
         mShowCpuInfo.setOnPreferenceChangeListener(this);
 
-        mWakeWhenPluggedOrUnplugged =
-                (SwitchPreference) findPreference(KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED);
-
         mVibrateOnPlug =
                 (SwitchPreference) findPreference(KEY_VIBRATE_ON_CHARGE_STATE_CHANGED);
 
         if(!Util.hasVibrator(getActivity())){
             mVibrateOnPlug.getParent().removePreference(mVibrateOnPlug);
-        }
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        // Default value for wake-on-plug behavior from config.xml
-        boolean wakeUpWhenPluggedOrUnpluggedConfig = getResources().getBoolean(
-                com.android.internal.R.bool.config_unplugTurnsOnScreen);
-
-        if (mWakeWhenPluggedOrUnplugged != null) {
-        mWakeWhenPluggedOrUnplugged.setChecked(Settings.Global.getInt(getActivity().getContentResolver(),
-                Settings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
-                (wakeUpWhenPluggedOrUnpluggedConfig ? 1 : 0)) == 1);
         }
     }
 

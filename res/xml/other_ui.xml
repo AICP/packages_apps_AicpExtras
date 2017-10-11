@@ -86,13 +86,6 @@
         android:summary="@string/toast_icon_summary"
         android:defaultValue="true" />
 
-    <!-- Wake on plug -->
-    <com.aicp.extras.preference.GlobalSettingSwitchPreference
-        android:key="wake_when_plugged_or_unplugged"
-        android:title="@string/wake_when_plugged_or_unplugged_title"
-        android:summary="@string/wake_when_plugged_or_unplugged_summary"
-        android:defaultValue="false"/>
-
     <!-- Vibrate on plug -->
     <com.aicp.extras.preference.SystemSettingSwitchPreference
       android:key="vibration_on_charge_state_changed"
