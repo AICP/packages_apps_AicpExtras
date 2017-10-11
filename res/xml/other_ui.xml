@@ -31,4 +31,11 @@
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="ms" />
 
+    <!-- Toast icon switch -->
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="toast_icon"
+        android:title="@string/toast_icon_title"
+        android:summary="@string/toast_icon_summary"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
