@@ -36,6 +36,9 @@ public class SettingsActivity extends BaseActivity {
     // String extra containing the fragment class
     private static final String EXTRA_FRAGMENT_CLASS =
             "com.aicp.extras.extra.preference_fragment";
+    // Bundle extra containing arguments for the fragment
+    private static final String EXTRA_FRAGMENT_ARGUMENTS =
+            "com.aicp.extras.extra.preference_arguments";
     // String extra containing an optional system settings key to be controlled by the switch bar
     private static final String EXTRA_SWITCH_SYSTEM_SETTINGS_KEY =
             "com.aicp.extras.extra.preference_switch_system_settings_key";
@@ -52,6 +55,9 @@ public class SettingsActivity extends BaseActivity {
 
         String fragmentClass = mIntent.getStringExtra(EXTRA_FRAGMENT_CLASS);
         mFragment = getNewFragment(fragmentClass);
+        if (mIntent.hasExtra(EXTRA_FRAGMENT_ARGUMENTS)) {
+            mFragment.setArguments(mIntent.getBundleExtra(EXTRA_FRAGMENT_ARGUMENTS));
+        }
         getFragmentManager().beginTransaction().replace(R.id.main_content, mFragment).commit();
 
         mSwitchBar = (SwitchBar) findViewById(R.id.switch_bar);
@@ -113,6 +119,9 @@ public class SettingsActivity extends BaseActivity {
                     intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY, preference.getKey());
                     intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE,
                             ((SystemSettingMasterSwitchPreference) preference).getDefaultValue());
+                }
+                if (preference.peekExtras() != null) {
+                    intent.putExtra(EXTRA_FRAGMENT_ARGUMENTS, preference.getExtras());
                 }
                 startActivity(intent);
                 return true;
