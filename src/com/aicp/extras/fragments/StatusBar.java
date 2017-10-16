@@ -29,6 +29,8 @@ public class StatusBar extends BaseSettingsFragment {
 
     MasterSwitchPreference mBatteryBar;
 
+    private ListPreference mTickerMode;
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.status_bar;
@@ -40,12 +42,35 @@ public class StatusBar extends BaseSettingsFragment {
 
         mBatteryBar = (MasterSwitchPreference)
                 findPreference(Settings.System.STATUSBAR_BATTERY_BAR);
+
+        mTickerMode = (ListPreference) findPreference("ticker_mode");
+        mTickerMode.setOnPreferenceChangeListener(this);
+        int tickerMode = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.STATUS_BAR_SHOW_TICKER,
+                1, UserHandle.USER_CURRENT);
+        mTickerMode.setValue(String.valueOf(tickerMode));
+        mTickerMode.setSummary(mTickerMode.getEntry());
     }
 
     @Override
     public void onResume() {
         super.onResume();
+    }
 
         mBatteryBar.reloadValue();
+
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference.equals(mTickerMode)) {
+            int tickerMode = Integer.parseInt(((String) newValue).toString());
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.STATUS_BAR_SHOW_TICKER, tickerMode, UserHandle.USER_CURRENT);
+            int index = mTickerMode.findIndexOfValue((String) newValue);
+            mTickerMode.setSummary(
+                    mTickerMode.getEntries()[index]);
+            return true;
+        }
+
+        return false;
     }
 }
