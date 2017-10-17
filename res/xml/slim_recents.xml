@@ -50,17 +50,6 @@
         android:max="105" />
 
     <com.aicp.extras.preference.SystemSettingSwitchPreference
-        android:key="show_running_tasks"
-        android:title="@string/show_running_tasks_title"
-        android:defaultValue="false" />
-
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
-        android:key="recent_panel_show_topmost"
-        android:title="@string/recent_panel_show_topmost_title"
-        android:summary="@string/recent_panel_show_topmost_summary"
-        android:defaultValue="false" />
-
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
         android:key="slim_recents_aicp_empty_drawable"
         android:title="@string/slim_recents_aicp_empty_drawable_title"
         android:summary="@string/slim_recents_aicp_empty_drawable_summary"
@@ -81,13 +70,6 @@
         aicpextras:interval="1"
         aicpextras:unitsRight="dp" />
 
-    <!-- TODO
-    <Preference
-        android:key="slim_icon_pack"
-        android:title="@string/slim_icon_pack_title"
-        android:summary="@string/slim_icon_pack_summary" />
-    -->
-
     <com.aicp.extras.preference.SystemSettingIntListPreference
         android:key="recent_panel_expanded_mode"
         android:entries="@array/recent_panel_expanded_mode_entries"
@@ -95,6 +77,17 @@
         android:title="@string/recent_panel_expanded_mode_title"
         android:summary="@string/recent_panel_expanded_mode_summary"
         android:defaultValue="0" />
+
+    <Preference
+        android:key="slim_icon_pack"
+        android:title="@string/slim_icon_pack_title"
+        android:summary="@string/slim_icon_pack_summary" />
+
+    <PreferenceScreen
+        android:key="blacklist_fragment"
+        android:fragment="com.aicp.extras.fragments.SlimRecentsBlacklist"
+        android:title="@string/slim_blacklist_apps_cat_title"
+        android:summary="@string/slim_blacklist_apps_summary" />
 
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="use_recent_app_sidebar"
