@@ -50,17 +50,6 @@
         android:max="105" />
 
     <com.aicp.extras.preference.SystemSettingSwitchPreference
-        android:key="show_running_tasks"
-        android:title="@string/show_running_tasks_title"
-        android:defaultValue="false" />
-
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
-        android:key="recent_panel_show_topmost"
-        android:title="@string/recent_panel_show_topmost_title"
-        android:summary="@string/recent_panel_show_topmost_summary"
-        android:defaultValue="false" />
-
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
         android:key="slim_recents_aicp_empty_drawable"
         android:title="@string/slim_recents_aicp_empty_drawable_title"
         android:summary="@string/slim_recents_aicp_empty_drawable_summary"

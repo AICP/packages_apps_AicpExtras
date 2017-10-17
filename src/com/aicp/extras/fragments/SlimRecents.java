@@ -31,10 +31,8 @@ public class SlimRecents extends BaseSettingsFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String RECENT_PANEL_LEFTY_MODE = "recent_panel_lefty_mode";
-    private static final String RECENT_PANEL_SHOW_TOPMOST = "recent_panel_show_topmost";
 
     private SwitchPreference mRecentPanelLeftyMode;
-    private SwitchPreference mShowTopmost;
     private MasterSwitchPreference mAppSidebar;
 
     @Override
@@ -48,7 +46,6 @@ public class SlimRecents extends BaseSettingsFragment
 
         mRecentPanelLeftyMode = (SwitchPreference) findPreference(RECENT_PANEL_LEFTY_MODE);
         mRecentPanelLeftyMode.setOnPreferenceChangeListener(this);
-        mShowTopmost = (SwitchPreference) findPreference(RECENT_PANEL_SHOW_TOPMOST);
         mAppSidebar =
                 (MasterSwitchPreference) findPreference(Settings.System.USE_RECENT_APP_SIDEBAR);
     }
@@ -61,17 +58,7 @@ public class SlimRecents extends BaseSettingsFragment
                 Settings.System.RECENT_PANEL_GRAVITY, Gravity.RIGHT) == Gravity.LEFT;
         mRecentPanelLeftyMode.setChecked(recentLeftyMode);
 
-        mShowTopmost.setEnabled(isMasterDependencyEnabled() && !screenPinningEnabled());
-
         mAppSidebar.reloadValue();
-    }
-
-    @Override
-    public void setMasterDependencyState(boolean enabled) {
-        super.setMasterDependencyState(enabled);
-        if (mShowTopmost != null) {
-            mShowTopmost.setEnabled(enabled && !screenPinningEnabled());
-        }
     }
 
     @Override
