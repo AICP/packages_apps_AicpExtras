@@ -21,6 +21,10 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
     android:title="@string/recents_title">
 
+    <PreferenceCategory
+        android:key="stock_recents_category"
+        android:title="@string/stock_recents_category">
+
         <com.aicp.extras.preference.SystemSettingSwitchPreference
             android:key="show_clear_all_recents"
             android:title="@string/show_clear_all_recents_button_title"
@@ -42,4 +46,18 @@
             android:summaryOn="@string/systemui_recents_mem_display_summaryOn"
             android:summaryOff="@string/systemui_recents_mem_display_summaryOff"
             android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="alternative_recents_category"
+        android:title="@string/alternative_recents_category">
+
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+            android:key="use_slim_recents"
+            android:title="@string/slim_recents_title"
+            android:defaultValue="false"
+            android:fragment="com.aicp.extras.fragments.SlimRecents" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

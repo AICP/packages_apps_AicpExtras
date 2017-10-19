@@ -68,4 +68,8 @@ public abstract class BaseSettingsFragment extends PreferenceFragment {
             }
         }
     }
+
+    protected boolean isMasterDependencyEnabled() {
+        return mMasterDependencyEnabled;
+    }
 }
