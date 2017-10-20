@@ -53,6 +53,14 @@
             android:defaultValue="true" />
     </PreferenceCategory>
 
+    <Preference
+        android:key="app_ops"
+        android:title="App Ops"
+        android:summary="@string/app_ops_settings_summary"
+        android:fragment="com.android.settings.applications.AppOpsSummary">
+        <intent android:action="android.settings.APP_OPS_SETTINGS" />
+    </Preference>
+
     <!-- SELinux -->
     <PreferenceCategory
         android:key="selinux"
