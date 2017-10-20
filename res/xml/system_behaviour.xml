@@ -22,6 +22,14 @@
     xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     android:title="@string/system_behaviour_title">
 
+    <Preference
+        android:key="app_ops"
+        android:title="@string/app_ops_settings"
+        android:summary="@string/app_ops_settings_summary"
+        android:fragment="com.android.settings.applications.AppOpsSummary">
+        <intent android:action="android.settings.APP_OPS_SETTINGS" />
+    </Preference>
+
     <PreferenceScreen
         android:key="suspend_actions"
         android:title="@string/screen_state_toggles_title"
