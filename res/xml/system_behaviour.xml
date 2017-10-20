@@ -41,6 +41,14 @@
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.SmartPixels" />
 
+    <Preference
+        android:key="app_ops"
+        android:title="@string/app_ops_settings"
+        android:summary="@string/app_ops_settings_summary"
+        android:fragment="com.android.settings.applications.AppOpsSummary">
+        <intent android:action="android.settings.APP_OPS_SETTINGS" />
+    </Preference>
+
     <PreferenceCategory
         android:key="system_ss_category"
         android:title="@string/system_ss_category_title">
