@@ -27,4 +27,11 @@
         <intent android:action="com.aicp.extras.ViewSystemAppRemover" />
     </Preference>
 
+    <Preference
+        android:key="app_ops"
+        android:summary="@string/app_ops_settings_summary"
+        android:fragment="com.android.settings.applications.AppOpsSummary">
+        <intent android:action="android.settings.APP_OPS_SETTINGS" />
+    </Preference>
+
 </PreferenceScreen>
