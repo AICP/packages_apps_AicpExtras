@@ -95,6 +95,7 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
 
         mThumbDefaultValueColor = attrs.getAttributeIntValue(AICPEXTRAS,
                 "thumb_default_value_color", 0xff000000);
+        a.recycle();
     }
 
     private String getAttributeStringValue(AttributeSet attrs, String namespace, String name, String defaultValue) {
