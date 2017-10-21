@@ -75,6 +75,7 @@ public abstract class BaseChangelogActivity extends AppCompatActivity {
         };
         TypedArray ta = getTheme().obtainStyledAttributes(attrs);
         boolean lightStatusBar = ta.getBoolean(0, false);
+        ta.recycle();
         if (lightStatusBar) {
             newSystemUiFlags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
         } else {
