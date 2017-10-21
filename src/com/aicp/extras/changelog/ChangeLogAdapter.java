@@ -50,6 +50,7 @@ class ChangeLogAdapter extends RecyclerView.Adapter<ChangeLogAdapter.ViewHolder>
             };
             TypedArray ta = getContext().getTheme().obtainStyledAttributes(attrs);
             commitID.setTextColor(ta.getColor(0, Color.GRAY));
+            ta.recycle();
         } else {
             commitID.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             commitMessage.setVisibility(View.GONE);
@@ -62,6 +63,7 @@ class ChangeLogAdapter extends RecyclerView.Adapter<ChangeLogAdapter.ViewHolder>
             };
             TypedArray ta = getContext().getTheme().obtainStyledAttributes(attrs);
             commitID.setTextColor(ta.getColor(0, Color.GRAY));
+            ta.recycle();
         }
     }
 
