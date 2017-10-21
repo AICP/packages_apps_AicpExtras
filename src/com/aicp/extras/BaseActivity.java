@@ -68,6 +68,7 @@ public abstract class BaseActivity extends Activity {
         };
         TypedArray ta = getTheme().obtainStyledAttributes(attrs);
         boolean lightStatusBar = ta.getBoolean(0, false);
+        ta.recycle();
         if (lightStatusBar) {
             newSystemUiFlags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
         } else {
