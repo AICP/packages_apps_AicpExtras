@@ -22,6 +22,7 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.aicp.extras.dslv.ActionListViewSettings;
 import com.aicp.extras.fragments.Dashboard;
 import com.aicp.extras.preference.MasterSwitchPreference;
 import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
@@ -120,14 +121,23 @@ public class SettingsActivity extends BaseActivity {
             if (fragmentClass != null) {
                 Intent intent = new Intent(this, SubSettingsActivity.class);
                 intent.putExtra(EXTRA_FRAGMENT_CLASS, fragmentClass);
+
                 if (preference instanceof SystemSettingMasterSwitchPreference) {
-                    intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY, preference.getKey());
-                    intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE,
-                            ((SystemSettingMasterSwitchPreference) preference).getDefaultValue());
+                    if (fragmentClass.equals(ActionListViewSettings.class.getName())) {
+                        ((SystemSettingMasterSwitchPreference) preference)
+                                .setCheckedPersisting(true);
+                    } else {
+                        intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY, preference.getKey());
+                        intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE,
+                                ((SystemSettingMasterSwitchPreference) preference)
+                                        .getDefaultValue());
+                    }
                 }
+
                 if (preference.peekExtras() != null) {
                     intent.putExtra(EXTRA_FRAGMENT_ARGUMENTS, preference.getExtras());
                 }
+
                 startActivity(intent);
                 return true;
             }
