@@ -79,7 +79,12 @@ public class SettingsActivity extends BaseActivity {
 
         ActionBar actionBar = getActionBar();
         if (actionBar != null) {
-            if (mFragment instanceof android.preference.PreferenceFragment) {
+            if (mFragment instanceof TitleProvider) {
+                CharSequence title = ((TitleProvider) mFragment).getTitle();
+                if (title != null) {
+                    actionBar.setTitle(title);
+                }
+            } else if (mFragment instanceof android.preference.PreferenceFragment) {
                 android.preference.PreferenceScreen preferenceScreen =
                         ((android.preference.PreferenceFragment) mFragment).getPreferenceScreen();
                 if (preferenceScreen != null) {
