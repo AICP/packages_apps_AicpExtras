@@ -88,7 +88,7 @@ public class MasterSwitchPreference extends TwoTargetPreference {
     }
 
     public boolean isChecked() {
-        return mSwitch != null && mSwitch.isEnabled() && mChecked;
+        return mChecked;
     }
 
     public void setChecked(boolean checked) {
