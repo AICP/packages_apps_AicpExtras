@@ -49,6 +49,7 @@ public class Weather extends BaseSettingsFragment
     private static final String TAG = "OmniJawsSettings";
     private static final String WEATHER_ICON_PACK = "weather_icon_pack";
     private static final String DEFAULT_WEATHER_ICON_PACKAGE = "org.omnirom.omnijaws";
+    private static final String DEFAULT_WEATHER_ICON_PREFIX = "outline";
     private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
     private static final String CHRONUS_ICON_PACK_INTENT = "com.dvtonder.chronus.ICON_PACK";
 
@@ -73,7 +74,7 @@ public class Weather extends BaseSettingsFragment
             String settingsJaws = Settings.System.getString(resolver,
                     Settings.System.OMNIJAWS_WEATHER_ICON_PACK);
             if (settingsJaws == null) {
-                settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE;
+                settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE + "." + DEFAULT_WEATHER_ICON_PREFIX;
             }
             mWeatherIconPack = (ListPreference) findPreference(WEATHER_ICON_PACK);
 
@@ -86,7 +87,7 @@ public class Weather extends BaseSettingsFragment
             int valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
             if (valueJawsIndex == -1) {
                 // no longer found
-                settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE;
+                settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE + "." + DEFAULT_WEATHER_ICON_PREFIX;
                 Settings.System.putString(resolver,
                         Settings.System.OMNIJAWS_WEATHER_ICON_PACK, settingsJaws);
                 valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
