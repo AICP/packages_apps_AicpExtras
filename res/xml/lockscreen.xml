@@ -45,6 +45,12 @@
         android:summary="@string/lockscreen_power_menu_disabled_summary"
         android:defaultValue="false" />
 
+    <com.aicp.extras.preference.SecureSettingSwitchPreference
+        android:key="lockscreen_qs_disabled"
+        android:title="@string/lockscreen_qs_disabled_title"
+        android:summary="@string/lockscreen_qs_disabled_summary"
+        android:defaultValue="false" />
+
     <com.aicp.extras.preference.SystemSettingSwitchPreference
         android:key="lock_screen_custom_notif"
         android:title="@string/lockscreen_maxnotif_title"
