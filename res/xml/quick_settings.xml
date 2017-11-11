@@ -22,6 +22,12 @@
     android:title="@string/quick_settings_title">
 
     <com.aicp.extras.preference.SystemSettingSwitchPreference
+        android:key="qs_style_dark"
+        android:title="@string/qs_style_dark_title"
+        android:summary="@string/qs_style_dark_summary"
+        android:defaultValue="false" />
+     
+    <com.aicp.extras.preference.SystemSettingSwitchPreference
         android:key="music_tile_title"
         android:title="@string/qs_music_tile_track_optional_title"
         android:summary="@string/qs_music_tile_track_optional_summary"
