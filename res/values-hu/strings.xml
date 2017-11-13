@@ -25,27 +25,43 @@
   <string name="status_bar_title">Állapot sáv</string>
   <!-- Bluetooth status -->
   <!-- Statusbar net monitor -->
+  <string name="network_traffic_autohide_threshold_title">Hálózati tevékenység automatkus elrejtési küszöbérték (KB/s)</string>
   <!-- Battery bar -->
   <string name="battery_bar_title">Akkumulátor sáv</string>
   <string name="battery_bar_animate_title">Töltési animáció</string>
   <!-- Aicp statusbar logo -->
   <string name="status_bar_logo_title">AICP logo</string>
+  <string name="status_bar_logo_dialog_title">AICP logó helyzete</string>
   <string name="status_bar_logo_disabled">Tiltva</string>
   <string name="status_bar_logo_left">Bal</string>
   <string name="status_bar_logo_right">Jobb</string>
   <!-- StatusBar weather settings -->
+  <string name="statusbar_weather_summary">Gyorsbeállításokban megjelenő időjárás beállítása</string>
+  <!-- Smart pulldown-->
   <!-- Notifications -->
   <!-- Brightness slider settings -->
+  <string name="brightness_slider_switch">Fényerő csúszka megjelenítése a gyorsbeállítások panelen</string>
   <string name="brightness_icon_title">Fényerő ikon</string>
   <string name="brightness_icon_summary">Mutassa a fényerő ikont a fényerő állító csúszka bal oldalán</string>
   <!-- Quick settings -->
   <!-- Quick 1-finger pull down to access notifications -->
+  <string name="status_bar_quick_qs_pulldown_summary">Gyorsbeállítások teljes legördítése az állapotsáv jobb oldalán</string>
   <!-- Disable music track title in QS tile -->
   <!-- Small quick settings scroller -->
   <!-- QS rows and columns -->
+  <string name="qs_layout_category_title">Gyorsbeállítások elrendezése</string>
   <!-- QS footer warnings -->
   <!-- QS tiles title visibility -->
+  <!-- QS Dark mode -->
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_shadow_title">Fejléc kép sötétítés</string>
+  <string name="status_bar_custom_header_shadow_summary">Jobb láthatóság a világos képeknek</string>
+  <string name="unit_percent">\u0025</string>
+  <string name="header_provider_disabled">Tiltva</string>
+  <string name="custom_header_title">Időtől függő fejléc</string>
   <!-- Recents -->
+  <string name="stock_recents_category">Gyári előzményekpanel</string>
+  <string name="alternative_recents_category">Alternatív előzményekpanel</string>
   <!-- Recents panel settings -->
   <string name="show_clear_all_recents_button_title">Összes törlése Legutóbbi gomb</string>
   <string name="show_clear_all_recents_button_summary">Mutassa az összes törlése gombot a Leutóbbinál</string>
@@ -65,6 +81,7 @@
   <string name="recent_panel_expanded_mode_auto">Auto (alapértelmezett)</string>
   <string name="recent_panel_expanded_mode_always">Mindig</string>
   <string name="recent_panel_expanded_mode_never">Soha</string>
+  <string name="recent_panel_expanded_mode_disabled">Tiltva</string>
   <string name="recent_panel_bg_color_title">Panel háttérszín</string>
   <string name="recent_card_bg_color_title">Kártya háttérszíne</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
@@ -78,6 +95,8 @@
   <!-- Media art -->
   <!-- Lockscreen battery info indicator  -->
   <!-- Lockscreen notif count -->
+  <!-- Power menu on secure lockscreen -->
+  <!-- Disable QS on secure Lockscreen -->
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
@@ -94,13 +113,22 @@
   <string name="toast_icon_summary">Az alkalmazásnak megfelelő ikon kijelzése a buborékkal</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <!-- Show VoLTE icon on statusbar -->
+  <string name="volte_icon_title">VoLTE ikon</string>
+  <string name="volte_icon_summary">VoLTE ikon kijelzése, ha elérhető</string>
+  <!-- Vibrate on plug -->
   <!-- System animations -->
   <string name="system_animations_title">Kijelző és animációk</string>
+  <string name="custom_bootanimation_title">Bootanimáció</string>
+  <string name="custom_bootanimation_summary">Válassza ki a bootanimációt. Minden egyes változtatásakor biztonsági mentés készül a jelenlegi animációról a belső tároló AICP_backup mappába. Amire nincs szükség törölje manuálisan.</string>
   <!-- System behaviour -->
+  <string name="selinux_category">SELinux</string>
+  <string name="selinux_mode_title">SELinux mód</string>
+  <string name="selinux_enforcing_toast_title">SELinux átállítása \"enforcing\"-ra!</string>
   <!-- System extensions -->
   <!-- System app remover -->
   <string name="system_app_remover_title">Rendszer alkalmazás eltávolító</string>
   <!-- Log it -->
+  <string name="log_it_summary">Logcat, kmesg, dmesg</string>
   <string name="logcat_title">Logcat</string>
   <string name="kmesg_title">Kmesg</string>
   <string name="dmesg_title">Dmesg</string>
@@ -118,12 +146,20 @@
   <string name="power_menu_transparency">Kikapcsoló/újraindító menü áttetszőssége</string>
   <string name="power_menu_dialog_dim">Kikapcsoló/újraindító dialógus háttér halványítás mértéke</string>
   <!-- AE settings -->
+  <string name="ae_settings_title">AE testreszabás</string>
+  <string name="ae_settings_summary">Az AICP extrák viselkedésének és kinézetének módosítása</string>
+  <string name="ae_launcher_enabled_summary">AICP extrák megjelenítése az indítón</string>
   <!-- About -->
   <string name="about_title">Rólunk</string>
+  <string name="aicp_website_summary">Látogasson el a AICP honlapjára</string>
   <string name="g_plus_title">G+ közösség</string>
   <string name="aicp_gerrit_title">Gerrit</string>
+  <string name="aicp_gerrit_summary">Látogassa meg a Gerrit-et, hogy tudja min dologzunk jelenleg</string>
   <string name="aicp_changelog_title">Változások</string>
   <string name="aicp_downloads_title">Letöltések</string>
+  <string name="aicp_downloads_summary">Látogassa meg készüléke AICP letöltőközpontját</string>
+  <string name="lineage_extras_summary">Root hozzáadása, root eltávolítása, időjárás-szolgáltatók &#8230;</string>
+  <string name="stats_summary">Belépés/kilépés a névtelen statisztika programba/ból</string>
   <!-- Other / general purpose -->
   <string name="default_string">Alapértelmezett</string>
   <string name="on">Be</string>
@@ -132,4 +168,8 @@
   <string name="hidden_anim_more_nice">SZÉP</string>
   <!-- Sensor block per-package -->
   <!-- Weather - OmniJaws Settings -->
+  <string name="weather_icon_pack_note">Megjegyzés: \u003a új ikoncsomagok telepíthetőek a play store ban a \"Chronus ikons\" ra való kereséssel</string>
+  <!-- Lockscreen Weather -->
+  <!-- Statusbar ticker -->
+  <string name="ticker_disabled">Tiltva</string>
 </resources>

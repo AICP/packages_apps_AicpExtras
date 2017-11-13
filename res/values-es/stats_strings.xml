@@ -19,5 +19,29 @@
 -->
 <resources>
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+  <string name="anonymous_statistics_title">Estadísticas AICP</string>
+  <string name="anonymous_statistics_summary">Ayuda a AICP activando el envío de estadísticas anónimas</string>
+  <string name="anonymous_statistics_warning_title">Acerca de</string>
+  <string name="anonymous_statistics_warning">Activando las estadísticas AICP permitirá el envío de datos no personales a nuestros servidores. La información enviada incluye un identificador único que no compromete su privacidad ni la de sus datos personales. Los datos se envían cada 7 días.\n\nPara ver un ejemplo de los datos que se envían pulse en Previsualizar Datos.</string>
+  <string name="enable_reporting_title">Activar envío estadísticas</string>
+  <string name="disable_reporting_persistent">Deshabilitar de forma permanente</string>
+  <string name="preview_data_title">Previsualizar Datos</string>
+  <string name="view_stats_title">Ver página de estadísticas</string>
+  <string name="anonymous_learn_more">Saber más</string>
+  <string name="last_report_on">Último envío</string>
+  <string name="reporting_interval">Intervalo de envío</string>
+  <plurals name="reporting_interval_days">
+    <item quantity="one">1 día</item>
+    <item quantity="other">%d días</item>
+  </plurals>
+  <string name="next_report_on">Siguiente envío</string>
   <!-- Anonymous Statistics - Preview -->
+  <string name="preview_id_title">ID único</string>
+  <string name="preview_device_title">Dispositivo</string>
+  <string name="preview_version_title">Versión</string>
+  <string name="preview_country_title">País</string>
+  <string name="preview_carrier_title">Operador</string>
+  <string name="preview_romname_title">Nombre de la ROM</string>
+  <string name="preview_romversion_title">Versión AICP</string>
+  <string name="preview_buildtype_title">Tipo de compilación AICP</string>
 </resources>
