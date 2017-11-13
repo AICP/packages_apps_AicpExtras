@@ -46,6 +46,7 @@
   <string name="status_bar_logo_right">右</string>
   <!-- StatusBar weather settings -->
   <string name="statusbar_weather_dialog_title">ステータスバー上の天気</string>
+  <!-- Smart pulldown-->
   <!-- Notifications -->
   <string name="notifications_title">通知</string>
   <!-- Brightness slider settings -->
@@ -63,6 +64,17 @@
   <!-- QS rows and columns -->
   <!-- QS footer warnings -->
   <!-- QS tiles title visibility -->
+  <!-- QS Dark mode -->
+  <!-- QS Headers -->
+  <string name="daylight_header_pack_title">ヘッダー画像パック</string>
+  <string name="status_bar_custom_header_shadow_title">ヘッダー画像の影</string>
+  <string name="status_bar_custom_header_shadow_summary">明るい画像の時に見やすくします</string>
+  <string name="static_header_provider_title">固定</string>
+  <string name="daylight_header_provider_title">ダイナミック</string>
+  <string name="custom_header_provider_title">ヘッダープロパイダ</string>
+  <string name="custom_header_browse_title">インストール済みのヘッダーを表示する</string>
+  <string name="header_provider_disabled">無効</string>
+  <string name="custom_header_title">カスタムヘッダー画像</string>
   <!-- Recents -->
   <string name="recents_title">アプリ履歴</string>
   <!-- Recents panel settings -->
@@ -88,6 +100,7 @@
   <string name="recent_panel_expanded_mode_auto">自動（デフォルト）</string>
   <string name="recent_panel_expanded_mode_always">常に展開</string>
   <string name="recent_panel_expanded_mode_never">展開しない</string>
+  <string name="recent_panel_expanded_mode_disabled">無効</string>
   <string name="recent_panel_bg_color_title">パネルの背景色</string>
   <string name="recent_card_bg_color_title">カードの背景色</string>
   <string name="slim_icon_pack_title">アイコンパック</string>
@@ -111,6 +124,8 @@
   <string name="lockscreen_battery_info_title">バッテリー情報を表示する</string>
   <string name="lockscreen_battery_info_summary">充電中のロック画面に接続した充電器の最大電流/電圧とバッテリーの温度を表示する</string>
   <!-- Lockscreen notif count -->
+  <!-- Power menu on secure lockscreen -->
+  <!-- Disable QS on secure Lockscreen -->
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
@@ -127,6 +142,7 @@
   <string name="toast_icon_summary">トースト通知と共にアプリのアイコンを表示します</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <!-- Show VoLTE icon on statusbar -->
+  <!-- Vibrate on plug -->
   <!-- System animations -->
   <string name="system_animations_title">アニメーション</string>
   <!-- System behaviour -->
@@ -179,4 +195,17 @@
   <!-- Sensor block per-package -->
   <!-- Weather - OmniJaws Settings -->
   <string name="weather_title">天気</string>
+  <!-- Lockscreen Weather -->
+  <string name="lock_screen_weather_category_title">ロック画面</string>
+  <string name="lock_screen_show_weather_title">天気の表示</string>
+  <string name="lock_screen_show_weather_summaryOn">ロック画面に天気を表示する</string>
+  <string name="lock_screen_show_weather_summaryOff">ロック画面に天気を表示しない</string>
+  <string name="lock_screen_show_location_title">現在地の表示</string>
+  <string name="lock_screen_show_location_summaryOn">ロック画面に位置情報を表示する</string>
+  <string name="lock_screen_show_location_summaryOff">ロック画面に位置情報を表示しない</string>
+  <string name="lock_screen_weather_condition_icon_title">天候のアイコンを表示</string>
+  <string name="lock_screen_weather_condition_icon_summaryOn">ロック画面に天候のアイコンを表示する</string>
+  <string name="lock_screen_weather_condition_icon_summaryOff">ロック画面に天候のアイコンを表示しない</string>
+  <!-- Statusbar ticker -->
+  <string name="ticker_disabled">無効</string>
 </resources>

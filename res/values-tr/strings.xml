@@ -39,6 +39,7 @@
   <string name="status_bar_logo_left">Sol</string>
   <string name="status_bar_logo_right">Sağ</string>
   <!-- StatusBar weather settings -->
+  <!-- Smart pulldown-->
   <!-- Notifications -->
   <string name="notifications_title">Bildirimler</string>
   <!-- Brightness slider settings -->
@@ -53,6 +54,13 @@
   <!-- QS rows and columns -->
   <!-- QS footer warnings -->
   <!-- QS tiles title visibility -->
+  <!-- QS Dark mode -->
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_shadow_title">Başlık resminin gölgesi</string>
+  <string name="status_bar_custom_header_shadow_summary">Parlak görüntülerde daha net görüş için</string>
+  <string name="unit_percent">\u0025</string>
+  <string name="header_provider_disabled">Devre dışı</string>
+  <string name="custom_header_title">Günün saatine göre başlık resmi</string>
   <!-- Recents -->
   <string name="recents_title">Son Uygulamalar</string>
   <!-- Recents panel settings -->
@@ -74,6 +82,7 @@
   <string name="recent_panel_expanded_mode_auto">Otomatik (varsayılan)</string>
   <string name="recent_panel_expanded_mode_always">Her zaman</string>
   <string name="recent_panel_expanded_mode_never">Asla</string>
+  <string name="recent_panel_expanded_mode_disabled">Devre dışı</string>
   <string name="recent_panel_bg_color_title">Panel arkaplan rengi</string>
   <string name="recent_card_bg_color_title">Kart arkaplan rengi</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
@@ -87,6 +96,8 @@
   <!-- Media art -->
   <!-- Lockscreen battery info indicator  -->
   <!-- Lockscreen notif count -->
+  <!-- Power menu on secure lockscreen -->
+  <!-- Disable QS on secure Lockscreen -->
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
@@ -104,6 +115,7 @@
   <string name="toast_icon_summary">Toast ile bildirilen uygulama simgesini görüntüle</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <!-- Show VoLTE icon on statusbar -->
+  <!-- Vibrate on plug -->
   <!-- System animations -->
   <string name="system_animations_title">Ekran ve Animasyonlar</string>
   <!-- System behaviour -->
@@ -158,4 +170,7 @@
   <string name="hidden_anim_more_nice">GÜZEL</string>
   <!-- Sensor block per-package -->
   <!-- Weather - OmniJaws Settings -->
+  <!-- Lockscreen Weather -->
+  <!-- Statusbar ticker -->
+  <string name="ticker_disabled">Devre dışı</string>
 </resources>

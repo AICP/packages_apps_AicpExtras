@@ -54,12 +54,16 @@
   <string name="status_bar_logo_left">Sinistro</string>
   <string name="status_bar_logo_right">Destro</string>
   <!-- StatusBar weather settings -->
+  <string name="statusbar_weather_title">Meteo barra di stato</string>
+  <string name="statusbar_weather_summary">Configura dalle impostazioni rapide/Meteo</string>
   <string name="statusbar_weather_dialog_title">Stile meteo nella barra di stato</string>
+  <string name="status_bar_weather_hidden">Nascondi meteo</string>
   <string name="status_bar_temperature_image_show_scale">Mostra la temperatura con scala e immagine</string>
   <string name="status_bar_temperature_image_hide_scale">Mostra la temperatura con l\'immagine senza la scala</string>
   <string name="status_bar_temperature_show_scale_hide_image">Mostra la temperatura con la scala</string>
   <string name="status_bar_temperature_hide_scale_hide_image">Mostra la temperatura senza la scala</string>
   <string name="status_bar_show_image">Mostra immagine</string>
+  <!-- Smart pulldown-->
   <!-- Notifications -->
   <string name="notifications_title">Notifiche</string>
   <!-- Brightness slider settings -->
@@ -93,9 +97,24 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Mostra i titoli dei tiles</string>
   <string name="qs_tile_title_visibility_summary">Mostra i titoli al di sotto dei tile quando controllati</string>
+  <!-- QS Dark mode -->
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">Attiva</string>
+  <string name="daylight_header_pack_title">Pacchetto immagini intestazione</string>
+  <string name="status_bar_custom_header_shadow_title">Ombra immagine intestazione</string>
+  <string name="status_bar_custom_header_shadow_summary">Per una migliore visibilità su immagini luminose</string>
+  <string name="unit_percent">\u0025</string>
+  <string name="static_header_provider_title">Statico</string>
+  <string name="daylight_header_provider_title">Dinamico</string>
+  <string name="custom_header_provider_title">Provider intestazione</string>
+  <string name="custom_header_browse_title">Sfoglia gli header installati</string>
+  <string name="header_provider_disabled">Disabilitato</string>
+  <string name="custom_header_title">Immagine d\'intestazione personalizzata</string>
   <!-- Recents -->
   <string name="recents_title">Recenti</string>
   <string name="recents_summary">Schermata app recenti</string>
+  <string name="stock_recents_category">App recenti stock</string>
+  <string name="alternative_recents_category">App recenti alternative</string>
   <!-- Recents panel settings -->
   <string name="show_clear_all_recents_button_title">Pulsante cancella tutto</string>
   <string name="show_clear_all_recents_button_summary">Mostra il pulsante cancella tutto</string>
@@ -119,6 +138,7 @@
   <string name="recent_panel_expanded_mode_auto">Automatica (default)</string>
   <string name="recent_panel_expanded_mode_always">Sempre</string>
   <string name="recent_panel_expanded_mode_never">Mai</string>
+  <string name="recent_panel_expanded_mode_disabled">Disabilitato</string>
   <string name="recent_panel_bg_color_title">Colore di sfondo del pannello</string>
   <string name="recent_card_bg_color_title">Colore di sfondo delle carte</string>
   <string name="slim_recents_mem_display_long_click_clear_title">Pressione lunga sulla barra di memoria</string>
@@ -134,13 +154,23 @@
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <string name="recent_panel_lefty_mode_title">Mostra nel bordo sinistro</string>
   <string name="recent_panel_lefty_mode_summary">Mostra le app recenti sul bordo sinistro</string>
+  <string name="profile_choose_app">Scegli app</string>
+  <string name="dialog_delete_title">Cancella</string>
+  <string name="dialog_delete_message">Rimuovere l\'elemento selezionato?</string>
+  <string name="slim_blacklist_apps_cat_title">Lista nera</string>
+  <string name="slim_blacklist_apps_title">Lista nera delle app</string>
+  <string name="slim_blacklist_apps_summary">App da non mostrare nel pannello</string>
+  <string name="slim_blacklist_add_apps_title">Aggiungi app</string>
+  <string name="slim_blacklist_add_apps_summary">Tocca qui per aggiungere, tocca l\'app aggiunta per rimuoverla</string>
   <!-- Slim Recent App Sidebar  -->
   <string name="recent_app_sidebar_title">Barra laterale</string>
   <string name="recent_app_sidebar_summary">Mostra le scorciatoie delle app negli altri bordi</string>
   <string name="use_recent_app_sidebar_title">Attiva barra laterale</string>
   <string name="use_recent_app_sidebar_summary">Mostra le scorciatoie delle app negli altri bordi</string>
+  <string name="recent_app_sidebar_content_title">Contenuti nella barra laterale</string>
   <string name="recent_app_sidebar_content_summary">Configura i contenuti nella barra laterale</string>
   <string name="recent_app_sidebar_style_title">Stile barra laterale</string>
+  <string name="recent_app_sidebar_style_summary">Cambia l\'aspetto della barra laterale</string>
   <string name="recent_app_sidebar_hide_labels_title">Nascondi i nomi delle icone</string>
   <string name="recent_app_sidebar_label_color_title">Colore del testo</string>
   <string name="recent_app_sidebar_bg_color_title">Colore di sfondo</string>
@@ -166,6 +196,11 @@
   <string name="lockscreen_battery_info_title">Info batteria nella schermata di blocco</string>
   <string name="lockscreen_battery_info_summary">Indicatore del livello di carica massima di corrente-tensione e la temperatura della batteria sulla schermata di blocco durante la ricarica</string>
   <!-- Lockscreen notif count -->
+  <string name="lockscreen_maxnotif_title">Contatore delle notifiche</string>
+  <string name="lockscreen_maxnotif_summary">Personalizza il contatore delle notifiche</string>
+  <string name="lockscreen_maxnotif_config">Numero massimo di notifiche consentito</string>
+  <!-- Power menu on secure lockscreen -->
+  <!-- Disable QS on secure Lockscreen -->
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Altri tweaks per la UI</string>
   <!-- Volume dialog timeout -->
@@ -198,6 +233,10 @@
   <string name="wake_when_plugged_or_unplugged_title">Risveglia al collegamento</string>
   <string name="wake_when_plugged_or_unplugged_summary">Accendi lo schermo quando colleghi o scolleghi il dispositivo all\'alimentazione</string>
   <!-- Show VoLTE icon on statusbar -->
+  <string name="volte_icon_title">Icona VoLTE</string>
+  <string name="volte_icon_summary">Mostra l\'icona VoLTE quando disponibile</string>
+  <!-- Vibrate on plug -->
+  <string name="vibration_on_charge_state_changed_title">Vibra al collegamento</string>
   <!-- System animations -->
   <string name="system_animations_title">Display e animazioni</string>
   <string name="custom_bootanimation_title">Bootanimation</string>
@@ -312,4 +351,25 @@
   <string name="sensor_block_summary">Impedisci l\'accesso a determinati sensori per alcune app per risparmiare batteria.</string>
   <!-- Weather - OmniJaws Settings -->
   <string name="weather_title">Meteo</string>
+  <string name="weather_config_title">Impostazioni servizio meteo</string>
+  <string name="header_weather_title">Visualizza meteo nell\'intestazione</string>
+  <string name="header_weather_summary">Attiva la visualizzazione del meteo nell\'intestazione del pannello delle notifiche</string>
+  <string name="weather_icon_pack_title">Pacchetto icone condizioni meteo</string>
+  <string name="weather_icon_pack_note">Nota\u003a puoi installare nuovi pacchetti dal play store cercando \"Chronus icons\"</string>
+  <!-- Lockscreen Weather -->
+  <string name="lock_screen_weather_category_title">Schermata di blocco</string>
+  <string name="lock_screen_show_weather_title">Mostra meteo</string>
+  <string name="lock_screen_show_weather_summaryOn">Il meteo è mostrato nella schermata di blocco</string>
+  <string name="lock_screen_show_weather_summaryOff">Il meteo è nascosto nella schermata di blocco</string>
+  <string name="lock_screen_show_location_title">Mostra localizzazione</string>
+  <string name="lock_screen_show_location_summaryOn">La localizzazione è mostrata nella schermata di blocco</string>
+  <string name="lock_screen_show_location_summaryOff">La localizzazione è nascosta nella schermata di blocco</string>
+  <string name="lock_screen_weather_condition_icon_title">Visualizza icona di condizione</string>
+  <string name="lock_screen_weather_condition_icon_summaryOn">L\'icona di condizione è mostrata nella schermata di blocco</string>
+  <string name="lock_screen_weather_condition_icon_summaryOff">L\'icona di condizione è nascosta nella schermata di blocco</string>
+  <!-- Statusbar ticker -->
+  <string name="ticker_mode_title">Ticker per le notifiche nella barra di stato</string>
+  <string name="ticker_disabled">Disabilitato</string>
+  <string name="ticker_enabled">Ticker di notifica</string>
+  <string name="ticker_media_enabled">Ticker per le notifiche e musica</string>
 </resources>

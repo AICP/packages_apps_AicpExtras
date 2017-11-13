@@ -63,6 +63,7 @@
   <string name="status_bar_temperature_show_scale_hide_image">Zobrazit teplotu se stupnicí</string>
   <string name="status_bar_temperature_hide_scale_hide_image">Zobrazit teplotu bez stupnice</string>
   <string name="status_bar_show_image">Zobrazit obrázek</string>
+  <!-- Smart pulldown-->
   <!-- Notifications -->
   <string name="notifications_title">Oznámení</string>
   <!-- Brightness slider settings -->
@@ -96,6 +97,18 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Zobrazit názvy dlaždic</string>
   <string name="qs_tile_title_visibility_summary">Pokud je zaškrtnuto, zobrazí se popisky pod dlaždicemi</string>
+  <!-- QS Dark mode -->
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">Povolit</string>
+  <string name="daylight_header_pack_title">Balík obrázků záhlaví</string>
+  <string name="status_bar_custom_header_shadow_title">Stín obrázků záhlaví</string>
+  <string name="status_bar_custom_header_shadow_summary">Pro lepší viditelnost na jasném pozadí</string>
+  <string name="static_header_provider_title">Statický</string>
+  <string name="daylight_header_provider_title">Dynamický</string>
+  <string name="custom_header_provider_title">Poskytovatel záhlaví</string>
+  <string name="custom_header_browse_title">Procházet nainstalované záhlaví</string>
+  <string name="header_provider_disabled">Zakázáno</string>
+  <string name="custom_header_title">Vlastní obrázek záhlaví</string>
   <!-- Recents -->
   <string name="recents_title">Nedávné</string>
   <string name="recents_summary">Obrazovka nedávných aplikací</string>
@@ -124,6 +137,7 @@
   <string name="recent_panel_expanded_mode_auto">Automaticky (výchozí)</string>
   <string name="recent_panel_expanded_mode_always">Vždy</string>
   <string name="recent_panel_expanded_mode_never">Nikdy</string>
+  <string name="recent_panel_expanded_mode_disabled">Zakázáno</string>
   <string name="recent_panel_bg_color_title">Barva pozadí panelu</string>
   <string name="recent_card_bg_color_title">Barva pozadí karty</string>
   <string name="slim_recents_mem_display_long_click_clear_title">Dlouhý stisk pruhu baterie</string>
@@ -184,6 +198,8 @@
   <string name="lockscreen_maxnotif_title">Počet oznámení</string>
   <string name="lockscreen_maxnotif_summary">Vlastní nastavení počtu oznámení</string>
   <string name="lockscreen_maxnotif_config">Maximální povolený počet oznámení</string>
+  <!-- Power menu on secure lockscreen -->
+  <!-- Disable QS on secure Lockscreen -->
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Další vylepšení UI</string>
   <!-- Volume dialog timeout -->
@@ -218,6 +234,8 @@
   <!-- Show VoLTE icon on statusbar -->
   <string name="volte_icon_title">Ikona VoLTE</string>
   <string name="volte_icon_summary">Zobrazit ikonu VoLTE, když je k dispozici</string>
+  <!-- Vibrate on plug -->
+  <string name="vibration_on_charge_state_changed_title">Vibrovat při připojení</string>
   <!-- System animations -->
   <string name="system_animations_title">Animace</string>
   <string name="custom_bootanimation_title">Spouštěcí animace</string>
@@ -337,4 +355,20 @@
   <string name="header_weather_summary">Povolit zobrazení počasí v záhlaví panelu oznámení</string>
   <string name="weather_icon_pack_title">Balíček ikon stavu počasí</string>
   <string name="weather_icon_pack_note">Poznámka\u003a nové balíčky ikon můžete nainstalovat z obchodu play vyhledáním \"Chronus ikony\"</string>
+  <!-- Lockscreen Weather -->
+  <string name="lock_screen_weather_category_title">Zamykací obrazovka</string>
+  <string name="lock_screen_show_weather_title">Zobrazení počasí</string>
+  <string name="lock_screen_show_weather_summaryOn">Počasí je zobrazeno na zamykací obrazovce</string>
+  <string name="lock_screen_show_weather_summaryOff">Počasí je skryto na zamykací obrazovce</string>
+  <string name="lock_screen_show_location_title">Zobrazení polohy</string>
+  <string name="lock_screen_show_location_summaryOn">Poloha je zobrazena na zamykací obrazovce</string>
+  <string name="lock_screen_show_location_summaryOff">Poloha je skryta na zamykací obrazovce</string>
+  <string name="lock_screen_weather_condition_icon_title">Zobrazení ikon počasí</string>
+  <string name="lock_screen_weather_condition_icon_summaryOn">Ikony počasí jsou zobrazeny na zamykací obrazovce</string>
+  <string name="lock_screen_weather_condition_icon_summaryOff">Ikony počasí jsou skryty na zamykací obrazovce</string>
+  <!-- Statusbar ticker -->
+  <string name="ticker_mode_title">Notifikační oznámení ve stavové liště</string>
+  <string name="ticker_disabled">Zakázáno</string>
+  <string name="ticker_enabled">Notifikační oznámení</string>
+  <string name="ticker_media_enabled">Notifikační a hudební oznámení</string>
 </resources>
