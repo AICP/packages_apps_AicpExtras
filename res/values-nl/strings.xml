@@ -54,12 +54,16 @@
   <string name="status_bar_logo_left">Links</string>
   <string name="status_bar_logo_right">Rechts</string>
   <!-- StatusBar weather settings -->
+  <string name="statusbar_weather_title">Statusbalk weer</string>
+  <string name="statusbar_weather_summary">Configureren van Snelle instellingen/Weer</string>
   <string name="statusbar_weather_dialog_title">Statusbalk weer-stijl</string>
+  <string name="status_bar_weather_hidden">Verberg weer</string>
   <string name="status_bar_temperature_image_show_scale">Temperatuur tonen met eenheid en afbeelding</string>
   <string name="status_bar_temperature_image_hide_scale">Temperatuur tonen met afbeelding, maar zonder eenheid</string>
   <string name="status_bar_temperature_show_scale_hide_image">Temperatuur tonen met eenheid</string>
   <string name="status_bar_temperature_hide_scale_hide_image">Temperatuur tonen zonder eenheid</string>
   <string name="status_bar_show_image">Afbeelding weergeven</string>
+  <!-- Smart pulldown-->
   <!-- Notifications -->
   <string name="notifications_title">Notificaties</string>
   <!-- Brightness slider settings -->
@@ -93,9 +97,24 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Toon titel van tegels</string>
   <string name="qs_tile_title_visibility_summary">Toon titel onder tegel indien geselecteerd</string>
+  <!-- QS Dark mode -->
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">Inschakelen</string>
+  <string name="daylight_header_pack_title">Header afbeeldingpakket</string>
+  <string name="status_bar_custom_header_shadow_title">Achtergrondschaduw</string>
+  <string name="status_bar_custom_header_shadow_summary">Voor een betere zichtbaarheid bij heldere achtergrondbeelden</string>
+  <string name="unit_percent">\u0025</string>
+  <string name="static_header_provider_title">Statisch</string>
+  <string name="daylight_header_provider_title">Dynamisch</string>
+  <string name="custom_header_provider_title">Header provider</string>
+  <string name="custom_header_browse_title">Blader door geïnstalleerde headers</string>
+  <string name="header_provider_disabled">Uitgeschakeld</string>
+  <string name="custom_header_title">Tijdsafhankelijke header</string>
   <!-- Recents -->
   <string name="recents_title">Recente apps</string>
   <string name="recents_summary">Recente apps-scherm</string>
+  <string name="stock_recents_category">Standaard weergave Recente apps</string>
+  <string name="alternative_recents_category">Alternatieve weergave Recente apps</string>
   <!-- Recents panel settings -->
   <string name="show_clear_all_recents_button_title">Knop Alles wissen</string>
   <string name="show_clear_all_recents_button_summary">Toon knop Alles wissen</string>
@@ -119,6 +138,7 @@
   <string name="recent_panel_expanded_mode_auto">Automatisch (standaard)</string>
   <string name="recent_panel_expanded_mode_always">Altijd</string>
   <string name="recent_panel_expanded_mode_never">Nooit</string>
+  <string name="recent_panel_expanded_mode_disabled">Uitgeschakeld</string>
   <string name="recent_panel_bg_color_title">Achtergrondkleur paneelel</string>
   <string name="recent_card_bg_color_title">Achtergrondkleur kaart</string>
   <string name="slim_recents_mem_display_long_click_clear_title">Geheugenbalk lang drukken</string>
@@ -134,13 +154,23 @@
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <string name="recent_panel_lefty_mode_title">Tonen aan de linkerkant</string>
   <string name="recent_panel_lefty_mode_summary">Toon overzicht van actieve apps aan de linkerkant</string>
+  <string name="profile_choose_app">App selecteren</string>
+  <string name="dialog_delete_title">Verwijderen</string>
+  <string name="dialog_delete_message">Geselecteerd item verwijderen?</string>
+  <string name="slim_blacklist_apps_cat_title">Zwarte lijst</string>
+  <string name="slim_blacklist_apps_title">Geblokkeerde apps</string>
+  <string name="slim_blacklist_apps_summary">Niet getoonde of geblokkeerde apps</string>
+  <string name="slim_blacklist_add_apps_title">App toevoegen</string>
+  <string name="slim_blacklist_add_apps_summary">Tik hier om toe te voegen, tik op toegevoegde app om weer te verwijderen</string>
   <!-- Slim Recent App Sidebar  -->
   <string name="recent_app_sidebar_title">App zijbalk</string>
   <string name="recent_app_sidebar_summary">Toon app snelkoppelingen aan de andere kant</string>
   <string name="use_recent_app_sidebar_title">App zijbalk inschakelen</string>
   <string name="use_recent_app_sidebar_summary">Toon app snelkoppelingen aan de andere kant</string>
+  <string name="recent_app_sidebar_content_title">Inhoud zijbalk</string>
   <string name="recent_app_sidebar_content_summary">Configureren van inhoud van de zijbalk app</string>
   <string name="recent_app_sidebar_style_title">Zijbalk stijl</string>
+  <string name="recent_app_sidebar_style_summary">Wijzig het uiterlijk van de zijbalk</string>
   <string name="recent_app_sidebar_hide_labels_title">Verberg pictogram titels</string>
   <string name="recent_app_sidebar_label_color_title">Titel kleur</string>
   <string name="recent_app_sidebar_bg_color_title">Achtergrondkleur</string>
@@ -166,6 +196,11 @@
   <string name="lockscreen_battery_info_title">Accu informatie op vergrendelscherm</string>
   <string name="lockscreen_battery_info_summary">Toon laadstroom, voltage en accutemperatuur op vergrendelscherm</string>
   <!-- Lockscreen notif count -->
+  <string name="lockscreen_maxnotif_title">Notificatie aantal</string>
+  <string name="lockscreen_maxnotif_summary">Aanpassen aantal notificaties</string>
+  <string name="lockscreen_maxnotif_config">Aantal maximaal toegestane notificaties</string>
+  <!-- Power menu on secure lockscreen -->
+  <!-- Disable QS on secure Lockscreen -->
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Andere UI verbeteringen</string>
   <!-- Volume dialog timeout -->
@@ -198,6 +233,10 @@
   <string name="wake_when_plugged_or_unplugged_title">Ontwaken door aansluiten op lader</string>
   <string name="wake_when_plugged_or_unplugged_summary">Scherm aan bij het aansluiten of loskoppelen van een lader</string>
   <!-- Show VoLTE icon on statusbar -->
+  <string name="volte_icon_title">VoLTE pictogram</string>
+  <string name="volte_icon_summary">VoLTE pictogram weergeven indien beschikbaar</string>
+  <!-- Vibrate on plug -->
+  <string name="vibration_on_charge_state_changed_title">Trillen bij aansluiten op lader</string>
   <!-- System animations -->
   <string name="system_animations_title">Display en animaties</string>
   <string name="custom_bootanimation_title">Opstartanimatie</string>
@@ -312,4 +351,25 @@
   <string name="sensor_block_summary">Weiger sommige apps toegang tot bepaalde sensoren om batterij te besparen.</string>
   <!-- Weather - OmniJaws Settings -->
   <string name="weather_title">Weer</string>
+  <string name="weather_config_title">Service-instellingen</string>
+  <string name="header_weather_title">Weergave van het weer in de header</string>
+  <string name="header_weather_summary">Inschakelen weer-achtergronden op meldingenpaneel</string>
+  <string name="weather_icon_pack_title">Pictogrampakket weer</string>
+  <string name="weather_icon_pack_note">Note\u003a je kunt nieuwe pictogrampakketten uit de Playstore installeren door te zoeken naar \"Chronus icons\"</string>
+  <!-- Lockscreen Weather -->
+  <string name="lock_screen_weather_category_title">Vergrendelscherm</string>
+  <string name="lock_screen_show_weather_title">Weer weergeven</string>
+  <string name="lock_screen_show_weather_summaryOn">Weer wordt getoond op vergrendelscherm</string>
+  <string name="lock_screen_show_weather_summaryOff">Weer wordt niet getoond op vergrendelscherm</string>
+  <string name="lock_screen_show_location_title">Locatie weergeven</string>
+  <string name="lock_screen_show_location_summaryOn">Locatie wordt getoond op vergrendelscherm</string>
+  <string name="lock_screen_show_location_summaryOff">Locatie wordt niet getoond op vergrendelscherm</string>
+  <string name="lock_screen_weather_condition_icon_title">Weer-pictogram tonen</string>
+  <string name="lock_screen_weather_condition_icon_summaryOn">Weer-pictogram wordt getoond op vergrendelscherm</string>
+  <string name="lock_screen_weather_condition_icon_summaryOff">Weer-pictogram wordt niet getoond op vergrendelscherm</string>
+  <!-- Statusbar ticker -->
+  <string name="ticker_mode_title">Statusbalk ticker voor notificaties</string>
+  <string name="ticker_disabled">Uitgeschakeld</string>
+  <string name="ticker_enabled">Notificatie ticker</string>
+  <string name="ticker_media_enabled">Ticker voor notificaties en muziek</string>
 </resources>

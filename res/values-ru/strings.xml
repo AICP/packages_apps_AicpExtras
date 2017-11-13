@@ -55,12 +55,16 @@
   <string name="status_bar_logo_left">Слева</string>
   <string name="status_bar_logo_right">Справа</string>
   <!-- StatusBar weather settings -->
+  <string name="statusbar_weather_title">Погода в строке состояния</string>
+  <string name="statusbar_weather_summary">Настройте через быстрые настройки/Погода.</string>
   <string name="statusbar_weather_dialog_title">Стиль погоды в строке состояния</string>
+  <string name="status_bar_weather_hidden">Скрыть погоду</string>
   <string name="status_bar_temperature_image_show_scale">Показывать температуру с единицами измерения и иконкой</string>
   <string name="status_bar_temperature_image_hide_scale">Показывать температуру с иконкой без единиц измерения</string>
   <string name="status_bar_temperature_show_scale_hide_image">Показывать температуру с единицами измерения</string>
   <string name="status_bar_temperature_hide_scale_hide_image">Показывать температуру без единиц измерения</string>
   <string name="status_bar_show_image">Показывать иконку</string>
+  <!-- Smart pulldown-->
   <!-- Notifications -->
   <string name="notifications_title">Уведомления</string>
   <!-- Brightness slider settings -->
@@ -94,9 +98,23 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Показывать заголовки плиток</string>
   <string name="qs_tile_title_visibility_summary">Отображать названия плиток снизу, когда выбрано</string>
+  <!-- QS Dark mode -->
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">Включить</string>
+  <string name="daylight_header_pack_title">Набор изображений для заголовка</string>
+  <string name="status_bar_custom_header_shadow_title">Тень изображения в заголовке</string>
+  <string name="status_bar_custom_header_shadow_summary">Для лучшей видимости на светлых изображениях</string>
+  <string name="static_header_provider_title">Статичный</string>
+  <string name="daylight_header_provider_title">Динамический</string>
+  <string name="custom_header_provider_title">Поставщик заголовка</string>
+  <string name="custom_header_browse_title">Обзор установленных заголовков</string>
+  <string name="header_provider_disabled">Выключен</string>
+  <string name="custom_header_title">Пользовательское изображение в заголовке</string>
   <!-- Recents -->
   <string name="recents_title">Панель недавних приложений</string>
   <string name="recents_summary">Панель недавних приложений</string>
+  <string name="stock_recents_category">Стандартная панель недавних приложений</string>
+  <string name="alternative_recents_category">Альтернативные панели недавних приложений</string>
   <!-- Recents panel settings -->
   <string name="show_clear_all_recents_button_title">Включить кнопку \"Очистить всё\"</string>
   <string name="show_clear_all_recents_button_summary">Показывать кнопку \"Очистить всё\" в панели недавних приложений</string>
@@ -120,6 +138,7 @@
   <string name="recent_panel_expanded_mode_auto">Авто (по умолчанию)</string>
   <string name="recent_panel_expanded_mode_always">Всегда</string>
   <string name="recent_panel_expanded_mode_never">Никогда</string>
+  <string name="recent_panel_expanded_mode_disabled">Выключен</string>
   <string name="recent_panel_bg_color_title">Цвет фона панели</string>
   <string name="recent_card_bg_color_title">Цвет фона карточки</string>
   <string name="slim_recents_mem_display_long_click_clear_title">Долгое нажатие на панель памяти</string>
@@ -135,13 +154,23 @@
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <string name="recent_panel_lefty_mode_title">Отображать слева</string>
   <string name="recent_panel_lefty_mode_summary">Отображать панель недавних приложений слева</string>
+  <string name="profile_choose_app">Выбрать приложение</string>
+  <string name="dialog_delete_title">Удалить</string>
+  <string name="dialog_delete_message">Удалить выбранный элемент?</string>
+  <string name="slim_blacklist_apps_cat_title">Чёрный список</string>
+  <string name="slim_blacklist_apps_title">Черный список приложений</string>
+  <string name="slim_blacklist_apps_summary">Скрытые в панели приложения</string>
+  <string name="slim_blacklist_add_apps_title">Добавить приложение</string>
+  <string name="slim_blacklist_add_apps_summary">Нажмите здесь, чтобы добавить, нажмите на добавленное приложение, чтобы удалить его</string>
   <!-- Slim Recent App Sidebar  -->
   <string name="recent_app_sidebar_title">Боковая панель недавних приложений</string>
   <string name="recent_app_sidebar_summary">Отображать значки приложений с другого края</string>
   <string name="use_recent_app_sidebar_title">Включить боковую панель приложений</string>
   <string name="use_recent_app_sidebar_summary">Отображать значки приложений с другого края</string>
+  <string name="recent_app_sidebar_content_title">Содержимое боковой панели</string>
   <string name="recent_app_sidebar_content_summary">Настроить содержимое боковой панели приложений</string>
   <string name="recent_app_sidebar_style_title">Вид боковой панели</string>
+  <string name="recent_app_sidebar_style_summary">Изменить вид боковой панели</string>
   <string name="recent_app_sidebar_hide_labels_title">Скрыть подписи значков</string>
   <string name="recent_app_sidebar_label_color_title">Цвет подписи значков</string>
   <string name="recent_app_sidebar_bg_color_title">Цвет фона</string>
@@ -167,6 +196,11 @@
   <string name="lockscreen_battery_info_title">Информация о батарее</string>
   <string name="lockscreen_battery_info_summary">Показывать примерные максимальные ток, напряжение и температуру аккумулятора на экране блокировки во время зарядки</string>
   <!-- Lockscreen notif count -->
+  <string name="lockscreen_maxnotif_title">Счётчик уведомлений</string>
+  <string name="lockscreen_maxnotif_summary">Настройка счётчика уведомлений</string>
+  <string name="lockscreen_maxnotif_config">Максимальное количество разрешенных уведомлений</string>
+  <!-- Power menu on secure lockscreen -->
+  <!-- Disable QS on secure Lockscreen -->
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Другие настройки интерфейса</string>
   <!-- Volume dialog timeout -->
@@ -199,6 +233,10 @@
   <string name="wake_when_plugged_or_unplugged_title">Включение экрана при при подключении зарядки</string>
   <string name="wake_when_plugged_or_unplugged_summary">Включать экран при подключении или отключении источника питания</string>
   <!-- Show VoLTE icon on statusbar -->
+  <string name="volte_icon_title">Значок VoLTE</string>
+  <string name="volte_icon_summary">Отображение значка VoLTE при наличии</string>
+  <!-- Vibrate on plug -->
+  <string name="vibration_on_charge_state_changed_title">Вибрировать при подключении зарядки</string>
   <!-- System animations -->
   <string name="system_animations_title">Анимации</string>
   <string name="custom_bootanimation_title">Анимация загрузки</string>
@@ -313,4 +351,25 @@
   <string name="sensor_block_summary">Заблокировать доступ к датчикам для некоторых приложений для экономии заряда батареи.</string>
   <!-- Weather - OmniJaws Settings -->
   <string name="weather_title">Погода</string>
+  <string name="weather_config_title">Настройки службы</string>
+  <string name="header_weather_title">Заголовок просмотра погоды</string>
+  <string name="header_weather_summary">Включить отображение погоды в заголовке панели уведомлений</string>
+  <string name="weather_icon_pack_title">Набор значков погодных условий</string>
+  <string name="weather_icon_pack_note">Примечание\u003a вы можете установить новые пакеты значков из Магазина приложений при помощи поиска \"Chronus icons\"</string>
+  <!-- Lockscreen Weather -->
+  <string name="lock_screen_weather_category_title">Погода на экране блокировки</string>
+  <string name="lock_screen_show_weather_title">Погода на экране блокировки</string>
+  <string name="lock_screen_show_weather_summaryOn">Погода отображается на экране блокировки</string>
+  <string name="lock_screen_show_weather_summaryOff">Погода скрыта на экране блокировки</string>
+  <string name="lock_screen_show_location_title">Метоположение на экране блокировки</string>
+  <string name="lock_screen_show_location_summaryOn">Метоположение отображается на экране блокировки</string>
+  <string name="lock_screen_show_location_summaryOff">Метоположение скрыто на экране блокировки</string>
+  <string name="lock_screen_weather_condition_icon_title">Иконка погоды на экране блокировки</string>
+  <string name="lock_screen_weather_condition_icon_summaryOn">Иконка погоды отображается на экране блокировки</string>
+  <string name="lock_screen_weather_condition_icon_summaryOff">Иконка погоды скрыта на экране блокировки</string>
+  <!-- Statusbar ticker -->
+  <string name="ticker_mode_title">Бегущая строка в строке состояния</string>
+  <string name="ticker_disabled">Выключен</string>
+  <string name="ticker_enabled">Бегущей строка включена</string>
+  <string name="ticker_media_enabled">Бегущая строка уведомлений и музыки включена</string>
 </resources>

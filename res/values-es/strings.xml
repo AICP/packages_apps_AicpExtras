@@ -20,6 +20,7 @@
 <resources>
   <!-- Dashboard -->
   <string name="user_interface_category">Interfaz de usuario</string>
+  <string name="system_category">Sistema</string>
   <string name="other_category">Otros</string>
   <!-- Status bar -->
   <string name="status_bar_title">Barra de estado</string>
@@ -27,8 +28,15 @@
   <string name="bluetooth_battery_title">Mostrar estado de la batería en Blueetooth</string>
   <string name="bluetooth_battery_summary">Muestra, si está disponible, el estado de la batería del dispositivo conectado por bluetooth.</string>
   <!-- Statusbar net monitor -->
+  <string name="network_traffic_state_title">Mostrar la actividad de red en la barra de estado</string>
+  <string name="network_traffic_autohide_threshold_title">Umbral de actividad de red para autoocultarse (KB/s)</string>
   <!-- Battery bar -->
   <string name="battery_bar_title">Barra de batería</string>
+  <string name="battery_bar_color_title">Color</string>
+  <string name="battery_bar_charging_color_title">Color durante la carga</string>
+  <string name="battery_bar_battery_low_color_title">Color de batería baja</string>
+  <string name="battery_bar_style_title">Alineación</string>
+  <string name="battery_bar_thickness_title">Grosor</string>
   <string name="battery_bar_animate_title">Animación de carga</string>
   <string name="battery_bar_style_regular">Regular</string>
   <string name="battery_bar_style_center_mirrored">Centrada-espejo</string>
@@ -41,19 +49,26 @@
   <string name="battery_bar_blend_color_reverse_summary_on">Lleno &#8594; vacío: rojo &#8594; verde &#8594; azul &#8594; rojo</string>
   <!-- Aicp statusbar logo -->
   <string name="status_bar_logo_title">Logo de AICP</string>
+  <string name="status_bar_logo_dialog_title">Posición del logo AICP</string>
   <string name="status_bar_logo_disabled">Deshabilitada</string>
   <string name="status_bar_logo_left">Izquierda</string>
   <string name="status_bar_logo_right">Derecha</string>
   <!-- StatusBar weather settings -->
+  <string name="statusbar_weather_title">Clima en la barra de estado</string>
+  <string name="statusbar_weather_summary">Configurar desde Ajustes Rápidos/Clima</string>
   <string name="statusbar_weather_dialog_title">Estilo del clima en barra de estado</string>
+  <string name="status_bar_weather_hidden">Ocultar el clima</string>
   <string name="status_bar_temperature_image_show_scale">Mostrar la temperatura con escala e imágen</string>
   <string name="status_bar_temperature_image_hide_scale">Mostrar temperatura con imágen sin escala</string>
   <string name="status_bar_temperature_show_scale_hide_image">Mostrar temperatura con escala</string>
   <string name="status_bar_temperature_hide_scale_hide_image">Mostrar temperatura sin escala</string>
   <string name="status_bar_show_image">Mostrar imágen</string>
+  <!-- Smart pulldown-->
   <!-- Notifications -->
   <string name="notifications_title">Notificaciones</string>
   <!-- Brightness slider settings -->
+  <string name="brightness_slider_settings_title">Ajustes del deslizador de brillo</string>
+  <string name="brightness_slider_switch">Mostrar deslizador de brillo en los Ajustes rápidos</string>
   <string name="brightness_icon_title">Icono de brillo </string>
   <string name="brightness_icon_summary">Muestra un icono a la izquierda de la barra de brillo para ajustar el brillo automático</string>
   <string name="brightness_icon_position_title">Posición del icono de brillo</string>
@@ -62,6 +77,8 @@
   <!-- Quick settings -->
   <string name="quick_settings_title">Ajustes rápidos</string>
   <!-- Quick 1-finger pull down to access notifications -->
+  <string name="status_bar_quick_qs_pulldown">Despliegue rápido de los Ajustes rápidos</string>
+  <string name="status_bar_quick_qs_pulldown_summary">Deslizar desde la barra de estado por el lado derecho para mostrar rápidamente los paneles de ajustes rápidos</string>
   <!-- Disable music track title in QS tile -->
   <string name="qs_music_tile_track_optional_title">Título de la pista de audio en ajuste rápido</string>
   <string name="qs_music_tile_track_optional_summary">Muestra el título de la pista de audio en el nombre del ajuste rápido</string>
@@ -69,12 +86,35 @@
   <string name="qqs_scroll_title">Desplazamiento de ajustes rápidos</string>
   <string name="qqs_scroll_summary">Permite desplazarse a través de los ajustes rápidos pequeños</string>
   <!-- QS rows and columns -->
+  <string name="qs_layout_category_title">Diseño de los ajustes rápidos</string>
+  <string name="qs_rows_portrait_title">Filas en modo vertical</string>
+  <string name="qs_rows_landscape_title">Modo paisaje</string>
+  <string name="qs_columns_portrait_title">Filas en modo vertical</string>
+  <string name="qs_columns_landscape_title">Modo paisaje</string>
   <!-- QS footer warnings -->
   <string name="qs_footer_warnings_title">Avisos en ajustes rápidos</string>
   <string name="qs_footer_warnings_summary">Muestra un aviso bajo el panel de ajustes rápidos cuando la red se monitoriza por una aplicación externa o una vpn</string>
   <!-- QS tiles title visibility -->
+  <string name="qs_tile_title_visibility_title">Mostrar título del icono</string>
+  <string name="qs_tile_title_visibility_summary">Mostrar título debajo de si está habilitado</string>
+  <!-- QS Dark mode -->
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">Habilitar</string>
+  <string name="daylight_header_pack_title">Paquete de imágenes</string>
+  <string name="status_bar_custom_header_shadow_title">Sombra de imágen de cabecera</string>
+  <string name="status_bar_custom_header_shadow_summary">Para mejorar la visibilidad en imágenes brillantes</string>
+  <string name="unit_percent">\u0025</string>
+  <string name="static_header_provider_title">Estático</string>
+  <string name="daylight_header_provider_title">Dinámico</string>
+  <string name="custom_header_provider_title">Proveedor de imágenes</string>
+  <string name="custom_header_browse_title">Explorar imágenes instaladas</string>
+  <string name="header_provider_disabled">Deshabilitada</string>
+  <string name="custom_header_title">Imágen cabecera personalizada</string>
   <!-- Recents -->
   <string name="recents_title">Aps. recientes</string>
+  <string name="recents_summary">Panel de Recientes</string>
+  <string name="stock_recents_category">Panel recientes stock</string>
+  <string name="alternative_recents_category">Panel recientes alternativo</string>
   <!-- Recents panel settings -->
   <string name="show_clear_all_recents_button_title">Habilitar botón de cerrar todo</string>
   <string name="show_clear_all_recents_button_summary">Muestra el botón Cerrar Todo en la pantalla de aps. recientes</string>
@@ -98,6 +138,7 @@
   <string name="recent_panel_expanded_mode_auto">Automático (predeterminado)</string>
   <string name="recent_panel_expanded_mode_always">Siempre</string>
   <string name="recent_panel_expanded_mode_never">Nunca</string>
+  <string name="recent_panel_expanded_mode_disabled">Deshabilitada</string>
   <string name="recent_panel_bg_color_title">Color de fondo del panel</string>
   <string name="recent_card_bg_color_title">Color de fondo de las tarjetas</string>
   <string name="slim_recents_mem_display_long_click_clear_title">Pulsación larga en barra de memoria</string>
@@ -113,13 +154,23 @@
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <string name="recent_panel_lefty_mode_title">Mostrar en la lado izquierdo</string>
   <string name="recent_panel_lefty_mode_summary">Muestra el panel en el lado izquierdo de la pantalla</string>
+  <string name="profile_choose_app">Elegir aplicación</string>
+  <string name="dialog_delete_title">Eliminar</string>
+  <string name="dialog_delete_message">¿Eliminar el elemento seleccionado?</string>
+  <string name="slim_blacklist_apps_cat_title">Lista negra</string>
+  <string name="slim_blacklist_apps_title">Lista negra de aps.</string>
+  <string name="slim_blacklist_apps_summary">Aplicaciones que no se muestran en el panel</string>
+  <string name="slim_blacklist_add_apps_title">Añadir aplicación</string>
+  <string name="slim_blacklist_add_apps_summary">Toque aquí para agregar, toque en aplicación agregada para quitarlo</string>
   <!-- Slim Recent App Sidebar  -->
   <string name="recent_app_sidebar_title">Barra de aplicaciones lateral</string>
   <string name="recent_app_sidebar_summary">Mostrar accesos directos en el otro lado</string>
   <string name="use_recent_app_sidebar_title">Habilitar barra de aplicaciones</string>
   <string name="use_recent_app_sidebar_summary">Mostrar accesos directos en el otro lado</string>
+  <string name="recent_app_sidebar_content_title">Contenido de la barra lateral</string>
   <string name="recent_app_sidebar_content_summary">Configurar el contenido de la barra de aplicacionesr</string>
   <string name="recent_app_sidebar_style_title">Estilo</string>
+  <string name="recent_app_sidebar_style_summary">Cambiar el aspecto de la barra lateral</string>
   <string name="recent_app_sidebar_hide_labels_title">Ocultar etiquetas de los iconos</string>
   <string name="recent_app_sidebar_label_color_title">Color de etiqueta</string>
   <string name="recent_app_sidebar_bg_color_title">Color de fondo</string>
@@ -134,8 +185,10 @@
   <string name="slim_recents_mem_display_color">Color de la barra</string>
   <string name="slim_recents_mem_display_text_color">Color del texto</string>
   <!-- Lockscreen -->
-  <string name="lockscreen_title">Clima</string>
+  <string name="lockscreen_title">Pantalla de bloqueo</string>
   <!-- Double tap to sleep on lockscreen -->
+  <string name="double_tap_sleep_lockscreen">Doble toque para apagar pantalla</string>
+  <string name="double_tap_sleep_lockscreen_summary">Doble toque en pantalla de bloqueo para apagar la pantalla</string>
   <!-- Media art -->
   <string name="media_art_title">Imágen de pista en reproducción</string>
   <string name="media_art_summary">Habilita la imágen de pista en reproducción en la pantalla de bloqueo</string>
@@ -143,25 +196,51 @@
   <string name="lockscreen_battery_info_title">Información de batería en la pantalla de bloqueo</string>
   <string name="lockscreen_battery_info_summary">Muestra el voltaje y la temperatura de la batería en la pantalla de bloqueo mientras se carga</string>
   <!-- Lockscreen notif count -->
+  <string name="lockscreen_maxnotif_title">Contador de notificaciones</string>
+  <string name="lockscreen_maxnotif_summary">Personalizar contador de notificaciones</string>
+  <string name="lockscreen_maxnotif_config">Número máximo de notificaciones permitidas</string>
+  <!-- Power menu on secure lockscreen -->
+  <!-- Disable QS on secure Lockscreen -->
   <!-- Other UI tweaks -->
+  <string name="other_ui_title">Otros ajustes de interfaz de usuario</string>
   <!-- Volume dialog timeout -->
   <string name="volume_dialog_timeout_title">Tiempo de espera panel de volumen</string>
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Sonido al capturar pantalla</string>
   <string name="screenshot_sound_summary">Reproduce un sonido cuando se hace una captura de pantalla</string>
   <!-- Double tap navbar to sleep -->
+  <string name="double_tap_sleep_navbar">Doble toque en barra de estado para apagar pantalla</string>
+  <string name="double_tap_sleep_navbar_summary">Doble toque en la barra de navegación para apagar la pantalla</string>
   <!-- Swap volume keys based on device rotation -->
+  <string name="swap_volume_buttons">Intercambiar los botones de volumen</string>
+  <string name="swap_volume_buttons_summary">Intercambiar los botones de volumen teniendo en cuenta la rotación del dispositivo</string>
   <!-- Volume keys control media stream -->
+  <string name="volume_keys_control_media_stream_title">Las teclas de volumen controlan el volumen multimedia</string>
+  <string name="volume_keys_control_media_stream_summary">Panel de volumen mostrará el control deslizante de volumen de los medios de comunicación por defecto</string>
   <!-- Volume keys control music playback -->
+  <string name="volume_rocker_music_controls_title">Control de reproducción</string>
+  <string name="volume_rocker_music_controls_summary">Cuando la pantalla está apagada, mantener presionadas las teclas de volumen cambiará las pistas de música</string>
   <!-- setting: show CPU info-->
+  <string name="show_cpu_info">Mostrar información de la CPU</string>
+  <string name="show_cpu_info_summary">Muestra la información actual de la CPU en pantalla</string>
   <!-- Launch music player when headset is connected -->
+  <string name="headset_connect_player_title">Lanzamiento de la aplicación música en la conexión de auriculares</string>
+  <string name="headset_connect_player_summary">Iniciar el reproductor de música por defecto al conectar los auriculares</string>
   <!-- Toast icon switch -->
   <string name="toast_icon_title">Icono de notificaciones</string>
   <string name="toast_icon_summary">Muestra el icono de la aplicación que dispara la notificación</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
+  <string name="wake_when_plugged_or_unplugged_title">Encender al conectar</string>
+  <string name="wake_when_plugged_or_unplugged_summary">Enciende la patanlla cuando se conecta o se desconecta el cargador</string>
   <!-- Show VoLTE icon on statusbar -->
+  <string name="volte_icon_title">Icono de voLTE</string>
+  <string name="volte_icon_summary">Mostrar icono de VoLTE cuando esté disponible</string>
+  <!-- Vibrate on plug -->
+  <string name="vibration_on_charge_state_changed_title">Vibrar al conectar</string>
   <!-- System animations -->
   <string name="system_animations_title">Pantalla y animaciones</string>
+  <string name="custom_bootanimation_title">Bootanimation</string>
+  <string name="custom_bootanimation_summary">Seleccione su nueva animación de arranque. \nOn cada cambio, animación actual hacer copias a la carpeta de almacenamiento de información/AOKP_ota con fecha actual. Los antiguos deben eliminar manualmente si no se necesita.</string>
   <string name="bootanimation_preview">Previsualización de la animación</string>
   <string name="bootanimation_set_custom">Establecer personalizada...</string>
   <string name="bootanimation_creating_preview">Creando precisualización...</string>
@@ -171,16 +250,21 @@
   <string name="bootanimation_apply">Aplicar</string>
   <string name="bootanimation_install_successful">Nueva animación de inicio aplicada satisfactoriamente.</string>
   <!-- System behaviour -->
+  <string name="system_behaviour_title">Comportamiento del sistema</string>
+  <string name="selinux_category">SELinux</string>
   <string name="selinux_explanation_summary">SELinux es un conjunto de modificaciones del kernel y utilidades a nivel de usuario. Cambiando el modo puede ocasionar efectos no deseados. Usar bajo su responsabilidad.</string>
+  <string name="selinux_mode_title">Modo SELinux</string>
   <string name="selinux_permissive_summary">Permisivo</string>
   <string name="selinux_enforcing_summary">Obligatorio</string>
   <string name="selinux_persistence_title">Mantener tras reiniciar</string>
   <string name="selinux_persistence_summary">Restaura el estado de SELinux anterior al reiniciar</string>
   <string name="selinux_permissive_toast_title">¡SELinux establevido a permisivo!</string>
+  <string name="selinux_enforcing_toast_title">¡Selinux establece hacer cumplir!</string>
   <!-- System extensions -->
   <string name="system_extensions_title">Sistema</string>
   <!-- System app remover -->
   <string name="system_app_remover_title">Gestor de aps. de sistema</string>
+  <string name="system_app_remover_summary">Eliminar aplicaciones instaladas</string>
   <string name="system_app_remover_message_delete">¿Está seguro que desea eliminar esta aplicación?</string>
   <string name="system_app_remover_message_noselect">No hay nada seleccionado</string>
   <!-- Log it -->
@@ -199,6 +283,7 @@
   <string name="log_it_share_type_title">Forma de envío</string>
   <string name="log_it_share_type_zip">Archivo ZIP</string>
   <string name="log_it_share_type_haste">Subir a AICP ya</string>
+  <string name="log_it_share_via">Compartir a través de</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Estilo de paneles</string>
   <!-- Volume dialog opacity -->
@@ -218,19 +303,47 @@
   <string name="power_menu_transparency">Transparencia del menú de apagado</string>
   <string name="power_menu_dialog_dim">Umbral de difuminado del menú de apagado</string>
   <!-- AE settings -->
+  <string name="ae_settings_title">Personalización</string>
+  <string name="ae_settings_summary">Personalizar el aspecto y comportamiento de los Extras de la Aicp</string>
+  <string name="theme_title">Tema</string>
+  <string name="theme_default">Configuración predeterminada</string>
+  <string name="theme_dark_amber">Tema oscuro</string>
+  <string name="ae_launcher_enabled_title">Mostrar icono del launcher</string>
+  <string name="ae_launcher_enabled_summary">Mostrar Extras AICP en launcher</string>
+  <string name="ae_launcher_enabled_update">Visibilidad del icono de Launcher actualizada. Podría tomar algún tiempo para que el cambio surta efecto</string>
   <!-- About -->
   <string name="about_title">Acerca de</string>
+  <string name="about_summary">Información de la ROM</string>
+  <string name="weblinks_category">Enlaces</string>
+  <string name="info_category">Información</string>
+  <string name="aicp_website_title">Sitio web</string>
+  <string name="aicp_website_summary">Visite la página web de ANWB</string>
   <string name="g_plus_title">Conunidad G+</string>
+  <string name="g_plus_summary">Visitar nuestra comunidad en Google+</string>
   <string name="aicp_gerrit_title">Gerrit</string>
+  <string name="aicp_gerrit_summary">Visitar nuestro Gerrit para saber en qué estamos trabajando</string>
   <string name="aicp_changelog_title">Lista de cambios</string>
+  <string name="aicp_changelog_summary">Ver la lista de cambios recientes de AICP</string>
   <string name="aicp_downloads_title">Descargas</string>
+  <string name="aicp_downloads_summary">Visitar la página de descargas de AICP para tu dispositivo</string>
+  <string name="aicp_ota_title">Actualizaciones del sistema</string>
   <string name="aicp_ota_summary">Comprobar actualizaciones de la ROM actual</string>
   <string name="lineage_extras_title">Descargas extra de lineage</string>
+  <string name="lineage_extras_summary">Addon de root, desinstalador de root, los proveedores de clima;</string>
+  <string name="stats_title">Estadísticas</string>
+  <string name="stats_summary">Activar/Desactivar envío de estadísticas anónimas</string>
+  <string name="device_maintainer_title">Responsable del dispositivo</string>
+  <string name="device_maintainer_dialog">Responsable del dispositivo</string>
+  <string name="device_maintainers_dialog">Encargados de dispositivos</string>
   <string name="device_maintainer_default">Desconocido</string>
   <!-- Other / general purpose -->
   <string name="default_string">Predeterminado</string>
   <string name="on">Activado</string>
   <string name="off">Desactivado</string>
+  <string name="systemui_restart_title">SystemUI reinicio requerido</string>
+  <string name="systemui_restart_message">Para que todos los cambios surtan efecto, SystemUI es necesario. ¿Reiniciar el SystemUI ahora?</string>
+  <string name="cannot_get_su">Error en la acción debido a que la falta de acceso de superusuario</string>
+  <string name="launcher_shortcut_disabled_message">Acceso directo deshabilitado</string>
   <string name="hidden_anim_activity_title">Hora de Yoga!!!</string>
   <string name="hidden_anim_more_nice">AGRADABLE</string>
   <!-- Sensor block per-package -->
@@ -238,4 +351,25 @@
   <string name="sensor_block_summary">Bloquea el acceso a ciertos sensores de algunas aplicaciones para ahorrar batería.</string>
   <!-- Weather - OmniJaws Settings -->
   <string name="weather_title">Clima</string>
+  <string name="weather_config_title">Ajustes del servicio</string>
+  <string name="header_weather_title">Clima</string>
+  <string name="header_weather_summary">Habilitar clima en la cabecera del panel de notificaciones</string>
+  <string name="weather_icon_pack_title">Paquete de iconos de clima</string>
+  <string name="weather_icon_pack_note">Nota\u003a puede instalar nuevos paquetes de iconos desde play store buscando \"Chronus iconos\"</string>
+  <!-- Lockscreen Weather -->
+  <string name="lock_screen_weather_category_title">Clima</string>
+  <string name="lock_screen_show_weather_title">Mostrar clima</string>
+  <string name="lock_screen_show_weather_summaryOn">El clima se mostrará en la pantalla de bloqueo</string>
+  <string name="lock_screen_show_weather_summaryOff">El clima no se mostrará en la pantalla de bloqueo</string>
+  <string name="lock_screen_show_location_title">Mostrar ubicación</string>
+  <string name="lock_screen_show_location_summaryOn">La ubicación se mostrará en la pantalla de bloqueo</string>
+  <string name="lock_screen_show_location_summaryOff">La ubicación no se mostrará en la pantalla de bloqueo</string>
+  <string name="lock_screen_weather_condition_icon_title">Mostrar iconos</string>
+  <string name="lock_screen_weather_condition_icon_summaryOn">El icono del clima se mostrará en la pantalla de bloqueo</string>
+  <string name="lock_screen_weather_condition_icon_summaryOff">El icono del clima no se mostrará en la pantalla de bloqueo</string>
+  <!-- Statusbar ticker -->
+  <string name="ticker_mode_title">Ticker de notificación de barra de estado</string>
+  <string name="ticker_disabled">Deshabilitada</string>
+  <string name="ticker_enabled">Texto de notificación en la barra de estado</string>
+  <string name="ticker_media_enabled">Ticker De música y notificaciones</string>
 </resources>

@@ -45,6 +45,7 @@
   <string name="status_bar_logo_left">左侧</string>
   <string name="status_bar_logo_right">右侧</string>
   <!-- StatusBar weather settings -->
+  <!-- Smart pulldown-->
   <!-- Notifications -->
   <string name="notifications_title">通知</string>
   <!-- Brightness slider settings -->
@@ -65,6 +66,18 @@
   <!-- QS rows and columns -->
   <!-- QS footer warnings -->
   <!-- QS tiles title visibility -->
+  <!-- QS Dark mode -->
+  <!-- QS Headers -->
+  <string name="daylight_header_pack_title">顶部图像包</string>
+  <string name="status_bar_custom_header_shadow_title">顶部图像阴影</string>
+  <string name="status_bar_custom_header_shadow_summary">在较明亮的图片下可以取得较好的可见性</string>
+  <string name="unit_percent">\u0025</string>
+  <string name="static_header_provider_title">静态</string>
+  <string name="daylight_header_provider_title">动态</string>
+  <string name="custom_header_provider_title">顶部图像提供者</string>
+  <string name="custom_header_browse_title">浏览以选用</string>
+  <string name="header_provider_disabled">禁用</string>
+  <string name="custom_header_title">自定义顶部图像</string>
   <!-- Recents -->
   <string name="recents_title">最近任务面板</string>
   <!-- Recents panel settings -->
@@ -82,6 +95,7 @@
   <string name="systemui_recents_mem_display_summaryOn">内存栏已启用</string>
   <string name="systemui_recents_mem_display_summaryOff">内存栏已禁用</string>
   <!-- Slim recents -->
+  <string name="recent_panel_expanded_mode_disabled">禁用</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <!-- Slim Recent App Sidebar  -->
   <!-- Slim recents membar -->
@@ -95,6 +109,8 @@
   <string name="lockscreen_battery_info_title">锁屏电池信息</string>
   <string name="lockscreen_battery_info_summary">在充电时在锁定屏幕上显示充电器最大电流电压和电池温度</string>
   <!-- Lockscreen notif count -->
+  <!-- Power menu on secure lockscreen -->
+  <!-- Disable QS on secure Lockscreen -->
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
@@ -111,6 +127,7 @@
   <string name="toast_icon_summary">提示栏显示相应的应用图标</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <!-- Show VoLTE icon on statusbar -->
+  <!-- Vibrate on plug -->
   <!-- System animations -->
   <string name="system_animations_title">显示和动画</string>
   <!-- System behaviour -->
@@ -168,4 +185,7 @@
   <string name="hidden_anim_more_nice">漂亮</string>
   <!-- Sensor block per-package -->
   <!-- Weather - OmniJaws Settings -->
+  <!-- Lockscreen Weather -->
+  <!-- Statusbar ticker -->
+  <string name="ticker_disabled">禁用</string>
 </resources>

@@ -42,6 +42,7 @@
   <string name="status_bar_logo_left">Gauche</string>
   <string name="status_bar_logo_right">Droit</string>
   <!-- StatusBar weather settings -->
+  <!-- Smart pulldown-->
   <!-- Notifications -->
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Curseur de luminosité</string>
@@ -54,6 +55,13 @@
   <!-- QS rows and columns -->
   <!-- QS footer warnings -->
   <!-- QS tiles title visibility -->
+  <!-- QS Dark mode -->
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_shadow_title">Ombre</string>
+  <string name="status_bar_custom_header_shadow_summary">Appliquer une ombre sur l\'image d\'arrière-plan de l\'en-tête contextuel, pour une meilleure visibilité des images lumineuses</string>
+  <string name="unit_percent">\u0025</string>
+  <string name="header_provider_disabled">Désactivé</string>
+  <string name="custom_header_title">En-tête contextuel</string>
   <!-- Recents -->
   <string name="recents_summary">Écran des applications récentes</string>
   <!-- Recents panel settings -->
@@ -75,6 +83,7 @@
   <string name="recent_panel_expanded_mode_auto">Automatique (par défaut)</string>
   <string name="recent_panel_expanded_mode_always">Toujours</string>
   <string name="recent_panel_expanded_mode_never">Jamais</string>
+  <string name="recent_panel_expanded_mode_disabled">Désactivé</string>
   <string name="recent_panel_bg_color_title">Couleur d\'arrière-plan du panneau</string>
   <string name="recent_card_bg_color_title">Couleur de fond de carte</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
@@ -90,6 +99,8 @@
   <!-- Media art -->
   <!-- Lockscreen battery info indicator  -->
   <!-- Lockscreen notif count -->
+  <!-- Power menu on secure lockscreen -->
+  <!-- Disable QS on secure Lockscreen -->
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
@@ -110,6 +121,7 @@
   <string name="wake_when_plugged_or_unplugged_title">Réveiller au branchement</string>
   <string name="wake_when_plugged_or_unplugged_summary">Allumer l\'écran lorsque l\'appareil est connecté à une source d\'alimentation</string>
   <!-- Show VoLTE icon on statusbar -->
+  <!-- Vibrate on plug -->
   <!-- System animations -->
   <string name="system_animations_title">Affichage et animations</string>
   <string name="custom_bootanimation_title">Animation de démarrage</string>
@@ -173,4 +185,7 @@
   <string name="hidden_anim_more_nice">BIEN</string>
   <!-- Sensor block per-package -->
   <!-- Weather - OmniJaws Settings -->
+  <!-- Lockscreen Weather -->
+  <!-- Statusbar ticker -->
+  <string name="ticker_disabled">Désactivé</string>
 </resources>
