@@ -24,7 +24,6 @@
     <com.aicp.extras.preference.SystemSettingSwitchPreference
         android:key="qs_style_dark"
         android:title="@string/qs_style_dark_title"
-        android:summary="@string/qs_style_dark_summary"
         android:defaultValue="false" />
 
     <com.aicp.extras.preference.SystemSettingSwitchPreference
@@ -160,7 +159,7 @@
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="@string/unit_percent"
             android:persistent="false"
-            android:defaultValue="0" 
+            android:defaultValue="0"
             android:dependency="status_bar_custom_header" />
 
     </PreferenceCategory>
