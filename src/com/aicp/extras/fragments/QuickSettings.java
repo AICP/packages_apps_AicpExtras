@@ -45,7 +45,6 @@ public class QuickSettings extends BaseSettingsFragment
     implements OnPreferenceChangeListener {
 
     private static final String PREF_BRIGHTNESS_ICON_POSITION = "brightness_icon_position";
-
     private static final String CUSTOM_HEADER_BROWSE = "custom_header_browse";
     private static final String CUSTOM_HEADER_IMAGE = "status_bar_custom_header";
     private static final String DAYLIGHT_HEADER_PACK = "daylight_header_pack";
@@ -53,6 +52,7 @@ public class QuickSettings extends BaseSettingsFragment
     private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
     private static final String STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
     private static final String CUSTOM_HEADER_ENABLED = "status_bar_custom_header";
+    private static final String PREF_QS_STYLE_DARK = "qs_style_dark";
 
 
     private SwitchPreference mBrightnessIconPosition;
@@ -62,6 +62,7 @@ public class QuickSettings extends BaseSettingsFragment
     private ListPreference mHeaderProvider;
     private String mDaylightHeaderProvider;
     private SwitchPreference mHeaderEnabled;
+    private SwitchPreference mQsStyleDark;
 
     @Override
     protected int getPreferenceResource() {
@@ -114,6 +115,9 @@ public class QuickSettings extends BaseSettingsFragment
         mHeaderProvider.setSummary(mHeaderProvider.getEntry());
         mHeaderProvider.setOnPreferenceChangeListener(this);
         mDaylightHeaderPack.setEnabled(providerName.equals(mDaylightHeaderProvider));
+
+        mQsStyleDark = (SwitchPreference) findPreference(PREF_QS_STYLE_DARK);
+        mQsStyleDark.setOnPreferenceChangeListener(this);
     }
 
     private void updateHeaderProviderSummary(boolean headerEnabled) {
@@ -165,6 +169,9 @@ public class QuickSettings extends BaseSettingsFragment
         } else if (preference == mHeaderEnabled) {
             Boolean headerEnabled = (Boolean) newValue;
             updateHeaderProviderSummary(headerEnabled);
+            return true;
+        } else if (preference == mQsStyleDark) {
+            Util.showSystemUiRestartDialog(getContext());
             return true;
         }
         return false;
