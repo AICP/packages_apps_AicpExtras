@@ -25,6 +25,7 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
 
+import com.android.internal.util.aicp.DeviceUtils;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.utils.Util;
 import com.aicp.extras.R;
@@ -35,10 +36,12 @@ public class OtherUi extends BaseSettingsFragment
     private static final String SHOW_CPU_INFO_KEY = "show_cpu_info";
     private static final String KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wake_when_plugged_or_unplugged";
     private static final String KEY_VIBRATE_ON_CHARGE_STATE_CHANGED = "vibration_on_charge_state_changed";
+    private static final String KEY_SOUNDS_ON_CHARGE_STATE_CHANGED = "play_charging_sounds";
 
     private SwitchPreference mShowCpuInfo;
     private SwitchPreference mVibrateOnPlug;
     private SwitchPreference mWakeWhenPluggedOrUnplugged;
+    private SwitchPreference mSoundsWhenPluggedOrUnplugged;
 
     @Override
     protected int getPreferenceResource() {
@@ -59,10 +62,16 @@ public class OtherUi extends BaseSettingsFragment
 
         mVibrateOnPlug =
                 (SwitchPreference) findPreference(KEY_VIBRATE_ON_CHARGE_STATE_CHANGED);
-
         if(!Util.hasVibrator(getActivity())){
             mVibrateOnPlug.getParent().removePreference(mVibrateOnPlug);
         }
+
+        mSoundsWhenPluggedOrUnplugged =
+                (SwitchPreference) findPreference(KEY_SOUNDS_ON_CHARGE_STATE_CHANGED);
+        if(!DeviceUtils.isWifiOnly(getActivity())){
+            mSoundsWhenPluggedOrUnplugged.getParent().removePreference(mSoundsWhenPluggedOrUnplugged);
+        }
+
     }
 
     @Override
