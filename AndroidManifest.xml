@@ -89,5 +89,47 @@
             </intent-filter>
         </receiver>
 
+
+
+        <!-- DUI -->
+
+        <!-- System action picker -->
+        <activity android:name="com.aicp.extras.ActionPickerDialogActivity"
+                android:theme="@style/Theme.SmartBar.Dialog"
+                android:label="@string/choose_action_title"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- Icon pack picker -->
+        <activity android:name="com.aicp.extras.IconPickerActivity"
+                android:theme="@style/Theme.SmartBar.Dialog"
+                android:label="@string/icon_pack_picker_dialog_title"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- Icon picker proxy for gallery -->
+        <activity android:name="com.aicp.extras.IconPickerGallery"
+            android:theme="@style/Theme.SmartBar.Dialog"
+            android:label="@string/icon_pack_picker_dialog_title"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- Icon pack grid -->
+        <activity android:name="com.aicp.extras.IconPackGridActivity"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
     </application>
 </manifest>
