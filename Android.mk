@@ -44,6 +44,8 @@ LOCAL_STATIC_JAVA_LIBRARIES += android-support-design
 # Apache http for stats
 LOCAL_JAVA_LIBRARIES := org.apache.http.legacy
 
+LOCAL_JAVA_LIBRARIES += org.dirtyunicorns.utils
+
 LOCAL_AAPT_FLAGS := --auto-add-overlay
 LOCAL_AAPT_FLAGS += --extra-packages android.support.v7.appcompat:android.support.v7.cardview:android.support.v7.preference:android.support.v7.recyclerview:android.support.v14.preference:android.support.design
 

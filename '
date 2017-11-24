@@ -93,16 +93,6 @@
 
         <!-- DUI -->
 
-        <!-- System action picker -->
-        <activity android:name="com.aicp.extras.ActionPickerDialogActivity"
-                android:theme="@style/Theme.SmartBar.Dialog"
-                android:label="@string/choose_action_title"
-                android:excludeFromRecents="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-
         <!-- Icon pack picker -->
         <activity android:name="com.aicp.extras.IconPickerActivity"
                 android:theme="@style/Theme.SmartBar.Dialog"
