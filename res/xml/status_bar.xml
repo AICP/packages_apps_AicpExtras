@@ -29,6 +29,13 @@
         android:entryValues="@array/status_bar_logo_values"
         android:defaultValue="0" />
 
+    <com.aicp.extras.preference.SecureSettingSwitchPreference
+        android:title="@string/statusbar_carrier_label_title"
+        android:key="show_operator_name"
+        android:summaryOn="@string/statusbar_carrier_label_summaryOn"
+        android:summaryOff="@string/statusbar_carrier_label_summaryOff"
+        android:defaultValue="false"/>
+
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:title="@string/battery_bar_title"
         android:key="statusbar_battery_bar"

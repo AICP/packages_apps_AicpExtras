@@ -24,18 +24,23 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
+import android.support.v14.preference.SwitchPreference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.preference.MasterSwitchPreference;
 
+import com.android.internal.util.aicp.DeviceUtils;
+
 public class StatusBar extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String SMART_PULLDOWN = "qs_smart_pulldown";
+    private static final String KEY_SHOW_OPERATOR_NAME = "show_operator_name";
 
     MasterSwitchPreference mBatteryBar;
     private ListPreference mSmartPulldown;
+    private SwitchPreference mOperatorName;
 
     @Override
     protected int getPreferenceResource() {
@@ -56,6 +61,10 @@ public class StatusBar extends BaseSettingsFragment implements
         updateSmartPulldownSummary(smartPulldown);
         mSmartPulldown.setOnPreferenceChangeListener(this);
 
+        mOperatorName = (SwitchPreference) findPreference(KEY_SHOW_OPERATOR_NAME);
+        if(DeviceUtils.isWifiOnly(getActivity())){
+            mOperatorName.getParent().removePreference(mOperatorName);
+        }
     }
 
     @Override
