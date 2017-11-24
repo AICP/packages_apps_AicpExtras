@@ -62,6 +62,12 @@
             android:fragment="com.aicp.extras.fragments.Lockscreen" />
 
         <PreferenceScreen
+            android:title="@string/navbar_title"
+            android:summary="@string/navbar_summary"
+            android:icon="@drawable/ic_settings_navbar"
+            android:fragment="com.aicp.extras.fragments.NavigationBar" />
+
+        <PreferenceScreen
             android:title="@string/panel_porn_title"
             android:summary="@string/panel_porn_summary"
             android:icon="@drawable/ic_settings_panel_porn"

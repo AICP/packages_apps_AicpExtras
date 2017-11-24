@@ -51,4 +51,8 @@
         <!-- Changelog image behind status bar -->
         <item name="android:windowTranslucentStatus">true</item>
     </style>
+
+    <!-- DUI -->
+    <style name="Theme.SmartBar.Dialog" parent="@*android:style/Theme.DeviceDefault.Light.Dialog.Alert" />
+
 </resources>

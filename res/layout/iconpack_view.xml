@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright (C) 2017 ABC rom
   Copyright (C) 2014 The OmniROM Project
 
   This program is free software: you can redistribute it and/or modify
@@ -18,12 +17,23 @@
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingStart="@dimen/alert_dialog_padding_material"
-    android:paddingEnd="@dimen/alert_dialog_padding_material" >
-    <ListView
-        android:id="@+id/iconpack_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="8dp"
+        android:contentDescription="@null" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:paddingEnd="8dip"
+        android:paddingStart="8dip"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="19sp" />
 </LinearLayout>
