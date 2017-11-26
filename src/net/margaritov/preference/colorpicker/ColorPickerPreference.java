@@ -57,7 +57,6 @@ public class ColorPickerPreference extends Preference implements
     private static final String ANDROIDNS = "http://schemas.android.com/apk/res/android";
     private static final int DEF_VALUE_DEFAULT = -6;
     private static final int DEF_VALUE_DEFAULT_CHECK = -7; // != DEF_VALUE_DEFAULT
-    private boolean mUsesDefaultButton = false;
     private int mDefValue = -1;
     private boolean mAutoSummary = false;
 
@@ -85,8 +84,13 @@ public class ColorPickerPreference extends Preference implements
 
     @Override
     protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
-        onColorChanged(restoreValue ? getPersistedInt((Integer) defaultValue)
-                : (Integer) defaultValue);
+        int defaultVal;
+        if (defaultValue instanceof Integer) {
+            defaultVal = (Integer) defaultValue;
+        } else {
+            defaultVal = mDefValue;
+        }
+        onColorChanged(restoreValue ? getPersistedInt(defaultVal) : defaultVal);
     }
 
     private void init(Context context, AttributeSet attrs) {
@@ -94,16 +98,14 @@ public class ColorPickerPreference extends Preference implements
         setOnPreferenceClickListener(this);
         if (attrs != null) {
             mAlphaSliderEnabled = attrs.getAttributeBooleanValue(null, "alphaSlider", false);
-            int defVal = attrs.getAttributeIntValue(ANDROIDNS, "defaultValue", DEF_VALUE_DEFAULT);
-            if (defVal != DEF_VALUE_DEFAULT) {
-                mUsesDefaultButton = true;
-            } else {
+            mDefValue = attrs.getAttributeIntValue(ANDROIDNS, "defaultValue", DEF_VALUE_DEFAULT);
+            if (mDefValue == DEF_VALUE_DEFAULT) {
                 int defValCheck = attrs.getAttributeIntValue(ANDROIDNS, "defaultValue",
                         DEF_VALUE_DEFAULT_CHECK);
-                mUsesDefaultButton = defValCheck == defVal;
-            }
-            if (mUsesDefaultButton) {
-                mDefValue = defVal;
+                if (defValCheck != mDefValue) {
+                    throw new IllegalArgumentException("Preference with key \"" + getKey() +
+                            "\" needs a default value (check your xml!)!");
+                }
             }
         }
     }
@@ -114,9 +116,9 @@ public class ColorPickerPreference extends Preference implements
 
         widgetFrameView = (LinearLayout) holder.findViewById(android.R.id.widget_frame);
 
-        if (mUsesDefaultButton) {
+        //if (mUsesDefaultButton) {
             setDefaultButton();
-        }
+        //}
 
         setPreviewColor();
     }
