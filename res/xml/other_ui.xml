@@ -98,13 +98,4 @@
       android:key="vibration_on_charge_state_changed"
       android:title="@string/vibration_on_charge_state_changed_title"
       android:defaultValue="false" />
-
-    <!-- Charging event sounds for wifi only devices -->
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
-        android:key="play_charging_sounds"
-        android:title="@string/play_sounds_on_charge_state_changed_title"
-        android:summaryOn="@string/play_sounds_on_charge_state_changed_summaryOn"
-        android:summaryOff="@string/play_sounds_on_charge_state_changed_summaryOff"
-        android:defaultValue="false" />
-
 </PreferenceScreen>
