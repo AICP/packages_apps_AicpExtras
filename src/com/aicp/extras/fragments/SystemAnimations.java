@@ -69,6 +69,7 @@ public class SystemAnimations extends BaseSettingsFragment {
     private static final String TAG = SystemAnimations.class.getSimpleName();
 
     private static final String PREF_CUSTOM_BOOTANIM = "custom_bootanimation";
+    private static final String PREF_AOKP_ANIMATIONS = "aokp_animation";
 
     // Custom bootanimation
     private static final int REQUEST_PICK_BOOT_ANIMATION = 201;
@@ -76,6 +77,7 @@ public class SystemAnimations extends BaseSettingsFragment {
     private static final String BACKUP_PATH = new File(Environment
             .getExternalStorageDirectory(), "/AICP_backup").getAbsolutePath();
 
+    private Preference mAokpAnimation;
     private Preference mCustomBootAnimation;
 
     // Custom bootanimation
@@ -96,6 +98,7 @@ public class SystemAnimations extends BaseSettingsFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        mAokpAnimation = findPreference(PREF_AOKP_ANIMATIONS);
         // Custom bootanimation
         mCustomBootAnimation = findPreference(PREF_CUSTOM_BOOTANIM);
         resetBootAnimation();
@@ -111,6 +114,10 @@ public class SystemAnimations extends BaseSettingsFragment {
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mCustomBootAnimation) {
             openBootAnimationDialog();
+            return true;
+        } else if (preference == mAokpAnimation) {
+            Intent intent = new Intent(getActivity(), AnimationControls.class);
+            startActivity(intent);
             return true;
         } else {
             return super.onPreferenceTreeClick(preference);
