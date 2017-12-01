@@ -18,130 +18,940 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="navigation_drawer_open">開啟導覽清單</string>
+  <string name="navigation_drawer_close">關閉導覽清單</string>
+  <string name="action_settings">設定</string>
+  <string name="aicp_extras_title">Aicp 額外功能</string>
+  <string name="pun_title">管理自己的 ROM</string>
+  <string name="various_shit_title">其他設定</string>
+  <string name="about_title">關於</string>
+  <string name="other_title">其他</string>
+  <string name="g_community">G + 社群</string>
+  <string name="g_plus_summary">瀏覽我們的 Google+ 社群</string>
+  <string name="ui_title">使用者介面</string>
+  <string name="display_animations_title">動畫</string>
+  <string name="transparency_porn_title">面板顏色</string>
+  <string name="notificaitons_title">通知清單</string>
+  <string name="statubar_title">狀態列</string>
+  <string name="lockscreen_title">鎖定畫面</string>
+  <string name="aicp_downloads_title">下載</string>
+  <string name="dwnld_summary">瀏覽您的裝置的 AICP 下載頁面</string>
+  <string name="aicp_ota_title">更新中心</string>
+  <string name="ota_summary">檢查 AICP 更新</string>
+  <string name="aicp_gerrit_title">Gerrit</string>
+  <string name="ae_version_title">AICP 額外版本</string>
+  <string name="gerrit_summary">瀏覽我們的 gerrit 知道我們在做什麼</string>
+  <string name="hidden_anim_activity_title">休息時間！！！</string>
+  <string name="hidden_anim_more_title">更多？</string>
+  <string name="hidden_anim_more_nice">很好</string>
+  <string name="continue_title">繼續</string>
+  <string name="settings_activity_title">AE 設定</string>
+  <string name="recents_panel_title">「總覽」面板</string>
+  <string name="quick_settings_title">快速設定</string>
+  <string name="design_title">設計</string>
+  <string name="various_title">其它</string>
+  <string name="root_extras_title">Root 功能權限</string>
+  <string name="nothing_title">這裡現在什麼都沒有</string>
+  <string name="static_shortcut_disabled_message">捷徑已停用</string>
   <!-- Switch On/Off  -->
+  <string name="switch_on_text">開啟</string>
+  <string name="switch_off_text">關閉</string>
   <!-- Permissions -->
+  <string name="storage_permission_granted">已授予權限，現在可以寫入儲存空間。</string>
+  <string name="storage_permission_not_granted">未授予權限，不可以寫入儲存空間。</string>
   <!-- Seekbar strings -->
+  <string name="seekbar_no_default_value">未設定預設值</string>
+  <string name="seekbar_default_value_set">設定預設值為 <xliff:g id="number">%d</xliff:g></string>
+  <string name="seekbar_default_value_already_set">已設定預設值</string>
   <!-- Change Log -->
+  <string name="changelog_title">更新日誌</string>
+  <string name="changelog_title_summary">檢視最近對 AICP 所做的更改。</string>
+  <string name="changelog_error">無法載入更新日誌</string>
   <!-- Brightness slider -->
+  <string name="qs_brightness_slider_title">亮度滑動條</string>
+  <string name="qs_brightness_slider_enabled">已啟用</string>
+  <string name="qs_brightness_slider_disabled">已停用</string>
+  <string name="restarting_ui">正在重新啟動使用者介面\u2026</string>
   <!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
+  <string name="print_restart">重新啟動</string>
   <!-- Force expanded notifications -->
+  <string name="force_expanded_notifications_title">強制使用延伸通知</string>
+  <string name="force_expanded_notifications_summary">僅適用於支援延伸通知的應用程式</string>
   <!-- Disabling immersive mode messages -->
+  <string name="disable_immersive_message_title">停用全螢幕通知</string>
+  <string name="disable_immersive_message_summary">關閉所有全螢幕通知</string>
   <!-- Color Picker -->
+  <string name="press_color_to_apply">按下顏色以套用</string>
+  <string name="hex">十六進位：</string>
+  <string name="set">設定</string>
+  <string name="color_default">預設</string>
   <!-- Network traffic -->
+  <string name="traffic_category">流量指示器</string>
+  <string name="traffic_title">流量</string>
+  <string name="network_traffic_title">網路流量</string>
+  <string name="show_network_traffic_state">狀態列流量監測器</string>
+  <string name="show_network_traffic_unit">顯示單位</string>
+  <string name="show_network_traffic_frequency">更新間隔</string>
+  <string name="show_network_traffic_disable">已停用</string>
+  <string name="show_network_traffic_up">上傳</string>
+  <string name="show_network_traffic_down">下載</string>
+  <string name="show_network_traffic_all">上傳和下載</string>
+  <string name="show_network_traffic_bit">位元/秒</string>
+  <string name="show_network_traffic_byte">位元組/秒</string>
+  <string name="show_network_traffic_500">500 毫秒</string>
+  <string name="show_network_traffic_1000">1000 毫秒</string>
+  <string name="show_network_traffic_1500">1500 毫秒</string>
+  <string name="show_network_traffic_2000">2000 毫秒</string>
+  <string name="network_traffic_autohide">自動隱藏</string>
+  <string name="network_traffic_autohide_summary">沒有活動時隱藏流量監測器</string>
+  <string name="network_traffic_hidearrow">隱藏箭頭</string>
+  <string name="network_traffic_hidearrow_summary">隱藏流量指示器的箭頭</string>
+  <string name="network_traffic_autohide_threshold">活動監測下限</string>
+  <string name="ok">確定</string>
+  <string name="cancel">取消</string>
+  <string name="default_string">預設</string>
   <!-- Superuser indicator on status bar -->
+  <string name="su_indicator">超級使用者指標</string>
+  <string name="su_indicator_summary_on">超級使用者的指標會在運行時顯示</string>
+  <string name="su_indicator_summary_off">切換為在會話處於活動狀態時顯示超級使用者指標</string>
   <!-- Carrier Label -->
+  <string name="carrier_options">電信業者標籤</string>
+  <string name="custom_carrier_label_title">自訂電信業者名稱</string>
+  <string name="custom_carrier_label_explain">請輸入新的電信業者名稱，留空為恢復預設名稱。</string>
+  <string name="custom_carrier_label_notset">目前沒有設定電信業者名稱</string>
+  <string name="show_carrier_title">電信業者標籤</string>
+  <string name="show_carrier_disabled">已停用</string>
+  <string name="show_carrier_keyguard">僅限於鎖定畫面</string>
+  <string name="show_carrier_statusbar">僅狀態列</string>
   <string name="show_carrier_enabled">鎖定畫面與狀態列</string>
+  <string name="status_bar_carrier_color">電信業者標籤顏色</string>
+  <string name="status_bar_carrier_size">電信業者標籤文字大小</string>
   <!-- Battery Bar -->
+  <string name="battery_bar_title">電量列</string>
+  <string name="battery_bar">電量列位置</string>
+  <string name="battery_bar_no_navbar">電量列位置</string>
+  <string name="battery_bar_color">電量列顏色</string>
+  <string name="battery_bar_charging_color">電量列充電顏色</string>
+  <string name="battery_bar_battery_low_color">電量列低電量顏色</string>
+  <string name="battery_bar_cat">電量列樣式</string>
+  <string name="battery_bar_style_title">電量列對齊方式</string>
+  <string name="battery_bar_thickness_title">電量列粗度</string>
+  <string name="battery_bar_animate_title">充電動畫</string>
+  <string name="battery_bar_style_regular">正常</string>
+  <string name="battery_bar_style_center_mirrored">對稱中央</string>
+  <string name="battery_bar_style_reversed">反轉</string>
+  <string name="battery_bar_use_charging_color">自訂充電顏色</string>
+  <string name="battery_bar_blend_color_title">混合顏色</string>
+  <string name="battery_bar_blend_color_summary">根據電量百分比混合滿/空顏色</string>
+  <string name="battery_bar_blend_color_reverse_title">反轉顏色方向</string>
+  <string name="battery_bar_blend_color_reverse_summary_off">滿 &#8594; 空：紅 &#8592; 綠 &#8592; 藍 &#8592; 紅</string>
+  <string name="battery_bar_blend_color_reverse_summary_on">滿 &#8594; 空：紅 &#8594; 綠 &#8594; 藍 &#8594; 紅</string>
   <!-- Activity and App Picker -->
+  <string name="picker_activities">活動</string>
+  <string name="select_custom_app_title">選擇自訂應用程式</string>
+  <string name="select_custom_activity_title">選擇自訂活動</string>
+  <string name="profile_applist_title">應用程式</string>
   <!-- Power menu on lock screen -->
+  <string name="powermenu_lockscreen_title">電源選單</string>
+  <string name="powermenu_lockscreen_summary_on">已啟用鎖定畫面上的電源選單</string>
+  <string name="powermenu_lockscreen_summary_off">已停用鎖定畫面上的電源選單</string>
   <!-- ROM Stats -->
   <!-- Main -->
+  <string name="stats_title">統計</string>
+  <string name="stats_summary">選擇/退出匿名統計</string>
   <!-- Notification -->
+  <string name="notification_ticker">統計選擇</string>
+  <string name="notification_title">AICP 統計</string>
+  <string name="notification_desc">啟用或停用匿名統計</string>
+  <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;瞭解更多&lt;/a&gt;</string>
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+  <string name="anonymous_statistics_title">AICP 統計</string>
+  <string name="anonymous_statistics_summary">提交匿名資料來協助改善 AICP</string>
+  <string name="anonymous_statistics_warning_title">關於</string>
+  <string name="anonymous_statistics_warning">加入 AICP 統計將允許非個人資料被提交到我們伺服器。提交的資訊包含一個唯一識別碼，此識別碼並不會泄露您的隱私或個人資料。
+        該資料在每 7天提交一次。\n\n輕觸預覽資料以預覽被提交資料的範例。</string>
+  <string name="pref_settings">設定</string>
+  <string name="enable_reporting_title">啟用報告</string>
+  <string name="disable_reporting_persistent">永久退出</string>
+  <string name="preview_data_title">預覽資料</string>
+  <string name="view_stats_title">檢視統計頁面</string>
+  <string name="anonymous_learn_more">了解更多</string>
+  <string name="last_report_on">上一次報告</string>
+  <string name="reporting_interval">報告間隔</string>
+  <plurals name="reporting_interval_days">
+    <item quantity="other">%d 天</item>
+  </plurals>
+  <string name="next_report_on">下一次報告</string>
   <!-- Anonymous Statistics - Preview -->
+  <string name="preview_id_title">唯一識別碼</string>
+  <string name="preview_device_title">裝置</string>
+  <string name="preview_version_title">版本</string>
+  <string name="preview_country_title">國家/地區</string>
+  <string name="preview_carrier_title">電信業者</string>
+  <string name="preview_romname_title">ROM 名稱</string>
+  <string name="preview_romversion_title">AICP 版本</string>
+  <string name="preview_buildtype_title">AICP 構建類型</string>
   <!-- Double tap to sleep on lockscreen -->
+  <string name="double_tap_sleep_anywhere_title">輕按兩下即可休眠</string>
+  <string name="double_tap_sleep_anywhere_summary_on">輕觸兩下鎖定畫面以使裝置啟用休眠</string>
+  <string name="double_tap_sleep_anywhere_summary_off">輕觸兩下鎖定畫面以使裝置停用休眠</string>
   <!-- SU -->
+  <string name="cannot_get_su_start">無法取得超級使用者存取權限。</string>
   <!-- Aicp logcat -->
+  <string name="logcat_title">Logcat</string>
+  <string name="kmesg_title">Kmesg</string>
+  <string name="dmesg_title">Dmesg</string>
+  <string name="log_it_title">執行</string>
+  <string name="log_it_dialog_title">執行</string>
+  <string name="log_that_shit_title">記錄起來！</string>
+  <string name="logcat_warning">分享或是離開</string>
+  <string name="share_title">分享...</string>
+  <string name="log_it_share_subject">Aicp 日誌</string>
+  <string name="log_it_summary">耐心等待創建日誌</string>
+  <string name="log_it_logs_in_progress">正在創建日誌並&#8230;</string>
+  <string name="log_it_share_type_title">分享方法</string>
+  <string name="log_it_share_type_zip">ZIP 檔</string>
+  <string name="log_it_share_type_haste">上傳到 AICP Haste</string>
   <!-- AOKP custom system animations -->
+  <string name="animation_duration_default">預設</string>
   <!-- Toast Animation -->
+  <string name="toast_animation_title">提示訊息動畫</string>
+  <string name="toast_animation_style_title">已選擇的動畫樣式</string>
+  <string name="toast_none_animation">無</string>
+  <string name="toast_default_animation">預設</string>
+  <string name="toast_fade_animation">淡出</string>
+  <string name="toast_SlideRight_animation">向右滑動</string>
+  <string name="toast_SlideLeft_animation">向左滑動</string>
+  <string name="toast_Xylon_animation">木質</string>
+  <string name="toast_Toko_animation">東光</string>
+  <string name="toast_Tn_animation">Tn</string>
+  <string name="toast_Honami_animation">Honami</string>
+  <string name="toast_FastFade_animation">快速淡化</string>
+  <string name="toast_GrowFade_animation">縮放淡化</string>
+  <string name="toast_GrowFadeCenter_animation">於中央縮放淡化</string>
+  <string name="toast_GrowFadeBottom_animation">於底部縮放淡化</string>
+  <string name="toast_Translucent_animation">半透明</string>
+  <string name="toast_SlideLeftRight_animation">從左向右滑動</string>
+  <string name="toast_SlideRightLeft_animation">從右向左滑動</string>
   <!-- Toast Icons -->
+  <string name="toast_icon_title">提示訊息圖示</string>
+  <string name="toast_icon_summary">顯示與提示訊息相關的應用程式圖示</string>
+  <string name="toast_text_color">提示訊息文字顏色</string>
+  <string name="toast_icon_color">提示訊息圖示顔色</string>
   <!-- Power menu Animations  -->
+  <string name="power_menu_animation_title">電源選單動畫</string>
+  <string name="power_menu_animation_style_title">已選擇的動畫樣式</string>
+  <string name="power_menu_animation_aosp">AOSP (預設)</string>
+  <string name="power_menu_animation_bottom">底部</string>
+  <string name="power_menu_animation_top">頂部</string>
+  <string name="power_menu_animation_rotate">旋轉</string>
+  <string name="power_menu_animation_xylon">飛行</string>
+  <string name="power_menu_animation_slide">滑動</string>
+  <string name="power_menu_animation_turn">轉動</string>
+  <string name="power_menu_animation_fly">光暈</string>
+  <string name="power_menu_animation_card">3D</string>
+  <string name="power_menu_animation_translucent_top">半透明 (頂部)</string>
+  <string name="power_menu_animation_translucent_bottom">半透明 (底部)</string>
   <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_category_title">狀態列標誌</string>
+  <string name="status_bar_aicp_logo_title">AICP 標誌</string>
+  <string name="status_bar_aicp_logo_summary">啟用以在狀態列左側顯示 AICP 標誌</string>
+  <string name="status_bar_aicp_logo_color">AICP 標誌顏色</string>
+  <string name="status_bar_aicp_logo_position">標誌的位置</string>
+  <string name="status_bar_aicp_logo_position_summary">選擇標誌顯示在那一側，左或右</string>
+  <string name="status_bar_logo_position_right">右側</string>
+  <string name="status_bar_logo_position_left">左側</string>
   <!-- Launch music player when headset is connected -->
+  <string name="headset_connect_player_title">啟動音樂應用程式</string>
+  <string name="headset_connect_player_disabled">已停用</string>
+  <string name="headset_connect_player_wired">有線耳機插入時</string>
+  <string name="headset_connect_player_bt_no_carkit">藍牙耳機 (無車充) 插入時</string>
+  <string name="headset_connect_player_bt">藍牙耳機插入時</string>
+  <string name="headset_connect_player_both_no_carkit">有線或藍牙耳機 (無車充) 插入時</string>
+  <string name="headset_connect_player_both">有線或藍牙耳機插入時</string>
   <!-- Camera shutter sound -->
+  <string name="camera_sounds_title">相機快門聲</string>
+  <string name="camera_sounds_summary">在第三方的相機應用程式和在 HDR + 模式下停用可能無法使用</string>
   <!-- Screenshot sound -->
+  <string name="screenshot_sound_title">擷取螢幕畫面音效</string>
+  <string name="screenshot_sound_summary">擷取螢幕畫面時播放音效</string>
+  <string name="brightness_icon_title">亮度圖示</string>
+  <string name="brightness_icon_summary">在亮度滑動條左邊顯示一個亮度圖示以用來調整是否開啟自動亮度</string>
+  <string name="brightness_icon_position_title">亮度圖示的位置</string>
+  <string name="brightness_icon_position_on_summary">右側顯示</string>
+  <string name="brightness_icon_position_off_summary">左側顯示</string>
   <!-- QS shade opacity -->
+  <string name="qs_transparent_shade">快速設定陰影不透明度</string>
   <!-- QS header transparency -->
+  <string name="qs_transparent_header">快速設定的標頭透明度</string>
   <!-- QS tile labels visibility -->
+  <string name="qs_menu_item_titles">快速設定圖塊標籤</string>
+  <string name="qs_menu_item_titles_summaryOn">顯示標籤</string>
+  <string name="qs_menu_item_titles_summaryOff">隱藏標籤</string>
   <!-- Volume dialog opacity -->
+  <string name="volume_dialog_transparency">音量對話方塊不透明度</string>
   <!-- Power menu and dialogs opacity -->
+  <string name="power_menu_transparency">電源/重新啟動選單不透明度</string>
   <!-- Power/reboot dialogs dim amount -->
+  <string name="power_menu_dialog_dim">電源/重新啟動對話方塊昏暗的背景量</string>
   <!-- Notifications transparency -->
+  <string name="notifications_transparency">通知的透明度</string>
   <!-- Lockscreen Torch -->
+  <string name="keyguard_torch_title">長按電源鍵開啟手電筒</string>
+  <string name="keyguard_torch_summary_on">在啟用螢幕關閉的情況下，長按電源鍵可切換手電筒</string>
+  <string name="keyguard_torch_summary_off">在停用螢幕關閉的情況下，長按電源鍵可切換手電筒</string>
   <!-- Quick settings tiles columns and rows config -->
+  <string name="qs_rows_portrait_title">行 (縱向)</string>
+  <string name="qs_rows_portrait_summary">選擇要以縱向顯示的快速圖塊的行數</string>
+  <string name="qs_rows_landscape_title">行 (橫向)</string>
+  <string name="qs_rows_landscape_summary">選擇要以橫向顯示的快速圖塊的行數</string>
+  <string name="qs_columns_portrait_title">列 (縱向)</string>
+  <string name="qs_columns_portrait_summary">選擇要以縱向顯示的快速圖塊的列數</string>
+  <string name="qs_columns_landscape_title">列 (橫向)</string>
+  <string name="qs_columns_landscape_summary">選擇要以橫向顯示的快速圖塊的列數</string>
+  <string name="sysui_qqs_count_title">小的快速設定圖塊</string>
   <string name="qs_rows_prefix">行：</string>
   <string name="qs_cols_prefix">列：</string>
   <!-- Tiles animation style  -->
+  <string name="qs_tile_animation_title">快速設定圖塊動畫</string>
+  <string name="qs_tile_animation_style_title">已選擇的動畫樣式</string>
+  <string name="qs_tile_animation_duration_title">動畫長度</string>
+  <string name="qs_tile_animation_interpolator_title">動畫插值器</string>
+  <string name="qs_tile_animation_style_off">無動畫</string>
+  <string name="qs_tile_animation_style_flip">翻轉</string>
+  <string name="qs_tile_animation_style_rotate">旋轉</string>
+  <string name="qs_tile_animation_duration_low">低</string>
+  <string name="qs_tile_animation_duration_default">預設</string>
+  <string name="qs_tile_animation_duration_fast">快</string>
+  <string name="qs_tile_animation_duration_superfast">超快</string>
+  <string name="qs_tile_animation_interpolator_linearInterpolator">直線</string>
+  <string name="qs_tile_animation_interpolator_accelerateInterpolator">加速</string>
+  <string name="qs_tile_animation_interpolator_decelerateInterpolator">減速</string>
+  <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">先快後慢</string>
+  <string name="qs_tile_animation_interpolator_bounceInterpolator">彈跳</string>
+  <string name="qs_tile_animation_interpolator_overshootInterpolator">過衝</string>
+  <string name="qs_tile_animation_interpolator_anticipateInterpolator">預備</string>
+  <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">預備和過衝</string>
   <!-- App Exit Toast -->
+  <string name="app_exit_toast">再按一次返回鍵以退出</string>
   <!-- Volume dialog stroke settings -->
+  <string name="volume_dialog_stroke_title">音量對話方塊邊線</string>
+  <string name="volume_dialog_stroke_disabled">已停用</string>
+  <string name="volume_dialog_stroke_accent">強調顏色</string>
+  <string name="volume_dialog_stroke_custom">自訂顏色</string>
+  <string name="volume_dialog_stroke_color_title">音量對話方塊邊線顏色</string>
+  <string name="volume_dialog_stroke_thickness_title">音量對話方塊邊線厚度</string>
+  <string name="volume_dialog_corner_radius_title">音量對話方塊圓角半徑</string>
+  <string name="volume_dialog_dash_width_title">音量對話方塊虛線描邊寬度</string>
+  <string name="volume_dialog_dash_gap_title">音量對話方塊虛線描邊空隙</string>
   <!-- QS stroke settings -->
+  <string name="qs_stroke_title">快速設定的陰影邊線</string>
+  <string name="qs_stroke_disabled">已停用</string>
+  <string name="qs_stroke_accent">強調顏色</string>
+  <string name="qs_stroke_custom">自訂顏色</string>
+  <string name="qs_stroke_color_title">快速設定的陰影邊線顏色</string>
+  <string name="qs_stroke_thickness_title">快速設定的陰影邊線厚度</string>
+  <string name="qs_corner_radius_title">快速設定的陰影圓角半徑</string>
+  <string name="qs_dash_width_title">快速設定中的虛線描邊寬度</string>
+  <string name="qs_dash_gap_title">快速設定中的虛線描邊空隙</string>
   <!--Preference Categories-->
+  <string name="anim">動畫調整</string>
+  <string name="indicators">狀態列指示器</string>
+  <string name="quicksettings_tiles_category">快速設定面板配置</string>
+  <string name="header_tweaks">標頭調整</string>
+  <string name="Misc">其他設定</string>
+  <string name="qs">快速設定調整</string>
+  <string name="vol_diag">音量對話方塊調整</string>
+  <string name="power">電源選單調整</string>
+  <string name="cab">清除所有按鍵調整</string>
+  <string name="visuals">總覽額外的視覺效果</string>
   <!-- Fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">指紋認證震動</string>
+  <string name="fprint_sucess_vib_summary_on">已啟用成功認證指紋時震動</string>
+  <string name="fprint_sucess_vib_summary_off">已停用成功認證指紋時震動</string>
   <!-- AE settings -->
+  <string name="ae_settings_title">Aicp 額外功能設定</string>
+  <string name="ae_custom_colors_title">自訂顏色</string>
+  <string name="ae_custom_colors_summaries">使用下面的設定修改 AE 外觀</string>
+  <string name="ae_drawer_opacity_title">導覽清單不透明度</string>
+  <string name="ae_header_bg_image_color_title">導覽標頭背景圖片顏色</string>
+  <string name="ae_drawer_bg_color_title">導覽清單背景顏色</string>
+  <string name="ae_settings_restore_defaults_title">還原預設值</string>
+  <string name="values_restored_title">已還原設定值</string>
+  <string name="ae_header_bg_image_opacity_title">導覽清單標頭背景圖片不透明度</string>
+  <string name="ae_nav_drawer_checked_text_title">已選擇的項目文字顏色</string>
+  <string name="ae_nav_drawer_unchecked_text_title">項目文字顏色</string>
+  <string name="ae_settings_summary_title">設定應用程式中的自訂 AE 摘要文字</string>
+  <string name="custom_summary_title">自訂 AE 摘要</string>
+  <string name="custom_summary_explain">請輸入新的摘要。留空可以恢復到原始的文字。</string>
+  <string name="custom_summary_notset">自訂 ROM 個人化</string>
+  <string name="ae_moderate_language_title">適度語言模式</string>
+  <string name="ae_moderate_language_summary">過濾掉「不適當的語言」，並用其他替代措辭替換。 這可能會降低 AE 的效能。</string>
   <!-- Statusbar 4G LTE switch -->
+  <string name="show_fourg_title">顯示 4G 而非 LTE</string>
+  <string name="show_fourg_summary">以 4G 代替狀態列中的 LTE 指示器</string>
   <!-- QuickSettings haptic feedback -->
+  <string name="quick_settings_vibrate_title">觸控時震動</string>
+  <string name="quick_settings_vibrate_summary">輕觸圖塊時震動</string>
   <!-- Advanced data tile -->
+  <string name="qs_advanced_data_title">數據圖塊輕鬆切換</string>
+  <string name="qs_advanced_data_summary">啟用輕觸一下操作以啟用或停用數據</string>
   <!-- SystemUI restart prompt -->
+  <string name="systemui_restart_title">警告</string>
+  <string name="systemui_restart_message">將重新啟動使用者介面，以便可以正確套用已選擇的設定。</string>
+  <string name="systemui_restart_missing_su">由於缺少超級使用者權限，使用者介面重新啟動失敗，請手動重新啟動</string>
   <!-- Status Bar Ticker -->
+  <string name="ticker_screen_title">通知提示</string>
+  <string name="ticker_title">狀態列提示通知</string>
+  <string name="ticker_screen_summary">自訂提示通知的樣式</string>
+  <string name="ticker_summary">使用舊的狀態列提示通知</string>
+  <string name="ticker_restore_defaults_title">還原預設值</string>
+  <string name="text_title">文字</string>
+  <string name="icon_title">圖示</string>
+  <string name="colors_title">顏色</string>
+  <string name="ticker_disabled">沒有通知</string>
+  <string name="ticker_enabled">通知指示</string>
+  <string name="ticker_media_enabled">通知與音樂提示</string>
   <!-- Optional screenshot type -->
+  <string name="screenshot_type_title">擷取螢幕畫面類型</string>
+  <string name="screenshot_type_fullscreen">擷取全螢幕畫面</string>
+  <string name="screenshot_type_partial">拖動以選定擷取螢幕畫面的區域</string>
   <!-- Screenshot delay -->
+  <string name="screenshot_delay_title">擷取螢幕畫面延遲</string>
   <!-- Lock screen Am/Pm switch -->
+  <string name="lock_screen_hide_ampm_title">隱藏 上午/下午</string>
+  <string name="lock_screen_hide_ampm_summary_on">上午/下午 隱藏</string>
+  <string name="lock_screen_hide_ampm_summary_off">上午/下午 顯示</string>
   <!-- Hostname setting -->
+  <string name="device_hostname">裝置主機名稱</string>
   <!-- Disable quick settings on lock screen switch -->
+  <string name="lockscreen_qs_disabled_title">在鎖定畫面上停用快速設定</string>
+  <string name="lockscreen_qs_disabled_summary_on">在停用的安全鎖定畫面上展開快速設定和鍵盤捷徑</string>
+  <string name="lockscreen_qs_disabled_summary_off">在啟用的安全鎖定畫面上展開快速設定和鍵盤捷徑</string>
   <!-- Disable music track title in QS tile -->
+  <string name="qs_music_tile_track_optional_title">音樂圖塊曲目標題</string>
+  <string name="qs_music_tile_track_optional_summary">將音樂曲目標題顯示為快速設定圖塊標題</string>
   <!-- Immersive Recents -->
+  <string name="immersive_recents_title">全螢幕總覽</string>
+  <string name="immersive_recents_summary">變更總覽畫面樣式</string>
+  <string name="immersive_recents_dialog_title">選擇最近使用的應用程式樣式</string>
+  <string name="immersive_recents_default">預設</string>
+  <string name="immersive_recents_fullscreen">全螢幕</string>
+  <string name="immersive_recents_statusbar">僅狀態列</string>
+  <string name="immersive_recents_navbar">僅導覽列</string>
   <!-- Recents Membar -->
+  <string name="systemui_recents_mem_display_category_title">記憶體列</string>
+  <string name="systemui_recents_mem_display_title">顯示記憶體列</string>
+  <string name="systemui_recents_mem_display_summaryOn">已啟用記憶體列</string>
+  <string name="systemui_recents_mem_display_summaryOff">已停用記憶體列</string>
+  <string name="systemui_recents_mem_display_color">記憶體列顏色</string>
+  <string name="systemui_recents_mem_display_text_color">記憶體列文字顏色</string>
   <!-- Recents panel settings -->
+  <string name="show_clear_all_recents_button_title">啟用「全部清除」按鍵</string>
+  <string name="show_clear_all_recents_button_summary">清除所有按鈕使用時都顯示紀錄</string>
+  <string name="recents_clear_all_location_title">全部清除按鍵位置</string>
+  <string name="recents_clear_all_location_top_right">右上方</string>
+  <string name="recents_clear_all_location_top_left">左上方</string>
+  <string name="recents_clear_all_location_top_center">上方中央</string>
+  <string name="recents_clear_all_location_bottom_right">右下方</string>
+  <string name="recents_clear_all_location_bottom_left">左下方</string>
+  <string name="recents_clear_all_location_bottom_center">下方中央</string>
   <!-- Heads up settings -->
+  <string name="nav_headsup_title">浮動通知</string>
+  <string name="headsup_settings_category">浮動通知</string>
+  <string name="headsup_settings_title">啟用浮動通知</string>
+  <string name="headsup_settings_summary">允許應用程式通過螢幕提示視窗顯示互動通知時，啟用浮動通知。</string>
+  <string name="summary_heads_up_enabled">浮動通知已啟用</string>
+  <string name="summary_heads_up_disabled">浮動通知已停用</string>
   <!-- Heads up timeout -->
+  <string name="heads_up_time_out_title">逾時</string>
+  <string name="heads_up_time_out_summary">浮動通知將顯示為 <xliff:g id="number">%d </xliff:g> 秒</string>
+  <string name="heads_up_time_out_2sec">2 秒</string>
+  <string name="heads_up_time_out_4sec">4 秒</string>
+  <string name="heads_up_time_out_5sec">5 秒</string>
+  <string name="heads_up_time_out_6sec">6 秒</string>
+  <string name="heads_up_time_out_8sec">8 秒</string>
+  <string name="heads_up_time_out_10sec">10 秒</string>
   <!-- Heads up snooze -->
+  <string name="heads_up_snooze_title">暫停計時器</string>
+  <string name="heads_up_snooze_summary_one_minute">上滑浮動通知會將此應用程式的浮動通知進入休眠狀態 1 分鐘</string>
+  <string name="heads_up_snooze_summary">上滑浮動通知會將此應用程式的浮動通知進入休眠狀態 <xliff:g id="number">%d</xliff:g> 分鐘</string>
+  <string name="heads_up_snooze_disabled">已停用</string>
+  <string name="heads_up_snooze_disabled_summary">休眠計時器已停用</string>
+  <string name="heads_up_snooze_1min">1 分鐘</string>
+  <string name="heads_up_snooze_3min">3 分鐘</string>
+  <string name="heads_up_snooze_5min">5 分鐘</string>
+  <string name="heads_up_snooze_10min">10 分鐘</string>
+  <string name="heads_up_snooze_15min">15 分鐘</string>
+  <string name="heads_up_snooze_20min">20 分鐘</string>
+  <string name="heads_up_snooze_30min">30 分鐘</string>
+  <string name="heads_up_snooze_60min">60 分鐘</string>
   <!-- Lockscreen battery info indicator  -->
+  <string name="lockscreen_battery_info_title">電池資訊</string>
+  <string name="lockscreen_battery_info_summary">在充電時在鎖定畫面上顯示判斷的充電器最大電流電壓和電池溫度</string>
   <!-- Battery Saver easy toggle -->
+  <string name="qs_battery_easy_toggle_title">電池圖塊輕鬆切換</string>
+  <string name="qs_battery_easy_toggle_summary">啟用輕觸一下動作以啟用或停用數據</string>
   <!-- BT easy toggle -->
+  <string name="qs_bt_easy_toggle_title">藍牙圖塊輕鬆切換</string>
+  <string name="qs_bt_easy_toggle_summary">啟用輕觸一下動作以啟用或停用藍牙</string>
   <!-- WiFi easy toggle -->
+  <string name="qs_wifi_easy_toggle_title">WiFi 圖塊輕鬆切換</string>
+  <string name="qs_wifi_easy_toggle_summary">啟用輕觸一下動作以啟用或停用 WiFi</string>
   <!-- OmniSwitch Recents -->
+  <string name="aosp_recents_title">AICP 總覽</string>
+  <string name="omniswitch_recents_title">OmniSwitch 總覽</string>
+  <string name="recents_use_omniswitch_title">使用小型總覽</string>
+  <string name="recents_use_omniswitch_summary">使用 OmniSwitch 取代預設的「總覽」畫面</string>
+  <string name="omniswitch_start_settings_title">OmniSwitch 設定</string>
+  <string name="omniswitch_start_settings_summary">檢視 OmniSwitch 的設定</string>
+  <string name="omniswitch_first_time_title">警告</string>
+  <string name="omniswitch_first_time_message">如果使用 OmniSwitch 作為總覽選項，請確保已啟用 OmniSwitch</string>
   <!-- MediaScanner behavior on boot -->
+  <string name="media_scanner_on_boot_title">開機時執行媒體掃描</string>
+  <string name="media_scanner_on_boot_enabled">掃描媒體</string>
+  <string name="media_scanner_on_boot_ask">需要詢問才執行掃描 (通知)</string>
+  <string name="media_scanner_on_boot_disabled">不要掃描媒體</string>
   <!-- App Remover -->
+  <string name="system_app_remover">移除系統應用程式</string>
+  <string name="cancel">取消</string>
+  <string name="message_delete">確定要刪除此應用程式？</string>
+  <string name="message_noselect">未選擇任何內容</string>
   <!-- Extensions settings -->
+  <string name="extensions_title">系統擴充套件</string>
   <!-- Bluetooth status -->
+  <string name="bluetooth_battery_title">顯示藍牙電池狀態</string>
   <string name="bluetooth_battery_summary">顯示目前已連接藍牙裝置的電池狀態 (如果可用)。</string>
   <!-- Three-fingers-swipe to screenshot -->
+  <string name="three_finger_gesture">滑動以擷取螢幕畫面</string>
+  <string name="three_finger_gesture_summary">同時滑動三支指頭以擷取螢幕畫面</string>
   <!-- Blur UI -->
+  <string name="nav_blur_ui_title">模糊使用者介面</string>
+  <string name="blur_ui_category_title">模糊個人化</string>
+  <string name="blurred_status_bar_expanded_enabled_pref">模糊狀態列背景</string>
+  <string name="blurred_status_bar_expanded_enabled_pref_summary">當您拉下狀態列模糊背景</string>
+  <string name="translucent_notifications_pref">半透明通知</string>
+  <string name="translucent_notifications_pref_summary">設定通知的半透明背景</string>
   <string name="translucent_header_pref">模糊狀態列標頭</string>
+  <string name="translucent_header_pref_summary">模糊狀態列標頭的背景</string>
+  <string name="translucent_quick_settings_pref">透明延伸狀態列</string>
+  <string name="translucent_quick_settings_pref_summary">將快速設定面板背景透明</string>
+  <string name="transluency_level_universal">半透明度</string>
+  <string name="blur_expstatus_cat">延伸的狀態列 </string>
+  <string name="blur_notifications_cat">通知</string>
+  <string name="blur_header_cat">狀態列標頭</string>
+  <string name="blur_qs_cat">快速設定</string>
+  <string name="blur_recents_cat">最近使用的應用程式</string>
+  <string name="blurred_recent_app_enabled_pref">模糊總覽背景 </string>
+  <string name="blurred_recent_app_enabled_pref_summary">總覽應用程式清單的背景變模糊</string>
+  <string name="blurred_scale">模糊程度</string>
+  <string name="blurred_scale_summary">模糊圖片的品質</string>
+  <string name="blurred_radius">模糊範圍</string>
+  <string name="blurred_radius_summary">模糊程度</string>
+  <string name="blur_cat_notice">注意</string>
+  <string name="blur_cat_notice_summary">在鎖定畫面模糊功能是強制停用的！</string>
+  <string name="blur_colors_cat">模糊顏色濾鏡</string>
+  <string name="blur_light_color">淺色圖片彩色濾鏡</string>
+  <string name="blur_dark_color">深色圖片彩色濾鏡</string>
+  <string name="blur_mixed_color">混合圖片彩色濾鏡</string>
+  <string name="blur_colors_notice">這些顏色是做什麼的？</string>
+  <string name="blur_colors_notice_summary">這些顏色是背景的模糊背景。而不是正常的灰色，您現在可以選擇的顏色在您喜歡的方式。\n 有是三個彩色濾鏡︰ 一個用於淺色背景，另一個用於深色背景，另一個用於淺/深色背景。\n 這些顏色如何工作？\n 簡單，如標題所示，淺色濾鏡將用於較淺的背景，深色濾鏡用於深色背景，混合濾鏡將用於不太暗但不太亮的背景。\n 這些顏色的模糊背景用於︰狀態列和最近使用的應用程式 </string>
+  <string name="blur_default_colors_title">重設顏色為預設？</string>
   <!-- App sidebar -->
+  <string name="app_sidebar_title">應用程式側邊列</string>
+  <string name="app_sidebar_enable_title">開啟應用程式列</string>
+  <string name="app_sidebar_enable_summaryOn">應用程式列已啟用</string>
+  <string name="app_sidebar_enable_summaryOff">應用程式列已停用</string>
+  <string name="app_sidebar_setup_items_title">設定應用程式列內容</string>
+  <string name="app_sidebar_setup_items_summary">在應用程式列中新增、刪除和位置項目</string>
+  <string name="app_sidebar_transparency_title">應用程式列透明度</string>
+  <string name="app_sidebar_transparency_summary">調整應用程式列透明度級別</string>
+  <string name="app_sidebar_position_title">應用程式列位置</string>
+  <string name="app_sidebar_position_summary">將應用程式列放置在螢幕的左側或右側</string>
+  <string name="app_sidebar_position_left">左側</string>
+  <string name="app_sidebar_position_right">右側</string>
+  <string name="app_sidebar_hide_labels_title">隱藏圖示標籤</string>
+  <string name="app_sidebar_hide_labels_summary">隱藏應用程式列圖示標籤</string>
+  <string name="tab_category">可見分頁</string>
+  <string name="use_tab_title">顯示分頁</string>
+  <string name="use_tab_summary">在觸控的時候在顯示應用程式列的一側顯示一個可見的標籤。</string>
+  <string name="tab_position_title">標籤位置</string>
+  <string name="tab_position_summary">在螢幕的頂部，中間或底部顯示標籤。</string>
+  <string name="tab_size_title">標籤大小</string>
+  <string name="tab_size_summary">更改可見標籤的大小。</string>
+  <string name="trigger_category">觸發區域</string>
+  <string name="trigger_width_title">觸發寬度</string>
+  <string name="trigger_width_summary">調整觸發區域的寬度</string>
+  <string name="trigger_top_title">觸發位置</string>
+  <string name="trigger_top_summary">調整觸發區域的垂直位置</string>
+  <string name="trigger_bottom_title">觸發高度</string>
+  <string name="trigger_bottom_summary">調整觸發區域的高度</string>
+  <string name="app_sidebar_hide_timeout_title">應用程式列自動隱藏</string>
+  <string name="app_sidebar_hide_timeout_summary">自動隱藏應用程式列逾時。</string>
   <!-- Header images -->
+  <string name="status_bar_custom_header_title">自訂標頭圖片</string>
+  <string name="status_bar_custom_header_summary">啟用通知面板標題圖片</string>
+  <string name="daylight_header_pack_title">標頭圖片包</string>
+  <string name="status_bar_custom_header_shadow_title">標頭圖片陰影</string>
+  <string name="status_bar_custom_header_shadow_summary">在使用較明亮的圖片時能有更好的能見度</string>
+  <string name="static_header_provider_title">靜態</string>
+  <string name="daylight_header_provider_title">動態</string>
+  <string name="custom_header_provider_title">標頭提供者</string>
+  <string name="custom_header_browse_title">瀏覽已安裝的標頭</string>
+  <string name="custom_header_browse_summary">長時間按任何圖片用於靜態模式</string>
   <!-- qqs scroller -->
+  <string name="qqs_scroll_title">捲動小的快速設定圖塊</string>
+  <string name="qqs_scroll_summary">允許滾動快速設定小圖塊</string>
   <!-- PA Pie control -->
+  <string name="pa_piecontrol_settings_summary">自訂 PA 扇形 2.0的目標、風格、大小和顏色</string>
+  <string name="pa_pie_control_title">扇形控制</string>
+  <string name="pa_pie_control_enable_title">啟用扇形控制</string>
+  <string name="pa_pie_always_right_title">扇形一律在右邊</string>
+  <string name="pa_pie_always_right_summary">當螢幕橫向時扇形會一律顯示在右側</string>
+  <string name="pa_pie_targets_title">扇形目標</string>
+  <string name="pa_pie_style_title">扇形樣式</string>
+  <string name="pa_pie_menu_title">一律顯示選單按鍵</string>
+  <string name="pa_pie_menu_summary">就算不需要也要顯示選單鍵</string>
+  <string name="pa_pie_size_title">扇形大小</string>
+  <string name="pa_pie_size_summary">制定扇形的大小</string>
+  <string name="pa_pie_size_small">小</string>
+  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
+  <string name="pa_pie_size_large">較大</string>
+  <string name="pa_pie_size_gigantic">超大</string>
+  <string name="pa_pie_size_monster">怪獸级</string>
+  <string name="pa_pie_size_enormous">極大</string>
+  <string name="pa_pie_gravity_title">扇形重力</string>
+  <string name="pa_pie_gravity_summary">選擇扇形顯示的位置</string>
+  <string name="pa_pie_gravity_bottom">底部</string>
+  <string name="pa_pie_gravity_right">右側</string>
+  <string name="pa_pie_gravity_left">左側</string>
+  <string name="pa_pie_gap_title">項目間隔</string>
+  <string name="pa_pie_gap_summary">調整扇形按鍵之間的分隔間隙</string>
+  <string name="pa_pie_angle_title">扇形角度</string>
+  <string name="pa_pie_angle_summary">調整扇形從依附螢幕到手勢邊緣的角度</string>
+  <string name="pa_pie_angle_none">無 (舊)</string>
+  <string name="pa_pie_angle_small">小</string>
+  <string name="pa_pie_angle_big">正常 (預設)</string>
+  <string name="pa_pie_angle_huge">大</string>
+  <string name="pa_pie_angle_super">巨大</string>
+  <string name="pa_pie_gap_none">無</string>
+  <string name="pa_pie_gap_small">小</string>
+  <string name="pa_pie_gap_big">大 (預設)</string>
+  <string name="pa_pie_gap_huge">巨大</string>
+  <string name="pa_pie_mode_title">扇形樣式</string>
+  <string name="pa_pie_mode_summary">管理如何處理動畫及狀態增加</string>
+  <string name="pa_pie_mode_bare">空</string>
+  <string name="pa_pie_mode_quick">快速</string>
+  <string name="pa_pie_mode_default">預設</string>
+  <string name="pa_pie_mode_slow">慢</string>
+  <string name="pa_pie_lastapp_title">最後的應用程式</string>
+  <string name="pa_pie_lastapp_summary">啟用上次使用的應用程式的按鍵</string>
+  <string name="pa_pie_killtask_title">終止工作</string>
+  <string name="pa_pie_killtask_summary">啟用終止工作按鍵</string>
+  <string name="pa_pie_notifications_title">通知</string>
+  <string name="pa_pie_notifications_summary">啟用通知按鍵</string>
+  <string name="pa_pie_settings_panel_title">快速設定面板</string>
+  <string name="pa_pie_settings_panel_summary">啟用展開快速設定面板按鍵</string>
+  <string name="pa_pie_screenshot_title">擷取螢幕畫面</string>
+  <string name="pa_pie_screenshot_summary">啟用擷取螢幕畫面的按鍵</string>
+  <string name="pa_pie_color_title">扇形的顏色設定</string>
+  <string name="pa_pie_color_style_title">扇形的顏色樣式</string>
+  <string name="pa_pie_background_title">背景顏色</string>
+  <string name="pa_pie_select_title">選擇顏色</string>
+  <string name="pa_pie_outlines_title">外框顏色</string>
+  <string name="pa_pie_status_clock_title">時鐘顏色</string>
+  <string name="pa_pie_status_title">狀態顏色</string>
+  <string name="pa_pie_chevron_title">Chevron 顏色</string>
+  <string name="pa_pie_juice_title">電池的顏色</string>
+  <string name="pa_pie_button_color">按鍵顏色</string>
+  <string name="pa_pie_button_color_title">按鍵顏色</string>
+  <string name="pa_pie_color_reset_title">重設顏色</string>
+  <string name="reset_message">重設所有設定？</string>
+  <string name="reset_paranoid">AICP</string>
+  <string name="reset_android">Android</string>
+  <string name="reset">重設</string>
   <!-- Settings drawer switch -->
+  <string name="show_settings_drawer_title">顯示設定清單</string>
+  <string name="show_settings_drawer_enabled">啟用設定清單</string>
+  <string name="show_settings_drawer_disabled">停用設定清單</string>
   <!-- Lockscreen Colors -->
+  <string name="lockscreen_colors_title">項目顏色</string>
+  <string name="lockscreen_owner_info_color">擁有者資訊</string>
+  <string name="lockscreen_alarm_color">鬧鐘</string>
+  <string name="lockscreen_clock_color">時鐘</string>
+  <string name="lockscreen_clock_date_color">日期</string>
+  <string name="lockscreen_colors_reset_title">重設顏色</string>
+  <string name="lockscreen_colors_reset_message">確定要將所有顏色重設為預設顏色？</string>
+  <string name="yes">是</string>
   <!-- Hide Lockscreen clock & date -->
+  <string name="hide_lockscreen_items_title">項目</string>
+  <string name="hide_lockscreen_clock_title">顯示時鐘</string>
+  <string name="hide_lockscreen_date_title">顯示日期</string>
+  <string name="hide_lockscreen_alarm_title">顯示鬧鐘文字</string>
+  <string name="hide_lockscreen_bottom_shortcuts_title">隱藏底部捷徑</string>
+  <string name="hide_lockscreen_bottom_shortcuts_summary_on">隱藏在鍵盤上的底部捷徑</string>
+  <string name="hide_lockscreen_bottom_shortcuts_summary_off">顯示在鍵盤上的底部捷徑</string>
   <!-- Hide Statusbar on Lockscreen -->
+  <string name="lockscreen_hide_status_bar_title">隱藏狀態列</string>
+  <string name="lockscreen_hide_status_bar_summary">輕觸狀態列即可切換可見度</string>
   <!-- Changelog -->
+  <string name="changelog_name">更新日誌</string>
+  <string name="commit_id">鎖定畫面提交 ID</string>
+  <string name="commit_message">提交訊息</string>
   <!-- QS Header Icons -->
+  <string name="qs_settings_icon_title">設定捷徑</string>
+  <string name="qs_settings_icon_summary">停用標頭中的設定捷徑</string>
+  <string name="qs_running_services_title">正在運作的服務圖示</string>
+  <string name="qs_running_services_summary">停用標頭上執行中的服務圖示</string>
+  <string name="qs_edit_title">編輯圖示</string>
+  <string name="qs_edit_summary">在標頭中停用圖塊編輯圖示</string>
+  <string name="qs_multiuser_switch_title">切換多個使用者</string>
+  <string name="qs_multiuser_switch_summary">在標頭中停用多個使用者的開關</string>
+  <string name="qs_expand_indicator_title">展開指示器</string>
+  <string name="qs_expand_indicator_summary">停用標頭中的展開指示器</string>
   <!-- Slim Recent panel -->
+  <string name="slim_recents_title">小型總覽</string>
+  <string name="use_slim_recents_title">使用小型總覽</string>
+  <string name="use_slim_recents_summary">使用小型總覽而不是預設的總覽</string>
+  <string name="slim_recents_settings_title">小型總覽設定</string>
+  <string name="slim_recents_settings_summary">檢視小型總覽的設定</string>
+  <string name="recent_panel_category">小型總覽的應用程式</string>
+  <string name="show_running_tasks_title">僅顯示正在執行的應用程式</string>
+  <string name="recents_max_apps_title">允許的應用程式數量上限</string>
+  <string name="recent_panel_scale_title">大小</string>
+  <string name="recent_panel_expanded_mode_title">延伸模式</string>
+  <string name="recent_panel_expanded_mode_summary">使用延伸的預覽模式</string>
+  <string name="recent_panel_expanded_mode_auto">自動 (預設)</string>
+  <string name="recent_panel_expanded_mode_always">一律</string>
+  <string name="recent_panel_expanded_mode_never">永不</string>
+  <string name="recent_panel_show_topmost_title">顯示最上層的應用程式</string>
+  <string name="recent_panel_show_topmost_summary">不要將最上層的應用程式排除在「總覽」畫面之外</string>
+  <string name="recent_panel_bg_color_title">面板背景顏色</string>
+  <string name="recent_card_bg_color_title">卡片背景顏色</string>
+  <string name="slim_recents_mem_display_long_click_clear_title">長按記憶體列</string>
+  <string name="slim_recents_mem_display_long_click_clear_summary">透過長按記憶體列清除總覽</string>
+  <string name="slim_icon_pack_title">圖示包</string>
+  <string name="slim_icon_pack_summary">在面板中為應用程式套用自訂圖示包</string>
+  <string name="no_iconpacks_summary">沒有已安裝的圖示包</string>
+  <string name="dialog_pick_iconpack_title">選擇圖示包</string>
+  <string name="default_iconpack_title">預設圖示</string>
+  <string name="slim_recents_corner_radius_title">卡片角度半徑</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
+  <string name="recent_panel_lefty_mode_title">顯示在左側邊緣</string>
+  <string name="recent_panel_lefty_mode_summary">在螢幕左側邊緣顯示「總覽」面板</string>
+  <string name="slim_recents_aicp_empty_drawable_title">AICP 空的總覽</string>
+  <string name="slim_recents_aicp_empty_drawable_summary">圖片顯示時無最近的應用程式</string>
   <!-- Hide Apps from Recents -->
+  <string name="hide_apps_from_recents_title">隱藏應用程式</string>
+  <string name="hide_from_recents_add_app">新增應用程式</string>
+  <string name="hide_apps_from_recents_summary">選擇要從「總覽」面板排除的應用程式</string>
   <!-- Fingerprint unlock keystore -->
+  <string name="fp_unlock_keystore_title">指紋解鎖</string>
+  <string name="fp_unlock_keystore_summary">在重新啟動後用指紋解鎖裝置，無須 PIN /密碼/圖案\n注意：自擔風險！</string>
   <!-- Slim Recent App Sidebar  -->
+  <string name="recent_app_sidebar_title">總覽應用程式側邊列</string>
+  <string name="use_recent_app_sidebar_title">啟用應用程式側邊列</string>
+  <string name="use_recent_app_sidebar_summary">在另一側邊緣顯示應用程式捷徑</string>
+  <string name="recent_app_sidebar_content_title">應用程式側邊列內容</string>
+  <string name="recent_app_sidebar_content_summary">配置應用程式側邊列的內容</string>
+  <string name="recent_app_sidebar_style_title">側邊列樣式</string>
+  <string name="recent_app_sidebar_style_summary">更改最近應用側邊列樣式</string>
+  <string name="recent_app_sidebar_hide_labels_title">隱藏圖示標籤</string>
+  <string name="recent_app_sidebar_label_color_title">標籤顏色</string>
+  <string name="recent_app_sidebar_bg_color_title">背景顏色</string>
+  <string name="recent_app_sidebar_scale_title">大小</string>
+  <string name="recent_app_sidebar_open_simultaneously_title">與總覽同時開啟</string>
+  <string name="recent_app_sidebar_open_simultaneously_summary">停用此項可减少總覽開啟停滯</string>
   <!-- Slim lockscreen shortcuts -->
+  <string name="shortcut_action_none">無</string>
+  <string name="shortcut_action_longpress">長按：</string>
+  <string name="shortcut_action_select_action_longpress">選擇長按動作：</string>
+  <string name="shortcut_action_select_action">選擇動作：</string>
+  <string name="shortcut_action_select_action_newaction">選擇新動作：</string>
+  <string name="shortcut_action_reset">重設</string>
+  <string name="shortcut_action_add">新增</string>
+  <string name="shortcut_action_reset_message">重設所有設定？</string>
+  <string name="shortcut_action_max">已達到最大捷徑允許數目</string>
+  <string name="shortcut_action_warning">警告</string>
+  <string name="shortcut_action_warning_message">無法刪除最後一個捷徑</string>
+  <string name="shortcut_action_disable_message">已停用\n新增一個以啟用此功能</string>
+  <string name="shortcut_image_not_valid">所選的應用程式沒有有效的圖示或不支援圖像裁剪。請使用另一個應用程式。</string>
+  <string name="shortcut_duplicate_entry">所選的動作不能被新增兩次</string>
+  <string name="shortcut_action_help_shortcut">捷徑</string>
+  <string name="shortcut_action_help_button">按鍵</string>
+  <string name="shortcut_action_help_app">應用程式</string>
+  <string name="shortcut_action_help_icon">，長按圖示以顯示自訂選項</string>
+  <string name="shortcut_action_help_main">若要新增一個%1$s，請輕觸「新增」圖示。一旦新增了%1$s，輕觸橫列以變更目標%2$s\n\n若要移除一個%1$s，向左或向右滑動橫列。若要重新排列%1$s，請拖移左側的箭頭。\n\n若要清除或重設為預設，請輕觸「重設」按鍵。</string>
+  <string name="shortcut_action_help_delete_last_entry">移除所有清單中的 %1$s 將會完全停用此功能。</string>
+  <string name="shortcut_action_help_pie_second_layer_delete_last_entry">移除所有清單中的 %1$s 將會完全停用第二層扇形選單。</string>
+  <string name="shortcuts_applications">應用程式</string>
+  <string name="shortcuts_select_custom_app_title">選擇自訂應用程式</string>
+  <string name="shortcuts_icon_picker_type">選擇圖示類型：</string>
+  <string name="shortcuts_icon_default">預設</string>
+  <string name="shortcuts_icon_custom">圖片庫</string>
+  <string name="shortcuts_icon_picker_choose_icon_title">選擇圖示</string>
+  <string name="reset_message">重設所有設定？</string>
+  <string name="lockscreen_shortcuts_title">螢幕中央捷徑</string>
+  <string name="lockscreen_shortcuts_summary">檢視或變更鎖定畫面捷徑</string>
+  <string name="lockscreen_shorcuts_launch_type_title">捷徑點選模式</string>
+  <string name="lockscreen_shortcuts_single_tap">點選</string>
+  <string name="lockscreen_shortcuts_double_tap">輕觸兩下</string>
+  <string name="lockscreen_shortcuts_longpress">長按</string>
+  <string name="help">說明</string>
+  <string name="shortcut_action_app">自訂應用程式</string>
+  <string name="shortcut_action_home">主畫面</string>
+  <string name="shortcut_action_back">返回</string>
+  <string name="shortcut_action_menu">選單</string>
+  <string name="shortcut_action_ime">開啟輸入法選擇器</string>
+  <string name="shortcut_action_power_menu">電源選單</string>
+  <string name="shortcut_action_recent">最近使用的應用程式</string>
+  <string name="shortcut_action_power">螢幕關閉</string>
+  <string name="shortcut_action_search">應用程式内搜尋</string>
   <!-- Notification guts kill app button -->
+  <string name="notification_guts_kill_app_button_title">終止應用程式按鍵</string>
+  <string name="notification_guts_kill_app_button_summary">在通知長按選單中顯示終止應用程式按鍵</string>
   <!-- Circle app bar -->
+  <string name="category_app_circle_bar_title">應用程式啟動器</string>
+  <string name="app_circle_bar_title">環形應用程式列</string>
+  <string name="app_circle_bar_summary">輕觸螢幕右側後顯示環形應用程式列</string>
+  <string name="app_circle_bar_included_apps_title">包含的應用程式</string>
+  <string name="app_circle_bar_included_apps_summary">顯示在環形應用程式列中的應用程式</string>
   <!-- Disabling FC notifications -->
+  <string name="disable_fc_notifications_title">停用強制關閉通知</string>
+  <string name="disable_fc_notifications_summary">這將會隱藏所有強制關閉通知</string>
   <!-- Scrolling Cache -->
+  <string name="pref_scrollingcache_title">滑動快取</string>
+  <string name="pref_scrollingcache_summary">滑動快取可提升滑動時的效能，但同時也會提高記憶體使用量</string>
+  <string name="pref_scrollingcache_force_enable">強制啟用</string>
+  <string name="pref_scrollingcache_default_enable">預設啟用</string>
+  <string name="pref_scrollingcache_default_disable">預設停用</string>
+  <string name="pref_scrollingcache_force_disable">強制停用</string>
   <!-- Volume dialog timeout -->
+  <string name="volume_dialog_timeout_title">音量對話方塊逾時</string>
   <!-- LockClock settings -->
+  <string name="locksclock_settings_title">LockClock 設定</string>
+  <string name="locksclock_settings_summary">直接存取 LockClock 小工具設定。</string>
   <!-- OmniJaws -->
+  <string name="weather_title">天氣</string>
+  <string name="weather_config_title">主要設定</string>
   <!-- Header Weather -->
+  <string name="header_weather_category_title">標頭</string>
+  <string name="header_weather_enabled_title">顯示天氣</string>
+  <string name="header_weather_enabled_summaryOn">在展開標頭中顯示天氣</string>
+  <string name="header_weather_enabled_summaryOff">在展開標頭中隱藏天氣</string>
+  <string name="header_weather_image_enabled_title">天氣狀況圖示顯示</string>
+  <string name="header_weather_image_enabled_summaryOn">在展開的標頭中顯示天氣狀況圖示</string>
+  <string name="header_weather_image_enabled_summaryOff">在展開的標頭中隱藏天氣狀況圖示</string>
   <!-- StatusBar weather settings -->
+  <string name="statusbar_weather_category_title">狀態列</string>
+  <string name="statusbar_weather_title">顯示天氣</string>
+  <string name="statusbar_weather_summary">選擇狀態列的天氣顯示選項</string>
+  <string name="statusbar_weather_dialog_title">狀態列天氣樣式</string>
+  <string name="status_bar_weather_hidden">隱藏天氣</string>
+  <string name="status_bar_temperature_image_show_scale">顯示溫度單位與圖片</string>
+  <string name="status_bar_temperature_image_hide_scale">隱藏溫度單位與圖片</string>
+  <string name="status_bar_temperature_show_scale_hide_image">顯示溫度單位</string>
+  <string name="status_bar_temperature_hide_scale_hide_image">隱藏溫度單位</string>
+  <string name="status_bar_show_image">顯示圖片</string>
   <!-- Confirm Power Off selection on Power menu-->
+  <string name="confirm_shutdown_switch_title">關閉確認對話方塊</string>
+  <string name="confirm_shutdown_switch_desc">當電源選單上輕觸關閉按鈕時，新增一個對話方塊來確認關機</string>
   <!-- Screen state service -->
+  <string name="screen_state_toggles_title">暫停動作</string>
+  <string name="screen_state_toggles_enable_title">啟用</string>
+  <string name="screen_state_toggles_enable_summary">在螢幕關閉時才執行操作。螢幕開啟後會還原先前的狀態。</string>
+  <string name="screen_state_toggles_mobile_title">行動網路</string>
+  <string name="screen_state_toggles_location_title">定位</string>
+  <string name="screen_state_toggles_twog">切換至 2G</string>
+  <string name="screen_state_toggles_twog_summary">螢幕關閉時網路模式將會切換至 2G</string>
+  <string name="screen_state_toggles_gps">停用 GPS</string>
+  <string name="screen_state_toggles_gps_summary">螢幕關閉時根據 GPS 的定位服務將被停用</string>
+  <string name="screen_state_toggles_mobile_data">停用行動數據</string>
+  <string name="screen_state_toggles_mobile_data_summary">螢幕關閉時將會停用行動數據</string>
+  <string name="screen_state_off_delay_title">螢幕關閉動作延遲</string>
+  <string name="screen_state_off_delay_summary">螢幕關閉後執行動作之前等待的分鐘數</string>
+  <string name="screen_state_on_delay_title">螢幕關閉動作延遲</string>
+  <string name="screen_state_on_delay_summary">螢幕開啟後執行動作之前等待的分鐘數</string>
   <!-- Show camera intent on secure lock screen -->
+  <string name="show_camera_intent_title">在安全鎖定畫面上顯示相機捷徑</string>
   <!-- Media art -->
+  <string name="media_art_title">媒體封面</string>
+  <string name="media_art_summary">啟用鎖定畫面媒體封面</string>
   <!-- AICP device and maintainer name -->
+  <string name="device_info_title">裝置維護者資訊</string>
+  <string name="device_maintainer">裝置維護者：</string>
+  <string name="device_maintainers">裝置維護者：</string>
+  <string name="device_info_default">未知</string>
   <!-- Lockscreen Weather -->
+  <string name="lock_screen_weather_category_title">鎖定畫面</string>
+  <string name="lock_screen_show_weather_title">顯示天氣</string>
+  <string name="lock_screen_show_weather_summaryOn">在鎖定畫面顯示天氣</string>
+  <string name="lock_screen_show_weather_summaryOff">在鎖定畫面隱藏天氣</string>
+  <string name="lock_screen_show_location_title">顯示定位</string>
+  <string name="lock_screen_show_location_summaryOn">在鎖定畫面顯示定位</string>
+  <string name="lock_screen_show_location_summaryOff">在鎖定畫面隱藏定位</string>
+  <string name="lock_screen_weather_condition_icon_title">天氣狀況圖示顯示</string>
+  <string name="lock_screen_weather_condition_icon_summaryOn">鎖定畫面上顯示天氣狀況圖示</string>
+  <string name="lock_screen_weather_condition_icon_summaryOff">鎖定畫面上隱藏天氣狀況圖示</string>
   <!-- QS footer warnings -->
+  <string name="qs_footer_warnings_title">快速設定頁尾警告</string>
+  <string name="qs_footer_warnings_summary">當網路被 VPN 或者應用程式監測時，在快速設定底部顯示一個警告。</string>
   <!-- Misc Weather -->
+  <string name="misc_weather_category_title">其他設定</string>
+  <string name="weather_windspeed_metric_units">風速 (公制) 顯示單位</string>
+  <string name="weather_windspeed_metric_units_summaryOn">風速以公尺/秒 (公尺/秒) 顯示</string>
+  <string name="weather_windspeed_metric_units_summaryOff">風速以公里/小時 (公里/小時) 顯示</string>
+  <string name="weather_winddirection_display_title">風向顯示</string>
+  <string name="weather_winddirection_display_summaryOn">風向使用風車方向顯示</string>
+  <string name="weather_winddirection_display_summaryOff">風向使用角度方向顯示</string>
   <!-- Battery tile style-->
+  <string name="battery_tile_style_title">電池圖塊樣式</string>
   <!-- Battery strings -->
+  <string name="status_bar_battery_style_icon_portrait">直式圖示</string>
+  <string name="status_bar_battery_style_icon_landscape">橫向圖示</string>
+  <string name="status_bar_battery_style_circle">環狀圖示</string>
+  <string name="status_bar_battery_style_solid">純色</string>
+  <string name="status_bar_battery_style_aicp">電池</string>
   <!-- Root extras -->
+  <string name="root_extras_msg">為了使用這個螢幕上的功能，需要 root；所以請確保已經安裝了root / su 解決方案，然後再嘗試！</string>
   <!-- Selinux Switch -->
+  <string name="selinux_switch_title">Selinux 切換選項</string>
+  <string name="selinux_switch_summary">SELinux 是修改內核和使用者空間的工具。更改模式會導致不必要的影響。使用時自擔風險</string>
+  <string name="selinux_title">Selinux 模式</string>
+  <string name="selinux_permissive_title">許可</string>
+  <string name="selinux_enforcing_title">強制執行</string>
+  <string name="selinux_permissive_toast_title">Selinux 設定為允許！</string>
+  <string name="selinux_persistence_title">堅持重新啟動</string>
+  <string name="selinux_persistence_summary">在每次啟動時恢復上述設定的策略模式</string>
   <!-- Custom bootanim -->
+  <string name="custom_bootanimation_title">開機動畫</string>
+  <string name="custom_bootanimation_select_title">選擇開機動畫</string>
+  <string name="custom_bootanimation_summary">每次更改時，目前動畫將被備份儲存到具有目前日期的 /AICP_ota 資料夾中。 如果不需要，必須手動刪除舊的。</string>
+  <string name="bootanimation_preview">開機動畫預覽</string>
+  <string name="set_custom_bootanimation">設定自訂...</string>
+  <string name="creating_preview">正在建立預覽...</string>
   <string name="error_reading_zip_file">讀取 ZIP 檔案錯誤</string>
+  <string name="error_creating_preview">建立預覽錯誤</string>
+  <string name="install_file_manager_error">沒有用來選擇所需壓縮檔案的應用程式。請安裝一個檔案管理員。</string>
+  <string name="apply">套用</string>
+  <string name="bootanim_install_successful">已成功套用新開機動畫。</string>
   <!-- Lineage extras stuff -->
+  <string name="lineage_extras_title">Lineage 額外的下載</string>
+  <string name="lineage_extras_title_summary">Root 外掛、root 移除、天氣提供者...</string>
   <!-- Center Time + Date in header -->
   <string name="qs_date_time_center_title">中央的日期和時間</string>
+  <string name="qs_date_time_center_summary">將停用多使用者和正在執行的服務圖示</string>
   <!-- WakeBlock app -->
+  <string name="wakeblock_app_title">喚醒鎖</string>
+  <string name="wakeblock_app_installed_summary">阻止喚醒鎖</string>
+  <string name="wakeblock_app_not_installed_summary">從 Play 商店取得應用程式來阻止喚醒鎖！</string>
   <!-- Sensor block per-package -->
+  <string name="sensor_block_title">阻止個別套件存取感應器</string>
+  <string name="sensor_block_summary">阻止應用程式存取某些感應器以省電</string>
   <!-- QS Tiles single tap to add/remove -->
+  <string name="qs_tile_single_tap_title">輕觸一下圖塊</string>
+  <string name="qs_tile_single_tap_summary">透過輕觸一下自訂工具中的圖塊新增/刪除快速設定的圖塊</string>
   <!-- Grid recents -->
+  <string name="grid_recents_title">網格總覽</string>
+  <string name="grid_recents_summary">在網格中顯示總覽</string>
 </resources>
