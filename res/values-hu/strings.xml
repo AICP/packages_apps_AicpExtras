@@ -59,6 +59,7 @@
   <string name="unit_percent">\u0025</string>
   <string name="header_provider_disabled">Tiltva</string>
   <string name="custom_header_title">Időtől függő fejléc</string>
+  <!-- QS quick pulldown using fpc -->
   <!-- Recents -->
   <string name="stock_recents_category">Gyári előzményekpanel</string>
   <string name="alternative_recents_category">Alternatív előzményekpanel</string>
@@ -97,12 +98,13 @@
   <!-- Lockscreen notif count -->
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
+  <!-- Lockscreen rotation -->
+  <string name="lockscreen_rotation_title">Forgó</string>
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Képernyőkép hang</string>
   <string name="screenshot_sound_summary">Hang effekt, ha képernyőkép készül</string>
-  <!-- Double tap navbar to sleep -->
   <!-- Swap volume keys based on device rotation -->
   <!-- Volume keys control media stream -->
   <!-- Volume keys control music playback -->
@@ -164,6 +166,7 @@
   <string name="default_string">Alapértelmezett</string>
   <string name="on">Be</string>
   <string name="off">Ki</string>
+  <string name="reset">Alaphelyzet</string>
   <string name="hidden_anim_activity_title">Yoga idő!!!</string>
   <string name="hidden_anim_more_nice">SZÉP</string>
   <!-- Sensor block per-package -->
@@ -172,4 +175,29 @@
   <!-- Lockscreen Weather -->
   <!-- Statusbar ticker -->
   <string name="ticker_disabled">Tiltva</string>
+  <!-- DUI -->
+  <string name="picker_activities">Programok</string>
+  <string name="select_custom_app_title">Egyéni alkalmazás választása</string>
+  <string name="select_custom_activity_title">Egyéni tevékenység választása</string>
+  <string name="profile_applist_title">Alkalmazások</string>
+  <string name="default_string">Alapértelmezett</string>
+  <!-- Actions dialog and default task values set in ActionPreference xml-->
+  <!-- Fling -->
+  <string name="long_swipe_reset">Alaphelyzet</string>
+  <!-- Pulse navigation bar music visualizer -->
+  <!-- Pulse config -->
+  <!-- Navbar height -->
+  <!-- SmartBar -->
+  <string name="smartbar_right">Jobb</string>
+  <string name="smartbar_left">Bal</string>
+  <string name="smartbar_ime_action_none">Nincs</string>
+  <!-- Carrier Label -->
+  <string name="carrier_category">Szolgáltatói felírat</string>
+  <string name="custom_carrier_label_title">Egyéni szolgálatói felírat</string>
+  <string name="custom_carrier_label_explain">Add meg az új felíratot. Üresen hagyva visszaáll a gyári felíratra.</string>
+  <string name="custom_carrier_label_notset">Egyéni felírat jelenleg nincs beállítva</string>
+  <string name="show_carrier_keyguard">Zárképernyőn</string>
+  <string name="show_carrier_statusbar">Állapot sávon</string>
+  <string name="show_carrier_enabled">Együtt</string>
+  <!-- Three-fingers-swipe to screenshot -->
 </resources>
