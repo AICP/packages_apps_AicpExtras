@@ -62,6 +62,7 @@
   <string name="unit_percent">\u0025</string>
   <string name="header_provider_disabled">Désactivé</string>
   <string name="custom_header_title">En-tête contextuel</string>
+  <!-- QS quick pulldown using fpc -->
   <!-- Recents -->
   <string name="recents_summary">Écran des applications récentes</string>
   <!-- Recents panel settings -->
@@ -101,13 +102,13 @@
   <!-- Lockscreen notif count -->
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
+  <!-- Lockscreen rotation -->
+  <string name="lockscreen_rotation_title">Rotation</string>
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Son de la capture d\'écran</string>
   <string name="screenshot_sound_summary">Jouer un son lors de la prise de capture d\'écran</string>
-  <!-- Double tap navbar to sleep -->
-  <string name="double_tap_sleep_navbar">Double appui pour mettre en veille sur la barre de navigation</string>
   <!-- Swap volume keys based on device rotation -->
   <!-- Volume keys control media stream -->
   <!-- Volume keys control music playback -->
@@ -177,6 +178,7 @@
   <string name="default_string">Par défaut</string>
   <string name="on">Activé</string>
   <string name="off">Désactivé</string>
+  <string name="reset">Réinitialiser </string>
   <string name="systemui_restart_title">Un redémarrage de SystemUI est nécessaire</string>
   <string name="systemui_restart_message">Afin que toutes les modifications soient prises en compte, un redémarrage de SystemUI est nécessaire. Voulez vous redémarrer SystemUI maintenant ?</string>
   <string name="cannot_get_su">Permission de superuser non accordée, l\'action a échoué</string>
@@ -188,4 +190,29 @@
   <!-- Lockscreen Weather -->
   <!-- Statusbar ticker -->
   <string name="ticker_disabled">Désactivé</string>
+  <!-- DUI -->
+  <string name="picker_activities">Activités</string>
+  <string name="select_custom_app_title">Sélectionner l\'application</string>
+  <string name="select_custom_activity_title">Sélectionner l\'activité</string>
+  <string name="profile_applist_title">Applications</string>
+  <string name="default_string">Par défaut</string>
+  <!-- Actions dialog and default task values set in ActionPreference xml-->
+  <!-- Fling -->
+  <string name="long_swipe_reset">Réinitialiser </string>
+  <!-- Pulse navigation bar music visualizer -->
+  <!-- Pulse config -->
+  <!-- Navbar height -->
+  <!-- SmartBar -->
+  <string name="smartbar_right">Droit</string>
+  <string name="smartbar_left">Gauche</string>
+  <string name="smartbar_ime_action_none">Aucune</string>
+  <!-- Carrier Label -->
+  <string name="carrier_category">Libellé opérateur</string>
+  <string name="custom_carrier_label_title">Libellé</string>
+  <string name="custom_carrier_label_explain">Saisir un nouveau libellé. Laisser vide pour revenir au libellé d\'origine.</string>
+  <string name="custom_carrier_label_notset">Non défini</string>
+  <string name="show_carrier_keyguard">Écran de déverrouillage</string>
+  <string name="show_carrier_statusbar">Barre d\'état</string>
+  <string name="show_carrier_enabled">Sur les deux</string>
+  <!-- Three-fingers-swipe to screenshot -->
 </resources>

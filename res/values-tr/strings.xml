@@ -61,6 +61,7 @@
   <string name="unit_percent">\u0025</string>
   <string name="header_provider_disabled">Devre dışı</string>
   <string name="custom_header_title">Günün saatine göre başlık resmi</string>
+  <!-- QS quick pulldown using fpc -->
   <!-- Recents -->
   <string name="recents_title">Son Uygulamalar</string>
   <!-- Recents panel settings -->
@@ -98,12 +99,13 @@
   <!-- Lockscreen notif count -->
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
+  <!-- Lockscreen rotation -->
+  <string name="lockscreen_rotation_title">Dönerek</string>
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Ekran görüntüsü sesi</string>
   <string name="screenshot_sound_summary">Ekran görüntüsü alındığında ses efekti verir</string>
-  <!-- Double tap navbar to sleep -->
   <!-- Swap volume keys based on device rotation -->
   <!-- Volume keys control media stream -->
   <string name="volume_keys_control_media_stream_summary">Ses kontrol paneli varsayılan olarak medya ses düzeyi kaydırıcısını gösterecektir</string>
@@ -166,6 +168,7 @@
   <string name="default_string">Varsayılan</string>
   <string name="on">Açık</string>
   <string name="off">Kapalı</string>
+  <string name="reset">Sıfırla</string>
   <string name="hidden_anim_activity_title">Yoga zamanı!!!</string>
   <string name="hidden_anim_more_nice">GÜZEL</string>
   <!-- Sensor block per-package -->
@@ -173,4 +176,30 @@
   <!-- Lockscreen Weather -->
   <!-- Statusbar ticker -->
   <string name="ticker_disabled">Devre dışı</string>
+  <!-- DUI -->
+  <string name="picker_activities">Etkinlikler</string>
+  <string name="select_custom_app_title">Bir uygulama seçin</string>
+  <string name="select_custom_activity_title">Bir etkinlik seçin</string>
+  <string name="profile_applist_title">Uygulamalar</string>
+  <string name="default_string">Varsayılan</string>
+  <!-- Actions dialog and default task values set in ActionPreference xml-->
+  <!-- Fling -->
+  <string name="long_swipe_reset">Sıfırla</string>
+  <!-- Pulse navigation bar music visualizer -->
+  <!-- Pulse config -->
+  <!-- Navbar height -->
+  <!-- SmartBar -->
+  <string name="smartbar_right">Sağ</string>
+  <string name="smartbar_left">Sol</string>
+  <string name="smartbar_button_animation_flip">Çevirme</string>
+  <string name="smartbar_ime_action_none">Hiçbiri</string>
+  <!-- Carrier Label -->
+  <string name="carrier_category">Özel operatör ismi</string>
+  <string name="custom_carrier_label_title">Özel operatör ismi</string>
+  <string name="custom_carrier_label_explain">Yeni bir isim girin. Varsayılana dönmek için boş bırakın</string>
+  <string name="custom_carrier_label_notset">Özel isim şu anda ayarlı değil</string>
+  <string name="show_carrier_keyguard">Tuş kilidi</string>
+  <string name="show_carrier_statusbar">Durum çubuğu</string>
+  <string name="show_carrier_enabled">Her ikisi</string>
+  <!-- Three-fingers-swipe to screenshot -->
 </resources>
