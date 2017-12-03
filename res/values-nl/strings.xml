@@ -64,6 +64,14 @@
   <string name="status_bar_temperature_hide_scale_hide_image">Temperatuur tonen zonder eenheid</string>
   <string name="status_bar_show_image">Afbeelding weergeven</string>
   <!-- Smart pulldown-->
+  <string name="smart_pulldown_title">Slimme pulldown</string>
+  <string name="smart_pulldown_off">uit</string>
+  <string name="smart_pulldown_none">geen notificaties</string>
+  <string name="smart_pulldown_dismissable">geen verwijderbare notificaties</string>
+  <string name="smart_pulldown_ongoing">geen lopende notificaties</string>
+  <string name="smart_pulldown_summary">Open Snelle instellingen wanneer er %1$s notificaties zijn</string>
+  <string name="smart_pulldown_none_summary">Open snelle instellingen wanneer er geen notificaties zijn</string>
+  <string name="smart_pulldown_off_summary">is uitgeschakeld</string>
   <!-- Notifications -->
   <string name="notifications_title">Notificaties</string>
   <!-- Brightness slider settings -->
@@ -98,6 +106,7 @@
   <string name="qs_tile_title_visibility_title">Toon titel van tegels</string>
   <string name="qs_tile_title_visibility_summary">Toon titel onder tegel indien geselecteerd</string>
   <!-- QS Dark mode -->
+  <string name="qs_style_dark_title">Donkere SystemUI-stijl</string>
   <!-- QS Headers -->
   <string name="status_bar_custom_header_title">Inschakelen</string>
   <string name="daylight_header_pack_title">Header afbeeldingpakket</string>
@@ -108,8 +117,17 @@
   <string name="daylight_header_provider_title">Dynamisch</string>
   <string name="custom_header_provider_title">Header provider</string>
   <string name="custom_header_browse_title">Blader door geïnstalleerde headers</string>
+  <string name="custom_header_browse_summary">Tik op een foto om te gebruiken voor de statische modus</string>
+  <string name="custom_header_browse_summary_new">Door alle beschikbare header-pakketten bladeren</string>
+  <string name="custom_header_pick_title">Selecteer de header-afbeelding</string>
+  <string name="custom_header_pick_summary">Selecteer een afbeelding om te gebruiken voor de statische modus</string>
+  <string name="style_enabled_summary">Aangepaste header-afbeelding is AAN</string>
+  <string name="style_disabled_summary">Aangepaste header-afbeelding is UIT</string>
   <string name="header_provider_disabled">Uitgeschakeld</string>
   <string name="custom_header_title">Tijdsafhankelijke header</string>
+  <!-- QS quick pulldown using fpc -->
+  <string name="status_bar_quick_qs_pulldown_fp_title">Snelle veeg met vingerafdruk</string>
+  <string name="status_bar_quick_qs_pulldown_fp_summary">Door het inschakelen van deze optie kunt u met één veegbeweging de Snelle instellingen openen</string>
   <!-- Recents -->
   <string name="recents_title">Recente apps</string>
   <string name="recents_summary">Recente apps-scherm</string>
@@ -200,7 +218,15 @@
   <string name="lockscreen_maxnotif_summary">Aanpassen aantal notificaties</string>
   <string name="lockscreen_maxnotif_config">Aantal maximaal toegestane notificaties</string>
   <!-- Power menu on secure lockscreen -->
+  <string name="lockscreen_power_menu_disabled_title">Geen Aan-/uit menu op vergrendelscherm</string>
+  <string name="lockscreen_power_menu_disabled_summary">Uitschakelen Aan-/uit menu op vergrendelscherm</string>
   <!-- Disable QS on secure Lockscreen -->
+  <string name="lockscreen_qs_disabled_title">Geen Snelle instellingen op vergrendelscherm</string>
+  <string name="lockscreen_qs_disabled_summary">Uitschakelen Snelle instellingen-tegels op vergrendelscherm</string>
+  <!-- Lockscreen rotation -->
+  <string name="lockscreen_rotation_title">Rotatie</string>
+  <string name="lockscreen_rotation_summary_on">Vergrendelscherm rotatie is ingeschakeld</string>
+  <string name="lockscreen_rotation_summary_off">Vergrendelscherm rotatie is uitgeschakeld</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Andere UI verbeteringen</string>
   <!-- Volume dialog timeout -->
@@ -208,9 +234,6 @@
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Geluid schermafbeelding</string>
   <string name="screenshot_sound_summary">Speelt een geluid af bij het maken van een schermafbeelding</string>
-  <!-- Double tap navbar to sleep -->
-  <string name="double_tap_sleep_navbar">Dubbeltikken op navigatiebalk voor slaapstand</string>
-  <string name="double_tap_sleep_navbar_summary">Dubbeltikken op navigatiebalk zet het apparaat in slaapstand</string>
   <!-- Swap volume keys based on device rotation -->
   <string name="swap_volume_buttons">Volumeknoppen omwisselen</string>
   <string name="swap_volume_buttons_summary">Volumeknoppen omwisselen op basis van apparaat rotatie</string>
@@ -340,6 +363,7 @@
   <string name="default_string">Standaard</string>
   <string name="on">Aan</string>
   <string name="off">Uit</string>
+  <string name="reset">Herstellen</string>
   <string name="systemui_restart_title">Opnieuw opstarten SystemUI vereist</string>
   <string name="systemui_restart_message">Een herstart van de UI is nodig om alle wijzigingen door te voeren. UI nu herstarten?</string>
   <string name="cannot_get_su">Actie mislukt door het ontbreken van supergebruiker toegang</string>
@@ -372,4 +396,182 @@
   <string name="ticker_disabled">Uitgeschakeld</string>
   <string name="ticker_enabled">Notificatie ticker</string>
   <string name="ticker_media_enabled">Ticker voor notificaties en muziek</string>
+  <string name="navbar_title">Navigatiebalk</string>
+  <string name="navbar_summary">SmartBar/Fling</string>
+  <!-- DUI -->
+  <string name="navbar_interface_title">Interface</string>
+  <string name="navbar_size">Balk afmeting</string>
+  <string name="navbar_mode">Navigatiemodus</string>
+  <string name="navbar_mode_summary">Selecteer welke navigatiemodus gebruikt moet worden op uw apparaat</string>
+  <string name="navbar_visibility">Navigatiebalk tonen</string>
+  <string name="navigationbar_settings_title">Navigatiebalk</string>
+  <string name="navigationbar_settings_summary">Aanpassen stijl en gedrag navigatiebalk</string>
+  <string name="navbar_general_title">Geavanceerd</string>
+  <string name="navigation_bar_left_title">Linkshandige modus</string>
+  <string name="navigation_bar_left_summary">Navigatiebalk aan de linkerkant van het scherm weergeven in liggende stand</string>
+  <string name="smartbar_interface">SmartBar</string>
+  <string name="icon_pack_picker_dialog_title">Pictogrampakketten</string>
+  <string name="image_exceeds_max_allowed_size">Beeld mag niet groter zijn dan 512 x 512</string>
+  <string name="invalid_icon_from_uri">Kan afbeelding niet laden van content provider</string>
+  <string name="picker_activities">Activiteiten</string>
+  <string name="select_custom_app_title">Kies een app</string>
+  <string name="select_custom_activity_title">Kies een activiteit</string>
+  <string name="profile_applist_title">Apps</string>
+  <string name="default_string">Standaard</string>
+  <string name="default_settings">Standaard instellingen</string>
+  <string name="default_settings_summary">Standaard AOSP navigatiebalk</string>
+  <!-- Actions dialog and default task values set in ActionPreference xml-->
+  <string name="choose_action_title">Kies actie</string>
+  <string name="action_entry_default_action">Standaardinstellingen</string>
+  <string name="action_entry_select_app">Selecteer app</string>
+  <string name="action_entry_custom_action">Selecteer aangepaste actie</string>
+  <!-- Fling -->
+  <string name="fling_settings">Fling instellingen</string>
+  <string name="fling_settings_summary">Een unieke en volledig aanpasbare, gebaargestuurde navigatiebalk</string>
+  <string name="fling_interface">Fling</string>
+  <string name="fling_enable_title">Fling inschakelen</string>
+  <string name="fling_back_home_policy">Terug en Home moeten altijd worden ingesteld. Om toewijzing van de Terug- of Home-toets te wijzigen stelt u eerst de gewenste toewijzing in.\n\nOok zal het instellen van een dubbeltik-actie leiden tot een klein beetje vertraging bij een enkele tik.</string>
+  <string name="fling_split_bar_policy">Wanneer alleen een rechts of links actie is toegewezen, is de actie van toepassing op de volledige balk.</string>
+  <string name="fling_def_summary">Geen actie ingesteld</string>
+  <string name="fling_swipe_actions">Veeg gebaren</string>
+  <string name="fling_tap_actions">Tik gebaren</string>
+  <string name="fling_short_swipe_right">Korte veeg naar rechts</string>
+  <string name="fling_short_swipe_left">Korte veeg naar links</string>
+  <string name="fling_long_swipe_right">Lange veeg naar rechts</string>
+  <string name="fling_long_swipe_left">Lange veeg naar links</string>
+  <string name="fling_right_up_swipe">Rechts omhoog vegen</string>
+  <string name="fling_left_up_swipe">Links omhoog vegen</string>
+  <string name="fling_single_tap">Enkele tik rechts</string>
+  <string name="fling_double_tap">Dubbel tikken rechts</string>
+  <string name="fling_long_press">Lang drukken rechts</string>
+  <string name="fling_single_left_tap">Enkele tik links</string>
+  <string name="fling_double_left_tap">Dubbel tikken links</string>
+  <string name="fling_long_left_press">Lang drukken links</string>
+  <string name="long_swipe_portrait_title">Staand</string>
+  <string name="long_swipe_landscape_title">Liggend</string>
+  <string name="portrait_right_swipe_title">Staand rechts vegen</string>
+  <string name="portrait_left_swipe_title">Staand links vegen</string>
+  <string name="landscape_right_swipe_title">Liggend rechts vegen</string>
+  <string name="landscape_left_swipe_title">Liggend links vegen</string>
+  <string name="vertical_up_swipe_title">Verticaal omhoog vegen</string>
+  <string name="vertical_down_swipe_title">Verticaal omlaag vegen</string>
+  <string name="up_swipe_title">Omhoog vegen</string>
+  <string name="down_swipe_title">Omlaag vegen</string>
+  <string name="long_swipe_reset">Herstellen</string>
+  <string name="fling_advanced">Geavanceerd</string>
+  <string name="fling_long_swipe_title">Drempel lang vegen</string>
+  <string name="fling_long_swipe_summary">Fine-tunen van lang vegen drempels gebaseerd op een percentage van de Fling interface breedte of hoogte</string>
+  <string name="fling_trails_enable_title">Inschakelen gebaar sporen</string>
+  <string name="fling_trails_enable_summary">Toon een spoor bij veeg gebaren</string>
+  <string name="fling_trails_color_title">Spoor kleur</string>
+  <string name="fling_trails_width_title">Spoor breedte</string>
+  <string name="fling_appearance">Uiterlijk</string>
+  <string name="fling_show_logo_title">Toon Fling logo</string>
+  <string name="fling_animate_logo_title">Logo animeren</string>
+  <string name="fling_animate_logo_summary">Logo animeren bij aanraken</string>
+  <string name="fling_logo_color">Logo kleur</string>
+  <string name="fling_logo_custom_logo_pick_title">Aangepast logo pictogram</string>
+  <string name="fling_logo_custom_logo_image_pick_title">Aangepaste logo afbeelding</string>
+  <string name="fling_logo_custom_logo_reset_title">Reset logo pictogram</string>
+  <string name="fling_show_ripple_title">Toon rimpel</string>
+  <string name="fling_show_ripple_summary">Rimpeleffect bij aanraken</string>
+  <string name="fling_ripple_color">Rimpel kleur</string>
+  <string name="fling_longpress_timeout_label_left">Minder vertraging</string>
+  <string name="fling_longpress_timeout_label_right">Meer vertraging</string>
+  <string name="fling_longpress_title">Vertraging lang indrukken</string>
+  <string name="fling_longpress_summary">Verlengen of verkorten van de tijd die nodig is voor het uitvoeren van een lange druk</string>
+  <string name="fling_keyboard_cursors_title">Dynamische toetsenbord cursors actie</string>
+  <string name="fling_keyboard_cursors_summary">Dubbeltikken links en rechts wordt als beweging geïnterpreteerd bij geopend toetsenbord</string>
+  <string name="fling_logo_opacity_title">Transparantie Fling-logo</string>
+  <!-- Pulse navigation bar music visualizer -->
+  <string name="pulse_help_policy_notice_summary">Pulse werkt niet met sommige audio bronnen bij het luisteren via luidspreker</string>
+  <string name="pulse_settings">Pulse</string>
+  <string name="pulse_settings_summary">Grafische audio equalizer op de navigatiebalk</string>
+  <string name="fling_show_pulse_title">Pulse activeren</string>
+  <string name="fling_show_pulse_summary">Grafische audio equalizer op de navigatiebalk</string>
+  <string name="pulse_render_mode_title">Weergave modus</string>
+  <string name="pulse_render_mode_fading_bars">Vervagende blokken</string>
+  <string name="pulse_render_mode_solid_lines">Ononderbroken lijnen</string>
+  <string name="fling_pulse_color">Pulse kleur</string>
+  <string name="eos_fling_lavalamp_title">Lavalamp inschakelen</string>
+  <string name="eos_fling_lavalamp_summary">Pulse bootst een kleurenmix in vloeiende lavalamp stijl na</string>
+  <string name="pulse_advanced_category">Geavanceerd</string>
+  <string name="pulse_legacy_mode_advanced_category">Vervagende blokken-modus instellingen</string>
+  <string name="pulse_custom_fudge_factor">Sanity niveau</string>
+  <string name="lavamp_solid_speed_title">Lava Lamp snelheid</string>
+  <string name="pulse_solid_units_count">Aantal ononderbroken lijnen</string>
+  <string name="pulse_solid_lines_count">Aantal ononderbroken lijnen</string>
+  <string name="pulse_solid_units_opacity">Transparantie ononderbroken lijnen</string>
+  <string name="pulse_solid_dimen_category">Ononderbroken lijnen-modus instellingen</string>
+  <string name="pulse_custom_buttons_opacity_title">Transparantie Smartbar knoppen bij Pulse</string>
+  <!-- Pulse config -->
+  <string name="pulse_custom_dimen">Balk breedte</string>
+  <string name="pulse_custom_div">Balk afstand</string>
+  <string name="pulse_filled_block_size">Blok grootte</string>
+  <string name="pulse_empty_block_size">Blok afstand</string>
+  <!-- Navbar height -->
+  <string name="navigation_bar_size_title">Balk grootte</string>
+  <string name="portrait_title">Staand hoogte</string>
+  <string name="land_vert_title">Liggend breedte</string>
+  <string name="land_hor_title">Liggend hoogte</string>
+  <string name="positive_done">Gereed</string>
+  <!-- SmartBar -->
+  <string name="smartbar_category">Smartbar</string>
+  <string name="smartbar_settings_title">Smartbar instellingen</string>
+  <string name="smartbar_settings_summary">Volledig aanpasbare navigatiebalk</string>
+  <string name="smartbar_editor_title">Start bewerkingsmodus</string>
+  <string name="smartbar_editor_summary">Open Smartbar knoppen editor</string>
+  <string name="smartbar_help_policy_notice_summary">In de bewerkingsmodus zal middellang drukken en slepen van een knop diens positie wijzigen, terwijl lang indrukken het bewerkingsmenu zal tonen. Knoppositie kan worden gewijzigd terwijl het menu wordt getoond.\n\nHet instellen van een dubbele tik actie zal de enkele tik een beetje vertragen.</string>
+  <string name="smartbar_context_menu_position_title">Context knoppen weergavepositie</string>
+  <string name="smartbar_context_menu_position_summary">Positie van contextuele knoppen zoals Menu en Invoerselectie instellen</string>
+  <string name="smartbar_right">Rechts</string>
+  <string name="smartbar_left">Links</string>
+  <string name="smartbar_button_animation_title">Toets-animatie bij aanraken</string>
+  <string name="smartbar_button_animation_summary">De animatiestijl van de primaire knoppen instellen wanneer ze worden ingedrukt</string>
+  <string name="smartbar_button_animation_ripple">Rimpel</string>
+  <string name="smartbar_button_animation_spring">Verend</string>
+  <string name="smartbar_button_animation_flip">Omkeren</string>
+  <string name="smartbar_button_animation_pixel">Pixel (alle knoppen)</string>
+  <string name="smartbar_button_animation_pixel_home">Pixel (alleen Home-knop)</string>
+  <string name="smartbar_button_animation_pixel_home_ripple">Pixel (alleen Home knop) en rimpel</string>
+  <string name="smartbar_factory_reset_title">Terug naar standaard instellingen</string>
+  <string name="smartbar_factory_reset_confirm">Weet u zeker dat u Smartbar naar standaard instellingen wilt herstellen?</string>
+  <string name="smartbar_ime_action_title">Invoermethode en media-acties</string>
+  <string name="smartbar_ime_action_summary">Instellen welke knoppen getoond moeten worden bij schermtoetsenbord of als muziek speelt</string>
+  <string name="smartbar_ime_action_none">Geen</string>
+  <string name="smartbar_ime_action_arrows">Invoer pijlen</string>
+  <string name="smartbar_ime_action_switcher">Toetsenbord switcher</string>
+  <string name="smartbar_ime_action_dynamic">Invoer/media pijlen</string>
+  <string name="smartbar_backup_current_config_title">Profiel opslaan</string>
+  <string name="smartbar_restore_config_title">Profiel herstellen</string>
+  <string name="smartbar_config_name_edit_dialog_title">Smartbar profielnaam</string>
+  <string name="smartbar_config_name_edit_dialog_message">Voer naam in of laat leeg</string>
+  <string name="smartbar_config_dialog_title">Smartbar profielen</string>
+  <string name="smartbar_config_backup_success_toast">Smartbar profiel succesvol opgeslagen</string>
+  <string name="smartbar_config_restore_success_toast">Smartbar profiel succesvol hersteld</string>
+  <string name="smartbar_config_backup_error_toast">Fout bij het opslaan van Smartbar profiel</string>
+  <string name="smartbar_config_restore_error_toast">Fout bij het herstellen van Smartbar profiel</string>
+  <string name="navbar_buttons_alpha_title">Knop transparantie</string>
+  <string name="smartbar_longpress_delay_title">Vertraging lang drukken</string>
+  <string name="smartbar_longpress_delay_summary">Instellen hoe lang het systeem zal wachten voordat een lang drukken-actie wordt gestart</string>
+  <string name="smartbar_longpress_delay_default">Standaard vertraging (snel)</string>
+  <string name="smartbar_longpress_delay_normal">Normale vertraging</string>
+  <string name="smartbar_longpress_delay_long">Lange vertraging</string>
+  <string name="smartbar_custom_icon_size_title">Aangepaste pictogramschaling</string>
+  <string name="one_handed_mode_title">Enkelhandige modus</string>
+  <string name="one_handed_mode_summary">Staat toe om over de navigatiebalk te slepen om één hand modus te activeren</string>
+  <!-- Carrier Label -->
+  <string name="carrier_category">Providernaam</string>
+  <string name="carrier_options">Selecteer weergave locaties</string>
+  <string name="custom_carrier_label_title">Aangepaste providernaam</string>
+  <string name="custom_carrier_label_explain">Voer aub een nieuwe naam in. Leeg laten voor de standaard vermelding.</string>
+  <string name="custom_carrier_label_notset">Aangepaste naam niet ingesteld</string>
+  <string name="show_carrier_title">Wordt getoond op</string>
+  <string name="show_carrier_disabled">Nergens</string>
+  <string name="show_carrier_keyguard">Vergrendelscherm</string>
+  <string name="show_carrier_statusbar">Statusbalk</string>
+  <string name="show_carrier_enabled">Beide</string>
+  <!-- Three-fingers-swipe to screenshot -->
+  <string name="three_finger_gesture">Gebaar met drie vingers</string>
+  <string name="three_finger_gesture_summary">Schermafbeelding maken door met drie vingers over het scherm te vegen</string>
 </resources>

@@ -64,6 +64,7 @@
   <string name="unit_percent">\u0025</string>
   <string name="header_provider_disabled">Desativado</string>
   <string name="custom_header_title">Cabeçalho contextual do tempo</string>
+  <!-- QS quick pulldown using fpc -->
   <!-- Recents -->
   <string name="recents_title">Recentes</string>
   <!-- Recents panel settings -->
@@ -101,13 +102,13 @@
   <!-- Lockscreen notif count -->
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
+  <!-- Lockscreen rotation -->
+  <string name="lockscreen_rotation_title">Rotação</string>
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Som de captura de tela</string>
   <string name="screenshot_sound_summary">Reproduz um efeito sonoro quando a tela for capturada</string>
-  <!-- Double tap navbar to sleep -->
-  <string name="double_tap_sleep_navbar">Toque duas vezes para dormir (barra de status)</string>
   <!-- Swap volume keys based on device rotation -->
   <!-- Volume keys control media stream -->
   <!-- Volume keys control music playback -->
@@ -185,6 +186,7 @@
   <string name="default_string">Padrão</string>
   <string name="on">Ligado</string>
   <string name="off">Desligado</string>
+  <string name="reset">Reiniciar</string>
   <string name="hidden_anim_activity_title">tempo de Yoga !!!</string>
   <string name="hidden_anim_more_nice">NICE</string>
   <!-- Sensor block per-package -->
@@ -192,4 +194,30 @@
   <!-- Lockscreen Weather -->
   <!-- Statusbar ticker -->
   <string name="ticker_disabled">Desativado</string>
+  <!-- DUI -->
+  <string name="picker_activities">Atividades</string>
+  <string name="select_custom_app_title">Escolha um aplicativo personalizado</string>
+  <string name="select_custom_activity_title">Selecione a atividade personalizada</string>
+  <string name="profile_applist_title">Aplicações</string>
+  <string name="default_string">Padrão</string>
+  <!-- Actions dialog and default task values set in ActionPreference xml-->
+  <!-- Fling -->
+  <string name="long_swipe_reset">Reiniciar</string>
+  <!-- Pulse navigation bar music visualizer -->
+  <!-- Pulse config -->
+  <!-- Navbar height -->
+  <!-- SmartBar -->
+  <string name="smartbar_right">Centro</string>
+  <string name="smartbar_left">Esquerda</string>
+  <string name="smartbar_button_animation_flip">Giro</string>
+  <string name="smartbar_ime_action_none">Nenhuma</string>
+  <!-- Carrier Label -->
+  <string name="carrier_category">Etiqueta de suporte</string>
+  <string name="custom_carrier_label_title">Etiqueta de suporte personalizada</string>
+  <string name="custom_carrier_label_explain">Por favor, indique um novo rótulo. Deixe em branco para reverter a etiqueta de estoque.</string>
+  <string name="custom_carrier_label_notset">Etiqueta personalizada atualmente não definida</string>
+  <string name="show_carrier_keyguard">Chave de segurança</string>
+  <string name="show_carrier_statusbar">Barra de status</string>
+  <string name="show_carrier_enabled">Ambos</string>
+  <!-- Three-fingers-swipe to screenshot -->
 </resources>
