@@ -75,6 +75,7 @@
   <string name="custom_header_browse_title">インストール済みのヘッダーを表示する</string>
   <string name="header_provider_disabled">無効</string>
   <string name="custom_header_title">カスタムヘッダー画像</string>
+  <!-- QS quick pulldown using fpc -->
   <!-- Recents -->
   <string name="recents_title">アプリ履歴</string>
   <!-- Recents panel settings -->
@@ -126,12 +127,13 @@
   <!-- Lockscreen notif count -->
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
+  <!-- Lockscreen rotation -->
+  <string name="lockscreen_rotation_title">回転</string>
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">スクリーンショットの音</string>
   <string name="screenshot_sound_summary">スクリーンショットの取得時に音を鳴らします</string>
-  <!-- Double tap navbar to sleep -->
   <!-- Swap volume keys based on device rotation -->
   <!-- Volume keys control media stream -->
   <!-- Volume keys control music playback -->
@@ -191,6 +193,7 @@
   <string name="default_string">デフォルト</string>
   <string name="on">ON</string>
   <string name="off">OFF</string>
+  <string name="reset">リセット</string>
   <string name="hidden_anim_more_nice">いいぞ</string>
   <!-- Sensor block per-package -->
   <!-- Weather - OmniJaws Settings -->
@@ -208,4 +211,30 @@
   <string name="lock_screen_weather_condition_icon_summaryOff">ロック画面に天候のアイコンを表示しない</string>
   <!-- Statusbar ticker -->
   <string name="ticker_disabled">無効</string>
+  <!-- DUI -->
+  <string name="picker_activities">アクティビティ</string>
+  <string name="select_custom_app_title">アプリを選択</string>
+  <string name="select_custom_activity_title">アクティビティを選択</string>
+  <string name="profile_applist_title">アプリ</string>
+  <string name="default_string">デフォルト</string>
+  <!-- Actions dialog and default task values set in ActionPreference xml-->
+  <!-- Fling -->
+  <string name="long_swipe_reset">リセット</string>
+  <!-- Pulse navigation bar music visualizer -->
+  <!-- Pulse config -->
+  <!-- Navbar height -->
+  <!-- SmartBar -->
+  <string name="smartbar_right">右</string>
+  <string name="smartbar_left">左</string>
+  <string name="smartbar_button_animation_flip">左右に回転</string>
+  <string name="smartbar_ime_action_none">なし</string>
+  <!-- Carrier Label -->
+  <string name="carrier_category">キャリアラベル</string>
+  <string name="custom_carrier_label_title">カスタムキャリアラベル</string>
+  <string name="custom_carrier_label_explain">新しいラベル名を入力してください。空白のままにすると標準のラベルに戻ります。</string>
+  <string name="custom_carrier_label_notset">カスタムラベルは設定されていません</string>
+  <string name="show_carrier_keyguard">ロック画面で表示</string>
+  <string name="show_carrier_statusbar">ステータスバーで表示</string>
+  <string name="show_carrier_enabled">両方で表示</string>
+  <!-- Three-fingers-swipe to screenshot -->
 </resources>
