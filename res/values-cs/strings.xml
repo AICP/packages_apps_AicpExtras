@@ -64,6 +64,14 @@
   <string name="status_bar_temperature_hide_scale_hide_image">Zobrazit teplotu bez stupnice</string>
   <string name="status_bar_show_image">Zobrazit obrázek</string>
   <!-- Smart pulldown-->
+  <string name="smart_pulldown_title">Chytré rozbalení lišty</string>
+  <string name="smart_pulldown_off">vypnuto</string>
+  <string name="smart_pulldown_none">žádné oznámení</string>
+  <string name="smart_pulldown_dismissable">žádné zamítnuté oznámení</string>
+  <string name="smart_pulldown_ongoing">žádné probíhající oznámení</string>
+  <string name="smart_pulldown_summary">Otevře nabídku rychlého nastavení, kde je přítomno %1$s</string>
+  <string name="smart_pulldown_none_summary">Otevře Rychlé Nastavení pokud nejsou přítomny žádné oznámení</string>
+  <string name="smart_pulldown_off_summary">je vypnuto</string>
   <!-- Notifications -->
   <string name="notifications_title">Oznámení</string>
   <!-- Brightness slider settings -->
@@ -98,6 +106,7 @@
   <string name="qs_tile_title_visibility_title">Zobrazit názvy dlaždic</string>
   <string name="qs_tile_title_visibility_summary">Pokud je zaškrtnuto, zobrazí se popisky pod dlaždicemi</string>
   <!-- QS Dark mode -->
+  <string name="qs_style_dark_title">Styl Dark SystemUI</string>
   <!-- QS Headers -->
   <string name="status_bar_custom_header_title">Povolit</string>
   <string name="daylight_header_pack_title">Balík obrázků záhlaví</string>
@@ -107,8 +116,15 @@
   <string name="daylight_header_provider_title">Dynamický</string>
   <string name="custom_header_provider_title">Poskytovatel záhlaví</string>
   <string name="custom_header_browse_title">Procházet nainstalované záhlaví</string>
+  <string name="custom_header_browse_summary">Kliknutí na jakýkoliv obrázek spustí statický režim</string>
+  <string name="custom_header_browse_summary_new">Procházet všechny dostupné balíčky záhlaví</string>
+  <string name="custom_header_pick_title">Vybrat obrázek záhlaví</string>
+  <string name="custom_header_pick_summary">Vyberte obrázek, který chcete použít pro statický režim</string>
+  <string name="style_enabled_summary">Vlastní obrázek záhlaví je zapnutý</string>
+  <string name="style_disabled_summary">Vlastní obrázek záhlaví je vypnutý</string>
   <string name="header_provider_disabled">Zakázáno</string>
   <string name="custom_header_title">Vlastní obrázek záhlaví</string>
+  <!-- QS quick pulldown using fpc -->
   <!-- Recents -->
   <string name="recents_title">Nedávné</string>
   <string name="recents_summary">Obrazovka nedávných aplikací</string>
@@ -199,7 +215,15 @@
   <string name="lockscreen_maxnotif_summary">Vlastní nastavení počtu oznámení</string>
   <string name="lockscreen_maxnotif_config">Maximální povolený počet oznámení</string>
   <!-- Power menu on secure lockscreen -->
+  <string name="lockscreen_power_menu_disabled_title">Žádné menu napájení na zabezpečené zamykací obrazovce</string>
+  <string name="lockscreen_power_menu_disabled_summary">Zakázat menu napájení na zabezpečené zamykací obrazovce</string>
   <!-- Disable QS on secure Lockscreen -->
+  <string name="lockscreen_qs_disabled_title">Žádné rychlé nastavení na zabezpečené zamykací obrazovce</string>
+  <string name="lockscreen_qs_disabled_summary">Zakázat dlaždice rychlého nastavení na zabezpečené zamykací obrazovce</string>
+  <!-- Lockscreen rotation -->
+  <string name="lockscreen_rotation_title">Rotace</string>
+  <string name="lockscreen_rotation_summary_on">Otáčení zamykací obrazovky je povoleno</string>
+  <string name="lockscreen_rotation_summary_off">Otáčení zamykací obrazovky je zakázáno</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Další vylepšení UI</string>
   <!-- Volume dialog timeout -->
@@ -207,9 +231,6 @@
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Zvuk při snímku obrazovky</string>
   <string name="screenshot_sound_summary">Přehraje zvukový efekt při snímku obrazovky</string>
-  <!-- Double tap navbar to sleep -->
-  <string name="double_tap_sleep_navbar">Dvojím poklepáním na navigační panel uvést zařízení do režimu spánku</string>
-  <string name="double_tap_sleep_navbar_summary">Dvojí poklepání na navigační panel uvede zařízení do režimu spánku</string>
   <!-- Swap volume keys based on device rotation -->
   <string name="swap_volume_buttons">Prohodit tlačítka hlasitosti</string>
   <string name="swap_volume_buttons_summary">Prohodit tlačítka hlasitosti dle natočení zařízení</string>
@@ -339,6 +360,9 @@
   <string name="default_string">Výchozí</string>
   <string name="on">Zapnuto</string>
   <string name="off">Vypnuto</string>
+  <string name="yes">\@android:string/ano</string>
+  <string name="no">\@android:string/ne</string>
+  <string name="reset">Obnovit</string>
   <string name="systemui_restart_title">Je vyžadován restart SystemUI</string>
   <string name="systemui_restart_message">Aby se projevily všechny změny, je třeba restartovat SystemUI. Restartovat nyní?</string>
   <string name="cannot_get_su">Akce se nezdařila z důvodu chybějícího přístupu superuser</string>
@@ -371,4 +395,175 @@
   <string name="ticker_disabled">Zakázáno</string>
   <string name="ticker_enabled">Notifikační oznámení</string>
   <string name="ticker_media_enabled">Notifikační a hudební oznámení</string>
+  <string name="navbar_title">Navigační panel</string>
+  <string name="navbar_summary">Chytrá lišta/Fling</string>
+  <!-- DUI -->
+  <string name="navbar_interface_title">Rozhraní</string>
+  <string name="navbar_size">Velikost panelu</string>
+  <string name="navbar_mode">Navigační režim</string>
+  <string name="navbar_visibility">Povolit navigační panel</string>
+  <string name="navigationbar_settings_title">Navigační panel</string>
+  <string name="navigationbar_settings_summary">Upravit styl navigace a chování</string>
+  <string name="navbar_general_title">Rozšířené</string>
+  <string name="navigation_bar_left_title">Režim ovládání levou rukou</string>
+  <string name="navigation_bar_left_summary">Zobrazit navigační panel na levé straně v režimu na šířku</string>
+  <string name="smartbar_interface">Chytrá lišta</string>
+  <string name="icon_pack_picker_dialog_title">Balíčky ikon</string>
+  <string name="image_exceeds_max_allowed_size">Obrázek nesmí překročit rozměr 512x512</string>
+  <string name="invalid_icon_from_uri">Nelze načíst obrázek z obsahu poskytovatele</string>
+  <string name="picker_activities">Aktivity</string>
+  <string name="select_custom_app_title">Vybrat vlastní aplikaci</string>
+  <string name="select_custom_activity_title">Vybrat vlastní aktivitu</string>
+  <string name="profile_applist_title">Aplikace</string>
+  <string name="default_string">Výchozí</string>
+  <string name="default_settings">Výchozí nastavení</string>
+  <string name="default_settings_summary">Výchozí navigační panel AOSP</string>
+  <!-- Actions dialog and default task values set in ActionPreference xml-->
+  <string name="choose_action_title">Vyberte akci</string>
+  <string name="action_entry_default_action">Výchozí nastavení</string>
+  <string name="action_entry_select_app">Vybrat aplikaci</string>
+  <string name="action_entry_custom_action">Vybrat vlastní akci</string>
+  <!-- Fling -->
+  <string name="fling_settings">Nastavení Fling</string>
+  <string name="fling_interface">Fling</string>
+  <string name="fling_enable_title">Povolit Fling</string>
+  <string name="fling_split_bar_policy">Pokud je přiřazena pouze pravá nebo levá akce, tak se akce se vztahuje na celý řádek.</string>
+  <string name="fling_def_summary">Není vybrána žádná akce</string>
+  <string name="fling_swipe_actions">Gesta přejetím</string>
+  <string name="fling_tap_actions">Gesta poklepáním</string>
+  <string name="fling_short_swipe_right">Krátkým tažením vpravo</string>
+  <string name="fling_short_swipe_left">Krátkým tažením vlevo</string>
+  <string name="fling_long_swipe_right">Dlouhým tažením vpravo</string>
+  <string name="fling_long_swipe_left">Dlouhým tažením vlevo</string>
+  <string name="fling_right_up_swipe">Přetažením vpravo nahoru</string>
+  <string name="fling_left_up_swipe">Přetažením vlevo nahoru</string>
+  <string name="fling_single_tap">Jedním klepnutím vpravo</string>
+  <string name="fling_double_tap">Dvojím poklepáním vpravo</string>
+  <string name="fling_long_press">Dlouhým stiskem vpravo</string>
+  <string name="fling_single_left_tap">Jedním klepnutím vlevo</string>
+  <string name="fling_double_left_tap">Dvojím poklepáním vlevo</string>
+  <string name="fling_long_left_press">Dlouhým stiskem vlevo</string>
+  <string name="long_swipe_portrait_title">Na výšku</string>
+  <string name="long_swipe_landscape_title">Na šířku</string>
+  <string name="portrait_right_swipe_title">Posunutím doprava v režimu na výšku</string>
+  <string name="portrait_left_swipe_title">Posunutím doleva v režimu na výšku</string>
+  <string name="landscape_right_swipe_title">Posunutím doprava v režimu na šířku</string>
+  <string name="landscape_left_swipe_title">Posunutím doleva v režimu na šířku</string>
+  <string name="vertical_up_swipe_title">Vertikální posunutí nahoru</string>
+  <string name="vertical_down_swipe_title">Vertikální posunutí dolů</string>
+  <string name="up_swipe_title">Posunutí nahoru</string>
+  <string name="down_swipe_title">Posunutí dolů</string>
+  <string name="long_swipe_reset">Obnovit</string>
+  <string name="fling_advanced">Rozšířené</string>
+  <string name="fling_long_swipe_title">Dlouhým přejetím přes práh</string>
+  <string name="fling_long_swipe_summary">Vylaďte dlouhé přejetí přes práh založené na procentu šířky a výšky rozhraní Fling</string>
+  <string name="fling_trails_enable_title">Povolit stopu gesta</string>
+  <string name="fling_trails_enable_summary">Zobrazit stopu při potáhnutí</string>
+  <string name="fling_trails_color_title">Barva stopy</string>
+  <string name="fling_trails_width_title">Šířka stopy</string>
+  <string name="fling_appearance">Vzhled</string>
+  <string name="fling_show_logo_title">Zobrazit logo Fling</string>
+  <string name="fling_animate_logo_title">Animace loga</string>
+  <string name="fling_animate_logo_summary">Animace loga při dotyku</string>
+  <string name="fling_logo_color">Barva loga</string>
+  <string name="fling_logo_custom_logo_pick_title">Vlastní ikona loga</string>
+  <string name="fling_logo_custom_logo_image_pick_title">Vlastní obrázek loga</string>
+  <string name="fling_logo_custom_logo_reset_title">Obnovit ikonu loga</string>
+  <string name="fling_show_ripple_title">Zobrazit zvlnění</string>
+  <string name="fling_show_ripple_summary">Efekt zvlnění při dotyku</string>
+  <string name="fling_ripple_color">Barva zvlnění</string>
+  <string name="fling_longpress_timeout_label_left">Menší zpoždění</string>
+  <string name="fling_longpress_timeout_label_right">Větší zpoždění</string>
+  <string name="fling_longpress_title">Zpoždění dlouhým stiskem</string>
+  <string name="fling_longpress_summary">Zvýšit nebo snížit dobu potřebnou k provedení akce dlouhým stisknutím</string>
+  <string name="fling_logo_opacity_title">Průhlednost loga Fling</string>
+  <!-- Pulse navigation bar music visualizer -->
+  <string name="pulse_settings">Pulse</string>
+  <string name="pulse_settings_summary">Grafický ekvalizér na navigačním panelu</string>
+  <string name="fling_show_pulse_title">Povolit Pulse</string>
+  <string name="fling_show_pulse_summary">Zvukový ekvalizér na navigačním panelu</string>
+  <string name="pulse_render_mode_title">Režim vykreslení</string>
+  <string name="pulse_render_mode_fading_bars">Vyblednutí bloků</string>
+  <string name="pulse_render_mode_solid_lines">Plné čáry</string>
+  <string name="fling_pulse_color">Pulsující barva</string>
+  <string name="eos_fling_lavalamp_title">Zapnout lávovou lampu</string>
+  <string name="eos_fling_lavalamp_summary">Hladké pulsující prolnutí barev ve stylu lávové lampy</string>
+  <string name="pulse_advanced_category">Rozšířené</string>
+  <string name="pulse_legacy_mode_advanced_category">Režim nastavení vyblednutí bloků</string>
+  <string name="pulse_custom_fudge_factor">Úroveň výkonu</string>
+  <string name="lavamp_solid_speed_title">Rychlost lávové lampy</string>
+  <string name="pulse_solid_units_count">Počet plných čar</string>
+  <string name="pulse_solid_lines_count">Počet plných čar</string>
+  <string name="pulse_solid_units_opacity">Průhlednost plných čar</string>
+  <string name="pulse_solid_dimen_category">Nastavení režimu plné čáry</string>
+  <string name="pulse_custom_buttons_opacity_title">Průhlednost tlačítek chytré lišty při pulsování</string>
+  <!-- Pulse config -->
+  <string name="pulse_custom_dimen">Šířka pruhu</string>
+  <string name="pulse_custom_div">Mezera pruhu</string>
+  <string name="pulse_filled_block_size">Velikost bloku</string>
+  <string name="pulse_empty_block_size">Mezera mezi bloky</string>
+  <!-- Navbar height -->
+  <string name="navigation_bar_size_title">Velikost panelu</string>
+  <string name="portrait_title">Výška v režimu na výšku</string>
+  <string name="land_vert_title">Šířka v režimu na šířku</string>
+  <string name="land_hor_title">Výška v režimu na šířku</string>
+  <string name="positive_done">Hotovo</string>
+  <!-- SmartBar -->
+  <string name="smartbar_category">Chytrá lišta</string>
+  <string name="smartbar_settings_title">Nastavení chytré lišty</string>
+  <string name="smartbar_settings_summary">Plně přizpůsobitelný navigační panel</string>
+  <string name="smartbar_editor_title">Spustit režim úprav</string>
+  <string name="smartbar_editor_summary">Otevřít editor tlačítek chytré lišty</string>
+  <string name="smartbar_context_menu_position_title">Pozice kontextových tlačítek</string>
+  <string name="smartbar_context_menu_position_summary">Pozice kontextových tlačítek, jako jsou tlačítka pro výběr nabídky nebo klávesnice</string>
+  <string name="smartbar_right">Vpravo</string>
+  <string name="smartbar_left">Vlevo</string>
+  <string name="smartbar_button_animation_title">Animace stisku tlačítka</string>
+  <string name="smartbar_button_animation_summary">Nastavit styl animace hlavního tlačítka při stisknutí</string>
+  <string name="smartbar_button_animation_ripple">Vlnka</string>
+  <string name="smartbar_button_animation_spring">Odskok</string>
+  <string name="smartbar_button_animation_flip">Překlopení</string>
+  <string name="smartbar_button_animation_pixel">Pixel (všechna tlačítka)</string>
+  <string name="smartbar_button_animation_pixel_home">Pixel (pouze tlačítko Domů)</string>
+  <string name="smartbar_button_animation_pixel_home_ripple">Pixel (pouze tlačítko Domů) a efekt zvlnění</string>
+  <string name="smartbar_factory_reset_title">Obnovit výchozí</string>
+  <string name="smartbar_factory_reset_confirm">Opravdu chcete obnovit nastavení chytré lišty?</string>
+  <string name="smartbar_ime_action_title">Vstupní metoda a mediální akce</string>
+  <string name="smartbar_ime_action_summary">Nastavte, které tlačítka mají být zobrazeny, když se zobrazí klávesnice nebo se přehrává hudba</string>
+  <string name="smartbar_ime_action_none">Žádný</string>
+  <string name="smartbar_ime_action_arrows">Vstupní šipky</string>
+  <string name="smartbar_ime_action_switcher">Přepínač klávesnice</string>
+  <string name="smartbar_ime_action_dynamic">Šipky vstupu/médií</string>
+  <string name="smartbar_backup_current_config_title">Uložit profil</string>
+  <string name="smartbar_restore_config_title">Obnovit profil</string>
+  <string name="smartbar_config_name_edit_dialog_title">Název profilu chytré lišty</string>
+  <string name="smartbar_config_name_edit_dialog_message">Zadejte název nebo ponechte prázdné</string>
+  <string name="smartbar_config_dialog_title">Profily chytré lišty</string>
+  <string name="smartbar_config_backup_success_toast">Profil chytré lišty byl úspěšně uložen</string>
+  <string name="smartbar_config_restore_success_toast">Profil chytré lišty byl úspěšně obnoven</string>
+  <string name="smartbar_config_backup_error_toast">Chyba při ukládání profilu chytré lišty</string>
+  <string name="smartbar_config_restore_error_toast">Chyba při obnovení profilu chytré lišty</string>
+  <string name="navbar_buttons_alpha_title">Průhlednost tlačítka</string>
+  <string name="smartbar_longpress_delay_title">Prodleva dlouhého stisku</string>
+  <string name="smartbar_longpress_delay_summary">Nastavte, jak dlouho bude systém čekat před spuštěním dlouhého stisknutí</string>
+  <string name="smartbar_longpress_delay_default">Výchozí prodleva (rychle)</string>
+  <string name="smartbar_longpress_delay_normal">Běžná prodleva</string>
+  <string name="smartbar_longpress_delay_long">Dlouhá prodleva</string>
+  <string name="smartbar_custom_icon_size_title">Vlastní velikost ikon</string>
+  <string name="one_handed_mode_title">Režim jedné ruky</string>
+  <string name="one_handed_mode_summary">Umožnit zapnutí režimu jednou rukou posunutím přes navigační panel</string>
+  <!-- Carrier Label -->
+  <string name="carrier_category">Název mobilní sítě</string>
+  <string name="carrier_options">Vyberte umístění zobrazení</string>
+  <string name="custom_carrier_label_title">Vlastní název mobilní sítě</string>
+  <string name="custom_carrier_label_explain">Zadejte, prosím, nový název. Nechte prázdné pro navrácení k původnímu.</string>
+  <string name="custom_carrier_label_notset">Vlastní název není momentálně nastaven</string>
+  <string name="show_carrier_title">Je zobrazeno</string>
+  <string name="show_carrier_disabled">Nikde</string>
+  <string name="show_carrier_keyguard">Pouze na zamčené obrazovce</string>
+  <string name="show_carrier_statusbar">Pouze stavová lišta</string>
+  <string name="show_carrier_enabled">Zamykací obrazovka &amp; stavová lišta</string>
+  <!-- Three-fingers-swipe to screenshot -->
+  <string name="three_finger_gesture">Gesto třemi prsty</string>
+  <string name="three_finger_gesture_summary">Snímek obrazovky přejetím tří prstů</string>
 </resources>

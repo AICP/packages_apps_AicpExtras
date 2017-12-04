@@ -78,6 +78,7 @@
   <string name="custom_header_browse_title">浏览以选用</string>
   <string name="header_provider_disabled">禁用</string>
   <string name="custom_header_title">自定义顶部图像</string>
+  <!-- QS quick pulldown using fpc -->
   <!-- Recents -->
   <string name="recents_title">最近任务面板</string>
   <!-- Recents panel settings -->
@@ -111,12 +112,13 @@
   <!-- Lockscreen notif count -->
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
+  <!-- Lockscreen rotation -->
+  <string name="lockscreen_rotation_title">旋转</string>
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">截屏音效</string>
   <string name="screenshot_sound_summary">当截取屏幕时播放声音效果</string>
-  <!-- Double tap navbar to sleep -->
   <!-- Swap volume keys based on device rotation -->
   <!-- Volume keys control media stream -->
   <!-- Volume keys control music playback -->
@@ -188,4 +190,29 @@
   <!-- Lockscreen Weather -->
   <!-- Statusbar ticker -->
   <string name="ticker_disabled">禁用</string>
+  <!-- DUI -->
+  <string name="picker_activities">活动</string>
+  <string name="select_custom_app_title">选择应用程序</string>
+  <string name="select_custom_activity_title">选择活动</string>
+  <string name="profile_applist_title">应用程序</string>
+  <string name="default_string">默认</string>
+  <!-- Actions dialog and default task values set in ActionPreference xml-->
+  <!-- Fling -->
+  <!-- Pulse navigation bar music visualizer -->
+  <!-- Pulse config -->
+  <!-- Navbar height -->
+  <!-- SmartBar -->
+  <string name="smartbar_right">右侧</string>
+  <string name="smartbar_left">左侧</string>
+  <string name="smartbar_button_animation_flip">空翻</string>
+  <string name="smartbar_ime_action_none">无</string>
+  <!-- Carrier Label -->
+  <string name="carrier_category">运营商名称</string>
+  <string name="custom_carrier_label_title">自定义运营商名称</string>
+  <string name="custom_carrier_label_explain">请输入一个新的名称，不输入将恢复为默认。</string>
+  <string name="custom_carrier_label_notset">自定义运营商标签当前未设置</string>
+  <string name="show_carrier_keyguard">仅在锁屏时显示</string>
+  <string name="show_carrier_statusbar">仅在状态栏上显示</string>
+  <string name="show_carrier_enabled">全部显示</string>
+  <!-- Three-fingers-swipe to screenshot -->
 </resources>
