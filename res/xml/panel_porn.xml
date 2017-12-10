@@ -84,27 +84,4 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="@string/power">
-
-        <com.aicp.extras.preference.SystemSettingSeekBarPreference
-            android:key="transparent_power_menu"
-            android:title="@string/power_menu_transparency"
-            android:max="100"
-            android:min="0"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight="%"
-            android:defaultValue="100" />
-
-        <com.aicp.extras.preference.SystemSettingSeekBarPreference
-            android:key="transparent_power_dialog_dim"
-            android:title="@string/power_menu_dialog_dim"
-            android:max="100"
-            android:min="0"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight="%"
-            android:defaultValue="50" />
-
-    </PreferenceCategory>
-
 </PreferenceScreen>
