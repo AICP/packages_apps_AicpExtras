@@ -34,7 +34,6 @@ public class QuickSettings extends BaseSettingsFragment
     implements OnPreferenceChangeListener {
 
     private static final String PREF_BRIGHTNESS_ICON_POSITION = "brightness_icon_position";
-    private static final String PREF_QS_STYLE_DARK = "qs_style_dark";
     private static final String KEY_FPC_QUICK_PULLDOWN = "status_bar_quick_qs_pulldown_fp";
 
     private SwitchPreference mBrightnessIconPosition;
@@ -51,9 +50,6 @@ public class QuickSettings extends BaseSettingsFragment
         mBrightnessIconPosition = (SwitchPreference) findPreference(PREF_BRIGHTNESS_ICON_POSITION);
         mBrightnessIconPosition.setOnPreferenceChangeListener(this);
 
-        mQsStyleDark = (SwitchPreference) findPreference(PREF_QS_STYLE_DARK);
-        mQsStyleDark.setOnPreferenceChangeListener(this);
-
         mFPQuickPullDown = (SwitchPreference) findPreference(KEY_FPC_QUICK_PULLDOWN);
         if(!DeviceUtils.deviceSupportsFingerPrint(getActivity())){
             mFPQuickPullDown.getParent().removePreference(mFPQuickPullDown);
@@ -64,9 +60,6 @@ public class QuickSettings extends BaseSettingsFragment
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mBrightnessIconPosition) {
-            Util.showSystemUiRestartDialog(getContext());
-            return true;
-        } else if (preference == mQsStyleDark) {
             Util.showSystemUiRestartDialog(getContext());
             return true;
         }
