@@ -67,11 +67,4 @@
         aicpextras:unitsRight=""
         android:dependency="lock_screen_custom_notif"/>
 
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
-        android:key="lockscreen_rotation"
-        android:title="@string/lockscreen_rotation_title"
-        android:summaryOn="@string/lockscreen_rotation_summary_on"
-        android:summaryOff="@string/lockscreen_rotation_summary_off"
-        android:defaultValue="false" />
-
 </PreferenceScreen>
