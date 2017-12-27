@@ -21,13 +21,11 @@
 
     <!-- SeekBarPreferenceCham value popup -->
     <style name="SeekBarPreferenceChamValueView">
-        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textColor">@color/primary_text_default_material_light</item>
         <item name="android:textAppearance">@*android:style/TextAppearance.Toast</item>
-        <item name="android:shadowColor">#BB000000</item>
-        <item name="android:shadowRadius">2.75</item>
         <item name="android:background">@*android:drawable/toast_frame</item>
-        <item name="android:layout_marginTop">-16dp</item>
-        <item name="android:layout_marginStart">-16dp</item>
+        <item name="android:paddingHorizontal">24dp</item>
+        <item name="android:paddingVertical">15dp</item>
         <item name="android:fitsSystemWindows">false</item>
     </style>
 
