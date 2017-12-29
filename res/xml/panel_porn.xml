@@ -59,10 +59,10 @@
             android:key="volume_dialog_stroke_thickness"
             android:title="@string/volume_dialog_stroke_thickness_title"
             android:max="25"
-            android:min="1"
+            android:min="0"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="px"
-            android:defaultValue="4" />
+            android:defaultValue="0" />
 
         <com.aicp.extras.preference.SystemSettingSeekBarPreference
             android:key="volume_dialog_stroke_dash_width"
