@@ -19,5 +19,31 @@
 -->
 <resources>
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+  <string name="anonymous_statistics_title">Estastisticas AICP</string>
+  <string name="anonymous_statistics_summary">Ajudar a AICP, optando em enviar estatísticas anônimas</string>
+  <string name="anonymous_statistics_warning_title">Sobre</string>
+  <string name="anonymous_statistics_warning">Optando em \"AICP Estatísticas\" permitirá que os seus dados não pessoais serão enviados aos
+         nossos servidores. A informação apresentada inclui um identificador único, que não compromete a sua privacidade ou dados pessoais.
+         Os dados são apresentados a cada 7 dias.\n\nPara ver um exemplo dos dados que são enviados, toque na visualização de dados.</string>
+  <string name="enable_reporting_title">Habilitar o relatório</string>
+  <string name="disable_reporting_persistent">Opt-out persistente</string>
+  <string name="preview_data_title">Pré-visualizar dados</string>
+  <string name="view_stats_title">Ver pagina de Estatísticas</string>
+  <string name="anonymous_learn_more">Continuar Lendo</string>
+  <string name="last_report_on">Último relatório</string>
+  <string name="reporting_interval">Intervalo de relatórios</string>
+  <plurals name="reporting_interval_days">
+    <item quantity="one">1 dia</item>
+    <item quantity="other">%d dias</item>
+  </plurals>
+  <string name="next_report_on">Próximo relatório</string>
   <!-- Anonymous Statistics - Preview -->
+  <string name="preview_id_title">ID único</string>
+  <string name="preview_device_title">Dispositivo</string>
+  <string name="preview_version_title">Versão</string>
+  <string name="preview_country_title">País</string>
+  <string name="preview_carrier_title">Operadora</string>
+  <string name="preview_romname_title">Nome da ROM</string>
+  <string name="preview_romversion_title">Versão AICP</string>
+  <string name="preview_buildtype_title">Tipo de compilação AICP</string>
 </resources>

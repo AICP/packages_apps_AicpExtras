@@ -72,6 +72,9 @@
   <string name="smart_pulldown_summary">%1$s 時開啟快速設定</string>
   <string name="smart_pulldown_none_summary">開啟快速設定時沒有通知</string>
   <string name="smart_pulldown_off_summary">已關閉</string>
+  <!-- Double tap to sleep on status bar -->
+  <string name="status_bar_double_tap_to_sleep_title">輕觸即可休眠</string>
+  <string name="status_bar_double_tap_to_sleep_summary">輕觸兩下狀態列來關閉螢幕</string>
   <!-- Notifications -->
   <string name="notifications_title">通知</string>
   <!-- Brightness slider settings -->
@@ -105,28 +108,6 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">顯示圖塊標題</string>
   <string name="qs_tile_title_visibility_summary">當選取後顯示下方的圖塊標題</string>
-  <!-- QS Dark mode -->
-  <string name="qs_style_dark_title">深色使用者介面樣式</string>
-  <!-- QS Headers -->
-  <string name="status_bar_custom_header_title">啟用</string>
-  <string name="daylight_header_pack_title">標頭圖片包</string>
-  <string name="status_bar_custom_header_shadow_title">標頭圖片陰影</string>
-  <string name="status_bar_custom_header_shadow_summary">在使用較明亮的圖片時能有更好的能見度</string>
-  <string name="static_header_provider_title">靜態</string>
-  <string name="daylight_header_provider_title">動態</string>
-  <string name="custom_header_provider_title">標頭提供者</string>
-  <string name="custom_header_browse_title">瀏覽已安裝的標頭</string>
-  <string name="custom_header_browse_summary">按一下任何圖片以供靜態模式使用</string>
-  <string name="custom_header_browse_summary_new">瀏覽所有可用的標頭套件</string>
-  <string name="custom_header_pick_title">選擇標頭圖片</string>
-  <string name="custom_header_pick_summary">選擇要用於靜態模式的圖片</string>
-  <string name="style_enabled_summary">自訂標頭圖片已開啟</string>
-  <string name="style_disabled_summary">自訂標頭圖片已關閉</string>
-  <string name="header_provider_disabled">已停用</string>
-  <string name="custom_header_title">自訂標頭圖片</string>
-  <!-- QS quick pulldown using fpc -->
-  <string name="status_bar_quick_qs_pulldown_fp_title">使用指紋快速滑動</string>
-  <string name="status_bar_quick_qs_pulldown_fp_summary">取而代之的向下手勢兩次通知只會啟用此功能和滑動一次</string>
   <!-- Recents -->
   <string name="recents_title">最近使用的應用程式</string>
   <string name="recents_summary">最近使用的應用程式的畫面</string>
@@ -222,10 +203,6 @@
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">沒有安全上的快速設定</string>
   <string name="lockscreen_qs_disabled_summary">在安全鎖定畫面上停用快速設定圖塊</string>
-  <!-- Lockscreen rotation -->
-  <string name="lockscreen_rotation_title">旋轉</string>
-  <string name="lockscreen_rotation_summary_on">鎖定畫面旋轉已啟用</string>
-  <string name="lockscreen_rotation_summary_off">鎖定畫面旋轉已停用</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">其他 UI 調整</string>
   <!-- Volume dialog timeout -->
@@ -251,9 +228,6 @@
   <!-- Toast icon switch -->
   <string name="toast_icon_title">提示訊息圖示</string>
   <string name="toast_icon_summary">顯示與提示訊息相關的應用程式圖示</string>
-  <!-- Turn on display when power connected; turn off display when power disconnected -->
-  <string name="wake_when_plugged_or_unplugged_title">接上時喚醒</string>
-  <string name="wake_when_plugged_or_unplugged_summary">接上或移除電源時開啟螢幕</string>
   <!-- Show VoLTE icon on statusbar -->
   <string name="volte_icon_title">VoLTE 圖示</string>
   <string name="volte_icon_summary">可用時顯示 VoLTE 圖示</string>
@@ -559,6 +533,8 @@
   <string name="smartbar_custom_icon_size_title">自訂圖示大小</string>
   <string name="one_handed_mode_title">單手模式</string>
   <string name="one_handed_mode_summary">允許在導覽列上滑動以啟用單手模式</string>
+  <string name="smartbar_double_tap_sleep_title">輕觸兩下即可休眠</string>
+  <string name="smartbar_double_tap_sleep_summary">輕觸兩下空白導航列來休眠</string>
   <!-- Carrier Label -->
   <string name="carrier_category">電信業者標籤</string>
   <string name="carrier_options">選擇顯示位置</string>
@@ -573,4 +549,46 @@
   <!-- Three-fingers-swipe to screenshot -->
   <string name="three_finger_gesture">三指手勢</string>
   <string name="three_finger_gesture_summary">同時滑動三支指頭以擷取螢幕畫面</string>
+  <!-- AOKP custom system animations -->
+  <string name="animation_title">動畫</string>
+  <string name="system_animation_title">系統動畫</string>
+  <string name="activity_open_title">活動開啟動畫</string>
+  <string name="activity_close_title">活動關閉動畫</string>
+  <string name="task_open_title">應用程式開啟動畫</string>
+  <string name="task_close_title">應用程式關閉動畫</string>
+  <string name="task_move_to_front_title">移至前方動畫</string>
+  <string name="task_move_to_back_title">移至後方動畫</string>
+  <string name="wallpaper_open_title">桌布開啟動畫</string>
+  <string name="wallpaper_close_title">桌布關閉動畫</string>
+  <string name="wallpaper_intra_open_title">桌布內部開啟動畫</string>
+  <string name="wallpaper_intra_close_title">桌布內部關閉動畫</string>
+  <string name="animation_duration_title">動畫長度</string>
+  <string name="title_animation_no_override">防止應用程式覆寫</string>
+  <string name="summary_animation_no_override">防止應用程式覆寫動畫設定</string>
+  <string name="animation_duration_default">預設</string>
+  <!-- Lock screen visualizer -->
+  <string name="lockscreen_visualizer_title">音樂視覺化檢視</string>
+  <string name="lockscreen_visualizer_summary">在鎖定畫面上切換視覺化檢視</string>
+  <!-- SystemUI Theme -->
+  <string name="systemui_theme_style_title">圖塊面板和電源選單樣式</string>
+  <string name="systemui_theme_style_summary">從自動、淺色和深色樣式中選擇</string>
+  <string name="systemui_theme_style_auto">根據桌布</string>
+  <string name="systemui_theme_style_light">淺色樣式</string>
+  <string name="systemui_theme_style_dark">深色樣式</string>
+  <!-- Screen state service -->
+  <string name="screen_state_toggles_title">暫停動作</string>
+  <string name="screen_state_toggles_enable_title">啟用</string>
+  <string name="screen_state_toggles_enable_summary">在螢幕關閉時才執行操作。螢幕開啟後會還原先前的狀態。</string>
+  <string name="screen_state_toggles_mobile_title">行動網路</string>
+  <string name="screen_state_toggles_location_title">定位</string>
+  <string name="screen_state_toggles_twog">切換至 2G</string>
+  <string name="screen_state_toggles_twog_summary">螢幕關閉時網路模式將會切換至 2G</string>
+  <string name="screen_state_toggles_gps">停用 GPS</string>
+  <string name="screen_state_toggles_gps_summary">螢幕關閉時根據 GPS 的定位服務將被停用</string>
+  <string name="screen_state_toggles_mobile_data">停用行動數據</string>
+  <string name="screen_state_toggles_mobile_data_summary">螢幕關閉時將會停用行動數據</string>
+  <string name="screen_state_off_delay_title">螢幕關閉動作延遲</string>
+  <string name="screen_state_off_delay_summary">螢幕關閉後執行動作之前等待的分鐘數</string>
+  <string name="screen_state_on_delay_title">螢幕關閉動作延遲</string>
+  <string name="screen_state_on_delay_summary">螢幕開啟後執行動作之前等待的分鐘數</string>
 </resources>
