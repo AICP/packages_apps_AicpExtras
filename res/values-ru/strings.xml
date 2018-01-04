@@ -73,6 +73,7 @@
   <string name="smart_pulldown_summary">Открыть панель быстрых настроек, когда там %1$s уведомлений/я</string>
   <string name="smart_pulldown_none_summary">Открывать панель быстрых настроек, когда уведомления отсутствуют</string>
   <string name="smart_pulldown_off_summary">выключено</string>
+  <!-- Double tap to sleep on status bar -->
   <!-- Notifications -->
   <string name="notifications_title">Уведомления</string>
   <!-- Brightness slider settings -->
@@ -106,28 +107,6 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Показывать заголовки плиток</string>
   <string name="qs_tile_title_visibility_summary">Отображать названия плиток снизу, когда выбрано</string>
-  <!-- QS Dark mode -->
-  <string name="qs_style_dark_title">Тёмный стиль интерфейса системы</string>
-  <!-- QS Headers -->
-  <string name="status_bar_custom_header_title">Включить</string>
-  <string name="daylight_header_pack_title">Набор изображений для заголовка</string>
-  <string name="status_bar_custom_header_shadow_title">Тень изображения в заголовке</string>
-  <string name="status_bar_custom_header_shadow_summary">Для лучшей видимости на светлых изображениях</string>
-  <string name="static_header_provider_title">Статичный</string>
-  <string name="daylight_header_provider_title">Динамический</string>
-  <string name="custom_header_provider_title">Поставщик заголовка</string>
-  <string name="custom_header_browse_title">Обзор установленных заголовков</string>
-  <string name="custom_header_browse_summary">Нажмите на любое изображение для статичного режима</string>
-  <string name="custom_header_browse_summary_new">Просмотр всех доступных пакетов заголовков</string>
-  <string name="custom_header_pick_title">Выберите изображение заголовка</string>
-  <string name="custom_header_pick_summary">Выберите изображение для статичного режима</string>
-  <string name="style_enabled_summary">Пользовательское изображение заголовка ВКЛ.</string>
-  <string name="style_disabled_summary">Пользовательское изображение заголовка ВЫКЛ.</string>
-  <string name="header_provider_disabled">Выключен</string>
-  <string name="custom_header_title">Пользовательское изображение в заголовке</string>
-  <!-- QS quick pulldown using fpc -->
-  <string name="status_bar_quick_qs_pulldown_fp_title">Быстрый свайп по датчику отпечатков пальцев</string>
-  <string name="status_bar_quick_qs_pulldown_fp_summary">Вместо свайпа два раза вниз для показа уведомлений, просто включите эту настройку, и будет достаточно одного свайпа</string>
   <!-- Recents -->
   <string name="recents_title">Панель недавних приложений</string>
   <string name="recents_summary">Панель недавних приложений</string>
@@ -203,7 +182,7 @@
   <string name="slim_recents_mem_display_color">Цвет шкалы использования ОЗУ</string>
   <string name="slim_recents_mem_display_text_color">Цвет текста шкалы использования ОЗУ</string>
   <!-- Lockscreen -->
-  <string name="lockscreen_title">Экран блокировки</string>
+  <string name="lockscreen_title">Погода на экране блокировки</string>
   <!-- Double tap to sleep on lockscreen -->
   <string name="double_tap_sleep_lockscreen">Двойное нажатие для сна</string>
   <string name="double_tap_sleep_lockscreen_summary">Двойное нажатие на экране блокировки, чтобы перейти в режим сна</string>
@@ -223,10 +202,6 @@
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">Нет панели быстрых настроек на защищённом экране блокировки</string>
   <string name="lockscreen_qs_disabled_summary">Отключить панель быстрых настроек на защищённом экране блокировки</string>
-  <!-- Lockscreen rotation -->
-  <string name="lockscreen_rotation_title">Вращение</string>
-  <string name="lockscreen_rotation_summary_on">Вращение экрана блокировки включено</string>
-  <string name="lockscreen_rotation_summary_off">Вращение экрана блокировки выключено</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Другие настройки интерфейса</string>
   <!-- Volume dialog timeout -->
@@ -252,9 +227,6 @@
   <!-- Toast icon switch -->
   <string name="toast_icon_title">Иконка всплывающего уведомления</string>
   <string name="toast_icon_summary">Отображать иконку соответствующего приложения на всплывающем уведомлении</string>
-  <!-- Turn on display when power connected; turn off display when power disconnected -->
-  <string name="wake_when_plugged_or_unplugged_title">Включение экрана при при подключении зарядки</string>
-  <string name="wake_when_plugged_or_unplugged_summary">Включать экран при подключении или отключении источника питания</string>
   <!-- Show VoLTE icon on statusbar -->
   <string name="volte_icon_title">Значок VoLTE</string>
   <string name="volte_icon_summary">Отображение значка VoLTE при наличии</string>
@@ -363,8 +335,8 @@
   <string name="default_string">По умолчанию</string>
   <string name="on">Вкл.</string>
   <string name="off">Выкл.</string>
-  <string name="yes">\@android:string/да</string>
-  <string name="no">\@android:string/нет</string>
+  <string name="yes">@android:string/да</string>
+  <string name="no">@android:string/нет</string>
   <string name="reset">Сбросить</string>
   <string name="systemui_restart_title">Необходима перезагрузка интерфейса</string>
   <string name="systemui_restart_message">Чтобы все изменения вступили в силу, требуется перезагрузка интерфейса. Перезагрузить интерфейс?</string>
@@ -383,8 +355,8 @@
   <string name="weather_icon_pack_title">Набор значков погодных условий</string>
   <string name="weather_icon_pack_note">Примечание\u003a вы можете установить новые пакеты значков из Магазина приложений при помощи поиска \"Chronus icons\"</string>
   <!-- Lockscreen Weather -->
-  <string name="lock_screen_weather_category_title">Экран блокировки</string>
-  <string name="lock_screen_show_weather_title">Отобразить погоду</string>
+  <string name="lock_screen_weather_category_title">Погода на экране блокировки</string>
+  <string name="lock_screen_show_weather_title">Погода на экране блокировки</string>
   <string name="lock_screen_show_weather_summaryOn">Погода отображается на экране блокировки</string>
   <string name="lock_screen_show_weather_summaryOff">Погода скрыта на экране блокировки</string>
   <string name="lock_screen_show_location_title">Метоположение на экране блокировки</string>
@@ -562,6 +534,7 @@
   <string name="smartbar_custom_icon_size_title">Размер пользовательских иконок</string>
   <string name="one_handed_mode_title">Режим \"Управление одной рукой\"</string>
   <string name="one_handed_mode_summary">Позволяет свайпом по панели навигации включать режим \"Управление одной рукой\"</string>
+  <string name="smartbar_double_tap_sleep_title">Двойное нажатие для сна</string>
   <!-- Carrier Label -->
   <string name="carrier_category">Пользовательское имя оператора</string>
   <string name="carrier_options">Выбрать место отображения</string>
@@ -576,4 +549,27 @@
   <!-- Three-fingers-swipe to screenshot -->
   <string name="three_finger_gesture">Жест тремя пальцами</string>
   <string name="three_finger_gesture_summary">Свайп тремя пальцами для создания скриншота</string>
+  <!-- AOKP custom system animations -->
+  <string name="animation_title">Анимации</string>
+  <string name="animation_duration_title">Длительность анимации</string>
+  <string name="animation_duration_default">По умолчанию</string>
+  <!-- Lock screen visualizer -->
+  <!-- SystemUI Theme -->
+  <!-- Screen state service -->
+  <string name="screen_state_toggles_summary">\@null</string>
+  <string name="screen_state_toggles_title">Действия в режиме ожидания</string>
+  <string name="screen_state_toggles_enable_title">Включить</string>
+  <string name="screen_state_toggles_enable_summary">Действия, выполняемые при выключении экрана. При включении возвращаются прежние состояния параметров.</string>
+  <string name="screen_state_toggles_mobile_title">Мобильные сети</string>
+  <string name="screen_state_toggles_location_title">Местоположение</string>
+  <string name="screen_state_toggles_twog">Использовать режим 2G</string>
+  <string name="screen_state_toggles_twog_summary">Режим передачи данных активной сети будет переключен в режим 2G</string>
+  <string name="screen_state_toggles_gps">Выключить GPS</string>
+  <string name="screen_state_toggles_gps_summary">Не использовать GPS при выключенном экране</string>
+  <string name="screen_state_toggles_mobile_data">Отключить мобильные данные</string>
+  <string name="screen_state_toggles_mobile_data_summary">Не использовать передачу данных при выключенном экране</string>
+  <string name="screen_state_off_delay_title">Отложить действия при выключении экрана</string>
+  <string name="screen_state_off_delay_summary">Отложить действия при выключении экрана на указанное количество секунд</string>
+  <string name="screen_state_on_delay_title">Отложить действия при включении экрана</string>
+  <string name="screen_state_on_delay_summary">Отложить действия при включении экрана на указанное количество секунд</string>
 </resources>
