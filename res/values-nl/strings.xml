@@ -72,6 +72,9 @@
   <string name="smart_pulldown_summary">Open Snelle instellingen wanneer er %1$s notificaties zijn</string>
   <string name="smart_pulldown_none_summary">Open snelle instellingen wanneer er geen notificaties zijn</string>
   <string name="smart_pulldown_off_summary">is uitgeschakeld</string>
+  <!-- Double tap to sleep on status bar -->
+  <string name="status_bar_double_tap_to_sleep_title">Tikken voor slaapstand</string>
+  <string name="status_bar_double_tap_to_sleep_summary">Dubbeltik op de statusbalk om het scherm uit te schakelen</string>
   <!-- Notifications -->
   <string name="notifications_title">Notificaties</string>
   <!-- Brightness slider settings -->
@@ -105,29 +108,6 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Toon titel van tegels</string>
   <string name="qs_tile_title_visibility_summary">Toon titel onder tegel indien geselecteerd</string>
-  <!-- QS Dark mode -->
-  <string name="qs_style_dark_title">Donkere SystemUI-stijl</string>
-  <!-- QS Headers -->
-  <string name="status_bar_custom_header_title">Inschakelen</string>
-  <string name="daylight_header_pack_title">Header afbeeldingpakket</string>
-  <string name="status_bar_custom_header_shadow_title">Achtergrondschaduw</string>
-  <string name="status_bar_custom_header_shadow_summary">Voor een betere zichtbaarheid bij heldere achtergrondbeelden</string>
-  <string name="unit_percent">\u0025</string>
-  <string name="static_header_provider_title">Statisch</string>
-  <string name="daylight_header_provider_title">Dynamisch</string>
-  <string name="custom_header_provider_title">Header provider</string>
-  <string name="custom_header_browse_title">Blader door geïnstalleerde headers</string>
-  <string name="custom_header_browse_summary">Tik op een foto om te gebruiken voor de statische modus</string>
-  <string name="custom_header_browse_summary_new">Door alle beschikbare header-pakketten bladeren</string>
-  <string name="custom_header_pick_title">Selecteer de header-afbeelding</string>
-  <string name="custom_header_pick_summary">Selecteer een afbeelding om te gebruiken voor de statische modus</string>
-  <string name="style_enabled_summary">Aangepaste header-afbeelding is AAN</string>
-  <string name="style_disabled_summary">Aangepaste header-afbeelding is UIT</string>
-  <string name="header_provider_disabled">Uitgeschakeld</string>
-  <string name="custom_header_title">Tijdsafhankelijke header</string>
-  <!-- QS quick pulldown using fpc -->
-  <string name="status_bar_quick_qs_pulldown_fp_title">Snelle veeg met vingerafdruk</string>
-  <string name="status_bar_quick_qs_pulldown_fp_summary">Door het inschakelen van deze optie kunt u met één veegbeweging de Snelle instellingen openen</string>
   <!-- Recents -->
   <string name="recents_title">Recente apps</string>
   <string name="recents_summary">Recente apps-scherm</string>
@@ -223,10 +203,6 @@
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">Geen Snelle instellingen op vergrendelscherm</string>
   <string name="lockscreen_qs_disabled_summary">Uitschakelen Snelle instellingen-tegels op vergrendelscherm</string>
-  <!-- Lockscreen rotation -->
-  <string name="lockscreen_rotation_title">Rotatie</string>
-  <string name="lockscreen_rotation_summary_on">Vergrendelscherm rotatie is ingeschakeld</string>
-  <string name="lockscreen_rotation_summary_off">Vergrendelscherm rotatie is uitgeschakeld</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Andere UI verbeteringen</string>
   <!-- Volume dialog timeout -->
@@ -252,9 +228,6 @@
   <!-- Toast icon switch -->
   <string name="toast_icon_title">Toast icoon</string>
   <string name="toast_icon_summary">Toon het app icoon behorend bij de toast</string>
-  <!-- Turn on display when power connected; turn off display when power disconnected -->
-  <string name="wake_when_plugged_or_unplugged_title">Ontwaken door aansluiten op lader</string>
-  <string name="wake_when_plugged_or_unplugged_summary">Scherm aan bij het aansluiten of loskoppelen van een lader</string>
   <!-- Show VoLTE icon on statusbar -->
   <string name="volte_icon_title">VoLTE pictogram</string>
   <string name="volte_icon_summary">VoLTE pictogram weergeven indien beschikbaar</string>
@@ -560,6 +533,8 @@
   <string name="smartbar_custom_icon_size_title">Aangepaste pictogramschaling</string>
   <string name="one_handed_mode_title">Enkelhandige modus</string>
   <string name="one_handed_mode_summary">Staat toe om over de navigatiebalk te slepen om één hand modus te activeren</string>
+  <string name="smartbar_double_tap_sleep_title">Dubbeltikken voor slaapstand</string>
+  <string name="smartbar_double_tap_sleep_summary">Dubbeltik op lege navigatiebalk gebieden om slaapstand in te schakelen</string>
   <!-- Carrier Label -->
   <string name="carrier_category">Providernaam</string>
   <string name="carrier_options">Selecteer weergave locaties</string>
@@ -574,4 +549,46 @@
   <!-- Three-fingers-swipe to screenshot -->
   <string name="three_finger_gesture">Gebaar met drie vingers</string>
   <string name="three_finger_gesture_summary">Schermafbeelding maken door met drie vingers over het scherm te vegen</string>
+  <!-- AOKP custom system animations -->
+  <string name="animation_title">Display en animaties</string>
+  <string name="system_animation_title">Systeem animaties</string>
+  <string name="activity_open_title">Activiteit openen animatie</string>
+  <string name="activity_close_title">Activiteit sluiten animatie</string>
+  <string name="task_open_title">Taak openen animatie</string>
+  <string name="task_close_title">Taak sluiten animatie</string>
+  <string name="task_move_to_front_title">Naar voren verplaatsen animatie</string>
+  <string name="task_move_to_back_title">Naar achteren verplaatsen animatie</string>
+  <string name="wallpaper_open_title">Bureaubladachtergrond openen animatie</string>
+  <string name="wallpaper_close_title">Bureaubladachtergrond sluiten animatie</string>
+  <string name="wallpaper_intra_open_title">Animatie bij fade-in van bureaubladachtergrond</string>
+  <string name="wallpaper_intra_close_title">Animatie bij fade-out van bureaubladachtergrond</string>
+  <string name="animation_duration_title">Animatieduur snelle instellingen-tegels</string>
+  <string name="title_animation_no_override">Voorkom app overschrijvingen</string>
+  <string name="summary_animation_no_override">Voorkom dat apps overgangen overschrijven</string>
+  <string name="animation_duration_default">Standaard</string>
+  <!-- Lock screen visualizer -->
+  <string name="lockscreen_visualizer_title">Muziek visualizer</string>
+  <string name="lockscreen_visualizer_summary">Schakel visualizer weergave op het vergrendelscherm in of uit</string>
+  <!-- SystemUI Theme -->
+  <string name="systemui_theme_style_title">Stijl van het Snelle instellingen-paneel en Aan-/uit-menu</string>
+  <string name="systemui_theme_style_summary">Kies tussen automatische, lichte of donkere stijl</string>
+  <string name="systemui_theme_style_auto">Aangepast aan achtergrond</string>
+  <string name="systemui_theme_style_light">Lichte stijl</string>
+  <string name="systemui_theme_style_dark">Donkere stijl</string>
+  <!-- Screen state service -->
+  <string name="screen_state_toggles_title">Acties onderbreken</string>
+  <string name="screen_state_toggles_enable_title">Inschakelen</string>
+  <string name="screen_state_toggles_enable_summary">Acties zullen worden uitgevoerd met het scherm uit. Als het scherm weer aan gaat wordt de eerdere situatie hersteld.</string>
+  <string name="screen_state_toggles_mobile_title">Mobiele netwerken</string>
+  <string name="screen_state_toggles_location_title">Locatie</string>
+  <string name="screen_state_toggles_twog">Overschakelen naar 2G</string>
+  <string name="screen_state_toggles_twog_summary">Netwerkmodus zal worden overgeschakeld naar 2G bij uitgeschakeld scherm</string>
+  <string name="screen_state_toggles_gps">GPS uitschakelen</string>
+  <string name="screen_state_toggles_gps_summary">GPS gebaseerde locatie service wordt uitgeschakeld bij uitgeschakeld scherm</string>
+  <string name="screen_state_toggles_mobile_data">Mobiele data uitschakelen</string>
+  <string name="screen_state_toggles_mobile_data_summary">Mobiele data wordt uitgeschakeld bij uitgeschakeld scherm</string>
+  <string name="screen_state_off_delay_title">Uitgeschakeld scherm vertraging</string>
+  <string name="screen_state_off_delay_summary">Aantal minuten dat wordt gewacht na uitschakelen van het scherm voordat acties uitgevoerd worden</string>
+  <string name="screen_state_on_delay_title">Vertraging na inschakelen beeldscherm</string>
+  <string name="screen_state_on_delay_summary">Aantal minuten dat na het inschakelen van het scherm wordt gewacht voordat acties uitgevoerd worden</string>
 </resources>

@@ -19,5 +19,30 @@
 -->
 <resources>
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+  <string name="anonymous_statistics_title">AICP Statis</string>
+  <string name="anonymous_statistics_summary">Bantu AICP untuk menjadi lebih baik dengan memilih ke dalam pelaporan statistik anonim</string>
+  <string name="anonymous_statistics_warning_title">Tentang</string>
+  <string name="anonymous_statistics_warning">Memilih ikut dalam Statistik AICP akan memberikan data non-personal untuk dikirimkan ke server kami. Informasi yang sudah dimasukan menyangkut sebuah identifier yang unik, yang tidak akan membahayakan privasi atau data pribadi anda.
+Data akan dikirimkan setiap 7 hari.\n\n Sebagai contoh dari data yang telah dimasukan, ketuk Pratinjau Data.</string>
+  <string name="enable_reporting_title">Mengaktifkan laporan</string>
+  <string name="disable_reporting_persistent">Persisten opt-out</string>
+  <string name="preview_data_title">Pratinjau data</string>
+  <string name="preview_data_summary">%s</string>
+  <string name="view_stats_title">Lihat statistik Halaman</string>
+  <string name="anonymous_learn_more">Pelajari lebih lanjut</string>
+  <string name="last_report_on">Terakhir dilaporkan</string>
+  <string name="reporting_interval">Interval Pelaporan</string>
+  <plurals name="reporting_interval_days">
+    <item quantity="other">%d hari</item>
+  </plurals>
+  <string name="next_report_on">Laporan berikutnya</string>
   <!-- Anonymous Statistics - Preview -->
+  <string name="preview_id_title">ID Unik</string>
+  <string name="preview_device_title">Perangkat</string>
+  <string name="preview_version_title">Versi</string>
+  <string name="preview_country_title">Negara</string>
+  <string name="preview_carrier_title">Provider</string>
+  <string name="preview_romname_title">Nama ROM</string>
+  <string name="preview_romversion_title">Versi AICP</string>
+  <string name="preview_buildtype_title">Jenis AICP</string>
 </resources>

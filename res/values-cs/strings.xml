@@ -72,6 +72,9 @@
   <string name="smart_pulldown_summary">Otevře nabídku rychlého nastavení, kde je přítomno %1$s</string>
   <string name="smart_pulldown_none_summary">Otevře Rychlé Nastavení pokud nejsou přítomny žádné oznámení</string>
   <string name="smart_pulldown_off_summary">je vypnuto</string>
+  <!-- Double tap to sleep on status bar -->
+  <string name="status_bar_double_tap_to_sleep_title">Klepnutím na obrazovku uzamknout zařízení</string>
+  <string name="status_bar_double_tap_to_sleep_summary">Dvojitým poklepáním na stavovou lištu vypnout obrazovku</string>
   <!-- Notifications -->
   <string name="notifications_title">Oznámení</string>
   <!-- Brightness slider settings -->
@@ -105,26 +108,6 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Zobrazit názvy dlaždic</string>
   <string name="qs_tile_title_visibility_summary">Pokud je zaškrtnuto, zobrazí se popisky pod dlaždicemi</string>
-  <!-- QS Dark mode -->
-  <string name="qs_style_dark_title">Styl Dark SystemUI</string>
-  <!-- QS Headers -->
-  <string name="status_bar_custom_header_title">Povolit</string>
-  <string name="daylight_header_pack_title">Balík obrázků záhlaví</string>
-  <string name="status_bar_custom_header_shadow_title">Stín obrázků záhlaví</string>
-  <string name="status_bar_custom_header_shadow_summary">Pro lepší viditelnost na jasném pozadí</string>
-  <string name="static_header_provider_title">Statický</string>
-  <string name="daylight_header_provider_title">Dynamický</string>
-  <string name="custom_header_provider_title">Poskytovatel záhlaví</string>
-  <string name="custom_header_browse_title">Procházet nainstalované záhlaví</string>
-  <string name="custom_header_browse_summary">Kliknutí na jakýkoliv obrázek spustí statický režim</string>
-  <string name="custom_header_browse_summary_new">Procházet všechny dostupné balíčky záhlaví</string>
-  <string name="custom_header_pick_title">Vybrat obrázek záhlaví</string>
-  <string name="custom_header_pick_summary">Vyberte obrázek, který chcete použít pro statický režim</string>
-  <string name="style_enabled_summary">Vlastní obrázek záhlaví je zapnutý</string>
-  <string name="style_disabled_summary">Vlastní obrázek záhlaví je vypnutý</string>
-  <string name="header_provider_disabled">Zakázáno</string>
-  <string name="custom_header_title">Vlastní obrázek záhlaví</string>
-  <!-- QS quick pulldown using fpc -->
   <!-- Recents -->
   <string name="recents_title">Nedávné</string>
   <string name="recents_summary">Obrazovka nedávných aplikací</string>
@@ -220,10 +203,6 @@
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">Žádné rychlé nastavení na zabezpečené zamykací obrazovce</string>
   <string name="lockscreen_qs_disabled_summary">Zakázat dlaždice rychlého nastavení na zabezpečené zamykací obrazovce</string>
-  <!-- Lockscreen rotation -->
-  <string name="lockscreen_rotation_title">Rotace</string>
-  <string name="lockscreen_rotation_summary_on">Otáčení zamykací obrazovky je povoleno</string>
-  <string name="lockscreen_rotation_summary_off">Otáčení zamykací obrazovky je zakázáno</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Další vylepšení UI</string>
   <!-- Volume dialog timeout -->
@@ -249,9 +228,6 @@
   <!-- Toast icon switch -->
   <string name="toast_icon_title">Ikona Toast</string>
   <string name="toast_icon_summary">Zobrazit ikonu aplikace v oznámení Toast</string>
-  <!-- Turn on display when power connected; turn off display when power disconnected -->
-  <string name="wake_when_plugged_or_unplugged_title">Probudit při nabíjení</string>
-  <string name="wake_when_plugged_or_unplugged_summary">Zapnout obrazovku při připojení nebo odpojení nabíječky</string>
   <!-- Show VoLTE icon on statusbar -->
   <string name="volte_icon_title">Ikona VoLTE</string>
   <string name="volte_icon_summary">Zobrazit ikonu VoLTE, když je k dispozici</string>
@@ -360,8 +336,8 @@
   <string name="default_string">Výchozí</string>
   <string name="on">Zapnuto</string>
   <string name="off">Vypnuto</string>
-  <string name="yes">\@android:string/ano</string>
-  <string name="no">\@android:string/ne</string>
+  <string name="yes">@android:string/ano</string>
+  <string name="no">@android:string/ne</string>
   <string name="reset">Obnovit</string>
   <string name="systemui_restart_title">Je vyžadován restart SystemUI</string>
   <string name="systemui_restart_message">Aby se projevily všechny změny, je třeba restartovat SystemUI. Restartovat nyní?</string>
@@ -401,6 +377,7 @@
   <string name="navbar_interface_title">Rozhraní</string>
   <string name="navbar_size">Velikost panelu</string>
   <string name="navbar_mode">Navigační režim</string>
+  <string name="navbar_mode_summary">Vyberte, který režim navigace chcete použít ve svém zařízení</string>
   <string name="navbar_visibility">Povolit navigační panel</string>
   <string name="navigationbar_settings_title">Navigační panel</string>
   <string name="navigationbar_settings_summary">Upravit styl navigace a chování</string>
@@ -425,8 +402,10 @@
   <string name="action_entry_custom_action">Vybrat vlastní akci</string>
   <!-- Fling -->
   <string name="fling_settings">Nastavení Fling</string>
+  <string name="fling_settings_summary">Unikátní a plně přizpůsobitelný navigační panel založený na gestech</string>
   <string name="fling_interface">Fling</string>
   <string name="fling_enable_title">Povolit Fling</string>
+  <string name="fling_back_home_policy">Tlačítka Zpět a Domů je nutné vždy nastavit. Chcete-li změnit tlačítka Zpět a Domů, nejprve nastavte požadované přiřazení.\n\nNastavení dvojitého poklepání způsobí větší prodlevu jednoho klepnutí.</string>
   <string name="fling_split_bar_policy">Pokud je přiřazena pouze pravá nebo levá akce, tak se akce se vztahuje na celý řádek.</string>
   <string name="fling_def_summary">Není vybrána žádná akce</string>
   <string name="fling_swipe_actions">Gesta přejetím</string>
@@ -476,8 +455,11 @@
   <string name="fling_longpress_timeout_label_right">Větší zpoždění</string>
   <string name="fling_longpress_title">Zpoždění dlouhým stiskem</string>
   <string name="fling_longpress_summary">Zvýšit nebo snížit dobu potřebnou k provedení akce dlouhým stisknutím</string>
+  <string name="fling_keyboard_cursors_title">Akce dynamických kurzorů klávesnice</string>
+  <string name="fling_keyboard_cursors_summary">Dvojím poklepáním doleva a doprava se pohybují kurzorové klávesy vlevo a vpravo při otevřené klávesnici</string>
   <string name="fling_logo_opacity_title">Průhlednost loga Fling</string>
   <!-- Pulse navigation bar music visualizer -->
+  <string name="pulse_help_policy_notice_summary">Pulse nefunguje s některými zvukovými zdroji při poslechu z reproduktoru zařízení</string>
   <string name="pulse_settings">Pulse</string>
   <string name="pulse_settings_summary">Grafický ekvalizér na navigačním panelu</string>
   <string name="fling_show_pulse_title">Povolit Pulse</string>
@@ -514,6 +496,7 @@
   <string name="smartbar_settings_summary">Plně přizpůsobitelný navigační panel</string>
   <string name="smartbar_editor_title">Spustit režim úprav</string>
   <string name="smartbar_editor_summary">Otevřít editor tlačítek chytré lišty</string>
+  <string name="smartbar_help_policy_notice_summary">Zatímco v režimu úprav stisknete a podržíte tlačítko a přetáhnete ho pro změnu jeho polohy, nebo dlouhým stisknutím tlačítka přidržíte tlačítko pro zobrazení nabídky úprav. Umístění tlačítka lze měnit při zobrazování nabídky.\n\nNastavení dvojitého klepnutí zpomalí akci jedním stiskem.</string>
   <string name="smartbar_context_menu_position_title">Pozice kontextových tlačítek</string>
   <string name="smartbar_context_menu_position_summary">Pozice kontextových tlačítek, jako jsou tlačítka pro výběr nabídky nebo klávesnice</string>
   <string name="smartbar_right">Vpravo</string>
@@ -552,6 +535,8 @@
   <string name="smartbar_custom_icon_size_title">Vlastní velikost ikon</string>
   <string name="one_handed_mode_title">Režim jedné ruky</string>
   <string name="one_handed_mode_summary">Umožnit zapnutí režimu jednou rukou posunutím přes navigační panel</string>
+  <string name="smartbar_double_tap_sleep_title">Dvojitým poklepáním uspat</string>
+  <string name="smartbar_double_tap_sleep_summary">Dvojím poklepáním na prázdné místo navigačního panelu uspat zařízení</string>
   <!-- Carrier Label -->
   <string name="carrier_category">Název mobilní sítě</string>
   <string name="carrier_options">Vyberte umístění zobrazení</string>
@@ -566,4 +551,46 @@
   <!-- Three-fingers-swipe to screenshot -->
   <string name="three_finger_gesture">Gesto třemi prsty</string>
   <string name="three_finger_gesture_summary">Snímek obrazovky přejetím tří prstů</string>
+  <!-- AOKP custom system animations -->
+  <string name="animation_title">Animace</string>
+  <string name="system_animation_title">Systémové animace</string>
+  <string name="activity_open_title">Animace otevření aktivity</string>
+  <string name="activity_close_title">Animace zavření aktivity</string>
+  <string name="task_open_title">Animace otevření úlohy</string>
+  <string name="task_close_title">Animace zavření úlohy</string>
+  <string name="task_move_to_front_title">Animace přesunutí do popředí</string>
+  <string name="task_move_to_back_title">Animace přesunutí na pozadí</string>
+  <string name="wallpaper_open_title">Animace otevření tapety</string>
+  <string name="wallpaper_close_title">Animace zavření tapety</string>
+  <string name="wallpaper_intra_open_title">Animace otevření nové tapety</string>
+  <string name="wallpaper_intra_close_title">Animace zavření nové tapety</string>
+  <string name="animation_duration_title">Doba trvání animace</string>
+  <string name="title_animation_no_override">Zabránit aplikacím změnit nastavení</string>
+  <string name="summary_animation_no_override">Zabránit aplikacím změnit nastavení přechodů</string>
+  <string name="animation_duration_default">Výchozí</string>
+  <!-- Lock screen visualizer -->
+  <string name="lockscreen_visualizer_title">Hudební vizualizace</string>
+  <string name="lockscreen_visualizer_summary">Přnutí zobrazení vizualizací na zamykací obrazovce</string>
+  <!-- SystemUI Theme -->
+  <string name="systemui_theme_style_title">Styl QS a nabídky tlačítka \"Vypnout\"</string>
+  <string name="systemui_theme_style_summary">Vyberte si automatický, světlý nebo tmavý styl</string>
+  <string name="systemui_theme_style_auto">Podle tapety</string>
+  <string name="systemui_theme_style_light">Světlý styl</string>
+  <string name="systemui_theme_style_dark">Tmavý styl</string>
+  <!-- Screen state service -->
+  <string name="screen_state_toggles_title">Akce po zhasnutí obrazovky</string>
+  <string name="screen_state_toggles_enable_title">Povolit</string>
+  <string name="screen_state_toggles_enable_summary">Akce budou provedeny při vypnutí displeje. Při zapnutí a uvedení do předchozího stavu budou obnoveny.</string>
+  <string name="screen_state_toggles_mobile_title">Mobilní sítě</string>
+  <string name="screen_state_toggles_location_title">Poloha</string>
+  <string name="screen_state_toggles_twog">Přepnout na 2G</string>
+  <string name="screen_state_toggles_twog_summary">Režim sítě se přepne na 2G při vypnutí obrazovky</string>
+  <string name="screen_state_toggles_gps">Zakázat GPS</string>
+  <string name="screen_state_toggles_gps_summary">GPS služba bude vypnuta při vypnutí obrazovky</string>
+  <string name="screen_state_toggles_mobile_data">Zakázat mobilní data</string>
+  <string name="screen_state_toggles_mobile_data_summary">Mobilní data budou vypnuta při vypnutí obrazovky</string>
+  <string name="screen_state_off_delay_title">Zpoždění akcí po vypnutí obrazovky</string>
+  <string name="screen_state_off_delay_summary">Počet minut čekání před provedením akce po vypnutí obrazovky</string>
+  <string name="screen_state_on_delay_title">Zpoždění akcí po zapnutí obrazovky</string>
+  <string name="screen_state_on_delay_summary">Počet minut čekání před provedením akce po zapnutí obrazovky</string>
 </resources>

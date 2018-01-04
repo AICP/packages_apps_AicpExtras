@@ -73,6 +73,9 @@
   <string name="smart_pulldown_summary">Abrir ajustes rápidos cuando hay %1$s</string>
   <string name="smart_pulldown_none_summary">Abrir ajustes rápidos cuando no hay notificaciones</string>
   <string name="smart_pulldown_off_summary">está deshabilitado</string>
+  <!-- Double tap to sleep on status bar -->
+  <string name="status_bar_double_tap_to_sleep_title">Tocar para apagar pantalla</string>
+  <string name="status_bar_double_tap_to_sleep_summary">Doble toque en la barra de estado para apagar la pantalla</string>
   <!-- Notifications -->
   <string name="notifications_title">Notificaciones</string>
   <!-- Brightness slider settings -->
@@ -106,30 +109,6 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Mostrar texto del icono</string>
   <string name="qs_tile_title_visibility_summary">Mostrar texto debajo si está habilitado</string>
-  <!-- QS Dark mode -->
-  <string name="qs_style_dark_title">Interfaz con estilo oscuro</string>
-  <!-- QS Headers -->
-  <string name="status_bar_custom_header_title">Habilitar</string>
-  <string name="daylight_header_pack_title">Paquete de imágenes</string>
-  <string name="status_bar_custom_header_shadow_title">Sombra de imágen de cabecera</string>
-  <string name="status_bar_custom_header_shadow_summary">Para mejorar la visibilidad en imágenes brillantes</string>
-  <string name="unit_percent">\u0025</string>
-  <string name="static_header_provider_title">Estático</string>
-  <string name="daylight_header_provider_title">Dinámico</string>
-  <string name="custom_header_provider_title">Proveedor de imágenes</string>
-  <string name="custom_header_browse_title">Explorar imágenes instaladas</string>
-  <string name="custom_header_browse_summary">Tocar en cualquier imagen para aplicarla en modo estático</string>
-  <string name="custom_header_browse_summary_new">Ver todos los paquetes de imágenes de cabecera disponibles</string>
-  <string name="custom_header_pick_title">Seleccione la imagen de cabecera</string>
-  <string name="custom_header_pick_summary">Seleccione una imagen para usar en modo estático</string>
-  <string name="style_enabled_summary">Imagen personalizada en la cabecera habilitada</string>
-  <string name="style_disabled_summary">Imagen personalizada en la cabecera deshabilitada</string>
-  <string name="header_provider_disabled">Deshabilitada</string>
-  <string name="custom_header_title">Imágen cabecera personalizada</string>
-  <!-- QS quick pulldown using fpc -->
-  <string name="status_bar_quick_qs_pulldown_fp_title">Despliegue rápido usando el sensor de huella</string>
-  <string name="status_bar_quick_qs_pulldown_fp_summary">En lugar de deslizar hacia abajo dos veces para ver las notificaciones habilitar esto y hará un golpe fuerte
-Habilitando esta opción solamente será necesario deslizar el dedo una vez para ver las notificaciones en lugar de dos</string>
   <!-- Recents -->
   <string name="recents_title">Aps. recientes</string>
   <string name="recents_summary">Panel Recientes</string>
@@ -205,7 +184,7 @@ Habilitando esta opción solamente será necesario deslizar el dedo una vez para
   <string name="slim_recents_mem_display_color">Color de la barra</string>
   <string name="slim_recents_mem_display_text_color">Color del texto</string>
   <!-- Lockscreen -->
-  <string name="lockscreen_title">Pantalla de bloqueo</string>
+  <string name="lockscreen_title">Clima</string>
   <!-- Double tap to sleep on lockscreen -->
   <string name="double_tap_sleep_lockscreen">Doble toque para apagar pantalla</string>
   <string name="double_tap_sleep_lockscreen_summary">Doble toque en pantalla de bloqueo para apagar la pantalla</string>
@@ -225,10 +204,6 @@ Habilitando esta opción solamente será necesario deslizar el dedo una vez para
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">Deshabilitar ajustes rápidos en pantalla de bloqueo</string>
   <string name="lockscreen_qs_disabled_summary">No permite desplegar el panel de ajustes rápidos en la pantalla de bloqueo</string>
-  <!-- Lockscreen rotation -->
-  <string name="lockscreen_rotation_title">Rotación</string>
-  <string name="lockscreen_rotation_summary_on">Rotación de pantalla de bloqueo habilitada</string>
-  <string name="lockscreen_rotation_summary_off">Rotación de pantalla de bloqueo deshabilitada</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Otros ajustes de interfaz de usuario</string>
   <!-- Volume dialog timeout -->
@@ -254,9 +229,6 @@ Habilitando esta opción solamente será necesario deslizar el dedo una vez para
   <!-- Toast icon switch -->
   <string name="toast_icon_title">Icono de notificaciones</string>
   <string name="toast_icon_summary">Muestra el icono de la aplicación que dispara la notificación</string>
-  <!-- Turn on display when power connected; turn off display when power disconnected -->
-  <string name="wake_when_plugged_or_unplugged_title">Despertar al conectar</string>
-  <string name="wake_when_plugged_or_unplugged_summary">Enciende la patanlla cuando se conecta o se desconecta el cargador</string>
   <!-- Show VoLTE icon on statusbar -->
   <string name="volte_icon_title">Icono de voLTE</string>
   <string name="volte_icon_summary">Mostrar icono de VoLTE cuando esté disponible</string>
@@ -562,6 +534,8 @@ Habilitando esta opción solamente será necesario deslizar el dedo una vez para
   <string name="smartbar_custom_icon_size_title">Escala personalizada de iconos</string>
   <string name="one_handed_mode_title">Modo a una mano</string>
   <string name="one_handed_mode_summary">Deslizar en la barra de navegación para activar el modo a una mano</string>
+  <string name="smartbar_double_tap_sleep_title">Doble toque para apagar pantalla</string>
+  <string name="smartbar_double_tap_sleep_summary">Doble toque en la barra de navegación para apagar pantalla</string>
   <!-- Carrier Label -->
   <string name="carrier_category">Nombre de operador</string>
   <string name="carrier_options">Seleccionar una ubicación</string>
@@ -576,4 +550,47 @@ Habilitando esta opción solamente será necesario deslizar el dedo una vez para
   <!-- Three-fingers-swipe to screenshot -->
   <string name="three_finger_gesture">Gesto con tres dedos</string>
   <string name="three_finger_gesture_summary">Deslizar tres dedos para hacer captura de pantalla</string>
+  <!-- AOKP custom system animations -->
+  <string name="animation_title">Pantalla y animaciones</string>
+  <string name="system_animation_title">Animaciones del sistema</string>
+  <string name="activity_open_title">Animación de apertura</string>
+  <string name="activity_close_title">Animación de cierre</string>
+  <string name="task_open_title">Animación al abrir tarea</string>
+  <string name="task_close_title">Animación al cerrar tarea</string>
+  <string name="task_move_to_front_title">Animación al traer al frente</string>
+  <string name="task_move_to_back_title">Animación hacia atrás</string>
+  <string name="wallpaper_open_title">Animación al abrir fondo de pantalla</string>
+  <string name="wallpaper_close_title">Animación al cerrar fondo de pantalla</string>
+  <string name="wallpaper_intra_open_title">Animación interna al abrir el fondo de pantalla</string>
+  <string name="wallpaper_intra_close_title">Animación interna al cerrar el fondo de pantalla</string>
+  <string name="animation_duration_title">Duración de la animación</string>
+  <string name="title_animation_no_override">Evitar reemplazos de aplicaciones</string>
+  <string name="summary_animation_no_override">Evitar que las aplicaciones reemplacen las transiciones</string>
+  <string name="animation_duration_default">Predeterminada</string>
+  <!-- Lock screen visualizer -->
+  <string name="lockscreen_visualizer_title">Visualizador de música</string>
+  <string name="lockscreen_visualizer_summary">Habilita el visualizador en la pantalla de bloqueo</string>
+  <!-- SystemUI Theme -->
+  <string name="systemui_theme_style_title">Estilo de ajustes rápidos y menú de apagado</string>
+  <string name="systemui_theme_style_summary">Elegir entre estilos automáticos, claros y oscuros</string>
+  <string name="systemui_theme_style_auto">Basado en el Fondo de Pantalla</string>
+  <string name="systemui_theme_style_light">Estilo claro</string>
+  <string name="systemui_theme_style_dark">Estilo oscuro</string>
+  <!-- Screen state service -->
+  <string name="screen_state_toggles_summary">\@null</string>
+  <string name="screen_state_toggles_title">Acciones al apagar pantalla</string>
+  <string name="screen_state_toggles_enable_title">Habilitar</string>
+  <string name="screen_state_toggles_enable_summary">Acciones que se ejecutarán cuando se apague la pantalla. Al encender la pantalla se restaurarán al estado anterior.</string>
+  <string name="screen_state_toggles_mobile_title">Redes móviles</string>
+  <string name="screen_state_toggles_location_title">Ubicación</string>
+  <string name="screen_state_toggles_twog">Cambiar a 2G</string>
+  <string name="screen_state_toggles_twog_summary">El modo de red se cambiará a 2G al apagar la pantalla</string>
+  <string name="screen_state_toggles_gps">Deshabilitar GPS</string>
+  <string name="screen_state_toggles_gps_summary">El servicio de ubicación con GPS se deshabilitará al apagar la pantalla</string>
+  <string name="screen_state_toggles_mobile_data">Deshabilitar datos móviles</string>
+  <string name="screen_state_toggles_mobile_data_summary">Se deshabilitarán los datos moviles al apagar la pantalla</string>
+  <string name="screen_state_off_delay_title">Tiempo de espera al apagar pantalla</string>
+  <string name="screen_state_off_delay_summary">Minutos después de los que se ejecutarán las acciones tras apagar la pantalla</string>
+  <string name="screen_state_on_delay_title">Tiempo de espera al encender pantalla</string>
+  <string name="screen_state_on_delay_summary">Minutos después de los que se ejecutarán las acciones tras encender la pantalla</string>
 </resources>
