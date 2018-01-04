@@ -72,6 +72,9 @@
   <string name="smart_pulldown_summary">Apri i quick settings quando ci sono %1$s notifiche presenti</string>
   <string name="smart_pulldown_none_summary">Apri i quick settings quando non ci sono notifiche</string>
   <string name="smart_pulldown_off_summary">disattivata</string>
+  <!-- Double tap to sleep on status bar -->
+  <string name="status_bar_double_tap_to_sleep_title">Doppio tocco per sospensione</string>
+  <string name="status_bar_double_tap_to_sleep_summary">Doppio tocco sulla barra di stato per spegnere lo schermo</string>
   <!-- Notifications -->
   <string name="notifications_title">Notifiche</string>
   <!-- Brightness slider settings -->
@@ -105,29 +108,6 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Mostra i titoli dei tiles</string>
   <string name="qs_tile_title_visibility_summary">Mostra i titoli al di sotto dei tile quando controllati</string>
-  <!-- QS Dark mode -->
-  <string name="qs_style_dark_title">SystemUI scuro</string>
-  <!-- QS Headers -->
-  <string name="status_bar_custom_header_title">Attiva</string>
-  <string name="daylight_header_pack_title">Pacchetto immagini intestazione</string>
-  <string name="status_bar_custom_header_shadow_title">Ombra immagine intestazione</string>
-  <string name="status_bar_custom_header_shadow_summary">Per una migliore visibilità su immagini luminose</string>
-  <string name="unit_percent">\u0025</string>
-  <string name="static_header_provider_title">Statico</string>
-  <string name="daylight_header_provider_title">Dinamico</string>
-  <string name="custom_header_provider_title">Provider intestazione</string>
-  <string name="custom_header_browse_title">Sfoglia gli header installati</string>
-  <string name="custom_header_browse_summary">Clicca un\'immagine da utilizzare per la modalità statica</string>
-  <string name="custom_header_browse_summary_new">Sfoglia tutti i pacchetti delle immagini d\'intestazione disponibili</string>
-  <string name="custom_header_pick_title">Seleziona immagine d\'intestazione</string>
-  <string name="custom_header_pick_summary">Seleziona un\'immagine da utilizzare per la modalità statica</string>
-  <string name="style_enabled_summary">Immagine d\'intestazione personalizzata attiva</string>
-  <string name="style_disabled_summary">Immagine d\'intestazione personalizzata non attiva</string>
-  <string name="header_provider_disabled">Disabilitato</string>
-  <string name="custom_header_title">Immagine d\'intestazione personalizzata</string>
-  <!-- QS quick pulldown using fpc -->
-  <string name="status_bar_quick_qs_pulldown_fp_title">Discesa rapida col sensore d\'impronte</string>
-  <string name="status_bar_quick_qs_pulldown_fp_summary">Invece di scorrere due volte verso il basso per le notifiche, attiva questo per un singolo scorrimento</string>
   <!-- Recents -->
   <string name="recents_title">Recenti</string>
   <string name="recents_summary">Schermata app recenti</string>
@@ -223,10 +203,6 @@
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">Non visualizzare i QuickSettings quando bloccato</string>
   <string name="lockscreen_qs_disabled_summary">Disattiva i quick settings nella schermata di blocco</string>
-  <!-- Lockscreen rotation -->
-  <string name="lockscreen_rotation_title">Rotazione</string>
-  <string name="lockscreen_rotation_summary_on">Rotazione schermata di blocco abilitata</string>
-  <string name="lockscreen_rotation_summary_off">Rotazione schermata di blocco disabilitata</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Altri tweaks per la UI</string>
   <!-- Volume dialog timeout -->
@@ -252,9 +228,6 @@
   <!-- Toast icon switch -->
   <string name="toast_icon_title">Icona toast</string>
   <string name="toast_icon_summary">Mostra l\'icona dell\'app corrispondente al toast</string>
-  <!-- Turn on display when power connected; turn off display when power disconnected -->
-  <string name="wake_when_plugged_or_unplugged_title">Risveglia al collegamento</string>
-  <string name="wake_when_plugged_or_unplugged_summary">Accendi lo schermo quando colleghi o scolleghi il dispositivo all\'alimentazione</string>
   <!-- Show VoLTE icon on statusbar -->
   <string name="volte_icon_title">Icona VoLTE</string>
   <string name="volte_icon_summary">Mostra l\'icona VoLTE quando disponibile</string>
@@ -560,6 +533,8 @@
   <string name="smartbar_custom_icon_size_title">Dimensione personalizzata dell\'icona</string>
   <string name="one_handed_mode_title">Modo d\'uso con una mano</string>
   <string name="one_handed_mode_summary">Consente di attivare la modalità una mano scorrendo sulla barra di navigazione</string>
+  <string name="smartbar_double_tap_sleep_title">Doppio tocco per spegnere lo schermo</string>
+  <string name="smartbar_double_tap_sleep_summary">Doppio tocco su uno spazio vuoto della barra di navigazione per spegnere lo schermo</string>
   <!-- Carrier Label -->
   <string name="carrier_category">Etichetta operatore</string>
   <string name="carrier_options">Imposta la posizione</string>
@@ -574,4 +549,47 @@
   <!-- Three-fingers-swipe to screenshot -->
   <string name="three_finger_gesture">Gesture a tre dita</string>
   <string name="three_finger_gesture_summary">Scorri con tre dita per prendere uno screenshot</string>
+  <!-- AOKP custom system animations -->
+  <string name="animation_title">Display e animazioni</string>
+  <string name="system_animation_title">Animazioni di sistema</string>
+  <string name="activity_open_title">Animazione apertura attività</string>
+  <string name="activity_close_title">Animazione chiusura attività</string>
+  <string name="task_open_title">Animazione apertura processo</string>
+  <string name="task_close_title">Animazione chiusura processo</string>
+  <string name="task_move_to_front_title">Animazione avanti</string>
+  <string name="task_move_to_back_title">Animazione indietro</string>
+  <string name="wallpaper_open_title">Animazione di apertura sfondo</string>
+  <string name="wallpaper_close_title">Animazione di chiusura sfondo</string>
+  <string name="wallpaper_intra_open_title">Animazione apertura interna sfondo</string>
+  <string name="wallpaper_intra_close_title">Animazione chiusura interna sfondo</string>
+  <string name="animation_duration_title">Durata animazione</string>
+  <string name="title_animation_no_override">Previeni sovrascrizioni dalle app</string>
+  <string name="summary_animation_no_override">Previene che le transizioni delle app vengano sostituite</string>
+  <string name="animation_duration_default">Predefinito</string>
+  <!-- Lock screen visualizer -->
+  <string name="lockscreen_visualizer_title">Visualizzatore di musica</string>
+  <string name="lockscreen_visualizer_summary">Attiva il visualizzatore di musica nella schermata di blocco</string>
+  <!-- SystemUI Theme -->
+  <string name="systemui_theme_style_title">Stile dei quick settings e del menù di spegnimento</string>
+  <string name="systemui_theme_style_summary">Scegli tra automatico, chiaro e scuro</string>
+  <string name="systemui_theme_style_auto">Basato sullo sfondo</string>
+  <string name="systemui_theme_style_light">Stile chiaro</string>
+  <string name="systemui_theme_style_dark">Stile scuro</string>
+  <!-- Screen state service -->
+  <string name="screen_state_toggles_summary">\@null</string>
+  <string name="screen_state_toggles_title">Suspend Actions</string>
+  <string name="screen_state_toggles_enable_title">Attiva</string>
+  <string name="screen_state_toggles_enable_summary">Le azioni verranno eseguite a schermo spento. A schermo acceso lo stato precedente verrà ripristinato.</string>
+  <string name="screen_state_toggles_mobile_title">Reti mobili</string>
+  <string name="screen_state_toggles_location_title">Localizzazione</string>
+  <string name="screen_state_toggles_twog">Passa al 2G</string>
+  <string name="screen_state_toggles_twog_summary">La modalità di rete passerà al 2G a schermo spento</string>
+  <string name="screen_state_toggles_gps">Disabilita GPS</string>
+  <string name="screen_state_toggles_gps_summary">La localizzazione via GPS verra disabilita a schermo spento</string>
+  <string name="screen_state_toggles_mobile_data">Disabilita dati mobili</string>
+  <string name="screen_state_toggles_mobile_data_summary">I dati mobili verranno disabilitati a schermo spento</string>
+  <string name="screen_state_off_delay_title">Tempo di attesa schermo spento</string>
+  <string name="screen_state_off_delay_summary">Numero di minuti da aspettare prima di eseguire le azioni dopo aver spento lo schermo</string>
+  <string name="screen_state_on_delay_title">Tempo di attesa schermo acceso</string>
+  <string name="screen_state_on_delay_summary">Numero di minuti da aspettare prima di eseguire le azioni dopo aver acceso lo schermo</string>
 </resources>

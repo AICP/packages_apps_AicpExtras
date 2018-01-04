@@ -72,6 +72,9 @@
   <string name="smart_pulldown_summary">Schnelleinstellungen öffnen, wenn %1$s Benachrichtigungen vorliegen</string>
   <string name="smart_pulldown_none_summary">Schnelleinstellungen öffnen, wenn keine Benachrichtigungen vorhanden sind</string>
   <string name="smart_pulldown_off_summary">ist ausgeschaltet</string>
+  <!-- Double tap to sleep on status bar -->
+  <string name="status_bar_double_tap_to_sleep_title">Doppeltippen für Standby (DT2S)</string>
+  <string name="status_bar_double_tap_to_sleep_summary">Doppelt auf die Statusleiste tippen, um das Display auszuschalten</string>
   <!-- Notifications -->
   <string name="notifications_title">Benachrichtigungen</string>
   <!-- Brightness slider settings -->
@@ -83,7 +86,7 @@
   <string name="brightness_icon_position_on_summary">Rechts anzeigen</string>
   <string name="brightness_icon_position_off_summary">Links anzeigen</string>
   <!-- Quick settings -->
-  <string name="quick_settings_title">Schnelleinstellungen</string>
+  <string name="quick_settings_title">Kacheln</string>
   <!-- Quick 1-finger pull down to access notifications -->
   <string name="status_bar_quick_qs_pulldown">Schnelles Herunterziehen</string>
   <string name="status_bar_quick_qs_pulldown_summary">Rechte Seite der Statusleiste herunterziehen, um direkt die Schnelleinstellungen anzuzeigen</string>
@@ -105,30 +108,8 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Namen der Kacheln anzeigen</string>
   <string name="qs_tile_title_visibility_summary">Wenn aktiviert, wird unterhalb von Kacheln der Name angezeigt</string>
-  <!-- QS Dark mode -->
-  <string name="qs_style_dark_title">Dunkles SystemUI-Design</string>
-  <!-- QS Headers -->
-  <string name="status_bar_custom_header_title">Aktivieren</string>
-  <string name="daylight_header_pack_title">Hintergrundbild-Paket</string>
-  <string name="status_bar_custom_header_shadow_title">Hintergrundbild-Schatten</string>
-  <string name="status_bar_custom_header_shadow_summary">Für eine bessere Sichtbarkeit bei hellen Hintergrundbildern</string>
-  <string name="static_header_provider_title">Statisch (Einzelbild)</string>
-  <string name="daylight_header_provider_title">Dynamisch (nach Zeit)</string>
-  <string name="custom_header_provider_title">Hintergrundbild-Anbieter</string>
-  <string name="custom_header_browse_title">Blättere durch installierte Pakete</string>
-  <string name="custom_header_browse_summary">Lange auf ein Bild drücken, um es als statisches Bild zu nutzen</string>
-  <string name="custom_header_browse_summary_new">Alle verfügbaren Hintergrund-Pakete durchsuchen</string>
-  <string name="custom_header_pick_title">Hintergrundbild für Kopfzeile auswählen</string>
-  <string name="custom_header_pick_summary">Bild für statischen Modus wählen</string>
-  <string name="style_enabled_summary">Benutzerdefiniertes Kopfzeilenbild ist AN</string>
-  <string name="style_disabled_summary">Benutzerdefiniertes Kopfzeilenbild ist AUS</string>
-  <string name="header_provider_disabled">Deaktiviert</string>
-  <string name="custom_header_title">Eigenes Hintergrundbild</string>
-  <!-- QS quick pulldown using fpc -->
-  <string name="status_bar_quick_qs_pulldown_fp_title">Schnelleinstellungen per Fingerabdrucksensor</string>
-  <string name="status_bar_quick_qs_pulldown_fp_summary">Einmaliges Wischen über den Fingerabdrucksensor öffnet die Schnelleinstellungen</string>
   <!-- Recents -->
-  <string name="recents_title">Anwendungsverlauf</string>
+  <string name="recents_title">Verlauf</string>
   <string name="recents_summary">Zuletzt geöffnete Apps</string>
   <string name="stock_recents_category">Standard-Anwendungsverlauf</string>
   <string name="alternative_recents_category">Alternativer Anwendungsverlauf</string>
@@ -222,10 +203,6 @@
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">Keine Schnelleinstellungen auf sicherem Sperrbildschirm</string>
   <string name="lockscreen_qs_disabled_summary">Deaktiviert den Zugriff auf die Schnelleinstellungen bei gesperrtem Sperrbildschirm</string>
-  <!-- Lockscreen rotation -->
-  <string name="lockscreen_rotation_title">Rotation</string>
-  <string name="lockscreen_rotation_summary_on">Sperrbildschirm-Drehung ist aktiviert</string>
-  <string name="lockscreen_rotation_summary_off">Sperrbildschirm-Drehung ist deaktiviert</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Andere UI-Verbesserungen</string>
   <!-- Volume dialog timeout -->
@@ -251,9 +228,6 @@
   <!-- Toast icon switch -->
   <string name="toast_icon_title">Toast Symbol</string>
   <string name="toast_icon_summary">Zeige das zur Meldung zugehörige Symbol der Anwendung</string>
-  <!-- Turn on display when power connected; turn off display when power disconnected -->
-  <string name="wake_when_plugged_or_unplugged_title">Beim Anschließen aufwecken</string>
-  <string name="wake_when_plugged_or_unplugged_summary">Beim Anschließen oder Trennen einer Stromquelle den Bildschirm einschalten</string>
   <!-- Show VoLTE icon on statusbar -->
   <string name="volte_icon_title">VoLTE-Symbol</string>
   <string name="volte_icon_summary">Bei Verfügbarkeit das VoLTE-Symbol anzeigen</string>
@@ -560,6 +534,8 @@ Ordner AICP_backup gesichert. \n Alte Sicherungen müssen manuell gelöscht werd
   <string name="smartbar_custom_icon_size_title">Benutzerdefinierte Symbolgröße</string>
   <string name="one_handed_mode_title">Ein-Hand-Modus</string>
   <string name="one_handed_mode_summary">Aktiviert die Bedienung mit einer Hand, wenn über die Navigationsleiste gewischt wird</string>
+  <string name="smartbar_double_tap_sleep_title">Zum Schlafen zweimal Tippen (DT2S)</string>
+  <string name="smartbar_double_tap_sleep_summary">Für Standby zweimal auf einen leeren Teil der Navigationsleiste tippen</string>
   <!-- Carrier Label -->
   <string name="carrier_category">Anzeige des Anbieters</string>
   <string name="carrier_options">Anzeigeseite wählen</string>
@@ -574,4 +550,47 @@ Ordner AICP_backup gesichert. \n Alte Sicherungen müssen manuell gelöscht werd
   <!-- Three-fingers-swipe to screenshot -->
   <string name="three_finger_gesture">Drei-Finger-Geste</string>
   <string name="three_finger_gesture_summary">Wische mit drei Fingern, um ein Bildschirmfoto aufzunehmen</string>
+  <!-- AOKP custom system animations -->
+  <string name="animation_title">Display und Animationen</string>
+  <string name="system_animation_title">Systemanimationen</string>
+  <string name="activity_open_title">\"Aktivität starten\"-Animation</string>
+  <string name="activity_close_title">\"Aktivität beenden\"-Animation</string>
+  <string name="task_open_title">\"Anwendung öffnen\"-Animation</string>
+  <string name="task_close_title">\"Anwendung beenden\"-Animation</string>
+  <string name="task_move_to_front_title">\"Hole nach vorne\"-Animation</string>
+  <string name="task_move_to_back_title">\"Verschiebe nach hinten\"-Animation</string>
+  <string name="wallpaper_open_title">\"Hintergrundbild öffnen\"-Animation</string>
+  <string name="wallpaper_close_title">\"Hintergrundbild schließen\"-Animation</string>
+  <string name="wallpaper_intra_open_title">Animation beim Einblenden des Bildschirmhintergrunds</string>
+  <string name="wallpaper_intra_close_title">Animation beim Ausblenden des Bildschirmhintergrunds</string>
+  <string name="animation_duration_title">Dauer der Kachelanimation</string>
+  <string name="title_animation_no_override">Appbeeinflussung verhindern</string>
+  <string name="summary_animation_no_override">Apps davon abhalten die Übergangsanimationen zu beeinflussen</string>
+  <string name="animation_duration_default">Standard</string>
+  <!-- Lock screen visualizer -->
+  <string name="lockscreen_visualizer_title">Musikvisualisierung</string>
+  <string name="lockscreen_visualizer_summary">Zeigt Musikvisualisierung auf dem Sperrbildschirm</string>
+  <!-- SystemUI Theme -->
+  <string name="systemui_theme_style_title">Design des Ein-/Aus Menüs und Kachel-Panels</string>
+  <string name="systemui_theme_style_summary">Wähle zwischen automatischem, hellem und dunklem Stil</string>
+  <string name="systemui_theme_style_auto">An Hintergrund angepasst</string>
+  <string name="systemui_theme_style_light">Heller Stil</string>
+  <string name="systemui_theme_style_dark">Dunkler Stil</string>
+  <!-- Screen state service -->
+  <string name="screen_state_toggles_summary">\@null</string>
+  <string name="screen_state_toggles_title">Energiespar-Optionen</string>
+  <string name="screen_state_toggles_enable_title">Aktivieren</string>
+  <string name="screen_state_toggles_enable_summary">Die Optionen werden bei Displayabschaltung aktiviert. Bei Einschaltung werden die vorherigen Werte wieder hergestellt.</string>
+  <string name="screen_state_toggles_mobile_title">Mobilfunknetze</string>
+  <string name="screen_state_toggles_location_title">Standort</string>
+  <string name="screen_state_toggles_twog">Umschalten zu GPRS/EDGE (2G)</string>
+  <string name="screen_state_toggles_twog_summary">Der Netzwerkmodus wird auf 2G geschaltet, wenn das Display aus ist</string>
+  <string name="screen_state_toggles_gps">GPS deaktivieren</string>
+  <string name="screen_state_toggles_gps_summary">Die Standortbestimmung per GPS wird abgeschaltet, wenn das Display aus ist</string>
+  <string name="screen_state_toggles_mobile_data">Mobile Datenverbindung trennen</string>
+  <string name="screen_state_toggles_mobile_data_summary">Mobile Datenverbindung wird deaktiviert, wenn das Display aus ist</string>
+  <string name="screen_state_off_delay_title">Verzögerung nach der Displayabschaltung</string>
+  <string name="screen_state_off_delay_summary">Anzahl der Minuten nach Displayabschaltung bevor die gewählten Optionen in Kraft treten</string>
+  <string name="screen_state_on_delay_title">Verzögerung nach Reaktivierung des Displays</string>
+  <string name="screen_state_on_delay_summary">Anzahl der Minuten nach Wiedereinschaltung des Displays bevor die gewählten Optionen rückgängig gemacht werden</string>
 </resources>

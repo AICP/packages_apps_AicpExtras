@@ -47,6 +47,7 @@
   <!-- StatusBar weather settings -->
   <string name="statusbar_weather_dialog_title">ステータスバー上の天気</string>
   <!-- Smart pulldown-->
+  <!-- Double tap to sleep on status bar -->
   <!-- Notifications -->
   <string name="notifications_title">通知</string>
   <!-- Brightness slider settings -->
@@ -64,18 +65,6 @@
   <!-- QS rows and columns -->
   <!-- QS footer warnings -->
   <!-- QS tiles title visibility -->
-  <!-- QS Dark mode -->
-  <!-- QS Headers -->
-  <string name="daylight_header_pack_title">ヘッダー画像パック</string>
-  <string name="status_bar_custom_header_shadow_title">ヘッダー画像の影</string>
-  <string name="status_bar_custom_header_shadow_summary">明るい画像の時に見やすくします</string>
-  <string name="static_header_provider_title">固定</string>
-  <string name="daylight_header_provider_title">ダイナミック</string>
-  <string name="custom_header_provider_title">ヘッダープロパイダ</string>
-  <string name="custom_header_browse_title">インストール済みのヘッダーを表示する</string>
-  <string name="header_provider_disabled">無効</string>
-  <string name="custom_header_title">カスタムヘッダー画像</string>
-  <!-- QS quick pulldown using fpc -->
   <!-- Recents -->
   <string name="recents_title">アプリ履歴</string>
   <!-- Recents panel settings -->
@@ -127,8 +116,6 @@
   <!-- Lockscreen notif count -->
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
-  <!-- Lockscreen rotation -->
-  <string name="lockscreen_rotation_title">回転</string>
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
@@ -142,7 +129,6 @@
   <!-- Toast icon switch -->
   <string name="toast_icon_title">トースト通知のアイコン</string>
   <string name="toast_icon_summary">トースト通知と共にアプリのアイコンを表示します</string>
-  <!-- Turn on display when power connected; turn off display when power disconnected -->
   <!-- Show VoLTE icon on statusbar -->
   <!-- Vibrate on plug -->
   <!-- System animations -->
@@ -237,4 +223,11 @@
   <string name="show_carrier_statusbar">ステータスバーで表示</string>
   <string name="show_carrier_enabled">両方で表示</string>
   <!-- Three-fingers-swipe to screenshot -->
+  <!-- AOKP custom system animations -->
+  <string name="animation_title">アニメーション</string>
+  <string name="animation_duration_title">タイルタップ時のアニメーション時間</string>
+  <string name="animation_duration_default">デフォルト</string>
+  <!-- Lock screen visualizer -->
+  <!-- SystemUI Theme -->
+  <!-- Screen state service -->
 </resources>

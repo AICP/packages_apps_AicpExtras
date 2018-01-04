@@ -46,6 +46,7 @@
   <string name="status_bar_logo_right">右侧</string>
   <!-- StatusBar weather settings -->
   <!-- Smart pulldown-->
+  <!-- Double tap to sleep on status bar -->
   <!-- Notifications -->
   <string name="notifications_title">通知</string>
   <!-- Brightness slider settings -->
@@ -66,19 +67,6 @@
   <!-- QS rows and columns -->
   <!-- QS footer warnings -->
   <!-- QS tiles title visibility -->
-  <!-- QS Dark mode -->
-  <!-- QS Headers -->
-  <string name="daylight_header_pack_title">顶部图像包</string>
-  <string name="status_bar_custom_header_shadow_title">顶部图像阴影</string>
-  <string name="status_bar_custom_header_shadow_summary">在较明亮的图片下可以取得较好的可见性</string>
-  <string name="unit_percent">\u0025</string>
-  <string name="static_header_provider_title">静态</string>
-  <string name="daylight_header_provider_title">动态</string>
-  <string name="custom_header_provider_title">顶部图像提供者</string>
-  <string name="custom_header_browse_title">浏览以选用</string>
-  <string name="header_provider_disabled">禁用</string>
-  <string name="custom_header_title">自定义顶部图像</string>
-  <!-- QS quick pulldown using fpc -->
   <!-- Recents -->
   <string name="recents_title">最近任务面板</string>
   <!-- Recents panel settings -->
@@ -112,8 +100,6 @@
   <!-- Lockscreen notif count -->
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
-  <!-- Lockscreen rotation -->
-  <string name="lockscreen_rotation_title">旋转</string>
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
@@ -127,7 +113,6 @@
   <!-- Toast icon switch -->
   <string name="toast_icon_title">提示栏显示图标</string>
   <string name="toast_icon_summary">提示栏显示相应的应用图标</string>
-  <!-- Turn on display when power connected; turn off display when power disconnected -->
   <!-- Show VoLTE icon on statusbar -->
   <!-- Vibrate on plug -->
   <!-- System animations -->
@@ -215,4 +200,11 @@
   <string name="show_carrier_statusbar">仅在状态栏上显示</string>
   <string name="show_carrier_enabled">全部显示</string>
   <!-- Three-fingers-swipe to screenshot -->
+  <!-- AOKP custom system animations -->
+  <string name="animation_title">显示和动画</string>
+  <string name="animation_duration_title">瓷块动画持续时间</string>
+  <string name="animation_duration_default">默认</string>
+  <!-- Lock screen visualizer -->
+  <!-- SystemUI Theme -->
+  <!-- Screen state service -->
 </resources>

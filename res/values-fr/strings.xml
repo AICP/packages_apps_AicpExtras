@@ -43,6 +43,7 @@
   <string name="status_bar_logo_right">Droit</string>
   <!-- StatusBar weather settings -->
   <!-- Smart pulldown-->
+  <!-- Double tap to sleep on status bar -->
   <!-- Notifications -->
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Curseur de luminosité</string>
@@ -55,14 +56,6 @@
   <!-- QS rows and columns -->
   <!-- QS footer warnings -->
   <!-- QS tiles title visibility -->
-  <!-- QS Dark mode -->
-  <!-- QS Headers -->
-  <string name="status_bar_custom_header_shadow_title">Ombre</string>
-  <string name="status_bar_custom_header_shadow_summary">Appliquer une ombre sur l\'image d\'arrière-plan de l\'en-tête contextuel, pour une meilleure visibilité des images lumineuses</string>
-  <string name="unit_percent">\u0025</string>
-  <string name="header_provider_disabled">Désactivé</string>
-  <string name="custom_header_title">En-tête contextuel</string>
-  <!-- QS quick pulldown using fpc -->
   <!-- Recents -->
   <string name="recents_summary">Écran des applications récentes</string>
   <!-- Recents panel settings -->
@@ -102,8 +95,6 @@
   <!-- Lockscreen notif count -->
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
-  <!-- Lockscreen rotation -->
-  <string name="lockscreen_rotation_title">Rotation</string>
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
@@ -118,9 +109,6 @@
   <!-- Toast icon switch -->
   <string name="toast_icon_title">Icône Toast</string>
   <string name="toast_icon_summary">Afficher l\'icône de l\'application correspondante dans la notification Toast</string>
-  <!-- Turn on display when power connected; turn off display when power disconnected -->
-  <string name="wake_when_plugged_or_unplugged_title">Réveiller au branchement</string>
-  <string name="wake_when_plugged_or_unplugged_summary">Allumer l\'écran lorsque l\'appareil est connecté à une source d\'alimentation</string>
   <!-- Show VoLTE icon on statusbar -->
   <!-- Vibrate on plug -->
   <!-- System animations -->
@@ -206,6 +194,7 @@
   <string name="smartbar_right">Droit</string>
   <string name="smartbar_left">Gauche</string>
   <string name="smartbar_ime_action_none">Aucune</string>
+  <string name="smartbar_double_tap_sleep_title">Double appui pour mettre en veille</string>
   <!-- Carrier Label -->
   <string name="carrier_category">Libellé opérateur</string>
   <string name="custom_carrier_label_title">Libellé</string>
@@ -215,4 +204,10 @@
   <string name="show_carrier_statusbar">Barre d\'état</string>
   <string name="show_carrier_enabled">Sur les deux</string>
   <!-- Three-fingers-swipe to screenshot -->
+  <!-- AOKP custom system animations -->
+  <string name="animation_title">Affichage et animations</string>
+  <string name="animation_duration_default">Par défaut</string>
+  <!-- Lock screen visualizer -->
+  <!-- SystemUI Theme -->
+  <!-- Screen state service -->
 </resources>
