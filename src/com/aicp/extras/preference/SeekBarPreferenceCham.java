@@ -100,8 +100,8 @@ public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekB
             Log.e(TAG, "Invalid interval value", e);
         }
 
-        mThumbDefaultValueColor = attrs.getAttributeIntValue(AICPEXTRAS,
-                "thumb_default_value_color", 0xff000000);
+        mThumbDefaultValueColor = a.getColor(R.styleable.SeekBarPreference_thumb_default_value_color,
+                0xff000000);
         a.recycle();
     }
 
