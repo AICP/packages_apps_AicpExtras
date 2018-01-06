@@ -17,49 +17,13 @@
 
 package com.aicp.extras.fragments;
 
-import android.content.ContentResolver;
-import android.os.Bundle;
-import android.provider.Settings;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v14.preference.SwitchPreference;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.extras.utils.Util;
 
-public class QuickSettings extends BaseSettingsFragment
-    implements OnPreferenceChangeListener {
-
-    private static final String PREF_BRIGHTNESS_ICON_POSITION = "brightness_icon_position";
-    private SwitchPreference mBrightnessIconPosition;
+public class QuickSettings extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.quick_settings;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        mBrightnessIconPosition = (SwitchPreference) findPreference(PREF_BRIGHTNESS_ICON_POSITION);
-        mBrightnessIconPosition.setOnPreferenceChangeListener(this);
-
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mBrightnessIconPosition) {
-            Util.showSystemUiRestartDialog(getContext());
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public boolean onPreferenceTreeClick(Preference preference) {
-        return super.onPreferenceTreeClick(preference);
     }
 }
