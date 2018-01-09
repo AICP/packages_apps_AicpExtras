@@ -17,6 +17,7 @@
 
 package com.aicp.extras.fragments;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
@@ -29,8 +30,12 @@ import com.aicp.extras.R;
 
 public class Lockscreen extends BaseSettingsFragment {
 
+    private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
+    private static final String FP_UNLOCK_KEYSTORE = "fp_unlock_keystore";
+
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
+    private SwitchPreference mFpKeystore;
 
     @Override
     protected int getPreferenceResource() {
@@ -41,12 +46,18 @@ public class Lockscreen extends BaseSettingsFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         PreferenceScreen prefSet = getPreferenceScreen();
+        ContentResolver resolver = getActivity().getContentResolver();
 
         // Fingerprint vibration
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
-        mFingerprintVib = (SwitchPreference) prefSet.findPreference("fingerprint_success_vib");
+        mFingerprintVib = (SwitchPreference) prefSet.findPreference(FP_SUCCESS_VIBRATION);
         if (!mFingerprintManager.isHardwareDetected()){
             prefSet.removePreference(mFingerprintVib);
+        }
+        // Fingerprint unlock keystore
+        mFpKeystore = (SwitchPreference) prefSet.findPreference(FP_UNLOCK_KEYSTORE);
+        if (!mFingerprintManager.isHardwareDetected()){
+            prefSet.removePreference(mFpKeystore);
         }
     }
 }
