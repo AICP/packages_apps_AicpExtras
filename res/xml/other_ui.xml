@@ -107,6 +107,12 @@
         android:summary="@string/status_bar_battery_saver_color_summary"
         android:defaultValue="0xfff4511e" /> <!-- deep orange 600 -->
 
+    <lineageos.preference.LineageSystemSettingSwitchPreference
+        android:key="torch_long_press_power_gesture"
+        android:title="@string/torch_long_press_power_gesture_title"
+        android:summary="@string/torch_long_press_power_gesture_summary"
+        android:defaultValue="false"/>
+
      <!-- Scrolling cache -->
      <ListPreference
         android:key="pref_scrollingcache"
