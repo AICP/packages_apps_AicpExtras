@@ -51,8 +51,8 @@
             android:title="@string/default_settings"
             android:summary="@string/default_settings_summary">
             <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.tuner.NavBarActivity" />
+                android:targetPackage="org.lineageos.lineageparts"
+                android:targetClass="org.lineageos.lineageparts.input.ButtonSettings" />
         </Preference>
     </PreferenceCategory>
 
