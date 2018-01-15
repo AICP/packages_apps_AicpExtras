@@ -48,6 +48,10 @@
         <item name="changelog_color_commit_bg">#eeeeee</item>
         <!-- Changelog image behind status bar -->
         <item name="android:windowTranslucentStatus">true</item>
+        <!-- Add white nav bar with divider that matches material -->
+        <item name="android:navigationBarDividerColor">#1f000000</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:windowLightNavigationBar">true</item>
     </style>
 
     <style name="ChangelogTheme_DarkAmber" parent="Theme.AppCompat.NoActionBar">
