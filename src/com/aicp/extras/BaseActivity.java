@@ -66,14 +66,21 @@ public abstract class BaseActivity extends Activity {
         int newSystemUiFlags = oldSystemUiFlags;
         int[] attrs = new int[] {
                 android.R.attr.windowLightStatusBar,
+                android.R.attr.windowLightNavigationBar,
         };
         TypedArray ta = getTheme().obtainStyledAttributes(attrs);
         boolean lightStatusBar = ta.getBoolean(0, false);
+        boolean lightNavigationBar = ta.getBoolean(1, false);
         ta.recycle();
         if (lightStatusBar) {
             newSystemUiFlags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
         } else {
             newSystemUiFlags &= ~(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        }
+        if (lightNavigationBar) {
+            newSystemUiFlags |= View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+        } else {
+            newSystemUiFlags &= ~(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
         }
 
         if (newSystemUiFlags != oldSystemUiFlags) {
