@@ -20,8 +20,8 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/ae_settings_title">
 
-    <ListPreference
-        android:key="theme"
+    <com.aicp.extras.preference.SystemSettingIntListPreference
+        android:key="ae_theme"
         android:title="@string/theme_title"
         android:entries="@array/theme_entries"
         android:entryValues="@array/theme_values"
