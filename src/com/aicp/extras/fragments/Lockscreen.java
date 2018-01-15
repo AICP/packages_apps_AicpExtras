@@ -51,12 +51,12 @@ public class Lockscreen extends BaseSettingsFragment {
         // Fingerprint vibration
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintVib = (SwitchPreference) prefSet.findPreference(FP_SUCCESS_VIBRATION);
-        if (!mFingerprintManager.isHardwareDetected()){
+        if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()){
             prefSet.removePreference(mFingerprintVib);
         }
         // Fingerprint unlock keystore
         mFpKeystore = (SwitchPreference) prefSet.findPreference(FP_UNLOCK_KEYSTORE);
-        if (!mFingerprintManager.isHardwareDetected()){
+        if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()){
             prefSet.removePreference(mFpKeystore);
         }
     }
