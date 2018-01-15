@@ -20,6 +20,7 @@ package com.aicp.extras.changelog;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
@@ -35,28 +36,28 @@ public abstract class BaseChangelogActivity extends AppCompatActivity {
     private int mThemeRes;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        mThemeRes = getThemeRes();
-        setTheme(mThemeRes);
-        super.onCreate(savedInstanceState);
-        fixStatusBarFg();
-    }
+        protected void onCreate(Bundle savedInstanceState) {
+            mThemeRes = getThemeRes();
+            setTheme(mThemeRes);
+            super.onCreate(savedInstanceState);
+            fixStatusBarFg();
+        }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        if (mThemeRes != getThemeRes()) {
-            recreate();
+        protected void onResume() {
+            super.onResume();
+            if (mThemeRes != getThemeRes()) {
+                recreate();
+            }
         }
-    }
 
     protected int getThemeRes() {
-        String themePref = PreferenceManager.getDefaultSharedPreferences(this)
-                .getString(Constants.PREF_THEME, "0");
-        if ("1".equals(themePref)) {
-            return R.style.ChangelogTheme_DarkAmber;
-        } else {
-            return R.style.ChangelogTheme;
+        int themePref = Settings.System.getInt(getContentResolver(), Settings.System.AE_THEME, 0);
+        switch (themePref) {
+            case 1:
+                return R.style.ChangelogTheme_DarkAmber;
+            default:
+                return R.style.ChangelogTheme;
         }
     }
 

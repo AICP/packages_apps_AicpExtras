@@ -30,11 +30,6 @@ public abstract class Constants {
     public static final String AICP_OTA_ACTIVITY = AICP_OTA_PACKAGE + ".MainActivity";
 
     /**
-     * Key for SharedPreferences for AE's theme.
-     */
-    public static final String PREF_THEME = "theme";
-
-    /**
      * Key for SharedPreferences for selinux switch
      */
     public static final String PREF_SELINUX_MODE = "selinux_mode";
