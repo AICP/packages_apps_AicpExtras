@@ -57,6 +57,14 @@
         android:summary="@string/lockscreen_visualizer_summary"
         android:defaultValue="true"/>
 
+    <com.aicp.extras.preference.SystemSettingIntListPreference
+        android:key="force_ambient_for_media"
+        android:entries="@array/force_ambient_for_media_entries"
+        android:entryValues="@array/force_ambient_for_media_values"
+        android:title="@string/force_ambient_for_media_title"
+        android:summary="@string/force_ambient_for_media_summary"
+        android:defaultValue="0" />
+
     <com.aicp.extras.preference.SystemSettingSwitchPreference
         android:key="lock_screen_custom_notif"
         android:title="@string/lockscreen_maxnotif_title"
