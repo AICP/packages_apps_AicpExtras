@@ -20,11 +20,13 @@ package com.aicp.extras.fragments;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
@@ -53,7 +55,9 @@ public class QuickSettings extends BaseSettingsFragment
     private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
     private static final String STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
     private static final String CUSTOM_HEADER_ENABLED = "status_bar_custom_header";
+    private static final String FILE_HEADER_SELECT = "file_header_select";
 
+    private static final int REQUEST_PICK_IMAGE = 0;
 
     private Preference mHeaderBrowse;
     private ListPreference mDaylightHeaderPack;
@@ -61,6 +65,8 @@ public class QuickSettings extends BaseSettingsFragment
     private ListPreference mHeaderProvider;
     private String mDaylightHeaderProvider;
     private SwitchPreference mHeaderEnabled;
+    private Preference mFileHeader;
+    private String mFileHeaderProvider;
 
     @Override
     protected int getPreferenceResource() {
@@ -74,7 +80,6 @@ public class QuickSettings extends BaseSettingsFragment
         ContentResolver resolver = getActivity().getContentResolver();
 
         mHeaderBrowse = findPreference(CUSTOM_HEADER_BROWSE);
-        mHeaderBrowse.setEnabled(isBrowseHeaderAvailable());
 
         mHeaderEnabled = (SwitchPreference) findPreference(CUSTOM_HEADER_ENABLED);
         mHeaderEnabled.setOnPreferenceChangeListener(this);
@@ -99,17 +104,23 @@ public class QuickSettings extends BaseSettingsFragment
         mHeaderShadow.setOnPreferenceChangeListener(this);
 
         mDaylightHeaderProvider = getResources().getString(R.string.daylight_header_provider);
+        mFileHeaderProvider = getResources().getString(R.string.file_header_provider);
         String providerName = Settings.System.getString(resolver,
                 Settings.System.STATUS_BAR_CUSTOM_HEADER_PROVIDER);
         if (providerName == null) {
             providerName = mDaylightHeaderProvider;
         }
+        mHeaderBrowse.setEnabled(isBrowseHeaderAvailable() && !providerName.equals(mFileHeaderProvider));
+
         mHeaderProvider = (ListPreference) findPreference(CUSTOM_HEADER_PROVIDER);
         int valueIndex = mHeaderProvider.findIndexOfValue(providerName);
         mHeaderProvider.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
         mHeaderProvider.setSummary(mHeaderProvider.getEntry());
         mHeaderProvider.setOnPreferenceChangeListener(this);
         mDaylightHeaderPack.setEnabled(providerName.equals(mDaylightHeaderProvider));
+
+        mFileHeader = findPreference(FILE_HEADER_SELECT);
+        mFileHeader.setEnabled(providerName.equals(mFileHeaderProvider));
     }
 
     private void updateHeaderProviderSummary(boolean headerEnabled) {
@@ -152,8 +163,10 @@ public class QuickSettings extends BaseSettingsFragment
             int valueIndex = mHeaderProvider.findIndexOfValue(value);
             mHeaderProvider.setSummary(mHeaderProvider.getEntries()[valueIndex]);
             mDaylightHeaderPack.setEnabled(value.equals(mDaylightHeaderProvider));
+            mHeaderBrowse.setEnabled(!value.equals(mFileHeaderProvider));
             mHeaderBrowse.setTitle(valueIndex == 0 ? R.string.custom_header_browse_title : R.string.custom_header_pick_title);
             mHeaderBrowse.setSummary(valueIndex == 0 ? R.string.custom_header_browse_summary_new : R.string.custom_header_pick_summary);
+            mFileHeader.setEnabled(value.equals(mFileHeaderProvider));
             return true;
         } else if (preference == mHeaderEnabled) {
             Boolean headerEnabled = (Boolean) newValue;
@@ -205,7 +218,24 @@ public class QuickSettings extends BaseSettingsFragment
     }
 
     @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent result) {
+        if (requestCode == REQUEST_PICK_IMAGE) {
+            if (resultCode != Activity.RESULT_OK) {
+                return;
+            }
+            final Uri imageUri = result.getData();
+            Settings.System.putString(getContentResolver(), Settings.System.STATUS_BAR_FILE_HEADER_IMAGE, imageUri.toString());
+        }
+    }
+
+    @Override
     public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference == mFileHeader) {
+            Intent intent = new Intent(Intent.ACTION_PICK);
+            intent.setType("image/*");
+            startActivityForResult(intent, REQUEST_PICK_IMAGE);
+            return true;
+        }
         return super.onPreferenceTreeClick(preference);
     }
 }
