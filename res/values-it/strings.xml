@@ -110,7 +110,6 @@
   <string name="qs_tile_title_visibility_summary">Mostra i titoli al di sotto dei tile quando controllati</string>
   <!-- Recents -->
   <string name="recents_title">Recenti</string>
-  <string name="recents_summary">Schermata app recenti</string>
   <string name="stock_recents_category">App recenti stock</string>
   <string name="alternative_recents_category">App recenti alternative</string>
   <!-- Recents panel settings -->
@@ -203,6 +202,13 @@
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">Non visualizzare i QuickSettings quando bloccato</string>
   <string name="lockscreen_qs_disabled_summary">Disattiva i quick settings nella schermata di blocco</string>
+  <!-- Fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">Autenticazione impronta digitale con vibrazione</string>
+  <string name="fprint_sucess_vib_summary_on">Vibrazione all\'avvenuta autenticazione tramite impronta digitale è attivata</string>
+  <string name="fprint_sucess_vib_summary_off">Vibrazione all\'avvenuta autenticazione tramite impronta digitale è disattivata</string>
+  <!-- Fingerprint unlock keystore -->
+  <string name="fp_unlock_keystore_title">Sblocca con il sensore di impronte</string>
+  <string name="fp_unlock_keystore_summary">Sblocca il telefono con il sensore di impronte(dopo il riavvio) senza PIN/Password/Pattern\nNota: a tuo rischio e pericolo!</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Altri tweaks per la UI</string>
   <!-- Volume dialog timeout -->
@@ -233,6 +239,16 @@
   <string name="volte_icon_summary">Mostra l\'icona VoLTE quando disponibile</string>
   <!-- Vibrate on plug -->
   <string name="vibration_on_charge_state_changed_title">Vibra al collegamento</string>
+  <!-- Scrolling Cache -->
+  <string name="pref_scrollingcache_title">Cache di scorrimento</string>
+  <string name="pref_scrollingcache_summary">La cache di scorrimento potrebbe aumentare la performance al costo di memoria</string>
+  <string name="pref_scrollingcache_force_enable">Forza attiva</string>
+  <string name="pref_scrollingcache_default_enable">Attiva di default</string>
+  <string name="pref_scrollingcache_default_disable">Disattivata di default</string>
+  <string name="pref_scrollingcache_force_disable">Forza disattivata</string>
+  <!-- Status bar - Battery saver color -->
+  <string name="status_bar_battery_saver_color_title">Colore risparmio batteria</string>
+  <string name="status_bar_battery_saver_color_summary">Nota: Se il risparmio batteria è già attivo, per rendere effettivo il nuovo colore, attiva o disattiva il risparmio batteria!</string>
   <!-- System animations -->
   <string name="system_animations_title">Display e animazioni</string>
   <string name="custom_bootanimation_title">Bootanimation</string>
@@ -591,4 +607,7 @@
   <string name="screen_state_off_delay_summary">Numero di minuti da aspettare prima di eseguire le azioni dopo aver spento lo schermo</string>
   <string name="screen_state_on_delay_title">Tempo di attesa schermo acceso</string>
   <string name="screen_state_on_delay_summary">Numero di minuti da aspettare prima di eseguire le azioni dopo aver acceso lo schermo</string>
+  <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_off">Disabilitato</string>
+  <string name="force_ambient_for_media_on">Abilitato</string>
 </resources>

@@ -92,6 +92,9 @@
   <!-- Lockscreen notif count -->
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
+  <!-- Fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">Parmak izi doğrulama titreşimi</string>
+  <!-- Fingerprint unlock keystore -->
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
@@ -108,6 +111,14 @@
   <string name="toast_icon_summary">Toast ile bildirilen uygulama simgesini görüntüle</string>
   <!-- Show VoLTE icon on statusbar -->
   <!-- Vibrate on plug -->
+  <!-- Scrolling Cache -->
+  <string name="pref_scrollingcache_title">Kaydırma önbelleği</string>
+  <string name="pref_scrollingcache_summary">Kaydırma önbelleği, hafızayı etkilese bile kayfırma performansını arttırabilir</string>
+  <string name="pref_scrollingcache_force_enable">Zorla etkinleştir</string>
+  <string name="pref_scrollingcache_default_enable">Varsayılan etkin</string>
+  <string name="pref_scrollingcache_default_disable">Varsayılan devre dışı</string>
+  <string name="pref_scrollingcache_force_disable">Zorla devte dışı bırak</string>
+  <!-- Status bar - Battery saver color -->
   <!-- System animations -->
   <string name="system_animations_title">Ekran ve Animasyonlar</string>
   <!-- System behaviour -->
@@ -199,4 +210,7 @@
   <!-- Lock screen visualizer -->
   <!-- SystemUI Theme -->
   <!-- Screen state service -->
+  <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_off">Devre dışı</string>
+  <string name="force_ambient_for_media_on">Etkin</string>
 </resources>

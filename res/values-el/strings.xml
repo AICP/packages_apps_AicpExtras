@@ -87,6 +87,9 @@
   <!-- Lockscreen notif count -->
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
+  <!-- Fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
+  <!-- Fingerprint unlock keystore -->
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
@@ -102,6 +105,14 @@
   <string name="toast_icon_summary">Εμφάνιση εικονίδιο εφαρμογής σε περίπτωση Toast</string>
   <!-- Show VoLTE icon on statusbar -->
   <!-- Vibrate on plug -->
+  <!-- Scrolling Cache -->
+  <string name="pref_scrollingcache_title">Scrolling cache</string>
+  <string name="pref_scrollingcache_summary">Μπορεί να βελτιώσει την εμπειρία με κόστος την μνήμη</string>
+  <string name="pref_scrollingcache_force_enable">Αναγκαστική ενεργοποίηση</string>
+  <string name="pref_scrollingcache_default_enable">Ενεργοποιημένο</string>
+  <string name="pref_scrollingcache_default_disable">Απενεργοποιημένο</string>
+  <string name="pref_scrollingcache_force_disable">Αναγκαστική απενεργοποίηση</string>
+  <!-- Status bar - Battery saver color -->
   <!-- System animations -->
   <string name="system_animations_title">Εμφάνιση και κινήσεις</string>
   <!-- System behaviour -->
@@ -186,4 +197,7 @@
   <!-- Lock screen visualizer -->
   <!-- SystemUI Theme -->
   <!-- Screen state service -->
+  <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_off">Απενεργοποιημένο</string>
+  <string name="force_ambient_for_media_on">Ενεργοποιημένο</string>
 </resources>

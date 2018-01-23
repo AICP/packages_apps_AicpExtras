@@ -110,7 +110,6 @@
   <string name="qs_tile_title_visibility_summary">Toon titel onder tegel indien geselecteerd</string>
   <!-- Recents -->
   <string name="recents_title">Recente apps</string>
-  <string name="recents_summary">Recente apps-scherm</string>
   <string name="stock_recents_category">Standaard weergave Recente apps</string>
   <string name="alternative_recents_category">Alternatieve weergave Recente apps</string>
   <!-- Recents panel settings -->
@@ -203,6 +202,13 @@
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">Geen Snelle instellingen op vergrendelscherm</string>
   <string name="lockscreen_qs_disabled_summary">Uitschakelen Snelle instellingen-tegels op vergrendelscherm</string>
+  <!-- Fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">Trillen vingerafdruk-verificatie</string>
+  <string name="fprint_sucess_vib_summary_on">Trillen bij succesvolle vingerafdruk herkenning ingeschakeld</string>
+  <string name="fprint_sucess_vib_summary_off">Trillen bij succesvolle vingerafdruk herkenning uitgeschakeld</string>
+  <!-- Fingerprint unlock keystore -->
+  <string name="fp_unlock_keystore_title">Ontgrendelen met vingerafdruk</string>
+  <string name="fp_unlock_keystore_summary">Apparaat ontgrendelen met vingerafdruk na herstart zonder PIN/wachtwoord/patroon\nWaarschuwing: gebruik op eigen risico!</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Andere UI verbeteringen</string>
   <!-- Volume dialog timeout -->
@@ -233,6 +239,16 @@
   <string name="volte_icon_summary">VoLTE pictogram weergeven indien beschikbaar</string>
   <!-- Vibrate on plug -->
   <string name="vibration_on_charge_state_changed_title">Trillen bij aansluiten op lader</string>
+  <!-- Scrolling Cache -->
+  <string name="pref_scrollingcache_title">Scroll cache</string>
+  <string name="pref_scrollingcache_summary">Scroll cache kan de scroll prestatie verbeteren ten koste van extra geheugengebruik</string>
+  <string name="pref_scrollingcache_force_enable">Geforceerd ingeschakeld</string>
+  <string name="pref_scrollingcache_default_enable">Standaard ingeschakeld</string>
+  <string name="pref_scrollingcache_default_disable">Standaard uitgeschakeld</string>
+  <string name="pref_scrollingcache_force_disable">Gedwongen uitgeschakeld</string>
+  <!-- Status bar - Battery saver color -->
+  <string name="status_bar_battery_saver_color_title">Kleur van de accubalk tijdens spaarstand</string>
+  <string name="status_bar_battery_saver_color_summary">Let op: als de accuspaarstand al actief is, schakel deze dan een keer uit en in om de nieuwe kleur te effectueren!</string>
   <!-- System animations -->
   <string name="system_animations_title">Display en animaties</string>
   <string name="custom_bootanimation_title">Opstartanimatie</string>
@@ -591,4 +607,7 @@
   <string name="screen_state_off_delay_summary">Aantal minuten dat wordt gewacht na uitschakelen van het scherm voordat acties uitgevoerd worden</string>
   <string name="screen_state_on_delay_title">Vertraging na inschakelen beeldscherm</string>
   <string name="screen_state_on_delay_summary">Aantal minuten dat na het inschakelen van het scherm wordt gewacht voordat acties uitgevoerd worden</string>
+  <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_off">Uitgeschakeld</string>
+  <string name="force_ambient_for_media_on">Ingeschakeld</string>
 </resources>

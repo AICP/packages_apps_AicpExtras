@@ -73,6 +73,8 @@
   <string name="smart_pulldown_none_summary">Abra configurações rápidas quando não há notificações</string>
   <string name="smart_pulldown_off_summary">está desligado</string>
   <!-- Double tap to sleep on status bar -->
+  <string name="status_bar_double_tap_to_sleep_title">Toque para dormir</string>
+  <string name="status_bar_double_tap_to_sleep_summary">Dê um duplo toque na barra de status para desligar a tela</string>
   <!-- Notifications -->
   <string name="notifications_title">Notificações</string>
   <!-- Brightness slider settings -->
@@ -108,7 +110,6 @@
   <string name="qs_tile_title_visibility_summary">Exibir título do ícone debaixo quando marcado</string>
   <!-- Recents -->
   <string name="recents_title">Recentes</string>
-  <string name="recents_summary">Tela de aplicativos recentes</string>
   <string name="stock_recents_category">Ações recentes</string>
   <string name="alternative_recents_category">Como alternativa aos \"Recentes\"</string>
   <!-- Recents panel settings -->
@@ -201,6 +202,13 @@
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">Não há QuickSettings em segurança</string>
   <string name="lockscreen_qs_disabled_summary">Desativar telas de configurações rápidas na tela de bloqueio segura</string>
+  <!-- Fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">Vibração da autenticação de impressão digital</string>
+  <string name="fprint_sucess_vib_summary_on">Vibrar na autenticação de impressão digital com sucesso: habilitado</string>
+  <string name="fprint_sucess_vib_summary_off">Vibrar na autenticação de impressão digital com sucesso: desabilitado</string>
+  <!-- Fingerprint unlock keystore -->
+  <string name="fp_unlock_keystore_title">Desbloqueio por impressão digital</string>
+  <string name="fp_unlock_keystore_summary">Desbloquear o dispositivo com impressão digital após a reinicialização sem pedir o pin/senha/padrão.\nAtenção: Tenha cuidado, use por sua conta e risco!</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Outros ajustes da interface de usuário</string>
   <!-- Volume dialog timeout -->
@@ -231,6 +239,16 @@
   <string name="volte_icon_summary">Exibir o ícone do VoLTE quando disponível</string>
   <!-- Vibrate on plug -->
   <string name="vibration_on_charge_state_changed_title">Vibrar ao plugar</string>
+  <!-- Scrolling Cache -->
+  <string name="pref_scrollingcache_title">Rolagem de cache</string>
+  <string name="pref_scrollingcache_summary">Rolagem cache pode melhorar o desempenho de rolagem com o custo de memória</string>
+  <string name="pref_scrollingcache_force_enable">Forçar ativação</string>
+  <string name="pref_scrollingcache_default_enable">Permitir por padrão</string>
+  <string name="pref_scrollingcache_default_disable">Desativar por padrão</string>
+  <string name="pref_scrollingcache_force_disable">Forçar desativação</string>
+  <!-- Status bar - Battery saver color -->
+  <string name="status_bar_battery_saver_color_title">Cor da economia de bateria</string>
+  <string name="status_bar_battery_saver_color_summary">Obs: Se a economia de bateria já estiver habilitada, para a nova cor funcionar, desabilite a economia de bateria!</string>
   <!-- System animations -->
   <string name="system_animations_title">Visor e animações</string>
   <string name="custom_bootanimation_title">Animação de inicialização</string>
@@ -532,6 +550,7 @@
   <string name="one_handed_mode_title">Modo para uma mão</string>
   <string name="one_handed_mode_summary">Permite deslizar na barra de navegação para habilitar o modo de uma mão</string>
   <string name="smartbar_double_tap_sleep_title">Toque duplo para desligar a tela</string>
+  <string name="smartbar_double_tap_sleep_summary">Toque duplo nas áreas vazias da barra de navegação para dormir</string>
   <!-- Carrier Label -->
   <string name="carrier_category">Etiqueta de suporte</string>
   <string name="carrier_options">Selecione os locais de exibição</string>
@@ -548,10 +567,30 @@
   <string name="three_finger_gesture_summary">Deslize três dedos para tirar screenshot</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">Visor e animações</string>
+  <string name="system_animation_title">Animações do Sistema</string>
+  <string name="activity_open_title">Animação ao abrir atividade</string>
+  <string name="activity_close_title">Animação ao fechar atividade</string>
+  <string name="task_open_title">Animação ao abrir tarefa</string>
+  <string name="task_close_title">Animação ao fechar tarefa</string>
+  <string name="task_move_to_front_title">Animação ao mover para frente</string>
+  <string name="task_move_to_back_title">Animação ao mover para trás</string>
+  <string name="wallpaper_open_title">Animação ao abrir plano de fundo</string>
+  <string name="wallpaper_close_title">Animação ao fechar plano de fundo</string>
+  <string name="wallpaper_intra_open_title">Animação de abertura do plano de fundo</string>
+  <string name="wallpaper_intra_close_title">Animação de fechamento do plano de fundo</string>
   <string name="animation_duration_title">Duração da animação telhas</string>
+  <string name="title_animation_no_override">Evitar sobreposições de app</string>
+  <string name="summary_animation_no_override">Impedir que aplicativos substituam transições</string>
   <string name="animation_duration_default">Padrão</string>
   <!-- Lock screen visualizer -->
+  <string name="lockscreen_visualizer_title">Visualização de música</string>
+  <string name="lockscreen_visualizer_summary">Exibir os alternadores de visualização na tela de bloqueio</string>
   <!-- SystemUI Theme -->
+  <string name="systemui_theme_style_title">Estilo do menu de energia e painel de blocos</string>
+  <string name="systemui_theme_style_summary">Escolher entre estilos automático, claro e escuro</string>
+  <string name="systemui_theme_style_auto">Baseado no papel de parede</string>
+  <string name="systemui_theme_style_light">Estilo claro</string>
+  <string name="systemui_theme_style_dark">Estilo escuro</string>
   <!-- Screen state service -->
   <string name="screen_state_toggles_title">Suspender as ações</string>
   <string name="screen_state_toggles_enable_title">Habilitar</string>
@@ -568,4 +607,7 @@
   <string name="screen_state_off_delay_summary">Número de minutos a esperar antes de executar ações após o desligamento da tela</string>
   <string name="screen_state_on_delay_title">Atraso das ações ao ligar a tela</string>
   <string name="screen_state_on_delay_summary">Número de minutos a esperar antes de executar ações após o ligamento da tela</string>
+  <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_off">Desativado</string>
+  <string name="force_ambient_for_media_on">Ativado</string>
 </resources>

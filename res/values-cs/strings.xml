@@ -110,7 +110,6 @@
   <string name="qs_tile_title_visibility_summary">Pokud je zaškrtnuto, zobrazí se popisky pod dlaždicemi</string>
   <!-- Recents -->
   <string name="recents_title">Nedávné</string>
-  <string name="recents_summary">Obrazovka nedávných aplikací</string>
   <string name="stock_recents_category">Původní nedávné</string>
   <string name="alternative_recents_category">Alternativní nedávné</string>
   <!-- Recents panel settings -->
@@ -203,6 +202,13 @@
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">Žádné rychlé nastavení na zabezpečené zamykací obrazovce</string>
   <string name="lockscreen_qs_disabled_summary">Zakázat dlaždice rychlého nastavení na zabezpečené zamykací obrazovce</string>
+  <!-- Fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">Vibrovat při ověření otisků prstů</string>
+  <string name="fprint_sucess_vib_summary_on">Vibrace při úspěšném otisku prstu jsou povoleny</string>
+  <string name="fprint_sucess_vib_summary_off">Vibrace při úspěšném otisku prstu jsou zakázány</string>
+  <!-- Fingerprint unlock keystore -->
+  <string name="fp_unlock_keystore_title">Odemknutí otiskem prstu</string>
+  <string name="fp_unlock_keystore_summary">Odemknutí zařízení pomocí otisku prstu po restartu bez zadání PINu/hesla/Vzoru\nUpozornění: na vlastní nebezpečí!</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Další vylepšení UI</string>
   <!-- Volume dialog timeout -->
@@ -233,6 +239,16 @@
   <string name="volte_icon_summary">Zobrazit ikonu VoLTE, když je k dispozici</string>
   <!-- Vibrate on plug -->
   <string name="vibration_on_charge_state_changed_title">Vibrovat při připojení</string>
+  <!-- Scrolling Cache -->
+  <string name="pref_scrollingcache_title">Mezipaměť rolování</string>
+  <string name="pref_scrollingcache_summary">Mezipaměť rolování může zlepšit výkon na úkor úbytku paměti</string>
+  <string name="pref_scrollingcache_force_enable">Vynuceně povolit</string>
+  <string name="pref_scrollingcache_default_enable">Povolit výchozí</string>
+  <string name="pref_scrollingcache_default_disable">Zakázat výchozí</string>
+  <string name="pref_scrollingcache_force_disable">Vynuceně zakázat</string>
+  <!-- Status bar - Battery saver color -->
+  <string name="status_bar_battery_saver_color_title">Barva spořiče baterie</string>
+  <string name="status_bar_battery_saver_color_summary">Poznámka: Nová barva bude použita při dalším spuštění spořiče baterie!</string>
   <!-- System animations -->
   <string name="system_animations_title">Animace</string>
   <string name="custom_bootanimation_title">Spouštěcí animace</string>
@@ -591,4 +607,7 @@
   <string name="screen_state_off_delay_summary">Počet minut čekání před provedením akce po vypnutí obrazovky</string>
   <string name="screen_state_on_delay_title">Zpoždění akcí po zapnutí obrazovky</string>
   <string name="screen_state_on_delay_summary">Počet minut čekání před provedením akce po zapnutí obrazovky</string>
+  <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_off">Zakázáno</string>
+  <string name="force_ambient_for_media_on">Povoleno</string>
 </resources>
