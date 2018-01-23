@@ -74,6 +74,8 @@
   <string name="smart_pulldown_none_summary">Открывать панель быстрых настроек, когда уведомления отсутствуют</string>
   <string name="smart_pulldown_off_summary">выключено</string>
   <!-- Double tap to sleep on status bar -->
+  <string name="status_bar_double_tap_to_sleep_title">Коснитесь для сна</string>
+  <string name="status_bar_double_tap_to_sleep_summary">Двойное нажатие на строку состояния, чтобы выключить дисплей</string>
   <!-- Notifications -->
   <string name="notifications_title">Уведомления</string>
   <!-- Brightness slider settings -->
@@ -109,7 +111,6 @@
   <string name="qs_tile_title_visibility_summary">Отображать названия плиток снизу, когда выбрано</string>
   <!-- Recents -->
   <string name="recents_title">Панель недавних приложений</string>
-  <string name="recents_summary">Панель недавних приложений</string>
   <string name="stock_recents_category">Стандартная панель недавних приложений</string>
   <string name="alternative_recents_category">Альтернативные панели недавних приложений</string>
   <!-- Recents panel settings -->
@@ -202,6 +203,13 @@
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">Нет панели быстрых настроек на защищённом экране блокировки</string>
   <string name="lockscreen_qs_disabled_summary">Отключить панель быстрых настроек на защищённом экране блокировки</string>
+  <!-- Fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">Вибрация при распознавании отпечатка пальца</string>
+  <string name="fprint_sucess_vib_summary_on">Вибрировать при удачном распознавании отпечатка пальца</string>
+  <string name="fprint_sucess_vib_summary_off">Не вибрировать при удачном распознавании отпечатка пальца</string>
+  <!-- Fingerprint unlock keystore -->
+  <string name="fp_unlock_keystore_title">Разблокировка отпечатком</string>
+  <string name="fp_unlock_keystore_summary">Разблокировать устройство после перезагрузки без PIN/Пароля/Граф. ключа.\nПрим.: Используйте на свой страх и риск!</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Другие настройки интерфейса</string>
   <!-- Volume dialog timeout -->
@@ -232,6 +240,16 @@
   <string name="volte_icon_summary">Отображение значка VoLTE при наличии</string>
   <!-- Vibrate on plug -->
   <string name="vibration_on_charge_state_changed_title">Вибрировать при подключении зарядки</string>
+  <!-- Scrolling Cache -->
+  <string name="pref_scrollingcache_title">Кэш прокрутки</string>
+  <string name="pref_scrollingcache_summary">Кэш прокрутки может повысить плавность прокрутки за счёт использования ОЗУ</string>
+  <string name="pref_scrollingcache_force_enable">Принудительно включить</string>
+  <string name="pref_scrollingcache_default_enable">Включить по умолчанию</string>
+  <string name="pref_scrollingcache_default_disable">Отключить по умолчанию</string>
+  <string name="pref_scrollingcache_force_disable">Принудительно отключить</string>
+  <!-- Status bar - Battery saver color -->
+  <string name="status_bar_battery_saver_color_title">Цвет индикатора режима энергосбережения</string>
+  <string name="status_bar_battery_saver_color_summary">Примечание: Если включен режим энергосбережения батареи, то для активации нового цвета индикатора необходимо выключить и снова включить режим энергосбережения!</string>
   <!-- System animations -->
   <string name="system_animations_title">Анимации</string>
   <string name="custom_bootanimation_title">Анимация загрузки</string>
@@ -406,7 +424,7 @@
   <string name="fling_split_bar_policy">Когда назначено действие только справа или слева, оно выполняется на всей панели.</string>
   <string name="fling_def_summary">Действия не установлены</string>
   <string name="fling_swipe_actions">Жесты свайпов</string>
-  <string name="fling_tap_actions">Жесты касания</string>
+  <string name="fling_tap_actions">Жесты нажатия</string>
   <string name="fling_short_swipe_right">Короткий свайп вправо</string>
   <string name="fling_short_swipe_left">Короткий свайп влево</string>
   <string name="fling_long_swipe_right">Долгий свайп вправо</string>
@@ -533,6 +551,7 @@
   <string name="one_handed_mode_title">Режим \"Управление одной рукой\"</string>
   <string name="one_handed_mode_summary">Позволяет свайпом по панели навигации включать режим \"Управление одной рукой\"</string>
   <string name="smartbar_double_tap_sleep_title">Двойное нажатие для сна</string>
+  <string name="smartbar_double_tap_sleep_summary">Двойное нажатие на пустую область панели навигации для сна</string>
   <!-- Carrier Label -->
   <string name="carrier_category">Пользовательское имя оператора</string>
   <string name="carrier_options">Выбрать место отображения</string>
@@ -549,10 +568,30 @@
   <string name="three_finger_gesture_summary">Свайп тремя пальцами для создания скриншота</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">Анимации</string>
+  <string name="system_animation_title">Системная анимация</string>
+  <string name="activity_open_title">Анимация открытия</string>
+  <string name="activity_close_title">Анимация закрытия</string>
+  <string name="task_open_title">Анимация открытия задачи</string>
+  <string name="task_close_title">Анимация закрытия задачи</string>
+  <string name="task_move_to_front_title">Анимация движения вперед</string>
+  <string name="task_move_to_back_title">Анимация движения назад</string>
+  <string name="wallpaper_open_title">Анимация открытия обоев</string>
+  <string name="wallpaper_close_title">Анимация закрытия обоев</string>
+  <string name="wallpaper_intra_open_title">Анимация открытия обоев изнутри</string>
+  <string name="wallpaper_intra_close_title">Анимация закрытия обоев изнутри</string>
   <string name="animation_duration_title">Длительность анимации</string>
+  <string name="title_animation_no_override">Запретить переопределения приложений</string>
+  <string name="summary_animation_no_override">Запретить приложениям переопределять переходы</string>
   <string name="animation_duration_default">По умолчанию</string>
   <!-- Lock screen visualizer -->
+  <string name="lockscreen_visualizer_title">Визуализатор музыки</string>
+  <string name="lockscreen_visualizer_summary">Переключение отображения визуализатора на экране блокировки</string>
   <!-- SystemUI Theme -->
+  <string name="systemui_theme_style_title">Панель плиток и стиль меню питания</string>
+  <string name="systemui_theme_style_summary">Выбрать один из автоматических, светлых и темных стилей</string>
+  <string name="systemui_theme_style_auto">На основе обоев</string>
+  <string name="systemui_theme_style_light">Светлый стиль</string>
+  <string name="systemui_theme_style_dark">Тёмный стиль</string>
   <!-- Screen state service -->
   <string name="screen_state_toggles_title">Действия в режиме ожидания</string>
   <string name="screen_state_toggles_enable_title">Включить</string>
@@ -569,4 +608,7 @@
   <string name="screen_state_off_delay_summary">Отложить действия при выключении экрана на указанное количество секунд</string>
   <string name="screen_state_on_delay_title">Отложить действия при включении экрана</string>
   <string name="screen_state_on_delay_summary">Отложить действия при включении экрана на указанное количество секунд</string>
+  <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_off">Выключен</string>
+  <string name="force_ambient_for_media_on">Включен</string>
 </resources>

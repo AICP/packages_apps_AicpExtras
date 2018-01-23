@@ -25,6 +25,7 @@
   <string name="other_category">Otros</string>
   <!-- Status bar -->
   <string name="status_bar_title">Barra de estado</string>
+  <string name="status_bar_summary">Editar aspecto de barra de estado</string>
   <!-- Bluetooth status -->
   <string name="bluetooth_battery_title">Mostrar estado de la batería en Blueetooth</string>
   <string name="bluetooth_battery_summary">Muestra, si está disponible, el estado de la batería del dispositivo conectado por bluetooth.</string>
@@ -78,6 +79,7 @@
   <string name="status_bar_double_tap_to_sleep_summary">Doble toque en la barra de estado para apagar la pantalla</string>
   <!-- Notifications -->
   <string name="notifications_title">Notificaciones</string>
+  <string name="notifications_summary">Marcador de posición (por ahora)</string>
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Ajustes de la barra de brillo</string>
   <string name="brightness_slider_switch">Mostrar barra de brillo en los Ajustes rápidos</string>
@@ -88,6 +90,7 @@
   <string name="brightness_icon_position_off_summary">Mostrar a la izquierda</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Ajustes rápidos</string>
+  <string name="quick_settings_summary">Editar aspecto de ajustes rápidos</string>
   <!-- Quick 1-finger pull down to access notifications -->
   <string name="status_bar_quick_qs_pulldown">Despliegue del panel de Ajustes rápidos</string>
   <string name="status_bar_quick_qs_pulldown_summary">Deslizar desde el lado derecho de la barra de estado para mostrar el panel de ajustes rápidos</string>
@@ -111,7 +114,7 @@
   <string name="qs_tile_title_visibility_summary">Mostrar texto debajo si está habilitado</string>
   <!-- Recents -->
   <string name="recents_title">Aps. recientes</string>
-  <string name="recents_summary">Panel Recientes</string>
+  <string name="recents_summary">Editar aspecto del panel de aps. recientes</string>
   <string name="stock_recents_category">Panel recientes predeterminado</string>
   <string name="alternative_recents_category">Panel recientes alternativo</string>
   <!-- Recents panel settings -->
@@ -184,7 +187,8 @@
   <string name="slim_recents_mem_display_color">Color de la barra</string>
   <string name="slim_recents_mem_display_text_color">Color del texto</string>
   <!-- Lockscreen -->
-  <string name="lockscreen_title">Clima</string>
+  <string name="lockscreen_title">Pantalla de bloqueo</string>
+  <string name="lockscreen_summary">Editar aspecto de pantalla de bloqueo</string>
   <!-- Double tap to sleep on lockscreen -->
   <string name="double_tap_sleep_lockscreen">Doble toque para apagar pantalla</string>
   <string name="double_tap_sleep_lockscreen_summary">Doble toque en pantalla de bloqueo para apagar la pantalla</string>
@@ -204,8 +208,16 @@
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">Deshabilitar ajustes rápidos en pantalla de bloqueo</string>
   <string name="lockscreen_qs_disabled_summary">No permite desplegar el panel de ajustes rápidos en la pantalla de bloqueo</string>
+  <!-- Fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">Vibración al autenticar con huella</string>
+  <string name="fprint_sucess_vib_summary_on">Vibrar cuando la autenticación con la huella es correcta</string>
+  <string name="fprint_sucess_vib_summary_off">Vibrar cuando la autenticación con la huella es correcta deshabilitado</string>
+  <!-- Fingerprint unlock keystore -->
+  <string name="fp_unlock_keystore_title">Desbloqueo con lectos de huellas</string>
+  <string name="fp_unlock_keystore_summary">Desbloquear el dispositivo con el lector de huellas tras un reinicio sin PIN/Contraseña/Patrón\nNota: Bajo su responsabilidad!</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Otros ajustes de interfaz de usuario</string>
+  <string name="other_ui_summary">Varios</string>
   <!-- Volume dialog timeout -->
   <string name="volume_dialog_timeout_title">Tiempo de espera panel de volumen</string>
   <!-- Screenshot sound -->
@@ -234,8 +246,19 @@
   <string name="volte_icon_summary">Mostrar icono de VoLTE cuando esté disponible</string>
   <!-- Vibrate on plug -->
   <string name="vibration_on_charge_state_changed_title">Vibrar al conectar</string>
+  <!-- Scrolling Cache -->
+  <string name="pref_scrollingcache_title">Caché de desplazamiento</string>
+  <string name="pref_scrollingcache_summary">La velocidad de desplazamiento aumentará pero se usará más memoria</string>
+  <string name="pref_scrollingcache_force_enable">Habilitado forzado</string>
+  <string name="pref_scrollingcache_default_enable">Habilitado predeterminado</string>
+  <string name="pref_scrollingcache_default_disable">Deshabilitado predeterminado</string>
+  <string name="pref_scrollingcache_force_disable">Deshabilitado forzado</string>
+  <!-- Status bar - Battery saver color -->
+  <string name="status_bar_battery_saver_color_title">Color del modo ahorro de batería</string>
+  <string name="status_bar_battery_saver_color_summary">Nota: Si el modo de ahorro de batería ya está activado se deberá de activar/desactivar para que se aplique el nuevo color</string>
   <!-- System animations -->
   <string name="system_animations_title">Pantalla y animaciones</string>
+  <string name="system_animations_summary">Animaciones de sistema</string>
   <string name="custom_bootanimation_title">Bootanimation</string>
   <string name="custom_bootanimation_summary">Seleccione su nueva animación de arranque. \nOn cada cambio, animación actual hacer copias a la carpeta de almacenamiento de información/AOKP_ota con fecha actual. Los antiguos deben eliminar manualmente si no se necesita.</string>
   <string name="bootanimation_preview">Previsualización de la animación</string>
@@ -248,6 +271,7 @@
   <string name="bootanimation_install_successful">Nueva animación de inicio aplicada satisfactoriamente.</string>
   <!-- System behaviour -->
   <string name="system_behaviour_title">Comportamiento del sistema</string>
+  <string name="system_behaviour_summary">Ajustes de sistema</string>
   <string name="selinux_category">SELinux</string>
   <string name="selinux_explanation_summary">SELinux es un conjunto de modificaciones del kernel y utilidades a nivel de usuario. Cambiando el modo puede ocasionar efectos no deseados. Usar bajo su responsabilidad.</string>
   <string name="selinux_mode_title">Modo SELinux</string>
@@ -259,6 +283,7 @@
   <string name="selinux_enforcing_toast_title">¡Establecido modo Selinux obligatorio!</string>
   <!-- System extensions -->
   <string name="system_extensions_title">Sistema</string>
+  <string name="system_extensions_summary">Addons de sistema</string>
   <!-- System app remover -->
   <string name="system_app_remover_title">Gestor de aps. de sistema</string>
   <string name="system_app_remover_summary">Eliminar aplicaciones instaladas</string>
@@ -283,6 +308,7 @@
   <string name="log_it_share_via">Compartir a través de</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Estilo de paneles</string>
+  <string name="panel_porn_summary">Davor world!</string>
   <!-- Volume dialog opacity -->
   <string name="volume_dialog_transparency_title">Configuración del panel de volumen</string>
   <string name="volume_dialog_transparency">Transparencia del panel de volumen</string>
@@ -592,4 +618,11 @@
   <string name="screen_state_off_delay_summary">Minutos después de los que se ejecutarán las acciones tras apagar la pantalla</string>
   <string name="screen_state_on_delay_title">Tiempo de espera al encender pantalla</string>
   <string name="screen_state_on_delay_summary">Minutos después de los que se ejecutarán las acciones tras encender la pantalla</string>
+  <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_title">Ticker de música</string>
+  <string name="force_ambient_for_media_summary">Información de pista de música en pantalla ambiente</string>
+  <string name="force_ambient_for_media_off">Deshabilitada</string>
+  <string name="force_ambient_for_media_on">Habilitada</string>
+  <string name="force_ambient_for_media_on_forced">Habilitado y obligatorio</string>
+  <string name="force_ambient_for_media_on_forced_clean">Habilitado y mínimo obligatorio</string>
 </resources>
