@@ -57,7 +57,6 @@
   <!-- QS footer warnings -->
   <!-- QS tiles title visibility -->
   <!-- Recents -->
-  <string name="recents_summary">Écran des applications récentes</string>
   <!-- Recents panel settings -->
   <string name="show_clear_all_recents_button_title">Bouton de fermeture rapide</string>
   <string name="show_clear_all_recents_button_summary">Afficher le bouton de fermeture rapide des applications dans la fenêtre des applications récentes</string>
@@ -95,6 +94,8 @@
   <!-- Lockscreen notif count -->
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
+  <!-- Fingerprint authentication vibration -->
+  <!-- Fingerprint unlock keystore -->
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
@@ -111,6 +112,14 @@
   <string name="toast_icon_summary">Afficher l\'icône de l\'application correspondante dans la notification Toast</string>
   <!-- Show VoLTE icon on statusbar -->
   <!-- Vibrate on plug -->
+  <!-- Scrolling Cache -->
+  <string name="pref_scrollingcache_title">Mémoire cache de défilement</string>
+  <string name="pref_scrollingcache_summary">Améliore les performances de défilement mais augmente l\'utilisation de la mémoire RAM</string>
+  <string name="pref_scrollingcache_force_enable">Forcer l\'activation</string>
+  <string name="pref_scrollingcache_default_enable">Activer par défaut</string>
+  <string name="pref_scrollingcache_default_disable">Désactiver par défaut</string>
+  <string name="pref_scrollingcache_force_disable">Forcer la désactivation</string>
+  <!-- Status bar - Battery saver color -->
   <!-- System animations -->
   <string name="system_animations_title">Affichage et animations</string>
   <string name="custom_bootanimation_title">Animation de démarrage</string>
@@ -210,4 +219,7 @@
   <!-- Lock screen visualizer -->
   <!-- SystemUI Theme -->
   <!-- Screen state service -->
+  <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_off">Désactivé</string>
+  <string name="force_ambient_for_media_on">Activé</string>
 </resources>

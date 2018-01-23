@@ -110,7 +110,6 @@
   <string name="qs_tile_title_visibility_summary">Wenn aktiviert, wird unterhalb von Kacheln der Name angezeigt</string>
   <!-- Recents -->
   <string name="recents_title">Verlauf</string>
-  <string name="recents_summary">Zuletzt geöffnete Apps</string>
   <string name="stock_recents_category">Standard-Anwendungsverlauf</string>
   <string name="alternative_recents_category">Alternativer Anwendungsverlauf</string>
   <!-- Recents panel settings -->
@@ -203,6 +202,13 @@
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">Keine Schnelleinstellungen auf sicherem Sperrbildschirm</string>
   <string name="lockscreen_qs_disabled_summary">Deaktiviert den Zugriff auf die Schnelleinstellungen bei gesperrtem Sperrbildschirm</string>
+  <!-- Fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">Vibration bei Authentifizierung per Fingerabdruck</string>
+  <string name="fprint_sucess_vib_summary_on">Nach erfolgreicher Authentifizierung per Fingerabdruck vibrieren</string>
+  <string name="fprint_sucess_vib_summary_off">Nach erfolgreicher Authentifizierung per Fingerabdruck nicht vibrieren</string>
+  <!-- Fingerprint unlock keystore -->
+  <string name="fp_unlock_keystore_title">Mit Fingerabdruck entsperren</string>
+  <string name="fp_unlock_keystore_summary">Das Gerät nur mittels Fingerabdruck (ohne PIN/Passwort/Muster) nach dem Neustart entsperren\nHinweis: auf eigene Verantwortung!</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Andere UI-Verbesserungen</string>
   <!-- Volume dialog timeout -->
@@ -233,6 +239,16 @@
   <string name="volte_icon_summary">Bei Verfügbarkeit das VoLTE-Symbol anzeigen</string>
   <!-- Vibrate on plug -->
   <string name="vibration_on_charge_state_changed_title">Bei Anschluss vibrieren</string>
+  <!-- Scrolling Cache -->
+  <string name="pref_scrollingcache_title">Scroll-Cache</string>
+  <string name="pref_scrollingcache_summary">Der Scroll-Cache verbessert die Performance beim Blättern, auf Kosten des Speicherplatzes</string>
+  <string name="pref_scrollingcache_force_enable">Immer aktiviert</string>
+  <string name="pref_scrollingcache_default_enable">Standardmäßig aktiviert</string>
+  <string name="pref_scrollingcache_default_disable">Standardmäßig deaktiviert</string>
+  <string name="pref_scrollingcache_force_disable">Immer deaktiviert</string>
+  <!-- Status bar - Battery saver color -->
+  <string name="status_bar_battery_saver_color_title">Statusleistenfarbe im Energiesparmodus</string>
+  <string name="status_bar_battery_saver_color_summary">Hinweis: Bei aktivem Energiesparmodus, diesen bitte einmal de- und reaktivieren, damit die neue Farbe übernommen wird!</string>
   <!-- System animations -->
   <string name="system_animations_title">Display und Animationen</string>
   <string name="custom_bootanimation_title">Boot Animation</string>
@@ -542,7 +558,7 @@ Ordner AICP_backup gesichert. \n Alte Sicherungen müssen manuell gelöscht werd
   <string name="custom_carrier_label_title">Eigene Anbieterbezeichnung</string>
   <string name="custom_carrier_label_explain">Bitte eine neue Bezeichnung eingeben. Leerlassen für die Standardanzeige.</string>
   <string name="custom_carrier_label_notset">Eigene Bezeichnung zur Zeit nicht gesetzt</string>
-  <string name="show_carrier_title">Wird angezeigt?</string>
+  <string name="show_carrier_title">Anbieter wird wo angezeigt?</string>
   <string name="show_carrier_disabled">Nirgendwo</string>
   <string name="show_carrier_keyguard">Nur auf Sperrbildschirm</string>
   <string name="show_carrier_statusbar">Nur in Statusleiste</string>
@@ -592,4 +608,7 @@ Ordner AICP_backup gesichert. \n Alte Sicherungen müssen manuell gelöscht werd
   <string name="screen_state_off_delay_summary">Anzahl der Minuten nach Displayabschaltung bevor die gewählten Optionen in Kraft treten</string>
   <string name="screen_state_on_delay_title">Verzögerung nach Reaktivierung des Displays</string>
   <string name="screen_state_on_delay_summary">Anzahl der Minuten nach Wiedereinschaltung des Displays bevor die gewählten Optionen rückgängig gemacht werden</string>
+  <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_off">Deaktiviert</string>
+  <string name="force_ambient_for_media_on">Aktiviert</string>
 </resources>

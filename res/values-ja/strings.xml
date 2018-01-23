@@ -116,6 +116,13 @@
   <!-- Lockscreen notif count -->
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
+  <!-- Fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">指紋認証のバイブレーション</string>
+  <string name="fprint_sucess_vib_summary_on">指紋認証に成功した際にバイブレーションを作動させます</string>
+  <string name="fprint_sucess_vib_summary_off">指紋認証に成功した際にバイブレーションを作動させません</string>
+  <!-- Fingerprint unlock keystore -->
+  <string name="fp_unlock_keystore_title">指紋認証でのロック解除</string>
+  <string name="fp_unlock_keystore_summary">再起動後も PIN/パスワード/パターン による認証なしで指紋認証によるロック解除を可能にします。\n注意: 自己責任で使用してください！</string>
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
@@ -131,6 +138,8 @@
   <string name="toast_icon_summary">トースト通知と共にアプリのアイコンを表示します</string>
   <!-- Show VoLTE icon on statusbar -->
   <!-- Vibrate on plug -->
+  <!-- Scrolling Cache -->
+  <!-- Status bar - Battery saver color -->
   <!-- System animations -->
   <string name="system_animations_title">アニメーション</string>
   <!-- System behaviour -->
@@ -230,4 +239,7 @@
   <!-- Lock screen visualizer -->
   <!-- SystemUI Theme -->
   <!-- Screen state service -->
+  <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_off">無効</string>
+  <string name="force_ambient_for_media_on">有効</string>
 </resources>
