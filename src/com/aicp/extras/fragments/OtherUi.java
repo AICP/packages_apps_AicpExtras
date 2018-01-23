@@ -51,6 +51,7 @@ public class OtherUi extends BaseSettingsFragment
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
     private static final String SCROLLINGCACHE_DEFAULT = "1";
     private static final String PREF_SCREENSHOT_EDIT_USER_APP = "screenshot_edit_app";
+    private static final String KEY_SMART_PIXELS = "smart_pixels";
     private static final int DIALOG_SCREENSHOT_EDIT_APP = 1;
 
     private Preference mScreenshotEditAppPref;
@@ -88,6 +89,15 @@ public class OtherUi extends BaseSettingsFragment
         mPackageAdapter = new ScreenshotEditPackageListAdapter(getActivity());
         mScreenshotEditAppPref = findPreference(PREF_SCREENSHOT_EDIT_USER_APP);
         mScreenshotEditAppPref.setOnPreferenceClickListener(this);
+
+        boolean enableSmartPixels = getContext().getResources().
+                getBoolean(com.android.internal.R.bool.config_enableSmartPixels);
+        Preference SmartPixels = findPreference(KEY_SMART_PIXELS);
+
+        if (!enableSmartPixels){
+            SmartPixels.getParent().removePreference(SmartPixels);
+        }
+
     }
 
     private Dialog selectPackages(int dialogId) {
