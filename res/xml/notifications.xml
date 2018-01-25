@@ -18,6 +18,16 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
     android:title="@string/notifications_title">
+
+    <com.aicp.extras.preference.SystemSettingIntListPreference
+        android:key="notification_sound_vib_screen_on"
+        android:entries="@array/notification_sound_vib_screen_on_entries"
+        android:entryValues="@array/notification_sound_vib_screen_on_values"
+        android:title="@string/notification_sound_vib_screen_on_title"
+        android:dialogTitle="@string/notification_sound_vib_screen_on_display_title"
+        android:summary="%s"
+        android:defaultValue="1" />
 
 </PreferenceScreen>
