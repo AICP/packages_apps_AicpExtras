@@ -83,11 +83,19 @@
                 android:min="65"
                 android:max="135"
                 aicpextras:unitsRight="%" />
-        <PreferenceScreen
-            android:key="pulse_settings"
-            android:title="@string/pulse_settings"
-            android:summary="@string/pulse_settings_summary"
-            android:fragment="com.aicp.extras.fragments.PulseSettings" />
+
+          <!-- Dynamic navbar color -->
+          <com.aicp.extras.preference.SystemSettingSwitchPreference
+              android:key="navbar_dynamic"
+              android:title="@string/navbar_dynamic_title"
+              android:summary="@string/navbar_dynamic_summary"
+              android:defaultValue="false" />
+
+          <PreferenceScreen
+              android:key="pulse_settings"
+              android:title="@string/pulse_settings"
+              android:summary="@string/pulse_settings_summary"
+              android:fragment="com.aicp.extras.fragments.PulseSettings" />
 
     </PreferenceCategory>
 </PreferenceScreen>
