@@ -66,6 +66,15 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".WakeLockBlocker"
+            android:label="@string/wakelock_blocker_title">
+            <intent-filter>
+                <action android:name="com.aicp.extras.ViewWakeLockBlocker" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <receiver
             android:name=".romstats.ReportingServiceManager"
             android:enabled="true"
