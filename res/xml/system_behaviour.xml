@@ -31,6 +31,13 @@
         android:title="@string/screen_state_toggles_title"
         android:fragment="com.aicp.extras.fragments.SuspendActions" />
 
+    <Preference
+        android:key="wakelock_blocker"
+        android:title="@string/wakelock_blocker_title"
+        android:summary="@string/wakelock_blocker_summary">
+        <intent android:action="com.aicp.extras.ViewWakeLockBlocker" />
+    </Preference>
+
     <!-- SELinux -->
     <PreferenceCategory
         android:key="selinux"
