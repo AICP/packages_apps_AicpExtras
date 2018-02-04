@@ -73,7 +73,7 @@
        android:defaultValue="false" />
 
     <com.aicp.extras.preference.SystemSettingIntListPreference
-        android:key="ticker_mode"
+        android:key="status_bar_show_ticker"
         android:entries="@array/ticker_mode_entries"
         android:entryValues="@array/ticker_mode_values"
         android:defaultValue="0"
