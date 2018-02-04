@@ -24,7 +24,7 @@
         android:title="@string/fling_show_pulse_title"
         android:summary="@string/fling_show_pulse_summary" />
 
-    <ListPreference
+    <com.aicp.extras.preference.ListPreference
         android:key="pulse_render_mode"
         android:title="@string/pulse_render_mode_title"
         android:entries="@array/pulse_render_mode_entries"
