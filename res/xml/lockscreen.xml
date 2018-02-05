@@ -94,4 +94,9 @@
         android:summary="@string/fp_unlock_keystore_summary"
         android:defaultValue="false" />
 
+    <com.aicp.extras.preference.SecureSettingSwitchPreference
+        android:key="face_auto_unlock"
+        android:title="@string/face_auto_unlock_title"
+        android:summary="@string/face_auto_unlock_summary"
+        android:defaultValue="false" />
 </PreferenceScreen>
