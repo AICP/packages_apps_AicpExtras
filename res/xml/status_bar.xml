@@ -28,18 +28,25 @@
         android:summary="@string/status_bar_double_tap_to_sleep_summary"
         android:defaultValue="true" />
 
-    <!-- Show Battery image on Statusbar -->
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
-        android:key="status_bar_show_battery_image"
-        android:title="@string/battery_image_title"
-        android:summary="@string/battery_image_summary"
-        android:defaultValue="true"/>
+    <!-- Show logo on Statusbar -->
+    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+        android:key="status_bar_logo"
+        android:title="@string/status_bar_logo_title"
+        android:defaultValue="false"
+        android:fragment="com.aicp.extras.fragments.StatusBarLogo" />
 
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:title="@string/battery_bar_title"
         android:key="statusbar_battery_bar"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.BatteryBar" />
+
+    <!-- Show Battery image on Statusbar -->
+    <com.aicp.extras.preference.SystemSettingSwitchPreference
+        android:key="status_bar_show_battery_image"
+        android:title="@string/battery_image_title"
+        android:summary="@string/battery_image_summary"
+        android:defaultValue="true"/>
 
     <!-- Show BT Battery Level on Statusbar -->
     <com.aicp.extras.preference.SystemSettingSwitchPreference
