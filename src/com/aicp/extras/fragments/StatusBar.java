@@ -44,6 +44,7 @@ public class StatusBar extends BaseSettingsFragment implements
 
     MasterSwitchPreference mBatteryBar;
     private ListPreference mSmartPulldown;
+    private MasterSwitchPreference mStatusBarLogo;
     private Preference mCustomCarrierLabel;
     private String mCustomCarrierLabelText;
 
@@ -59,6 +60,9 @@ public class StatusBar extends BaseSettingsFragment implements
 
         mBatteryBar = (MasterSwitchPreference)
                 findPreference(Settings.System.STATUSBAR_BATTERY_BAR);
+
+        mStatusBarLogo = (MasterSwitchPreference)
+                findPreference(Settings.System.STATUS_BAR_LOGO);
 
         mSmartPulldown = (ListPreference) findPreference(SMART_PULLDOWN);
         int smartPulldown = Settings.System.getInt(resolver,
@@ -113,6 +117,7 @@ public class StatusBar extends BaseSettingsFragment implements
         super.onResume();
 
         mBatteryBar.reloadValue();
+        mStatusBarLogo.reloadValue();
     }
 
     @Override
