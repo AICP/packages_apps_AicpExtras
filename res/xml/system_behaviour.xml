@@ -70,6 +70,21 @@
         android:summary="@string/sensor_block_summary"
         android:defaultValue="false" />
 
+      <!-- Gestures -->
+      <PreferenceCategory
+          android:key="gestures"
+          android:title="@string/gestures_preference_title">
+
+          <!-- Carbon Gestures -->
+          <PreferenceScreen
+              android:key="carbon_gestures"
+              android:fragment="com.aicp.extras.fragments.CarbonGesturesSettings"
+              android:title="@string/carbon_gesture_preference_title"
+              android:summary="@string/carbon_gestures_summary"
+              android:persistent="false" />
+
+      </PreferenceCategory>
+
     <PreferenceCategory
         android:key="system_ss_category"
         android:title="@string/system_ss_category_title">
