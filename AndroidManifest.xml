@@ -53,6 +53,33 @@
         </activity>
 
         <activity
+            android:name=".fragments.NavigationBar"
+            android:label="@string/navigationbar_settings_title">
+            <intent-filter>
+                <action android:name="com.aicp.extras.ViewNavigationBarSettings" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".fragments.FlingSettings"
+            android:label="@string/fling_settings">
+            <intent-filter>
+                <action android:name="com.aicp.extras.ViewFlingSettings" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".fragments.SmartbarSettings"
+            android:label="@string/smartbar_settings_title">
+            <intent-filter>
+                <action android:name="com.aicp.extras.ViewSmartbarSettings" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".HiddenAnimActivity"
             android:label="@string/hidden_anim_activity_title"
             android:excludeFromRecents="true" />
