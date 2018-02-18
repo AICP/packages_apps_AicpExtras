@@ -24,6 +24,7 @@
   <string name="other_category">Ostatní</string>
   <!-- Status bar -->
   <string name="status_bar_title">Stavová lišta</string>
+  <string name="status_bar_summary">Upravit vzhled stavové lišty</string>
   <!-- Bluetooth status -->
   <string name="bluetooth_battery_title">Zobrazit stav baterie Bluetooth</string>
   <string name="bluetooth_battery_summary">Zobrazit stav baterie aktuálně připojeného bluetooth zařízení, je-li dostupné.</string>
@@ -47,12 +48,6 @@
   <string name="battery_bar_blend_color_reverse_title">Pořadí barev</string>
   <string name="battery_bar_blend_color_reverse_summary_off">Nabito &#8594; Vybito: červená &#8592; zelená &#8592; modrá &#8592; červená</string>
   <string name="battery_bar_blend_color_reverse_summary_on">Nabito &#8594; Vybito: červená &#8594; zelená &#8594; modrá &#8594; červená</string>
-  <!-- Aicp statusbar logo -->
-  <string name="status_bar_logo_title">Logo AICP</string>
-  <string name="status_bar_logo_dialog_title">Pozice loga AICP</string>
-  <string name="status_bar_logo_disabled">Zakázáno</string>
-  <string name="status_bar_logo_left">Vlevo</string>
-  <string name="status_bar_logo_right">Vpravo</string>
   <!-- StatusBar weather settings -->
   <string name="statusbar_weather_title">Počasí ve stavové liště</string>
   <string name="statusbar_weather_summary">Konfigurace nastavení QS/Počasí</string>
@@ -75,8 +70,85 @@
   <!-- Double tap to sleep on status bar -->
   <string name="status_bar_double_tap_to_sleep_title">Klepnutím na obrazovku uzamknout zařízení</string>
   <string name="status_bar_double_tap_to_sleep_summary">Dvojitým poklepáním na stavovou lištu vypnout obrazovku</string>
+  <!-- Statusbar Clock options -->
+  <string name="status_bar_clock_title">Možnosti hodin</string>
+  <string name="status_bar_show_clock_title">Zobrazit hodiny &amp; datum</string>
+  <string name="clock_title_enable">Zarovnání</string>
+  <string name="right_clock">Hodiny vpravo</string>
+  <string name="center_clock">Hodiny uprostřed</string>
+  <string name="left_clock">Hodiny vlevo</string>
+  <string name="status_bar_clock_seconds_title">Sekundy hodin</string>
+  <string name="status_bar_clock_seconds_summary">Zobrazit sekundy vedle hodin ve stavové liště</string>
+  <string name="status_bar_am_pm_title">DOP/ODP</string>
+  <string name="status_bar_am_pm_info">24-hodinový formát povolen</string>
+  <string name="am_pm_clock_normal">Normální velikost písma</string>
+  <string name="am_pm_clock_small">Malá velikost písma</string>
+  <string name="am_pm_clock_none">Nezobrazovat</string>
+  <string name="clock_date_display">Datum</string>
+  <string name="clock_date_display_summary">Zobrazit vlastní datum před hodinami</string>
+  <string name="clock_date_style">Styl data</string>
+  <string name="clock_date_format">Formát data</string>
+  <string name="clock_date_string_edittext_title">Musí být ve formátu např. MM/dd/yy</string>
+  <string name="clock_date_string_edittext_summary">Zadejte řetězec</string>
+  <string name="clock_date_display_none">Nezobrazovat</string>
+  <string name="clock_date_display_small">Malá velikost písma</string>
+  <string name="clock_date_display_normal">Normální velikost písma</string>
+  <string name="clock_date_style_normal">Normální</string>
+  <string name="clock_date_style_lowercase">Malá písmena</string>
+  <string name="clock_date_style_uppercase">Velká písmena</string>
+  <string name="clock_date_format_custom">Vlastní formát Java</string>
+  <string name="menu_cancel">Zrušit</string>
+  <string name="menu_save">Uložit</string>
+  <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_category_title">Logo</string>
+  <string name="status_bar_logo_title">Logo ve stavové liště</string>
+  <string name="status_bar_logo_summary">Povolení zobrazení loga ve stavové liště</string>
+  <string name="status_bar_logo_color_title">Barva</string>
+  <string name="status_bar_logo_position_title">Umístění</string>
+  <string name="status_bar_logo_position_summary">Vyberte stranu, kde chcete zobrazit logo, vlevo nebo vpravo</string>
+  <string name="status_bar_logo_position_right">Vpravo</string>
+  <string name="status_bar_logo_position_left">Vlevo</string>
+  <string name="status_bar_logo_style_title">Styl</string>
+  <string name="status_bar_logo_style_aicp">AICP</string>
+  <string name="status_bar_logo_style_android">Android</string>
+  <string name="status_bar_logo_style_apple">Apple</string>
+  <string name="status_bar_logo_style_ios">iOS</string>
+  <string name="status_bar_logo_style_emoticon">Emoticon</string>
+  <string name="status_bar_logo_style_emoticon_cool">Emoticon cool</string>
+  <string name="status_bar_logo_style_emoticon_dead">Emoticon dead</string>
+  <string name="status_bar_logo_style_emoticon_devil">Emoticon devil</string>
+  <string name="status_bar_logo_style_emoticon_happy">Emoticon happy</string>
+  <string name="status_bar_logo_style_emoticon_neutral">Emoticon neutral</string>
+  <string name="status_bar_logo_style_emoticon_poop">Emoticon poop</string>
+  <string name="status_bar_logo_style_emoticon_sad">Emoticon sad</string>
+  <string name="status_bar_logo_style_emoticon_tongue">Emoticon tongue</string>
+  <string name="status_bar_logo_style_blackberry">Blackberry</string>
+  <string name="status_bar_logo_style_cake">Cake</string>
+  <string name="status_bar_logo_style_blogger">Blogger</string>
+  <string name="status_bar_logo_style_biohazard">Biohazard</string>
+  <string name="status_bar_logo_style_linux">Linux</string>
+  <string name="status_bar_logo_style_yin_yang">Yin-Yang</string>
+  <string name="status_bar_logo_style_windows">Windows</string>
+  <string name="status_bar_logo_style_robot">Robot</string>
+  <string name="status_bar_logo_style_ninja">Ninja</string>
+  <string name="status_bar_logo_style_heart">Heart</string>
+  <string name="status_bar_logo_style_flower">Flower</string>
+  <string name="status_bar_logo_style_ghost">Ghost</string>
+  <string name="status_bar_logo_style_google">Google</string>
+  <string name="status_bar_logo_style_human_male">Man</string>
+  <string name="status_bar_logo_style_human_female">Woman</string>
+  <string name="status_bar_logo_style_human_male_female">Man &amp; woman</string>
+  <string name="status_bar_logo_style_gender_male">Male</string>
+  <string name="status_bar_logo_style_gender_female">Female</string>
+  <string name="status_bar_logo_style_gender_male_female">Male &amp; female</string>
+  <string name="status_bar_logo_style_guitar_electric">Electric guitar</string>
+  <!-- Statusbar categories -->
+  <string name="status_bar_gestures_category_title">Gesta</string>
+  <string name="status_bar_icons_category_title">Ikony</string>
+  <string name="status_bar_others_category_title">Ostatní</string>
   <!-- Notifications -->
   <string name="notifications_title">Oznámení</string>
+  <string name="notifications_summary">Rozšířené ovládání oznámení</string>
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Přepínač posuvníku jasu</string>
   <string name="brightness_slider_switch">Zobrazit jas v Rychlém nastavení</string>
@@ -87,9 +159,7 @@
   <string name="brightness_icon_position_off_summary">Zobrazit vlevo</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Rychlá nastavení</string>
-  <!-- Quick 1-finger pull down to access notifications -->
-  <string name="status_bar_quick_qs_pulldown">Rychlé stažení nabídky</string>
-  <string name="status_bar_quick_qs_pulldown_summary">Stáhněte stavovou lištu na pravé straně k rychlému zobrazení panelu rychlého nastavení</string>
+  <string name="quick_settings_summary">Upravit vzhled rychlého nastavení</string>
   <!-- Disable music track title in QS tile -->
   <string name="qs_music_tile_track_optional_title">Dlaždice hudby</string>
   <string name="qs_music_tile_track_optional_summary">Zobrazit hudbu jako QS dlaždici</string>
@@ -108,8 +178,29 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Zobrazit názvy dlaždic</string>
   <string name="qs_tile_title_visibility_summary">Pokud je zaškrtnuto, zobrazí se popisky pod dlaždicemi</string>
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">Povolit</string>
+  <string name="daylight_header_pack_title">Sbírka obrázků záhlaví</string>
+  <string name="status_bar_custom_header_shadow_title">Stín obrázků záhlaví</string>
+  <string name="status_bar_custom_header_shadow_summary">Pro lepší viditelnost na jasném pozadí</string>
+  <string name="static_header_provider_title">Statický obrázek</string>
+  <string name="daylight_header_provider_title">Sbírka obrázků</string>
+  <string name="custom_header_provider_title">Poskytovatel záhlaví</string>
+  <string name="custom_header_browse_title">Procházet nainstalované záhlaví</string>
+  <string name="custom_header_browse_summary">Kliknutí na jakýkoliv obrázek spustí statický režim</string>
+  <string name="custom_header_browse_summary_new">Procházet všechny dostupné sbírky záhlaví</string>
+  <string name="custom_header_pick_title">Vybrat obrázek záhlaví</string>
+  <string name="custom_header_pick_summary">Vyberte obrázek, který chcete použít pro statický režim</string>
+  <string name="style_enabled_summary">Vlastní obrázek záhlaví je zapnutý</string>
+  <string name="style_disabled_summary">Vlastní obrázek záhlaví je vypnutý</string>
+  <string name="header_provider_disabled">Zakázáno</string>
+  <string name="custom_header_title">Vlastní obrázek záhlaví</string>
+  <string name="file_header_select_title">Vybrat obrázek</string>
+  <string name="file_header_select_summary">Vybrat vlastní obrázek</string>
+  <string name="file_header_provider_title">Vlastní obrázek</string>
   <!-- Recents -->
   <string name="recents_title">Nedávné</string>
+  <string name="recents_summary">Upravit vzhled obrazovky nedávných aplikací</string>
   <string name="stock_recents_category">Původní nedávné</string>
   <string name="alternative_recents_category">Alternativní nedávné</string>
   <!-- Recents panel settings -->
@@ -183,6 +274,7 @@
   <string name="slim_recents_mem_display_text_color">Barva textu ukazatele paměti</string>
   <!-- Lockscreen -->
   <string name="lockscreen_title">Zamykací obrazovka</string>
+  <string name="lockscreen_summary">Upravit vzhled zamykací obrazovky</string>
   <!-- Double tap to sleep on lockscreen -->
   <string name="double_tap_sleep_lockscreen">Dvojitým poklepáním uspat</string>
   <string name="double_tap_sleep_lockscreen_summary">Dvojí poklepání na zamykací obrazovce uspe zařízení</string>
@@ -211,20 +303,15 @@
   <string name="fp_unlock_keystore_summary">Odemknutí zařízení pomocí otisku prstu po restartu bez zadání PINu/hesla/Vzoru\nUpozornění: na vlastní nebezpečí!</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Další vylepšení UI</string>
+  <string name="other_ui_summary">Různé</string>
   <!-- Volume dialog timeout -->
   <string name="volume_dialog_timeout_title">Časový limit panelu ovládání hlasitosti</string>
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Zvuk při snímku obrazovky</string>
   <string name="screenshot_sound_summary">Přehraje zvukový efekt při snímku obrazovky</string>
-  <!-- Swap volume keys based on device rotation -->
-  <string name="swap_volume_buttons">Prohodit tlačítka hlasitosti</string>
-  <string name="swap_volume_buttons_summary">Prohodit tlačítka hlasitosti dle natočení zařízení</string>
   <!-- Volume keys control media stream -->
   <string name="volume_keys_control_media_stream_title">Tlačítka hlasitosti ovládají hlasitost médií</string>
   <string name="volume_keys_control_media_stream_summary">Panel hlasitosti ve výchozím nastavení zobrazí posuvník hlasitosti médií</string>
-  <!-- Volume keys control music playback -->
-  <string name="volume_rocker_music_controls_title">Ovládání přehrávání</string>
-  <string name="volume_rocker_music_controls_summary">Když je obrazovka vypnutá, dlouhý stisk tlačítka hlasitosti posune na další skladbu</string>
   <!-- setting: show CPU info-->
   <string name="show_cpu_info">Zobrazit využití CPU</string>
   <string name="show_cpu_info_summary">Překrytí obrazovky informacemi o aktuálním vytížení CPU</string>
@@ -251,6 +338,7 @@
   <string name="status_bar_battery_saver_color_summary">Poznámka: Nová barva bude použita při dalším spuštění spořiče baterie!</string>
   <!-- System animations -->
   <string name="system_animations_title">Animace</string>
+  <string name="system_animations_summary">Systémové animace</string>
   <string name="custom_bootanimation_title">Spouštěcí animace</string>
   <string name="custom_bootanimation_summary">Vyberte vlastní spouštěcí animaci. Při každé změně bude aktuální animace zálohována do složky AICP_backup ve vnitřní paměti. Stará, je-li to nutné, musí být odstraněna ručně.</string>
   <string name="bootanimation_preview">Náhled spouštěcí animace</string>
@@ -263,6 +351,7 @@
   <string name="bootanimation_install_successful">Nová spouštěcí animace byla úspěšně použita.</string>
   <!-- System behaviour -->
   <string name="system_behaviour_title">Chování systému</string>
+  <string name="system_behaviour_summary">Vylepšení systému</string>
   <string name="selinux_category">SELinux</string>
   <string name="selinux_explanation_summary">SELinux je soubor změn na linuxovém jádře a způsob přidělování zdrojů pro danou aplikaci. Změna režimu může způsobit nežádoucí chování. Použití je na vlastní nebezpečí.</string>
   <string name="selinux_mode_title">SELinux režim</string>
@@ -274,6 +363,7 @@
   <string name="selinux_enforcing_toast_title">SELinux nastaven na vynucený!</string>
   <!-- System extensions -->
   <string name="system_extensions_title">Systémová rozšíření</string>
+  <string name="system_extensions_summary">Systémové doplňky</string>
   <!-- System app remover -->
   <string name="system_app_remover_title">Odstraňovač systémových aplikací</string>
   <string name="system_app_remover_summary">Odstranit předinstalované aplikace</string>
@@ -298,6 +388,7 @@
   <string name="log_it_share_via">Sdílet pomocí</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Úpravy UI</string>
+  <string name="panel_porn_summary">Davor world!</string>
   <!-- Volume dialog opacity -->
   <string name="volume_dialog_transparency_title">Úpravy panelu hlasitosti</string>
   <string name="volume_dialog_transparency">Neprůhlednost panelu hlasitosti</string>
@@ -482,6 +573,7 @@
   <string name="pulse_render_mode_fading_bars">Vyblednutí bloků</string>
   <string name="pulse_render_mode_solid_lines">Plné čáry</string>
   <string name="fling_pulse_color">Pulsující barva</string>
+  <string name="fling_pulse_color_summary">Používá se také jako záloha pro automatickou barvu</string>
   <string name="eos_fling_lavalamp_title">Zapnout lávovou lampu</string>
   <string name="eos_fling_lavalamp_summary">Hladké pulsující prolnutí barev ve stylu lávové lampy</string>
   <string name="pulse_advanced_category">Rozšířené</string>
@@ -493,6 +585,8 @@
   <string name="pulse_solid_units_opacity">Průhlednost plných čar</string>
   <string name="pulse_solid_dimen_category">Nastavení režimu plné čáry</string>
   <string name="pulse_custom_buttons_opacity_title">Průhlednost tlačítek chytré lišty při pulsování</string>
+  <string name="pulse_auto_color_title">Automatická barva Pulse</string>
+  <string name="pulse_auto_color_summary">Synchronizuje barvu s obalem alba. Odstraní lávovou lampu a průhlednost čar.</string>
   <!-- Pulse config -->
   <string name="pulse_custom_dimen">Šířka pruhu</string>
   <string name="pulse_custom_div">Mezera pruhu</string>
@@ -552,13 +646,12 @@
   <string name="smartbar_double_tap_sleep_title">Dvojitým poklepáním uspat</string>
   <string name="smartbar_double_tap_sleep_summary">Dvojím poklepáním na prázdné místo navigačního panelu uspat zařízení</string>
   <!-- Carrier Label -->
-  <string name="carrier_category">Název mobilní sítě</string>
   <string name="carrier_options">Vyberte umístění zobrazení</string>
   <string name="custom_carrier_label_title">Vlastní název mobilní sítě</string>
   <string name="custom_carrier_label_explain">Zadejte, prosím, nový název. Nechte prázdné pro navrácení k původnímu.</string>
   <string name="custom_carrier_label_notset">Vlastní název není momentálně nastaven</string>
-  <string name="show_carrier_title">Je zobrazeno</string>
-  <string name="show_carrier_disabled">Nikde</string>
+  <string name="show_carrier_title">Název mobilní sítě</string>
+  <string name="show_carrier_disabled">Zakázáno</string>
   <string name="show_carrier_keyguard">Pouze na zamčené obrazovce</string>
   <string name="show_carrier_statusbar">Pouze stavová lišta</string>
   <string name="show_carrier_enabled">Zamykací obrazovka &amp; stavová lišta</string>
@@ -585,12 +678,6 @@
   <!-- Lock screen visualizer -->
   <string name="lockscreen_visualizer_title">Hudební vizualizace</string>
   <string name="lockscreen_visualizer_summary">Přnutí zobrazení vizualizací na zamykací obrazovce</string>
-  <!-- SystemUI Theme -->
-  <string name="systemui_theme_style_title">Styl QS a nabídky tlačítka \"Vypnout\"</string>
-  <string name="systemui_theme_style_summary">Vyberte si automatický, světlý nebo tmavý styl</string>
-  <string name="systemui_theme_style_auto">Podle tapety</string>
-  <string name="systemui_theme_style_light">Světlý styl</string>
-  <string name="systemui_theme_style_dark">Tmavý styl</string>
   <!-- Screen state service -->
   <string name="screen_state_toggles_title">Akce po zhasnutí obrazovky</string>
   <string name="screen_state_toggles_enable_title">Povolit</string>
@@ -608,6 +695,34 @@
   <string name="screen_state_on_delay_title">Zpoždění akcí po zapnutí obrazovky</string>
   <string name="screen_state_on_delay_summary">Počet minut čekání před provedením akce po zapnutí obrazovky</string>
   <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_title">Text oznámení hudby</string>
+  <string name="force_ambient_for_media_summary">Informace o hudební skladbě na ambientním displeji</string>
   <string name="force_ambient_for_media_off">Zakázáno</string>
   <string name="force_ambient_for_media_on">Povoleno</string>
+  <string name="force_ambient_for_media_on_forced">Povoleno a vynuceno</string>
+  <string name="force_ambient_for_media_on_forced_clean">Povoleno a minimálně vynuceno</string>
+  <!-- Screen Off animation -->
+  <string name="screen_off_animation_title">Animace vypnutí obrazovky</string>
+  <string name="screen_off_animation_default">Výchozí</string>
+  <string name="screen_off_animation_crt">CRT</string>
+  <string name="screen_off_animation_scale">Měřítko</string>
+  <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_title">Oznámení při zapnuté obrazovce</string>
+  <string name="notification_sound_vib_screen_on_display_title">Pro oznámení použít zvuky a vibrace</string>
+  <string name="notification_sound_vib_screen_on_never">Nikdy</string>
+  <string name="notification_sound_vib_screen_on_always">Vždy (výchozí)</string>
+  <string name="notification_sound_vib_screen_on_nomedia">Pokud se nepřehrávají média</string>
+  <!-- Accidental Touch -->
+  <string name="anbi_enabled_title">Zabránit náhodnému dotyku</string>
+  <string name="anbi_enabled_summary">Pokud je tato volba povolena, zabraňuje náhodnému dotyku hardwarových tlačítek při používání dotykové obrazovky.</string>
+  <!-- Dynamic Navbar -->
+  <string name="navbar_dynamic_title">Barva dynamického navigačního panelu</string>
+  <string name="navbar_dynamic_summary">Přizpůsobit barvu navigačního panelu tak, aby odpovídala běžící aplikaci v popředí</string>
+  <string name="restart_app_required">Pro zobrazení efektu restartujte příslušnou aplikaci</string>
+  <!-- Face unlock toggle -->
+  <string name="face_auto_unlock_title">Automatické odemčení pomocí obličeje</string>
+  <string name="face_auto_unlock_summary">Odstraní zamykací obrazovku po odemknutí obličejem</string>
+  <!-- Battery image -->
+  <string name="battery_image_title">Ikona baterie</string>
+  <string name="battery_image_summary">Zobrazit ikonu baterie na stavové liště</string>
 </resources>

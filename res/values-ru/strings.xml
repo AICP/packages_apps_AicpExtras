@@ -25,6 +25,7 @@
   <string name="other_category">Другое</string>
   <!-- Status bar -->
   <string name="status_bar_title">Строка состояния</string>
+  <string name="status_bar_summary">Изменить вид строки состояния</string>
   <!-- Bluetooth status -->
   <string name="bluetooth_battery_title">Показывать уровень заряда Bluetooth устройства</string>
   <string name="bluetooth_battery_summary">Показывать заряд батареи подключенных в настоящее время Bluetooth-устройств, если доступно.</string>
@@ -48,12 +49,6 @@
   <string name="battery_bar_blend_color_reverse_title">Обратное направление цветов</string>
   <string name="battery_bar_blend_color_reverse_summary_off">Полный &#8594; пустой: красный &#8592; зелёный &#8592; синий &#8592; красный</string>
   <string name="battery_bar_blend_color_reverse_summary_on">Полный &#8594; пустой: красный &#8594; зелёный &#8594; синий &#8594; красный</string>
-  <!-- Aicp statusbar logo -->
-  <string name="status_bar_logo_title">Логотип AICP</string>
-  <string name="status_bar_logo_dialog_title">Расположение логотипа AICP</string>
-  <string name="status_bar_logo_disabled">Выключен</string>
-  <string name="status_bar_logo_left">Слева</string>
-  <string name="status_bar_logo_right">Справа</string>
   <!-- StatusBar weather settings -->
   <string name="statusbar_weather_title">Погода в строке состояния</string>
   <string name="statusbar_weather_summary">Настройте через быстрые настройки/Погода.</string>
@@ -76,8 +71,85 @@
   <!-- Double tap to sleep on status bar -->
   <string name="status_bar_double_tap_to_sleep_title">Коснитесь для сна</string>
   <string name="status_bar_double_tap_to_sleep_summary">Двойное нажатие на строку состояния, чтобы выключить дисплей</string>
+  <!-- Statusbar Clock options -->
+  <string name="status_bar_clock_title">Параметры часов</string>
+  <string name="status_bar_show_clock_title">Показывать часы и дату</string>
+  <string name="clock_title_enable">Выравнивание</string>
+  <string name="right_clock">Часы справа</string>
+  <string name="center_clock">Часы по центру</string>
+  <string name="left_clock">Часы слева</string>
+  <string name="status_bar_clock_seconds_title">Показывать секунды</string>
+  <string name="status_bar_clock_seconds_summary">Отображение секунд рядом с часами в строке состояния</string>
+  <string name="status_bar_am_pm_title">12-часовой формат</string>
+  <string name="status_bar_am_pm_info">24-часовой формат включен</string>
+  <string name="am_pm_clock_normal">Обычный шрифт</string>
+  <string name="am_pm_clock_small">Маленький шрифт</string>
+  <string name="am_pm_clock_none">Не показывать</string>
+  <string name="clock_date_display">Дата</string>
+  <string name="clock_date_display_summary">Показывать дату перед часами</string>
+  <string name="clock_date_style">Стиль даты</string>
+  <string name="clock_date_format">Формат даты</string>
+  <string name="clock_date_string_edittext_title">Введённое значение должно соответствовать формату даты, например: ММ/dd/yy</string>
+  <string name="clock_date_string_edittext_summary">Введите значение</string>
+  <string name="clock_date_display_none">Не показывать</string>
+  <string name="clock_date_display_small">Маленький шрифт</string>
+  <string name="clock_date_display_normal">Обычный шрифт</string>
+  <string name="clock_date_style_normal">Обычный</string>
+  <string name="clock_date_style_lowercase">Строчные</string>
+  <string name="clock_date_style_uppercase">Прописные</string>
+  <string name="clock_date_format_custom">Пользовательский java формат</string>
+  <string name="menu_cancel">Отмена</string>
+  <string name="menu_save">Сохранить</string>
+  <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_category_title">Логотип</string>
+  <string name="status_bar_logo_title">Логотип в строке состояния</string>
+  <string name="status_bar_logo_summary">Включить отображение логотипа в строке состояния</string>
+  <string name="status_bar_logo_color_title">Цвет</string>
+  <string name="status_bar_logo_position_title">Позиция</string>
+  <string name="status_bar_logo_position_summary">Выберите, с какой стороны отображать логотип: справа или слева</string>
+  <string name="status_bar_logo_position_right">Справа</string>
+  <string name="status_bar_logo_position_left">Слева</string>
+  <string name="status_bar_logo_style_title">Стиль</string>
+  <string name="status_bar_logo_style_aicp">AICP</string>
+  <string name="status_bar_logo_style_android">Андроид</string>
+  <string name="status_bar_logo_style_apple">Apple</string>
+  <string name="status_bar_logo_style_ios">iOS</string>
+  <string name="status_bar_logo_style_emoticon">Смайл</string>
+  <string name="status_bar_logo_style_emoticon_cool">Смайл клёвый</string>
+  <string name="status_bar_logo_style_emoticon_dead">Смайл мертвый</string>
+  <string name="status_bar_logo_style_emoticon_devil">Смайл дьявол</string>
+  <string name="status_bar_logo_style_emoticon_happy">Смайл счастливый</string>
+  <string name="status_bar_logo_style_emoticon_neutral">Смайл нейтральный</string>
+  <string name="status_bar_logo_style_emoticon_poop">Смайл какаха</string>
+  <string name="status_bar_logo_style_emoticon_sad">Смайл грустный</string>
+  <string name="status_bar_logo_style_emoticon_tongue">Смайл язык</string>
+  <string name="status_bar_logo_style_blackberry">Blackberry</string>
+  <string name="status_bar_logo_style_cake">Торт</string>
+  <string name="status_bar_logo_style_blogger">Блоггер</string>
+  <string name="status_bar_logo_style_biohazard">Биологическая опасность</string>
+  <string name="status_bar_logo_style_linux">Linux</string>
+  <string name="status_bar_logo_style_yin_yang">Инь-янь</string>
+  <string name="status_bar_logo_style_windows">Windows</string>
+  <string name="status_bar_logo_style_robot">Робот</string>
+  <string name="status_bar_logo_style_ninja">Ниндзя</string>
+  <string name="status_bar_logo_style_heart">Сердце</string>
+  <string name="status_bar_logo_style_flower">Цветок</string>
+  <string name="status_bar_logo_style_ghost">Призрак</string>
+  <string name="status_bar_logo_style_google">Googlе</string>
+  <string name="status_bar_logo_style_human_male">Мужчина</string>
+  <string name="status_bar_logo_style_human_female">Женщина</string>
+  <string name="status_bar_logo_style_human_male_female">Мужчина и женщина</string>
+  <string name="status_bar_logo_style_gender_male">Мужской</string>
+  <string name="status_bar_logo_style_gender_female">Женский</string>
+  <string name="status_bar_logo_style_gender_male_female">Мужской и женский</string>
+  <string name="status_bar_logo_style_guitar_electric">Электрогитара</string>
+  <!-- Statusbar categories -->
+  <string name="status_bar_gestures_category_title">Жесты</string>
+  <string name="status_bar_icons_category_title">Иконки</string>
+  <string name="status_bar_others_category_title">Прочее</string>
   <!-- Notifications -->
   <string name="notifications_title">Уведомления</string>
+  <string name="notifications_summary">Управление расширенными уведомлениями</string>
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Настройки ползунка яркости</string>
   <string name="brightness_slider_switch">Показывать ползунок яркости в панели быстрых настроек</string>
@@ -88,9 +160,7 @@
   <string name="brightness_icon_position_off_summary">Слева</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Панель быстрых настроек</string>
-  <!-- Quick 1-finger pull down to access notifications -->
-  <string name="status_bar_quick_qs_pulldown">Вытягивание быстрых настроек</string>
-  <string name="status_bar_quick_qs_pulldown_summary">Потянуть справа панель статуса для быстрого отображения панели быстрых настроек</string>
+  <string name="quick_settings_summary">Изменить внешний вид быстрых настроек</string>
   <!-- Disable music track title in QS tile -->
   <string name="qs_music_tile_track_optional_title">Плитка \"Музыка\"</string>
   <string name="qs_music_tile_track_optional_summary">Отображать имя композиции в названии плитки</string>
@@ -109,8 +179,29 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Показывать заголовки плиток</string>
   <string name="qs_tile_title_visibility_summary">Отображать названия плиток снизу, когда выбрано</string>
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">Включить</string>
+  <string name="daylight_header_pack_title">Коллекция изображений заголовка</string>
+  <string name="status_bar_custom_header_shadow_title">Тень изображения в заголовке</string>
+  <string name="status_bar_custom_header_shadow_summary">Для лучшей видимости на светлых изображениях</string>
+  <string name="static_header_provider_title">Статическое изображение</string>
+  <string name="daylight_header_provider_title">Коллекция изображений</string>
+  <string name="custom_header_provider_title">Поставщик заголовка</string>
+  <string name="custom_header_browse_title">Обзор установленных заголовков</string>
+  <string name="custom_header_browse_summary">Нажмите на любое изображение для статичного режима</string>
+  <string name="custom_header_browse_summary_new">Просмотр всех доступных пакетов заголовков</string>
+  <string name="custom_header_pick_title">Выберите изображение заголовка</string>
+  <string name="custom_header_pick_summary">Выберите изображение для статичного режима</string>
+  <string name="style_enabled_summary">Пользовательское изображение заголовка ВКЛ.</string>
+  <string name="style_disabled_summary">Пользовательское изображение заголовка ВЫКЛ.</string>
+  <string name="header_provider_disabled">Выключен</string>
+  <string name="custom_header_title">Пользовательское изображение в заголовке</string>
+  <string name="file_header_select_title">Выбрать изображение</string>
+  <string name="file_header_select_summary">Выберите пользовательское изображение</string>
+  <string name="file_header_provider_title">Пользовательское изображение</string>
   <!-- Recents -->
   <string name="recents_title">Панель недавних приложений</string>
+  <string name="recents_summary">Изменить внешний вид недавних приложений</string>
   <string name="stock_recents_category">Стандартная панель недавних приложений</string>
   <string name="alternative_recents_category">Альтернативные панели недавних приложений</string>
   <!-- Recents panel settings -->
@@ -184,6 +275,7 @@
   <string name="slim_recents_mem_display_text_color">Цвет текста шкалы использования ОЗУ</string>
   <!-- Lockscreen -->
   <string name="lockscreen_title">Погода на экране блокировки</string>
+  <string name="lockscreen_summary">Изменить внешний вид экрана блокировки</string>
   <!-- Double tap to sleep on lockscreen -->
   <string name="double_tap_sleep_lockscreen">Двойное нажатие для сна</string>
   <string name="double_tap_sleep_lockscreen_summary">Двойное нажатие на экране блокировки, чтобы перейти в режим сна</string>
@@ -212,20 +304,15 @@
   <string name="fp_unlock_keystore_summary">Разблокировать устройство после перезагрузки без PIN/Пароля/Граф. ключа.\nПрим.: Используйте на свой страх и риск!</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Другие настройки интерфейса</string>
+  <string name="other_ui_summary">Разное</string>
   <!-- Volume dialog timeout -->
   <string name="volume_dialog_timeout_title">Время отображения панели громкости</string>
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Звук скриншота</string>
   <string name="screenshot_sound_summary">Воспроизводить звуковой сигнал при снятии скриншота</string>
-  <!-- Swap volume keys based on device rotation -->
-  <string name="swap_volume_buttons">Поменять местами кнопки громкости</string>
-  <string name="swap_volume_buttons_summary">Поменять местами кнопки громкости на основе вращения устройства</string>
   <!-- Volume keys control media stream -->
   <string name="volume_keys_control_media_stream_title">Клавиши громкости регулируют уровень громкости мультимедиа</string>
   <string name="volume_keys_control_media_stream_summary">Панель громкости по умолчанию отображает слайдер громкости мультимедиа</string>
-  <!-- Volume keys control music playback -->
-  <string name="volume_rocker_music_controls_title">Управление воспроизведением</string>
-  <string name="volume_rocker_music_controls_summary">Переключать треки долгим нажатием кнопок громкости при выключенном экране</string>
   <!-- setting: show CPU info-->
   <string name="show_cpu_info">Показать информацию процессора</string>
   <string name="show_cpu_info_summary">Экранное наслоение, показывающее текущую информацию о процессоре</string>
@@ -252,6 +339,7 @@
   <string name="status_bar_battery_saver_color_summary">Примечание: Если включен режим энергосбережения батареи, то для активации нового цвета индикатора необходимо выключить и снова включить режим энергосбережения!</string>
   <!-- System animations -->
   <string name="system_animations_title">Анимации</string>
+  <string name="system_animations_summary">Системные анимации</string>
   <string name="custom_bootanimation_title">Анимация загрузки</string>
   <string name="custom_bootanimation_summary">Выберите пользовательскую анимацию загрузки. При каждом изменении, текущая анимация будет скопирована в папку AICP_backup в вашей внутренней памяти. Старые анимации необходимо удалить вручную, если они не нужны.</string>
   <string name="bootanimation_preview">Предварительный просмотр</string>
@@ -264,6 +352,7 @@
   <string name="bootanimation_install_successful">Новая анимация загрузки успешно применена.</string>
   <!-- System behaviour -->
   <string name="system_behaviour_title">Поведение системы</string>
+  <string name="system_behaviour_summary">Настройки системы</string>
   <string name="selinux_category">SELinux</string>
   <string name="selinux_explanation_summary">SELinux - это набор модификаций ядра и инструментов пользовательского пространства. Изменение режимов может привести к нежелательным последствиям. Используйте на свой риск.</string>
   <string name="selinux_mode_title">Режим SELinux</string>
@@ -275,6 +364,7 @@
   <string name="selinux_enforcing_toast_title">SELinux выставлен в принудительный режим!</string>
   <!-- System extensions -->
   <string name="system_extensions_title">Системные расширения</string>
+  <string name="system_extensions_summary">Системные дополнения</string>
   <!-- System app remover -->
   <string name="system_app_remover_title">Удаление системных приложений</string>
   <string name="system_app_remover_summary">Удаление предустановленных приложений</string>
@@ -299,6 +389,7 @@
   <string name="log_it_share_via">Поделиться через</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Настройки панелей</string>
+  <string name="panel_porn_summary">Мир Давора!</string>
   <!-- Volume dialog opacity -->
   <string name="volume_dialog_transparency_title">Настройки панели громкости</string>
   <string name="volume_dialog_transparency">Прозрачность панели громкости</string>
@@ -483,6 +574,7 @@
   <string name="pulse_render_mode_fading_bars">Затухающие блоки</string>
   <string name="pulse_render_mode_solid_lines">Сплошные линии</string>
   <string name="fling_pulse_color">Цвет Pulse</string>
+  <string name="fling_pulse_color_summary">Используется также как резерв для автоматического подбора цвета</string>
   <string name="eos_fling_lavalamp_title">Включить \"Лава Лампу\"</string>
   <string name="eos_fling_lavalamp_summary">Включить плавно меняющиеся цвета Pulse</string>
   <string name="pulse_advanced_category">Расширенные настройки</string>
@@ -494,6 +586,8 @@
   <string name="pulse_solid_units_opacity">Прозрачность сплошных линий</string>
   <string name="pulse_solid_dimen_category">Настройки режима сплошных линий</string>
   <string name="pulse_custom_buttons_opacity_title">Прозрачность кнопок Smartbar в режиме Pulse</string>
+  <string name="pulse_auto_color_title">Автоматический цвет Pulse</string>
+  <string name="pulse_auto_color_summary">Цвет зависит от обложки альбома. Переопределяет прозрачность \"Лава Лампы\" и сплошных линий.</string>
   <!-- Pulse config -->
   <string name="pulse_custom_dimen">Ширина</string>
   <string name="pulse_custom_div">Интервал</string>
@@ -553,13 +647,12 @@
   <string name="smartbar_double_tap_sleep_title">Двойное нажатие для сна</string>
   <string name="smartbar_double_tap_sleep_summary">Двойное нажатие на пустую область панели навигации для сна</string>
   <!-- Carrier Label -->
-  <string name="carrier_category">Пользовательское имя оператора</string>
   <string name="carrier_options">Выбрать место отображения</string>
   <string name="custom_carrier_label_title">Своё название оператора</string>
   <string name="custom_carrier_label_explain">Пожалуйста, введите новое название. Пустое вернет к значению по умолчанию.</string>
   <string name="custom_carrier_label_notset">Своё название оператора не установлено</string>
-  <string name="show_carrier_title">Отображение на экране блокировки включено</string>
-  <string name="show_carrier_disabled">Нигде</string>
+  <string name="show_carrier_title">Название оператора</string>
+  <string name="show_carrier_disabled">Выключено</string>
   <string name="show_carrier_keyguard">Только на экране блокировки</string>
   <string name="show_carrier_statusbar">Только в строке состояния</string>
   <string name="show_carrier_enabled">На экране блокировки и в строке состояния</string>
@@ -586,12 +679,6 @@
   <!-- Lock screen visualizer -->
   <string name="lockscreen_visualizer_title">Визуализатор музыки</string>
   <string name="lockscreen_visualizer_summary">Переключение отображения визуализатора на экране блокировки</string>
-  <!-- SystemUI Theme -->
-  <string name="systemui_theme_style_title">Панель плиток и стиль меню питания</string>
-  <string name="systemui_theme_style_summary">Выбрать один из автоматических, светлых и темных стилей</string>
-  <string name="systemui_theme_style_auto">На основе обоев</string>
-  <string name="systemui_theme_style_light">Светлый стиль</string>
-  <string name="systemui_theme_style_dark">Тёмный стиль</string>
   <!-- Screen state service -->
   <string name="screen_state_toggles_title">Действия в режиме ожидания</string>
   <string name="screen_state_toggles_enable_title">Включить</string>
@@ -609,6 +696,34 @@
   <string name="screen_state_on_delay_title">Отложить действия при включении экрана</string>
   <string name="screen_state_on_delay_summary">Отложить действия при включении экрана на указанное количество секунд</string>
   <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_title">Музыкальный Тикер на Ambient Display</string>
+  <string name="force_ambient_for_media_summary">Информация о музыкальном треке на Ambient Display</string>
   <string name="force_ambient_for_media_off">Выключен</string>
   <string name="force_ambient_for_media_on">Включен</string>
+  <string name="force_ambient_for_media_on_forced">Включено принудительно</string>
+  <string name="force_ambient_for_media_on_forced_clean">Включено принудительно минимально</string>
+  <!-- Screen Off animation -->
+  <string name="screen_off_animation_title">Анимация выключения экрана</string>
+  <string name="screen_off_animation_default">По умолчанию</string>
+  <string name="screen_off_animation_crt">Эффект телевизора</string>
+  <string name="screen_off_animation_scale">Масштабирование</string>
+  <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_title">Индикатор событий при включенном экране</string>
+  <string name="notification_sound_vib_screen_on_display_title">Использование звука и вибрации для уведомления</string>
+  <string name="notification_sound_vib_screen_on_never">Никогда</string>
+  <string name="notification_sound_vib_screen_on_always">Всегда (по умолчанию)</string>
+  <string name="notification_sound_vib_screen_on_nomedia">Когда медиа не вопроизводится</string>
+  <!-- Accidental Touch -->
+  <string name="anbi_enabled_title">Предотвращать случайное включение</string>
+  <string name="anbi_enabled_summary">Если включено, предотвращает случайное касание аппаратных кнопок во время использования сенсорного экрана.</string>
+  <!-- Dynamic Navbar -->
+  <string name="navbar_dynamic_title">Динамический цвет панели навигации</string>
+  <string name="navbar_dynamic_summary">Изменять цвет панели навигации в зависимости от основного цвета приложения</string>
+  <string name="restart_app_required">Требуется перезапуск приложения</string>
+  <!-- Face unlock toggle -->
+  <string name="face_auto_unlock_title">Автоматическая разблокировка сканером лица</string>
+  <string name="face_auto_unlock_summary">Убарть экран блокировки после разблокировки сканером лица</string>
+  <!-- Battery image -->
+  <string name="battery_image_title">Изображение батареи</string>
+  <string name="battery_image_summary">Показать изображение батареи в строке состояния</string>
 </resources>

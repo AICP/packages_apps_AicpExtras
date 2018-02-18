@@ -24,6 +24,7 @@
   <string name="other_category">其他</string>
   <!-- Status bar -->
   <string name="status_bar_title">狀態列</string>
+  <string name="status_bar_summary">編輯狀態列外觀</string>
   <!-- Bluetooth status -->
   <string name="bluetooth_battery_title">顯示藍牙電池狀態</string>
   <string name="bluetooth_battery_summary">顯示目前已連接藍牙裝置的電池狀態 (如果可用)。</string>
@@ -47,12 +48,6 @@
   <string name="battery_bar_blend_color_reverse_title">反轉顏色方向</string>
   <string name="battery_bar_blend_color_reverse_summary_off">滿 &#8594; 空：紅 &#8592; 綠 &#8592; 藍 &#8592; 紅</string>
   <string name="battery_bar_blend_color_reverse_summary_on">滿 &#8594; 空：紅 &#8594; 綠 &#8594; 藍 &#8594; 紅</string>
-  <!-- Aicp statusbar logo -->
-  <string name="status_bar_logo_title">AICP 標誌</string>
-  <string name="status_bar_logo_dialog_title">AICP 標誌位置</string>
-  <string name="status_bar_logo_disabled">已停用</string>
-  <string name="status_bar_logo_left">左側</string>
-  <string name="status_bar_logo_right">右側</string>
   <!-- StatusBar weather settings -->
   <string name="statusbar_weather_title">狀態列天氣</string>
   <string name="statusbar_weather_summary">從配置快速設定/天氣</string>
@@ -75,8 +70,85 @@
   <!-- Double tap to sleep on status bar -->
   <string name="status_bar_double_tap_to_sleep_title">輕觸即可休眠</string>
   <string name="status_bar_double_tap_to_sleep_summary">輕觸兩下狀態列來關閉螢幕</string>
+  <!-- Statusbar Clock options -->
+  <string name="status_bar_clock_title">時鐘選項</string>
+  <string name="status_bar_show_clock_title">顯示時鐘與日期</string>
+  <string name="clock_title_enable">對齊方式</string>
+  <string name="right_clock">右側時鐘</string>
+  <string name="center_clock">置中時鐘</string>
+  <string name="left_clock">左側時鐘</string>
+  <string name="status_bar_clock_seconds_title">時鐘秒數</string>
+  <string name="status_bar_clock_seconds_summary">在狀態列中顯示時鐘旁邊的秒數</string>
+  <string name="status_bar_am_pm_title">上午/下午</string>
+  <string name="status_bar_am_pm_info">24 小時時鐘已啟用</string>
+  <string name="am_pm_clock_normal">正常字體大小</string>
+  <string name="am_pm_clock_small">小字體的大小</string>
+  <string name="am_pm_clock_none">不顯示</string>
+  <string name="clock_date_display">日期</string>
+  <string name="clock_date_display_summary">在時鐘前顯示自訂日期</string>
+  <string name="clock_date_style">日期樣式</string>
+  <string name="clock_date_format">日期格式</string>
+  <string name="clock_date_string_edittext_title">日期格式必須是此形式 例如：MM/dd/yy</string>
+  <string name="clock_date_string_edittext_summary">輸入字串</string>
+  <string name="clock_date_display_none">不顯示</string>
+  <string name="clock_date_display_small">小字體的大小</string>
+  <string name="clock_date_display_normal">正常字體大小</string>
+  <string name="clock_date_style_normal">適中</string>
+  <string name="clock_date_style_lowercase">小寫</string>
+  <string name="clock_date_style_uppercase">大寫</string>
+  <string name="clock_date_format_custom">自訂 java 格式</string>
+  <string name="menu_cancel">取消</string>
+  <string name="menu_save">儲存</string>
+  <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_category_title">標誌</string>
+  <string name="status_bar_logo_title">狀態列標誌</string>
+  <string name="status_bar_logo_summary">在狀態列上要啟用顯示標誌</string>
+  <string name="status_bar_logo_color_title">顏色</string>
+  <string name="status_bar_logo_position_title">位置</string>
+  <string name="status_bar_logo_position_summary">選擇標誌顯示在那一側，左或右</string>
+  <string name="status_bar_logo_position_right">右側</string>
+  <string name="status_bar_logo_position_left">左側</string>
+  <string name="status_bar_logo_style_title">樣式</string>
+  <string name="status_bar_logo_style_aicp">AICP</string>
+  <string name="status_bar_logo_style_android">Android</string>
+  <string name="status_bar_logo_style_apple">蘋果</string>
+  <string name="status_bar_logo_style_ios">iOS</string>
+  <string name="status_bar_logo_style_emoticon">表情符號</string>
+  <string name="status_bar_logo_style_emoticon_cool">表情符號 酷</string>
+  <string name="status_bar_logo_style_emoticon_dead">表情符號 死</string>
+  <string name="status_bar_logo_style_emoticon_devil">表情符號 惡魔</string>
+  <string name="status_bar_logo_style_emoticon_happy">表情符號 快樂</string>
+  <string name="status_bar_logo_style_emoticon_neutral">表情符號 中性</string>
+  <string name="status_bar_logo_style_emoticon_poop">表情符號 大便</string>
+  <string name="status_bar_logo_style_emoticon_sad">表情符號 悲傷</string>
+  <string name="status_bar_logo_style_emoticon_tongue">表情符號 吐舌頭</string>
+  <string name="status_bar_logo_style_blackberry">黑莓</string>
+  <string name="status_bar_logo_style_cake">蛋糕</string>
+  <string name="status_bar_logo_style_blogger">部落客</string>
+  <string name="status_bar_logo_style_biohazard">生化</string>
+  <string name="status_bar_logo_style_linux">Linux</string>
+  <string name="status_bar_logo_style_yin_yang">陰陽</string>
+  <string name="status_bar_logo_style_windows">視窗</string>
+  <string name="status_bar_logo_style_robot">機器人</string>
+  <string name="status_bar_logo_style_ninja">忍者</string>
+  <string name="status_bar_logo_style_heart">愛心</string>
+  <string name="status_bar_logo_style_flower">花朵</string>
+  <string name="status_bar_logo_style_ghost">幽靈</string>
+  <string name="status_bar_logo_style_google">Google</string>
+  <string name="status_bar_logo_style_human_male">男人</string>
+  <string name="status_bar_logo_style_human_female">女人</string>
+  <string name="status_bar_logo_style_human_male_female">男人與女人</string>
+  <string name="status_bar_logo_style_gender_male">男性</string>
+  <string name="status_bar_logo_style_gender_female">女性</string>
+  <string name="status_bar_logo_style_gender_male_female">男性與女性</string>
+  <string name="status_bar_logo_style_guitar_electric">電吉他</string>
+  <!-- Statusbar categories -->
+  <string name="status_bar_gestures_category_title">手勢</string>
+  <string name="status_bar_icons_category_title">圖示</string>
+  <string name="status_bar_others_category_title">其他</string>
   <!-- Notifications -->
   <string name="notifications_title">通知</string>
+  <string name="notifications_summary">延伸型通知控制</string>
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">亮度滑動條設定</string>
   <string name="brightness_slider_switch">在快速設定中顯示亮度滑動條</string>
@@ -87,9 +159,7 @@
   <string name="brightness_icon_position_off_summary">左側顯示</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">快速設定</string>
-  <!-- Quick 1-finger pull down to access notifications -->
-  <string name="status_bar_quick_qs_pulldown">快速的快速設定下拉</string>
-  <string name="status_bar_quick_qs_pulldown_summary">在右側的狀態列上下拉以快速顯示快速設定面板</string>
+  <string name="quick_settings_summary">編輯快速設定外觀</string>
   <!-- Disable music track title in QS tile -->
   <string name="qs_music_tile_track_optional_title">音樂圖塊曲目標題</string>
   <string name="qs_music_tile_track_optional_summary">將音樂曲目標題顯示為快速設定圖塊標題</string>
@@ -108,8 +178,29 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">顯示圖塊標題</string>
   <string name="qs_tile_title_visibility_summary">當選取後顯示下方的圖塊標題</string>
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">啟用</string>
+  <string name="daylight_header_pack_title">標頭圖像集合</string>
+  <string name="status_bar_custom_header_shadow_title">標頭圖片陰影</string>
+  <string name="status_bar_custom_header_shadow_summary">在使用較明亮的圖片時能有更好的能見度</string>
+  <string name="static_header_provider_title">靜態圖像</string>
+  <string name="daylight_header_provider_title">圖像集合</string>
+  <string name="custom_header_provider_title">標頭提供者</string>
+  <string name="custom_header_browse_title">瀏覽已安裝的標頭</string>
+  <string name="custom_header_browse_summary">按一下任何圖片以供靜態模式使用</string>
+  <string name="custom_header_browse_summary_new">瀏覽所有可用的標頭集合</string>
+  <string name="custom_header_pick_title">選擇標頭圖片</string>
+  <string name="custom_header_pick_summary">選擇要用於靜態模式的圖片</string>
+  <string name="style_enabled_summary">自訂標頭圖片已開啟</string>
+  <string name="style_disabled_summary">自訂標頭圖片已關閉</string>
+  <string name="header_provider_disabled">已停用</string>
+  <string name="custom_header_title">自訂標頭圖片</string>
+  <string name="file_header_select_title">選擇圖像</string>
+  <string name="file_header_select_summary">選擇自訂圖像</string>
+  <string name="file_header_provider_title">自訂圖像</string>
   <!-- Recents -->
   <string name="recents_title">最近使用的應用程式</string>
+  <string name="recents_summary">編輯總覽應用程式螢幕外觀</string>
   <string name="stock_recents_category">原始總覽</string>
   <string name="alternative_recents_category">替代總覽</string>
   <!-- Recents panel settings -->
@@ -183,6 +274,7 @@
   <string name="slim_recents_mem_display_text_color">記憶體列文字顏色</string>
   <!-- Lockscreen -->
   <string name="lockscreen_title">鎖定畫面</string>
+  <string name="lockscreen_summary">編輯鎖定畫面的外觀</string>
   <!-- Double tap to sleep on lockscreen -->
   <string name="double_tap_sleep_lockscreen">輕觸兩下即可休眠</string>
   <string name="double_tap_sleep_lockscreen_summary">輕觸兩下休眠在鎖定畫面上休眠裝置</string>
@@ -211,20 +303,15 @@
   <string name="fp_unlock_keystore_summary">在重新啟動後用指紋解鎖裝置，無須 PIN /密碼/圖案\n注意：自擔風險！</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">其他 UI 調整</string>
+  <string name="other_ui_summary">各種其他項目</string>
   <!-- Volume dialog timeout -->
   <string name="volume_dialog_timeout_title">音量對話方塊逾時</string>
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">擷取螢幕畫面音效</string>
   <string name="screenshot_sound_summary">擷取螢幕畫面時播放音效</string>
-  <!-- Swap volume keys based on device rotation -->
-  <string name="swap_volume_buttons">交換音量鍵</string>
-  <string name="swap_volume_buttons_summary">根據裝置旋轉交換音量鍵</string>
   <!-- Volume keys control media stream -->
   <string name="volume_keys_control_media_stream_title">音量鍵控制媒體音量</string>
   <string name="volume_keys_control_media_stream_summary">音量面板預設顯示媒體音量滑動條</string>
-  <!-- Volume keys control music playback -->
-  <string name="volume_rocker_music_controls_title">播放控制</string>
-  <string name="volume_rocker_music_controls_summary">螢幕關閉時，長按音量鍵即可切換曲目</string>
   <!-- setting: show CPU info-->
   <string name="show_cpu_info">顯示處理器資訊</string>
   <string name="show_cpu_info_summary">目前的處理器資訊重疊在螢幕上</string>
@@ -251,6 +338,7 @@
   <string name="status_bar_battery_saver_color_summary">注意：如果已經啟用了省電模式，為了使新顏色有效，請切換至省電模式！</string>
   <!-- System animations -->
   <string name="system_animations_title">動畫</string>
+  <string name="system_animations_summary">系統動畫</string>
   <string name="custom_bootanimation_title">開機動畫</string>
   <string name="custom_bootanimation_summary">請選擇自訂開機動畫。 每次更改目前動畫將被備份到內部儲存空間具有日期的 AICP_backup 資料夾中。 如果沒有必要，請刪除它。</string>
   <string name="bootanimation_preview">開機動畫預覽</string>
@@ -263,6 +351,7 @@
   <string name="bootanimation_install_successful">已成功套用新開機動畫。</string>
   <!-- System behaviour -->
   <string name="system_behaviour_title">系統行為</string>
+  <string name="system_behaviour_summary">系統微調</string>
   <string name="selinux_category">SELinux</string>
   <string name="selinux_explanation_summary">SELinux 是修改內核和使用者空間的工具。更改模式會導致不必要的影響。使用時自擔風險</string>
   <string name="selinux_mode_title">Selinux 模式</string>
@@ -274,6 +363,7 @@
   <string name="selinux_enforcing_toast_title">Selinux 設定執行！</string>
   <!-- System extensions -->
   <string name="system_extensions_title">系統擴充套件</string>
+  <string name="system_extensions_summary">系統外掛</string>
   <!-- System app remover -->
   <string name="system_app_remover_title">移除系統應用程式</string>
   <string name="system_app_remover_summary">移除預裝的應用程式</string>
@@ -298,6 +388,7 @@
   <string name="log_it_share_via">分享透過</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">面板顏色</string>
+  <string name="panel_porn_summary">達沃爾世界！</string>
   <!-- Volume dialog opacity -->
   <string name="volume_dialog_transparency_title">音量對話方塊調整</string>
   <string name="volume_dialog_transparency">音量對話方塊不透明度</string>
@@ -482,6 +573,7 @@
   <string name="pulse_render_mode_fading_bars">漸層方塊</string>
   <string name="pulse_render_mode_solid_lines">實線</string>
   <string name="fling_pulse_color">呼吸燈顏色</string>
+  <string name="fling_pulse_color_summary">也用作自動顏色的後備</string>
   <string name="eos_fling_lavalamp_title">開啟熔岩燈模式</string>
   <string name="eos_fling_lavalamp_summary">呼吸燈會產生類似熔岩燈的色彩變換</string>
   <string name="pulse_advanced_category">進階</string>
@@ -493,6 +585,8 @@
   <string name="pulse_solid_units_opacity">實線不透明度</string>
   <string name="pulse_solid_dimen_category">實線模式設定</string>
   <string name="pulse_custom_buttons_opacity_title">智慧列按鍵呼吸燈的不透明度</string>
+  <string name="pulse_auto_color_title">自動呼吸燈顏色</string>
+  <string name="pulse_auto_color_summary">與相簿藝術同步色彩。覆蓋熔岩燈和線的不透明度。</string>
   <!-- Pulse config -->
   <string name="pulse_custom_dimen">條形寬度</string>
   <string name="pulse_custom_div">條形間距</string>
@@ -552,13 +646,12 @@
   <string name="smartbar_double_tap_sleep_title">輕觸兩下即可休眠</string>
   <string name="smartbar_double_tap_sleep_summary">輕觸兩下空白導航列來休眠</string>
   <!-- Carrier Label -->
-  <string name="carrier_category">電信業者標籤</string>
   <string name="carrier_options">選擇顯示位置</string>
   <string name="custom_carrier_label_title">自訂電信業者名稱</string>
   <string name="custom_carrier_label_explain">請輸入新的電信業者名稱，留空為恢復預設名稱。</string>
   <string name="custom_carrier_label_notset">目前沒有設定電信業者名稱</string>
-  <string name="show_carrier_title">顯示在</string>
-  <string name="show_carrier_disabled">不可見</string>
+  <string name="show_carrier_title">電信業者標籤</string>
+  <string name="show_carrier_disabled">已停用</string>
   <string name="show_carrier_keyguard">僅限於鎖定畫面</string>
   <string name="show_carrier_statusbar">僅狀態列</string>
   <string name="show_carrier_enabled">鎖定畫面與狀態列</string>
@@ -585,12 +678,6 @@
   <!-- Lock screen visualizer -->
   <string name="lockscreen_visualizer_title">音樂視覺化檢視</string>
   <string name="lockscreen_visualizer_summary">在鎖定畫面上切換視覺化檢視</string>
-  <!-- SystemUI Theme -->
-  <string name="systemui_theme_style_title">圖塊面板和電源選單樣式</string>
-  <string name="systemui_theme_style_summary">從自動、淺色和深色樣式中選擇</string>
-  <string name="systemui_theme_style_auto">根據桌布</string>
-  <string name="systemui_theme_style_light">淺色樣式</string>
-  <string name="systemui_theme_style_dark">深色樣式</string>
   <!-- Screen state service -->
   <string name="screen_state_toggles_title">暫停動作</string>
   <string name="screen_state_toggles_enable_title">啟用</string>
@@ -608,6 +695,34 @@
   <string name="screen_state_on_delay_title">螢幕關閉動作延遲</string>
   <string name="screen_state_on_delay_summary">螢幕開啟後執行動作之前等待的分鐘數</string>
   <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_title">環境音樂通知</string>
+  <string name="force_ambient_for_media_summary">環境顯示中的音樂曲目資訊</string>
   <string name="force_ambient_for_media_off">已停用</string>
   <string name="force_ambient_for_media_on">已啟用</string>
+  <string name="force_ambient_for_media_on_forced">啟用並強制</string>
+  <string name="force_ambient_for_media_on_forced_clean">啟用並強制最小化</string>
+  <!-- Screen Off animation -->
+  <string name="screen_off_animation_title">螢幕關閉動畫</string>
+  <string name="screen_off_animation_default">預設</string>
+  <string name="screen_off_animation_crt">CRT</string>
+  <string name="screen_off_animation_scale">縮放</string>
+  <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_title">螢幕上的通知</string>
+  <string name="notification_sound_vib_screen_on_display_title">使用音效和震動進行通知</string>
+  <string name="notification_sound_vib_screen_on_never">永不</string>
+  <string name="notification_sound_vib_screen_on_always">一律 (預設)</string>
+  <string name="notification_sound_vib_screen_on_nomedia">如果沒有媒體在播放</string>
+  <!-- Accidental Touch -->
+  <string name="anbi_enabled_title">防止誤觸</string>
+  <string name="anbi_enabled_summary">啟用時, 在使用觸控式螢幕時防止意外觸摸硬體按鍵。</string>
+  <!-- Dynamic Navbar -->
+  <string name="navbar_dynamic_title">動態導覽列顏色</string>
+  <string name="navbar_dynamic_summary">調整導覽列顏色以符合前景正在執行的應用程式</string>
+  <string name="restart_app_required">重新啟動各自的應用程式以查看效果</string>
+  <!-- Face unlock toggle -->
+  <string name="face_auto_unlock_title">臉部自動解鎖</string>
+  <string name="face_auto_unlock_summary">解除鎖定畫面後的臉部解鎖</string>
+  <!-- Battery image -->
+  <string name="battery_image_title">電池圖片</string>
+  <string name="battery_image_summary">在狀態列中顯示電池圖片</string>
 </resources>

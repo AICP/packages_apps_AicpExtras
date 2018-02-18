@@ -49,12 +49,6 @@
   <string name="battery_bar_blend_color_reverse_title">Direción de la inversión de colores</string>
   <string name="battery_bar_blend_color_reverse_summary_off">Lleno &#8594; vacío: rojo &#8592; verde &#8592; azul &#8592; rojo</string>
   <string name="battery_bar_blend_color_reverse_summary_on">Lleno &#8594; vacío: rojo &#8594; verde &#8594; azul &#8594; rojo</string>
-  <!-- Aicp statusbar logo -->
-  <string name="status_bar_logo_title">Logo de AICP</string>
-  <string name="status_bar_logo_dialog_title">Posición del logo AICP</string>
-  <string name="status_bar_logo_disabled">Deshabilitada</string>
-  <string name="status_bar_logo_left">Izquierda</string>
-  <string name="status_bar_logo_right">Derecha</string>
   <!-- StatusBar weather settings -->
   <string name="statusbar_weather_title">Clima en la barra de estado</string>
   <string name="statusbar_weather_summary">Configurar desde Ajustes Rápidos/Clima</string>
@@ -77,9 +71,85 @@
   <!-- Double tap to sleep on status bar -->
   <string name="status_bar_double_tap_to_sleep_title">Tocar para apagar pantalla</string>
   <string name="status_bar_double_tap_to_sleep_summary">Doble toque en la barra de estado para apagar la pantalla</string>
+  <!-- Statusbar Clock options -->
+  <string name="status_bar_clock_title">Opciones del reloj</string>
+  <string name="status_bar_show_clock_title">Montrar reloj &amp; fecha</string>
+  <string name="clock_title_enable">Alineación</string>
+  <string name="right_clock">Reloj a la derecha</string>
+  <string name="center_clock">Reloj centrado</string>
+  <string name="left_clock">Reloj a la izquierda</string>
+  <string name="status_bar_clock_seconds_title">Segundos</string>
+  <string name="status_bar_clock_seconds_summary">Muestra los segundos al lado del reloj en la barra de estado</string>
+  <string name="status_bar_am_pm_title">AM/PM</string>
+  <string name="status_bar_am_pm_info">reloj 24 horas habilitado</string>
+  <string name="am_pm_clock_normal">Tamaño de fuente normal</string>
+  <string name="am_pm_clock_small">Tamaño de fuente pequeño</string>
+  <string name="am_pm_clock_none">No mostrar</string>
+  <string name="clock_date_display">Fecha</string>
+  <string name="clock_date_display_summary">Mostrar fecha personalizada antes del reloj</string>
+  <string name="clock_date_style">Estilo de fecha</string>
+  <string name="clock_date_format">Formato de fecha</string>
+  <string name="clock_date_string_edittext_title">Debe estar en formato DateFormat. Ej: MM/dd/yy</string>
+  <string name="clock_date_string_edittext_summary">Introducir cadena</string>
+  <string name="clock_date_display_none">No mostrar</string>
+  <string name="clock_date_display_small">Tamaño de fuente pequeño</string>
+  <string name="clock_date_display_normal">Tamaño de fuente normal</string>
+  <string name="clock_date_style_normal">Normal</string>
+  <string name="clock_date_style_lowercase">Minúsculas</string>
+  <string name="clock_date_style_uppercase">Mayúsculas</string>
+  <string name="clock_date_format_custom">Formato java personalizado</string>
+  <string name="menu_cancel">Cancelar</string>
+  <string name="menu_save">Guardar</string>
+  <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_category_title">Logo</string>
+  <string name="status_bar_logo_title">Logo en barra de estado</string>
+  <string name="status_bar_logo_summary">Activar para mostrar logo en la barra de estado</string>
+  <string name="status_bar_logo_color_title">Color</string>
+  <string name="status_bar_logo_position_title">Posición</string>
+  <string name="status_bar_logo_position_summary">Elegir en qué lado mostrar el logo, izquierda o derecha</string>
+  <string name="status_bar_logo_position_right">Derecha</string>
+  <string name="status_bar_logo_position_left">Izquierda</string>
+  <string name="status_bar_logo_style_title">Estilo</string>
+  <string name="status_bar_logo_style_aicp">AICP</string>
+  <string name="status_bar_logo_style_android">Android</string>
+  <string name="status_bar_logo_style_apple">Apple</string>
+  <string name="status_bar_logo_style_ios">iOS</string>
+  <string name="status_bar_logo_style_emoticon">Emoticono</string>
+  <string name="status_bar_logo_style_emoticon_cool">Emoticono guay</string>
+  <string name="status_bar_logo_style_emoticon_dead">Emoticono muerto</string>
+  <string name="status_bar_logo_style_emoticon_devil">Emoticono diablo</string>
+  <string name="status_bar_logo_style_emoticon_happy">Emoticono feliz</string>
+  <string name="status_bar_logo_style_emoticon_neutral">Emoticono neutro</string>
+  <string name="status_bar_logo_style_emoticon_poop">Mierda con ojos</string>
+  <string name="status_bar_logo_style_emoticon_sad">Emoticono triste</string>
+  <string name="status_bar_logo_style_emoticon_tongue">Emoticono con lengua</string>
+  <string name="status_bar_logo_style_blackberry">Blackberry</string>
+  <string name="status_bar_logo_style_cake">Pastel</string>
+  <string name="status_bar_logo_style_blogger">Bloguero</string>
+  <string name="status_bar_logo_style_biohazard">Riesgo biológico</string>
+  <string name="status_bar_logo_style_linux">Linux</string>
+  <string name="status_bar_logo_style_yin_yang">Yin- Yang</string>
+  <string name="status_bar_logo_style_windows">Windows</string>
+  <string name="status_bar_logo_style_robot">Robot</string>
+  <string name="status_bar_logo_style_ninja">Ninja</string>
+  <string name="status_bar_logo_style_heart">Corazón</string>
+  <string name="status_bar_logo_style_flower">Flor</string>
+  <string name="status_bar_logo_style_ghost">Fantasma</string>
+  <string name="status_bar_logo_style_google">Google </string>
+  <string name="status_bar_logo_style_human_male">Hombre</string>
+  <string name="status_bar_logo_style_human_female">Mujer</string>
+  <string name="status_bar_logo_style_human_male_female">Hombre &amp; mujer</string>
+  <string name="status_bar_logo_style_gender_male">Masculino</string>
+  <string name="status_bar_logo_style_gender_female">Femenino</string>
+  <string name="status_bar_logo_style_gender_male_female">Masculino &amp; femenino</string>
+  <string name="status_bar_logo_style_guitar_electric">Guitarra eléctrica</string>
+  <!-- Statusbar categories -->
+  <string name="status_bar_gestures_category_title">Gestos</string>
+  <string name="status_bar_icons_category_title">Iconos</string>
+  <string name="status_bar_others_category_title">Otros</string>
   <!-- Notifications -->
   <string name="notifications_title">Notificaciones</string>
-  <string name="notifications_summary">Marcador de posición (por ahora)</string>
+  <string name="notifications_summary">Control de notificaciones</string>
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Ajustes de la barra de brillo</string>
   <string name="brightness_slider_switch">Mostrar barra de brillo en los Ajustes rápidos</string>
@@ -91,9 +161,6 @@
   <!-- Quick settings -->
   <string name="quick_settings_title">Ajustes rápidos</string>
   <string name="quick_settings_summary">Editar aspecto de ajustes rápidos</string>
-  <!-- Quick 1-finger pull down to access notifications -->
-  <string name="status_bar_quick_qs_pulldown">Despliegue del panel de Ajustes rápidos</string>
-  <string name="status_bar_quick_qs_pulldown_summary">Deslizar desde el lado derecho de la barra de estado para mostrar el panel de ajustes rápidos</string>
   <!-- Disable music track title in QS tile -->
   <string name="qs_music_tile_track_optional_title">Título de la pista de audio en ajuste rápido</string>
   <string name="qs_music_tile_track_optional_summary">Muestra el título de la pista de audio en el nombre del ajuste rápido</string>
@@ -112,6 +179,27 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Mostrar texto del icono</string>
   <string name="qs_tile_title_visibility_summary">Mostrar texto debajo si está habilitado</string>
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">Habilitar</string>
+  <string name="daylight_header_pack_title">Colección de imagen de cabecera</string>
+  <string name="status_bar_custom_header_shadow_title">Sombra de imágen de cabecera</string>
+  <string name="status_bar_custom_header_shadow_summary">Para mejorar la visibilidad en imágenes brillantes</string>
+  <string name="unit_percent">\u0025</string>
+  <string name="static_header_provider_title">Imagen estática</string>
+  <string name="daylight_header_provider_title">Colección de imágenes</string>
+  <string name="custom_header_provider_title">Proveedor de imágenes</string>
+  <string name="custom_header_browse_title">Explorar imágenes instaladas</string>
+  <string name="custom_header_browse_summary">Tocar en cualquier imagen para aplicarla en modo estático</string>
+  <string name="custom_header_browse_summary_new">Ver todos las colecciones de imágenes de cabecera disponibles</string>
+  <string name="custom_header_pick_title">Seleccione la imagen de cabecera</string>
+  <string name="custom_header_pick_summary">Seleccione una imagen para usar en modo estático</string>
+  <string name="style_enabled_summary">Imagen personalizada en la cabecera habilitada</string>
+  <string name="style_disabled_summary">Imagen personalizada en la cabecera deshabilitada</string>
+  <string name="header_provider_disabled">Deshabilitada</string>
+  <string name="custom_header_title">Imágen cabecera personalizada</string>
+  <string name="file_header_select_title">Seleccionar imagen</string>
+  <string name="file_header_select_summary">Seleccione imagen personalizada</string>
+  <string name="file_header_provider_title">Imagen personalizada</string>
   <!-- Recents -->
   <string name="recents_title">Aps. recientes</string>
   <string name="recents_summary">Editar aspecto del panel de aps. recientes</string>
@@ -223,15 +311,9 @@
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Sonido al capturar pantalla</string>
   <string name="screenshot_sound_summary">Reproduce un sonido cuando se hace una captura de pantalla</string>
-  <!-- Swap volume keys based on device rotation -->
-  <string name="swap_volume_buttons">Intercambiar los botones de volumen</string>
-  <string name="swap_volume_buttons_summary">Intercambiar los botones de volumen teniendo en cuenta la rotación del dispositivo</string>
   <!-- Volume keys control media stream -->
   <string name="volume_keys_control_media_stream_title">Teclas de volumen controlan volumen multimedia</string>
   <string name="volume_keys_control_media_stream_summary">Panel de volumen mostrará el control deslizante de volumen de los medios de comunicación por defecto</string>
-  <!-- Volume keys control music playback -->
-  <string name="volume_rocker_music_controls_title">Control de reproducción</string>
-  <string name="volume_rocker_music_controls_summary">Cuando la pantalla está apagada, mantener presionadas las teclas de volumen cambiará las pistas de música</string>
   <!-- setting: show CPU info-->
   <string name="show_cpu_info">Mostrar información de la CPU</string>
   <string name="show_cpu_info_summary">Muestra la información actual de la CPU en pantalla</string>
@@ -493,6 +575,7 @@
   <string name="pulse_render_mode_fading_bars">Desvanecimiento de bloques</string>
   <string name="pulse_render_mode_solid_lines">Líneas sólidas</string>
   <string name="fling_pulse_color">Color de Pulso</string>
+  <string name="fling_pulse_color_summary">Utilizada también al replegarse para color automático</string>
   <string name="eos_fling_lavalamp_title">Activar lámpara de lava</string>
   <string name="eos_fling_lavalamp_summary">Pulse crea una animación con una suave mezcla de colores tipo lámpara de lava</string>
   <string name="pulse_advanced_category">Avanzado</string>
@@ -504,6 +587,8 @@
   <string name="pulse_solid_units_opacity">Opacidad de líneas sólidas</string>
   <string name="pulse_solid_dimen_category">Configuración de modo líneas sólidas</string>
   <string name="pulse_custom_buttons_opacity_title">Opacidad de los botones de Smartbar con pulso</string>
+  <string name="pulse_auto_color_title">Color de pulso automático</string>
+  <string name="pulse_auto_color_summary">Sincronizar color con las imágenes del album. Sustituye a la lámpara de lava y a las líneas opacas.</string>
   <!-- Pulse config -->
   <string name="pulse_custom_dimen">Ancho de la barra</string>
   <string name="pulse_custom_div">Espaciado de la barra</string>
@@ -563,13 +648,12 @@
   <string name="smartbar_double_tap_sleep_title">Doble toque para apagar pantalla</string>
   <string name="smartbar_double_tap_sleep_summary">Doble toque en la barra de navegación para apagar pantalla</string>
   <!-- Carrier Label -->
-  <string name="carrier_category">Nombre de operador</string>
   <string name="carrier_options">Seleccionar una ubicación</string>
   <string name="custom_carrier_label_title">Nombre de operador personalizado</string>
   <string name="custom_carrier_label_explain">Introduzca un nuevo nombre. Dejar en blanco para restablecer al predeterminado.</string>
   <string name="custom_carrier_label_notset">Nombre personalizado no establecido actualmente</string>
-  <string name="show_carrier_title">Se muestra en</string>
-  <string name="show_carrier_disabled">Ninguna parte</string>
+  <string name="show_carrier_title">Nombre de operador</string>
+  <string name="show_carrier_disabled">Deshabilitado</string>
   <string name="show_carrier_keyguard">Sólo en pantalla de bloqueo</string>
   <string name="show_carrier_statusbar">Sólo en barra de estado</string>
   <string name="show_carrier_enabled">Pantalla de bloqueo &amp; barra de estado</string>
@@ -596,12 +680,6 @@
   <!-- Lock screen visualizer -->
   <string name="lockscreen_visualizer_title">Visualizador de música</string>
   <string name="lockscreen_visualizer_summary">Habilita el visualizador en la pantalla de bloqueo</string>
-  <!-- SystemUI Theme -->
-  <string name="systemui_theme_style_title">Estilo de ajustes rápidos y menú de apagado</string>
-  <string name="systemui_theme_style_summary">Elegir entre estilos automáticos, claros y oscuros</string>
-  <string name="systemui_theme_style_auto">Basado en el Fondo de Pantalla</string>
-  <string name="systemui_theme_style_light">Estilo claro</string>
-  <string name="systemui_theme_style_dark">Estilo oscuro</string>
   <!-- Screen state service -->
   <string name="screen_state_toggles_title">Acciones al apagar pantalla</string>
   <string name="screen_state_toggles_enable_title">Habilitar</string>
@@ -625,4 +703,28 @@
   <string name="force_ambient_for_media_on">Habilitada</string>
   <string name="force_ambient_for_media_on_forced">Habilitado y obligatorio</string>
   <string name="force_ambient_for_media_on_forced_clean">Habilitado y mínimo obligatorio</string>
+  <!-- Screen Off animation -->
+  <string name="screen_off_animation_title">Animación al apagar</string>
+  <string name="screen_off_animation_default">Predeterminado</string>
+  <string name="screen_off_animation_crt">CRT</string>
+  <string name="screen_off_animation_scale">Escalado</string>
+  <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_title">Notificaciones en pantalla</string>
+  <string name="notification_sound_vib_screen_on_display_title">Usar sonido y vibración en la notificación</string>
+  <string name="notification_sound_vib_screen_on_never">Nunca</string>
+  <string name="notification_sound_vib_screen_on_always">Siempre (predeterminado)</string>
+  <string name="notification_sound_vib_screen_on_nomedia">Si no hay nada en reproducción</string>
+  <!-- Accidental Touch -->
+  <string name="anbi_enabled_title">Prevenir toques accidentales</string>
+  <string name="anbi_enabled_summary">Cuando está activado, evita toques accidentales en los botones físicos si se está usando la pantalla.</string>
+  <!-- Dynamic Navbar -->
+  <string name="navbar_dynamic_title">Color dinámico de la barra de navegación</string>
+  <string name="navbar_dynamic_summary">Adaptar el color de la barra de navegación para que coincida con el de la aplicación en primer plano</string>
+  <string name="restart_app_required">Reinicie la aplicación respectiva para ver el efecto</string>
+  <!-- Face unlock toggle -->
+  <string name="face_auto_unlock_title">Desbloqueo facial automático</string>
+  <string name="face_auto_unlock_summary">Quita la pantalla de bloqueo tras desbloqueo facial</string>
+  <!-- Battery image -->
+  <string name="battery_image_title">Icono de batería</string>
+  <string name="battery_image_summary">Mostrar icono de batería en la barra de estado</string>
 </resources>
