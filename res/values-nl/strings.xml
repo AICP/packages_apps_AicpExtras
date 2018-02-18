@@ -24,6 +24,7 @@
   <string name="other_category">Overig</string>
   <!-- Status bar -->
   <string name="status_bar_title">Statusbalk</string>
+  <string name="status_bar_summary">Bewerken weergave statusbalk</string>
   <!-- Bluetooth status -->
   <string name="bluetooth_battery_title">Toon Bluetooth accustatus</string>
   <string name="bluetooth_battery_summary">Toon de accustatus van het aangesloten Bluetooth apparaat, indien beschikbaar.</string>
@@ -47,12 +48,6 @@
   <string name="battery_bar_blend_color_reverse_title">Kleurrichting omdraaien</string>
   <string name="battery_bar_blend_color_reverse_summary_off">Vol &#8594; leeg: rood &#8592; groen &#8592; blauw &#8592; rood</string>
   <string name="battery_bar_blend_color_reverse_summary_on">Vol &#8594; leeg: rood &#8594; groen &#8594; blauw &#8594; rood</string>
-  <!-- Aicp statusbar logo -->
-  <string name="status_bar_logo_title">AICP-logo</string>
-  <string name="status_bar_logo_dialog_title">Positie van het AICP logo</string>
-  <string name="status_bar_logo_disabled">Uitgeschakeld</string>
-  <string name="status_bar_logo_left">Links</string>
-  <string name="status_bar_logo_right">Rechts</string>
   <!-- StatusBar weather settings -->
   <string name="statusbar_weather_title">Statusbalk weer</string>
   <string name="statusbar_weather_summary">Configureren van Snelle instellingen/Weer</string>
@@ -75,8 +70,85 @@
   <!-- Double tap to sleep on status bar -->
   <string name="status_bar_double_tap_to_sleep_title">Tikken voor slaapstand</string>
   <string name="status_bar_double_tap_to_sleep_summary">Dubbeltik op de statusbalk om het scherm uit te schakelen</string>
+  <!-- Statusbar Clock options -->
+  <string name="status_bar_clock_title">Klok instellingen</string>
+  <string name="status_bar_show_clock_title">Toon klok &amp; datum</string>
+  <string name="clock_title_enable">Uitlijning</string>
+  <string name="right_clock">Klok rechts</string>
+  <string name="center_clock">Klok centreren</string>
+  <string name="left_clock">Klok links</string>
+  <string name="status_bar_clock_seconds_title">Klok secondes</string>
+  <string name="status_bar_clock_seconds_summary">Seconden weergeven naast klok in de statusbalk</string>
+  <string name="status_bar_am_pm_title">AM/PM</string>
+  <string name="status_bar_am_pm_info">24-uurs klok is ingeschakeld</string>
+  <string name="am_pm_clock_normal">Normale lettergrootte</string>
+  <string name="am_pm_clock_small">Kleine lettergrootte</string>
+  <string name="am_pm_clock_none">Niet tonen</string>
+  <string name="clock_date_display">Datum</string>
+  <string name="clock_date_display_summary">Aangepaste datum vóór de klok weergeven</string>
+  <string name="clock_date_style">Datumstijl</string>
+  <string name="clock_date_format">Datumformaat</string>
+  <string name="clock_date_string_edittext_title">Moet in datumnotatie zijn, bijv. mm/dd/jj</string>
+  <string name="clock_date_string_edittext_summary">Voer de waarde in</string>
+  <string name="clock_date_display_none">Niet tonen</string>
+  <string name="clock_date_display_small">Kleine lettergrootte</string>
+  <string name="clock_date_display_normal">Normale lettergrootte</string>
+  <string name="clock_date_style_normal">Normaal</string>
+  <string name="clock_date_style_lowercase">Kleine letters</string>
+  <string name="clock_date_style_uppercase">Hoofdletters</string>
+  <string name="clock_date_format_custom">Aangepaste Java code</string>
+  <string name="menu_cancel">Annuleren</string>
+  <string name="menu_save">Opslaan</string>
+  <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_category_title">Logo</string>
+  <string name="status_bar_logo_title">Statusbalk logo</string>
+  <string name="status_bar_logo_summary">Inschakelen om logo weer te geven in de statusbalk</string>
+  <string name="status_bar_logo_color_title">Kleur</string>
+  <string name="status_bar_logo_position_title">Positie</string>
+  <string name="status_bar_logo_position_summary">Kiezen aan welke kant het logo getoond moet worden, links of rechts</string>
+  <string name="status_bar_logo_position_right">Rechts</string>
+  <string name="status_bar_logo_position_left">Links</string>
+  <string name="status_bar_logo_style_title">Stijl</string>
+  <string name="status_bar_logo_style_aicp">AICP</string>
+  <string name="status_bar_logo_style_android">Android</string>
+  <string name="status_bar_logo_style_apple">Apple</string>
+  <string name="status_bar_logo_style_ios">iOS</string>
+  <string name="status_bar_logo_style_emoticon">Emoticon</string>
+  <string name="status_bar_logo_style_emoticon_cool">Emoticon (cool)</string>
+  <string name="status_bar_logo_style_emoticon_dead">Emoticon (dood)</string>
+  <string name="status_bar_logo_style_emoticon_devil">Emoticon (duivel)</string>
+  <string name="status_bar_logo_style_emoticon_happy">Emoticon (gelukkig)</string>
+  <string name="status_bar_logo_style_emoticon_neutral">Emoticon (neutraal)</string>
+  <string name="status_bar_logo_style_emoticon_poop">Emoticon (poep)</string>
+  <string name="status_bar_logo_style_emoticon_sad">Emoticon (verdrietig)</string>
+  <string name="status_bar_logo_style_emoticon_tongue">Emoticon (tong)</string>
+  <string name="status_bar_logo_style_blackberry">BlackBerry</string>
+  <string name="status_bar_logo_style_cake">Taart</string>
+  <string name="status_bar_logo_style_blogger">Blogger</string>
+  <string name="status_bar_logo_style_biohazard">Biohazard</string>
+  <string name="status_bar_logo_style_linux">Linux</string>
+  <string name="status_bar_logo_style_yin_yang">Yin-Yang</string>
+  <string name="status_bar_logo_style_windows">Windows</string>
+  <string name="status_bar_logo_style_robot">Robot</string>
+  <string name="status_bar_logo_style_ninja">Ninja</string>
+  <string name="status_bar_logo_style_heart">Hart</string>
+  <string name="status_bar_logo_style_flower">Bloem</string>
+  <string name="status_bar_logo_style_ghost">Spook</string>
+  <string name="status_bar_logo_style_google">Google </string>
+  <string name="status_bar_logo_style_human_male">Man</string>
+  <string name="status_bar_logo_style_human_female">Vrouw</string>
+  <string name="status_bar_logo_style_human_male_female">Man &amp; vrouw</string>
+  <string name="status_bar_logo_style_gender_male">Mannelijk</string>
+  <string name="status_bar_logo_style_gender_female">Vrouwelijk</string>
+  <string name="status_bar_logo_style_gender_male_female">Mannelijk &amp; vrouwelijk</string>
+  <string name="status_bar_logo_style_guitar_electric">Elektrische gitaar</string>
+  <!-- Statusbar categories -->
+  <string name="status_bar_gestures_category_title">Gebaren</string>
+  <string name="status_bar_icons_category_title">Pictogrammen</string>
+  <string name="status_bar_others_category_title">Overigen</string>
   <!-- Notifications -->
   <string name="notifications_title">Notificaties</string>
+  <string name="notifications_summary">Geavanceerde meldingsinstellingen</string>
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Instellingen helderheidsregelaar</string>
   <string name="brightness_slider_switch">Toon helderheidsregelaar in Snelle instellingen</string>
@@ -87,9 +159,7 @@
   <string name="brightness_icon_position_off_summary">Wordt links getoond</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Snelle instellingen</string>
-  <!-- Quick 1-finger pull down to access notifications -->
-  <string name="status_bar_quick_qs_pulldown">Snel naar beneden vegen</string>
-  <string name="status_bar_quick_qs_pulldown_summary">Rechterkant van statusbalk naar beneden vegen opent Snelle instellingen</string>
+  <string name="quick_settings_summary">Bewerken weergave Snelle instellingen</string>
   <!-- Disable music track title in QS tile -->
   <string name="qs_music_tile_track_optional_title">Muziek tegel tracktitel</string>
   <string name="qs_music_tile_track_optional_summary">Toon de muziektrack als tegeltitel in Snelle instellingen</string>
@@ -108,8 +178,30 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Toon titel van tegels</string>
   <string name="qs_tile_title_visibility_summary">Toon titel onder tegel indien geselecteerd</string>
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">Inschakelen</string>
+  <string name="daylight_header_pack_title">Header-afbeeldingen verzameling</string>
+  <string name="status_bar_custom_header_shadow_title">Achtergrondschaduw</string>
+  <string name="status_bar_custom_header_shadow_summary">Voor een betere zichtbaarheid bij heldere achtergrondbeelden</string>
+  <string name="unit_percent">\u0025</string>
+  <string name="static_header_provider_title">Statische afbeelding</string>
+  <string name="daylight_header_provider_title">Afbeeldingen verzameling</string>
+  <string name="custom_header_provider_title">Header provider</string>
+  <string name="custom_header_browse_title">Blader door geïnstalleerde headers</string>
+  <string name="custom_header_browse_summary">Tik op een foto om te gebruiken voor de statische modus</string>
+  <string name="custom_header_browse_summary_new">Blader door alle beschikbare header verzamelingen</string>
+  <string name="custom_header_pick_title">Selecteer de header-afbeelding</string>
+  <string name="custom_header_pick_summary">Selecteer een afbeelding om te gebruiken voor de statische modus</string>
+  <string name="style_enabled_summary">Aangepaste header-afbeelding is AAN</string>
+  <string name="style_disabled_summary">Aangepaste header-afbeelding is UIT</string>
+  <string name="header_provider_disabled">Uitgeschakeld</string>
+  <string name="custom_header_title">Tijdsafhankelijke header</string>
+  <string name="file_header_select_title">Selecteer afbeelding</string>
+  <string name="file_header_select_summary">Selecteer aangepaste afbeelding</string>
+  <string name="file_header_provider_title">Aangepaste afbeelding</string>
   <!-- Recents -->
   <string name="recents_title">Recente apps</string>
+  <string name="recents_summary">Bewerken weergave Recente apps</string>
   <string name="stock_recents_category">Standaard weergave Recente apps</string>
   <string name="alternative_recents_category">Alternatieve weergave Recente apps</string>
   <!-- Recents panel settings -->
@@ -183,6 +275,7 @@
   <string name="slim_recents_mem_display_text_color">Tekstkleur van de geheugenbalk</string>
   <!-- Lockscreen -->
   <string name="lockscreen_title">Vergrendelscherm</string>
+  <string name="lockscreen_summary">Bewerken weergave vergrendelingsscherm</string>
   <!-- Double tap to sleep on lockscreen -->
   <string name="double_tap_sleep_lockscreen">Dubbeltikken voor slaapstand</string>
   <string name="double_tap_sleep_lockscreen_summary">Dubbeltikken op vergrendelscherm voor slaapstand</string>
@@ -211,20 +304,15 @@
   <string name="fp_unlock_keystore_summary">Apparaat ontgrendelen met vingerafdruk na herstart zonder PIN/wachtwoord/patroon\nWaarschuwing: gebruik op eigen risico!</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Andere UI verbeteringen</string>
+  <string name="other_ui_summary">Diversen</string>
   <!-- Volume dialog timeout -->
   <string name="volume_dialog_timeout_title">Volume dialoogvenster timeout</string>
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Geluid schermafbeelding</string>
   <string name="screenshot_sound_summary">Speelt een geluid af bij het maken van een schermafbeelding</string>
-  <!-- Swap volume keys based on device rotation -->
-  <string name="swap_volume_buttons">Volumeknoppen omwisselen</string>
-  <string name="swap_volume_buttons_summary">Volumeknoppen omwisselen op basis van apparaat rotatie</string>
   <!-- Volume keys control media stream -->
   <string name="volume_keys_control_media_stream_title">Volumeknoppen passen mediavolume aan</string>
   <string name="volume_keys_control_media_stream_summary">Volumepaneel toont standaard de volumeregelaar voor media</string>
-  <!-- Volume keys control music playback -->
-  <string name="volume_rocker_music_controls_title">Afspeel controle</string>
-  <string name="volume_rocker_music_controls_summary">Volumetoetsen lang indrukken bij uitgeschakeld scherm navigeert door muzieknummers</string>
   <!-- setting: show CPU info-->
   <string name="show_cpu_info">Toon CPU-informatie</string>
   <string name="show_cpu_info_summary">Schermlaag met huidige CPU-info weergeven</string>
@@ -251,6 +339,7 @@
   <string name="status_bar_battery_saver_color_summary">Let op: als de accuspaarstand al actief is, schakel deze dan een keer uit en in om de nieuwe kleur te effectueren!</string>
   <!-- System animations -->
   <string name="system_animations_title">Display en animaties</string>
+  <string name="system_animations_summary">Systeem animaties</string>
   <string name="custom_bootanimation_title">Opstartanimatie</string>
   <string name="custom_bootanimation_summary">Selecteer een aangepaste bootanimatie. Bij elke wijziging zal van de huidige animatie een backup worden gemaakt naar de AICP_backup map in uw interne opslag. Oude backups moeten worden handmatig verwijderd als ze niet meer nodig zijn.</string>
   <string name="bootanimation_preview">Voorvertoning opstartanimatie</string>
@@ -263,6 +352,7 @@
   <string name="bootanimation_install_successful">Nieuwe opstartanimatie met succes toegepast.</string>
   <!-- System behaviour -->
   <string name="system_behaviour_title">Systeemgedrag</string>
+  <string name="system_behaviour_summary">Systeem Tweaks</string>
   <string name="selinux_category">SELinux</string>
   <string name="selinux_explanation_summary">SELinux is een verzameling kernel wijzigingen en hulpmiddelen van de gebruikersruimte. Wijziging van deze instelling kan ongewenste effecten veroorzaken. Gebruik is dan ook op eigen risico.</string>
   <string name="selinux_mode_title">SELinux modus</string>
@@ -274,6 +364,7 @@
   <string name="selinux_enforcing_toast_title">SELinux ingesteld op geforceerd!</string>
   <!-- System extensions -->
   <string name="system_extensions_title">Systeem uitbreidingen</string>
+  <string name="system_extensions_summary">Systeem Addons</string>
   <!-- System app remover -->
   <string name="system_app_remover_title">Systeem App Remover</string>
   <string name="system_app_remover_summary">Vooraf geïnstalleerde apps verwijderen</string>
@@ -298,6 +389,7 @@
   <string name="log_it_share_via">Delen via</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Paneelporno</string>
+  <string name="panel_porn_summary">Davor wereld!</string>
   <!-- Volume dialog opacity -->
   <string name="volume_dialog_transparency_title">Aanpassingen dialoogvenster Volume</string>
   <string name="volume_dialog_transparency">Dialoogvenster Volume</string>
@@ -482,6 +574,7 @@
   <string name="pulse_render_mode_fading_bars">Vervagende blokken</string>
   <string name="pulse_render_mode_solid_lines">Ononderbroken lijnen</string>
   <string name="fling_pulse_color">Pulse kleur</string>
+  <string name="fling_pulse_color_summary">Ook gebruikt als fallback voor automatische kleur</string>
   <string name="eos_fling_lavalamp_title">Lavalamp inschakelen</string>
   <string name="eos_fling_lavalamp_summary">Pulse bootst een kleurenmix in vloeiende lavalamp stijl na</string>
   <string name="pulse_advanced_category">Geavanceerd</string>
@@ -493,6 +586,8 @@
   <string name="pulse_solid_units_opacity">Transparantie ononderbroken lijnen</string>
   <string name="pulse_solid_dimen_category">Ononderbroken lijnen-modus instellingen</string>
   <string name="pulse_custom_buttons_opacity_title">Transparantie Smartbar knoppen bij Pulse</string>
+  <string name="pulse_auto_color_title">Automatische pulse kleur</string>
+  <string name="pulse_auto_color_summary">Stem kleur af op album art. Overschrijft Lavalamp en lijn-transparantie.</string>
   <!-- Pulse config -->
   <string name="pulse_custom_dimen">Balk breedte</string>
   <string name="pulse_custom_div">Balk afstand</string>
@@ -552,13 +647,12 @@
   <string name="smartbar_double_tap_sleep_title">Dubbeltikken voor slaapstand</string>
   <string name="smartbar_double_tap_sleep_summary">Dubbeltik op lege navigatiebalk gebieden om slaapstand in te schakelen</string>
   <!-- Carrier Label -->
-  <string name="carrier_category">Providernaam</string>
   <string name="carrier_options">Selecteer weergave locaties</string>
   <string name="custom_carrier_label_title">Aangepaste providernaam</string>
   <string name="custom_carrier_label_explain">Voer aub een nieuwe naam in. Leeg laten voor de standaard vermelding.</string>
   <string name="custom_carrier_label_notset">Aangepaste naam niet ingesteld</string>
-  <string name="show_carrier_title">Wordt getoond op</string>
-  <string name="show_carrier_disabled">Nergens</string>
+  <string name="show_carrier_title">Providernaam</string>
+  <string name="show_carrier_disabled">Uitgeschakeld</string>
   <string name="show_carrier_keyguard">Vergrendelscherm</string>
   <string name="show_carrier_statusbar">Statusbalk</string>
   <string name="show_carrier_enabled">Beide</string>
@@ -585,12 +679,6 @@
   <!-- Lock screen visualizer -->
   <string name="lockscreen_visualizer_title">Muziek visualizer</string>
   <string name="lockscreen_visualizer_summary">Schakel visualizer weergave op het vergrendelscherm in of uit</string>
-  <!-- SystemUI Theme -->
-  <string name="systemui_theme_style_title">Stijl van het Snelle instellingen-paneel en Aan-/uit-menu</string>
-  <string name="systemui_theme_style_summary">Kies tussen automatische, lichte of donkere stijl</string>
-  <string name="systemui_theme_style_auto">Aangepast aan achtergrond</string>
-  <string name="systemui_theme_style_light">Lichte stijl</string>
-  <string name="systemui_theme_style_dark">Donkere stijl</string>
   <!-- Screen state service -->
   <string name="screen_state_toggles_title">Acties onderbreken</string>
   <string name="screen_state_toggles_enable_title">Inschakelen</string>
@@ -608,6 +696,34 @@
   <string name="screen_state_on_delay_title">Vertraging na inschakelen beeldscherm</string>
   <string name="screen_state_on_delay_summary">Aantal minuten dat na het inschakelen van het scherm wordt gewacht voordat acties uitgevoerd worden</string>
   <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_title">Muziekticker bij inactiviteit</string>
+  <string name="force_ambient_for_media_summary">Muziektitelinfo op \"Always-On\"-/Inactiviteitsscherm</string>
   <string name="force_ambient_for_media_off">Uitgeschakeld</string>
   <string name="force_ambient_for_media_on">Ingeschakeld</string>
+  <string name="force_ambient_for_media_on_forced">Ingeschakeld (geforceerd)</string>
+  <string name="force_ambient_for_media_on_forced_clean">Ingeschakeld (geforceerd indien mogelijk)</string>
+  <!-- Screen Off animation -->
+  <string name="screen_off_animation_title">Scherm-uit animatie</string>
+  <string name="screen_off_animation_default">Standaard</string>
+  <string name="screen_off_animation_crt">CRT</string>
+  <string name="screen_off_animation_scale">Schaal</string>
+  <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_title">Weergave van meldingen</string>
+  <string name="notification_sound_vib_screen_on_display_title">Geluid en trillingen gebruiken voor notificaties</string>
+  <string name="notification_sound_vib_screen_on_never">Nooit</string>
+  <string name="notification_sound_vib_screen_on_always">Altijd (standaard)</string>
+  <string name="notification_sound_vib_screen_on_nomedia">Als geen media wordt afgespeeld</string>
+  <!-- Accidental Touch -->
+  <string name="anbi_enabled_title">Onbedoelde aanraking voorkomen</string>
+  <string name="anbi_enabled_summary">Negeert onbedoelde aanrakingen tijdens het gebruik van het touchscreen.</string>
+  <!-- Dynamic Navbar -->
+  <string name="navbar_dynamic_title">Dynamische navigatiebalk kleur</string>
+  <string name="navbar_dynamic_summary">Pas kleur van navigatiebalk aan aan app in de voorgrond</string>
+  <string name="restart_app_required">Herstart betreffende app om effect te zien</string>
+  <!-- Face unlock toggle -->
+  <string name="face_auto_unlock_title">Automatisch ontgrendelen door gezichtsherkenning</string>
+  <string name="face_auto_unlock_summary">Vergrendelscherm uitschakelen na gezichtsontgrendeling</string>
+  <!-- Battery image -->
+  <string name="battery_image_title">Accusymbool</string>
+  <string name="battery_image_summary">Accusymbool weergeven in de statusbalk</string>
 </resources>

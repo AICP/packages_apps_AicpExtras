@@ -31,8 +31,6 @@
   <string name="battery_bar_battery_low_color_title">Warna baterai lemah</string>
   <string name="battery_bar_style_title">Perataan</string>
   <string name="battery_bar_thickness_title">Ketebalan</string>
-  <!-- Aicp statusbar logo -->
-  <string name="status_bar_logo_dialog_title">Posisi logo AICP</string>
   <!-- StatusBar weather settings -->
   <string name="statusbar_weather_title">Cuaca status bar</string>
   <string name="statusbar_weather_summary">Konfigurasi dari QS pengaturan/Cuaca</string>
@@ -47,14 +45,27 @@
   <string name="smart_pulldown_none_summary">Membuka Qs ketika tidak ada notifikasi</string>
   <string name="smart_pulldown_off_summary">dimatikan</string>
   <!-- Double tap to sleep on status bar -->
+  <!-- Statusbar Clock options -->
+  <string name="status_bar_show_clock_title">Tampilkan jam &amp; tanggal</string>
+  <string name="clock_title_enable">Perataan</string>
+  <string name="clock_date_style">Gaya tanggal</string>
+  <string name="clock_date_format">Format tanggal</string>
+  <string name="clock_date_string_edittext_title">Harus dalam format tanggal misalnya. MM/dd/yy</string>
+  <string name="clock_date_string_edittext_summary">Masukan teks</string>
+  <string name="clock_date_display_none">Jangan tampilkan</string>
+  <string name="clock_date_style_lowercase">Huruf kecil</string>
+  <string name="menu_save">Simpan</string>
+  <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_category_title">Logo</string>
+  <string name="status_bar_logo_color_title">Warna</string>
+  <string name="status_bar_logo_position_title">Posisi</string>
+  <string name="status_bar_logo_style_title">Gaya</string>
+  <!-- Statusbar categories -->
   <!-- Notifications -->
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Slider pengaturan kecerahan</string>
   <string name="brightness_slider_switch">Tampilkan slider kecerahan di QS</string>
   <!-- Quick settings -->
-  <!-- Quick 1-finger pull down to access notifications -->
-  <string name="status_bar_quick_qs_pulldown">Pull-down QS cepat</string>
-  <string name="status_bar_quick_qs_pulldown_summary">Tarik kebawah di statusbar</string>
   <!-- Disable music track title in QS tile -->
   <!-- Small quick settings scroller -->
   <!-- QS rows and columns -->
@@ -63,6 +74,12 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Tampilkan judul ikon</string>
   <string name="qs_tile_title_visibility_summary">Tampilakn tulisan ikon dibawah ketika diperika</string>
+  <!-- QS Headers -->
+  <string name="custom_header_browse_summary">Klik pada gambar apapun untuk mengunakan mode statis</string>
+  <string name="custom_header_pick_title">Pilih gambar header</string>
+  <string name="custom_header_pick_summary">Pilih sebuah gambar untuk digunakan pada modus statis</string>
+  <string name="style_enabled_summary">Custom gambar header hidup</string>
+  <string name="style_disabled_summary">Custom gambar header mati</string>
   <!-- Recents -->
   <string name="stock_recents_category">recent bawaan</string>
   <!-- Recents panel settings -->
@@ -103,15 +120,9 @@
   <string name="other_ui_title">Tweak UI lainnya</string>
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
-  <!-- Swap volume keys based on device rotation -->
-  <string name="swap_volume_buttons">Swap tombol volume</string>
-  <string name="swap_volume_buttons_summary">Swap tombol volume berdasarkan rotasi perangkat</string>
   <!-- Volume keys control media stream -->
   <string name="volume_keys_control_media_stream_title">Tombol volume mengontrol volume media</string>
   <string name="volume_keys_control_media_stream_summary">Volume panel akan menunjukkan media volume slider secara default</string>
-  <!-- Volume keys control music playback -->
-  <string name="volume_rocker_music_controls_title">Kontrol pemutar</string>
-  <string name="volume_rocker_music_controls_summary">Saat layar mati, menekan lama tombol volume akan menggeser trek musik</string>
   <!-- setting: show CPU info-->
   <string name="show_cpu_info">Tampilkan info CPU</string>
   <string name="show_cpu_info_summary">Tampilan layar menampilkan info CPU saat ini</string>
@@ -128,6 +139,7 @@
   <!-- Status bar - Battery saver color -->
   <string name="status_bar_battery_saver_color_title">Warna penghemat baterai</string>
   <!-- System animations -->
+  <string name="system_animations_summary">Animasi sistem</string>
   <string name="custom_bootanimation_title">Bootanimation</string>
   <string name="custom_bootanimation_summary">Pilih custom bootanimation. Pada setiap perubahan, animasi saat ini akan mundur ke folder AICP_backup di penyimpanan internal Anda. File yang lama harus dihapus secara manual jika tidak diperlukan.</string>
   <!-- System behaviour -->
@@ -298,14 +310,18 @@
   <string name="smartbar_double_tap_sleep_title">Ketuk dua kali untuk tidur</string>
   <!-- Carrier Label -->
   <string name="carrier_options">Pilih lokasi mengembalikan</string>
-  <string name="show_carrier_disabled">Tidak dimana-mana</string>
   <!-- Three-fingers-swipe to screenshot -->
   <string name="three_finger_gesture">Gerakan tiga jari</string>
   <string name="three_finger_gesture_summary">Gesekkan tiga jari untuk mengambil tangkapan layar</string>
   <!-- AOKP custom system animations -->
   <string name="system_animation_title">Animasi sistem</string>
   <!-- Lock screen visualizer -->
-  <!-- SystemUI Theme -->
   <!-- Screen state service -->
   <!-- Ambient Music Ticker -->
+  <!-- Screen Off animation -->
+  <!-- Suppress notification sound/vibration -->
+  <!-- Accidental Touch -->
+  <!-- Dynamic Navbar -->
+  <!-- Face unlock toggle -->
+  <!-- Battery image -->
 </resources>
