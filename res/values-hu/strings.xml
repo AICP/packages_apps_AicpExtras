@@ -29,30 +29,39 @@
   <!-- Battery bar -->
   <string name="battery_bar_title">Akkumulátor sáv</string>
   <string name="battery_bar_animate_title">Töltési animáció</string>
-  <!-- Aicp statusbar logo -->
-  <string name="status_bar_logo_title">AICP logo</string>
-  <string name="status_bar_logo_dialog_title">AICP logó helyzete</string>
-  <string name="status_bar_logo_disabled">Tiltva</string>
-  <string name="status_bar_logo_left">Bal</string>
-  <string name="status_bar_logo_right">Jobb</string>
   <!-- StatusBar weather settings -->
   <string name="statusbar_weather_summary">Gyorsbeállításokban megjelenő időjárás beállítása</string>
   <!-- Smart pulldown-->
   <!-- Double tap to sleep on status bar -->
+  <!-- Statusbar Clock options -->
+  <string name="clock_date_display">Dátum</string>
+  <string name="menu_cancel">Törlés</string>
+  <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_title">Állapot sáv logo</string>
+  <string name="status_bar_logo_position_summary">Válaszd ki melyik oldalon legyen a logo, bal vagy jobb</string>
+  <string name="status_bar_logo_position_right">Jobb</string>
+  <string name="status_bar_logo_position_left">Bal</string>
+  <string name="status_bar_logo_style_aicp">AICP</string>
+  <string name="status_bar_logo_style_android">Android</string>
+  <!-- Statusbar categories -->
   <!-- Notifications -->
   <!-- Brightness slider settings -->
   <string name="brightness_slider_switch">Fényerő csúszka megjelenítése a gyorsbeállítások panelen</string>
   <string name="brightness_icon_title">Fényerő ikon</string>
   <string name="brightness_icon_summary">Mutassa a fényerő ikont a fényerő állító csúszka bal oldalán</string>
   <!-- Quick settings -->
-  <!-- Quick 1-finger pull down to access notifications -->
-  <string name="status_bar_quick_qs_pulldown_summary">Gyorsbeállítások teljes legördítése az állapotsáv jobb oldalán</string>
   <!-- Disable music track title in QS tile -->
   <!-- Small quick settings scroller -->
   <!-- QS rows and columns -->
   <string name="qs_layout_category_title">Gyorsbeállítások elrendezése</string>
   <!-- QS footer warnings -->
   <!-- QS tiles title visibility -->
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_shadow_title">Fejléc kép sötétítés</string>
+  <string name="status_bar_custom_header_shadow_summary">Jobb láthatóság a világos képeknek</string>
+  <string name="unit_percent">\u0025</string>
+  <string name="header_provider_disabled">Tiltva</string>
+  <string name="custom_header_title">Időtől függő fejléc</string>
   <!-- Recents -->
   <string name="stock_recents_category">Gyári előzményekpanel</string>
   <string name="alternative_recents_category">Alternatív előzményekpanel</string>
@@ -98,9 +107,7 @@
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Képernyőkép hang</string>
   <string name="screenshot_sound_summary">Hang effekt, ha képernyőkép készül</string>
-  <!-- Swap volume keys based on device rotation -->
   <!-- Volume keys control media stream -->
-  <!-- Volume keys control music playback -->
   <!-- setting: show CPU info-->
   <!-- Launch music player when headset is connected -->
   <!-- Toast icon switch -->
@@ -192,10 +199,11 @@
   <string name="smartbar_left">Bal</string>
   <string name="smartbar_ime_action_none">Nincs</string>
   <!-- Carrier Label -->
-  <string name="carrier_category">Szolgáltatói felírat</string>
   <string name="custom_carrier_label_title">Egyéni szolgálatói felírat</string>
   <string name="custom_carrier_label_explain">Add meg az új felíratot. Üresen hagyva visszaáll a gyári felíratra.</string>
   <string name="custom_carrier_label_notset">Egyéni felírat jelenleg nincs beállítva</string>
+  <string name="show_carrier_title">Szolgáltatói felírat</string>
+  <string name="show_carrier_disabled">Tiltva</string>
   <string name="show_carrier_keyguard">Zárképernyőn</string>
   <string name="show_carrier_statusbar">Állapot sávon</string>
   <string name="show_carrier_enabled">Együtt</string>
@@ -204,9 +212,16 @@
   <string name="animation_title">Kijelző és animációk</string>
   <string name="animation_duration_default">Alapértelmezett</string>
   <!-- Lock screen visualizer -->
-  <!-- SystemUI Theme -->
   <!-- Screen state service -->
   <!-- Ambient Music Ticker -->
   <string name="force_ambient_for_media_off">Tiltva</string>
   <string name="force_ambient_for_media_on">Engedélyezve</string>
+  <!-- Screen Off animation -->
+  <string name="screen_off_animation_default">Alapértelmezett</string>
+  <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_never">Soha</string>
+  <!-- Accidental Touch -->
+  <!-- Dynamic Navbar -->
+  <!-- Face unlock toggle -->
+  <!-- Battery image -->
 </resources>

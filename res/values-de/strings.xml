@@ -24,6 +24,7 @@
   <string name="other_category">Sonstiges</string>
   <!-- Status bar -->
   <string name="status_bar_title">Statusleiste</string>
+  <string name="status_bar_summary">Erscheinungsbild der Statusleiste bearbeiten</string>
   <!-- Bluetooth status -->
   <string name="bluetooth_battery_title">Zeige Akkuladung für Bluetoothgeräte</string>
   <string name="bluetooth_battery_summary">Zeigt die Akkuladung für momentan verbundene Bluetoothgeräte an, wenn möglich.</string>
@@ -47,12 +48,6 @@
   <string name="battery_bar_blend_color_reverse_title">Farbübergang umkehren</string>
   <string name="battery_bar_blend_color_reverse_summary_off">Voll &#8594; Leer: Rot &#8592; Grün &#8592; Blau &#8592; Rot</string>
   <string name="battery_bar_blend_color_reverse_summary_on">Voll &#8594; Leer: Rot &#8594; Grün &#8594; Blau &#8594; Rot</string>
-  <!-- Aicp statusbar logo -->
-  <string name="status_bar_logo_title">AICP Logo</string>
-  <string name="status_bar_logo_dialog_title">Position des AICP Logos</string>
-  <string name="status_bar_logo_disabled">Deaktiviert</string>
-  <string name="status_bar_logo_left">Links</string>
-  <string name="status_bar_logo_right">Rechts</string>
   <!-- StatusBar weather settings -->
   <string name="statusbar_weather_title">Wetter in der Statusleiste</string>
   <string name="statusbar_weather_summary">Bitte über Schnelleinstellungen -> Wetter konfigurieren</string>
@@ -75,8 +70,85 @@
   <!-- Double tap to sleep on status bar -->
   <string name="status_bar_double_tap_to_sleep_title">Doppeltippen für Standby (DT2S)</string>
   <string name="status_bar_double_tap_to_sleep_summary">Doppelt auf die Statusleiste tippen, um das Display auszuschalten</string>
+  <!-- Statusbar Clock options -->
+  <string name="status_bar_clock_title">Uhreinstellungen</string>
+  <string name="status_bar_show_clock_title">Uhr &amp; Datum anzeigen</string>
+  <string name="clock_title_enable">Ausrichtung</string>
+  <string name="right_clock">Uhr rechts</string>
+  <string name="center_clock">Uhr zentrieren</string>
+  <string name="left_clock">Uhr links</string>
+  <string name="status_bar_clock_seconds_title">Sekundenanzeige</string>
+  <string name="status_bar_clock_seconds_summary">Sekunden neben der Uhr in der Statusleiste anzeigen</string>
+  <string name="status_bar_am_pm_title">AM/PM-Format</string>
+  <string name="status_bar_am_pm_info">24-Stunden-Format ist aktiviert</string>
+  <string name="am_pm_clock_normal">Normale Schriftgröße</string>
+  <string name="am_pm_clock_small">Kleine Schriftgröße</string>
+  <string name="am_pm_clock_none">Nicht anzeigen</string>
+  <string name="clock_date_display">Datum</string>
+  <string name="clock_date_display_summary">Benutzerdefiniertes Datum vor der Uhrzeit anzeigen</string>
+  <string name="clock_date_style">Datumsstil</string>
+  <string name="clock_date_format">Datumsformat</string>
+  <string name="clock_date_string_edittext_title">Eingabe nur im vorgegebenen Datumsformat, z. B. MM/TT/JJ</string>
+  <string name="clock_date_string_edittext_summary">Eingabe</string>
+  <string name="clock_date_display_none">Nicht anzeigen</string>
+  <string name="clock_date_display_small">Kleine Schriftgröße</string>
+  <string name="clock_date_display_normal">Normale Schriftgröße</string>
+  <string name="clock_date_style_normal">Normal</string>
+  <string name="clock_date_style_lowercase">Kleinbuchstaben</string>
+  <string name="clock_date_style_uppercase">Großbuchstaben</string>
+  <string name="clock_date_format_custom">Benutzerdefiniertes Java-Format</string>
+  <string name="menu_cancel">Abbrechen</string>
+  <string name="menu_save">Speichern</string>
+  <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_category_title">Logo</string>
+  <string name="status_bar_logo_title">Statusleisten-Logo</string>
+  <string name="status_bar_logo_summary">Anzeige eines Logos in der Statusleiste aktivieren</string>
+  <string name="status_bar_logo_color_title">Farbe</string>
+  <string name="status_bar_logo_position_title">Position</string>
+  <string name="status_bar_logo_position_summary">Wähle auf welcher Seite das Logo angezeigt wird, rechts oder links</string>
+  <string name="status_bar_logo_position_right">Rechts</string>
+  <string name="status_bar_logo_position_left">Links</string>
+  <string name="status_bar_logo_style_title">Stil</string>
+  <string name="status_bar_logo_style_aicp">AICP</string>
+  <string name="status_bar_logo_style_android">Android</string>
+  <string name="status_bar_logo_style_apple">Apple</string>
+  <string name="status_bar_logo_style_ios">iOS</string>
+  <string name="status_bar_logo_style_emoticon">Smiley</string>
+  <string name="status_bar_logo_style_emoticon_cool">Smiley (cool)</string>
+  <string name="status_bar_logo_style_emoticon_dead">Smiley (tot)</string>
+  <string name="status_bar_logo_style_emoticon_devil">Smiley (Teufel)</string>
+  <string name="status_bar_logo_style_emoticon_happy">Smiley (glücklich)</string>
+  <string name="status_bar_logo_style_emoticon_neutral">Smiley (neutral)</string>
+  <string name="status_bar_logo_style_emoticon_poop">Poop</string>
+  <string name="status_bar_logo_style_emoticon_sad">Smiley (unglücklich)</string>
+  <string name="status_bar_logo_style_emoticon_tongue">Smiley (mit Zunge)</string>
+  <string name="status_bar_logo_style_blackberry">BlackBerry</string>
+  <string name="status_bar_logo_style_cake">Torte</string>
+  <string name="status_bar_logo_style_blogger">Blogger</string>
+  <string name="status_bar_logo_style_biohazard">Biohazard</string>
+  <string name="status_bar_logo_style_linux">Linux</string>
+  <string name="status_bar_logo_style_yin_yang">Yin-Yang</string>
+  <string name="status_bar_logo_style_windows">Windows</string>
+  <string name="status_bar_logo_style_robot">Roboter</string>
+  <string name="status_bar_logo_style_ninja">Ninja</string>
+  <string name="status_bar_logo_style_heart">Herz</string>
+  <string name="status_bar_logo_style_flower">Blume</string>
+  <string name="status_bar_logo_style_ghost">Geist</string>
+  <string name="status_bar_logo_style_google">Google</string>
+  <string name="status_bar_logo_style_human_male">Mann</string>
+  <string name="status_bar_logo_style_human_female">Frau</string>
+  <string name="status_bar_logo_style_human_male_female">Mann &amp; Frau</string>
+  <string name="status_bar_logo_style_gender_male">Männlich</string>
+  <string name="status_bar_logo_style_gender_female">Weiblich</string>
+  <string name="status_bar_logo_style_gender_male_female">Männlich &amp; weiblich</string>
+  <string name="status_bar_logo_style_guitar_electric">Elektrische Gitarre</string>
+  <!-- Statusbar categories -->
+  <string name="status_bar_gestures_category_title">Gesten</string>
+  <string name="status_bar_icons_category_title">Symbole</string>
+  <string name="status_bar_others_category_title">Sonstiges</string>
   <!-- Notifications -->
   <string name="notifications_title">Benachrichtigungen</string>
+  <string name="notifications_summary">Erweiterte Benachrichtigungseinstellungen</string>
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Einstellungen für den Helligkeitsregler</string>
   <string name="brightness_slider_switch">Zeige den Helligkeitsregler in den Schnelleinstellungen an</string>
@@ -87,9 +159,7 @@
   <string name="brightness_icon_position_off_summary">Links anzeigen</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Kacheln</string>
-  <!-- Quick 1-finger pull down to access notifications -->
-  <string name="status_bar_quick_qs_pulldown">Schnelles Herunterziehen</string>
-  <string name="status_bar_quick_qs_pulldown_summary">Rechte Seite der Statusleiste herunterziehen, um direkt die Schnelleinstellungen anzuzeigen</string>
+  <string name="quick_settings_summary">Bearbeitung der Schnelleinstellungen/Kacheln</string>
   <!-- Disable music track title in QS tile -->
   <string name="qs_music_tile_track_optional_title">Musiktitelanzeige</string>
   <string name="qs_music_tile_track_optional_summary">Zeigt den Titelnamen als Kachelbezeichnung</string>
@@ -108,8 +178,29 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Namen der Kacheln anzeigen</string>
   <string name="qs_tile_title_visibility_summary">Wenn aktiviert, wird unterhalb von Kacheln der Name angezeigt</string>
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">Aktivieren</string>
+  <string name="daylight_header_pack_title">Hintergrundbild-Sammlung</string>
+  <string name="status_bar_custom_header_shadow_title">Hintergrundbild-Schatten</string>
+  <string name="status_bar_custom_header_shadow_summary">Für eine bessere Sichtbarkeit bei hellen Hintergrundbildern</string>
+  <string name="static_header_provider_title">Statisches Bild</string>
+  <string name="daylight_header_provider_title">Bildersammlung</string>
+  <string name="custom_header_provider_title">Hintergrundbild-Anbieter</string>
+  <string name="custom_header_browse_title">Blättere durch installierte Pakete</string>
+  <string name="custom_header_browse_summary">Lange auf ein Bild drücken, um es als statisches Bild zu nutzen</string>
+  <string name="custom_header_browse_summary_new">Alle verfügbaren Hintergrund-Pakete durchsuchen</string>
+  <string name="custom_header_pick_title">Hintergrundbild für Kopfzeile auswählen</string>
+  <string name="custom_header_pick_summary">Bild für statischen Modus wählen</string>
+  <string name="style_enabled_summary">Benutzerdefiniertes Kopfzeilenbild ist AN</string>
+  <string name="style_disabled_summary">Benutzerdefiniertes Kopfzeilenbild ist AUS</string>
+  <string name="header_provider_disabled">Deaktiviert</string>
+  <string name="custom_header_title">Eigenes Hintergrundbild</string>
+  <string name="file_header_select_title">Bild auswählen</string>
+  <string name="file_header_select_summary">Benutzerdefiniertes Bild auswählen</string>
+  <string name="file_header_provider_title">Benutzerdefiniertes Bild</string>
   <!-- Recents -->
   <string name="recents_title">Verlauf</string>
+  <string name="recents_summary">Einstellungen für die App-Übersicht bearbeiten</string>
   <string name="stock_recents_category">Standard-Anwendungsverlauf</string>
   <string name="alternative_recents_category">Alternativer Anwendungsverlauf</string>
   <!-- Recents panel settings -->
@@ -183,6 +274,7 @@
   <string name="slim_recents_mem_display_text_color">Farbe des Leistentextes</string>
   <!-- Lockscreen -->
   <string name="lockscreen_title">Sperrbildschirm</string>
+  <string name="lockscreen_summary">Einstellungen des Sperrbildschirms bearbeiten</string>
   <!-- Double tap to sleep on lockscreen -->
   <string name="double_tap_sleep_lockscreen">Zum Schlafen zweimal Tippen (DT2S)</string>
   <string name="double_tap_sleep_lockscreen_summary">Doppel-Tippen auf den Sperrbildschirm aktiviert den Standby-Modus</string>
@@ -211,20 +303,15 @@
   <string name="fp_unlock_keystore_summary">Das Gerät nur mittels Fingerabdruck (ohne PIN/Passwort/Muster) nach dem Neustart entsperren\nHinweis: auf eigene Verantwortung!</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Andere UI-Verbesserungen</string>
+  <string name="other_ui_summary">Verschiedene Zusatzfunktionen anpassen</string>
   <!-- Volume dialog timeout -->
   <string name="volume_dialog_timeout_title"> Anzeigezeit des Lautstärkedialogs</string>
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Ton bei Bildschirmfoto</string>
   <string name="screenshot_sound_summary">Spielt einen Ton ab, wenn ein Bildschirmfoto aufgenommen wird</string>
-  <!-- Swap volume keys based on device rotation -->
-  <string name="swap_volume_buttons">Lautstärketasten tauschen</string>
-  <string name="swap_volume_buttons_summary">Lautstärketasten je nach Drehung des Geräts wechseln</string>
   <!-- Volume keys control media stream -->
   <string name="volume_keys_control_media_stream_title">Lautstärketasten steuern Medienlautstärke</string>
   <string name="volume_keys_control_media_stream_summary">Lautstärke-Paneel zeigt standardmäßig den Lautstärkeregler für Medien</string>
-  <!-- Volume keys control music playback -->
-  <string name="volume_rocker_music_controls_title">Wiedergabesteuerung</string>
-  <string name="volume_rocker_music_controls_summary">Bei ausgeschaltetem Bildschirm, wird durch langes Drücken der Lautstärketaste der Musiktitel gewechselt</string>
   <!-- setting: show CPU info-->
   <string name="show_cpu_info">Zeige CPU-Infos</string>
   <string name="show_cpu_info_summary">Bildschirmeinblendung mit aktuellem CPU-Infos</string>
@@ -251,6 +338,7 @@
   <string name="status_bar_battery_saver_color_summary">Hinweis: Bei aktivem Energiesparmodus, diesen bitte einmal de- und reaktivieren, damit die neue Farbe übernommen wird!</string>
   <!-- System animations -->
   <string name="system_animations_title">Display und Animationen</string>
+  <string name="system_animations_summary">Einstellungen zu verschiedenen Animationen</string>
   <string name="custom_bootanimation_title">Boot Animation</string>
   <string name="custom_bootanimation_summary">Wählen Sie Ihre neue Boot Animation. \n Jede Änderung der aktuellen Animation wird im
 Ordner AICP_backup gesichert. \n Alte Sicherungen müssen manuell gelöscht werden, wenn sie nicht mehr benötigt werden.</string>
@@ -264,6 +352,7 @@ Ordner AICP_backup gesichert. \n Alte Sicherungen müssen manuell gelöscht werd
   <string name="bootanimation_install_successful">Neue Bootanimation erfolgreich installiert.</string>
   <!-- System behaviour -->
   <string name="system_behaviour_title">Systemverhalten</string>
+  <string name="system_behaviour_summary">Zusätzliche Energie- und Sicherheitseinstellungen</string>
   <string name="selinux_category">SELinux</string>
   <string name="selinux_explanation_summary">SELinux sind verschiedene Kernel-Modifikationen und \"user-space\" Werkzeuge. Eine Änderung des Modus kann unerwartetes Telefonverhalten auslösen. Benutzung auf eigenes Risiko!</string>
   <string name="selinux_mode_title">SELinux-Modus</string>
@@ -275,6 +364,7 @@ Ordner AICP_backup gesichert. \n Alte Sicherungen müssen manuell gelöscht werd
   <string name="selinux_enforcing_toast_title">SELinux auf \"Strikt\" gesetzt!</string>
   <!-- System extensions -->
   <string name="system_extensions_title">Systemerweiterungen</string>
+  <string name="system_extensions_summary">Funktionalitätserweiterungen des Systems</string>
   <!-- System app remover -->
   <string name="system_app_remover_title">System-App Entferner</string>
   <string name="system_app_remover_summary">Vorinstallierte Apps entfernen</string>
@@ -299,6 +389,7 @@ Ordner AICP_backup gesichert. \n Alte Sicherungen müssen manuell gelöscht werd
   <string name="log_it_share_via">Teilen über</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">UI-Anpassungen</string>
+  <string name="panel_porn_summary">Aussehen-/Transparenzeinstellungen</string>
   <!-- Volume dialog opacity -->
   <string name="volume_dialog_transparency_title">Anpassung des Lautstärkedialogs</string>
   <string name="volume_dialog_transparency">Transparenz</string>
@@ -483,6 +574,7 @@ Ordner AICP_backup gesichert. \n Alte Sicherungen müssen manuell gelöscht werd
   <string name="pulse_render_mode_fading_bars">Verblassende Blöcke</string>
   <string name="pulse_render_mode_solid_lines">Durchgehende Linien</string>
   <string name="fling_pulse_color">Farbe für Pulse</string>
+  <string name="fling_pulse_color_summary">Wird auch als Ersatz für automatische Farbe verwendet</string>
   <string name="eos_fling_lavalamp_title">Lavalampe einschalten</string>
   <string name="eos_fling_lavalamp_summary">Pulse wechselt automatisch die Farben in einem Lavalampen-Stil</string>
   <string name="pulse_advanced_category">Weitere Einstellungen</string>
@@ -494,6 +586,8 @@ Ordner AICP_backup gesichert. \n Alte Sicherungen müssen manuell gelöscht werd
   <string name="pulse_solid_units_opacity">Deckkraft für durchgehende Linien</string>
   <string name="pulse_solid_dimen_category">Einstellungen für durchgehende Balken</string>
   <string name="pulse_custom_buttons_opacity_title">Deckkraft der SmartBar-Tasten bei Pulse</string>
+  <string name="pulse_auto_color_title">Automatische Farbauswahl</string>
+  <string name="pulse_auto_color_summary">Farbe mit Musikcover synchronisieren. Überschreibt Deckkraft der Lavalampe und Linien.</string>
   <!-- Pulse config -->
   <string name="pulse_custom_dimen">Breite der Balken</string>
   <string name="pulse_custom_div">Abstand der Balken</string>
@@ -553,13 +647,12 @@ Ordner AICP_backup gesichert. \n Alte Sicherungen müssen manuell gelöscht werd
   <string name="smartbar_double_tap_sleep_title">Zum Schlafen zweimal Tippen (DT2S)</string>
   <string name="smartbar_double_tap_sleep_summary">Für Standby zweimal auf einen leeren Teil der Navigationsleiste tippen</string>
   <!-- Carrier Label -->
-  <string name="carrier_category">Anzeige des Anbieters</string>
   <string name="carrier_options">Anzeigeseite wählen</string>
   <string name="custom_carrier_label_title">Eigene Anbieterbezeichnung</string>
   <string name="custom_carrier_label_explain">Bitte eine neue Bezeichnung eingeben. Leerlassen für die Standardanzeige.</string>
   <string name="custom_carrier_label_notset">Eigene Bezeichnung zur Zeit nicht gesetzt</string>
-  <string name="show_carrier_title">Anbieter wird wo angezeigt?</string>
-  <string name="show_carrier_disabled">Nirgendwo</string>
+  <string name="show_carrier_title">Anbieteranzeige</string>
+  <string name="show_carrier_disabled">Deaktiviert</string>
   <string name="show_carrier_keyguard">Nur auf Sperrbildschirm</string>
   <string name="show_carrier_statusbar">Nur in Statusleiste</string>
   <string name="show_carrier_enabled">Sperrbildschirm &amp; Statusleiste</string>
@@ -586,12 +679,6 @@ Ordner AICP_backup gesichert. \n Alte Sicherungen müssen manuell gelöscht werd
   <!-- Lock screen visualizer -->
   <string name="lockscreen_visualizer_title">Musikvisualisierung</string>
   <string name="lockscreen_visualizer_summary">Zeigt Musikvisualisierung auf dem Sperrbildschirm</string>
-  <!-- SystemUI Theme -->
-  <string name="systemui_theme_style_title">Design des Ein-/Aus Menüs und Kachel-Panels</string>
-  <string name="systemui_theme_style_summary">Wähle zwischen automatischem, hellem und dunklem Stil</string>
-  <string name="systemui_theme_style_auto">An Hintergrund angepasst</string>
-  <string name="systemui_theme_style_light">Heller Stil</string>
-  <string name="systemui_theme_style_dark">Dunkler Stil</string>
   <!-- Screen state service -->
   <string name="screen_state_toggles_title">Energiespar-Optionen</string>
   <string name="screen_state_toggles_enable_title">Aktivieren</string>
@@ -609,6 +696,34 @@ Ordner AICP_backup gesichert. \n Alte Sicherungen müssen manuell gelöscht werd
   <string name="screen_state_on_delay_title">Verzögerung nach Reaktivierung des Displays</string>
   <string name="screen_state_on_delay_summary">Anzahl der Minuten nach Wiedereinschaltung des Displays bevor die gewählten Optionen rückgängig gemacht werden</string>
   <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_title">Musiktitelanzeige bei Inaktivität</string>
+  <string name="force_ambient_for_media_summary">Musiktitelinfo im \"Always-On\"-/Inaktivitätsdisplay</string>
   <string name="force_ambient_for_media_off">Deaktiviert</string>
   <string name="force_ambient_for_media_on">Aktiviert</string>
+  <string name="force_ambient_for_media_on_forced">Aktiviert (immer dargestellt)</string>
+  <string name="force_ambient_for_media_on_forced_clean">Aktiviert (dargestellt falls möglich)</string>
+  <!-- Screen Off animation -->
+  <string name="screen_off_animation_title">Stil der Abschaltanimation</string>
+  <string name="screen_off_animation_default">Standard</string>
+  <string name="screen_off_animation_crt">CRT</string>
+  <string name="screen_off_animation_scale">Skalieren</string>
+  <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_title">Anzeige von Benachrichtigungen</string>
+  <string name="notification_sound_vib_screen_on_display_title">Ton und Vibration für Benachrichtigungen verwenden</string>
+  <string name="notification_sound_vib_screen_on_never">Niemals</string>
+  <string name="notification_sound_vib_screen_on_always">Immer (Standard)</string>
+  <string name="notification_sound_vib_screen_on_nomedia">Wenn keine Medien abgespielt werden</string>
+  <!-- Accidental Touch -->
+  <string name="anbi_enabled_title">Unbeabsichtigte Berührungen verhindern</string>
+  <string name="anbi_enabled_summary">Ignoriert bei Aktivierung Berührungen der Hardwaretasten, während der Touchscreen verwendet wird.</string>
+  <!-- Dynamic Navbar -->
+  <string name="navbar_dynamic_title">Dynamische Nav.-leistenfarbe</string>
+  <string name="navbar_dynamic_summary">Passt die Navigationsleistefarbe an die App im Vordergrund an</string>
+  <string name="restart_app_required">App neustarten, um den Effekt zu sehen</string>
+  <!-- Face unlock toggle -->
+  <string name="face_auto_unlock_title">Entsperren per Gesichtserkennung</string>
+  <string name="face_auto_unlock_summary">Sperrbildschirm nach Gesichtserkennung automatisch übergehen</string>
+  <!-- Battery image -->
+  <string name="battery_image_title">Akkusymbol</string>
+  <string name="battery_image_summary">Akkusymbol in der Statusleiste anzeigen</string>
 </resources>

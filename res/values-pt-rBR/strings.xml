@@ -24,6 +24,7 @@
   <string name="other_category">Other</string>
   <!-- Status bar -->
   <string name="status_bar_title">Barra de status</string>
+  <string name="status_bar_summary">Editar aparência da barra de status</string>
   <!-- Bluetooth status -->
   <string name="bluetooth_battery_title">Mostrar os Status de bateria do Bluetooth</string>
   <string name="bluetooth_battery_summary">Mostrar o status de bateria do dispositivo bluetooth conectado atualmente, caso disponível.</string>
@@ -47,12 +48,6 @@
   <string name="battery_bar_blend_color_reverse_title">Inverter a direção de cor</string>
   <string name="battery_bar_blend_color_reverse_summary_off">Cheio &#8594; vazio: vermelho &#8592; verde &#8592; azul &#8592; vermelho</string>
   <string name="battery_bar_blend_color_reverse_summary_on">Cheio &#8594; vazio: vermelho &#8594; verde &#8594; azul &#8594; vermelho</string>
-  <!-- Aicp statusbar logo -->
-  <string name="status_bar_logo_title">Logotipo AICP</string>
-  <string name="status_bar_logo_dialog_title">Posição do logo AICP</string>
-  <string name="status_bar_logo_disabled">Desativado</string>
-  <string name="status_bar_logo_left">Esquerda</string>
-  <string name="status_bar_logo_right">Centro</string>
   <!-- StatusBar weather settings -->
   <string name="statusbar_weather_title">Barra de status do clima</string>
   <string name="statusbar_weather_summary">Configurar a partir das configurações rápidas/meteorologia</string>
@@ -75,6 +70,19 @@
   <!-- Double tap to sleep on status bar -->
   <string name="status_bar_double_tap_to_sleep_title">Toque para dormir</string>
   <string name="status_bar_double_tap_to_sleep_summary">Dê um duplo toque na barra de status para desligar a tela</string>
+  <!-- Statusbar Clock options -->
+  <string name="clock_title_enable">Alinhamento</string>
+  <string name="clock_date_display">Data</string>
+  <string name="menu_cancel">Cancelar</string>
+  <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_title">logotipo da barra de status</string>
+  <string name="status_bar_logo_color_title">Cor</string>
+  <string name="status_bar_logo_position_summary">Escolha de que lado para exibir o logotipo, na esquerda ou direita</string>
+  <string name="status_bar_logo_position_right">Centro</string>
+  <string name="status_bar_logo_position_left">Esquerda</string>
+  <string name="status_bar_logo_style_aicp">AICP</string>
+  <string name="status_bar_logo_style_android">Android</string>
+  <!-- Statusbar categories -->
   <!-- Notifications -->
   <string name="notifications_title">Notificações</string>
   <!-- Brightness slider settings -->
@@ -87,9 +95,7 @@
   <string name="brightness_icon_position_off_summary">Mostrar à esquerda</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Configurações rápidas</string>
-  <!-- Quick 1-finger pull down to access notifications -->
-  <string name="status_bar_quick_qs_pulldown">Mostrar Configurações Rápidas ao deslizar rápido para baixo</string>
-  <string name="status_bar_quick_qs_pulldown_summary">Puxar para baixo no lado direito da barra de status para ver rapidamente o painel de Configurações Rápidas</string>
+  <string name="quick_settings_summary">Editar a aparência das configurações rápidas</string>
   <!-- Disable music track title in QS tile -->
   <string name="qs_music_tile_track_optional_title">Título da faixa de música</string>
   <string name="qs_music_tile_track_optional_summary">Mostrar o título da faixa de música nas configurações rápidas</string>
@@ -108,8 +114,23 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Exibir o título do ícone</string>
   <string name="qs_tile_title_visibility_summary">Exibir título do ícone debaixo quando marcado</string>
+  <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">Habilitar</string>
+  <string name="status_bar_custom_header_shadow_title">Sombra da imagem do cabeçalho</string>
+  <string name="status_bar_custom_header_shadow_summary">Para uma melhor visibilidade em imagens brilhantes</string>
+  <string name="unit_percent">\u0025</string>
+  <string name="custom_header_provider_title">Provedor de cabeçalho</string>
+  <string name="custom_header_browse_title">Ver os cabeçalhos instalados</string>
+  <string name="custom_header_browse_summary">Clique em qualquer imagem para usar no modo estático</string>
+  <string name="custom_header_pick_title">Selecione a imagem do cabeçalho</string>
+  <string name="custom_header_pick_summary">Selecione uma imagem para usar no modo estático</string>
+  <string name="style_enabled_summary">Imagem de cabeçalho personalizado está ativo</string>
+  <string name="style_disabled_summary">Imagem de cabeçalho personalizado está desativado</string>
+  <string name="header_provider_disabled">Desativado</string>
+  <string name="custom_header_title">Cabeçalho contextual do tempo</string>
   <!-- Recents -->
   <string name="recents_title">Recentes</string>
+  <string name="recents_summary">Editar aparência da tela de apps recentes</string>
   <string name="stock_recents_category">Ações recentes</string>
   <string name="alternative_recents_category">Como alternativa aos \"Recentes\"</string>
   <!-- Recents panel settings -->
@@ -183,6 +204,7 @@
   <string name="slim_recents_mem_display_text_color">Cor do texto da barra de memória RAM</string>
   <!-- Lockscreen -->
   <string name="lockscreen_title">Tela de bloqueio</string>
+  <string name="lockscreen_summary">Editar aparência da tela de bloqueio</string>
   <!-- Double tap to sleep on lockscreen -->
   <string name="double_tap_sleep_lockscreen">Toque duplo para desligar a tela</string>
   <string name="double_tap_sleep_lockscreen_summary">Toque duplo na tela de bloqueio para desligar o aparelho</string>
@@ -211,20 +233,15 @@
   <string name="fp_unlock_keystore_summary">Desbloquear o dispositivo com impressão digital após a reinicialização sem pedir o pin/senha/padrão.\nAtenção: Tenha cuidado, use por sua conta e risco!</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Outros ajustes da interface de usuário</string>
+  <string name="other_ui_summary">Utilitários variados</string>
   <!-- Volume dialog timeout -->
   <string name="volume_dialog_timeout_title">Duração do painel de volume</string>
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Som de captura de tela</string>
   <string name="screenshot_sound_summary">Reproduz um efeito sonoro quando a tela for capturada</string>
-  <!-- Swap volume keys based on device rotation -->
-  <string name="swap_volume_buttons">Trocar os botões de volume</string>
-  <string name="swap_volume_buttons_summary">Trocar os botões de volume baseado na rotação do dispositivo</string>
   <!-- Volume keys control media stream -->
   <string name="volume_keys_control_media_stream_title">Teclas de volume controlam o volume de mídia</string>
   <string name="volume_keys_control_media_stream_summary">Painel de volume irá mostrar o controle deslizante de volume de mídia como padrão</string>
-  <!-- Volume keys control music playback -->
-  <string name="volume_rocker_music_controls_title">Controle de reprodução</string>
-  <string name="volume_rocker_music_controls_summary">Quando a tela estiver desligada, segurar os botões de volume avançam ou retrocedem músicas</string>
   <!-- setting: show CPU info-->
   <string name="show_cpu_info">Mostrar informações da CPU</string>
   <string name="show_cpu_info_summary">Superposição de tela mostrando informações de CPU atual</string>
@@ -251,6 +268,7 @@
   <string name="status_bar_battery_saver_color_summary">Obs: Se a economia de bateria já estiver habilitada, para a nova cor funcionar, desabilite a economia de bateria!</string>
   <!-- System animations -->
   <string name="system_animations_title">Visor e animações</string>
+  <string name="system_animations_summary">Animações do sistema</string>
   <string name="custom_bootanimation_title">Animação de inicialização</string>
   <string name="custom_bootanimation_summary">Selecionar animação de inicialização personalizada. Em cada troca, a animação atual será copiada para a pasta AICP_backup no seu armazenamento interno. Animações antigas deverão ser excluídas manualmente se não forem mais necessárias.</string>
   <string name="bootanimation_preview">Visualizar animação de inicialização</string>
@@ -263,6 +281,7 @@
   <string name="bootanimation_install_successful">Configuração aplicada com sucesso.</string>
   <!-- System behaviour -->
   <string name="system_behaviour_title">Comportamento do sistema</string>
+  <string name="system_behaviour_summary">Ajustes do sistema</string>
   <string name="selinux_category">SELinux</string>
   <string name="selinux_explanation_summary">SELinux é um conjunto de modificações do kernel e ferramentas de espaço de usuário. Alterando modos pode causar efeitos indesejados. Use a seu próprio risco.</string>
   <string name="selinux_mode_title">Modo do SElinux</string>
@@ -274,6 +293,7 @@
   <string name="selinux_enforcing_toast_title">Selinux configurado para aplicar!</string>
   <!-- System extensions -->
   <string name="system_extensions_title">Extensões do sistema</string>
+  <string name="system_extensions_summary">Adicionais do sistema</string>
   <!-- System app remover -->
   <string name="system_app_remover_title">Removedor de aplicativos do sistema</string>
   <string name="system_app_remover_summary">Remover aplicativos pré-instalados</string>
@@ -298,6 +318,7 @@
   <string name="log_it_share_via">Compartilhar via</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Panel porn</string>
+  <string name="panel_porn_summary">Mundo Davor!</string>
   <!-- Volume dialog opacity -->
   <string name="volume_dialog_transparency_title">Ajuste do diálogo de volume</string>
   <string name="volume_dialog_transparency">Transparência de barra de volume</string>
@@ -552,13 +573,12 @@
   <string name="smartbar_double_tap_sleep_title">Toque duplo para desligar a tela</string>
   <string name="smartbar_double_tap_sleep_summary">Toque duplo nas áreas vazias da barra de navegação para dormir</string>
   <!-- Carrier Label -->
-  <string name="carrier_category">Etiqueta de suporte</string>
   <string name="carrier_options">Selecione os locais de exibição</string>
   <string name="custom_carrier_label_title">Etiqueta de suporte personalizada</string>
   <string name="custom_carrier_label_explain">Por favor, indique um novo rótulo. Deixe em branco para reverter a etiqueta de estoque.</string>
   <string name="custom_carrier_label_notset">Etiqueta personalizada atualmente não definida</string>
-  <string name="show_carrier_title">É exibido em</string>
-  <string name="show_carrier_disabled">Em nenhum local</string>
+  <string name="show_carrier_title">Etiqueta de suporte</string>
+  <string name="show_carrier_disabled">Desativada</string>
   <string name="show_carrier_keyguard">Chave de segurança</string>
   <string name="show_carrier_statusbar">Barra de status</string>
   <string name="show_carrier_enabled">Ambos</string>
@@ -585,12 +605,6 @@
   <!-- Lock screen visualizer -->
   <string name="lockscreen_visualizer_title">Visualização de música</string>
   <string name="lockscreen_visualizer_summary">Exibir os alternadores de visualização na tela de bloqueio</string>
-  <!-- SystemUI Theme -->
-  <string name="systemui_theme_style_title">Estilo do menu de energia e painel de blocos</string>
-  <string name="systemui_theme_style_summary">Escolher entre estilos automático, claro e escuro</string>
-  <string name="systemui_theme_style_auto">Baseado no papel de parede</string>
-  <string name="systemui_theme_style_light">Estilo claro</string>
-  <string name="systemui_theme_style_dark">Estilo escuro</string>
   <!-- Screen state service -->
   <string name="screen_state_toggles_title">Suspender as ações</string>
   <string name="screen_state_toggles_enable_title">Habilitar</string>
@@ -608,6 +622,18 @@
   <string name="screen_state_on_delay_title">Atraso das ações ao ligar a tela</string>
   <string name="screen_state_on_delay_summary">Número de minutos a esperar antes de executar ações após o ligamento da tela</string>
   <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_title">Ícone de Música em Ambiente</string>
+  <string name="force_ambient_for_media_summary">Informação da faixa de música em Exibição de Ambiente</string>
   <string name="force_ambient_for_media_off">Desativado</string>
   <string name="force_ambient_for_media_on">Ativado</string>
+  <string name="force_ambient_for_media_on_forced">Habilitado e forçado</string>
+  <string name="force_ambient_for_media_on_forced_clean">Habilitado e levemente forçado</string>
+  <!-- Screen Off animation -->
+  <string name="screen_off_animation_default">Padrão</string>
+  <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_never">Nunca</string>
+  <!-- Accidental Touch -->
+  <!-- Dynamic Navbar -->
+  <!-- Face unlock toggle -->
+  <!-- Battery image -->
 </resources>
