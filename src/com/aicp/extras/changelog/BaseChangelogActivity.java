@@ -18,10 +18,13 @@
 package com.aicp.extras.changelog;
 
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 
 import com.aicp.extras.Constants;
@@ -54,10 +57,30 @@ public abstract class BaseChangelogActivity extends AppCompatActivity {
     protected int getThemeRes() {
         int themePref = Settings.System.getInt(getContentResolver(), Settings.System.AE_THEME, 0);
         switch (themePref) {
+            /*
             case 1:
                 return R.style.ChangelogTheme_DarkAmber;
+            */
+            case 2:
+                return R.style.ChangelogTheme_Light;
+            case 3:
+                return R.style.ChangelogTheme_Dark;
             default:
-                return R.style.ChangelogTheme;
+            {
+                // Decide on whether to use a light or dark theme by judging devicedefault
+                // settings theme (or descendant in this case) colors
+                ContextThemeWrapper themeContext = new ContextThemeWrapper(this, R.style.AppTheme);
+                TypedValue tv = new TypedValue();
+                themeContext.getTheme().resolveAttribute(android.R.attr.colorBackground, tv, true);
+                int bgColor = tv.data;
+                themeContext.getTheme().resolveAttribute(android.R.attr.colorForeground, tv, true);
+                int fgColor = tv.data;
+                if (Color.luminance(fgColor) <= Color.luminance(bgColor)) {
+                    return R.style.ChangelogTheme_Light;
+                } else {
+                    return R.style.ChangelogTheme_Dark;
+                }
+            }
         }
     }
 
