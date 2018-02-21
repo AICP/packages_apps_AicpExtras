@@ -19,9 +19,12 @@ package com.aicp.extras;
 
 import android.app.Activity;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 
 public abstract class BaseActivity extends Activity {
@@ -47,10 +50,34 @@ public abstract class BaseActivity extends Activity {
     protected int getThemeRes() {
         int themePref = Settings.System.getInt(getContentResolver(), Settings.System.AE_THEME, 0);
         switch (themePref) {
+            /*
             case 1:
                 return R.style.AppTheme_DarkAmber;
+            */
+            case 2:
+                return R.style.AppTheme_Light;
+            case 3:
+                return R.style.AppTheme_Dark;
             default:
-                return R.style.AppTheme;
+            {
+                // Decide on whether to use a light or dark theme by judging devicedefault
+                // settings theme (or descendant in this case) colors
+                ContextThemeWrapper themeContext = new ContextThemeWrapper(this, R.style.AppTheme);
+                TypedValue tv = new TypedValue();
+                themeContext.getTheme().resolveAttribute(android.R.attr.colorBackground, tv, true);
+                int bgColor = tv.data;
+                themeContext.getTheme().resolveAttribute(android.R.attr.colorForeground, tv, true);
+                int fgColor = tv.data;
+                if (Color.luminance(fgColor) <= Color.luminance(bgColor)) {
+                    // Use theme that follows DeviceDefault settings theme directly
+                    // to get possibly themed changes
+                    return R.style.AppTheme;
+                } else {
+                    // When using a dark theme, we could actually use AppTheme here too because
+                    // it inherits from DeviceDefault, but we have some dark theme improvements here
+                    return R.style.AppTheme_Dark;
+                }
+            }
         }
     }
 
