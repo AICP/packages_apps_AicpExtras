@@ -36,8 +36,8 @@ import android.support.v14.preference.SwitchPreference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.extras.preference.SystemSettingSeekBarPreference;
-import com.aicp.extras.preference.SystemSettingSwitchPreference;
+import com.aicp.gear.preference.SystemSettingSeekBarPreference;
+import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.Collections;

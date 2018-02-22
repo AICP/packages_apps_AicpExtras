@@ -31,7 +31,7 @@
         android:title="@string/system_animation_title"
         android:fragment="com.aicp.extras.fragments.AnimationControls" />
 
-    <com.aicp.extras.preference.SystemSettingIntListPreference
+    <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="screen_off_animation"
         android:title="@string/screen_off_animation_title"
         android:dialogTitle="@string/screen_off_animation_title"

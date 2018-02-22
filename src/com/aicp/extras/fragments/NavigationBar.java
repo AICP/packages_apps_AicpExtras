@@ -33,7 +33,7 @@ import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 
 import com.aicp.extras.BaseSettingsFragment;
-import com.aicp.extras.preference.SeekBarPreferenceCham;
+import com.aicp.gear.preference.SeekBarPreferenceCham;
 import com.android.internal.utils.du.ActionConstants;
 import com.android.internal.utils.du.Config;
 import com.android.internal.utils.du.DUActionUtils;

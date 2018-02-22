@@ -21,25 +21,25 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
     android:title="@string/quick_settings_title">
 
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="music_tile_title"
         android:title="@string/qs_music_tile_track_optional_title"
         android:summary="@string/qs_music_tile_track_optional_summary"
         android:defaultValue="false"/>
 
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="qs_quickbar_scroll_enabled"
         android:title="@string/qqs_scroll_title"
         android:summary="@string/qqs_scroll_summary"
         android:defaultValue="false"/>
 
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="qs_footer_warnings"
         android:title="@string/qs_footer_warnings_title"
         android:summary="@string/qs_footer_warnings_summary"
         android:defaultValue="false" />
 
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
         android:title="@string/qs_tile_title_visibility_title"
         android:summary="@string/qs_tile_title_visibility_summary"
@@ -49,7 +49,7 @@
         android:key="qs_layout_category"
         android:title="@string/qs_layout_category_title">
 
-        <com.aicp.extras.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_rows_portrait"
             android:title="@string/qs_rows_portrait_title"
             android:max="5"
@@ -58,7 +58,7 @@
             aicpextras:unitsRight=""
             android:defaultValue="3" />
 
-        <com.aicp.extras.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_rows_landscape"
             android:title="@string/qs_rows_landscape_title"
             android:max="3"
@@ -67,7 +67,7 @@
             aicpextras:unitsRight=""
             android:defaultValue="2" />
 
-        <com.aicp.extras.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_columns_portrait"
             android:title="@string/qs_columns_portrait_title"
             android:max="7"
@@ -76,7 +76,7 @@
             aicpextras:unitsRight=""
             android:defaultValue="3" />
 
-        <com.aicp.extras.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_columns_landscape"
             android:title="@string/qs_columns_landscape_title"
             android:max="9"
@@ -89,19 +89,19 @@
     <PreferenceCategory
         android:title="@string/brightness_slider_settings_title">
 
-        <com.aicp.extras.preference.SecureSettingSwitchPreference
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
             android:key="qs_show_brightness"
             android:title="@string/brightness_slider_switch"
             android:defaultValue="true" />
 
-        <com.aicp.extras.preference.SystemSettingSwitchPreference
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="brightness_icon"
             android:title="@string/brightness_icon_title"
             android:summary="@string/brightness_icon_summary"
             android:dependency="qs_show_brightness"
             android:defaultValue="true" />
 
-        <com.aicp.extras.preference.SystemSettingSwitchPreference
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="brightness_icon_position"
             android:title="@string/brightness_icon_position_title"
             android:summaryOn="@string/brightness_icon_position_on_summary"
@@ -115,7 +115,7 @@
         android:key="category_custom_header"
         android:title="@string/custom_header_title">
 
-        <com.aicp.extras.preference.SystemSettingSwitchPreference
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="status_bar_custom_header"
             android:title="@string/status_bar_custom_header_title"
             android:defaultValue="false" />
@@ -153,7 +153,7 @@
             android:dependency="status_bar_custom_header" >
         </Preference>
 
-        <com.aicp.extras.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="status_bar_custom_header_shadow"
             android:title="@string/status_bar_custom_header_shadow_title"
             android:summary="@string/status_bar_custom_header_shadow_summary"

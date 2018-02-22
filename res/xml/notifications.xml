@@ -21,7 +21,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
     android:title="@string/notifications_title">
 
-    <com.aicp.extras.preference.SystemSettingIntListPreference
+    <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="status_bar_show_ticker"
         android:entries="@array/ticker_mode_entries"
         android:entryValues="@array/ticker_mode_values"
@@ -29,7 +29,7 @@
         android:summary="%s"
         android:title="@string/ticker_mode_title" />
 
-    <com.aicp.extras.preference.SystemSettingIntListPreference
+    <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="notification_sound_vib_screen_on"
         android:entries="@array/notification_sound_vib_screen_on_entries"
         android:entryValues="@array/notification_sound_vib_screen_on_values"

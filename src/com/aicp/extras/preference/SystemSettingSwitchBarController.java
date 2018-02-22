@@ -22,6 +22,8 @@ import android.widget.Switch;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.widget.SwitchBar;
 
+import com.aicp.gear.preference.SystemSettingsStore;
+
 public class SystemSettingSwitchBarController implements SwitchBar.OnSwitchChangeListener {
 
     private String mKey;

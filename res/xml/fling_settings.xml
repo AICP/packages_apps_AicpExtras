@@ -135,7 +135,7 @@
             android:dependency="eos_fling_show_logo"
             android:title="@string/fling_logo_custom_logo_reset_title" />
 
-        <com.aicp.extras.preference.SeekBarPreferenceCham
+        <com.aicp.gear.preference.SeekBarPreferenceCham
             android:key="fling_logo_opacity"
             android:dependency="eos_fling_show_logo"
             android:title="@string/fling_logo_opacity_title"
@@ -166,7 +166,7 @@
             android:defaultValue="0xffffff"
             android:dependency="eos_fling_trails_enable" />
 
-        <com.aicp.extras.preference.SeekBarPreferenceCham
+        <com.aicp.gear.preference.SeekBarPreferenceCham
             android:key="du_fling_trails_width"
             android:title="@string/fling_trails_width_title"
             android:defaultValue="15"
@@ -181,7 +181,7 @@
         android:key="eos_long_swipe_category"
         android:title="@string/fling_advanced" >
 
-        <com.aicp.extras.preference.SeekBarPreferenceCham
+        <com.aicp.gear.preference.SeekBarPreferenceCham
             android:key="du_fling_longpress_pref"
             android:title="@string/fling_longpress_title"
             android:defaultValue="350"
@@ -198,7 +198,7 @@
             android:summary="@string/fling_long_swipe_summary"
             android:title="@string/fling_long_swipe_title" />
 
-        <com.aicp.extras.preference.SeekBarPreferenceCham
+        <com.aicp.gear.preference.SeekBarPreferenceCham
             android:key="du_fling_longswipe_port_right"
             android:title="@string/portrait_right_swipe_title"
             android:defaultValue="40"
@@ -207,7 +207,7 @@
             aicpextras:unitsRight="%"
             android:persistent="false" />
 
-        <com.aicp.extras.preference.SeekBarPreferenceCham
+        <com.aicp.gear.preference.SeekBarPreferenceCham
             android:key="du_fling_longswipe_port_left"
             android:title="@string/portrait_left_swipe_title"
             android:defaultValue="40"
@@ -216,7 +216,7 @@
             aicpextras:unitsRight="%"
             android:persistent="false" />
 
-        <com.aicp.extras.preference.SeekBarPreferenceCham
+        <com.aicp.gear.preference.SeekBarPreferenceCham
             android:key="du_fling_longswipe_land_right"
             android:title="@string/landscape_right_swipe_title"
             android:defaultValue="25"
@@ -225,7 +225,7 @@
             aicpextras:unitsRight="%"
             android:persistent="false" />
 
-        <com.aicp.extras.preference.SeekBarPreferenceCham
+        <com.aicp.gear.preference.SeekBarPreferenceCham
             android:key="du_fling_longswipe_land_left"
             android:title="@string/landscape_left_swipe_title"
             android:defaultValue="25"
@@ -234,7 +234,7 @@
             aicpextras:unitsRight="%"
             android:persistent="false" />
 
-        <com.aicp.extras.preference.SeekBarPreferenceCham
+        <com.aicp.gear.preference.SeekBarPreferenceCham
             android:key="du_fling_longswipe_vert_up"
             android:title="@string/vertical_up_swipe_title"
             android:defaultValue="40"
@@ -243,7 +243,7 @@
             aicpextras:unitsRight="%"
             android:persistent="false" />
 
-        <com.aicp.extras.preference.SeekBarPreferenceCham
+        <com.aicp.gear.preference.SeekBarPreferenceCham
             android:key="du_fling_longswipe_vert_down"
             android:title="@string/vertical_down_swipe_title"
             android:defaultValue="40"
