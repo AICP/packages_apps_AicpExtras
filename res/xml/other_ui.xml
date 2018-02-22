@@ -21,7 +21,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
     android:title="@string/other_ui_title">
 
-    <com.aicp.extras.preference.SystemSettingSeekBarPreference
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
         android:key="volume_dialog_timeout"
         android:title="@string/volume_dialog_timeout_title"
         android:min="500"
@@ -32,42 +32,42 @@
         aicpextras:unitsRight="ms" />
 
     <!-- Screenshot tone -->
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="screenshot_sound"
         android:title="@string/screenshot_sound_title"
         android:summary="@string/screenshot_sound_summary"
         android:defaultValue="true" />
 
     <!-- Three-Finger Swipe to Screenshot -->
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="three_finger_gesture"
         android:title="@string/three_finger_gesture"
         android:summary="@string/three_finger_gesture_summary"
         android:defaultValue="false" />
 
     <!-- Accidental touch -->
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="anbi_enabled"
         android:title="@string/anbi_enabled_title"
         android:summary="@string/anbi_enabled_summary"
         android:defaultValue="false" />
 
     <!-- Pocket Judge -->
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="pocket_judge"
         android:title="@string/pocket_judge_title"
         android:summary="@string/pocket_judge_summary"
         android:defaultValue="false" />
 
     <!-- Volume keys control media stream -->
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="volume_keys_control_media_stream"
         android:title="@string/volume_keys_control_media_stream_title"
         android:summary="@string/volume_keys_control_media_stream_summary"
         android:defaultValue="false" />
 
     <!-- Launch music player when headset is connected -->
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="headset_connect_player"
         android:title="@string/headset_connect_player_title"
         android:summary="@string/headset_connect_player_summary"
@@ -81,19 +81,19 @@
         android:defaultValue="false" />
 
     <!-- Toast icon switch -->
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="toast_icon"
         android:title="@string/toast_icon_title"
         android:summary="@string/toast_icon_summary"
         android:defaultValue="true" />
 
     <!-- Vibrate on plug -->
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="vibration_on_charge_state_changed"
         android:title="@string/vibration_on_charge_state_changed_title"
         android:defaultValue="false" />
 
-    <com.aicp.extras.preference.SecureSettingColorPickerPreference
+    <com.aicp.gear.preference.SecureSettingColorPickerPreference
         android:key="status_bar_battery_saver_color"
         android:title="@string/status_bar_battery_saver_color_title"
         android:summary="@string/status_bar_battery_saver_color_summary"

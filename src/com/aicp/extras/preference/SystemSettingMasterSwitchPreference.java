@@ -19,6 +19,8 @@ package com.aicp.extras.preference;
 import android.content.Context;
 import android.util.AttributeSet;
 
+import com.aicp.gear.preference.SystemSettingsStore;
+
 public class SystemSettingMasterSwitchPreference extends MasterSwitchPreference {
 
     public SystemSettingMasterSwitchPreference(Context context, AttributeSet attrs, int defStyle) {

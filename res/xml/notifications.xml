@@ -21,7 +21,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
     android:title="@string/notifications_title">
 
-    <com.aicp.extras.preference.SystemSettingIntListPreference
+    <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="notification_sound_vib_screen_on"
         android:entries="@array/notification_sound_vib_screen_on_entries"
         android:entryValues="@array/notification_sound_vib_screen_on_values"

@@ -19,19 +19,19 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
     android:title="@string/status_bar_logo_title">
 
-    <com.aicp.extras.preference.SystemSettingColorPickerPreference
+    <com.aicp.gear.preference.SystemSettingColorPickerPreference
         android:key="status_bar_logo_color"
         android:title="@string/status_bar_logo_color_title"
         android:defaultValue="0xffffffff" />
 
-    <com.aicp.extras.preference.SystemSettingIntListPreference
+    <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="status_bar_logo_position"
         android:title="@string/status_bar_logo_position_title"
         android:entries="@array/status_bar_logo_position_entries"
         android:entryValues="@array/status_bar_logo_position_values"
         android:defaultValue="0" />
 
-    <com.aicp.extras.preference.SystemSettingIntListPreference
+    <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="status_bar_logo_style"
         android:title="@string/status_bar_logo_style_title"
         android:entries="@array/status_bar_logo_style_entries"

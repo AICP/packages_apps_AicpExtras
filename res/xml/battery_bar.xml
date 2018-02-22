@@ -19,34 +19,34 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
     android:title="@string/battery_bar_title">
 
-    <com.aicp.extras.preference.SystemSettingColorPickerPreference
+    <com.aicp.gear.preference.SystemSettingColorPickerPreference
         android:key="statusbar_battery_bar_color"
         android:title="@string/battery_bar_color_title"
         android:defaultValue="0xffffffff" />
 
-    <com.aicp.extras.preference.SystemSettingColorPickerPreference
+    <com.aicp.gear.preference.SystemSettingColorPickerPreference
         android:key="statusbar_battery_bar_battery_low_color"
         android:title="@string/battery_bar_battery_low_color_title"
         android:defaultValue="0xffffffff" />
 
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="statusbar_battery_bar_enable_charging_color"
         android:title="@string/battery_bar_use_charging_color_title"
         android:defaultValue="true" />
 
-    <com.aicp.extras.preference.SystemSettingColorPickerPreference
+    <com.aicp.gear.preference.SystemSettingColorPickerPreference
         android:key="statusbar_battery_bar_charging_color"
         android:title="@string/battery_bar_charging_color_title"
         android:defaultValue="0xffffff00"
         android:dependency="statusbar_battery_bar_enable_charging_color" />
 
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="statusbar_battery_bar_blend_color"
         android:title="@string/battery_bar_blend_color_title"
         android:summary="@string/battery_bar_blend_color_summary"
         android:defaultValue="false" />
 
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="statusbar_battery_bar_blend_color_reverse"
         android:title="@string/battery_bar_blend_color_reverse_title"
         android:summaryOn="@string/battery_bar_blend_color_reverse_summary_on"
@@ -54,14 +54,14 @@
         android:dependency="statusbar_battery_bar_blend_color"
         android:defaultValue="false" />
 
-    <com.aicp.extras.preference.SystemSettingIntListPreference
+    <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="statusbar_battery_bar_style"
         android:title="@string/battery_bar_style_title"
         android:entries="@array/battery_bar_style_entries"
         android:entryValues="@array/battery_bar_style_values"
         android:defaultValue="0" />
 
-    <com.aicp.extras.preference.SystemSettingSeekBarPreference
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
         android:key="statusbar_battery_bar_thickness"
         android:title="@string/battery_bar_thickness_title"
         android:min="1"
@@ -70,7 +70,7 @@
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="dp" />
 
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="statusbar_battery_bar_animate"
         android:title="@string/battery_bar_animate_title"
         android:defaultValue="false" />

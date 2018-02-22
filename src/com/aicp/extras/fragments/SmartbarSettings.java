@@ -53,7 +53,7 @@ import com.android.internal.utils.du.Config;
 import com.android.internal.utils.du.Config.ButtonConfig;
 import com.aicp.extras.R;
 import com.aicp.extras.BaseSettingsFragment;
-import com.aicp.extras.preference.SeekBarPreferenceCham;
+import com.aicp.gear.preference.SeekBarPreferenceCham;
 
 public class SmartbarSettings extends BaseSettingsFragment implements
         OnPreferenceChangeListener {
