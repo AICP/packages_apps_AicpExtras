@@ -35,13 +35,11 @@ public class OtherUi extends BaseSettingsFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String SHOW_CPU_INFO_KEY = "show_cpu_info";
-    private static final String KEY_ACCIDENTAL_TOUCH = "anbi_enabled";
     private static final String KEY_VIBRATE_ON_CHARGE_STATE_CHANGED = "vibration_on_charge_state_changed";
     private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
     private static final String SCROLLINGCACHE_DEFAULT = "1";
 
-    private SwitchPreference mAccidentalTouch;
     private SwitchPreference mShowCpuInfo;
     private SwitchPreference mVibrateOnPlug;
     private ListPreference mScrollingCachePref;
@@ -65,14 +63,6 @@ public class OtherUi extends BaseSettingsFragment
 
         if(!Util.hasVibrator(getActivity())){
             mVibrateOnPlug.getParent().removePreference(mVibrateOnPlug);
-        }
-
-        // Prevent accidental touch to hw keys.
-        mAccidentalTouch = (SwitchPreference) findPreference(KEY_ACCIDENTAL_TOUCH);
-        int deviceHardwareKeys = getActivity().getResources().getInteger(
-                org.lineageos.platform.internal.R.integer.config_deviceHardwareKeys);
-        if (deviceHardwareKeys == 0 || deviceHardwareKeys == 64) {
-            mAccidentalTouch.getParent().removePreference(mAccidentalTouch);
         }
 
         mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
