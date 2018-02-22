@@ -28,6 +28,7 @@ LOCAL_RESOURCE_DIR += $(SUPPORT_LIBRARY_ROOT)/v7/preference/res
 LOCAL_RESOURCE_DIR += $(SUPPORT_LIBRARY_ROOT)/v7/recyclerview/res
 LOCAL_RESOURCE_DIR += $(SUPPORT_LIBRARY_ROOT)/v14/preference/res
 LOCAL_RESOURCE_DIR += $(SUPPORT_LIBRARY_ROOT)/design/res
+LOCAL_RESOURCE_DIR += frameworks/opt/aicpgear/res
 
 LOCAL_ASSET_DIR := $(LOCAL_PATH)/assets
 
@@ -41,6 +42,7 @@ LOCAL_STATIC_JAVA_LIBRARIES += android-support-v7-recyclerview
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-v14-preference
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-design
 LOCAL_STATIC_JAVA_LIBRARIES += org.lineageos.platform.internal
+LOCAL_STATIC_JAVA_LIBRARIES += AicpGear
 
 # Apache http for stats
 LOCAL_JAVA_LIBRARIES := org.apache.http.legacy
@@ -48,7 +50,7 @@ LOCAL_JAVA_LIBRARIES := org.apache.http.legacy
 LOCAL_JAVA_LIBRARIES += org.dirtyunicorns.utils
 
 LOCAL_AAPT_FLAGS := --auto-add-overlay
-LOCAL_AAPT_FLAGS += --extra-packages android.support.v7.appcompat:android.support.v7.cardview:android.support.v7.preference:android.support.v7.recyclerview:android.support.v14.preference:android.support.design
+LOCAL_AAPT_FLAGS += --extra-packages android.support.v7.appcompat:android.support.v7.cardview:android.support.v7.preference:android.support.v7.recyclerview:android.support.v14.preference:android.support.design:com.aicp.gear
 
 LOCAL_PACKAGE_NAME := AicpExtras
 

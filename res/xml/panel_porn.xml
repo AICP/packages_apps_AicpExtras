@@ -24,7 +24,7 @@
     <PreferenceCategory
         android:title="@string/volume_dialog_transparency_title">
 
-        <com.aicp.extras.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="transparent_volume_dialog"
             android:title="@string/volume_dialog_transparency"
             android:max="255"
@@ -33,7 +33,7 @@
             aicpextras:unitsRight=""
             android:defaultValue="255" />
 
-        <com.aicp.extras.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="volume_dialog_corner_radius"
             android:title="@string/volume_dialog_corner_radius_title"
             android:max="50"
@@ -42,7 +42,7 @@
             aicpextras:unitsRight="px"
             android:defaultValue="10" />
 
-        <com.aicp.extras.preference.SystemSettingListPreference
+        <com.aicp.gear.preference.SystemSettingListPreference
             android:key="volume_dialog_stroke"
             android:title="@string/volume_dialog_stroke_title"
             android:dialogTitle="@string/volume_dialog_stroke_title"
@@ -50,12 +50,12 @@
             android:entryValues="@array/volume_dialog_stroke_values"
             android:defaultValue="0" />
 
-        <com.aicp.extras.preference.SystemSettingColorPickerPreference
+        <com.aicp.gear.preference.SystemSettingColorPickerPreference
             android:key="volume_dialog_stroke_color"
             android:title="@string/volume_dialog_stroke_color_title"
             android:defaultValue="0xffffab00" />
 
-        <com.aicp.extras.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="volume_dialog_stroke_thickness"
             android:title="@string/volume_dialog_stroke_thickness_title"
             android:max="25"
@@ -64,7 +64,7 @@
             aicpextras:unitsRight="px"
             android:defaultValue="0" />
 
-        <com.aicp.extras.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="volume_dialog_stroke_dash_width"
             android:title="@string/volume_dialog_dash_width_title"
             android:max="50"
@@ -73,7 +73,7 @@
             aicpextras:unitsRight="px"
             android:defaultValue="0" />
 
-        <com.aicp.extras.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="volume_dialog_stroke_dash_gap"
             android:title="@string/volume_dialog_dash_gap_title"
             android:max="50"
@@ -87,7 +87,7 @@
     <PreferenceCategory
         android:title="@string/power">
 
-        <com.aicp.extras.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="transparent_power_menu"
             android:title="@string/power_menu_transparency"
             android:max="100"
@@ -96,7 +96,7 @@
             aicpextras:unitsRight="%"
             android:defaultValue="100" />
 
-        <com.aicp.extras.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="transparent_power_dialog_dim"
             android:title="@string/power_menu_dialog_dim"
             android:max="100"

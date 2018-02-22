@@ -33,7 +33,7 @@ import android.provider.Settings;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.extras.preference.SeekBarPreferenceCham;
+import com.aicp.gear.preference.SeekBarPreferenceCham;
 
 public class SuspendActions extends BaseSettingsFragment
             implements Preference.OnPreferenceChangeListener {
