@@ -35,7 +35,7 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.Constants;
 import com.aicp.extras.PreferenceMultiClickHandler;
 import com.aicp.extras.R;
-import com.aicp.extras.preference.LongClickablePreference;
+import com.aicp.gear.preference.LongClickablePreference;
 import com.aicp.extras.utils.Util;
 
 import com.plattysoft.leonids.ParticleSystem;

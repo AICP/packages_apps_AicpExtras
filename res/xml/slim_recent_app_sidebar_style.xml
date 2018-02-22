@@ -21,7 +21,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
     android:title="@string/recent_app_sidebar_title">
 
-    <com.aicp.extras.preference.SystemSettingSeekBarPreference
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="recent_app_sidebar_scale_factor"
             android:title="@string/recent_app_sidebar_scale_title"
             android:defaultValue="100"
@@ -30,26 +30,26 @@
             aicpextras:interval="5"
             aicpextras:unitsRight="%" />
 
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="recent_app_sidebar_disable_labels"
             android:title="@string/recent_app_sidebar_hide_labels_title"
             android:disableDependentsState="true"
             android:defaultValue="false" />
 
-    <com.aicp.extras.preference.SystemSettingColorPickerPreference
+    <com.aicp.gear.preference.SystemSettingColorPickerPreference
             android:key="recent_app_sidebar_text_color"
             android:title="@string/recent_app_sidebar_label_color_title"
             android:defaultValue="0x00ffffff"
             alphaSlider="false"
             android:dependency="recent_app_sidebar_disable_labels" />
 
-    <com.aicp.extras.preference.SystemSettingColorPickerPreference
+    <com.aicp.gear.preference.SystemSettingColorPickerPreference
             android:key="recent_app_sidebar_bg_color"
             android:title="@string/recent_app_sidebar_bg_color_title"
             android:defaultValue="0x00ffffff"
             alphaSlider="true" />
 
-    <com.aicp.extras.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="recent_app_sidebar_open_simultaneously"
             android:title="@string/recent_app_sidebar_open_simultaneously_title"
             android:summary="@string/recent_app_sidebar_open_simultaneously_summary"
