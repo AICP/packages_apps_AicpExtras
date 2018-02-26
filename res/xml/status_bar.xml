@@ -67,6 +67,13 @@
             android:entryValues="@array/battery_style_values"
             android:defaultValue="0" />
 
+        <!-- Force Show Battery Percentage in QS Header and Keyguard -->
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="qs_header_force_battery_percent"
+            android:title="@string/force_battery_percentage_title"
+            android:summary="@string/force_battery_percentage_summary"
+            android:defaultValue="false"/>
+
         <!-- Show BT Battery Level on Statusbar -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="bluetooth_show_battery"
