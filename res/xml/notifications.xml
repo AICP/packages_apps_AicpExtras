@@ -30,6 +30,12 @@
         android:summary="%s"
         android:defaultValue="1" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="notification_guts_kill_app_button"
+        android:title="@string/notification_guts_kill_app_button_title"
+        android:summary="@string/notification_guts_kill_app_button_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:title="@string/status_bar_ticker_category_title">
 
