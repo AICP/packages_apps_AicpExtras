@@ -46,6 +46,12 @@
             android:summaryOn="@string/systemui_recents_mem_display_summaryOn"
             android:summaryOff="@string/systemui_recents_mem_display_summaryOff"
             android:defaultValue="false" />
+
+        <!-- Icon pack -->
+        <Preference
+            android:key="recents_icon_pack"
+            android:title="@string/recents_icon_pack_title"
+            android:summary="@string/recents_icon_pack_summary" />
     </PreferenceCategory>
 
     <PreferenceCategory
