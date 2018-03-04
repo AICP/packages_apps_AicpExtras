@@ -19,6 +19,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     android:title="@string/hw_keys_title">
 
     <SwitchPreference android:key="hardware_keys_disable"
@@ -210,6 +211,21 @@
             android:title="@string/volume_rocker_music_controls_title"
             android:summary="@string/volume_rocker_music_controls_summary"
             android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="other_keys"
+        android:title="@string/other_keys_category" >
+
+        <lineageos.preference.RemotePreference
+            android:key="additional_buttons"
+            android:title="@string/additional_buttons_title"
+            android:summary="@string/additional_buttons_summary"
+            lineage:requiresAction="org.lineageos.settings.device.ADDITIONAL_BUTTONS_SETTINGS">
+            <intent
+                android:action="org.lineageos.settings.device.ADDITIONAL_BUTTONS_SETTINGS" />
+        </lineageos.preference.RemotePreference>
 
     </PreferenceCategory>
 
