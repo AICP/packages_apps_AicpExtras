@@ -28,6 +28,29 @@
 
 
     <PreferenceCategory
+        android:title="@string/navigation_category">
+
+        <PreferenceScreen
+            android:title="@string/hw_keys_title"
+            android:summary="@string/hw_keys_summary"
+            android:icon="@drawable/ic_settings_hw_keys"
+            android:fragment="com.aicp.extras.fragments.HwKeys" />
+
+        <PreferenceScreen
+            android:title="@string/navbar_title"
+            android:summary="@string/navbar_summary"
+            android:icon="@drawable/ic_settings_navbar"
+            android:fragment="com.aicp.extras.fragments.NavigationBar" />
+
+        <PreferenceScreen
+            android:title="@string/recents_title"
+            android:summary="@string/recents_summary"
+            android:icon="@drawable/ic_settings_recents"
+            android:fragment="com.aicp.extras.fragments.Recents" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/user_interface_category">
 
 
@@ -50,22 +73,10 @@
             android:fragment="com.aicp.extras.fragments.QuickSettings" />
 
         <PreferenceScreen
-            android:title="@string/recents_title"
-            android:summary="@string/recents_summary"
-            android:icon="@drawable/ic_settings_recents"
-            android:fragment="com.aicp.extras.fragments.Recents" />
-
-        <PreferenceScreen
             android:title="@string/lockscreen_title"
             android:summary="@string/lockscreen_summary"
             android:icon="@drawable/ic_settings_lockscreen"
             android:fragment="com.aicp.extras.fragments.Lockscreen" />
-
-        <PreferenceScreen
-            android:title="@string/navbar_title"
-            android:summary="@string/navbar_summary"
-            android:icon="@drawable/ic_settings_navbar"
-            android:fragment="com.aicp.extras.fragments.NavigationBar" />
 
         <PreferenceScreen
             android:title="@string/panel_porn_title"
