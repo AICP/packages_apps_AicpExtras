@@ -22,6 +22,22 @@
     xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     android:title="@string/hw_keys_title">
 
+    <Preference
+        android:title="@string/power_menu_title"
+        android:summary="@string/power_menu_summary">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="org.lineageos.lineageparts"
+            android:targetClass="org.lineageos.lineageparts.PartsActivity">
+            <extra
+                android:name=":settings:show_fragment"
+                android:value="org.lineageos.lineageparts.input.PowerMenuActions" />
+            <extra
+                android:name=":settings:show_fragment_title"
+                android:value="@string/power_menu_title" />
+        </intent>
+    </Preference>
+
     <SwitchPreference android:key="hardware_keys_disable"
         android:title="@string/hardware_keys_disable_title" />
 
