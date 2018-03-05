@@ -58,6 +58,10 @@ public abstract class BaseActivity extends Activity {
                 return R.style.AppTheme_Light;
             case 3:
                 return R.style.AppTheme_Dark;
+            case 4:
+                return R.style.AppTheme_Light_MoreAccent;
+            case 5:
+                return R.style.AppTheme_Dark_MoreAccent;
             default:
             {
                 // Decide on whether to use a light or dark theme by judging devicedefault
@@ -71,11 +75,19 @@ public abstract class BaseActivity extends Activity {
                 if (Color.luminance(fgColor) <= Color.luminance(bgColor)) {
                     // Use theme that follows DeviceDefault settings theme directly
                     // to get possibly themed changes
-                    return R.style.AppTheme;
+                    if (themePref == 6) {
+                        return R.style.AppTheme_MoreAccent;
+                    } else {
+                        return R.style.AppTheme;
+                    }
                 } else {
                     // When using a dark theme, we could actually use AppTheme here too because
                     // it inherits from DeviceDefault, but we have some dark theme improvements here
-                    return R.style.AppTheme_Dark;
+                    if (themePref == 6) {
+                        return R.style.AppTheme_Dark_MoreAccent;
+                    } else {
+                        return R.style.AppTheme_Dark;
+                    }
                 }
             }
         }
