@@ -62,8 +62,10 @@ public abstract class BaseChangelogActivity extends AppCompatActivity {
                 return R.style.ChangelogTheme_DarkAmber;
             */
             case 2:
+            case 4:
                 return R.style.ChangelogTheme_Light;
             case 3:
+            case 5:
                 return R.style.ChangelogTheme_Dark;
             default:
             {

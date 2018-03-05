@@ -43,6 +43,10 @@
         <item name="android:windowLightNavigationBar">true</item>
     </style>
 
+    <style name="AppTheme_Light_MoreAccent" parent="@style/AppTheme_Light">
+        <item name="color_settings_icon">?android:attr/colorAccent</item>
+    </style>
+
     <style name="AppTheme_Dark" parent="@android:style/Theme.Material">
         <item name="color_settings_icon">?android:attr/colorControlNormal</item>
         <item name="preferenceTheme">@style/AppPreferenceTheme</item>
@@ -53,6 +57,9 @@
         <item name="value_popup_view_fg">@*android:color/primary_text_default_material_dark</item>
     </style>
 
+    <style name="AppTheme_Dark_MoreAccent" parent="@style/AppTheme_Dark">
+        <item name="color_settings_icon">?android:attr/colorAccent</item>
+    </style>
 
     <style name="ChangelogTheme_Light" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorAccent">@*android:color/accent_device_default_light</item>

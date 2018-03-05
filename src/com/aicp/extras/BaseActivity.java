@@ -58,6 +58,10 @@ public abstract class BaseActivity extends Activity {
                 return R.style.AppTheme_Light;
             case 3:
                 return R.style.AppTheme_Dark;
+            case 4:
+                return R.style.AppTheme_Light_MoreAccent;
+            case 5:
+                return R.style.AppTheme_Dark_MoreAccent;
             default:
             {
                 // Decide on whether to use a light or dark theme by judging devicedefault
