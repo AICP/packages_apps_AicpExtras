@@ -30,22 +30,32 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.text.Spannable;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.EditText;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.preference.MasterSwitchPreference;
 
+import lineageos.preference.LineageSystemSettingListPreference;
+
 public class StatusBar extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String SMART_PULLDOWN = "qs_smart_pulldown";
     private static final String KEY_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
+    private static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
 
-    MasterSwitchPreference mBatteryBar;
+    private static final int PULLDOWN_DIR_NONE = 0;
+    private static final int PULLDOWN_DIR_RIGHT = 1;
+    private static final int PULLDOWN_DIR_LEFT = 2;
+
+    private MasterSwitchPreference mBatteryBar;
     private ListPreference mSmartPulldown;
     private MasterSwitchPreference mStatusBarLogo;
     private Preference mCustomCarrierLabel;
+    private LineageSystemSettingListPreference mQuickPulldown;
+
     private String mCustomCarrierLabelText;
 
     @Override
@@ -72,6 +82,11 @@ public class StatusBar extends BaseSettingsFragment implements
 
         mCustomCarrierLabel = (Preference) findPreference(KEY_CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
+
+        mQuickPulldown =
+                (LineageSystemSettingListPreference) findPreference(STATUS_BAR_QUICK_QS_PULLDOWN);
+        mQuickPulldown.setOnPreferenceChangeListener(this);
+        updateQuickPulldownSummary(mQuickPulldown.getIntValue(0));
     }
 
     private void updateCustomLabelTextSummary() {
@@ -91,6 +106,9 @@ public class StatusBar extends BaseSettingsFragment implements
         if (preference == mSmartPulldown) {
             int value = Integer.parseInt((String) newValue);
             updateSmartPulldownSummary(value);
+            return true;
+        } else if (preference == mQuickPulldown) {
+            updateQuickPulldownSummary(Integer.parseInt((String) newValue));
             return true;
         }
         return false;
@@ -118,13 +136,18 @@ public class StatusBar extends BaseSettingsFragment implements
 
         mBatteryBar.reloadValue();
         mStatusBarLogo.reloadValue();
+
+        // Adjust status bar preferences for RTL
+        if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
+            mQuickPulldown.setEntries(R.array.status_bar_quick_qs_pulldown_entries_rtl);
+        }
     }
 
     @Override
     public boolean onPreferenceTreeClick(final Preference preference) {
         super.onPreferenceTreeClick(preference);
         final ContentResolver resolver = getActivity().getContentResolver();
-        if (preference.getKey().equals(KEY_CUSTOM_CARRIER_LABEL)) {
+        if (KEY_CUSTOM_CARRIER_LABEL.equals(preference.getKey())) {
             AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
             alert.setTitle(R.string.custom_carrier_label_title);
             alert.setMessage(R.string.custom_carrier_label_explain);
@@ -147,7 +170,27 @@ public class StatusBar extends BaseSettingsFragment implements
                     });
             alert.setNegativeButton(getString(android.R.string.cancel), null);
             alert.show();
+            return true;
+        } else {
+            return false;
         }
-        return true;
+    }
+
+    private void updateQuickPulldownSummary(int value) {
+        String summary="";
+        switch (value) {
+            case PULLDOWN_DIR_NONE:
+                summary = getResources().getString(
+                    R.string.status_bar_quick_qs_pulldown_off);
+                break;
+
+            case PULLDOWN_DIR_LEFT:
+            case PULLDOWN_DIR_RIGHT:
+                summary = getResources().getString(value == PULLDOWN_DIR_LEFT
+                        ? R.string.status_bar_quick_qs_pulldown_summary_left
+                        : R.string.status_bar_quick_qs_pulldown_summary_right);
+                break;
+        }
+        mQuickPulldown.setSummary(summary);
     }
 }
