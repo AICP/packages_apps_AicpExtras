@@ -181,6 +181,9 @@
     <string name="notification_guts_kill_app_button_title">Kill app button</string>
     <string name="notification_guts_kill_app_button_summary">Show a kill app button in the notification\'s longpress menu</string>
 
+    <!-- InCall notifications vibrate -->
+    <string name="incall_notifications_vibrate_title">Less annoying in-call notifications</string>
+    <string name="incall_notifications_vibrate_summary">Gently vibrate instead of playing a sound while in-call and a notification is pushed</string>
 
     <!-- Brightness slider settings -->
     <string name="brightness_slider_settings_title">Brightness slider settings</string>
@@ -280,6 +283,13 @@
     <string name="systemui_recents_mem_display_title">Show memory bar</string>
     <string name="systemui_recents_mem_display_summaryOn">Memory bar enabled</string>
     <string name="systemui_recents_mem_display_summaryOff">Memory bar disabled</string>
+
+    <!-- Stock recents icon pack -->
+    <string name="recents_icon_pack_title">Icon pack</string>
+    <string name="recents_icon_pack_summary">Apply a custom icon pack for apps in the panel</string>
+    <string name="no_iconpacks_summary">No icon packs installed</string>
+    <string name="dialog_pick_iconpack_title">Pick icon pack</string>
+    <string name="default_iconpack_title">Default icons</string>
 
     <!-- Slim recents -->
     <string name="slim_recents_title">Slim recents</string>
@@ -739,7 +749,7 @@
     <string name="fling_longpress_title">Long press delay</string>
     <string name="fling_longpress_summary">Increase or decrease the time it takes to execute a long press</string>
     <string name="fling_keyboard_cursors_title">Dynamic keyboard cursors action</string>
-    <string name="fling_keyboard_cursors_summary">Double tap left and right actions becomes left and right keyboard cursor actions if keyboard is open</string>
+    <string name="fling_keyboard_cursors_move_summary">When keyboard is showing, long press left or right to move the text cursor to left or right.\nKeep longpressing to keep moving the cursor, single tap on bar to go to home screen.</string>
     <string name="fling_logo_opacity_title">Fling logo opacity</string>
 
     <!-- Pulse navigation bar music visualizer -->
