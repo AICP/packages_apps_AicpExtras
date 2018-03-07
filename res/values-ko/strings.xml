@@ -20,17 +20,38 @@
 <resources>
   <!-- Dashboard -->
   <!-- Status bar -->
+  <string name="status_bar_summary">상태 표시줄 모양 편집</string>
+  <!-- StatusBar Battery Options -->
   <!-- Bluetooth status -->
   <!-- Statusbar net monitor -->
+  <!-- QS Header battery percentage -->
   <!-- Battery bar -->
+  <string name="battery_bar_charging_color_title">충전중 색상</string>
   <!-- StatusBar weather settings -->
   <!-- Smart pulldown-->
   <!-- Double tap to sleep on status bar -->
+  <string name="status_bar_double_tap_to_sleep_title">잠금 화면을 탭하여 절전 모드로 들어갑니다.</string>
+  <string name="status_bar_double_tap_to_sleep_summary">상태표시줄을 두 번 두드려 화면을 끕니다.</string>
   <!-- Statusbar Clock options -->
+  <string name="status_bar_show_clock_title">날짜와 시간 표시</string>
+  <string name="status_bar_clock_seconds_title">초단위 시계</string>
+  <string name="status_bar_clock_seconds_summary">상태표시줄 시계에 초를 표시합니다</string>
+  <string name="clock_date_display_none">표시 안함</string>
   <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_title">상태 표시줄 로고</string>
+  <string name="status_bar_logo_summary">상태 표시줄에 로고를 표시할 수 있도록 합니다</string>
+  <string name="status_bar_logo_style_ios">iOS</string>
+  <string name="status_bar_logo_style_emoticon">이모티콘</string>
+  <string name="status_bar_logo_style_biohazard">생물 학적</string>
+  <string name="status_bar_logo_style_windows">윈도우</string>
+  <string name="status_bar_logo_style_ninja">닌자</string>
   <!-- Statusbar categories -->
+  <string name="status_bar_gestures_category_title">제스쳐</string>
   <!-- Notifications -->
+  <!-- Notification guts kill app button -->
+  <!-- InCall notifications vibrate -->
   <!-- Brightness slider settings -->
+  <!-- Battery Styles -->
   <!-- Quick settings -->
   <!-- Disable music track title in QS tile -->
   <!-- Small quick settings scroller -->
@@ -38,10 +59,13 @@
   <!-- QS footer warnings -->
   <!-- QS tiles title visibility -->
   <!-- QS Headers -->
+  <string name="header_provider_disabled">비활성화됨</string>
   <!-- Recents -->
   <!-- Recents panel settings -->
   <!-- Recents Membar -->
+  <!-- Stock recents icon pack -->
   <!-- Slim recents -->
+  <string name="recent_panel_expanded_mode_disabled">비활성화됨</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <!-- Slim Recent App Sidebar  -->
   <!-- Slim recents membar -->
@@ -57,14 +81,20 @@
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
+  <string name="screenshot_sound_title">스크린샷 소리</string>
+  <string name="screenshot_sound_summary">스크린샷 촬영시 음향효과 재생</string>
+  <!-- Swap volume keys based on device rotation -->
   <!-- Volume keys control media stream -->
+  <!-- Volume keys control music playback -->
   <!-- setting: show CPU info-->
   <!-- Launch music player when headset is connected -->
   <!-- Toast icon switch -->
+  <string name="toast_icon_summary">팝업과 함께 해당 앱 아이콘 표시</string>
   <!-- Show VoLTE icon on statusbar -->
   <!-- Vibrate on plug -->
   <!-- Scrolling Cache -->
   <!-- Status bar - Battery saver color -->
+  <!-- Turn on display when power connected; turn off display when power disconnected -->
   <!-- System animations -->
   <!-- System behaviour -->
   <!-- System extensions -->
@@ -72,15 +102,23 @@
   <!-- Log it -->
   <!-- Panel porn -->
   <!-- Volume dialog opacity -->
+  <string name="volume_dialog_transparency_title">볼륨창 커스터마이징</string>
+  <string name="volume_dialog_stroke_color_title">볼륨창 강조 색상설정</string>
+  <string name="volume_dialog_stroke_thickness_title">볼륨창 강조 두께 조정</string>
+  <string name="volume_dialog_corner_radius_title">볼륨창 코너 반지름 조정</string>
   <!-- Power menu and dialogs opacity -->
+  <string name="power">전원 메뉴 커스터마이징</string>
   <!-- AE settings -->
   <!-- About -->
+  <string name="aicp_ota_summary">새로운 AICP 업데이트 확인</string>
   <!-- Other / general purpose -->
   <!-- Sensor block per-package -->
   <!-- Weather - OmniJaws Settings -->
   <!-- Lockscreen Weather -->
   <!-- Statusbar ticker -->
+  <string name="ticker_disabled">비활성화됨</string>
   <!-- DUI -->
+  <string name="select_custom_app_title">사용자 정의 앱 선택</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <!-- Fling -->
   <!-- Pulse navigation bar music visualizer -->
@@ -88,15 +126,28 @@
   <!-- Navbar height -->
   <!-- SmartBar -->
   <!-- Carrier Label -->
+  <string name="show_carrier_disabled">비활성화됨</string>
+  <string name="show_carrier_statusbar">상태 표시줄에만 표시</string>
+  <string name="show_carrier_enabled">잠금 화면 &amp; 상태 표시줄 모두</string>
   <!-- Three-fingers-swipe to screenshot -->
   <!-- AOKP custom system animations -->
   <!-- Lock screen visualizer -->
+  <string name="lockscreen_visualizer_summary">잠금 화면의 시각화 프로그램 표시 토글</string>
   <!-- Screen state service -->
   <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_off">비활성화됨</string>
   <!-- Screen Off animation -->
   <!-- Suppress notification sound/vibration -->
-  <!-- Accidental Touch -->
+  <string name="notification_sound_vib_screen_on_always">항상켜기 (기본값)</string>
+  <string name="notification_sound_vib_screen_on_nomedia">재생중인 미디어가없는 경우</string>
   <!-- Dynamic Navbar -->
+  <string name="navbar_dynamic_summary">포 그라운드 앱 색상과 일치하도록 설정</string>
   <!-- Face unlock toggle -->
-  <!-- Battery image -->
+  <!-- Navigation -->
+  <!-- HW keys -->
+  <!-- Volume keys -->
+  <!-- Hardware button navigation -->
+  <!-- Button brightness -->
+  <!-- Quick QS pull down -->
+  <!-- Status bar system icons -->
 </resources>

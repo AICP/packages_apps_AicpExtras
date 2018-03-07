@@ -23,10 +23,12 @@
   <string name="other_category">その他</string>
   <!-- Status bar -->
   <string name="status_bar_title">ステータスバー</string>
+  <!-- StatusBar Battery Options -->
   <!-- Bluetooth status -->
   <string name="bluetooth_battery_title">Bluetoothデバイスのバッテリ情報を表示</string>
   <string name="bluetooth_battery_summary">利用可能な場合、現在接続しているBluetoothデバイスのバッテリ情報を表示します。</string>
   <!-- Statusbar net monitor -->
+  <!-- QS Header battery percentage -->
   <!-- Battery bar -->
   <string name="battery_bar_title">バッテリーバー</string>
   <string name="battery_bar_animate_title">充電時のアニメーション</string>
@@ -42,6 +44,7 @@
   <!-- StatusBar weather settings -->
   <string name="statusbar_weather_dialog_title">ステータスバー上の天気</string>
   <!-- Smart pulldown-->
+  <string name="smart_pulldown_off">OFF</string>
   <!-- Double tap to sleep on status bar -->
   <!-- Statusbar Clock options -->
   <string name="clock_date_display">日付</string>
@@ -54,9 +57,13 @@
   <!-- Statusbar categories -->
   <!-- Notifications -->
   <string name="notifications_title">通知</string>
+  <!-- Notification guts kill app button -->
+  <!-- InCall notifications vibrate -->
   <!-- Brightness slider settings -->
   <string name="brightness_icon_title">画面の明るさアイコン</string>
   <string name="brightness_icon_summary">明るさスライダーの左に「画面の明るさ」ボタンを表示する</string>
+  <!-- Battery Styles -->
+  <string name="battery_style_text">テキスト</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">クイック設定パネル</string>
   <!-- Disable music track title in QS tile -->
@@ -91,6 +98,7 @@
   <string name="systemui_recents_mem_display_title">メモリ使用量バーの表示</string>
   <string name="systemui_recents_mem_display_summaryOn">RAMバーが有効です</string>
   <string name="systemui_recents_mem_display_summaryOff">RAMバーは無効になっています</string>
+  <!-- Stock recents icon pack -->
   <!-- Slim recents -->
   <string name="slim_recents_title">Slim Recents</string>
   <string name="recents_max_apps_title">表示するアプリの最大数</string>
@@ -138,7 +146,9 @@
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">スクリーンショットの音</string>
   <string name="screenshot_sound_summary">スクリーンショットの取得時に音を鳴らします</string>
+  <!-- Swap volume keys based on device rotation -->
   <!-- Volume keys control media stream -->
+  <!-- Volume keys control music playback -->
   <!-- setting: show CPU info-->
   <!-- Launch music player when headset is connected -->
   <!-- Toast icon switch -->
@@ -148,8 +158,11 @@
   <!-- Vibrate on plug -->
   <!-- Scrolling Cache -->
   <!-- Status bar - Battery saver color -->
+  <!-- Turn on display when power connected; turn off display when power disconnected -->
   <!-- System animations -->
   <string name="system_animations_title">アニメーション</string>
+  <string name="bootanimation_error_reading_zip_file">ZIP の読み込み中にエラーが発生しました</string>
+  <string name="bootanimation_install_file_manager_error">ZIP ファイルを選ぶためのアプリが見つかりません。ファイルマネージャをインストールしてください</string>
   <!-- System behaviour -->
   <string name="selinux_explanation_summary">SELinuxはカーネルの改変とユーザー空間ツールの組み合わせから成ります。モードの変更は望まない影響を及ぼすことがあります。自己責任の下で利用してください。</string>
   <string name="selinux_permissive_toast_title">SELinuxは permissive に設定されました！</string>
@@ -188,15 +201,19 @@
   <string name="about_title">AICP Extrasについて</string>
   <string name="g_plus_title">Google+ コミュニティ</string>
   <string name="aicp_gerrit_title">Gerrit Code Review</string>
+  <string name="aicp_gerrit_summary">Gerrit で AICP の開発の最前線をチェックします</string>
   <string name="aicp_changelog_title">更新履歴</string>
   <string name="aicp_downloads_title">ダウンロード</string>
   <string name="aicp_ota_summary">AICP の更新を確認します</string>
   <string name="lineage_extras_title">LineageOS Extrasのダウンロード</string>
+  <string name="lineage_extras_summary">root インストーラ、アンインストーラ、天気プロバイダをダウンロードします&#8230;</string>
   <!-- Other / general purpose -->
   <string name="default_string">デフォルト</string>
   <string name="on">ON</string>
   <string name="off">OFF</string>
   <string name="reset">リセット</string>
+  <string name="systemui_restart_title">システム UI の再起動が必要</string>
+  <string name="systemui_restart_message">すべての変更を反映するには、システム UI の再起動が必要です。再起動しますか？</string>
   <string name="hidden_anim_more_nice">いいぞ</string>
   <!-- Sensor block per-package -->
   <!-- Weather - OmniJaws Settings -->
@@ -213,7 +230,9 @@
   <string name="lock_screen_weather_condition_icon_summaryOn">ロック画面に天候のアイコンを表示する</string>
   <string name="lock_screen_weather_condition_icon_summaryOff">ロック画面に天候のアイコンを表示しない</string>
   <!-- Statusbar ticker -->
+  <string name="status_bar_ticker_category_title">ティッカー</string>
   <string name="ticker_disabled">無効</string>
+  <string name="ticker_animation_mode_alpha_fade">フェード</string>
   <!-- DUI -->
   <string name="picker_activities">アクティビティ</string>
   <string name="select_custom_app_title">アプリを選択</string>
@@ -231,6 +250,7 @@
   <string name="smartbar_left">左</string>
   <string name="smartbar_button_animation_flip">左右に回転</string>
   <string name="smartbar_ime_action_none">なし</string>
+  <string name="smartbar_ime_action_switcher">IME切り替え</string>
   <!-- Carrier Label -->
   <string name="custom_carrier_label_title">カスタムキャリアラベル</string>
   <string name="custom_carrier_label_explain">新しいラベル名を入力してください。空白のままにすると標準のラベルに戻ります。</string>
@@ -254,8 +274,17 @@
   <string name="screen_off_animation_default">デフォルト</string>
   <!-- Suppress notification sound/vibration -->
   <string name="notification_sound_vib_screen_on_never">展開しない</string>
-  <!-- Accidental Touch -->
   <!-- Dynamic Navbar -->
   <!-- Face unlock toggle -->
-  <!-- Battery image -->
+  <!-- Navigation -->
+  <!-- HW keys -->
+  <!-- Volume keys -->
+  <!-- Hardware button navigation -->
+  <!-- Button brightness -->
+  <string name="power_menu_title">電源メニュー</string>
+  <!-- Quick QS pull down -->
+  <string name="status_bar_quick_qs_pulldown_off">OFF</string>
+  <string name="status_bar_quick_qs_pulldown_left">左</string>
+  <string name="status_bar_quick_qs_pulldown_right">右</string>
+  <!-- Status bar system icons -->
 </resources>
