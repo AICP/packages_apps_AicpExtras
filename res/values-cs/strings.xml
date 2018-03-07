@@ -25,12 +25,14 @@
   <!-- Status bar -->
   <string name="status_bar_title">Stavová lišta</string>
   <string name="status_bar_summary">Upravit vzhled stavové lišty</string>
+  <!-- StatusBar Battery Options -->
   <!-- Bluetooth status -->
   <string name="bluetooth_battery_title">Zobrazit stav baterie Bluetooth</string>
   <string name="bluetooth_battery_summary">Zobrazit stav baterie aktuálně připojeného bluetooth zařízení, je-li dostupné.</string>
   <!-- Statusbar net monitor -->
   <string name="network_traffic_state_title">Zobrazit indikátor síťové aktivity ve stavové liště</string>
   <string name="network_traffic_autohide_threshold_title">Prahová hodnota pro automatické skrytí sítě (KB/s)</string>
+  <!-- QS Header battery percentage -->
   <!-- Battery bar -->
   <string name="battery_bar_title">Pruh baterie</string>
   <string name="battery_bar_color_title">Barva</string>
@@ -87,9 +89,12 @@
   <string name="clock_date_display">Datum</string>
   <string name="clock_date_display_summary">Zobrazit vlastní datum před hodinami</string>
   <string name="clock_date_style">Styl data</string>
+  <string name="clock_date_position">Pozice data</string>
   <string name="clock_date_format">Formát data</string>
   <string name="clock_date_string_edittext_title">Musí být ve formátu např. MM/dd/yy</string>
   <string name="clock_date_string_edittext_summary">Zadejte řetězec</string>
+  <string name="clock_date_right">Vpravo od času</string>
+  <string name="clock_date_left">Vlevo od času</string>
   <string name="clock_date_display_none">Nezobrazovat</string>
   <string name="clock_date_display_small">Malá velikost písma</string>
   <string name="clock_date_display_normal">Normální velikost písma</string>
@@ -149,6 +154,10 @@
   <!-- Notifications -->
   <string name="notifications_title">Oznámení</string>
   <string name="notifications_summary">Rozšířené ovládání oznámení</string>
+  <!-- Notification guts kill app button -->
+  <string name="notification_guts_kill_app_button_title">Tlačítko \"Ukončit aplikaci\"</string>
+  <string name="notification_guts_kill_app_button_summary">Zobrazit tlačítko \"Ukončit aplikaci\" při dlouhém stisku v nabídce oznámení</string>
+  <!-- InCall notifications vibrate -->
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Přepínač posuvníku jasu</string>
   <string name="brightness_slider_switch">Zobrazit jas v Rychlém nastavení</string>
@@ -157,6 +166,15 @@
   <string name="brightness_icon_position_title">Pozice ikony jasu</string>
   <string name="brightness_icon_position_on_summary">Zobrazit vpravo</string>
   <string name="brightness_icon_position_off_summary">Zobrazit vlevo</string>
+  <!-- Battery Styles -->
+  <string name="battery_style_title">Styl ikony baterie</string>
+  <string name="battery_style_summary">Změna vzhledu ikony baterie ve stavové liště</string>
+  <string name="battery_style_port">Na výšku</string>
+  <string name="battery_style_land">Na šířku</string>
+  <string name="battery_style_circle">Kruh</string>
+  <string name="battery_style_dotted_circle">Tečkovaný kruh</string>
+  <string name="battery_style_text">Text</string>
+  <string name="battery_style_hidden">Skrytá</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Rychlá nastavení</string>
   <string name="quick_settings_summary">Upravit vzhled rychlého nastavení</string>
@@ -217,6 +235,11 @@
   <string name="systemui_recents_mem_display_title">Zobrazit ukazatel paměti</string>
   <string name="systemui_recents_mem_display_summaryOn">Ukazatel paměti je povolen</string>
   <string name="systemui_recents_mem_display_summaryOff">Ukazatel paměti je zakázán</string>
+  <!-- Stock recents icon pack -->
+  <string name="recents_icon_pack_summary">Použít vlastní balíček ikon pro aplikace v panelu</string>
+  <string name="no_iconpacks_summary">Není nainstalován žádný balíček ikon</string>
+  <string name="dialog_pick_iconpack_title">Vyberte balíček ikon</string>
+  <string name="default_iconpack_title">Výchozí ikony</string>
   <!-- Slim recents -->
   <string name="slim_recents_title">Slim nedávné aplikace</string>
   <string name="recents_max_apps_title">Maximum povolených aplikací</string>
@@ -309,9 +332,15 @@
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Zvuk při snímku obrazovky</string>
   <string name="screenshot_sound_summary">Přehraje zvukový efekt při snímku obrazovky</string>
+  <!-- Swap volume keys based on device rotation -->
+  <string name="swap_volume_buttons">Prohodit tlačítka hlasitosti</string>
+  <string name="swap_volume_buttons_summary">Prohodit tlačítka hlasitosti dle natočení zařízení</string>
   <!-- Volume keys control media stream -->
   <string name="volume_keys_control_media_stream_title">Tlačítka hlasitosti ovládají hlasitost médií</string>
   <string name="volume_keys_control_media_stream_summary">Panel hlasitosti ve výchozím nastavení zobrazí posuvník hlasitosti médií</string>
+  <!-- Volume keys control music playback -->
+  <string name="volume_rocker_music_controls_title">Ovládání přehrávání</string>
+  <string name="volume_rocker_music_controls_summary">Když je obrazovka vypnutá, dlouhý stisk tlačítka hlasitosti posune na další skladbu</string>
   <!-- setting: show CPU info-->
   <string name="show_cpu_info">Zobrazit využití CPU</string>
   <string name="show_cpu_info_summary">Překrytí obrazovky informacemi o aktuálním vytížení CPU</string>
@@ -336,6 +365,9 @@
   <!-- Status bar - Battery saver color -->
   <string name="status_bar_battery_saver_color_title">Barva spořiče baterie</string>
   <string name="status_bar_battery_saver_color_summary">Poznámka: Nová barva bude použita při dalším spuštění spořiče baterie!</string>
+  <!-- Turn on display when power connected; turn off display when power disconnected -->
+  <string name="wake_when_plugged_or_unplugged_title">Probudit při nabíjení</string>
+  <string name="wake_when_plugged_or_unplugged_summary">Zapnout obrazovku při připojení nebo odpojení nabíječky</string>
   <!-- System animations -->
   <string name="system_animations_title">Animace</string>
   <string name="system_animations_summary">Systémové animace</string>
@@ -410,7 +442,8 @@
   <string name="ae_settings_summary">Přizpůsobit vzhled a chování Aicp Extras</string>
   <string name="theme_title">Motiv</string>
   <string name="theme_default">Výchozí nastavení motivu</string>
-  <string name="theme_dark_amber">Tmavě jantarový motiv</string>
+  <string name="theme_light">Světlý</string>
+  <string name="theme_dark">Tmavý</string>
   <string name="ae_launcher_enabled_title">Zobrazit ikonu spouštěče</string>
   <string name="ae_launcher_enabled_summary">Zobrazit AICP Extras ve spouštěči</string>
   <string name="ae_launcher_enabled_update">Ikona spouštěče byla aktualizována. Projevení změny může chvíli trvat</string>
@@ -472,10 +505,14 @@
   <string name="lock_screen_weather_condition_icon_summaryOn">Ikony počasí jsou zobrazeny na zamykací obrazovce</string>
   <string name="lock_screen_weather_condition_icon_summaryOff">Ikony počasí jsou skryty na zamykací obrazovce</string>
   <!-- Statusbar ticker -->
+  <string name="status_bar_ticker_category_title">Text oznámení</string>
   <string name="ticker_mode_title">Notifikační oznámení ve stavové liště</string>
   <string name="ticker_disabled">Zakázáno</string>
   <string name="ticker_enabled">Notifikační oznámení</string>
   <string name="ticker_media_enabled">Notifikační a hudební oznámení</string>
+  <string name="ticker_animation_mode_title">Animace textu oznámení</string>
+  <string name="ticker_animation_mode_alpha_fade">Slábnutí</string>
+  <string name="ticker_animation_mode_scroll">Rolování</string>
   <string name="navbar_title">Navigační panel</string>
   <string name="navbar_summary">Chytrá lišta/Fling</string>
   <!-- DUI -->
@@ -561,7 +598,6 @@
   <string name="fling_longpress_title">Zpoždění dlouhým stiskem</string>
   <string name="fling_longpress_summary">Zvýšit nebo snížit dobu potřebnou k provedení akce dlouhým stisknutím</string>
   <string name="fling_keyboard_cursors_title">Akce dynamických kurzorů klávesnice</string>
-  <string name="fling_keyboard_cursors_summary">Dvojím poklepáním doleva a doprava se pohybují kurzorové klávesy vlevo a vpravo při otevřené klávesnici</string>
   <string name="fling_logo_opacity_title">Průhlednost loga Fling</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">Pulse nefunguje s některými zvukovými zdroji při poslechu z reproduktoru zařízení</string>
@@ -712,8 +748,6 @@
   <string name="notification_sound_vib_screen_on_never">Nikdy</string>
   <string name="notification_sound_vib_screen_on_always">Vždy (výchozí)</string>
   <string name="notification_sound_vib_screen_on_nomedia">Pokud se nepřehrávají média</string>
-  <!-- Accidental Touch -->
-  <string name="anbi_enabled_title">Zabránit náhodnému dotyku</string>
   <string name="anbi_enabled_summary">Pokud je tato volba povolena, zabraňuje náhodnému dotyku hardwarových tlačítek při používání dotykové obrazovky.</string>
   <!-- Dynamic Navbar -->
   <string name="navbar_dynamic_title">Barva dynamického navigačního panelu</string>
@@ -722,7 +756,15 @@
   <!-- Face unlock toggle -->
   <string name="face_auto_unlock_title">Automatické odemčení pomocí obličeje</string>
   <string name="face_auto_unlock_summary">Odstraní zamykací obrazovku po odemknutí obličejem</string>
-  <!-- Battery image -->
-  <string name="battery_image_title">Ikona baterie</string>
-  <string name="battery_image_summary">Zobrazit ikonu baterie na stavové liště</string>
+  <!-- Navigation -->
+  <!-- HW keys -->
+  <!-- Volume keys -->
+  <!-- Hardware button navigation -->
+  <!-- Button brightness -->
+  <string name="power_menu_title">Menu napájení</string>
+  <!-- Quick QS pull down -->
+  <string name="status_bar_quick_qs_pulldown_off">Vypnuto</string>
+  <string name="status_bar_quick_qs_pulldown_left">Vlevo</string>
+  <string name="status_bar_quick_qs_pulldown_right">Vpravo</string>
+  <!-- Status bar system icons -->
 </resources>

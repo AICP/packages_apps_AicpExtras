@@ -25,12 +25,17 @@
   <!-- Status bar -->
   <string name="status_bar_title">狀態列</string>
   <string name="status_bar_summary">編輯狀態列外觀</string>
+  <!-- StatusBar Battery Options -->
+  <string name="status_bar_battery_options">電池選項</string>
   <!-- Bluetooth status -->
   <string name="bluetooth_battery_title">顯示藍牙電池狀態</string>
   <string name="bluetooth_battery_summary">顯示目前已連接藍牙裝置的電池狀態 (如果可用)。</string>
   <!-- Statusbar net monitor -->
   <string name="network_traffic_state_title">在狀態列中顯示網路活動</string>
   <string name="network_traffic_autohide_threshold_title">網路活動自動隱藏下限 (KB/s)</string>
+  <!-- QS Header battery percentage -->
+  <string name="force_battery_percentage_title">強制顯示電池百分比</string>
+  <string name="force_battery_percentage_summary">顯示快速設定標頭和鍵盤鎖中的電池百分比文字。</string>
   <!-- Battery bar -->
   <string name="battery_bar_title">電量列</string>
   <string name="battery_bar_color_title">顏色</string>
@@ -87,9 +92,12 @@
   <string name="clock_date_display">日期</string>
   <string name="clock_date_display_summary">在時鐘前顯示自訂日期</string>
   <string name="clock_date_style">日期樣式</string>
+  <string name="clock_date_position">日期位置</string>
   <string name="clock_date_format">日期格式</string>
   <string name="clock_date_string_edittext_title">日期格式必須是此形式 例如：MM/dd/yy</string>
   <string name="clock_date_string_edittext_summary">輸入字串</string>
+  <string name="clock_date_right">時鐘右側</string>
+  <string name="clock_date_left">時鐘左側</string>
   <string name="clock_date_display_none">不顯示</string>
   <string name="clock_date_display_small">小字體的大小</string>
   <string name="clock_date_display_normal">正常字體大小</string>
@@ -149,6 +157,12 @@
   <!-- Notifications -->
   <string name="notifications_title">通知</string>
   <string name="notifications_summary">延伸型通知控制</string>
+  <!-- Notification guts kill app button -->
+  <string name="notification_guts_kill_app_button_title">終止應用程式按鍵</string>
+  <string name="notification_guts_kill_app_button_summary">在通知長按選單中顯示終止應用程式按鍵</string>
+  <!-- InCall notifications vibrate -->
+  <string name="incall_notifications_vibrate_title">較少煩人的通話中通知</string>
+  <string name="incall_notifications_vibrate_summary">在來電時輕輕震動而不是播放音效, 並推送通知</string>
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">亮度滑動條設定</string>
   <string name="brightness_slider_switch">在快速設定中顯示亮度滑動條</string>
@@ -157,6 +171,15 @@
   <string name="brightness_icon_position_title">亮度圖示的位置</string>
   <string name="brightness_icon_position_on_summary">右側顯示</string>
   <string name="brightness_icon_position_off_summary">左側顯示</string>
+  <!-- Battery Styles -->
+  <string name="battery_style_title">電池圖示樣式</string>
+  <string name="battery_style_summary">更改狀態列中圖示的外觀</string>
+  <string name="battery_style_port">縱向</string>
+  <string name="battery_style_land">横向</string>
+  <string name="battery_style_circle">環狀圖示</string>
+  <string name="battery_style_dotted_circle">點陣環形</string>
+  <string name="battery_style_text">文字</string>
+  <string name="battery_style_hidden">隱藏</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">快速設定</string>
   <string name="quick_settings_summary">編輯快速設定外觀</string>
@@ -217,6 +240,12 @@
   <string name="systemui_recents_mem_display_title">顯示記憶體列</string>
   <string name="systemui_recents_mem_display_summaryOn">已啟用記憶體列</string>
   <string name="systemui_recents_mem_display_summaryOff">已停用記憶體列</string>
+  <!-- Stock recents icon pack -->
+  <string name="recents_icon_pack_title">圖示包</string>
+  <string name="recents_icon_pack_summary">在面板中為應用程式套用自訂圖示包</string>
+  <string name="no_iconpacks_summary">沒有已安裝的圖示包</string>
+  <string name="dialog_pick_iconpack_title">選擇圖示包</string>
+  <string name="default_iconpack_title">預設圖示</string>
   <!-- Slim recents -->
   <string name="slim_recents_title">小型總覽</string>
   <string name="recents_max_apps_title">允許的應用程式數量上限</string>
@@ -309,9 +338,15 @@
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">擷取螢幕畫面音效</string>
   <string name="screenshot_sound_summary">擷取螢幕畫面時播放音效</string>
+  <!-- Swap volume keys based on device rotation -->
+  <string name="swap_volume_buttons">交換音量鍵</string>
+  <string name="swap_volume_buttons_summary">根據裝置旋轉交換音量鍵</string>
   <!-- Volume keys control media stream -->
   <string name="volume_keys_control_media_stream_title">音量鍵控制媒體音量</string>
   <string name="volume_keys_control_media_stream_summary">音量面板預設顯示媒體音量滑動條</string>
+  <!-- Volume keys control music playback -->
+  <string name="volume_rocker_music_controls_title">播放控制</string>
+  <string name="volume_rocker_music_controls_summary">螢幕關閉時，長按音量鍵即可切換曲目</string>
   <!-- setting: show CPU info-->
   <string name="show_cpu_info">顯示處理器資訊</string>
   <string name="show_cpu_info_summary">目前的處理器資訊重疊在螢幕上</string>
@@ -336,6 +371,9 @@
   <!-- Status bar - Battery saver color -->
   <string name="status_bar_battery_saver_color_title">省電模式顏色</string>
   <string name="status_bar_battery_saver_color_summary">注意：如果已經啟用了省電模式，為了使新顏色有效，請切換至省電模式！</string>
+  <!-- Turn on display when power connected; turn off display when power disconnected -->
+  <string name="wake_when_plugged_or_unplugged_title">接上時喚醒</string>
+  <string name="wake_when_plugged_or_unplugged_summary">接上或移除電源時開啟螢幕</string>
   <!-- System animations -->
   <string name="system_animations_title">動畫</string>
   <string name="system_animations_summary">系統動畫</string>
@@ -410,7 +448,11 @@
   <string name="ae_settings_summary">自訂 Aicp 額外的外觀和行為</string>
   <string name="theme_title">主題</string>
   <string name="theme_default">預設設定主題</string>
-  <string name="theme_dark_amber">深琥珀色主題</string>
+  <string name="theme_default_more_accent">更多顏色</string>
+  <string name="theme_light">淺色</string>
+  <string name="theme_light_more_accent">更多淺色的顏色</string>
+  <string name="theme_dark">暗色</string>
+  <string name="theme_dark_more_accent">更多深色的顏色</string>
   <string name="ae_launcher_enabled_title">顯示啟動器圖示</string>
   <string name="ae_launcher_enabled_summary">在啟動器中顯示 AICP 附加功能</string>
   <string name="ae_launcher_enabled_update">啟動器圖示可見性已更新。更改生效可能需要一些時間</string>
@@ -472,10 +514,14 @@
   <string name="lock_screen_weather_condition_icon_summaryOn">鎖定畫面上顯示天氣狀況圖示</string>
   <string name="lock_screen_weather_condition_icon_summaryOff">鎖定畫面上隱藏天氣狀況圖示</string>
   <!-- Statusbar ticker -->
+  <string name="status_bar_ticker_category_title">通知提示</string>
   <string name="ticker_mode_title">狀態列通知提示</string>
   <string name="ticker_disabled">已停用</string>
   <string name="ticker_enabled">通知指示</string>
   <string name="ticker_media_enabled">通知與音樂提示</string>
+  <string name="ticker_animation_mode_title">提示訊息動畫</string>
+  <string name="ticker_animation_mode_alpha_fade">淡出</string>
+  <string name="ticker_animation_mode_scroll">滾動</string>
   <string name="navbar_title">導覽列</string>
   <string name="navbar_summary">智慧列/滑動手勢</string>
   <!-- DUI -->
@@ -561,7 +607,7 @@
   <string name="fling_longpress_title">長按延遲</string>
   <string name="fling_longpress_summary">增加或減少執行長按所需的時間</string>
   <string name="fling_keyboard_cursors_title">動態鍵盤游標動作</string>
-  <string name="fling_keyboard_cursors_summary">如鍵盤開啟，則輕觸兩下左右動作成為左右鍵盤游標的動作</string>
+  <string name="fling_keyboard_cursors_move_summary">當鍵盤顯示時, 長按左或右鍵可將文字游標向左或向右移動. \n 保持長時間的移動游標, 在列上輕觸進入主畫面。</string>
   <string name="fling_logo_opacity_title">滑動手勢標誌不透明度</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">在裝置喇叭上聆聽時，呼吸燈不適用於某些音訊來源</string>
@@ -712,8 +758,6 @@
   <string name="notification_sound_vib_screen_on_never">永不</string>
   <string name="notification_sound_vib_screen_on_always">一律 (預設)</string>
   <string name="notification_sound_vib_screen_on_nomedia">如果沒有媒體在播放</string>
-  <!-- Accidental Touch -->
-  <string name="anbi_enabled_title">防止誤觸</string>
   <string name="anbi_enabled_summary">啟用時, 在使用觸控式螢幕時防止意外觸摸硬體按鍵。</string>
   <!-- Dynamic Navbar -->
   <string name="navbar_dynamic_title">動態導覽列顏色</string>
@@ -722,7 +766,44 @@
   <!-- Face unlock toggle -->
   <string name="face_auto_unlock_title">臉部自動解鎖</string>
   <string name="face_auto_unlock_summary">解除鎖定畫面後的臉部解鎖</string>
-  <!-- Battery image -->
-  <string name="battery_image_title">電池圖片</string>
-  <string name="battery_image_summary">在狀態列中顯示電池圖片</string>
+  <!-- Navigation -->
+  <string name="navigation_category">導覽</string>
+  <!-- HW keys -->
+  <string name="hw_keys_title">實體按鍵</string>
+  <string name="hw_keys_summary">配置裝置硬體按鍵的行為</string>
+  <!-- Volume keys -->
+  <string name="volume_keys_category">音量鍵</string>
+  <!-- Hardware button navigation -->
+  <string name="hardware_keys_volume_keys_title">音量搖杆</string>
+  <string name="hardware_keys_home_key_title">主畫面鍵</string>
+  <string name="hardware_keys_menu_key_title">選單鍵</string>
+  <string name="hardware_keys_assist_key_title">搜尋鍵</string>
+  <string name="hardware_keys_appswitch_key_title">總覽鍵</string>
+  <string name="hardware_keys_back_key_title">返回鍵</string>
+  <string name="hardware_keys_double_tap_summary">設定輕觸兩下動作</string>
+  <string name="hardware_keys_single_tap_summary">設定輕觸一下動作</string>
+  <string name="hardware_keys_long_press_summary">設定長按動作</string>
+  <string name="hardware_keys_single_tap_title">輕觸一下動作</string>
+  <string name="hardware_keys_long_press_title">長按動作</string>
+  <string name="hardware_keys_double_tap_title">輕觸兩下動作</string>
+  <string name="hardware_keys_disable_title">停用導覽列按鍵</string>
+  <!-- Button brightness -->
+  <string name="button_backlight_options_category">背光選項</string>
+  <string name="button_backlight_enable_title">允許按鍵背光</string>
+  <string name="button_link_brightness">連結至螢幕亮度</string>
+  <string name="button_link_brightness_summary">按鈕背光亮度將根據螢幕的亮度調整</string>
+  <string name="button_manual_brightness">亮度等級</string>
+  <string name="button_timeout_title">背光逾時</string>
+  <string name="button_backlight_on_touch_only_title">按鍵背光觸控</string>
+  <string name="button_backlight_on_touch_only_summary">按鍵背光只會在按下按鍵時出現，而不是一直按下。逾時仍會影響此功能。</string>
+  <string name="other_keys_category">其他按鍵</string>
+  <string name="additional_buttons_title">更多按鍵</string>
+  <string name="additional_buttons_summary">裝置特定硬體</string>
+  <string name="power_menu_title">電源選單</string>
+  <string name="power_menu_summary">電源選單內容</string>
+  <!-- Quick QS pull down -->
+  <string name="status_bar_quick_qs_pulldown_off">關閉</string>
+  <string name="status_bar_quick_qs_pulldown_left">左側</string>
+  <string name="status_bar_quick_qs_pulldown_right">右側</string>
+  <!-- Status bar system icons -->
 </resources>
