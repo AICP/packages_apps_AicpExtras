@@ -19,5 +19,30 @@
 -->
 <resources>
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+  <string name="anonymous_statistics_title">AICP统计</string>
+  <string name="anonymous_statistics_summary">帮助AICP选择为匿名统计报告</string>
+  <string name="anonymous_statistics_warning_title">关于</string>
+  <string name="anonymous_statistics_warning">选入AICP Stats将允许向非个人数据提交
+         我们的服务器提交的信息包含一个唯一的标识符，不会危害您的隐私或个人数据。
+         数据每7天提交一次。\n\n有关提交数据的示例，请点击预览数据。</string>
+  <string name="enable_reporting_title">启用统计</string>
+  <string name="disable_reporting_persistent">永久退出</string>
+  <string name="preview_data_title">预览数据</string>
+  <string name="view_stats_title">查看统计页面</string>
+  <string name="anonymous_learn_more">了解更多</string>
+  <string name="last_report_on">上次统计报告</string>
+  <string name="reporting_interval">报告间隔</string>
+  <plurals name="reporting_interval_days">
+    <item quantity="other">%d天</item>
+  </plurals>
+  <string name="next_report_on">下次统计报告</string>
   <!-- Anonymous Statistics - Preview -->
+  <string name="preview_id_title">唯一标识符</string>
+  <string name="preview_device_title">设备</string>
+  <string name="preview_version_title">版本</string>
+  <string name="preview_country_title">国家</string>
+  <string name="preview_carrier_title">运营商</string>
+  <string name="preview_romname_title">ROM名称</string>
+  <string name="preview_romversion_title">AICP版本</string>
+  <string name="preview_buildtype_title">AICP版本类型</string>
 </resources>

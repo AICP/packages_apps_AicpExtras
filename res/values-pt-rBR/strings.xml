@@ -25,12 +25,14 @@
   <!-- Status bar -->
   <string name="status_bar_title">Barra de status</string>
   <string name="status_bar_summary">Editar aparência da barra de status</string>
+  <!-- StatusBar Battery Options -->
   <!-- Bluetooth status -->
   <string name="bluetooth_battery_title">Mostrar os Status de bateria do Bluetooth</string>
   <string name="bluetooth_battery_summary">Mostrar o status de bateria do dispositivo bluetooth conectado atualmente, caso disponível.</string>
   <!-- Statusbar net monitor -->
   <string name="network_traffic_state_title">Mostrar a atividade da rede na barra de status</string>
   <string name="network_traffic_autohide_threshold_title">Limite para Auto Ocultar atividade da rede (KB/s)</string>
+  <!-- QS Header battery percentage -->
   <!-- Battery bar -->
   <string name="battery_bar_title">Barra da bateria</string>
   <string name="battery_bar_color_title">Cor</string>
@@ -71,8 +73,10 @@
   <string name="status_bar_double_tap_to_sleep_title">Toque para dormir</string>
   <string name="status_bar_double_tap_to_sleep_summary">Dê um duplo toque na barra de status para desligar a tela</string>
   <!-- Statusbar Clock options -->
+  <string name="status_bar_show_clock_title">Mostrar o relógio e data</string>
   <string name="clock_title_enable">Alinhamento</string>
   <string name="clock_date_display">Data</string>
+  <string name="clock_date_string_edittext_title">Deve estar em formato de data, por exemplo: MM/dd/yy</string>
   <string name="menu_cancel">Cancelar</string>
   <!-- Statusbar AICP logo -->
   <string name="status_bar_logo_title">logotipo da barra de status</string>
@@ -82,9 +86,27 @@
   <string name="status_bar_logo_position_left">Esquerda</string>
   <string name="status_bar_logo_style_aicp">AICP</string>
   <string name="status_bar_logo_style_android">Android</string>
+  <string name="status_bar_logo_style_ios">iOS</string>
+  <string name="status_bar_logo_style_emoticon">Emoticon</string>
+  <string name="status_bar_logo_style_emoticon_cool">Emoticon legal</string>
+  <string name="status_bar_logo_style_emoticon_dead">Emoticon morto</string>
+  <string name="status_bar_logo_style_emoticon_devil">Emoticon demônio</string>
+  <string name="status_bar_logo_style_emoticon_happy">Emoticon feliz</string>
+  <string name="status_bar_logo_style_emoticon_neutral">Emoticon neutro</string>
+  <string name="status_bar_logo_style_emoticon_poop">Emoticon cocô</string>
+  <string name="status_bar_logo_style_emoticon_sad">Emoticon triste</string>
+  <string name="status_bar_logo_style_emoticon_tongue">Emoticon língua</string>
+  <string name="status_bar_logo_style_blackberry">BlackBerry</string>
+  <string name="status_bar_logo_style_blogger">Blogger</string>
+  <string name="status_bar_logo_style_biohazard">Biohazard</string>
   <!-- Statusbar categories -->
   <!-- Notifications -->
   <string name="notifications_title">Notificações</string>
+  <string name="notifications_summary">Controle de notificações extendido</string>
+  <!-- Notification guts kill app button -->
+  <string name="notification_guts_kill_app_button_title">Botão de encerrar aplicativo</string>
+  <string name="notification_guts_kill_app_button_summary">Mostrar um botão para finalizar o aplicativo ao tocar e segurar em uma notificação</string>
+  <!-- InCall notifications vibrate -->
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Configurações do controle deslizante de brilho</string>
   <string name="brightness_slider_switch">Mostrar controle deslizante de brilho nas Configurações Rápidas</string>
@@ -93,6 +115,11 @@
   <string name="brightness_icon_position_title">Posição de ícone de brilho</string>
   <string name="brightness_icon_position_on_summary">Mostrar à direita</string>
   <string name="brightness_icon_position_off_summary">Mostrar à esquerda</string>
+  <!-- Battery Styles -->
+  <string name="battery_style_port">Retrato</string>
+  <string name="battery_style_land">Paisagem</string>
+  <string name="battery_style_circle">Círculo</string>
+  <string name="battery_style_text">Texto</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Configurações rápidas</string>
   <string name="quick_settings_summary">Editar a aparência das configurações rápidas</string>
@@ -147,6 +174,11 @@
   <string name="systemui_recents_mem_display_title">Mostrar barra de memória RAM</string>
   <string name="systemui_recents_mem_display_summaryOn">Barra de memória RAM habilitada</string>
   <string name="systemui_recents_mem_display_summaryOff">Barra de memória RAM desabilitada</string>
+  <!-- Stock recents icon pack -->
+  <string name="recents_icon_pack_summary">Aplicar um pacote de ícones personalizados nos aplicativos recentes</string>
+  <string name="no_iconpacks_summary">Não há pacotes de ícone instalados</string>
+  <string name="dialog_pick_iconpack_title">Escolha o pacote de ícones</string>
+  <string name="default_iconpack_title">Ícones padrão</string>
   <!-- Slim recents -->
   <string name="slim_recents_title">Slim Recents</string>
   <string name="recents_max_apps_title">Permitir o maximo de aplicativos</string>
@@ -239,9 +271,15 @@
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Som de captura de tela</string>
   <string name="screenshot_sound_summary">Reproduz um efeito sonoro quando a tela for capturada</string>
+  <!-- Swap volume keys based on device rotation -->
+  <string name="swap_volume_buttons">Trocar os botões de volume</string>
+  <string name="swap_volume_buttons_summary">Trocar os botões de volume baseado na rotação do dispositivo</string>
   <!-- Volume keys control media stream -->
   <string name="volume_keys_control_media_stream_title">Teclas de volume controlam o volume de mídia</string>
   <string name="volume_keys_control_media_stream_summary">Painel de volume irá mostrar o controle deslizante de volume de mídia como padrão</string>
+  <!-- Volume keys control music playback -->
+  <string name="volume_rocker_music_controls_title">Controle de reprodução</string>
+  <string name="volume_rocker_music_controls_summary">Quando a tela estiver desligada, segurar os botões de volume avançam ou retrocedem músicas</string>
   <!-- setting: show CPU info-->
   <string name="show_cpu_info">Mostrar informações da CPU</string>
   <string name="show_cpu_info_summary">Superposição de tela mostrando informações de CPU atual</string>
@@ -266,6 +304,9 @@
   <!-- Status bar - Battery saver color -->
   <string name="status_bar_battery_saver_color_title">Cor da economia de bateria</string>
   <string name="status_bar_battery_saver_color_summary">Obs: Se a economia de bateria já estiver habilitada, para a nova cor funcionar, desabilite a economia de bateria!</string>
+  <!-- Turn on display when power connected; turn off display when power disconnected -->
+  <string name="wake_when_plugged_or_unplugged_title">Acordar ao conectar</string>
+  <string name="wake_when_plugged_or_unplugged_summary">Ativar a tela ao ligar ou desligar do carregador</string>
   <!-- System animations -->
   <string name="system_animations_title">Visor e animações</string>
   <string name="system_animations_summary">Animações do sistema</string>
@@ -340,7 +381,6 @@
   <string name="ae_settings_summary">Personalizar a aparência e o comportamento do Aicp Extras</string>
   <string name="theme_title">Tema</string>
   <string name="theme_default">Tema de configurações padrão</string>
-  <string name="theme_dark_amber">Tema de âmbar escuro</string>
   <string name="ae_launcher_enabled_title">Mostrar ícone do launcher</string>
   <string name="ae_launcher_enabled_summary">Mostrar AICP Extras no launcher</string>
   <string name="ae_launcher_enabled_update">Visibilidade de ícone do launcher atualizada. Pode levar algum tempo para que a alteração tenha efeito</string>
@@ -402,10 +442,12 @@
   <string name="lock_screen_weather_condition_icon_summaryOn">Ícone de condição é mostrado na tela de bloqueio</string>
   <string name="lock_screen_weather_condition_icon_summaryOff">Ícone de condição não é mostrado na tela de bloqueio</string>
   <!-- Statusbar ticker -->
+  <string name="status_bar_ticker_category_title">Ticker</string>
   <string name="ticker_mode_title">Alerta de notificação na barra de status</string>
   <string name="ticker_disabled">Desativado</string>
   <string name="ticker_enabled">Notificação ticker</string>
   <string name="ticker_media_enabled">Ticker para notificações e música</string>
+  <string name="ticker_animation_mode_alpha_fade">Desvanecer</string>
   <string name="navbar_title">Barra de navegação</string>
   <string name="navbar_summary">Smartbar/Fling</string>
   <!-- DUI -->
@@ -491,7 +533,6 @@
   <string name="fling_longpress_title">Atraso do toque longo</string>
   <string name="fling_longpress_summary">Aumentar ou diminuir o tempo que leva para executar um toque longo</string>
   <string name="fling_keyboard_cursors_title">Ação de cursores do teclado dinâmico</string>
-  <string name="fling_keyboard_cursors_summary">As ações de toque duplo e direito se tornam ações do cursor do teclado esquerdo e direito se o teclado estiver aberto</string>
   <string name="fling_logo_opacity_title">Opacidade da logo do Fling</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">Pulse não funciona com algumas fontes de áudio quando ouvir no alto-falante do dispositivo</string>
@@ -632,8 +673,18 @@
   <string name="screen_off_animation_default">Padrão</string>
   <!-- Suppress notification sound/vibration -->
   <string name="notification_sound_vib_screen_on_never">Nunca</string>
-  <!-- Accidental Touch -->
   <!-- Dynamic Navbar -->
+  <string name="restart_app_required">Reinicie o respectivo app para ver o efeito</string>
   <!-- Face unlock toggle -->
-  <!-- Battery image -->
+  <!-- Navigation -->
+  <!-- HW keys -->
+  <!-- Volume keys -->
+  <!-- Hardware button navigation -->
+  <!-- Button brightness -->
+  <string name="power_menu_title">Menu ligar na tela de bloqueio</string>
+  <!-- Quick QS pull down -->
+  <string name="status_bar_quick_qs_pulldown_off">Desligado</string>
+  <string name="status_bar_quick_qs_pulldown_left">Esquerda</string>
+  <string name="status_bar_quick_qs_pulldown_right">Centro</string>
+  <!-- Status bar system icons -->
 </resources>

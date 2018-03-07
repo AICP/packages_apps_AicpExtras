@@ -25,12 +25,17 @@
   <!-- Status bar -->
   <string name="status_bar_title">Stavový riadok</string>
   <string name="status_bar_summary">Upraviť vzhľad stavového riadku</string>
+  <!-- StatusBar Battery Options -->
+  <string name="status_bar_battery_options">Možnosti ikony batérie</string>
   <!-- Bluetooth status -->
   <string name="bluetooth_battery_title">Zobraziť stav batérie Bluetooth</string>
   <string name="bluetooth_battery_summary">Zobraziť stav batérie aktuálne pripojeného Bluetooth zariadenia, ak je dostupné.</string>
   <!-- Statusbar net monitor -->
   <string name="network_traffic_state_title">Zobraziť rýchlosť prenosu dát v stavovom riadku</string>
   <string name="network_traffic_autohide_threshold_title">Skryť pri rýchlosti dát (KB/s)</string>
+  <!-- QS Header battery percentage -->
+  <string name="force_battery_percentage_title">Vynútiť zobrazenie percent nabitia batérie</string>
+  <string name="force_battery_percentage_summary">Zobraziť percento nabíjania batérie na obrazovke uzamknutia a v hlavičke rýchlych nastavení.</string>
   <!-- Battery bar -->
   <string name="battery_bar_title">Pruh batérie</string>
   <string name="battery_bar_color_title">Farba</string>
@@ -87,9 +92,12 @@
   <string name="clock_date_display">Dátum</string>
   <string name="clock_date_display_summary">Zobraziť vlastný dátum pred hodinami</string>
   <string name="clock_date_style">Štýl dátumu</string>
+  <string name="clock_date_position">Umiestnenie dátumu</string>
   <string name="clock_date_format">Formát dátumu</string>
   <string name="clock_date_string_edittext_title">Musí byť vo formáte dátumu napr. MM/dd/yy</string>
   <string name="clock_date_string_edittext_summary">Zadajte reťazec</string>
+  <string name="clock_date_right">Vpravo od hodín</string>
+  <string name="clock_date_left">Vľavo od hodín</string>
   <string name="clock_date_display_none">Nezobrazovať</string>
   <string name="clock_date_display_small">Malá veľkosť písma</string>
   <string name="clock_date_display_normal">Normálna veľkosť písma</string>
@@ -149,6 +157,12 @@
   <!-- Notifications -->
   <string name="notifications_title">Upozornenia</string>
   <string name="notifications_summary">Ovládacie prvky rozšírených upozornení</string>
+  <!-- Notification guts kill app button -->
+  <string name="notification_guts_kill_app_button_title">Tlačidlo \"Ukončiť aplikáciu\"</string>
+  <string name="notification_guts_kill_app_button_summary">Zobraziť tlačidlo \"Ukončiť aplikáciu\" v ponuke akcií pri dlhom stlačení</string>
+  <!-- InCall notifications vibrate -->
+  <string name="incall_notifications_vibrate_title">Menej otravné upozornenia počas hovoru</string>
+  <string name="incall_notifications_vibrate_summary">Ak príde upozornenie počas hovoru, iba jemne zavibrovať namiesto prehrania zvuku</string>
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Nastavenia posuvníka jasu</string>
   <string name="brightness_slider_switch">Zobraziť posuvník jasu na paneli rýchlych nastavení</string>
@@ -157,6 +171,15 @@
   <string name="brightness_icon_position_title">Poloha ikony jasu</string>
   <string name="brightness_icon_position_on_summary">Zobraziť napravo</string>
   <string name="brightness_icon_position_off_summary">Zobraziť vľavo</string>
+  <!-- Battery Styles -->
+  <string name="battery_style_title">Zobrazenie ikony batérie</string>
+  <string name="battery_style_summary">Zmena vzhľadu ikony batérie v stavovom riadku</string>
+  <string name="battery_style_port">Na výšku</string>
+  <string name="battery_style_land">Na šírku</string>
+  <string name="battery_style_circle">Kruh</string>
+  <string name="battery_style_dotted_circle">Bodkovaný kruh</string>
+  <string name="battery_style_text">Text</string>
+  <string name="battery_style_hidden">Skrytá</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Rýchle nastavenia</string>
   <string name="quick_settings_summary">Upraviť vzhľad rýchlych nastavení</string>
@@ -217,6 +240,12 @@
   <string name="systemui_recents_mem_display_title">Zobraziť pruh pamäte</string>
   <string name="systemui_recents_mem_display_summaryOn">Pruh pamäte je povolený</string>
   <string name="systemui_recents_mem_display_summaryOff">Pruh pamäte je zakázaný</string>
+  <!-- Stock recents icon pack -->
+  <string name="recents_icon_pack_title">Balíček ikon</string>
+  <string name="recents_icon_pack_summary">Použiť vlastný balíček ikon pre aplikácie na paneli</string>
+  <string name="no_iconpacks_summary">Žiadne balíky ikon nie sú nainštalované</string>
+  <string name="dialog_pick_iconpack_title">Vyberte balík ikon</string>
+  <string name="default_iconpack_title">Predvolené ikony</string>
   <!-- Slim recents -->
   <string name="slim_recents_title">Slim prepínač nedávnych aplikácií</string>
   <string name="recents_max_apps_title">Maximálny počet povolených aplikácií</string>
@@ -309,9 +338,15 @@
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Zvuk pri snímke obrazovky</string>
   <string name="screenshot_sound_summary">Prehrá zvukový efekt pri snímke obrazovky</string>
+  <!-- Swap volume keys based on device rotation -->
+  <string name="swap_volume_buttons">Prehodiť tlačidlá hlasitosti</string>
+  <string name="swap_volume_buttons_summary">Prehodiť tlačidlá hlasitosti podľa otočenia zariadenia</string>
   <!-- Volume keys control media stream -->
   <string name="volume_keys_control_media_stream_title">Tlačidlá hlasitosti ovládajú hlasitosť médií</string>
   <string name="volume_keys_control_media_stream_summary">Panel hlasitosti v predvolenom nastavení zobrazí posuvník hlasitosti médií</string>
+  <!-- Volume keys control music playback -->
+  <string name="volume_rocker_music_controls_title">Ovládanie prehrávania</string>
+  <string name="volume_rocker_music_controls_summary">Keď je vypnutá obrazovka, prepínať skladby dlhým stlačením tlačidiel pre ovládanie hlasitosti</string>
   <!-- setting: show CPU info-->
   <string name="show_cpu_info">Zobrazenie informácií o CPU</string>
   <string name="show_cpu_info_summary">Prekrytie obrazovky informáciami o aktuálnom vyťažení CPU</string>
@@ -336,6 +371,9 @@
   <!-- Status bar - Battery saver color -->
   <string name="status_bar_battery_saver_color_title">Farba pruhu batérie</string>
   <string name="status_bar_battery_saver_color_summary">Poznámka: Nová farba bude použitá pri nasledujúcom spustení šetriča batérie!</string>
+  <!-- Turn on display when power connected; turn off display when power disconnected -->
+  <string name="wake_when_plugged_or_unplugged_title">Prebudiť pri nabíjaní</string>
+  <string name="wake_when_plugged_or_unplugged_summary">Zapnúť obrazovku pri pripojení alebo odpojení zdroja nabíjania</string>
   <!-- System animations -->
   <string name="system_animations_title">Animácie</string>
   <string name="system_animations_summary">Systémové animácie</string>
@@ -410,7 +448,11 @@
   <string name="ae_settings_summary">Prispôsobiť vzhľad a správanie AICPA Extras</string>
   <string name="theme_title">Téma</string>
   <string name="theme_default">Predvolené nastavenia témy</string>
-  <string name="theme_dark_amber">Tmavo jantárový motív</string>
+  <string name="theme_default_more_accent">Viac farieb</string>
+  <string name="theme_light">Svetlá</string>
+  <string name="theme_light_more_accent">Viac svetlých farieb</string>
+  <string name="theme_dark">Tmavá</string>
+  <string name="theme_dark_more_accent">Viac tmavých farieb</string>
   <string name="ae_launcher_enabled_title">Zobraziť ikonu spúšťača</string>
   <string name="ae_launcher_enabled_summary">Zobraziť AICP Extras v spúšťači</string>
   <string name="ae_launcher_enabled_update">Ikona spúšťača bola aktualizovaná. Prejavenie zmeny môže chvíľu trvať</string>
@@ -472,10 +514,14 @@
   <string name="lock_screen_weather_condition_icon_summaryOn">Ikony počasia sú zobrazené na obrazovke uzamknutia</string>
   <string name="lock_screen_weather_condition_icon_summaryOff">Ikony počasia nie sú zobrazené na obrazovke uzamknutia</string>
   <!-- Statusbar ticker -->
+  <string name="status_bar_ticker_category_title">Text upozornenia</string>
   <string name="ticker_mode_title">Bežiaci text v stavovom riadku</string>
   <string name="ticker_disabled">Vypnuté</string>
   <string name="ticker_enabled">Textové upozornenie</string>
   <string name="ticker_media_enabled">Textové a zvukové upozornenie</string>
+  <string name="ticker_animation_mode_title">Animácia textu upozonenia</string>
+  <string name="ticker_animation_mode_alpha_fade">Miznutie</string>
+  <string name="ticker_animation_mode_scroll">Rolovanie</string>
   <string name="navbar_title">Navigačný panel</string>
   <string name="navbar_summary">Smartbar/Fling</string>
   <!-- DUI -->
@@ -561,7 +607,7 @@
   <string name="fling_longpress_title">Oneskorenie dlhým stlačením</string>
   <string name="fling_longpress_summary">Zvýšiť alebo znížiť časový interval pre prevedenie akcie dlhého stlačenia</string>
   <string name="fling_keyboard_cursors_title">Akcie kurzorov dynamickej klávesnice</string>
-  <string name="fling_keyboard_cursors_summary">Pri zapnutej klávesnici sa kurzorové klávesy pohybujú dvojklikom na ľavú a pravú akciu</string>
+  <string name="fling_keyboard_cursors_move_summary">Keď je klávesnica zobrazená, dlho stlačte doľava alebo doprava, aby ste posunuli textový kurzor doľava alebo doprava..\nPokračovaním v dlhom stlačení sa bude kurzor stále posúvať. Kliknite raz na panel pre návrat na domovskú obrazovku.</string>
   <string name="fling_logo_opacity_title">Priehľadnosť loga Fling</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">Pulse nefunguje s niektorými zvukovými zdrojmi pri počúvaní z reproduktora zariadenia</string>
@@ -712,8 +758,6 @@
   <string name="notification_sound_vib_screen_on_never">Nikdy</string>
   <string name="notification_sound_vib_screen_on_always">Vždy (predvolené)</string>
   <string name="notification_sound_vib_screen_on_nomedia">Ak sa multimédiá neprehrávajú</string>
-  <!-- Accidental Touch -->
-  <string name="anbi_enabled_title">Zabrániť náhodnému dotyku</string>
   <string name="anbi_enabled_summary">Ak je táto voľba povolená, zabraňuje náhodnému dotyku hardvérových tlačidiel pri používaní dotykovej obrazovky.</string>
   <!-- Dynamic Navbar -->
   <string name="navbar_dynamic_title">Farba dynamického navigačného panela</string>
@@ -722,7 +766,44 @@
   <!-- Face unlock toggle -->
   <string name="face_auto_unlock_title">Automatické odomknutie pomocou tváre</string>
   <string name="face_auto_unlock_summary">Zbaliť obrazovku uzamknutia po odomknutí pomocou tváre</string>
-  <!-- Battery image -->
-  <string name="battery_image_title">Ikona batérie</string>
-  <string name="battery_image_summary">Zobraziť ikonu batérie na stavovom riadku</string>
+  <!-- Navigation -->
+  <string name="navigation_category">Navigácia</string>
+  <!-- HW keys -->
+  <string name="hw_keys_title">Hardvérové tlačidlá</string>
+  <string name="hw_keys_summary">Konfigurácia správania hardvérových tlačidiel na zariadení</string>
+  <!-- Volume keys -->
+  <string name="volume_keys_category">Tlačidlá ovládania hlasitosti</string>
+  <!-- Hardware button navigation -->
+  <string name="hardware_keys_volume_keys_title">Prebudenie pomocou tlačidiel hlasitosti</string>
+  <string name="hardware_keys_home_key_title">Tlačidlo Domov</string>
+  <string name="hardware_keys_menu_key_title">Tlačidlo Menu</string>
+  <string name="hardware_keys_assist_key_title">Tlačidlo Hľadať</string>
+  <string name="hardware_keys_appswitch_key_title">Prepínač aplikácií</string>
+  <string name="hardware_keys_back_key_title">Tlačidlo Späť</string>
+  <string name="hardware_keys_double_tap_summary">Nastaviť akciu pri dvojkliku</string>
+  <string name="hardware_keys_single_tap_summary">Nastaviť akciu po jednom kliknutí</string>
+  <string name="hardware_keys_long_press_summary">Nastaviť akciu po dlhom stlačení</string>
+  <string name="hardware_keys_single_tap_title">Akcia pri kliknutí</string>
+  <string name="hardware_keys_long_press_title">Akcia po dlhom stlačení</string>
+  <string name="hardware_keys_double_tap_title">Akcia po dvojitom kliknutí</string>
+  <string name="hardware_keys_disable_title">Zakázať navigačné tlačidlá</string>
+  <!-- Button brightness -->
+  <string name="button_backlight_options_category">Možnosti podsvietenia</string>
+  <string name="button_backlight_enable_title">Zapnúť podsvietenie tlačidiel</string>
+  <string name="button_link_brightness">Zjednotiť s jasom obrazovky</string>
+  <string name="button_link_brightness_summary">Jas podsvietenia tlačidiel bude prispôsobený úrovni jasu obrazovky</string>
+  <string name="button_manual_brightness">Úroveň jasu</string>
+  <string name="button_timeout_title">Časový limit podsvietenia</string>
+  <string name="button_backlight_on_touch_only_title">Časový limit podsvietenia tlačidiel pri dotyku</string>
+  <string name="button_backlight_on_touch_only_summary">Podsvietenie tlačidiel bude zobrazené iba pri stlačení, nie po celú dobu. Časový limit stále ovplyvňuje túto funkciu.</string>
+  <string name="other_keys_category">Ostatné tlačidlá</string>
+  <string name="additional_buttons_title">Ďalšie tlačidlá</string>
+  <string name="additional_buttons_summary">Hardvér špecifický pre zariadenie</string>
+  <string name="power_menu_title">Menu tlačidla Napájanie</string>
+  <string name="power_menu_summary">Možnosti ponuky tlačidla Napájanie</string>
+  <!-- Quick QS pull down -->
+  <string name="status_bar_quick_qs_pulldown_off">Vyp.</string>
+  <string name="status_bar_quick_qs_pulldown_left">Vľavo</string>
+  <string name="status_bar_quick_qs_pulldown_right">Vpravo</string>
+  <!-- Status bar system icons -->
 </resources>
