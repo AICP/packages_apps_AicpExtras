@@ -130,6 +130,13 @@
             android:title="@string/hardware_keys_double_tap_title" >
         </com.aicp.extras.preference.ActionPreference>
 
+        <com.aicp.extras.preference.ActionPreference
+            android:key="button_home_wake_screen"
+            android:summary="@string/button_home_wake_summary"
+            android:title="@string/button_home_wake_title"
+            android:defaultValue="false" >
+        </com.aicp.extras.preference.ActionPreference>
+
     </PreferenceCategory>
 
     <PreferenceCategory
