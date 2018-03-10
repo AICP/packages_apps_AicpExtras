@@ -68,7 +68,7 @@
         android:entries="@array/force_ambient_for_media_entries"
         android:entryValues="@array/force_ambient_for_media_values"
         android:title="@string/force_ambient_for_media_title"
-        android:summary="@string/force_ambient_for_media_summary"
+        android:summary="%s"
         android:defaultValue="0" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
