@@ -78,6 +78,11 @@
         android:title="@string/info_category">
 
         <Preference
+            android:key="no_root"
+            android:title="@string/no_root_title"
+            android:summary="@string/no_root_summary" />
+
+        <Preference
             android:key="device_maintainer"
             android:title="@string/device_maintainer_title" />
 

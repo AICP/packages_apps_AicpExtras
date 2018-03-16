@@ -44,6 +44,7 @@ public class About extends BaseSettingsFragment {
     private static final String PREF_AICP_LOGO = "aicp_logo";
     private static final String PREF_AICP_DOWNLOADS = "aicp_downloads";
     private static final String PREF_DEVICE_MAINTAINER = "device_maintainer";
+    private static final String PREF_NO_ROOT = "no_root";
 
     private Preference mAicpDownloads;
     private Preference mDeviceMaintainer;
@@ -71,6 +72,11 @@ public class About extends BaseSettingsFragment {
                 startActivity(new Intent(getActivity(), HiddenAnimActivity.class));
             }
         }, 5));
+
+        Preference mNoRoot = findPreference(PREF_NO_ROOT);
+        if (Util.hasSu()) {
+            mNoRoot.getParent().removePreference(mNoRoot);
+        }
     }
 
     @Override
