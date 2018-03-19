@@ -57,11 +57,13 @@
         android:summary="@string/lockscreen_visualizer_summary"
         android:defaultValue="true"/>
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="ambient_battery_percent"
-        android:title="@string/ambient_battery_percent_title"
-        android:summary="@string/ambient_battery_percent_summary"
-        android:defaultValue="false" />
+    <com.aicp.gear.preference.SystemSettingIntListPreference
+        android:key="ambient_bottom_display"
+        android:entries="@array/ambient_display_bottom_info_entries"
+        android:entryValues="@array/ambient_display_bottom_info_values"
+        android:title="@string/ambient_display_bottom_info_title"
+        android:summary="%s"
+        android:defaultValue="0" />
 
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="force_ambient_for_media"
