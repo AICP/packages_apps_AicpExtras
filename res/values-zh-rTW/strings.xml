@@ -221,6 +221,22 @@
   <string name="file_header_select_title">選擇圖像</string>
   <string name="file_header_select_summary">選擇自訂圖像</string>
   <string name="file_header_provider_title">自訂圖像</string>
+  <!-- Tiles animation style  -->
+  <string name="qs_tile_animation_duration_title">動畫長度</string>
+  <string name="qs_tile_animation_style_off">無動畫</string>
+  <string name="qs_tile_animation_style_flip">翻轉</string>
+  <string name="qs_tile_animation_style_rotate">旋轉</string>
+  <string name="qs_tile_animation_duration_low">低</string>
+  <string name="qs_tile_animation_duration_default">預設</string>
+  <string name="qs_tile_animation_duration_fast">快</string>
+  <string name="qs_tile_animation_interpolator_linearInterpolator">直線</string>
+  <string name="qs_tile_animation_interpolator_accelerateInterpolator">加速</string>
+  <string name="qs_tile_animation_interpolator_decelerateInterpolator">減速</string>
+  <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">先快後慢</string>
+  <string name="qs_tile_animation_interpolator_bounceInterpolator">彈跳</string>
+  <string name="qs_tile_animation_interpolator_overshootInterpolator">過衝</string>
+  <string name="qs_tile_animation_interpolator_anticipateInterpolator">預備</string>
+  <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">預備和過衝</string>
   <!-- Recents -->
   <string name="recents_title">最近使用的應用程式</string>
   <string name="recents_summary">編輯總覽應用程式螢幕外觀</string>
@@ -330,6 +346,8 @@
   <!-- Fingerprint unlock keystore -->
   <string name="fp_unlock_keystore_title">指紋解鎖</string>
   <string name="fp_unlock_keystore_summary">在重新啟動後用指紋解鎖裝置，無須 PIN /密碼/圖案\n注意：自擔風險！</string>
+  <!-- Ambient display bottom info -->
+  <string name="ambient_display_bottom_info_off">已停用</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">其他 UI 調整</string>
   <string name="other_ui_summary">各種其他項目</string>
@@ -374,6 +392,11 @@
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <string name="wake_when_plugged_or_unplugged_title">接上時喚醒</string>
   <string name="wake_when_plugged_or_unplugged_summary">接上或移除電源時開啟螢幕</string>
+  <!-- Power Button - Long press for torch -->
+  <string name="torch_long_press_power_timeout_never">永不</string>
+  <string name="torch_long_press_power_timeout_1min">1 分鐘</string>
+  <string name="torch_long_press_power_timeout_5min">5 分鐘</string>
+  <string name="torch_long_press_power_timeout_10min">10 分鐘</string>
   <!-- System animations -->
   <string name="system_animations_title">動畫</string>
   <string name="system_animations_summary">系統動畫</string>
@@ -741,7 +764,6 @@
   <string name="screen_state_on_delay_title">螢幕關閉動作延遲</string>
   <string name="screen_state_on_delay_summary">螢幕開啟後執行動作之前等待的分鐘數</string>
   <!-- Ambient Music Ticker -->
-  <string name="force_ambient_for_media_title">環境音樂通知</string>
   <string name="force_ambient_for_media_summary">環境顯示中的音樂曲目資訊</string>
   <string name="force_ambient_for_media_off">已停用</string>
   <string name="force_ambient_for_media_on">已啟用</string>
@@ -787,6 +809,7 @@
   <string name="hardware_keys_long_press_title">長按動作</string>
   <string name="hardware_keys_double_tap_title">輕觸兩下動作</string>
   <string name="hardware_keys_disable_title">停用導覽列按鍵</string>
+  <!-- Home Hardware button options -->
   <!-- Button brightness -->
   <string name="button_backlight_options_category">背光選項</string>
   <string name="button_backlight_enable_title">允許按鍵背光</string>
