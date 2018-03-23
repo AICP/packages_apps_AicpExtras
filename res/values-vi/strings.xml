@@ -75,6 +75,22 @@
   <!-- QS tiles title visibility -->
   <!-- QS Headers -->
   <string name="header_provider_disabled">Đã vô hiệu hóa</string>
+  <!-- Tiles animation style  -->
+  <string name="qs_tile_animation_duration_title">Thời lượng hoạt ảnh</string>
+  <string name="qs_tile_animation_style_off">Không có hoạt ảnh</string>
+  <string name="qs_tile_animation_style_flip">Lật lại</string>
+  <string name="qs_tile_animation_style_rotate">Xoay</string>
+  <string name="qs_tile_animation_duration_low">Thấp</string>
+  <string name="qs_tile_animation_duration_default">Mặc định</string>
+  <string name="qs_tile_animation_duration_fast">Nhanh</string>
+  <string name="qs_tile_animation_interpolator_linearInterpolator">Đường thẳng</string>
+  <string name="qs_tile_animation_interpolator_accelerateInterpolator">Tăng tốc</string>
+  <string name="qs_tile_animation_interpolator_decelerateInterpolator">Giảm tốc</string>
+  <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">Tăng rồi giảm</string>
+  <string name="qs_tile_animation_interpolator_bounceInterpolator">Nảy lên</string>
+  <string name="qs_tile_animation_interpolator_overshootInterpolator">Vượt quá</string>
+  <string name="qs_tile_animation_interpolator_anticipateInterpolator">Nhanh chóng</string>
+  <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Nhanh và vượt quá</string>
   <!-- Recents -->
   <string name="recents_title">Ứng dụng gần đây</string>
   <!-- Recents panel settings -->
@@ -117,6 +133,8 @@
   <string name="fprint_sucess_vib_summary_on">Kích hoạt rung khi xác thực dấu vân tay thành công</string>
   <string name="fprint_sucess_vib_summary_off">Vô hiệu hóa rung khi xác thực dấu vân tay thành công</string>
   <!-- Fingerprint unlock keystore -->
+  <!-- Ambient display bottom info -->
+  <string name="ambient_display_bottom_info_off">Đã vô hiệu hóa</string>
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
@@ -135,6 +153,10 @@
   <!-- Scrolling Cache -->
   <!-- Status bar - Battery saver color -->
   <!-- Turn on display when power connected; turn off display when power disconnected -->
+  <!-- Power Button - Long press for torch -->
+  <string name="torch_long_press_power_timeout_1min">1 phút</string>
+  <string name="torch_long_press_power_timeout_5min">5 phút</string>
+  <string name="torch_long_press_power_timeout_10min">10 phút</string>
   <!-- System animations -->
   <string name="system_animations_title">Hoạt ảnh</string>
   <!-- System behaviour -->
@@ -242,6 +264,7 @@
   <!-- HW keys -->
   <!-- Volume keys -->
   <!-- Hardware button navigation -->
+  <!-- Home Hardware button options -->
   <!-- Button brightness -->
   <string name="power_menu_title">Menu nguồn</string>
   <!-- Quick QS pull down -->
