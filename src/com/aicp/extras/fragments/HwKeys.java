@@ -50,6 +50,7 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
     private static final String KEY_BUTTON_MANUAL_BRIGHTNESS_NEW = "button_manual_brightness_new";
     private static final String KEY_BUTTON_TIMEOUT = "button_timeout";
     private static final String KEY_BUTON_BACKLIGHT_OPTIONS = "button_backlight_options_category";
+    private static final String KEY_ACCIDENTAL_TOUCH = "anbi_enabled";
 
     // Masks for checking presence of hardware keys.
     // Must match values in frameworks/base/core/res/res/values/config.xml
@@ -66,6 +67,7 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
     private SeekBarPreferenceCham mButtonTimoutBar;
     private SeekBarPreferenceCham mManualButtonBrightness;
     private PreferenceCategory mButtonBackLightCategory;
+    private SwitchPreference mAccidentalTouch;
 
     @Override
     protected int getPreferenceResource() {
@@ -95,6 +97,14 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
                 Settings.System.BUTTON_BACKLIGHT_TIMEOUT, 0);
         mButtonTimoutBar.setValue(currentTimeout);
         mButtonTimoutBar.setOnPreferenceChangeListener(this);
+
+        // Prevent accidental touch to hw keys.
+        mAccidentalTouch = (SwitchPreference) findPreference(KEY_ACCIDENTAL_TOUCH);
+        int deviceHardwareKeys = getActivity().getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+        if (deviceHardwareKeys == 0 || deviceHardwareKeys == 64) {
+            mAccidentalTouch.getParent().removePreference(mAccidentalTouch);
+        }
 
         final boolean enableBacklightOptions = getResources().getBoolean(
                 com.android.internal.R.bool.config_button_brightness_support);
