@@ -223,6 +223,27 @@
   <string name="file_header_select_title">Seleccionar imagen</string>
   <string name="file_header_select_summary">Seleccione imagen personalizada</string>
   <string name="file_header_provider_title">Imagen personalizada</string>
+  <!-- Tiles animation style  -->
+  <string name="qs_tiles">Ajustes rápidos</string>
+  <string name="qs_tile_animation_style_title">Estilo de animación</string>
+  <string name="qs_tile_animation_duration_title">Duración de la animación</string>
+  <string name="qs_tile_animation_interpolator_title">Interpolador de la animación de los ajustes rápidos</string>
+  <string name="qs_tile_animation_style_off">Sin animación</string>
+  <string name="qs_tile_animation_style_flip">Voltear</string>
+  <string name="qs_tile_animation_style_rotate">Rotar</string>
+  <string name="qs_tile_animation_duration_low">Lento</string>
+  <string name="qs_tile_animation_duration_default">Predeterminado</string>
+  <string name="qs_tile_animation_duration_fast">Rápido</string>
+  <string name="qs_tile_animation_duration_quite_fast">Muy rápido</string>
+  <string name="qs_tile_animation_duration_super_fast">Super rapido</string>
+  <string name="qs_tile_animation_interpolator_linearInterpolator">Lineal</string>
+  <string name="qs_tile_animation_interpolator_accelerateInterpolator">Acelerar</string>
+  <string name="qs_tile_animation_interpolator_decelerateInterpolator">Decelerar</string>
+  <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">Accelerar decelerar</string>
+  <string name="qs_tile_animation_interpolator_bounceInterpolator">Rebotar</string>
+  <string name="qs_tile_animation_interpolator_overshootInterpolator">Excedido</string>
+  <string name="qs_tile_animation_interpolator_anticipateInterpolator">Anticipado</string>
+  <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Anticipado excedido</string>
   <!-- Recents -->
   <string name="recents_title">Aps. recientes</string>
   <string name="recents_summary">Editar aspecto del panel de aps. recientes</string>
@@ -332,6 +353,14 @@
   <!-- Fingerprint unlock keystore -->
   <string name="fp_unlock_keystore_title">Desbloqueo con lectos de huellas</string>
   <string name="fp_unlock_keystore_summary">Desbloquear el dispositivo con el lector de huellas tras un reinicio sin PIN/Contraseña/Patrón\nNota: Bajo su responsabilidad!</string>
+  <!-- Ambient display bottom info -->
+  <string name="ambient_display_category">Pantalla ambiente</string>
+  <string name="ambient_display_bottom_info_title">Vista inferior</string>
+  <string name="ambient_display_bottom_info_summary">Habilitar para mostrar la información en la parte inferior en modo Doze</string>
+  <string name="ambient_display_bottom_info_off">Deshabilitada</string>
+  <string name="ambient_display_bottom_info_battery">Porcentaje de batería</string>
+  <string name="ambient_display_bottom_info_weather">Mostrar información meteorológica</string>
+  <string name="lockscreen_security_category">Seguridad</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Otros ajustes de interfaz de usuario</string>
   <string name="other_ui_summary">Varios</string>
@@ -376,6 +405,18 @@
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <string name="wake_when_plugged_or_unplugged_title">Despertar al conectar</string>
   <string name="wake_when_plugged_or_unplugged_summary">Enciende la patanlla cuando se conecta o se desconecta el cargador</string>
+  <!-- Power Button - Long press for torch -->
+  <string name="torch_long_press_power_gesture_title">Pulsación larga del botón de encendido para activar la linterna</string>
+  <string name="torch_long_press_power_gesture_summary">Activa la linterna cuando se pulsa de forma prolongada el botón de encendido con la pantalla apagada</string>
+  <string name="torch_long_press_power_timeout_title">Apagar automáticamente la linterna</string>
+  <string name="torch_long_press_power_timeout_never">Nunca</string>
+  <string name="torch_long_press_power_timeout_1min">1 minuto</string>
+  <string name="torch_long_press_power_timeout_2min">2 minutos</string>
+  <string name="torch_long_press_power_timeout_5min">5 minutos</string>
+  <string name="torch_long_press_power_timeout_10min">10 minutos</string>
+  <string name="screenshot_edit_app">Editor de captura de pantalla</string>
+  <string name="screenshot_edit_app_summary">Elegir qué aplicación debe iniciarse al tocar el botón de Editar en la notificación de captura de pantalla</string>
+  <string name="screenshot_edit_app_no_editor">Ningún editor de imágenes disponible</string>
   <!-- System animations -->
   <string name="system_animations_title">Pantalla y animaciones</string>
   <string name="system_animations_summary">Animaciones de sistema</string>
@@ -447,7 +488,7 @@
   <string name="power_menu_dialog_dim">Umbral de difuminado del menú de apagado</string>
   <!-- AE settings -->
   <string name="ae_settings_title">Personalización</string>
-  <string name="ae_settings_summary">Personalizar el aspecto y comportamiento de los Extras de la Aicp</string>
+  <string name="ae_settings_summary">Personalizar el aspecto y comportamiento de los Extras Aicp</string>
   <string name="theme_title">Tema</string>
   <string name="theme_default">Configuración predeterminada</string>
   <string name="theme_default_more_accent">Más color</string>
@@ -464,7 +505,7 @@
   <string name="weblinks_category">Enlaces</string>
   <string name="info_category">Información</string>
   <string name="aicp_website_title">Sitio web</string>
-  <string name="aicp_website_summary">Visite la página web de ANWB</string>
+  <string name="aicp_website_summary">Visite la página web de AICP</string>
   <string name="g_plus_title">Conunidad G+</string>
   <string name="g_plus_summary">Visitar nuestra comunidad en Google+</string>
   <string name="aicp_gerrit_title">Gerrit</string>
@@ -474,9 +515,9 @@
   <string name="aicp_downloads_title">Descargas</string>
   <string name="aicp_downloads_summary">Visitar la página de descargas de AICP para tu dispositivo</string>
   <string name="aicp_ota_title">Actualizaciones del sistema</string>
-  <string name="aicp_ota_summary">Comprobar actualizaciones de la ROM actual</string>
+  <string name="aicp_ota_summary">Comprobar actualizaciones</string>
   <string name="lineage_extras_title">Descargas extra de lineage</string>
-  <string name="lineage_extras_summary">Addon de root, desinstalador de root, los proveedores de clima;</string>
+  <string name="lineage_extras_summary">Addon de root, desinstalador de root, proveedores de clima&#8230;</string>
   <string name="stats_title">Estadísticas</string>
   <string name="stats_summary">Activar/Desactivar envío de estadísticas anónimas</string>
   <string name="device_maintainer_title">Responsable del dispositivo</string>
@@ -788,7 +829,10 @@
   <string name="hardware_keys_single_tap_title">Acción de un toque</string>
   <string name="hardware_keys_long_press_title">Acción de pulsación larga</string>
   <string name="hardware_keys_double_tap_title">Acción de doble toque</string>
-  <string name="hardware_keys_disable_title">Deshabilitar botones de navegación</string>
+  <string name="hardware_keys_disable_title">Deshabilitar botones</string>
+  <!-- Home Hardware button options -->
+  <string name="button_home_wake_title">Despertar con botón Inicio</string>
+  <string name="button_home_wake_summary">Despierta el dispositivo con el botón Inicio</string>
   <!-- Button brightness -->
   <string name="button_backlight_options_category">Opciones de retroiluminación</string>
   <string name="button_backlight_enable_title">Permitir retroiluminación de los botones</string>
@@ -801,7 +845,7 @@
   <string name="other_keys_category">Otros botones</string>
   <string name="additional_buttons_title">Botones adicionales</string>
   <string name="additional_buttons_summary">Hardware específico del dispositivo</string>
-  <string name="power_menu_title">Menú de apagado en pantalla de bloqueo</string>
+  <string name="power_menu_title">Menú de apagado</string>
   <string name="power_menu_summary">Elementos del menú de apagado</string>
   <!-- Quick QS pull down -->
   <string name="status_bar_quick_qs_pulldown_title">Despliegue rápido</string>
