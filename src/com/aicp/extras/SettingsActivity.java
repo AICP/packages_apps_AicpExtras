@@ -18,15 +18,21 @@
 package com.aicp.extras;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
 import android.app.Fragment;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 
 import com.aicp.extras.dslv.ActionListViewSettings;
 import com.aicp.extras.fragments.Dashboard;
 import com.aicp.extras.preference.MasterSwitchPreference;
 import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
 import com.aicp.extras.preference.SystemSettingSwitchBarController;
+import com.aicp.extras.utils.Util;
 import com.aicp.extras.widget.SwitchBar;
 
 public class SettingsActivity extends BaseActivity {
@@ -71,6 +77,11 @@ public class SettingsActivity extends BaseActivity {
                     mIntent.getBooleanExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE, false),
                     getContentResolver(),
                     settingsFragment);
+        }
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        if (sharedPreferences.getBoolean("is_first_time", true)) {
+            firstStartNoRootDialog();
         }
     }
 
@@ -159,5 +170,26 @@ public class SettingsActivity extends BaseActivity {
 
     protected Fragment getDefaultFragment() {
         return new Dashboard();
+    }
+
+    private void firstStartNoRootDialog() {
+        if (Util.hasSu()) {
+            // We are rooted, full functionality available
+            return;
+        }
+        String title = getResources().getString(R.string.no_root_title);
+        String message = getResources().getString(R.string.no_root_summary);
+
+        new AlertDialog.Builder(this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            // No need to show again
+                            PreferenceManager.getDefaultSharedPreferences(SettingsActivity.this)
+                                    .edit().putBoolean("is_first_time", false).apply();
+                        }
+                })
+                .show();
     }
 }
