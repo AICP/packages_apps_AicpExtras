@@ -26,6 +26,12 @@
             android:title="@string/custom_bootanimation_title"
             android:summary="@string/custom_bootanimation_summary" />
 
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+        android:key="system_default_animation"
+        android:title="@string/system_default_animation_title"
+        android:summary="@string/system_default_animation_summary"
+        android:defaultValue="0" />
+
     <PreferenceScreen
         android:key="aokp_animation"
         android:title="@string/system_animation_title"
