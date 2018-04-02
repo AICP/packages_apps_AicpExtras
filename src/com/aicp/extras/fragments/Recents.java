@@ -45,10 +45,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ListView;
 
+import com.android.internal.util.omni.OmniSwitchConstants;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.preference.MasterSwitchPreference;
+import com.aicp.extras.utils.Util;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -77,6 +79,7 @@ public class Recents extends BaseSettingsFragment
 
     private PreferenceCategory mStockRecentsCategory;
     private PreferenceCategory mAlternativeRecentsCategory;
+    private MasterSwitchPreference mOmniSwitchPreference;
 
     private AlertDialog mDialog;
     private ListView mListView;
@@ -94,6 +97,9 @@ public class Recents extends BaseSettingsFragment
         mStockRecentsCategory = (PreferenceCategory) findPreference(PREF_STOCK_RECENTS_CATEGORY);
         mAlternativeRecentsCategory =
                 (PreferenceCategory) findPreference(PREF_ALTERNATIVE_RECENTS_CATEGORY);
+
+        mOmniSwitchPreference = (MasterSwitchPreference)
+                findPreference(Settings.System.RECENTS_OMNI_SWITCH_ENABLED);
 
         mIconPack = findPreference(RECENT_ICON_PACK);
 
@@ -117,6 +123,14 @@ public class Recents extends BaseSettingsFragment
     @Override
     public void onResume() {
         super.onResume();
+
+        if (isOmniSwitchInstalled()) {
+            mOmniSwitchPreference.setEnabled(true);
+        } else {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.RECENTS_OMNI_SWITCH_ENABLED, 0);
+            mOmniSwitchPreference.setEnabled(false);
+        }
 
         for (int i = 0; i < mAlternativeRecentsCategory.getPreferenceCount(); i++) {
             Preference preference = mAlternativeRecentsCategory.getPreference(i);
@@ -156,6 +170,11 @@ public class Recents extends BaseSettingsFragment
             }
         }
         mStockRecentsCategory.setEnabled(!alternativeRecentsEnabled);
+    }
+
+    private boolean isOmniSwitchInstalled() {
+        return Util.isPackageEnabled(OmniSwitchConstants.APP_PACKAGE_NAME,
+                getActivity().getPackageManager());
     }
 
     /** Recents Icon Pack Dialog **/
