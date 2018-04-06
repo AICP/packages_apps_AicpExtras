@@ -84,13 +84,6 @@
                 android:max="135"
                 aicpextras:unitsRight="%" />
 
-          <!-- Dynamic navbar color -->
-          <com.aicp.gear.preference.SystemSettingSwitchPreference
-              android:key="navbar_dynamic"
-              android:title="@string/navbar_dynamic_title"
-              android:summary="@string/navbar_dynamic_summary"
-              android:defaultValue="false" />
-
           <PreferenceScreen
               android:key="pulse_settings"
               android:title="@string/pulse_settings"
