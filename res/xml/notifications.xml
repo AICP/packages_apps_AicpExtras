@@ -21,6 +21,12 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/notifications_title">
 
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+        android:key="heads_up_notifications_enabled"
+        android:title="@string/notification_heads_up_title"
+        android:summary="@string/notification_heads_up_summary"
+        android:defaultValue="true" />
+
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="notification_sound_vib_screen_on"
         android:entries="@array/notification_sound_vib_screen_on_entries"
