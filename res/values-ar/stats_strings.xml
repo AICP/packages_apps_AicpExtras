@@ -19,5 +19,33 @@
 -->
 <resources>
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+  <string name="anonymous_statistics_title">إحصائيات AICP</string>
+  <string name="anonymous_statistics_summary">المساعدة في جعل AICP افضل بالابلاغ عن احصائيات مجهولة المصدر</string>
+  <string name="anonymous_statistics_warning_title">حول</string>
+  <string name="anonymous_statistics_warning">سيسمح الاشتراك في إحصائيات AICP بتقديم البيانات غير الشخصية الى خوادمنا. تتضمن المعلومات المقدمة معرفًا فريدًا لا يؤثر على خصوصيتك أو بياناتك الشخصية. يتم إرسال البيانات كل 7 أيام.\n\n للحصول على مثال للبيانات التي يتم إرسالها ، انقر على معاينة البيانات.</string>
+  <string name="enable_reporting_title">تفعيل إرسال التقارير</string>
+  <string name="disable_reporting_persistent">الانسحاب المستمر</string>
+  <string name="preview_data_title">معاينة البيانات</string>
+  <string name="view_stats_title">عرض صفحة الاحصائيات</string>
+  <string name="anonymous_learn_more">معرفة المزيد</string>
+  <string name="last_report_on">اخر التقارير</string>
+  <string name="reporting_interval">الفاصل الزمني لتقديم التقارير</string>
+  <plurals name="reporting_interval_days">
+    <item quantity="zero">%d أيام</item>
+    <item quantity="one">%d أيام</item>
+    <item quantity="two">%d أيام</item>
+    <item quantity="few">%d أيام</item>
+    <item quantity="many">%d أيام</item>
+    <item quantity="other">%d أيام</item>
+  </plurals>
+  <string name="next_report_on">التقرير التالي</string>
   <!-- Anonymous Statistics - Preview -->
+  <string name="preview_id_title">معرف فريد</string>
+  <string name="preview_device_title">الجهاز</string>
+  <string name="preview_version_title">الإصدار</string>
+  <string name="preview_country_title">الدولة</string>
+  <string name="preview_carrier_title">الناقل</string>
+  <string name="preview_romname_title">اسم الروم</string>
+  <string name="preview_romversion_title">إصدار AICP</string>
+  <string name="preview_buildtype_title">نوع بناء AICP</string>
 </resources>

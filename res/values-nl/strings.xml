@@ -223,13 +223,18 @@
   <string name="file_header_select_summary">Selecteer aangepaste afbeelding</string>
   <string name="file_header_provider_title">Aangepaste afbeelding</string>
   <!-- Tiles animation style  -->
+  <string name="qs_tiles">Tegels voor Snelle instellingen</string>
+  <string name="qs_tile_animation_style_title">Animatiestijl</string>
   <string name="qs_tile_animation_duration_title">Animatieduur snelle instellingen-tegels</string>
+  <string name="qs_tile_animation_interpolator_title">Tegels animatie vormgeving</string>
   <string name="qs_tile_animation_style_off">Geen animatie</string>
   <string name="qs_tile_animation_style_flip">Omkeren</string>
   <string name="qs_tile_animation_style_rotate">Draaien</string>
   <string name="qs_tile_animation_duration_low">Traag</string>
   <string name="qs_tile_animation_duration_default">Standaard</string>
   <string name="qs_tile_animation_duration_fast">Snel</string>
+  <string name="qs_tile_animation_duration_quite_fast">Redelijk snel</string>
+  <string name="qs_tile_animation_duration_super_fast">Supersnel</string>
   <string name="qs_tile_animation_interpolator_linearInterpolator">Lineair</string>
   <string name="qs_tile_animation_interpolator_accelerateInterpolator">Versnellen</string>
   <string name="qs_tile_animation_interpolator_decelerateInterpolator">Vertragen</string>
@@ -348,8 +353,24 @@
   <string name="fp_unlock_keystore_title">Ontgrendelen met vingerafdruk</string>
   <string name="fp_unlock_keystore_summary">Apparaat ontgrendelen met vingerafdruk na herstart zonder PIN/wachtwoord/patroon\nWaarschuwing: gebruik op eigen risico!</string>
   <!-- Ambient display bottom info -->
+  <string name="ambient_display_category">Inactiviteitsdisplay</string>
+  <string name="ambient_display_bottom_info_title">Beeld onderzijde</string>
+  <string name="ambient_display_bottom_info_summary">Inschakelen om informatie aan de onderkant van het scherm te tonen tijdens inactiviteit</string>
   <string name="ambient_display_bottom_info_off">Uitgeschakeld</string>
+  <string name="ambient_display_bottom_info_battery">Batterijpercentage</string>
   <string name="ambient_display_bottom_info_weather">Korte weerinfo</string>
+  <string name="lockscreen_security_category">Beveiliging</string>
+  <string name="lockscreen_visibilities_category">Zichtbaarheid</string>
+  <!-- Show Lockscreen clock, date, & alarm -->
+  <string name="show_lockscreen_clock_title">Klok widget</string>
+  <string name="show_lockscreen_clock_summary">Inschakelen om klok widget te tonen</string>
+  <string name="show_lockscreen_date_title">Datum widget</string>
+  <string name="show_lockscreen_date_summary">Inschakelen om datum widget te tonen</string>
+  <string name="show_lockscreen_alarm_title">Alarmtekst</string>
+  <string name="show_lockscreen_alarm_summary">Inschakelen om alarmtekst onder de klok widget te tonen</string>
+  <!-- Hide statusbar on lockscreen -->
+  <string name="lockscreen_hide_status_bar_title">Verberg statusbalk</string>
+  <string name="lockscreen_hide_status_bar_summary">Wanneer ingeschakeld, zal de statusbalk op het vergrendelscherm worden verborgen</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Andere UI verbeteringen</string>
   <string name="other_ui_summary">Diversen</string>
@@ -395,11 +416,17 @@
   <string name="wake_when_plugged_or_unplugged_title">Ontwaken door aansluiten op lader</string>
   <string name="wake_when_plugged_or_unplugged_summary">Scherm aan bij het aansluiten of loskoppelen van een lader</string>
   <!-- Power Button - Long press for torch -->
+  <string name="torch_long_press_power_gesture_title">Aan/uit-knop lang indrukken voor zaklamp</string>
+  <string name="torch_long_press_power_gesture_summary">Schakelt zaklamp in en uit door lang indrukken van de Aan/uit-knop</string>
+  <string name="torch_long_press_power_timeout_title">Zaklamp automatisch uitschakelen</string>
   <string name="torch_long_press_power_timeout_never">Nooit</string>
   <string name="torch_long_press_power_timeout_1min">1 minuut</string>
+  <string name="torch_long_press_power_timeout_2min">2 minuten</string>
   <string name="torch_long_press_power_timeout_5min">5 minuten</string>
   <string name="torch_long_press_power_timeout_10min">10 minuten</string>
+  <string name="screenshot_edit_app">Editor voor schermafbeeldingen</string>
   <string name="screenshot_edit_app_summary">Kies welke app moet worden gestart als op de schermafbeelding notificatie wordt getikt</string>
+  <string name="screenshot_edit_app_no_editor">Geen afbeeldingseditor beschikbaar</string>
   <!-- System animations -->
   <string name="system_animations_title">Display en animaties</string>
   <string name="system_animations_summary">Systeem animaties</string>
@@ -507,6 +534,8 @@
   <string name="device_maintainer_dialog">Apparaat onderhouder</string>
   <string name="device_maintainers_dialog">Apparaat onderhouders</string>
   <string name="device_maintainer_default">Onbekend</string>
+  <string name="no_root_title">Niet geroot</string>
+  <string name="no_root_summary">Root uw apparaat voor meer functionaliteit</string>
   <!-- Other / general purpose -->
   <string name="default_string">Standaard</string>
   <string name="on">Aan</string>
@@ -767,6 +796,7 @@
   <string name="screen_state_on_delay_title">Vertraging na inschakelen beeldscherm</string>
   <string name="screen_state_on_delay_summary">Aantal minuten dat na het inschakelen van het scherm wordt gewacht voordat acties uitgevoerd worden</string>
   <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_title">Muziek Ticker</string>
   <string name="force_ambient_for_media_summary">Muziektitelinfo op \"Always-On\"-/Inactiviteitsscherm</string>
   <string name="force_ambient_for_media_off">Uitgeschakeld</string>
   <string name="force_ambient_for_media_on">Ingeschakeld</string>
@@ -783,6 +813,8 @@
   <string name="notification_sound_vib_screen_on_never">Nooit</string>
   <string name="notification_sound_vib_screen_on_always">Altijd (standaard)</string>
   <string name="notification_sound_vib_screen_on_nomedia">Als geen media wordt afgespeeld</string>
+  <!-- Accidental Touch -->
+  <string name="anbi_enabled_title">Onbedoelde aanraking voorkomen</string>
   <string name="anbi_enabled_summary">Negeert onbedoelde aanrakingen tijdens het gebruik van het touchscreen.</string>
   <!-- Dynamic Navbar -->
   <string name="navbar_dynamic_title">Dynamische navigatiebalk kleur</string>
@@ -813,6 +845,8 @@
   <string name="hardware_keys_double_tap_title">Actie bij dubbeltikken</string>
   <string name="hardware_keys_disable_title">Navigatieknoppen uitschakelen</string>
   <!-- Home Hardware button options -->
+  <string name="button_home_wake_title">Activeren met Home-toets</string>
+  <string name="button_home_wake_summary">Apparaat activeren met behulp van de Home-toets</string>
   <!-- Button brightness -->
   <string name="button_backlight_options_category">Achtergrondverlichting opties</string>
   <string name="button_backlight_enable_title">Achtergrondverlichting van knoppen toestaan</string>
@@ -837,4 +871,26 @@
   <!-- Status bar system icons -->
   <string name="status_bar_system_icons_title">Systeempictogrammen</string>
   <string name="status_bar_system_icons_summary">Bepaal welke statusbalkpictogrammen worden getoond</string>
+  <!-- Toast Animation -->
+  <string name="toast_animation_title">Toast animatie</string>
+  <string name="toast_none_animation">Geen</string>
+  <string name="toast_default_animation">Standaard</string>
+  <string name="toast_fade_animation">Fade</string>
+  <string name="toast_SlideRight_animation">Slide right</string>
+  <string name="toast_SlideLeft_animation">Slide left</string>
+  <string name="toast_Xylon_animation">Xylon</string>
+  <string name="toast_Toko_animation">Toko</string>
+  <string name="toast_Tn_animation">Tn</string>
+  <string name="toast_Honami_animation">Honami</string>
+  <string name="toast_FastFade_animation">Fast fade</string>
+  <string name="toast_GrowFade_animation">Grow fade</string>
+  <string name="toast_GrowFadeCenter_animation">Grow fade center</string>
+  <string name="toast_GrowFadeBottom_animation">Grow fade bottom</string>
+  <string name="toast_Translucent_animation">Translucent</string>
+  <string name="toast_SlideLeftRight_animation">Slide left to right</string>
+  <string name="toast_SlideRightLeft_animation">Slide right to left</string>
+  <string name="toast_animation_test">Dit is een test voor de geselecteerde toast animatie</string>
+  <!-- System default animation -->
+  <string name="system_default_animation_title">Android P animatiestijl</string>
+  <string name="system_default_animation_summary">\"Standaard\" animaties van Android P inschakelen</string>
 </resources>

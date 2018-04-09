@@ -359,6 +359,17 @@
   <string name="ambient_display_bottom_info_battery">Procenta baterie</string>
   <string name="ambient_display_bottom_info_weather">Krátké informace o počasí</string>
   <string name="lockscreen_security_category">Zabezpečení</string>
+  <string name="lockscreen_visibilities_category">Viditelnosti</string>
+  <!-- Show Lockscreen clock, date, & alarm -->
+  <string name="show_lockscreen_clock_title">Widget hodin</string>
+  <string name="show_lockscreen_clock_summary">Povolit zobrazení widgetu hodin</string>
+  <string name="show_lockscreen_date_title">Widget data</string>
+  <string name="show_lockscreen_date_summary">Povolit zobrazení data pod widgetem hodin</string>
+  <string name="show_lockscreen_alarm_title">Text budíku</string>
+  <string name="show_lockscreen_alarm_summary">Povolit zobrazení textu budíku pod widgetem hodin</string>
+  <!-- Hide statusbar on lockscreen -->
+  <string name="lockscreen_hide_status_bar_title">Skrýt stavovou lištu</string>
+  <string name="lockscreen_hide_status_bar_summary">Pokud je povoleno, stavová lišta bude skryta na zamykací obrazovce</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Další vylepšení UI</string>
   <string name="other_ui_summary">Různé</string>
@@ -522,6 +533,8 @@
   <string name="device_maintainer_dialog">Správce zařízení</string>
   <string name="device_maintainers_dialog">Správci zařízení</string>
   <string name="device_maintainer_default">Neznámé</string>
+  <string name="no_root_title">Bez rootu</string>
+  <string name="no_root_summary">Pro více funkcí proveďte root zařízení</string>
   <!-- Other / general purpose -->
   <string name="default_string">Výchozí</string>
   <string name="on">Zapnuto</string>
@@ -799,6 +812,8 @@
   <string name="notification_sound_vib_screen_on_never">Nikdy</string>
   <string name="notification_sound_vib_screen_on_always">Vždy (výchozí)</string>
   <string name="notification_sound_vib_screen_on_nomedia">Pokud se nepřehrávají média</string>
+  <!-- Accidental Touch -->
+  <string name="anbi_enabled_title">Zabránit náhodnému dotyku</string>
   <string name="anbi_enabled_summary">Pokud je tato volba povolena, zabraňuje náhodnému dotyku hardwarových tlačítek při používání dotykové obrazovky.</string>
   <!-- Dynamic Navbar -->
   <string name="navbar_dynamic_title">Barva dynamického navigačního panelu</string>
@@ -855,4 +870,26 @@
   <!-- Status bar system icons -->
   <string name="status_bar_system_icons_title">Systémové ikony</string>
   <string name="status_bar_system_icons_summary">Upravit zobrazení ikon na stavové liště</string>
+  <!-- Toast Animation -->
+  <string name="toast_animation_title">Toast animace</string>
+  <string name="toast_none_animation">Žádný</string>
+  <string name="toast_default_animation">Výchozí</string>
+  <string name="toast_fade_animation">Slábnutí</string>
+  <string name="toast_SlideRight_animation">Zasunutí vpravo</string>
+  <string name="toast_SlideLeft_animation">Zasunutí vlevo</string>
+  <string name="toast_Xylon_animation">Xylon</string>
+  <string name="toast_Toko_animation">Toko</string>
+  <string name="toast_Tn_animation">Tn</string>
+  <string name="toast_Honami_animation">Honami</string>
+  <string name="toast_FastFade_animation">Rychlé stmívání</string>
+  <string name="toast_GrowFade_animation">Růst prolínačkou</string>
+  <string name="toast_GrowFadeCenter_animation">Růst prolínačkou zprostřed</string>
+  <string name="toast_GrowFadeBottom_animation">Růst prolínačkou zezdola</string>
+  <string name="toast_Translucent_animation">Průhlednost</string>
+  <string name="toast_SlideLeftRight_animation">Přejetí zleva doprava</string>
+  <string name="toast_SlideRightLeft_animation">Přejetí zprava doleva</string>
+  <string name="toast_animation_test">Toto je test pro vybranou animaci Toast</string>
+  <!-- System default animation -->
+  <string name="system_default_animation_title">Styl animace Android P</string>
+  <string name="system_default_animation_summary">Povolit \"Výchozí\" animace Android P</string>
 </resources>

@@ -360,6 +360,17 @@
   <string name="ambient_display_bottom_info_battery">Процент батареи</string>
   <string name="ambient_display_bottom_info_weather">Краткая информация о погоде</string>
   <string name="lockscreen_security_category">Безопасность</string>
+  <string name="lockscreen_visibilities_category">Видимость</string>
+  <!-- Show Lockscreen clock, date, & alarm -->
+  <string name="show_lockscreen_clock_title">Виджет часов</string>
+  <string name="show_lockscreen_clock_summary">Показать виджет часов</string>
+  <string name="show_lockscreen_date_title">Виджет даты</string>
+  <string name="show_lockscreen_date_summary">Показать виджет даты под виджетом часов</string>
+  <string name="show_lockscreen_alarm_title">Текст будильника</string>
+  <string name="show_lockscreen_alarm_summary">Показать текст будильника под виджетом часов</string>
+  <!-- Hide statusbar on lockscreen -->
+  <string name="lockscreen_hide_status_bar_title">Скрыть строку состояния</string>
+  <string name="lockscreen_hide_status_bar_summary">При включении строка состояния будет скрыта на экране блокировки</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Другие настройки интерфейса</string>
   <string name="other_ui_summary">Разное</string>
@@ -523,6 +534,8 @@
   <string name="device_maintainer_dialog">Сопровождающий устройство</string>
   <string name="device_maintainers_dialog">Сопровождающие устройство</string>
   <string name="device_maintainer_default">Неизвестно</string>
+  <string name="no_root_title">Нет Root прав</string>
+  <string name="no_root_summary">Для большей функциональности, корень устройства</string>
   <!-- Other / general purpose -->
   <string name="default_string">По умолчанию</string>
   <string name="on">Вкл.</string>
@@ -800,6 +813,8 @@
   <string name="notification_sound_vib_screen_on_never">Никогда</string>
   <string name="notification_sound_vib_screen_on_always">Всегда (по умолчанию)</string>
   <string name="notification_sound_vib_screen_on_nomedia">Когда медиа не вопроизводится</string>
+  <!-- Accidental Touch -->
+  <string name="anbi_enabled_title">Предотвращать случайные касания</string>
   <string name="anbi_enabled_summary">Если включено, предотвращает случайное касание аппаратных кнопок во время использования сенсорного экрана.</string>
   <!-- Dynamic Navbar -->
   <string name="navbar_dynamic_title">Динамический цвет панели навигации</string>
@@ -856,4 +871,26 @@
   <!-- Status bar system icons -->
   <string name="status_bar_system_icons_title">Системные иконки</string>
   <string name="status_bar_system_icons_summary">Управление отображением значков в строке состояния</string>
+  <!-- Toast Animation -->
+  <string name="toast_animation_title">Анимация всплывающих уведомлений</string>
+  <string name="toast_none_animation">Отсутствует</string>
+  <string name="toast_default_animation">По умолчанию</string>
+  <string name="toast_fade_animation">Угасание</string>
+  <string name="toast_SlideRight_animation">Скольжение справа</string>
+  <string name="toast_SlideLeft_animation">Скольжение слева</string>
+  <string name="toast_Xylon_animation">Анимация Xylon</string>
+  <string name="toast_Toko_animation">Анимация Toko</string>
+  <string name="toast_Tn_animation">Анимация Tn</string>
+  <string name="toast_Honami_animation">Анимация Honami</string>
+  <string name="toast_FastFade_animation">Быстрое угасание</string>
+  <string name="toast_GrowFade_animation">Растущее угасание</string>
+  <string name="toast_GrowFadeCenter_animation">Угасание от центра</string>
+  <string name="toast_GrowFadeBottom_animation">Угасание снизу</string>
+  <string name="toast_Translucent_animation">Полупрозрачная</string>
+  <string name="toast_SlideLeftRight_animation">Скольжение слева направо</string>
+  <string name="toast_SlideRightLeft_animation">Скольжение справа налево</string>
+  <string name="toast_animation_test">Тест для анимации всплывающих уведомлений</string>
+  <!-- System default animation -->
+  <string name="system_default_animation_title">Стиль анимации Android P</string>
+  <string name="system_default_animation_summary">Включить анимацию «По умолчанию» из Android P</string>
 </resources>

@@ -55,13 +55,13 @@
   <string name="smart_pulldown_title">スマートプルダウン</string>
   <string name="smart_pulldown_off">OFF</string>
   <string name="smart_pulldown_none">通知がない</string>
-  <string name="smart_pulldown_dismissable">削除できない通知がない</string>
   <string name="smart_pulldown_ongoing">実行中の通知がない</string>
   <string name="smart_pulldown_summary">%1$s時に直接クイック設定を開きます</string>
   <string name="smart_pulldown_none_summary">通知がない時に直接クイック設定を開きます</string>
   <string name="smart_pulldown_off_summary">はオフです</string>
   <!-- Double tap to sleep on status bar -->
   <!-- Statusbar Clock options -->
+  <string name="status_bar_show_clock_title">日付と時刻を表示する</string>
   <string name="clock_title_enable">配置</string>
   <string name="clock_date_display">日付</string>
   <string name="menu_cancel">キャンセル</string>
@@ -199,6 +199,8 @@
   <string name="fp_unlock_keystore_summary">再起動後も PIN/パスワード/パターン による認証なしで指紋認証によるロック解除を可能にします。\n注意: 自己責任で使用してください！</string>
   <!-- Ambient display bottom info -->
   <string name="ambient_display_bottom_info_off">無効</string>
+  <!-- Show Lockscreen clock, date, & alarm -->
+  <!-- Hide statusbar on lockscreen -->
   <!-- Other UI tweaks -->
   <string name="other_ui_title">その他の UI 設定</string>
   <!-- Volume dialog timeout -->
@@ -426,6 +428,7 @@
   <string name="screen_off_animation_default">デフォルト</string>
   <!-- Suppress notification sound/vibration -->
   <string name="notification_sound_vib_screen_on_never">展開しない</string>
+  <!-- Accidental Touch -->
   <!-- Dynamic Navbar -->
   <!-- Face unlock toggle -->
   <!-- Navigation -->
@@ -440,4 +443,19 @@
   <string name="status_bar_quick_qs_pulldown_left">左</string>
   <string name="status_bar_quick_qs_pulldown_right">右</string>
   <!-- Status bar system icons -->
+  <!-- Toast Animation -->
+  <string name="toast_animation_title">トースト通知のアニメーション</string>
+  <string name="toast_none_animation">なし</string>
+  <string name="toast_default_animation">デフォルト</string>
+  <string name="toast_fade_animation">フェード</string>
+  <string name="toast_SlideRight_animation">右にスライド</string>
+  <string name="toast_SlideLeft_animation">左にスライド</string>
+  <string name="toast_FastFade_animation">速いフェード</string>
+  <string name="toast_GrowFade_animation">グローフェード</string>
+  <string name="toast_GrowFadeCenter_animation">中央からグローフェード</string>
+  <string name="toast_GrowFadeBottom_animation">下からグローフェード</string>
+  <string name="toast_Translucent_animation">半透明</string>
+  <string name="toast_SlideLeftRight_animation">左から右にスライド</string>
+  <string name="toast_SlideRightLeft_animation">右から左にスライド</string>
+  <!-- System default animation -->
 </resources>
