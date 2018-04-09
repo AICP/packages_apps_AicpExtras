@@ -166,6 +166,8 @@
   <!-- Fingerprint unlock keystore -->
   <!-- Ambient display bottom info -->
   <string name="ambient_display_bottom_info_off">Tiltva</string>
+  <!-- Show Lockscreen clock, date, & alarm -->
+  <!-- Hide statusbar on lockscreen -->
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Egyéb felhasználói felület módosítások</string>
   <!-- Volume dialog timeout -->
@@ -368,7 +370,7 @@
   <string name="fling_show_logo_title">Fling logó megjelenítése</string>
   <string name="fling_animate_logo_title">Logó animálása</string>
   <string name="fling_animate_logo_summary">Érintési műveletek esetén animált logó</string>
-  <string name="fling_logo_color">Logó színe</string>
+  <string name="fling_logo_color">A logó színe</string>
   <string name="fling_logo_custom_logo_pick_title">Egyéni logó ikon</string>
   <string name="fling_logo_custom_logo_image_pick_title">Egyéni logó kép</string>
   <string name="fling_logo_custom_logo_reset_title">Logó ikon visszaállítása</string>
@@ -499,6 +501,7 @@
   <string name="screen_off_animation_default">Alapértelmezett</string>
   <!-- Suppress notification sound/vibration -->
   <string name="notification_sound_vib_screen_on_never">Soha</string>
+  <!-- Accidental Touch -->
   <!-- Dynamic Navbar -->
   <!-- Face unlock toggle -->
   <!-- Navigation -->
@@ -513,4 +516,23 @@
   <string name="status_bar_quick_qs_pulldown_left">Bal</string>
   <string name="status_bar_quick_qs_pulldown_right">Jobb</string>
   <!-- Status bar system icons -->
+  <!-- Toast Animation -->
+  <string name="toast_animation_title">Buborék animáció</string>
+  <string name="toast_none_animation">Nincs</string>
+  <string name="toast_default_animation">Alapértelmezett</string>
+  <string name="toast_fade_animation">Áttűnés</string>
+  <string name="toast_SlideRight_animation">Jobbról</string>
+  <string name="toast_SlideLeft_animation">Balról</string>
+  <string name="toast_Xylon_animation">Xylon</string>
+  <string name="toast_Toko_animation">Toko</string>
+  <string name="toast_Tn_animation">Tn</string>
+  <string name="toast_Honami_animation">Honami</string>
+  <string name="toast_FastFade_animation">Gyors áttűnés</string>
+  <string name="toast_GrowFade_animation">Grow fade</string>
+  <string name="toast_GrowFadeCenter_animation">Grow fade center</string>
+  <string name="toast_GrowFadeBottom_animation">Grow fade bottom</string>
+  <string name="toast_Translucent_animation">Áttetsző</string>
+  <string name="toast_SlideLeftRight_animation">Balról jobbra</string>
+  <string name="toast_SlideRightLeft_animation">Jobbról balra</string>
+  <!-- System default animation -->
 </resources>

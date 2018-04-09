@@ -223,13 +223,18 @@
   <string name="file_header_select_summary">选择自定义图像</string>
   <string name="file_header_provider_title">自定义图像</string>
   <!-- Tiles animation style  -->
+  <string name="qs_tiles">快速设置瓷块</string>
+  <string name="qs_tile_animation_style_title">动画风格</string>
   <string name="qs_tile_animation_duration_title">瓷块动画持续时间</string>
+  <string name="qs_tile_animation_interpolator_title">瓷砖动画插值器</string>
   <string name="qs_tile_animation_style_off">无动画</string>
   <string name="qs_tile_animation_style_flip">空翻</string>
   <string name="qs_tile_animation_style_rotate">旋转</string>
   <string name="qs_tile_animation_duration_low">低</string>
   <string name="qs_tile_animation_duration_default">默认</string>
   <string name="qs_tile_animation_duration_fast">快速</string>
+  <string name="qs_tile_animation_duration_quite_fast">相当快</string>
+  <string name="qs_tile_animation_duration_super_fast">超级快</string>
   <string name="qs_tile_animation_interpolator_linearInterpolator">线性</string>
   <string name="qs_tile_animation_interpolator_accelerateInterpolator">加速</string>
   <string name="qs_tile_animation_interpolator_decelerateInterpolator">减速</string>
@@ -348,7 +353,24 @@
   <string name="fp_unlock_keystore_title">指纹解锁</string>
   <string name="fp_unlock_keystore_summary">在重启后用指纹解锁设备，无须 PIN/密码/图案\n注意： 风险自负！</string>
   <!-- Ambient display bottom info -->
+  <string name="ambient_display_category">主动显示</string>
+  <string name="ambient_display_bottom_info_title">底部视图</string>
+  <string name="ambient_display_bottom_info_summary">在打瞌睡时启用显示底部的信息</string>
   <string name="ambient_display_bottom_info_off">禁用</string>
+  <string name="ambient_display_bottom_info_battery">电量百分比</string>
+  <string name="ambient_display_bottom_info_weather">简介天气信息</string>
+  <string name="lockscreen_security_category">安全保护</string>
+  <string name="lockscreen_visibilities_category">能见度</string>
+  <!-- Show Lockscreen clock, date, & alarm -->
+  <string name="show_lockscreen_clock_title">时钟小部件</string>
+  <string name="show_lockscreen_clock_summary">启用以显示时钟部件</string>
+  <string name="show_lockscreen_date_title">日期部件</string>
+  <string name="show_lockscreen_date_summary">启用以显示时钟小部件下的日期</string>
+  <string name="show_lockscreen_alarm_title">闹钟文本</string>
+  <string name="show_lockscreen_alarm_summary">启用在时钟小部件下显示报警文本</string>
+  <!-- Hide statusbar on lockscreen -->
+  <string name="lockscreen_hide_status_bar_title">隐藏状态栏</string>
+  <string name="lockscreen_hide_status_bar_summary">启用后, 状态栏将隐藏在锁屏界面上</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">其他UI调整</string>
   <string name="other_ui_summary">各种杂项</string>
@@ -394,10 +416,17 @@
   <string name="wake_when_plugged_or_unplugged_title">充电唤醒</string>
   <string name="wake_when_plugged_or_unplugged_summary">在连接或者断开充电器时打开屏幕</string>
   <!-- Power Button - Long press for torch -->
+  <string name="torch_long_press_power_gesture_title">长按电源按钮以启动手电筒</string>
+  <string name="torch_long_press_power_gesture_summary">当显示关闭时电源按钮被长时间按下时切换火炬</string>
+  <string name="torch_long_press_power_timeout_title">自动开启</string>
   <string name="torch_long_press_power_timeout_never">从不</string>
   <string name="torch_long_press_power_timeout_1min">1分钟</string>
+  <string name="torch_long_press_power_timeout_2min">2分钟</string>
   <string name="torch_long_press_power_timeout_5min">5分钟</string>
   <string name="torch_long_press_power_timeout_10min">10分钟</string>
+  <string name="screenshot_edit_app">屏幕截图编辑器</string>
+  <string name="screenshot_edit_app_summary">选择在点击屏幕截图通知编辑按钮时应该启动的应用程序</string>
+  <string name="screenshot_edit_app_no_editor">没有可用的图像编辑器</string>
   <!-- System animations -->
   <string name="system_animations_title">显示和动画</string>
   <string name="system_animations_summary">系统动画</string>
@@ -505,6 +534,8 @@
   <string name="device_maintainer_dialog">设备维护人员</string>
   <string name="device_maintainers_dialog">设备维护人员</string>
   <string name="device_maintainer_default">未知</string>
+  <string name="no_root_title">未root</string>
+  <string name="no_root_summary">有关更多 functionaliy, 请 root 你的设备</string>
   <!-- Other / general purpose -->
   <string name="default_string">默认</string>
   <string name="on">开启</string>
@@ -765,6 +796,7 @@
   <string name="screen_state_on_delay_title">屏幕点亮操作延迟</string>
   <string name="screen_state_on_delay_summary">在屏幕开启后执行操作前等待的时长</string>
   <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_title">音乐代号</string>
   <string name="force_ambient_for_media_summary">环境显示中的音乐曲目信息</string>
   <string name="force_ambient_for_media_off">禁用</string>
   <string name="force_ambient_for_media_on">启用</string>
@@ -781,6 +813,8 @@
   <string name="notification_sound_vib_screen_on_never">从不</string>
   <string name="notification_sound_vib_screen_on_always">始终 (默认)</string>
   <string name="notification_sound_vib_screen_on_nomedia">如果没有媒体正在播放</string>
+  <!-- Accidental Touch -->
+  <string name="anbi_enabled_title">防止误触</string>
   <string name="anbi_enabled_summary">启用时, 防止触摸屏使用时意外触摸硬件按钮。</string>
   <!-- Dynamic Navbar -->
   <string name="navbar_dynamic_title">动态导航栏颜色</string>
@@ -811,6 +845,8 @@
   <string name="hardware_keys_double_tap_title">双击操作</string>
   <string name="hardware_keys_disable_title">禁用导航栏按钮</string>
   <!-- Home Hardware button options -->
+  <string name="button_home_wake_title">按钮首页唤醒</string>
+  <string name="button_home_wake_summary">使用主页按钮唤醒</string>
   <!-- Button brightness -->
   <string name="button_backlight_options_category">背光设置</string>
   <string name="button_backlight_enable_title">允许按钮背光</string>
@@ -835,4 +871,26 @@
   <!-- Status bar system icons -->
   <string name="status_bar_system_icons_title">系统图标</string>
   <string name="status_bar_system_icons_summary">控制在状态栏显示的图标</string>
+  <!-- Toast Animation -->
+  <string name="toast_animation_title">提示栏动画</string>
+  <string name="toast_none_animation">无</string>
+  <string name="toast_default_animation">默认</string>
+  <string name="toast_fade_animation">淡入淡出</string>
+  <string name="toast_SlideRight_animation">向右滑动</string>
+  <string name="toast_SlideLeft_animation">向左滑动</string>
+  <string name="toast_Xylon_animation">Xylon</string>
+  <string name="toast_Toko_animation">Toko</string>
+  <string name="toast_Tn_animation">Tn</string>
+  <string name="toast_Honami_animation">Honami</string>
+  <string name="toast_FastFade_animation">快速淡入淡出</string>
+  <string name="toast_GrowFade_animation">缓慢淡入淡出</string>
+  <string name="toast_GrowFadeCenter_animation">从中心缓慢淡入淡出</string>
+  <string name="toast_GrowFadeBottom_animation">从底部缓慢淡入淡出</string>
+  <string name="toast_Translucent_animation">半透明</string>
+  <string name="toast_SlideLeftRight_animation">从左到右滑动</string>
+  <string name="toast_SlideRightLeft_animation">从右到左滑动</string>
+  <string name="toast_animation_test">这是对所选择的 Toast 动画的测试</string>
+  <!-- System default animation -->
+  <string name="system_default_animation_title">Android P 动画风格</string>
+  <string name="system_default_animation_summary">启用 Android P \"默认\" 动画</string>
 </resources>
