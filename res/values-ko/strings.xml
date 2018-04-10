@@ -25,6 +25,8 @@
   <!-- Bluetooth status -->
   <!-- Statusbar net monitor -->
   <!-- QS Header battery percentage -->
+  <string name="force_battery_percentage_title">배터리 퍼센트 표사</string>
+  <string name="force_battery_percentage_summary">QSHeader 및 KeyGuard에서 배터리 백분율 텍스트 표시</string>
   <!-- Battery bar -->
   <string name="battery_bar_charging_color_title">충전중 색상</string>
   <!-- StatusBar weather settings -->
@@ -50,8 +52,10 @@
   <!-- Notifications -->
   <!-- Notification guts kill app button -->
   <!-- InCall notifications vibrate -->
+  <string name="incall_notifications_vibrate_summary">소리를내는 대신 부드럽게 진동하고 알림이 푸시됩니다.</string>
   <!-- Brightness slider settings -->
   <!-- Battery Styles -->
+  <string name="battery_style_dotted_circle">점선 원</string>
   <!-- Quick settings -->
   <!-- Disable music track title in QS tile -->
   <!-- Small quick settings scroller -->
@@ -61,6 +65,7 @@
   <!-- QS Headers -->
   <string name="header_provider_disabled">비활성화됨</string>
   <!-- Tiles animation style  -->
+  <string name="qs_tile_animation_interpolator_title">타일 애니메이션 보간</string>
   <string name="qs_tile_animation_duration_default">기본값</string>
   <string name="qs_tile_animation_interpolator_linearInterpolator">선형(Linear)</string>
   <string name="qs_tile_animation_interpolator_decelerateInterpolator">감속</string>
@@ -68,6 +73,7 @@
   <string name="qs_tile_animation_interpolator_anticipateInterpolator">예측 보간</string>
   <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">예측 및 overshoot 보간</string>
   <!-- Recents -->
+  <string name="recents_summary">최근 애플 리 케이 션 화면 모양 편집</string>
   <!-- Recents panel settings -->
   <!-- Recents Membar -->
   <!-- Stock recents icon pack -->
@@ -77,6 +83,7 @@
   <!-- Slim Recent App Sidebar  -->
   <!-- Slim recents membar -->
   <!-- Lockscreen -->
+  <string name="lockscreen_summary">잠금화면 모양 편집</string>
   <!-- Double tap to sleep on lockscreen -->
   <!-- Media art -->
   <!-- Lockscreen battery info indicator  -->
@@ -86,7 +93,10 @@
   <!-- Fingerprint authentication vibration -->
   <!-- Fingerprint unlock keystore -->
   <!-- Ambient display bottom info -->
+  <string name="ambient_display_category">앰비언트 디스플레이</string>
   <string name="ambient_display_bottom_info_off">비활성화됨</string>
+  <!-- Show Lockscreen clock, date, & alarm -->
+  <!-- Hide statusbar on lockscreen -->
   <!-- Other UI tweaks -->
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
@@ -103,11 +113,15 @@
   <!-- Vibrate on plug -->
   <!-- Scrolling Cache -->
   <!-- Status bar - Battery saver color -->
+  <string name="status_bar_battery_saver_color_summary">참고: 이미 배터리 보호 모드가 활성화되어 있으면, 새로운 색상을 적용할 때, 배터리 보호 모드를 껏다 켜주세요!</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <!-- Power Button - Long press for torch -->
+  <string name="screenshot_edit_app">스크린 샷 편집기</string>
+  <string name="screenshot_edit_app_summary">스크린 샷 수정 버튼을 누를 때 실행할 앱을 선택하십시오.</string>
   <!-- System animations -->
   <!-- System behaviour -->
   <!-- System extensions -->
+  <string name="system_extensions_summary">시스템 애드온</string>
   <!-- System app remover -->
   <!-- Log it -->
   <!-- Panel porn -->
@@ -127,11 +141,15 @@
   <!-- Lockscreen Weather -->
   <!-- Statusbar ticker -->
   <string name="ticker_disabled">비활성화됨</string>
+  <string name="ticker_animation_mode_title">티커 애니메이션 스타일</string>
   <!-- DUI -->
   <string name="select_custom_app_title">사용자 정의 앱 선택</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <!-- Fling -->
+  <string name="fling_keyboard_cursors_move_summary">키보드가 나타나면 왼쪽 또는 오른쪽을 길게 눌러 텍스트 커서를 왼쪽이나 오른쪽으로 이동하십시오. \ n 커서를 계속 움직이려면 길게 누르십시오. 막대를 한 번 누르면 홈 화면으로 이동합니다.</string>
   <!-- Pulse navigation bar music visualizer -->
+  <string name="fling_pulse_color_summary">자동색상 사용</string>
+  <string name="pulse_auto_color_title">자동 펄스 색상</string>
   <!-- Pulse config -->
   <!-- Navbar height -->
   <!-- SmartBar -->
@@ -150,6 +168,7 @@
   <!-- Suppress notification sound/vibration -->
   <string name="notification_sound_vib_screen_on_always">항상켜기 (기본값)</string>
   <string name="notification_sound_vib_screen_on_nomedia">재생중인 미디어가없는 경우</string>
+  <!-- Accidental Touch -->
   <!-- Dynamic Navbar -->
   <string name="navbar_dynamic_summary">포 그라운드 앱 색상과 일치하도록 설정</string>
   <!-- Face unlock toggle -->
@@ -159,6 +178,12 @@
   <!-- Hardware button navigation -->
   <!-- Home Hardware button options -->
   <!-- Button brightness -->
+  <string name="button_backlight_on_touch_only_summary">버튼 백라이트는 항상이 아니라 버튼을 누르는 경우에만 나타납니다. 시간 초과는 여전히 이 기능에 영향을 미칩니다.</string>
   <!-- Quick QS pull down -->
+  <string name="status_bar_quick_qs_pulldown_summary_left">상태 표시줄의 왼쪽된 가장자리 빠른 설정 내리기</string>
+  <string name="status_bar_quick_qs_pulldown_summary_right">상태 표시줄의 오른쪽 모서리를 끌어 내려 빠른 설정 보기</string>
   <!-- Status bar system icons -->
+  <string name="status_bar_system_icons_summary">상태표시줄에 표시할 아이콘을 설정합니다.</string>
+  <!-- Toast Animation -->
+  <!-- System default animation -->
 </resources>
