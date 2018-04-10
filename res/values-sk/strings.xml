@@ -222,13 +222,18 @@
   <string name="file_header_select_summary">Vybrať vlastný obrázok</string>
   <string name="file_header_provider_title">Vlastný obrázok</string>
   <!-- Tiles animation style  -->
+  <string name="qs_tiles">Dlaždice rýchlych nastavení</string>
+  <string name="qs_tile_animation_style_title">Štýl animácie</string>
   <string name="qs_tile_animation_duration_title">Dĺžka trvania animácie</string>
+  <string name="qs_tile_animation_interpolator_title">Interpolácia animácie dlaždíc</string>
   <string name="qs_tile_animation_style_off">Bez animácie</string>
   <string name="qs_tile_animation_style_flip">Preklopenie</string>
   <string name="qs_tile_animation_style_rotate">Otočenie</string>
   <string name="qs_tile_animation_duration_low">Krátka</string>
   <string name="qs_tile_animation_duration_default">Predvolená</string>
   <string name="qs_tile_animation_duration_fast">Rýchla</string>
+  <string name="qs_tile_animation_duration_quite_fast">Celkom rýchlo</string>
+  <string name="qs_tile_animation_duration_super_fast">Super rýchlo</string>
   <string name="qs_tile_animation_interpolator_linearInterpolator">Lineárne</string>
   <string name="qs_tile_animation_interpolator_accelerateInterpolator">Zrýchlenie</string>
   <string name="qs_tile_animation_interpolator_decelerateInterpolator">Spomalenie</string>
@@ -347,7 +352,24 @@
   <string name="fp_unlock_keystore_title">Odomknutie pomocou snímača odtlačkov</string>
   <string name="fp_unlock_keystore_summary">Odomknúť zariadenie pomocou snímača odtlačkov prstov po reštarte bez PIN/hesla/Vzoru\nUpozornenie: na vlastné riziko!</string>
   <!-- Ambient display bottom info -->
+  <string name="ambient_display_category">Ambientné zobrazenie</string>
+  <string name="ambient_display_bottom_info_title">Spodné zobrazenie</string>
+  <string name="ambient_display_bottom_info_summary">Povoliť zobrazenie informácií na spodnej strane počas nečinnosti</string>
   <string name="ambient_display_bottom_info_off">Vypnuté</string>
+  <string name="ambient_display_bottom_info_battery">Percentá batérie</string>
+  <string name="ambient_display_bottom_info_weather">Krátke informácie o počasí</string>
+  <string name="lockscreen_security_category">Zabezpečenie</string>
+  <string name="lockscreen_visibilities_category">Viditeľnosť</string>
+  <!-- Show Lockscreen clock, date, & alarm -->
+  <string name="show_lockscreen_clock_title">Miniaplikácia hodín</string>
+  <string name="show_lockscreen_clock_summary">Povoliť zobrazenie miniaplikácie hodín</string>
+  <string name="show_lockscreen_date_title">Miniaplikácia dátumu</string>
+  <string name="show_lockscreen_date_summary">Povoliť zobrazenie dátumu pod miniaplikáciou hodín</string>
+  <string name="show_lockscreen_alarm_title">Text budíku</string>
+  <string name="show_lockscreen_alarm_summary">Povoliť zobrazenie textu budíka pod miniaplikáciou hodín</string>
+  <!-- Hide statusbar on lockscreen -->
+  <string name="lockscreen_hide_status_bar_title">Skryť stavový riadok</string>
+  <string name="lockscreen_hide_status_bar_summary">Ak je povolené, bude stavový riadok na obrazovke uzamknutia skrytý</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Ďalšie vylepšenia UI</string>
   <string name="other_ui_summary">Rôzne</string>
@@ -393,10 +415,17 @@
   <string name="wake_when_plugged_or_unplugged_title">Prebudiť pri nabíjaní</string>
   <string name="wake_when_plugged_or_unplugged_summary">Zapnúť obrazovku pri pripojení alebo odpojení zdroja nabíjania</string>
   <!-- Power Button - Long press for torch -->
+  <string name="torch_long_press_power_gesture_title">Zapnutie baterky dlhým stlačením tlačidla Napájanie</string>
+  <string name="torch_long_press_power_gesture_summary">Prepínanie baterky dlhým stlačením tlačidla Napájanie pri vypnutej obrazovke</string>
+  <string name="torch_long_press_power_timeout_title">Automatické vypnutie baterky</string>
   <string name="torch_long_press_power_timeout_never">Nikdy</string>
   <string name="torch_long_press_power_timeout_1min">1 minúta</string>
+  <string name="torch_long_press_power_timeout_2min">2 minúty</string>
   <string name="torch_long_press_power_timeout_5min">5 minút</string>
   <string name="torch_long_press_power_timeout_10min">10 minút</string>
+  <string name="screenshot_edit_app">Editor snímok obrazovky</string>
+  <string name="screenshot_edit_app_summary">Vyberte, ktorá aplikácia by sa mala spustiť pri stlačení tlačidla \"Upraviť\" v upozornení na obrazovke</string>
+  <string name="screenshot_edit_app_no_editor">Nie je k dispozícii žiadny editor obrázkov</string>
   <!-- System animations -->
   <string name="system_animations_title">Animácie</string>
   <string name="system_animations_summary">Systémové animácie</string>
@@ -504,6 +533,8 @@
   <string name="device_maintainer_dialog">Správcovia zariadenia</string>
   <string name="device_maintainers_dialog">Správcovia zariadenia</string>
   <string name="device_maintainer_default">Neznámy</string>
+  <string name="no_root_title">Bez rootu</string>
+  <string name="no_root_summary">Pre viac funkcií vykonajte root zariadenia</string>
   <!-- Other / general purpose -->
   <string name="default_string">Predvolené</string>
   <string name="on">Zap.</string>
@@ -764,6 +795,7 @@
   <string name="screen_state_on_delay_title">Oneskorenie akcí po zapnutí obrazovky</string>
   <string name="screen_state_on_delay_summary">Počet minút čakania pred vykonaním akcie po zapnutí obrazovky</string>
   <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_title">Hudobné upozornenie</string>
   <string name="force_ambient_for_media_summary">Informácie o hudobnej skladbe na Ambientnom displeji</string>
   <string name="force_ambient_for_media_off">Vypnuté</string>
   <string name="force_ambient_for_media_on">Zapnuté</string>
@@ -780,6 +812,8 @@
   <string name="notification_sound_vib_screen_on_never">Nikdy</string>
   <string name="notification_sound_vib_screen_on_always">Vždy (predvolené)</string>
   <string name="notification_sound_vib_screen_on_nomedia">Ak sa multimédiá neprehrávajú</string>
+  <!-- Accidental Touch -->
+  <string name="anbi_enabled_title">Zabránenie náhodnému dotyku</string>
   <string name="anbi_enabled_summary">Ak je táto voľba povolená, zabraňuje náhodnému dotyku hardvérových tlačidiel pri používaní dotykovej obrazovky.</string>
   <!-- Dynamic Navbar -->
   <string name="navbar_dynamic_title">Farba dynamického navigačného panela</string>
@@ -810,6 +844,8 @@
   <string name="hardware_keys_double_tap_title">Akcia po dvojitom kliknutí</string>
   <string name="hardware_keys_disable_title">Zakázať navigačné tlačidlá</string>
   <!-- Home Hardware button options -->
+  <string name="button_home_wake_title">Prebudenie tlačidlom Domov</string>
+  <string name="button_home_wake_summary">Prebudenie pomocou tlačidla Domov</string>
   <!-- Button brightness -->
   <string name="button_backlight_options_category">Možnosti podsvietenia</string>
   <string name="button_backlight_enable_title">Zapnúť podsvietenie tlačidiel</string>
@@ -834,4 +870,26 @@
   <!-- Status bar system icons -->
   <string name="status_bar_system_icons_title">Systémové ikony</string>
   <string name="status_bar_system_icons_summary">Vyberte ikony, ktoré budú zobrazené v stavovom riadku</string>
+  <!-- Toast Animation -->
+  <string name="toast_animation_title">Animácia vyskakujúceho oznámenia</string>
+  <string name="toast_none_animation">Žiadny</string>
+  <string name="toast_default_animation">Predvolená</string>
+  <string name="toast_fade_animation">Miznutie</string>
+  <string name="toast_SlideRight_animation">Potiahnutie vpravo</string>
+  <string name="toast_SlideLeft_animation">Potiahnutie vľavo</string>
+  <string name="toast_Xylon_animation">Xylon</string>
+  <string name="toast_Toko_animation">Toko</string>
+  <string name="toast_Tn_animation">Tn</string>
+  <string name="toast_Honami_animation">Honami</string>
+  <string name="toast_FastFade_animation">Rýchle stmavnutie</string>
+  <string name="toast_GrowFade_animation">Postupné stmavnutie</string>
+  <string name="toast_GrowFadeCenter_animation">Postupné stmavnutie od stredu</string>
+  <string name="toast_GrowFadeBottom_animation">Postupné stmavnutie zospodu</string>
+  <string name="toast_Translucent_animation">Priehľadnosť</string>
+  <string name="toast_SlideLeftRight_animation">Potiahnutie zľava do prava</string>
+  <string name="toast_SlideRightLeft_animation">Potiahni zprava doľava</string>
+  <string name="toast_animation_test">Toto je test pre animáciu vyskakujúceho upozornenia</string>
+  <!-- System default animation -->
+  <string name="system_default_animation_title">Štýl animácie Android P</string>
+  <string name="system_default_animation_summary">Povoliť \"Predvolené\" animácie Android P</string>
 </resources>

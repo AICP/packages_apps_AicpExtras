@@ -360,6 +360,17 @@
   <string name="ambient_display_bottom_info_battery">Percentuale batteria</string>
   <string name="ambient_display_bottom_info_weather">Brevi informazioni meteorologiche</string>
   <string name="lockscreen_security_category">Sicurezza</string>
+  <string name="lockscreen_visibilities_category">Visibilità</string>
+  <!-- Show Lockscreen clock, date, & alarm -->
+  <string name="show_lockscreen_clock_title">Widget orologio</string>
+  <string name="show_lockscreen_clock_summary">Abilita la visualizzazione del widget orologio</string>
+  <string name="show_lockscreen_date_title">Widget data</string>
+  <string name="show_lockscreen_date_summary">Abilita la visualizzazione della data sotto il widget orologio</string>
+  <string name="show_lockscreen_alarm_title">Testo sveglia</string>
+  <string name="show_lockscreen_alarm_summary">Abilita la visualizzazione del testo della sveglia sotto il widget orologio</string>
+  <!-- Hide statusbar on lockscreen -->
+  <string name="lockscreen_hide_status_bar_title">Nascondi la barra di stato</string>
+  <string name="lockscreen_hide_status_bar_summary">Quando abilitato, la barra di stato verrà nascosta sulla schermata di blocco</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Altri tweaks per la UI</string>
   <string name="other_ui_summary">Varie</string>
@@ -523,6 +534,8 @@
   <string name="device_maintainer_dialog">Device maintainer</string>
   <string name="device_maintainers_dialog">Device maintainers</string>
   <string name="device_maintainer_default">Sconosciute</string>
+  <string name="no_root_title">Nessun root</string>
+  <string name="no_root_summary">Per ulteriori funzionalità, esegui il root del tuo dispositivo</string>
   <!-- Other / general purpose -->
   <string name="default_string">Predefinito</string>
   <string name="on">On</string>
@@ -800,6 +813,8 @@
   <string name="notification_sound_vib_screen_on_never">Mai</string>
   <string name="notification_sound_vib_screen_on_always">Sempre (predefinito)</string>
   <string name="notification_sound_vib_screen_on_nomedia">Senza riproduzione multimediale</string>
+  <!-- Accidental Touch -->
+  <string name="anbi_enabled_title">Previeni tocchi accidentali</string>
   <string name="anbi_enabled_summary">Quando attivato, previene tocchi accidentali ai tasti fisici mentre il touchscreen è in uso.</string>
   <!-- Dynamic Navbar -->
   <string name="navbar_dynamic_title">Colore barra di navigazione dinamico</string>
@@ -856,4 +871,26 @@
   <!-- Status bar system icons -->
   <string name="status_bar_system_icons_title">Icone di sistema</string>
   <string name="status_bar_system_icons_summary">Controlla quali icone vengono visualizzate nella barra di stato</string>
+  <!-- Toast Animation -->
+  <string name="toast_animation_title">Animazione toast</string>
+  <string name="toast_none_animation">Nessuna</string>
+  <string name="toast_default_animation">Predefinita</string>
+  <string name="toast_fade_animation">Dissolvenza</string>
+  <string name="toast_SlideRight_animation">Scorri a destra</string>
+  <string name="toast_SlideLeft_animation">Scorri a sinistra</string>
+  <string name="toast_Xylon_animation">Xylon</string>
+  <string name="toast_Toko_animation">Toko</string>
+  <string name="toast_Tn_animation">Tn</string>
+  <string name="toast_Honami_animation">Honami</string>
+  <string name="toast_FastFade_animation">Dissolvenza rapida</string>
+  <string name="toast_GrowFade_animation">Dissolvenza crescente</string>
+  <string name="toast_GrowFadeCenter_animation">Dissolvenza crescente centrale</string>
+  <string name="toast_GrowFadeBottom_animation">Dissolvenza crescente dal basso</string>
+  <string name="toast_Translucent_animation">Trasparenza</string>
+  <string name="toast_SlideLeftRight_animation">Scorri da sinistra a destra</string>
+  <string name="toast_SlideRightLeft_animation">Scorri da destra a sinistra</string>
+  <string name="toast_animation_test">Questo è un test per l\'animazione del toast</string>
+  <!-- System default animation -->
+  <string name="system_default_animation_title">Stile animazione Android P</string>
+  <string name="system_default_animation_summary">Attiva le animazioni di Android P \"predefinito\"</string>
 </resources>

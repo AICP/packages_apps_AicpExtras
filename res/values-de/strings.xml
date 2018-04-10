@@ -26,7 +26,7 @@
   <string name="status_bar_title">Statusleiste</string>
   <string name="status_bar_summary">Erscheinungsbild der Statusleiste bearbeiten</string>
   <!-- StatusBar Battery Options -->
-  <string name="status_bar_battery_options">Akku Einstellungen</string>
+  <string name="status_bar_battery_options">Akku-Einstellungen</string>
   <!-- Bluetooth status -->
   <string name="bluetooth_battery_title">Zeige Akkuladung für Bluetoothgeräte</string>
   <string name="bluetooth_battery_summary">Zeigt die Akkuladung für momentan verbundene Bluetoothgeräte an, wenn möglich.</string>
@@ -35,7 +35,7 @@
   <string name="network_traffic_autohide_threshold_title">Schwellenwert in (kB/s) ab dem die Netzwerk-Aktivitätsanzeige verborgen wird</string>
   <!-- QS Header battery percentage -->
   <string name="force_battery_percentage_title">Akku-Prozentanzeige erzwingen</string>
-  <string name="force_battery_percentage_summary">Akku-Ladung in Prozent bei sperrbildschirm und in Kopfzeile der Schnelleinstellungen.</string>
+  <string name="force_battery_percentage_summary">Akkuladung in Prozent bei Sperrbildschirm und in Kopfzeile der Schnelleinstellungen anzeigen.</string>
   <!-- Battery bar -->
   <string name="battery_bar_title">Akkustandbalken</string>
   <string name="battery_bar_color_title">Farbe</string>
@@ -162,7 +162,7 @@
   <string name="notification_guts_kill_app_button_summary">Zeige eine Taste zum Beenden der App, wenn deren Benachrichtigung lange gedrückt wird</string>
   <!-- InCall notifications vibrate -->
   <string name="incall_notifications_vibrate_title">Weniger lästige Anrufbenachrichtigungen</string>
-  <string name="incall_notifications_vibrate_summary">Im Gespräch anstatt eines Tons sanft Vibrieren und eine Benachrichtigung anzeigen</string>
+  <string name="incall_notifications_vibrate_summary">Im Gespräch anstatt eines Tons sanft vibrieren und eine Benachrichtigung anzeigen</string>
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Einstellungen für den Helligkeitsregler</string>
   <string name="brightness_slider_switch">Zeige den Helligkeitsregler in den Schnelleinstellungen an</string>
@@ -333,7 +333,7 @@
   <string name="media_art_summary">Zeigt Albumcover auf dem Sperrbildschirm als Hintergrund</string>
   <!-- Lockscreen battery info indicator  -->
   <string name="lockscreen_battery_info_title">Auflade-Infos auf dem Sperrbildschirm</string>
-  <string name="lockscreen_battery_info_summary">Zeigt auf dem Sperrbildschirm den momentanen Ladestrom (in Volt) and die Akku-Temperatur während des Aufladens an</string>
+  <string name="lockscreen_battery_info_summary">Zeige maximale ermittelte Ladespannung/-strom und Batterietemperatur während des Ladens auf dem Sperrbildschirm</string>
   <!-- Lockscreen notif count -->
   <string name="lockscreen_maxnotif_title">Benachrichtigungen</string>
   <string name="lockscreen_maxnotif_summary">Anzahl der Benachrichtigungen anpassen</string>
@@ -343,14 +343,14 @@
   <string name="lockscreen_power_menu_disabled_summary">Deaktiviert die Darstellung des Ein-/Aus-Menüs bei gesichertem Sperrbildschirm</string>
   <!-- Disable QS on secure Lockscreen -->
   <string name="lockscreen_qs_disabled_title">Keine Schnelleinstellungen auf sicherem Sperrbildschirm</string>
-  <string name="lockscreen_qs_disabled_summary">Deaktiviert den Zugriff auf die Schnelleinstellungen bei gesperrtem Sperrbildschirm</string>
+  <string name="lockscreen_qs_disabled_summary">Deaktiviert den Zugriff auf die Schnelleinstellungen bei gesichertem Sperrbildschirm</string>
   <!-- Fingerprint authentication vibration -->
   <string name="fprint_sucess_vib_title">Vibration bei Authentifizierung per Fingerabdruck</string>
   <string name="fprint_sucess_vib_summary_on">Nach erfolgreicher Authentifizierung per Fingerabdruck vibrieren</string>
   <string name="fprint_sucess_vib_summary_off">Nach erfolgreicher Authentifizierung per Fingerabdruck nicht vibrieren</string>
   <!-- Fingerprint unlock keystore -->
   <string name="fp_unlock_keystore_title">Mit Fingerabdruck entsperren</string>
-  <string name="fp_unlock_keystore_summary">Das Gerät nur mittels Fingerabdruck (ohne PIN/Passwort/Muster) nach dem Neustart entsperren\nHinweis: auf eigene Verantwortung!</string>
+  <string name="fp_unlock_keystore_summary">Das Gerät nur mittels Fingerabdruck (ohne PIN/Passwort/Muster) nach dem Neustart entsperren\nWarnung: Auf eigene Verantwortung!</string>
   <!-- Ambient display bottom info -->
   <string name="ambient_display_category">Inaktivitätsdisplay</string>
   <string name="ambient_display_bottom_info_title">Untere Anzeige</string>
@@ -359,6 +359,17 @@
   <string name="ambient_display_bottom_info_battery">Akku-Restladung in Prozent</string>
   <string name="ambient_display_bottom_info_weather">Kurze Wetterinformationen</string>
   <string name="lockscreen_security_category">Sicherheit</string>
+  <string name="lockscreen_visibilities_category">Anzeigen auf dem Sperrbildschirm</string>
+  <!-- Show Lockscreen clock, date, & alarm -->
+  <string name="show_lockscreen_clock_title">Uhrzeit</string>
+  <string name="show_lockscreen_clock_summary">Aktivieren, um die Uhrzeit anzuzeigen</string>
+  <string name="show_lockscreen_date_title">Datum</string>
+  <string name="show_lockscreen_date_summary">Aktivieren, um das Datum unter der Uhrzeit anzuzeigen</string>
+  <string name="show_lockscreen_alarm_title">Wecker</string>
+  <string name="show_lockscreen_alarm_summary">Aktivieren, um den nächsten Weckalarm unter der Uhrzeit anzuzeigen</string>
+  <!-- Hide statusbar on lockscreen -->
+  <string name="lockscreen_hide_status_bar_title">Statusleiste ausblenden</string>
+  <string name="lockscreen_hide_status_bar_summary">Bei Aktivierung, wird die Statusleiste auf dem Sperrbildschirm ausgeblendet</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Andere UI-Verbesserungen</string>
   <string name="other_ui_summary">Verschiedene Zusatzfunktionen anpassen</string>
@@ -514,7 +525,7 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="aicp_downloads_title">Downloads</string>
   <string name="aicp_downloads_summary">Besuche die AICP Webseite mit Downloads für dein Gerät</string>
   <string name="aicp_ota_title">OTA Aktualisierung</string>
-  <string name="aicp_ota_summary">Aktualisierungsprüfung für die installierte ROM Version</string>
+  <string name="aicp_ota_summary">Aktualisierungsprüfung für die installierte ROM-Version</string>
   <string name="lineage_extras_title">LineageOS Extras</string>
   <string name="lineage_extras_summary">SU addon laden oder entfernen, Wetteranbieter&#8230;</string>
   <string name="stats_title">Statistiken</string>
@@ -523,6 +534,8 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="device_maintainer_dialog">Geräte-Betreuer</string>
   <string name="device_maintainers_dialog">Geräte-Betreuer</string>
   <string name="device_maintainer_default">Unbekannt</string>
+  <string name="no_root_title">Nicht gerootet</string>
+  <string name="no_root_summary">Für mehr Funktionalität bitte das Gerät rooten</string>
   <!-- Other / general purpose -->
   <string name="default_string">Standard</string>
   <string name="on">An</string>
@@ -800,6 +813,8 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="notification_sound_vib_screen_on_never">Niemals</string>
   <string name="notification_sound_vib_screen_on_always">Immer (Standard)</string>
   <string name="notification_sound_vib_screen_on_nomedia">Wenn keine Medien abgespielt werden</string>
+  <!-- Accidental Touch -->
+  <string name="anbi_enabled_title">Unbeabsichtigte Berührungen verhindern</string>
   <string name="anbi_enabled_summary">Ignoriert bei Aktivierung Berührungen der Hardwaretasten, während der Touchscreen verwendet wird.</string>
   <!-- Dynamic Navbar -->
   <string name="navbar_dynamic_title">Dynamische Nav.-leistenfarbe</string>
@@ -856,4 +871,26 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <!-- Status bar system icons -->
   <string name="status_bar_system_icons_title">System-Symbole</string>
   <string name="status_bar_system_icons_summary">Festlegen, welche Statusleistensymbole angezeigt werden</string>
+  <!-- Toast Animation -->
+  <string name="toast_animation_title">Toast Animation</string>
+  <string name="toast_none_animation">Keine</string>
+  <string name="toast_default_animation">Standard</string>
+  <string name="toast_fade_animation">Ausblenden</string>
+  <string name="toast_SlideRight_animation">Nach rechts gleiten</string>
+  <string name="toast_SlideLeft_animation">Nach links gleiten</string>
+  <string name="toast_Xylon_animation">Xylon</string>
+  <string name="toast_Toko_animation">Toko</string>
+  <string name="toast_Tn_animation">Tn</string>
+  <string name="toast_Honami_animation">Honami</string>
+  <string name="toast_FastFade_animation">Schnell ausblenden</string>
+  <string name="toast_GrowFade_animation">Ausblenden und vergrößern</string>
+  <string name="toast_GrowFadeCenter_animation">Zentriert ausblenden und vergrößern</string>
+  <string name="toast_GrowFadeBottom_animation">Nach unten ausblenden und vergrößern</string>
+  <string name="toast_Translucent_animation">Durchsichtig</string>
+  <string name="toast_SlideLeftRight_animation">Gleite von links nach rechts</string>
+  <string name="toast_SlideRightLeft_animation">Gleite von rechts nach links</string>
+  <string name="toast_animation_test">Dies ist ein Test für die ausgewählte Toast-Animation</string>
+  <!-- System default animation -->
+  <string name="system_default_animation_title">Android P Animationsstil</string>
+  <string name="system_default_animation_summary">Aktiviert die \"Standard\"-Animationen von Android P</string>
 </resources>
