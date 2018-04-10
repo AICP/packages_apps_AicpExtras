@@ -222,13 +222,18 @@
   <string name="file_header_select_summary">選擇自訂圖像</string>
   <string name="file_header_provider_title">自訂圖像</string>
   <!-- Tiles animation style  -->
+  <string name="qs_tiles">快速設定圖塊</string>
+  <string name="qs_tile_animation_style_title">動畫樣式</string>
   <string name="qs_tile_animation_duration_title">動畫長度</string>
+  <string name="qs_tile_animation_interpolator_title">圖塊動畫插值器</string>
   <string name="qs_tile_animation_style_off">無動畫</string>
   <string name="qs_tile_animation_style_flip">翻轉</string>
   <string name="qs_tile_animation_style_rotate">旋轉</string>
   <string name="qs_tile_animation_duration_low">低</string>
   <string name="qs_tile_animation_duration_default">預設</string>
   <string name="qs_tile_animation_duration_fast">快</string>
+  <string name="qs_tile_animation_duration_quite_fast">相當快</string>
+  <string name="qs_tile_animation_duration_super_fast">超級快</string>
   <string name="qs_tile_animation_interpolator_linearInterpolator">直線</string>
   <string name="qs_tile_animation_interpolator_accelerateInterpolator">加速</string>
   <string name="qs_tile_animation_interpolator_decelerateInterpolator">減速</string>
@@ -347,7 +352,24 @@
   <string name="fp_unlock_keystore_title">指紋解鎖</string>
   <string name="fp_unlock_keystore_summary">在重新啟動後用指紋解鎖裝置，無須 PIN /密碼/圖案\n注意：自擔風險！</string>
   <!-- Ambient display bottom info -->
+  <string name="ambient_display_category">環境顯示</string>
+  <string name="ambient_display_bottom_info_title">底部視圖</string>
+  <string name="ambient_display_bottom_info_summary">在休眠時啟用顯示底部的資訊</string>
   <string name="ambient_display_bottom_info_off">已停用</string>
+  <string name="ambient_display_bottom_info_battery">電量百分比</string>
+  <string name="ambient_display_bottom_info_weather">顯示天氣資訊</string>
+  <string name="lockscreen_security_category">安全性</string>
+  <string name="lockscreen_visibilities_category">能見度</string>
+  <!-- Show Lockscreen clock, date, & alarm -->
+  <string name="show_lockscreen_clock_title">時鐘小工具</string>
+  <string name="show_lockscreen_clock_summary">啟用以顯示時鐘小工具</string>
+  <string name="show_lockscreen_date_title">日期小工具</string>
+  <string name="show_lockscreen_date_summary">啟用以顯示時鐘小工具下的日期</string>
+  <string name="show_lockscreen_alarm_title">鬧鐘文字</string>
+  <string name="show_lockscreen_alarm_summary">啟用在時鐘小工具下顯示鬧鐘文字</string>
+  <!-- Hide statusbar on lockscreen -->
+  <string name="lockscreen_hide_status_bar_title">隱藏狀態列</string>
+  <string name="lockscreen_hide_status_bar_summary">啟用後，狀態列將隱藏在鎖定畫面上</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">其他 UI 調整</string>
   <string name="other_ui_summary">各種其他項目</string>
@@ -393,10 +415,17 @@
   <string name="wake_when_plugged_or_unplugged_title">接上時喚醒</string>
   <string name="wake_when_plugged_or_unplugged_summary">接上或移除電源時開啟螢幕</string>
   <!-- Power Button - Long press for torch -->
+  <string name="torch_long_press_power_gesture_title">長按電源鍵即可啟動手電筒</string>
+  <string name="torch_long_press_power_gesture_summary">當顯示關閉時電源按鈕被長時間按下時切換手電筒</string>
+  <string name="torch_long_press_power_timeout_title">自動關閉手電筒</string>
   <string name="torch_long_press_power_timeout_never">永不</string>
   <string name="torch_long_press_power_timeout_1min">1 分鐘</string>
+  <string name="torch_long_press_power_timeout_2min">2 分鐘</string>
   <string name="torch_long_press_power_timeout_5min">5 分鐘</string>
   <string name="torch_long_press_power_timeout_10min">10 分鐘</string>
+  <string name="screenshot_edit_app">螢幕擷取畫面編輯器</string>
+  <string name="screenshot_edit_app_summary">選擇在輕觸螢幕擷取畫面通知編輯按鈕時應該啟動的應用程式</string>
+  <string name="screenshot_edit_app_no_editor">沒有可用的圖片編輯器</string>
   <!-- System animations -->
   <string name="system_animations_title">動畫</string>
   <string name="system_animations_summary">系統動畫</string>
@@ -504,6 +533,8 @@
   <string name="device_maintainer_dialog">裝置維護者</string>
   <string name="device_maintainers_dialog">裝置維護者</string>
   <string name="device_maintainer_default">未知</string>
+  <string name="no_root_title">尚未 root</string>
+  <string name="no_root_summary">更多有關功能, 請 root 您的裝置</string>
   <!-- Other / general purpose -->
   <string name="default_string">預設</string>
   <string name="on">開啟</string>
@@ -764,6 +795,7 @@
   <string name="screen_state_on_delay_title">螢幕關閉動作延遲</string>
   <string name="screen_state_on_delay_summary">螢幕開啟後執行動作之前等待的分鐘數</string>
   <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_title">音樂提示訊息</string>
   <string name="force_ambient_for_media_summary">環境顯示中的音樂曲目資訊</string>
   <string name="force_ambient_for_media_off">已停用</string>
   <string name="force_ambient_for_media_on">已啟用</string>
@@ -780,6 +812,8 @@
   <string name="notification_sound_vib_screen_on_never">永不</string>
   <string name="notification_sound_vib_screen_on_always">一律 (預設)</string>
   <string name="notification_sound_vib_screen_on_nomedia">如果沒有媒體在播放</string>
+  <!-- Accidental Touch -->
+  <string name="anbi_enabled_title">防止誤觸</string>
   <string name="anbi_enabled_summary">啟用時, 在使用觸控式螢幕時防止意外觸摸硬體按鍵。</string>
   <!-- Dynamic Navbar -->
   <string name="navbar_dynamic_title">動態導覽列顏色</string>
@@ -810,6 +844,8 @@
   <string name="hardware_keys_double_tap_title">輕觸兩下動作</string>
   <string name="hardware_keys_disable_title">停用導覽列按鍵</string>
   <!-- Home Hardware button options -->
+  <string name="button_home_wake_title">按鈕首頁喚醒</string>
+  <string name="button_home_wake_summary">使用主畫面鍵喚醒</string>
   <!-- Button brightness -->
   <string name="button_backlight_options_category">背光選項</string>
   <string name="button_backlight_enable_title">允許按鍵背光</string>
@@ -825,8 +861,35 @@
   <string name="power_menu_title">電源選單</string>
   <string name="power_menu_summary">電源選單內容</string>
   <!-- Quick QS pull down -->
+  <string name="status_bar_quick_qs_pulldown_title">快速下拉</string>
+  <string name="status_bar_quick_qs_pulldown_summary_left">狀態列的左邊緣拉下快速設定</string>
+  <string name="status_bar_quick_qs_pulldown_summary_right">在狀態列的右側下拉時直接進入快速設定</string>
   <string name="status_bar_quick_qs_pulldown_off">關閉</string>
   <string name="status_bar_quick_qs_pulldown_left">左側</string>
   <string name="status_bar_quick_qs_pulldown_right">右側</string>
   <!-- Status bar system icons -->
+  <string name="status_bar_system_icons_title">系統圖示</string>
+  <string name="status_bar_system_icons_summary">控制顯示哪些狀態列圖示</string>
+  <!-- Toast Animation -->
+  <string name="toast_animation_title">提示訊息動畫</string>
+  <string name="toast_none_animation">無</string>
+  <string name="toast_default_animation">預設</string>
+  <string name="toast_fade_animation">淡出</string>
+  <string name="toast_SlideRight_animation">向右滑動</string>
+  <string name="toast_SlideLeft_animation">向左滑動</string>
+  <string name="toast_Xylon_animation">木質</string>
+  <string name="toast_Toko_animation">東光</string>
+  <string name="toast_Tn_animation">Tn</string>
+  <string name="toast_Honami_animation">Honami</string>
+  <string name="toast_FastFade_animation">快速淡化</string>
+  <string name="toast_GrowFade_animation">縮放淡化</string>
+  <string name="toast_GrowFadeCenter_animation">於中央縮放淡化</string>
+  <string name="toast_GrowFadeBottom_animation">於底部縮放淡化</string>
+  <string name="toast_Translucent_animation">半透明</string>
+  <string name="toast_SlideLeftRight_animation">從左向右滑動</string>
+  <string name="toast_SlideRightLeft_animation">從右向左滑動</string>
+  <string name="toast_animation_test">這是針對選擇的提示訊息動畫所顯示的測試</string>
+  <!-- System default animation -->
+  <string name="system_default_animation_title">Android P 動畫樣式</string>
+  <string name="system_default_animation_summary">啟用 Andoird P「預設」的動畫</string>
 </resources>
