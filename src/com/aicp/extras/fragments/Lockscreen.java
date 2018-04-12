@@ -32,10 +32,12 @@ public class Lockscreen extends BaseSettingsFragment {
 
     private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
     private static final String FP_UNLOCK_KEYSTORE = "fp_unlock_keystore";
+    private static final String FP_WAKE_UNLOCK = "fp_wake_and_unlock";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
     private SwitchPreference mFpKeystore;
+    private SwitchPreference mFpWakeAndUnlock;
 
     @Override
     protected int getPreferenceResource() {
@@ -48,16 +50,24 @@ public class Lockscreen extends BaseSettingsFragment {
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
 
-        // Fingerprint vibration
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+
+        // Fingerprint vibration
         mFingerprintVib = (SwitchPreference) prefSet.findPreference(FP_SUCCESS_VIBRATION);
-        if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()){
-            mFingerprintVib.getParent().removePreference(mFingerprintVib);
-        }
         // Fingerprint unlock keystore
         mFpKeystore = (SwitchPreference) prefSet.findPreference(FP_UNLOCK_KEYSTORE);
+        // Fingerprint wake and unlock
+        mFpWakeAndUnlock = (SwitchPreference) prefSet.findPreference(FP_WAKE_UNLOCK);
         if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()){
+            mFingerprintVib.getParent().removePreference(mFingerprintVib);
             mFpKeystore.getParent().removePreference(mFpKeystore);
+            mFpWakeAndUnlock.getParent().removePreference(mFpWakeAndUnlock);
+        }
+
+        boolean configWakeAndUnlockEnabled = getActivity().getResources().getBoolean(
+                com.android.internal.R.bool.config_fingerprintWakeAndUnlock);
+        if (mFpWakeAndUnlock != null && !configWakeAndUnlockEnabled) {
+            mFpWakeAndUnlock.getParent().removePreference(mFpWakeAndUnlock);
         }
     }
 }
