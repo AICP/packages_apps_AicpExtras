@@ -54,6 +54,7 @@
         <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="status_bar_show_ticker"
             android:title="@string/ticker_mode_title"
+            android:summary="%s"
             android:entries="@array/ticker_mode_entries"
             android:entryValues="@array/ticker_mode_values"
             android:defaultValue="0" />
