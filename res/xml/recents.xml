@@ -59,6 +59,16 @@
         android:title="@string/alternative_recents_category">
 
         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+            android:key="recents_omni_switch"
+            android:title="@string/omni_switch_title"
+            android:defaultValue="false">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="org.omnirom.omniswitch"
+                android:targetClass="org.omnirom.omniswitch.SettingsActivity" />
+        </com.aicp.extras.preference.SystemSettingMasterSwitchPreference>
+
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="use_slim_recents"
             android:title="@string/slim_recents_title"
             android:defaultValue="false"
