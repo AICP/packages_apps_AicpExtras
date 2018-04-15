@@ -40,6 +40,18 @@
         android:defaultValue="false" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="qs_footer_show_settings"
+        android:title="@string/qs_footer_settings_title"
+        android:summary="@string/qs_footer_settings_summary"
+        android:defaultValue="true" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="qs_footer_show_services"
+        android:title="@string/qs_footer_services_title"
+        android:summary="@string/qs_footer_services_summary"
+        android:defaultValue="true" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
         android:title="@string/qs_tile_title_visibility_title"
         android:summary="@string/qs_tile_title_visibility_summary"
