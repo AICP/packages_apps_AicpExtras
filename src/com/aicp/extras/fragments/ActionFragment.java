@@ -199,7 +199,7 @@ public abstract class ActionFragment extends BaseSettingsFragment implements
         loadAndSetConfigs();
     }
 
-    private void loadAndSetConfigs() {
+    protected void loadAndSetConfigs() {
         mButtons = Config.getConfig(getActivity(), mDefaults);
         mDefaultButtons = Config.getDefaultConfig(getActivity(), mDefaults);
         for (ActionPreference pref : mPrefHolder) {
