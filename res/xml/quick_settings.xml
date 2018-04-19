@@ -57,6 +57,17 @@
         android:summary="@string/qs_tile_title_visibility_summary"
         android:defaultValue="true" />
 
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="qs_panel_bg_alpha"
+        android:title="@string/qs_panel_alpha_title"
+        android:summary="@string/qs_panel_alpha_summary"
+        android:max="255"
+        android:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight=""
+        android:persistent="false"
+        android:defaultValue="255" />
+
     <PreferenceCategory
         android:key="qs_layout_category"
         android:title="@string/qs_layout_category_title">
@@ -102,6 +113,7 @@
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
             android:defaultValue="3" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
