@@ -50,23 +50,28 @@ public class Lockscreen extends BaseSettingsFragment {
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
 
-        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        boolean configWakeAndUnlockEnabled = getActivity().getResources().getBoolean(
+                com.android.internal.R.bool.config_fingerprintWakeAndUnlock);
 
+        try {
+            mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        } catch (Exception e) {
+            //ignore
+        }
         // Fingerprint vibration
         mFingerprintVib = (SwitchPreference) prefSet.findPreference(FP_SUCCESS_VIBRATION);
         // Fingerprint unlock keystore
         mFpKeystore = (SwitchPreference) prefSet.findPreference(FP_UNLOCK_KEYSTORE);
         // Fingerprint wake and unlock
         mFpWakeAndUnlock = (SwitchPreference) prefSet.findPreference(FP_WAKE_UNLOCK);
-        if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()){
+
+        if (mFingerprintManager != null && mFingerprintManager.isHardwareDetected()){
+            if (configWakeAndUnlockEnabled){
+                mFpWakeAndUnlock.getParent().removePreference(mFpWakeAndUnlock);
+            }
+        } else {
             mFingerprintVib.getParent().removePreference(mFingerprintVib);
             mFpKeystore.getParent().removePreference(mFpKeystore);
-            mFpWakeAndUnlock.getParent().removePreference(mFpWakeAndUnlock);
-        }
-
-        boolean configWakeAndUnlockEnabled = getActivity().getResources().getBoolean(
-                com.android.internal.R.bool.config_fingerprintWakeAndUnlock);
-        if (mFpWakeAndUnlock != null && configWakeAndUnlockEnabled) {
             mFpWakeAndUnlock.getParent().removePreference(mFpWakeAndUnlock);
         }
     }
