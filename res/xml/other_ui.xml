@@ -19,6 +19,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     android:title="@string/other_ui_title">
 
     <com.aicp.gear.preference.SystemSettingSeekBarPreference
@@ -50,6 +51,10 @@
         android:key="screenshot_edit_app"
         android:title="@string/screenshot_edit_app"
         android:summary="@string/screenshot_edit_app_summary" />
+
+    <org.lineageos.internal.lineageparts.LineagePartsPreference
+        android:key="long_screen_settings"
+        lineage:requiresConfig="@*lineageos.platform:bool/config_haveHigherAspectRatioScreen" />
 
     <!-- Launch music player when headset is connected -->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
