@@ -22,12 +22,12 @@ public abstract class Constants {
     /**
      * Package name of AICP OTA
      */
-    public static final String AICP_OTA_PACKAGE = "com.aicp.aicpota";
+    public static final String AICP_OTA_PACKAGE = "com.aicp.updater";
 
     /**
      * Default activity of AICP OTA
      */
-    public static final String AICP_OTA_ACTIVITY = AICP_OTA_PACKAGE + ".MainActivity";
+    public static final String AICP_OTA_ACTIVITY = AICP_OTA_PACKAGE + ".Settings";
 
     /**
      * Key for SharedPreferences for selinux switch
