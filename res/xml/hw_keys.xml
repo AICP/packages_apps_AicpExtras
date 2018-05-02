@@ -88,6 +88,15 @@
             aicpextras:plainSwitch="true"
             android:defaultValue="false" />
 
+        <!-- Volume rocker wake screen -->
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+            android:key="volume_rocker_wake"
+            android:title="@string/volume_rocker_wake_title"
+            android:summary="@string/volume_rocker_wake_summary"
+            aicpextras:thereCanBeOnlyOneGroupId="1"
+            aicpextras:plainSwitch="true"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
