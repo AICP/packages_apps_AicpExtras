@@ -160,6 +160,8 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         // bits for hardware keys present on device
         final int deviceKeys = getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
+        final int deviceWakeKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareWakeKeys);
 
         // read bits for present hardware keys
         final boolean hasHomeKey = (deviceKeys & KEY_MASK_HOME) != 0;
@@ -167,6 +169,12 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         final boolean hasMenuKey = (deviceKeys & KEY_MASK_MENU) != 0;
         final boolean hasAssistKey = (deviceKeys & KEY_MASK_ASSIST) != 0;
         final boolean hasAppSwitchKey = (deviceKeys & KEY_MASK_APP_SWITCH) != 0;
+
+        final boolean showHomeWake = (deviceWakeKeys & KEY_MASK_HOME) != 0;
+        final boolean showBackWake = (deviceWakeKeys & KEY_MASK_BACK) != 0;
+        final boolean showMenuWake = (deviceWakeKeys & KEY_MASK_MENU) != 0;
+        final boolean showAssistWake = (deviceWakeKeys & KEY_MASK_ASSIST) != 0;
+        final boolean showAppSwitchWake = (deviceWakeKeys & KEY_MASK_APP_SWITCH) != 0;
 
         // load categories and init/remove preferences based on device
         // configuration
@@ -182,28 +190,49 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
                 .findPreference(CATEGORY_APPSWITCH);
 
         // back key
-        if (!hasBackKey) {
+        if (hasBackKey) {
+            if (!showBackWake) {
+                backCategory.removePreference(findPreference(Settings.System.BACK_WAKE_SCREEN));
+            }
+        } else {
             prefScreen.removePreference(backCategory);
         }
 
         // home key
-        if (!hasHomeKey) {
+        if (hasHomeKey) {
+            if (!showHomeWake) {
+                homeCategory.removePreference(findPreference(Settings.System.HOME_WAKE_SCREEN));
+            }
+        } else {
             prefScreen.removePreference(homeCategory);
             prefScreen.removePreference(hwkeyCategory);
         }
 
         // App switch key (recents)
-        if (!hasAppSwitchKey) {
+        if (hasAppSwitchKey) {
+            if (!showAppSwitchWake) {
+                appSwitchCategory.removePreference(findPreference(
+                        Settings.System.APP_SWITCH_WAKE_SCREEN));
+            }
+        } else {
             prefScreen.removePreference(appSwitchCategory);
         }
 
         // menu key
-        if (!hasMenuKey) {
+        if (hasMenuKey) {
+            if (!showMenuWake) {
+                menuCategory.removePreference(findPreference(Settings.System.MENU_WAKE_SCREEN));
+            }
+        } else {
             prefScreen.removePreference(menuCategory);
         }
 
         // search/assist key
-        if (!hasAssistKey) {
+        if (hasAssistKey) {
+            if (!showAssistWake) {
+                assistCategory.removePreference(findPreference(Settings.System.ASSIST_WAKE_SCREEN));
+            }
+        } else {
             prefScreen.removePreference(assistCategory);
         }
 
