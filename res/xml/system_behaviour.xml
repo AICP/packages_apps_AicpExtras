@@ -34,13 +34,6 @@
         android:title="@string/screen_state_toggles_title"
         android:fragment="com.aicp.extras.fragments.SuspendActions" />
 
-    <PreferenceScreen
-        android:key="chooser_activity_blacklist"
-        android:fragment="com.aicp.extras.fragments.ChooserActivityBlacklist"
-        android:title="@string/chooser_activity_blacklist_title"
-        android:summary="@string/chooser_activity_blacklist_summary"
-        android:persistent="false" />
-
     <com.aicp.extras.preference.HostnamePreference
         android:key="device_hostname"
         android:title="@string/device_hostname"
