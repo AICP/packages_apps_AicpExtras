@@ -32,12 +32,10 @@ public class Lockscreen extends BaseSettingsFragment {
 
     private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
     private static final String FP_UNLOCK_KEYSTORE = "fp_unlock_keystore";
-    private static final String FP_WAKE_UNLOCK = "fp_wake_and_unlock";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
     private SwitchPreference mFpKeystore;
-    private SwitchPreference mFpWakeAndUnlock;
 
     @Override
     protected int getPreferenceResource() {
@@ -62,17 +60,10 @@ public class Lockscreen extends BaseSettingsFragment {
         mFingerprintVib = (SwitchPreference) prefSet.findPreference(FP_SUCCESS_VIBRATION);
         // Fingerprint unlock keystore
         mFpKeystore = (SwitchPreference) prefSet.findPreference(FP_UNLOCK_KEYSTORE);
-        // Fingerprint wake and unlock
-        mFpWakeAndUnlock = (SwitchPreference) prefSet.findPreference(FP_WAKE_UNLOCK);
 
-        if (mFingerprintManager != null && mFingerprintManager.isHardwareDetected()){
-            if (configWakeAndUnlockEnabled){
-                mFpWakeAndUnlock.getParent().removePreference(mFpWakeAndUnlock);
-            }
-        } else {
+        if (mFingerprintManager == null && !mFingerprintManager.isHardwareDetected()){
             mFingerprintVib.getParent().removePreference(mFingerprintVib);
             mFpKeystore.getParent().removePreference(mFpKeystore);
-            mFpWakeAndUnlock.getParent().removePreference(mFpWakeAndUnlock);
         }
     }
 }
