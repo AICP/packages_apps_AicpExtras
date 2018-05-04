@@ -32,10 +32,12 @@ public class Lockscreen extends BaseSettingsFragment {
 
     private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
     private static final String FP_UNLOCK_KEYSTORE = "fp_unlock_keystore";
+    private static final String FP_ONLY_SCREEN_ON = "fp_only_screen_on";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
     private SwitchPreference mFpKeystore;
+    private SwitchPreference mFpOnlyScreenOn;
 
     @Override
     protected int getPreferenceResource() {
@@ -60,10 +62,13 @@ public class Lockscreen extends BaseSettingsFragment {
         mFingerprintVib = (SwitchPreference) prefSet.findPreference(FP_SUCCESS_VIBRATION);
         // Fingerprint unlock keystore
         mFpKeystore = (SwitchPreference) prefSet.findPreference(FP_UNLOCK_KEYSTORE);
+        // Fingerprint only at screen on
+        mFpOnlyScreenOn = (SwitchPreference) prefSet.findPreference(FP_ONLY_SCREEN_ON);
 
         if (mFingerprintManager == null && !mFingerprintManager.isHardwareDetected()){
             mFingerprintVib.getParent().removePreference(mFingerprintVib);
             mFpKeystore.getParent().removePreference(mFpKeystore);
+            mFpOnlyScreenOn.getParent().removePreference(mFpOnlyScreenOn);
         }
     }
 }
