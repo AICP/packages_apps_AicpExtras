@@ -146,5 +146,11 @@
               android:title="@string/face_auto_unlock_title"
               android:summary="@string/face_auto_unlock_summary"
               android:defaultValue="false" />
+
+          <com.aicp.gear.preference.SystemSettingSwitchPreference
+              android:key="fp_only_screen_on"
+              android:title="@string/fp_only_screen_on_title"
+              android:summary="@string/fp_only_screen_on_summary"
+              android:defaultValue="false" />
     </PreferenceCategory>
 </PreferenceScreen>
