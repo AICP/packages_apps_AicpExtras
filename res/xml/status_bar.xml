@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2017-2018 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -84,17 +84,23 @@
 
         <!-- Data icon - show 4G instead of LTE -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
-           android:key="show_lte_fourgee"
-           android:title="@string/show_4g_title"
-           android:summary="@string/show_4g_summary"
-           android:defaultValue="false" />
+            android:key="show_lte_fourgee"
+            android:title="@string/show_4g_title"
+            android:summary="@string/show_4g_summary"
+            android:defaultValue="false" />
 
         <!-- VoLTE icon - display when available -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
-           android:key="show_volte_icon"
-           android:title="@string/volte_icon_title"
-           android:summary="@string/volte_icon_summary"
-           android:defaultValue="false" />
+            android:key="show_volte_icon"
+            android:title="@string/volte_icon_title"
+            android:summary="@string/volte_icon_summary"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="data_disabled_icon"
+            android:title="@string/data_disabled_icon_title"
+            android:summary="@string/data_disabled_icon_summary"
+            android:defaultValue="true"/>
 
         <!-- Show Network Traffic State on Statusbar -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
@@ -103,38 +109,38 @@
             android:defaultValue="false" />
 
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
-           android:key="network_traffic_autohide_threshold"
-           android:title="@string/network_traffic_autohide_threshold_title"
-           android:max="10"
-           android:min="0"
-           aicpextras:unitsLeft=""
-           aicpextras:unitsRight=""
-           android:defaultValue="1"
-           android:dependency="network_traffic_state" />
+            android:key="network_traffic_autohide_threshold"
+            android:title="@string/network_traffic_autohide_threshold_title"
+            android:max="10"
+            android:min="0"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight=""
+            android:defaultValue="1"
+            android:dependency="network_traffic_state" />
 
-   </PreferenceCategory>
+    </PreferenceCategory>
 
-   <PreferenceCategory
-       android:key="statusbar_others_category"
-       android:title="@string/status_bar_others_category_title">
+    <PreferenceCategory
+        android:key="statusbar_others_category"
+        android:title="@string/status_bar_others_category_title">
 
-      <com.aicp.gear.preference.SystemSettingListPreference
-          android:key="status_bar_show_carrier"
-          android:title="@string/show_carrier_title"
-          android:dialogTitle="@string/carrier_options"
-          android:entries="@array/carrier_label_entries"
-          android:entryValues="@array/carrier_label_values"
-          android:defaultValue="1" />
+        <com.aicp.gear.preference.SystemSettingListPreference
+            android:key="status_bar_show_carrier"
+            android:title="@string/show_carrier_title"
+            android:dialogTitle="@string/carrier_options"
+            android:entries="@array/carrier_label_entries"
+            android:entryValues="@array/carrier_label_values"
+            android:defaultValue="1" />
 
-      <Preference
-          android:key="custom_carrier_label"
-          android:title="@string/custom_carrier_label_title" />
+        <Preference
+            android:key="custom_carrier_label"
+            android:title="@string/custom_carrier_label_title" />
 
-      <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-          android:title="@string/battery_bar_title"
-          android:key="statusbar_battery_bar"
-          android:defaultValue="false"
-          android:fragment="com.aicp.extras.fragments.BatteryBar" />
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+            android:title="@string/battery_bar_title"
+            android:key="statusbar_battery_bar"
+            android:defaultValue="false"
+            android:fragment="com.aicp.extras.fragments.BatteryBar" />
 
     </PreferenceCategory>
 
