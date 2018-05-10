@@ -104,6 +104,12 @@
             android:summary="@string/volte_icon_summary"
             android:defaultValue="true"/>
 
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="data_disabled_icon"
+            android:title="@string/data_disabled_icon_title"
+            android:summary="@string/data_disabled_icon_summary"
+            android:defaultValue="true"/>
+
     </PreferenceCategory>
 
     <!-- Show Network Traffic State on Statusbar -->
