@@ -19,6 +19,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     android:title="@string/other_ui_title">
 
     <com.aicp.gear.preference.SystemSettingSeekBarPreference
@@ -62,6 +63,13 @@
         android:key="smart_pixels"
         android:title="@string/smart_pixels_title"
         android:fragment="com.aicp.extras.fragments.SmartPixels" />
+
+    <!-- Full screen aspect ratio -->
+    <lineageos.preference.LineageSystemSettingSwitchPreference
+        android:key="full_screen_aspect_ratio"
+        android:title="@string/full_screen_aspect_ratio_title"
+        android:summary="@string/full_screen_aspect_ratio_summary"
+        lineage:requiresConfig="@*lineageos.platform:bool/config_haveHigherAspectRatioScreen" />
 
     <!-- Show CPU Info overlay -->
     <SwitchPreference
