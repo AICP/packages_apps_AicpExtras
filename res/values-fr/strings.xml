@@ -35,6 +35,11 @@
   <string name="battery_bar_style_title">Alignement</string>
   <string name="battery_bar_thickness_title">Épaisseur</string>
   <string name="battery_bar_animate_title">Animation lors de la charge</string>
+  <string name="battery_bar_style_regular">Standard</string>
+  <string name="battery_bar_style_reversed">Inversé</string>
+  <string name="battery_bar_use_charging_color_title">Couleur de charge personnalisée</string>
+  <string name="battery_bar_blend_color_title">Mélanger les couleurs</string>
+  <string name="battery_bar_blend_color_reverse_title">Inversion de couleur</string>
   <!-- Aicp statusbar logo -->
   <string name="status_bar_logo_title">Logo AICP</string>
   <string name="status_bar_logo_dialog_title">Position du logo AICP</string>
@@ -42,13 +47,18 @@
   <string name="status_bar_logo_left">Gauche</string>
   <string name="status_bar_logo_right">Droit</string>
   <!-- StatusBar weather settings -->
+  <string name="status_bar_show_image">Afficher l\'image</string>
   <!-- Smart pulldown-->
   <!-- Notifications -->
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Curseur de luminosité</string>
   <string name="brightness_icon_title">Icône de luminosité</string>
   <string name="brightness_icon_summary">Afficher l\'icône de luminosité à gauche du urseur de luminosité permettant d\'ajuster automatiquement la luminosité</string>
+  <string name="brightness_icon_position_title">Position de l’icône de luminosité</string>
+  <string name="brightness_icon_position_on_summary">Afficher à droite</string>
+  <string name="brightness_icon_position_off_summary">Afficher à gauche</string>
   <!-- Quick settings -->
+  <string name="quick_settings_title">Paramètres rapides</string>
   <!-- Quick 1-finger pull down to access notifications -->
   <!-- Disable music track title in QS tile -->
   <!-- Small quick settings scroller -->
@@ -57,9 +67,12 @@
   <!-- QS tiles title visibility -->
   <!-- QS Dark mode -->
   <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">Activer</string>
   <string name="status_bar_custom_header_shadow_title">Ombre</string>
   <string name="status_bar_custom_header_shadow_summary">Appliquer une ombre sur l\'image d\'arrière-plan de l\'en-tête contextuel, pour une meilleure visibilité des images lumineuses</string>
   <string name="unit_percent">\u0025</string>
+  <string name="static_header_provider_title">Statique</string>
+  <string name="daylight_header_provider_title">Dynamique</string>
   <string name="header_provider_disabled">Désactivé</string>
   <string name="custom_header_title">En-tête contextuel</string>
   <!-- QS quick pulldown using fpc -->
@@ -76,6 +89,9 @@
   <string name="recents_clear_all_location_bottom_left">En bas à gauche</string>
   <string name="recents_clear_all_location_bottom_center">En bas au milieu</string>
   <!-- Recents Membar -->
+  <string name="systemui_recents_mem_display_title">Afficher la barre d\'utilisation mémoire</string>
+  <string name="systemui_recents_mem_display_summaryOn">Barre de mémoire activé</string>
+  <string name="systemui_recents_mem_display_summaryOff">Barre de mémoire désactivé</string>
   <!-- Slim recents -->
   <string name="recents_max_apps_title">Max. d\'applications autorisées</string>
   <string name="recent_panel_scale_title">Taille</string>
@@ -87,18 +103,27 @@
   <string name="recent_panel_expanded_mode_disabled">Désactivé</string>
   <string name="recent_panel_bg_color_title">Couleur d\'arrière-plan du panneau</string>
   <string name="recent_card_bg_color_title">Couleur de fond de carte</string>
+  <string name="default_iconpack_title">Icônes par défaut</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <string name="recent_panel_lefty_mode_title">Afficher sur le bord gauche</string>
   <string name="recent_panel_lefty_mode_summary">Afficher le panneau des applications récentes sur le bord gauche</string>
   <!-- Slim Recent App Sidebar  -->
   <string name="recent_app_sidebar_title">Barre d\'application latérale</string>
+  <string name="recent_app_sidebar_scale_title">Taille</string>
   <!-- Slim recents membar -->
+  <string name="slim_recents_mem_display_category_title">Barre de mémoire</string>
+  <string name="slim_recents_mem_display_title">Afficher la barre d\'utilisation mémoire</string>
+  <string name="slim_recents_mem_display_summaryOn">Barre de mémoire activé</string>
+  <string name="slim_recents_mem_display_summaryOff">Barre de mémoire désactivé</string>
+  <string name="slim_recents_mem_display_color">Couleur de la barre de mémoire RAM</string>
   <!-- Lockscreen -->
+  <string name="lockscreen_title">Écran de Verrouillage</string>
   <!-- Double tap to sleep on lockscreen -->
   <string name="double_tap_sleep_lockscreen">Double appui pour mettre en veille</string>
   <string name="double_tap_sleep_lockscreen_summary">Double appui pour mettre en vieille sur l\'écran de vérouillage</string>
   <!-- Media art -->
   <!-- Lockscreen battery info indicator  -->
+  <string name="lockscreen_battery_info_title">Informations sur la batterie</string>
   <!-- Lockscreen notif count -->
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
@@ -127,6 +152,7 @@
   <string name="system_animations_title">Affichage et animations</string>
   <string name="custom_bootanimation_title">Animation de démarrage</string>
   <string name="custom_bootanimation_summary">Sélectionner une animation de démarrage. Pour chaque changement, l\'animation de démarrage sera sauvegardée dans le dossier AICP_backup dans votre mémoire interne. Les anciennes animations doivent être supprimées manuellement si vous ne les utilisez plus.</string>
+  <string name="bootanimation_apply">Appliquer</string>
   <!-- System behaviour -->
   <string name="selinux_category">SELinux</string>
   <string name="selinux_mode_title">Mode de Selinux</string>
@@ -144,12 +170,20 @@
   <string name="share_title">Partage...</string>
   <string name="log_it_share_subject">Journaux AICP</string>
   <string name="log_it_now_summary">Soyez patiens le temps que les logs soient crées</string>
+  <string name="log_it_logs_in_progress">Des journées ont été créés&#8230;</string>
+  <string name="log_it_share_type_title">Partager la méthode</string>
+  <string name="log_it_share_type_zip">Fichier ZIP</string>
   <string name="log_it_share_via">Partager via</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Transparence</string>
   <!-- Volume dialog opacity -->
   <string name="volume_dialog_transparency">Transparence du panneau de volume</string>
+  <string name="volume_dialog_stroke_disabled">Désactivé</string>
+  <string name="volume_dialog_stroke_accent">Couleur d’accentuation</string>
+  <string name="volume_dialog_stroke_custom">Couleur personnalisée</string>
+  <string name="volume_dialog_stroke_color_title">Couleur de contour du réglage de volume</string>
   <!-- Power menu and dialogs opacity -->
+  <string name="power">Options du menu Marche/Arrêt</string>
   <string name="power_menu_transparency">Transparence du menu d\'alimentation</string>
   <string name="power_menu_dialog_dim">Transparence des dialogues du menu d\'alimentation</string>
   <!-- AE settings -->
@@ -174,6 +208,7 @@
   <string name="device_maintainer_title">Mainteneur de l\'appareil</string>
   <string name="device_maintainer_dialog">Mainteneur de l\'appareil</string>
   <string name="device_maintainers_dialog">Mainteneurs de l\'appareil</string>
+  <string name="device_maintainer_default">Inconnu</string>
   <!-- Other / general purpose -->
   <string name="default_string">Par défaut</string>
   <string name="on">Activé</string>
@@ -187,7 +222,9 @@
   <string name="hidden_anim_more_nice">BIEN</string>
   <!-- Sensor block per-package -->
   <!-- Weather - OmniJaws Settings -->
+  <string name="weather_title">Météo</string>
   <!-- Lockscreen Weather -->
+  <string name="lock_screen_weather_category_title">Écran de Verrouillage</string>
   <!-- Statusbar ticker -->
   <string name="ticker_disabled">Désactivé</string>
   <!-- DUI -->
@@ -205,6 +242,7 @@
   <!-- SmartBar -->
   <string name="smartbar_right">Droit</string>
   <string name="smartbar_left">Gauche</string>
+  <string name="smartbar_button_animation_flip">Inverser</string>
   <string name="smartbar_ime_action_none">Aucune</string>
   <!-- Carrier Label -->
   <string name="carrier_category">Libellé opérateur</string>

@@ -18,67 +18,159 @@
  */
 -->
 <resources>
+  <string name="app_name">Aicp Extras</string>
   <!-- Dashboard -->
+  <string name="user_interface_category">UI</string>
   <string name="system_category">Sistem</string>
+  <string name="other_category">Lainnya</string>
   <!-- Status bar -->
+  <string name="status_bar_title">Bilah status</string>
   <!-- Bluetooth status -->
+  <string name="bluetooth_battery_title">Tampilkan status baterai Bluetooth</string>
+  <string name="bluetooth_battery_summary">Tampilkan status baterai untuk perangkat bluetooth yang terhubung saat ini, jika tersedia.</string>
   <!-- Statusbar net monitor -->
-  <string name="network_traffic_state_title">Menampilkan aktivitas internet di statusbar</string>
-  <string name="network_traffic_autohide_threshold_title">Batas aktivitas internet</string>
+  <string name="network_traffic_state_title">Tampilkan aktivitas jaringan di bilah status</string>
+  <string name="network_traffic_autohide_threshold_title">Ambang batas sembunyi otomatis aktivitas jaringan (KB/d)</string>
   <!-- Battery bar -->
+  <string name="battery_bar_title">Bilah baterai</string>
   <string name="battery_bar_color_title">Warna</string>
   <string name="battery_bar_charging_color_title">Warna pengisian</string>
   <string name="battery_bar_battery_low_color_title">Warna baterai lemah</string>
   <string name="battery_bar_style_title">Perataan</string>
   <string name="battery_bar_thickness_title">Ketebalan</string>
+  <string name="battery_bar_animate_title">Animasi pengisian</string>
+  <string name="battery_bar_style_regular">Biasa</string>
+  <string name="battery_bar_style_center_mirrored">Tengah-memantul</string>
+  <string name="battery_bar_style_reversed">Terbalik</string>
+  <string name="battery_bar_use_charging_color_title">Warna khusus saat pengisian</string>
+  <string name="battery_bar_blend_color_title">Perpaduan warna</string>
+  <string name="battery_bar_blend_color_summary">Perpaduan warna penuh/kosong yang sesuai dengan persentase baterai</string>
+  <string name="battery_bar_blend_color_reverse_title">Arah warna terbalik</string>
+  <string name="battery_bar_blend_color_reverse_summary_off">Penuh &#8594; kosong: merah &#8592; hijau &#8592; biru &#8592; merah</string>
+  <string name="battery_bar_blend_color_reverse_summary_on">Penuh &#8594; kosong: merah &#8594; hijau &#8594; biru &#8594; merah</string>
   <!-- Aicp statusbar logo -->
+  <string name="status_bar_logo_title">Logo AICP</string>
   <string name="status_bar_logo_dialog_title">Posisi logo AICP</string>
+  <string name="status_bar_logo_disabled">Dimatikan</string>
+  <string name="status_bar_logo_left">Kiri</string>
+  <string name="status_bar_logo_right">Kanan</string>
   <!-- StatusBar weather settings -->
-  <string name="statusbar_weather_title">Cuaca status bar</string>
-  <string name="statusbar_weather_summary">Konfigurasi dari QS pengaturan/Cuaca</string>
+  <string name="statusbar_weather_title">Cuaca bilah status</string>
+  <string name="statusbar_weather_summary">Konfigurasikan dari setelan QS/Cuaca</string>
+  <string name="statusbar_weather_dialog_title">Gaya cuaca bilah status</string>
   <string name="status_bar_weather_hidden">Sembunyikan cuaca</string>
+  <string name="status_bar_temperature_image_show_scale">Tampilkan suhu dengan skala dan gambar</string>
+  <string name="status_bar_temperature_image_hide_scale">Tampilkan suhu dengan gambar tanpa skala</string>
+  <string name="status_bar_temperature_show_scale_hide_image">Tampilkan suhu dengan skala</string>
+  <string name="status_bar_temperature_hide_scale_hide_image">Tampilkan suhu tanpa skala</string>
+  <string name="status_bar_show_image">Tampilkan gambar</string>
   <!-- Smart pulldown-->
   <string name="smart_pulldown_title">Pulldown pintar</string>
   <string name="smart_pulldown_off">mati</string>
-  <string name="smart_pulldown_none">tidak ada notifikasi</string>
+  <string name="smart_pulldown_none">tidak ada pemberitahuan</string>
   <string name="smart_pulldown_dismissable">abaikan semua notifikasi</string>
   <string name="smart_pulldown_ongoing">tidak ada notifikasi yang berjalan</string>
   <string name="smart_pulldown_summary">Membuka pengaturan cepat ketika ada %1$s pemberitahuan</string>
   <string name="smart_pulldown_none_summary">Membuka Qs ketika tidak ada notifikasi</string>
   <string name="smart_pulldown_off_summary">dimatikan</string>
   <!-- Notifications -->
+  <string name="notifications_title">Pemberitahuan</string>
   <!-- Brightness slider settings -->
-  <string name="brightness_slider_settings_title">Slider pengaturan kecerahan</string>
-  <string name="brightness_slider_switch">Tampilkan slider kecerahan di QS</string>
+  <string name="brightness_slider_settings_title">Setelan slider kecerahan</string>
+  <string name="brightness_slider_switch">Tampilkan slider kecerahan di Setelan Cepat</string>
+  <string name="brightness_icon_title">Ikon kecerahan</string>
+  <string name="brightness_icon_summary">Tampilkan ikon kecerahan di sebelah kiri slider kecerahan untuk mengatur kecerahan-otomatis</string>
+  <string name="brightness_icon_position_title">Posisi ikon kecerahan</string>
+  <string name="brightness_icon_position_on_summary">Tampilkan di kanan</string>
+  <string name="brightness_icon_position_off_summary">Tampilkan di kiri</string>
   <!-- Quick settings -->
+  <string name="quick_settings_title">Setelan cepat</string>
   <!-- Quick 1-finger pull down to access notifications -->
   <string name="status_bar_quick_qs_pulldown">Pull-down QS cepat</string>
   <string name="status_bar_quick_qs_pulldown_summary">Tarik kebawah di statusbar</string>
   <!-- Disable music track title in QS tile -->
+  <string name="qs_music_tile_track_optional_title">Ubin musik judul trek</string>
+  <string name="qs_music_tile_track_optional_summary">Tampilkan judul trek musik sebagai judul ubin QS</string>
   <!-- Small quick settings scroller -->
+  <string name="qqs_scroll_title">Gulir ubin QS kecil</string>
+  <string name="qqs_scroll_summary">Memungkinkan bergulir melalui ubin QS kecil</string>
   <!-- QS rows and columns -->
   <string name="qs_layout_category_title">QS letak</string>
+  <string name="qs_rows_portrait_title">Baris ubin pada tampilan potret</string>
+  <string name="qs_rows_landscape_title">Baris ubin pada tampilan mendatar</string>
+  <string name="qs_columns_portrait_title">Kolom ubin pada tampilan potret</string>
+  <string name="qs_columns_landscape_title">Kolom ubin pada tampilan lanskap</string>
   <!-- QS footer warnings -->
+  <string name="qs_footer_warnings_title">Peringatan footer QS</string>
+  <string name="qs_footer_warnings_summary">Tampilkan peringatan di panel QS bawah saat jaringan dipantau oleh aplikasi atau vpn eksternal</string>
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Tampilkan judul ikon</string>
   <string name="qs_tile_title_visibility_summary">Tampilakn tulisan ikon dibawah ketika diperika</string>
   <!-- QS Dark mode -->
   <string name="qs_style_dark_title">Gaya SystemUI gelap</string>
   <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">Hidupkan</string>
+  <string name="daylight_header_pack_title">Paket gambar header</string>
+  <string name="status_bar_custom_header_shadow_title">Bayangan gambar Header</string>
+  <string name="status_bar_custom_header_shadow_summary">Untuk visibilitas yang lebih baik pada gambar yang terang</string>
+  <string name="static_header_provider_title">Statis</string>
+  <string name="daylight_header_provider_title">Dinamis</string>
+  <string name="custom_header_provider_title">Penyedia header</string>
+  <string name="custom_header_browse_title">Telusuri header yang terpasang</string>
   <string name="custom_header_browse_summary">Klik pada gambar apapun untuk mengunakan mode statis</string>
   <string name="custom_header_browse_summary_new">Telusuri semua paket header yang tersedia</string>
   <string name="custom_header_pick_title">Pilih gambar header</string>
   <string name="custom_header_pick_summary">Pilih sebuah gambar untuk digunakan pada modus statis</string>
   <string name="style_enabled_summary">Custom gambar header hidup</string>
   <string name="style_disabled_summary">Custom gambar header mati</string>
+  <string name="header_provider_disabled">Dimatikan</string>
+  <string name="custom_header_title">Gambar header khusus</string>
   <!-- QS quick pulldown using fpc -->
   <string name="status_bar_quick_qs_pulldown_fp_title">Usapan menggunakan fingerprint</string>
   <!-- Recents -->
-  <string name="stock_recents_category">recent bawaan</string>
+  <string name="recents_title">Recent</string>
+  <string name="recents_summary">Layar aplikasi terbaru</string>
+  <string name="stock_recents_category">Recent bawaan</string>
+  <string name="alternative_recents_category">Pilihan alternatif</string>
   <!-- Recents panel settings -->
+  <string name="show_clear_all_recents_button_title">Hidupkan tombol hapus semua</string>
+  <string name="show_clear_all_recents_button_summary">Tampilkan tombol hapus semua saat menggunakan recent</string>
+  <string name="recents_clear_all_location_title">Lokasi tombol hapus semua</string>
+  <string name="recents_clear_all_location_top_right">Kanan atas</string>
+  <string name="recents_clear_all_location_top_left">Kiri atas</string>
+  <string name="recents_clear_all_location_top_center">Tengah atas</string>
+  <string name="recents_clear_all_location_bottom_right">Kanan bawah</string>
+  <string name="recents_clear_all_location_bottom_left">Kiri bawah</string>
+  <string name="recents_clear_all_location_bottom_center">Tengah bawah</string>
   <!-- Recents Membar -->
+  <string name="systemui_recents_mem_display_title">Tampilkan bilah memori</string>
+  <string name="systemui_recents_mem_display_summaryOn">Bilah memori dihidupkan</string>
+  <string name="systemui_recents_mem_display_summaryOff">Bilah memori dimatikan</string>
   <!-- Slim recents -->
+  <string name="slim_recents_title">Slim recent</string>
+  <string name="recents_max_apps_title">Maksimal aplikasi yang diperbolehkan</string>
+  <string name="recent_panel_scale_title">Ukuran</string>
+  <string name="recent_panel_expanded_mode_title">Modus diperluas</string>
+  <string name="recent_panel_expanded_mode_summary">Modus pratinjau recent yang diperluas</string>
+  <string name="recent_panel_expanded_mode_auto">Otomatis (standar)</string>
+  <string name="recent_panel_expanded_mode_always">Selalu</string>
+  <string name="recent_panel_expanded_mode_never">Jangan pernah</string>
+  <string name="recent_panel_expanded_mode_disabled">Dimatikan</string>
+  <string name="recent_panel_bg_color_title">Warna latar belakang panel</string>
+  <string name="recent_card_bg_color_title">Warna latar belakang kartu</string>
+  <string name="slim_recents_mem_display_long_click_clear_title">Tekan lama bilah memori</string>
+  <string name="slim_recents_mem_display_long_click_clear_summary">Bersihkan recent dengan menekan lama bilah memori</string>
+  <string name="slim_icon_pack_title">Paket Ikon</string>
+  <string name="slim_icon_pack_summary">Terapkan paket ikon khusus untuk aplikasi di panel</string>
+  <string name="no_iconpacks_summary">Tidak ada paket ikon yang terpasang</string>
+  <string name="dialog_pick_iconpack_title">Pilih paket ikon</string>
+  <string name="default_iconpack_title">Ikon standar</string>
+  <string name="slim_recents_corner_radius_title">Radius sudut kartu</string>
+  <string name="slim_recents_aicp_empty_drawable_title">Recent kosong AICP</string>
+  <string name="slim_recents_aicp_empty_drawable_summary">Gambar untuk menunjukkan ketika tidak ada aplikasi terbaru</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
+  <string name="recent_panel_lefty_mode_title">Tampilkan di tepi kiri</string>
+  <string name="recent_panel_lefty_mode_summary">Tampilkan panel aplikasi terbaru di tepi kiri</string>
   <string name="profile_choose_app">Pilih aplikasi</string>
   <string name="dialog_delete_title">Hapus</string>
   <string name="dialog_delete_message">Hapus item yang dipilih?</string>
@@ -88,15 +180,38 @@
   <string name="slim_blacklist_add_apps_title">Tambah apl</string>
   <string name="slim_blacklist_add_apps_summary">Ketuk disini untuk menambah, tekan pada aplikasi yang telah ditambahkan untuk menghapusnya</string>
   <!-- Slim Recent App Sidebar  -->
+  <string name="recent_app_sidebar_title">Bilah sisi aplikasi terbaru</string>
+  <string name="recent_app_sidebar_summary">Tampilkan pintasan aplikasi di sisi lain</string>
+  <string name="use_recent_app_sidebar_title">Hidupkan bilah sisi aplikasi</string>
+  <string name="use_recent_app_sidebar_summary">Tampilkan pintasan aplikasi di sisi lain</string>
   <string name="recent_app_sidebar_content_title">Konten sidebar</string>
+  <string name="recent_app_sidebar_content_summary">Konfigurasikan konten bilah sisi aplikasi</string>
+  <string name="recent_app_sidebar_style_title">Gaya bilah tepi</string>
   <string name="recent_app_sidebar_style_summary">Ubah tampilan dari sidebar</string>
+  <string name="recent_app_sidebar_hide_labels_title">Sembunyikan label ikon</string>
+  <string name="recent_app_sidebar_label_color_title">Warna label</string>
+  <string name="recent_app_sidebar_bg_color_title">Warna latar belakang</string>
+  <string name="recent_app_sidebar_scale_title">Ukuran</string>
+  <string name="recent_app_sidebar_open_simultaneously_title">Buka bersamaan dengan recent</string>
+  <string name="recent_app_sidebar_open_simultaneously_summary">Mengurangi lag pada pembukaan recents dengan mematikan ini</string>
   <!-- Slim recents membar -->
+  <string name="slim_recents_mem_display_category_title">Bilah memori</string>
+  <string name="slim_recents_mem_display_title">Tampilkan bilah memori</string>
+  <string name="slim_recents_mem_display_summaryOn">Bilah memori dihidupkan</string>
+  <string name="slim_recents_mem_display_summaryOff">Bilah memori dimatikan</string>
+  <string name="slim_recents_mem_display_color">Warna bilah memori</string>
+  <string name="slim_recents_mem_display_text_color">Warna teks bilah memori</string>
   <!-- Lockscreen -->
+  <string name="lockscreen_title">Layar kunci</string>
   <!-- Double tap to sleep on lockscreen -->
   <string name="double_tap_sleep_lockscreen">Ketuk dua kali untuk tidur</string>
   <string name="double_tap_sleep_lockscreen_summary">Ketuk duakali pada layar kunci untuk mematikan layar</string>
   <!-- Media art -->
+  <string name="media_art_title">Sampul album media</string>
+  <string name="media_art_summary">Hidupkan sampul album media pada layar kunci</string>
   <!-- Lockscreen battery info indicator  -->
+  <string name="lockscreen_battery_info_title">Info baterai</string>
+  <string name="lockscreen_battery_info_summary">Menampilkan maksimal arus-tegangan yang dinegosiasikan pengisi daya dan suhu baterai pada layar kunci saat pengisian</string>
   <!-- Lockscreen notif count -->
   <string name="lockscreen_maxnotif_title">Tampilkan hitungan pemberitahuan</string>
   <string name="lockscreen_maxnotif_summary">Sesuaikan hitungan pemberitahuan</string>
@@ -108,12 +223,16 @@
   <string name="lockscreen_qs_disabled_title">Tidak QuickSettings saat terkunci</string>
   <string name="lockscreen_qs_disabled_summary">Menonaktifkan pengaturan cepat saat layar terkunci</string>
   <!-- Lockscreen rotation -->
+  <string name="lockscreen_rotation_title">Rotasi</string>
   <string name="lockscreen_rotation_summary_on">Rotasi lockscreen diaktifkan</string>
   <string name="lockscreen_rotation_summary_off">Rotasi lockscreen diaktifkan</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Tweak UI lainnya</string>
   <!-- Volume dialog timeout -->
+  <string name="volume_dialog_timeout_title">Batas waktu dialog volume</string>
   <!-- Screenshot sound -->
+  <string name="screenshot_sound_title">Suara tangkapan layar</string>
+  <string name="screenshot_sound_summary">Memainkan efek suara ketika tangkapan layar diambil</string>
   <!-- Swap volume keys based on device rotation -->
   <string name="swap_volume_buttons">Swap tombol volume</string>
   <string name="swap_volume_buttons_summary">Swap tombol volume berdasarkan rotasi perangkat</string>
@@ -127,68 +246,157 @@
   <string name="show_cpu_info">Tampilkan info CPU</string>
   <string name="show_cpu_info_summary">Tampilan layar menampilkan info CPU saat ini</string>
   <!-- Launch music player when headset is connected -->
-  <string name="headset_connect_player_title">Meluncurkan app musik ketika headset terhubung</string>
-  <string name="headset_connect_player_summary">Luncurkan pemutar musik bawaan saat headset tersambung</string>
+  <string name="headset_connect_player_title">Jalankan aplikasi musik ketika headset terhubung</string>
+  <string name="headset_connect_player_summary">Menjalankan aplikasi musik bawaan ketika headset terhubung</string>
   <!-- Toast icon switch -->
+  <string name="toast_icon_title">Ikon toast</string>
+  <string name="toast_icon_summary">Tampilkan ikon aplikasi sesuai dengan toast</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
-  <string name="wake_when_plugged_or_unplugged_title">Bangun saat pengisi daya di pasang</string>
-  <string name="wake_when_plugged_or_unplugged_summary">Aktifkan layar ketika menghubungkan atau melepaskan sumber daya</string>
+  <string name="wake_when_plugged_or_unplugged_title">Bangun saat tersambung</string>
+  <string name="wake_when_plugged_or_unplugged_summary">Mengaktifkan layar ketika menghubungkan atau melepaskan sumber daya</string>
   <!-- Show VoLTE icon on statusbar -->
-  <string name="volte_icon_title">Ikon voLTE</string>
+  <string name="volte_icon_title">Ikon VoLTE</string>
   <string name="volte_icon_summary">Menampilkan ikon VoLTE bila tersedia</string>
   <!-- Vibrate on plug -->
-  <string name="vibration_on_charge_state_changed_title">Getar saat disambungkan</string>
+  <string name="vibration_on_charge_state_changed_title">Bergetar saat tersambung</string>
   <!-- System animations -->
+  <string name="system_animations_title">Animasi</string>
   <string name="custom_bootanimation_title">Bootanimation</string>
-  <string name="custom_bootanimation_summary">Pilih custom bootanimation. Pada setiap perubahan, animasi saat ini akan mundur ke folder AICP_backup di penyimpanan internal Anda. File yang lama harus dihapus secara manual jika tidak diperlukan.</string>
+  <string name="custom_bootanimation_summary">Pilih bootanimation khusus. Pada setiap perubahan, animasi saat ini akan dicadangkan ke folder AICP_backup pada penyimpanan internal Anda. File yang lama harus dihapus secara manual jika tidak diperlukan.</string>
+  <string name="bootanimation_preview">Pratinjau animasi boot</string>
+  <string name="bootanimation_set_custom">Setel khusus...</string>
+  <string name="bootanimation_creating_preview">Membuat pratinjau...</string>
+  <string name="bootanimation_error_reading_zip_file">Kesalahan saat membaca berkas zip</string>
+  <string name="bootanimation_error_creating_preview">Kesalahan membuat pratinjau</string>
+  <string name="bootanimation_install_file_manager_error">Tidak ada aplikasi untuk memilih berkas zip. Silakan pasang pengelola berkas.</string>
+  <string name="bootanimation_apply">Terapkan</string>
+  <string name="bootanimation_install_successful">Animasi boot baru berhasil diterapkan.</string>
   <!-- System behaviour -->
+  <string name="system_behaviour_title">Perilaku sistem</string>
   <string name="selinux_category">SELinux</string>
+  <string name="selinux_explanation_summary">SELinux adalah seperangkat modifikasi kernel dan alat-alat ruang pengguna. Mengubah mode dapat menyebabkan efek yang tidak diinginkan. Gunakan dengan resiko Anda sendiri.</string>
   <string name="selinux_mode_title">Modus SELinux</string>
-  <string name="selinux_enforcing_toast_title">Ubah selinux menjadi wajib!</string>
+  <string name="selinux_permissive_summary">Tidak wajib</string>
+  <string name="selinux_enforcing_summary">Wajib</string>
+  <string name="selinux_persistence_title">Tidak berubah ketika mulai ulang</string>
+  <string name="selinux_persistence_summary">Mengembalikan modus sepolicy yang disetel di atas pada setiap boot</string>
+  <string name="selinux_permissive_toast_title">Selinux disetel ke tidak wajib!</string>
+  <string name="selinux_enforcing_toast_title">Selinux disetel ke wajib!</string>
   <!-- System extensions -->
+  <string name="system_extensions_title">Tambahan sistem</string>
   <!-- System app remover -->
+  <string name="system_app_remover_title">Penghapus Aplikasi Sistem</string>
   <string name="system_app_remover_summary">Menghapus aplikasi yang terinstal ( Sistem )</string>
+  <string name="system_app_remover_message_delete">Apakah Anda yakin ingin menghapus aplikasi ini?</string>
+  <string name="system_app_remover_message_noselect">Tidak ada yang dipilih</string>
   <!-- Log it -->
+  <string name="log_it_title">Log yang sialan!</string>
   <string name="log_it_summary">Logcat, kmesg, dmesg</string>
+  <string name="logcat_title">Logcat</string>
+  <string name="kmesg_title">Kmesg</string>
+  <string name="dmesg_title">Dmesg</string>
+  <string name="log_it_now_title">Memesan</string>
+  <string name="log_it_dialog_title">Memesan</string>
+  <string name="logcat_warning">Bagikan atau GTFO!</string>
+  <string name="share_title">Bagikan...</string>
+  <string name="log_it_share_subject">Log Aicp</string>
+  <string name="log_it_now_summary">Bersabarlah terhadap log yang akan dibuat</string>
+  <string name="log_it_logs_in_progress">Log sedang dibuat &#8230;</string>
+  <string name="log_it_share_type_title">Metode berbagi</string>
+  <string name="log_it_share_type_zip">Berkas-ZIP</string>
+  <string name="log_it_share_type_haste">Unggah ke AICP Haste</string>
   <string name="log_it_share_via">Bagikan lewat</string>
   <!-- Panel porn -->
+  <string name="panel_porn_title">Panel porno</string>
   <!-- Volume dialog opacity -->
+  <string name="volume_dialog_transparency_title">Tweak Dialog Volume</string>
+  <string name="volume_dialog_transparency">Opasistas dialog volume</string>
+  <string name="volume_dialog_stroke_title">Batas dialog volume</string>
+  <string name="volume_dialog_stroke_disabled">Dimatikan</string>
+  <string name="volume_dialog_stroke_accent">Warna aksen</string>
+  <string name="volume_dialog_stroke_custom">Warna khusus</string>
+  <string name="volume_dialog_stroke_color_title">Warna batas dialog volume</string>
+  <string name="volume_dialog_stroke_thickness_title">Ketebalan batas dialog volume</string>
+  <string name="volume_dialog_corner_radius_title">Radius sudut dialog volume</string>
+  <string name="volume_dialog_dash_width_title">Lebar garis batas dialog volume</string>
+  <string name="volume_dialog_dash_gap_title">Jarak garis batas dialog volume</string>
   <!-- Power menu and dialogs opacity -->
+  <string name="power">Tweak Menu Daya</string>
+  <string name="power_menu_transparency">Opasitas menu daya/mulai ulang</string>
+  <string name="power_menu_dialog_dim">Kuantitas latar belakang redup dialog daya/mulai ulang</string>
   <!-- AE settings -->
-  <string name="ae_settings_summary">Ubah tampilan dari Aicp Ekstra</string>
+  <string name="ae_settings_title">Kustomisasi AE</string>
+  <string name="ae_settings_summary">Sesuaikan tampilan dan perilaku Aicp Extras</string>
   <string name="theme_title">Tema</string>
+  <string name="theme_default">Tema setelan bawaan</string>
+  <string name="theme_dark_amber">Tema oranye gelap</string>
   <string name="ae_launcher_enabled_title">Tampilkan ikon peluncur</string>
-  <string name="ae_launcher_enabled_summary">Tampilan AICP Ekstra pada launcher</string>
+  <string name="ae_launcher_enabled_summary">Tampilkan AICP Extras pada peluncur</string>
+  <string name="ae_launcher_enabled_update">Visibilitas ikon peluncur diperbarui. Mungkin perlu beberapa waktu agar perubahan itu berlaku</string>
   <!-- About -->
-  <string name="about_summary">Informasi lanjut tentang ROM ini</string>
+  <string name="about_title">Tentang</string>
+  <string name="about_summary">Lihat informasi tentang ROM ini</string>
+  <string name="weblinks_category">Weblinks</string>
   <string name="info_category">Info</string>
   <string name="aicp_website_title">Situs web</string>
   <string name="aicp_website_summary">Kunjungi laman AICP</string>
+  <string name="g_plus_title">komunitas G+</string>
   <string name="g_plus_summary">Kunjungi komunitas Google+ kami</string>
+  <string name="aicp_gerrit_title">Gerrit</string>
   <string name="aicp_gerrit_summary">Kunjungi gerrit kami untuk mengetahui apa yang sedang kami kerjakan</string>
+  <string name="aicp_changelog_title">Catatan perubahan</string>
   <string name="aicp_changelog_summary">Lihat perubahan terbaru yang dibuat untuk AICP</string>
+  <string name="aicp_downloads_title">Unduhan</string>
   <string name="aicp_downloads_summary">Kunjungi halaman download AICP untuk perangkat Anda</string>
   <string name="aicp_ota_title">Pusat pembaruan</string>
+  <string name="aicp_ota_summary">Periksa pembaruan AICP</string>
+  <string name="lineage_extras_title">Unduhan ekstra dari Lineage</string>
+  <string name="lineage_extras_summary">Tambahan root, penghilang root, penyedia layanan cuaca&#8230;</string>
   <string name="stats_title">Statistik</string>
+  <string name="stats_summary">Ikut masuk/keluar untuk statistik anonim</string>
   <string name="device_maintainer_title">Pengelola perangkat</string>
   <string name="device_maintainer_dialog">Pengelola perangkat</string>
   <string name="device_maintainers_dialog">Pengelola perangkat</string>
+  <string name="device_maintainer_default">Tidak diketahui</string>
   <!-- Other / general purpose -->
+  <string name="default_string">Standar</string>
+  <string name="on">Hidup</string>
+  <string name="off">Mati</string>
+  <string name="reset">Setel ulang</string>
   <string name="systemui_restart_title">diperlukan memulai ulang SystemUI</string>
   <string name="systemui_restart_message">Untuk melihat semua perubahan, diperlukannya memulai ulang SystemUI. mulai ulang sekarang?</string>
   <string name="cannot_get_su">Aksi gagal dikarenakan akses tidak ada akses superuser</string>
   <string name="launcher_shortcut_disabled_message">Pintasan dinonaktifkan</string>
+  <string name="hidden_anim_activity_title">Waktunya Yoga!!!</string>
+  <string name="hidden_anim_more_nice">BAGUS</string>
   <!-- Sensor block per-package -->
+  <string name="sensor_block_title">Blokir sensor per-paket</string>
+  <string name="sensor_block_summary">Blokir akses ke sensor tertentu untuk beberapa aplikasi untuk menghemat baterai.</string>
   <!-- Weather - OmniJaws Settings -->
+  <string name="weather_title">Cuaca</string>
   <string name="weather_config_title">Setelan layanan</string>
+  <string name="header_weather_title">Cuaca tampilam header</string>
   <string name="header_weather_summary">Mengaktifkan gambar pada Header panel pemberitahuan</string>
   <string name="weather_icon_pack_title">Keadaan paket ikon</string>
   <string name="weather_icon_pack_note">Catatan\u003a anda bisa memasang paket ikon baru dari play store dengan mencari \"Chronus icons\"</string>
   <!-- Lockscreen Weather -->
+  <string name="lock_screen_weather_category_title">Layar kunci</string>
+  <string name="lock_screen_show_weather_title">Tampilan cuaca</string>
+  <string name="lock_screen_show_weather_summaryOn">Cuaca ditampilkan di layar kunci</string>
+  <string name="lock_screen_show_weather_summaryOff">Cuaca tersembunyi di layar kunci</string>
+  <string name="lock_screen_show_location_title">Tampilan lokasi</string>
+  <string name="lock_screen_show_location_summaryOn">Lokasi ditampilkan di layar kunci</string>
+  <string name="lock_screen_show_location_summaryOff">Lokasi tersembunyi di layar kunci</string>
+  <string name="lock_screen_weather_condition_icon_title">Tampilan ikon kondisi</string>
+  <string name="lock_screen_weather_condition_icon_summaryOn">Ikon kondisi ditampilkan di layar kunci</string>
+  <string name="lock_screen_weather_condition_icon_summaryOff">Ikon kondisi tersembunyi di layar kunci</string>
   <!-- Statusbar ticker -->
   <string name="ticker_mode_title">Statusbar pemberitahuan ticker</string>
+  <string name="ticker_disabled">Dimatikan</string>
+  <string name="ticker_enabled">Pemberitahuan ticker</string>
   <string name="ticker_media_enabled">Notifikasi dan musik ticker</string>
   <string name="navbar_title">Bar Navigasi</string>
+  <string name="navbar_summary">Smartbar/Fling</string>
   <!-- DUI -->
   <string name="navbar_interface_title">Antarmuka</string>
   <string name="navbar_size">Ukuran bar</string>
@@ -204,7 +412,13 @@
   <string name="icon_pack_picker_dialog_title">Paket ikon</string>
   <string name="image_exceeds_max_allowed_size">Gambar tidak boleh melebihi 512 x 512</string>
   <string name="invalid_icon_from_uri">Tidak dapat memuat gambar dari penyedia konten</string>
+  <string name="picker_activities">Aktivitas</string>
+  <string name="select_custom_app_title">Pilih aplikasi khusus</string>
+  <string name="select_custom_activity_title">Pilih aktivitas khusus</string>
+  <string name="profile_applist_title">Aplikasi</string>
+  <string name="default_string">Standar</string>
   <string name="default_settings">Setting bawaan</string>
+  <string name="default_settings_summary">Bilah navigasi bawaan AOSP</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Pilih tindakan</string>
   <string name="action_entry_default_action">Setelan bawaan</string>
@@ -215,6 +429,8 @@
   <string name="fling_settings_summary">Navigasi bar yang berbasis gerakan yang sangat unik dan sepenuhnya disesuaikan</string>
   <string name="fling_interface">Fling</string>
   <string name="fling_enable_title">Hidupkan fling</string>
+  <string name="fling_back_home_policy">Tombol Kembali dan Beranda harus selalu disetel setiap saat. Untuk mengubah tugas tombol Kembali atau Beranda, tetapkan tugas yang diinginkan terlebih dahulu.\n\nJuga, menyetel tindakan ketuk ganda akan sedikit menunda ketuk satu kali.</string>
+  <string name="fling_split_bar_policy">Ketika tindakan yang ditetapkan hanya kanan atau kiri, tindakan berlaku untuk seluruh bilah.</string>
   <string name="fling_def_summary">Tidak ada tindakan diatur</string>
   <string name="fling_swipe_actions">Gerakan usap</string>
   <string name="fling_tap_actions">Gerakan ketuk</string>
@@ -222,6 +438,8 @@
   <string name="fling_short_swipe_left">Usap pendek kiri</string>
   <string name="fling_long_swipe_right">Usap panjang kanan</string>
   <string name="fling_long_swipe_left">Usap panjang kiri</string>
+  <string name="fling_right_up_swipe">Gesek kanan ke atas</string>
+  <string name="fling_left_up_swipe">Sisi kiri gesek ke atas</string>
   <string name="fling_single_tap">Satu ketukan kanan</string>
   <string name="fling_double_tap">Dua ketukan kanan</string>
   <string name="fling_long_press">Tekan lama kanan</string>
@@ -230,9 +448,15 @@
   <string name="fling_long_left_press">Tekan lama kiri</string>
   <string name="long_swipe_portrait_title">Tegak</string>
   <string name="long_swipe_landscape_title">Mendatar</string>
+  <string name="portrait_right_swipe_title">Potret kanan gesek</string>
+  <string name="portrait_left_swipe_title">Potret kiri gesek</string>
+  <string name="landscape_right_swipe_title">Gesek kanan lansekap</string>
+  <string name="landscape_left_swipe_title">Lansekap gesek kiri</string>
+  <string name="vertical_up_swipe_title">Gesek vertikal</string>
   <string name="vertical_down_swipe_title">Usap vertikal turun</string>
   <string name="up_swipe_title">Usap atas</string>
   <string name="down_swipe_title">Usap bawah</string>
+  <string name="long_swipe_reset">Setel ulang</string>
   <string name="fling_advanced">Lanjutan</string>
   <string name="fling_long_swipe_title">Jarak usapan panjang</string>
   <string name="fling_long_swipe_summary">Sempurnakan ambang usap panjang berdasarkan persentase dari lebar atau tinggi antarmuka Fling</string>
@@ -249,16 +473,36 @@
   <string name="fling_logo_custom_logo_image_pick_title">Gambar logo khusus</string>
   <string name="fling_logo_custom_logo_reset_title">Atur ulang ikon logo</string>
   <string name="fling_show_ripple_title">Tampilkan riak</string>
+  <string name="fling_show_ripple_summary">Efek riak saat disentuh</string>
   <string name="fling_ripple_color">Warna riak</string>
-  <string name="fling_logo_opacity_title">keburaman logo Fling</string>
+  <string name="fling_longpress_timeout_label_left">Kurang keterlambatan</string>
+  <string name="fling_longpress_timeout_label_right">Lebih banyak penundaan</string>
+  <string name="fling_longpress_title">Keterlambatan pers lama</string>
+  <string name="fling_longpress_summary">Meningkatkan atau mengurangi waktu yang dibutuhkan untuk melakukan pers lama</string>
+  <string name="fling_keyboard_cursors_title">Tindakan kursor papan ketik dinamis</string>
+  <string name="fling_keyboard_cursors_summary">Tindakan ketuk dua kali kiri dan kanan akan menjadi tindakan tombol papan ketik kiri dan kanan jika papan ketik terbuka</string>
+  <string name="fling_logo_opacity_title">Opasitas logo Fling</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">Pulse tidak dapat bekerja sepenuhnya ketika menggunakan pengeras suara</string>
+  <string name="pulse_settings">Pulse</string>
+  <string name="pulse_settings_summary">Bar navigasi equalizer grafis audio</string>
+  <string name="fling_show_pulse_title">Tampilkan Pulse</string>
+  <string name="fling_show_pulse_summary">Equalizer grafis audio pada panel navigasi</string>
+  <string name="pulse_render_mode_title">Render mode</string>
+  <string name="pulse_render_mode_fading_bars">Blok memudar</string>
   <string name="pulse_render_mode_solid_lines">Garis-garis solid</string>
+  <string name="fling_pulse_color">Warna pulse</string>
+  <string name="eos_fling_lavalamp_title">Hidupkan Lampu Lava</string>
+  <string name="eos_fling_lavalamp_summary">Pulse menjiwai perpaduan warna gaya lampu lava halus</string>
   <string name="pulse_advanced_category">Lanjutan</string>
+  <string name="pulse_legacy_mode_advanced_category">Setelan modus blok memudar</string>
   <string name="pulse_custom_fudge_factor">Tingkat kewajaran</string>
   <string name="lavamp_solid_speed_title">Kecepatan lampu lava</string>
   <string name="pulse_solid_units_count">Jumlah garis-garis solid</string>
   <string name="pulse_solid_lines_count">Jumlah garis-garis solid</string>
+  <string name="pulse_solid_units_opacity">Solid lines opacity</string>
+  <string name="pulse_solid_dimen_category">Setelan modus garis-garis solid</string>
+  <string name="pulse_custom_buttons_opacity_title">Tombol pintas Smartbar pada Pulse</string>
   <!-- Pulse config -->
   <string name="pulse_custom_dimen">Lebar bar</string>
   <string name="pulse_custom_div">Jarak bar</string>
@@ -273,42 +517,59 @@
   <!-- SmartBar -->
   <string name="smartbar_category">SmartBar</string>
   <string name="smartbar_settings_title">pengaturan Smartbar</string>
+  <string name="smartbar_settings_summary">Bar navigasi yang dapat disesuaikan sepenuhnya</string>
   <string name="smartbar_editor_title">Mulai mode sunting</string>
   <string name="smartbar_editor_summary">Buka sunting tombol smartbar</string>
   <string name="smartbar_help_policy_notice_summary">Ketika dalam mode sunting, tekan dan seret tombol untuk merubah posisi atau tekan lama tombol untuk memunculkan pilihan sunting. Posisi tombol mungkin akan berubah ketika muncul menu.\n\nPengaturan aksi dobel tap akan mengalami penundaan.</string>
   <string name="smartbar_context_menu_position_title">Posisi tata letak tombol konteks</string>
   <string name="smartbar_context_menu_position_summary">Atur posisi tombol kontekstual seperti menu dan pemilih ime</string>
+  <string name="smartbar_right">Kanan</string>
+  <string name="smartbar_left">Kiri</string>
   <string name="smartbar_button_animation_title">Animasi sentuh tombol</string>
   <string name="smartbar_button_animation_summary">Atur gaya animasi tombol utama saat mereka ditekan</string>
   <string name="smartbar_button_animation_ripple">Riak</string>
   <string name="smartbar_button_animation_spring">Memantul</string>
+  <string name="smartbar_button_animation_flip">Membalik</string>
   <string name="smartbar_button_animation_pixel">Pixel (semua tombol)</string>
   <string name="smartbar_button_animation_pixel_home">Pixel (Hanya tombol Home)</string>
   <string name="smartbar_button_animation_pixel_home_ripple">Pixel (Hanya tombol Home) dan Riak</string>
   <string name="smartbar_factory_reset_title">Setel ulang ke bawaan</string>
-  <string name="smartbar_factory_reset_confirm">Apakah anda yakin ingin mengatur ulang Smartbar kepengaturan awal?</string>
+  <string name="smartbar_factory_reset_confirm">Apakah Anda yakin ingin menyetel ulang Smartbar ke setelan awal?</string>
+  <string name="smartbar_ime_action_title">Metode masukan dan tindakan media</string>
+  <string name="smartbar_ime_action_summary">Tentukan tombol mana yang akan ditampilkan saat papan ketik ditampilkan pada layar atau musik diputar</string>
+  <string name="smartbar_ime_action_none">Tidak ada</string>
+  <string name="smartbar_ime_action_arrows">Panah masukan</string>
   <string name="smartbar_ime_action_switcher">Pengubah papan ketik</string>
+  <string name="smartbar_ime_action_dynamic">Panah masukkan/media</string>
   <string name="smartbar_backup_current_config_title">Simpan profil</string>
   <string name="smartbar_restore_config_title">Pulihkan profil</string>
-  <string name="smartbar_config_name_edit_dialog_title">nama profil Smartbar</string>
+  <string name="smartbar_config_name_edit_dialog_title">Nama profil Smartbar</string>
   <string name="smartbar_config_name_edit_dialog_message">Masukkan nama atau biarkan kosong</string>
-  <string name="smartbar_config_dialog_title">profil Smartbar</string>
-  <string name="smartbar_config_backup_success_toast">Profil Smartbar berhasil di simpan</string>
-  <string name="smartbar_config_restore_success_toast">profil Smartbar berhasil dikembalikan</string>
-  <string name="smartbar_config_backup_error_toast">Gagal saat menyimpan profil smartbar</string>
-  <string name="smartbar_config_restore_error_toast">Gagal saat memulihkan profil Smartbar</string>
+  <string name="smartbar_config_dialog_title">Profil Smartbar</string>
+  <string name="smartbar_config_backup_success_toast">Profil Smartbar berhasil disimpan</string>
+  <string name="smartbar_config_restore_success_toast">Profil Smartbar berhasil dipulihkan</string>
+  <string name="smartbar_config_backup_error_toast">Kesalahan saat menyimpan profil Smartbar</string>
+  <string name="smartbar_config_restore_error_toast">Kesalahan saat memulihkan profil Smartbar</string>
   <string name="navbar_buttons_alpha_title">Transparansi tombol</string>
-  <string name="smartbar_longpress_delay_title">Jeda tekan lama tombol</string>
-  <string name="smartbar_longpress_delay_summary">Tetapkan berapa lama sistem akan menunggu sebelum memicu tindakan tekan tombol lama</string>
-  <string name="smartbar_longpress_delay_default">Standar penundaan (cepat)</string>
+  <string name="smartbar_longpress_delay_title">Penundaan tekan lama tombol</string>
+  <string name="smartbar_longpress_delay_summary">Tetapkan berapa lama sistem akan menunggu sebelum memicu tindakan tekan lama</string>
+  <string name="smartbar_longpress_delay_default">Penundaan standar (cepat)</string>
   <string name="smartbar_longpress_delay_normal">Penundaan normal</string>
   <string name="smartbar_longpress_delay_long">Penundaan lama</string>
-  <string name="smartbar_custom_icon_size_title">Sesuaikan penskalaan ikon</string>
+  <string name="smartbar_custom_icon_size_title">Penskalaan ikon khusus</string>
   <string name="one_handed_mode_title">Mode satu tangan</string>
   <string name="one_handed_mode_summary">Memungkinkan menggesekkan pada panel navigasi untuk mengaktifkan mode satu tangan</string>
   <!-- Carrier Label -->
-  <string name="carrier_options">Pilih lokasi mengembalikan</string>
-  <string name="show_carrier_disabled">Tidak dimana-mana</string>
+  <string name="carrier_category">Label operator</string>
+  <string name="carrier_options">Pilih lokasi tampilan</string>
+  <string name="custom_carrier_label_title">Label operator khusus</string>
+  <string name="custom_carrier_label_explain">Silakan masukkan label baru. Biarkan kosong untuk kembali ke label bawaan.</string>
+  <string name="custom_carrier_label_notset">Tidak ada label khusus yang disetel</string>
+  <string name="show_carrier_title">Ditampilkan di</string>
+  <string name="show_carrier_disabled">Tidak dimanapun</string>
+  <string name="show_carrier_keyguard">Hanya kunci layar</string>
+  <string name="show_carrier_statusbar">Hanya bilah status</string>
+  <string name="show_carrier_enabled">Kunci layar &amp; bilah status</string>
   <!-- Three-fingers-swipe to screenshot -->
   <string name="three_finger_gesture">Gerakan tiga jari</string>
   <string name="three_finger_gesture_summary">Gesekkan tiga jari untuk mengambil tangkapan layar</string>
