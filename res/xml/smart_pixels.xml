@@ -18,6 +18,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     android:title="@string/smart_pixels_title" >
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
@@ -40,13 +41,14 @@
         android:summary="@string/smart_pixels_on_power_save_summary"
         android:defaultValue="false" />
 
-    <com.aicp.gear.preference.SystemSettingListPreference
+    <lineageos.preference.SystemSettingListPreference
         android:key="smart_pixels_shift_timeout"
         android:entries="@array/smart_pixels_shift_times"
         android:entryValues="@array/smart_pixels_shift_values"
         android:defaultValue="5"
         android:title="@string/smart_pixels_shift_title"
         android:summary="@string/smart_pixels_shift_summary"
-        android:dialogTitle="@string/smart_pixels_shift_title" />
+        android:dialogTitle="@string/smart_pixels_shift_title"
+        lineage:requiresConfig="@*android:bool/config_enableSmartPixelsBurninProtection" />
 
 </PreferenceScreen>
