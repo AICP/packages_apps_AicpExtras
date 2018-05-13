@@ -18,35 +18,195 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="navigation_drawer_open">Włącz szufladę nawigacji</string>
+  <string name="navigation_drawer_close">Zamknij szufladę nawigacji</string>
+  <string name="action_settings">Ustawienia</string>
+  <string name="aicp_extras_title">AICP Extras</string>
+  <string name="pun_title">Jeden ROM, który rządzi innymi</string>
+  <string name="various_shit_title">Różne rzeczy</string>
+  <string name="about_title">O</string>
+  <string name="other_title">Inne</string>
+  <string name="g_community">Społeczność G+</string>
+  <string name="g_plus_summary">Przejdź na naszą stronę społeczności Google+</string>
+  <string name="ui_title">UI</string>
+  <string name="display_animations_title">Animacje</string>
+  <string name="transparency_porn_title">Panel porno</string>
+  <string name="notificaitons_title">Panel powiadomień</string>
+  <string name="statubar_title">Pasek statusu</string>
+  <string name="lockscreen_title">Ekran blokady</string>
+  <string name="aicp_downloads_title">Pobrane</string>
+  <string name="dwnld_summary">Odwiedź stronę pobierania AICP dla Twojego urządzenia.</string>
+  <string name="aicp_ota_title">Centrum aktualizacji</string>
+  <string name="ota_summary">Sprawdź aktualizacje</string>
+  <string name="aicp_gerrit_title">Gerrit</string>
+  <string name="ae_version_title">Wersja AICP Extras</string>
+  <string name="gerrit_summary">Odwiedź nasz gerrit, aby wiedzieć nad czym pracujemy.</string>
+  <string name="hidden_anim_activity_title">Czas na yoge!!</string>
+  <string name="hidden_anim_more_title">WIĘCEJ?
+</string>
+  <string name="hidden_anim_more_nice">NICE</string>
+  <string name="continue_title">Dalej</string>
+  <string name="settings_activity_title">Ustawienia AE</string>
+  <string name="recents_panel_title">Ostatnie aplikacje</string>
+  <string name="quick_settings_title">Szybkie ustawienia</string>
+  <string name="design_title">Design</string>
+  <string name="various_title">Różne</string>
+  <string name="root_extras_title">Dodatki ROOT</string>
+  <string name="nothing_title">Nic tu nie zobaczysz jeszcze, idź dalej</string>
+  <string name="static_shortcut_disabled_message">Skróty wyłączone</string>
   <!-- Switch On/Off  -->
+  <string name="switch_on_text">Wł</string>
+  <string name="switch_off_text">Wył</string>
   <!-- Permissions -->
+  <string name="storage_permission_granted">Uprawnienia przyznane, teraz możesz nadpisywać pamięć urządzenia.</string>
+  <string name="storage_permission_not_granted">Nie nadano uprawnień,nie możesz nadpisywać pamięci urządzenia.</string>
   <!-- Seekbar strings -->
+  <string name="seekbar_no_default_value">Brak wartości domyślnej</string>
+  <string name="seekbar_default_value_set">Ustawiono wartość domyślną <xliff:g id="number">%d</xliff:g></string>
+  <string name="seekbar_default_value_already_set">Wartość domyślna jest już ustawiona</string>
   <!-- Change Log -->
+  <string name="changelog_title">Dziennik zmian</string>
+  <string name="changelog_title_summary">Zobacz najświeższe zmiany w AICP.</string>
+  <string name="changelog_error">Nie można wczytać listy zmian</string>
   <!-- Brightness slider -->
+  <string name="qs_brightness_slider_title">Suwak jasności</string>
+  <string name="qs_brightness_slider_enabled">Włączono</string>
+  <string name="qs_brightness_slider_disabled">Wyłączono</string>
+  <string name="restarting_ui">Restartowanie interfejsu\u2026</string>
   <!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
+  <string name="print_restart">Uruchom ponownie</string>
   <!-- Force expanded notifications -->
+  <string name="force_expanded_notifications_title">Wymuś rozwinięte powiadomienia</string>
+  <string name="force_expanded_notifications_summary">Dostępne dla aplikacji, które obsługują rozwijane powiadomienia</string>
   <!-- Disabling immersive mode messages -->
+  <string name="disable_immersive_message_title">Wyłącz wiadomości trybu pełnoekranowego</string>
+  <string name="disable_immersive_message_summary">Nie pokazuj wiadomości trybu pełnoekranowego</string>
   <!-- Color Picker -->
+  <string name="press_color_to_apply">Naciśnij na kolor poniżej aby zastosować</string>
+  <string name="hex">Hex:</string>
+  <string name="set">Zapisz</string>
+  <string name="color_default">Domyślnie</string>
   <!-- Network traffic -->
+  <string name="traffic_category">Wskaźnik ruchu sieciowego</string>
+  <string name="traffic_title">Ruch</string>
+  <string name="network_traffic_title">Ruch sieciowy</string>
+  <string name="show_network_traffic_state">Pokaż użycie sieci na pasku stanu</string>
+  <string name="show_network_traffic_unit">Wyświetl jednostkę</string>
+  <string name="show_network_traffic_frequency">Częstotliwość aktualizacji</string>
+  <string name="show_network_traffic_disable">Wyłączono</string>
+  <string name="show_network_traffic_up">Wysyłane</string>
+  <string name="show_network_traffic_down">Przychodzące</string>
+  <string name="show_network_traffic_all">Przychodzące i wychodzące</string>
+  <string name="show_network_traffic_bit">Bity na sekundę</string>
+  <string name="show_network_traffic_byte">Bajty na sekundę</string>
+  <string name="show_network_traffic_500">500 ms</string>
+  <string name="show_network_traffic_1000">1000 ms</string>
+  <string name="show_network_traffic_1500">1500 ms</string>
+  <string name="show_network_traffic_2000">2000 ms</string>
+  <string name="network_traffic_autohide">Auto-ukrywanie</string>
+  <string name="network_traffic_autohide_summary">Ukryj szczegóły ruchu gdy jest brak aktywności</string>
+  <string name="network_traffic_hidearrow">Ukryj strzałki transferu</string>
+  <string name="network_traffic_hidearrow_summary">Ukryj strzałki wskaźnika ruchu</string>
+  <string name="network_traffic_autohide_threshold">Próg bezczynności</string>
+  <string name="ok">Ok</string>
+  <string name="cancel">Anuluj</string>
+  <string name="default_string">Domyślne</string>
   <!-- Superuser indicator on status bar -->
+  <string name="su_indicator">Ikona Superuser</string>
+  <string name="su_indicator_summary_on">Ikona Superuser jest widoczna, gdy sesja su jest aktywna</string>
+  <string name="su_indicator_summary_off">Pokaż wskaźnik Superuser, kiedy sesja su jest aktywna</string>
   <!-- Carrier Label -->
+  <string name="carrier_options">Etykieta sieci</string>
+  <string name="custom_carrier_label_title">Własna etykieta sieci</string>
+  <string name="custom_carrier_label_explain">Wprowadź nową etykietę. Pozostaw puste, aby powrócić do domyślnej.</string>
+  <string name="custom_carrier_label_notset">Własna etykieta nie jest obecnie ustawiona</string>
+  <string name="show_carrier_title">Etykieta sieci</string>
+  <string name="show_carrier_disabled">Wyłączono</string>
+  <string name="show_carrier_keyguard">Tylko na ekranie blokady</string>
+  <string name="show_carrier_statusbar">Tylko na pasku stanu</string>
+  <string name="show_carrier_enabled">Ekran blokady &amp; pasek stanu</string>
+  <string name="status_bar_carrier_color">Kolor etykiety operatora</string>
+  <string name="status_bar_carrier_size">Rozmiar tekstu operatora</string>
   <!-- Battery Bar -->
+  <string name="battery_bar_title">Pasek baterii</string>
+  <string name="battery_bar">Lokalizacja paska baterii</string>
+  <string name="battery_bar_no_navbar">Lokalizacja paska baterii</string>
+  <string name="battery_bar_color">Kolor paska baterii</string>
+  <string name="battery_bar_charging_color">Kolor paska podczas ładowania</string>
+  <string name="battery_bar_battery_low_color">Kolor paska przy niskim poziomie baterii</string>
+  <string name="battery_bar_cat">Styl paska baterii</string>
+  <string name="battery_bar_style_title">Położenie paska baterii</string>
+  <string name="battery_bar_thickness_title">Grubość paska baterii</string>
+  <string name="battery_bar_animate_title">Animacja ładowania</string>
+  <string name="battery_bar_style_regular">Regularny</string>
+  <string name="battery_bar_style_center_mirrored">Wyśrodkowany</string>
+  <string name="battery_bar_style_reversed">Odwrócony</string>
+  <string name="battery_bar_use_charging_color">Własny kolor podczas ładowania</string>
+  <string name="battery_bar_blend_color_title">Mieszanie kolorów</string>
+  <string name="battery_bar_blend_color_summary">Mieszaj pełne/puste kolory odpowiadające procentom baterii</string>
+  <string name="battery_bar_blend_color_reverse_title">Odwróć kierunek kolorów</string>
+  <string name="battery_bar_blend_color_reverse_summary_off">Pełna &#8594; pusta: czerwony &#8592; zielony &#8592; niebieski &#8592; czerwony</string>
+  <string name="battery_bar_blend_color_reverse_summary_on">Pełna &#8594; pusta: czerwony &#8594; zielony &#8594; niebieski &#8594; czerwony</string>
   <!-- Activity and App Picker -->
+  <string name="picker_activities">Aktywności</string>
+  <string name="select_custom_app_title">Wybierz własną aplikację</string>
+  <string name="select_custom_activity_title">Wybierz niestandardową aktywność</string>
+  <string name="profile_applist_title">Aplikacje</string>
   <!-- Power menu on lock screen -->
+  <string name="powermenu_lockscreen_title">Menu zasilania</string>
+  <string name="powermenu_lockscreen_summary_on">Menu zasilania włączone na ekranie blokady</string>
+  <string name="powermenu_lockscreen_summary_off">Menu zasilania wyłączone na ekranie blokady</string>
   <!-- ROM Stats -->
   <!-- Main -->
+  <string name="stats_title">Statystyki</string>
   <!-- Notification -->
+  <string name="notification_title">Statystyki AICP</string>
+  <string name="notification_desc">Włącz lub wyłącz anonimowe statystyki</string>
+  <string name="main_link">&lt;a href=&quot;http://lineageos.org/legal/&quot;&gt;Learn More&lt;/a&gt;</string>
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+  <string name="anonymous_statistics_title">Statystyki AICP</string>
+  <string name="anonymous_statistics_summary">Pomóż udoskonalić AICP decydując się na raportowanie anonimowych statystyk</string>
+  <string name="anonymous_statistics_warning_title">O</string>
+  <string name="anonymous_statistics_warning">Udział w statystykach zezwoli na przesyłanie anonimowych danych twórcom Aicp w celu badania liczby aktywnych urządzeń. Raport zawiera unikatowy ID, który nie zagraża Twojej prywatności ani danym osobowym. Dane są przesyłane co 7 dni.\n\nAby zobaczyć przykładowe wysyłane informacje, podejrzyj swoje dane.</string>
+  <string name="pref_settings">Ustawienia</string>
+  <string name="enable_reporting_title">Włącz raportowanie</string>
+  <string name="disable_reporting_persistent">Zrezygnuj</string>
+  <string name="preview_data_title">Podejrzyj swoje dane</string>
+  <string name="view_stats_title">Pokaż stronę statystyk
+</string>
+  <string name="anonymous_learn_more">Dowiedz się więcej</string>
+  <string name="last_report_on">Ostatnio zgłoszone</string>
+  <string name="reporting_interval">Częstotliwość raportowania</string>
+  <string name="next_report_on">Następny raport</string>
   <!-- Anonymous Statistics - Preview -->
+  <string name="preview_id_title">Unikalny ID</string>
+  <string name="preview_device_title">Urządzenie</string>
+  <string name="preview_version_title">Wersja</string>
+  <string name="preview_country_title">Kraj</string>
+  <string name="preview_carrier_title">Operator GSM</string>
+  <string name="preview_romname_title">Nazwa ROMu</string>
+  <string name="preview_romversion_title">Wersja AICP</string>
+  <string name="preview_buildtype_title">Rodzaj kompilacji</string>
   <!-- Double tap to sleep on lockscreen -->
   <!-- SU -->
   <!-- Aicp logcat -->
   <!-- AOKP custom system animations -->
   <!-- Toast Animation -->
+  <string name="toast_SlideLeftRight_animation">Przesuń z lewej do prawej</string>
+  <string name="toast_SlideRightLeft_animation">Przesuń z prawej do lewej</string>
   <!-- Toast Icons -->
   <!-- Power menu Animations  -->
+  <string name="power_menu_animation_slide">Slajd</string>
+  <string name="power_menu_animation_turn">Obrót</string>
+  <string name="power_menu_animation_fly">Blask</string>
+  <string name="power_menu_animation_card">3D</string>
+  <string name="power_menu_animation_translucent_top">Półprzezroczyste (u góry)</string>
+  <string name="power_menu_animation_translucent_bottom">Półprzezroczyste (na dole)</string>
   <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_category_title">Logo na pasku stanu</string>
+  <string name="status_bar_aicp_logo_title">logo AICP</string>
   <!-- Launch music player when headset is connected -->
+  <string name="headset_connect_player_disabled">Wyłączone</string>
   <!-- Camera shutter sound -->
   <!-- Screenshot sound -->
   <!-- QS shade opacity -->
@@ -58,6 +218,8 @@
   <!-- Notifications transparency -->
   <!-- Lockscreen Torch -->
   <!-- Quick settings tiles columns and rows config -->
+  <string name="qs_rows_prefix">Wierszy: </string>
+  <string name="qs_cols_prefix">Kolumn: </string>
   <!-- Tiles animation style  -->
   <!-- App Exit Toast -->
   <!-- Volume dialog stroke settings -->
@@ -89,6 +251,7 @@
   <!-- OmniSwitch Recents -->
   <!-- MediaScanner behavior on boot -->
   <!-- App Remover -->
+  <string name="cancel">Anuluj</string>
   <!-- Extensions settings -->
   <!-- Bluetooth status -->
   <!-- Three-fingers-swipe to screenshot -->

@@ -18,57 +18,384 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="navigation_drawer_open">내비게이션 서랍 열기</string>
+  <string name="navigation_drawer_close">내비게이션 서랍 닫기</string>
+  <string name="action_settings">설정</string>
+  <string name="aicp_extras_title">AICP Extras</string>
+  <string name="pun_title">하나의 롬으로 모두 다룰 수 있는</string>
+  <string name="various_shit_title">기타 설정</string>
+  <string name="about_title">소개</string>
+  <string name="other_title">기타</string>
+  <string name="g_community">G+ 커뮤니티</string>
+  <string name="g_plus_summary">Google+ 커뮤니티를 방문 하십시오.</string>
+  <string name="ui_title">UI</string>
+  <string name="display_animations_title">애니메이션</string>
+  <string name="transparency_porn_title">패널 설정</string>
+  <string name="notificaitons_title">내비게이션 서랍</string>
+  <string name="statubar_title">상태 바</string>
+  <string name="lockscreen_title">잠금 화면</string>
+  <string name="aicp_downloads_title">다운로드</string>
+  <string name="dwnld_summary">기기의 AICP 다운로드 페이지를 방문하세요</string>
+  <string name="aicp_ota_title">업데이트 센터</string>
+  <string name="ota_summary">새로운 AICP 업데이트 확인</string>
+  <string name="aicp_gerrit_title">Gerrit</string>
+  <string name="ae_version_title">AICP Extras 버전</string>
+  <string name="gerrit_summary">Grerrit을 방문하여 우리가 무슨 일을 하는지 알아보세요.</string>
+  <string name="hidden_anim_activity_title">요가 타임!!!</string>
+  <string name="hidden_anim_more_title">부족해?</string>
+  <string name="hidden_anim_more_nice">좋아</string>
+  <string name="continue_title">계속</string>
+  <string name="settings_activity_title">AE 설정</string>
+  <string name="recents_panel_title">최근 사용된 앱</string>
+  <string name="quick_settings_title">빠른 설정</string>
+  <string name="design_title">디자인</string>
+  <string name="various_title">기타</string>
+  <string name="root_extras_title">루트 추가설정</string>
+  <string name="nothing_title">이곳은 아직 볼게 없습니다, 이동하세요.</string>
+  <string name="static_shortcut_disabled_message">바로가기가 비활성화 되었습니다</string>
   <!-- Switch On/Off  -->
+  <string name="switch_on_text">켜기</string>
+  <string name="switch_off_text">끄기</string>
   <!-- Permissions -->
+  <string name="storage_permission_granted">권한 부여됨. 이제 저장소에 쓰기가 가능합니다.</string>
+  <string name="storage_permission_not_granted">권한 거부됨. 저장소에 쓰기를 할 수 없습니다</string>
   <!-- Seekbar strings -->
+  <string name="seekbar_no_default_value">기본값이 설정되지 않음</string>
+  <string name="seekbar_default_value_set">기본 값으로 설정합니다. 값: <xliff:g id="number">%d</xliff:g></string>
+  <string name="seekbar_default_value_already_set">이미 기본 값으로 설정되어 있습니다</string>
   <!-- Change Log -->
+  <string name="changelog_title">변경 사항</string>
+  <string name="changelog_title_summary">AICP의 최근 변경 사항 보기.</string>
+  <string name="changelog_error">변경 사항을 불러올 수 없습니다.</string>
   <!-- Brightness slider -->
+  <string name="qs_brightness_slider_title">밝기 조절 슬라이더</string>
+  <string name="qs_brightness_slider_enabled">활성화됨</string>
+  <string name="qs_brightness_slider_disabled">비활성화됨</string>
+  <string name="restarting_ui">UI 다시 시작하는 중\u2026</string>
   <!-- Title for the button to restart a print job. [CHAR LIMIT=25] -->
+  <string name="print_restart">다시 시작</string>
   <!-- Force expanded notifications -->
+  <string name="force_expanded_notifications_title">알림 강제 확장</string>
+  <string name="force_expanded_notifications_summary">확장된 알림을 지원하는 앱에서만 사용 가능합니다</string>
   <!-- Disabling immersive mode messages -->
+  <string name="disable_immersive_message_title">전체 화면 모드 메시지 사용 안 함</string>
+  <string name="disable_immersive_message_summary">모든 전체 화면 모드 메시지를 표시하지 않습니다</string>
   <!-- Color Picker -->
+  <string name="press_color_to_apply">적용할 색상을 아래에서 선택하세요</string>
+  <string name="hex">16진수:</string>
+  <string name="set">설정</string>
+  <string name="color_default">기본</string>
   <!-- Network traffic -->
+  <string name="traffic_category">송수신 표시</string>
+  <string name="traffic_title">트래픽</string>
+  <string name="network_traffic_title">네트워크 트래픽</string>
+  <string name="show_network_traffic_state">상태표시줄 실시간 네트워크 속도 표시</string>
+  <string name="show_network_traffic_unit">디스플레이 장치</string>
+  <string name="show_network_traffic_frequency">업데이트 간격</string>
+  <string name="show_network_traffic_disable">비활성화됨</string>
+  <string name="show_network_traffic_up">송신</string>
+  <string name="show_network_traffic_down">수신</string>
+  <string name="show_network_traffic_all">송신과 수신</string>
+  <string name="show_network_traffic_bit">비트 / 초</string>
+  <string name="show_network_traffic_byte">바이트/초</string>
+  <string name="show_network_traffic_500">500 ms</string>
+  <string name="show_network_traffic_1000">1000 ms</string>
+  <string name="show_network_traffic_1500">1500 ms</string>
+  <string name="show_network_traffic_2000">2000 ms</string>
+  <string name="network_traffic_autohide">자동으로 숨기기</string>
+  <string name="network_traffic_autohide_summary">아무런 활동이 없을때 트래픽 모니터 숨기기</string>
+  <string name="network_traffic_hidearrow">화살표 숨기기</string>
+  <string name="network_traffic_hidearrow_summary">트래픽 표시기에 화살표 숨기기</string>
+  <string name="network_traffic_autohide_threshold">비활성 임계값</string>
+  <string name="ok">확인</string>
+  <string name="cancel">취소</string>
+  <string name="default_string">기본</string>
   <!-- Superuser indicator on status bar -->
+  <string name="su_indicator">루트 권한 표시</string>
+  <string name="su_indicator_summary_on">루트 권한 사용 시 상태표시줄에 아이콘을 표시합니다.</string>
+  <string name="su_indicator_summary_off">세션이 활성화일 때 루트권한 상태를 표시 켜기/끄기</string>
   <!-- Carrier Label -->
+  <string name="carrier_options">통신사 문구</string>
+  <string name="custom_carrier_label_title">사용자 정의 통신사 문구</string>
+  <string name="custom_carrier_label_explain">새 문구를 입력해주세요. 아무것도 입력하지 않을 시 기본 문구로 돌아갑니다.</string>
+  <string name="custom_carrier_label_notset">사용자가 설정한 통신사 문구 없음</string>
+  <string name="show_carrier_title">통신사 문구</string>
+  <string name="show_carrier_disabled">비활성화됨</string>
+  <string name="show_carrier_keyguard">잠금 화면에만 표시</string>
+  <string name="show_carrier_statusbar">상태 표시줄에만 표시</string>
+  <string name="show_carrier_enabled">잠금 화면 &amp; 상태 표시줄 모두</string>
+  <string name="status_bar_carrier_color">통신사 문구 색상</string>
+  <string name="status_bar_carrier_size">통신사 문구 글자 크기</string>
   <!-- Battery Bar -->
+  <string name="battery_bar_title">배터리 바</string>
+  <string name="battery_bar">배터리 바 위치</string>
+  <string name="battery_bar_no_navbar">배터리 바 위치</string>
+  <string name="battery_bar_color">배터리 바 색상</string>
+  <string name="battery_bar_charging_color">배터리 바 충전 중 색상</string>
+  <string name="battery_bar_battery_low_color">배터리 바 배터리 부족 시 색상</string>
+  <string name="battery_bar_cat">배터리 바 스타일</string>
+  <string name="battery_bar_style_title">배터리 바 정렬</string>
+  <string name="battery_bar_thickness_title">배터리 바 두께</string>
+  <string name="battery_bar_animate_title">충전 중 애니메이션</string>
+  <string name="battery_bar_style_regular">일반</string>
+  <string name="battery_bar_style_center_mirrored">중앙 정렬</string>
+  <string name="battery_bar_style_reversed">반전</string>
+  <string name="battery_bar_use_charging_color">사용자 정의 충전 중 색상</string>
+  <string name="battery_bar_blend_color_title">색상 혼합</string>
+  <string name="battery_bar_blend_color_summary">배터리 퍼센트를 구성하는 최대/최소 색상 혼합</string>
+  <string name="battery_bar_blend_color_reverse_title">색상 방향 반전</string>
+  <string name="battery_bar_blend_color_reverse_summary_off">최대 &#8594; 최소: 빨강 &#8592; 녹색 &#8592; 파랑 &#8592; 빨강</string>
+  <string name="battery_bar_blend_color_reverse_summary_on">최대 &#8594; 최소: 빨강 &#8594; 녹색 &#8594; 파랑 &#8594; 빨강</string>
   <!-- Activity and App Picker -->
+  <string name="picker_activities">활동</string>
+  <string name="select_custom_app_title">사용자 정의 앱 선택</string>
+  <string name="select_custom_activity_title">사용자 지정 활동 선택</string>
+  <string name="profile_applist_title">애플리케이션</string>
   <!-- Power menu on lock screen -->
+  <string name="powermenu_lockscreen_title">전원 메뉴</string>
+  <string name="powermenu_lockscreen_summary_on">잠금 화면에서 전원 메뉴 활성화됨</string>
+  <string name="powermenu_lockscreen_summary_off">잠금 화면에서 전원 메뉴 비활성화됨</string>
   <!-- ROM Stats -->
   <!-- Main -->
+  <string name="stats_title">통계</string>
+  <string name="stats_summary">익명 통계를 위한 송/수신 선택</string>
   <!-- Notification -->
+  <string name="notification_ticker">통계 참여</string>
+  <string name="notification_title">AICP 통계</string>
+  <string name="notification_desc">익명 통계 활성화 또는 비활성화</string>
+  <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;더 알아보기&lt;/a&gt;</string>
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+  <string name="anonymous_statistics_title">AICP 통계</string>
+  <string name="anonymous_statistics_summary">익명 통계 보고를 선택하여 AICP를 더 개선할 수 있도록 돕기</string>
+  <string name="anonymous_statistics_warning_title">소개</string>
+  <string name="anonymous_statistics_warning">AICP 통계를 사용하면 기기 고유의 설치 상태를 추적하기 위해 개인 정보를 포함하지 않은 정보가 AICP의 개발자에게 전송됩니다. 정보는 매 주마다 전송됩니다.\n\n전송되는 정보를 보려면 데이터 미리 보기를 누르세요.</string>
+  <string name="pref_settings">설정</string>
+  <string name="enable_reporting_title">보고 활성화</string>
+  <string name="disable_reporting_persistent">관여하지 않음</string>
+  <string name="preview_data_title">데이터 미리보기</string>
+  <string name="view_stats_title">통계 페이지 보기</string>
+  <string name="anonymous_learn_more">더 알아보기</string>
+  <string name="last_report_on">마지막으로 보고됨</string>
+  <string name="reporting_interval">보고 간격</string>
+  <plurals name="reporting_interval_days">
+    <item quantity="other">%d일 마다</item>
+  </plurals>
+  <string name="next_report_on">다음 보고</string>
   <!-- Anonymous Statistics - Preview -->
+  <string name="preview_id_title">고유 ID</string>
+  <string name="preview_device_title">장치</string>
+  <string name="preview_version_title">버전</string>
+  <string name="preview_country_title">국가</string>
+  <string name="preview_carrier_title">통신사</string>
+  <string name="preview_romname_title">ROM 이름</string>
+  <string name="preview_romversion_title">AICP 버전</string>
+  <string name="preview_buildtype_title">AICP 빌드 형식</string>
   <!-- Double tap to sleep on lockscreen -->
+  <string name="double_tap_sleep_anywhere_title">두번 두드려 화면 끄기</string>
+  <string name="double_tap_sleep_anywhere_summary_on">잠금 화면을 두번 탭하여 장치를 절전모드로 만들기</string>
+  <string name="double_tap_sleep_anywhere_summary_off">잠금 화면을 두번 탭하여 장치를 절전모드로 만들기 해제</string>
   <!-- SU -->
+  <string name="cannot_get_su_start">루트 권한을 얻을 수 없습니다.</string>
   <!-- Aicp logcat -->
+  <string name="logcat_title">Logcat</string>
+  <string name="kmesg_title">Kmesg</string>
+  <string name="dmesg_title">Dmesg</string>
+  <string name="log_it_title">참여</string>
+  <string name="log_it_dialog_title">참여</string>
+  <string name="log_that_shit_title">기록</string>
+  <string name="share_title">공유...</string>
+  <string name="log_it_share_subject">Aicp 로그</string>
+  <string name="log_it_summary">로그가 생성되는 동안 기다려주세요</string>
+  <string name="log_it_logs_in_progress">로그가 생성되었습니다&#8230;</string>
+  <string name="log_it_share_type_title">공유 방법</string>
+  <string name="log_it_share_type_zip">ZIP 파일</string>
+  <string name="log_it_share_type_haste">AICP 메모장에 업로드</string>
   <!-- AOKP custom system animations -->
+  <string name="animation_duration_default">기본</string>
   <!-- Toast Animation -->
+  <string name="toast_animation_title">팝업 애니메이션</string>
+  <string name="toast_animation_style_title">애니메이션 방식을 선택하세요.</string>
+  <string name="toast_none_animation">없음</string>
+  <string name="toast_default_animation">기본</string>
+  <string name="toast_fade_animation">서서히 사라지기</string>
+  <string name="toast_SlideRight_animation">오른쪽으로 슬라이드</string>
+  <string name="toast_SlideLeft_animation">왼쪽으로 슬라이드</string>
+  <string name="toast_Xylon_animation">Xylon 애니메이션</string>
+  <string name="toast_Toko_animation">Toko 애니메이션</string>
+  <string name="toast_Tn_animation">Tn 애니메이션</string>
+  <string name="toast_Honami_animation">Honami 애니메이션</string>
+  <string name="toast_FastFade_animation">빠르게 사라지기</string>
+  <string name="toast_GrowFade_animation">천천히 사라지기</string>
+  <string name="toast_GrowFadeCenter_animation">중앙에서 천천히 사라지기</string>
+  <string name="toast_GrowFadeBottom_animation">하단으로 천천히 사라지기</string>
+  <string name="toast_Translucent_animation">반투명 애니메이션</string>
+  <string name="toast_SlideLeftRight_animation">왼쪽에서 오른쪽으로 넘기기</string>
+  <string name="toast_SlideRightLeft_animation">왼쪽에서 오른쪽으로 넘기기</string>
   <!-- Toast Icons -->
+  <string name="toast_icon_title">팝업 아이콘</string>
+  <string name="toast_icon_summary">팝업과 함께 해당 앱 아이콘 표시</string>
+  <string name="toast_text_color">팝업 알림 글자 색상</string>
+  <string name="toast_icon_color">팝업 알림 아이콘 색상</string>
   <!-- Power menu Animations  -->
+  <string name="power_menu_animation_title">전원 메뉴 애니메이션</string>
+  <string name="power_menu_animation_style_title">선택된 애니메이션 방식</string>
+  <string name="power_menu_animation_aosp">AOSP (기본값)</string>
+  <string name="power_menu_animation_bottom">하단</string>
+  <string name="power_menu_animation_top">상단</string>
+  <string name="power_menu_animation_rotate">회전</string>
+  <string name="power_menu_animation_xylon">비행</string>
+  <string name="power_menu_animation_slide">슬라이드</string>
+  <string name="power_menu_animation_turn">스프라이트 회전</string>
+  <string name="power_menu_animation_fly">밝기 변화</string>
+  <string name="power_menu_animation_card">3D</string>
+  <string name="power_menu_animation_translucent_top">반투명 (상단)</string>
+  <string name="power_menu_animation_translucent_bottom">반투명 (하단)</string>
   <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_category_title">상태 표시줄 로고</string>
+  <string name="status_bar_aicp_logo_title">AICP 로고</string>
+  <string name="status_bar_aicp_logo_summary">상태 표시줄의 왼쪽에 AICP 로고 표시 활성화</string>
+  <string name="status_bar_aicp_logo_color">AICP 로고 색상</string>
+  <string name="status_bar_aicp_logo_position">로고 위치</string>
+  <string name="status_bar_aicp_logo_position_summary">로고 표시 위치를 지정합니다.</string>
+  <string name="status_bar_logo_position_right">오른쪽</string>
+  <string name="status_bar_logo_position_left">왼쪽</string>
   <!-- Launch music player when headset is connected -->
+  <string name="headset_connect_player_title">음악 앱 실행</string>
+  <string name="headset_connect_player_disabled">비활성화됨</string>
+  <string name="headset_connect_player_wired">유선 헤드셋이 연결되었을 때</string>
+  <string name="headset_connect_player_bt_no_carkit">블루투스 헤드셋이(자동차 제외) 연결되었을 때</string>
+  <string name="headset_connect_player_bt">블루투스 헤드셋이 연결되었을 때</string>
+  <string name="headset_connect_player_both_no_carkit">유선 헤드셋이나 블루투스 헤드셋(자동차 제외)이 연결되었을 때</string>
+  <string name="headset_connect_player_both">유선 헤드셋 또는 블루투스 헤드셋이 연결되었을 때</string>
   <!-- Camera shutter sound -->
+  <string name="camera_sounds_title">카메라 촬영음</string>
+  <string name="camera_sounds_summary">서드파티 카메라 앱과 HDR+ 모드에서는 카메라 셔터 소리 해제가 작동하지 않을 수 있습니다.</string>
   <!-- Screenshot sound -->
+  <string name="screenshot_sound_title">스크린샷 소리</string>
+  <string name="screenshot_sound_summary">스크린샷 촬영시 음향효과 재생</string>
+  <string name="brightness_icon_title">밝기 아이콘</string>
+  <string name="brightness_icon_summary">밝기 조절 슬라이더 왼쪽에 자동 밝기 조절 아이콘을 표시합니다</string>
+  <string name="brightness_icon_position_title">밝기 조절 아이콘 위치</string>
+  <string name="brightness_icon_position_on_summary">오른쪽에 표시</string>
+  <string name="brightness_icon_position_off_summary">왼쪽에 표시</string>
   <!-- QS shade opacity -->
+  <string name="qs_transparent_shade">빠른설정 쉐이더 불투명도</string>
   <!-- QS header transparency -->
+  <string name="qs_transparent_header">빠른 설정 헤더 투명도</string>
   <!-- QS tile labels visibility -->
+  <string name="qs_menu_item_titles">빠른 설정 타일 문구</string>
+  <string name="qs_menu_item_titles_summaryOn">문구가 표시됩니다</string>
+  <string name="qs_menu_item_titles_summaryOff">문구가 숨겨집니다</string>
   <!-- Volume dialog opacity -->
+  <string name="volume_dialog_transparency">볼륨 창 불투명도</string>
   <!-- Power menu and dialogs opacity -->
+  <string name="power_menu_transparency">전원/다시 시작 메뉴 불투명도</string>
   <!-- Power/reboot dialogs dim amount -->
+  <string name="power_menu_dialog_dim">전원/다시 시작 메뉴 배경 밝기 조절</string>
   <!-- Notifications transparency -->
+  <string name="notifications_transparency">알림 투명도</string>
   <!-- Lockscreen Torch -->
+  <string name="keyguard_torch_title">전원 버튼 길게 누를 시 손전틍 켜기</string>
+  <string name="keyguard_torch_summary_on">화면이 꺼져있는 동안 전원 버튼을 길게 누르면 손전등이 켜집니다</string>
+  <string name="keyguard_torch_summary_off">화면이 꺼져있는 동안 전원 버튼을 길게 눌러도 손전등이 켜지지 않습니다</string>
   <!-- Quick settings tiles columns and rows config -->
+  <string name="qs_rows_portrait_title">열 (세로 모드)</string>
+  <string name="qs_rows_portrait_summary">세로 방향으로 표시되는 빠른 설정 타일 수를 선택하세요</string>
+  <string name="qs_rows_landscape_title">열 (가로 모드)</string>
+  <string name="qs_rows_landscape_summary">가로 방향으로 표시되는 빠른 설정 타일 수를 선택하세요</string>
+  <string name="qs_columns_portrait_title">행 (세로 모드)</string>
+  <string name="qs_columns_portrait_summary">세로 방향으로 표시되는 빠른 설정 세로줄 수를 선택하세요</string>
+  <string name="qs_columns_landscape_title">행 (가로 모드)</string>
+  <string name="qs_columns_landscape_summary">세로 방향으로 표시되는 빠른 설정 가로줄 수를 선택하세요</string>
+  <string name="sysui_qqs_count_title">작은 빠른 설정 타일 사용</string>
+  <string name="qs_rows_prefix">열:</string>
+  <string name="qs_cols_prefix">열: </string>
   <!-- Tiles animation style  -->
+  <string name="qs_tile_animation_title">빠른설정 타일 토글 애니메이션</string>
+  <string name="qs_tile_animation_style_title">타일 애니메이션 스타일</string>
+  <string name="qs_tile_animation_duration_title">애니메이션 지속 시간</string>
+  <string name="qs_tile_animation_interpolator_title">애니메이션 보간</string>
+  <string name="qs_tile_animation_style_off">애니메이션 없음</string>
+  <string name="qs_tile_animation_style_flip">뒤집기</string>
+  <string name="qs_tile_animation_style_rotate">회전</string>
+  <string name="qs_tile_animation_duration_low">길게</string>
+  <string name="qs_tile_animation_duration_default">기본값</string>
+  <string name="qs_tile_animation_duration_fast">짧게</string>
+  <string name="qs_tile_animation_duration_superfast">아주 짧게</string>
+  <string name="qs_tile_animation_interpolator_linearInterpolator">선형(Linear)</string>
+  <string name="qs_tile_animation_interpolator_accelerateInterpolator">가속</string>
+  <string name="qs_tile_animation_interpolator_decelerateInterpolator">감속</string>
+  <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">가속 후 천천히</string>
+  <string name="qs_tile_animation_interpolator_bounceInterpolator">튕기기 보간</string>
+  <string name="qs_tile_animation_interpolator_overshootInterpolator">Overshoot</string>
+  <string name="qs_tile_animation_interpolator_anticipateInterpolator">예측 보간</string>
+  <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">예측 및 overshoot 보간</string>
   <!-- App Exit Toast -->
+  <string name="app_exit_toast">뒤로 가기 버튼을 한 번 더 눌러 종료합니다</string>
   <!-- Volume dialog stroke settings -->
+  <string name="volume_dialog_stroke_title">음량 조절 창 강조</string>
+  <string name="volume_dialog_stroke_disabled">사용 안 함</string>
+  <string name="volume_dialog_stroke_accent">강조 색상</string>
+  <string name="volume_dialog_stroke_custom">사용자 정의 색상</string>
+  <string name="volume_dialog_stroke_color_title">볼륨창 강조 색상설정</string>
+  <string name="volume_dialog_stroke_thickness_title">볼륨창 강조 두께 조정</string>
+  <string name="volume_dialog_corner_radius_title">볼륨창 코너 반지름 조정</string>
+  <string name="volume_dialog_dash_width_title">음량 조절 창 강조 대시 폭 조절</string>
+  <string name="volume_dialog_dash_gap_title">볼륨 간격 조정</string>
   <!-- QS stroke settings -->
+  <string name="qs_stroke_title">빠른설정 강조선 그림자</string>
+  <string name="qs_stroke_disabled">사용 안 함</string>
+  <string name="qs_stroke_accent">강조 색상</string>
+  <string name="qs_stroke_custom">사용자 지정 색상</string>
+  <string name="qs_stroke_color_title">빠른설정 강조선 그림자 색상</string>
+  <string name="qs_stroke_thickness_title">빠른설정 강조선 그림자 두께</string>
+  <string name="qs_corner_radius_title">빠른설정 그림자 반경</string>
+  <string name="qs_dash_width_title">빠른설정 강조점선 두께</string>
+  <string name="qs_dash_gap_title">빠른설정 강조점선 간격</string>
   <!--Preference Categories-->
+  <string name="anim">애니메이션 커스터마이징</string>
+  <string name="indicators">상태 표시줄 아이콘</string>
+  <string name="quicksettings_tiles_category">빠른설정 패널 설정</string>
+  <string name="header_tweaks">머릿말 커스터마이징</string>
+  <string name="Misc">기타 설정</string>
+  <string name="qs">빠른설정 커스터마이징</string>
+  <string name="vol_diag">볼륨창 커스터마이징</string>
+  <string name="power">전원 메뉴 커스터마이징</string>
+  <string name="cab">알림 비우기 버튼 커스터마이징</string>
+  <string name="visuals">앱 전환기 외형 추가설정</string>
   <!-- Fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">지문 인식 진동</string>
+  <string name="fprint_sucess_vib_summary_on">지문 인식에 성공하면 진동을 울립니다</string>
+  <string name="fprint_sucess_vib_summary_off">지문 인식에 성공해도 진동을 울리지 않습니다</string>
   <!-- AE settings -->
+  <string name="ae_settings_title">AicpExtras 설정</string>
+  <string name="ae_custom_colors_title">사용자 정의 색상</string>
+  <string name="ae_custom_colors_summaries">아래 설정을 사용하여 AicpExtra의 외관을 수정합니다</string>
+  <string name="ae_drawer_opacity_title">내비게이션 서랍 불투명도</string>
+  <string name="ae_header_bg_image_color_title">탐색기 머리말 배경 이미지 색상</string>
+  <string name="ae_drawer_bg_color_title">탐색기 서랍 배경 색상</string>
+  <string name="ae_settings_restore_defaults_title">기본 값 복원</string>
+  <string name="values_restored_title">기본 값으로 복원 됨</string>
+  <string name="ae_header_bg_image_opacity_title">탐색기 서랍 머리말 배경 이미지 투명도</string>
+  <string name="ae_nav_drawer_checked_text_title">선택된 항목 글자 색상</string>
+  <string name="ae_nav_drawer_unchecked_text_title">글자 색상</string>
+  <string name="ae_settings_summary_title">설정 애플리케이션의 AE 설명 문구 수정</string>
+  <string name="custom_summary_title">사용자 지정 AE 설명</string>
+  <string name="custom_summary_explain">새 설명을 입력해주세요. 아무것도 입력하지 않을 시 기본 문구로 되돌립니다.</string>
+  <string name="ae_moderate_language_title">언어순화</string>
+  <string name="ae_moderate_language_summary">부적절한 언어를 대체단어로 필터합니다. AE의 동작이 느려질 수 있습니다</string>
   <!-- Statusbar 4G LTE switch -->
+  <string name="show_fourg_title">LTE 대신 4G 표시</string>
+  <string name="show_fourg_summary">LTE 상태 표시줄 표시를 4G로 바꿉니다</string>
   <!-- QuickSettings haptic feedback -->
+  <string name="quick_settings_vibrate_title">터치 시 진동</string>
+  <string name="quick_settings_vibrate_summary">타일 터치시 진동</string>
   <!-- Advanced data tile -->
+  <string name="qs_advanced_data_title">간편 데이터 타일 토글</string>
+  <string name="qs_advanced_data_summary">한번의 터치로 데이터를 켜고 끕니다</string>
   <!-- SystemUI restart prompt -->
+  <string name="systemui_restart_title">경고!</string>
+  <string name="systemui_restart_message">변경된 설정을 적용하기 위해 시스템 UI가 재시작됩니다.</string>
   <!-- Status Bar Ticker -->
   <!-- Optional screenshot type -->
   <!-- Screenshot delay -->
@@ -89,6 +416,7 @@
   <!-- OmniSwitch Recents -->
   <!-- MediaScanner behavior on boot -->
   <!-- App Remover -->
+  <string name="cancel">취소</string>
   <!-- Extensions settings -->
   <!-- Bluetooth status -->
   <!-- Three-fingers-swipe to screenshot -->

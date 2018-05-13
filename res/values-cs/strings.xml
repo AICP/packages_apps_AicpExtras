@@ -117,11 +117,11 @@
   <!-- Carrier Label -->
   <string name="carrier_options">Název mobilní sítě</string>
   <string name="custom_carrier_label_title">Vlastní název mobilní sítě</string>
-  <string name="custom_carrier_label_explain">Zadejte, prosím, nový název. Nechte prázdné pro navrácení k původnímu.</string>
+  <string name="custom_carrier_label_explain">Zadejte prosím nový název. Nechte prázdné pro navrácení k původnímu.</string>
   <string name="custom_carrier_label_notset">Vlastní název není momentálně nastaven</string>
   <string name="show_carrier_title">Název mobilní sítě</string>
   <string name="show_carrier_disabled">Zakázáno</string>
-  <string name="show_carrier_keyguard">Pouze na zamčené obrazovce</string>
+  <string name="show_carrier_keyguard">Pouze na zamykací obrazovce</string>
   <string name="show_carrier_statusbar">Pouze stavová lišta</string>
   <string name="show_carrier_enabled">Zamykací obrazovka &amp; stavová lišta</string>
   <string name="status_bar_carrier_color">Barva popisku mobilní sítě</string>
@@ -180,6 +180,7 @@
   <plurals name="reporting_interval_days">
     <item quantity="one">1 den</item>
     <item quantity="few">%d dny</item>
+    <item quantity="many">%d dní</item>
     <item quantity="other">%d dní</item>
   </plurals>
   <string name="next_report_on">Další hlášení</string>
@@ -859,7 +860,7 @@
   <!-- Screen state service -->
   <string name="screen_state_toggles_title">Akce po zhasnutí obrazovky</string>
   <string name="screen_state_toggles_enable_title">Povolit</string>
-  <string name="screen_state_toggles_enable_summary">Akce budou provedeny při vypnutí displeje. Při zapnutí a uvedení do předchozího stavu budou obnoveny.</string>
+  <string name="screen_state_toggles_enable_summary">Akce budou provedeny při vypnutí obrazovky. Při zapnutí a uvedení do předchozího stavu budou obnoveny.</string>
   <string name="screen_state_toggles_mobile_title">Mobilní sítě</string>
   <string name="screen_state_toggles_location_title">Poloha</string>
   <string name="screen_state_toggles_twog">Přepnout na 2G</string>
