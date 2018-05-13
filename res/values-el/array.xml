@@ -6,6 +6,16 @@
   <!-- Network Traffic Period -->
   <!-- Carrier Label -->
   <!-- Battery bar -->
+  <string-array name="battery_bar_entries">
+    <item>Απόκρυψη</item>
+    <item>Γραμμή κατάστασης</item>
+    <item>Πάνω απο την γραμμή πλοήγησης</item>
+    <item>Κάτω απο την γραμμή πλοήγησης</item>
+  </string-array>
+  <string-array name="battery_bar_no_navbar_entries">
+    <item>Απόκρυψη</item>
+    <item>Γραμμή κατάστασης</item>
+  </string-array>
   <!-- Toast Animation -->
   <!-- Power menu Animations  -->
   <!-- Status bar logo position-->
@@ -21,6 +31,16 @@
   <!-- Heads up snooze -->
   <!-- MediaScanner behavior on boot -->
   <!-- App sidebar -->
+  <string-array name="tab_position_entries">
+    <item>Κορυφή</item>
+    <item>Μεσαία</item>
+    <item>Βάση</item>
+  </string-array>
+  <string-array name="tab_size_entries">
+    <item>Μικρό</item>
+    <item>Μεσαίο</item>
+    <item>Μεγάλο</item>
+  </string-array>
   <!-- PA PIE -->
   <!-- Slim Recent panel -->
   <!-- Icon type for lockscreen shorcut. -->
@@ -88,6 +108,14 @@
         inappropriate wordings, leave those arrays empty in your translation, and the setting to filter out inappropriate
         language will automatically get disabled.
     -->
+  <string-array name="ae_inappropriate_wordings">
+    <item>σκατά</item>
+    <item>πορνό</item>
+  </string-array>
+  <string-array name="ae_inappropriate_wordings_replacements">
+    <item>μαγεία</item>
+    <item>ευτυχία</item>
+  </string-array>
   <!-- Ticker mode -->
   <!-- Launch default music player on headset connection -->
   <!-- Battery tile style -->

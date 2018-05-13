@@ -6,6 +6,16 @@
   <!-- Network Traffic Period -->
   <!-- Carrier Label -->
   <!-- Battery bar -->
+  <string-array name="battery_bar_entries">
+    <item>Skjul</item>
+    <item>Statuslinje</item>
+    <item>Top of navbar</item>
+    <item>Bottom of navbar</item>
+  </string-array>
+  <string-array name="battery_bar_no_navbar_entries">
+    <item>Skjul</item>
+    <item>Statuslinje</item>
+  </string-array>
   <!-- Toast Animation -->
   <!-- Power menu Animations  -->
   <!-- Status bar logo position-->
@@ -21,6 +31,16 @@
   <!-- Heads up snooze -->
   <!-- MediaScanner behavior on boot -->
   <!-- App sidebar -->
+  <string-array name="tab_position_entries">
+    <item>Topp</item>
+    <item>Midten</item>
+    <item>Bunn</item>
+  </string-array>
+  <string-array name="tab_size_entries">
+    <item>Liten</item>
+    <item>Middels</item>
+    <item>Stor</item>
+  </string-array>
   <!-- PA PIE -->
   <!-- Slim Recent panel -->
   <!-- Icon type for lockscreen shorcut. -->
@@ -88,6 +108,14 @@
         inappropriate wordings, leave those arrays empty in your translation, and the setting to filter out inappropriate
         language will automatically get disabled.
     -->
+  <string-array name="ae_inappropriate_wordings">
+    <item>shit</item>
+    <item>porno</item>
+  </string-array>
+  <string-array name="ae_inappropriate_wordings_replacements">
+    <item>magi</item>
+    <item>happiness</item>
+  </string-array>
   <!-- Ticker mode -->
   <!-- Launch default music player on headset connection -->
   <!-- Battery tile style -->
