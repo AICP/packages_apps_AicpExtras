@@ -28,12 +28,44 @@
   <!-- StatusBar weather settings -->
   <!-- Smart pulldown-->
   <!-- Double tap to sleep on status bar -->
+  <string name="status_bar_double_tap_to_sleep_summary">خاموش شدن صفحه با دوبار ضربه زدن روی نوار وضعیت</string>
   <!-- Statusbar Clock options -->
   <string name="status_bar_show_clock_title">نمایش ساعت و تاریخ</string>
+  <string name="right_clock">ساعت در راست</string>
+  <string name="center_clock">ساعت در مرکز</string>
+  <string name="left_clock">ساعت در چپ</string>
+  <string name="status_bar_clock_seconds_title">ثانیه ساعت</string>
   <string name="status_bar_am_pm_title">ق.ظ/ب.ظ</string>
+  <string name="status_bar_am_pm_info">ساعت 24 ساعته فعال است</string>
+  <string name="am_pm_clock_normal">اندازه فونت عادی</string>
+  <string name="am_pm_clock_small">اندازه فونت کوچک</string>
+  <string name="am_pm_clock_none">عدم نمایش</string>
+  <string name="clock_date_display_summary">تاریخ سفارشی را قبل از ساعت نمایش بده</string>
+  <string name="clock_date_style">سبک تاریخ</string>
+  <string name="clock_date_position">موقعیت تاریخ</string>
+  <string name="clock_date_format">قالب تاریخ</string>
+  <string name="clock_date_string_edittext_title">باید به عنوان مثال قالب تاریخ ماه/روز/سال باشد</string>
+  <string name="clock_date_string_edittext_summary">متن را وارد کنید</string>
+  <string name="clock_date_right">راست از زمان</string>
+  <string name="clock_date_left">چپ از زمان</string>
+  <string name="clock_date_display_none">عدم نمایش</string>
+  <string name="clock_date_display_small">اندازه فونت کوچک</string>
+  <string name="clock_date_display_normal">اندازه فونت عادی</string>
+  <string name="clock_date_style_normal">عادی</string>
+  <string name="clock_date_style_lowercase">حروف کوچک</string>
+  <string name="clock_date_style_uppercase">حروف بزرگ</string>
+  <string name="clock_date_format_custom">فرمت سفارشی جاوا</string>
+  <string name="menu_save">ذخیره</string>
   <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_category_title">آرم</string>
+  <string name="status_bar_logo_position_title">جایگاه</string>
+  <string name="status_bar_logo_style_title">سبک</string>
+  <string name="status_bar_logo_style_apple">اپل</string>
+  <string name="status_bar_logo_style_ios">iOS</string>
+  <string name="status_bar_logo_style_emoticon">شکلک</string>
   <!-- Statusbar categories -->
   <!-- Notifications -->
+  <!-- Heads up -->
   <!-- Notification guts kill app button -->
   <!-- InCall notifications vibrate -->
   <!-- Brightness slider settings -->
@@ -43,6 +75,8 @@
   <!-- Small quick settings scroller -->
   <!-- QS rows and columns -->
   <!-- QS footer warnings -->
+  <!-- QS footer Running Services icon -->
+  <!-- QS footer Settings icon -->
   <!-- QS tiles title visibility -->
   <!-- QS Headers -->
   <!-- Tiles animation style  -->
@@ -54,6 +88,7 @@
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <!-- Slim Recent App Sidebar  -->
   <!-- Slim recents membar -->
+  <!-- OmniSwitch -->
   <!-- Lockscreen -->
   <!-- Double tap to sleep on lockscreen -->
   <!-- Media art -->
@@ -118,10 +153,12 @@
   <!-- HW keys -->
   <!-- Volume keys -->
   <!-- Hardware button navigation -->
-  <!-- Home Hardware button options -->
+  <!-- Volume rocker wake -->
   <!-- Button brightness -->
   <!-- Quick QS pull down -->
   <!-- Status bar system icons -->
   <!-- Toast Animation -->
   <!-- System default animation -->
+  <!-- Smart Pixels -->
+  <!-- Fingerprint sensor only at screen on -->
 </resources>

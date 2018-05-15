@@ -157,6 +157,7 @@
   <!-- Notifications -->
   <string name="notifications_title">通知</string>
   <string name="notifications_summary">扩展通知控件</string>
+  <!-- Heads up -->
   <!-- Notification guts kill app button -->
   <string name="notification_guts_kill_app_button_title">清除应用按钮</string>
   <string name="notification_guts_kill_app_button_summary">在通知的长按菜单中显示清除应用按钮</string>
@@ -198,6 +199,8 @@
   <!-- QS footer warnings -->
   <string name="qs_footer_warnings_title">快速设置页脚警告</string>
   <string name="qs_footer_warnings_summary">当网络被 VPN 或者应用程序监测时，在快速设置底部显示一个警告</string>
+  <!-- QS footer Running Services icon -->
+  <!-- QS footer Settings icon -->
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">显示图标标题</string>
   <string name="qs_tile_title_visibility_summary">当磁贴被选中时在其下方显示标题</string>
@@ -226,7 +229,6 @@
   <string name="qs_tiles">快速设置瓷块</string>
   <string name="qs_tile_animation_style_title">动画风格</string>
   <string name="qs_tile_animation_duration_title">瓷块动画持续时间</string>
-  <string name="qs_tile_animation_interpolator_title">瓷砖动画插值器</string>
   <string name="qs_tile_animation_style_off">无动画</string>
   <string name="qs_tile_animation_style_flip">空翻</string>
   <string name="qs_tile_animation_style_rotate">旋转</string>
@@ -323,6 +325,7 @@
   <string name="slim_recents_mem_display_summaryOff">内存栏已禁用</string>
   <string name="slim_recents_mem_display_color">内存栏颜色</string>
   <string name="slim_recents_mem_display_text_color">内存栏文本颜色</string>
+  <!-- OmniSwitch -->
   <!-- Lockscreen -->
   <string name="lockscreen_title">锁屏界面</string>
   <string name="lockscreen_summary">编辑锁屏界面外观</string>
@@ -751,8 +754,8 @@
   <string name="custom_carrier_label_title">自定义运营商名称</string>
   <string name="custom_carrier_label_explain">请输入一个新的名称，不输入将恢复为默认。</string>
   <string name="custom_carrier_label_notset">自定义运营商标签当前未设置</string>
-  <string name="show_carrier_title">运营商标签</string>
-  <string name="show_carrier_disabled">不显示</string>
+  <string name="show_carrier_title">运营商名称</string>
+  <string name="show_carrier_disabled">禁用</string>
   <string name="show_carrier_keyguard">仅在锁屏时显示</string>
   <string name="show_carrier_statusbar">仅在状态栏上显示</string>
   <string name="show_carrier_enabled">全部显示</string>
@@ -844,9 +847,7 @@
   <string name="hardware_keys_long_press_title">长按操作</string>
   <string name="hardware_keys_double_tap_title">双击操作</string>
   <string name="hardware_keys_disable_title">禁用导航栏按钮</string>
-  <!-- Home Hardware button options -->
-  <string name="button_home_wake_title">按钮首页唤醒</string>
-  <string name="button_home_wake_summary">使用主页按钮唤醒</string>
+  <!-- Volume rocker wake -->
   <!-- Button brightness -->
   <string name="button_backlight_options_category">背光设置</string>
   <string name="button_backlight_enable_title">允许按钮背光</string>
@@ -889,8 +890,9 @@
   <string name="toast_Translucent_animation">半透明</string>
   <string name="toast_SlideLeftRight_animation">从左到右滑动</string>
   <string name="toast_SlideRightLeft_animation">从右到左滑动</string>
-  <string name="toast_animation_test">这是对所选择的 Toast 动画的测试</string>
   <!-- System default animation -->
   <string name="system_default_animation_title">Android P 动画风格</string>
   <string name="system_default_animation_summary">启用 Android P \"默认\" 动画</string>
+  <!-- Smart Pixels -->
+  <!-- Fingerprint sensor only at screen on -->
 </resources>
