@@ -158,6 +158,9 @@
   <!-- Notifications -->
   <string name="notifications_title">Notificaciones</string>
   <string name="notifications_summary">Control de notificaciones</string>
+  <!-- Heads up -->
+  <string name="notification_heads_up_title">Notificaciones emergentes</string>
+  <string name="notification_heads_up_summary">Permitir notificaciones emergentes</string>
   <!-- Notification guts kill app button -->
   <string name="notification_guts_kill_app_button_title">Botón cerrar aplicación</string>
   <string name="notification_guts_kill_app_button_summary">Muestra el botón de cerrar aplicación en el menú de pulsación prolongada</string>
@@ -199,6 +202,12 @@
   <!-- QS footer warnings -->
   <string name="qs_footer_warnings_title">Avisos en ajustes rápidos</string>
   <string name="qs_footer_warnings_summary">Muestra un aviso bajo el panel de ajustes rápidos cuando la red se monitoriza por una aplicación externa o una vpn</string>
+  <!-- QS footer Running Services icon -->
+  <string name="qs_footer_services_title">Mostrar icono de Servicios en ejecución</string>
+  <string name="qs_footer_services_summary">Mostrar icono de Servicios en ejecución bajo los ajustes rápidos</string>
+  <!-- QS footer Settings icon -->
+  <string name="qs_footer_settings_title">Mostrar icono de Ajustes</string>
+  <string name="qs_footer_settings_summary">Mostrar icono de ajustes bajo los ajustes rápidos</string>
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Mostrar texto del icono</string>
   <string name="qs_tile_title_visibility_summary">Mostrar texto debajo si está habilitado</string>
@@ -227,7 +236,7 @@
   <string name="qs_tiles">Ajustes rápidos</string>
   <string name="qs_tile_animation_style_title">Estilo de animación</string>
   <string name="qs_tile_animation_duration_title">Duración de la animación</string>
-  <string name="qs_tile_animation_interpolator_title">Interpolador de la animación de los ajustes rápidos</string>
+  <string name="qs_tile_animation_interpolator_title">Interpolador de animación</string>
   <string name="qs_tile_animation_style_off">Sin animación</string>
   <string name="qs_tile_animation_style_flip">Voltear</string>
   <string name="qs_tile_animation_style_rotate">Rotar</string>
@@ -324,6 +333,8 @@
   <string name="slim_recents_mem_display_summaryOff">Barra de memoria RAM deshabilitada</string>
   <string name="slim_recents_mem_display_color">Color de la barra</string>
   <string name="slim_recents_mem_display_text_color">Color del texto</string>
+  <!-- OmniSwitch -->
+  <string name="omni_switch_title">OmniSwitch</string>
   <!-- Lockscreen -->
   <string name="lockscreen_title">Pantalla de bloqueo</string>
   <string name="lockscreen_summary">Editar aspecto de pantalla de bloqueo</string>
@@ -753,7 +764,7 @@
   <string name="custom_carrier_label_explain">Introduzca un nuevo nombre. Dejar en blanco para restablecer al predeterminado.</string>
   <string name="custom_carrier_label_notset">Nombre personalizado no establecido actualmente</string>
   <string name="show_carrier_title">Nombre de operador</string>
-  <string name="show_carrier_disabled">Deshabilitado</string>
+  <string name="show_carrier_disabled">Deshabilitada</string>
   <string name="show_carrier_keyguard">Sólo en pantalla de bloqueo</string>
   <string name="show_carrier_statusbar">Sólo en barra de estado</string>
   <string name="show_carrier_enabled">Pantalla de bloqueo &amp; barra de estado</string>
@@ -776,7 +787,7 @@
   <string name="animation_duration_title">Duración de la animación</string>
   <string name="title_animation_no_override">Evitar reemplazos de aplicaciones</string>
   <string name="summary_animation_no_override">Evitar que las aplicaciones reemplacen las transiciones</string>
-  <string name="animation_duration_default">Predeterminada</string>
+  <string name="animation_duration_default">Predeterminado</string>
   <!-- Lock screen visualizer -->
   <string name="lockscreen_visualizer_title">Visualizador de música</string>
   <string name="lockscreen_visualizer_summary">Habilita el visualizador en la pantalla de bloqueo</string>
@@ -845,9 +856,10 @@
   <string name="hardware_keys_long_press_title">Acción de pulsación larga</string>
   <string name="hardware_keys_double_tap_title">Acción de doble toque</string>
   <string name="hardware_keys_disable_title">Deshabilitar botones</string>
-  <!-- Home Hardware button options -->
-  <string name="button_home_wake_title">Despertar con botón Inicio</string>
-  <string name="button_home_wake_summary">Despierta el dispositivo con el botón Inicio</string>
+  <string name="hardware_keys_wake_title">Despertar dispositivo</string>
+  <!-- Volume rocker wake -->
+  <string name="volume_rocker_wake_title">Encender pantalla con botones de volumen</string>
+  <string name="volume_rocker_wake_summary">Encender el dispositivo presionando los botones de volumen</string>
   <!-- Button brightness -->
   <string name="button_backlight_options_category">Opciones de retroiluminación</string>
   <string name="button_backlight_enable_title">Permitir retroiluminación de los botones</string>
@@ -875,7 +887,7 @@
   <!-- Toast Animation -->
   <string name="toast_animation_title">Animación Toast</string>
   <string name="toast_none_animation">Ninguna</string>
-  <string name="toast_default_animation">Predeterminada</string>
+  <string name="toast_default_animation">Predeterminado</string>
   <string name="toast_fade_animation">Transición</string>
   <string name="toast_SlideRight_animation">Deslizar hacia la derecha</string>
   <string name="toast_SlideLeft_animation">Deslizar hacia la izquierda</string>
@@ -890,8 +902,20 @@
   <string name="toast_Translucent_animation">Translúcida</string>
   <string name="toast_SlideLeftRight_animation">Deslizar de izquierda a derecha</string>
   <string name="toast_SlideRightLeft_animation">Deslizar de derecha a izquierda</string>
-  <string name="toast_animation_test">Esto es una prueba para las animaciones toast</string>
   <!-- System default animation -->
   <string name="system_default_animation_title">Estilo de animación de Android P</string>
   <string name="system_default_animation_summary">Activar animaciones de Android P predeterminadas</string>
+  <!-- Smart Pixels -->
+  <string name="smart_pixels_title">Píxeles inteligentes</string>
+  <string name="smart_pixels_summary">Ahorra batería apagando píxeles adicionales</string>
+  <string name="smart_pixels_enable_title">Habilitar píxeles inteligentes</string>
+  <string name="smart_pixels_enable_summary">Apagar píxeles para reducir el consumo de energía</string>
+  <string name="smart_pixels_on_power_save_title">Activar automáticamente en modo ahorro de batería</string>
+  <string name="smart_pixels_on_power_save_summary">Habilitar Smart Pixels cuando el ahorro de batería está habilitado</string>
+  <string name="smart_pixels_percent">Porcentaje de píxeles a desactivar</string>
+  <string name="smart_pixels_shift_title">Protección contra quemado</string>
+  <string name="smart_pixels_shift_summary">Previene el quemado de la pantalla en dispositivos con tecnología OLED alternando píxeles de vez en cuando</string>
+  <!-- Fingerprint sensor only at screen on -->
+  <string name="fp_only_screen_on_title">Lector de huellas con pantalla encendida</string>
+  <string name="fp_only_screen_on_summary">El lector de huellas sólo funcionará cuando la pantalla está encendida</string>
 </resources>
