@@ -19,7 +19,10 @@
 -->
 <resources>
   <!-- Dashboard -->
+  <string name="user_interface_category">Brukergrensesnitt</string>
+  <string name="other_category">Annet</string>
   <!-- Status bar -->
+  <string name="status_bar_title">Statuslinje</string>
   <!-- StatusBar Battery Options -->
   <!-- Bluetooth status -->
   <!-- Statusbar net monitor -->
@@ -29,29 +32,38 @@
   <!-- Smart pulldown-->
   <!-- Double tap to sleep on status bar -->
   <!-- Statusbar Clock options -->
+  <string name="menu_cancel">Avbryt</string>
   <!-- Statusbar AICP logo -->
   <!-- Statusbar categories -->
   <!-- Notifications -->
+  <!-- Heads up -->
   <!-- Notification guts kill app button -->
   <!-- InCall notifications vibrate -->
   <!-- Brightness slider settings -->
   <!-- Battery Styles -->
   <!-- Quick settings -->
+  <string name="quick_settings_title">Hurtiginnstillinger</string>
   <!-- Disable music track title in QS tile -->
   <!-- Small quick settings scroller -->
   <!-- QS rows and columns -->
   <!-- QS footer warnings -->
+  <!-- QS footer Running Services icon -->
+  <!-- QS footer Settings icon -->
   <!-- QS tiles title visibility -->
   <!-- QS Headers -->
+  <string name="header_provider_disabled">Deativert</string>
   <!-- Tiles animation style  -->
+  <string name="qs_tile_animation_duration_default">Standard</string>
   <!-- Recents -->
   <!-- Recents panel settings -->
   <!-- Recents Membar -->
   <!-- Stock recents icon pack -->
   <!-- Slim recents -->
+  <string name="recent_panel_expanded_mode_disabled">Deativert</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <!-- Slim Recent App Sidebar  -->
   <!-- Slim recents membar -->
+  <!-- OmniSwitch -->
   <!-- Lockscreen -->
   <!-- Double tap to sleep on lockscreen -->
   <!-- Media art -->
@@ -62,6 +74,7 @@
   <!-- Fingerprint authentication vibration -->
   <!-- Fingerprint unlock keystore -->
   <!-- Ambient display bottom info -->
+  <string name="ambient_display_bottom_info_off">Deativert</string>
   <!-- Show Lockscreen clock, date, & alarm -->
   <!-- Hide statusbar on lockscreen -->
   <!-- Other UI tweaks -->
@@ -80,6 +93,7 @@
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <!-- Power Button - Long press for torch -->
   <!-- System animations -->
+  <string name="system_animations_title">Animasjoner</string>
   <!-- System behaviour -->
   <!-- System extensions -->
   <!-- System app remover -->
@@ -89,25 +103,57 @@
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
   <!-- About -->
+  <string name="about_title">Om</string>
+  <string name="aicp_changelog_title">Endringslogg</string>
+  <string name="aicp_downloads_title">Nedlastinger</string>
+  <string name="aicp_ota_summary">Se etter AICP oppdateringer</string>
   <!-- Other / general purpose -->
+  <string name="default_string">Standard</string>
+  <string name="on">På</string>
+  <string name="off">Av</string>
+  <string name="hidden_anim_activity_title">Yoga tid!!!</string>
+  <string name="hidden_anim_more_nice">HYGGELIG</string>
   <!-- Sensor block per-package -->
   <!-- Weather - OmniJaws Settings -->
   <!-- Lockscreen Weather -->
   <!-- Statusbar ticker -->
+  <string name="ticker_disabled">Deativert</string>
+  <string name="navbar_summary">SmartBar/Fling</string>
   <!-- DUI -->
+  <string name="smartbar_interface">SmartBar</string>
+  <string name="default_string">Standard</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <!-- Fling -->
+  <string name="fling_logo_opacity_title">Fling logo transparens</string>
   <!-- Pulse navigation bar music visualizer -->
+  <string name="pulse_custom_buttons_opacity_title">SmartBar knapper transparens på Pulse</string>
   <!-- Pulse config -->
   <!-- Navbar height -->
   <!-- SmartBar -->
+  <string name="smartbar_category">SmartBar</string>
+  <string name="smartbar_settings_title">SmartBar innstillinger</string>
+  <string name="smartbar_editor_summary">Åpne SmartBar knappeinnstillimg</string>
+  <string name="smartbar_factory_reset_confirm">Er du sikker på at du vil tilbakestille Smartbar til standardinnstillinger?</string>
+  <string name="smartbar_config_name_edit_dialog_title">SmartBar Profilnavn</string>
+  <string name="smartbar_config_dialog_title">SmartBar profiler</string>
+  <string name="smartbar_config_backup_success_toast">Vellykket lagring av SmartBar profil</string>
+  <string name="smartbar_config_restore_success_toast">Vellykket gjenoppretting av SmartBar profil</string>
+  <string name="smartbar_config_backup_error_toast">Feil ved lagring av SmartBar profil</string>
+  <string name="smartbar_config_restore_error_toast">Feil ved gjenoppretting av SmartBar profil</string>
   <!-- Carrier Label -->
+  <string name="show_carrier_disabled">Deativert</string>
+  <string name="show_carrier_keyguard">Kun låseskjerm</string>
   <!-- Three-fingers-swipe to screenshot -->
   <!-- AOKP custom system animations -->
+  <string name="animation_title">Animasjoner</string>
+  <string name="animation_duration_default">Standard</string>
   <!-- Lock screen visualizer -->
   <!-- Screen state service -->
   <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_off">Deativert</string>
+  <string name="force_ambient_for_media_on">Aktivert</string>
   <!-- Screen Off animation -->
+  <string name="screen_off_animation_default">Standard</string>
   <!-- Suppress notification sound/vibration -->
   <!-- Accidental Touch -->
   <!-- Dynamic Navbar -->
@@ -116,10 +162,14 @@
   <!-- HW keys -->
   <!-- Volume keys -->
   <!-- Hardware button navigation -->
-  <!-- Home Hardware button options -->
+  <!-- Volume rocker wake -->
   <!-- Button brightness -->
   <!-- Quick QS pull down -->
+  <string name="status_bar_quick_qs_pulldown_off">Av</string>
   <!-- Status bar system icons -->
   <!-- Toast Animation -->
+  <string name="toast_default_animation">Standard</string>
   <!-- System default animation -->
+  <!-- Smart Pixels -->
+  <!-- Fingerprint sensor only at screen on -->
 </resources>

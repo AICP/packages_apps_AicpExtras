@@ -19,76 +19,202 @@
 -->
 <resources>
   <!-- Dashboard -->
+  <string name="user_interface_category">UI</string>
+  <string name="system_category">System</string>
+  <string name="other_category">Inne</string>
   <!-- Status bar -->
+  <string name="status_bar_title">Pasek statusu</string>
   <!-- StatusBar Battery Options -->
   <!-- Bluetooth status -->
   <!-- Statusbar net monitor -->
+  <string name="network_traffic_state_title">Pokaż aktywność sieci w pasku stanu</string>
+  <string name="network_traffic_autohide_threshold_title">Schowaj poniżej limitu (KB/s)</string>
   <!-- QS Header battery percentage -->
   <!-- Battery bar -->
+  <string name="battery_bar_title">Pasek baterii</string>
+  <string name="battery_bar_color_title">Kolor</string>
+  <string name="battery_bar_charging_color_title">Kolor podczas ładowania</string>
+  <string name="battery_bar_battery_low_color_title">Kolor niskiego poziomu baterii</string>
+  <string name="battery_bar_style_title">Wyrównanie</string>
+  <string name="battery_bar_thickness_title">Grubość</string>
+  <string name="battery_bar_animate_title">Animacja ładowania</string>
+  <string name="battery_bar_style_regular">Regularny</string>
+  <string name="battery_bar_style_center_mirrored">Wyśrodkowany</string>
+  <string name="battery_bar_style_reversed">Odwrócony</string>
+  <string name="battery_bar_use_charging_color_title">Własny kolor podczas ładowania</string>
+  <string name="battery_bar_blend_color_title">Mieszanie kolorów</string>
+  <string name="battery_bar_blend_color_summary">Mieszaj pełne/puste kolory odpowiadające procentom baterii</string>
+  <string name="battery_bar_blend_color_reverse_title">Odwróć kierunek kolorów</string>
+  <string name="battery_bar_blend_color_reverse_summary_off">Pełna &#8594; pusta: czerwony &#8592; zielony &#8592; niebieski &#8592; czerwony</string>
+  <string name="battery_bar_blend_color_reverse_summary_on">Pełna &#8594; pusta: czerwony &#8594; zielony &#8594; niebieski &#8594; czerwony</string>
   <!-- StatusBar weather settings -->
+  <string name="status_bar_weather_hidden">Ukryj pogodę</string>
   <!-- Smart pulldown-->
+  <string name="smart_pulldown_off">wyłączone</string>
+  <string name="smart_pulldown_none">brak powiadomień</string>
+  <string name="smart_pulldown_off_summary">jest wyłączone</string>
   <!-- Double tap to sleep on status bar -->
+  <string name="status_bar_double_tap_to_sleep_title">Dotknij, by uśpić</string>
+  <string name="status_bar_double_tap_to_sleep_summary">Dotknij dwukrotnie na pasku stanu, aby wyłączyć ekran</string>
   <!-- Statusbar Clock options -->
+  <string name="status_bar_clock_title">Opcje zegara</string>
   <string name="status_bar_show_clock_title">Pokaż zegar i datę</string>
+  <string name="clock_title_enable">Wyrównanie</string>
+  <string name="right_clock">Zegar po prawej</string>
+  <string name="center_clock">Zegar na środku</string>
+  <string name="left_clock">Zegar po lewej</string>
+  <string name="status_bar_clock_seconds_title">Sekundy zegara</string>
+  <string name="status_bar_clock_seconds_summary">Wyświetlaj sekundy obok zegara na pasku stanu</string>
+  <string name="status_bar_am_pm_title">Czas AM/PM godzinny</string>
+  <string name="status_bar_am_pm_info">24 godzinny zegar jest włączony</string>
+  <string name="am_pm_clock_normal">Normalny rozmiar czcionki</string>
+  <string name="am_pm_clock_small">Mały rozmiar czcionki</string>
+  <string name="am_pm_clock_none">Nie pokazuj</string>
+  <string name="clock_date_display_summary">Wyświetl własny format daty przed zegarem</string>
+  <string name="clock_date_style">Styl daty</string>
+  <string name="clock_date_format">Format daty</string>
   <string name="clock_date_string_edittext_title">Musi być w formacie daty np. dd/MM/rr</string>
+  <string name="clock_date_string_edittext_summary">Wprowadź ciąg znaków</string>
+  <string name="clock_date_display_none">Nie pokazuj</string>
+  <string name="clock_date_display_small">Mały rozmiar czcionki</string>
+  <string name="clock_date_display_normal">Normalny rozmiar czcionki</string>
   <string name="clock_date_format_custom">Własny format java</string>
+  <string name="menu_cancel">Anuluj</string>
+  <string name="menu_save">Zapisz</string>
   <!-- Statusbar AICP logo -->
+  <string name="status_bar_logo_category_title">Logo</string>
+  <string name="status_bar_logo_title">Logo na pasku stanu</string>
+  <string name="status_bar_logo_summary">Włącz, aby pokazać logo na pasku stanu</string>
+  <string name="status_bar_logo_color_title">Kolor</string>
+  <string name="status_bar_logo_position_title">Pozycja</string>
+  <string name="status_bar_logo_style_title">Styl</string>
+  <string name="status_bar_logo_style_apple">Apple</string>
   <string name="status_bar_logo_style_ios">iOS</string>
+  <string name="status_bar_logo_style_emoticon">Emotikon</string>
+  <string name="status_bar_logo_style_blackberry">Blackberry</string>
+  <string name="status_bar_logo_style_cake">Ciasto</string>
   <string name="status_bar_logo_style_biohazard">Biohazard</string>
+  <string name="status_bar_logo_style_linux">Linux</string>
+  <string name="status_bar_logo_style_yin_yang">Yin-Yang</string>
+  <string name="status_bar_logo_style_windows">Windows</string>
+  <string name="status_bar_logo_style_robot">Robot</string>
+  <string name="status_bar_logo_style_ninja">Ninja</string>
+  <string name="status_bar_logo_style_heart">Serce</string>
+  <string name="status_bar_logo_style_flower">Kwiat</string>
+  <string name="status_bar_logo_style_ghost">Duch</string>
+  <string name="status_bar_logo_style_google">Google</string>
+  <string name="status_bar_logo_style_human_male">Mężczyzna</string>
+  <string name="status_bar_logo_style_human_female">Kobieta</string>
+  <string name="status_bar_logo_style_gender_male">Mężczyzna</string>
+  <string name="status_bar_logo_style_gender_female">Kobieta</string>
   <string name="status_bar_logo_style_gender_male_female">Mężczyzna i kobieta</string>
+  <string name="status_bar_logo_style_guitar_electric">Gitara elektryczna</string>
   <!-- Statusbar categories -->
+  <string name="status_bar_gestures_category_title">Gesty</string>
+  <string name="status_bar_icons_category_title">Ikony</string>
+  <string name="status_bar_others_category_title">Inne</string>
   <!-- Notifications -->
+  <!-- Heads up -->
   <!-- Notification guts kill app button -->
   <!-- InCall notifications vibrate -->
   <!-- Brightness slider settings -->
+  <string name="brightness_slider_settings_title">Ustawienia suwaka jasności</string>
+  <string name="brightness_slider_switch">Pokaż suwak jasności w panelu szybkich ustawień</string>
   <!-- Battery Styles -->
   <!-- Quick settings -->
+  <string name="quick_settings_title">Szybkie ustawienia</string>
   <!-- Disable music track title in QS tile -->
   <!-- Small quick settings scroller -->
   <!-- QS rows and columns -->
+  <string name="qs_layout_category_title">Układ QS</string>
+  <string name="qs_rows_portrait_title">Ilość kafelków w wierszu w pionie</string>
+  <string name="qs_rows_landscape_title">Ilość kafelków w wierszu w poziomie</string>
+  <string name="qs_columns_portrait_title">Ilość kafelków w kolumnie w pionie</string>
+  <string name="qs_columns_landscape_title">Ilość kafelków w kolumnie w poziomie</string>
   <!-- QS footer warnings -->
+  <!-- QS footer Running Services icon -->
+  <!-- QS footer Settings icon -->
   <!-- QS tiles title visibility -->
+  <string name="qs_tile_title_visibility_title">Pokaż nazwy kafelków</string>
+  <string name="qs_tile_title_visibility_summary">Wyświetl nazwę kafelka po zaznaczeniu</string>
   <!-- QS Headers -->
+  <string name="static_header_provider_title">Obraz statyczny</string>
+  <string name="daylight_header_provider_title">Kolekcja obrazów</string>
+  <string name="header_provider_disabled">Wyłączono</string>
+  <string name="file_header_select_title">Wybierz obraz</string>
+  <string name="file_header_select_summary">Wybierz własny obraz</string>
+  <string name="file_header_provider_title">Własny obraz</string>
   <!-- Tiles animation style  -->
+  <string name="qs_tile_animation_duration_default">Domyślne</string>
   <!-- Recents -->
   <!-- Recents panel settings -->
   <!-- Recents Membar -->
   <!-- Stock recents icon pack -->
   <!-- Slim recents -->
+  <string name="recent_panel_expanded_mode_disabled">Wyłączono</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
+  <string name="profile_choose_app">Wybierz aplikację</string>
+  <string name="dialog_delete_title">Usuń</string>
+  <string name="dialog_delete_message">Usunąć wybrany element?</string>
+  <string name="slim_blacklist_apps_cat_title">Czarna lista</string>
+  <string name="slim_blacklist_apps_title">Czarna lista aplikacji</string>
+  <string name="slim_blacklist_add_apps_title">Dodaj aplikację</string>
   <!-- Slim Recent App Sidebar  -->
+  <string name="recent_app_sidebar_content_title">Zawartość paska bocznego</string>
+  <string name="recent_app_sidebar_style_summary">Zmień wygląd paska bocznego</string>
   <!-- Slim recents membar -->
+  <!-- OmniSwitch -->
   <!-- Lockscreen -->
   <!-- Double tap to sleep on lockscreen -->
+  <string name="double_tap_sleep_lockscreen">Dwukrotnie dotknij, aby uśpić</string>
+  <string name="double_tap_sleep_lockscreen_summary">Podwójne dotknięcie na ekranie blokady usypia urządzenie</string>
   <!-- Media art -->
   <!-- Lockscreen battery info indicator  -->
   <!-- Lockscreen notif count -->
+  <string name="lockscreen_maxnotif_title">Licznik powiadomień</string>
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
   <!-- Fingerprint authentication vibration -->
   <!-- Fingerprint unlock keystore -->
   <!-- Ambient display bottom info -->
+  <string name="ambient_display_bottom_info_off">Wyłączono</string>
   <!-- Show Lockscreen clock, date, & alarm -->
   <!-- Hide statusbar on lockscreen -->
   <!-- Other UI tweaks -->
+  <string name="other_ui_title">Inne dodatki UI</string>
   <!-- Volume dialog timeout -->
   <!-- Screenshot sound -->
   <!-- Swap volume keys based on device rotation -->
+  <string name="swap_volume_buttons">Zamień przyciski głośności</string>
+  <string name="swap_volume_buttons_summary">Zamień przyciski głośności według obrotu urządzenia</string>
   <!-- Volume keys control media stream -->
+  <string name="volume_keys_control_media_stream_title">Przyciski głośności regulują głośność multimediów</string>
+  <string name="volume_keys_control_media_stream_summary">Panel głośności domyślnie wyświetla głośność multimediów</string>
   <!-- Volume keys control music playback -->
+  <string name="volume_rocker_music_controls_title">Sterowanie odtwarzaniem</string>
+  <string name="volume_rocker_music_controls_summary">Przełączaj utwory przyciskami głośności, gdy ekran jest wyłączony</string>
   <!-- setting: show CPU info-->
+  <string name="show_cpu_info">Pokaż informacje o CPU</string>
+  <string name="show_cpu_info_summary">Nakładka ekranowa pokazująca bieżące wykorzystanie CPU</string>
   <!-- Launch music player when headset is connected -->
+  <string name="headset_connect_player_title">Uruchom aplikację Muzyka po podłączeniu zestawu słuchawkowego</string>
+  <string name="headset_connect_player_summary">Uruchom domyślny odtwarzacz muzyki po podłączeniu słuchawek</string>
   <!-- Toast icon switch -->
   <!-- Show VoLTE icon on statusbar -->
   <!-- Vibrate on plug -->
   <!-- Scrolling Cache -->
   <!-- Status bar - Battery saver color -->
   <!-- Turn on display when power connected; turn off display when power disconnected -->
+  <string name="wake_when_plugged_or_unplugged_title">Wybudź przy podłączeniu</string>
+  <string name="wake_when_plugged_or_unplugged_summary">Włącz ekran, gdy zostanie podłączone lub rozłączone źródło zasilania</string>
   <!-- Power Button - Long press for torch -->
   <!-- System animations -->
+  <string name="system_animations_title">Animacje</string>
   <string name="custom_bootanimation_title">Animacja uruchamiania
 </string>
+  <string name="custom_bootanimation_summary">Wybierz niestandardową animacje uruchamiania. Po każdej zmianie zostaje wykonana kopia obecnej animacji do AICP_backup w pamięci urządzenia. Starsze kopie muszą zostać usunięte manualnie.</string>
   <!-- System behaviour -->
+  <string name="system_behaviour_title">Zachowanie systemu</string>
   <string name="selinux_category">SELinux</string>
   <string name="selinux_mode_title">Tryb SELinux</string>
   <string name="selinux_enforcing_toast_title">Tryb Selinux ustawiony na enforcing!</string>
@@ -96,44 +222,108 @@
   <!-- System app remover -->
   <string name="system_app_remover_summary">Usuń pre-instalowane apki</string>
   <!-- Log it -->
+  <string name="log_it_title">Loguj ten shit!</string>
   <string name="log_it_summary">Logcat, kmesg, dmesg</string>
+  <string name="log_it_share_via">Udostępnij przez</string>
   <!-- Panel porn -->
+  <string name="panel_porn_title">Panel porno</string>
   <!-- Volume dialog opacity -->
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
+  <string name="ae_settings_title">Dostosowanie AE</string>
   <string name="ae_settings_summary">Dostosuj wygląd i zachowanie AE</string>
+  <string name="theme_title">Motyw</string>
+  <string name="theme_default">Domyślny motyw ustawień</string>
   <string name="ae_launcher_enabled_title">Pokaż ikonę launchera</string>
+  <string name="ae_launcher_enabled_summary">Pokaż ikonę dodatków AICP w liście aplikacji</string>
   <string name="ae_launcher_enabled_update">Zaktualizowano widoczność ikon w launcherze. Wprowadzenie zmian może chwile potrwać</string>
   <!-- About -->
+  <string name="about_title">O</string>
   <string name="about_summary">Wyświetlanie informacji o tym ROMie</string>
+  <string name="weblinks_category">Linki</string>
+  <string name="info_category">Informacje</string>
   <string name="aicp_website_title">Strona WWW</string>
+  <string name="aicp_website_summary">Odwiedź witrynę AICP</string>
+  <string name="g_plus_title">Społeczność G+</string>
+  <string name="g_plus_summary">Przejdź na stronę społeczności Google +</string>
   <string name="aicp_gerrit_title">Gerrit</string>
   <string name="aicp_gerrit_summary">Odwiedź nasz gerrit, aby wiedzieć nad czym pracujemy</string>
+  <string name="aicp_changelog_title">Dziennik zmian</string>
+  <string name="aicp_changelog_summary">Zobacz najświeższe zmiany w AICP</string>
+  <string name="aicp_downloads_title">Pobrane</string>
+  <string name="aicp_downloads_summary">Odwiedź stronę pobierania AICP dla Twojego urządzenia</string>
+  <string name="aicp_ota_title">Centrum aktualizacji</string>
+  <string name="aicp_ota_summary">Sprawdź aktualizacje</string>
   <string name="lineage_extras_summary">Dodatek ROOT, Dostawcy pogody&#8230;</string>
+  <string name="stats_title">Statystyki</string>
+  <string name="stats_summary">Zezwalam na anonimowe zbieranie danych</string>
+  <string name="device_maintainer_title">Opiekun urządzenia</string>
+  <string name="device_maintainer_dialog">Opiekun urządzenia</string>
+  <string name="device_maintainers_dialog">Opiekunowie urządzenia</string>
   <!-- Other / general purpose -->
+  <string name="default_string">Domyślne</string>
+  <string name="on">Wł</string>
+  <string name="off">Wył</string>
   <string name="systemui_restart_title">Wymagany restart SystemUI</string>
   <string name="systemui_restart_message">Aby wszystkie zmiany zostały wprowadzone wymagany jest restart SystemUI. Zrestartować SystemUI teraz?</string>
   <string name="cannot_get_su">Akcja nie powiodła się z powodu braku ROOTa</string>
+  <string name="launcher_shortcut_disabled_message">Skrót wyłączony</string>
   <string name="hidden_anim_activity_title">Czas na yoge!!</string>
+  <string name="hidden_anim_more_nice">NICE</string>
   <!-- Sensor block per-package -->
   <!-- Weather - OmniJaws Settings -->
   <!-- Lockscreen Weather -->
   <!-- Statusbar ticker -->
+  <string name="ticker_disabled">Wyłączono</string>
   <!-- DUI -->
+  <string name="navbar_general_title">Zaawansowane</string>
+  <string name="navigation_bar_left_title">Tryb dla leworęcznych</string>
+  <string name="icon_pack_picker_dialog_title">Zestawy ikon</string>
+  <string name="picker_activities">Aktywności</string>
+  <string name="select_custom_app_title">Wybierz własną aplikację</string>
+  <string name="select_custom_activity_title">Wybierz niestandardową aktywność</string>
+  <string name="profile_applist_title">Aplikacje</string>
+  <string name="default_string">Domyślne</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
+  <string name="choose_action_title">Wybierz akcję</string>
+  <string name="action_entry_default_action">Ustawienia domyślne</string>
+  <string name="action_entry_select_app">Wybierz aplikację</string>
+  <string name="action_entry_custom_action">Wybierz własną akcję</string>
   <!-- Fling -->
   <!-- Pulse navigation bar music visualizer -->
   <!-- Pulse config -->
   <!-- Navbar height -->
   <!-- SmartBar -->
+  <string name="smartbar_double_tap_sleep_title">Dwukrotnie dotknij, aby uśpić</string>
   <!-- Carrier Label -->
+  <string name="custom_carrier_label_title">Własna etykieta sieci</string>
+  <string name="custom_carrier_label_explain">Wprowadź nową etykietę. Pozostaw puste, aby powrócić do domyślnej.</string>
+  <string name="custom_carrier_label_notset">Własna etykieta nie jest obecnie ustawiona</string>
+  <string name="show_carrier_title">Etykieta sieci</string>
+  <string name="show_carrier_disabled">Wyłączono</string>
+  <string name="show_carrier_keyguard">Tylko na ekranie blokady</string>
+  <string name="show_carrier_statusbar">Tylko na pasku stanu</string>
+  <string name="show_carrier_enabled">Ekran blokady &amp; pasek stanu</string>
   <!-- Three-fingers-swipe to screenshot -->
   <!-- AOKP custom system animations -->
+  <string name="animation_title">Animacje</string>
+  <string name="system_animation_title">Animacje systemowe</string>
+  <string name="activity_open_title">Animacja otwierania aktywności</string>
+  <string name="activity_close_title">Animacja zamykania aktywności</string>
+  <string name="task_open_title">Animacja otwarcia zadania</string>
+  <string name="task_close_title">Animacja zamknięcia zadania</string>
+  <string name="animation_duration_default">Domyślne</string>
   <!-- Lock screen visualizer -->
   <!-- Screen state service -->
   <!-- Ambient Music Ticker -->
+  <string name="force_ambient_for_media_off">Wyłączono</string>
+  <string name="force_ambient_for_media_on">Włączono</string>
   <!-- Screen Off animation -->
+  <string name="screen_off_animation_default">Domyślne</string>
   <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_display_title">Użyj dźwięku i wibracji dla powiadomień</string>
+  <string name="notification_sound_vib_screen_on_always">Zawsze (domyślnie)</string>
+  <string name="notification_sound_vib_screen_on_nomedia">Jeśli nic nie jest odtwarzane</string>
   <!-- Accidental Touch -->
   <!-- Dynamic Navbar -->
   <!-- Face unlock toggle -->
@@ -141,10 +331,17 @@
   <!-- HW keys -->
   <!-- Volume keys -->
   <!-- Hardware button navigation -->
-  <!-- Home Hardware button options -->
+  <!-- Volume rocker wake -->
   <!-- Button brightness -->
+  <string name="power_menu_title">Menu zasilania</string>
   <!-- Quick QS pull down -->
+  <string name="status_bar_quick_qs_pulldown_off">Wył</string>
   <!-- Status bar system icons -->
   <!-- Toast Animation -->
+  <string name="toast_default_animation">Domyślne</string>
+  <string name="toast_SlideLeftRight_animation">Przesuń z lewej do prawej</string>
+  <string name="toast_SlideRightLeft_animation">Przesuń z prawej do lewej</string>
   <!-- System default animation -->
+  <!-- Smart Pixels -->
+  <!-- Fingerprint sensor only at screen on -->
 </resources>
