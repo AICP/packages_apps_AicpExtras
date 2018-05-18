@@ -19,10 +19,26 @@
 -->
 <resources>
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+  <string name="anonymous_statistics_title">Statystyki</string>
+  <string name="anonymous_statistics_summary">Pomóż udoskonalić AICP decydując się na raportowanie anonimowych statystyk</string>
+  <string name="anonymous_statistics_warning_title">O</string>
   <string name="anonymous_statistics_warning">Udział w statystykach zezwoli na przesyłanie anonimowych danych twórcom Aicp w celu badania liczby aktywnych urządzeń. Raport zawiera unikatowy ID, który nie zagraża Twojej prywatności ani danym osobowym. Dane są przesyłane co 7 dni.\n\nAby zobaczyć przykładowe wysyłane informacje, podejrzyj swoje dane.</string>
+  <string name="enable_reporting_title">Włącz raportowanie</string>
+  <string name="disable_reporting_persistent">Zrezygnuj</string>
+  <string name="preview_data_title">Podejrzyj swoje dane</string>
   <string name="view_stats_title">Pokaż stronę statystyk
 </string>
+  <string name="anonymous_learn_more">Dowiedz się więcej</string>
+  <string name="last_report_on">Ostatnio zgłoszone</string>
+  <string name="reporting_interval">Częstotliwość raportowania</string>
+  <string name="next_report_on">Następny raport</string>
   <!-- Anonymous Statistics - Preview -->
+  <string name="preview_id_title">Unikalny ID</string>
+  <string name="preview_device_title">Urządzenie</string>
+  <string name="preview_version_title">Wersja</string>
+  <string name="preview_country_title">Kraj</string>
   <string name="preview_carrier_title">Operator GSM</string>
   <string name="preview_romname_title">Nazwa ROMu</string>
+  <string name="preview_romversion_title">Wersja AICP</string>
+  <string name="preview_buildtype_title">Rodzaj kompilacji</string>
 </resources>
