@@ -43,11 +43,27 @@
               android:summary="@string/show_lockscreen_clock_summary"
               android:defaultValue="true" />
 
+              <com.aicp.gear.preference.SystemSettingIntListPreference
+                  android:key="lockscreen_clock_selection"
+                  android:title="@string/lockscreen_clock_selection_title"
+                  android:entries="@array/lockscreen_clock_selection_entries"
+                  android:entryValues="@array/lockscreen_clock_selection_values"
+                  android:defaultValue="0"
+                  android:dependency="show_lockscreen_clock" />
+
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="show_lockscreen_date"
               android:title="@string/show_lockscreen_date_title"
               android:summary="@string/show_lockscreen_date_summary"
               android:defaultValue="true" />
+
+              <com.aicp.gear.preference.SystemSettingIntListPreference
+                  android:key="lockscreen_date_selection"
+                  android:title="@string/lockscreen_date_selection_title"
+                  android:entries="@array/lockscreen_date_selection_entries"
+                  android:entryValues="@array/lockscreen_date_selection_values"
+                  android:defaultValue="0"
+                  android:dependency="show_lockscreen_date" />
 
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="show_lockscreen_alarm"
