@@ -27,14 +27,11 @@
         android:summary="@string/notification_heads_up_summary"
         android:defaultValue="true" />
 
-    <com.aicp.gear.preference.SystemSettingIntListPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="notification_sound_vib_screen_on"
-        android:entries="@array/notification_sound_vib_screen_on_entries"
-        android:entryValues="@array/notification_sound_vib_screen_on_values"
         android:title="@string/notification_sound_vib_screen_on_title"
-        android:dialogTitle="@string/notification_sound_vib_screen_on_display_title"
-        android:summary="%s"
-        android:defaultValue="1" />
+        android:summary="@string/notification_sound_vib_screen_on_summary"
+        android:defaultValue="true" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="notification_guts_kill_app_button"
