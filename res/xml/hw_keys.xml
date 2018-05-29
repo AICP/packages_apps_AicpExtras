@@ -22,37 +22,6 @@
     xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     android:title="@string/hw_keys_title">
 
-    <Preference
-        android:title="@string/power_menu_title"
-        android:summary="@string/power_menu_summary">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="org.lineageos.lineageparts"
-            android:targetClass="org.lineageos.lineageparts.PartsActivity">
-            <extra
-                android:name=":settings:show_fragment"
-                android:value="org.lineageos.lineageparts.input.PowerMenuActions" />
-            <extra
-                android:name=":settings:show_fragment_title"
-                android:value="@string/power_menu_title" />
-        </intent>
-    </Preference>
-
-    <lineageos.preference.LineageSystemSettingSwitchPreference
-        android:key="torch_long_press_power_gesture"
-        android:title="@string/torch_long_press_power_gesture_title"
-        android:summary="@string/torch_long_press_power_gesture_summary"
-        android:defaultValue="false"/>
-
-    <lineageos.preference.LineageSystemSettingListPreference
-        android:key="torch_long_press_power_timeout"
-        android:dialogTitle="@string/torch_long_press_power_timeout_title"
-        android:title="@string/torch_long_press_power_timeout_title"
-        android:entries="@array/torch_long_press_power_timeout_entries"
-        android:entryValues="@array/torch_long_press_power_timeout_values"
-        android:dependency="torch_long_press_power_gesture"
-        android:persistent="false" />
-
     <SwitchPreference android:key="hardware_keys_disable"
         android:title="@string/hardware_keys_disable_title" />
 
@@ -62,6 +31,44 @@
         android:title="@string/anbi_enabled_title"
         android:summary="@string/anbi_enabled_summary"
         android:defaultValue="false" />
+
+    <PreferenceCategory
+        android:key="power_key"
+        android:title="@string/hardware_keys_power_key_title" >
+
+        <Preference
+            android:title="@string/power_menu_title"
+            android:summary="@string/power_menu_summary">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="org.lineageos.lineageparts"
+                android:targetClass="org.lineageos.lineageparts.PartsActivity">
+                <extra
+                    android:name=":settings:show_fragment"
+                    android:value="org.lineageos.lineageparts.input.PowerMenuActions" />
+                <extra
+                    android:name=":settings:show_fragment_title"
+                    android:value="@string/power_menu_title" />
+            </intent>
+        </Preference>
+
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="torch_long_press_power_gesture"
+            android:title="@string/torch_long_press_power_gesture_title"
+            android:summary="@string/torch_long_press_power_gesture_summary"
+            android:defaultValue="false"
+            lineage:requiresConfig="@*android:bool/config_supportLongPressPowerWhenNonInteractive" />
+
+        <ListPreference
+            android:key="torch_long_press_power_timeout"
+            android:dialogTitle="@string/torch_long_press_power_timeout_title"
+            android:title="@string/torch_long_press_power_timeout_title"
+            android:entries="@array/torch_long_press_power_timeout_entries"
+            android:entryValues="@array/torch_long_press_power_timeout_values"
+            android:dependency="torch_long_press_power_gesture"
+            android:persistent="false" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="button_backlight_options_category"
