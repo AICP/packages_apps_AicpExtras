@@ -24,21 +24,25 @@ import android.os.UserHandle;
 import android.os.PowerManager;
 import android.os.ServiceManager;
 import android.provider.Settings;
+import android.view.KeyCharacterMap;
+import android.view.KeyEvent;
+import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceScreen;
 import android.support.v14.preference.SwitchPreference;
 
 import com.aicp.extras.R;
-
+import com.aicp.gear.preference.SeekBarPreferenceCham;
+import com.android.internal.util.aicp.DeviceUtils;
 import com.android.internal.utils.du.ActionConstants;
 import com.android.internal.utils.du.DUActionUtils;
 
-import com.aicp.gear.preference.SeekBarPreferenceCham;
+import static org.lineageos.internal.util.DeviceKeysConstants.*;
+
+import lineageos.providers.LineageSettings;
 
 public class HwKeys extends ActionFragment implements Preference.OnPreferenceChangeListener {
-
-    private static final String HWKEY_DISABLE = "hardware_keys_disable";
-
     // category keys
     private static final String CATEGORY_BACK = "back_key";
     private static final String CATEGORY_HOME = "home_key";
@@ -47,10 +51,15 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
     private static final String CATEGORY_APPSWITCH = "app_switch_key";
     private static final String CATEGORY_VOLUME = "volume_keys";
     private static final String CATEGORY_POWER = "power_key";
+    private static final String HWKEY_DISABLE = "hardware_keys_disable";
     private static final String KEY_BUTTON_MANUAL_BRIGHTNESS_NEW = "button_manual_brightness_new";
     private static final String KEY_BUTTON_TIMEOUT = "button_timeout";
     private static final String KEY_BUTON_BACKLIGHT_OPTIONS = "button_backlight_options_category";
     private static final String KEY_ACCIDENTAL_TOUCH = "anbi_enabled";
+    private static final String KEY_TORCH_LONG_PRESS_POWER_GESTURE =
+            "torch_long_press_power_gesture";
+    private static final String KEY_TORCH_LONG_PRESS_POWER_TIMEOUT =
+            "torch_long_press_power_timeout";
 
     // Masks for checking presence of hardware keys.
     // Must match values in frameworks/base/core/res/res/values/config.xml
@@ -63,11 +72,12 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
     public static final int KEY_MASK_VOLUME = 0x40;
 
     private SwitchPreference mHwKeyDisable;
-
     private SeekBarPreferenceCham mButtonTimoutBar;
     private SeekBarPreferenceCham mManualButtonBrightness;
     private PreferenceCategory mButtonBackLightCategory;
     private SwitchPreference mAccidentalTouch;
+    private SwitchPreference mTorchLongPressPowerGesture;
+    private ListPreference mTorchLongPressPowerTimeout;
 
     @Override
     protected int getPreferenceResource() {
@@ -79,6 +89,29 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         super.onCreate(savedInstanceState);
 
         ContentResolver resolver = getContentResolver();
+        PreferenceScreen prefScreen = getPreferenceScreen();
+
+        final boolean hasPowerKey = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_POWER);
+
+        final PreferenceCategory powerCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_POWER);
+
+        // Long press power while display is off to activate torchlight
+        mTorchLongPressPowerGesture =
+                (SwitchPreference) findPreference(KEY_TORCH_LONG_PRESS_POWER_GESTURE);
+        final int torchLongPressPowerTimeout = LineageSettings.System.getInt(resolver,
+                LineageSettings.System.TORCH_LONG_PRESS_POWER_TIMEOUT, 0);
+        mTorchLongPressPowerTimeout = initList(KEY_TORCH_LONG_PRESS_POWER_TIMEOUT,
+                torchLongPressPowerTimeout);
+
+        if (hasPowerKey) {
+            if (!DeviceUtils.deviceSupportsFlashLight(getActivity())) {
+                powerCategory.removePreference(mTorchLongPressPowerGesture);
+                powerCategory.removePreference(mTorchLongPressPowerTimeout);
+            }
+        } else {
+            prefScreen.removePreference(powerCategory);
+        }
 
         mManualButtonBrightness = (SeekBarPreferenceCham) findPreference(
                 KEY_BUTTON_MANUAL_BRIGHTNESS_NEW);
@@ -213,6 +246,26 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         setActionPreferencesEnabled(keysDisabled == 0);
     }
 
+    private ListPreference initList(String key, Action value) {
+        return initList(key, value.ordinal());
+    }
+
+    private ListPreference initList(String key, int value) {
+        ListPreference list = (ListPreference) getPreferenceScreen().findPreference(key);
+        if (list == null) return null;
+        list.setValue(Integer.toString(value));
+        list.setSummary(list.getEntry());
+        list.setOnPreferenceChangeListener(this);
+        return list;
+    }
+
+    private void handleListChange(ListPreference pref, Object newValue, String setting) {
+        String value = (String) newValue;
+        int index = pref.findIndexOfValue(value);
+        pref.setSummary(pref.getEntries()[index]);
+        LineageSettings.System.putInt(getContentResolver(), setting, Integer.valueOf(value));
+    }
+
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mHwKeyDisable) {
@@ -231,9 +284,12 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
             Settings.System.putInt(getContentResolver(),
                     Settings.System.CUSTOM_BUTTON_BRIGHTNESS, buttonBrightness);
             return true;
-        } else {
-            return false;
+        } else if (preference == mTorchLongPressPowerTimeout) {
+            handleListChange(mTorchLongPressPowerTimeout, newValue,
+                    LineageSettings.System.TORCH_LONG_PRESS_POWER_TIMEOUT);
+            return true;
         }
+        return false;
     }
 
     @Override
