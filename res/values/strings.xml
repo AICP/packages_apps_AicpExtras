@@ -197,6 +197,14 @@
     <!-- Status bar - Battery saver color -->
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <!-- Power Button - Long press for torch -->
+    <string name="torch_long_press_power_gesture_title">Long press power button for torch</string>
+    <string name="torch_long_press_power_gesture_summary">Toggles torch when power button is long pressed while display is off</string>
+    <string name="torch_long_press_power_timeout_title">Automatically turn torch off</string>
+    <string name="torch_long_press_power_timeout_never">Never</string>
+    <string name="torch_long_press_power_timeout_1min">1 minute</string>
+    <string name="torch_long_press_power_timeout_2min">2 minutes</string>
+    <string name="torch_long_press_power_timeout_5min">5 minutes</string>
+    <string name="torch_long_press_power_timeout_10min">10 minutes</string>
     <!-- System animations -->
 
     <string name="system_animations_title">Animations</string>
@@ -442,6 +450,9 @@
     <!-- HW keys -->
     <string name="hw_keys_title">Hardware buttons</string>
     <string name="hw_keys_summary">Configure the behaviour of the device\'s hardware buttons</string>
+
+    <!-- Power keys -->
+    <string name="hardware_keys_power_key_title">Power buttons</string>
 
     <!-- Volume keys -->
     <string name="volume_keys_category">Volume buttons</string>
