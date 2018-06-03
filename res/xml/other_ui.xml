@@ -104,4 +104,33 @@
         android:summary="@string/pref_scrollingcache_summary"
         android:entries="@array/entries_scrollingcache"
         android:entryValues="@array/values_scrollingcache" />
+
+      <PreferenceCategory
+          android:key="aspect_ratio_category"
+          android:title="@string/aspect_ratio_category_title">
+
+          <com.aicp.gear.preference.SystemSettingSwitchPreference
+              android:key="aspect_ratio_apps_enabled"
+              android:title="@string/aspect_ratio_apps_enabled_title"
+              android:summary="@string/aspect_ratio_apps_enabled_summary"
+              android:defaultValue="false" />
+
+          <com.aicp.gear.preference.AppMultiSelectListPreference
+              android:dependency="aspect_ratio_apps_enabled"
+              android:key="aspect_ratio_apps_list"
+              android:persistent="false"
+              android:summary="@string/aspect_ratio_apps_list_summary"
+              android:title="@string/aspect_ratio_apps_list_title" />
+
+          <com.aicp.gear.preference.ScrollAppsViewPreference
+              android:dependency="aspect_ratio_apps_enabled"
+              android:key="aspect_ratio_apps_list_scroller"
+              android:persistent="false"
+              android:selectable="false" />
+
+          <Preference
+              android:dependency="aspect_ratio_apps_enabled"
+              android:persistent="false"
+              android:summary="@string/aspect_ratio_apps_info" />
+      </PreferenceCategory>
 </PreferenceScreen>
