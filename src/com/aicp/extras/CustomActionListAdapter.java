@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,7 +40,7 @@ import com.aicp.extras.R;
 public class CustomActionListAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     private Context mContext;
-    private List<ActionConfig> mCustomActions = new ArrayList<ActionConfig>();
+    private List<ActionConfigs> mCustomActions = new ArrayList<ActionConfigs>();
 
     public CustomActionListAdapter(Context context) {
         mContext = context;
@@ -49,14 +50,18 @@ public class CustomActionListAdapter extends BaseAdapter {
 
     private void reloadActions() {
         mCustomActions.clear();
-        mCustomActions.addAll(ActionHandler.getSystemActions(mContext));
+        List<ActionConfig> allActions = ActionHandler.getSystemActions(mContext);
+        for (ActionConfig action : allActions) {
+            final ActionConfigs item = new ActionConfigs(action, mContext);
+            mCustomActions.add(item);
+        }
         notifyDataSetChanged();
     }
 
     public void removeAction(String action) {
         int index = -1;
         for (int i = 0; i < mCustomActions.size(); i++) {
-            if (TextUtils.equals(mCustomActions.get(i).getAction(), action)) {
+            if (TextUtils.equals(mCustomActions.get(i).action.getAction(), action)) {
                 index = i;
                 break;
             }
@@ -73,7 +78,7 @@ public class CustomActionListAdapter extends BaseAdapter {
     }
 
     @Override
-    public ActionConfig getItem(int position) {
+    public ActionConfigs getItem(int position) {
         return mCustomActions.get(position);
     }
 
@@ -91,7 +96,6 @@ public class CustomActionListAdapter extends BaseAdapter {
         } else {
             convertView = mInflater.inflate(R.layout.custom_action_item, null, false);
             holder = new ViewHolder();
-            convertView.setTag(holder);
             holder.title = (TextView) convertView.findViewById(com.android.internal.R.id.title);
             holder.summary = (TextView) convertView
                     .findViewById(com.android.internal.R.id.summary);
@@ -102,12 +106,13 @@ public class CustomActionListAdapter extends BaseAdapter {
             holder.icon.setLayoutParams(params);
             holder.icon.setScaleType(ScaleType.CENTER);
             holder.icon.setCropToPadding(true);
+            holder.icon.setBackgroundResource(R.drawable.fab_accent);
+            convertView.setTag(holder);
         }
 
-        ActionConfig config = getItem(position);
-        holder.title.setText(config.getLabel());
-        holder.icon.setBackgroundResource(R.drawable.fab_accent);
-        holder.icon.setImageDrawable(config.getDefaultIcon(ctx));
+        ActionConfigs config = getItem(position);
+        holder.title.setText(config.label);
+        holder.icon.setImageDrawable(config.icon);
         holder.summary.setVisibility(View.GONE);
 
         return convertView;
@@ -118,5 +123,17 @@ public class CustomActionListAdapter extends BaseAdapter {
         TextView title;
         TextView summary;
         ImageView icon;
+    }
+
+    public static class ActionConfigs {
+        public final ActionConfig action;
+        public final String label;
+        public final Drawable icon;
+
+        ActionConfigs(ActionConfig action, Context ctx) {
+            this.action = action;
+            this.label = action.getLabel();
+            this.icon = action.getDefaultIcon(ctx);
+        }
     }
 }
