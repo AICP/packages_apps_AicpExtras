@@ -71,7 +71,7 @@ public class ActionPickerDialogActivity extends Activity implements
                                         : R.array.action_dialog_no_default_values)[item]);
                         break;
                     case DIALOG_SYSTEM:
-                        sendResultAndFinish(mCustomActionListAdapter.getItem(item).getAction());
+                        sendResultAndFinish(mCustomActionListAdapter.getItem(item).action.getAction());
                         finish();
                         break;
                     default:
