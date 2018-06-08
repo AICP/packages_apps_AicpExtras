@@ -31,38 +31,6 @@
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="ms" />
 
-    <!-- Screenshot tone -->
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="screenshot_sound"
-        android:title="@string/screenshot_sound_title"
-        android:summary="@string/screenshot_sound_summary"
-        android:defaultValue="true" />
-
-    <!-- Three-Finger Swipe to Screenshot -->
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="three_finger_gesture"
-        android:title="@string/three_finger_gesture"
-        android:summary="@string/three_finger_gesture_summary"
-        android:defaultValue="false" />
-
-    <!-- Screenshot editor app -->
-    <Preference
-        android:key="screenshot_edit_app"
-        android:title="@string/screenshot_edit_app"
-        android:summary="@string/screenshot_edit_app_summary" />
-
-    <!-- Launch music player when headset is connected -->
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="headset_connect_player"
-        android:title="@string/headset_connect_player_title"
-        android:summary="@string/headset_connect_player_summary"
-        android:defaultValue="false" />
-
-    <PreferenceScreen
-        android:key="smart_pixels"
-        android:title="@string/smart_pixels_title"
-        android:fragment="com.aicp.extras.fragments.SmartPixels" />
-
     <!-- Show CPU Info overlay -->
     <SwitchPreference
         android:key="show_cpu_info"
@@ -77,31 +45,9 @@
         android:summary="@string/toast_icon_summary"
         android:defaultValue="true" />
 
-    <!-- Wake on plug -->
-    <com.aicp.gear.preference.GlobalSettingSwitchPreference
-        android:key="wake_when_plugged_or_unplugged"
-        android:title="@string/wake_when_plugged_or_unplugged_title"
-        android:summary="@string/wake_when_plugged_or_unplugged_summary"
-        android:defaultValue="false"/>
-
-    <!-- Vibrate on plug -->
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="vibration_on_charge_state_changed"
-        android:title="@string/vibration_on_charge_state_changed_title"
-        android:defaultValue="false" />
-
     <com.aicp.gear.preference.SecureSettingColorPickerPreference
         android:key="status_bar_battery_saver_color"
         android:title="@string/status_bar_battery_saver_color_title"
         android:summary="@string/status_bar_battery_saver_color_summary"
         android:defaultValue="0xfff4511e" /> <!-- deep orange 600 -->
-
-     <!-- Scrolling cache -->
-     <ListPreference
-        android:key="pref_scrollingcache"
-        android:dialogTitle="@string/pref_scrollingcache_title"
-        android:title="@string/pref_scrollingcache_title"
-        android:summary="@string/pref_scrollingcache_summary"
-        android:entries="@array/entries_scrollingcache"
-        android:entryValues="@array/values_scrollingcache" />
 </PreferenceScreen>
