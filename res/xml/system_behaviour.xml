@@ -29,6 +29,10 @@
         android:summary="@string/chooser_activity_blacklist_summary"
         android:persistent="false" />
 
+    <org.lineageos.internal.lineageparts.LineagePartsPreference
+      android:key="long_screen_settings"
+      lineage:requiresConfig="@*lineageos.platform:bool/config_haveHigherAspectRatioScreen" />
+
     <!-- Scrolling cache -->
     <ListPreference
        android:key="pref_scrollingcache"
