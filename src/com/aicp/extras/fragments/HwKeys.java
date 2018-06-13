@@ -248,6 +248,8 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         if (hasCameraKey) {
             if (!showCameraWake) {
                 cameraCategory.removePreference(findPreference(
+                        LineageSettings.System.CAMERA_SLEEP_ON_RELEASE));
+                cameraCategory.removePreference(findPreference(
                         LineageSettings.System.CAMERA_WAKE_SCREEN));
             }
         } else {
