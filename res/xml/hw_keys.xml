@@ -258,6 +258,32 @@
 
     </PreferenceCategory>
 
+
+    <PreferenceCategory
+        android:key="camera_key"
+        android:title="@string/hardware_keys_camera_key_title">
+
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="camera_wake_screen"
+            android:title="@string/hardware_keys_wake_title"
+            android:defaultValue="false" />
+
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="camera_sleep_on_release"
+            android:title="@string/camera_sleep_on_release_title"
+            android:summary="@string/camera_sleep_on_release_summary"
+            android:defaultValue="false"
+            android:dependency="camera_wake_screen" />
+
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="camera_launch"
+            android:title="@string/camera_launch_title"
+            android:summary="@string/camera_launch_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+
     <PreferenceCategory
         android:title="@string/volume_keys_category">
 
