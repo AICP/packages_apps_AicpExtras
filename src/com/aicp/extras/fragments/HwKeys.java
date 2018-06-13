@@ -49,6 +49,7 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
     private static final String CATEGORY_MENU = "menu_key";
     private static final String CATEGORY_ASSIST = "assist_key";
     private static final String CATEGORY_APPSWITCH = "app_switch_key";
+    private static final String CATEGORY_CAMERA = "camera_key";
     private static final String CATEGORY_VOLUME = "volume_keys";
     private static final String CATEGORY_POWER = "power_key";
     private static final String HWKEY_DISABLE = "hardware_keys_disable";
@@ -173,12 +174,14 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         final boolean hasMenuKey = (deviceKeys & KEY_MASK_MENU) != 0;
         final boolean hasAssistKey = (deviceKeys & KEY_MASK_ASSIST) != 0;
         final boolean hasAppSwitchKey = (deviceKeys & KEY_MASK_APP_SWITCH) != 0;
+        final boolean hasCameraKey = (deviceKeys & KEY_MASK_CAMERA) != 0;
 
         final boolean showHomeWake = (deviceWakeKeys & KEY_MASK_HOME) != 0;
         final boolean showBackWake = (deviceWakeKeys & KEY_MASK_BACK) != 0;
         final boolean showMenuWake = (deviceWakeKeys & KEY_MASK_MENU) != 0;
         final boolean showAssistWake = (deviceWakeKeys & KEY_MASK_ASSIST) != 0;
         final boolean showAppSwitchWake = (deviceWakeKeys & KEY_MASK_APP_SWITCH) != 0;
+        final boolean showCameraWake = (deviceWakeKeys & KEY_MASK_CAMERA) != 0;
 
         // load categories and init/remove preferences based on device
         // configuration
@@ -192,6 +195,8 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
                 findPreference(CATEGORY_ASSIST);
         final PreferenceCategory appSwitchCategory = (PreferenceCategory)
                 findPreference(CATEGORY_APPSWITCH);
+        final PreferenceCategory cameraCategory = (PreferenceCategory)
+                findPreference(CATEGORY_CAMERA);
 
         // back key
         if (hasBackKey) {
@@ -237,6 +242,16 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
             }
         } else {
             assistCategory.getParent().removePreference(assistCategory);
+        }
+
+        // camera button
+        if (hasCameraKey) {
+            if (!showCameraWake) {
+                cameraCategory.removePreference(findPreference(
+                        LineageSettings.System.CAMERA_WAKE_SCREEN));
+            }
+        } else {
+            cameraCategory.getParent().removePreference(assistCategory);
         }
 
         // let super know we can load ActionPreferences
