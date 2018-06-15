@@ -155,6 +155,7 @@
   <string name="status_bar_gestures_category_title">Mozdulatvezérlés</string>
   <string name="status_bar_icons_category_title">Ikonok</string>
   <string name="status_bar_others_category_title">Egyebek</string>
+  <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
   <string name="notifications_title">Értesítések</string>
   <string name="notifications_summary">Kiterjesztett értesítések vezérlése</string>
@@ -184,6 +185,7 @@
   <string name="battery_style_dotted_circle">Pontozott kör</string>
   <string name="battery_style_text">Szöveg</string>
   <string name="battery_style_hidden">Rejtett</string>
+  <!-- Notification count -->
   <!-- Quick settings -->
   <string name="quick_settings_title">Gyorsbeállítások</string>
   <string name="quick_settings_summary">Gyorsbeállítások kinézetének szerkesztése</string>
@@ -199,6 +201,7 @@
   <string name="qs_rows_landscape_title">Csempesorok száma fekvő módban</string>
   <string name="qs_columns_portrait_title">Csempeoszlopok száma álló helyzetben</string>
   <string name="qs_columns_landscape_title">Csempeoszlopok száma fekvő helyzetben</string>
+  <!-- QS tiles mini mode -->
   <!-- QS footer warnings -->
   <string name="qs_footer_warnings_title">Gyorsbeállítás-figyelmeztetések a láblécen</string>
   <string name="qs_footer_warnings_summary">Figyelmeztetés megjelenítése a Gyorsbeállítások panel alján, ha a hálózatot külső alkalmazás vagy a VPN figyeli</string>
@@ -211,6 +214,7 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Csempék neveinek megjelenítése</string>
   <string name="qs_tile_title_visibility_summary">Kattintás után a címek kijelzése</string>
+  <!-- QS carrier text visibility -->
   <!-- QS Headers -->
   <string name="status_bar_custom_header_title">Engedélyezés</string>
   <string name="daylight_header_pack_title">Fejléckép gyűjtemény</string>
@@ -820,11 +824,6 @@
   <string name="screen_off_animation_crt">CRT</string>
   <string name="screen_off_animation_scale">Skála</string>
   <!-- Suppress notification sound/vibration -->
-  <string name="notification_sound_vib_screen_on_title">Bekapcsolt képernyő melletti értesítések</string>
-  <string name="notification_sound_vib_screen_on_display_title">Hang és rezgés használata az értesítésekhez</string>
-  <string name="notification_sound_vib_screen_on_never">Soha</string>
-  <string name="notification_sound_vib_screen_on_always">Mindig (alapértelmezett)</string>
-  <string name="notification_sound_vib_screen_on_nomedia">Ha épp nem játszik le médiafájlt</string>
   <!-- Accidental Touch -->
   <string name="anbi_enabled_title">Véletlen érintés megakadályozása</string>
   <string name="anbi_enabled_summary">Engedélyezésekor megakadályozza a véletlen érintést a navigációs gombokon az érintőképernyő használata közben.</string>
@@ -857,6 +856,7 @@
   <string name="hardware_keys_double_tap_title">Dupla koppintás eseménye</string>
   <string name="hardware_keys_disable_title">Navigációs gombok letiltása</string>
   <string name="hardware_keys_wake_title">Készülék felébresztése</string>
+  <!-- Camera button -->
   <!-- Volume rocker wake -->
   <string name="volume_rocker_wake_title">Ébresztés hangerőgombbal</string>
   <string name="volume_rocker_wake_summary">Hangerőgomb megnyomására ébredjen fel a készülék</string>
@@ -918,4 +918,12 @@
   <!-- Fingerprint sensor only at screen on -->
   <string name="fp_only_screen_on_title">Ujjlenyomat csak képernyő be állapotban</string>
   <string name="fp_only_screen_on_summary">Az ujjlenyomat-érzékelő csak akkor működik, ha a képernyőn be van kapcsolva</string>
+  <!-- Heads up snooze -->
+  <!-- Heads up timeout -->
+  <!-- Activity Blacklist -->
+  <string name="profile_choose_app">Alkalmazás kiválasztása</string>
+  <string name="dialog_delete_title">Törlés</string>
+  <string name="dialog_delete_message">Eltávolítja a kijelölt elemet?</string>
+  <!-- System Behavior category strings -->
+  <!-- AOSP Recents Style -->
 </resources>

@@ -123,6 +123,7 @@
   <string name="status_bar_gestures_category_title">제스쳐</string>
   <string name="status_bar_icons_category_title">아이콘</string>
   <string name="status_bar_others_category_title">기타</string>
+  <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
   <string name="notifications_summary">확장된 알림 설정</string>
   <!-- Heads up -->
@@ -141,16 +142,19 @@
   <string name="battery_style_summary">상태 표시 줄의 아이콘 모양 변경</string>
   <string name="battery_style_dotted_circle">점선 원</string>
   <string name="battery_style_hidden">아이콘 숨김</string>
+  <!-- Notification count -->
   <!-- Quick settings -->
   <string name="quick_settings_title">빠른 설정</string>
   <string name="quick_settings_summary">빠른 설정 모양 수정</string>
   <!-- Disable music track title in QS tile -->
   <!-- Small quick settings scroller -->
   <!-- QS rows and columns -->
+  <!-- QS tiles mini mode -->
   <!-- QS footer warnings -->
   <!-- QS footer Running Services icon -->
   <!-- QS footer Settings icon -->
   <!-- QS tiles title visibility -->
+  <!-- QS carrier text visibility -->
   <!-- QS Headers -->
   <string name="daylight_header_pack_title">헤더 이미지 모음</string>
   <string name="static_header_provider_title">고정 이미지</string>
@@ -359,10 +363,6 @@
   <string name="screen_off_animation_crt">CRT</string>
   <string name="screen_off_animation_scale">배율</string>
   <!-- Suppress notification sound/vibration -->
-  <string name="notification_sound_vib_screen_on_title">알림 메시지 표시</string>
-  <string name="notification_sound_vib_screen_on_display_title">알림을 위해 소리와 진동 사용</string>
-  <string name="notification_sound_vib_screen_on_always">항상켜기 (기본값)</string>
-  <string name="notification_sound_vib_screen_on_nomedia">재생중인 미디어가없는 경우</string>
   <!-- Accidental Touch -->
   <string name="anbi_enabled_summary">이 기능을 사용하면 터치 스크린 사용 중에 실수로 하드웨어 버튼을 터치하는 것을 방지합니다.</string>
   <!-- Dynamic Navbar -->
@@ -376,6 +376,7 @@
   <!-- HW keys -->
   <!-- Volume keys -->
   <!-- Hardware button navigation -->
+  <!-- Camera button -->
   <!-- Volume rocker wake -->
   <!-- Button brightness -->
   <string name="button_manual_brightness">밝기 수준</string>
@@ -418,4 +419,9 @@
   <!-- System default animation -->
   <!-- Smart Pixels -->
   <!-- Fingerprint sensor only at screen on -->
+  <!-- Heads up snooze -->
+  <!-- Heads up timeout -->
+  <!-- Activity Blacklist -->
+  <!-- System Behavior category strings -->
+  <!-- AOSP Recents Style -->
 </resources>

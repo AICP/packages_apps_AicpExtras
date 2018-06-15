@@ -18,6 +18,7 @@
  */
 -->
 <resources>
+  <string name="app_name">Dodatki AICP</string>
   <!-- Dashboard -->
   <string name="user_interface_category">UI</string>
   <string name="system_category">System</string>
@@ -113,6 +114,7 @@
   <string name="status_bar_gestures_category_title">Gesty</string>
   <string name="status_bar_icons_category_title">Ikony</string>
   <string name="status_bar_others_category_title">Inne</string>
+  <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
   <!-- Heads up -->
   <!-- Notification guts kill app button -->
@@ -121,6 +123,7 @@
   <string name="brightness_slider_settings_title">Ustawienia suwaka jasności</string>
   <string name="brightness_slider_switch">Pokaż suwak jasności w panelu szybkich ustawień</string>
   <!-- Battery Styles -->
+  <!-- Notification count -->
   <!-- Quick settings -->
   <string name="quick_settings_title">Szybkie ustawienia</string>
   <!-- Disable music track title in QS tile -->
@@ -131,12 +134,14 @@
   <string name="qs_rows_landscape_title">Ilość kafelków w wierszu w poziomie</string>
   <string name="qs_columns_portrait_title">Ilość kafelków w kolumnie w pionie</string>
   <string name="qs_columns_landscape_title">Ilość kafelków w kolumnie w poziomie</string>
+  <!-- QS tiles mini mode -->
   <!-- QS footer warnings -->
   <!-- QS footer Running Services icon -->
   <!-- QS footer Settings icon -->
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Pokaż nazwy kafelków</string>
   <string name="qs_tile_title_visibility_summary">Wyświetl nazwę kafelka po zaznaczeniu</string>
+  <!-- QS carrier text visibility -->
   <!-- QS Headers -->
   <string name="static_header_provider_title">Obraz statyczny</string>
   <string name="daylight_header_provider_title">Kolekcja obrazów</string>
@@ -321,9 +326,6 @@
   <!-- Screen Off animation -->
   <string name="screen_off_animation_default">Domyślne</string>
   <!-- Suppress notification sound/vibration -->
-  <string name="notification_sound_vib_screen_on_display_title">Użyj dźwięku i wibracji dla powiadomień</string>
-  <string name="notification_sound_vib_screen_on_always">Zawsze (domyślnie)</string>
-  <string name="notification_sound_vib_screen_on_nomedia">Jeśli nic nie jest odtwarzane</string>
   <!-- Accidental Touch -->
   <!-- Dynamic Navbar -->
   <!-- Face unlock toggle -->
@@ -331,6 +333,7 @@
   <!-- HW keys -->
   <!-- Volume keys -->
   <!-- Hardware button navigation -->
+  <!-- Camera button -->
   <!-- Volume rocker wake -->
   <!-- Button brightness -->
   <string name="power_menu_title">Menu zasilania</string>
@@ -344,4 +347,12 @@
   <!-- System default animation -->
   <!-- Smart Pixels -->
   <!-- Fingerprint sensor only at screen on -->
+  <!-- Heads up snooze -->
+  <!-- Heads up timeout -->
+  <!-- Activity Blacklist -->
+  <string name="profile_choose_app">Wybierz aplikację</string>
+  <string name="dialog_delete_title">Usuń</string>
+  <string name="dialog_delete_message">Usunąć wybrany element?</string>
+  <!-- System Behavior category strings -->
+  <!-- AOSP Recents Style -->
 </resources>
