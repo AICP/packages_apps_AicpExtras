@@ -155,6 +155,7 @@
   <string name="status_bar_gestures_category_title">Gesta</string>
   <string name="status_bar_icons_category_title">Ikony</string>
   <string name="status_bar_others_category_title">Ostatní</string>
+  <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
   <string name="notifications_title">Oznámení</string>
   <string name="notifications_summary">Rozšířené ovládání oznámení</string>
@@ -184,6 +185,7 @@
   <string name="battery_style_dotted_circle">Tečkovaný kruh</string>
   <string name="battery_style_text">Text</string>
   <string name="battery_style_hidden">Skrytá</string>
+  <!-- Notification count -->
   <!-- Quick settings -->
   <string name="quick_settings_title">Rychlá nastavení</string>
   <string name="quick_settings_summary">Upravit vzhled rychlého nastavení</string>
@@ -199,6 +201,7 @@
   <string name="qs_rows_landscape_title">Počet řádků dlaždic na šířku</string>
   <string name="qs_columns_portrait_title">Počet sloupců dlaždic na výšku</string>
   <string name="qs_columns_landscape_title">Počet sloupců dlaždic na šířku</string>
+  <!-- QS tiles mini mode -->
   <!-- QS footer warnings -->
   <string name="qs_footer_warnings_title">Výstrahy ve spodní části panelu rychlého nastavení</string>
   <string name="qs_footer_warnings_summary">Zobrazit varování ve spodní části panelu rychlého nastavení při monitorování sítě externími aplikacemi nebo VPN</string>
@@ -211,6 +214,7 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Zobrazit názvy dlaždic</string>
   <string name="qs_tile_title_visibility_summary">Pokud je zaškrtnuto, zobrazí se popisky pod dlaždicemi</string>
+  <!-- QS carrier text visibility -->
   <!-- QS Headers -->
   <string name="status_bar_custom_header_title">Povolit</string>
   <string name="daylight_header_pack_title">Sbírka obrázků záhlaví</string>
@@ -819,11 +823,6 @@
   <string name="screen_off_animation_crt">CRT</string>
   <string name="screen_off_animation_scale">Měřítko</string>
   <!-- Suppress notification sound/vibration -->
-  <string name="notification_sound_vib_screen_on_title">Oznámení při zapnuté obrazovce</string>
-  <string name="notification_sound_vib_screen_on_display_title">Pro oznámení použít zvuky a vibrace</string>
-  <string name="notification_sound_vib_screen_on_never">Nikdy</string>
-  <string name="notification_sound_vib_screen_on_always">Vždy (výchozí)</string>
-  <string name="notification_sound_vib_screen_on_nomedia">Pokud se nepřehrávají média</string>
   <!-- Accidental Touch -->
   <string name="anbi_enabled_title">Zabránit náhodnému dotyku</string>
   <string name="anbi_enabled_summary">Pokud je tato volba povolena, zabraňuje náhodnému dotyku hardwarových tlačítek při používání dotykové obrazovky.</string>
@@ -856,6 +855,7 @@
   <string name="hardware_keys_double_tap_title">Akce dvojím poklepáním</string>
   <string name="hardware_keys_disable_title">Zakázat navigační tlačítka</string>
   <string name="hardware_keys_wake_title">Probudit zařízení</string>
+  <!-- Camera button -->
   <!-- Volume rocker wake -->
   <string name="volume_rocker_wake_title">Probudit tlačítky hlasitosti</string>
   <string name="volume_rocker_wake_summary">Probudit zařízení stisknutím tlačítek hlasitosti</string>
@@ -917,4 +917,12 @@
   <!-- Fingerprint sensor only at screen on -->
   <string name="fp_only_screen_on_title">Otisky prstů při zapnuté obrazovce</string>
   <string name="fp_only_screen_on_summary">Snímač otisků prstů funguje pouze tehdy, když je obrazovka zapnuta</string>
+  <!-- Heads up snooze -->
+  <!-- Heads up timeout -->
+  <!-- Activity Blacklist -->
+  <string name="profile_choose_app">Vybrat aplikaci</string>
+  <string name="dialog_delete_title">Odstranit</string>
+  <string name="dialog_delete_message">Odstranit vybranou položku?</string>
+  <!-- System Behavior category strings -->
+  <!-- AOSP Recents Style -->
 </resources>

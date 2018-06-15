@@ -155,6 +155,9 @@
   <string name="status_bar_gestures_category_title">Gesten</string>
   <string name="status_bar_icons_category_title">Symbole</string>
   <string name="status_bar_others_category_title">Sonstiges</string>
+  <!-- Show 4G instead of LTE -->
+  <string name="show_4g_title">4G-Empfangssymbol anzeigen</string>
+  <string name="show_4g_summary">Zeige 4G anstelle von LTE Empfangssymbolen</string>
   <!-- Notifications -->
   <string name="notifications_title">Benachrichtigungen</string>
   <string name="notifications_summary">Erweiterte Benachrichtigungseinstellungen</string>
@@ -184,6 +187,9 @@
   <string name="battery_style_dotted_circle">Kreis (gepunktet)</string>
   <string name="battery_style_text">Text</string>
   <string name="battery_style_hidden">Ausgeblendet</string>
+  <!-- Notification count -->
+  <string name="status_bar_notif_count_title">Benachrichtigungszähler anzeigen</string>
+  <string name="status_bar_notif_count_summary">Anzahl der ungelesenen Benachrichtigungen in der Statusleiste anzeigen</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Schnelleinstellungen</string>
   <string name="quick_settings_summary">Bearbeitung der Schnelleinstellungen/Kacheln</string>
@@ -199,6 +205,9 @@
   <string name="qs_rows_landscape_title">Kachel-Zeilen im Querformat</string>
   <string name="qs_columns_portrait_title">Kachel-Spalten im Hochformat</string>
   <string name="qs_columns_landscape_title">Kachel-Spalten im Querformat</string>
+  <!-- QS tiles mini mode -->
+  <string name="qs_show_mini_title">Mini-Modus</string>
+  <string name="qs_show_mini_summary">Erlaubt das Ausblenden der Kopfzeilen-Symbole zur Anzeige eines kompakteren Kopfzeilenbereichs</string>
   <!-- QS footer warnings -->
   <string name="qs_footer_warnings_title">Schnelleinstellungs-Warnung (Fusszeile)</string>
   <string name="qs_footer_warnings_summary">Zeigt eine Warnmeldung unter den Schnelleinstellungen, wenn die Netzwerkverbindung von einer externen App gesteuert wird oder VPN aktiv ist.</string>
@@ -211,6 +220,9 @@
   <!-- QS tiles title visibility -->
   <string name="qs_tile_title_visibility_title">Namen der Kacheln anzeigen</string>
   <string name="qs_tile_title_visibility_summary">Wenn aktiviert, wird unterhalb von Kacheln der Name angezeigt</string>
+  <!-- QS carrier text visibility -->
+  <string name="qs_hide_carriertext_title">Netzbetreiber ausblenden</string>
+  <string name="qs_hide_carriertext_summary">Erlaubt das Ausblenden der Anbieter-Textanzeige in der erweiterten Kopfzeile</string>
   <!-- QS Headers -->
   <string name="status_bar_custom_header_title">Aktivieren</string>
   <string name="daylight_header_pack_title">Hintergrundbild-Sammlung</string>
@@ -375,8 +387,21 @@
   <!-- Show Lockscreen clock, date, & alarm -->
   <string name="show_lockscreen_clock_title">Uhrzeit</string>
   <string name="show_lockscreen_clock_summary">Aktivieren, um die Uhrzeit anzuzeigen</string>
+  <string name="lockscreen_clock_selection_title">Uhrenstil</string>
+  <string name="lockscreen_clock_selection_digital">Standard</string>
+  <string name="lockscreen_clock_selection_digital_bold">Digital (Fett)</string>
+  <string name="lockscreen_clock_selection_analog">Analog</string>
+  <string name="lockscreen_clock_selection_analog_deadpool">Analog (Deadpool)</string>
+  <string name="lockscreen_clock_selection_analog_spidey">Analog (Spiderman)</string>
+  <string name="lockscreen_clock_selection_sammy">Samsung</string>
+  <string name="lockscreen_clock_selection_sammy_bold">Samsung (Fett)</string>
   <string name="show_lockscreen_date_title">Datum</string>
   <string name="show_lockscreen_date_summary">Aktivieren, um das Datum unter der Uhrzeit anzuzeigen</string>
+  <string name="lockscreen_date_selection_title">Datumsstil</string>
+  <string name="lockscreen_date_selection_default_aosp">Standard (klein)</string>
+  <string name="lockscreen_date_selection_default">Standard</string>
+  <string name="lockscreen_date_selection_str_box">Halbtransparente Box</string>
+  <string name="lockscreen_date_selection_str_round">Halbtransparente Box (abgerundet)</string>
   <string name="show_lockscreen_alarm_title">Wecker</string>
   <string name="show_lockscreen_alarm_summary">Aktivieren, um den nächsten Weckalarm unter der Uhrzeit anzuzeigen</string>
   <!-- Hide statusbar on lockscreen -->
@@ -820,11 +845,8 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="screen_off_animation_crt">CRT</string>
   <string name="screen_off_animation_scale">Skalieren</string>
   <!-- Suppress notification sound/vibration -->
-  <string name="notification_sound_vib_screen_on_title">Anzeige von Benachrichtigungen</string>
-  <string name="notification_sound_vib_screen_on_display_title">Ton und Vibration für Benachrichtigungen verwenden</string>
-  <string name="notification_sound_vib_screen_on_never">Niemals</string>
-  <string name="notification_sound_vib_screen_on_always">Immer (Standard)</string>
-  <string name="notification_sound_vib_screen_on_nomedia">Wenn keine Medien abgespielt werden</string>
+  <string name="notification_sound_vib_screen_on_title">Benachrichtigungston bei eingeschaltetem Bildschirm</string>
+  <string name="notification_sound_vib_screen_on_summary">Wiedergabe von Ton und Vibration für Benachrichtigungen bei aktiviertem Bildschirm</string>
   <!-- Accidental Touch -->
   <string name="anbi_enabled_title">Unbeabsichtigte Berührungen verhindern</string>
   <string name="anbi_enabled_summary">Ignoriert bei Aktivierung Berührungen der Hardwaretasten, während der Touchscreen verwendet wird.</string>
@@ -843,6 +865,7 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <!-- Volume keys -->
   <string name="volume_keys_category">Lautstärketasten</string>
   <!-- Hardware button navigation -->
+  <string name="hardware_keys_power_key_title">Ein-/Aus-Tasten</string>
   <string name="hardware_keys_volume_keys_title">Lautstärketasten</string>
   <string name="hardware_keys_home_key_title">Home-Taste</string>
   <string name="hardware_keys_menu_key_title">Menü-Taste</string>
@@ -857,6 +880,12 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="hardware_keys_double_tap_title">Doppeltes Tippen (Aktion)</string>
   <string name="hardware_keys_disable_title">Navigationstasten deaktivieren</string>
   <string name="hardware_keys_wake_title">Gerät aufwecken</string>
+  <string name="hardware_keys_camera_key_title">Kamera-Taste</string>
+  <!-- Camera button -->
+  <string name="camera_sleep_on_release_title">Bilschirm-Vorschau</string>
+  <string name="camera_sleep_on_release_summary">Der Bildschirm bleibt aktiviert, solange die Taste halb gedrückt gehalten wird</string>
+  <string name="camera_launch_title">Kamera öffnen</string>
+  <string name="camera_launch_summary">Langes Drücken und Loslassen startet die Kamera</string>
   <!-- Volume rocker wake -->
   <string name="volume_rocker_wake_title">Lautstärketasten wecken Gerät</string>
   <string name="volume_rocker_wake_summary">Das Gerät wird durch Drücken der Lautstärketasten aufgeweckt</string>
@@ -918,4 +947,37 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <!-- Fingerprint sensor only at screen on -->
   <string name="fp_only_screen_on_title">Fingerabdrucksensor nur bei aktivem Display</string>
   <string name="fp_only_screen_on_summary">Fingerabdrucksensor funktioniert nur bei eingeschaltetem Display</string>
+  <!-- Heads up snooze -->
+  <string name="heads_up_category">Pop-Up Benachrichtigungen</string>
+  <string name="heads_up_snooze_title">Schlummerfunktion</string>
+  <string name="heads_up_snooze_disabled">deaktiviert</string>
+  <string name="heads_up_snooze_1min">1 Minute</string>
+  <string name="heads_up_snooze_5min">5 Minuten</string>
+  <string name="heads_up_snooze_10min">10 Minuten</string>
+  <string name="heads_up_snooze_15min">15 Minuten</string>
+  <string name="heads_up_snooze_20min">20 Minuten</string>
+  <!-- Heads up timeout -->
+  <string name="heads_up_time_out_title">Anzeigedauer</string>
+  <string name="heads_up_time_out_2sec">2 Sekunden (Standard)</string>
+  <string name="heads_up_time_out_4sec">4 Sekunden</string>
+  <string name="heads_up_time_out_5sec">5 Sekunden</string>
+  <string name="heads_up_time_out_6sec">6 Sekunden</string>
+  <string name="heads_up_time_out_8sec">8 Sekunden</string>
+  <string name="heads_up_time_out_10sec">10 Sekunden</string>
+  <!-- Activity Blacklist -->
+  <string name="chooser_activity_blacklist_title">Liste ausgeblendeter Apps in der Auswahl</string>
+  <string name="chooser_activity_blacklist_summary">Apps, die nicht bei Auswahl der \"Teilen\"-Funktion angezeigt werden sollen</string>
+  <string name="chooser_activity_blacklist_cat_title">Blockierliste</string>
+  <string name="chooser_activity_blacklist_pref_title">App hinzufügen</string>
+  <string name="chooser_activity_blacklist_pref_summary">Hier zum Hinzufügen tippen, zum Entfernen auf eine vorhandene App tippen</string>
+  <string name="profile_choose_app">Anwendung auswählen</string>
+  <string name="dialog_delete_title">Löschen</string>
+  <string name="dialog_delete_message">Ausgewählten Eintrag löschen?</string>
+  <!-- System Behavior category strings -->
+  <string name="system_ss_category_title">Bildschirmfoto-Optionen</string>
+  <string name="system_pup_category_title">Optionen beim Verbinden</string>
+  <!-- AOSP Recents Style -->
+  <string name="recents_type_title">Layout des Anwendungsverlaufs</string>
+  <string name="recents_stock">Standard</string>
+  <string name="recents_grid">Raster</string>
 </resources>
