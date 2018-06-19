@@ -394,43 +394,45 @@ public class FlingSettings extends ActionFragment implements
 
         Settings.Secure.putInt(getContentResolver(),
                 Settings.Secure.FLING_TRAILS_WIDTH, 15);
-        mTrailsWidth.setValue(15);
+        mTrailsWidth.refresh(15);
         mTrailsWidth.setOnPreferenceChangeListener(this);
 
         Settings.Secure.putInt(getContentResolver(),
                 Settings.Secure.FLING_LONGPRESS_TIMEOUT, 250);
-        mLongPressTimeout.setValue(250+100);
+        mLongPressTimeout.refresh(250+100);
         mLongPressTimeout.setOnPreferenceChangeListener(this);
 
         Settings.Secure.putInt(getContentResolver(),
                 Settings.Secure.FLING_LONGSWIPE_THRESHOLD_RIGHT_PORT, mIsTablet ? 30 : 40);
-        mSwipePortRight.setValue(mIsTablet ? 30 : 40);
+        mSwipePortRight.refresh(mIsTablet ? 30 : 40);
         mSwipePortRight.setOnPreferenceChangeListener(this);
 
         Settings.Secure.putInt(getContentResolver(),
                 Settings.Secure.FLING_LONGSWIPE_THRESHOLD_LEFT_PORT, mIsTablet ? 30 : 40);
-        mSwipePortLeft.setValue(mIsTablet ? 30 : 40);
+        mSwipePortLeft.refresh(mIsTablet ? 30 : 40);
         mSwipePortLeft.setOnPreferenceChangeListener(this);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_LONGSWIPE_THRESHOLD_RIGHT_LAND, 25);
-        mSwipeLandRight.setValue(25);
-        mSwipeLandRight.setOnPreferenceChangeListener(this);
+        if(mIsTablet) {
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.FLING_LONGSWIPE_THRESHOLD_RIGHT_LAND, 25);
+            mSwipeLandRight.refresh(25);
+            mSwipeLandRight.setOnPreferenceChangeListener(this);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_LONGSWIPE_THRESHOLD_LEFT_LAND, 25);
-        mSwipeLandLeft.setValue(25);
-        mSwipeLandLeft.setOnPreferenceChangeListener(this);
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.FLING_LONGSWIPE_THRESHOLD_LEFT_LAND, 25);
+            mSwipeLandLeft.refresh(25);
+            mSwipeLandLeft.setOnPreferenceChangeListener(this);
+        } else {
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.FLING_LONGSWIPE_THRESHOLD_UP_LAND, 40);
+            mSwipeVertUp.refresh(40);
+            mSwipeVertUp.setOnPreferenceChangeListener(this);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_LONGSWIPE_THRESHOLD_UP_LAND, 40);
-        mSwipeVertUp.setValue(40);
-        mSwipeVertUp.setOnPreferenceChangeListener(this);
-
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_LONGSWIPE_THRESHOLD_DOWN_LAND, 40);
-        mSwipeVertDown.setValue(40);
-        mSwipeVertDown.setOnPreferenceChangeListener(this);
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.FLING_LONGSWIPE_THRESHOLD_DOWN_LAND, 40);
+            mSwipeVertDown.refresh(40);
+            mSwipeVertDown.setOnPreferenceChangeListener(this);
+        }
 
         Settings.Secure.putInt(getContentResolver(),
                 Settings.Secure.FLING_KEYBOARD_CURSORS, 1);
@@ -439,7 +441,7 @@ public class FlingSettings extends ActionFragment implements
 
         Settings.Secure.putInt(getContentResolver(),
                 Settings.Secure.FLING_LOGO_OPACITY, 255);
-        mLogoOpacity.setValue(255);
+        mLogoOpacity.refresh(255);
         mLogoOpacity.setOnPreferenceChangeListener(this);
     }
 
