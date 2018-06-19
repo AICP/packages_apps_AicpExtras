@@ -315,7 +315,7 @@ public class SmartbarSettings extends BaseSettingsFragment implements
 
         Settings.Secure.putInt(getContentResolver(),
                 "navbar_buttons_alpha", 255);
-        mButtonsAlpha.setValue(255);
+        mButtonsAlpha.setValue(255 / 1);
         mButtonsAlpha.setOnPreferenceChangeListener(this);
 
         Settings.Secure.putInt(getContentResolver(),
