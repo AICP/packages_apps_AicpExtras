@@ -61,7 +61,7 @@
             android:summary="%s"
             android:entries="@array/heads_up_snooze_entries"
             android:entryValues="@array/heads_up_snooze_values"
-            android:defaultValue="0"
+            android:defaultValue="60000"
             android:dependency="heads_up_notifications_enabled" />
 
         <com.aicp.gear.preference.SystemSettingIntListPreference
@@ -70,7 +70,7 @@
             android:summary="%s"
             android:entries="@array/heads_up_time_out_entries"
             android:entryValues="@array/heads_up_time_out_values"
-            android:defaultValue="0"
+            android:defaultValue="5000"
             android:dependency="heads_up_notifications_enabled" />
 
     </PreferenceCategory>
