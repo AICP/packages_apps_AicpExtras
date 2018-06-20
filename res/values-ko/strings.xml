@@ -18,8 +18,10 @@
  */
 -->
 <resources>
+  <string name="app_name">Aicp 추가설정</string>
   <!-- Dashboard -->
   <string name="user_interface_category">UI</string>
+  <string name="system_category">시스템</string>
   <string name="other_category">기타</string>
   <!-- Status bar -->
   <string name="status_bar_title">상태 바</string>
@@ -27,13 +29,21 @@
   <!-- StatusBar Battery Options -->
   <string name="status_bar_battery_options">배터리 옵션</string>
   <!-- Bluetooth status -->
+  <string name="bluetooth_battery_title">블루투스 배터리 상태 표시</string>
+  <string name="bluetooth_battery_summary">현재 연결된 블루투스 장치에 대한 배터리 상태를 표시합니다</string>
   <!-- Statusbar net monitor -->
+  <string name="network_traffic_state_title">상태 표시줄에 네트워크 트래픽 표시</string>
+  <string name="network_traffic_autohide_threshold_title">네트워크 트래픽 자동으로 숨기기 (KB/s)</string>
   <!-- QS Header battery percentage -->
   <string name="force_battery_percentage_title">배터리 퍼센트 표사</string>
   <string name="force_battery_percentage_summary">QSHeader 및 KeyGuard에서 배터리 백분율 텍스트 표시</string>
   <!-- Battery bar -->
   <string name="battery_bar_title">배터리 바</string>
+  <string name="battery_bar_color_title">색상</string>
   <string name="battery_bar_charging_color_title">충전중 색상</string>
+  <string name="battery_bar_battery_low_color_title">적은 배터리 색상</string>
+  <string name="battery_bar_style_title">정렬</string>
+  <string name="battery_bar_thickness_title">두께</string>
   <string name="battery_bar_animate_title">충전 중 애니메이션</string>
   <string name="battery_bar_style_regular">일반</string>
   <string name="battery_bar_style_center_mirrored">중앙 정렬</string>
@@ -45,7 +55,20 @@
   <string name="battery_bar_blend_color_reverse_summary_off">최대 &#8594; 최소: 빨강 &#8592; 녹색 &#8592; 파랑 &#8592; 빨강</string>
   <string name="battery_bar_blend_color_reverse_summary_on">최대 &#8594; 최소: 빨강 &#8594; 녹색 &#8594; 파랑 &#8594; 빨강</string>
   <!-- StatusBar weather settings -->
+  <string name="statusbar_weather_title">상태표시줄 날씨</string>
+  <string name="statusbar_weather_summary">QS 설정/날씨에서 구성합니다.</string>
+  <string name="statusbar_weather_dialog_title">상태표시줄 날씨 스타일</string>
+  <string name="status_bar_weather_hidden">날씨 숨기기</string>
+  <string name="status_bar_temperature_image_show_scale">온도와 함께 단위와 이미지를 표시</string>
+  <string name="status_bar_temperature_image_hide_scale">단위를 제외한 온도와 이미지만 표시</string>
+  <string name="status_bar_temperature_show_scale_hide_image">단위와 온도 표시</string>
+  <string name="status_bar_temperature_hide_scale_hide_image">단위 없이 온도만 표시</string>
+  <string name="status_bar_show_image">이미지 표시</string>
   <!-- Smart pulldown-->
+  <string name="smart_pulldown_title">스마트 풀 다운</string>
+  <string name="smart_pulldown_off">끄기</string>
+  <string name="smart_pulldown_none">알림 없음</string>
+  <string name="smart_pulldown_dismissable">모든 알림 제거</string>
   <!-- Double tap to sleep on status bar -->
   <string name="status_bar_double_tap_to_sleep_title">잠금 화면을 탭하여 절전 모드로 들어갑니다.</string>
   <string name="status_bar_double_tap_to_sleep_summary">상태표시줄을 두 번 두드려 화면을 끕니다.</string>
@@ -83,6 +106,7 @@
   <string name="status_bar_logo_category_title">로고</string>
   <string name="status_bar_logo_title">상태 표시줄 로고</string>
   <string name="status_bar_logo_summary">상태 표시줄에 로고를 표시할 수 있도록 합니다</string>
+  <string name="status_bar_logo_color_title">색상</string>
   <string name="status_bar_logo_position_title">위치</string>
   <string name="status_bar_logo_position_summary">로고 표시 위치를 지정합니다.</string>
   <string name="status_bar_logo_position_right">오른쪽</string>

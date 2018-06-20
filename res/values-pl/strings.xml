@@ -26,7 +26,10 @@
   <!-- Status bar -->
   <string name="status_bar_title">Pasek statusu</string>
   <!-- StatusBar Battery Options -->
+  <string name="status_bar_battery_options">Opcje baterii</string>
   <!-- Bluetooth status -->
+  <string name="bluetooth_battery_title">Pokaż stan baterii Bluetooth</string>
+  <string name="bluetooth_battery_summary">Pokaż stan baterii aktualnie podłączonego urządzenia Bluetooth, jeśli dostępny.</string>
   <!-- Statusbar net monitor -->
   <string name="network_traffic_state_title">Pokaż aktywność sieci w pasku stanu</string>
   <string name="network_traffic_autohide_threshold_title">Schowaj poniżej limitu (KB/s)</string>
@@ -71,14 +74,20 @@
   <string name="am_pm_clock_normal">Normalny rozmiar czcionki</string>
   <string name="am_pm_clock_small">Mały rozmiar czcionki</string>
   <string name="am_pm_clock_none">Nie pokazuj</string>
+  <string name="clock_date_display">Data</string>
   <string name="clock_date_display_summary">Wyświetl własny format daty przed zegarem</string>
   <string name="clock_date_style">Styl daty</string>
+  <string name="clock_date_position">Położenie daty</string>
   <string name="clock_date_format">Format daty</string>
   <string name="clock_date_string_edittext_title">Musi być w formacie daty np. dd/MM/rr</string>
   <string name="clock_date_string_edittext_summary">Wprowadź ciąg znaków</string>
+  <string name="clock_date_right">Po prawej stronie zegara</string>
+  <string name="clock_date_left">Po lewej stronie zegara</string>
   <string name="clock_date_display_none">Nie pokazuj</string>
   <string name="clock_date_display_small">Mały rozmiar czcionki</string>
   <string name="clock_date_display_normal">Normalny rozmiar czcionki</string>
+  <string name="clock_date_style_lowercase">Małe litery</string>
+  <string name="clock_date_style_uppercase">Duże litery</string>
   <string name="clock_date_format_custom">Własny format java</string>
   <string name="menu_cancel">Anuluj</string>
   <string name="menu_save">Zapisz</string>
@@ -88,7 +97,12 @@
   <string name="status_bar_logo_summary">Włącz, aby pokazać logo na pasku stanu</string>
   <string name="status_bar_logo_color_title">Kolor</string>
   <string name="status_bar_logo_position_title">Pozycja</string>
+  <string name="status_bar_logo_position_summary">Wybierz po której stronie wyświetlać logo, po lewej lub prawej</string>
+  <string name="status_bar_logo_position_right">Do prawej</string>
+  <string name="status_bar_logo_position_left">Po lewej</string>
   <string name="status_bar_logo_style_title">Styl</string>
+  <string name="status_bar_logo_style_aicp">AICP</string>
+  <string name="status_bar_logo_style_android">Android</string>
   <string name="status_bar_logo_style_apple">Apple</string>
   <string name="status_bar_logo_style_ios">iOS</string>
   <string name="status_bar_logo_style_emoticon">Emotikon</string>
@@ -123,6 +137,8 @@
   <string name="brightness_slider_settings_title">Ustawienia suwaka jasności</string>
   <string name="brightness_slider_switch">Pokaż suwak jasności w panelu szybkich ustawień</string>
   <!-- Battery Styles -->
+  <string name="battery_style_title">Wygląd ikony baterii</string>
+  <string name="battery_style_hidden">Ukryty</string>
   <!-- Notification count -->
   <!-- Quick settings -->
   <string name="quick_settings_title">Szybkie ustawienia</string>
@@ -332,10 +348,18 @@
   <!-- Navigation -->
   <!-- HW keys -->
   <!-- Volume keys -->
+  <string name="volume_keys_category">Przyciski głośności</string>
   <!-- Hardware button navigation -->
+  <string name="hardware_keys_home_key_title">Przycisk Home</string>
+  <string name="hardware_keys_menu_key_title">Przycisk Menu</string>
+  <string name="hardware_keys_assist_key_title">Przycisk Szukaj</string>
+  <string name="hardware_keys_back_key_title">Przycisk Wstecz</string>
   <!-- Camera button -->
   <!-- Volume rocker wake -->
   <!-- Button brightness -->
+  <string name="button_manual_brightness">Poziom jasności</string>
+  <string name="other_keys_category">Pozostałe przyciski</string>
+  <string name="additional_buttons_title">Dodatkowe przyciski</string>
   <string name="power_menu_title">Menu zasilania</string>
   <!-- Quick QS pull down -->
   <string name="status_bar_quick_qs_pulldown_off">Wył</string>

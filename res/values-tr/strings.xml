@@ -156,6 +156,8 @@
   <string name="status_bar_icons_category_title">Simgeler</string>
   <string name="status_bar_others_category_title">Diğer</string>
   <!-- Show 4G instead of LTE -->
+  <string name="show_4g_title">4G simgesi</string>
+  <string name="show_4g_summary">LTE yerine 4G simgesini göster</string>
   <!-- Notifications -->
   <string name="notifications_title">Bildirimler</string>
   <string name="notifications_summary">Genişletilmiş bildirimler kontrolü</string>
@@ -186,6 +188,8 @@
   <string name="battery_style_text">Metin</string>
   <string name="battery_style_hidden">Gizle</string>
   <!-- Notification count -->
+  <string name="status_bar_notif_count_title">Bildirim sayısı</string>
+  <string name="status_bar_notif_count_summary">Bekleyen bildirimlerin sayısını görüntüle</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Hızlı ayarlar</string>
   <string name="quick_settings_summary">Hızlı ayarlar görünümünü düzenleme</string>
@@ -202,6 +206,8 @@
   <string name="qs_columns_portrait_title">Dikey modda sütunlar</string>
   <string name="qs_columns_landscape_title">Yatay modda sütunlar</string>
   <!-- QS tiles mini mode -->
+  <string name="qs_show_mini_title">Mini mod</string>
+  <string name="qs_show_mini_summary">Hızlı ayarlar başlık simgelerini gizlemeye ve daha küçük başlık oluşturmaya izin ver</string>
   <!-- QS footer warnings -->
   <string name="qs_footer_warnings_title">Bilgi uyarıları</string>
   <string name="qs_footer_warnings_summary">Ağ harici uygulamalar veya VPN tarafından izlendiğinizde hızlı ayarlar panelinin altına bir uyarı gösterir</string>
@@ -215,6 +221,8 @@
   <string name="qs_tile_title_visibility_title">Kare başlıkları</string>
   <string name="qs_tile_title_visibility_summary">Her bir karenin altında başlık gösterir</string>
   <!-- QS carrier text visibility -->
+  <string name="qs_hide_carriertext_title">Taşıyıcı metnini gizle</string>
+  <string name="qs_hide_carriertext_summary">Hızlı ayarlar başlık taşıyıcı metnini gizlemeye izin ver</string>
   <!-- QS Headers -->
   <string name="status_bar_custom_header_title">Etkinleştir</string>
   <string name="daylight_header_pack_title">Başlık görüntü koleksiyonu</string>
@@ -380,8 +388,21 @@
   <!-- Show Lockscreen clock, date, & alarm -->
   <string name="show_lockscreen_clock_title">Saat widgeti</string>
   <string name="show_lockscreen_clock_summary">Saat widgetini kilit ekranında göster</string>
+  <string name="lockscreen_clock_selection_title">Saat stili</string>
+  <string name="lockscreen_clock_selection_digital">Varsayılan</string>
+  <string name="lockscreen_clock_selection_digital_bold">Dijital (kalın)</string>
+  <string name="lockscreen_clock_selection_analog">Analog</string>
+  <string name="lockscreen_clock_selection_analog_deadpool">Analog (deadpool)</string>
+  <string name="lockscreen_clock_selection_analog_spidey">Analog (örümcek)</string>
+  <string name="lockscreen_clock_selection_sammy">Sammy</string>
+  <string name="lockscreen_clock_selection_sammy_bold">Sammy (kalın)</string>
   <string name="show_lockscreen_date_title">Tarih widgeti</string>
   <string name="show_lockscreen_date_summary">Tarih metnini kilit ekranında göster</string>
+  <string name="lockscreen_date_selection_title">Tarih stili</string>
+  <string name="lockscreen_date_selection_default_aosp">Varsayılan (küçük boy)</string>
+  <string name="lockscreen_date_selection_default">Varsayılan</string>
+  <string name="lockscreen_date_selection_str_box">Yarı şeffaf kutu</string>
+  <string name="lockscreen_date_selection_str_round">Yarı şeffaf kutu (yuvarlak)</string>
   <string name="show_lockscreen_alarm_title">Alarm metni</string>
   <string name="show_lockscreen_alarm_summary">Alarm metnini kilit ekranında göster</string>
   <!-- Hide statusbar on lockscreen -->
@@ -825,6 +846,8 @@
   <string name="screen_off_animation_crt">CRT</string>
   <string name="screen_off_animation_scale">Ölçek</string>
   <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_title">Ekran açıkken bildirim sesi</string>
+  <string name="notification_sound_vib_screen_on_summary">Ekran açıkken bildirimler için ses ve titreşim</string>
   <!-- Accidental Touch -->
   <string name="anbi_enabled_title">Yanlışlıkla dokunmayı önle</string>
   <string name="anbi_enabled_summary">Etkinleştirildiğinde, dokunmatik ekran kullanılırken donanım tuşlarına veya gezinme tuşlarına yanlışlıkla dokunmayı önler.</string>
@@ -843,6 +866,7 @@
   <!-- Volume keys -->
   <string name="volume_keys_category">Ses tuşu</string>
   <!-- Hardware button navigation -->
+  <string name="hardware_keys_power_key_title">Güç tuşu</string>
   <string name="hardware_keys_volume_keys_title">Ses tuşu</string>
   <string name="hardware_keys_home_key_title">Ana ekran tuşu</string>
   <string name="hardware_keys_menu_key_title">Menü tuşu</string>
@@ -857,7 +881,12 @@
   <string name="hardware_keys_double_tap_title">Çift dokunma eylemi</string>
   <string name="hardware_keys_disable_title">Gezinme tuşlarını devre dışı bırak</string>
   <string name="hardware_keys_wake_title">Cihazı uyandır</string>
+  <string name="hardware_keys_camera_key_title">Kamera tuşu</string>
   <!-- Camera button -->
+  <string name="camera_sleep_on_release_title">Kamera tuşu</string>
+  <string name="camera_sleep_on_release_summary">Yarı basma işlemi, tuşa basılı tutulduğu sürece ekran açık kalacaktır</string>
+  <string name="camera_launch_title">Kamerayı başlat</string>
+  <string name="camera_launch_summary">Uzun basıp bırakma kamerayı başlatır</string>
   <!-- Volume rocker wake -->
   <string name="volume_rocker_wake_title">Ses tuşlarıyla uyandır</string>
   <string name="volume_rocker_wake_summary">Ses tuşlarına basıldığında cihazı uyandır</string>
@@ -920,11 +949,36 @@
   <string name="fp_only_screen_on_title">Parmak izi ekranı</string>
   <string name="fp_only_screen_on_summary">Parmak izi sensörü sadece ekran açıkken çalışır</string>
   <!-- Heads up snooze -->
+  <string name="heads_up_category">Bildirim pencereleri</string>
+  <string name="heads_up_snooze_title">Erteleme zamanlayıcısı</string>
+  <string name="heads_up_snooze_disabled">devre dışı</string>
+  <string name="heads_up_snooze_1min">1 dakika</string>
+  <string name="heads_up_snooze_5min">5 dakika</string>
+  <string name="heads_up_snooze_10min">10 dakika</string>
+  <string name="heads_up_snooze_15min">15 dakika</string>
+  <string name="heads_up_snooze_20min">20 dakika</string>
   <!-- Heads up timeout -->
+  <string name="heads_up_time_out_title">Zaman aşımı</string>
+  <string name="heads_up_time_out_2sec">2 saniye (varsayılan)</string>
+  <string name="heads_up_time_out_4sec">4 saniye</string>
+  <string name="heads_up_time_out_5sec">5 saniye</string>
+  <string name="heads_up_time_out_6sec">6 saniye</string>
+  <string name="heads_up_time_out_8sec">8 saniye</string>
+  <string name="heads_up_time_out_10sec">10 saniye</string>
   <!-- Activity Blacklist -->
+  <string name="chooser_activity_blacklist_title">Seçici etkinlik kara listesi</string>
+  <string name="chooser_activity_blacklist_summary">Paylaş tuşuna dokunulduğunda gösterilmeyecek uygulamalar</string>
+  <string name="chooser_activity_blacklist_cat_title">Kara liste</string>
+  <string name="chooser_activity_blacklist_pref_title">Uygulama ekle</string>
+  <string name="chooser_activity_blacklist_pref_summary">Eklemek için buraya dokunun, kaldırmak için eklenen uygulamaya dokunun</string>
   <string name="profile_choose_app">Uygulama seç</string>
   <string name="dialog_delete_title">Sil</string>
   <string name="dialog_delete_message">Seçili öğe kaldırılsın mı?</string>
   <!-- System Behavior category strings -->
+  <string name="system_ss_category_title">Ekran görüntüsü</string>
+  <string name="system_pup_category_title">Takıp çıkarma</string>
   <!-- AOSP Recents Style -->
+  <string name="recents_type_title">Son uygulamalar stili</string>
+  <string name="recents_stock">Varsayılan</string>
+  <string name="recents_grid">Izgara</string>
 </resources>
