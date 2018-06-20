@@ -156,6 +156,8 @@
   <string name="status_bar_icons_category_title">Ikon</string>
   <string name="status_bar_others_category_title">Lainnya</string>
   <!-- Show 4G instead of LTE -->
+  <string name="show_4g_title">Tampilkan 4G</string>
+  <string name="show_4g_summary">Tampilkan ikon sinyal 4G bukan LTE</string>
   <!-- Notifications -->
   <string name="notifications_title">Pemberitahuan</string>
   <string name="notifications_summary">Kontrol pemberitahuan yang diperluas</string>
@@ -167,6 +169,7 @@
   <string name="notification_guts_kill_app_button_summary">Tampilkan tombol kill app di menu notpress pemberitahuan</string>
   <!-- InCall notifications vibrate -->
   <string name="incall_notifications_vibrate_title">Pemberitahuan panggilan kurang mengganggu</string>
+  <string name="incall_notifications_vibrate_summary">Bergetar dengan lembut bukan memutar suara saat panggilan dan pemberitahuan masuk</string>
   <!-- Brightness slider settings -->
   <string name="brightness_slider_settings_title">Setelan slider kecerahan</string>
   <string name="brightness_slider_switch">Tampilkan slider kecerahan di Setelan Cepat</string>
@@ -185,6 +188,8 @@
   <string name="battery_style_text">Teks</string>
   <string name="battery_style_hidden">Tersembunyi</string>
   <!-- Notification count -->
+  <string name="status_bar_notif_count_title">Tampilkan hitungan pemberitahuan</string>
+  <string name="status_bar_notif_count_summary">Menampilkan jumlah dari pemberitahuan tertunda</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Setelan cepat</string>
   <string name="quick_settings_summary">Sunting tampilan setelan cepat</string>
@@ -201,6 +206,8 @@
   <string name="qs_columns_portrait_title">Kolom ubin pada tampilan potret</string>
   <string name="qs_columns_landscape_title">Kolom ubin pada tampilan lanskap</string>
   <!-- QS tiles mini mode -->
+  <string name="qs_show_mini_title">Modus mini</string>
+  <string name="qs_show_mini_summary">Memungkinkan menyembunyikan ikon header setelan cepat dan membuat header kecil</string>
   <!-- QS footer warnings -->
   <string name="qs_footer_warnings_title">Peringatan footer QS</string>
   <string name="qs_footer_warnings_summary">Tampilkan peringatan di panel QS bawah saat jaringan dipantau oleh aplikasi atau vpn eksternal</string>
@@ -214,6 +221,8 @@
   <string name="qs_tile_title_visibility_title">Tampilkan judul ikon</string>
   <string name="qs_tile_title_visibility_summary">Tampilakn tulisan ikon dibawah ketika diperika</string>
   <!-- QS carrier text visibility -->
+  <string name="qs_hide_carriertext_title">Sembunyikan teks operator</string>
+  <string name="qs_hide_carriertext_summary">Memungkinkan menyembunyikan teks operator pada header setelan cepat</string>
   <!-- QS Headers -->
   <string name="status_bar_custom_header_title">Hidupkan</string>
   <string name="daylight_header_pack_title">Koleksi gambar header</string>
@@ -309,25 +318,25 @@
   <string name="dialog_delete_title">Hapus</string>
   <string name="dialog_delete_message">Hapus item yang dipilih?</string>
   <string name="slim_blacklist_apps_cat_title">Daftar cekal</string>
-  <string name="slim_blacklist_apps_title">List aplikasi yang dicekal</string>
+  <string name="slim_blacklist_apps_title">Daftar aplikasi yang dicekal</string>
   <string name="slim_blacklist_apps_summary">Aplikasi yang tidak ditampilakan di panel</string>
-  <string name="slim_blacklist_add_apps_title">Tambah apl</string>
+  <string name="slim_blacklist_add_apps_title">Tambah aplikasi</string>
   <string name="slim_blacklist_add_apps_summary">Ketuk disini untuk menambah, tekan pada aplikasi yang telah ditambahkan untuk menghapusnya</string>
   <!-- Slim Recent App Sidebar  -->
   <string name="recent_app_sidebar_title">Bilah sisi aplikasi terbaru</string>
   <string name="recent_app_sidebar_summary">Tampilkan pintasan aplikasi di sisi lain</string>
   <string name="use_recent_app_sidebar_title">Hidupkan bilah sisi aplikasi</string>
   <string name="use_recent_app_sidebar_summary">Tampilkan pintasan aplikasi di sisi lain</string>
-  <string name="recent_app_sidebar_content_title">Konten sidebar</string>
+  <string name="recent_app_sidebar_content_title">Konten bilah sisi</string>
   <string name="recent_app_sidebar_content_summary">Konfigurasikan konten bilah sisi aplikasi</string>
-  <string name="recent_app_sidebar_style_title">Gaya bilah tepi</string>
-  <string name="recent_app_sidebar_style_summary">Ubah tampilan dari sidebar</string>
+  <string name="recent_app_sidebar_style_title">Gaya bilah sisi</string>
+  <string name="recent_app_sidebar_style_summary">Ubah tampilan bilah sisi</string>
   <string name="recent_app_sidebar_hide_labels_title">Sembunyikan label ikon</string>
   <string name="recent_app_sidebar_label_color_title">Warna label</string>
   <string name="recent_app_sidebar_bg_color_title">Warna latar belakang</string>
   <string name="recent_app_sidebar_scale_title">Ukuran</string>
   <string name="recent_app_sidebar_open_simultaneously_title">Buka bersamaan dengan recent</string>
-  <string name="recent_app_sidebar_open_simultaneously_summary">Mengurangi lag pada pembukaan recents dengan mematikan ini</string>
+  <string name="recent_app_sidebar_open_simultaneously_summary">Mengurangi lag pada pembukaan recent dengan mematikan ini</string>
   <!-- Slim recents membar -->
   <string name="slim_recents_mem_display_category_title">Bilah memori</string>
   <string name="slim_recents_mem_display_title">Tampilkan bilah memori</string>
@@ -338,34 +347,34 @@
   <!-- OmniSwitch -->
   <string name="omni_switch_title">OmniSwitch</string>
   <!-- Lockscreen -->
-  <string name="lockscreen_title">Layar kunci</string>
+  <string name="lockscreen_title">Kunci layar</string>
   <string name="lockscreen_summary">Sunting tampilan kunci layar</string>
   <!-- Double tap to sleep on lockscreen -->
   <string name="double_tap_sleep_lockscreen">Ketuk dua kali untuk tidur</string>
-  <string name="double_tap_sleep_lockscreen_summary">Ketuk duakali pada layar kunci untuk mematikan layar</string>
+  <string name="double_tap_sleep_lockscreen_summary">Ketuk dua kali pada kunci layar untuk mematikan layar</string>
   <!-- Media art -->
   <string name="media_art_title">Sampul album media</string>
-  <string name="media_art_summary">Hidupkan sampul album media pada layar kunci</string>
+  <string name="media_art_summary">Hidupkan sampul album media pada kunci layar</string>
   <!-- Lockscreen battery info indicator  -->
   <string name="lockscreen_battery_info_title">Info baterai</string>
-  <string name="lockscreen_battery_info_summary">Menampilkan maksimal arus-tegangan yang dinegosiasikan pengisi daya dan suhu baterai pada layar kunci saat pengisian</string>
+  <string name="lockscreen_battery_info_summary">Tampilkan maksimal arus-tegangan yang dinegosiasikan pengisi daya dan suhu baterai pada layar kunci saat pengisian</string>
   <!-- Lockscreen notif count -->
-  <string name="lockscreen_maxnotif_title">Tampilkan hitungan pemberitahuan</string>
-  <string name="lockscreen_maxnotif_summary">Sesuaikan hitungan pemberitahuan</string>
-  <string name="lockscreen_maxnotif_config">Jumlah maksismum pemberitahuan yang diizinkan</string>
+  <string name="lockscreen_maxnotif_title">Jumlah pemberitahuan</string>
+  <string name="lockscreen_maxnotif_summary">Sesuaikan jumlah pemberitahuan</string>
+  <string name="lockscreen_maxnotif_config">Jumlah maksimal pemberitahuan yang diizinkan</string>
   <!-- Power menu on secure lockscreen -->
-  <string name="lockscreen_power_menu_disabled_title">Tidak ada tampilan daya saat terkunci</string>
-  <string name="lockscreen_power_menu_disabled_summary">Menonaktifkan tombol daya saat terkunci</string>
+  <string name="lockscreen_power_menu_disabled_title">Tidak ada menu daya pada kunci layar aman</string>
+  <string name="lockscreen_power_menu_disabled_summary">Matikan menu daya pada kunci layar aman</string>
   <!-- Disable QS on secure Lockscreen -->
-  <string name="lockscreen_qs_disabled_title">Tidak QuickSettings saat terkunci</string>
-  <string name="lockscreen_qs_disabled_summary">Menonaktifkan pengaturan cepat saat layar terkunci</string>
+  <string name="lockscreen_qs_disabled_title">Tidak ada setelan cepat pada kunci layar aman</string>
+  <string name="lockscreen_qs_disabled_summary">Matikan ubin setelan cepat pada kunci layar aman</string>
   <!-- Fingerprint authentication vibration -->
   <string name="fprint_sucess_vib_title">Getaran otentikasi sidik jari</string>
-  <string name="fprint_sucess_vib_summary_on">Getar pada otentikasi sidik jari berhasil diaktifkan</string>
-  <string name="fprint_sucess_vib_summary_off">Getar pada otentikasi sidik jari berhasil dinonaktifkan</string>
+  <string name="fprint_sucess_vib_summary_on">Bergetar saat otentikasi sidik jari dihidupkan</string>
+  <string name="fprint_sucess_vib_summary_off">Bergetar saat otentikasi sidik jari dimatikan</string>
   <!-- Fingerprint unlock keystore -->
-  <string name="fp_unlock_keystore_title">Membuka kunci sidik jari</string>
-  <string name="fp_unlock_keystore_summary">Buka kunci perangkat dengan sidik jari setelah reboot tanpa PIN/Kata Sandi/Pola\nCatatan: atas risiko Anda sendiri!</string>
+  <string name="fp_unlock_keystore_title">Buka kunci dengan sidik jari</string>
+  <string name="fp_unlock_keystore_summary">Buka kunci perangkat dengan sidik jari setelah mulai ulang tanpa PIN/Kata Sandi/Pola\nCatatan: dengan resiko Anda sendiri!</string>
   <!-- Ambient display bottom info -->
   <string name="ambient_display_category">Tampilan Ambien</string>
   <string name="ambient_display_bottom_info_title">Tampilan bawah</string>
@@ -378,10 +387,23 @@
   <!-- Show Lockscreen clock, date, & alarm -->
   <string name="show_lockscreen_clock_title">Widget jam</string>
   <string name="show_lockscreen_clock_summary">Hidupkan untuk menampilkan widget jam</string>
+  <string name="lockscreen_clock_selection_title">Gaya jam</string>
+  <string name="lockscreen_clock_selection_digital">Standar</string>
+  <string name="lockscreen_clock_selection_digital_bold">Digital (huruf tebal)</string>
+  <string name="lockscreen_clock_selection_analog">Analog</string>
+  <string name="lockscreen_clock_selection_analog_deadpool">Analog (deadpool)</string>
+  <string name="lockscreen_clock_selection_analog_spidey">Analog (spidey)</string>
+  <string name="lockscreen_clock_selection_sammy">Sammy</string>
+  <string name="lockscreen_clock_selection_sammy_bold">Sammy (huruf tebal)</string>
   <string name="show_lockscreen_date_title">Widget tanggal</string>
-  <string name="show_lockscreen_date_summary">Hidupkan untuk menampilkan widget tanggal</string>
+  <string name="show_lockscreen_date_summary">Hidupkan untuk menampilkan tanggal di bawah widget jam</string>
+  <string name="lockscreen_date_selection_title">Gaya tanggal</string>
+  <string name="lockscreen_date_selection_default_aosp">Standar (ukuran kecil)</string>
+  <string name="lockscreen_date_selection_default">Standar</string>
+  <string name="lockscreen_date_selection_str_box">Kotak semi-transparan</string>
+  <string name="lockscreen_date_selection_str_round">Kotak semi-transparan (bulat)</string>
   <string name="show_lockscreen_alarm_title">Teks alarm</string>
-  <string name="show_lockscreen_alarm_summary">Hidupkan untuk menampilkan teks di bawah widget jam</string>
+  <string name="show_lockscreen_alarm_summary">Hidupkan untuk menampilkan teks alarm di bawah widget jam</string>
   <!-- Hide statusbar on lockscreen -->
   <string name="lockscreen_hide_status_bar_title">Sembunyikan bilah status</string>
   <string name="lockscreen_hide_status_bar_summary">Jika dihidupkan, bilah status akan disembunyikan di kunci layar</string>
@@ -822,6 +844,8 @@
   <string name="screen_off_animation_crt">CRT</string>
   <string name="screen_off_animation_scale">Skala</string>
   <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_title">Suara pemberitahuan jika layar hidup</string>
+  <string name="notification_sound_vib_screen_on_summary">Memutar suara dan getaran untuk pemberitahuan ketika layar hidup</string>
   <!-- Accidental Touch -->
   <string name="anbi_enabled_title">Mencegah sentuhan tidak disengaja</string>
   <string name="anbi_enabled_summary">Bila diaktifkan, mencegah sentuhan disengaja ke tombol perangkat keras saat layar sentuh sedang digunakan.</string>
@@ -840,6 +864,7 @@
   <!-- Volume keys -->
   <string name="volume_keys_category">Tombol volume</string>
   <!-- Hardware button navigation -->
+  <string name="hardware_keys_power_key_title">Tombol daya</string>
   <string name="hardware_keys_volume_keys_title">Tombol volume</string>
   <string name="hardware_keys_home_key_title">Tombol beranda</string>
   <string name="hardware_keys_menu_key_title">Tombol menu</string>
@@ -854,7 +879,12 @@
   <string name="hardware_keys_double_tap_title">Tindakan tekan dua kali</string>
   <string name="hardware_keys_disable_title">Nonaktifkan tombol navigasi</string>
   <string name="hardware_keys_wake_title">Bangunkan perangkat</string>
+  <string name="hardware_keys_camera_key_title">Tombol kamera</string>
   <!-- Camera button -->
+  <string name="camera_sleep_on_release_title">Layar mengintip</string>
+  <string name="camera_sleep_on_release_summary">Menekan sedang akan menyalakan layar hanya saat tombol tertekan</string>
+  <string name="camera_launch_title">Buka kamera</string>
+  <string name="camera_launch_summary">Tekan lama dan lepas akan meluncurkan kamera</string>
   <!-- Volume rocker wake -->
   <string name="volume_rocker_wake_title">Volume membangunkan</string>
   <string name="volume_rocker_wake_summary">Bangunkan perangkat anda dengan menekan tombol volume</string>
@@ -917,11 +947,36 @@
   <string name="fp_only_screen_on_title">Sidik jari saat layar hidup</string>
   <string name="fp_only_screen_on_summary">Sensor sidik jari hanya akan bekerja ketika layar hidup</string>
   <!-- Heads up snooze -->
+  <string name="heads_up_category">Heads up</string>
+  <string name="heads_up_snooze_title">Waktu penundaan</string>
+  <string name="heads_up_snooze_disabled">dimatikan</string>
+  <string name="heads_up_snooze_1min">1 menit</string>
+  <string name="heads_up_snooze_5min">5 menit</string>
+  <string name="heads_up_snooze_10min">10 menit</string>
+  <string name="heads_up_snooze_15min">15 menit</string>
+  <string name="heads_up_snooze_20min">20 menit</string>
   <!-- Heads up timeout -->
+  <string name="heads_up_time_out_title">Batas waktu</string>
+  <string name="heads_up_time_out_2sec">2 detik (standar)</string>
+  <string name="heads_up_time_out_4sec">4 detik</string>
+  <string name="heads_up_time_out_5sec">5 detik</string>
+  <string name="heads_up_time_out_6sec">6 detik</string>
+  <string name="heads_up_time_out_8sec">8 detik</string>
+  <string name="heads_up_time_out_10sec">10 detik</string>
   <!-- Activity Blacklist -->
+  <string name="chooser_activity_blacklist_title">Pemilih aktifitas yang diblokir</string>
+  <string name="chooser_activity_blacklist_summary">Aplikasi untuk tidak ditampilkan ketika menekan tombol Bagikan</string>
+  <string name="chooser_activity_blacklist_cat_title">Daftar cekal</string>
+  <string name="chooser_activity_blacklist_pref_title">Tambah aplikasi</string>
+  <string name="chooser_activity_blacklist_pref_summary">Tekan di sini untuk menambahkan, tekan pada aplikasi yang ditambahkan untuk menghapusnya</string>
   <string name="profile_choose_app">Pilih aplikasi</string>
   <string name="dialog_delete_title">Hapus</string>
   <string name="dialog_delete_message">Hapus item yang dipilih?</string>
   <!-- System Behavior category strings -->
+  <string name="system_ss_category_title">Pilihan tangkapan layar</string>
+  <string name="system_pup_category_title">Pilihan pasang/lepas</string>
   <!-- AOSP Recents Style -->
+  <string name="recents_type_title">Tata letak recent</string>
+  <string name="recents_stock">Bawaan</string>
+  <string name="recents_grid">Grid</string>
 </resources>
