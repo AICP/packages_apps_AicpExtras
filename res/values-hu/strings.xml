@@ -156,6 +156,8 @@
   <string name="status_bar_icons_category_title">Ikonok</string>
   <string name="status_bar_others_category_title">Egyebek</string>
   <!-- Show 4G instead of LTE -->
+  <string name="show_4g_title">4G kijelzése</string>
+  <string name="show_4g_summary">4G megjelenítése LTE helyett</string>
   <!-- Notifications -->
   <string name="notifications_title">Értesítések</string>
   <string name="notifications_summary">Kiterjesztett értesítések vezérlése</string>
@@ -186,6 +188,8 @@
   <string name="battery_style_text">Szöveg</string>
   <string name="battery_style_hidden">Rejtett</string>
   <!-- Notification count -->
+  <string name="status_bar_notif_count_title">Értesítések számának megjelenítése</string>
+  <string name="status_bar_notif_count_summary">Megjeleníti a függőben lévő értesítések számát</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Gyorsbeállítások</string>
   <string name="quick_settings_summary">Gyorsbeállítások kinézetének szerkesztése</string>
@@ -202,6 +206,8 @@
   <string name="qs_columns_portrait_title">Csempeoszlopok száma álló helyzetben</string>
   <string name="qs_columns_landscape_title">Csempeoszlopok száma fekvő helyzetben</string>
   <!-- QS tiles mini mode -->
+  <string name="qs_show_mini_title">Mini mód</string>
+  <string name="qs_show_mini_summary">Lehetővé teszi, a gyorsbeállítások-fejlécikonok elrejtését, és kisebb fejlécet hoz létre</string>
   <!-- QS footer warnings -->
   <string name="qs_footer_warnings_title">Gyorsbeállítás-figyelmeztetések a láblécen</string>
   <string name="qs_footer_warnings_summary">Figyelmeztetés megjelenítése a Gyorsbeállítások panel alján, ha a hálózatot külső alkalmazás vagy a VPN figyeli</string>
@@ -215,6 +221,8 @@
   <string name="qs_tile_title_visibility_title">Csempék neveinek megjelenítése</string>
   <string name="qs_tile_title_visibility_summary">Kattintás után a címek kijelzése</string>
   <!-- QS carrier text visibility -->
+  <string name="qs_hide_carriertext_title">Szolgáltatónév elrejtése</string>
+  <string name="qs_hide_carriertext_summary">Lehetővé teszi a szöveg elrejtését a gyorsbeállítások fejlécén</string>
   <!-- QS Headers -->
   <string name="status_bar_custom_header_title">Engedélyezés</string>
   <string name="daylight_header_pack_title">Fejléckép gyűjtemény</string>
@@ -380,8 +388,21 @@
   <!-- Show Lockscreen clock, date, & alarm -->
   <string name="show_lockscreen_clock_title">Óra kisalkalmazás</string>
   <string name="show_lockscreen_clock_summary">Óra kisalkalmazás megjelenítésének engedélyezése</string>
+  <string name="lockscreen_clock_selection_title">Az Óra stílusa</string>
+  <string name="lockscreen_clock_selection_digital">Alapértelmezett</string>
+  <string name="lockscreen_clock_selection_digital_bold">Digitális (félkövér)</string>
+  <string name="lockscreen_clock_selection_analog">Analóg</string>
+  <string name="lockscreen_clock_selection_analog_deadpool">Analóg (deadpool)</string>
+  <string name="lockscreen_clock_selection_analog_spidey">Analóg (spidey)</string>
+  <string name="lockscreen_clock_selection_sammy">Sammy</string>
+  <string name="lockscreen_clock_selection_sammy_bold">Sammy (félkövér)</string>
   <string name="show_lockscreen_date_title">Dátum kisalkalmazás</string>
   <string name="show_lockscreen_date_summary">Lehetővé teszi a dátum megjelenítését az óra kisalkalmazás alatt</string>
+  <string name="lockscreen_date_selection_title">A dátum stílusa</string>
+  <string name="lockscreen_date_selection_default_aosp">Alapértelmezett (kis méret)</string>
+  <string name="lockscreen_date_selection_default">Alapértelmezett</string>
+  <string name="lockscreen_date_selection_str_box">Félig átlátszó doboz</string>
+  <string name="lockscreen_date_selection_str_round">Félig átlátszó doboz (kerekített)</string>
   <string name="show_lockscreen_alarm_title">Ébresztési szöveg</string>
   <string name="show_lockscreen_alarm_summary">Lehetővé teszi az ébresztés megjelenítését az óra kisalkalmazás alatt</string>
   <!-- Hide statusbar on lockscreen -->
@@ -824,6 +845,8 @@
   <string name="screen_off_animation_crt">CRT</string>
   <string name="screen_off_animation_scale">Skála</string>
   <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_title">Értesítéshangok, ha a képernyő be van kapcsolva</string>
+  <string name="notification_sound_vib_screen_on_summary">Értesítéshangok és rezgések lejátszása, ha a képernyő bekapcsolt állapotban van</string>
   <!-- Accidental Touch -->
   <string name="anbi_enabled_title">Véletlen érintés megakadályozása</string>
   <string name="anbi_enabled_summary">Engedélyezésekor megakadályozza a véletlen érintést a navigációs gombokon az érintőképernyő használata közben.</string>
@@ -842,6 +865,7 @@
   <!-- Volume keys -->
   <string name="volume_keys_category">Hangerőgombok</string>
   <!-- Hardware button navigation -->
+  <string name="hardware_keys_power_key_title">Bekapcsológomb</string>
   <string name="hardware_keys_volume_keys_title">Hangerőgomb</string>
   <string name="hardware_keys_home_key_title">Főoldal gomb</string>
   <string name="hardware_keys_menu_key_title">Menügomb</string>
@@ -856,7 +880,12 @@
   <string name="hardware_keys_double_tap_title">Dupla koppintás eseménye</string>
   <string name="hardware_keys_disable_title">Navigációs gombok letiltása</string>
   <string name="hardware_keys_wake_title">Készülék felébresztése</string>
+  <string name="hardware_keys_camera_key_title">Kameragomb</string>
   <!-- Camera button -->
+  <string name="camera_sleep_on_release_title">Betekintés a képernyőbe</string>
+  <string name="camera_sleep_on_release_summary">Bepillanthat a képernyőbe, amíg félig lenyomva tartja a gombot</string>
+  <string name="camera_launch_title">Kamera indítása</string>
+  <string name="camera_launch_summary">Egy hosszan nyomás és elengedés elindítja a kamerát</string>
   <!-- Volume rocker wake -->
   <string name="volume_rocker_wake_title">Ébresztés hangerőgombbal</string>
   <string name="volume_rocker_wake_summary">Hangerőgomb megnyomására ébredjen fel a készülék</string>
@@ -919,11 +948,36 @@
   <string name="fp_only_screen_on_title">Ujjlenyomat csak képernyő be állapotban</string>
   <string name="fp_only_screen_on_summary">Az ujjlenyomat-érzékelő csak akkor működik, ha a képernyőn be van kapcsolva</string>
   <!-- Heads up snooze -->
+  <string name="heads_up_category">Lebegő értesítés</string>
+  <string name="heads_up_snooze_title">Elhalasztás időzítése</string>
+  <string name="heads_up_snooze_disabled">letiltva</string>
+  <string name="heads_up_snooze_1min">1 perc</string>
+  <string name="heads_up_snooze_5min">5 perc</string>
+  <string name="heads_up_snooze_10min">10 perc</string>
+  <string name="heads_up_snooze_15min">15 perc</string>
+  <string name="heads_up_snooze_20min">20 perc</string>
   <!-- Heads up timeout -->
+  <string name="heads_up_time_out_title">Időkorlát</string>
+  <string name="heads_up_time_out_2sec">2 másodperc (alapértelmezett)</string>
+  <string name="heads_up_time_out_4sec">4 másodperc</string>
+  <string name="heads_up_time_out_5sec">5 másodperc</string>
+  <string name="heads_up_time_out_6sec">6 másodperc</string>
+  <string name="heads_up_time_out_8sec">8 másodperc</string>
+  <string name="heads_up_time_out_10sec">10 másodperc</string>
   <!-- Activity Blacklist -->
+  <string name="chooser_activity_blacklist_title">Nem választható alkalmazások</string>
+  <string name="chooser_activity_blacklist_summary">A Megosztás-gomb megérintésekor nem megjelenítendő alkalmazások</string>
+  <string name="chooser_activity_blacklist_cat_title">Tiltólista</string>
+  <string name="chooser_activity_blacklist_pref_title">Alkalmazás hozzáadása</string>
+  <string name="chooser_activity_blacklist_pref_summary">Koppintson ide az alkalmazás hozzáadásához, vagy érintse meg az eltávolításához</string>
   <string name="profile_choose_app">Alkalmazás kiválasztása</string>
   <string name="dialog_delete_title">Törlés</string>
   <string name="dialog_delete_message">Eltávolítja a kijelölt elemet?</string>
   <!-- System Behavior category strings -->
+  <string name="system_ss_category_title">Képernyőmentési beállítások</string>
+  <string name="system_pup_category_title">Csatlakozás/Leválasztás lehetőségek</string>
   <!-- AOSP Recents Style -->
+  <string name="recents_type_title">Az Előzmények elrendezési módja</string>
+  <string name="recents_stock">Gyári</string>
+  <string name="recents_grid">Rács</string>
 </resources>

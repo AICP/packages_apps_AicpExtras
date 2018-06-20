@@ -156,6 +156,8 @@
   <string name="status_bar_icons_category_title">Pictogrammen</string>
   <string name="status_bar_others_category_title">Overigen</string>
   <!-- Show 4G instead of LTE -->
+  <string name="show_4g_title">Toon 4G</string>
+  <string name="show_4g_summary">Toon 4G in plaats van LTE in signaalpictogram</string>
   <!-- Notifications -->
   <string name="notifications_title">Notificaties</string>
   <string name="notifications_summary">Geavanceerde meldingsinstellingen</string>
@@ -186,6 +188,8 @@
   <string name="battery_style_text">Tekst</string>
   <string name="battery_style_hidden">Verborgen</string>
   <!-- Notification count -->
+  <string name="status_bar_notif_count_title">Aantal meldingen tonen</string>
+  <string name="status_bar_notif_count_summary">Aantal nieuwe meldingen tonen</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Snelle instellingen</string>
   <string name="quick_settings_summary">Bewerken weergave Snelle instellingen</string>
@@ -202,6 +206,8 @@
   <string name="qs_columns_portrait_title">Kolommen met tegels staand</string>
   <string name="qs_columns_landscape_title">Kolommen met tegels liggend</string>
   <!-- QS tiles mini mode -->
+  <string name="qs_show_mini_title">Mini-modus</string>
+  <string name="qs_show_mini_summary">Creëer een kleinere header door het verbergen van header-pictogrammen toe te staan</string>
   <!-- QS footer warnings -->
   <string name="qs_footer_warnings_title">Snelle instellingen voettekst waarschuwingen</string>
   <string name="qs_footer_warnings_summary">Laat onderaan het Snelle instellingen-paneel een waarschuwing zien wanneer het netwerk word gemonitord door externe apps of VPN</string>
@@ -215,6 +221,8 @@
   <string name="qs_tile_title_visibility_title">Toon titel van tegels</string>
   <string name="qs_tile_title_visibility_summary">Toon titel onder tegel indien geselecteerd</string>
   <!-- QS carrier text visibility -->
+  <string name="qs_hide_carriertext_title">Providerlabel verbergen</string>
+  <string name="qs_hide_carriertext_summary">Verbergen van providerlabel toestaan</string>
   <!-- QS Headers -->
   <string name="status_bar_custom_header_title">Inschakelen</string>
   <string name="daylight_header_pack_title">Header-afbeeldingen verzameling</string>
@@ -380,8 +388,21 @@
   <!-- Show Lockscreen clock, date, & alarm -->
   <string name="show_lockscreen_clock_title">Klok widget</string>
   <string name="show_lockscreen_clock_summary">Inschakelen om klok widget te tonen</string>
+  <string name="lockscreen_clock_selection_title">Klok stijl</string>
+  <string name="lockscreen_clock_selection_digital">Standaard</string>
+  <string name="lockscreen_clock_selection_digital_bold">Digitaal (vet)</string>
+  <string name="lockscreen_clock_selection_analog">Analoog</string>
+  <string name="lockscreen_clock_selection_analog_deadpool">Analoog (Deadpool)</string>
+  <string name="lockscreen_clock_selection_analog_spidey">Analoog (Spiderman)</string>
+  <string name="lockscreen_clock_selection_sammy">Samsung</string>
+  <string name="lockscreen_clock_selection_sammy_bold">Samsung (vet)</string>
   <string name="show_lockscreen_date_title">Datum widget</string>
   <string name="show_lockscreen_date_summary">Inschakelen om datum widget te tonen</string>
+  <string name="lockscreen_date_selection_title">Datumstijl</string>
+  <string name="lockscreen_date_selection_default_aosp">Standaard (klein formaat)</string>
+  <string name="lockscreen_date_selection_default">Standaard</string>
+  <string name="lockscreen_date_selection_str_box">Semi-transparante box</string>
+  <string name="lockscreen_date_selection_str_round">Semi-transparante box (afgerond)</string>
   <string name="show_lockscreen_alarm_title">Alarmtekst</string>
   <string name="show_lockscreen_alarm_summary">Inschakelen om alarmtekst onder de klok widget te tonen</string>
   <!-- Hide statusbar on lockscreen -->
@@ -824,6 +845,8 @@
   <string name="screen_off_animation_crt">CRT</string>
   <string name="screen_off_animation_scale">Schaal</string>
   <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_title">Notificatiegeluid bij scherm aan</string>
+  <string name="notification_sound_vib_screen_on_summary">Geluid afspelen en trillen bij meldingen indien scherm is ingeschakeld</string>
   <!-- Accidental Touch -->
   <string name="anbi_enabled_title">Onbedoelde aanraking voorkomen</string>
   <string name="anbi_enabled_summary">Negeert onbedoelde aanrakingen tijdens het gebruik van het touchscreen.</string>
@@ -842,6 +865,7 @@
   <!-- Volume keys -->
   <string name="volume_keys_category">Volumeknoppen</string>
   <!-- Hardware button navigation -->
+  <string name="hardware_keys_power_key_title">Aan/uit-knop</string>
   <string name="hardware_keys_volume_keys_title">Volumeknop</string>
   <string name="hardware_keys_home_key_title">Homeknop</string>
   <string name="hardware_keys_menu_key_title">Menuknop</string>
@@ -856,7 +880,12 @@
   <string name="hardware_keys_double_tap_title">Actie bij dubbeltikken</string>
   <string name="hardware_keys_disable_title">Navigatieknoppen uitschakelen</string>
   <string name="hardware_keys_wake_title">Apparaat ontwaken</string>
+  <string name="hardware_keys_camera_key_title">Cameraknop</string>
   <!-- Camera button -->
+  <string name="camera_sleep_on_release_title">Schermvoorbeeld</string>
+  <string name="camera_sleep_on_release_summary">Half indrukken zal het scherm aanhouden zolang de knop ingedrukt blijft</string>
+  <string name="camera_launch_title">Camera openen</string>
+  <string name="camera_launch_summary">Lang indrukken en loslaten zal de camera openen</string>
   <!-- Volume rocker wake -->
   <string name="volume_rocker_wake_title">Ontwaken met volumeknop</string>
   <string name="volume_rocker_wake_summary">Apparaat ontwaken door volumeknoppen</string>
@@ -919,11 +948,36 @@
   <string name="fp_only_screen_on_title">Vingerafdruk bij actief scherm</string>
   <string name="fp_only_screen_on_summary">Vingerafdruk-sensor werkt alleen wanneer scherm ingeschakeld is</string>
   <!-- Heads up snooze -->
+  <string name="heads_up_category">Notificaties</string>
+  <string name="heads_up_snooze_title">Sluimer timer</string>
+  <string name="heads_up_snooze_disabled">uitgeschakeld</string>
+  <string name="heads_up_snooze_1min">1 minuut</string>
+  <string name="heads_up_snooze_5min">5 minuten</string>
+  <string name="heads_up_snooze_10min">10 minuten</string>
+  <string name="heads_up_snooze_15min">15 minuten</string>
+  <string name="heads_up_snooze_20min">20 minuten</string>
   <!-- Heads up timeout -->
+  <string name="heads_up_time_out_title">Timeout</string>
+  <string name="heads_up_time_out_2sec">2 seconden (standaard)</string>
+  <string name="heads_up_time_out_4sec">4 seconden</string>
+  <string name="heads_up_time_out_5sec">5 seconden</string>
+  <string name="heads_up_time_out_6sec">6 seconden</string>
+  <string name="heads_up_time_out_8sec">8 seconden</string>
+  <string name="heads_up_time_out_10sec">10 seconden</string>
   <!-- Activity Blacklist -->
+  <string name="chooser_activity_blacklist_title">Keuzelijst van apps op zwarte lijst</string>
+  <string name="chooser_activity_blacklist_summary">Apps die niet getoond worden bij het tikken op het Delen pictogram</string>
+  <string name="chooser_activity_blacklist_cat_title">Zwarte lijst</string>
+  <string name="chooser_activity_blacklist_pref_title">App toevoegen</string>
+  <string name="chooser_activity_blacklist_pref_summary">Tik hier om toe te voegen, tik op toegevoegde app om weer te verwijderen</string>
   <string name="profile_choose_app">App selecteren</string>
   <string name="dialog_delete_title">Verwijderen</string>
   <string name="dialog_delete_message">Geselecteerd item verwijderen?</string>
   <!-- System Behavior category strings -->
+  <string name="system_ss_category_title">Schermafbeelding instellingen</string>
+  <string name="system_pup_category_title">Opties bij verbinden/verbreken</string>
   <!-- AOSP Recents Style -->
+  <string name="recents_type_title">Opmaak van het overzicht van Recente apps</string>
+  <string name="recents_stock">Standaard</string>
+  <string name="recents_grid">Raster</string>
 </resources>
