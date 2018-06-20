@@ -156,6 +156,8 @@
   <string name="status_bar_icons_category_title">Ikony</string>
   <string name="status_bar_others_category_title">Ostatní</string>
   <!-- Show 4G instead of LTE -->
+  <string name="show_4g_title">Zobrazit 4G</string>
+  <string name="show_4g_summary">Zobrazit 4G místo LTE</string>
   <!-- Notifications -->
   <string name="notifications_title">Oznámení</string>
   <string name="notifications_summary">Rozšířené ovládání oznámení</string>
@@ -186,6 +188,8 @@
   <string name="battery_style_text">Text</string>
   <string name="battery_style_hidden">Skrytá</string>
   <!-- Notification count -->
+  <string name="status_bar_notif_count_title">Zobrazit počet oznámení</string>
+  <string name="status_bar_notif_count_summary">Zobrazí počet nezobrazených oznámení</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Rychlá nastavení</string>
   <string name="quick_settings_summary">Upravit vzhled rychlého nastavení</string>
@@ -202,6 +206,8 @@
   <string name="qs_columns_portrait_title">Počet sloupců dlaždic na výšku</string>
   <string name="qs_columns_landscape_title">Počet sloupců dlaždic na šířku</string>
   <!-- QS tiles mini mode -->
+  <string name="qs_show_mini_title">Mini režim</string>
+  <string name="qs_show_mini_summary">Umožňuje skrýt ikony záhlaví QS a vytvořit menší záhlaví</string>
   <!-- QS footer warnings -->
   <string name="qs_footer_warnings_title">Výstrahy ve spodní části panelu rychlého nastavení</string>
   <string name="qs_footer_warnings_summary">Zobrazit varování ve spodní části panelu rychlého nastavení při monitorování sítě externími aplikacemi nebo VPN</string>
@@ -215,6 +221,8 @@
   <string name="qs_tile_title_visibility_title">Zobrazit názvy dlaždic</string>
   <string name="qs_tile_title_visibility_summary">Pokud je zaškrtnuto, zobrazí se popisky pod dlaždicemi</string>
   <!-- QS carrier text visibility -->
+  <string name="qs_hide_carriertext_title">Skrýt název operátora</string>
+  <string name="qs_hide_carriertext_summary">Umožňuje skrýt název operátora v záhlaví QS</string>
   <!-- QS Headers -->
   <string name="status_bar_custom_header_title">Povolit</string>
   <string name="daylight_header_pack_title">Sbírka obrázků záhlaví</string>
@@ -379,8 +387,21 @@
   <!-- Show Lockscreen clock, date, & alarm -->
   <string name="show_lockscreen_clock_title">Widget hodin</string>
   <string name="show_lockscreen_clock_summary">Povolit zobrazení widgetu hodin</string>
+  <string name="lockscreen_clock_selection_title">Styl hodin</string>
+  <string name="lockscreen_clock_selection_digital">Výchozí</string>
+  <string name="lockscreen_clock_selection_digital_bold">Digitální (tučné)</string>
+  <string name="lockscreen_clock_selection_analog">Analogové</string>
+  <string name="lockscreen_clock_selection_analog_deadpool">Analogové (deadpool)</string>
+  <string name="lockscreen_clock_selection_analog_spidey">Analogové (spidey)</string>
+  <string name="lockscreen_clock_selection_sammy">Sammy</string>
+  <string name="lockscreen_clock_selection_sammy_bold">Sammy (tučné)</string>
   <string name="show_lockscreen_date_title">Widget data</string>
   <string name="show_lockscreen_date_summary">Povolit zobrazení data pod widgetem hodin</string>
+  <string name="lockscreen_date_selection_title">Styl data</string>
+  <string name="lockscreen_date_selection_default_aosp">Výchozí (malá velikost)</string>
+  <string name="lockscreen_date_selection_default">Výchozí</string>
+  <string name="lockscreen_date_selection_str_box">Poloprůhledný box</string>
+  <string name="lockscreen_date_selection_str_round">Poloprůhledný box (kulatý)</string>
   <string name="show_lockscreen_alarm_title">Text budíku</string>
   <string name="show_lockscreen_alarm_summary">Povolit zobrazení textu budíku pod widgetem hodin</string>
   <!-- Hide statusbar on lockscreen -->
@@ -823,6 +844,8 @@
   <string name="screen_off_animation_crt">CRT</string>
   <string name="screen_off_animation_scale">Měřítko</string>
   <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_title">Zvukové oznámení při zapnuté obrazovce</string>
+  <string name="notification_sound_vib_screen_on_summary">Přehrát zvuk a vibrace pro oznámení při zapnuté obrazovce</string>
   <!-- Accidental Touch -->
   <string name="anbi_enabled_title">Zabránit náhodnému dotyku</string>
   <string name="anbi_enabled_summary">Pokud je tato volba povolena, zabraňuje náhodnému dotyku hardwarových tlačítek při používání dotykové obrazovky.</string>
@@ -841,6 +864,7 @@
   <!-- Volume keys -->
   <string name="volume_keys_category">Tlačítka hlasitosti</string>
   <!-- Hardware button navigation -->
+  <string name="hardware_keys_power_key_title">Tlačítka napájení</string>
   <string name="hardware_keys_volume_keys_title">Tlačítka hlasitosti</string>
   <string name="hardware_keys_home_key_title">Tlačítko Domů</string>
   <string name="hardware_keys_menu_key_title">Tlačítko Nabídka</string>
@@ -855,7 +879,12 @@
   <string name="hardware_keys_double_tap_title">Akce dvojím poklepáním</string>
   <string name="hardware_keys_disable_title">Zakázat navigační tlačítka</string>
   <string name="hardware_keys_wake_title">Probudit zařízení</string>
+  <string name="hardware_keys_camera_key_title">Tlačítko fotoaparátu</string>
   <!-- Camera button -->
+  <string name="camera_sleep_on_release_title">Náhled obrazovky</string>
+  <string name="camera_sleep_on_release_summary">Polovičním stiskem tlačítka bude rozsvícena obrazovka pouze po dobu, po kterou je tlačítko stisknuté</string>
+  <string name="camera_launch_title">Spustit fotoaparát</string>
+  <string name="camera_launch_summary">Dlouhým stiskem a uvolněním spustit fotoaparát</string>
   <!-- Volume rocker wake -->
   <string name="volume_rocker_wake_title">Probudit tlačítky hlasitosti</string>
   <string name="volume_rocker_wake_summary">Probudit zařízení stisknutím tlačítek hlasitosti</string>
@@ -918,11 +947,36 @@
   <string name="fp_only_screen_on_title">Otisky prstů při zapnuté obrazovce</string>
   <string name="fp_only_screen_on_summary">Snímač otisků prstů funguje pouze tehdy, když je obrazovka zapnuta</string>
   <!-- Heads up snooze -->
+  <string name="heads_up_category">Plovoucí oznámení</string>
+  <string name="heads_up_snooze_title">Časovač odložení</string>
+  <string name="heads_up_snooze_disabled">zakázáno</string>
+  <string name="heads_up_snooze_1min">1 minuta</string>
+  <string name="heads_up_snooze_5min">5 minut</string>
+  <string name="heads_up_snooze_10min">10 minut</string>
+  <string name="heads_up_snooze_15min">15 minut</string>
+  <string name="heads_up_snooze_20min">20 minut</string>
   <!-- Heads up timeout -->
+  <string name="heads_up_time_out_title">Délka zobrazení</string>
+  <string name="heads_up_time_out_2sec">2 sekundy (výchozí)</string>
+  <string name="heads_up_time_out_4sec">4 sekundy</string>
+  <string name="heads_up_time_out_5sec">5 sekund</string>
+  <string name="heads_up_time_out_6sec">6 sekund</string>
+  <string name="heads_up_time_out_8sec">8 sekund</string>
+  <string name="heads_up_time_out_10sec">10 sekund</string>
   <!-- Activity Blacklist -->
+  <string name="chooser_activity_blacklist_title">Selektor aktivit černé listiny</string>
+  <string name="chooser_activity_blacklist_summary">Aplikace se nezobrazí při klepnutí na tlačítko Sdílet</string>
+  <string name="chooser_activity_blacklist_cat_title">Černá listina</string>
+  <string name="chooser_activity_blacklist_pref_title">Přidat aplikaci</string>
+  <string name="chooser_activity_blacklist_pref_summary">Klepnutím sem přidáte, klepnutím na přidanou aplikaci odstraníte</string>
   <string name="profile_choose_app">Vybrat aplikaci</string>
   <string name="dialog_delete_title">Odstranit</string>
   <string name="dialog_delete_message">Odstranit vybranou položku?</string>
   <!-- System Behavior category strings -->
+  <string name="system_ss_category_title">Možnosti snímku obrazovky</string>
+  <string name="system_pup_category_title">Možnosti připojení/odpojení</string>
   <!-- AOSP Recents Style -->
+  <string name="recents_type_title">Rozvržení nedávných</string>
+  <string name="recents_stock">Výchozí</string>
+  <string name="recents_grid">Mřížka</string>
 </resources>

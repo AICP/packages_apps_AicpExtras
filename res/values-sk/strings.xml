@@ -156,6 +156,8 @@
   <string name="status_bar_icons_category_title">Ikony</string>
   <string name="status_bar_others_category_title">Iné</string>
   <!-- Show 4G instead of LTE -->
+  <string name="show_4g_title">Zobraziť 4G</string>
+  <string name="show_4g_summary">Zobraziť 4G namiesto LTE na ikone signálu</string>
   <!-- Notifications -->
   <string name="notifications_title">Upozornenia</string>
   <string name="notifications_summary">Ovládacie prvky rozšírených upozornení</string>
@@ -186,6 +188,8 @@
   <string name="battery_style_text">Text</string>
   <string name="battery_style_hidden">Skrytá</string>
   <!-- Notification count -->
+  <string name="status_bar_notif_count_title">Zobraziť počítadlo upozornení</string>
+  <string name="status_bar_notif_count_summary">Zobrazí počet nezobrazených upozorneni</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">Rýchle nastavenia</string>
   <string name="quick_settings_summary">Upraviť vzhľad rýchlych nastavení</string>
@@ -202,6 +206,8 @@
   <string name="qs_columns_portrait_title">Počet stĺpcov dlaždíc na výšku</string>
   <string name="qs_columns_landscape_title">Počet stĺpcov dlaždíc na šírku</string>
   <!-- QS tiles mini mode -->
+  <string name="qs_show_mini_title">Režim mini</string>
+  <string name="qs_show_mini_summary">Umožňuje skryť ikony Rýchl. nastavení v záhlaví a tým vytvoriť menšie záhlavie</string>
   <!-- QS footer warnings -->
   <string name="qs_footer_warnings_title">Výstrahy v spodnej časti panela rýchlych nastavení</string>
   <string name="qs_footer_warnings_summary">Zobraziť varovanie v spodnej časti panela rýchlych nastavení, keď je sieť monitorovaná externými aplikáciami alebo VPN</string>
@@ -215,6 +221,8 @@
   <string name="qs_tile_title_visibility_title">Zobraziť názvy dlaždíc rýchlych nastavení</string>
   <string name="qs_tile_title_visibility_summary">Ak je zaškrtnuté, zobrazia sa názvy pod dlaždicami</string>
   <!-- QS carrier text visibility -->
+  <string name="qs_hide_carriertext_title">Skryť názov operátora</string>
+  <string name="qs_hide_carriertext_summary">Umožňuje skryť názov operátora v záhlaví Rýchl. nastavení</string>
   <!-- QS Headers -->
   <string name="status_bar_custom_header_title">Zapnúť</string>
   <string name="daylight_header_pack_title">Zbierka obrázkov záhlavia</string>
@@ -379,8 +387,21 @@
   <!-- Show Lockscreen clock, date, & alarm -->
   <string name="show_lockscreen_clock_title">Miniaplikácia hodín</string>
   <string name="show_lockscreen_clock_summary">Povoliť zobrazenie miniaplikácie hodín</string>
+  <string name="lockscreen_clock_selection_title">Štýl hodín</string>
+  <string name="lockscreen_clock_selection_digital">Predvolené</string>
+  <string name="lockscreen_clock_selection_digital_bold">Digitálne (tučné)</string>
+  <string name="lockscreen_clock_selection_analog">Analogové</string>
+  <string name="lockscreen_clock_selection_analog_deadpool">Analogové (deadpool)</string>
+  <string name="lockscreen_clock_selection_analog_spidey">Analógové (spidey)</string>
+  <string name="lockscreen_clock_selection_sammy">Vertikálne</string>
+  <string name="lockscreen_clock_selection_sammy_bold">Vertikálne (tučné)</string>
   <string name="show_lockscreen_date_title">Miniaplikácia dátumu</string>
   <string name="show_lockscreen_date_summary">Povoliť zobrazenie dátumu pod miniaplikáciou hodín</string>
+  <string name="lockscreen_date_selection_title">Štýl dátumu</string>
+  <string name="lockscreen_date_selection_default_aosp">Predvolený (malá veľkosť)</string>
+  <string name="lockscreen_date_selection_default">Predvolený</string>
+  <string name="lockscreen_date_selection_str_box">Polopriehľadné okno</string>
+  <string name="lockscreen_date_selection_str_round">Polopriehľadné okno (zaoblené)</string>
   <string name="show_lockscreen_alarm_title">Text budíku</string>
   <string name="show_lockscreen_alarm_summary">Povoliť zobrazenie textu budíka pod miniaplikáciou hodín</string>
   <!-- Hide statusbar on lockscreen -->
@@ -823,6 +844,8 @@
   <string name="screen_off_animation_crt">CRT</string>
   <string name="screen_off_animation_scale">Mierka</string>
   <!-- Suppress notification sound/vibration -->
+  <string name="notification_sound_vib_screen_on_title">Zvukové upozornenia aj pri zapnutej obrazovke</string>
+  <string name="notification_sound_vib_screen_on_summary">Prehrávanie zvuku a vibrácie pre upozornenia, keď je obrazovka zapnutá</string>
   <!-- Accidental Touch -->
   <string name="anbi_enabled_title">Zabránenie náhodnému dotyku</string>
   <string name="anbi_enabled_summary">Ak je táto voľba povolená, zabraňuje náhodnému dotyku hardvérových tlačidiel pri používaní dotykovej obrazovky.</string>
@@ -841,6 +864,7 @@
   <!-- Volume keys -->
   <string name="volume_keys_category">Tlačidlá ovládania hlasitosti</string>
   <!-- Hardware button navigation -->
+  <string name="hardware_keys_power_key_title">Tlačidlá Napájania</string>
   <string name="hardware_keys_volume_keys_title">Prebudenie pomocou tlačidiel hlasitosti</string>
   <string name="hardware_keys_home_key_title">Tlačidlo Domov</string>
   <string name="hardware_keys_menu_key_title">Tlačidlo Menu</string>
@@ -855,7 +879,12 @@
   <string name="hardware_keys_double_tap_title">Akcia po dvojitom kliknutí</string>
   <string name="hardware_keys_disable_title">Zakázať navigačné tlačidlá</string>
   <string name="hardware_keys_wake_title">Prebudiť zariadenie</string>
+  <string name="hardware_keys_camera_key_title">Tlačidlo Fotoaparát</string>
   <!-- Camera button -->
+  <string name="camera_sleep_on_release_title">Náhľad obrazovky</string>
+  <string name="camera_sleep_on_release_summary">Polovičným stlačením tlačidla sa rozsvieti obrazovka iba vtedy, kým je tlačidlo držané</string>
+  <string name="camera_launch_title">Spustiť fotoaparát</string>
+  <string name="camera_launch_summary">Dlhým stlačením a uvoľnením sa spustí fotoaparát</string>
   <!-- Volume rocker wake -->
   <string name="volume_rocker_wake_title">Prebudiť tlačidlami hlasitosti</string>
   <string name="volume_rocker_wake_summary">Prebiť zariadenie stlačením tlačidiel hlasitosti</string>
@@ -918,11 +947,36 @@
   <string name="fp_only_screen_on_title">Odtlačky prstov pri zapnutej obrazovke</string>
   <string name="fp_only_screen_on_summary">Snímač odtlačkov prstov funguje len vtedy, keď je obrazovka zapnutá</string>
   <!-- Heads up snooze -->
+  <string name="heads_up_category">Plávajúce upozornenia</string>
+  <string name="heads_up_snooze_title">Časovač odloženia upozorení</string>
+  <string name="heads_up_snooze_disabled">vypnuté</string>
+  <string name="heads_up_snooze_1min">1 minúta</string>
+  <string name="heads_up_snooze_5min">5 minút</string>
+  <string name="heads_up_snooze_10min">10 minút</string>
+  <string name="heads_up_snooze_15min">15 minút</string>
+  <string name="heads_up_snooze_20min">20 minút</string>
   <!-- Heads up timeout -->
+  <string name="heads_up_time_out_title">Časový limit</string>
+  <string name="heads_up_time_out_2sec">2 sekundy (predvolené)</string>
+  <string name="heads_up_time_out_4sec">4 sekundy</string>
+  <string name="heads_up_time_out_5sec">5 sekúnd</string>
+  <string name="heads_up_time_out_6sec">6 sekúnd</string>
+  <string name="heads_up_time_out_8sec">8 sekúnd</string>
+  <string name="heads_up_time_out_10sec">10 sekúnd</string>
   <!-- Activity Blacklist -->
+  <string name="chooser_activity_blacklist_title">Nevybrateľné aplikácie</string>
+  <string name="chooser_activity_blacklist_summary">Aplikácie, ktoré sa nezobrazia pri kliknutí na tlačidlo Zdieľať</string>
+  <string name="chooser_activity_blacklist_cat_title">Čierna listina</string>
+  <string name="chooser_activity_blacklist_pref_title">Pridať aplikáciu</string>
+  <string name="chooser_activity_blacklist_pref_summary">Kliknutím sem pridáte, kliknutím na pridanú aplikáciu ju môžete odstrániť</string>
   <string name="profile_choose_app">Vybrať aplikáciu</string>
   <string name="dialog_delete_title">Vymazať</string>
   <string name="dialog_delete_message">Vymazať vybranú položku?</string>
   <!-- System Behavior category strings -->
+  <string name="system_ss_category_title">Možnosti snímky obrazovky</string>
+  <string name="system_pup_category_title">Možnosti pripojenia/odpojenia</string>
   <!-- AOSP Recents Style -->
+  <string name="recents_type_title">Rozvrhnutie Nedávnych</string>
+  <string name="recents_stock">Stock</string>
+  <string name="recents_grid">Mriežka</string>
 </resources>
