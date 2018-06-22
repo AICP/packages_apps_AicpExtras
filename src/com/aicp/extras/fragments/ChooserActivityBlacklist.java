@@ -32,6 +32,7 @@ import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -53,19 +54,23 @@ import com.aicp.extras.R;
 public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         Preference.OnPreferenceClickListener {
 
-    private static final String TAG = "ChooserActivityBlacklist";
+    private static final String TAG = "Blacklist";
+    private static final String KEY_BLACKLIST = "add_blacklist_packages";
+
+    private static final boolean DEBUG = false;
 
     private static final int DIALOG_BLACKLIST_APPS = 1;
 
-    private PackageListAdapter mPackageAdapter;
-    private PackageManager mPackageManager;
-    private PreferenceGroup mBlacklistPrefList;
-    private Preference mAddBlacklistPref;
-    private String mBlacklistPackageList;
-    private Map<String, Package> mBlacklistPackages;
+    protected PackageListAdapter mPackageAdapter;
+    protected PackageManager mPackageManager;
+    protected PreferenceGroup mBlacklistPrefList;
+    protected Preference mAddBlacklistPref;
+    protected String mBlacklistPackageList;
+    protected String mBlacklistPackageStore;
+    protected Map<String, Package> mBlacklistPackages;
 
-    private AlertDialog mDialog;
-    private ListView mListView;
+    protected AlertDialog mDialog;
+    protected ListView mListView;
 
     @Override
     protected int getPreferenceResource() {
@@ -78,7 +83,7 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         initializeAllPreferences();
     }
 
-    private void showDialog(int dialogId) {
+    protected void showDialog(int dialogId) {
         switch (dialogId) {
             case DIALOG_BLACKLIST_APPS: {
                 Dialog dialog;
@@ -109,13 +114,14 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         refreshCustomApplicationPrefs();
     }
 
-    private void initializeAllPreferences() {
+    protected void initializeAllPreferences() {
+        mBlacklistPackageStore = Settings.System.CHOOSER_ACTIVITY_BLACKLIST;
         mPackageManager = getActivity().getPackageManager();
         mPackageAdapter = new PackageListAdapter(getActivity());
         mBlacklistPrefList = getPreferenceScreen();
         mBlacklistPrefList.setOrderingAsAdded(false);
         mBlacklistPackages = new HashMap<String, Package>();
-        mAddBlacklistPref = findPreference("add_blacklist_packages");
+        mAddBlacklistPref = findPreference(KEY_BLACKLIST);
         mAddBlacklistPref.setOnPreferenceClickListener(this);
     }
 
@@ -144,7 +150,7 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
     /**
      * Application class
      */
-    private static class Package {
+    protected static class Package {
         public String name;
         /**
          * Stores all the application values in one call
@@ -175,7 +181,7 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
 
     };
 
-    private void refreshCustomApplicationPrefs() {
+    protected void refreshCustomApplicationPrefs() {
         if (!parsePackageList()) {
             return;
         }
@@ -200,7 +206,7 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         mBlacklistPrefList.addPreference(mAddBlacklistPref);
     }
 
-     private void addCustomApplicationPref(String packageName, Map<String,Package> map) {
+     protected void addCustomApplicationPref(String packageName, Map<String,Package> map) {
         Package pkg = map.get(packageName);
         if (pkg == null) {
             pkg = new Package(packageName);
@@ -210,7 +216,7 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         }
     }
 
-    private Preference createPreferenceFromInfo(Package pkg)
+    protected Preference createPreferenceFromInfo(Package pkg)
             throws PackageManager.NameNotFoundException {
         PackageInfo info = mPackageManager.getPackageInfo(pkg.name,
                 PackageManager.GET_META_DATA);
@@ -225,17 +231,19 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         return pref;
     }
 
-    private void removeApplicationPref(String packageName, Map<String,Package> map) {
+    protected void removeApplicationPref(String packageName, Map<String,Package> map) {
         if (map.remove(packageName) != null) {
             savePackageList(false, map);
             refreshCustomApplicationPrefs();
         }
     }
 
-    private boolean parsePackageList() {
+    protected boolean parsePackageList() {
         boolean parsed = false;
         final String blacklistString = Settings.System.getString(getActivity().getContentResolver(),
-                Settings.System.CHOOSER_ACTIVITY_BLACKLIST);
+                mBlacklistPackageStore);
+
+        if (DEBUG) Log.v(TAG, "blacklistString: " + blacklistString);
 
         if (!TextUtils.equals(mBlacklistPackageList, blacklistString)) {
             mBlacklistPackageList = blacklistString;
@@ -247,12 +255,14 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         return parsed;
     }
 
-    private void parseAndAddToMap(String baseString, Map<String,Package> map) {
+    protected void parseAndAddToMap(String baseString, Map<String,Package> map) {
         if (baseString == null) {
             return;
         }
 
         final String[] array = TextUtils.split(baseString, "\\|");
+        if (DEBUG) Log.v(TAG, "baseString: " + baseString);
+
         for (String item : array) {
             if (TextUtils.isEmpty(item)) {
                 continue;
@@ -262,10 +272,7 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         }
     }
 
-
-    private void savePackageList(boolean preferencesUpdated, Map<String,Package> map) {
-        String setting = Settings.System.CHOOSER_ACTIVITY_BLACKLIST;
-
+    protected void savePackageList(boolean preferencesUpdated, Map<String,Package> map) {
         List<String> settings = new ArrayList<String>();
         for (Package app : map.values()) {
             settings.add(app.toString());
@@ -274,7 +281,8 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         if (preferencesUpdated) {
             mBlacklistPackageList = value;
         }
+        if (DEBUG) Log.v(TAG, "blackStringSaved: " + value);
         Settings.System.putString(getActivity().getContentResolver(),
-                setting, value);
+                mBlacklistPackageStore, value);
     }
 }

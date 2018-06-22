@@ -37,6 +37,14 @@
         android:fragment="com.aicp.extras.fragments.HeadsUpOptions"
         aicpextras:thereCanBeOnlyOneGroupId="1" />
 
+    <PreferenceScreen
+        android:key="headsup_activity_blacklist"
+        android:fragment="com.aicp.extras.fragments.HeadsUpActivityBlacklist"
+        android:title="@string/headsup_activity_blacklist_title"
+        android:summary="@string/headsup_activity_blacklist_summary"
+        android:dependency="heads_up_notifications_enabled"
+        android:persistent="false" />
+
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="battery_light_enabled"
         android:defaultValue="@*android:bool/config_intrusiveBatteryLed"
