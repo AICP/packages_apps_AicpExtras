@@ -92,6 +92,31 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         ContentResolver resolver = getContentResolver();
         PreferenceScreen prefScreen = getPreferenceScreen();
 
+        final boolean needsNavbar = DUActionUtils.hasNavbarByDefault(getActivity());
+        int keysDisabled = 0;
+        mHwKeyDisable = (SwitchPreference) findPreference(HWKEY_DISABLE);
+        if (!needsNavbar) {
+            keysDisabled = Settings.Secure.getIntForUser(resolver,
+                    Settings.Secure.HARDWARE_KEYS_DISABLE, 0,
+                    UserHandle.USER_CURRENT);
+            mHwKeyDisable.setChecked(keysDisabled != 0);
+            mHwKeyDisable.setOnPreferenceChangeListener(this);
+        } else {
+            mHwKeyDisable.getParent().removePreference(mHwKeyDisable);
+        }
+
+        // Prevent accidental touch to hw keys.
+        mAccidentalTouch = (SwitchPreference) findPreference(KEY_ACCIDENTAL_TOUCH);
+        int deviceHardwareKeys = getActivity().getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+        if (deviceHardwareKeys != 0 || deviceHardwareKeys != 64) {
+            mAccidentalTouch.setEnabled(!(Settings.Secure.getIntForUser(resolver,
+                    Settings.Secure.HARDWARE_KEYS_DISABLE, 0,
+                    UserHandle.USER_CURRENT) == 1));
+        } else {
+            mAccidentalTouch.getParent().removePreference(mAccidentalTouch);
+        }
+
         final boolean hasPowerKey = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_POWER);
 
         final PreferenceCategory powerCategory =
@@ -114,6 +139,11 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
             prefScreen.removePreference(powerCategory);
         }
 
+        final boolean enableBacklightOptions = getResources().getBoolean(
+                com.android.internal.R.bool.config_button_brightness_support);
+
+        mButtonBackLightCategory = (PreferenceCategory) findPreference(KEY_BUTON_BACKLIGHT_OPTIONS);
+
         mManualButtonBrightness = (SeekBarPreferenceCham) findPreference(
                 KEY_BUTTON_MANUAL_BRIGHTNESS_NEW);
         final int customButtonBrightness = getResources().getInteger(
@@ -132,34 +162,8 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         mButtonTimoutBar.setValue(currentTimeout);
         mButtonTimoutBar.setOnPreferenceChangeListener(this);
 
-        // Prevent accidental touch to hw keys.
-        mAccidentalTouch = (SwitchPreference) findPreference(KEY_ACCIDENTAL_TOUCH);
-        int deviceHardwareKeys = getActivity().getResources().getInteger(
-                com.android.internal.R.integer.config_deviceHardwareKeys);
-        if (deviceHardwareKeys == 0 || deviceHardwareKeys == 64) {
-            mAccidentalTouch.getParent().removePreference(mAccidentalTouch);
-        }
-
-        final boolean enableBacklightOptions = getResources().getBoolean(
-                com.android.internal.R.bool.config_button_brightness_support);
-
-        mButtonBackLightCategory = (PreferenceCategory) findPreference(KEY_BUTON_BACKLIGHT_OPTIONS);
-
         if (!enableBacklightOptions) {
             mButtonBackLightCategory.getParent().removePreference(mButtonBackLightCategory);
-        }
-
-        final boolean needsNavbar = DUActionUtils.hasNavbarByDefault(getActivity());
-        int keysDisabled = 0;
-        mHwKeyDisable = (SwitchPreference) findPreference(HWKEY_DISABLE);
-        if (!needsNavbar) {
-            keysDisabled = Settings.Secure.getIntForUser(getContentResolver(),
-                    Settings.Secure.HARDWARE_KEYS_DISABLE, 0,
-                    UserHandle.USER_CURRENT);
-            mHwKeyDisable.setChecked(keysDisabled != 0);
-            mHwKeyDisable.setOnPreferenceChangeListener(this);
-        } else {
-            mHwKeyDisable.getParent().removePreference(mHwKeyDisable);
         }
 
         // bits for hardware keys present on device
@@ -285,20 +289,22 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getContentResolver();
         if (preference == mHwKeyDisable) {
             boolean value = (Boolean) newValue;
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.HARDWARE_KEYS_DISABLE,
-                    value ? 1 : 0);
+            Settings.Secure.putInt(resolver,
+                    Settings.Secure.HARDWARE_KEYS_DISABLE, value ? 1 : 0);
             setActionPreferencesEnabled(!value);
+            mAccidentalTouch.setEnabled(!value);
             return true;
         } else if (preference == mButtonTimoutBar) {
             int buttonTimeout = (Integer) newValue;
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.BUTTON_BACKLIGHT_TIMEOUT, buttonTimeout);
             return true;
         } else if (preference == mManualButtonBrightness) {
             int buttonBrightness = (Integer) newValue;
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.CUSTOM_BUTTON_BRIGHTNESS, buttonBrightness);
             return true;
         } else if (preference == mTorchLongPressPowerTimeout) {
