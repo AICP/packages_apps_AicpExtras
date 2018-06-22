@@ -55,6 +55,14 @@
             android:summary="@string/notification_heads_up_summary"
             android:defaultValue="true" />
 
+        <PreferenceScreen
+            android:key="headsup_activity_blacklist"
+            android:fragment="com.aicp.extras.fragments.HeadsUpActivityBlacklist"
+            android:title="@string/headsup_activity_blacklist_title"
+            android:summary="@string/headsup_activity_blacklist_summary"
+            android:dependency="heads_up_notifications_enabled"
+            android:persistent="false" />
+
         <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="heads_up_notification_snooze"
             android:title="@string/heads_up_snooze_title"
