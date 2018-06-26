@@ -34,13 +34,13 @@
         android:key="recent_panel_bg_color"
         android:title="@string/recent_panel_bg_color_title"
         android:defaultValue="0x00ffffff"
-        alphaSliderEnabled="true" />
+        alphaSlider="true" />
 
     <com.aicp.gear.preference.SystemSettingColorPickerPreference
         android:key="recent_card_bg_color"
         android:title="@string/recent_card_bg_color_title"
         android:defaultValue="0x00ffffff"
-        alphaSliderEnabled="true" />
+        alphaSlider="true" />
 
     <com.aicp.gear.preference.SystemSettingSeekBarPreference
         android:key="recents_max_apps"

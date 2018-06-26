@@ -22,23 +22,27 @@
     <com.aicp.gear.preference.SystemSettingColorPickerPreference
         android:key="statusbar_battery_bar_color"
         android:title="@string/battery_bar_color_title"
-        android:defaultValue="0xffffffff" />
+        android:defaultValue="0xffffffff"
+        alphaSlider="true" />
 
     <com.aicp.gear.preference.SystemSettingColorPickerPreference
         android:key="statusbar_battery_bar_battery_low_color"
         android:title="@string/battery_bar_battery_low_color_title"
-        android:defaultValue="0xffffffff" />
+        android:defaultValue="0xffffffff"
+        alphaSlider="true" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="statusbar_battery_bar_enable_charging_color"
         android:title="@string/battery_bar_use_charging_color_title"
-        android:defaultValue="true" />
+        android:defaultValue="true"
+        alphaSlider="true" />
 
     <com.aicp.gear.preference.SystemSettingColorPickerPreference
         android:key="statusbar_battery_bar_charging_color"
         android:title="@string/battery_bar_charging_color_title"
         android:defaultValue="0xffffff00"
-        android:dependency="statusbar_battery_bar_enable_charging_color" />
+        android:dependency="statusbar_battery_bar_enable_charging_color"
+        alphaSlider="true" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="statusbar_battery_bar_blend_color"
