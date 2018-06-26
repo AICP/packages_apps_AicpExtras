@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
@@ -30,12 +31,10 @@ import com.aicp.gear.preference.SystemSettingIntListPreference;
 public class Notifications extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
-    private static final String TICKER_MODE = "status_bar_show_ticker";
-    private static final String TICKER_MODE_ANIMATION =
-            "status_bar_ticker_animation_mode";
+    private static final String TICKER_CATEGORY = "status_bar_ticker_category";
 
     private SystemSettingIntListPreference mTickerMode;
-    private SystemSettingIntListPreference mTickerModeAnimation;
+    private PreferenceCategory mTickerCategory;
 
     @Override
     protected int getPreferenceResource() {
@@ -47,25 +46,34 @@ public class Notifications extends BaseSettingsFragment implements
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
 
-        mTickerMode =
-                (SystemSettingIntListPreference) findPreference(TICKER_MODE);
+        mTickerMode = (SystemSettingIntListPreference)
+                findPreference(Settings.System.STATUS_BAR_SHOW_TICKER);
         mTickerMode.setOnPreferenceChangeListener(this);
+        mTickerCategory = (PreferenceCategory) findPreference(TICKER_CATEGORY);
 
-        mTickerModeAnimation =
-                (SystemSettingIntListPreference) findPreference(TICKER_MODE_ANIMATION);
         int tickerMode = Settings.System.getIntForUser(resolver,
                 Settings.System.STATUS_BAR_SHOW_TICKER, 0,
                 UserHandle.USER_CURRENT);
-        mTickerModeAnimation.setEnabled(tickerMode > 0);
+        updateTickerDependencies(tickerMode);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference.equals(mTickerMode)) {
-             int value = Integer.parseInt((String) newValue);
-             mTickerModeAnimation.setEnabled(value > 0);
+             updateTickerDependencies(Integer.parseInt((String) newValue));
              return true;
         }
         return false;
+    }
+
+    private void updateTickerDependencies(int tickerMode) {
+        // All preferences in ticker category except the switch itself depend on
+        // ticker enabled state
+        for (int i = 0; i < mTickerCategory.getPreferenceCount(); i++) {
+            Preference preference = mTickerCategory.getPreference(i);
+            if (preference != mTickerMode) {
+                preference.setEnabled(tickerMode > 0);
+            }
+        }
     }
 }
