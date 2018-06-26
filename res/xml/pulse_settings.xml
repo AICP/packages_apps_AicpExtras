@@ -42,7 +42,8 @@
         android:key="eos_fling_pulse_color"
         android:title="@string/fling_pulse_color"
         android:summary="@string/fling_pulse_color_summary"
-        android:defaultValue="0xffffff"
+        android:defaultValue="0xffffffff"
+        alphaSlider="true"
         android:dependency="eos_fling_show_pulse" />
 
     <SwitchPreference
