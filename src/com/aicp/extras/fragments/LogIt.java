@@ -50,6 +50,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     private static final String TAG = LogIt.class.getSimpleName();
 
     private static final String PREF_LOGCAT = "logcat";
+    private static final String PREF_LOGCAT_RADIO = "logcat_radio";
     private static final String PREF_KMSG = "kmseg";
     private static final String PREF_DMESG = "dmesg";
     private static final String PREF_AICP_LOG_IT = "aicp_log_it_now";
@@ -57,6 +58,8 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
 
     private static final String LOGCAT_FILE = new File(Environment
         .getExternalStorageDirectory(), "aicp_logcat.txt").getAbsolutePath();
+    private static final String LOGCAT_RADIO_FILE = new File(Environment
+        .getExternalStorageDirectory(), "aicp_radiolog.txt").getAbsolutePath();
     private static final String KMSG_FILE = new File(Environment
         .getExternalStorageDirectory(), "aicp_kmsg.txt").getAbsolutePath();
     private static final String DMESG_FILE = new File(Environment
@@ -64,6 +67,8 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
 
     private static final String HASTE_LOGCAT_KEY = new File(Environment
             .getExternalStorageDirectory(), "aicp_haste_logcat_key").getAbsolutePath();
+    private static final String HASTE_LOGCAT_RADIO_KEY = new File(Environment
+            .getExternalStorageDirectory(), "aicp_haste_logcat_radio_key").getAbsolutePath();
     private static final String HASTE_KMSG_KEY = new File(Environment
             .getExternalStorageDirectory(), "aicp_haste_kmsg_key").getAbsolutePath();
     private static final String HASTE_DMESG_KEY = new File(Environment
@@ -73,6 +78,8 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     private static final File sdCardDirectory = Environment.getExternalStorageDirectory();
     private static final File logcatFile = new File(sdCardDirectory, "aicp_logcat.txt");
     private static final File logcatHasteKey = new File(sdCardDirectory, "aicp_haste_logcat_key");
+    private static final File logcatRadioFile = new File(sdCardDirectory, "aicp_radiolog.txt");
+    private static final File logcatRadioHasteKey = new File(sdCardDirectory, "aicp_haste_logcat_radio_key");
     private static final File dmesgFile = new File(sdCardDirectory, "aicp_dmesg.txt");
     private static final File dmesgHasteKey = new File(sdCardDirectory, "aicp_haste_dmesg_key");
     private static final File kmsgFile = new File(sdCardDirectory, "aicp_kmsg.txt");
@@ -82,6 +89,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     private static final int HASTE_MAX_LOG_SIZE = 400000;
 
     private CheckBoxPreference mLogcat;
+    private CheckBoxPreference mLogcatRadio;
     private CheckBoxPreference mKmsg;
     private CheckBoxPreference mDmesg;
     private Preference mAicpLogIt;
@@ -103,6 +111,8 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
 
         mLogcat = (CheckBoxPreference) findPreference(PREF_LOGCAT);
         mLogcat.setOnPreferenceChangeListener(this);
+        mLogcatRadio = (CheckBoxPreference) findPreference(PREF_LOGCAT_RADIO);
+        mLogcatRadio.setOnPreferenceChangeListener(this);
         mKmsg = (CheckBoxPreference) findPreference(PREF_KMSG);
         mKmsg.setOnPreferenceChangeListener(this);
         mDmesg = (CheckBoxPreference) findPreference(PREF_DMESG);
@@ -116,14 +126,11 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mLogcat) {
-            mAicpLogIt.setEnabled((Boolean) newValue || mKmsg.isChecked() || mDmesg.isChecked());
-            return true;
-        } else if (preference == mKmsg) {
-            mAicpLogIt.setEnabled((Boolean) newValue || mLogcat.isChecked() || mDmesg.isChecked());
-            return true;
-        } else if (preference == mDmesg) {
-            mAicpLogIt.setEnabled((Boolean) newValue || mLogcat.isChecked() || mKmsg.isChecked());
+        if (preference == mLogcat
+            || preference == mLogcatRadio
+            || preference == mKmsg
+            || preference == mDmesg) {
+            updateEnabledState((CheckBoxPreference) preference, (Boolean) newValue);
             return true;
         } else if (preference == mShareType) {
             if ("0".equals(newValue)) {
@@ -145,10 +152,30 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         }
     }
 
+    protected void updateEnabledState(CheckBoxPreference changedPref, boolean newValue) {
+        final CheckBoxPreference logSelectors[] = {mLogcat, mLogcatRadio, mKmsg, mDmesg,};
+        boolean enabled = newValue;
+        // Enabled if any checkbox is checked
+        if (!enabled) {
+            for (CheckBoxPreference pref: logSelectors) {
+                if (pref == changedPref) {
+                    // Checked status not up-to-date, we use newValue for that
+                    continue;
+                }
+                if (pref.isChecked()) {
+                    enabled = true;
+                    break;
+                }
+            }
+        }
+        mAicpLogIt.setEnabled(enabled);
+    }
+
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mAicpLogIt) {
-            new CreateLogTask().execute(mLogcat.isChecked(), mKmsg.isChecked(), mDmesg.isChecked());
+            new CreateLogTask().execute(mLogcat.isChecked(), mLogcatRadio.isChecked(),
+                    mKmsg.isChecked(), mDmesg.isChecked());
             return true;
         } else {
             return super.onPreferenceTreeClick(preference);
@@ -213,6 +240,19 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         SuShell.runWithSuCheck(command);
     }
 
+    public void makeLogcatRadio() throws SuShell.SuDeniedException, IOException {
+        String command = "logcat -d -b radio";
+        if (shareHaste) {
+            command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + LOGCAT_RADIO_FILE
+                    + "&& curl -s -X POST -T " + LOGCAT_RADIO_FILE + " " + AICP_HASTE
+                    + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > "
+                            + HASTE_LOGCAT_RADIO_KEY;
+        } else {
+            command += " > " + LOGCAT_RADIO_FILE;
+        }
+        SuShell.runWithSuCheck(command);
+    }
+
     public void makeKmsg() throws SuShell.SuDeniedException, IOException {
         String command = "cat /proc/last_kmsg";
         if (shareHaste) {
@@ -239,7 +279,8 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         SuShell.runWithSuCheck(command);
     }
 
-    private void createShareZip(boolean logcat, boolean kmsg, boolean dmesg) throws IOException {
+    private void createShareZip(boolean logcat, boolean logcatRadio, boolean kmsg, boolean dmesg)
+                                throws IOException {
 
         ZipOutputStream out = null;
         try {
@@ -247,6 +288,9 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
                     new FileOutputStream(shareZipFile.getAbsolutePath())));
             if (logcat) {
                 writeToZip(logcatFile, out);
+            }
+            if (logcatRadio) {
+                writeToZip(logcatRadioFile, out);
             }
             if (kmsg) {
                 writeToZip(kmsgFile, out);
@@ -291,7 +335,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         @Override
         protected String doInBackground(Boolean... params) {
             String sharingIntentString = "";
-            if (params.length != 3) {
+            if (params.length != 4) {
                 Log.e(TAG, "CreateLogTask: invalid argument count");
                 return sharingIntentString;
             }
@@ -304,13 +348,20 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
                     }
                 }
                 if (params[1]) {
+                    makeLogcatRadio();
+                    if (shareHaste) {
+                        sharingIntentString += "\nRadio log: " +
+                                Util.readStringFromFile(logcatRadioHasteKey);
+                    }
+                }
+                if (params[2]) {
                     makeKmsg();
                     if (shareHaste) {
                         sharingIntentString += "\nKmsg: " +
                                 Util.readStringFromFile(kmsgHasteKey);
                     }
                 }
-                if (params[2]) {
+                if (params[3]) {
                     makeDmesg();
                     if (shareHaste) {
                         sharingIntentString += "\nDmesg: " +
@@ -318,7 +369,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
                     }
                 }
                 if (shareZip) {
-                    createShareZip(params[0], params[1], params[2]);
+                    createShareZip(params[0], params[1], params[2], params[3]);
                 }
             } catch (SuShell.SuDeniedException e) {
                 mException = e;
@@ -350,6 +401,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
 
     public void resetValues() {
         mLogcat.setChecked(false);
+        mLogcatRadio.setChecked(false);
         mKmsg.setChecked(false);
         mDmesg.setChecked(false);
         mAicpLogIt.setEnabled(false);
