@@ -33,6 +33,11 @@
         android:defaultValue="false" />
 
     <CheckBoxPreference
+        android:key="logcat_radio"
+        android:title="@string/logcat_radio_title"
+        android:defaultValue="false" />
+
+    <CheckBoxPreference
         android:key="kmseg"
         android:title="@string/kmesg_title"
         android:defaultValue="false" />
