@@ -24,31 +24,33 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
-import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.provider.Settings;
+import android.support.v14.preference.SwitchPreference;
 
 import com.aicp.extras.BaseSettingsFragment;
+import com.aicp.extras.R;
+import com.aicp.extras.utils.Util;
 import com.aicp.gear.preference.SeekBarPreferenceCham;
 import com.android.internal.utils.du.ActionConstants;
 import com.android.internal.utils.du.Config;
 import com.android.internal.utils.du.DUActionUtils;
 import com.android.internal.utils.du.Config.ButtonConfig;
-import com.aicp.extras.R;
 
-public class NavigationBar extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
+import lineageos.providers.LineageSettings;
+
+public class NavigationBar extends BaseSettingsFragment implements OnPreferenceChangeListener {
     private static final String NAVBAR_VISIBILITY = "navbar_visibility";
     private static final String KEY_NAVBAR_MODE = "navbar_mode";
-    private static final String KEY_DEFAULT_NAVBAR_SETTINGS = "default_settings";
-    private static final String KEY_FLING_NAVBAR_SETTINGS = "fling_settings";
     private static final String KEY_CATEGORY_NAVIGATION_INTERFACE = "category_navbar_interface";
     private static final String KEY_CATEGORY_NAVIGATION_GENERAL = "category_navbar_general";
-    private static final String KEY_NAVIGATION_BAR_LEFT = "navigation_bar_left";
     private static final String KEY_SMARTBAR_SETTINGS = "smartbar_settings";
+    private static final String KEY_FLING_NAVBAR_SETTINGS = "fling_settings";
+    private static final String KEY_DEFAULT_NAVBAR_SETTINGS = "default_settings";
     private static final String KEY_NAVIGATION_HEIGHT_PORT = "navbar_height_portrait";
     private static final String KEY_NAVIGATION_HEIGHT_LAND = "navbar_height_landscape";
     private static final String KEY_NAVIGATION_WIDTH = "navbar_width";
@@ -56,11 +58,12 @@ public class NavigationBar extends BaseSettingsFragment implements Preference.On
 
     private SwitchPreference mNavbarVisibility;
     private ListPreference mNavbarMode;
-    private PreferenceScreen mFlingSettings;
     private PreferenceCategory mNavInterface;
     private PreferenceCategory mNavGeneral;
     private PreferenceScreen mSmartbarSettings;
+    private PreferenceScreen mFlingSettings;
     private Preference mDefaultSettings;
+    private Preference mPixelNavbarAnimation;
     private SeekBarPreferenceCham mBarHeightPort;
     private SeekBarPreferenceCham mBarHeightLand;
     private SeekBarPreferenceCham mBarWidth;
@@ -79,9 +82,11 @@ public class NavigationBar extends BaseSettingsFragment implements Preference.On
         mNavGeneral = (PreferenceCategory) findPreference(KEY_CATEGORY_NAVIGATION_GENERAL);
         mNavbarVisibility = (SwitchPreference) findPreference(NAVBAR_VISIBILITY);
         mNavbarMode = (ListPreference) findPreference(KEY_NAVBAR_MODE);
-        mDefaultSettings = (Preference) findPreference(KEY_DEFAULT_NAVBAR_SETTINGS);
-        mFlingSettings = (PreferenceScreen) findPreference(KEY_FLING_NAVBAR_SETTINGS);
         mSmartbarSettings = (PreferenceScreen) findPreference(KEY_SMARTBAR_SETTINGS);
+        mFlingSettings = (PreferenceScreen) findPreference(KEY_FLING_NAVBAR_SETTINGS);
+        mDefaultSettings = (Preference) findPreference(KEY_DEFAULT_NAVBAR_SETTINGS);
+        mPixelNavbarAnimation =
+                (Preference) findPreference(LineageSettings.System.PIXEL_NAV_ANIMATION);
         mPulseSettings = (PreferenceScreen) findPreference(KEY_PULSE_SETTINGS);
 
         boolean showing = Settings.Secure.getInt(getContentResolver(),
@@ -95,6 +100,7 @@ public class NavigationBar extends BaseSettingsFragment implements Preference.On
 
         updateBarModeSettings(mode);
         mNavbarMode.setOnPreferenceChangeListener(this);
+        mPixelNavbarAnimation.setOnPreferenceChangeListener(this);
 
         int size = Settings.Secure.getIntForUser(getContentResolver(),
                 Settings.Secure.NAVIGATION_BAR_HEIGHT, 100, UserHandle.USER_CURRENT);
@@ -124,32 +130,38 @@ public class NavigationBar extends BaseSettingsFragment implements Preference.On
         mNavbarMode.setValue(String.valueOf(mode));
         switch (mode) {
             case 0:
-                mDefaultSettings.setEnabled(true);
-                mDefaultSettings.setSelectable(true);
                 mSmartbarSettings.setEnabled(false);
                 mSmartbarSettings.setSelectable(false);
                 mFlingSettings.setEnabled(false);
                 mFlingSettings.setSelectable(false);
+                mDefaultSettings.setEnabled(true);
+                mDefaultSettings.setSelectable(true);
+                mPixelNavbarAnimation.setEnabled(true);
+                mPixelNavbarAnimation.setSelectable(true);
                 mPulseSettings.setEnabled(false);
                 mPulseSettings.setSelectable(false);
                 break;
             case 1:
-                mDefaultSettings.setEnabled(false);
-                mDefaultSettings.setSelectable(false);
                 mSmartbarSettings.setEnabled(true);
                 mSmartbarSettings.setSelectable(true);
                 mFlingSettings.setEnabled(false);
                 mFlingSettings.setSelectable(false);
+                mDefaultSettings.setEnabled(false);
+                mDefaultSettings.setSelectable(false);
+                mPixelNavbarAnimation.setEnabled(false);
+                mPixelNavbarAnimation.setSelectable(false);
                 mPulseSettings.setEnabled(true);
                 mPulseSettings.setSelectable(true);
                 break;
             case 2:
-                mDefaultSettings.setEnabled(false);
-                mDefaultSettings.setSelectable(false);
                 mSmartbarSettings.setEnabled(false);
                 mSmartbarSettings.setSelectable(false);
                 mFlingSettings.setEnabled(true);
                 mFlingSettings.setSelectable(true);
+                mDefaultSettings.setEnabled(false);
+                mDefaultSettings.setSelectable(false);
+                mPixelNavbarAnimation.setEnabled(false);
+                mPixelNavbarAnimation.setSelectable(false);
                 mPulseSettings.setEnabled(true);
                 mPulseSettings.setSelectable(true);
                 break;
@@ -164,17 +176,22 @@ public class NavigationBar extends BaseSettingsFragment implements Preference.On
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference.equals(mNavbarMode)) {
+        if (preference.equals(mNavbarVisibility)) {
+            boolean showing = ((Boolean)newValue);
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.NAVIGATION_BAR_VISIBLE,
+                    showing ? 1 : 0);
+            updateBarVisibleAndUpdatePrefs(showing);
+            return true;
+        } else if (preference.equals(mNavbarMode)) {
             int mode = Integer.parseInt(((String) newValue).toString());
             Settings.Secure.putInt(getContentResolver(),
                     Settings.Secure.NAVIGATION_BAR_MODE, mode);
             updateBarModeSettings(mode);
             return true;
-        } else if (preference.equals(mNavbarVisibility)) {
-            boolean showing = ((Boolean)newValue);
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.NAVIGATION_BAR_VISIBLE,
-                    showing ? 1 : 0);
-            updateBarVisibleAndUpdatePrefs(showing);
+        } else if (preference == mPixelNavbarAnimation) {
+            // For changes to take effect,
+            // a SystemUI restart is required
+            Util.showSystemUIrestartDialog(getActivity());
             return true;
         } else if (preference == mBarHeightPort) {
             int val = (Integer) newValue;
