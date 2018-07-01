@@ -94,13 +94,13 @@ public class StatusBarBatterySettings extends BaseSettingsFragment implements
 
     private void updateDependencies(int index) {
         if (mForceShowPercent) {
-              if (index != 5) {
+              if (index != 6) {
                   mForceShowQSHeaderPercent.setEnabled(false);
               } else {
                   mForceShowQSHeaderPercent.setEnabled(true);
               }
         } else {
-              if (index == 2 || index == 3) {
+              if (index == 2 || index == 3 || index == 4) {
                   mForceShowQSHeaderPercent.setEnabled(false);
               } else {
                   mForceShowQSHeaderPercent.setEnabled(true);
