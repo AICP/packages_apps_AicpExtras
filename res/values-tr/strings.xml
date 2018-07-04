@@ -185,6 +185,7 @@
   <string name="battery_style_land">Yatay</string>
   <string name="battery_style_circle">Daire</string>
   <string name="battery_style_dotted_circle">Noktalı daire</string>
+  <string name="battery_style_square">Kare</string>
   <string name="battery_style_text">Metin</string>
   <string name="battery_style_hidden">Gizle</string>
   <!-- Notification count -->
@@ -614,6 +615,7 @@
   <string name="ticker_animation_mode_title">Şerit animasyonu</string>
   <string name="ticker_animation_mode_alpha_fade">Karart</string>
   <string name="ticker_animation_mode_scroll">Kaydır</string>
+  <string name="ticker_tick_duration_title">Şerit süresi</string>
   <string name="navbar_title">Gezinme çubuğu</string>
   <string name="navbar_summary">Gezinme tuşlarının davranışını düzenleme</string>
   <!-- DUI -->
@@ -701,6 +703,17 @@
   <string name="fling_keyboard_cursors_title">Dinamik klavye imleç eylemi</string>
   <string name="fling_keyboard_cursors_move_summary">Klavye açıkken, imleci sola veya sağa taşımak için sola veya sağa uzun basın.\nİmleci hareket ettirmeye devam etmek için uzun basmaya devam edin, ana ekrana gitmek için çubuğa bir kez dokunun.</string>
   <string name="fling_logo_opacity_title">Fling logo opaklığı</string>
+  <string name="fling_factory_reset_title">Varsayılana sıfırla</string>
+  <string name="fling_factory_reset_confirm">Fling\'i varsayılan ayarlarına sıfırlamak istediğinize emin misiniz?</string>
+  <string name="fling_backup_current_config_title">Profili kaydet</string>
+  <string name="fling_restore_config_title">Profili geri yükle</string>
+  <string name="fling_config_name_edit_dialog_title">Fling profil adı</string>
+  <string name="fling_config_name_edit_dialog_message">Ad girin veya boş bırakın</string>
+  <string name="fling_config_dialog_title">Fling profilleri</string>
+  <string name="fling_config_backup_success_toast">Fling profili başarıyla kaydedildi</string>
+  <string name="fling_config_restore_success_toast">Fling profili başarıyla geri yüklendi</string>
+  <string name="fling_config_backup_error_toast">Fling profili kaydedilirken hata oluştu</string>
+  <string name="fling_config_restore_error_toast">Fling profili geri yüklenirken hata oluştu</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">Pulse cihaz hoparlörünü dinlerken bazı ses kaynakları ile çalışmayabilir</string>
   <string name="pulse_settings">Pulse</string>
@@ -838,7 +851,6 @@
   <string name="force_ambient_for_media_summary">Müzik parça bilgisini ortam ekranında görüntüle</string>
   <string name="force_ambient_for_media_off">Devre dışı</string>
   <string name="force_ambient_for_media_on">Etkin</string>
-  <string name="force_ambient_for_media_on_forced">Standart (Zorla)</string>
   <string name="force_ambient_for_media_on_forced_clean">Minimum (Zorla)</string>
   <!-- Screen Off animation -->
   <string name="screen_off_animation_title">Ekran kapanma animasyonu</string>
@@ -952,16 +964,16 @@
   <string name="heads_up_category">Bildirim pencereleri</string>
   <string name="heads_up_snooze_title">Erteleme zamanlayıcısı</string>
   <string name="heads_up_snooze_disabled">devre dışı</string>
-  <string name="heads_up_snooze_1min">1 dakika</string>
+  <string name="heads_up_snooze_1min">1 dakika (varsayılan)</string>
   <string name="heads_up_snooze_5min">5 dakika</string>
   <string name="heads_up_snooze_10min">10 dakika</string>
   <string name="heads_up_snooze_15min">15 dakika</string>
   <string name="heads_up_snooze_20min">20 dakika</string>
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Zaman aşımı</string>
-  <string name="heads_up_time_out_2sec">2 saniye (varsayılan)</string>
+  <string name="heads_up_time_out_2sec">2 saniye</string>
   <string name="heads_up_time_out_4sec">4 saniye</string>
-  <string name="heads_up_time_out_5sec">5 saniye</string>
+  <string name="heads_up_time_out_5sec">5 saniye (varsayılan)</string>
   <string name="heads_up_time_out_6sec">6 saniye</string>
   <string name="heads_up_time_out_8sec">8 saniye</string>
   <string name="heads_up_time_out_10sec">10 saniye</string>
@@ -974,11 +986,14 @@
   <string name="profile_choose_app">Uygulama seç</string>
   <string name="dialog_delete_title">Sil</string>
   <string name="dialog_delete_message">Seçili öğe kaldırılsın mı?</string>
+  <string name="headsup_activity_blacklist_title">Bildirimler kara listesi</string>
+  <string name="headsup_activity_blacklist_summary">Uygulamalarda bildirim pencereleri gösterilmesine izin verilmiyor</string>
+  <string name="headsup_activity_blacklist_cat_title">Kara liste</string>
+  <string name="headsup_activity_blacklist_pref_title">Uygulama ekle</string>
+  <string name="headsup_activity_blacklist_pref_summary">Eklemek için buraya dokunun, kaldırmak için eklenen uygulamaya dokunun</string>
   <!-- System Behavior category strings -->
   <string name="system_ss_category_title">Ekran görüntüsü</string>
   <string name="system_pup_category_title">Takıp çıkarma</string>
-  <!-- AOSP Recents Style -->
-  <string name="recents_type_title">Son uygulamalar stili</string>
-  <string name="recents_stock">Varsayılan</string>
-  <string name="recents_grid">Izgara</string>
+  <!-- QuickSettings Panel Transparency -->
+  <string name="qs_panel_alpha_title">Panel şeffaflığı</string>
 </resources>
