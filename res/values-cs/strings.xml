@@ -185,6 +185,7 @@
   <string name="battery_style_land">Na šířku</string>
   <string name="battery_style_circle">Kruh</string>
   <string name="battery_style_dotted_circle">Tečkovaný kruh</string>
+  <string name="battery_style_square">Čtverec</string>
   <string name="battery_style_text">Text</string>
   <string name="battery_style_hidden">Skrytá</string>
   <!-- Notification count -->
@@ -613,6 +614,7 @@
   <string name="ticker_animation_mode_title">Animace textu oznámení</string>
   <string name="ticker_animation_mode_alpha_fade">Slábnutí</string>
   <string name="ticker_animation_mode_scroll">Rolování</string>
+  <string name="ticker_tick_duration_title">Doba trvání textu oznámení</string>
   <string name="navbar_title">Navigační panel</string>
   <string name="navbar_summary">SmartBar/Fling</string>
   <!-- DUI -->
@@ -700,6 +702,17 @@
   <string name="fling_keyboard_cursors_title">Akce dynamických kurzorů klávesnice</string>
   <string name="fling_keyboard_cursors_move_summary">Když se klávesnice zobrazí, dlouhým stiskem vlevo nebo vpravo přesunete textový kurzor doleva nebo doprava.\nDlouhým stiskem pokračujete v pohybu kurzoru, jedním klepnutím na panel přejdete na domovskou obrazovku.</string>
   <string name="fling_logo_opacity_title">Průhlednost loga Fling</string>
+  <string name="fling_factory_reset_title">Obnovit výchozí</string>
+  <string name="fling_factory_reset_confirm">Opravdu chcete obnovit nastavení Fling?</string>
+  <string name="fling_backup_current_config_title">Uložit profil</string>
+  <string name="fling_restore_config_title">Obnovit profil</string>
+  <string name="fling_config_name_edit_dialog_title">Název profilu Fling</string>
+  <string name="fling_config_name_edit_dialog_message">Zadejte název nebo ponechte prázdné</string>
+  <string name="fling_config_dialog_title">Profily Fling</string>
+  <string name="fling_config_backup_success_toast">Profil Fling byl úspěšně uložen</string>
+  <string name="fling_config_restore_success_toast">Profil Fling byl úspěšně obnoven</string>
+  <string name="fling_config_backup_error_toast">Chyba při ukládání profilu Fling</string>
+  <string name="fling_config_restore_error_toast">Chyba při obnovení profilu Fling</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">Pulse nefunguje s některými zvukovými zdroji při poslechu z reproduktoru zařízení</string>
   <string name="pulse_settings">Pulse</string>
@@ -836,7 +849,6 @@
   <string name="force_ambient_for_media_summary">Informace o hudební skladbě na ambientním displeji</string>
   <string name="force_ambient_for_media_off">Zakázáno</string>
   <string name="force_ambient_for_media_on">Povoleno</string>
-  <string name="force_ambient_for_media_on_forced">Povoleno a vynuceno</string>
   <string name="force_ambient_for_media_on_forced_clean">Povoleno a minimálně vynuceno</string>
   <!-- Screen Off animation -->
   <string name="screen_off_animation_title">Animace vypnutí obrazovky</string>
@@ -950,16 +962,16 @@
   <string name="heads_up_category">Plovoucí oznámení</string>
   <string name="heads_up_snooze_title">Časovač odložení</string>
   <string name="heads_up_snooze_disabled">zakázáno</string>
-  <string name="heads_up_snooze_1min">1 minuta</string>
+  <string name="heads_up_snooze_1min">1 minuta (výchozí)</string>
   <string name="heads_up_snooze_5min">5 minut</string>
   <string name="heads_up_snooze_10min">10 minut</string>
   <string name="heads_up_snooze_15min">15 minut</string>
   <string name="heads_up_snooze_20min">20 minut</string>
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Délka zobrazení</string>
-  <string name="heads_up_time_out_2sec">2 sekundy (výchozí)</string>
+  <string name="heads_up_time_out_2sec">2 sekundy</string>
   <string name="heads_up_time_out_4sec">4 sekundy</string>
-  <string name="heads_up_time_out_5sec">5 sekund</string>
+  <string name="heads_up_time_out_5sec">5 sekundy (výchozí)</string>
   <string name="heads_up_time_out_6sec">6 sekund</string>
   <string name="heads_up_time_out_8sec">8 sekund</string>
   <string name="heads_up_time_out_10sec">10 sekund</string>
@@ -972,11 +984,14 @@
   <string name="profile_choose_app">Vybrat aplikaci</string>
   <string name="dialog_delete_title">Odstranit</string>
   <string name="dialog_delete_message">Odstranit vybranou položku?</string>
+  <string name="headsup_activity_blacklist_title">Černá listina plovoucích oznámení</string>
+  <string name="headsup_activity_blacklist_summary">Aplikacím není dovoleno zobrazovat plovoucí oznámení</string>
+  <string name="headsup_activity_blacklist_cat_title">Černá listina</string>
+  <string name="headsup_activity_blacklist_pref_title">Přidat aplikaci</string>
+  <string name="headsup_activity_blacklist_pref_summary">Klepnutím sem přidáte, klepnutím na jakoukoliv aplikaci odstraníte</string>
   <!-- System Behavior category strings -->
   <string name="system_ss_category_title">Možnosti snímku obrazovky</string>
   <string name="system_pup_category_title">Možnosti připojení/odpojení</string>
-  <!-- AOSP Recents Style -->
-  <string name="recents_type_title">Rozvržení nedávných</string>
-  <string name="recents_stock">Výchozí</string>
-  <string name="recents_grid">Mřížka</string>
+  <!-- QuickSettings Panel Transparency -->
+  <string name="qs_panel_alpha_title">Neprůhlednost panelu</string>
 </resources>

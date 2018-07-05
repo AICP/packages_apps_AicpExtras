@@ -185,6 +185,7 @@
   <string name="battery_style_land">Modo apaisado</string>
   <string name="battery_style_circle">Círculo</string>
   <string name="battery_style_dotted_circle">Circular punteado</string>
+  <string name="battery_style_square">Cuadrado</string>
   <string name="battery_style_text">Texto</string>
   <string name="battery_style_hidden">Oculto</string>
   <!-- Notification count -->
@@ -501,6 +502,7 @@
   <string name="log_it_title">Log &amp; debug!</string>
   <string name="log_it_summary">Logcat, kmesg, dmesg</string>
   <string name="logcat_title">Logcat</string>
+  <string name="logcat_radio_title">Registro de radio</string>
   <string name="kmesg_title">Kmesg</string>
   <string name="dmesg_title">Dmesg</string>
   <string name="log_it_now_title">Compartir</string>
@@ -614,6 +616,7 @@
   <string name="ticker_animation_mode_title">Animación del Ticker</string>
   <string name="ticker_animation_mode_alpha_fade">Transición</string>
   <string name="ticker_animation_mode_scroll">Desplazamiento</string>
+  <string name="ticker_tick_duration_title">Duración de Ticker</string>
   <string name="navbar_title">Barra de navegación</string>
   <string name="navbar_summary">Smartbar/Fling</string>
   <!-- DUI -->
@@ -701,6 +704,17 @@
   <string name="fling_keyboard_cursors_title">Acción de cursores de teclado dinámico</string>
   <string name="fling_keyboard_cursors_move_summary">Cuando se muestre el teclado, realiza una pulsación larga a la izquierda o derecha para mover el cursor.\nMantén la pulsación larga para seguir moviéndolo, toca en la barra para ir a la pantalla de inicio.</string>
   <string name="fling_logo_opacity_title">Opacidad del logo de Fling</string>
+  <string name="fling_factory_reset_title">Restablecer a valores predeterminados</string>
+  <string name="fling_factory_reset_confirm">¿Está seguro de que desea restablecer Fling a los valores predeterminados?</string>
+  <string name="fling_backup_current_config_title">Guardar perfil</string>
+  <string name="fling_restore_config_title">Restaurar perfil</string>
+  <string name="fling_config_name_edit_dialog_title">Nombre de Perfil de Fling</string>
+  <string name="fling_config_name_edit_dialog_message">Escribir un nombre o dejar en blanco</string>
+  <string name="fling_config_dialog_title">Perfiles de Fling</string>
+  <string name="fling_config_backup_success_toast">Perfil de Fling guardado con éxito</string>
+  <string name="fling_config_restore_success_toast">Perfil de Fling restaurado con éxito</string>
+  <string name="fling_config_backup_error_toast">Error al guardar el perfil de Fling</string>
+  <string name="fling_config_restore_error_toast">Error al restaurar el perfil de Fling</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">Pulso no funciona con algunas fuentes de audio cuando se escucha en el altavoz del dispositivo</string>
   <string name="pulse_settings">Pulso</string>
@@ -772,7 +786,7 @@
   <string name="smartbar_config_restore_success_toast">Perfil Smartbar restaurado correctamente</string>
   <string name="smartbar_config_backup_error_toast">Error al guardar el perfil de Smartbar</string>
   <string name="smartbar_config_restore_error_toast">Error restaurando el perfil de Smartbar</string>
-  <string name="navbar_buttons_alpha_title">Transparencia de los botones</string>
+  <string name="navbar_buttons_alpha_title">Opacidad de los botones</string>
   <string name="smartbar_longpress_delay_title">Tiempo de espera de pulsación larga</string>
   <string name="smartbar_longpress_delay_summary">Establece cuánto esperará el sistema antes de desencadenar una acción de pulsación larga</string>
   <string name="smartbar_longpress_delay_default">Tiempo de espera predeterminado (rápido)</string>
@@ -837,7 +851,6 @@
   <string name="force_ambient_for_media_summary">Información de pista de música en pantalla ambiente</string>
   <string name="force_ambient_for_media_off">Deshabilitada</string>
   <string name="force_ambient_for_media_on">Habilitada</string>
-  <string name="force_ambient_for_media_on_forced">Habilitado y obligatorio</string>
   <string name="force_ambient_for_media_on_forced_clean">Habilitado y mínimo obligatorio</string>
   <!-- Screen Off animation -->
   <string name="screen_off_animation_title">Animación al apagar</string>
@@ -951,16 +964,16 @@
   <string name="heads_up_category">Notificaciones emergentes</string>
   <string name="heads_up_snooze_title">Tiempo de silenciado</string>
   <string name="heads_up_snooze_disabled">deshabilitado</string>
-  <string name="heads_up_snooze_1min">1 minuto</string>
+  <string name="heads_up_snooze_1min">1 minuto (predeterminado)</string>
   <string name="heads_up_snooze_5min">5 minutos</string>
   <string name="heads_up_snooze_10min">10 minutos</string>
   <string name="heads_up_snooze_15min">15 minutos</string>
   <string name="heads_up_snooze_20min">20 minutos</string>
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Tiempo de espera</string>
-  <string name="heads_up_time_out_2sec">2 segundos (predeterminado)</string>
+  <string name="heads_up_time_out_2sec">2 segundos</string>
   <string name="heads_up_time_out_4sec">4 segundos</string>
-  <string name="heads_up_time_out_5sec">5 segundos</string>
+  <string name="heads_up_time_out_5sec">5 segundos (predeterminado)</string>
   <string name="heads_up_time_out_6sec">6 segundos</string>
   <string name="heads_up_time_out_8sec">8 segundos</string>
   <string name="heads_up_time_out_10sec">10 segundos</string>
@@ -973,11 +986,14 @@
   <string name="profile_choose_app">Elegir aplicación</string>
   <string name="dialog_delete_title">Eliminar</string>
   <string name="dialog_delete_message">¿Eliminar el elemento seleccionado?</string>
+  <string name="headsup_activity_blacklist_title">Lista negra de notificaciones emergentes</string>
+  <string name="headsup_activity_blacklist_summary">Aplicaciones sin permiso para mostrar notificaciones emergentes</string>
+  <string name="headsup_activity_blacklist_cat_title">Lista negra</string>
+  <string name="headsup_activity_blacklist_pref_title">Añadir aplicación</string>
+  <string name="headsup_activity_blacklist_pref_summary">Toca aquí para añadir, toca en la aplicación añadida para eliminarla</string>
   <!-- System Behavior category strings -->
   <string name="system_ss_category_title">Opciones de captura de pantalla</string>
   <string name="system_pup_category_title">Opciones al conectar/desconectar</string>
-  <!-- AOSP Recents Style -->
-  <string name="recents_type_title">Estilo de Recientes</string>
-  <string name="recents_stock">Predeterminado</string>
-  <string name="recents_grid">Rejilla</string>
+  <!-- QuickSettings Panel Transparency -->
+  <string name="qs_panel_alpha_title">Opacidad de panel</string>
 </resources>

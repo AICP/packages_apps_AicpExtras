@@ -18,7 +18,7 @@
  */
 -->
 <resources>
-  <string name="app_name">Aicp 额外设置</string>
+  <string name="app_name">Aicp 附加设置</string>
   <!-- Dashboard -->
   <string name="user_interface_category">界面</string>
   <string name="system_category">系统</string>
@@ -185,6 +185,7 @@
   <string name="battery_style_land">横向</string>
   <string name="battery_style_circle">圆形图标</string>
   <string name="battery_style_dotted_circle">环形虚线</string>
+  <string name="battery_style_square">方形</string>
   <string name="battery_style_text">文本</string>
   <string name="battery_style_hidden">隐藏</string>
   <!-- Notification count -->
@@ -535,7 +536,7 @@
   <string name="power_menu_dialog_dim">电源菜单背景阴影度</string>
   <!-- AE settings -->
   <string name="ae_settings_title">AE 定制</string>
-  <string name="ae_settings_summary">自定义 Aicp 额外设置的外观和行为</string>
+  <string name="ae_settings_summary">自定义 Aicp 附加设置的外观和行为</string>
   <string name="theme_title">主题</string>
   <string name="theme_default">默认设置</string>
   <string name="theme_default_more_accent">更多颜色</string>
@@ -544,7 +545,7 @@
   <string name="theme_dark">深色</string>
   <string name="theme_dark_more_accent">暗色与更多颜色</string>
   <string name="ae_launcher_enabled_title">显示启动器图标</string>
-  <string name="ae_launcher_enabled_summary">在启动器中显示 AICP 额外设置</string>
+  <string name="ae_launcher_enabled_summary">在启动器中显示 AICP 附加设置</string>
   <string name="ae_launcher_enabled_update">启动器图标可见性已更新。更改可能需要一些时间才能生效</string>
   <!-- About -->
   <string name="about_title">关于</string>
@@ -553,17 +554,17 @@
   <string name="info_category">信息</string>
   <string name="aicp_website_title">网站</string>
   <string name="aicp_website_summary">访问 GIMP 网站</string>
-  <string name="g_plus_title">G+社区</string>
-  <string name="g_plus_summary">访问我们的G+社区</string>
-  <string name="aicp_gerrit_title">Gerrit代码审查</string>
-  <string name="aicp_gerrit_summary">访问我们的Gerrit来知道我们在为什么而工作</string>
+  <string name="g_plus_title">G+ 社区</string>
+  <string name="g_plus_summary">访问我们的 G+ 社区</string>
+  <string name="aicp_gerrit_title">Gerrit 代码审查</string>
+  <string name="aicp_gerrit_summary">访问我们的 Gerrit 来知道我们在为什么而工作</string>
   <string name="aicp_changelog_title">更新日志</string>
   <string name="aicp_changelog_summary">查看 ROM 的更新日志</string>
   <string name="aicp_downloads_title">下载地址</string>
   <string name="aicp_downloads_summary">访问您设备的 AICP 下载页面</string>
   <string name="aicp_ota_title">Ota 中心</string>
   <string name="aicp_ota_summary">检查 AICP 更新</string>
-  <string name="lineage_extras_title">Lineage附加文件下载</string>
+  <string name="lineage_extras_title">Lineage 附加文件下载</string>
   <string name="lineage_extras_summary">Root 插件, root 移除, 天气提供商&#8230;</string>
   <string name="stats_title">统计</string>
   <string name="stats_summary">提交匿名统计</string>
@@ -614,6 +615,7 @@
   <string name="ticker_animation_mode_title">通知动画</string>
   <string name="ticker_animation_mode_alpha_fade">淡入淡出</string>
   <string name="ticker_animation_mode_scroll">滚动</string>
+  <string name="ticker_tick_duration_title">通知动画</string>
   <string name="navbar_title">导航栏</string>
   <string name="navbar_summary">智能导航栏/扫动</string>
   <!-- DUI -->
@@ -701,6 +703,17 @@
   <string name="fling_keyboard_cursors_title">动态键盘光标操作</string>
   <string name="fling_keyboard_cursors_move_summary">显示键盘时，长按左键或右键可将指针向左或向右移动。\n长按按键以移动指针，单击按键栏回到主屏幕。</string>
   <string name="fling_logo_opacity_title">扫动标志透明度</string>
+  <string name="fling_factory_reset_title">恢复默认设置</string>
+  <string name="fling_factory_reset_confirm">你确定要把扫动模式恢复到默认设置吗？</string>
+  <string name="fling_backup_current_config_title">保存配置</string>
+  <string name="fling_restore_config_title">恢复配置</string>
+  <string name="fling_config_name_edit_dialog_title">扫动配置文件名称</string>
+  <string name="fling_config_name_edit_dialog_message">输入名称或留空</string>
+  <string name="fling_config_dialog_title">扫动配置文件</string>
+  <string name="fling_config_backup_success_toast">扫动配置文件保存成功</string>
+  <string name="fling_config_restore_success_toast">扫动配置文件恢复成功</string>
+  <string name="fling_config_backup_error_toast">保存扫动配置文件时出错</string>
+  <string name="fling_config_restore_error_toast">恢复扫动配置文件时出错</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">当扬声器正在播放音频时，某些音频脉冲将不能正常工作</string>
   <string name="pulse_settings">脉冲信号</string>
@@ -772,7 +785,7 @@
   <string name="smartbar_config_restore_success_toast">智能导航栏配置文件已成功恢复</string>
   <string name="smartbar_config_backup_error_toast">保存智能导航栏配置文件时出错</string>
   <string name="smartbar_config_restore_error_toast">恢复智能导航栏配置文件时出错</string>
-  <string name="navbar_buttons_alpha_title">按钮透明度</string>
+  <string name="navbar_buttons_alpha_title">按钮不透明度</string>
   <string name="smartbar_longpress_delay_title">按钮长按延迟</string>
   <string name="smartbar_longpress_delay_summary">设置系统在触发长按动作之前的等待时间</string>
   <string name="smartbar_longpress_delay_default">默认延迟 (快)</string>
@@ -837,7 +850,6 @@
   <string name="force_ambient_for_media_summary">环境显示中的音乐曲目信息</string>
   <string name="force_ambient_for_media_off">禁用</string>
   <string name="force_ambient_for_media_on">启用</string>
-  <string name="force_ambient_for_media_on_forced">启用和强制</string>
   <string name="force_ambient_for_media_on_forced_clean">启用和强制最小化</string>
   <!-- Screen Off animation -->
   <string name="screen_off_animation_title">屏幕关闭动画</string>
@@ -951,16 +963,16 @@
   <string name="heads_up_category">浮动通知</string>
   <string name="heads_up_snooze_title">打盹计时器</string>
   <string name="heads_up_snooze_disabled">禁用</string>
-  <string name="heads_up_snooze_1min">1 分钟</string>
+  <string name="heads_up_snooze_1min">1 分钟 (默认)</string>
   <string name="heads_up_snooze_5min">5 分钟</string>
   <string name="heads_up_snooze_10min">10 分钟</string>
   <string name="heads_up_snooze_15min">15 分钟</string>
   <string name="heads_up_snooze_20min">20 分钟</string>
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">超时</string>
-  <string name="heads_up_time_out_2sec">2 秒 (默认值)</string>
+  <string name="heads_up_time_out_2sec">2 秒</string>
   <string name="heads_up_time_out_4sec">4 秒</string>
-  <string name="heads_up_time_out_5sec">5 秒</string>
+  <string name="heads_up_time_out_5sec">5 秒 (默认)</string>
   <string name="heads_up_time_out_6sec">6 秒</string>
   <string name="heads_up_time_out_8sec">8 秒</string>
   <string name="heads_up_time_out_10sec">10 秒</string>
@@ -973,11 +985,14 @@
   <string name="profile_choose_app">选择应用</string>
   <string name="dialog_delete_title">删除</string>
   <string name="dialog_delete_message">移除选中的项目？</string>
+  <string name="headsup_activity_blacklist_title">HeadsUp 通知黑名单</string>
+  <string name="headsup_activity_blacklist_summary">应用程序不允许显示 headsup 通知</string>
+  <string name="headsup_activity_blacklist_cat_title">黑名单</string>
+  <string name="headsup_activity_blacklist_pref_title">添加应用程序</string>
+  <string name="headsup_activity_blacklist_pref_summary">点击此处添加，点击列表中的任意应用程序将其删除</string>
   <!-- System Behavior category strings -->
   <string name="system_ss_category_title">屏幕截图选项</string>
   <string name="system_pup_category_title">Plug / Unplug 选项</string>
-  <!-- AOSP Recents Style -->
-  <string name="recents_type_title">最近任务布局</string>
-  <string name="recents_stock">原生</string>
-  <string name="recents_grid">网格</string>
+  <!-- QuickSettings Panel Transparency -->
+  <string name="qs_panel_alpha_title">快速设置面板不透明度</string>
 </resources>
