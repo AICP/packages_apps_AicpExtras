@@ -162,7 +162,7 @@
   <string name="notifications_title">Pemberitahuan</string>
   <string name="notifications_summary">Kontrol pemberitahuan yang diperluas</string>
   <!-- Heads up -->
-  <string name="notification_heads_up_title">Heads up</string>
+  <string name="notification_heads_up_title">Pemberitahuan mengambang</string>
   <string name="notification_heads_up_summary">Izinkan pop up pemberitahuan</string>
   <!-- Notification guts kill app button -->
   <string name="notification_guts_kill_app_button_title">Bunuh tombol aplikasi</string>
@@ -185,6 +185,7 @@
   <string name="battery_style_land">Mendatar</string>
   <string name="battery_style_circle">Lingkaran</string>
   <string name="battery_style_dotted_circle">Lingkaran bertitik</string>
+  <string name="battery_style_square">Kotak</string>
   <string name="battery_style_text">Teks</string>
   <string name="battery_style_hidden">Tersembunyi</string>
   <!-- Notification count -->
@@ -207,7 +208,7 @@
   <string name="qs_columns_landscape_title">Kolom ubin pada tampilan lanskap</string>
   <!-- QS tiles mini mode -->
   <string name="qs_show_mini_title">Modus mini</string>
-  <string name="qs_show_mini_summary">Memungkinkan menyembunyikan ikon header setelan cepat dan membuat header kecil</string>
+  <string name="qs_show_mini_summary">Memungkinkan menyembunyikan ikon header setelan cepat dan membuat header lebih kecil</string>
   <!-- QS footer warnings -->
   <string name="qs_footer_warnings_title">Peringatan footer QS</string>
   <string name="qs_footer_warnings_summary">Tampilkan peringatan di panel QS bawah saat jaringan dipantau oleh aplikasi atau vpn eksternal</string>
@@ -500,6 +501,7 @@
   <string name="log_it_title">Log yang sialan!</string>
   <string name="log_it_summary">Logcat, kmesg, dmesg</string>
   <string name="logcat_title">Logcat</string>
+  <string name="logcat_radio_title">Log radio</string>
   <string name="kmesg_title">Kmesg</string>
   <string name="dmesg_title">Dmesg</string>
   <string name="log_it_now_title">Memesan</string>
@@ -613,6 +615,7 @@
   <string name="ticker_animation_mode_title">Animasi ticker</string>
   <string name="ticker_animation_mode_alpha_fade">Luntur</string>
   <string name="ticker_animation_mode_scroll">Gulir</string>
+  <string name="ticker_tick_duration_title">Durasi ticker</string>
   <string name="navbar_title">Bar Navigasi</string>
   <string name="navbar_summary">Smartbar/Fling</string>
   <!-- DUI -->
@@ -700,6 +703,17 @@
   <string name="fling_keyboard_cursors_title">Tindakan kursor papan ketik dinamis</string>
   <string name="fling_keyboard_cursors_move_summary">Ketika papan ketik ditampilkan, tekan lama bagian kiri atau kanan untuk memindahkan kursor teks ke kiri atau ke kanan. \nTekan dan tahan untuk terus memindahkan kursor, tekan sekali di bilah untuk pergi ke layar beranda.</string>
   <string name="fling_logo_opacity_title">Opasitas logo Fling</string>
+  <string name="fling_factory_reset_title">Setel ulang ke bawaan</string>
+  <string name="fling_factory_reset_confirm">Apakah Anda yakin ingin menyetel ulang Fling ke setelan bawaan?</string>
+  <string name="fling_backup_current_config_title">Simpan profil</string>
+  <string name="fling_restore_config_title">Pulihkan profil</string>
+  <string name="fling_config_name_edit_dialog_title">Nama profil Fling</string>
+  <string name="fling_config_name_edit_dialog_message">Masukkan nama atau kosongkan</string>
+  <string name="fling_config_dialog_title">Profil Fling</string>
+  <string name="fling_config_backup_success_toast">Profil Fling berhasil disimpan</string>
+  <string name="fling_config_restore_success_toast">Profil Fling berhasil dipulihkan</string>
+  <string name="fling_config_backup_error_toast">Kesalahan saat menyimpan profil Fling</string>
+  <string name="fling_config_restore_error_toast">Kesalahan saat memulihkan profil Fling</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">Pulsa tidak bekerja dengan beberapa sumber audio saat mendengarkan pada perangkat pengeras suara</string>
   <string name="pulse_settings">Pulse</string>
@@ -771,7 +785,7 @@
   <string name="smartbar_config_restore_success_toast">Profil Smartbar berhasil dipulihkan</string>
   <string name="smartbar_config_backup_error_toast">Kesalahan saat menyimpan profil Smartbar</string>
   <string name="smartbar_config_restore_error_toast">Kesalahan saat memulihkan profil Smartbar</string>
-  <string name="navbar_buttons_alpha_title">Transparansi tombol</string>
+  <string name="navbar_buttons_alpha_title">Opasitas tombol</string>
   <string name="smartbar_longpress_delay_title">Penundaan tekan lama tombol</string>
   <string name="smartbar_longpress_delay_summary">Tetapkan berapa lama sistem akan menunggu sebelum memicu tindakan tekan lama</string>
   <string name="smartbar_longpress_delay_default">Penundaan standar (cepat)</string>
@@ -836,7 +850,6 @@
   <string name="force_ambient_for_media_summary">Informasi trek musik pada tampilan ambien</string>
   <string name="force_ambient_for_media_off">Dimatikan</string>
   <string name="force_ambient_for_media_on">Dihidupkan</string>
-  <string name="force_ambient_for_media_on_forced">Dihidupkan dan diberlakukan</string>
   <string name="force_ambient_for_media_on_forced_clean">Dihidupkan dan minimal diberlakukan</string>
   <!-- Screen Off animation -->
   <string name="screen_off_animation_title">Animasi layar mati</string>
@@ -884,7 +897,7 @@
   <string name="camera_sleep_on_release_title">Layar mengintip</string>
   <string name="camera_sleep_on_release_summary">Menekan sedang akan menyalakan layar hanya saat tombol tertekan</string>
   <string name="camera_launch_title">Buka kamera</string>
-  <string name="camera_launch_summary">Tekan lama dan lepas akan meluncurkan kamera</string>
+  <string name="camera_launch_summary">Tekan lama dan lepas akan membuka kamera</string>
   <!-- Volume rocker wake -->
   <string name="volume_rocker_wake_title">Volume membangunkan</string>
   <string name="volume_rocker_wake_summary">Bangunkan perangkat anda dengan menekan tombol volume</string>
@@ -947,19 +960,19 @@
   <string name="fp_only_screen_on_title">Sidik jari saat layar hidup</string>
   <string name="fp_only_screen_on_summary">Sensor sidik jari hanya akan bekerja ketika layar hidup</string>
   <!-- Heads up snooze -->
-  <string name="heads_up_category">Heads up</string>
+  <string name="heads_up_category">Pemberitahuan mengambang</string>
   <string name="heads_up_snooze_title">Waktu penundaan</string>
   <string name="heads_up_snooze_disabled">dimatikan</string>
-  <string name="heads_up_snooze_1min">1 menit</string>
+  <string name="heads_up_snooze_1min">1 menit (standar)</string>
   <string name="heads_up_snooze_5min">5 menit</string>
   <string name="heads_up_snooze_10min">10 menit</string>
   <string name="heads_up_snooze_15min">15 menit</string>
   <string name="heads_up_snooze_20min">20 menit</string>
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Batas waktu</string>
-  <string name="heads_up_time_out_2sec">2 detik (standar)</string>
+  <string name="heads_up_time_out_2sec">2 detik</string>
   <string name="heads_up_time_out_4sec">4 detik</string>
-  <string name="heads_up_time_out_5sec">5 detik</string>
+  <string name="heads_up_time_out_5sec">5 detik (standar)</string>
   <string name="heads_up_time_out_6sec">6 detik</string>
   <string name="heads_up_time_out_8sec">8 detik</string>
   <string name="heads_up_time_out_10sec">10 detik</string>
@@ -972,11 +985,14 @@
   <string name="profile_choose_app">Pilih aplikasi</string>
   <string name="dialog_delete_title">Hapus</string>
   <string name="dialog_delete_message">Hapus item yang dipilih?</string>
+  <string name="headsup_activity_blacklist_title">Daftar cekal pemberitauan mengambang</string>
+  <string name="headsup_activity_blacklist_summary">Aplikasi tidak diizinkan untuk menampilkan pemberitahuan mengambang</string>
+  <string name="headsup_activity_blacklist_cat_title">Daftar cekal</string>
+  <string name="headsup_activity_blacklist_pref_title">Tambahkan aplikasi</string>
+  <string name="headsup_activity_blacklist_pref_summary">Ketuk disini untuk menambah, ketuk aplikasi pada daftar untuk menghapusnya</string>
   <!-- System Behavior category strings -->
   <string name="system_ss_category_title">Pilihan tangkapan layar</string>
   <string name="system_pup_category_title">Pilihan pasang/lepas</string>
-  <!-- AOSP Recents Style -->
-  <string name="recents_type_title">Tata letak recent</string>
-  <string name="recents_stock">Bawaan</string>
-  <string name="recents_grid">Grid</string>
+  <!-- QuickSettings Panel Transparency -->
+  <string name="qs_panel_alpha_title">Opasitas panel</string>
 </resources>

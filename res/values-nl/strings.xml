@@ -185,6 +185,7 @@
   <string name="battery_style_land">Liggend</string>
   <string name="battery_style_circle">Cirkel</string>
   <string name="battery_style_dotted_circle">Gestippelde cirkel</string>
+  <string name="battery_style_square">Vierkant</string>
   <string name="battery_style_text">Tekst</string>
   <string name="battery_style_hidden">Verborgen</string>
   <!-- Notification count -->
@@ -614,6 +615,7 @@
   <string name="ticker_animation_mode_title">Ticker animatie</string>
   <string name="ticker_animation_mode_alpha_fade">Fade</string>
   <string name="ticker_animation_mode_scroll">Scrollen</string>
+  <string name="ticker_tick_duration_title">Ticker duur</string>
   <string name="navbar_title">Navigatiebalk</string>
   <string name="navbar_summary">SmartBar/Fling</string>
   <!-- DUI -->
@@ -701,6 +703,17 @@
   <string name="fling_keyboard_cursors_title">Dynamische toetsenbord cursors actie</string>
   <string name="fling_keyboard_cursors_move_summary">Wanneer het toetsenbord wordt weergegeven, druk lang links of rechts om de tekstcursor naar links of rechts te verplaatsen. \nBlijf indrukken om de cursor te blijven verplaatsen, druk eenmaal op de balk om terug naar het home scherm te gaan.</string>
   <string name="fling_logo_opacity_title">Transparantie Fling-logo</string>
+  <string name="fling_factory_reset_title">Terug naar standaard instellingen</string>
+  <string name="fling_factory_reset_confirm">Weet u zeker dat u Fling naar standaardinstellingen wilt herstellen?</string>
+  <string name="fling_backup_current_config_title">Profiel opslaan</string>
+  <string name="fling_restore_config_title">Profiel herstellen</string>
+  <string name="fling_config_name_edit_dialog_title">Fling profielnaam</string>
+  <string name="fling_config_name_edit_dialog_message">Voer naam in of laat leeg</string>
+  <string name="fling_config_dialog_title">Fling profielen</string>
+  <string name="fling_config_backup_success_toast">Fling profiel succesvol opgeslagen</string>
+  <string name="fling_config_restore_success_toast">Fling profiel succesvol hersteld</string>
+  <string name="fling_config_backup_error_toast">Fout bij het opslaan van het Fling profiel</string>
+  <string name="fling_config_restore_error_toast">Fout bij het herstellen van het Fling profiel</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">Pulse werkt niet met sommige audio bronnen bij het luisteren via luidspreker</string>
   <string name="pulse_settings">Pulse</string>
@@ -772,7 +785,7 @@
   <string name="smartbar_config_restore_success_toast">Smartbar profiel succesvol hersteld</string>
   <string name="smartbar_config_backup_error_toast">Fout bij het opslaan van Smartbar profiel</string>
   <string name="smartbar_config_restore_error_toast">Fout bij het herstellen van Smartbar profiel</string>
-  <string name="navbar_buttons_alpha_title">Knop transparantie</string>
+  <string name="navbar_buttons_alpha_title">Transparantie van de knop</string>
   <string name="smartbar_longpress_delay_title">Vertraging lang drukken</string>
   <string name="smartbar_longpress_delay_summary">Instellen hoe lang het systeem zal wachten voordat een lang drukken-actie wordt gestart</string>
   <string name="smartbar_longpress_delay_default">Standaard vertraging (snel)</string>
@@ -837,7 +850,6 @@
   <string name="force_ambient_for_media_summary">Muziektitelinfo op \"Always-On\"-/Inactiviteitsscherm</string>
   <string name="force_ambient_for_media_off">Uitgeschakeld</string>
   <string name="force_ambient_for_media_on">Ingeschakeld</string>
-  <string name="force_ambient_for_media_on_forced">Ingeschakeld (geforceerd)</string>
   <string name="force_ambient_for_media_on_forced_clean">Ingeschakeld (geforceerd indien mogelijk)</string>
   <!-- Screen Off animation -->
   <string name="screen_off_animation_title">Scherm-uit animatie</string>
@@ -951,16 +963,16 @@
   <string name="heads_up_category">Notificaties</string>
   <string name="heads_up_snooze_title">Sluimer timer</string>
   <string name="heads_up_snooze_disabled">uitgeschakeld</string>
-  <string name="heads_up_snooze_1min">1 minuut</string>
+  <string name="heads_up_snooze_1min">1 minuut (standaard)</string>
   <string name="heads_up_snooze_5min">5 minuten</string>
   <string name="heads_up_snooze_10min">10 minuten</string>
   <string name="heads_up_snooze_15min">15 minuten</string>
   <string name="heads_up_snooze_20min">20 minuten</string>
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Timeout</string>
-  <string name="heads_up_time_out_2sec">2 seconden (standaard)</string>
+  <string name="heads_up_time_out_2sec">2 seconden</string>
   <string name="heads_up_time_out_4sec">4 seconden</string>
-  <string name="heads_up_time_out_5sec">5 seconden</string>
+  <string name="heads_up_time_out_5sec">5 seconden (standaard)</string>
   <string name="heads_up_time_out_6sec">6 seconden</string>
   <string name="heads_up_time_out_8sec">8 seconden</string>
   <string name="heads_up_time_out_10sec">10 seconden</string>
@@ -973,11 +985,14 @@
   <string name="profile_choose_app">App selecteren</string>
   <string name="dialog_delete_title">Verwijderen</string>
   <string name="dialog_delete_message">Geselecteerd item verwijderen?</string>
+  <string name="headsup_activity_blacklist_title">Zwarte lijst heads up-meldingen</string>
+  <string name="headsup_activity_blacklist_summary">Apps die geen heads up-meldingen mogen laten zien</string>
+  <string name="headsup_activity_blacklist_cat_title">Zwarte lijst</string>
+  <string name="headsup_activity_blacklist_pref_title">App toevoegen</string>
+  <string name="headsup_activity_blacklist_pref_summary">Tik hier om toe te voegen, tik op een app in de lijst om deze te verwijderen</string>
   <!-- System Behavior category strings -->
   <string name="system_ss_category_title">Schermafbeelding instellingen</string>
   <string name="system_pup_category_title">Opties bij verbinden/verbreken</string>
-  <!-- AOSP Recents Style -->
-  <string name="recents_type_title">Opmaak van het overzicht van Recente apps</string>
-  <string name="recents_stock">Standaard</string>
-  <string name="recents_grid">Raster</string>
+  <!-- QuickSettings Panel Transparency -->
+  <string name="qs_panel_alpha_title">Transparantie Snelle instellingen-paneel</string>
 </resources>

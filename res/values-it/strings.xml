@@ -185,6 +185,7 @@
   <string name="battery_style_land">Orizzontale</string>
   <string name="battery_style_circle">Circolare</string>
   <string name="battery_style_dotted_circle">Cerchio tratteggiato</string>
+  <string name="battery_style_square">Quadra</string>
   <string name="battery_style_text">Testo</string>
   <string name="battery_style_hidden">Nascosta</string>
   <!-- Notification count -->
@@ -614,6 +615,7 @@
   <string name="ticker_animation_mode_title">Animazione ticker</string>
   <string name="ticker_animation_mode_alpha_fade">Dissolvenza</string>
   <string name="ticker_animation_mode_scroll">Scorrimento</string>
+  <string name="ticker_tick_duration_title">Durata del ticker</string>
   <string name="navbar_title">Barra di navigazione</string>
   <string name="navbar_summary">SmartBar/Fling</string>
   <!-- DUI -->
@@ -701,6 +703,17 @@
   <string name="fling_keyboard_cursors_title">Azioni dei cursori della tastiera dinamici</string>
   <string name="fling_keyboard_cursors_move_summary">Quando la tastiera é visibile, tieni premuto a destra o sinistra per muovere il cursore a destra o sinistra. \nTieni premuto per continuare a muovere il cursore, premi una volta la barra per tornare alla schermata home.</string>
   <string name="fling_logo_opacity_title">Trasparenza logo Fling</string>
+  <string name="fling_factory_reset_title">Ripristina a predefinito</string>
+  <string name="fling_factory_reset_confirm">Sei sicuro di voler ripristinare le impostazioni di Fling a quelle di fabbrica?</string>
+  <string name="fling_backup_current_config_title">Salva profilo</string>
+  <string name="fling_restore_config_title">Ripristina profilo</string>
+  <string name="fling_config_name_edit_dialog_title">Nome profilo Fling</string>
+  <string name="fling_config_name_edit_dialog_message">Immetti un nome o lascia vuoto</string>
+  <string name="fling_config_dialog_title">Profili Fling</string>
+  <string name="fling_config_backup_success_toast">Profilo Fling salvato correttamente</string>
+  <string name="fling_config_restore_success_toast">Profilo Fling ripristinato correttamente</string>
+  <string name="fling_config_backup_error_toast">Errore salvataggio del profilo Fling</string>
+  <string name="fling_config_restore_error_toast">Errore ripristino del profilo Fling</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">Pulse non funziona con alcune fonti di audio durante l\'ascolto sull\'altoparlante del dispositivo</string>
   <string name="pulse_settings">Pulse</string>
@@ -837,7 +850,6 @@
   <string name="force_ambient_for_media_summary">Informazioni sulla musica nel Display Ambient</string>
   <string name="force_ambient_for_media_off">Disabilitato</string>
   <string name="force_ambient_for_media_on">Abilitato</string>
-  <string name="force_ambient_for_media_on_forced">Abilitato e forzato</string>
   <string name="force_ambient_for_media_on_forced_clean">Abilitato e forzato minimal</string>
   <!-- Screen Off animation -->
   <string name="screen_off_animation_title">Animazione spegnimento schermo</string>
@@ -951,16 +963,16 @@
   <string name="heads_up_category">Notifiche Fluttuanti</string>
   <string name="heads_up_snooze_title">Durata del posticipo</string>
   <string name="heads_up_snooze_disabled">disabilitato</string>
-  <string name="heads_up_snooze_1min">1 minuto</string>
+  <string name="heads_up_snooze_1min">1 minuto (predefinito)</string>
   <string name="heads_up_snooze_5min">5 minuti</string>
   <string name="heads_up_snooze_10min">10 minuti</string>
   <string name="heads_up_snooze_15min">15 minuti</string>
   <string name="heads_up_snooze_20min">20 minuti</string>
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Durata della visualizzazione</string>
-  <string name="heads_up_time_out_2sec">2 secondi (predefinito)</string>
+  <string name="heads_up_time_out_2sec">2 secondi</string>
   <string name="heads_up_time_out_4sec">4 secondi</string>
-  <string name="heads_up_time_out_5sec">5 secondi</string>
+  <string name="heads_up_time_out_5sec">5 secondi (predefinito)</string>
   <string name="heads_up_time_out_6sec">6 secondi</string>
   <string name="heads_up_time_out_8sec">8 secondi</string>
   <string name="heads_up_time_out_10sec">10 secondi</string>
@@ -973,11 +985,14 @@
   <string name="profile_choose_app">Scegli app</string>
   <string name="dialog_delete_title">Cancella</string>
   <string name="dialog_delete_message">Rimuovere l\'elemento selezionato?</string>
+  <string name="headsup_activity_blacklist_title">Lista nera notifiche fluttuanti</string>
+  <string name="headsup_activity_blacklist_summary">Le app non sono autorizzate a mostrare le notifiche fluttuanti</string>
+  <string name="headsup_activity_blacklist_cat_title">Lista nera</string>
+  <string name="headsup_activity_blacklist_pref_title">Aggiungi app</string>
+  <string name="headsup_activity_blacklist_pref_summary">Tocca qui per aggiungere, tocca qualsiasi app nell\'elenco per rimuoverla</string>
   <!-- System Behavior category strings -->
   <string name="system_ss_category_title">Opzioni screenshot</string>
   <string name="system_pup_category_title">Opzioni collega/scollega</string>
-  <!-- AOSP Recents Style -->
-  <string name="recents_type_title">Disposizione dei recenti</string>
-  <string name="recents_stock">Predefinito</string>
-  <string name="recents_grid">Griglia</string>
+  <!-- QuickSettings Panel Transparency -->
+  <string name="qs_panel_alpha_title">Trasparenza del pannello</string>
 </resources>

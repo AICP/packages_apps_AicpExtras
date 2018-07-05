@@ -185,6 +185,7 @@
   <string name="battery_style_land">Ландшафтная ориентация</string>
   <string name="battery_style_circle">Круг</string>
   <string name="battery_style_dotted_circle">Пунктирный круг</string>
+  <string name="battery_style_square">Квадрат</string>
   <string name="battery_style_text">Текст</string>
   <string name="battery_style_hidden">Скрыть</string>
   <!-- Notification count -->
@@ -290,7 +291,7 @@
   <string name="dialog_pick_iconpack_title">Выберите набор значков</string>
   <string name="default_iconpack_title">Значки по умолчанию</string>
   <!-- Slim recents -->
-  <string name="slim_recents_title">Панель недавних приложений Slim</string>
+  <string name="slim_recents_title">Slim recents</string>
   <string name="recents_max_apps_title">Максимально допустимое количество приложений</string>
   <string name="recent_panel_scale_title">Размер</string>
   <string name="recent_panel_expanded_mode_title">Расширенный режим</string>
@@ -310,7 +311,7 @@
   <string name="default_iconpack_title">Значки по умолчанию</string>
   <string name="slim_recents_corner_radius_title">Радиус закругления карточки</string>
   <string name="slim_recents_aicp_empty_drawable_title">Картинка AICP для пустой панели недавних приложений</string>
-  <string name="slim_recents_aicp_empty_drawable_summary">Показываьт картинку AICP, когда список недавних приложений пуст</string>
+  <string name="slim_recents_aicp_empty_drawable_summary">Показывать картинку AICP, когда список недавних приложений пуст</string>
   <!-- ATTENTION: RTL languages need to replace left with right -->
   <string name="recent_panel_lefty_mode_title">Отображать слева</string>
   <string name="recent_panel_lefty_mode_summary">Отображать панель недавних приложений слева</string>
@@ -449,7 +450,7 @@
   <string name="status_bar_battery_saver_color_title">Цвет индикатора режима энергосбережения</string>
   <string name="status_bar_battery_saver_color_summary">Примечание: Если включен режим энергосбережения батареи, то для активации нового цвета индикатора необходимо выключить и снова включить режим энергосбережения!</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
-  <string name="wake_when_plugged_or_unplugged_title">Включение экрана при при подключении зарядки</string>
+  <string name="wake_when_plugged_or_unplugged_title">Включение экрана при подключении зарядки</string>
   <string name="wake_when_plugged_or_unplugged_summary">Включать экран при подключении или отключении источника питания</string>
   <!-- Power Button - Long press for torch -->
   <string name="torch_long_press_power_gesture_title">Долгое нажатие кнопки питания для включения фонарика</string>
@@ -468,7 +469,7 @@
   <string name="system_animations_summary">Системные анимации</string>
   <string name="custom_bootanimation_title">Анимация загрузки</string>
   <string name="custom_bootanimation_summary">Выберите пользовательскую анимацию загрузки. При каждом изменении, текущая анимация будет скопирована в папку AICP_backup в вашей внутренней памяти. Старые анимации необходимо удалить вручную, если они не нужны.</string>
-  <string name="bootanimation_preview">Предварительный просмотр</string>
+  <string name="bootanimation_preview">Предварительный просмотр анимации загрузки</string>
   <string name="bootanimation_set_custom">Выбрать свою...</string>
   <string name="bootanimation_creating_preview">Создание предварительного просмотра...</string>
   <string name="bootanimation_error_reading_zip_file">Ошибка чтения zip-файла</string>
@@ -566,9 +567,9 @@
   <string name="lineage_extras_summary">Root аддон, удаление root, провайдеры погоды&#8230;</string>
   <string name="stats_title">Статистика</string>
   <string name="stats_summary">Включить/отключить анонимную статистику</string>
-  <string name="device_maintainer_title">Сопровождающий устройство</string>
-  <string name="device_maintainer_dialog">Сопровождающий устройство</string>
-  <string name="device_maintainers_dialog">Сопровождающие устройство</string>
+  <string name="device_maintainer_title">Разработчик</string>
+  <string name="device_maintainer_dialog">Разработчик</string>
+  <string name="device_maintainers_dialog">Разработчики</string>
   <string name="device_maintainer_default">Неизвестно</string>
   <string name="no_root_title">Нет Root прав</string>
   <string name="no_root_summary">Для большей функциональности, корень устройства</string>
@@ -613,6 +614,7 @@
   <string name="ticker_animation_mode_title">Анимация тикера</string>
   <string name="ticker_animation_mode_alpha_fade">Угасание</string>
   <string name="ticker_animation_mode_scroll">Прокрутка</string>
+  <string name="ticker_tick_duration_title">Продолжительность тикера</string>
   <string name="navbar_title">Панель навигации</string>
   <string name="navbar_summary">Smartbar/Fling</string>
   <!-- DUI -->
@@ -698,8 +700,19 @@
   <string name="fling_longpress_title">Задержка длительного нажатия</string>
   <string name="fling_longpress_summary">Увеличить или уменьшить время, необходимое для длительного нажатия</string>
   <string name="fling_keyboard_cursors_title">Динамическое действие курсора клавиатуры</string>
-  <string name="fling_keyboard_cursors_move_summary">Когда отображается клавиатура, длительное нажатие влево или вправо для перемещения текстового курсора влево или вправо.\nЧтобы продолжить перемещение курсора, одним нажатием на панели, чтобы перейти к домашнему экрану.</string>
+  <string name="fling_keyboard_cursors_move_summary">Во время отображения клавиатуры используйте длительное нажатие влево или вправо для перемещения текстового курсора влево или вправо.\nЧтобы продолжить перемещение курсора, продолжайте длительное нажатие. Используйте одиночное нажатие для перехода к домашнему экрану.</string>
   <string name="fling_logo_opacity_title">Прозрачность логотипа Fling</string>
+  <string name="fling_factory_reset_title">Сбросить к настройкам по умолчанию</string>
+  <string name="fling_factory_reset_confirm">Вы уверены, что вы хотите сбросить Fling к настройкам по умолчанию?</string>
+  <string name="fling_backup_current_config_title">Сохранить профиль</string>
+  <string name="fling_restore_config_title">Восстановить профиль</string>
+  <string name="fling_config_name_edit_dialog_title">Имя профиля Fling</string>
+  <string name="fling_config_name_edit_dialog_message">Введите название или оставьте пустым</string>
+  <string name="fling_config_dialog_title">Профили Fling</string>
+  <string name="fling_config_backup_success_toast">Профиль Fling успешно сохранен</string>
+  <string name="fling_config_restore_success_toast">Профиль Fling успешно восстановлен</string>
+  <string name="fling_config_backup_error_toast">Ошибка при сохранении профиля Fling</string>
+  <string name="fling_config_restore_error_toast">Ошибка при восстановлении профиля Fling</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">Pulse не работает с некоторыми источниками аудио во время прослушивания через динамик</string>
   <string name="pulse_settings">Pulse</string>
@@ -836,7 +849,6 @@
   <string name="force_ambient_for_media_summary">Информация о музыкальном треке на Ambient Display</string>
   <string name="force_ambient_for_media_off">Выключен</string>
   <string name="force_ambient_for_media_on">Включен</string>
-  <string name="force_ambient_for_media_on_forced">Включено принудительно</string>
   <string name="force_ambient_for_media_on_forced_clean">Включено принудительно минимально</string>
   <!-- Screen Off animation -->
   <string name="screen_off_animation_title">Анимация выключения экрана</string>
@@ -950,16 +962,16 @@
   <string name="heads_up_category">Всплывающие уведомления</string>
   <string name="heads_up_snooze_title">Задержка всплывающих уведомлений</string>
   <string name="heads_up_snooze_disabled">выключено</string>
-  <string name="heads_up_snooze_1min">1 минута</string>
+  <string name="heads_up_snooze_1min">1 минута (по умолчанию)</string>
   <string name="heads_up_snooze_5min">5 минут</string>
   <string name="heads_up_snooze_10min">10 минут</string>
   <string name="heads_up_snooze_15min">15 минут</string>
   <string name="heads_up_snooze_20min">20 минут</string>
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Длительность</string>
-  <string name="heads_up_time_out_2sec">2 секунды (по умолчанию)</string>
+  <string name="heads_up_time_out_2sec">2 секунды</string>
   <string name="heads_up_time_out_4sec">4 секунды</string>
-  <string name="heads_up_time_out_5sec">5 секунд</string>
+  <string name="heads_up_time_out_5sec">5 секунд (по умолчанию)</string>
   <string name="heads_up_time_out_6sec">6 секунд</string>
   <string name="heads_up_time_out_8sec">8 секунд</string>
   <string name="heads_up_time_out_10sec">10 секунд</string>
@@ -972,11 +984,14 @@
   <string name="profile_choose_app">Выбрать приложение</string>
   <string name="dialog_delete_title">Удалить</string>
   <string name="dialog_delete_message">Удалить выбранный элемент?</string>
+  <string name="headsup_activity_blacklist_title">Чёрный список всплывающих уведомлений</string>
+  <string name="headsup_activity_blacklist_summary">Приложения, для которых не разрешено показывать высплывающие уведомления</string>
+  <string name="headsup_activity_blacklist_cat_title">Чёрный список</string>
+  <string name="headsup_activity_blacklist_pref_title">Добавить приложение</string>
+  <string name="headsup_activity_blacklist_pref_summary">Нажмите здесь, чтобы добавить, нажмите на добавленное приложение, чтобы удалить его</string>
   <!-- System Behavior category strings -->
   <string name="system_ss_category_title">Настройки скриншота</string>
   <string name="system_pup_category_title">Настройки подключения/отключения</string>
-  <!-- AOSP Recents Style -->
-  <string name="recents_type_title">Вид панели недавних приложений</string>
-  <string name="recents_stock">По умолчанию</string>
-  <string name="recents_grid">Сетка</string>
+  <!-- QuickSettings Panel Transparency -->
+  <string name="qs_panel_alpha_title">Прозрачность панели</string>
 </resources>

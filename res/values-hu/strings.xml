@@ -185,6 +185,7 @@
   <string name="battery_style_land">Fekvő</string>
   <string name="battery_style_circle">Kör</string>
   <string name="battery_style_dotted_circle">Pontozott kör</string>
+  <string name="battery_style_square">Négyzet</string>
   <string name="battery_style_text">Szöveg</string>
   <string name="battery_style_hidden">Rejtett</string>
   <!-- Notification count -->
@@ -614,6 +615,7 @@
   <string name="ticker_animation_mode_title">Jelzőszalag animációja</string>
   <string name="ticker_animation_mode_alpha_fade">Áttűnés</string>
   <string name="ticker_animation_mode_scroll">Görgetés</string>
+  <string name="ticker_tick_duration_title">Jelzőszalag időtartama</string>
   <string name="navbar_title">Navigációs sáv</string>
   <string name="navbar_summary">Smartbar/Fling</string>
   <!-- DUI -->
@@ -701,6 +703,17 @@
   <string name="fling_keyboard_cursors_title">Dinamikus billentyűzet kurzorok</string>
   <string name="fling_keyboard_cursors_move_summary">Amikor a billentyűzet látszik, nyomja hosszan a balra vagy a jobbra gombot a kurzor balra vagy jobbra mozgatásához.\nTartsa nyomva a kurzor mozgásban tartásához, a kezdőképernyőre lépéshez érintse meg a sávot.</string>
   <string name="fling_logo_opacity_title">Fling logó átlátszatlansága</string>
+  <string name="fling_factory_reset_title">Visszaállítás gyárira</string>
+  <string name="fling_factory_reset_confirm">Biztos, hogy visszaállítja a Fling gyári állapotát?</string>
+  <string name="fling_backup_current_config_title">Profil mentése</string>
+  <string name="fling_restore_config_title">Profil visszaállítása</string>
+  <string name="fling_config_name_edit_dialog_title">A Fling-profil neve</string>
+  <string name="fling_config_name_edit_dialog_message">Adjon meg nevet, vagy hagyja üresen</string>
+  <string name="fling_config_dialog_title">Fling-profilok</string>
+  <string name="fling_config_backup_success_toast">A Fling-profil sikeresen mentésre került</string>
+  <string name="fling_config_restore_success_toast">A Fling-profil sikeresen visszaállításra került</string>
+  <string name="fling_config_backup_error_toast">Hiba keletkezett a Fling-profil mentésekor</string>
+  <string name="fling_config_restore_error_toast">Hiba keletkezett a Fling-profil visszaállításakor</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">\"Pulse\" nem működik bizonyos források esetén, amikor a készülék nagszóróján szól a média</string>
   <string name="pulse_settings">Pulse</string>
@@ -772,7 +785,7 @@
   <string name="smartbar_config_restore_success_toast">SmartBar profil sikeresen visszaállítva</string>
   <string name="smartbar_config_backup_error_toast">Hiba a SmartBar profil mentésekor</string>
   <string name="smartbar_config_restore_error_toast">Hiba a SmartBar profil visszaállításakor</string>
-  <string name="navbar_buttons_alpha_title">Gombok áttetszősége</string>
+  <string name="navbar_buttons_alpha_title">A Gomb átlátszósága</string>
   <string name="smartbar_longpress_delay_title">Gomb hosszan nyomási időkorlátja</string>
   <string name="smartbar_longpress_delay_summary">Állítsa be, mennyi ideig várjon a rendszer egy hosszan nyomási művelet elindítása előtt</string>
   <string name="smartbar_longpress_delay_default">Alapértelmezett késleltetés (gyors)</string>
@@ -837,7 +850,6 @@
   <string name="force_ambient_for_media_summary">Zeneszáminformáció megjelenítése a Környezeti kijelzőn</string>
   <string name="force_ambient_for_media_off">Letiltva</string>
   <string name="force_ambient_for_media_on">Engedélyezve</string>
-  <string name="force_ambient_for_media_on_forced">Engedélyezve és kényszerítve</string>
   <string name="force_ambient_for_media_on_forced_clean">Engedélyezve és minimálisan kényszerítve</string>
   <!-- Screen Off animation -->
   <string name="screen_off_animation_title">Képernyő-kikapcsolási animáció</string>
@@ -951,16 +963,16 @@
   <string name="heads_up_category">Lebegő értesítés</string>
   <string name="heads_up_snooze_title">Elhalasztás időzítése</string>
   <string name="heads_up_snooze_disabled">letiltva</string>
-  <string name="heads_up_snooze_1min">1 perc</string>
+  <string name="heads_up_snooze_1min">1 percre (alapértelmezett)</string>
   <string name="heads_up_snooze_5min">5 perc</string>
   <string name="heads_up_snooze_10min">10 perc</string>
   <string name="heads_up_snooze_15min">15 perc</string>
   <string name="heads_up_snooze_20min">20 perc</string>
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Időkorlát</string>
-  <string name="heads_up_time_out_2sec">2 másodperc (alapértelmezett)</string>
+  <string name="heads_up_time_out_2sec">2 másodperc</string>
   <string name="heads_up_time_out_4sec">4 másodperc</string>
-  <string name="heads_up_time_out_5sec">5 másodperc</string>
+  <string name="heads_up_time_out_5sec">5 másodperc (alapértelmezett)</string>
   <string name="heads_up_time_out_6sec">6 másodperc</string>
   <string name="heads_up_time_out_8sec">8 másodperc</string>
   <string name="heads_up_time_out_10sec">10 másodperc</string>
@@ -973,11 +985,14 @@
   <string name="profile_choose_app">Alkalmazás kiválasztása</string>
   <string name="dialog_delete_title">Törlés</string>
   <string name="dialog_delete_message">Eltávolítja a kijelölt elemet?</string>
+  <string name="headsup_activity_blacklist_title">Felugró értesítések tiltólistája</string>
+  <string name="headsup_activity_blacklist_summary">Azon alkalmazások listája, amelyek nem jeleníthetnek meg felugró értesítéseket</string>
+  <string name="headsup_activity_blacklist_cat_title">Tiltólista</string>
+  <string name="headsup_activity_blacklist_pref_title">Alkalmazás hozzáadása</string>
+  <string name="headsup_activity_blacklist_pref_summary">Koppintson ide az alkalmazás hozzáadásához, vagy érintsen meg egyet az eltávolításához</string>
   <!-- System Behavior category strings -->
   <string name="system_ss_category_title">Képernyőmentési beállítások</string>
   <string name="system_pup_category_title">Csatlakozás/Leválasztás lehetőségek</string>
-  <!-- AOSP Recents Style -->
-  <string name="recents_type_title">Az Előzmények elrendezési módja</string>
-  <string name="recents_stock">Gyári</string>
-  <string name="recents_grid">Rács</string>
+  <!-- QuickSettings Panel Transparency -->
+  <string name="qs_panel_alpha_title">A panel átlátszósága</string>
 </resources>

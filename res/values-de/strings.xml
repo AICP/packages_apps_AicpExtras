@@ -163,7 +163,7 @@
   <string name="notifications_summary">Erweiterte Benachrichtigungseinstellungen</string>
   <!-- Heads up -->
   <string name="notification_heads_up_title">Pop-ups</string>
-  <string name="notification_heads_up_summary">Pop-up-Benachrichtigungen zulassen</string>
+  <string name="notification_heads_up_summary">Pop-Up Benachrichtigungen zulassen</string>
   <!-- Notification guts kill app button -->
   <string name="notification_guts_kill_app_button_title">\"App beenden\"-Taste</string>
   <string name="notification_guts_kill_app_button_summary">Zeige eine Taste zum Beenden der App, wenn deren Benachrichtigung lange gedrückt wird</string>
@@ -185,6 +185,7 @@
   <string name="battery_style_land">Querformat</string>
   <string name="battery_style_circle">Kreis</string>
   <string name="battery_style_dotted_circle">Kreis (gepunktet)</string>
+  <string name="battery_style_square">Quadrat</string>
   <string name="battery_style_text">Text</string>
   <string name="battery_style_hidden">Ausgeblendet</string>
   <!-- Notification count -->
@@ -500,9 +501,10 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <!-- Log it -->
   <string name="log_it_title">Logs erstellen</string>
   <string name="log_it_summary">Logcat, Kmesg, Dmesg</string>
-  <string name="logcat_title">Logcat</string>
-  <string name="kmesg_title">Kmesg</string>
-  <string name="dmesg_title">Dmesg</string>
+  <string name="logcat_title">Gesamt log (logcat)</string>
+  <string name="logcat_radio_title">Modem log</string>
+  <string name="kmesg_title">Kernel log (kmesg)</string>
+  <string name="dmesg_title">Geräte log (dmesg)</string>
   <string name="log_it_now_title">Loslegen</string>
   <string name="log_it_dialog_title">Loslegen</string>
   <string name="logcat_warning">Teile das oder GTFO!</string>
@@ -614,6 +616,7 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="ticker_animation_mode_title">Ticker-Animation</string>
   <string name="ticker_animation_mode_alpha_fade">Ausblenden</string>
   <string name="ticker_animation_mode_scroll">Textlauf</string>
+  <string name="ticker_tick_duration_title">Ticker-Dauer</string>
   <string name="navbar_title">Navigationsleiste</string>
   <string name="navbar_summary">SmartBar/Fling</string>
   <!-- DUI -->
@@ -701,6 +704,17 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="fling_keyboard_cursors_title">Dyn. Aktionen zur Eingabebewegung (Tastatur)</string>
   <string name="fling_keyboard_cursors_move_summary">Bei aktiver Tastatur, links oder rechts gedrückt halten, um den Textcursor zu bewegen.\nLänger gedrückt halten, um den Cursor weiter zu bewegen.\nTippen Sie auf die Leiste, um zum Startbildschirm zu gelangen.</string>
   <string name="fling_logo_opacity_title">Deckkraft des Fling-Logos</string>
+  <string name="fling_factory_reset_title">Auf Grundeinstellung zurücksetzen</string>
+  <string name="fling_factory_reset_confirm">Sind Sie sicher, dass Sie Fling auf die Grundeinstellungen zurücksetzen möchten?</string>
+  <string name="fling_backup_current_config_title">Profil speichern</string>
+  <string name="fling_restore_config_title">Profil wiederherstellen</string>
+  <string name="fling_config_name_edit_dialog_title">Fling-Profilname</string>
+  <string name="fling_config_name_edit_dialog_message">Namen eingeben oder leer lassen</string>
+  <string name="fling_config_dialog_title">Fling-Profile</string>
+  <string name="fling_config_backup_success_toast">Fling-Profil erfolgreich gespeichert</string>
+  <string name="fling_config_restore_success_toast">Fling-Profil erfolgreich wiederhergestellt</string>
+  <string name="fling_config_backup_error_toast">Fehler beim Speichern des Fling-Profils</string>
+  <string name="fling_config_restore_error_toast">Fehler beim Wiederherstellen des Fling-Profils</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">Pulse funktioniert nicht mit einige Audioquellen, wenn Die Ausgabe über Lautsprecher erfolgt</string>
   <string name="pulse_settings">Pulse</string>
@@ -772,7 +786,7 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="smartbar_config_restore_success_toast">SmartBar-Profil erfolgreich wiederhergestellt</string>
   <string name="smartbar_config_backup_error_toast">Fehler beim Speichern des SmartBar-Profils</string>
   <string name="smartbar_config_restore_error_toast">Fehler beim Wiederherstellen des SmartBar-Profils</string>
-  <string name="navbar_buttons_alpha_title">Transparenz der Tasten</string>
+  <string name="navbar_buttons_alpha_title">Deckkraft der Tasten</string>
   <string name="smartbar_longpress_delay_title">Tastenverzögerung bei Langem Druck</string>
   <string name="smartbar_longpress_delay_summary">Einstellen, wie lange das System wartet, bevor die Aktion als \"langer Druck\" erkannt wird</string>
   <string name="smartbar_longpress_delay_default">Kurze Verzögerung (Standard)</string>
@@ -837,7 +851,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="force_ambient_for_media_summary">Musiktitelinfo bei \"Always-On\"-Inaktivitätsdisplay</string>
   <string name="force_ambient_for_media_off">Deaktiviert</string>
   <string name="force_ambient_for_media_on">Aktiviert</string>
-  <string name="force_ambient_for_media_on_forced">Aktiviert (immer dargestellt)</string>
   <string name="force_ambient_for_media_on_forced_clean">Aktiviert (dargestellt falls möglich)</string>
   <!-- Screen Off animation -->
   <string name="screen_off_animation_title">Stil der Abschaltanimation</string>
@@ -951,16 +964,16 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="heads_up_category">Pop-Up Benachrichtigungen</string>
   <string name="heads_up_snooze_title">Schlummerfunktion</string>
   <string name="heads_up_snooze_disabled">deaktiviert</string>
-  <string name="heads_up_snooze_1min">1 Minute</string>
+  <string name="heads_up_snooze_1min">1 Minute (Standard)</string>
   <string name="heads_up_snooze_5min">5 Minuten</string>
   <string name="heads_up_snooze_10min">10 Minuten</string>
   <string name="heads_up_snooze_15min">15 Minuten</string>
   <string name="heads_up_snooze_20min">20 Minuten</string>
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Anzeigedauer</string>
-  <string name="heads_up_time_out_2sec">2 Sekunden (Standard)</string>
+  <string name="heads_up_time_out_2sec">2 Sekunden</string>
   <string name="heads_up_time_out_4sec">4 Sekunden</string>
-  <string name="heads_up_time_out_5sec">5 Sekunden</string>
+  <string name="heads_up_time_out_5sec">5 Sekunden (Standard)</string>
   <string name="heads_up_time_out_6sec">6 Sekunden</string>
   <string name="heads_up_time_out_8sec">8 Sekunden</string>
   <string name="heads_up_time_out_10sec">10 Sekunden</string>
@@ -973,11 +986,14 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="profile_choose_app">Anwendung auswählen</string>
   <string name="dialog_delete_title">Löschen</string>
   <string name="dialog_delete_message">Ausgewählten Eintrag löschen?</string>
+  <string name="headsup_activity_blacklist_title">Blockierliste für Pop-Up Benachrichtigungen</string>
+  <string name="headsup_activity_blacklist_summary">Apps, denen nicht erlaubt wird, Pop-Up Benachrichtigungen anzuzeigen</string>
+  <string name="headsup_activity_blacklist_cat_title">Blockierliste</string>
+  <string name="headsup_activity_blacklist_pref_title">App hinzufügen</string>
+  <string name="headsup_activity_blacklist_pref_summary">Hier zum Hinzufügen tippen, zum Entfernen auf eine vorhandene App tippen</string>
   <!-- System Behavior category strings -->
   <string name="system_ss_category_title">Bildschirmfoto-Optionen</string>
   <string name="system_pup_category_title">Optionen beim Verbinden</string>
-  <!-- AOSP Recents Style -->
-  <string name="recents_type_title">Layout des Anwendungsverlaufs</string>
-  <string name="recents_stock">Standard</string>
-  <string name="recents_grid">Raster</string>
+  <!-- QuickSettings Panel Transparency -->
+  <string name="qs_panel_alpha_title">Transparenz der Schnelleinstellungen</string>
 </resources>
