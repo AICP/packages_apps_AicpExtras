@@ -185,6 +185,7 @@
   <string name="battery_style_land">Na šírku</string>
   <string name="battery_style_circle">Kruh</string>
   <string name="battery_style_dotted_circle">Bodkovaný kruh</string>
+  <string name="battery_style_square">Štvorec</string>
   <string name="battery_style_text">Text</string>
   <string name="battery_style_hidden">Skrytá</string>
   <!-- Notification count -->
@@ -613,6 +614,7 @@
   <string name="ticker_animation_mode_title">Animácia textu upozonenia</string>
   <string name="ticker_animation_mode_alpha_fade">Miznutie</string>
   <string name="ticker_animation_mode_scroll">Rolovanie</string>
+  <string name="ticker_tick_duration_title">Časový interval zobrazenia textu upozornenia</string>
   <string name="navbar_title">Navigačný panel</string>
   <string name="navbar_summary">Smartbar/Fling</string>
   <!-- DUI -->
@@ -700,6 +702,17 @@
   <string name="fling_keyboard_cursors_title">Akcie kurzorov dynamickej klávesnice</string>
   <string name="fling_keyboard_cursors_move_summary">Keď je klávesnica zobrazená, dlho stlačte doľava alebo doprava, aby ste posunuli textový kurzor doľava alebo doprava..\nPokračovaním v dlhom stlačení sa bude kurzor stále posúvať. Kliknite raz na panel pre návrat na domovskú obrazovku.</string>
   <string name="fling_logo_opacity_title">Priehľadnosť loga Fling</string>
+  <string name="fling_factory_reset_title">Obnoviť predvolené</string>
+  <string name="fling_factory_reset_confirm">Naozaj chcete obnoviť nastavenia Fling lišty na predvolené hodnoty?</string>
+  <string name="fling_backup_current_config_title">Uložiť profil</string>
+  <string name="fling_restore_config_title">Obnoviť profil</string>
+  <string name="fling_config_name_edit_dialog_title">Názov profilu Fling</string>
+  <string name="fling_config_name_edit_dialog_message">Zadajte meno alebo ponechajte prázdne</string>
+  <string name="fling_config_dialog_title">Fling profily</string>
+  <string name="fling_config_backup_success_toast">Profil Fling bol úspešne uložený</string>
+  <string name="fling_config_restore_success_toast">Profil Fling bol úspešne obnovený</string>
+  <string name="fling_config_backup_error_toast">Chyba pri ukladaní profilu Fling</string>
+  <string name="fling_config_restore_error_toast">Chyba pri obnovení profilu Fling</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_help_policy_notice_summary">Pulse nefunguje s niektorými zvukovými zdrojmi pri počúvaní z reproduktora zariadenia</string>
   <string name="pulse_settings">Pulzovanie</string>
@@ -771,7 +784,7 @@
   <string name="smartbar_config_restore_success_toast">Profil Smartbar bol úspešne obnovený</string>
   <string name="smartbar_config_backup_error_toast">Chyba pri ukladaní profilu Smartbar</string>
   <string name="smartbar_config_restore_error_toast">Chyba pri obnovení profilu Smartbar</string>
-  <string name="navbar_buttons_alpha_title">Priehľadnosť tlačidiel</string>
+  <string name="navbar_buttons_alpha_title">Priehľadnosť tlačidla</string>
   <string name="smartbar_longpress_delay_title">Oneskorenie dlhého stlačenia</string>
   <string name="smartbar_longpress_delay_summary">Nastavte, ako dlho bude systém čakať pred spustením akcie dlhého stlačenia</string>
   <string name="smartbar_longpress_delay_default">Predvolené oneskorenie (rýchlo)</string>
@@ -836,7 +849,6 @@
   <string name="force_ambient_for_media_summary">Informácie o hudobnej skladbe na Ambientnom displeji</string>
   <string name="force_ambient_for_media_off">Vypnuté</string>
   <string name="force_ambient_for_media_on">Zapnuté</string>
-  <string name="force_ambient_for_media_on_forced">Povolené a vynútené</string>
   <string name="force_ambient_for_media_on_forced_clean">Povolené a minimálne vynútené</string>
   <!-- Screen Off animation -->
   <string name="screen_off_animation_title">Animácia vypnutia obrazovky</string>
@@ -950,16 +962,16 @@
   <string name="heads_up_category">Plávajúce upozornenia</string>
   <string name="heads_up_snooze_title">Časovač odloženia upozorení</string>
   <string name="heads_up_snooze_disabled">vypnuté</string>
-  <string name="heads_up_snooze_1min">1 minúta</string>
+  <string name="heads_up_snooze_1min">1 minúta (predvolené)</string>
   <string name="heads_up_snooze_5min">5 minút</string>
   <string name="heads_up_snooze_10min">10 minút</string>
   <string name="heads_up_snooze_15min">15 minút</string>
   <string name="heads_up_snooze_20min">20 minút</string>
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Časový limit</string>
-  <string name="heads_up_time_out_2sec">2 sekundy (predvolené)</string>
+  <string name="heads_up_time_out_2sec">2 sekundy</string>
   <string name="heads_up_time_out_4sec">4 sekundy</string>
-  <string name="heads_up_time_out_5sec">5 sekúnd</string>
+  <string name="heads_up_time_out_5sec">10 sekúnd (predvolené)</string>
   <string name="heads_up_time_out_6sec">6 sekúnd</string>
   <string name="heads_up_time_out_8sec">8 sekúnd</string>
   <string name="heads_up_time_out_10sec">10 sekúnd</string>
@@ -972,11 +984,14 @@
   <string name="profile_choose_app">Vybrať aplikáciu</string>
   <string name="dialog_delete_title">Vymazať</string>
   <string name="dialog_delete_message">Vymazať vybranú položku?</string>
+  <string name="headsup_activity_blacklist_title">Čierna listina plávajúcich upozornení</string>
+  <string name="headsup_activity_blacklist_summary">Aplikáciám nie je dovolené zobrazovať plávajúce upozornenia</string>
+  <string name="headsup_activity_blacklist_cat_title">Čierna listina</string>
+  <string name="headsup_activity_blacklist_pref_title">Pridať aplikáciu</string>
+  <string name="headsup_activity_blacklist_pref_summary">Kliknutím sem pridáte, kliknutím na pridanú aplikáciu ju môžete odstrániť</string>
   <!-- System Behavior category strings -->
   <string name="system_ss_category_title">Možnosti snímky obrazovky</string>
   <string name="system_pup_category_title">Možnosti pripojenia/odpojenia</string>
-  <!-- AOSP Recents Style -->
-  <string name="recents_type_title">Rozvrhnutie Nedávnych</string>
-  <string name="recents_stock">Stock</string>
-  <string name="recents_grid">Mriežka</string>
+  <!-- QuickSettings Panel Transparency -->
+  <string name="qs_panel_alpha_title">Priehľadnosť panela</string>
 </resources>
