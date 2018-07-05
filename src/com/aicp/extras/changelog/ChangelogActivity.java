@@ -67,12 +67,26 @@ public class ChangelogActivity extends BaseChangelogActivity {
                             timeString = "Five days ago";
                         } else if (diff < 1000 * 60 * 60 * 24 * 7) {
                             timeString = "Six days ago";
-                        } else if (diff < 1000 * 60 * 60 * 24 * 14) {
+                        } else if (diff < 1000 * 60 * 60 * 24 * 8) {
                             timeString = "A week ago";
-                        } else if (diff < 1000 * 60 * 60 * 24 * 21) {
+                        } else if (diff < 1000 * 60 * 60 * 24 * 9) {
+                            timeString = "Eight days ago";
+                        } else if (diff < 1000 * 60 * 60 * 24 * 10) {
+                            timeString = "Nine days ago";
+                        } else if (diff < 1000 * 60 * 60 * 24 * 11) {
+                            timeString = "Ten days ago";
+                        } else if (diff < 1000 * 60 * 60 * 24 * 12) {
+                            timeString = "Eleven days ago";
+                        } else if (diff < 1000 * 60 * 60 * 24 * 13) {
+                            timeString = "Twelve days ago";
+                        } else if (diff < 1000 * 60 * 60 * 24 * 14) {
+                            timeString = "Thirteen days ago";
+                        } else if (diff < 1000 * 60 * 60 * 24 * 15) {
                             timeString = "Two weeks ago";
+                        } else if (diff < 1000 * 60 * 60 * 24 * 21) {
+                            timeString = "Between two and three weeks ago";
                         } else if (diff < 1000L * 60 * 60 * 24 * 28) {
-                            timeString = "Three weeks ago";
+                            timeString = "Between three and four weeks ago";
                         } else {
                             timeString = line.trim().replaceAll("-", "/");
                         }
