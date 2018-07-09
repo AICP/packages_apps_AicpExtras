@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2017-2018 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,12 +14,9 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
-import android.app.Activity;
 import android.content.ContentResolver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -29,31 +26,22 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v14.preference.SwitchPreference;
-
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
 import com.aicp.extras.BaseSettingsFragment;
-import com.aicp.extras.utils.Util;
 import com.aicp.extras.R;
 
 import java.util.List;
 import java.util.ArrayList;
 
-public class Weather extends BaseSettingsFragment
-        implements Preference.OnPreferenceChangeListener {
+public class Weather extends BaseSettingsFragment implements OnPreferenceChangeListener {
 
     private static final String TAG = "OmniJawsSettings";
     private static final String WEATHER_ICON_PACK = "weather_icon_pack";
     private static final String DEFAULT_WEATHER_ICON_PACKAGE = "org.omnirom.omnijaws";
     private static final String DEFAULT_WEATHER_ICON_PREFIX = "outline";
-    private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
     private static final String CHRONUS_ICON_PACK_INTENT = "com.dvtonder.chronus.ICON_PACK";
 
-    private PreferenceCategory mWeatherCategory;
     private ListPreference mWeatherIconPack;
 
     @Override
@@ -64,38 +52,32 @@ public class Weather extends BaseSettingsFragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        PreferenceScreen prefSet = getPreferenceScreen();
-        Activity activity = getActivity();
         final ContentResolver resolver = getActivity().getContentResolver();
-        final PackageManager pm = getActivity().getPackageManager();
 
-        if (Util.isPackageInstalled(WEATHER_SERVICE_PACKAGE, pm)) {
-            String settingsJaws = Settings.System.getString(resolver,
-                    Settings.System.OMNIJAWS_WEATHER_ICON_PACK);
-            if (settingsJaws == null) {
-                settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE + "." + DEFAULT_WEATHER_ICON_PREFIX;
-            }
-            mWeatherIconPack = (ListPreference) findPreference(WEATHER_ICON_PACK);
-
-            List<String> entries = new ArrayList<String>();
-            List<String> values = new ArrayList<String>();
-            getAvailableWeatherIconPacks(entries, values);
-            mWeatherIconPack.setEntries(entries.toArray(new String[entries.size()]));
-            mWeatherIconPack.setEntryValues(values.toArray(new String[values.size()]));
-
-            int valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
-            if (valueJawsIndex == -1) {
-                // no longer found
-                settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE + "." + DEFAULT_WEATHER_ICON_PREFIX;
-                Settings.System.putString(resolver,
-                        Settings.System.OMNIJAWS_WEATHER_ICON_PACK, settingsJaws);
-                valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
-            }
-            mWeatherIconPack.setValueIndex(valueJawsIndex >= 0 ? valueJawsIndex : 0);
-            mWeatherIconPack.setSummary(mWeatherIconPack.getEntry());
-            mWeatherIconPack.setOnPreferenceChangeListener(this);
+        String settingsJaws = Settings.System.getString(resolver,
+                Settings.System.OMNIJAWS_WEATHER_ICON_PACK);
+        if (settingsJaws == null) {
+            settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE + "." + DEFAULT_WEATHER_ICON_PREFIX;
         }
+        mWeatherIconPack = (ListPreference) findPreference(WEATHER_ICON_PACK);
+
+        List<String> entries = new ArrayList<String>();
+        List<String> values = new ArrayList<String>();
+        getAvailableWeatherIconPacks(entries, values);
+        mWeatherIconPack.setEntries(entries.toArray(new String[entries.size()]));
+        mWeatherIconPack.setEntryValues(values.toArray(new String[values.size()]));
+
+        int valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
+        if (valueJawsIndex == -1) {
+            // no longer found
+            settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE + "." + DEFAULT_WEATHER_ICON_PREFIX;
+            Settings.System.putString(resolver,
+                    Settings.System.OMNIJAWS_WEATHER_ICON_PACK, settingsJaws);
+            valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
+        }
+        mWeatherIconPack.setValueIndex(valueJawsIndex >= 0 ? valueJawsIndex : 0);
+        mWeatherIconPack.setSummary(mWeatherIconPack.getEntry());
+        mWeatherIconPack.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
@@ -107,10 +89,6 @@ public class Weather extends BaseSettingsFragment
             mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[valueIndex]);
         }
         return true;
-    }
-
-    private boolean isOmniJawsServiceInstalled() {
-        return Util.isPackageInstalled(WEATHER_SERVICE_PACKAGE, getActivity().getPackageManager());
     }
 
     private void getAvailableWeatherIconPacks(List<String> entries, List<String> values) {
