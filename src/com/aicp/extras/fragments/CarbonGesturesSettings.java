@@ -18,6 +18,7 @@ package com.aicp.extras.fragments;
 
 import android.content.Context;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -132,9 +133,15 @@ public class CarbonGesturesSettings extends BaseSettingsFragment implements
                 setApplicationNamePreferenceSummary(info.packageName, pref);
             }
         };
-        dDialog.setCancelable(false);
+        dDialog.setCancelable(true);
         dDialog.setLauncherFilter(true);
         dDialog.show(1);
+        dDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                setPreferenceToDefaults(pref);
+            }
+        });
     }
 
     private void setApplicationNamePreferenceSummary(String pkg, ListPreference pref) {
@@ -142,10 +149,28 @@ public class CarbonGesturesSettings extends BaseSettingsFragment implements
         String packageInfo = "";
         try {
             packageInfo = packageManager.getApplicationLabel(packageManager.getApplicationInfo(pkg, PackageManager.GET_META_DATA)).toString();
-            } catch (PackageManager.NameNotFoundException e) {
-                e.printStackTrace();
-            }
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
         pref.setSummary(getActivity().getString(R.string.carbon_gesture_launch) + " " + packageInfo);
+    }
+
+    private void setPreferenceToDefaults(ListPreference pref) {
+        if (pref.equals(mCarbonGestureRight)) {
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.CARBON_CUSTOM_GESTURE_RIGHT, 0, UserHandle.USER_CURRENT);
+        } else if (pref.equals(mCarbonGestureLeft)) {
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.CARBON_CUSTOM_GESTURE_LEFT, 0, UserHandle.USER_CURRENT);
+        } else if (pref.equals(mCarbonGestureUp)) {
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.CARBON_CUSTOM_GESTURE_UP, 0, UserHandle.USER_CURRENT);
+        } else if (pref.equals(mCarbonGestureDown)) {
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.CARBON_CUSTOM_GESTURE_DOWN, 0, UserHandle.USER_CURRENT);
+        }
+        pref.setValue(String.valueOf(0));
+        pref.setSummary(pref.getEntry());
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
