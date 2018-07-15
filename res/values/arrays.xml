@@ -603,6 +603,50 @@
         <item>1</item>
     </string-array>
 
+    <string-array name="clock_position_entries" translatable="false">
+        <item>@string/clock_position_right</item>
+        <item>@string/clock_position_center</item>
+        <item>@string/clock_position_left</item>
+    </string-array>
+
+    <string-array name="clock_position_entries_rtl" translatable="false">
+        <item>@string/clock_position_left</item>
+        <item>@string/clock_position_center</item>
+        <item>@string/clock_position_right</item>
+    </string-array>
+
+    <string-array name="clock_position_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="clock_position_values_rtl" translatable="false">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="clock_position_entries_notch" translatable="false">
+        <item>@string/clock_position_right</item>
+        <item>@string/clock_position_left</item>
+    </string-array>
+
+    <string-array name="clock_position_entries_notch_rtl" translatable="false">
+        <item>@string/clock_position_left</item>
+        <item>@string/clock_position_right</item>
+    </string-array>
+
+    <string-array name="clock_position_values_notch" translatable="false">
+        <item>0</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="clock_position_values_notch_rtl" translatable="false">
+        <item>2</item>
+        <item>0</item>
+    </string-array>
+
     <string-array name="clock_date_format_entries_values">
         <item>dd/MM/yy</item>
         <item>MM/dd/yy</item>
