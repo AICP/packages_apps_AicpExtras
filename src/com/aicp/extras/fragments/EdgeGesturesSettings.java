@@ -17,52 +17,13 @@
 
 package com.aicp.extras.fragments;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.os.UserHandle;
-import android.provider.Settings;
-import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-
-import com.android.internal.utils.du.DUActionUtils;
 import com.aicp.extras.R;
 import com.aicp.extras.BaseSettingsFragment;
 
-public class EdgeGesturesSettings extends BaseSettingsFragment implements
-        OnPreferenceChangeListener {
-
-    public static final String EDGE_GESTURES_ENABLED = "edge_gestures_enabled";
-    public static final String EDGE_GESTURES_SCREEN_PERCENT = "edge_gestures_back_screen_percent";
-
-    private String previousTitle;
-
-    private SwitchPreference enabledPreference;
+public class EdgeGesturesSettings extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.edge_gestures;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        enabledPreference = (SwitchPreference) findPreference(EDGE_GESTURES_ENABLED);
-        enabledPreference.setOnPreferenceChangeListener(this);
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == enabledPreference) {
-            boolean enabled = ((Boolean)newValue);
-            Settings.Secure.putIntForUser(getContentResolver(),
-                    Settings.Secure.NAVIGATION_BAR_VISIBLE,
-                    enabled ? 0 : (DUActionUtils.hasNavbarByDefault(
-                                      getActivity().getApplicationContext()) ? 1 : 0),
-                                      UserHandle.USER_CURRENT);
-            return true;
-        }
-        return false;
     }
 }
