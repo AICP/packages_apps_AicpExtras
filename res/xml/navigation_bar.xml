@@ -23,6 +23,14 @@
         android:key="navbar_visibility"
         android:title="@string/navbar_visibility" />
 
+    <!-- Edge Gestures -->
+    <PreferenceScreen
+        android:key="edge_gestures"
+        android:fragment="com.aicp.extras.fragments.EdgeGesturesSettings"
+        android:title="@string/edge_gestures_title"
+        android:summary="@string/edge_gestures_summary"
+        android:persistent="false" />
+
     <PreferenceCategory
         android:key="category_navbar_interface"
         android:title="@string/navbar_interface_title" >
