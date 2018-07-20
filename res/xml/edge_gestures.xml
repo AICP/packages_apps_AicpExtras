@@ -14,12 +14,11 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    xmlns:aicpextras="http://schemas.android.com/apk/res-auto" >
+    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    android:title="@string/edge_gestures_title" >
 
-    <com.aicp.gear.preference.SecureSettingSwitchPreference
-        android:key="edge_gestures_enabled"
-        android:title="@string/edge_gestures_title"
-        android:defaultValue="false" />
+    <Preference android:key="edge_gestures_description"
+        android:summary="Swipe from bottom to trigger Home gesture, keep it pressed to open recents. Swipe from bottom left or bottom right to go back." />
 
     <com.aicp.gear.preference.SecureSettingIntListPreference
         android:key="edge_gestures_feedback_duration"
@@ -28,8 +27,7 @@
         android:title="@string/edge_gestures_feedback_duration_title"
         android:dialogTitle="@string/edge_gestures_feedback_duration_title"
         android:summary="%s"
-        android:defaultValue="100"
-        android:dependency="edge_gestures_enabled" />
+        android:defaultValue="100" />
 
     <com.aicp.gear.preference.SecureSettingIntListPreference
         android:key="edge_gestures_long_press_duration"
@@ -38,11 +36,7 @@
         android:title="@string/edge_gestures_long_press_delay_title"
         android:dialogTitle="@string/edge_gestures_long_press_delay_title"
         android:summary="%s"
-        android:defaultValue="500"
-        android:dependency="edge_gestures_enabled" />
-
-    <Preference android:key="edge_gestures_description"
-        android:summary="Swipe from bottom to trigger Home gesture, keep it pressed to open recents. Swipe from bottom left or bottom right to go back." />
+        android:defaultValue="500" />
 
     <PreferenceCategory
         android:key="edge_gestures_category_back"
@@ -54,8 +48,7 @@
             android:entries="@array/edge_gestures_back_edges_labels"
             android:entryValues="@array/edge_gestures_back_edges_values"
             android:summary="%s"
-            android:defaultValue="5"
-            android:dependency="edge_gestures_enabled" />
+            android:defaultValue="5" />
 
     <com.aicp.gear.preference.SecureSettingIntListPreference
             android:key="edge_gestures_landscape_back_edges"
@@ -63,8 +56,7 @@
             android:entries="@array/edge_gestures_back_edges_labels"
             android:entryValues="@array/edge_gestures_back_edges_values"
             android:summary="%s"
-            android:defaultValue="5"
-            android:dependency="edge_gestures_enabled" />
+            android:defaultValue="5" />
 
     <com.aicp.gear.preference.SecureSettingSeekBarPreference
             android:key="edge_gestures_back_screen_percent"
@@ -73,8 +65,7 @@
             android:max="90"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="@string/unit_percent"
-            android:defaultValue="60"
-            android:dependency="edge_gestures_enabled" />
+            android:defaultValue="60" />
 
     </PreferenceCategory>
 </PreferenceScreen>
