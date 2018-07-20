@@ -42,6 +42,7 @@ import com.aicp.extras.R;
 
 public class NavigationBar extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
     private static final String NAVBAR_VISIBILITY = "navbar_visibility";
+    private static final String KEY_EDGE_GESTURES = "edge_gestures";
     private static final String KEY_NAVBAR_MODE = "navbar_mode";
     private static final String KEY_DEFAULT_NAVBAR_SETTINGS = "default_settings";
     private static final String KEY_FLING_NAVBAR_SETTINGS = "fling_settings";
@@ -55,6 +56,7 @@ public class NavigationBar extends BaseSettingsFragment implements Preference.On
     private static final String KEY_PULSE_SETTINGS = "pulse_settings";
 
     private SwitchPreference mNavbarVisibility;
+    private Preference mEdgeGestures;
     private ListPreference mNavbarMode;
     private PreferenceScreen mFlingSettings;
     private PreferenceCategory mNavInterface;
@@ -78,6 +80,7 @@ public class NavigationBar extends BaseSettingsFragment implements Preference.On
         mNavInterface = (PreferenceCategory) findPreference(KEY_CATEGORY_NAVIGATION_INTERFACE);
         mNavGeneral = (PreferenceCategory) findPreference(KEY_CATEGORY_NAVIGATION_GENERAL);
         mNavbarVisibility = (SwitchPreference) findPreference(NAVBAR_VISIBILITY);
+        mEdgeGestures = (Preference) findPreference(KEY_EDGE_GESTURES);
         mNavbarMode = (ListPreference) findPreference(KEY_NAVBAR_MODE);
         mDefaultSettings = (Preference) findPreference(KEY_DEFAULT_NAVBAR_SETTINGS);
         mFlingSettings = (PreferenceScreen) findPreference(KEY_FLING_NAVBAR_SETTINGS);
@@ -158,6 +161,7 @@ public class NavigationBar extends BaseSettingsFragment implements Preference.On
 
     private void updateBarVisibleAndUpdatePrefs(boolean showing) {
         mNavbarVisibility.setChecked(showing);
+        mEdgeGestures.setEnabled(!mNavbarVisibility.isChecked());
         mNavInterface.setEnabled(mNavbarVisibility.isChecked());
         mNavGeneral.setEnabled(mNavbarVisibility.isChecked());
     }
@@ -166,14 +170,18 @@ public class NavigationBar extends BaseSettingsFragment implements Preference.On
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference.equals(mNavbarMode)) {
             int mode = Integer.parseInt(((String) newValue).toString());
-            Settings.Secure.putInt(getContentResolver(),
-                    Settings.Secure.NAVIGATION_BAR_MODE, mode);
+            Settings.Secure.putIntForUser(getContentResolver(),
+                    Settings.Secure.NAVIGATION_BAR_MODE, mode, UserHandle.USER_CURRENT);
             updateBarModeSettings(mode);
             return true;
         } else if (preference.equals(mNavbarVisibility)) {
             boolean showing = ((Boolean)newValue);
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.NAVIGATION_BAR_VISIBLE,
-                    showing ? 1 : 0);
+            Settings.Secure.putIntForUser(getContentResolver(),
+                    Settings.Secure.NAVIGATION_BAR_VISIBLE,
+                    showing ? 1 : 0, UserHandle.USER_CURRENT);
+            Settings.Secure.putIntForUser(getContentResolver(),
+                    Settings.Secure.EDGE_GESTURES_ENABLED,
+                    showing ? 0 : 1, UserHandle.USER_CURRENT);
             updateBarVisibleAndUpdatePrefs(showing);
             return true;
         } else if (preference == mBarHeightPort) {
