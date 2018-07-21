@@ -18,7 +18,7 @@
     android:title="@string/edge_gestures_title" >
 
     <Preference android:key="edge_gestures_description"
-        android:summary="Swipe from bottom to trigger Home gesture, keep it pressed to open recents. Swipe from bottom left or bottom right to go back." />
+        android:summary="@string/edge_gestures_description" />
 
     <com.aicp.gear.preference.SecureSettingIntListPreference
         android:key="edge_gestures_feedback_duration"
