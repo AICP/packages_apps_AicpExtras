@@ -764,15 +764,21 @@
     <string name="ticker_animation_mode_scroll">Scroll</string>
     <string name="ticker_tick_duration_title">Ticker duration</string>
 
+    <!-- Navigation-->
+    <string name="navigation_title">Navigation</string>
+    <string name="navigation_description">Mutually exclusive modes of navigation. Disabling one automatically enables the other.</string>
+    <string name="navigation_summary">Stock/Smartbar/Fling/Gestures</string>
+
+    <!-- Navigation bar -->
     <string name="navbar_title">Navigation bar</string>
-    <string name="navbar_summary">Smartbar/Fling</string>
+    <string name="navbar_summary">Click for available modes and options</string>
 
     <!-- DUI -->
     <string name="navbar_interface_title">Interface</string>
     <string name="navbar_size">Bar size</string>
     <string name="navbar_mode">Navigation mode</string>
     <string name="navbar_mode_summary">Select which navigation mode to use on your device</string>
-    <string name="navbar_visibility">Allow navigation bar</string>
+    <string name="navbar_visibility">Navigation bar</string>
     <string name="navigationbar_settings_title">Navigation bar</string>
     <string name="navigationbar_settings_summary">Customize navigation style and behavior</string>
     <string name="navbar_general_title">Advanced</string>
@@ -789,6 +795,18 @@
     <string name="default_string">Stock</string>
     <string name="default_settings">Stock settings</string>
     <string name="default_settings_summary">Stock AOSP navigation bar</string>
+
+    <!-- Edge gestures -->
+    <string name="edge_gestures_title">Edge gestures</string>
+    <string name="edge_gestures_description">Swipe from bottom to trigger Home gesture, keep it pressed to open recents. Swipe from bottom left or bottom right to go back.</string>
+    <string name="edge_gestures_summary">Navigate using edge gestures. Click for options.</string>
+    <string name="edge_gestures_feedback_duration_title">Haptic feedback duration</string>
+    <string name="edge_gestures_long_press_delay_title">Delay until long press action starts</string>
+    <string name="edge_gestures_back_category_title">Back gesture</string>
+    <string name="edge_gestures_back_edges_title">Trigger back gesture from</string>
+    <string name="edge_gestures_landscape_back_edges_title">Trigger back gesture on landscape from</string>
+    <string name="edge_gestures_back_screen_percent_title">Back gesture must start below this percentage of the screen</string>
+    <string name="edge_gestures_back_screen_percent_summary">Trigger area: lower than % of screen</string>
 
     <!-- Actions dialog and default task values set in ActionPreference xml-->
     <string name="choose_action_title">Choose action</string>
@@ -1222,15 +1240,4 @@
     <!-- Disable FC notifications -->
     <string name="disable_fc_notifications_title">Disable FC notifications</string>
     <string name="disable_fc_notifications_summary">This will hide all force close notifications. Use with caution</string>
-
-    <!-- Edge gestures -->
-    <string name="edge_gestures_title">Edge gestures</string>
-    <string name="edge_gestures_summary">Navigate using edge gestures</string>
-    <string name="edge_gestures_feedback_duration_title">Haptic feedback duration</string>
-    <string name="edge_gestures_long_press_delay_title">Delay until long press action starts</string>
-    <string name="edge_gestures_back_category_title">Back gesture</string>
-    <string name="edge_gestures_back_edges_title">Trigger back gesture from</string>
-    <string name="edge_gestures_landscape_back_edges_title">Trigger back gesture on landscape from</string>
-    <string name="edge_gestures_back_screen_percent_title">Back gesture must start below this percentage of the screen</string>
-    <string name="edge_gestures_back_screen_percent_summary">Trigger area: lower than % of screen</string>
 </resources>
