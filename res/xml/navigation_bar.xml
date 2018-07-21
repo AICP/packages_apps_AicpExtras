@@ -19,18 +19,6 @@
     xmlns:aicpextras="http://schemas.android.com/akp/res-auto"
     android:title="@string/navbar_title">
 
-    <SwitchPreference
-        android:key="navbar_visibility"
-        android:title="@string/navbar_visibility" />
-
-    <!-- Edge Gestures -->
-    <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
-        android:key="edge_gestures_enabled"
-        android:title="@string/edge_gestures_title"
-        android:summary="@string/edge_gestures_summary"
-        android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.EdgeGesturesSettings" />
-
     <PreferenceCategory
         android:key="category_navbar_interface"
         android:title="@string/navbar_interface_title" >
