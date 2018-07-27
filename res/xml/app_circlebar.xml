@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014 AICP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    android:title="@string/category_app_circle_bar_title" >
+
+    <PreferenceScreen
+        android:key="app_circle_bar_included_apps"
+        android:title="@string/app_circle_bar_included_apps_title"
+        android:fragment="com.aicp.extras.fragments.AppCircleBarAppChooser"
+        android:summary="@string/app_circle_bar_included_apps_summary"
+        android:persistent="false" />
+
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="app_circle_bar_trigger_width"
+        android:title="@string/app_circle_bar_trigger_width_title"
+        android:max="64"
+        android:min="4"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="px"
+        android:defaultValue="4" />
+
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="app_circle_bar_trigger_top"
+        android:title="@string/app_circle_bar_trigger_top_title"
+        android:max="99"
+        android:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="@string/unit_percent"
+        android:defaultValue="0" />
+
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="app_circle_bar_trigger_height"
+        android:title="@string/app_circle_bar_trigger_height_title"
+        android:max="100"
+        android:min="1"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="@string/unit_percent"
+        android:defaultValue="100" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="app_circle_bar_show_trigger"
+        android:title="@string/app_circle_bar_show_trigger_title"
+        android:summary="@string/app_circle_bar_show_trigger_summary"
+        android:defaultValue="false"/>
+
+</PreferenceScreen>
