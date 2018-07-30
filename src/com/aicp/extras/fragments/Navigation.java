@@ -19,21 +19,23 @@ package com.aicp.extras.fragments;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 
 import com.aicp.extras.BaseSettingsFragment;
-import com.aicp.extras.preference.SecureSettingMasterSwitchPreference;
+import com.aicp.extras.preference.MasterSwitchPreference;
 import com.android.internal.utils.du.DUActionUtils;
 import com.aicp.extras.R;
 
 public class Navigation extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
+
     private static final String KEY_NAVBAR_VISIBILITY = "navigation_bar_visible";
     private static final String KEY_EDGE_GESTURES_ENABLED = "edge_gestures_enabled";
 
-    private SecureSettingMasterSwitchPreference mNavbarVisibility;
-    private SecureSettingMasterSwitchPreference mEdgeGestures;
+    private MasterSwitchPreference mNavbarVisibility;
+    private MasterSwitchPreference mEdgeGestures;
 
     @Override
     protected int getPreferenceResource() {
@@ -48,39 +50,17 @@ public class Navigation extends BaseSettingsFragment implements
                 Settings.Secure.NAVIGATION_BAR_VISIBLE,
                 DUActionUtils.hasNavbarByDefault(getActivity()) ? 1 : 0) != 0;
 
-        mNavbarVisibility = (SecureSettingMasterSwitchPreference)
-                              findPreference(KEY_NAVBAR_VISIBILITY);
-        mEdgeGestures = (SecureSettingMasterSwitchPreference)
-                          findPreference(KEY_EDGE_GESTURES_ENABLED);
+        mNavbarVisibility = (MasterSwitchPreference) findPreference(KEY_NAVBAR_VISIBILITY);
+        mEdgeGestures = (MasterSwitchPreference) findPreference(KEY_EDGE_GESTURES_ENABLED);
         mNavbarVisibility.setOnPreferenceChangeListener(this);
         mEdgeGestures.setOnPreferenceChangeListener(this);
-
-        updatePrefs(showing);
-    }
-
-    private void updatePrefs(boolean showing) {
-        mNavbarVisibility.setChecked(showing);
-        mNavbarVisibility.setEnabled(showing);
-
-        mEdgeGestures.setChecked(!showing);
-        mEdgeGestures.setEnabled(!showing);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference.equals(mNavbarVisibility)) {
-            boolean showing = ((Boolean)newValue);
-            Settings.Secure.putIntForUser(getContentResolver(),
-                    Settings.Secure.EDGE_GESTURES_ENABLED,
-                    showing ? 0 : 1, UserHandle.USER_CURRENT);
-            updatePrefs(showing);
-            return true;
-        } else if (preference.equals(mEdgeGestures)) {
-            boolean showing = ((Boolean)newValue);
-            Settings.Secure.putInt(getContentResolver(),
-                    Settings.Secure.NAVIGATION_BAR_VISIBLE,
-                    showing ? 0 : 1);
-            updatePrefs(!showing);
+        if (preference == mNavbarVisibility
+                || preference == mEdgeGestures) {
+            updateDependencies((Boolean) newValue ? preference : null);
             return true;
         }
         return false;
@@ -91,5 +71,20 @@ public class Navigation extends BaseSettingsFragment implements
         super.onResume();
         mNavbarVisibility.reloadValue();
         mEdgeGestures.reloadValue();
+        updateDependencies(null);
+    }
+
+    private void updateDependencies(Preference enabledNavigationMode) {
+        PreferenceScreen preferenceScreen = getPreferenceScreen();
+        for (int i = 0; i < preferenceScreen.getPreferenceCount(); i++) {
+            Preference preference = preferenceScreen.getPreference(i);
+            if (enabledNavigationMode != null
+                    && enabledNavigationMode != preference
+                    && preference instanceof MasterSwitchPreference
+                    && ((MasterSwitchPreference) preference).isChecked()) {
+                // Only one navigation mode at the time!
+                ((MasterSwitchPreference) preference).setCheckedPersisting(false);
+            }
+        }
     }
 }
