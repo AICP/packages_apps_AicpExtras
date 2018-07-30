@@ -44,18 +44,26 @@ public class Navigation extends BaseSettingsFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        boolean showing = Settings.Secure.getInt(getContentResolver(),
+        final boolean needsNavbar = DUActionUtils.hasNavbarByDefault(getActivity());
+        final boolean showingNavbar = Settings.Secure.getInt(getContentResolver(),
                 Settings.Secure.NAVIGATION_BAR_VISIBLE,
-                DUActionUtils.hasNavbarByDefault(getActivity()) ? 1 : 0) != 0;
+                needsNavbar ? 1 : 0) != 0;
 
         mNavbarVisibility = (SecureSettingMasterSwitchPreference)
                               findPreference(KEY_NAVBAR_VISIBILITY);
         mEdgeGestures = (SecureSettingMasterSwitchPreference)
                           findPreference(KEY_EDGE_GESTURES_ENABLED);
-        mNavbarVisibility.setOnPreferenceChangeListener(this);
-        mEdgeGestures.setOnPreferenceChangeListener(this);
 
-        updatePrefs(showing);
+        if (!needsNavbar && !showingNavbar) {
+            mEdgeGestures.setChecked(showingNavbar);
+            mEdgeGestures.setEnabled(showingNavbar);
+            mNavbarVisibility.setChecked(showingNavbar);
+            mNavbarVisibility.setEnabled(showingNavbar);
+        } else {
+            mNavbarVisibility.setOnPreferenceChangeListener(this);
+            mEdgeGestures.setOnPreferenceChangeListener(this);
+            updatePrefs(showingNavbar);
+        }
     }
 
     private void updatePrefs(boolean showing) {
