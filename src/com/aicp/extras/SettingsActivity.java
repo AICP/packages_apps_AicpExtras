@@ -30,6 +30,8 @@ import android.preference.PreferenceManager;
 import com.aicp.extras.dslv.ActionListViewSettings;
 import com.aicp.extras.fragments.Dashboard;
 import com.aicp.extras.preference.MasterSwitchPreference;
+import com.aicp.extras.preference.SecureSettingMasterSwitchPreference;
+import com.aicp.extras.preference.SecureSettingSwitchBarController;
 import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
 import com.aicp.extras.preference.SystemSettingSwitchBarController;
 import com.aicp.extras.utils.Util;
@@ -52,6 +54,12 @@ public class SettingsActivity extends BaseActivity {
     // Default value for switch bar controlling the system setting
     private static final String EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE =
             "com.aicp.extras.extra.preference_switch_system_settings_default_value";
+    // String extra containing an optional secure settings key to be controlled by the switch bar
+    private static final String EXTRA_SWITCH_SECURE_SETTINGS_KEY =
+            "com.aicp.extras.extra.preference_switch_secure_settings_key";
+    // Default value for switch bar controlling the system setting
+    private static final String EXTRA_SWITCH_SECURE_SETTINGS_DEFAULT_VALUE =
+            "com.aicp.extras.extra.preference_switch_secure_settings_default_value";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +83,15 @@ public class SettingsActivity extends BaseActivity {
             new SystemSettingSwitchBarController(mSwitchBar,
                     mIntent.getStringExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY),
                     mIntent.getBooleanExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE, false),
+                    getContentResolver(),
+                    settingsFragment);
+        } else if (mIntent.hasExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY)) {
+            mSwitchBar.show();
+            BaseSettingsFragment settingsFragment = mFragment instanceof BaseSettingsFragment
+                    ? (BaseSettingsFragment) mFragment : null;
+            new SecureSettingSwitchBarController(mSwitchBar,
+                    mIntent.getStringExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY),
+                    mIntent.getBooleanExtra(EXTRA_SWITCH_SECURE_SETTINGS_DEFAULT_VALUE, false),
                     getContentResolver(),
                     settingsFragment);
         }
@@ -141,6 +158,17 @@ public class SettingsActivity extends BaseActivity {
                         intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY, preference.getKey());
                         intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE,
                                 ((SystemSettingMasterSwitchPreference) preference)
+                                        .getDefaultValue());
+                    }
+                }
+                if (preference instanceof SecureSettingMasterSwitchPreference) {
+                    if (fragmentClass.equals(ActionListViewSettings.class.getName())) {
+                        ((SecureSettingMasterSwitchPreference) preference)
+                                .setCheckedPersisting(true);
+                    } else {
+                        intent.putExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY, preference.getKey());
+                        intent.putExtra(EXTRA_SWITCH_SECURE_SETTINGS_DEFAULT_VALUE,
+                                ((SecureSettingMasterSwitchPreference) preference)
                                         .getDefaultValue());
                     }
                 }
