@@ -61,6 +61,7 @@
         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="recents_omni_switch"
             android:title="@string/omni_switch_title"
+            aicpextras:thereCanBeOnlyOneGroupId="1"
             android:defaultValue="false">
             <intent
                 android:action="android.intent.action.VIEW"
@@ -71,6 +72,7 @@
         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="use_slim_recents"
             android:title="@string/slim_recents_title"
+            aicpextras:thereCanBeOnlyOneGroupId="1"
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.SlimRecents" />
 
