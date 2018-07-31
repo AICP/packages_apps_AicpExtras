@@ -59,8 +59,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
 
-public class Recents extends BaseSettingsFragment
-        implements Preference.OnPreferenceChangeListener, DialogInterface.OnDismissListener {
+public class Recents extends BaseSettingsFragment implements DialogInterface.OnDismissListener {
 
     private static final String PREF_STOCK_RECENTS_CATEGORY = "stock_recents_category";
     private static final String PREF_ALTERNATIVE_RECENTS_CATEGORY = "alternative_recents_category";
@@ -108,7 +107,7 @@ public class Recents extends BaseSettingsFragment
                 new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
-                updateDependencies((Boolean) newValue ? preference : null);
+                updateDependencies(preference, (Boolean) newValue);
                 return true;
             }
         };
@@ -118,6 +117,7 @@ public class Recents extends BaseSettingsFragment
                 preference.setOnPreferenceChangeListener(alternativeRecentsChangeListener);
             }
         }
+        updateDependencies();
     }
 
     @Override
@@ -132,17 +132,6 @@ public class Recents extends BaseSettingsFragment
             mOmniSwitchPreference.setEnabled(false);
         }
 
-        for (int i = 0; i < mAlternativeRecentsCategory.getPreferenceCount(); i++) {
-            Preference preference = mAlternativeRecentsCategory.getPreference(i);
-            if (preference instanceof MasterSwitchPreference) {
-                ((MasterSwitchPreference) preference).reloadValue();
-            }
-        }
-        updateDependencies(null);
-    }
-
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
     }
 
     @Override
@@ -154,19 +143,25 @@ public class Recents extends BaseSettingsFragment
         return super.onPreferenceTreeClick(preference);
     }
 
-    private void updateDependencies(Preference enabledAlternativeRecentsPreference) {
-        boolean alternativeRecentsEnabled = false;
-        for (int i = 0; i < mAlternativeRecentsCategory.getPreferenceCount(); i++) {
-            Preference preference = mAlternativeRecentsCategory.getPreference(i);
-            if (enabledAlternativeRecentsPreference != null
-                    && enabledAlternativeRecentsPreference != preference
-                    && preference instanceof MasterSwitchPreference
-                    && ((MasterSwitchPreference) preference).isChecked()) {
-                // Only one alternative recents at the time!
-                ((MasterSwitchPreference) preference).setCheckedPersisting(false);
-            } else if (preference instanceof MasterSwitchPreference
-                    && ((MasterSwitchPreference) preference).isChecked()) {
-                alternativeRecentsEnabled = true;
+    private void updateDependencies() {
+        updateDependencies(null, null);
+    }
+
+    private void updateDependencies(Preference updatedPreference, Boolean newValue) {
+        // Disable stock recents category if alternative enabled
+        boolean alternativeRecentsEnabled = newValue != null && newValue;
+        if (!alternativeRecentsEnabled) {
+            for (int i = 0; i < mAlternativeRecentsCategory.getPreferenceCount(); i++) {
+                Preference preference = mAlternativeRecentsCategory.getPreference(i);
+                if (preference == updatedPreference) {
+                    // Already used newValue
+                    continue;
+                }
+                if (preference instanceof MasterSwitchPreference
+                        && ((MasterSwitchPreference) preference).isChecked()) {
+                    alternativeRecentsEnabled = true;
+                    break;
+                }
             }
         }
         mStockRecentsCategory.setEnabled(!alternativeRecentsEnabled);

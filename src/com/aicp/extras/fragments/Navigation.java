@@ -28,8 +28,7 @@ import com.aicp.extras.preference.MasterSwitchPreference;
 import com.android.internal.utils.du.DUActionUtils;
 import com.aicp.extras.R;
 
-public class Navigation extends BaseSettingsFragment implements
-        Preference.OnPreferenceChangeListener {
+public class Navigation extends BaseSettingsFragment {
 
     private static final String KEY_NAVBAR_VISIBILITY = "navigation_bar_visible";
     private static final String KEY_EDGE_GESTURES_ENABLED = "edge_gestures_enabled";
@@ -52,39 +51,10 @@ public class Navigation extends BaseSettingsFragment implements
 
         mNavbarVisibility = (MasterSwitchPreference) findPreference(KEY_NAVBAR_VISIBILITY);
         mEdgeGestures = (MasterSwitchPreference) findPreference(KEY_EDGE_GESTURES_ENABLED);
-        mNavbarVisibility.setOnPreferenceChangeListener(this);
-        mEdgeGestures.setOnPreferenceChangeListener(this);
+
+        boolean needsNavigation = DUActionUtils.hasNavbarByDefault(getActivity());
+        mNavbarVisibility.setThereShouldBeOneSwitch(needsNavigation);
+        mEdgeGestures.setThereShouldBeOneSwitch(needsNavigation);
     }
 
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mNavbarVisibility
-                || preference == mEdgeGestures) {
-            updateDependencies((Boolean) newValue ? preference : null);
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        mNavbarVisibility.reloadValue();
-        mEdgeGestures.reloadValue();
-        updateDependencies(null);
-    }
-
-    private void updateDependencies(Preference enabledNavigationMode) {
-        PreferenceScreen preferenceScreen = getPreferenceScreen();
-        for (int i = 0; i < preferenceScreen.getPreferenceCount(); i++) {
-            Preference preference = preferenceScreen.getPreference(i);
-            if (enabledNavigationMode != null
-                    && enabledNavigationMode != preference
-                    && preference instanceof MasterSwitchPreference
-                    && ((MasterSwitchPreference) preference).isChecked()) {
-                // Only one navigation mode at the time!
-                ((MasterSwitchPreference) preference).setCheckedPersisting(false);
-            }
-        }
-    }
 }

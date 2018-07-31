@@ -36,21 +36,40 @@ public class MasterSwitchPreference extends TwoTargetPreference {
     private boolean mEnableSwitch = true;
     private boolean mDefaultValue;
 
+    private MasterSwitchPreferenceDependencyHandler mDependencyHandler;
+    private int mThereCanBeOnlyOneGroupId = 0;
+    private boolean mThereShouldBeOne = false;
+
     public MasterSwitchPreference(Context context, AttributeSet attrs,
                                   int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+        init(context, attrs);
     }
 
     public MasterSwitchPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init(context, attrs);
     }
 
     public MasterSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init(context, attrs);
     }
 
     public MasterSwitchPreference(Context context) {
         super(context);
+        init(context, null);
+    }
+
+    private void init(Context context, AttributeSet attrs) {
+        final TypedArray a = context.obtainStyledAttributes(
+                attrs, R.styleable.MasterSwitchPreference);
+        mThereCanBeOnlyOneGroupId = a.getInt(
+                R.styleable.MasterSwitchPreference_thereCanBeOnlyOneGroupId,
+                mThereCanBeOnlyOneGroupId);
+        mThereShouldBeOne = a.getBoolean(R.styleable.MasterSwitchPreference_thereShouldBeOneSwitch,
+                mThereShouldBeOne);
+        a.recycle();
     }
 
     @Override
@@ -69,6 +88,15 @@ public class MasterSwitchPreference extends TwoTargetPreference {
                     if (mSwitch != null && !mSwitch.isEnabled()) {
                         return;
                     }
+                    if (!mChecked) {
+                        mDependencyHandler.onEnablePref(mThereCanBeOnlyOneGroupId, getKey());
+                    } else if (mDependencyHandler != null && mThereShouldBeOne &&
+                            !mDependencyHandler.isAnotherEnabled(
+                                    mThereCanBeOnlyOneGroupId, getKey())) {
+                        // It might not be safe to disable, so ask the user to make sure
+                        // TODO dialog: call dependency handler with custom click listener?
+                        return;
+                    }
                     setChecked(!mChecked);
                     if (!callChangeListener(mChecked)) {
                         setChecked(!mChecked);
@@ -85,6 +113,26 @@ public class MasterSwitchPreference extends TwoTargetPreference {
             mSwitch.setChecked(mChecked);
             mSwitch.setEnabled(mEnableSwitch);
         }
+    }
+
+    public void setDependencyHandler(MasterSwitchPreferenceDependencyHandler dependencyHandler) {
+        mDependencyHandler = dependencyHandler;
+    }
+
+    public void setThereCanBeOnlyOneGroupId(int id) {
+        mThereCanBeOnlyOneGroupId = id;
+    }
+
+    public int getThereCanBeOnlyOneGroupId() {
+        return mThereCanBeOnlyOneGroupId;
+    }
+
+    public void setThereShouldBeOneSwitch(boolean enabled) {
+        mThereShouldBeOne = enabled;
+    }
+
+    public boolean getThereShouldBeOneSwitch() {
+        return mThereShouldBeOne;
     }
 
     public boolean isChecked() {
@@ -110,10 +158,6 @@ public class MasterSwitchPreference extends TwoTargetPreference {
         }
     }
 
-    public Switch getSwitch() {
-        return mSwitch;
-    }
-
     @Override
     protected Object onGetDefaultValue(TypedArray a, int index) {
         return mDefaultValue = a.getBoolean(index, false);
@@ -128,8 +172,16 @@ public class MasterSwitchPreference extends TwoTargetPreference {
     /**
      * Call from outside when value might have changed.
      */
-    public void reloadValue() {
-        setChecked(getPersistedBoolean(mChecked));
+    void reloadValue() {
+        boolean newValue = getPersistedBoolean(mChecked);
+        if (newValue != mChecked) {
+            // Update listener so it knows the value has changed e.g. on resume,
+            // but ignore return result: we don't allow listener to prevent change
+            // since it already has changed
+            callChangeListener(newValue);
+            // Update UI
+            setChecked(newValue);
+        }
     }
 
     /**
