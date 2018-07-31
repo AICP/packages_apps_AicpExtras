@@ -134,9 +134,6 @@ public class StatusBar extends BaseSettingsFragment implements
     public void onResume() {
         super.onResume();
 
-        mBatteryBar.reloadValue();
-        mStatusBarLogo.reloadValue();
-
         // Adjust status bar preferences for RTL
         if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
             mQuickPulldown.setEntries(R.array.status_bar_quick_qs_pulldown_entries_rtl);
