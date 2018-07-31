@@ -164,10 +164,6 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
         mSwitch.setEnabled(enabled);
     }
 
-    public final ToggleSwitch getSwitch() {
-        return mSwitch;
-    }
-
     public void show() {
         if (!isShowing()) {
             setVisibility(View.VISIBLE);
