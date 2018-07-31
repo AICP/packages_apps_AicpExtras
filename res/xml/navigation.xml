@@ -16,17 +16,19 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/akp/res-auto"
+    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/navigation_title">
 
     <Preference android:key="navigation_description"
-        android:summary="@string/navigation_description" />
+        android:summary="@string/navigation_description"
+        android:selectable="false" />
 
     <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
         android:key="navigation_bar_visible"
         android:title="@string/navbar_title"
         android:summary="@string/navbar_summary"
         android:defaultValue="true"
+        aicpextras:thereCanBeOnlyOneGroupId="1"
         android:fragment="com.aicp.extras.fragments.NavigationBar" />
 
     <!-- Edge Gestures -->
@@ -35,6 +37,7 @@
         android:title="@string/edge_gestures_title"
         android:summary="@string/edge_gestures_summary"
         android:defaultValue="false"
+        aicpextras:thereCanBeOnlyOneGroupId="1"
         android:fragment="com.aicp.extras.fragments.EdgeGesturesSettings" />
 
 </PreferenceScreen>
