@@ -65,13 +65,6 @@
                 android:data="@string/aicp_gerrit_link" />
         </Preference>
 
-        <Preference
-            android:title="@string/lineage_extras_title"
-            android:summary="@string/lineage_extras_summary">
-            <intent android:action="android.intent.action.VIEW"
-                android:data="@string/lineage_extras_link" />
-        </Preference>
-
     </PreferenceCategory>
 
     <PreferenceCategory
