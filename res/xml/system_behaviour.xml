@@ -22,7 +22,7 @@
     xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     android:title="@string/system_behaviour_title">
 
-    <com.aicp.gear.preference.HostnamePreference
+    <org.lineageos.internal.preference.HostnamePreference
         android:key="device_hostname"
         android:title="@string/device_hostname"
         android:summary="@string/device_hostname_summary"
