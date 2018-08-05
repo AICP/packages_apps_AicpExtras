@@ -99,8 +99,6 @@ public class SlimRecents extends BaseSettingsFragment
         boolean recentLeftyMode = Settings.System.getInt(getContext().getContentResolver(),
                 Settings.System.RECENT_PANEL_GRAVITY, Gravity.END) == Gravity.START;
         mRecentPanelLeftyMode.setChecked(recentLeftyMode);
-
-        mAppSidebar.reloadValue();
     }
 
     @Override
