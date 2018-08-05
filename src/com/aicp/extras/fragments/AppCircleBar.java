@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2010 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,36 +14,32 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.Preference.OnPreferenceClickListener;
+import android.provider.Settings;
 
-import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.extras.preference.MasterSwitchPreference;
-import com.aicp.extras.utils.Util;
+import com.aicp.extras.BaseSettingsFragment;
 
-public class SystemExtensions extends BaseSettingsFragment {
-
-    private static final String PREF_SYSTEM_APP_REMOVER = "system_app_remover";
-    private static final String PREF_APP_CIRCLE_BAR = "enable_app_circle_bar";
-
-    private MasterSwitchPreference mAppCircleBar;
+public class AppCircleBar extends BaseSettingsFragment implements
+        OnPreferenceClickListener {
+    private static final String TAG = "AppCircleSidebar";
 
     @Override
     protected int getPreferenceResource() {
-        return R.xml.system_extensions;
+        return R.xml.app_circlebar;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Preference systemAppRemover = findPreference(PREF_SYSTEM_APP_REMOVER);
-        Util.requireRoot(systemAppRemover);
-
-        mAppCircleBar = (MasterSwitchPreference) findPreference(PREF_APP_CIRCLE_BAR);
+    }
+    @Override
+    public boolean onPreferenceClick(Preference preference) {
+      return true;
     }
 }

@@ -41,7 +41,6 @@ import com.android.internal.utils.du.Config.ButtonConfig;
 import com.aicp.extras.R;
 
 public class NavigationBar extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
-    private static final String NAVBAR_VISIBILITY = "navbar_visibility";
     private static final String KEY_NAVBAR_MODE = "navbar_mode";
     private static final String KEY_DEFAULT_NAVBAR_SETTINGS = "default_settings";
     private static final String KEY_FLING_NAVBAR_SETTINGS = "fling_settings";
@@ -54,7 +53,6 @@ public class NavigationBar extends BaseSettingsFragment implements Preference.On
     private static final String KEY_NAVIGATION_WIDTH = "navbar_width";
     private static final String KEY_PULSE_SETTINGS = "pulse_settings";
 
-    private SwitchPreference mNavbarVisibility;
     private ListPreference mNavbarMode;
     private PreferenceScreen mFlingSettings;
     private PreferenceCategory mNavInterface;
@@ -75,20 +73,13 @@ public class NavigationBar extends BaseSettingsFragment implements Preference.On
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        mNavbarMode = (ListPreference) findPreference(KEY_NAVBAR_MODE);
         mNavInterface = (PreferenceCategory) findPreference(KEY_CATEGORY_NAVIGATION_INTERFACE);
         mNavGeneral = (PreferenceCategory) findPreference(KEY_CATEGORY_NAVIGATION_GENERAL);
-        mNavbarVisibility = (SwitchPreference) findPreference(NAVBAR_VISIBILITY);
-        mNavbarMode = (ListPreference) findPreference(KEY_NAVBAR_MODE);
         mDefaultSettings = (Preference) findPreference(KEY_DEFAULT_NAVBAR_SETTINGS);
         mFlingSettings = (PreferenceScreen) findPreference(KEY_FLING_NAVBAR_SETTINGS);
         mSmartbarSettings = (PreferenceScreen) findPreference(KEY_SMARTBAR_SETTINGS);
         mPulseSettings = (PreferenceScreen) findPreference(KEY_PULSE_SETTINGS);
-
-        boolean showing = Settings.Secure.getInt(getContentResolver(),
-                Settings.Secure.NAVIGATION_BAR_VISIBLE,
-                DUActionUtils.hasNavbarByDefault(getActivity()) ? 1 : 0) != 0;
-        updateBarVisibleAndUpdatePrefs(showing);
-        mNavbarVisibility.setOnPreferenceChangeListener(this);
 
         int mode = Settings.Secure.getInt(getContentResolver(), Settings.Secure.NAVIGATION_BAR_MODE,
                 0);
@@ -156,25 +147,13 @@ public class NavigationBar extends BaseSettingsFragment implements Preference.On
         }
     }
 
-    private void updateBarVisibleAndUpdatePrefs(boolean showing) {
-        mNavbarVisibility.setChecked(showing);
-        mNavInterface.setEnabled(mNavbarVisibility.isChecked());
-        mNavGeneral.setEnabled(mNavbarVisibility.isChecked());
-    }
-
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference.equals(mNavbarMode)) {
             int mode = Integer.parseInt(((String) newValue).toString());
-            Settings.Secure.putInt(getContentResolver(),
-                    Settings.Secure.NAVIGATION_BAR_MODE, mode);
+            Settings.Secure.putIntForUser(getContentResolver(),
+                    Settings.Secure.NAVIGATION_BAR_MODE, mode, UserHandle.USER_CURRENT);
             updateBarModeSettings(mode);
-            return true;
-        } else if (preference.equals(mNavbarVisibility)) {
-            boolean showing = ((Boolean)newValue);
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.NAVIGATION_BAR_VISIBLE,
-                    showing ? 1 : 0);
-            updateBarVisibleAndUpdatePrefs(showing);
             return true;
         } else if (preference == mBarHeightPort) {
             int val = (Integer) newValue;
@@ -194,5 +173,4 @@ public class NavigationBar extends BaseSettingsFragment implements Preference.On
         }
         return false;
     }
-
 }
