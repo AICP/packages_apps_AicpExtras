@@ -28,7 +28,7 @@ public class HiddenAnimActivity extends Activity {
         setContentView(R.layout.animgif_layout);
 
         gifView = (GifWebView) findViewById(R.id.gif_view);
-        gifView.setGifAssetPath("file:///android_asset/yoga.gif");
+        gifView.setGifAssetPath("file:///android_asset/anim.gif");
 
         Snackbar snackbar = Snackbar
                 .make(gifView, R.string.hidden_anim_activity_title, Snackbar.LENGTH_LONG)
@@ -55,7 +55,7 @@ public class HiddenAnimActivity extends Activity {
                                     public void onShow(DialogInterface d) {
                                         ImageView image = (ImageView) dialog.findViewById(R.id.hidden_img);
                                         Bitmap icon = BitmapFactory.decodeResource(getResources(),
-                                                R.drawable.aicp_hidden);
+                                                R.drawable.aicp_cool);
                                         float imageWidthInPX = (float)image.getWidth();
 
                                         LinearLayout.LayoutParams layoutParams =
