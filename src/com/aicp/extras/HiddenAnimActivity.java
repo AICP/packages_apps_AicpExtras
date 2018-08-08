@@ -26,7 +26,7 @@ public class HiddenAnimActivity extends BaseActivity {
         setContentView(R.layout.animgif_layout);
 
         gifView = (GifView) findViewById(R.id.gif_view);
-        gifView.setGifAssetPath("yoga.gif");
+        gifView.setGifAssetPath("anim.gif");
         gifView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
@@ -50,7 +50,7 @@ public class HiddenAnimActivity extends BaseActivity {
                     public void onShow(DialogInterface d) {
                         ImageView image = (ImageView) dialog.findViewById(R.id.hidden_img);
                         Bitmap icon = BitmapFactory.decodeResource(getResources(),
-                                R.drawable.aicp_hidden);
+                                R.drawable.aicp_cool);
                         float imageWidthInPX = (float)image.getWidth();
 
                         LinearLayout.LayoutParams layoutParams =
