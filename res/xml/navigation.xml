@@ -31,13 +31,12 @@
         aicpextras:thereCanBeOnlyOneGroupId="1"
         android:fragment="com.aicp.extras.fragments.NavigationBar" />
 
-    <!-- Edge Gestures -->
-    <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
-        android:key="edge_gestures_enabled"
-        android:title="@string/edge_gestures_title"
-        android:summary="@string/edge_gestures_summary"
+    <!-- Bottom Gestures -->
+    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+        android:key="use_bottom_gesture_navigation"
+        android:title="@string/use_bottom_gesture_title"
+        android:summary="@string/use_bottom_gesture_summary"
         android:defaultValue="false"
-        aicpextras:thereCanBeOnlyOneGroupId="1"
-        android:fragment="com.aicp.extras.fragments.EdgeGesturesSettings" />
+        aicpextras:thereCanBeOnlyOneGroupId="1" />
 
 </PreferenceScreen>
