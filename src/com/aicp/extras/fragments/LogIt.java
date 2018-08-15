@@ -254,7 +254,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     }
 
     public void makeKmsg() throws SuShell.SuDeniedException, IOException {
-        String command = "test -e /proc/last_kmsg && cat /proc/last_kmsg  || cat /sys/fs/pstore/console-ramoops";
+        String command = "test -e /proc/last_kmsg && cat /proc/last_kmsg  || cat /sys/fs/pstore/console-ramoops-*";
         if (shareHaste) {
             command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + KMSG_FILE
                     + " && curl -s -X POST -T " + KMSG_FILE + " " + AICP_HASTE
