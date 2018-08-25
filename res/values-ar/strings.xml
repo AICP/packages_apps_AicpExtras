@@ -539,7 +539,6 @@
   <string name="device_maintainers_dialog">مشرفي الجهاز</string>
   <string name="device_maintainer_default">غير معروف</string>
   <string name="no_root_title">غير مرّوت</string>
-  <string name="no_root_summary">لمزيد من الخصائص، قم بعمل روت للجهاز</string>
   <!-- Other / general purpose -->
   <string name="default_string">الافتراضي</string>
   <string name="on">تشغيل</string>
@@ -581,14 +580,14 @@
   <string name="ticker_animation_mode_title">شريط الرسوم المتحركة</string>
   <string name="ticker_animation_mode_alpha_fade">التلاشي</string>
   <string name="ticker_animation_mode_scroll">التمرير</string>
+  <!-- Navigation-->
+  <!-- Navigation bar -->
   <string name="navbar_title">شريط التنقل</string>
-  <string name="navbar_summary">شريط ذكي/قذف</string>
   <!-- DUI -->
   <string name="navbar_interface_title">الواجهة</string>
   <string name="navbar_size">حجم الشريط</string>
   <string name="navbar_mode">نمط التنقل</string>
   <string name="navbar_mode_summary">حدد اي وضع تنقل تريد استخدامه على جهازك</string>
-  <string name="navbar_visibility">اتاحة شريط التنقل</string>
   <string name="navigationbar_settings_title">شريط التنقل</string>
   <string name="navigationbar_settings_summary">تخصيص نمط التنقل والسلوك</string>
   <string name="navbar_general_title">خيارات متقدمة</string>
@@ -605,6 +604,7 @@
   <string name="default_string">الافتراضي</string>
   <string name="default_settings">الإعدادات الإفتراضية</string>
   <string name="default_settings_summary">شريط تنقل AOSP الإفتراضي</string>
+  <!-- Edge gestures -->
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">اختر الإجراء</string>
   <string name="action_entry_default_action">الإعدادات الافتراضية</string>
@@ -759,9 +759,6 @@
   <string name="show_carrier_keyguard">شاشة القفل فقط</string>
   <string name="show_carrier_statusbar">شريط الحالة فقط</string>
   <string name="show_carrier_enabled">شاشة القفل وشريط الحالة</string>
-  <!-- Three-fingers-swipe to screenshot -->
-  <string name="three_finger_gesture">إيماء الثلاثة أصابع</string>
-  <string name="three_finger_gesture_summary">السحب بثلاثة أصابع لأخذ لقطة للشاشة</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">المؤثرات الحركية</string>
   <string name="system_animation_title">الرسوم المتحركة للنظام</string>
@@ -898,4 +895,9 @@
   <string name="dialog_delete_message">حذف المحدد؟</string>
   <!-- System Behavior category strings -->
   <!-- QuickSettings Panel Transparency -->
+  <!-- Hostname setting -->
+  <!-- Gestures -->
+  <!-- Carbon gestures -->
+  <!-- Disable FC notifications -->
+  <!-- Circle app bar -->
 </resources>

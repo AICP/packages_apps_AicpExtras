@@ -27,21 +27,21 @@
   <string name="status_bar_title">ステータスバー</string>
   <string name="status_bar_summary">ステータスバーの外観を編集します</string>
   <!-- StatusBar Battery Options -->
-  <string name="status_bar_battery_options">バッテリのオプション</string>
+  <string name="status_bar_battery_options">バッテリーのオプション</string>
   <!-- Bluetooth status -->
-  <string name="bluetooth_battery_title">Bluetoothデバイスのバッテリ情報を表示</string>
-  <string name="bluetooth_battery_summary">利用可能な場合、現在接続しているBluetoothデバイスのバッテリ情報を表示します</string>
+  <string name="bluetooth_battery_title">Bluetoothデバイスのバッテリー情報を表示</string>
+  <string name="bluetooth_battery_summary">利用可能な場合、現在接続しているBluetoothデバイスのバッテリー情報を表示します</string>
   <!-- Statusbar net monitor -->
   <string name="network_traffic_state_title">ステータスバーに通信速度を表示</string>
   <string name="network_traffic_autohide_threshold_title">自動的に非表示するしきい値 (KB/s)</string>
   <!-- QS Header battery percentage -->
-  <string name="force_battery_percentage_title">バッテリ残量を常に表示</string>
-  <string name="force_battery_percentage_summary">クイック設定パネルのヘッダーやロック画面でもバッテリ残量を表示します</string>
+  <string name="force_battery_percentage_title">バッテリー残量を常に表示</string>
+  <string name="force_battery_percentage_summary">クイック設定パネルのヘッダーやロック画面でもバッテリー残量を表示します</string>
   <!-- Battery bar -->
   <string name="battery_bar_title">バッテリーバー</string>
   <string name="battery_bar_color_title">色</string>
   <string name="battery_bar_charging_color_title">充電中の色</string>
-  <string name="battery_bar_battery_low_color_title">低バッテリー時の色</string>
+  <string name="battery_bar_battery_low_color_title">バッテリー残量低下時の色</string>
   <string name="battery_bar_style_title">配置</string>
   <string name="battery_bar_thickness_title">太さ</string>
   <string name="battery_bar_animate_title">充電時のアニメーション</string>
@@ -122,8 +122,18 @@
   <string name="status_bar_logo_style_android">Android</string>
   <string name="status_bar_logo_style_apple">Apple</string>
   <string name="status_bar_logo_style_ios">iOS</string>
-  <string name="status_bar_logo_style_emoticon">顔文字</string>
+  <string name="status_bar_logo_style_emoticon">絵文字</string>
+  <string name="status_bar_logo_style_emoticon_cool">Cool絵文字</string>
+  <string name="status_bar_logo_style_emoticon_dead">Dead絵文字</string>
+  <string name="status_bar_logo_style_emoticon_devil">Devil絵文字</string>
+  <string name="status_bar_logo_style_emoticon_happy">Happy絵文字</string>
+  <string name="status_bar_logo_style_emoticon_neutral">Neutral絵文字</string>
+  <string name="status_bar_logo_style_emoticon_poop">Poop絵文字</string>
+  <string name="status_bar_logo_style_emoticon_sad">Sad絵文字</string>
+  <string name="status_bar_logo_style_emoticon_tongue">Tongue絵文字</string>
+  <string name="status_bar_logo_style_blackberry">Blackberry</string>
   <string name="status_bar_logo_style_cake">ケーキ</string>
+  <string name="status_bar_logo_style_blogger">Blogger</string>
   <string name="status_bar_logo_style_biohazard">バイオハザード</string>
   <string name="status_bar_logo_style_linux">Linux</string>
   <string name="status_bar_logo_style_yin_yang">陰陽</string>
@@ -137,8 +147,8 @@
   <string name="status_bar_logo_style_human_male">男</string>
   <string name="status_bar_logo_style_human_female">女</string>
   <string name="status_bar_logo_style_human_male_female">男女</string>
-  <string name="status_bar_logo_style_gender_male">男性</string>
-  <string name="status_bar_logo_style_gender_female">女性</string>
+  <string name="status_bar_logo_style_gender_male">オス</string>
+  <string name="status_bar_logo_style_gender_female">メス</string>
   <string name="status_bar_logo_style_gender_male_female">男性と女性</string>
   <string name="status_bar_logo_style_guitar_electric">エレキギター</string>
   <!-- Statusbar categories -->
@@ -169,7 +179,7 @@
   <string name="brightness_icon_position_on_summary">右に表示</string>
   <string name="brightness_icon_position_off_summary">左に表示</string>
   <!-- Battery Styles -->
-  <string name="battery_style_title">バッテリ残量アイコンのスタイル</string>
+  <string name="battery_style_title">バッテリー残量アイコンのスタイル</string>
   <string name="battery_style_summary">ステータスバー上での見た目を変更します</string>
   <string name="battery_style_port">縦向き</string>
   <string name="battery_style_land">横向き</string>
@@ -350,7 +360,7 @@
   <string name="lockscreen_battery_info_title">バッテリー情報を表示する</string>
   <string name="lockscreen_battery_info_summary">充電中のロック画面に接続した充電器の最大電流/電圧とバッテリーの温度を表示します</string>
   <!-- Lockscreen notif count -->
-  <string name="lockscreen_maxnotif_title">通知数</string>
+  <string name="lockscreen_maxnotif_title">表示する通知数</string>
   <string name="lockscreen_maxnotif_summary">表示する通知の数を調整します</string>
   <string name="lockscreen_maxnotif_config">表示する通知の最大数</string>
   <!-- Power menu on secure lockscreen -->
@@ -491,6 +501,7 @@
   <string name="log_it_title">ログを取得!</string>
   <string name="log_it_summary">Logcat、kmesg、dmesg</string>
   <string name="logcat_title">Logcat</string>
+  <string name="logcat_radio_title">ラジオのログ</string>
   <string name="kmesg_title">Kmesg</string>
   <string name="dmesg_title">Dmesg</string>
   <string name="log_it_now_title">ログの取得</string>
@@ -570,6 +581,7 @@
   <string name="systemui_restart_message">すべての変更を反映するには、システム UI の再起動が必要です。再起動しますか？</string>
   <string name="cannot_get_su">Superuser アクセスが不足しているためアクションに失敗しました</string>
   <string name="launcher_shortcut_disabled_message">ショートカットは無効です</string>
+  <string name="hidden_anim_activity_title">Yoga time!!!</string>
   <string name="hidden_anim_more_nice">いいぞ</string>
   <!-- Sensor block per-package -->
   <string name="sensor_block_title">パッケージごとにセンサーを無効化</string>
@@ -602,14 +614,19 @@
   <string name="ticker_animation_mode_alpha_fade">フェード</string>
   <string name="ticker_animation_mode_scroll">スクロール</string>
   <string name="ticker_tick_duration_title">ティッカーの動作時間</string>
+  <!-- Navigation-->
+  <string name="navigation_title">ナビゲーション</string>
+  <string name="navigation_description">ナビゲーションモードは一つしか選べません。一つを有効化すると他は無効化されます。</string>
+  <string name="navigation_summary">標準/Smartbar/Fling/ジェスチャー</string>
+  <!-- Navigation bar -->
   <string name="navbar_title">ナビゲーションバー</string>
-  <string name="navbar_summary">Smartbar/Fling</string>
+  <string name="navbar_summary">タップで利用可能なモードやオプションを表示します</string>
   <!-- DUI -->
   <string name="navbar_interface_title">インターフェース</string>
   <string name="navbar_size">ナビゲーションバーのサイズ</string>
   <string name="navbar_mode">ナビゲーションモード</string>
   <string name="navbar_mode_summary">端末で使用するナビゲーションモードを選択してください</string>
-  <string name="navbar_visibility">ナビゲーションバーを表示</string>
+  <string name="navbar_visibility">ナビゲーションバー</string>
   <string name="navigationbar_settings_title">ナビゲーションバー</string>
   <string name="navigationbar_settings_summary">ナビゲーションバーのスタイルや動作を設定します</string>
   <string name="navbar_general_title">高度な設定</string>
@@ -626,6 +643,21 @@
   <string name="default_string">デフォルト</string>
   <string name="default_settings">ナビゲーションバーの設定</string>
   <string name="default_settings_summary">AOSP のナビゲーションバー</string>
+  <!-- Edge gestures -->
+  <string name="edge_gestures_title">エッジジェスチャー</string>
+  <string name="edge_gestures_description">下からスワイプしてホームジェスチャーを起動します。 アプリ履歴を開くには押したままにしておきます。 左下または右下からスワイプして戻ります。</string>
+  <string name="edge_gestures_summary">エッジジェスチャーを使います。タップでオプションを表示します。</string>
+  <string name="edge_gestures_feedback_duration_title">振動フィードバックの長さ</string>
+  <string name="edge_gestures_long_press_delay_title">長押し開始までの待機時間</string>
+  <string name="edge_gestures_back_category_title">戻るジェスチャー</string>
+  <string name="edge_gestures_back_edges_title">戻るジェスチャーを始める場所</string>
+  <string name="edge_gestures_landscape_back_edges_title">横向きで戻るジェスチャーを始める場所</string>
+  <string name="edge_gestures_back_screen_percent_title">戻るジェスチャーを以下で指定した画面の割合でのみ開始します</string>
+  <string name="edge_gestures_back_screen_percent_summary">トリガー領域を画面のこの割合以下にする</string>
+  <string name="edge_gestures_back_show_ui_feedback_title">戻るジェスチャーアニメーション</string>
+  <string name="edge_gestures_back_show_ui_feedback_summary">戻るジェスチャーを使った時のエッジアニメーションを表示します</string>
+  <string name="edge_gestures_back_use_black_arrow_title">ダークカラーの戻るボタン</string>
+  <string name="edge_gestures_back_use_black_arrow_summary">白色の代わりに黒色の戻るボタンを表示します</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">アクションを選択</string>
   <string name="action_entry_default_action">デフォルトの設定</string>
@@ -636,7 +668,7 @@
   <string name="fling_settings_summary">ユニークで細かくカスタマイズできる、ジェスチャーベースのナビゲーションバー</string>
   <string name="fling_interface">Fling</string>
   <string name="fling_enable_title">Fling の有効化</string>
-  <string name="fling_back_home_policy">バックとホームは常に設定する必要があります。バックまたはホームの割り当てを変更する場合は、まず最初に割り当てるようにしてください。\n\nまた、ダブルタップを設定するとシングルタップが少し遅れます。</string>
+  <string name="fling_back_home_policy">「戻る」と「ホーム」は必ず設定する必要があります。「戻る」や「ホーム」の割り当てを変更する場合は、まず最初に割り当てるようにしてください。\n\nまた、ダブルタップを設定するとシングルタップの動作が少し遅れます。</string>
   <string name="fling_split_bar_policy">左右どちらかにのみアクションが割り当てられている場合は、バー全体にアクションが適用されます</string>
   <string name="fling_def_summary">アクションが設定されていません</string>
   <string name="fling_swipe_actions">スワイプジェスチャー</string>
@@ -792,9 +824,6 @@
   <string name="show_carrier_keyguard">ロック画面で表示</string>
   <string name="show_carrier_statusbar">ステータスバーで表示</string>
   <string name="show_carrier_enabled">両方で表示</string>
-  <!-- Three-fingers-swipe to screenshot -->
-  <string name="three_finger_gesture">3本指でのジェスチャー</string>
-  <string name="three_finger_gesture_summary">3本指でスワイプしてスクリーンショットを取得します</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">アニメーション</string>
   <string name="system_animation_title">システムのアニメーション設定</string>
@@ -981,4 +1010,50 @@
   <string name="system_pup_category_title">接続/接続解除時のオプション</string>
   <!-- QuickSettings Panel Transparency -->
   <string name="qs_panel_alpha_title">パネルの不透明度</string>
+  <!-- Hostname setting -->
+  <string name="device_hostname">端末のホスト名</string>
+  <string name="device_hostname_summary">IP の解決で使われる端末のホスト名を変更します。DHCP 環境で接続するときに便利です。</string>
+  <!-- Gestures -->
+  <string name="gestures_preference_title">ジェスチャー</string>
+  <!-- Carbon gestures -->
+  <string name="carbon_gesture_preference_title">カーボン</string>
+  <string name="carbon_gestures_summary">カスタムグローバルジェスチャーを編集します</string>
+  <string name="carbon_gestures_fingers_title">ジェスチャーに使用する指の本数（デフォルト：2）</string>
+  <string name="carbon_gestures_fingers_unit">本指</string>
+  <string name="carbon_gestures_right_title">右ジェスチャー</string>
+  <string name="carbon_gestures_left_title">左ジェスチャー</string>
+  <string name="carbon_gestures_up_title">上ジェスチャー</string>
+  <string name="carbon_gestures_down_title">下ジェスチャー</string>
+  <string name="carbon_gesture_disabled">無効</string>
+  <string name="carbon_gesture_back">戻る</string>
+  <string name="carbon_gesture_home">ホーム</string>
+  <string name="carbon_gesture_recents">アプリ履歴</string>
+  <string name="carbon_gesture_power">電源</string>
+  <string name="carbon_gesture_volume_down">音量下</string>
+  <string name="carbon_gesture_volume_up">音量上</string>
+  <string name="carbon_gesture_volume_mute">ミュート</string>
+  <string name="carbon_gesture_screenshot">スクリーンショット</string>
+  <string name="carbon_gesture_media_play_pause">メディアの再生/一時停止</string>
+  <string name="carbon_gesture_media_skip">メディアのスキップ</string>
+  <string name="carbon_gesture_media_previous">前のメディア</string>
+  <string name="carbon_gesture_customapp">アプリの起動</string>
+  <string name="carbon_gesture_launch">起動</string>
+  <!-- Disable FC notifications -->
+  <string name="disable_fc_notifications_title">強制終了通知を無効化</string>
+  <string name="disable_fc_notifications_summary">アプリの動作が停止したときの通知を非表示にします。注意して使用してください</string>
+  <!-- Circle app bar -->
+  <string name="category_app_circle_bar_title">アプリサークルバーランチャー</string>
+  <string name="app_circle_bar_title">アプリサークルバー</string>
+  <string name="app_circle_bar_summary">画面右端をタップすると円状のアプリランチャーを表示します</string>
+  <string name="app_circle_bar_included_apps_title">選択したアプリ</string>
+  <string name="app_circle_bar_included_apps_summary">アプリサークルバーで使うアプリ</string>
+  <string name="app_circle_bar_trigger_width_title">トリガー領域の幅</string>
+  <string name="app_circle_bar_trigger_top_title">トリガー領域の上の位置</string>
+  <string name="app_circle_bar_trigger_height_title">トリガー領域の高さ</string>
+  <string name="app_circle_bar_appchooser_title">アプリサークルバーの選択</string>
+  <string name="app_circle_bar_appchooser_summary">アプリサークルバーで表示するアプリを選択します</string>
+  <string name="app_circle_bar_appchooser_pref_title">アプリを追加</string>
+  <string name="app_circle_bar_appchooser_pref_summary">ここをタップして追加し、リストにあるアプリをタップすると削除します。\n何もアプリが追加されていないと、デフォルトで電話・連絡先・設定が表示されます。</string>
+  <string name="app_circle_bar_show_trigger_title">トリガー領域の表示</string>
+  <string name="app_circle_bar_show_trigger_summary">有効にするとアプリサークルバーランチャーのトリガー領域を表示します</string>
 </resources>

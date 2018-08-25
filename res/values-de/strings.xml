@@ -615,14 +615,19 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="ticker_animation_mode_alpha_fade">Ausblenden</string>
   <string name="ticker_animation_mode_scroll">Textlauf</string>
   <string name="ticker_tick_duration_title">Ticker-Dauer</string>
+  <!-- Navigation-->
+  <string name="navigation_title">Navigation</string>
+  <string name="navigation_description">Sich gegenseitig ausschließende Arten für die Navigation. Die Auswahl einer Art deaktiviert automatisch die andere Art.</string>
+  <string name="navigation_summary">AOSP/Smartbar/Fling/Gestensteuerung</string>
+  <!-- Navigation bar -->
   <string name="navbar_title">Navigationsleiste</string>
-  <string name="navbar_summary">SmartBar/Fling</string>
+  <string name="navbar_summary">Klicken Sie hier für die verfügbaren Modi und Optionen</string>
   <!-- DUI -->
   <string name="navbar_interface_title">Schnittstelle</string>
   <string name="navbar_size">Größe der Leiste</string>
   <string name="navbar_mode">Navigationsmodus</string>
   <string name="navbar_mode_summary">Wählen, welcher Navigationsmodus verwendet werden soll</string>
-  <string name="navbar_visibility">Navigationsleiste einblenden</string>
+  <string name="navbar_visibility">Navigationsleiste</string>
   <string name="navigationbar_settings_title">Navigationsleiste</string>
   <string name="navigationbar_settings_summary">Stil und Verhalten für die Navigation anpassen</string>
   <string name="navbar_general_title">Erweitert</string>
@@ -639,6 +644,21 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="default_string">Standard</string>
   <string name="default_settings">Standard-Einstellungen</string>
   <string name="default_settings_summary">Standard AOSP Navigationsleiste</string>
+  <!-- Edge gestures -->
+  <string name="edge_gestures_title">Randgesten</string>
+  <string name="edge_gestures_description">Von unten wischen um zur Startseite zu gelangen. Gedrückt halten für den Anwendungsverlauf. Von unten links oder rechts wischen, um zurückzugehen.</string>
+  <string name="edge_gestures_summary">Navigieren Sie über Randgesten. Für Optionen bitte Klicken.</string>
+  <string name="edge_gestures_feedback_duration_title">Dauer der haptischen Rückmeldung (Vibration)</string>
+  <string name="edge_gestures_long_press_delay_title">Verzögerung, bis langes Drücken eine Aktion startet</string>
+  <string name="edge_gestures_back_category_title">Zurück-Geste</string>
+  <string name="edge_gestures_back_edges_title">Zurück-Geste auslösen von</string>
+  <string name="edge_gestures_landscape_back_edges_title">Zurück-Geste im Querformat auslösen von</string>
+  <string name="edge_gestures_back_screen_percent_title">Zurück-Geste muss unterhalb diesem Prozentsatz des Displays begonnen werden</string>
+  <string name="edge_gestures_back_screen_percent_summary">Auslösebereich: weniger als % des Displays</string>
+  <string name="edge_gestures_back_show_ui_feedback_title">Animation der Zurück-Geste</string>
+  <string name="edge_gestures_back_show_ui_feedback_summary">Zeige animiertes Feedback an den Kanten, wenn die Zurück-Geste verwendet wird</string>
+  <string name="edge_gestures_back_use_black_arrow_title">Dunkle Farbe der Zurück-Taste</string>
+  <string name="edge_gestures_back_use_black_arrow_summary">Zeige eine schwarze Zurück-Taste anstelle der weißen Version</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Aktion wählen</string>
   <string name="action_entry_default_action">Grundeinstellungen</string>
@@ -805,9 +825,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="show_carrier_keyguard">Nur auf Sperrbildschirm</string>
   <string name="show_carrier_statusbar">Nur in Statusleiste</string>
   <string name="show_carrier_enabled">Sperrbildschirm &amp; Statusleiste</string>
-  <!-- Three-fingers-swipe to screenshot -->
-  <string name="three_finger_gesture">Drei-Finger-Geste</string>
-  <string name="three_finger_gesture_summary">Wische mit drei Fingern, um ein Bildschirmfoto aufzunehmen</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">Display und Animationen</string>
   <string name="system_animation_title">Systemanimationen</string>
@@ -994,4 +1011,50 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="system_pup_category_title">Optionen beim Verbinden</string>
   <!-- QuickSettings Panel Transparency -->
   <string name="qs_panel_alpha_title">Transparenz der Schnelleinstellungen</string>
+  <!-- Hostname setting -->
+  <string name="device_hostname">Netzwerkname des Geräts</string>
+  <string name="device_hostname_summary">Ändern Sie den Netzwerknamen des Geräts für die IP-Auflösung (Nützlich bei der Verbindung mit diesem Gerät in einer dynamischen DHCP-Umgebung).</string>
+  <!-- Gestures -->
+  <string name="gestures_preference_title">Gesten</string>
+  <!-- Carbon gestures -->
+  <string name="carbon_gesture_preference_title">Mehrfinger-Gesten</string>
+  <string name="carbon_gestures_summary">Konfiguriere benutzerdefinierte globale Gesten</string>
+  <string name="carbon_gestures_fingers_title">Anzahl der verwendeten Finger für Gesten (Standard: 2)</string>
+  <string name="carbon_gestures_fingers_unit">Finger</string>
+  <string name="carbon_gestures_right_title">Wischen nach rechts</string>
+  <string name="carbon_gestures_left_title">Wischen nach links</string>
+  <string name="carbon_gestures_up_title">Wischen nach oben</string>
+  <string name="carbon_gestures_down_title">Wischen nach unten</string>
+  <string name="carbon_gesture_disabled">Deaktiviert</string>
+  <string name="carbon_gesture_back">Zurück</string>
+  <string name="carbon_gesture_home">Start</string>
+  <string name="carbon_gesture_recents">Verlauf</string>
+  <string name="carbon_gesture_power">Ein/Aus</string>
+  <string name="carbon_gesture_volume_down">Lautstärke senken</string>
+  <string name="carbon_gesture_volume_up">Lautstärke erhöhen</string>
+  <string name="carbon_gesture_volume_mute">Stummschalten</string>
+  <string name="carbon_gesture_screenshot">Bildschirmfoto</string>
+  <string name="carbon_gesture_media_play_pause">Wiedergabe/Pause Musik</string>
+  <string name="carbon_gesture_media_skip">Titel überspringen</string>
+  <string name="carbon_gesture_media_previous">Vorheriger Titel</string>
+  <string name="carbon_gesture_customapp">Anwendung starten</string>
+  <string name="carbon_gesture_launch">Starten</string>
+  <!-- Disable FC notifications -->
+  <string name="disable_fc_notifications_title">Absturz-Benachrichtigungen deaktivieren</string>
+  <string name="disable_fc_notifications_summary">Hierdurch werden alle Benachrichtigungen zu Programmabstürzen (\'Force Close\') unterdrückt. Mit Vorsicht nutzen!</string>
+  <!-- Circle app bar -->
+  <string name="category_app_circle_bar_title">Kreisleiste für Anwendungen</string>
+  <string name="app_circle_bar_title">App-Kreisleiste</string>
+  <string name="app_circle_bar_summary">Zeige die Kreisleiste bei Berührung des rechten Displayrands</string>
+  <string name="app_circle_bar_included_apps_title">Anwendungsauswahl</string>
+  <string name="app_circle_bar_included_apps_summary">Ausgewählte Apps für die Kreisleiste</string>
+  <string name="app_circle_bar_trigger_width_title">Breite des Auslösebereichs</string>
+  <string name="app_circle_bar_trigger_top_title">Oberer Anfang des Auslösebereichs</string>
+  <string name="app_circle_bar_trigger_height_title">Höhe des Auslösebereichs</string>
+  <string name="app_circle_bar_appchooser_title">Kreisleiste für Anwendungen</string>
+  <string name="app_circle_bar_appchooser_summary">Ausgewählte Apps werden in der Kreisleiste angezeigt</string>
+  <string name="app_circle_bar_appchooser_pref_title">App hinzufügen</string>
+  <string name="app_circle_bar_appchooser_pref_summary">App zum Hinzufügen einmal antippen. Das Antippen einer App in der Liste löscht diese.\nWenn keine App zur Liste hinzugefügt wird, werden Telefon, Kontakte und Einstellungen als Standard angezeigt.</string>
+  <string name="app_circle_bar_show_trigger_title">Auslösebereich immer anzeigen</string>
+  <string name="app_circle_bar_show_trigger_summary">Ermöglicht die dauerhafte Anzeige des Auslösebereichs der Kreisleiste.</string>
 </resources>

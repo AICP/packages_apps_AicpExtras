@@ -501,6 +501,7 @@
   <string name="log_it_title">記錄起來！</string>
   <string name="log_it_summary">Logcat, kmesg, dmesg</string>
   <string name="logcat_title">Logcat</string>
+  <string name="logcat_radio_title">無線電日誌</string>
   <string name="kmesg_title">Kmesg</string>
   <string name="dmesg_title">Dmesg</string>
   <string name="log_it_now_title">執行</string>
@@ -613,14 +614,19 @@
   <string name="ticker_animation_mode_alpha_fade">淡出</string>
   <string name="ticker_animation_mode_scroll">滾動</string>
   <string name="ticker_tick_duration_title">提示訊息動畫</string>
+  <!-- Navigation-->
+  <string name="navigation_title">導覽</string>
+  <string name="navigation_description">相互排斥的導覽模式。啟用一個自動停用另一個。</string>
+  <string name="navigation_summary">原始/智慧列/滑動手勢/手勢</string>
+  <!-- Navigation bar -->
   <string name="navbar_title">導覽列</string>
-  <string name="navbar_summary">智慧列/滑動手勢</string>
+  <string name="navbar_summary">按一下可用模式和選項</string>
   <!-- DUI -->
   <string name="navbar_interface_title">介面</string>
   <string name="navbar_size">導覽列大小</string>
   <string name="navbar_mode">導覽列模式</string>
   <string name="navbar_mode_summary">選擇要在裝置上使用的導覽模式</string>
-  <string name="navbar_visibility">允許導覽列</string>
+  <string name="navbar_visibility">導覽列</string>
   <string name="navigationbar_settings_title">導覽列</string>
   <string name="navigationbar_settings_summary">自訂導覽列樣式和行為</string>
   <string name="navbar_general_title">進階</string>
@@ -637,6 +643,21 @@
   <string name="default_string">預設</string>
   <string name="default_settings">原始設定</string>
   <string name="default_settings_summary">原始 AOSP 導覽列</string>
+  <!-- Edge gestures -->
+  <string name="edge_gestures_title">邊緣手勢</string>
+  <string name="edge_gestures_description">由底部往上滑來調整主畫面的手勢。保持按下來開啟最近使用的應用程式。從左下角或右下角滑動即可返回</string>
+  <string name="edge_gestures_summary">使用邊緣手勢導覽。按一下以選擇選項。</string>
+  <string name="edge_gestures_feedback_duration_title">觸覺反饋持續時間</string>
+  <string name="edge_gestures_long_press_delay_title">長按操作啟動延遲</string>
+  <string name="edge_gestures_back_category_title">返回手勢</string>
+  <string name="edge_gestures_back_edges_title">觸發返回鍵從</string>
+  <string name="edge_gestures_landscape_back_edges_title">在橫向上觸發返回鍵</string>
+  <string name="edge_gestures_back_screen_percent_title">返回手勢必須在多少百分比下才開始</string>
+  <string name="edge_gestures_back_screen_percent_summary">觸發區域：低於螢幕百分比</string>
+  <string name="edge_gestures_back_show_ui_feedback_title">返回手勢動畫</string>
+  <string name="edge_gestures_back_show_ui_feedback_summary">使用返回手勢時顯示邊緣上的動畫回饋</string>
+  <string name="edge_gestures_back_use_black_arrow_title">返回建深色顏色</string>
+  <string name="edge_gestures_back_use_black_arrow_summary">顯示黑色返回鍵而不是白色版本</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">選擇動作</string>
   <string name="action_entry_default_action">預設設定</string>
@@ -803,9 +824,6 @@
   <string name="show_carrier_keyguard">僅限於鎖定畫面</string>
   <string name="show_carrier_statusbar">僅狀態列</string>
   <string name="show_carrier_enabled">鎖定畫面與狀態列</string>
-  <!-- Three-fingers-swipe to screenshot -->
-  <string name="three_finger_gesture">三指手勢</string>
-  <string name="three_finger_gesture_summary">同時滑動三支指頭以擷取螢幕畫面</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">動畫</string>
   <string name="system_animation_title">系統動畫</string>
@@ -992,4 +1010,50 @@
   <string name="system_pup_category_title">插入/拔除選項</string>
   <!-- QuickSettings Panel Transparency -->
   <string name="qs_panel_alpha_title">面板不透明度</string>
+  <!-- Hostname setting -->
+  <string name="device_hostname">裝置主機名稱</string>
+  <string name="device_hostname_summary">修改 ip 解析中使用的裝置主機名稱, 在動態 dhcp 環境中連線到此裝置時非常有用</string>
+  <!-- Gestures -->
+  <string name="gestures_preference_title">手勢</string>
+  <!-- Carbon gestures -->
+  <string name="carbon_gesture_preference_title">碳</string>
+  <string name="carbon_gestures_summary">配置自訂全域手勢</string>
+  <string name="carbon_gestures_fingers_title">手勢用的手指 (預設值 2)</string>
+  <string name="carbon_gestures_fingers_unit">指頭</string>
+  <string name="carbon_gestures_right_title">向右手勢</string>
+  <string name="carbon_gestures_left_title">向左手勢</string>
+  <string name="carbon_gestures_up_title">向上手勢</string>
+  <string name="carbon_gestures_down_title">向下手勢</string>
+  <string name="carbon_gesture_disabled">已停用</string>
+  <string name="carbon_gesture_back">返回</string>
+  <string name="carbon_gesture_home">主畫面</string>
+  <string name="carbon_gesture_recents">最近使用的應用程式</string>
+  <string name="carbon_gesture_power">電源</string>
+  <string name="carbon_gesture_volume_down">降低音量</string>
+  <string name="carbon_gesture_volume_up">調高音量</string>
+  <string name="carbon_gesture_volume_mute">靜音</string>
+  <string name="carbon_gesture_screenshot">擷取螢幕畫面</string>
+  <string name="carbon_gesture_media_play_pause">播放/暫停音樂</string>
+  <string name="carbon_gesture_media_skip">略過媒體</string>
+  <string name="carbon_gesture_media_previous">上個媒體</string>
+  <string name="carbon_gesture_customapp">啟動應用程式</string>
+  <string name="carbon_gesture_launch">啟動</string>
+  <!-- Disable FC notifications -->
+  <string name="disable_fc_notifications_title">停用強制關閉通知</string>
+  <string name="disable_fc_notifications_summary">這將會隱藏所有強制關閉通知</string>
+  <!-- Circle app bar -->
+  <string name="category_app_circle_bar_title">應用程式環形列啟動器</string>
+  <string name="app_circle_bar_title">環形應用程式列</string>
+  <string name="app_circle_bar_summary">輕觸螢幕右側後顯示環形應用程式列</string>
+  <string name="app_circle_bar_included_apps_title">選擇應用程式</string>
+  <string name="app_circle_bar_included_apps_summary">為應用程式環形列選擇的應用程式</string>
+  <string name="app_circle_bar_trigger_width_title">觸發區域寬度</string>
+  <string name="app_circle_bar_trigger_top_title">觸發區域頂部</string>
+  <string name="app_circle_bar_trigger_height_title">觸發區域高度</string>
+  <string name="app_circle_bar_appchooser_title">應用程式環形列選擇器</string>
+  <string name="app_circle_bar_appchooser_summary">選擇要顯示在應用程式環形列上的應用程式</string>
+  <string name="app_circle_bar_appchooser_pref_title">新增應用程式</string>
+  <string name="app_circle_bar_appchooser_pref_summary">輕觸此處新增，輕觸清單中的任何應用程式刪除. \n手機預設情況下，如果沒有新增任何應用程式，則顯示連絡人和設定。</string>
+  <string name="app_circle_bar_show_trigger_title">顯示觸發區域</string>
+  <string name="app_circle_bar_show_trigger_summary">啟用以顯示為應用程式環形列啟動器配置的觸發區域。</string>
 </resources>

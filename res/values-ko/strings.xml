@@ -415,7 +415,6 @@
   <string name="aicp_ota_summary">새로운 AICP 업데이트 확인</string>
   <string name="stats_summary">익명 통계를 위한 송/수신 선택</string>
   <string name="no_root_title">루팅되지 않음</string>
-  <string name="no_root_summary">더 많은 기능을 원한다면, 장치 루트를 하십시요</string>
   <!-- Other / general purpose -->
   <string name="default_string">기본</string>
   <string name="on">켜기</string>
@@ -440,9 +439,9 @@
   <string name="ticker_animation_mode_title">티커 애니메이션 스타일</string>
   <string name="ticker_animation_mode_alpha_fade">서서히 사라지기</string>
   <string name="ticker_animation_mode_scroll">스크롤</string>
-  <string name="navbar_summary">스마트 바/Fling</string>
+  <!-- Navigation-->
+  <!-- Navigation bar -->
   <!-- DUI -->
-  <string name="navbar_visibility">네비게이션 바 켜기</string>
   <string name="navigation_bar_left_summary">가로화면 모드에서 화면 왼쪽에 내비게이션 바를 배치</string>
   <string name="smartbar_interface">스마트 바</string>
   <string name="invalid_icon_from_uri">콘텐츠 공급자로부터 이미지를로드 할 수 없습니다.</string>
@@ -452,6 +451,7 @@
   <string name="profile_applist_title">애플리케이션</string>
   <string name="default_string">기본</string>
   <string name="default_settings_summary">AOSP 네비게이션 바</string>
+  <!-- Edge gestures -->
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <!-- Fling -->
   <string name="fling_back_home_policy">Back and Home은 항상 설정해야합니다. 뒤로 또는 홈 할당을 변경하려면 먼저 원하는 할당을 설정하십시오. \ n \ n 또한 두 번 탭 동작을 설정하면 단일 탭이 약간 지연됩니다.</string>
@@ -532,9 +532,6 @@
   <string name="show_carrier_keyguard">잠금 화면에만 표시</string>
   <string name="show_carrier_statusbar">상태 표시줄에만 표시</string>
   <string name="show_carrier_enabled">잠금 화면 &amp; 상태 표시줄 모두</string>
-  <!-- Three-fingers-swipe to screenshot -->
-  <string name="three_finger_gesture">세손가락 제스쳐</string>
-  <string name="three_finger_gesture_summary">세 손가락을 스와이프해서 스크린샷을 찍습니다</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">애니메이션</string>
   <string name="activity_open_title">액티비티 실행 애니메이션</string>
@@ -641,4 +638,9 @@
   <!-- System Behavior category strings -->
   <string name="system_ss_category_title">화면 캡처 설정</string>
   <!-- QuickSettings Panel Transparency -->
+  <!-- Hostname setting -->
+  <!-- Gestures -->
+  <!-- Carbon gestures -->
+  <!-- Disable FC notifications -->
+  <!-- Circle app bar -->
 </resources>

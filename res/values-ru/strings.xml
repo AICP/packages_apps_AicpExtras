@@ -501,6 +501,7 @@
   <string name="log_it_title">Снять лог!</string>
   <string name="log_it_summary">Logcat, kmesg, dmesg</string>
   <string name="logcat_title">Logcat</string>
+  <string name="logcat_radio_title">Радио лог</string>
   <string name="kmesg_title">Kmesg</string>
   <string name="dmesg_title">Dmesg</string>
   <string name="log_it_now_title">Сбор данных</string>
@@ -570,7 +571,7 @@
   <string name="device_maintainers_dialog">Разработчики</string>
   <string name="device_maintainer_default">Неизвестно</string>
   <string name="no_root_title">Нет Root прав</string>
-  <string name="no_root_summary">Для большей функциональности, корень устройства</string>
+  <string name="no_root_summary">Получите root-доступ для большей функциональности</string>
   <!-- Other / general purpose -->
   <string name="default_string">По умолчанию</string>
   <string name="on">Вкл.</string>
@@ -613,14 +614,19 @@
   <string name="ticker_animation_mode_alpha_fade">Угасание</string>
   <string name="ticker_animation_mode_scroll">Прокрутка</string>
   <string name="ticker_tick_duration_title">Продолжительность тикера</string>
+  <!-- Navigation-->
+  <string name="navigation_title">Навигация</string>
+  <string name="navigation_description">Взаимоисключающие режимы навигации. При включении одного автоматически отключается другой.</string>
+  <string name="navigation_summary">Стоковая/Smartbar/Fling/Жесты</string>
+  <!-- Navigation bar -->
   <string name="navbar_title">Панель навигации</string>
-  <string name="navbar_summary">Smartbar/Fling</string>
+  <string name="navbar_summary">Нажмите для доступных режимов и параметров</string>
   <!-- DUI -->
   <string name="navbar_interface_title">Интерфейс</string>
   <string name="navbar_size">Размер панели навигации</string>
   <string name="navbar_mode">Режим навигации</string>
   <string name="navbar_mode_summary">Выберите режим навигации, который будет использоваться на устройстве</string>
-  <string name="navbar_visibility">Включить панель навигации</string>
+  <string name="navbar_visibility">Панель навигации</string>
   <string name="navigationbar_settings_title">Панель навигации</string>
   <string name="navigationbar_settings_summary">Настройка стиля и поведения навигации</string>
   <string name="navbar_general_title">Расширенные настройки</string>
@@ -637,6 +643,21 @@
   <string name="default_string">По умолчанию</string>
   <string name="default_settings">Настройки по умолчанию</string>
   <string name="default_settings_summary">Панель навигации AOSP по умолчанию</string>
+  <!-- Edge gestures -->
+  <string name="edge_gestures_title">Жесты</string>
+  <string name="edge_gestures_description">Проведите по экрану снизу для перехода к домашнему экрану, продолжайте удерживать для открытия недавних приложения. Проведите внизу слева или справа для возврата назад.</string>
+  <string name="edge_gestures_summary">Навигация с помощью жестов. Нажмите для настроек.</string>
+  <string name="edge_gestures_feedback_duration_title">Длительность виброотклика</string>
+  <string name="edge_gestures_long_press_delay_title">Величина задержки до срабатывания долгого нажатия</string>
+  <string name="edge_gestures_back_category_title">Жест \"Назад\"</string>
+  <string name="edge_gestures_back_edges_title">Жест \"Назад\" срабатывает с</string>
+  <string name="edge_gestures_landscape_back_edges_title">Жест \"Назад\" в альбомной ориентации срабатывает с</string>
+  <string name="edge_gestures_back_screen_percent_title">Жест \"Назад\" должен начинаться меньше этого процента экрана</string>
+  <string name="edge_gestures_back_screen_percent_summary">Область срабатывания: ниже % экрана</string>
+  <string name="edge_gestures_back_show_ui_feedback_title">Анимация жеста \"Назад\"</string>
+  <string name="edge_gestures_back_show_ui_feedback_summary">Показывать анимацию по краям при использовании жеста \"Назад\"</string>
+  <string name="edge_gestures_back_use_black_arrow_title">Тёмный цвет кнопки \"Назад\"</string>
+  <string name="edge_gestures_back_use_black_arrow_summary">Показывать чёрную кнопку \"Назад\" вместо белой</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Выберите действие</string>
   <string name="action_entry_default_action">Настройки по умолчанию</string>
@@ -803,9 +824,6 @@
   <string name="show_carrier_keyguard">Только на экране блокировки</string>
   <string name="show_carrier_statusbar">Только в строке состояния</string>
   <string name="show_carrier_enabled">На экране блокировки и в строке состояния</string>
-  <!-- Three-fingers-swipe to screenshot -->
-  <string name="three_finger_gesture">Жест тремя пальцами</string>
-  <string name="three_finger_gesture_summary">Свайп тремя пальцами для создания скриншота</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">Анимации</string>
   <string name="system_animation_title">Системная анимация</string>
@@ -992,4 +1010,50 @@
   <string name="system_pup_category_title">Настройки подключения/отключения</string>
   <!-- QuickSettings Panel Transparency -->
   <string name="qs_panel_alpha_title">Прозрачность панели</string>
+  <!-- Hostname setting -->
+  <string name="device_hostname">Имя устройства</string>
+  <string name="device_hostname_summary">Изменение имени устройства, используемого в разрешении ip. Полезно при подключении к этому устройству в динамической среде dhcp</string>
+  <!-- Gestures -->
+  <string name="gestures_preference_title">Жесты</string>
+  <!-- Carbon gestures -->
+  <string name="carbon_gesture_preference_title">Чёрный</string>
+  <string name="carbon_gestures_summary">Настройка пользовательских глобальных жестов</string>
+  <string name="carbon_gestures_fingers_title">Количество пальцев для жестов (по умолчанию 2)</string>
+  <string name="carbon_gestures_fingers_unit">пальцы</string>
+  <string name="carbon_gestures_right_title">Жест вправо</string>
+  <string name="carbon_gestures_left_title">Жест влево</string>
+  <string name="carbon_gestures_up_title">Жест вверх</string>
+  <string name="carbon_gestures_down_title">Жест вниз</string>
+  <string name="carbon_gesture_disabled">Выключено</string>
+  <string name="carbon_gesture_back">Назад</string>
+  <string name="carbon_gesture_home">Домой</string>
+  <string name="carbon_gesture_recents">Недавние приложения</string>
+  <string name="carbon_gesture_power">Кнопка питания</string>
+  <string name="carbon_gesture_volume_down">Уменьшить громкость</string>
+  <string name="carbon_gesture_volume_up">Увеличить громкость</string>
+  <string name="carbon_gesture_volume_mute">Отключить звук</string>
+  <string name="carbon_gesture_screenshot">Скриншот</string>
+  <string name="carbon_gesture_media_play_pause">Пуск/Пауза</string>
+  <string name="carbon_gesture_media_skip">Пропустить трек</string>
+  <string name="carbon_gesture_media_previous">Предыдущий трек</string>
+  <string name="carbon_gesture_customapp">Запуск приложения</string>
+  <string name="carbon_gesture_launch">Запуск</string>
+  <!-- Disable FC notifications -->
+  <string name="disable_fc_notifications_title">Отключить уведомления о принудительном закрытии</string>
+  <string name="disable_fc_notifications_summary">Это скроет все уведомления о принудительном закрытии. Используйте с осторожностью</string>
+  <!-- Circle app bar -->
+  <string name="category_app_circle_bar_title">Круговая панель приложений</string>
+  <string name="app_circle_bar_title">Круговая панель приложений</string>
+  <string name="app_circle_bar_summary">Показать Круговую панель приложений после прикосновения к правому краю экрана</string>
+  <string name="app_circle_bar_included_apps_title">Выбранные приложения</string>
+  <string name="app_circle_bar_included_apps_summary">Приложения, выбранные для Круговой панели приложений</string>
+  <string name="app_circle_bar_trigger_width_title">Ширина области срабатывания</string>
+  <string name="app_circle_bar_trigger_top_title">Верх области срабатывания</string>
+  <string name="app_circle_bar_trigger_height_title">Высота области срабатывания</string>
+  <string name="app_circle_bar_appchooser_title">Выбор для Круговой панели приложений</string>
+  <string name="app_circle_bar_appchooser_summary">Приложения, выбранные для показа на Круговой панели приложений</string>
+  <string name="app_circle_bar_appchooser_pref_title">Добавить приложение</string>
+  <string name="app_circle_bar_appchooser_pref_summary">Нажмите здесь, чтобы добавить, коснитесь любого приложения в списке, чтобы удалить. \nТелефон, Контакты и Настройки отображаются по умолчанию, когда ничего не добавлено.</string>
+  <string name="app_circle_bar_show_trigger_title">Показать область срабатывания</string>
+  <string name="app_circle_bar_show_trigger_summary">Включите, чтобы показать настроенную область срабатывания для запуска Круговой панели приложений.</string>
 </resources>

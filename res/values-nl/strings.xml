@@ -502,6 +502,7 @@
   <string name="log_it_title">Leg vast die zooi!</string>
   <string name="log_it_summary">Logcat, Kmesg, Dmesg</string>
   <string name="logcat_title">Logcat</string>
+  <string name="logcat_radio_title">Radio log</string>
   <string name="kmesg_title">Kmesg</string>
   <string name="dmesg_title">Dmesg</string>
   <string name="log_it_now_title">Aan de slag</string>
@@ -614,14 +615,19 @@
   <string name="ticker_animation_mode_alpha_fade">Fade</string>
   <string name="ticker_animation_mode_scroll">Scrollen</string>
   <string name="ticker_tick_duration_title">Ticker duur</string>
+  <!-- Navigation-->
+  <string name="navigation_title">Navigatie</string>
+  <string name="navigation_description">Wederzijds exclusieve modi voor navigatie. Inschakelen van de ene leidt automatisch tot het uitschakelen van de andere.</string>
+  <string name="navigation_summary">AOSP/Smartbar/Fling/Gebaren</string>
+  <!-- Navigation bar -->
   <string name="navbar_title">Navigatiebalk</string>
-  <string name="navbar_summary">SmartBar/Fling</string>
+  <string name="navbar_summary">Klik hier voor de beschikbare modi en opties</string>
   <!-- DUI -->
   <string name="navbar_interface_title">Interface</string>
   <string name="navbar_size">Balk afmeting</string>
   <string name="navbar_mode">Navigatiemodus</string>
   <string name="navbar_mode_summary">Selecteer welke navigatiemodus gebruikt moet worden op uw apparaat</string>
-  <string name="navbar_visibility">Navigatiebalk tonen</string>
+  <string name="navbar_visibility">Navigatiebalk</string>
   <string name="navigationbar_settings_title">Navigatiebalk</string>
   <string name="navigationbar_settings_summary">Aanpassen stijl en gedrag navigatiebalk</string>
   <string name="navbar_general_title">Geavanceerd</string>
@@ -638,6 +644,21 @@
   <string name="default_string">Standaard</string>
   <string name="default_settings">Standaard instellingen</string>
   <string name="default_settings_summary">Standaard AOSP navigatiebalk</string>
+  <!-- Edge gestures -->
+  <string name="edge_gestures_title">Rand-gebaren</string>
+  <string name="edge_gestures_description">Veeg vanaf onderzijde om Home te openen, ingedrukt houden om Recente apps te openen. Veeg vanaf onderzijde links of rechts om terug te gaan.</string>
+  <string name="edge_gestures_summary">Navigeren met behulp van rand-gebaren. Klik hier voor opties.</string>
+  <string name="edge_gestures_feedback_duration_title">Duur haptische feedback (trilsignaal)</string>
+  <string name="edge_gestures_long_press_delay_title">Vertraging tot langdruk-actie start</string>
+  <string name="edge_gestures_back_category_title">Terug-gebaar</string>
+  <string name="edge_gestures_back_edges_title">Activeer terug-gebaar van</string>
+  <string name="edge_gestures_landscape_back_edges_title">Activeer terug-gebaar in landschap modus</string>
+  <string name="edge_gestures_back_screen_percent_title">Terug-gebaar moet beginnen onder dit gedeelte van het scherm</string>
+  <string name="edge_gestures_back_screen_percent_summary">Aanrakingsgebied: minder dan % van scherm</string>
+  <string name="edge_gestures_back_show_ui_feedback_title">Terug-gebaar animatie</string>
+  <string name="edge_gestures_back_show_ui_feedback_summary">Geanimeerde feedback op randen weergeven wanneer terug-gebaar wordt gebruikt</string>
+  <string name="edge_gestures_back_use_black_arrow_title">Donkere kleur van de terug-knop</string>
+  <string name="edge_gestures_back_use_black_arrow_summary">Zwarte terug-knop weergeven in plaats van de witte versie</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Kies actie</string>
   <string name="action_entry_default_action">Standaardinstellingen</string>
@@ -804,9 +825,6 @@
   <string name="show_carrier_keyguard">Vergrendelscherm</string>
   <string name="show_carrier_statusbar">Statusbalk</string>
   <string name="show_carrier_enabled">Beide</string>
-  <!-- Three-fingers-swipe to screenshot -->
-  <string name="three_finger_gesture">Gebaar met drie vingers</string>
-  <string name="three_finger_gesture_summary">Schermafbeelding maken door met drie vingers over het scherm te vegen</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">Display en animaties</string>
   <string name="system_animation_title">Systeem animaties</string>
@@ -993,4 +1011,50 @@
   <string name="system_pup_category_title">Opties bij verbinden/verbreken</string>
   <!-- QuickSettings Panel Transparency -->
   <string name="qs_panel_alpha_title">Transparantie Snelle instellingen-paneel</string>
+  <!-- Hostname setting -->
+  <string name="device_hostname">Hostnaam apparaat</string>
+  <string name="device_hostname_summary">Wijzig apparaat hostnaam, gebruikt in IP-resolutie. Nuttig wanneer in een dynamische DHCP omgeving verbinding wordt gemaakt met dit apparaat</string>
+  <!-- Gestures -->
+  <string name="gestures_preference_title">Gebaren</string>
+  <!-- Carbon gestures -->
+  <string name="carbon_gesture_preference_title">Carbon</string>
+  <string name="carbon_gestures_summary">Configureren van aangepaste globale gebaren</string>
+  <string name="carbon_gestures_fingers_title">Aantal vingers gebruikt voor gebaar (standaard 2)</string>
+  <string name="carbon_gestures_fingers_unit">vingers</string>
+  <string name="carbon_gestures_right_title">Gebaar naar rechts</string>
+  <string name="carbon_gestures_left_title">Gebaar naar links</string>
+  <string name="carbon_gestures_up_title">Gebaar naar boven</string>
+  <string name="carbon_gestures_down_title">Gebaar naar onder</string>
+  <string name="carbon_gesture_disabled">Uitgeschakeld</string>
+  <string name="carbon_gesture_back">Terug</string>
+  <string name="carbon_gesture_home">Home</string>
+  <string name="carbon_gesture_recents">Recente apps</string>
+  <string name="carbon_gesture_power">Power</string>
+  <string name="carbon_gesture_volume_down">Volume omlaag</string>
+  <string name="carbon_gesture_volume_up">Volume omhoog</string>
+  <string name="carbon_gesture_volume_mute">Volume dempen</string>
+  <string name="carbon_gesture_screenshot">Schermafbeelding</string>
+  <string name="carbon_gesture_media_play_pause">Afspelen/pauzeren media</string>
+  <string name="carbon_gesture_media_skip">Sla titel over</string>
+  <string name="carbon_gesture_media_previous">Vorige titel</string>
+  <string name="carbon_gesture_customapp">Toepassing starten</string>
+  <string name="carbon_gesture_launch">Starten</string>
+  <!-- Disable FC notifications -->
+  <string name="disable_fc_notifications_title">Uitschakelen FC notificaties</string>
+  <string name="disable_fc_notifications_summary">Dit zal alle FC notificaties verbergen. Voorzichtig gebruiken!</string>
+  <!-- Circle app bar -->
+  <string name="category_app_circle_bar_title">App Circle Bar launcher</string>
+  <string name="app_circle_bar_title">App Circle Bar</string>
+  <string name="app_circle_bar_summary">Toon Cirkel App launcher na aanraken van de rechterkant van het scherm</string>
+  <string name="app_circle_bar_included_apps_title">Geselecteerde apps</string>
+  <string name="app_circle_bar_included_apps_summary">Geselecteerde apps voor de App Circle Bar</string>
+  <string name="app_circle_bar_trigger_width_title">Breedte activeringsgebied</string>
+  <string name="app_circle_bar_trigger_top_title">Bovenzijde activeringsgebied</string>
+  <string name="app_circle_bar_trigger_height_title">Hoogte activeringsgebied</string>
+  <string name="app_circle_bar_appchooser_title">App Circle Bar launcher</string>
+  <string name="app_circle_bar_appchooser_summary">Apps die worden weergegeven op de App Circle Bar</string>
+  <string name="app_circle_bar_appchooser_pref_title">App toevoegen</string>
+  <string name="app_circle_bar_appchooser_pref_summary">Hier tikken om toe te voegen, op een app tikken om te verwijderen.\nTelefoon, Contacten en Instellingen worden standaard getoond als geen apps zijn toegevoegd.</string>
+  <string name="app_circle_bar_show_trigger_title">Toon activeringsgebied</string>
+  <string name="app_circle_bar_show_trigger_summary">Inschakelen om het ingestelde activeringsgebied voor de App Circle Bar launcher te tonen.</string>
 </resources>

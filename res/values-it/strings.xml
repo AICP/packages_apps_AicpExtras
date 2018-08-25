@@ -502,6 +502,7 @@
   <string name="log_it_title">Registra quello schifo!</string>
   <string name="log_it_summary">Logcat, kmesg, dmesg</string>
   <string name="logcat_title">Logcat</string>
+  <string name="logcat_radio_title">Registro radio</string>
   <string name="kmesg_title">Kmesg</string>
   <string name="dmesg_title">Dmesg</string>
   <string name="log_it_now_title">Attiva</string>
@@ -614,14 +615,19 @@
   <string name="ticker_animation_mode_alpha_fade">Dissolvenza</string>
   <string name="ticker_animation_mode_scroll">Scorrimento</string>
   <string name="ticker_tick_duration_title">Durata del ticker</string>
+  <!-- Navigation-->
+  <string name="navigation_title">Navigazione</string>
+  <string name="navigation_description">Modalità di navigazione reciprocamente esclusive. L\'attivazione di una disabilita automaticamente l\'altra.</string>
+  <string name="navigation_summary">Stock/Smartbar/Fling/Gesti</string>
+  <!-- Navigation bar -->
   <string name="navbar_title">Barra di navigazione</string>
-  <string name="navbar_summary">SmartBar/Fling</string>
+  <string name="navbar_summary">Clicca per le opzioni e modalità disponibili</string>
   <!-- DUI -->
   <string name="navbar_interface_title">Interfaccia</string>
   <string name="navbar_size">Dimensione barra</string>
   <string name="navbar_mode">Modalità navigazione</string>
   <string name="navbar_mode_summary">Seleziona quale modalità di navigazione vuoi usare sul tuo dispositivo</string>
-  <string name="navbar_visibility">Abilità la barra di navigazione</string>
+  <string name="navbar_visibility">Barra di navigazione</string>
   <string name="navigationbar_settings_title">Barra di navigazione</string>
   <string name="navigationbar_settings_summary">Personalizza stile e comportamento della navigazione</string>
   <string name="navbar_general_title">Avanzate</string>
@@ -638,6 +644,21 @@
   <string name="default_string">Predefinito</string>
   <string name="default_settings">Impostazioni stock</string>
   <string name="default_settings_summary">Barra di navigazione AOSP stock</string>
+  <!-- Edge gestures -->
+  <string name="edge_gestures_title">Gesti sul bordo</string>
+  <string name="edge_gestures_description">Scorri dal basso per attivare il gesto Home, tieni premuto per aprire i recenti. Scorri dal basso a sinistra o in basso a destra per tornare indietro.</string>
+  <string name="edge_gestures_summary">Naviga utilizzando i gesti sul bordo. Clicca per le opzioni.</string>
+  <string name="edge_gestures_feedback_duration_title">Durata della vibrazione</string>
+  <string name="edge_gestures_long_press_delay_title">Ritarda fino all\'avvio dell\'azione della pressione prolungata</string>
+  <string name="edge_gestures_back_category_title">Gesto indietro</string>
+  <string name="edge_gestures_back_edges_title">Esegui il gesto indietro da</string>
+  <string name="edge_gestures_landscape_back_edges_title">Esegui il gesto indietro in orizzontale da</string>
+  <string name="edge_gestures_back_screen_percent_title">Il gesto indietro deve iniziare al di sotto di questa percentuale dello schermo</string>
+  <string name="edge_gestures_back_screen_percent_summary">Area di attivazione: inferiore al % dello schermo</string>
+  <string name="edge_gestures_back_show_ui_feedback_title">Animazione gesto indietro</string>
+  <string name="edge_gestures_back_show_ui_feedback_summary">Mostra il feedback animato sui bordi quando viene utilizzato il gesto indietro</string>
+  <string name="edge_gestures_back_use_black_arrow_title">Pulsante indietro nero</string>
+  <string name="edge_gestures_back_use_black_arrow_summary">Mostra il pulsante indietro nero invece della versione bianca</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Scegli un\'azione</string>
   <string name="action_entry_default_action">Impostazioni predefinite</string>
@@ -804,9 +825,6 @@
   <string name="show_carrier_keyguard">Schermata di blocco</string>
   <string name="show_carrier_statusbar">Barra di stato</string>
   <string name="show_carrier_enabled">Entrambe</string>
-  <!-- Three-fingers-swipe to screenshot -->
-  <string name="three_finger_gesture">Gesto a tre dita</string>
-  <string name="three_finger_gesture_summary">Scorri con tre dita per prendere uno screenshot</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">Display e animazioni</string>
   <string name="system_animation_title">Animazioni di sistema</string>
@@ -993,4 +1011,50 @@
   <string name="system_pup_category_title">Opzioni collega/scollega</string>
   <!-- QuickSettings Panel Transparency -->
   <string name="qs_panel_alpha_title">Trasparenza del pannello</string>
+  <!-- Hostname setting -->
+  <string name="device_hostname">Hostname del dispositivo</string>
+  <string name="device_hostname_summary">Modifica il nome host del dispositivo utilizzato la risoluzione ip, utile quando ci si connette a questo dispositivo in un ambiente dinamico dhcp</string>
+  <!-- Gestures -->
+  <string name="gestures_preference_title">Gesti</string>
+  <!-- Carbon gestures -->
+  <string name="carbon_gesture_preference_title">Carbon</string>
+  <string name="carbon_gestures_summary">Configura i gesti globali personalizzati</string>
+  <string name="carbon_gestures_fingers_title">Dita usate per il gesto (predefinito 2)</string>
+  <string name="carbon_gestures_fingers_unit">dita</string>
+  <string name="carbon_gestures_right_title">Gesto destro</string>
+  <string name="carbon_gestures_left_title">Gesto sinistro</string>
+  <string name="carbon_gestures_up_title">Gesto dall\'alto</string>
+  <string name="carbon_gestures_down_title">Gesto dal basso</string>
+  <string name="carbon_gesture_disabled">Disabilitato</string>
+  <string name="carbon_gesture_back">Indietro</string>
+  <string name="carbon_gesture_home">Home</string>
+  <string name="carbon_gesture_recents">Recenti</string>
+  <string name="carbon_gesture_power">Menu tasto di accensione</string>
+  <string name="carbon_gesture_volume_down">Volume giù</string>
+  <string name="carbon_gesture_volume_up">Volume su</string>
+  <string name="carbon_gesture_volume_mute">Volume muto</string>
+  <string name="carbon_gesture_screenshot">Screenshot</string>
+  <string name="carbon_gesture_media_play_pause">Riproduci/Pausa brano</string>
+  <string name="carbon_gesture_media_skip">Salta il brano</string>
+  <string name="carbon_gesture_media_previous">Brano precedente</string>
+  <string name="carbon_gesture_customapp">Avvia un\'applicazione</string>
+  <string name="carbon_gesture_launch">Avvia</string>
+  <!-- Disable FC notifications -->
+  <string name="disable_fc_notifications_title">Disattiva le notifiche FC</string>
+  <string name="disable_fc_notifications_summary">Questo nasconderà tutte le notifiche con chiusura forzata. Usare con cautela</string>
+  <!-- Circle app bar -->
+  <string name="category_app_circle_bar_title">Avvia barra app in cerchio</string>
+  <string name="app_circle_bar_title">Barra app in cerchio</string>
+  <string name="app_circle_bar_summary">Mostra la barra app in cerchio dopo aver toccato il lato destro dello schermo</string>
+  <string name="app_circle_bar_included_apps_title">Applicazioni selezionate</string>
+  <string name="app_circle_bar_included_apps_summary">App selezionate per la barra app in cerchio</string>
+  <string name="app_circle_bar_trigger_width_title">Larghezza dell\'area di attivazione</string>
+  <string name="app_circle_bar_trigger_top_title">Area di attivazione in alto</string>
+  <string name="app_circle_bar_trigger_height_title">Altezza dell\'area di attivazione</string>
+  <string name="app_circle_bar_appchooser_title">Selettore barra app in cerchio</string>
+  <string name="app_circle_bar_appchooser_summary">Applicazioni selezionate per essere visualizzata sulla barra dell\'App cerchio</string>
+  <string name="app_circle_bar_appchooser_pref_title">Aggiungi applicazione</string>
+  <string name="app_circle_bar_appchooser_pref_summary">Tocca qui per aggiungere, tocca qualsiasi app nell\'elenco per rimuoverlo. \Telefono, Contatti e Impostazioni sono visualizzati per impostazione predefinita, quando non viene aggiunta alcuna app.</string>
+  <string name="app_circle_bar_show_trigger_title">Visualizza l\'area di attivazione</string>
+  <string name="app_circle_bar_show_trigger_summary">Abilita per visualizzate l\'area di attivazione configurata per l\'avvio della barra delle app in cerchio.</string>
 </resources>

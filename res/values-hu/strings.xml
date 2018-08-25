@@ -502,6 +502,7 @@
   <string name="log_it_title">Jelentések!</string>
   <string name="log_it_summary">Logcat, kmesg, dmesg</string>
   <string name="logcat_title">Logcat</string>
+  <string name="logcat_radio_title">Rádiónapló</string>
   <string name="kmesg_title">Kmesg</string>
   <string name="dmesg_title">Dmesg</string>
   <string name="log_it_now_title">Foglalás</string>
@@ -614,14 +615,19 @@
   <string name="ticker_animation_mode_alpha_fade">Áttűnés</string>
   <string name="ticker_animation_mode_scroll">Görgetés</string>
   <string name="ticker_tick_duration_title">Jelzőszalag időtartama</string>
+  <!-- Navigation-->
+  <string name="navigation_title">Navigáció</string>
+  <string name="navigation_description">A navigáció egy egymást kölcsönösen kizáró mód. Ha az egyiket engedélyezi, automatikusan letiltja a többit.</string>
+  <string name="navigation_summary">Gyári / Okossáv / Fling / Mozdulatvezérlés</string>
+  <!-- Navigation bar -->
   <string name="navbar_title">Navigációs sáv</string>
-  <string name="navbar_summary">Smartbar/Fling</string>
+  <string name="navbar_summary">Kattintson az elérhető módokért és lehetőségekért</string>
   <!-- DUI -->
   <string name="navbar_interface_title">Felület</string>
   <string name="navbar_size">Sáv mérete</string>
   <string name="navbar_mode">Navigációs mód</string>
   <string name="navbar_mode_summary">Válassza ki, melyik navigációs módot szeretné használni eszközén</string>
-  <string name="navbar_visibility">Navigációs sáv egedélyezése</string>
+  <string name="navbar_visibility">Navigációs sáv</string>
   <string name="navigationbar_settings_title">Navigációs sáv</string>
   <string name="navigationbar_settings_summary">Navigációs stílus és viselkedés testreszabása</string>
   <string name="navbar_general_title">Haladó</string>
@@ -638,6 +644,21 @@
   <string name="default_string">Alapértelmezett</string>
   <string name="default_settings">Gyári beállítások</string>
   <string name="default_settings_summary">Gyári (AOSP) navigációs sáv</string>
+  <!-- Edge gestures -->
+  <string name="edge_gestures_title">Az Élvezérlés lehetőségei</string>
+  <string name="edge_gestures_description">Csúsztasson alulról fel a Kezdőképernyő megnyitásához. Csúsztasson alulról és állítsa meg a mozdulatot az Előzményekhez. Csúsztasson alulról balra vagy jobbra a visszalépéshez.</string>
+  <string name="edge_gestures_summary">Navigáljon élvezérlési mozdulatokkal. Kattintson ide a lehetőségekért.</string>
+  <string name="edge_gestures_feedback_duration_title">Érintési visszajelzés hossza</string>
+  <string name="edge_gestures_long_press_delay_title">Késleltetés, amíg a hosszan érintési művelet elindul</string>
+  <string name="edge_gestures_back_category_title">Vissza gesztus</string>
+  <string name="edge_gestures_back_edges_title">Vissza gesztus indítása innen</string>
+  <string name="edge_gestures_landscape_back_edges_title">Vissza gesztus indítása fekvő módban innen</string>
+  <string name="edge_gestures_back_screen_percent_title">A Vissza gesztust a képernyő ennyi százalékos aránya alatt kell indtani</string>
+  <string name="edge_gestures_back_screen_percent_summary">Indítási terület: kisebb, mint a képernyő % százaléka</string>
+  <string name="edge_gestures_back_show_ui_feedback_title">A Vissza gesztus animációja</string>
+  <string name="edge_gestures_back_show_ui_feedback_summary">Jelenítse meg használatkor a Vissza gesztus animációját a széleken</string>
+  <string name="edge_gestures_back_use_black_arrow_title">Sötét színű Vissza gomb</string>
+  <string name="edge_gestures_back_use_black_arrow_summary">Fekete gomb megjelenítése a fehér változat helyett</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Művelet választása</string>
   <string name="action_entry_default_action">Alapértelmezett beállítások</string>
@@ -804,9 +825,6 @@
   <string name="show_carrier_keyguard">Zárképernyőn</string>
   <string name="show_carrier_statusbar">Állapot sávon</string>
   <string name="show_carrier_enabled">Együtt</string>
-  <!-- Three-fingers-swipe to screenshot -->
-  <string name="three_finger_gesture">Három ujjas gesztus</string>
-  <string name="three_finger_gesture_summary">Csúsztasson három ujjal a képernyőmentéshez</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">Kijelző és animációk</string>
   <string name="system_animation_title">Rendszeranimációk</string>
@@ -993,4 +1011,50 @@
   <string name="system_pup_category_title">Csatlakozás/Leválasztás lehetőségek</string>
   <!-- QuickSettings Panel Transparency -->
   <string name="qs_panel_alpha_title">A panel átlátszósága</string>
+  <!-- Hostname setting -->
+  <string name="device_hostname">A készülék elérési neve</string>
+  <string name="device_hostname_summary">Az IP-feloldásban használt készülék-gazdanév módosítása, amely akkor hasznos, ha dinamikus DHCP-környezetben csatlakozik ehhez a készülékhez</string>
+  <!-- Gestures -->
+  <string name="gestures_preference_title">Mozdulatvezérlés</string>
+  <!-- Carbon gestures -->
+  <string name="carbon_gesture_preference_title">Carbon</string>
+  <string name="carbon_gestures_summary">Állítson be egyéni átfogó vezérléseket</string>
+  <string name="carbon_gestures_fingers_title">Ujjmozdulatokkal való vezérlés (alapértelmezett 2)</string>
+  <string name="carbon_gestures_fingers_unit">ujjak</string>
+  <string name="carbon_gestures_right_title">Jobb oldali vezérlés</string>
+  <string name="carbon_gestures_left_title">Bal oldali vezérlés</string>
+  <string name="carbon_gestures_up_title">Felfelé indított vezérlés</string>
+  <string name="carbon_gestures_down_title">Lefelé indított vezérlés</string>
+  <string name="carbon_gesture_disabled">Letiltva</string>
+  <string name="carbon_gesture_back">Vissza</string>
+  <string name="carbon_gesture_home">Főoldal</string>
+  <string name="carbon_gesture_recents">Előzmények</string>
+  <string name="carbon_gesture_power">Kikapcsolás</string>
+  <string name="carbon_gesture_volume_down">Hangerő le</string>
+  <string name="carbon_gesture_volume_up">Hangerő fel</string>
+  <string name="carbon_gesture_volume_mute">Hangerőnémítás</string>
+  <string name="carbon_gesture_screenshot">Képernyőmentés</string>
+  <string name="carbon_gesture_media_play_pause">Zene lejátszása/megállítása</string>
+  <string name="carbon_gesture_media_skip">Zeneszám átugrása</string>
+  <string name="carbon_gesture_media_previous">Előző zeneszám</string>
+  <string name="carbon_gesture_customapp">Alkalmazás indítása</string>
+  <string name="carbon_gesture_launch">Indítás</string>
+  <!-- Disable FC notifications -->
+  <string name="disable_fc_notifications_title">Kényszerített leállások értesítéseinek tiltása</string>
+  <string name="disable_fc_notifications_summary">Ez el fogja rejti a kényszerített leállítások értesítéseit. Óvatosan használja</string>
+  <!-- Circle app bar -->
+  <string name="category_app_circle_bar_title">Alkalmazás-körsáv indítópult</string>
+  <string name="app_circle_bar_title">Alkalmazás-körsáv</string>
+  <string name="app_circle_bar_summary">Alkalmazás-körsáv megjelenítése a képernyő jobb oldalának megérintése után</string>
+  <string name="app_circle_bar_included_apps_title">Kiválasztott alkalmazások</string>
+  <string name="app_circle_bar_included_apps_summary">Alkalmazás-körsávhoz kiválasztott alkalmazások</string>
+  <string name="app_circle_bar_trigger_width_title">Kapcsolási terület szélessége</string>
+  <string name="app_circle_bar_trigger_top_title">Kapcsolási terület teteje</string>
+  <string name="app_circle_bar_trigger_height_title">Kapcsolási terület magassága</string>
+  <string name="app_circle_bar_appchooser_title">Alkalmazás-körsáv választó</string>
+  <string name="app_circle_bar_appchooser_summary">Kiválaszthatja az alkalmazásokat, amelyek megjelennek a körsávon</string>
+  <string name="app_circle_bar_appchooser_pref_title">Alkalmazás hozzáadása</string>
+  <string name="app_circle_bar_appchooser_pref_summary">Érintse meg itt a hozzáadáshoz, vagy érintsen meg egy alkalmazást az eltávolításhoz.\nA Telefon, a Névjegyek és a Beállítások alapértelmezetten megjelenik akkor is, ha nincs más alkamazás beállítva.</string>
+  <string name="app_circle_bar_show_trigger_title">Kapcsolási terület megjelenítése</string>
+  <string name="app_circle_bar_show_trigger_summary">Engedélyezi az Alkalmazás-körsáv számára beállított kapcsolási terület megjelenítését.</string>
 </resources>

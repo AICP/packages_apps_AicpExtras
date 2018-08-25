@@ -571,7 +571,6 @@
   <string name="device_maintainers_dialog">Pengelola perangkat</string>
   <string name="device_maintainer_default">Tidak diketahui</string>
   <string name="no_root_title">Tidak diroot</string>
-  <string name="no_root_summary">Untuk lebih fungsional, root perangkat Anda</string>
   <!-- Other / general purpose -->
   <string name="default_string">Standar</string>
   <string name="on">Hidup</string>
@@ -614,14 +613,17 @@
   <string name="ticker_animation_mode_alpha_fade">Luntur</string>
   <string name="ticker_animation_mode_scroll">Gulir</string>
   <string name="ticker_tick_duration_title">Durasi ticker</string>
+  <!-- Navigation-->
+  <string name="navigation_title">Navigasi</string>
+  <string name="navigation_summary">Bawaan/Smartbar/Fling/Gerakan</string>
+  <!-- Navigation bar -->
   <string name="navbar_title">Bar Navigasi</string>
-  <string name="navbar_summary">Smartbar/Fling</string>
   <!-- DUI -->
   <string name="navbar_interface_title">Antarmuka</string>
   <string name="navbar_size">Ukuran bar</string>
   <string name="navbar_mode">Modus navigasi</string>
   <string name="navbar_mode_summary">Pilih modus navigasi yang digunakan pada perangkat Anda</string>
-  <string name="navbar_visibility">Izinkan bari navigasi</string>
+  <string name="navbar_visibility">Bilah navigasi</string>
   <string name="navigationbar_settings_title">Bar Navigasi</string>
   <string name="navigationbar_settings_summary">Seusuaikan gaya bar navigasi</string>
   <string name="navbar_general_title">Lanjutan</string>
@@ -638,6 +640,7 @@
   <string name="default_string">Standar</string>
   <string name="default_settings">Setting bawaan</string>
   <string name="default_settings_summary">Bilah navigasi bawaan AOSP</string>
+  <!-- Edge gestures -->
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Pilih tindakan</string>
   <string name="action_entry_default_action">Setelan bawaan</string>
@@ -804,9 +807,6 @@
   <string name="show_carrier_keyguard">Hanya kunci layar</string>
   <string name="show_carrier_statusbar">Hanya bilah status</string>
   <string name="show_carrier_enabled">Kunci layar &amp; bilah status</string>
-  <!-- Three-fingers-swipe to screenshot -->
-  <string name="three_finger_gesture">Gerakan tiga jari</string>
-  <string name="three_finger_gesture_summary">Gesekkan tiga jari untuk mengambil tangkapan layar</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">Animasi</string>
   <string name="system_animation_title">Animasi sistem</string>
@@ -993,4 +993,22 @@
   <string name="system_pup_category_title">Pilihan pasang/lepas</string>
   <!-- QuickSettings Panel Transparency -->
   <string name="qs_panel_alpha_title">Opasitas panel</string>
+  <!-- Hostname setting -->
+  <!-- Gestures -->
+  <!-- Carbon gestures -->
+  <string name="carbon_gesture_preference_title">Carbon</string>
+  <string name="carbon_gesture_power">Daya</string>
+  <string name="carbon_gesture_screenshot">Tangkapan Layar</string>
+  <string name="carbon_gesture_media_play_pause">Putar/Jeda media</string>
+  <string name="carbon_gesture_media_previous">Media sebelumnya</string>
+  <string name="carbon_gesture_customapp">Jalankan aplikasi</string>
+  <string name="carbon_gesture_launch">Jalankan</string>
+  <!-- Disable FC notifications -->
+  <!-- Circle app bar -->
+  <string name="app_circle_bar_included_apps_title">Aplikasi terpilih</string>
+  <string name="app_circle_bar_trigger_width_title">Lebar area pemicu</string>
+  <string name="app_circle_bar_trigger_top_title">Area pemicu atas</string>
+  <string name="app_circle_bar_trigger_height_title">Tinggi area pemicu</string>
+  <string name="app_circle_bar_appchooser_pref_title">Tambah aplikasi</string>
+  <string name="app_circle_bar_show_trigger_title">Tampilkan area pemicu</string>
 </resources>

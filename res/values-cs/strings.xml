@@ -501,6 +501,7 @@
   <string name="log_it_title">Zaznamenej ten odpad!</string>
   <string name="log_it_summary">Logcat, kmesg, dmesg</string>
   <string name="logcat_title">Logcat</string>
+  <string name="logcat_radio_title">Radio log</string>
   <string name="kmesg_title">Kmesg</string>
   <string name="dmesg_title">Dmesg</string>
   <string name="log_it_now_title">Zapojit se</string>
@@ -613,14 +614,19 @@
   <string name="ticker_animation_mode_alpha_fade">Slábnutí</string>
   <string name="ticker_animation_mode_scroll">Rolování</string>
   <string name="ticker_tick_duration_title">Doba trvání textu oznámení</string>
+  <!-- Navigation-->
+  <string name="navigation_title">Navigace</string>
+  <string name="navigation_description">Vzájemně se vylučující způsoby navigace. Aktivací jednoho automaticky vypne druhý.</string>
+  <string name="navigation_summary">Stock/SmartBar/Fling/Gesta</string>
+  <!-- Navigation bar -->
   <string name="navbar_title">Navigační panel</string>
-  <string name="navbar_summary">SmartBar/Fling</string>
+  <string name="navbar_summary">Klikněte pro dostupné režimy a možnosti</string>
   <!-- DUI -->
   <string name="navbar_interface_title">Rozhraní</string>
   <string name="navbar_size">Velikost panelu</string>
   <string name="navbar_mode">Navigační režim</string>
   <string name="navbar_mode_summary">Vyberte, který režim navigace chcete použít ve svém zařízení</string>
-  <string name="navbar_visibility">Povolit navigační panel</string>
+  <string name="navbar_visibility">Navigační panel</string>
   <string name="navigationbar_settings_title">Navigační panel</string>
   <string name="navigationbar_settings_summary">Upravit styl navigace a chování</string>
   <string name="navbar_general_title">Rozšířené</string>
@@ -637,6 +643,21 @@
   <string name="default_string">Výchozí</string>
   <string name="default_settings">Výchozí nastavení</string>
   <string name="default_settings_summary">Výchozí navigační panel AOSP</string>
+  <!-- Edge gestures -->
+  <string name="edge_gestures_title">Gesta na okraji</string>
+  <string name="edge_gestures_description">Přejetím prstem zespodu nahoru se spustí gesto Domů. Pokud necháte prst stlačený, otevřou se Nedávné. Přejetím prstu zespodu doleva nebo doprava se vrátíte zpět.</string>
+  <string name="edge_gestures_summary">Navigace pomocí gest na okraji. Klikněte pro možnosti.</string>
+  <string name="edge_gestures_feedback_duration_title">Doba trvání hmatové odezvy</string>
+  <string name="edge_gestures_long_press_delay_title">Zpoždění, než se spustí akce po dlouhém stisknutí</string>
+  <string name="edge_gestures_back_category_title">Gesto zpět</string>
+  <string name="edge_gestures_back_edges_title">Spustit gesto zpět od</string>
+  <string name="edge_gestures_landscape_back_edges_title">Spustit gesto zpět od (v režimu na šířku)</string>
+  <string name="edge_gestures_back_screen_percent_title">Gesto zpět musí být nastaveno pod tímto procentním rozměrem obrazovky</string>
+  <string name="edge_gestures_back_screen_percent_summary">Aktivační oblast: menší než % obrazovky</string>
+  <string name="edge_gestures_back_show_ui_feedback_title">Animace gesta Zpět</string>
+  <string name="edge_gestures_back_show_ui_feedback_summary">Zobrazit animace na okrajích při použití gesta Zpět</string>
+  <string name="edge_gestures_back_use_black_arrow_title">Tmavá barva tlačítka Zpět</string>
+  <string name="edge_gestures_back_use_black_arrow_summary">Zobrazit černé tlačítko Zpět namísto bílého</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Vyberte akci</string>
   <string name="action_entry_default_action">Výchozí nastavení</string>
@@ -803,9 +824,6 @@
   <string name="show_carrier_keyguard">Pouze na zamykací obrazovce</string>
   <string name="show_carrier_statusbar">Pouze stavová lišta</string>
   <string name="show_carrier_enabled">Zamykací obrazovka &amp; stavová lišta</string>
-  <!-- Three-fingers-swipe to screenshot -->
-  <string name="three_finger_gesture">Gesto třemi prsty</string>
-  <string name="three_finger_gesture_summary">Snímek obrazovky přejetím tří prstů</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">Animace</string>
   <string name="system_animation_title">Systémové animace</string>
@@ -992,4 +1010,50 @@
   <string name="system_pup_category_title">Možnosti připojení/odpojení</string>
   <!-- QuickSettings Panel Transparency -->
   <string name="qs_panel_alpha_title">Neprůhlednost panelu</string>
+  <!-- Hostname setting -->
+  <string name="device_hostname">Hostitelské jméno zařízení</string>
+  <string name="device_hostname_summary">Změna názvu hostitele zařízení použitého v rozlišení IP je užitečná při připojení k tomuto zařízení v dynamickém prostředí DHCP</string>
+  <!-- Gestures -->
+  <string name="gestures_preference_title">Gesta</string>
+  <!-- Carbon gestures -->
+  <string name="carbon_gesture_preference_title">Carbon</string>
+  <string name="carbon_gestures_summary">Nastavit vlastní obecné gesta</string>
+  <string name="carbon_gestures_fingers_title">Gesta prstů (výchozí 2)</string>
+  <string name="carbon_gestures_fingers_unit">prsty</string>
+  <string name="carbon_gestures_right_title">Gesto vpravo</string>
+  <string name="carbon_gestures_left_title">Gesto vlevo</string>
+  <string name="carbon_gestures_up_title">Gesto nahoru</string>
+  <string name="carbon_gestures_down_title">Gesto dolů</string>
+  <string name="carbon_gesture_disabled">Zakázáno</string>
+  <string name="carbon_gesture_back">Zpět</string>
+  <string name="carbon_gesture_home">Domů</string>
+  <string name="carbon_gesture_recents">Nedávné</string>
+  <string name="carbon_gesture_power">Napájení</string>
+  <string name="carbon_gesture_volume_down">Hlasitost dolů</string>
+  <string name="carbon_gesture_volume_up">Hlasitost nahoru</string>
+  <string name="carbon_gesture_volume_mute">Ztišit hlasitost</string>
+  <string name="carbon_gesture_screenshot">Snímek obrazovky</string>
+  <string name="carbon_gesture_media_play_pause">Přehrávat/pozastavit skladbu</string>
+  <string name="carbon_gesture_media_skip">Přeskočit skladbu</string>
+  <string name="carbon_gesture_media_previous">Předchozí skladba</string>
+  <string name="carbon_gesture_customapp">Spustit aplikaci</string>
+  <string name="carbon_gesture_launch">Spustit</string>
+  <!-- Disable FC notifications -->
+  <string name="disable_fc_notifications_title">Vypnout oznámení nuceného ukončení \'Force Close\'</string>
+  <string name="disable_fc_notifications_summary">Tímto se vypnou všechna oznámení při vynuceném ukončení aplikace. Používejte s opatrností</string>
+  <!-- Circle app bar -->
+  <string name="category_app_circle_bar_title">Kruhový spouštěč aplikací</string>
+  <string name="app_circle_bar_title">Kruhový spouštěč</string>
+  <string name="app_circle_bar_summary">Zobrazit kruhový spouštěč aplikací po dotyku na pravé straně obrazovky</string>
+  <string name="app_circle_bar_included_apps_title">Vybrané aplikace</string>
+  <string name="app_circle_bar_included_apps_summary">Aplikace vybrané pro kruhový spouštěč</string>
+  <string name="app_circle_bar_trigger_width_title">Šířka aktivační oblasti</string>
+  <string name="app_circle_bar_trigger_top_title">Horní část aktivační oblasti</string>
+  <string name="app_circle_bar_trigger_height_title">Výška aktivační oblasti</string>
+  <string name="app_circle_bar_appchooser_title">Výběr aplikací do kruhového spouštěče</string>
+  <string name="app_circle_bar_appchooser_summary">Aplikace vybrané pro zobrazení v kruhovém spouštěči</string>
+  <string name="app_circle_bar_appchooser_pref_title">Přidat aplikaci</string>
+  <string name="app_circle_bar_appchooser_pref_summary">Klepnutím sem přidáte, klepnutím na kteroukoli aplikaci v seznamu ji odstraníte.\nTelefon, Kontakty a Nastavení se zobrazují jako výchozí, pokud není přidána žádná aplikace.</string>
+  <string name="app_circle_bar_show_trigger_title">Zobrazit aktivační oblast</string>
+  <string name="app_circle_bar_show_trigger_summary">Povolit zobrazení nastavené aktivační oblasti pro kruhový spouštěč aplikací.</string>
 </resources>

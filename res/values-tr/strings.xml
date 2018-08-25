@@ -502,6 +502,7 @@
   <string name="log_it_title">Veri günlüğü oluştur!</string>
   <string name="log_it_summary">Logcat, kmesg, dmesg</string>
   <string name="logcat_title">Logcat</string>
+  <string name="logcat_radio_title">Radio</string>
   <string name="kmesg_title">Kmesg</string>
   <string name="dmesg_title">Dmesg</string>
   <string name="log_it_now_title">Oluştur</string>
@@ -585,7 +586,7 @@
   <string name="hidden_anim_more_nice">GÜZEL</string>
   <!-- Sensor block per-package -->
   <string name="sensor_block_title">Uygulama başına sensör engelleme</string>
-  <string name="sensor_block_summary">Bazı uygulamaların pil tasarrufu yapabilmesi için belirli sensörlere erişimini engelleyin.</string>
+  <string name="sensor_block_summary">Pil tasarrufu için bazı uygulamaların belirli sensörlere erişimini engelleyin.</string>
   <!-- Weather - OmniJaws Settings -->
   <string name="weather_title">Hava durumu</string>
   <string name="weather_config_title">Servis ayarları</string>
@@ -614,14 +615,19 @@
   <string name="ticker_animation_mode_alpha_fade">Karart</string>
   <string name="ticker_animation_mode_scroll">Kaydır</string>
   <string name="ticker_tick_duration_title">Şerit süresi</string>
+  <!-- Navigation-->
+  <string name="navigation_title">Gezinme</string>
+  <string name="navigation_description">Karşılıklı özel gezinme modları. Birini etkinleştirmek diğerini otomatik olarak devre dışı bırakır.</string>
+  <string name="navigation_summary">Varsayılan/Akıllı çubuk/Fling/Hareketler</string>
+  <!-- Navigation bar -->
   <string name="navbar_title">Gezinme çubuğu</string>
-  <string name="navbar_summary">Gezinme tuşlarının davranışını düzenleme</string>
+  <string name="navbar_summary">Mevcut modlar ve seçenekler için tıklayın</string>
   <!-- DUI -->
   <string name="navbar_interface_title">Arayüz</string>
   <string name="navbar_size">Çubuk boyutu</string>
   <string name="navbar_mode">Gezinme modu</string>
   <string name="navbar_mode_summary">Kullanmak istediğiniz gezinme çubuğu modunu seçin</string>
-  <string name="navbar_visibility">Gezinme çubuğunu etkinleştir</string>
+  <string name="navbar_visibility">Gezinme çubuğu</string>
   <string name="navigationbar_settings_title">Gezinme çubuğu</string>
   <string name="navigationbar_settings_summary">Gezinme çubuğu stilini ve davranışını özelleştirme</string>
   <string name="navbar_general_title">Gelişmiş</string>
@@ -638,6 +644,21 @@
   <string name="default_string">Varsayılan</string>
   <string name="default_settings">Varsayılan ayarlar</string>
   <string name="default_settings_summary">Varsayılan gezinme çubuğu</string>
+  <!-- Edge gestures -->
+  <string name="edge_gestures_title">Kenar hareketleri</string>
+  <string name="edge_gestures_description">Ana ekran hareketini kullanmak için alttan kaydırın. Son uygulamaları açmak için basılı tutun. Geri gitmek için sol veya sağ alttan kaydırın.</string>
+  <string name="edge_gestures_summary">Kenar hareketlerini kullanarak gezinin. Seçenekler için tıklayın.</string>
+  <string name="edge_gestures_feedback_duration_title">Dokunumsal geribildirim süresi</string>
+  <string name="edge_gestures_long_press_delay_title">Uzun basma eylemi başlayana kadar gecikme</string>
+  <string name="edge_gestures_back_category_title">Geri hareketi</string>
+  <string name="edge_gestures_back_edges_title">Geri hareketini tetikle</string>
+  <string name="edge_gestures_landscape_back_edges_title">Yatay geri tetikleme hareketi</string>
+  <string name="edge_gestures_back_screen_percent_title">Geri hareketi ekranın bu yüzdesinin altında başlamalıdır</string>
+  <string name="edge_gestures_back_screen_percent_summary">Tetik alanı: ekranın % \'sinden daha düşük</string>
+  <string name="edge_gestures_back_show_ui_feedback_title">Geri hareketi animasyonu</string>
+  <string name="edge_gestures_back_show_ui_feedback_summary">Geri hareketi kullanıldığında kenarlarda animasyonlu geri bildirim gösterir</string>
+  <string name="edge_gestures_back_use_black_arrow_title">Koyu renkli geri tuşu</string>
+  <string name="edge_gestures_back_use_black_arrow_summary">Beyaz versiyonun yerine siyah geri tuşu gösterir</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Eylem seçin</string>
   <string name="action_entry_default_action">Varsayılan ayarlar</string>
@@ -804,9 +825,6 @@
   <string name="show_carrier_keyguard">Yalnızca kilit ekranı</string>
   <string name="show_carrier_statusbar">Yalnızca durum çubuğu</string>
   <string name="show_carrier_enabled">Etkin</string>
-  <!-- Three-fingers-swipe to screenshot -->
-  <string name="three_finger_gesture">Üç parmak hareketi</string>
-  <string name="three_finger_gesture_summary">Ekran görüntüsü almak için üç parmağınızı ekran üzerinde kaydırın</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">Animasyonlar</string>
   <string name="system_animation_title">Sistem animasyonları</string>
@@ -994,4 +1012,50 @@
   <string name="system_pup_category_title">Takıp çıkarma</string>
   <!-- QuickSettings Panel Transparency -->
   <string name="qs_panel_alpha_title">Panel şeffaflığı</string>
+  <!-- Hostname setting -->
+  <string name="device_hostname">Cihaz host adı</string>
+  <string name="device_hostname_summary">Bu cihaza dinamik dhcp ortamında bağlanırken kullanılabilecek ip çözünürlükte kullanılan cihaz ana bilgisayar adını değiştir</string>
+  <!-- Gestures -->
+  <string name="gestures_preference_title">Hareketler</string>
+  <!-- Carbon gestures -->
+  <string name="carbon_gesture_preference_title">Carbon</string>
+  <string name="carbon_gestures_summary">Özel genel hareketleri yapılandır</string>
+  <string name="carbon_gestures_fingers_title">Hareketler için kullanılan parmaklar (varsayılan 2)</string>
+  <string name="carbon_gestures_fingers_unit">parmaklar</string>
+  <string name="carbon_gestures_right_title">Sağ hareket</string>
+  <string name="carbon_gestures_left_title">Sol hareket</string>
+  <string name="carbon_gestures_up_title">Yukarı haraket</string>
+  <string name="carbon_gestures_down_title">Aşağı hareket</string>
+  <string name="carbon_gesture_disabled">Devre dışı</string>
+  <string name="carbon_gesture_back">Geri</string>
+  <string name="carbon_gesture_home">Ana ekran</string>
+  <string name="carbon_gesture_recents">Son uygulamalar</string>
+  <string name="carbon_gesture_power">Güç</string>
+  <string name="carbon_gesture_volume_down">Sesi azalt</string>
+  <string name="carbon_gesture_volume_up">Sesi yükselt</string>
+  <string name="carbon_gesture_volume_mute">Sesi kes</string>
+  <string name="carbon_gesture_screenshot">Ekran görüntüsü</string>
+  <string name="carbon_gesture_media_play_pause">Medyayı oynat/duraklat</string>
+  <string name="carbon_gesture_media_skip">Medyayı atla</string>
+  <string name="carbon_gesture_media_previous">Önceki medya</string>
+  <string name="carbon_gesture_customapp">Uygulamayı başlat</string>
+  <string name="carbon_gesture_launch">Başlat</string>
+  <!-- Disable FC notifications -->
+  <string name="disable_fc_notifications_title">FC bildirimlerini kapat</string>
+  <string name="disable_fc_notifications_summary">Uygulamaların zorla durduruldu bildirimlerini kapatır</string>
+  <!-- Circle app bar -->
+  <string name="category_app_circle_bar_title">Uygulama daire çubuğu başlatıcı</string>
+  <string name="app_circle_bar_title">Uygulama daire çubuğu</string>
+  <string name="app_circle_bar_summary">Ekranın sağ tarafına dokunduktan sonra daire uygulama başlatıcısını göster</string>
+  <string name="app_circle_bar_included_apps_title">Seçilen uygulamalar</string>
+  <string name="app_circle_bar_included_apps_summary">Uygulama daire çubuğu için seçilen uygulamalar</string>
+  <string name="app_circle_bar_trigger_width_title">Tetikleyici alanı genişliği</string>
+  <string name="app_circle_bar_trigger_top_title">Tetikleyici alanı üstü</string>
+  <string name="app_circle_bar_trigger_height_title">Tetikleyici alanı yüksekliği</string>
+  <string name="app_circle_bar_appchooser_title">Uygulama daire çubuğu seçici</string>
+  <string name="app_circle_bar_appchooser_summary">Uygulama daire çubuğunda gösterilmek için seçilen uygulamalar</string>
+  <string name="app_circle_bar_appchooser_pref_title">Uygulama ekle</string>
+  <string name="app_circle_bar_appchooser_pref_summary">Eklemek için buraya dokunun, kaldırmak için listede herhangi bir uygulamaya dokunun.\nHiçbir uygulama eklenmediğinde, Telefon, Kişiler ve Ayarlar varsayılan olarak gösterilir.</string>
+  <string name="app_circle_bar_show_trigger_title">Tetikleyici bölgesini göster</string>
+  <string name="app_circle_bar_show_trigger_summary">Uygulama daire çubuğu başlatıcısı için yapılandırılmış tetikleme bölgesini göstermeyi etkinleştir.</string>
 </resources>

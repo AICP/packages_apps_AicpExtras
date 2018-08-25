@@ -570,7 +570,6 @@
   <string name="device_maintainers_dialog">Mantenedores do dispositivo</string>
   <string name="device_maintainer_default">Desconhecido</string>
   <string name="no_root_title">Não enraizadas</string>
-  <string name="no_root_summary">Para mais funcionalidades, faça root no seu dispositivo</string>
   <!-- Other / general purpose -->
   <string name="default_string">Padrão</string>
   <string name="on">Ligado</string>
@@ -612,14 +611,15 @@
   <string name="ticker_animation_mode_title">Animação da notificação</string>
   <string name="ticker_animation_mode_alpha_fade">Desvanecer</string>
   <string name="ticker_animation_mode_scroll">Rolagem</string>
+  <!-- Navigation-->
+  <string name="navigation_summary">Estoque/Smartbar/aventura/gestos</string>
+  <!-- Navigation bar -->
   <string name="navbar_title">Barra de navegação</string>
-  <string name="navbar_summary">Smartbar/Fling</string>
   <!-- DUI -->
   <string name="navbar_interface_title">Interface</string>
   <string name="navbar_size">Tamanho da barra</string>
   <string name="navbar_mode">Modo de navegação</string>
   <string name="navbar_mode_summary">Selecione o modo de navegação para usar no seu dispositivo</string>
-  <string name="navbar_visibility">Permitir barra de navegação</string>
   <string name="navigationbar_settings_title">Barra de Navegação</string>
   <string name="navigationbar_settings_summary">Personalizar o estilo e comportamento da barra de navegação</string>
   <string name="navbar_general_title">Avançado</string>
@@ -636,6 +636,7 @@
   <string name="default_string">Padrão</string>
   <string name="default_settings">Configurações padrão</string>
   <string name="default_settings_summary">Ações da barra de navegação AOSP</string>
+  <!-- Edge gestures -->
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Escolher ação</string>
   <string name="action_entry_default_action">Definições padrão</string>
@@ -790,9 +791,6 @@
   <string name="show_carrier_keyguard">Chave de segurança</string>
   <string name="show_carrier_statusbar">Barra de status</string>
   <string name="show_carrier_enabled">Ambos</string>
-  <!-- Three-fingers-swipe to screenshot -->
-  <string name="three_finger_gesture">Gesto de três dedos</string>
-  <string name="three_finger_gesture_summary">Deslize três dedos para tirar screenshot</string>
   <!-- AOKP custom system animations -->
   <string name="animation_title">Visor e animações</string>
   <string name="system_animation_title">Animações do Sistema</string>
@@ -966,8 +964,19 @@
   <string name="profile_choose_app">Escolher app</string>
   <string name="dialog_delete_title">Excluir</string>
   <string name="dialog_delete_message">Remover o item selecionado?</string>
+  <string name="headsup_activity_blacklist_title">Lista negra de notificações HeadsUp</string>
+  <string name="headsup_activity_blacklist_summary">Apps que não podem mostrar notificações HeadsUp</string>
   <!-- System Behavior category strings -->
   <string name="system_ss_category_title">Opções de captura de ecrã</string>
   <string name="system_pup_category_title">Opções de Plug / Unplug</string>
   <!-- QuickSettings Panel Transparency -->
+  <!-- Hostname setting -->
+  <string name="device_hostname_summary">Modificar o hostname do dispositivo usado na resolução ip, útil ao se conectar a este dispositivo em um ambiente dinâmico dhcp</string>
+  <!-- Gestures -->
+  <!-- Carbon gestures -->
+  <!-- Disable FC notifications -->
+  <!-- Circle app bar -->
+  <string name="category_app_circle_bar_title">Lançador de App círculo Bar</string>
+  <string name="app_circle_bar_included_apps_title">Aplicações seleccionadas</string>
+  <string name="app_circle_bar_included_apps_summary">Apps selecionados para a barra de círculos do aplicativo</string>
 </resources>
