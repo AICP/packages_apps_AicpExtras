@@ -31,10 +31,10 @@ import com.aicp.extras.R;
 public class Navigation extends BaseSettingsFragment {
 
     private static final String KEY_NAVBAR_VISIBILITY = "navigation_bar_visible";
-    private static final String KEY_EDGE_GESTURES_ENABLED = "edge_gestures_enabled";
+    private static final String KEY_BUTTOM_GESTURES_ENABLED = "use_bottom_gesture_navigation";
 
     private MasterSwitchPreference mNavbarVisibility;
-    private MasterSwitchPreference mEdgeGestures;
+    private MasterSwitchPreference mBottomGestures;
 
     @Override
     protected int getPreferenceResource() {
@@ -50,11 +50,11 @@ public class Navigation extends BaseSettingsFragment {
                 DUActionUtils.hasNavbarByDefault(getActivity()) ? 1 : 0) != 0;
 
         mNavbarVisibility = (MasterSwitchPreference) findPreference(KEY_NAVBAR_VISIBILITY);
-        mEdgeGestures = (MasterSwitchPreference) findPreference(KEY_EDGE_GESTURES_ENABLED);
+        mBottomGestures = (MasterSwitchPreference) findPreference(KEY_BUTTOM_GESTURES_ENABLED);
 
         boolean needsNavigation = DUActionUtils.hasNavbarByDefault(getActivity());
         mNavbarVisibility.setThereShouldBeOneSwitch(needsNavigation);
-        mEdgeGestures.setThereShouldBeOneSwitch(needsNavigation);
+        mBottomGestures.setThereShouldBeOneSwitch(needsNavigation);
     }
 
 }
