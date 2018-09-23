@@ -18,9 +18,7 @@
 -->
 
 <resources>
-
     <string name="app_name">Aicp Extras</string>
-
 
 
     <!-- Dashboard -->
@@ -30,7 +28,6 @@
     <string name="other_category">Other</string>
 
 
-
     <!-- Status bar -->
 
     <string name="status_bar_title">Status bar</string>
@@ -38,15 +35,19 @@
 
     <!-- StatusBar Battery Options -->
     <string name="status_bar_battery_options">Battery options</string>
+
     <!-- Bluetooth status -->
     <string name="bluetooth_battery_title">Show Bluetooth battery status</string>
     <string name="bluetooth_battery_summary">Show battery status for the currently connected bluetooth device, if available.</string>
+
     <!-- Statusbar net monitor -->
     <string name="network_traffic_state_title">Show net activity in statusbar</string>
     <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
+
     <!-- QS Header battery percentage -->
     <string name="force_battery_percentage_title">Force show battery percent</string>
     <string name="force_battery_percentage_summary">Show battery percent text in QSHeader and KeyGuard.</string>
+
     <!-- Battery bar -->
     <string name="battery_bar_title">Battery bar</string>
     <string name="battery_bar_color_title">Color</string>
@@ -64,6 +65,7 @@
     <string name="battery_bar_blend_color_reverse_title">Reverse color direction</string>
     <string name="battery_bar_blend_color_reverse_summary_off">Full &#8594; empty: red &#8592; green &#8592; blue &#8592; red</string>
     <string name="battery_bar_blend_color_reverse_summary_on">Full &#8594; empty: red &#8594; green &#8594; blue &#8594; red</string>
+
     <!-- StatusBar weather settings -->
     <string name="statusbar_weather_title">Status bar weather</string>
     <string name="statusbar_weather_summary">Configure from QS settings/Weather</string>
@@ -218,7 +220,6 @@
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
 
 
-
     <!-- Quick settings -->
 
     <string name="quick_settings_title">Quick settings</string>
@@ -338,9 +339,6 @@
     <!-- Stock recents icon pack -->
     <string name="recents_icon_pack_title">Icon pack</string>
     <string name="recents_icon_pack_summary">Apply a custom icon pack for apps in the panel</string>
-    <string name="no_iconpacks_summary">No icon packs installed</string>
-    <string name="dialog_pick_iconpack_title">Pick icon pack</string>
-    <string name="default_iconpack_title">Default icons</string>
 
     <!-- Slim recents -->
     <string name="slim_recents_title">Slim recents</string>
@@ -402,8 +400,6 @@
 
     <!-- OmniSwitch -->
     <string name="omni_switch_title">OmniSwitch</string>
-
-
 
 
     <!-- Lockscreen -->
@@ -477,7 +473,6 @@
     <string name="show_lockscreen_alarm_title">Alarm text</string>
     <string name="show_lockscreen_alarm_summary">Enable to show alarm text below the clock widget</string>
 
-
     <!-- Hide statusbar on lockscreen -->
     <string name="lockscreen_hide_status_bar_title">Hide Statusbar</string>
     <string name="lockscreen_hide_status_bar_summary">When enabled, statusbar will be hidden on lockscreen</string>
@@ -487,34 +482,45 @@
 
     <string name="other_ui_title">Other UI tweaks</string>
     <string name="other_ui_summary">Various misc</string>
+
     <!-- Volume dialog timeout -->
     <string name="volume_dialog_timeout_title">Volume dialog timeout</string>
+
     <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Screenshot sound</string>
     <string name="screenshot_sound_summary">Plays sound effect when screenshot is taken</string>
+
     <!-- Swap volume keys based on device rotation -->
     <string name="swap_volume_buttons">Swap volume buttons</string>
     <string name="swap_volume_buttons_summary">Swap volume buttons based on device rotation</string>
+
     <!-- Volume keys control media stream -->
     <string name="volume_keys_control_media_stream_title">Volume keys control media volume</string>
     <string name="volume_keys_control_media_stream_summary">Volume panel will show media volume slider by default</string>
+
     <!-- Volume keys control music playback -->
     <string name="volume_rocker_music_controls_title">Playback control</string>
     <string name="volume_rocker_music_controls_summary">When the screen is off, long-pressing the volume keys will seek music tracks</string>
+
     <!-- setting: show CPU info-->
     <string name="show_cpu_info">Show CPU info</string>
     <string name="show_cpu_info_summary">Screen overlay showing current CPU info</string>
+
     <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Launch music app on headset connection</string>
     <string name="headset_connect_player_summary">Launch the default music app when headset is connected</string>
+
     <!-- Toast icon switch -->
     <string name="toast_icon_title">Toast icon</string>
     <string name="toast_icon_summary">Display the app icon corresponding with the toast</string>
+
     <!-- Show VoLTE icon on statusbar -->
     <string name="volte_icon_title">VoLTE icon</string>
     <string name="volte_icon_summary">Display VoLTE icon when available</string>
+
     <!-- Vibrate on plug -->
     <string name="vibration_on_charge_state_changed_title">Vibrate on plug</string>
+
     <!-- Scrolling Cache -->
     <string name="pref_scrollingcache_title">Scrolling cache</string>
     <string name="pref_scrollingcache_summary">Scrolling cache may improve scrolling performance at the cost of memory</string>
@@ -522,12 +528,15 @@
     <string name="pref_scrollingcache_default_enable">Default enable</string>
     <string name="pref_scrollingcache_default_disable">Default disable</string>
     <string name="pref_scrollingcache_force_disable">Force disable</string>
+
     <!-- Status bar - Battery saver color -->
     <string name="status_bar_battery_saver_color_title">Battery saver color</string>
     <string name="status_bar_battery_saver_color_summary">Note: If battery saver already enabled, for new color to be effective, toggle battery saver!</string>
+
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
     <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when connecting or disconnecting a power source</string>
+
     <!-- Power Button - Long press for torch -->
     <string name="torch_long_press_power_gesture_title">Long press power button for torch</string>
     <string name="torch_long_press_power_gesture_summary">Toggles torch when power button is long pressed while display is off</string>
@@ -538,10 +547,10 @@
     <string name="torch_long_press_power_timeout_5min">5 minutes</string>
     <string name="torch_long_press_power_timeout_10min">10 minutes</string>
 
+    <!-- Screeshot editor options -->
     <string name="screenshot_edit_app">Screenshot editor</string>
     <string name="screenshot_edit_app_summary">Choose which app should be launched when tapping on the screenshot notification edit button</string>
     <string name="screenshot_edit_app_no_editor">No image editor available</string>
-
 
 
     <!-- System animations -->
@@ -561,7 +570,6 @@
     <string name="bootanimation_install_successful">New bootanimation successfully applied.</string>
 
 
-
     <!-- System behaviour -->
 
     <string name="system_behaviour_title">System behaviour</string>
@@ -578,7 +586,6 @@
     <string name="selinux_enforcing_toast_title">Selinux set to enforcing!</string>
 
 
-
     <!-- System extensions -->
 
     <string name="system_extensions_title">System extensions</string>
@@ -590,7 +597,6 @@
     <string name="system_app_remover_cancel">@string/cancel</string>
     <string name="system_app_remover_message_delete">Are you sure you want to delete this app?</string>
     <string name="system_app_remover_message_noselect">Nothing selected</string>
-
 
 
     <!-- Log it -->
@@ -613,7 +619,6 @@
     <string name="log_it_share_type_zip">ZIP-File</string>
     <string name="log_it_share_type_haste">Upload to AICP Haste</string>
     <string name="log_it_share_via">Share via</string>
-
 
 
     <!-- Panel porn -->
@@ -639,7 +644,6 @@
     <string name="power_menu_dialog_dim">Power/reboot dialog dim background amount</string>
 
 
-
     <!-- AE settings -->
 
     <string name="ae_settings_title">AE customization</string>
@@ -656,7 +660,6 @@
     <string name="ae_launcher_enabled_title">Show launcher icon</string>
     <string name="ae_launcher_enabled_summary">Show AICP Extras in launcher</string>
     <string name="ae_launcher_enabled_update">Launcher icon visibility updated. It might take some time for the change to take effect</string>
-
 
 
     <!-- About -->
@@ -788,7 +791,6 @@
     <string name="select_custom_app_title">Select custom app</string>
     <string name="select_custom_activity_title">Select custom activity</string>
     <string name="profile_applist_title">Applications</string>
-    <string name="default_string">Stock</string>
     <string name="default_settings">Stock settings</string>
     <string name="default_settings_summary">Stock AOSP navigation bar</string>
 
@@ -1174,9 +1176,6 @@
     <string name="chooser_activity_blacklist_cat_title">Blacklist</string>
     <string name="chooser_activity_blacklist_pref_title">Add app</string>
     <string name="chooser_activity_blacklist_pref_summary">Tap here to add, tap on added app to remove it</string>
-    <string name="profile_choose_app">Choose app</string>
-    <string name="dialog_delete_title">Delete</string>
-    <string name="dialog_delete_message">Remove selected item?</string>
     <string name="headsup_activity_blacklist_title">HeadsUp Notifications blacklist</string>
     <string name="headsup_activity_blacklist_summary">Apps not allowed to show headsup notifications</string>
     <string name="headsup_activity_blacklist_cat_title">Blacklist</string>
