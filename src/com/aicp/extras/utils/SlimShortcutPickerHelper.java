@@ -30,7 +30,7 @@ import android.util.Log;
 
 import com.aicp.extras.R;
 
-import com.android.internal.util.aicp.AppHelper;
+import com.aicp.gear.util.AppHelper;
 
 import java.util.ArrayList;
 

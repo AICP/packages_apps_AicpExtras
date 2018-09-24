@@ -55,12 +55,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ListView;
 
-import com.android.internal.util.aicp.ActionConfig;
-import com.android.internal.util.aicp.ActionConstants;
-import com.android.internal.util.aicp.ActionHelper;
-import com.android.internal.util.aicp.ImageHelper;
-import com.android.internal.util.aicp.DeviceUtils;
-import com.android.internal.util.aicp.DeviceUtils.FilteredDeviceFeaturesArray;
+import com.aicp.gear.util.ActionConfig;
+import com.aicp.gear.util.ActionConstants;
+import com.aicp.gear.util.ActionHelper;
+import com.aicp.gear.util.ImageHelper;
+import com.aicp.gear.util.DeviceUtils;
+import com.aicp.gear.util.DeviceUtils.FilteredDeviceFeaturesArray;
 
 import com.aicp.extras.R;
 import com.aicp.extras.TitleProvider;
@@ -180,6 +180,12 @@ public class ActionListViewSettings extends ListFragment implements
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Resources res = getResources();
+
+        if (false) {
+            // Tell Lint these arrays are used
+            int unused = R.array.shortcut_action_values;
+            unused = R.array.shortcut_action_entries;
+        }
 
         mActionMode = getArguments().getInt("actionMode", NAV_BAR);
         mMaxAllowedActions = getArguments().getInt("maxAllowedActions", DEFAULT_MAX_ACTION_NUMBER);

@@ -22,15 +22,11 @@ import android.support.v7.preference.Preference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.extras.preference.MasterSwitchPreference;
 import com.aicp.extras.utils.Util;
 
 public class SystemExtensions extends BaseSettingsFragment {
 
     private static final String PREF_SYSTEM_APP_REMOVER = "system_app_remover";
-    private static final String PREF_APP_CIRCLE_BAR = "enable_app_circle_bar";
-
-    private MasterSwitchPreference mAppCircleBar;
 
     @Override
     protected int getPreferenceResource() {
@@ -43,7 +39,5 @@ public class SystemExtensions extends BaseSettingsFragment {
 
         Preference systemAppRemover = findPreference(PREF_SYSTEM_APP_REMOVER);
         Util.requireRoot(systemAppRemover);
-
-        mAppCircleBar = (MasterSwitchPreference) findPreference(PREF_APP_CIRCLE_BAR);
     }
 }
