@@ -17,63 +17,13 @@
 
 package com.aicp.extras.fragments;
 
-import android.content.ContentResolver;
-import android.os.Bundle;
-import android.os.UserHandle;
-import android.provider.Settings;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.gear.preference.SystemSettingIntListPreference;
 
-public class Notifications extends BaseSettingsFragment implements
-        Preference.OnPreferenceChangeListener {
-
-    private static final String TICKER_CATEGORY = "status_bar_ticker_category";
-
-    private SystemSettingIntListPreference mTickerMode;
-    private PreferenceCategory mTickerCategory;
+public class Notifications extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.notifications;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        ContentResolver resolver = getActivity().getContentResolver();
-
-        mTickerMode = (SystemSettingIntListPreference)
-                findPreference(Settings.System.STATUS_BAR_SHOW_TICKER);
-        mTickerMode.setOnPreferenceChangeListener(this);
-        mTickerCategory = (PreferenceCategory) findPreference(TICKER_CATEGORY);
-
-        int tickerMode = Settings.System.getIntForUser(resolver,
-                Settings.System.STATUS_BAR_SHOW_TICKER, 0,
-                UserHandle.USER_CURRENT);
-        updateTickerDependencies(tickerMode);
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference.equals(mTickerMode)) {
-             updateTickerDependencies(Integer.parseInt((String) newValue));
-             return true;
-        }
-        return false;
-    }
-
-    private void updateTickerDependencies(int tickerMode) {
-        // All preferences in ticker category except the switch itself depend on
-        // ticker enabled state
-        for (int i = 0; i < mTickerCategory.getPreferenceCount(); i++) {
-            Preference preference = mTickerCategory.getPreference(i);
-            if (preference != mTickerMode) {
-                preference.setEnabled(tickerMode > 0);
-            }
-        }
     }
 }

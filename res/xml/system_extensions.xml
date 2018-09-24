@@ -28,11 +28,4 @@
         <intent android:action="com.aicp.extras.ViewSystemAppRemover" />
     </Preference>
 
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-        android:key="enable_app_circle_bar"
-        android:title="@string/app_circle_bar_title"
-        android:summary="@string/app_circle_bar_summary"
-        android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.AppCircleBar" />
-
 </PreferenceScreen>
