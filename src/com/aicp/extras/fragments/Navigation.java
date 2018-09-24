@@ -16,45 +16,13 @@
 
 package com.aicp.extras.fragments;
 
-import android.os.Bundle;
-import android.os.UserHandle;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.provider.Settings;
-
 import com.aicp.extras.BaseSettingsFragment;
-import com.aicp.extras.preference.MasterSwitchPreference;
-import com.android.internal.utils.du.DUActionUtils;
 import com.aicp.extras.R;
 
 public class Navigation extends BaseSettingsFragment {
-
-    private static final String KEY_NAVBAR_VISIBILITY = "navigation_bar_visible";
-    private static final String KEY_BUTTOM_GESTURES_ENABLED = "use_bottom_gesture_navigation";
-
-    private MasterSwitchPreference mNavbarVisibility;
-    private MasterSwitchPreference mBottomGestures;
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.navigation;
     }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        boolean showing = Settings.Secure.getInt(getContentResolver(),
-                Settings.Secure.NAVIGATION_BAR_VISIBLE,
-                DUActionUtils.hasNavbarByDefault(getActivity()) ? 1 : 0) != 0;
-
-        mNavbarVisibility = (MasterSwitchPreference) findPreference(KEY_NAVBAR_VISIBILITY);
-        mBottomGestures = (MasterSwitchPreference) findPreference(KEY_BUTTOM_GESTURES_ENABLED);
-
-        boolean needsNavigation = DUActionUtils.hasNavbarByDefault(getActivity());
-        mNavbarVisibility.setThereShouldBeOneSwitch(needsNavigation);
-        mBottomGestures.setThereShouldBeOneSwitch(needsNavigation);
-    }
-
 }

@@ -181,6 +181,12 @@ public class ActionListViewSettings extends ListFragment implements
         super.onViewCreated(view, savedInstanceState);
         Resources res = getResources();
 
+        if (false) {
+            // Tell Lint these arrays are used
+            int unused = R.array.shortcut_action_values;
+            unused = R.array.shortcut_action_entries;
+        }
+
         mActionMode = getArguments().getInt("actionMode", NAV_BAR);
         mMaxAllowedActions = getArguments().getInt("maxAllowedActions", DEFAULT_MAX_ACTION_NUMBER);
         mAdditionalFragment = getArguments().getString("fragment", null);

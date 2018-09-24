@@ -68,16 +68,11 @@ import com.aicp.extras.utils.SuShell;
 import com.aicp.extras.utils.SuTask;
 import com.aicp.extras.utils.Util;
 
-public class SystemAnimations extends BaseSettingsFragment implements
-        Preference.OnPreferenceChangeListener {
+public class SystemAnimations extends BaseSettingsFragment {
 
     private static final String TAG = SystemAnimations.class.getSimpleName();
 
     private static final String PREF_CUSTOM_BOOTANIM = "custom_bootanimation";
-    private static final String PREF_TILE_ANIM_STYLE = "anim_tile_style";
-    private static final String PREF_TILE_ANIM_DURATION = "anim_tile_duration";
-    private static final String PREF_TILE_ANIM_INTERPOLATOR = "anim_tile_interpolator";
-    private static final String PREF_TOAST_ANIMATION = "toast_animation";
 
     // Custom bootanimation
     private static final int REQUEST_PICK_BOOT_ANIMATION = 201;
@@ -95,12 +90,6 @@ public class SystemAnimations extends BaseSettingsFragment implements
     private AnimationDrawable mBootanimationPart2;
     private String mBootanimationErrormsg;
     private String mBootAnimationPath;
-
-    private ListPreference mTileAnimationDuration;
-    private ListPreference mTileAnimationInterpolator;
-    private ListPreference mTileAnimationStyle;
-    private ListPreference mToastAnimation;
-    Toast mToast;
 
     @Override
     protected int getPreferenceResource() {
@@ -122,86 +111,6 @@ public class SystemAnimations extends BaseSettingsFragment implements
         }
         Util.requireRoot(mCustomBootAnimation);
 
-        // Toast Animations
-        mToastAnimation = (ListPreference) findPreference(PREF_TOAST_ANIMATION);
-        mToastAnimation.setSummary(mToastAnimation.getEntry());
-        int CurrentToastAnimation = Settings.System.getInt(resolver,
-                Settings.System.TOAST_ANIMATION, 1);
-        mToastAnimation.setValueIndex(CurrentToastAnimation); //set to index of default value
-        mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
-        mToastAnimation.setOnPreferenceChangeListener(this);
-        if (mToast != null) {
-            mToast.cancel();
-            mToast = null;
-        }
-
-        // QS Tile Animations
-        mTileAnimationStyle = (ListPreference) findPreference(PREF_TILE_ANIM_STYLE);
-        int tileAnimationStyle = Settings.System.getIntForUser(resolver,
-                Settings.System.ANIM_TILE_STYLE, 0, UserHandle.USER_CURRENT);
-        mTileAnimationStyle.setValue(String.valueOf(tileAnimationStyle));
-        mTileAnimationStyle.setSummary(mTileAnimationStyle.getEntry());
-        mTileAnimationStyle.setOnPreferenceChangeListener(this);
-
-        mTileAnimationDuration = (ListPreference) findPreference(PREF_TILE_ANIM_DURATION);
-        int tileAnimationDuration = Settings.System.getIntForUser(resolver,
-                Settings.System.ANIM_TILE_DURATION, 2000, UserHandle.USER_CURRENT);
-        mTileAnimationDuration.setValue(String.valueOf(tileAnimationDuration));
-        mTileAnimationDuration.setSummary(mTileAnimationDuration.getEntry());
-        mTileAnimationDuration.setEnabled(tileAnimationStyle > 0);
-        mTileAnimationDuration.setOnPreferenceChangeListener(this);
-
-        mTileAnimationInterpolator = (ListPreference) findPreference(PREF_TILE_ANIM_INTERPOLATOR);
-        int tileAnimationInterpolator = Settings.System.getIntForUser(resolver,
-                Settings.System.ANIM_TILE_INTERPOLATOR, 0, UserHandle.USER_CURRENT);
-        mTileAnimationInterpolator.setValue(String.valueOf(tileAnimationInterpolator));
-        mTileAnimationInterpolator.setSummary(mTileAnimationInterpolator.getEntry());
-        mTileAnimationInterpolator.setEnabled(tileAnimationStyle > 0);
-        mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        int value;
-        int index;
-        ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mToastAnimation) {
-            index = mToastAnimation.findIndexOfValue((String) newValue);
-            Settings.System.putInt(resolver,
-                    Settings.System.TOAST_ANIMATION, index);
-            mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
-            if (mToast != null) {
-                mToast.cancel();
-            }
-            mToast = Toast.makeText(getActivity(), mToastAnimation.getEntries()[index],
-                    Toast.LENGTH_SHORT);
-            mToast.show();
-            return true;
-        } else if (preference == mTileAnimationStyle) {
-            value = Integer.parseInt((String) newValue);
-            index = mTileAnimationStyle.findIndexOfValue((String) newValue);
-            Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_STYLE,
-                    value, UserHandle.USER_CURRENT);
-            mTileAnimationStyle.setSummary(mTileAnimationStyle.getEntries()[index]);
-            mTileAnimationDuration.setEnabled(value > 0);
-            mTileAnimationInterpolator.setEnabled(value > 0);
-            return true;
-        } else if (preference == mTileAnimationDuration) {
-            value = Integer.parseInt((String) newValue);
-            index = mTileAnimationDuration.findIndexOfValue((String) newValue);
-            Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_DURATION,
-                    value, UserHandle.USER_CURRENT);
-            mTileAnimationDuration.setSummary(mTileAnimationDuration.getEntries()[index]);
-            return true;
-        } else if (preference == mTileAnimationInterpolator) {
-            value = Integer.parseInt((String) newValue);
-            index = mTileAnimationInterpolator.findIndexOfValue((String) newValue);
-            Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_INTERPOLATOR,
-                    value, UserHandle.USER_CURRENT);
-            mTileAnimationInterpolator.setSummary(mTileAnimationInterpolator.getEntries()[index]);
-            return true;
-        }
-        return false;
     }
 
     @Override
