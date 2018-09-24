@@ -28,12 +28,6 @@
         android:title="@string/navigation_category">
 
         <PreferenceScreen
-            android:title="@string/hw_keys_title"
-            android:summary="@string/hw_keys_summary"
-            android:icon="@drawable/ic_settings_hw_keys"
-            android:fragment="com.aicp.extras.fragments.HwKeys" />
-
-        <PreferenceScreen
             android:title="@string/navigation_title"
             android:summary="@string/navigation_summary"
             android:icon="@drawable/ic_settings_navbar"
@@ -79,13 +73,6 @@
             android:summary="@string/panel_porn_summary"
             android:icon="@drawable/ic_settings_panel_porn"
             android:fragment="com.aicp.extras.fragments.PanelPorn" />
-
-        <PreferenceScreen
-            android:key="weather_option"
-            android:title="@string/weather_title"
-            android:summary="@string/weather_config_title"
-            android:icon="@drawable/ic_settings_weather"
-            android:fragment="com.aicp.extras.fragments.Weather" />
 
         <PreferenceScreen
             android:title="@string/other_ui_title"

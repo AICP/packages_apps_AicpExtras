@@ -19,24 +19,4 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/navigation_title">
 
-    <Preference android:key="navigation_description"
-        android:summary="@string/navigation_description"
-        android:selectable="false" />
-
-    <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
-        android:key="navigation_bar_visible"
-        android:title="@string/navbar_title"
-        android:summary="@string/navbar_summary"
-        android:defaultValue="true"
-        aicpextras:thereCanBeOnlyOneGroupId="1"
-        android:fragment="com.aicp.extras.fragments.NavigationBar" />
-
-    <!-- Bottom Gestures -->
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-        android:key="use_bottom_gesture_navigation"
-        android:title="@string/use_bottom_gesture_title"
-        android:summary="@string/use_bottom_gesture_summary"
-        android:defaultValue="false"
-        aicpextras:thereCanBeOnlyOneGroupId="1" />
-
 </PreferenceScreen>
