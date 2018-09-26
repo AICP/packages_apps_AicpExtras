@@ -287,9 +287,6 @@
   <!-- Stock recents icon pack -->
   <string name="recents_icon_pack_title">Набор иконок</string>
   <string name="recents_icon_pack_summary">Применить свой набор значков для приложений в панели</string>
-  <string name="no_iconpacks_summary">Наборы значков не установлены</string>
-  <string name="dialog_pick_iconpack_title">Выберите набор значков</string>
-  <string name="default_iconpack_title">Значки по умолчанию</string>
   <!-- Slim recents -->
   <string name="slim_recents_title">Slim recents</string>
   <string name="recents_max_apps_title">Максимально допустимое количество приложений</string>
@@ -461,6 +458,7 @@
   <string name="torch_long_press_power_timeout_2min">2 минуты</string>
   <string name="torch_long_press_power_timeout_5min">5 минут</string>
   <string name="torch_long_press_power_timeout_10min">10 минут</string>
+  <!-- Screeshot editor options -->
   <string name="screenshot_edit_app">Редактор скриншотов</string>
   <string name="screenshot_edit_app_summary">Выберите, какое приложение должно быть запущено при нажатии на кнопку редактирования в уведомлении скриншота</string>
   <string name="screenshot_edit_app_no_editor">Нет доступного редактора изображения</string>
@@ -640,24 +638,8 @@
   <string name="select_custom_app_title">Выбрать своё приложение</string>
   <string name="select_custom_activity_title">Выбрать своё действие</string>
   <string name="profile_applist_title">Приложения</string>
-  <string name="default_string">По умолчанию</string>
   <string name="default_settings">Настройки по умолчанию</string>
   <string name="default_settings_summary">Панель навигации AOSP по умолчанию</string>
-  <!-- Edge gestures -->
-  <string name="edge_gestures_title">Жесты</string>
-  <string name="edge_gestures_description">Проведите по экрану снизу для перехода к домашнему экрану, продолжайте удерживать для открытия недавних приложения. Проведите внизу слева или справа для возврата назад.</string>
-  <string name="edge_gestures_summary">Навигация с помощью жестов. Нажмите для настроек.</string>
-  <string name="edge_gestures_feedback_duration_title">Длительность виброотклика</string>
-  <string name="edge_gestures_long_press_delay_title">Величина задержки до срабатывания долгого нажатия</string>
-  <string name="edge_gestures_back_category_title">Жест \"Назад\"</string>
-  <string name="edge_gestures_back_edges_title">Жест \"Назад\" срабатывает с</string>
-  <string name="edge_gestures_landscape_back_edges_title">Жест \"Назад\" в альбомной ориентации срабатывает с</string>
-  <string name="edge_gestures_back_screen_percent_title">Жест \"Назад\" должен начинаться меньше этого процента экрана</string>
-  <string name="edge_gestures_back_screen_percent_summary">Область срабатывания: ниже % экрана</string>
-  <string name="edge_gestures_back_show_ui_feedback_title">Анимация жеста \"Назад\"</string>
-  <string name="edge_gestures_back_show_ui_feedback_summary">Показывать анимацию по краям при использовании жеста \"Назад\"</string>
-  <string name="edge_gestures_back_use_black_arrow_title">Тёмный цвет кнопки \"Назад\"</string>
-  <string name="edge_gestures_back_use_black_arrow_summary">Показывать чёрную кнопку \"Назад\" вместо белой</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Выберите действие</string>
   <string name="action_entry_default_action">Настройки по умолчанию</string>
@@ -997,9 +979,6 @@
   <string name="chooser_activity_blacklist_cat_title">Чёрный список</string>
   <string name="chooser_activity_blacklist_pref_title">Добавить приложение</string>
   <string name="chooser_activity_blacklist_pref_summary">Нажмите здесь, чтобы добавить, нажмите на добавленное приложение, чтобы удалить его</string>
-  <string name="profile_choose_app">Выбрать приложение</string>
-  <string name="dialog_delete_title">Удалить</string>
-  <string name="dialog_delete_message">Удалить выбранный элемент?</string>
   <string name="headsup_activity_blacklist_title">Чёрный список всплывающих уведомлений</string>
   <string name="headsup_activity_blacklist_summary">Приложения, для которых не разрешено показывать высплывающие уведомления</string>
   <string name="headsup_activity_blacklist_cat_title">Чёрный список</string>
@@ -1056,4 +1035,7 @@
   <string name="app_circle_bar_appchooser_pref_summary">Нажмите здесь, чтобы добавить, коснитесь любого приложения в списке, чтобы удалить. \nТелефон, Контакты и Настройки отображаются по умолчанию, когда ничего не добавлено.</string>
   <string name="app_circle_bar_show_trigger_title">Показать область срабатывания</string>
   <string name="app_circle_bar_show_trigger_summary">Включите, чтобы показать настроенную область срабатывания для запуска Круговой панели приложений.</string>
+  <!--OmniGesture-->
+  <string name="use_bottom_gesture_title">Жесты вверх</string>
+  <string name="use_bottom_gesture_summary">Доступные жесты:\n\nНазад\n- Проведите пальцем вверх слева или справа\n\nДомой\n- Проведите пальцем вверх по центру\n\nНедавние приложения\n- Проведите пальцем вверх по центру и удерживайте\n\nДолго нажимайте кнопку \"Домой\"\n- Коротко проведите пальцем вверх и удерживайте по центру\n\n\nРаботает лучше всего с отключенной панелью навигации.</string>
 </resources>

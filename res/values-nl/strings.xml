@@ -288,9 +288,6 @@
   <!-- Stock recents icon pack -->
   <string name="recents_icon_pack_title">Pictogrampakket</string>
   <string name="recents_icon_pack_summary">Aangepast pictogrammenpakket gebruiken</string>
-  <string name="no_iconpacks_summary">Geen pictogrampakketten geïnstalleerd</string>
-  <string name="dialog_pick_iconpack_title">Pictogrammenpakket kiezen</string>
-  <string name="default_iconpack_title">Standaardpictogrammen</string>
   <!-- Slim recents -->
   <string name="slim_recents_title">Slim Recents</string>
   <string name="recents_max_apps_title">Max. aantal toegestane apps</string>
@@ -462,6 +459,7 @@
   <string name="torch_long_press_power_timeout_2min">2 minuten</string>
   <string name="torch_long_press_power_timeout_5min">5 minuten</string>
   <string name="torch_long_press_power_timeout_10min">10 minuten</string>
+  <!-- Screeshot editor options -->
   <string name="screenshot_edit_app">Editor voor schermafbeeldingen</string>
   <string name="screenshot_edit_app_summary">Kies welke app moet worden gestart als op de schermafbeelding notificatie wordt getikt</string>
   <string name="screenshot_edit_app_no_editor">Geen afbeeldingseditor beschikbaar</string>
@@ -641,24 +639,8 @@
   <string name="select_custom_app_title">Kies een app</string>
   <string name="select_custom_activity_title">Kies een activiteit</string>
   <string name="profile_applist_title">Apps</string>
-  <string name="default_string">Standaard</string>
   <string name="default_settings">Standaard instellingen</string>
   <string name="default_settings_summary">Standaard AOSP navigatiebalk</string>
-  <!-- Edge gestures -->
-  <string name="edge_gestures_title">Rand-gebaren</string>
-  <string name="edge_gestures_description">Veeg vanaf onderzijde om Home te openen, ingedrukt houden om Recente apps te openen. Veeg vanaf onderzijde links of rechts om terug te gaan.</string>
-  <string name="edge_gestures_summary">Navigeren met behulp van rand-gebaren. Klik hier voor opties.</string>
-  <string name="edge_gestures_feedback_duration_title">Duur haptische feedback (trilsignaal)</string>
-  <string name="edge_gestures_long_press_delay_title">Vertraging tot langdruk-actie start</string>
-  <string name="edge_gestures_back_category_title">Terug-gebaar</string>
-  <string name="edge_gestures_back_edges_title">Activeer terug-gebaar van</string>
-  <string name="edge_gestures_landscape_back_edges_title">Activeer terug-gebaar in landschap modus</string>
-  <string name="edge_gestures_back_screen_percent_title">Terug-gebaar moet beginnen onder dit gedeelte van het scherm</string>
-  <string name="edge_gestures_back_screen_percent_summary">Aanrakingsgebied: minder dan % van scherm</string>
-  <string name="edge_gestures_back_show_ui_feedback_title">Terug-gebaar animatie</string>
-  <string name="edge_gestures_back_show_ui_feedback_summary">Geanimeerde feedback op randen weergeven wanneer terug-gebaar wordt gebruikt</string>
-  <string name="edge_gestures_back_use_black_arrow_title">Donkere kleur van de terug-knop</string>
-  <string name="edge_gestures_back_use_black_arrow_summary">Zwarte terug-knop weergeven in plaats van de witte versie</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Kies actie</string>
   <string name="action_entry_default_action">Standaardinstellingen</string>
@@ -998,9 +980,6 @@
   <string name="chooser_activity_blacklist_cat_title">Zwarte lijst</string>
   <string name="chooser_activity_blacklist_pref_title">App toevoegen</string>
   <string name="chooser_activity_blacklist_pref_summary">Tik hier om toe te voegen, tik op toegevoegde app om weer te verwijderen</string>
-  <string name="profile_choose_app">App selecteren</string>
-  <string name="dialog_delete_title">Verwijderen</string>
-  <string name="dialog_delete_message">Geselecteerd item verwijderen?</string>
   <string name="headsup_activity_blacklist_title">Zwarte lijst heads up-meldingen</string>
   <string name="headsup_activity_blacklist_summary">Apps die geen heads up-meldingen mogen laten zien</string>
   <string name="headsup_activity_blacklist_cat_title">Zwarte lijst</string>
@@ -1057,4 +1036,7 @@
   <string name="app_circle_bar_appchooser_pref_summary">Hier tikken om toe te voegen, op een app tikken om te verwijderen.\nTelefoon, Contacten en Instellingen worden standaard getoond als geen apps zijn toegevoegd.</string>
   <string name="app_circle_bar_show_trigger_title">Toon activeringsgebied</string>
   <string name="app_circle_bar_show_trigger_summary">Inschakelen om het ingestelde activeringsgebied voor de App Circle Bar launcher te tonen.</string>
+  <!--OmniGesture-->
+  <string name="use_bottom_gesture_title">Navigatiegebaren</string>
+  <string name="use_bottom_gesture_summary">Beschikbare gebaren: \n\nTerug\n- Veeg omhoog aan de linker- of rechterkant\n\nHome\n- Veeg omhoog in het midden\n\nRecente apps\n- Veeg omhoog in het midden en hou ingedrukt\n\nHome-toets lang indrukken\n- Korte veeg omhoog en ingedrukt houden in het midden\n\n\nWerkt het beste als de navigatiebalk is uitgeschakeld.</string>
 </resources>

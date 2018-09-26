@@ -288,9 +288,6 @@
   <!-- Stock recents icon pack -->
   <string name="recents_icon_pack_title">Simge paketi</string>
   <string name="recents_icon_pack_summary">Paneldeki uygulamalar için özel bir simge paketi uygula</string>
-  <string name="no_iconpacks_summary">Yüklü simge paketleri yok</string>
-  <string name="dialog_pick_iconpack_title">Simge paketi seçin</string>
-  <string name="default_iconpack_title">Varsayılan simgeler</string>
   <!-- Slim recents -->
   <string name="slim_recents_title">Slim son uygulamalar</string>
   <string name="recents_max_apps_title">İzin verilen maksimum uygulama</string>
@@ -462,6 +459,7 @@
   <string name="torch_long_press_power_timeout_2min">2 dakika</string>
   <string name="torch_long_press_power_timeout_5min">5 dakika</string>
   <string name="torch_long_press_power_timeout_10min">10 dakika</string>
+  <!-- Screeshot editor options -->
   <string name="screenshot_edit_app">Ekran görüntüsü düzenleyici</string>
   <string name="screenshot_edit_app_summary">Ekran görüntüsü bildiriminin düzenleme tuşuna basıldığında hangi uygulamanın başlatılması gerektiğini seçin</string>
   <string name="screenshot_edit_app_no_editor">Görüntü düzenleyici yok</string>
@@ -641,24 +639,8 @@
   <string name="select_custom_app_title">Özel uygulama seç</string>
   <string name="select_custom_activity_title">Özel etkinlik seç</string>
   <string name="profile_applist_title">Uygulamalar</string>
-  <string name="default_string">Varsayılan</string>
   <string name="default_settings">Varsayılan ayarlar</string>
   <string name="default_settings_summary">Varsayılan gezinme çubuğu</string>
-  <!-- Edge gestures -->
-  <string name="edge_gestures_title">Kenar hareketleri</string>
-  <string name="edge_gestures_description">Ana ekran hareketini kullanmak için alttan kaydırın. Son uygulamaları açmak için basılı tutun. Geri gitmek için sol veya sağ alttan kaydırın.</string>
-  <string name="edge_gestures_summary">Kenar hareketlerini kullanarak gezinin. Seçenekler için tıklayın.</string>
-  <string name="edge_gestures_feedback_duration_title">Dokunumsal geribildirim süresi</string>
-  <string name="edge_gestures_long_press_delay_title">Uzun basma eylemi başlayana kadar gecikme</string>
-  <string name="edge_gestures_back_category_title">Geri hareketi</string>
-  <string name="edge_gestures_back_edges_title">Geri hareketini tetikle</string>
-  <string name="edge_gestures_landscape_back_edges_title">Yatay geri tetikleme hareketi</string>
-  <string name="edge_gestures_back_screen_percent_title">Geri hareketi ekranın bu yüzdesinin altında başlamalıdır</string>
-  <string name="edge_gestures_back_screen_percent_summary">Tetik alanı: ekranın % \'sinden daha düşük</string>
-  <string name="edge_gestures_back_show_ui_feedback_title">Geri hareketi animasyonu</string>
-  <string name="edge_gestures_back_show_ui_feedback_summary">Geri hareketi kullanıldığında kenarlarda animasyonlu geri bildirim gösterir</string>
-  <string name="edge_gestures_back_use_black_arrow_title">Koyu renkli geri tuşu</string>
-  <string name="edge_gestures_back_use_black_arrow_summary">Beyaz versiyonun yerine siyah geri tuşu gösterir</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Eylem seçin</string>
   <string name="action_entry_default_action">Varsayılan ayarlar</string>
@@ -999,9 +981,6 @@
   <string name="chooser_activity_blacklist_cat_title">Kara liste</string>
   <string name="chooser_activity_blacklist_pref_title">Uygulama ekle</string>
   <string name="chooser_activity_blacklist_pref_summary">Eklemek için buraya dokunun, kaldırmak için eklenen uygulamaya dokunun</string>
-  <string name="profile_choose_app">Uygulama seç</string>
-  <string name="dialog_delete_title">Sil</string>
-  <string name="dialog_delete_message">Seçili öğe kaldırılsın mı?</string>
   <string name="headsup_activity_blacklist_title">Bildirimler kara listesi</string>
   <string name="headsup_activity_blacklist_summary">Uygulamalarda bildirim pencereleri gösterilmesine izin verilmiyor</string>
   <string name="headsup_activity_blacklist_cat_title">Kara liste</string>
@@ -1058,4 +1037,7 @@
   <string name="app_circle_bar_appchooser_pref_summary">Eklemek için buraya dokunun, kaldırmak için listede herhangi bir uygulamaya dokunun.\nHiçbir uygulama eklenmediğinde, Telefon, Kişiler ve Ayarlar varsayılan olarak gösterilir.</string>
   <string name="app_circle_bar_show_trigger_title">Tetikleyici bölgesini göster</string>
   <string name="app_circle_bar_show_trigger_summary">Uygulama daire çubuğu başlatıcısı için yapılandırılmış tetikleme bölgesini göstermeyi etkinleştir.</string>
+  <!--OmniGesture-->
+  <string name="use_bottom_gesture_title">Kaydırma hareketleri</string>
+  <string name="use_bottom_gesture_summary">Kullanılabilir hareketler:\n\nArka\n- Sola veya sağa kaydırın\n\nAna ekran\n- Kaydırma merkezi\n\nSon uygulamalar\n- Merkezini kaydırın ve tutun\n\nYada ana ekrana basın\n- Kısa kaydırın ve merkezde tutun\n\n\nİndirim çubuğu devre dışıyken en iyi çalışır.</string>
 </resources>

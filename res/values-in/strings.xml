@@ -287,9 +287,6 @@
   <!-- Stock recents icon pack -->
   <string name="recents_icon_pack_title">Paket ikon</string>
   <string name="recents_icon_pack_summary">Terapkan paket ikon khusus untuk aplikasi di panel</string>
-  <string name="no_iconpacks_summary">Tidak ada paket ikon yang terpasang</string>
-  <string name="dialog_pick_iconpack_title">Pilih paket ikon</string>
-  <string name="default_iconpack_title">Ikon standar</string>
   <!-- Slim recents -->
   <string name="slim_recents_title">Slim recent</string>
   <string name="recents_max_apps_title">Maksimal aplikasi yang diperbolehkan</string>
@@ -461,6 +458,7 @@
   <string name="torch_long_press_power_timeout_2min">2 menit</string>
   <string name="torch_long_press_power_timeout_5min">5 menit</string>
   <string name="torch_long_press_power_timeout_10min">10 menit</string>
+  <!-- Screeshot editor options -->
   <string name="screenshot_edit_app">Penyunting tangkapan layar</string>
   <string name="screenshot_edit_app_summary">Pilih aplikasi yang harus dijalankan ketika menekan tombol sunting pemberitahuan tangkapan layar</string>
   <string name="screenshot_edit_app_no_editor">Penyunting gambar tidak tersedia</string>
@@ -637,10 +635,8 @@
   <string name="select_custom_app_title">Pilih aplikasi khusus</string>
   <string name="select_custom_activity_title">Pilih aktivitas khusus</string>
   <string name="profile_applist_title">Aplikasi</string>
-  <string name="default_string">Standar</string>
   <string name="default_settings">Setting bawaan</string>
   <string name="default_settings_summary">Bilah navigasi bawaan AOSP</string>
-  <!-- Edge gestures -->
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Pilih tindakan</string>
   <string name="action_entry_default_action">Setelan bawaan</string>
@@ -980,9 +976,6 @@
   <string name="chooser_activity_blacklist_cat_title">Daftar cekal</string>
   <string name="chooser_activity_blacklist_pref_title">Tambah aplikasi</string>
   <string name="chooser_activity_blacklist_pref_summary">Tekan di sini untuk menambahkan, tekan pada aplikasi yang ditambahkan untuk menghapusnya</string>
-  <string name="profile_choose_app">Pilih aplikasi</string>
-  <string name="dialog_delete_title">Hapus</string>
-  <string name="dialog_delete_message">Hapus item yang dipilih?</string>
   <string name="headsup_activity_blacklist_title">Daftar cekal pemberitauan mengambang</string>
   <string name="headsup_activity_blacklist_summary">Aplikasi tidak diizinkan untuk menampilkan pemberitahuan mengambang</string>
   <string name="headsup_activity_blacklist_cat_title">Daftar cekal</string>
@@ -994,10 +987,17 @@
   <!-- QuickSettings Panel Transparency -->
   <string name="qs_panel_alpha_title">Opasitas panel</string>
   <!-- Hostname setting -->
+  <string name="device_hostname">Nama host perangkat</string>
   <!-- Gestures -->
   <!-- Carbon gestures -->
   <string name="carbon_gesture_preference_title">Carbon</string>
+  <string name="carbon_gesture_disabled">Dimatikan</string>
+  <string name="carbon_gesture_back">Kembali</string>
+  <string name="carbon_gesture_home">Beranda</string>
+  <string name="carbon_gesture_recents">Recent</string>
   <string name="carbon_gesture_power">Daya</string>
+  <string name="carbon_gesture_volume_down">Volume turun</string>
+  <string name="carbon_gesture_volume_up">Volume naik</string>
   <string name="carbon_gesture_screenshot">Tangkapan Layar</string>
   <string name="carbon_gesture_media_play_pause">Putar/Jeda media</string>
   <string name="carbon_gesture_media_previous">Media sebelumnya</string>
@@ -1011,4 +1011,5 @@
   <string name="app_circle_bar_trigger_height_title">Tinggi area pemicu</string>
   <string name="app_circle_bar_appchooser_pref_title">Tambah aplikasi</string>
   <string name="app_circle_bar_show_trigger_title">Tampilkan area pemicu</string>
+  <!--OmniGesture-->
 </resources>

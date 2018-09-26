@@ -288,9 +288,6 @@
   <!-- Stock recents icon pack -->
   <string name="recents_icon_pack_title">图标包</string>
   <string name="recents_icon_pack_summary">为面板中的应用程序应用自定义图标包</string>
-  <string name="no_iconpacks_summary">没有已安装的图标包</string>
-  <string name="dialog_pick_iconpack_title">选择图标包</string>
-  <string name="default_iconpack_title">默认图标</string>
   <!-- Slim recents -->
   <string name="slim_recents_title">Slim 最近任务视图</string>
   <string name="recents_max_apps_title">最大允许的应用数</string>
@@ -462,6 +459,7 @@
   <string name="torch_long_press_power_timeout_2min">2分钟</string>
   <string name="torch_long_press_power_timeout_5min">5分钟</string>
   <string name="torch_long_press_power_timeout_10min">10分钟</string>
+  <!-- Screeshot editor options -->
   <string name="screenshot_edit_app">屏幕截图编辑器</string>
   <string name="screenshot_edit_app_summary">选择在点击屏幕截图通知编辑按钮时应该启动的应用程序</string>
   <string name="screenshot_edit_app_no_editor">没有可用的图像编辑器</string>
@@ -641,24 +639,8 @@
   <string name="select_custom_app_title">选择应用程序</string>
   <string name="select_custom_activity_title">选择活动</string>
   <string name="profile_applist_title">应用程序</string>
-  <string name="default_string">默认</string>
   <string name="default_settings">初始设置</string>
   <string name="default_settings_summary">AOSP 导航栏</string>
-  <!-- Edge gestures -->
-  <string name="edge_gestures_title">边缘手势</string>
-  <string name="edge_gestures_description">从底部滑动以触发主页手势，按住它以打开最近的手势。从左下角或右下角滑动即可返回。</string>
-  <string name="edge_gestures_summary">使用边缘手势导航。单击以选择选项。</string>
-  <string name="edge_gestures_feedback_duration_title">触摸震动持续时间</string>
-  <string name="edge_gestures_long_press_delay_title">长按操作启动延时</string>
-  <string name="edge_gestures_back_category_title">返回手势</string>
-  <string name="edge_gestures_back_edges_title">触发返回手势</string>
-  <string name="edge_gestures_landscape_back_edges_title">触发横屏返回手势</string>
-  <string name="edge_gestures_back_screen_percent_title">返回手势触发屏幕区域</string>
-  <string name="edge_gestures_back_screen_percent_summary">触发区域: 低于屏幕百分比</string>
-  <string name="edge_gestures_back_show_ui_feedback_title">返回手势动画</string>
-  <string name="edge_gestures_back_show_ui_feedback_summary">使用后退手势时显示边缘上的动画反馈</string>
-  <string name="edge_gestures_back_use_black_arrow_title">后退按钮深色颜色</string>
-  <string name="edge_gestures_back_use_black_arrow_summary">显示黑色后退按钮而不是白色版本</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">选择活动</string>
   <string name="action_entry_default_action">默认设置</string>
@@ -998,9 +980,6 @@
   <string name="chooser_activity_blacklist_cat_title">黑名单</string>
   <string name="chooser_activity_blacklist_pref_title">添加应用程序</string>
   <string name="chooser_activity_blacklist_pref_summary">点击此处添加应用, 点击已添加的应用程序来删除</string>
-  <string name="profile_choose_app">选择应用</string>
-  <string name="dialog_delete_title">删除</string>
-  <string name="dialog_delete_message">移除选中的项目？</string>
   <string name="headsup_activity_blacklist_title">HeadsUp 通知黑名单</string>
   <string name="headsup_activity_blacklist_summary">应用程序不允许显示 headsup 通知</string>
   <string name="headsup_activity_blacklist_cat_title">黑名单</string>
@@ -1057,4 +1036,7 @@
   <string name="app_circle_bar_appchooser_pref_summary">点按此处即可添加，点按列表中的任意应用即可将其删除。\n默认情况下会显示电话，通讯录和设置，此时不添加任何应用。</string>
   <string name="app_circle_bar_show_trigger_title">显示触发器区域</string>
   <string name="app_circle_bar_show_trigger_summary">启用以显示为环形应用栏启动器配置的触发区域。</string>
+  <!--OmniGesture-->
+  <string name="use_bottom_gesture_title">向上滑动手势</string>
+  <string name="use_bottom_gesture_summary">可用的手势：\n\n返回\n-向左或向右滑动\n\n主页\n-向上滑动中心\n\n最近的应用程序\n-向上滑动并按住\n\n长按主页\n-短按禁用导航栏的情况下向上滑动并保持在中心\n\n\nWorks中</string>
 </resources>

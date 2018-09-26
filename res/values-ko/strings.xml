@@ -70,12 +70,15 @@
   <string name="smart_pulldown_none">알림 없음</string>
   <string name="smart_pulldown_dismissable">모든 알림 제거</string>
   <string name="smart_pulldown_ongoing">진행중인 알림 없음</string>
+  <string name="smart_pulldown_summary">%1$s개 이상의 알림이 있으면 빠른 설정을 표시합니다</string>
+  <string name="smart_pulldown_none_summary">표시할 알림이 없으면 빠른 설정을 표시합니다</string>
   <!-- Double tap to sleep on status bar -->
   <string name="status_bar_double_tap_to_sleep_title">잠금 화면을 탭하여 절전 모드로 들어갑니다.</string>
   <string name="status_bar_double_tap_to_sleep_summary">상태표시줄을 두 번 두드려 화면을 끕니다.</string>
   <!-- Statusbar Clock options -->
   <string name="status_bar_clock_title">날짜 및 시간 설정</string>
   <string name="status_bar_show_clock_title">날짜와 시간 표시</string>
+  <string name="clock_title_enable">정렬</string>
   <string name="right_clock">오른쪽 시계</string>
   <string name="center_clock">가운데에 시간 표시</string>
   <string name="left_clock">왼쪽에 시간 표시</string>
@@ -86,6 +89,7 @@
   <string name="am_pm_clock_normal">보통 글꼴 크기</string>
   <string name="am_pm_clock_small">작은 글꼴 크기</string>
   <string name="am_pm_clock_none">표시 안 함</string>
+  <string name="clock_date_display">날짜</string>
   <string name="clock_date_display_summary">시계 앞에 사용자 지정 날짜</string>
   <string name="clock_date_style">날짜 형식</string>
   <string name="clock_date_position">날짜 위치</string>
@@ -113,6 +117,8 @@
   <string name="status_bar_logo_position_right">오른쪽</string>
   <string name="status_bar_logo_position_left">왼쪽</string>
   <string name="status_bar_logo_style_title">종류</string>
+  <string name="status_bar_logo_style_aicp">AICP</string>
+  <string name="status_bar_logo_style_android">안드로이드</string>
   <string name="status_bar_logo_style_apple">사과</string>
   <string name="status_bar_logo_style_ios">iOS</string>
   <string name="status_bar_logo_style_emoticon">이모티콘</string>
@@ -149,10 +155,14 @@
   <string name="status_bar_icons_category_title">아이콘</string>
   <string name="status_bar_others_category_title">기타</string>
   <!-- Show 4G instead of LTE -->
+  <string name="show_4g_title">4G 표시</string>
+  <string name="show_4g_summary">LTE 신호 아이콘 대신 4G 표시</string>
   <!-- Notifications -->
+  <string name="notifications_title">알림</string>
   <string name="notifications_summary">확장된 알림 설정</string>
   <!-- Heads up -->
   <string name="notification_heads_up_title">헤드업 알림</string>
+  <string name="notification_heads_up_summary">팝업 알림 허용</string>
   <!-- Notification guts kill app button -->
   <string name="notification_guts_kill_app_button_title">앱 종료 버튼</string>
   <string name="notification_guts_kill_app_button_summary">알림을 길게 누르면 앱 종료 버튼을 표시합니다</string>
@@ -160,6 +170,8 @@
   <string name="incall_notifications_vibrate_title">덜 성가신 전화 알림</string>
   <string name="incall_notifications_vibrate_summary">소리를내는 대신 부드럽게 진동하고 알림이 푸시됩니다.</string>
   <!-- Brightness slider settings -->
+  <string name="brightness_slider_settings_title">밝기 슬라이더 설정</string>
+  <string name="brightness_slider_switch">빠른 설정에서 밝기 슬라이더 표시</string>
   <string name="brightness_icon_title">밝기 아이콘</string>
   <string name="brightness_icon_summary">밝기 조절 슬라이더 왼쪽에 자동 밝기 조절 아이콘을 표시합니다</string>
   <string name="brightness_icon_position_title">밝기 조절 아이콘 위치</string>
@@ -168,36 +180,63 @@
   <!-- Battery Styles -->
   <string name="battery_style_title">배터리 아이콘 스타일</string>
   <string name="battery_style_summary">상태 표시 줄의 아이콘 모양 변경</string>
+  <string name="battery_style_port">세로 모드</string>
+  <string name="battery_style_land">가로 모드</string>
+  <string name="battery_style_circle">원 아이콘</string>
   <string name="battery_style_dotted_circle">점선 원</string>
+  <string name="battery_style_square">스퀘어</string>
+  <string name="battery_style_text">텍스트</string>
   <string name="battery_style_hidden">아이콘 숨김</string>
   <!-- Notification count -->
   <string name="status_bar_notif_count_title">알림 갯수 표시</string>
+  <string name="status_bar_notif_count_summary">읽지 않은 알림 숫자 표시</string>
   <!-- Quick settings -->
   <string name="quick_settings_title">빠른 설정</string>
   <string name="quick_settings_summary">빠른 설정 모양 수정</string>
   <!-- Disable music track title in QS tile -->
+  <string name="qs_music_tile_track_optional_title">음악 제목 타일</string>
   <string name="qs_music_tile_track_optional_summary">빠른 설정 타일에 음악 제목을 표시합니다</string>
   <!-- Small quick settings scroller -->
   <string name="qqs_scroll_title">작은 빠른설정 타일을 스크롤</string>
   <string name="qqs_scroll_summary">작은 빠른설정 타일의 스크롤을 허용합니다</string>
   <!-- QS rows and columns -->
+  <string name="qs_rows_portrait_title">세로에서 타일 행 수</string>
+  <string name="qs_rows_landscape_title">가로에서 타일 행 수</string>
+  <string name="qs_columns_portrait_title">세로에서 타일 열 수</string>
+  <string name="qs_columns_landscape_title">가로에서 타일 열 수</string>
   <!-- QS tiles mini mode -->
+  <string name="qs_show_mini_title">미니 모드</string>
   <!-- QS footer warnings -->
+  <string name="qs_footer_warnings_title">빠른 설정에 경고 표시</string>
   <string name="qs_footer_warnings_summary">네트워크가 외부 앱이나 VPN에 의해 모니터링 될 때 빠른 설정 패널 하단에 경고를 표시합니다</string>
   <!-- QS footer Running Services icon -->
   <string name="qs_footer_services_title">실행중인 서비스 표시 아이콘</string>
+  <string name="qs_footer_services_summary">빠른 설정 바닥 글에서 서비스 실행 아이콘 표시</string>
   <!-- QS footer Settings icon -->
+  <string name="qs_footer_settings_title">설정 표시 아이콘</string>
+  <string name="qs_footer_settings_summary">빠른 설정 바닥 글에 표시 설정 아이콘</string>
   <!-- QS tiles title visibility -->
+  <string name="qs_tile_title_visibility_title">타일 ​​제목 표시</string>
+  <string name="qs_tile_title_visibility_summary">선택 하면 타일 아래 타이틀 표시 합니다</string>
   <!-- QS carrier text visibility -->
+  <string name="qs_hide_carriertext_title">이동 통신사 텍스트 숨기기</string>
   <!-- QS Headers -->
+  <string name="status_bar_custom_header_title">활성화</string>
   <string name="daylight_header_pack_title">헤더 이미지 모음</string>
+  <string name="status_bar_custom_header_shadow_title">헤더 이미지 밝기</string>
   <string name="status_bar_custom_header_shadow_summary">밝은 이미지에서의 가시성을 높여줍니다</string>
   <string name="static_header_provider_title">고정 이미지</string>
   <string name="daylight_header_provider_title">이미지 컬렉션</string>
   <string name="custom_header_provider_title">헤더 제공자</string>
+  <string name="custom_header_browse_title">설치된 헤더를 확인합니다</string>
+  <string name="custom_header_browse_summary">이미지를 고정 모드에 사용합니다</string>
   <string name="custom_header_browse_summary_new">모든 사용 가능한 헤더 컬렉션을 찾아보기</string>
+  <string name="custom_header_pick_title">헤더 이미지 선택</string>
+  <string name="custom_header_pick_summary">고정 모드에 사용할 이미지 선택</string>
+  <string name="style_enabled_summary">사용자 정의 헤더 이미지</string>
   <string name="style_disabled_summary">사용자 정의 헤더 이미지 사용않함</string>
   <string name="header_provider_disabled">비활성화됨</string>
+  <string name="custom_header_title">사용자 지정 헤더 이미지</string>
   <string name="file_header_select_title">이미지 선택</string>
   <string name="file_header_select_summary">사용자 지정 이미지 선택</string>
   <string name="file_header_provider_title">사용자 지정 이미지</string>
@@ -223,13 +262,18 @@
   <string name="qs_tile_animation_interpolator_anticipateInterpolator">예측 보간</string>
   <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">예측 및 overshoot 보간</string>
   <!-- Recents -->
+  <string name="recents_title">최근 실행 목록</string>
   <string name="recents_summary">최근 애플 리 케이 션 화면 모양 편집</string>
+  <string name="stock_recents_category">순정 최신</string>
   <!-- Recents panel settings -->
+  <string name="show_clear_all_recents_button_title">모두 지우기 버튼 활성화</string>
+  <string name="show_clear_all_recents_button_summary">회신을 사용할 때 모두 지우기 단추 표시</string>
+  <string name="recents_clear_all_location_title">버튼 위치</string>
+  <string name="recents_clear_all_location_top_right">오른쪽 상단</string>
   <!-- Recents Membar -->
   <!-- Stock recents icon pack -->
   <string name="recents_icon_pack_title">아이콘 팩</string>
   <string name="recents_icon_pack_summary">패널의 앱에 사용자 지정 아이콘을 적용합니다</string>
-  <string name="no_iconpacks_summary">설치된 아이콘팩이 없습니다.</string>
   <!-- Slim recents -->
   <string name="slim_recents_title">슬림 최근 앱</string>
   <string name="recents_max_apps_title">최대로 허용된 앱 개수</string>
@@ -343,6 +387,7 @@
   <string name="torch_long_press_power_timeout_title">자동으로 손전등 끄기</string>
   <string name="torch_long_press_power_timeout_never">안함</string>
   <string name="torch_long_press_power_timeout_2min">2 분</string>
+  <!-- Screeshot editor options -->
   <string name="screenshot_edit_app">스크린 샷 편집기</string>
   <string name="screenshot_edit_app_summary">스크린 샷 수정 버튼을 누를 때 실행할 앱을 선택하십시오.</string>
   <string name="screenshot_edit_app_no_editor">사용 가능한 이미지 편집기 없음</string>
@@ -415,6 +460,7 @@
   <string name="aicp_ota_summary">새로운 AICP 업데이트 확인</string>
   <string name="stats_summary">익명 통계를 위한 송/수신 선택</string>
   <string name="no_root_title">루팅되지 않음</string>
+  <string name="no_root_summary">더 많은 기능을 원한다면, 장치 루트권한이 필요합니다</string>
   <!-- Other / general purpose -->
   <string name="default_string">기본</string>
   <string name="on">켜기</string>
@@ -440,6 +486,9 @@
   <string name="ticker_animation_mode_alpha_fade">서서히 사라지기</string>
   <string name="ticker_animation_mode_scroll">스크롤</string>
   <!-- Navigation-->
+  <string name="navigation_title">내비게이션 </string>
+  <string name="navigation_description">상호 배타적 인 탐색 모드. 활성화하면 자동으로 다른 것을 비활성화합니다.</string>
+  <string name="navigation_summary">주식 / 스마트 바 / Fling / 제스처</string>
   <!-- Navigation bar -->
   <!-- DUI -->
   <string name="navigation_bar_left_summary">가로화면 모드에서 화면 왼쪽에 내비게이션 바를 배치</string>
@@ -449,9 +498,7 @@
   <string name="select_custom_app_title">사용자 정의 앱 선택</string>
   <string name="select_custom_activity_title">사용자 지정 활동 선택</string>
   <string name="profile_applist_title">애플리케이션</string>
-  <string name="default_string">기본</string>
   <string name="default_settings_summary">AOSP 네비게이션 바</string>
-  <!-- Edge gestures -->
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <!-- Fling -->
   <string name="fling_back_home_policy">Back and Home은 항상 설정해야합니다. 뒤로 또는 홈 할당을 변경하려면 먼저 원하는 할당을 설정하십시오. \ n \ n 또한 두 번 탭 동작을 설정하면 단일 탭이 약간 지연됩니다.</string>
@@ -474,6 +521,11 @@
   <string name="fling_longpress_timeout_label_left">지연시간 짧게</string>
   <string name="fling_longpress_timeout_label_right">지연시간 길게</string>
   <string name="fling_keyboard_cursors_move_summary">키보드가 나타나면 왼쪽 또는 오른쪽을 길게 눌러 텍스트 커서를 왼쪽이나 오른쪽으로 이동하십시오. \ n 커서를 계속 움직이려면 길게 누르십시오. 막대를 한 번 누르면 홈 화면으로 이동합니다.</string>
+  <string name="fling_factory_reset_confirm">Fling 초기 설정으로 재설정 하시겠습니까?</string>
+  <string name="fling_config_name_edit_dialog_title">Fling 프로파일 이름</string>
+  <string name="fling_config_dialog_title">Fling 프로파일</string>
+  <string name="fling_config_backup_error_toast">Fling 프로파일 저장 중 오류 발생 하였습니다</string>
+  <string name="fling_config_restore_error_toast">Fling 프로파일을 복원하는 중 오류가 발생했습니다.</string>
   <!-- Pulse navigation bar music visualizer -->
   <string name="pulse_settings">펄스</string>
   <string name="pulse_settings_summary">내비게이션 바에 오디오 시각화 표시</string>
@@ -629,18 +681,40 @@
   <!-- Heads up snooze -->
   <string name="heads_up_category">헤드업 알림</string>
   <string name="heads_up_snooze_disabled">비활성화됨</string>
+  <string name="heads_up_snooze_1min">1 분 (기본값)</string>
   <!-- Heads up timeout -->
+  <string name="heads_up_time_out_5sec">5 초 (기본값)</string>
   <!-- Activity Blacklist -->
   <string name="chooser_activity_blacklist_title">Chooser 활동 블랙리스트</string>
   <string name="chooser_activity_blacklist_summary">공유 버튼을 탭할 때 표시되지 않는 앱</string>
   <string name="chooser_activity_blacklist_pref_summary">추가하려면 여기를 탭하고, 추가 된 앱을 탭하여 제거하십시오.</string>
-  <string name="profile_choose_app">어플을 선택합니다.</string>
+  <string name="headsup_activity_blacklist_title">헤드 업 알림 블랙리스트</string>
+  <string name="headsup_activity_blacklist_summary">애플 리 케이 션 headsup 알림을 표시 수 없습니다</string>
+  <string name="headsup_activity_blacklist_cat_title">블랙리스트</string>
+  <string name="headsup_activity_blacklist_pref_summary">추가하려면 여기를 누르십시오. 목록에서 앱을 탭하여 제거하십시오.</string>
   <!-- System Behavior category strings -->
   <string name="system_ss_category_title">화면 캡처 설정</string>
   <!-- QuickSettings Panel Transparency -->
   <!-- Hostname setting -->
+  <string name="device_hostname">장치 호스트명</string>
+  <string name="device_hostname_summary">동적 IP 주소 환경에서이 장치에 연결할 때 유용한 IP 해상도로 사용되는 장치 호스트 이름 수정</string>
   <!-- Gestures -->
+  <string name="gestures_preference_title">제스쳐</string>
   <!-- Carbon gestures -->
+  <string name="carbon_gestures_fingers_title">손가락 제스처 (기본값 2)</string>
+  <string name="carbon_gesture_disabled">비활성화됨</string>
+  <string name="carbon_gesture_volume_mute">볼륨 음소거</string>
+  <string name="carbon_gesture_screenshot">스크린샷</string>
   <!-- Disable FC notifications -->
+  <string name="disable_fc_notifications_summary">이렇게하면 강제 종료 알림이 모두 숨겨집니다. 주의해서 사용하세요</string>
   <!-- Circle app bar -->
+  <string name="category_app_circle_bar_title">원형바 사용</string>
+  <string name="app_circle_bar_title">원형 앱 런처</string>
+  <string name="app_circle_bar_summary">화면 오른쪽을 터치후에 원형 앱 런쳐 표시</string>
+  <string name="app_circle_bar_included_apps_title">선택한 앱</string>
+  <string name="app_circle_bar_included_apps_summary">앱 서클 바용으로 선택된 앱</string>
+  <string name="app_circle_bar_trigger_width_title">트리거 영역 너비</string>
+  <string name="app_circle_bar_trigger_top_title">트리거 영역 상단</string>
+  <string name="app_circle_bar_trigger_height_title">트리거 영역 높이</string>
+  <!--OmniGesture-->
 </resources>

@@ -287,9 +287,6 @@
   <!-- Stock recents icon pack -->
   <string name="recents_icon_pack_title">Balíček ikon</string>
   <string name="recents_icon_pack_summary">Použít vlastní balíček ikon pro aplikace v panelu</string>
-  <string name="no_iconpacks_summary">Není nainstalován žádný balíček ikon</string>
-  <string name="dialog_pick_iconpack_title">Vyberte balíček ikon</string>
-  <string name="default_iconpack_title">Výchozí ikony</string>
   <!-- Slim recents -->
   <string name="slim_recents_title">Slim nedávné aplikace</string>
   <string name="recents_max_apps_title">Maximum povolených aplikací</string>
@@ -461,6 +458,7 @@
   <string name="torch_long_press_power_timeout_2min">2 minuty</string>
   <string name="torch_long_press_power_timeout_5min">5 minut</string>
   <string name="torch_long_press_power_timeout_10min">10 minut</string>
+  <!-- Screeshot editor options -->
   <string name="screenshot_edit_app">Editor snímků obrazovky</string>
   <string name="screenshot_edit_app_summary">Vyberte, která aplikace by se měla spustit při stisknutí tlačítka \"Upravit\" v oznámení na obrazovce</string>
   <string name="screenshot_edit_app_no_editor">Není k dispozici žádný editor obrázků</string>
@@ -640,24 +638,8 @@
   <string name="select_custom_app_title">Vybrat vlastní aplikaci</string>
   <string name="select_custom_activity_title">Vybrat vlastní aktivitu</string>
   <string name="profile_applist_title">Aplikace</string>
-  <string name="default_string">Výchozí</string>
   <string name="default_settings">Výchozí nastavení</string>
   <string name="default_settings_summary">Výchozí navigační panel AOSP</string>
-  <!-- Edge gestures -->
-  <string name="edge_gestures_title">Gesta na okraji</string>
-  <string name="edge_gestures_description">Přejetím prstem zespodu nahoru se spustí gesto Domů. Pokud necháte prst stlačený, otevřou se Nedávné. Přejetím prstu zespodu doleva nebo doprava se vrátíte zpět.</string>
-  <string name="edge_gestures_summary">Navigace pomocí gest na okraji. Klikněte pro možnosti.</string>
-  <string name="edge_gestures_feedback_duration_title">Doba trvání hmatové odezvy</string>
-  <string name="edge_gestures_long_press_delay_title">Zpoždění, než se spustí akce po dlouhém stisknutí</string>
-  <string name="edge_gestures_back_category_title">Gesto zpět</string>
-  <string name="edge_gestures_back_edges_title">Spustit gesto zpět od</string>
-  <string name="edge_gestures_landscape_back_edges_title">Spustit gesto zpět od (v režimu na šířku)</string>
-  <string name="edge_gestures_back_screen_percent_title">Gesto zpět musí být nastaveno pod tímto procentním rozměrem obrazovky</string>
-  <string name="edge_gestures_back_screen_percent_summary">Aktivační oblast: menší než % obrazovky</string>
-  <string name="edge_gestures_back_show_ui_feedback_title">Animace gesta Zpět</string>
-  <string name="edge_gestures_back_show_ui_feedback_summary">Zobrazit animace na okrajích při použití gesta Zpět</string>
-  <string name="edge_gestures_back_use_black_arrow_title">Tmavá barva tlačítka Zpět</string>
-  <string name="edge_gestures_back_use_black_arrow_summary">Zobrazit černé tlačítko Zpět namísto bílého</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Vyberte akci</string>
   <string name="action_entry_default_action">Výchozí nastavení</string>
@@ -997,9 +979,6 @@
   <string name="chooser_activity_blacklist_cat_title">Černá listina</string>
   <string name="chooser_activity_blacklist_pref_title">Přidat aplikaci</string>
   <string name="chooser_activity_blacklist_pref_summary">Klepnutím sem přidáte, klepnutím na přidanou aplikaci odstraníte</string>
-  <string name="profile_choose_app">Vybrat aplikaci</string>
-  <string name="dialog_delete_title">Odstranit</string>
-  <string name="dialog_delete_message">Odstranit vybranou položku?</string>
   <string name="headsup_activity_blacklist_title">Černá listina plovoucích oznámení</string>
   <string name="headsup_activity_blacklist_summary">Aplikacím není dovoleno zobrazovat plovoucí oznámení</string>
   <string name="headsup_activity_blacklist_cat_title">Černá listina</string>
@@ -1056,4 +1035,7 @@
   <string name="app_circle_bar_appchooser_pref_summary">Klepnutím sem přidáte, klepnutím na kteroukoli aplikaci v seznamu ji odstraníte.\nTelefon, Kontakty a Nastavení se zobrazují jako výchozí, pokud není přidána žádná aplikace.</string>
   <string name="app_circle_bar_show_trigger_title">Zobrazit aktivační oblast</string>
   <string name="app_circle_bar_show_trigger_summary">Povolit zobrazení nastavené aktivační oblasti pro kruhový spouštěč aplikací.</string>
+  <!--OmniGesture-->
+  <string name="use_bottom_gesture_title">Gesta přejetím nahoru</string>
+  <string name="use_bottom_gesture_summary">Dostupná gesta:\n\nZpět\n- Přejetím nahoru na levé nebo pravé straně\n\nDomů\n- Přejetím nahoru uprostřed\n\nNedávné aplikace\n- Přejetím nahoru uprostřed a přidržením\n\nDlouhý stisk tlačítka Domů\n- Krátkým přejetím nahoru a přidržením uprostřed\n\n\nNejlíp funguje se zakázaným navigačním panelem.</string>
 </resources>

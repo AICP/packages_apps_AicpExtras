@@ -288,9 +288,6 @@
   <!-- Stock recents icon pack -->
   <string name="recents_icon_pack_title">Pacchetto icone</string>
   <string name="recents_icon_pack_summary">Applica una icon pack per le app del pannello</string>
-  <string name="no_iconpacks_summary">Nessun icon pack installato</string>
-  <string name="dialog_pick_iconpack_title">Scegli un icon pack</string>
-  <string name="default_iconpack_title">Icone di default</string>
   <!-- Slim recents -->
   <string name="slim_recents_title">Slim recents</string>
   <string name="recents_max_apps_title">Numero massimo di app</string>
@@ -462,6 +459,7 @@
   <string name="torch_long_press_power_timeout_2min">2 minuti</string>
   <string name="torch_long_press_power_timeout_5min">5 minuti</string>
   <string name="torch_long_press_power_timeout_10min">10 minuti</string>
+  <!-- Screeshot editor options -->
   <string name="screenshot_edit_app">Modifica screenshot</string>
   <string name="screenshot_edit_app_summary">Scegli quale applicazione deve essere avviata quando tocchi sul pulsante di modifica nella notifica dello screenshot</string>
   <string name="screenshot_edit_app_no_editor">Nessuna immagine disponibile per la modifica</string>
@@ -641,24 +639,8 @@
   <string name="select_custom_app_title">Seleziona applicazione</string>
   <string name="select_custom_activity_title">Seleziona attività</string>
   <string name="profile_applist_title">Applicazioni</string>
-  <string name="default_string">Predefinito</string>
   <string name="default_settings">Impostazioni stock</string>
   <string name="default_settings_summary">Barra di navigazione AOSP stock</string>
-  <!-- Edge gestures -->
-  <string name="edge_gestures_title">Gesti sul bordo</string>
-  <string name="edge_gestures_description">Scorri dal basso per attivare il gesto Home, tieni premuto per aprire i recenti. Scorri dal basso a sinistra o in basso a destra per tornare indietro.</string>
-  <string name="edge_gestures_summary">Naviga utilizzando i gesti sul bordo. Clicca per le opzioni.</string>
-  <string name="edge_gestures_feedback_duration_title">Durata della vibrazione</string>
-  <string name="edge_gestures_long_press_delay_title">Ritarda fino all\'avvio dell\'azione della pressione prolungata</string>
-  <string name="edge_gestures_back_category_title">Gesto indietro</string>
-  <string name="edge_gestures_back_edges_title">Esegui il gesto indietro da</string>
-  <string name="edge_gestures_landscape_back_edges_title">Esegui il gesto indietro in orizzontale da</string>
-  <string name="edge_gestures_back_screen_percent_title">Il gesto indietro deve iniziare al di sotto di questa percentuale dello schermo</string>
-  <string name="edge_gestures_back_screen_percent_summary">Area di attivazione: inferiore al % dello schermo</string>
-  <string name="edge_gestures_back_show_ui_feedback_title">Animazione gesto indietro</string>
-  <string name="edge_gestures_back_show_ui_feedback_summary">Mostra il feedback animato sui bordi quando viene utilizzato il gesto indietro</string>
-  <string name="edge_gestures_back_use_black_arrow_title">Pulsante indietro nero</string>
-  <string name="edge_gestures_back_use_black_arrow_summary">Mostra il pulsante indietro nero invece della versione bianca</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Scegli un\'azione</string>
   <string name="action_entry_default_action">Impostazioni predefinite</string>
@@ -998,9 +980,6 @@
   <string name="chooser_activity_blacklist_cat_title">Lista nera</string>
   <string name="chooser_activity_blacklist_pref_title">Aggiungi applicazione</string>
   <string name="chooser_activity_blacklist_pref_summary">Tocca qui per aggiungere, tocca l\'app aggiunta per rimuoverla</string>
-  <string name="profile_choose_app">Scegli app</string>
-  <string name="dialog_delete_title">Cancella</string>
-  <string name="dialog_delete_message">Rimuovere l\'elemento selezionato?</string>
   <string name="headsup_activity_blacklist_title">Lista nera notifiche fluttuanti</string>
   <string name="headsup_activity_blacklist_summary">Le app non sono autorizzate a mostrare le notifiche fluttuanti</string>
   <string name="headsup_activity_blacklist_cat_title">Lista nera</string>
@@ -1057,4 +1036,7 @@
   <string name="app_circle_bar_appchooser_pref_summary">Tocca qui per aggiungere, tocca qualsiasi app nell\'elenco per rimuoverlo. \Telefono, Contatti e Impostazioni sono visualizzati per impostazione predefinita, quando non viene aggiunta alcuna app.</string>
   <string name="app_circle_bar_show_trigger_title">Visualizza l\'area di attivazione</string>
   <string name="app_circle_bar_show_trigger_summary">Abilita per visualizzate l\'area di attivazione configurata per l\'avvio della barra delle app in cerchio.</string>
+  <!--OmniGesture-->
+  <string name="use_bottom_gesture_title">Gesti di scorrimento rapido</string>
+  <string name="use_bottom_gesture_summary">Gesti disponibili: \n\nIndietro\n- Scorri verso l\'alto sul lato sinistro o destro\n\nHome\n- Scorri verso l\'alto il centro\n\nIppenti recenti\n- Scorri verso l\'alto il centro e tieni premuto\n\nLungo premi home\n- Breve scorri verso l\'alto e tieni premuto al centro\n\n\nLavora meglio con la barra di navigazione disabilitata.</string>
 </resources>

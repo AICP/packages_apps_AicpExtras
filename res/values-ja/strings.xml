@@ -287,9 +287,6 @@
   <!-- Stock recents icon pack -->
   <string name="recents_icon_pack_title">アイコンパック</string>
   <string name="recents_icon_pack_summary">パネルのアプリにカスタムアイコンパックを適用します</string>
-  <string name="no_iconpacks_summary">アイコンパックがインストールされていません</string>
-  <string name="dialog_pick_iconpack_title">アイコンパックを選択</string>
-  <string name="default_iconpack_title">デフォルト</string>
   <!-- Slim recents -->
   <string name="slim_recents_title">Slim Recents</string>
   <string name="recents_max_apps_title">表示するアプリの最大数</string>
@@ -461,6 +458,7 @@
   <string name="torch_long_press_power_timeout_2min">2分</string>
   <string name="torch_long_press_power_timeout_5min">5分</string>
   <string name="torch_long_press_power_timeout_10min">10分</string>
+  <!-- Screeshot editor options -->
   <string name="screenshot_edit_app">スクリーンショットエディター</string>
   <string name="screenshot_edit_app_summary">スクリーンショット通知の編集ボタンをタップした時に起動するアプリを選択します</string>
   <string name="screenshot_edit_app_no_editor">利用可能な画像エディターがありません</string>
@@ -640,24 +638,8 @@
   <string name="select_custom_app_title">アプリを選択</string>
   <string name="select_custom_activity_title">アクティビティを選択</string>
   <string name="profile_applist_title">アプリ</string>
-  <string name="default_string">デフォルト</string>
   <string name="default_settings">ナビゲーションバーの設定</string>
   <string name="default_settings_summary">AOSP のナビゲーションバー</string>
-  <!-- Edge gestures -->
-  <string name="edge_gestures_title">エッジジェスチャー</string>
-  <string name="edge_gestures_description">下からスワイプしてホームジェスチャーを起動します。 アプリ履歴を開くには押したままにしておきます。 左下または右下からスワイプして戻ります。</string>
-  <string name="edge_gestures_summary">エッジジェスチャーを使います。タップでオプションを表示します。</string>
-  <string name="edge_gestures_feedback_duration_title">振動フィードバックの長さ</string>
-  <string name="edge_gestures_long_press_delay_title">長押し開始までの待機時間</string>
-  <string name="edge_gestures_back_category_title">戻るジェスチャー</string>
-  <string name="edge_gestures_back_edges_title">戻るジェスチャーを始める場所</string>
-  <string name="edge_gestures_landscape_back_edges_title">横向きで戻るジェスチャーを始める場所</string>
-  <string name="edge_gestures_back_screen_percent_title">戻るジェスチャーを以下で指定した画面の割合でのみ開始します</string>
-  <string name="edge_gestures_back_screen_percent_summary">トリガー領域を画面のこの割合以下にする</string>
-  <string name="edge_gestures_back_show_ui_feedback_title">戻るジェスチャーアニメーション</string>
-  <string name="edge_gestures_back_show_ui_feedback_summary">戻るジェスチャーを使った時のエッジアニメーションを表示します</string>
-  <string name="edge_gestures_back_use_black_arrow_title">ダークカラーの戻るボタン</string>
-  <string name="edge_gestures_back_use_black_arrow_summary">白色の代わりに黒色の戻るボタンを表示します</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">アクションを選択</string>
   <string name="action_entry_default_action">デフォルトの設定</string>
@@ -997,9 +979,6 @@
   <string name="chooser_activity_blacklist_cat_title">ブラックリスト</string>
   <string name="chooser_activity_blacklist_pref_title">アプリを追加</string>
   <string name="chooser_activity_blacklist_pref_summary">ここをタップするとアプリを追加し、追加済みアプリをタップすると削除できます</string>
-  <string name="profile_choose_app">アプリを選択</string>
-  <string name="dialog_delete_title">削除</string>
-  <string name="dialog_delete_message">選択した項目を削除しますか？</string>
   <string name="headsup_activity_blacklist_title">ヘッドアップ通知のブラックリスト</string>
   <string name="headsup_activity_blacklist_summary">ヘッドアップ通知の表示を許可しないアプリのリストです</string>
   <string name="headsup_activity_blacklist_cat_title">ブラックリスト</string>
@@ -1056,4 +1035,7 @@
   <string name="app_circle_bar_appchooser_pref_summary">ここをタップして追加し、リストにあるアプリをタップすると削除します。\n何もアプリが追加されていないと、デフォルトで電話・連絡先・設定が表示されます。</string>
   <string name="app_circle_bar_show_trigger_title">トリガー領域の表示</string>
   <string name="app_circle_bar_show_trigger_summary">有効にするとアプリサークルバーランチャーのトリガー領域を表示します</string>
+  <!--OmniGesture-->
+  <string name="use_bottom_gesture_title">上スワイプジェスチャー</string>
+  <string name="use_bottom_gesture_summary">使用可能なジェスチャー：\n\n戻る\n- 右か左の端で上にスワイプ\n\nホーム\n- 中央で上にスワイプ\n\nアプリ履歴\n- 中央で上にスワイプしてホールド\n\nホーム長押し\n- 中央で上に短くスワイプしてホールド\n\n\nナビゲーションバーを無効化することをおすすめします。</string>
 </resources>

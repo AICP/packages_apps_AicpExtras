@@ -288,9 +288,6 @@
   <!-- Stock recents icon pack -->
   <string name="recents_icon_pack_title">Ikoncsomag</string>
   <string name="recents_icon_pack_summary">Egyéni ikoncsomag alkalmazása a panelen szereplő alkalmazásokhoz</string>
-  <string name="no_iconpacks_summary">Nincsenek telepítve ikoncsomagok</string>
-  <string name="dialog_pick_iconpack_title">Ikoncsomag választása</string>
-  <string name="default_iconpack_title">Alapértelmezett ikonok</string>
   <!-- Slim recents -->
   <string name="slim_recents_title">Slim előzmények</string>
   <string name="recents_max_apps_title">Max engedélyezett alkalmazás</string>
@@ -462,6 +459,7 @@
   <string name="torch_long_press_power_timeout_2min">2 perc</string>
   <string name="torch_long_press_power_timeout_5min">5 perc</string>
   <string name="torch_long_press_power_timeout_10min">10 perc</string>
+  <!-- Screeshot editor options -->
   <string name="screenshot_edit_app">Képernyőmentés-szerkesztő</string>
   <string name="screenshot_edit_app_summary">Válassza ki, melyik alkalmazás induljon el, ha megérinti a Képernyőmentés-szerkesztő gombot</string>
   <string name="screenshot_edit_app_no_editor">Nem található képszerkesztő</string>
@@ -641,24 +639,8 @@
   <string name="select_custom_app_title">Egyéni alkalmazás választása</string>
   <string name="select_custom_activity_title">Egyéni tevékenység választása</string>
   <string name="profile_applist_title">Alkalmazások</string>
-  <string name="default_string">Alapértelmezett</string>
   <string name="default_settings">Gyári beállítások</string>
   <string name="default_settings_summary">Gyári (AOSP) navigációs sáv</string>
-  <!-- Edge gestures -->
-  <string name="edge_gestures_title">Az Élvezérlés lehetőségei</string>
-  <string name="edge_gestures_description">Csúsztasson alulról fel a Kezdőképernyő megnyitásához. Csúsztasson alulról és állítsa meg a mozdulatot az Előzményekhez. Csúsztasson alulról balra vagy jobbra a visszalépéshez.</string>
-  <string name="edge_gestures_summary">Navigáljon élvezérlési mozdulatokkal. Kattintson ide a lehetőségekért.</string>
-  <string name="edge_gestures_feedback_duration_title">Érintési visszajelzés hossza</string>
-  <string name="edge_gestures_long_press_delay_title">Késleltetés, amíg a hosszan érintési művelet elindul</string>
-  <string name="edge_gestures_back_category_title">Vissza gesztus</string>
-  <string name="edge_gestures_back_edges_title">Vissza gesztus indítása innen</string>
-  <string name="edge_gestures_landscape_back_edges_title">Vissza gesztus indítása fekvő módban innen</string>
-  <string name="edge_gestures_back_screen_percent_title">A Vissza gesztust a képernyő ennyi százalékos aránya alatt kell indtani</string>
-  <string name="edge_gestures_back_screen_percent_summary">Indítási terület: kisebb, mint a képernyő % százaléka</string>
-  <string name="edge_gestures_back_show_ui_feedback_title">A Vissza gesztus animációja</string>
-  <string name="edge_gestures_back_show_ui_feedback_summary">Jelenítse meg használatkor a Vissza gesztus animációját a széleken</string>
-  <string name="edge_gestures_back_use_black_arrow_title">Sötét színű Vissza gomb</string>
-  <string name="edge_gestures_back_use_black_arrow_summary">Fekete gomb megjelenítése a fehér változat helyett</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Művelet választása</string>
   <string name="action_entry_default_action">Alapértelmezett beállítások</string>
@@ -998,9 +980,6 @@
   <string name="chooser_activity_blacklist_cat_title">Tiltólista</string>
   <string name="chooser_activity_blacklist_pref_title">Alkalmazás hozzáadása</string>
   <string name="chooser_activity_blacklist_pref_summary">Koppintson ide az alkalmazás hozzáadásához, vagy érintse meg az eltávolításához</string>
-  <string name="profile_choose_app">Alkalmazás kiválasztása</string>
-  <string name="dialog_delete_title">Törlés</string>
-  <string name="dialog_delete_message">Eltávolítja a kijelölt elemet?</string>
   <string name="headsup_activity_blacklist_title">Felugró értesítések tiltólistája</string>
   <string name="headsup_activity_blacklist_summary">Azon alkalmazások listája, amelyek nem jeleníthetnek meg felugró értesítéseket</string>
   <string name="headsup_activity_blacklist_cat_title">Tiltólista</string>
@@ -1057,4 +1036,7 @@
   <string name="app_circle_bar_appchooser_pref_summary">Érintse meg itt a hozzáadáshoz, vagy érintsen meg egy alkalmazást az eltávolításhoz.\nA Telefon, a Névjegyek és a Beállítások alapértelmezetten megjelenik akkor is, ha nincs más alkamazás beállítva.</string>
   <string name="app_circle_bar_show_trigger_title">Kapcsolási terület megjelenítése</string>
   <string name="app_circle_bar_show_trigger_summary">Engedélyezi az Alkalmazás-körsáv számára beállított kapcsolási terület megjelenítését.</string>
+  <!--OmniGesture-->
+  <string name="use_bottom_gesture_title">Mozdulatvezérlés felfelé csúsztatással</string>
+  <string name="use_bottom_gesture_summary">Rendelkezésre álló mozdulatvezérlések:\n\nVissza\n- Húzza fel bal vagy jobb oldalon\n\nKezdőoldal\n- Húzza fel középen\n\nElőzmények\n- Húzza fel középen de állítsa meg a mozdulatot\n\nKezdőoldal hosszan nyomása\n- Röviden húzze fel és tartsa nyomva középen\n\n\nJobban működik a Navigációs sáv letiltásával.</string>
 </resources>
