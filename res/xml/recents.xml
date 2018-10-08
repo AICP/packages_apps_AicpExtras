@@ -21,13 +21,19 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/recents_title">
 
-    <!--
-    <PreferenceCategory
-        android:key="stock_recents_category"
-        android:title="@string/stock_recents_category">
+     <PreferenceCategory
+         android:key="stock_recents_category"
+         android:title="@string/stock_recents_category">
+
+    <ListPreference
+        android:key="recents_component"
+        android:title="@string/recents_component_type_title"
+        android:dialogTitle="@string/recents_component_type_title"
+        android:entries="@array/recents_component_type_title_entries"
+        android:defaultValue="0"
+        android:entryValues="@array/recents_component_type_title_values"/>
 
     </PreferenceCategory>
-    -->
 
     <PreferenceCategory
         android:key="alternative_recents_category"
