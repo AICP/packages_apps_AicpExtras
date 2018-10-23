@@ -17,14 +17,45 @@
 
 package com.aicp.extras.fragments;
 
+import android.content.ContentResolver;
+import android.content.Context;
+import android.hardware.fingerprint.FingerprintManager;
+import android.os.Bundle;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
+import android.support.v14.preference.SwitchPreference;
+
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
 public class Lockscreen extends BaseSettingsFragment {
 
+    private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
+
+    private FingerprintManager mFingerprintManager;
+    private SwitchPreference mFingerprintVib;
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.lockscreen;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        PreferenceScreen prefSet = getPreferenceScreen();
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        try {
+            mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        } catch (Exception e) {
+            //ignore
+        }
+        // Fingerprint vibration
+        mFingerprintVib = (SwitchPreference) prefSet.findPreference(FP_SUCCESS_VIBRATION);
+
+        if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()){
+            mFingerprintVib.getParent().removePreference(mFingerprintVib);
+        }
     }
 }
