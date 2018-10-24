@@ -21,4 +21,19 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/other_ui_title">
 
+    <PreferenceCategory
+        android:key="category_theming"
+        android:title="@string/theming_title">
+
+        <Preference
+            android:key="theme_select_activity"
+            android:title="@string/theme_select_title"
+            android:summary="@string/theme_select_summary"
+            android:persistent="false" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="org.omnirom.omnistyle"
+                    android:targetClass="org.omnirom.omnistyle.BrowseThemesActivity" />
+        </Preference>
+    </PreferenceCategory>
+
 </PreferenceScreen>
