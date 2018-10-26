@@ -27,4 +27,10 @@
         android:summary="@string/qs_music_tile_track_optional_summary"
         android:defaultValue="false"/>
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="qs_tile_title_visibility"
+        android:title="@string/qs_tile_title_visibility_title"
+        android:summary="@string/qs_tile_title_visibility_summary"
+        android:defaultValue="true"/>
+
 </PreferenceScreen>
