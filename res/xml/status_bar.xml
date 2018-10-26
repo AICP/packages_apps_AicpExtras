@@ -21,6 +21,12 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/status_bar_title">
 
+    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+        android:key="statusbar_battery_bar"
+        android:title="@string/battery_bar_title"
+        android:defaultValue="false"
+        android:fragment="com.aicp.extras.fragments.BatteryBar" />
+
    <PreferenceCategory
         android:key="statusbar_icons_category"
         android:title="@string/status_bar_icons_category_title">

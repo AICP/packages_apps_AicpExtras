@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2018 Android Ice Cold Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    android:title="@string/battery_bar_title">
+
+    <com.aicp.gear.preference.SystemSettingColorBlendPreference
+        android:title="@string/battery_bar_color_title"
+        android:summary="@string/battery_bar_color_summary"
+        aicpextras:keyColorStart="statusbar_battery_bar_battery_low_color"
+        aicpextras:keyColorEnd="statusbar_battery_bar_color"
+        aicpextras:keyBlendReverse="statusbar_battery_bar_blend_color_reverse"
+        aicpextras:defaultValueColorStart="#ffffffff"
+        aicpextras:defaultValueColorEnd="#ffffffff"
+        aicpextras:previewStartText="@string/battery_blend_start"
+        aicpextras:previewBetweenText="@string/battery_blend_between"
+        aicpextras:previewEndText="@string/battery_blend_end" />
+
+    <com.aicp.gear.preference.SystemSettingColorBlendPreference
+        android:title="@string/battery_bar_dark_color_title"
+        android:summary="@string/battery_bar_dark_color_summary"
+        aicpextras:keyColorStart="statusbar_battery_bar_battery_low_dark_color"
+        aicpextras:keyColorEnd="statusbar_battery_bar_dark_color"
+        aicpextras:keyBlendReverse="statusbar_battery_bar_blend_color_dark_reverse"
+        aicpextras:defaultValueColorStart="#99000000"
+        aicpextras:defaultValueColorEnd="#99000000"
+        aicpextras:previewStartText="@string/battery_blend_start"
+        aicpextras:previewBetweenText="@string/battery_blend_between"
+        aicpextras:previewEndText="@string/battery_blend_end" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="statusbar_battery_bar_enable_charging_color"
+        android:title="@string/battery_bar_use_charging_color_title"
+        android:defaultValue="true" />
+
+    <com.aicp.gear.preference.SystemSettingColorPickerPreference
+        android:key="statusbar_battery_bar_charging_color"
+        android:title="@string/battery_bar_charging_color_title"
+        android:summary="@string/battery_bar_charging_color_summary"
+        android:defaultValue="0xffffff00"
+        android:dependency="statusbar_battery_bar_enable_charging_color" />
+
+    <com.aicp.gear.preference.SystemSettingColorPickerPreference
+        android:key="statusbar_battery_bar_charging_dark_color"
+        android:title="@string/battery_bar_charging_dark_color_title"
+        android:summary="@string/battery_bar_charging_dark_color_summary"
+        android:defaultValue="0xff0d47a1"
+        android:dependency="statusbar_battery_bar_enable_charging_color" />
+
+    <com.aicp.gear.preference.SystemSettingIntListPreference
+        android:key="statusbar_battery_bar_style"
+        android:title="@string/battery_bar_style_title"
+        android:entries="@array/battery_bar_style_entries"
+        android:entryValues="@array/battery_bar_style_values"
+        android:defaultValue="0" />
+
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="statusbar_battery_bar_thickness"
+        android:title="@string/battery_bar_thickness_title"
+        android:min="1"
+        android:max="4"
+        android:defaultValue="2"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="dp" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="statusbar_battery_bar_animate"
+        android:title="@string/battery_bar_animate_title"
+        android:defaultValue="false" />
+
+</PreferenceScreen>
