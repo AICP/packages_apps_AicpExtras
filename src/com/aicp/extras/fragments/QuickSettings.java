@@ -17,14 +17,61 @@
 
 package com.aicp.extras.fragments;
 
+import android.content.Context;
+import android.content.ContentResolver;
+import android.os.Bundle;
+import android.provider.Settings;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v14.preference.SwitchPreference;
+
+
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
+import com.aicp.gear.preference.SystemSettingSeekBarPreference;
 
-public class QuickSettings extends BaseSettingsFragment {
+public class QuickSettings extends BaseSettingsFragment
+    implements OnPreferenceChangeListener {
+
+    private static final String QS_QUICKBAR_COLUMNS_AUTO = "qs_quickbar_columns_auto";
+    private static final String QS_QUICKBAR_COLUMNS_COUNT = "qs_quickbar_columns";
+
+    private SwitchPreference mQQSColsAuto;
+    private SystemSettingSeekBarPreference mQQSColsCount;
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.quick_settings;
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        mQQSColsAuto = (SwitchPreference) findPreference(QS_QUICKBAR_COLUMNS_AUTO);
+        mQQSColsCount = (SystemSettingSeekBarPreference) findPreference(QS_QUICKBAR_COLUMNS_COUNT);
+
+        boolean qqsColsAutoEnabled = Settings.System.getInt(resolver,
+                Settings.System.AICP_QS_QUICKBAR_COLUMNS, 6) == -1;
+        mQQSColsAuto.setChecked(qqsColsAutoEnabled);
+        mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
+        mQQSColsAuto.setOnPreferenceChangeListener(this);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mQQSColsAuto) {
+            Boolean qqsColsAutoEnabled = (Boolean) newValue;
+            mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
+            if (qqsColsAutoEnabled){
+              Settings.System.putInt(resolver,
+                      Settings.System.AICP_QS_QUICKBAR_COLUMNS, -1);
+            }
+            return true;
+        }
+        return false;
+    }
 }

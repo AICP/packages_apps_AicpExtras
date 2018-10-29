@@ -38,6 +38,12 @@
         android:key="qs_layout_category"
         android:title="@string/qs_layout_category_title">
 
+        <SwitchPreference
+            android:key="qs_quickbar_columns_auto"
+            android:title="@string/qqs_columns_auto_title"
+            android:summary="@string/qqs_columns_auto_summary"
+            android:defaultValue="false" />
+
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_quickbar_columns"
             android:title="@string/qqs_columns_title"
