@@ -84,16 +84,76 @@
         <item>2</item>
     </string-array>
 
+
+
     <!-- Screen off animation -->
+
     <string-array name="screen_off_animation_entries">
         <item>@string/screen_off_animation_default</item>
         <item>@string/screen_off_animation_crt</item>
         <item>@string/screen_off_animation_scale</item>
     </string-array>
-     <string-array name="screen_off_animation_values" translatable="false">
+
+    <string-array name="screen_off_animation_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
+    </string-array>
+
+
+
+    <!-- Themes -->
+
+    <string-array name="theming_base_entries" translatable="false">
+        <item>@string/theming_base_default</item>
+        <item>@string/theming_base_dark</item>
+        <item>@string/theming_base_black</item>
+    </string-array>
+
+    <string-array name="theming_base_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="theming_accent_entries" translatable="false">
+        <item>@string/theming_accent_default</item>
+        <item>@string/theming_accent_amber</item>
+        <item>@string/theming_accent_bluelight</item>
+        <item>@string/theming_accent_cyan</item>
+        <item>@string/theming_accent_denim</item>
+        <item>@string/theming_accent_gold</item>
+        <item>@string/theming_accent_greenlight</item>
+        <item>@string/theming_accent_lime</item>
+        <item>@string/theming_accent_orange</item>
+        <item>@string/theming_accent_oxygen</item>
+        <item>@string/theming_accent_pink</item>
+        <item>@string/theming_accent_pixel</item>
+        <item>@string/theming_accent_purple</item>
+        <item>@string/theming_accent_red</item>
+        <item>@string/theming_accent_teal</item>
+        <item>@string/theming_accent_turquoise</item>
+        <item>@string/theming_accent_yellow</item>
+    </string-array>
+
+    <string-array name="theming_accent_values" translatable="false">
+        <item>0</item> <!-- default -->
+        <item>1</item> <!-- amber -->
+        <item>4</item> <!-- blue light -->
+        <item>5</item> <!-- cyan -->
+        <item>6</item> <!-- denim -->
+        <item>7</item> <!-- gold -->
+        <item>2</item> <!-- green light -->
+        <item>3</item> <!-- lime -->
+        <item>8</item> <!-- orange -->
+        <item>9</item> <!-- oxygen -->
+        <item>10</item> <!--pink -->
+        <item>11</item> <!--pixel -->
+        <item>12</item> <!--purple -->
+        <item>13</item> <!--red -->
+        <item>14</item> <!--teal -->
+        <item>15</item> <!--turquoise -->
+        <item>16</item> <!--yellow -->
     </string-array>
 
 </resources>
