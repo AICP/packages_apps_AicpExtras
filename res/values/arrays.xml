@@ -54,4 +54,34 @@
         <item>0</item>
     </string-array>
 
+
+
+    <!-- Themes -->
+
+    <string-array name="theming_base_entries" translatable="false">
+        <item>@string/theming_base_default</item>
+        <item>@string/theming_base_dark</item>
+        <item>@string/theming_base_black</item>
+    </string-array>
+
+    <string-array name="theming_base_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="theming_accent_entries" translatable="false">
+        <item>@string/theming_accent_default</item>
+        <item>@string/theming_accent_amber</item>
+        <item>@string/theming_accent_greenlight</item>
+        <item>@string/theming_accent_lime</item>
+    </string-array>
+
+    <string-array name="theming_accent_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
 </resources>
