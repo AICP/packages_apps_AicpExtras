@@ -63,7 +63,7 @@ public class SystemBehaviour extends BaseSettingsFragment
         mSelinuxPersistence.setChecked(getContext()
                 .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
                 .contains(Constants.PREF_SELINUX_MODE));
-        Util.requireRoot(selinuxCategory);
+        Util.requireRoot(getActivity(), selinuxCategory);
     }
 
     @Override

@@ -75,7 +75,7 @@ public class Dashboard extends BaseSettingsFragment {
         }
 
         Preference logIt = findPreference(PREF_LOG_IT);
-        Util.requireRoot(logIt);
+        Util.requireRoot(getActivity(), logIt);
 
         mAicpLogo.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override

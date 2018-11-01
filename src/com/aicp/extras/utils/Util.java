@@ -29,6 +29,7 @@ import android.hardware.fingerprint.FingerprintManager;
 import android.os.AsyncTask;
 import android.os.SystemProperties;
 import android.os.Vibrator;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
@@ -43,6 +44,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
+import com.aicp.extras.Constants;
 import com.aicp.extras.R;
 import com.aicp.extras.SettingsActivity;
 
@@ -171,7 +173,8 @@ public abstract class Util {
         return false;
     }
 
-    public static void requireRoot(Preference preference) {
+    public static void requireRoot(Context context, Preference preference) {
+        if (showAllPrefs(context)) return;
         if (!hasSu()) {
             preference.getParent().removePreference(preference);
         }
@@ -181,12 +184,18 @@ public abstract class Util {
      * Remove preference on devices with display cutout (notch).
      */
     public static void requireFullStatusbar(Context context, Preference preference) {
+        if (showAllPrefs(context)) return;
         String displayCutoutPath = context.getResources()
                 .getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
         if (!TextUtils.isEmpty(displayCutoutPath)) {
             // TODO: we might want to check whether cutout is in statusbar area as well
             preference.getParent().removePreference(preference);
         }
+    }
+
+    private static boolean showAllPrefs(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(Constants.PREF_SHOW_DEVICE_HIDDEN_PREFS, false);
     }
 
     public static void restartSystemUi(Context context) {
