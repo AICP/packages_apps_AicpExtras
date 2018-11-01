@@ -177,6 +177,18 @@ public abstract class Util {
         }
     }
 
+    /**
+     * Remove preference on devices with display cutout (notch).
+     */
+    public static void requireFullStatusbar(Context context, Preference preference) {
+        String displayCutoutPath = context.getResources()
+                .getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
+        if (!TextUtils.isEmpty(displayCutoutPath)) {
+            // TODO: we might want to check whether cutout is in statusbar area as well
+            preference.getParent().removePreference(preference);
+        }
+    }
+
     public static void restartSystemUi(Context context) {
         new RestartSystemUiTask(context).execute();
     }
