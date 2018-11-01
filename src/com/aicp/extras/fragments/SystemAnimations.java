@@ -109,7 +109,7 @@ public class SystemAnimations extends BaseSettingsFragment {
         } else {
             Log.d(TAG, "Did not create bootanimation backup dir");
         }
-        Util.requireRoot(mCustomBootAnimation);
+        Util.requireRoot(getActivity(), mCustomBootAnimation);
 
     }
 
