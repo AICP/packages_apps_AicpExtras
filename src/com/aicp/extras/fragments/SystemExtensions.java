@@ -38,6 +38,6 @@ public class SystemExtensions extends BaseSettingsFragment {
         super.onCreate(savedInstanceState);
 
         Preference systemAppRemover = findPreference(PREF_SYSTEM_APP_REMOVER);
-        Util.requireRoot(systemAppRemover);
+        Util.requireRoot(getActivity(), systemAppRemover);
     }
 }
