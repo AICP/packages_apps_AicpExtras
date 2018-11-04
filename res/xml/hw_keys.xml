@@ -67,6 +67,13 @@
             android:summary="@string/volume_keys_control_ring_tone_summary"
             android:defaultValue="false" />
 
+        <!-- Volume keys music control -->
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="volume_button_music_control"
+            android:title="@string/volume_rocker_music_controls_title"
+            android:summary="@string/volume_rocker_music_controls_summary"
+            android:defaultValue="false" />
+
         <!-- Volume rocker wake screen -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="volume_wake_screen"
