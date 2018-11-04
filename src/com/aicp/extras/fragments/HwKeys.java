@@ -40,14 +40,21 @@ public class HwKeys extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
     // category keys
     private static final String CATEGORY_POWER = "power_key";
+    private static final String CATEGORY_VOLUME = "volume_keys";
 
     private static final String KEY_TORCH_LONG_PRESS_POWER_GESTURE =
             "torch_long_press_power_gesture";
     private static final String KEY_TORCH_LONG_PRESS_POWER_TIMEOUT =
             "torch_long_press_power_timeout";
+    private static final String KEY_VOLUME_ROCKER_WAKE_SCREEN =
+            "volrocker_wake_screen";
+
+    private static final int KEY_MASK_VOLUME = 0x40;
 
     private SwitchPreference mTorchLongPressPowerGesture;
     private ListPreference mTorchLongPressPowerTimeout;
+
+    private int mDeviceHardwareWakeKeys;
 
     @Override
     protected int getPreferenceResource() {
@@ -61,10 +68,16 @@ public class HwKeys extends BaseSettingsFragment implements
         ContentResolver resolver = getContentResolver();
         PreferenceScreen prefScreen = getPreferenceScreen();
 
+        mDeviceHardwareWakeKeys = getActivity().getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareWakeKeys);
+
         final boolean hasPowerKey = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_POWER);
+        final boolean hasVolumeRockerKey = (mDeviceHardwareWakeKeys & KEY_MASK_VOLUME) != 0;
 
         final PreferenceCategory powerCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_POWER);
+        final PreferenceCategory volumeCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_VOLUME);
 
         // Long press power while display is off to activate torchlight
         mTorchLongPressPowerGesture =
@@ -83,6 +96,9 @@ public class HwKeys extends BaseSettingsFragment implements
             prefScreen.removePreference(powerCategory);
         }
 
+        if (!hasVolumeRockerKey) {
+            prefScreen.removePreference(volumeCategory);
+        }
     }
 
     private ListPreference initList(String key, int value) {
