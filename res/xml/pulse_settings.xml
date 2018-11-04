@@ -19,6 +19,12 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/pulse_settings" >
 
+    <PreferenceScreen
+        android:key="blacklist_fragment"
+        android:fragment="com.aicp.extras.navigation.PulseBlacklist"
+        android:title="@string/pulse_blacklist_title"
+        android:summary="@string/pulse_blacklist_summary" />
+
     <com.aicp.gear.preference.SecureSettingIntListPreference
         android:key="pulse_render_style"
         android:title="@string/pulse_render_mode_title"
