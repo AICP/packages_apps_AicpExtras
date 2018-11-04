@@ -23,7 +23,7 @@
 
     <PreferenceCategory
         android:key="power_key"
-        android:title="@string/hardware_keys_power_key_title" >
+        android:title="@string/category_power_key" >
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="torch_long_press_power_gesture"
@@ -39,6 +39,26 @@
             android:entryValues="@array/torch_long_press_power_timeout_values"
             android:dependency="torch_long_press_power_gesture"
             android:persistent="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="volume_keys"
+        android:title="@string/category_volume_keys">
+
+        <!-- Volume key cursor control -->
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="volume_key_cursor_control"
+            android:title="@string/volume_keys_cursor_control_title"
+            android:summary="@string/volume_keys_cursor_control_summary"
+            android:defaultValue="false" />
+
+        <!-- Volume rocker wake screen -->
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="volume_wake_screen"
+            android:title="@string/volume_wake_screen_title"
+            android:summary="@string/volume_wake_screen_summary"
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 
