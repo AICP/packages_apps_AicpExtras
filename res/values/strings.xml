@@ -182,7 +182,6 @@
     <!-- Show Lockscreen clock, date, & alarm -->
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
-
     <string name="other_ui_title">Other UI tweaks</string>
     <string name="other_ui_summary">Various misc</string>
     <!-- Volume dialog timeout -->
@@ -192,10 +191,10 @@
     <string name="swap_volume_buttons_summary">Swap volume buttons based on device rotation</string>
     <!-- Volume keys control rint tone stream -->
     <string name="volume_keys_control_ring_tone_title">Control ring volume</string>
-    <string name="volume_keys_control_ring_tone_summary">Keys control media slider by default. Enable to switch to ring tone slider.</string>
+    <string name="volume_keys_control_ring_tone_summary">Keys control media slider by default. Enable to switch to ring tone slider</string>
     <!-- Volume keys control music playback -->
     <string name="volume_rocker_music_controls_title">Playback control</string>
-    <string name="volume_rocker_music_controls_summary">When the screen is off, long-pressing the volume keys will seek music tracks</string>
+    <string name="volume_rocker_music_controls_summary">When the screen is off, long-pressing the volume keys will seek music tracks. Will disable wake control below</string>
 
     <!-- setting: show CPU info-->
     <!-- Launch music player when headset is connected -->
@@ -471,7 +470,7 @@
     <!-- Camera button -->
     <!-- Volume rocker wake -->
     <string name="volume_wake_screen_title">Wake screen</string>
-    <string name="volume_wake_screen_summary">Use volume rocker to wake screen when off</string>
+    <string name="volume_wake_screen_summary">Use volume rocker to wake screen when off. Will disable playback control above</string>
     <!-- Button brightness -->
     <!-- Quick QS pull down -->
     <string name="status_bar_quick_qs_pulldown_summary_left">Left edge of the status bar pulls down Quick Settings</string>

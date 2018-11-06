@@ -68,17 +68,19 @@
             android:defaultValue="false" />
 
         <!-- Volume keys music control -->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="volume_button_music_control"
             android:title="@string/volume_rocker_music_controls_title"
             android:summary="@string/volume_rocker_music_controls_summary"
+            aicpextras:thereCanBeOnlyOneGroupId="1"
             android:defaultValue="false" />
 
         <!-- Volume rocker wake screen -->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="volume_wake_screen"
             android:title="@string/volume_wake_screen_title"
             android:summary="@string/volume_wake_screen_summary"
+            aicpextras:thereCanBeOnlyOneGroupId="1"
             android:defaultValue="false" />
 
     </PreferenceCategory>
