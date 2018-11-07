@@ -27,7 +27,6 @@ import android.support.v7.preference.PreferenceScreen;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.extras.utils.Util;
 
 public class StatusBar extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
@@ -45,9 +44,6 @@ public class StatusBar extends BaseSettingsFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
-
-        Util.requireFullStatusbar(getActivity(),
-                findPreference(Settings.System.STATUSBAR_BATTERY_BAR));
 
         mSmartPulldown = (ListPreference) findPreference(SMART_PULLDOWN);
         int smartPulldown = Settings.System.getInt(resolver,
