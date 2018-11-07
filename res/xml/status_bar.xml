@@ -21,6 +21,14 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/status_bar_title">
 
+    <!-- Show BT Battery Level on Statusbar -->
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="bluetooth_show_battery"
+        android:title="@string/bluetooth_battery_title"
+        android:summary="@string/bluetooth_battery_summary"
+        android:defaultValue="false"/>
+
+    <!-- Double tap on Statusbar to sleep -->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_gesture"
         android:title="@string/status_bar_double_tap_to_sleep_title"
