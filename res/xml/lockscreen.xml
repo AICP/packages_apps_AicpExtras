@@ -52,4 +52,9 @@
         android:summary="@string/media_art_summary"
         android:defaultValue="false" />
 
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="lockscreen_qs_disabled"
+        android:title="@string/lockscreen_qs_disabled_title"
+        android:summary="@string/lockscreen_qs_disabled_summary"
+        android:defaultValue="false" />
 </PreferenceScreen>
