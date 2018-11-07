@@ -17,25 +17,14 @@
 
 package com.aicp.extras.fragments;
 
-import android.os.Bundle;
-import android.provider.Settings;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.extras.utils.Util;
 
 public class StatusBar extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.status_bar;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Util.requireFullStatusbar(getActivity(),
-                findPreference(Settings.System.STATUSBAR_BATTERY_BAR));
     }
 
 }
