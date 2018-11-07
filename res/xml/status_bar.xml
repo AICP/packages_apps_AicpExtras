@@ -21,6 +21,14 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/status_bar_title">
 
+    <!-- Smart pulldown -->
+    <com.aicp.gear.preference.SystemSettingIntListPreference
+        android:key="qs_smart_pulldown"
+        android:entries="@array/smart_pulldown_entries"
+        android:entryValues="@array/smart_pulldown_values"
+        android:defaultValue="0"
+        android:title="@string/smart_pulldown_title" />
+
     <!-- Show BT Battery Level on Statusbar -->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="bluetooth_show_battery"
