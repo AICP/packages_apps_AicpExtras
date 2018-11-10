@@ -27,37 +27,16 @@
         android:summary="@string/status_bar_show_ticker_summary"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.StatusBarTicker"
+        aicpextras:thereCanBeOnlyOneGroupId="1"
         android:dependency="heads_up_notifications_enabled" />
 
-    <PreferenceCategory
-        android:key="category_headsup"
-        android:title="@string/heads_up_category">
-
-        <com.aicp.gear.preference.GlobalSettingSwitchPreference
-            android:key="heads_up_notifications_enabled"
-            android:title="@string/notification_heads_up_title"
-            android:summary="@string/notification_heads_up_summary"
-            android:defaultValue="true"
-            android:disableDependentsState="true" />
-
-        <com.aicp.gear.preference.SystemSettingIntListPreference
-            android:key="heads_up_notification_snooze"
-            android:title="@string/heads_up_snooze_title"
-            android:summary="%s"
-            android:entries="@array/heads_up_snooze_entries"
-            android:entryValues="@array/heads_up_snooze_values"
-            android:defaultValue="0"
-            android:dependency="heads_up_notifications_enabled" />
-
-        <com.aicp.gear.preference.SystemSettingIntListPreference
-            android:key="heads_up_timeout"
-            android:title="@string/heads_up_time_out_title"
-            android:summary="%s"
-            android:entries="@array/heads_up_time_out_entries"
-            android:entryValues="@array/heads_up_time_out_values"
-            android:defaultValue="0"
-            android:dependency="heads_up_notifications_enabled" />
-
-    </PreferenceCategory>
+    <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
+        android:key="heads_up_notifications_enabled"
+        android:title="@string/notification_heads_up_title"
+        android:summary="@string/notification_heads_up_summary"
+        android:defaultValue="true"
+        android:fragment="com.aicp.extras.fragments.HeadsUpOptions"
+        aicpextras:thereCanBeOnlyOneGroupId="1"
+        android:disableDependentsState="true" />
 
 </PreferenceScreen>
