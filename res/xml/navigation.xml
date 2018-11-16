@@ -29,6 +29,13 @@
             android:targetClass="com.android.systemui.tuner.NavBarActivity" />
     </Preference>
 
+    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+        android:key="fling_pulse_enabled"
+        android:title="@string/fling_show_pulse_title"
+        android:summary="@string/fling_show_pulse_summary"
+        android:defaultValue="false"
+        android:fragment="com.aicp.extras.fragments.PulseSettings" />
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="use_bottom_gesture_navigation"
             android:title="@string/use_bottom_gesture_title"
