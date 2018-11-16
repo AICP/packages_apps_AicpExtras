@@ -28,12 +28,18 @@
         android:entryValues="@array/theming_base_values"
         android:defaultValue="0" />
 
-
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="theming_accent"
         android:title="@string/theming_accent_title"
         android:entries="@array/theming_accent_entries"
         android:entryValues="@array/theming_accent_values"
+        android:defaultValue="0" />
+
+    <com.aicp.gear.preference.SystemSettingIntListPreference
+        android:key="theming_corners"
+        android:title="@string/theming_corners_title"
+        android:entries="@array/theming_corners_entries"
+        android:entryValues="@array/theming_corners_values"
         android:defaultValue="0" />
 
 </PreferenceScreen>

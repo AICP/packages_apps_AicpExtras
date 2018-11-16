@@ -41,6 +41,7 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
         super.onCreate(savedInstanceState);
 
         findPreference(Settings.System.THEMING_BASE).setOnPreferenceChangeListener(this);
+        findPreference(Settings.System.THEMING_CORNERS).setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -51,15 +52,12 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
             if (hasDarkNotifications(Integer.parseInt((String) newValue)) ||
                     hasDarkNotifications(Settings.System.getInt(getActivity().getContentResolver(),
                             Settings.System.THEMING_BASE, 0))) {
-                // Keep a context even if activity gets closed
-                final Context appContext = getActivity().getApplicationContext();
-                mHandler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            Util.restartSystemUi(appContext);
-                        }
-                });
+                postRestartSystemUi();
             }
+            return true;
+        } else if (Settings.System.THEMING_CORNERS.equals(preference.getKey())) {
+            // Rounded corners of notifications need systemui restart
+            postRestartSystemUi();
             return true;
         } else {
             return false;
@@ -68,6 +66,17 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
 
     private boolean hasDarkNotifications(int baseThemePref) {
             return baseThemePref >= 3 && baseThemePref <= 6;
+    }
+
+    private void postRestartSystemUi() {
+        // Keep a context even if activity gets closed
+        final Context appContext = getActivity().getApplicationContext();
+        mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Util.restartSystemUi(appContext);
+                }
+        }, 200);
     }
 
 }
