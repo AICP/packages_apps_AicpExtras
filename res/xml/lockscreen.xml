@@ -27,6 +27,12 @@
         android:summary="@string/double_tap_sleep_lockscreen_summary"
         android:defaultValue="false"/>
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="lockscreen_media_metadata"
+        android:title="@string/media_art_title"
+        android:summary="@string/media_art_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
           android:key="lockscreen_security_category"
           android:title="@string/lockscreen_security_category">
@@ -44,17 +50,11 @@
               android:summary="@string/lockscreen_enable_power_menu_summary"
               android:defaultValue="true"/>
 
+          <com.aicp.gear.preference.SecureSettingSwitchPreference
+              android:key="lockscreen_qs_disabled"
+              android:title="@string/lockscreen_qs_disabled_title"
+              android:summary="@string/lockscreen_qs_disabled_summary"
+              android:defaultValue="false" />
+
     </PreferenceCategory>
-
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="lockscreen_media_metadata"
-        android:title="@string/media_art_title"
-        android:summary="@string/media_art_summary"
-        android:defaultValue="false" />
-
-    <com.aicp.gear.preference.SecureSettingSwitchPreference
-        android:key="lockscreen_qs_disabled"
-        android:title="@string/lockscreen_qs_disabled_title"
-        android:summary="@string/lockscreen_qs_disabled_summary"
-        android:defaultValue="false" />
 </PreferenceScreen>
