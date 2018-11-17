@@ -447,8 +447,9 @@
     <string name="gesture_settings_info">Navigation bar must be disabled!\n\nAvailable gestures:\n\nBack\n- Swipe up on left or right side\n\nHome\n- Swipe up center\n\nRecent apps\n- Swipe up center and hold\n\nLong press home\n- Short swipe up and hold in the center</string>
     <string name="use_bottom_gesture_title">Navigation gestures</string>
     <string name="use_bottom_gesture_summary">Use bottom swipe up gestures for navigation\nNavigation bar must be disabled!\n\nAvailable gestures:\n\nBack\n- Swipe up on left or right side\n\nHome\n- Swipe up center\n\nRecent apps\n- Swipe up center and hold\n\nLong press home\n- Short swipe up and hold in the center</string>
-
     <!-- Navigation bar -->
+    <string name="navigation_bar_title">Navigation bar</string>
+    <string name="navigation_bar_summary">Toggle to enable onscreen navigation bar</string>
     <!-- DUI -->
     <string name="icon_pack_picker_dialog_title">Icon packs</string>
     <string name="picker_activities">Activities</string>
@@ -543,6 +544,10 @@
     <string name="volume_wake_screen_title">Wake screen</string>
     <string name="volume_wake_screen_summary">Use volume rocker to wake screen when off. Will disable playback control above</string>
     <!-- Button brightness -->
+    <string name="button_backlight_options_category">Backlight options</string>
+    <string name="button_backlight_enable_title">Allow button backlight</string>
+    <string name="button_backlight_enable_summary">Toggle to enable/disable button backlight on hardware keys</string>
+    <string name="button_manual_brightness">Brightness level</string>
     <!-- Quick QS pull down -->
     <string name="status_bar_quick_qs_pulldown_summary_left">Left edge of the status bar pulls down Quick Settings</string>
     <string name="status_bar_quick_qs_pulldown_summary_right">Right edge of the status bar pulls down Quick Settings</string>
@@ -640,4 +645,4 @@
     <!-- Stock Navbar settings -->
     <string name="default_settings">Stock settings</string>
     <string name="default_settings_summary">Stock AOSP navigation bar</string>
-  </resources>
+</resources>
