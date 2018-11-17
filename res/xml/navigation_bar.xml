@@ -20,20 +20,20 @@
     android:title="@string/navigation_title">
 
 
+    <Preference
+        android:key="default_settings"
+        android:title="@string/default_settings"
+        android:summary="@string/default_settings_summary">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.systemui"
+            android:targetClass="com.android.systemui.tuner.NavBarActivity" />
+    </Preference>
+
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-        android:key="navigation_bar_enabled"
-        android:title="@string/navigation_bar_title"
-        android:summary="@string/navigation_bar_summary"
+        android:key="fling_pulse_enabled"
+        android:title="@string/fling_show_pulse_title"
+        android:summary="@string/fling_show_pulse_summary"
         android:defaultValue="false"
-        aicpextras:thereCanBeOnlyOneGroupId="1"
-        android:fragment="com.aicp.extras.fragments.NavigationBar" />
-
-
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-            android:key="use_bottom_gesture_navigation"
-            android:title="@string/use_bottom_gesture_title"
-            android:summary="@string/use_bottom_gesture_summary"
-            aicpextras:thereCanBeOnlyOneGroupId="1"
-            android:defaultValue="false" />
+        android:fragment="com.aicp.extras.fragments.PulseSettings" />
 
 </PreferenceScreen>
