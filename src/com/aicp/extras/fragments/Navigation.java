@@ -34,10 +34,13 @@ public class Navigation extends BaseSettingsFragment implements
 
     private static final String KEY_NAVIGATION_BAR_ENABLED =
             "navigation_bar_enabled";
+    private static final int BUTTON_BRIGHTNESS_DEFAULT = 180;
 
     private MasterSwitchPreference mNavBarPreference;
 
-    private boolean mNavbarEnabled;
+    private boolean mButtonLightsEnabled;
+    private boolean mHasNavigationBar;
+    private int mButtonBrightness;
 
     @Override
     protected int getPreferenceResource() {
@@ -54,27 +57,33 @@ public class Navigation extends BaseSettingsFragment implements
         mNavBarPreference =
                 (MasterSwitchPreference) findPreference(KEY_NAVIGATION_BAR_ENABLED);
 
-        mNavbarEnabled = Settings.System.getInt(resolver,
-                Settings.System.NAVIGATION_BAR_ENABLED, 0) !=0;
+        mHasNavigationBar = getActivity().getResources()
+                .getBoolean(com.android.internal.R.bool.config_showNavigationBar);
 
-        updateButtonLights(mNavbarEnabled);
+        mButtonLightsEnabled = Settings.System.getInt(resolver,
+                        Settings.System.BUTTON_BRIGHTNESS_ENABLED, 0) !=0;
+        mButtonBrightness =  Settings.System.getInt(resolver,
+                        Settings.System.BUTTON_BRIGHTNESS, BUTTON_BRIGHTNESS_DEFAULT);
+
         mNavBarPreference.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mNavBarPreference) {
-            updateButtonLights((Boolean) newValue);
+            if (!mHasNavigationBar) updateButtonLights((boolean) newValue);
             return true;
         }
         return false;
     }
 
-    private void updateButtonLights(Boolean navbarstate) {
+    private void updateButtonLights(boolean navbarEnabled) {
         ContentResolver resolver = getContentResolver();
+
         Settings.System.putInt(resolver, Settings.System.BUTTON_BRIGHTNESS_ENABLED,
-                navbarstate ? 0 : 1);
+                !navbarEnabled ? (mButtonLightsEnabled ? 1 : 0) : 0);
         Settings.System.putInt(resolver, Settings.System.BUTTON_BRIGHTNESS,
-                navbarstate ? 0 : 180);
+                !navbarEnabled ? (mButtonBrightness == 0 ?
+                          BUTTON_BRIGHTNESS_DEFAULT : mButtonBrightness) : 0);
     }
 }
