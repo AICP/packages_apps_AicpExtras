@@ -41,6 +41,7 @@ public class HwKeys extends BaseSettingsFragment implements
     // category keys
     private static final String CATEGORY_POWER = "power_key";
     private static final String CATEGORY_VOLUME = "volume_keys";
+    private static final String CATEGORY_BACKLIGHT = "button_lights_key";
 
     private static final String KEY_TORCH_LONG_PRESS_POWER_GESTURE =
             "torch_long_press_power_gesture";
@@ -55,6 +56,7 @@ public class HwKeys extends BaseSettingsFragment implements
     private ListPreference mTorchLongPressPowerTimeout;
 
     private int mDeviceHardwareWakeKeys;
+    private boolean mNavbarEnabled;
 
     @Override
     protected int getPreferenceResource() {
@@ -70,6 +72,8 @@ public class HwKeys extends BaseSettingsFragment implements
 
         mDeviceHardwareWakeKeys = getActivity().getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareWakeKeys);
+        mNavbarEnabled = Settings.System.getInt(resolver,
+                Settings.System.NAVIGATION_BAR_ENABLED, 0) !=0;
 
         final boolean hasPowerKey = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_POWER);
         final boolean hasVolumeRockerKey = (mDeviceHardwareWakeKeys & KEY_MASK_VOLUME) != 0;
@@ -78,6 +82,8 @@ public class HwKeys extends BaseSettingsFragment implements
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_POWER);
         final PreferenceCategory volumeCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_VOLUME);
+        final PreferenceCategory backlightCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_BACKLIGHT);
 
         // Long press power while display is off to activate torchlight
         mTorchLongPressPowerGesture =
@@ -98,6 +104,10 @@ public class HwKeys extends BaseSettingsFragment implements
 
         if (!hasVolumeRockerKey) {
             prefScreen.removePreference(volumeCategory);
+        }
+
+        if (mNavbarEnabled) {
+            prefScreen.removePreference(backlightCategory);
         }
     }
 
