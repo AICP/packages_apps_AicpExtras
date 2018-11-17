@@ -98,4 +98,25 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="button_lights_key"
+        android:title="@string/button_backlight_options_category" >
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="button_brightness_enabled"
+            android:title="@string/button_backlight_enable_title"
+            android:summary="@string/button_backlight_enable_summary"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+            android:key="button_brightness"
+            android:title="@string/button_manual_brightness"
+            android:max="255"
+            android:min="0"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight=""
+            android:defaultValue="180" />
+
+      </PreferenceCategory>
+
 </PreferenceScreen>
