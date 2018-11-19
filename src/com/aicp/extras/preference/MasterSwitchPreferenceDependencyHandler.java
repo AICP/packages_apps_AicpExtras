@@ -24,6 +24,7 @@ import android.util.Log;
 
 import com.aicp.extras.R;
 
+import com.aicp.gear.preference.GlobalSettingsStore;
 import com.aicp.gear.preference.SystemSettingsStore;
 import com.aicp.gear.preference.SecureSettingsStore;
 
@@ -41,11 +42,13 @@ public class MasterSwitchPreferenceDependencyHandler {
     private HashMap<Integer,ArrayList<PreferenceControl>> mPreferences;
     private SystemSettingsStore mSystemSetingsStore;
     private SecureSettingsStore mSecureSetingsStore;
+    private GlobalSettingsStore mGlobalSettingsStore;
 
     public MasterSwitchPreferenceDependencyHandler(Context context) {
         mPreferences = new HashMap();
         mSystemSetingsStore = new SystemSettingsStore(context.getContentResolver());
         mSecureSetingsStore = new SecureSettingsStore(context.getContentResolver());
+        mGlobalSettingsStore = new GlobalSettingsStore(context.getContentResolver());
     }
 
     private static interface PreferenceControl {
@@ -56,6 +59,7 @@ public class MasterSwitchPreferenceDependencyHandler {
         void reload();
         boolean isSystemSetting();
         boolean isSecureSetting();
+        boolean isGlobalSetting();
     }
 
     private static class MasterSwitchPreferenceControl implements PreferenceControl {
@@ -90,6 +94,10 @@ public class MasterSwitchPreferenceDependencyHandler {
         @Override
         public boolean isSecureSetting() {
             return mPreference.getPreferenceDataStore() instanceof SecureSettingsStore;
+        }
+        @Override
+        public boolean isGlobalSetting() {
+            return mPreference.getPreferenceDataStore() instanceof GlobalSettingsStore;
         }
     }
 
@@ -131,6 +139,10 @@ public class MasterSwitchPreferenceDependencyHandler {
         public boolean isSecureSetting() {
             return mPreferenceStore instanceof SecureSettingsStore;
         }
+        @Override
+        public boolean isGlobalSetting() {
+            return mPreferenceStore instanceof GlobalSettingsStore;
+        }
     }
 
     public void addPreferences(MasterSwitchPreference... preferences) {
@@ -149,6 +161,12 @@ public class MasterSwitchPreferenceDependencyHandler {
     public void addSecureSettingPreferences(int group, String... keys) {
         for (String key: keys) {
             addPreferences(new PreferenceStoreControl(key, group, false, mSecureSetingsStore));
+        }
+    }
+
+    public void addGlobalSettingPreferences(int group, String... keys) {
+        for (String key: keys) {
+            addPreferences(new PreferenceStoreControl(key, group, false, mGlobalSettingsStore));
         }
     }
 
@@ -255,6 +273,26 @@ public class MasterSwitchPreferenceDependencyHandler {
         ArrayList<String> result = new ArrayList();
         for (PreferenceControl pref: groupList) {
             if (pref.isSecureSetting()) {
+                result.add(pref.getKey());
+            }
+        }
+        return result.toArray(new String[result.size()]);
+    }
+
+    public String[] getGlobalSettingsForGroup(int groupId) {
+        if (groupId == 0) {
+            // group id 0 is no group id -> no restrictions
+            return new String[0];
+        }
+        ArrayList<PreferenceControl> groupList = mPreferences.get(groupId);
+        if (groupList == null) {
+            Log.e(TAG, "inconsistent master switch dependency handler: getGlobalSettingForGroup " +
+                    "called for unregistered group " + groupId);
+            return new String[0];
+        }
+        ArrayList<String> result = new ArrayList();
+        for (PreferenceControl pref: groupList) {
+            if (pref.isGlobalSetting()) {
                 result.add(pref.getKey());
             }
         }

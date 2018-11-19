@@ -29,6 +29,8 @@ import android.preference.PreferenceManager;
 
 import com.aicp.extras.dslv.ActionListViewSettings;
 import com.aicp.extras.fragments.Dashboard;
+import com.aicp.extras.preference.GlobalSettingMasterSwitchPreference;
+import com.aicp.extras.preference.GlobalSettingSwitchBarController;
 import com.aicp.extras.preference.MasterSwitchPreference;
 import com.aicp.extras.preference.MasterSwitchPreferenceDependencyHandler;
 import com.aicp.extras.preference.SecureSettingMasterSwitchPreference;
@@ -62,11 +64,19 @@ public class SettingsActivity extends BaseActivity {
     // Default value for switch bar controlling the system setting
     private static final String EXTRA_SWITCH_SECURE_SETTINGS_DEFAULT_VALUE =
             "com.aicp.extras.extra.preference_switch_secure_settings_default_value";
+    // String extra containing an optional global settings key to be controlled by the switch bar
+    private static final String EXTRA_SWITCH_GLOBAL_SETTINGS_KEY =
+            "com.aicp.extras.extra.preference_switch_global_settings_key";
+    // Default value for switch bar controlling the global setting
+    private static final String EXTRA_SWITCH_GLOBAL_SETTINGS_DEFAULT_VALUE =
+            "com.aicp.extras.extra.preference_switch_global_settings_default_value";
     // Mutual exclusive dependencies for master switches
     private static final String EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS =
             "com.aicp.extras.extra.preference_switch_system_settings_mutual_keys";
     private static final String EXTRA_SWITCH_SECURE_SETTINGS_MUTUAL_KEYS =
             "com.aicp.extras.extra.preference_switch_secure_settings_mutual_keys";
+    private static final String EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS =
+            "com.aicp.extras.extra.preference_switch_global_settings_mutual_keys";
     private static final String EXTRA_SWITCH_THERE_SHOULD_BE_ONE =
             "com.aicp.extras.extra.preference_switch_there_should_be_one";
 
@@ -94,6 +104,10 @@ public class SettingsActivity extends BaseActivity {
             mMasterSwitchDependencyHandler.addSecureSettingPreferences(-1,
                     mIntent.getStringArrayExtra(EXTRA_SWITCH_SECURE_SETTINGS_MUTUAL_KEYS));
         }
+        if (mIntent.hasExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS)) {
+            mMasterSwitchDependencyHandler.addGlobalSettingPreferences(-1,
+                    mIntent.getStringArrayExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS));
+        }
         boolean thereShouldBeOne = mIntent.getBooleanExtra(EXTRA_SWITCH_THERE_SHOULD_BE_ONE, false);
 
         mSwitchBar = (SwitchBar) findViewById(R.id.switch_bar);
@@ -115,6 +129,17 @@ public class SettingsActivity extends BaseActivity {
             new SecureSettingSwitchBarController(mSwitchBar,
                     mIntent.getStringExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY),
                     mIntent.getBooleanExtra(EXTRA_SWITCH_SECURE_SETTINGS_DEFAULT_VALUE, false),
+                    getContentResolver(),
+                    settingsFragment,
+                    mMasterSwitchDependencyHandler,
+                    thereShouldBeOne);
+        } else if (mIntent.hasExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_KEY)) {
+            mSwitchBar.show();
+            BaseSettingsFragment settingsFragment = mFragment instanceof BaseSettingsFragment
+                    ? (BaseSettingsFragment) mFragment : null;
+            new GlobalSettingSwitchBarController(mSwitchBar,
+                    mIntent.getStringExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_KEY),
+                    mIntent.getBooleanExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_DEFAULT_VALUE, false),
                     getContentResolver(),
                     settingsFragment,
                     mMasterSwitchDependencyHandler,
@@ -213,6 +238,12 @@ public class SettingsActivity extends BaseActivity {
                                     ((SecureSettingMasterSwitchPreference) preference)
                                             .getDefaultValue());
                         }
+                        if (preference instanceof GlobalSettingMasterSwitchPreference) {
+                            intent.putExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_KEY, preference.getKey());
+                            intent.putExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_DEFAULT_VALUE,
+                                    ((GlobalSettingMasterSwitchPreference) preference)
+                                            .getDefaultValue());
+                        }
                         intent.putExtra(EXTRA_SWITCH_THERE_SHOULD_BE_ONE,
                                 ((MasterSwitchPreference) preference).getThereShouldBeOneSwitch());
                         int groupId = ((MasterSwitchPreference) preference)
@@ -221,6 +252,8 @@ public class SettingsActivity extends BaseActivity {
                                 mMasterSwitchDependencyHandler.getSystemSettingsForGroup(groupId));
                         intent.putExtra(EXTRA_SWITCH_SECURE_SETTINGS_MUTUAL_KEYS,
                                 mMasterSwitchDependencyHandler.getSecureSettingsForGroup(groupId));
+                        intent.putExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS,
+                                mMasterSwitchDependencyHandler.getGlobalSettingsForGroup(groupId));
                     }
                 }
 
