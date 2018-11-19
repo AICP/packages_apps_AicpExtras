@@ -25,5 +25,8 @@
         <attr name="thereCanBeOnlyOneGroupId" format="integer" />
         <!-- Whether to warn before disabling the last active switch -->
         <attr name="thereShouldBeOneSwitch" format="boolean" />
+        <!-- Use as a regular switch, i.e. hide two target separator and also toggle on
+            non-switch clicks. -->
+        <attr name="plainSwitch" format="boolean" />
     </declare-styleable>
 </resources>
