@@ -86,6 +86,7 @@
             android:title="@string/volume_rocker_music_controls_title"
             android:summary="@string/volume_rocker_music_controls_summary"
             aicpextras:thereCanBeOnlyOneGroupId="1"
+            aicpextras:plainSwitch="true"
             android:defaultValue="false" />
 
         <!-- Volume rocker wake screen -->
@@ -94,6 +95,7 @@
             android:title="@string/volume_wake_screen_title"
             android:summary="@string/volume_wake_screen_summary"
             aicpextras:thereCanBeOnlyOneGroupId="1"
+            aicpextras:plainSwitch="true"
             android:defaultValue="false" />
 
     </PreferenceCategory>
