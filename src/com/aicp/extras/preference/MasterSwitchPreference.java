@@ -19,6 +19,7 @@ package com.aicp.extras.preference;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.support.v7.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 import android.view.View;
@@ -41,6 +42,12 @@ public class MasterSwitchPreference extends TwoTargetPreference {
     private MasterSwitchPreferenceDependencyHandler mDependencyHandler;
     private int mThereCanBeOnlyOneGroupId = 0;
     private boolean mThereShouldBeOne = false;
+
+    private View mTwoTargetDivider;
+    private View mWidgetView;
+    private View mBaseView;
+    private View mMainView;
+    private boolean mPlainSwitch = false;
 
     public MasterSwitchPreference(Context context, AttributeSet attrs,
                                   int defStyleAttr, int defStyleRes) {
@@ -72,6 +79,9 @@ public class MasterSwitchPreference extends TwoTargetPreference {
                 mThereCanBeOnlyOneGroupId);
         mThereShouldBeOne = a.getBoolean(R.styleable.MasterSwitchPreference_thereShouldBeOneSwitch,
                 mThereShouldBeOne);
+        setPlainSwitch(
+                a.getBoolean(R.styleable.MasterSwitchPreference_plainSwitch,
+                    mPlainSwitch));
         a.recycle();
     }
 
@@ -80,52 +90,57 @@ public class MasterSwitchPreference extends TwoTargetPreference {
         return R.layout.preference_widget_master_switch;
     }
 
+    private View.OnClickListener mClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mSwitch != null && !mSwitch.isEnabled()) {
+                    return;
+                }
+                if (!mChecked) {
+                    mDependencyHandler.onEnablePref(mThereCanBeOnlyOneGroupId, getKey());
+                } else if (mDependencyHandler != null && mThereShouldBeOne &&
+                        !mDependencyHandler.isAnotherEnabled(
+                                mThereCanBeOnlyOneGroupId, getKey())) {
+                    // It might not be safe to disable, so ask the user to make sure
+                    mDependencyHandler.showConfirmDisableDialog(mContext,
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // Continue with disabling the preference
+                                    setChecked(false);
+                                    if (!callChangeListener(mChecked)) {
+                                        setChecked(!mChecked);
+                                    } else {
+                                        persistBoolean(mChecked);
+                                    }
+                                }
+                            },
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // Only close dialog
+                                }
+                            });
+                    return;
+                }
+                setChecked(!mChecked);
+                if (!callChangeListener(mChecked)) {
+                    setChecked(!mChecked);
+                } else {
+                    persistBoolean(mChecked);
+                }
+            }
+        };
+
+
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
-        final View widgetView = holder.findViewById(android.R.id.widget_frame);
-        if (widgetView != null) {
-            widgetView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (mSwitch != null && !mSwitch.isEnabled()) {
-                        return;
-                    }
-                    if (!mChecked) {
-                        mDependencyHandler.onEnablePref(mThereCanBeOnlyOneGroupId, getKey());
-                    } else if (mDependencyHandler != null && mThereShouldBeOne &&
-                            !mDependencyHandler.isAnotherEnabled(
-                                    mThereCanBeOnlyOneGroupId, getKey())) {
-                        // It might not be safe to disable, so ask the user to make sure
-                        mDependencyHandler.showConfirmDisableDialog(mContext,
-                                new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        // Continue with disabling the preference
-                                        setChecked(false);
-                                        if (!callChangeListener(mChecked)) {
-                                            setChecked(!mChecked);
-                                        } else {
-                                            persistBoolean(mChecked);
-                                        }
-                                    }
-                                },
-                                new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        // Only close dialog
-                                    }
-                                });
-                        return;
-                    }
-                    setChecked(!mChecked);
-                    if (!callChangeListener(mChecked)) {
-                        setChecked(!mChecked);
-                    } else {
-                        persistBoolean(mChecked);
-                    }
-                }
-            });
+        mWidgetView = holder.findViewById(android.R.id.widget_frame);
+        mBaseView = holder.itemView;
+        mMainView = holder.findViewById(R.id.main_view);
+        if (mWidgetView != null) {
+            mWidgetView.setOnClickListener(mClickListener);
         }
 
         mSwitch = (Switch) holder.findViewById(R.id.switchWidget);
@@ -134,7 +149,19 @@ public class MasterSwitchPreference extends TwoTargetPreference {
             mSwitch.setChecked(mChecked);
             mSwitch.setEnabled(mEnableSwitch);
         }
+        mTwoTargetDivider = holder.findViewById(R.id.two_target_divider);
+        setPlainSwitch(mPlainSwitch);
     }
+
+    @Override
+    protected void onClick() {
+        super.onClick();
+
+        if (mPlainSwitch) {
+            mClickListener.onClick(null);
+        }
+    }
+
 
     public void setDependencyHandler(MasterSwitchPreferenceDependencyHandler dependencyHandler) {
         mDependencyHandler = dependencyHandler;
@@ -210,5 +237,33 @@ public class MasterSwitchPreference extends TwoTargetPreference {
      */
     public boolean getDefaultValue() {
         return mDefaultValue;
+    }
+
+    public void setPlainSwitch(boolean plainSwitch) {
+        mPlainSwitch = plainSwitch;
+        if (mTwoTargetDivider != null) {
+            mTwoTargetDivider.setVisibility(plainSwitch ? View.GONE : View.VISIBLE);
+        }
+        int[] attrs = new int[] {
+            android.R.attr.selectableItemBackground,
+        };
+        TypedArray ta = mContext.getTheme().obtainStyledAttributes(attrs);
+        int selectableItemBackground = ta.getResourceId(0, 0);
+        ta.recycle();
+        if (mWidgetView != null) {
+            // When imitating a plain switch, whole preference is clickable,
+            // so disable individual clickabilities for better visual appearance
+            if (plainSwitch) {
+                mWidgetView.setClickable(false);
+                mWidgetView.setBackgroundColor(Color.TRANSPARENT);
+                mBaseView.setBackgroundResource(selectableItemBackground);
+                mMainView.setBackgroundColor(Color.TRANSPARENT);
+            } else {
+                mWidgetView.setClickable(true);
+                mWidgetView.setBackground(null);
+                mBaseView.setBackgroundColor(Color.TRANSPARENT);
+                mMainView.setBackgroundResource(selectableItemBackground);
+            }
+        }
     }
 }
