@@ -27,8 +27,7 @@
         android:summary="@string/status_bar_show_ticker_summary"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.StatusBarTicker"
-        aicpextras:thereCanBeOnlyOneGroupId="1"
-        android:dependency="heads_up_notifications_enabled" />
+        aicpextras:thereCanBeOnlyOneGroupId="1" />
 
     <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
         android:key="heads_up_notifications_enabled"
@@ -36,7 +35,6 @@
         android:summary="@string/notification_heads_up_summary"
         android:defaultValue="true"
         android:fragment="com.aicp.extras.fragments.HeadsUpOptions"
-        aicpextras:thereCanBeOnlyOneGroupId="1"
-        android:disableDependentsState="true" />
+        aicpextras:thereCanBeOnlyOneGroupId="1" />
 
 </PreferenceScreen>
