@@ -33,6 +33,13 @@
         android:summary="@string/media_art_summary"
         android:defaultValue="false" />
 
+    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+        android:key="force_ambient_for_media"
+        android:title="@string/force_ambient_for_media_title"
+        android:summary="@string/force_ambient_for_media_summary"
+        android:defaultValue="false"
+        android:fragment="com.aicp.extras.fragments.AmbientMediaTicker" />
+
     <PreferenceCategory
           android:key="lockscreen_security_category"
           android:title="@string/lockscreen_security_category">
