@@ -32,6 +32,7 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v14.preference.SwitchPreference;
+import android.provider.Settings;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
@@ -39,25 +40,43 @@ import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
 import com.android.internal.util.aicp.DeviceUtils;
 import com.android.internal.utils.ActionUtils;
+import com.aicp.extras.smartnav.ActionFragment;
+import com.android.internal.utils.ActionConstants;
 
-public class HwKeys extends BaseSettingsFragment implements
-        Preference.OnPreferenceChangeListener {
+public class HwKeys extends ActionFragment implements Preference.OnPreferenceChangeListener {
     // category keys
-    private static final String CATEGORY_POWER = "power_key";
+    private static final String CATEGORY_BACK = "back_key";
+    private static final String CATEGORY_HOME = "home_key";
+    private static final String CATEGORY_MENU = "menu_key";
+    private static final String CATEGORY_ASSIST = "assist_key";
+    private static final String CATEGORY_APPSWITCH = "app_switch_key";
+    private static final String CATEGORY_CAMERA = "camera_key";
     private static final String CATEGORY_VOLUME = "volume_keys";
-
+    private static final String CATEGORY_POWER = "power_key";
+    private static final String HWKEY_DISABLE = "hardware_keys_disable";
     private static final String KEY_TORCH_LONG_PRESS_POWER_GESTURE =
             "torch_long_press_power_gesture";
     private static final String KEY_TORCH_LONG_PRESS_POWER_TIMEOUT =
             "torch_long_press_power_timeout";
 
+    // Masks for checking presence of hardware keys.
+    // Must match values in frameworks/base/core/res/res/values/config.xml
+    public static final int KEY_MASK_HOME = 0x01;
+    public static final int KEY_MASK_BACK = 0x02;
+    public static final int KEY_MASK_MENU = 0x04;
+    public static final int KEY_MASK_ASSIST = 0x08;
+    public static final int KEY_MASK_APP_SWITCH = 0x10;
+    public static final int KEY_MASK_CAMERA = 0x20;
+    public static final int KEY_MASK_VOLUME = 0x40;
+
+    private SwitchPreference mHwKeyDisable;
     private SwitchPreference mTorchLongPressPowerGesture;
     private ListPreference mTorchLongPressPowerTimeout;
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.hw_keys;
-    }
+}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,12 +85,23 @@ public class HwKeys extends BaseSettingsFragment implements
         ContentResolver resolver = getContentResolver();
         PreferenceScreen prefScreen = getPreferenceScreen();
 
+        final boolean needsNavbar = ActionUtils.hasNavbarByDefault(getActivity());
+        int keysDisabled = 0;
+        mHwKeyDisable = (SwitchPreference) findPreference(HWKEY_DISABLE);
+        if (!needsNavbar) {
+            keysDisabled = Settings.Secure.getIntForUser(resolver,
+                    Settings.Secure.HARDWARE_KEYS_DISABLE, 0,
+                    UserHandle.USER_CURRENT);
+            mHwKeyDisable.setChecked(keysDisabled != 0);
+            mHwKeyDisable.setOnPreferenceChangeListener(this);
+        } else {
+            mHwKeyDisable.getParent().removePreference(mHwKeyDisable);
+        }
+
         final boolean hasPowerKey = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_POWER);
 
         final PreferenceCategory powerCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_POWER);
-        final PreferenceCategory volumeCategory =
-                (PreferenceCategory) prefScreen.findPreference(CATEGORY_VOLUME);
 
         // Long press power while display is off to activate torchlight
         mTorchLongPressPowerGesture =
@@ -89,6 +119,61 @@ public class HwKeys extends BaseSettingsFragment implements
         } else {
             prefScreen.removePreference(powerCategory);
         }
+
+        // bits for hardware keys present on device
+        final int deviceKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+
+        // read bits for present hardware keys
+        final boolean hasHomeKey = (deviceKeys & KEY_MASK_HOME) != 0;
+        final boolean hasBackKey = (deviceKeys & KEY_MASK_BACK) != 0;
+        final boolean hasMenuKey = (deviceKeys & KEY_MASK_MENU) != 0;
+        final boolean hasAssistKey = (deviceKeys & KEY_MASK_ASSIST) != 0;
+        final boolean hasAppSwitchKey = (deviceKeys & KEY_MASK_APP_SWITCH) != 0;
+
+        // load categories and init/remove preferences based on device
+        // configuration
+        final PreferenceCategory backCategory = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_BACK);
+        final PreferenceCategory homeCategory = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_HOME);
+        final PreferenceCategory menuCategory = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_MENU);
+        final PreferenceCategory assistCategory = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_ASSIST);
+        final PreferenceCategory appSwitchCategory = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_APPSWITCH);
+
+        // back key
+        if (!hasBackKey) {
+            prefScreen.removePreference(backCategory);
+        }
+
+        // home key
+        if (!hasHomeKey) {
+            prefScreen.removePreference(homeCategory);
+        }
+
+        // App switch key (recents)
+        if (!hasAppSwitchKey) {
+            prefScreen.removePreference(appSwitchCategory);
+        }
+
+        // menu key
+        if (!hasMenuKey) {
+            prefScreen.removePreference(menuCategory);
+        }
+
+        // search/assist key
+        if (!hasAssistKey) {
+            prefScreen.removePreference(assistCategory);
+        }
+
+        // let super know we can load ActionPreferences
+        onPreferenceScreenLoaded(ActionConstants.getDefaults(ActionConstants.HWKEYS));
+
+        // load preferences first
+        setActionPreferencesEnabled(keysDisabled == 0);
     }
 
     private ListPreference initList(String key, int value) {
@@ -109,11 +194,23 @@ public class HwKeys extends BaseSettingsFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mTorchLongPressPowerTimeout) {
+        ContentResolver resolver = getContentResolver();
+        if (preference == mHwKeyDisable) {
+            boolean value = (Boolean) newValue;
+            Settings.Secure.putInt(resolver,
+                    Settings.Secure.HARDWARE_KEYS_DISABLE, value ? 1 : 0);
+            setActionPreferencesEnabled(!value);
+            return true;
+        } else if (preference == mTorchLongPressPowerTimeout) {
             handleListChange(mTorchLongPressPowerTimeout, newValue,
                     Settings.System.TORCH_LONG_PRESS_POWER_TIMEOUT);
             return true;
         }
         return false;
+    }
+
+    @Override
+    protected boolean usesExtendedActionsList() {
+        return true;
     }
 }
