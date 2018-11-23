@@ -46,12 +46,20 @@
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="statusbar_battery_bar"
         android:title="@string/battery_bar_title"
+        android:summary="@string/battery_bar_summary"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.BatteryBar" />
 
    <PreferenceCategory
         android:key="statusbar_icons_category"
         android:title="@string/status_bar_icons_category_title">
+
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+            android:key="status_bar_show_battery_image"
+            android:title="@string/status_bar_battery_title"
+            android:summary="@string/status_bar_battery_summary"
+            android:defaultValue="true"
+            android:fragment="com.aicp.extras.fragments.BatteryStyles" />
 
         <!-- Show Network Traffic State on Statusbar -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
