@@ -540,7 +540,6 @@
         <item>@string/battery_style_dotted_circle</item>
         <item>@string/battery_style_big_circle</item>
         <item>@string/battery_style_big_dotted_circle</item>
-        <item>@string/battery_style_text</item>
     </string-array>
      <string-array name="battery_style_values" translatable="false">
         <item>0</item>
@@ -548,13 +547,12 @@
         <item>3</item>
         <item>4</item>
         <item>7</item>
-        <item>5</item>
     </string-array>
      <!-- Battery percent styles -->
     <string-array name="battery_percent_entries" translatable="false">
-        <item>@string/battery_percent_hidden</item>
-        <item>@string/battery_percent_outside</item>
-        <item>@string/battery_percent_inside</item>
+        <item>@string/battery_percent_disabled</item>
+        <item>@string/battery_percent_enabled</item>
+        <item>@string/battery_percent_embedded</item>
     </string-array>
      <string-array name="battery_percent_values" translatable="false">
         <item>0</item>
