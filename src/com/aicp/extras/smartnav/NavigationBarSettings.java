@@ -102,8 +102,6 @@ public class NavigationBarSettings extends BaseSettingsFragment implements Prefe
                 mSmartbarSettings.setSelectable(false);
                 mFlingSettings.setEnabled(false);
                 mFlingSettings.setSelectable(false);
-                mPulseSettings.setEnabled(false);
-                mPulseSettings.setSelectable(false);
                 break;
             case 1:
                 mDefaultSettings.setEnabled(false);
@@ -112,8 +110,6 @@ public class NavigationBarSettings extends BaseSettingsFragment implements Prefe
                 mSmartbarSettings.setSelectable(true);
                 mFlingSettings.setEnabled(false);
                 mFlingSettings.setSelectable(false);
-                mPulseSettings.setEnabled(true);
-                mPulseSettings.setSelectable(true);
                 break;
             case 2:
                 mDefaultSettings.setEnabled(false);
@@ -122,8 +118,6 @@ public class NavigationBarSettings extends BaseSettingsFragment implements Prefe
                 mSmartbarSettings.setSelectable(false);
                 mFlingSettings.setEnabled(true);
                 mFlingSettings.setSelectable(true);
-                mPulseSettings.setEnabled(true);
-                mPulseSettings.setSelectable(true);
                 break;
         }
     }
