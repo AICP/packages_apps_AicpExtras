@@ -98,7 +98,7 @@
         <!-- DUI -->
 
         <!-- System action picker -->
-        <activity android:name="com.aicp.extras.ActionPickerDialogActivity"
+        <activity android:name="com.aicp.extras.smartnav.ActionPickerDialogActivity"
                 android:theme="@style/Theme.SmartBar.Dialog"
                 android:label="@string/choose_action_title"
                 android:excludeFromRecents="true">
@@ -108,7 +108,7 @@
         </activity>
 
         <!-- Icon pack picker -->
-        <activity android:name="com.aicp.extras.IconPickerActivity"
+        <activity android:name="com.aicp.extras.smartnav.IconPickerActivity"
                 android:theme="@style/Theme.SmartBar.Dialog"
                 android:label="@string/icon_pack_picker_dialog_title"
                 android:excludeFromRecents="true">
@@ -118,7 +118,7 @@
         </activity>
 
         <!-- Icon picker proxy for gallery -->
-        <activity android:name="com.aicp.extras.IconPickerGallery"
+        <activity android:name="com.aicp.extras.smartnav.IconPickerGallery"
             android:theme="@style/Theme.SmartBar.Dialog"
             android:label="@string/icon_pack_picker_dialog_title"
             android:excludeFromRecents="true">
@@ -128,7 +128,7 @@
         </activity>
 
         <!-- Icon pack grid -->
-        <activity android:name="com.aicp.extras.IconPackGridActivity"
+        <activity android:name="com.aicp.extras.smartnav.IconPackGridActivity"
                 android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
