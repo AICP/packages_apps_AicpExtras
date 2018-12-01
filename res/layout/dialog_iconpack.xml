@@ -20,8 +20,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingStart="?android:attr/dialogPreferredPadding"
-    android:paddingEnd="?android:attr/dialogPreferredPadding" >
+    android:paddingStart="@dimen/alert_dialog_padding_material"
+    android:paddingEnd="@dimen/alert_dialog_padding_material" >
     <ListView
         android:id="@+id/iconpack_list"
         android:layout_width="match_parent"

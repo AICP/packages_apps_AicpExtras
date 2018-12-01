@@ -33,7 +33,7 @@ public class Navigation extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String KEY_NAVIGATION_BAR_ENABLED =
-            "navigation_bar_enabled";
+            "navigation_bar_visible";
     private static final int BUTTON_BRIGHTNESS_DEFAULT = 180;
 
     private MasterSwitchPreference mNavBarPreference;
