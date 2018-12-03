@@ -55,6 +55,13 @@
         </Preference>
 
         <Preference
+            android:title="@string/aicp_walls_title"
+            android:summary="@string/aicp_walls_summary">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="@string/aicp_walls_link" />
+        </Preference>
+
+        <Preference
             android:title="@string/g_plus_title"
             android:summary="@string/g_plus_summary">
             <intent android:action="android.intent.action.VIEW"
