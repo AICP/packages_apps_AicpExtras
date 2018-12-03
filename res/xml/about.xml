@@ -42,7 +42,10 @@
         <Preference
             android:key="aicp_downloads"
             android:title="@string/aicp_downloads_title"
-            android:summary="@string/aicp_downloads_summary" />
+            android:summary="@string/aicp_downloads_summary">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="@string/aicp_downloads_link" />
+        </Preference>
 
         <Preference
             android:title="@string/aicp_website_title"
