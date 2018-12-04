@@ -19,27 +19,11 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
-    android:title="@string/recents_title">
+    android:title="@string/recent_app_sidebar_title">
 
-    <!--
-    <PreferenceCategory
-        android:key="stock_recents_category"
-        android:title="@string/stock_recents_category">
-
-    </PreferenceCategory>
-    -->
-
-    <PreferenceCategory
-        android:key="alternative_recents_category"
-        android:title="@string/alternative_recents_category">
-
-        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-            android:key="use_slim_recents"
-            android:title="@string/slim_recents_title"
-            aicpextras:thereCanBeOnlyOneGroupId="1"
-            android:defaultValue="false"
-            android:fragment="com.aicp.extras.fragments.SlimRecents" />
-
-    </PreferenceCategory>
+    <PreferenceScreen
+        android:title="@string/recent_app_sidebar_style_title"
+        android:summary="@string/recent_app_sidebar_style_summary"
+        android:fragment="com.aicp.extras.fragments.SlimRecentAppSidebarStyle" />
 
 </PreferenceScreen>
