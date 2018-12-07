@@ -29,18 +29,15 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.preference.MasterSwitchPreference;
 
+import com.android.internal.utils.ActionUtils;
+
 public class Navigation extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
-    private static final String KEY_NAVIGATION_BAR_ENABLED =
+    private static final String KEY_NAVIGATION_BAR_VISIBLE =
             "navigation_bar_visible";
-    private static final int BUTTON_BRIGHTNESS_DEFAULT = 180;
 
-    private MasterSwitchPreference mNavBarPreference;
-
-    private boolean mButtonLightsEnabled;
-    private boolean mHasNavigationBar;
-    private int mButtonBrightness;
+    private MasterSwitchPreference mNavbarPreference;
 
     @Override
     protected int getPreferenceResource() {
@@ -51,39 +48,23 @@ public class Navigation extends BaseSettingsFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ContentResolver resolver = getContentResolver();
-        PreferenceScreen prefScreen = getPreferenceScreen();
+        mNavbarPreference =
+                (MasterSwitchPreference) findPreference(KEY_NAVIGATION_BAR_VISIBLE);
 
-        mNavBarPreference =
-                (MasterSwitchPreference) findPreference(KEY_NAVIGATION_BAR_ENABLED);
-
-        mHasNavigationBar = getActivity().getResources()
-                .getBoolean(com.android.internal.R.bool.config_showNavigationBar);
-
-        mButtonLightsEnabled = Settings.System.getInt(resolver,
-                        Settings.System.BUTTON_BRIGHTNESS_ENABLED, 0) !=0;
-        mButtonBrightness =  Settings.System.getInt(resolver,
-                        Settings.System.BUTTON_BRIGHTNESS, BUTTON_BRIGHTNESS_DEFAULT);
-
-        mNavBarPreference.setOnPreferenceChangeListener(this);
+        mNavbarPreference.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mNavBarPreference) {
-            if (!mHasNavigationBar) updateButtonLights((boolean) newValue);
+        if (preference == mNavbarPreference) {
+            updateButtonLights((boolean) newValue);
             return true;
         }
         return false;
     }
 
     private void updateButtonLights(boolean navbarEnabled) {
-        ContentResolver resolver = getContentResolver();
-
-        Settings.System.putInt(resolver, Settings.System.BUTTON_BRIGHTNESS_ENABLED,
-                !navbarEnabled ? (mButtonLightsEnabled ? 1 : 0) : 0);
-        Settings.System.putInt(resolver, Settings.System.BUTTON_BRIGHTNESS,
-                !navbarEnabled ? (mButtonBrightness == 0 ?
-                          BUTTON_BRIGHTNESS_DEFAULT : mButtonBrightness) : 0);
+        Settings.System.putInt(getContentResolver(),
+            Settings.System.BUTTON_BRIGHTNESS_ENABLED, !navbarEnabled ? 1 : 0);
     }
 }

@@ -35,7 +35,9 @@ import android.support.v14.preference.SwitchPreference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
+
 import com.android.internal.util.aicp.DeviceUtils;
+import com.android.internal.utils.ActionUtils;
 
 public class HwKeys extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
@@ -61,13 +63,15 @@ public class HwKeys extends BaseSettingsFragment implements
     private static final int KEY_MASK_CAMERA = 0x20;
     private static final int KEY_MASK_VOLUME = 0x40;
 
+    private static final int BUTTON_BRIGHTNESS_DEFAULT = 180;
+
     private SwitchPreference mTorchLongPressPowerGesture;
     private ListPreference mTorchLongPressPowerTimeout;
 
+    private boolean mNavbarVisible = false;
+    private int mButtonBrightness;
     private int mDeviceHardwareKeys;
     private int mDeviceHardwareWakeKeys;
-    private boolean mHasNavigationBar = false;
-    private boolean mNavBarEnabled = false;
 
     @Override
     protected int getPreferenceResource() {
@@ -125,28 +129,27 @@ public class HwKeys extends BaseSettingsFragment implements
             prefScreen.removePreference(volumeCategory);
         }
 
-        mHasNavigationBar = getActivity().getResources()
-                .getBoolean(com.android.internal.R.bool.config_showNavigationBar);
-
-        final boolean defaultToNavigationBar = getActivity().getResources()
-                .getBoolean(com.android.internal.R.bool.config_defaultToNavigationBar);
-
-        mNavBarEnabled = Settings.System.getIntForUser(resolver,
-                Settings.System.NAVIGATION_BAR_ENABLED, defaultToNavigationBar ? 1 : 0,
-                        UserHandle.USER_CURRENT) == 1;
+        mNavbarVisible = Settings.Secure.getIntForUser(resolver,
+                        Settings.Secure.NAVIGATION_BAR_VISIBLE,
+                        ActionUtils.hasNavbarByDefault(getActivity()) ? 1 : 0, UserHandle.USER_CURRENT) != 0;
+        mButtonBrightness =  Settings.System.getInt(resolver,
+                        Settings.System.BUTTON_BRIGHTNESS, BUTTON_BRIGHTNESS_DEFAULT);
         final boolean buttonBrightnessEnabled = Settings.System.getIntForUser(resolver,
                 Settings.System.BUTTON_BRIGHTNESS_ENABLED, 0, UserHandle.USER_CURRENT) == 1;
-        if (mDeviceHardwareKeys != 0) {
-            if (hasNavigationBar() && buttonBrightnessEnabled) {
-                Settings.System.putInt(resolver,
-                        Settings.System.BUTTON_BRIGHTNESS_ENABLED, 0);
-            } else if (hasNavigationBar()) {
-                prefScreen.removePreference(backlightCategory);
-            }
-        } else {
+
+        if (hasNavigationBar()) {  // we have navbar, turn lights off, remove lights category
             Settings.System.putInt(resolver,
                     Settings.System.BUTTON_BRIGHTNESS_ENABLED, 0);
             prefScreen.removePreference(backlightCategory);
+        } else {
+            if (mDeviceHardwareKeys != 0) {  // dont have navbar but have hwkeys, turn lights on
+                Settings.System.putInt(resolver,
+                        Settings.System.BUTTON_BRIGHTNESS_ENABLED, 1);
+            } else { // we have no navbar, no hwkeys, only gesture navigation possibly, no lights
+                Settings.System.putInt(resolver,
+                        Settings.System.BUTTON_BRIGHTNESS_ENABLED, 0);
+                prefScreen.removePreference(backlightCategory);
+            }
         }
     }
 
@@ -177,7 +180,7 @@ public class HwKeys extends BaseSettingsFragment implements
     }
 
     public boolean hasNavigationBar() {
-        return mHasNavigationBar || mNavBarEnabled;
+        return mNavbarVisible;
     }
 
 }
