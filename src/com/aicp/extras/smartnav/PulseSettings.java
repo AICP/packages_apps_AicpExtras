@@ -16,13 +16,56 @@
 
 package com.aicp.extras.smartnav;
 
+import android.os.Bundle;
+import android.os.UserHandle;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.Preference;
+import android.provider.Settings;
+
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
+import com.aicp.gear.preference.SecureSettingIntListPreference;
 
-public class PulseSettings extends BaseSettingsFragment {
+public class PulseSettings extends BaseSettingsFragment implements
+        Preference.OnPreferenceChangeListener {
+
+    private static final String TAG = PulseSettings.class.getSimpleName();
+
+    private static final int RENDER_STYLE_FADING_BARS = 0;
+    private static final int RENDER_STYLE_SOLID_LINES = 1;
+
+    SecureSettingIntListPreference mRenderMode;
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.pulse_settings;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        mRenderMode = (SecureSettingIntListPreference) findPreference("pulse_render_style");
+        mRenderMode.setOnPreferenceChangeListener(this);
+        int renderMode = Settings.Secure.getIntForUser(getContentResolver(),
+                Settings.Secure.PULSE_RENDER_STYLE_URI, RENDER_STYLE_SOLID_LINES, UserHandle.USER_CURRENT);
+        updateCategoryDependencies(renderMode);
+    }
+
+    private void updateCategoryDependencies(int renderMode) {
+        PreferenceCategory fadingBarsCat = (PreferenceCategory)findPreference("pulse_fading_bars_category");
+        fadingBarsCat.setEnabled(renderMode == RENDER_STYLE_FADING_BARS);
+        PreferenceCategory solidBarsCat = (PreferenceCategory) findPreference("pulse_2");
+        solidBarsCat.setEnabled(renderMode == RENDER_STYLE_SOLID_LINES);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference.equals(mRenderMode)) {
+            int mode = Integer.valueOf((String) newValue);
+            updateCategoryDependencies(mode);
+            return true;
+        }
+        return false;
     }
 }
