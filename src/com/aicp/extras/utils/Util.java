@@ -174,6 +174,7 @@ public abstract class Util {
     }
 
     public static void requireRoot(Context context, Preference preference) {
+        if (preference == null) return;
         if (showAllPrefs(context)) return;
         if (!hasSu()) {
             preference.getParent().removePreference(preference);
@@ -184,11 +185,21 @@ public abstract class Util {
      * Remove preference on devices with display cutout (notch).
      */
     public static void requireFullStatusbar(Context context, Preference preference) {
+        if (preference == null) return;
         if (showAllPrefs(context)) return;
         String displayCutoutPath = context.getResources()
                 .getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
         if (!TextUtils.isEmpty(displayCutoutPath)) {
             // TODO: we might want to check whether cutout is in statusbar area as well
+            preference.getParent().removePreference(preference);
+        }
+    }
+
+    public static void requireConfig(Context context, Preference preference, int configId,
+                                     boolean expectValue, boolean allowBypass) {
+        if (preference == null) return;
+        if (allowBypass && showAllPrefs(context)) return;
+        if (context.getResources().getBoolean(configId) != expectValue) {
             preference.getParent().removePreference(preference);
         }
     }

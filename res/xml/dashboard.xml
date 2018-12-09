@@ -74,6 +74,14 @@
             android:icon="@drawable/ic_settings_lockscreen"
             android:fragment="com.aicp.extras.fragments.Lockscreen" />
 
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+            android:key="battery_light_enabled"
+            android:defaultValue="@*android:bool/config_intrusiveBatteryLed"
+            android:title="@string/battery_light_title"
+            android:summary="@string/battery_light_summary"
+            android:icon="@drawable/ic_settings_battery_light"
+            android:fragment="com.aicp.extras.fragments.BatteryLight" />
+
         <PreferenceScreen
             android:title="@string/panel_porn_title"
             android:summary="@string/panel_porn_summary"
