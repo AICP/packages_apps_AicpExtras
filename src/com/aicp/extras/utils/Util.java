@@ -193,6 +193,14 @@ public abstract class Util {
         }
     }
 
+    public static void requireConfig(Context context, Preference preference, int configId,
+                                     boolean expectValue, boolean allowBypass) {
+        if (allowBypass && showAllPrefs(context)) return;
+        if (context.getResources().getBoolean(configId) != expectValue) {
+            preference.getParent().removePreference(preference);
+        }
+    }
+
     private static boolean showAllPrefs(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(Constants.PREF_SHOW_DEVICE_HIDDEN_PREFS, false);
