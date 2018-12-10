@@ -137,19 +137,9 @@ public class HwKeys extends BaseSettingsFragment implements
         final boolean buttonBrightnessEnabled = Settings.System.getIntForUser(resolver,
                 Settings.System.BUTTON_BRIGHTNESS_ENABLED, 0, UserHandle.USER_CURRENT) == 1;
 
-        if (hasNavigationBar()) {  // we have navbar, turn lights off, remove lights category
-            Settings.System.putInt(resolver,
-                    Settings.System.BUTTON_BRIGHTNESS_ENABLED, 0);
+        // Remove backlight category when using navigation bar or when we don't have hw keys
+        if (hasNavigationBar() || mDeviceHardwareKeys == 0) {
             prefScreen.removePreference(backlightCategory);
-        } else {
-            if (mDeviceHardwareKeys != 0) {  // dont have navbar but have hwkeys, turn lights on
-                Settings.System.putInt(resolver,
-                        Settings.System.BUTTON_BRIGHTNESS_ENABLED, 1);
-            } else { // we have no navbar, no hwkeys, only gesture navigation possibly, no lights
-                Settings.System.putInt(resolver,
-                        Settings.System.BUTTON_BRIGHTNESS_ENABLED, 0);
-                prefScreen.removePreference(backlightCategory);
-            }
         }
     }
 
