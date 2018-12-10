@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.os.SystemProperties;
 import android.support.v7.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 import android.view.View;
@@ -208,6 +209,23 @@ public class MasterSwitchPreference extends TwoTargetPreference {
 
     @Override
     protected Object onGetDefaultValue(TypedArray a, int index) {
+        // This is called in super constructor, so we cannot load required
+        // attrs for this method from init() -> do here (and use Preference stylables only)
+        String systemPropDefaultOverride =
+                a.getString(R.styleable.Preference_systemPropDefaultOverride);
+
+        if (systemPropDefaultOverride != null) {
+            int sep1 = systemPropDefaultOverride.indexOf('?');
+            int sep2 = systemPropDefaultOverride.indexOf(':');
+            String override = SystemProperties.get(systemPropDefaultOverride.substring(0, sep1));
+            String onValue = systemPropDefaultOverride.substring(sep1+1, sep2);
+            String offValue = systemPropDefaultOverride.substring(sep2+1);
+            if (onValue.equals(override)) {
+                return true;
+            } else if (offValue.equals(override)) {
+                return false;
+            } // else: don't override
+        }
         return mDefaultValue = a.getBoolean(index, false);
     }
 

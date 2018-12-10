@@ -29,4 +29,14 @@
             non-switch clicks. -->
         <attr name="plainSwitch" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="Preference">
+        <!-- If there is a system prop that should overwrite the default value, put
+            systemPropDefaultOverride="<prop_name>?<on_value>:<off_value>".
+
+            Logically, this belongs to the MasterSwitchPreference stylable, but we need it here
+            due to Preference implementation.
+            Who knows, we might use it for other preferences as well -->
+        <attr name="systemPropDefaultOverride" format="string" />
+    </declare-styleable>
 </resources>

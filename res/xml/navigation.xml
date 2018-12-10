@@ -24,7 +24,8 @@
         android:key="navigation_bar_visible"
         android:title="@string/navbar_visibility"
         android:summary="@string/navigation_bar_summary"
-        android:defaultValue="false"
+        android:defaultValue="@*android:bool/config_showNavigationBar"
+        aicpextras:systemPropDefaultOverride="qemu.hw.mainkeys?0:1"
         aicpextras:thereCanBeOnlyOneGroupId="1"
         android:fragment="com.aicp.extras.smartnav.NavigationBarSettings" />
 
