@@ -16,55 +16,13 @@
 
 package com.aicp.extras.fragments;
 
-import android.content.ContentResolver;
-import android.content.Context;
-import android.os.Bundle;
-import android.os.UserHandle;
-import android.provider.Settings;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceScreen;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.extras.preference.MasterSwitchPreference;
 
-import com.android.internal.utils.ActionUtils;
-
-public class Navigation extends BaseSettingsFragment implements
-        Preference.OnPreferenceChangeListener {
-
-    private static final String KEY_NAVIGATION_BAR_VISIBLE =
-            "navigation_bar_visible";
-
-    private MasterSwitchPreference mNavbarPreference;
+public class Navigation extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.navigation;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        mNavbarPreference =
-                (MasterSwitchPreference) findPreference(KEY_NAVIGATION_BAR_VISIBLE);
-
-        mNavbarPreference.setOnPreferenceChangeListener(this);
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mNavbarPreference) {
-            updateButtonLights((boolean) newValue);
-            return true;
-        }
-        return false;
-    }
-
-    private void updateButtonLights(boolean navbarEnabled) {
-        Settings.System.putInt(getContentResolver(),
-            Settings.System.BUTTON_BRIGHTNESS_ENABLED, !navbarEnabled ? 1 : 0);
     }
 }
