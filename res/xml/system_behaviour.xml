@@ -38,7 +38,7 @@
         android:key="smart_pixels_enable"
         android:title="@string/smart_pixels_title"
         android:summary="@string/smart_pixels_summary"
-        android:defaultValue="false"
+        android:defaultValue="@*android:bool/config_enableSmartPixels"
         android:fragment="com.aicp.extras.fragments.SmartPixels" />
 
     <PreferenceCategory
