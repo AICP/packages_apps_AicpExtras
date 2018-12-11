@@ -38,6 +38,7 @@ public class SystemBehaviour extends BaseSettingsFragment
 
     private static final String TAG = SystemBehaviour.class.getSimpleName();
 
+    private static final String KEY_SMART_PIXELS = "smart_pixels_enable";
     private static final String SELINUX_CATEGORY = "selinux";
 
     private SwitchPreference mSelinuxMode;
@@ -64,6 +65,14 @@ public class SystemBehaviour extends BaseSettingsFragment
                 .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
                 .contains(Constants.PREF_SELINUX_MODE));
         Util.requireRoot(getActivity(), selinuxCategory);
+
+        boolean enableSmartPixels = getContext().getResources().
+                getBoolean(com.android.internal.R.bool.config_enableSmartPixels);
+        Preference SmartPixels = findPreference(KEY_SMART_PIXELS);
+
+        if (!enableSmartPixels){
+            SmartPixels.getParent().removePreference(SmartPixels);
+        }
     }
 
     @Override
