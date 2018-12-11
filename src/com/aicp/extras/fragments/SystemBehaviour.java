@@ -66,13 +66,9 @@ public class SystemBehaviour extends BaseSettingsFragment
                 .contains(Constants.PREF_SELINUX_MODE));
         Util.requireRoot(getActivity(), selinuxCategory);
 
-        boolean enableSmartPixels = getContext().getResources().
-                getBoolean(com.android.internal.R.bool.config_enableSmartPixels);
-        Preference SmartPixels = findPreference(KEY_SMART_PIXELS);
+        Util.requireConfig(getActivity(), findPreference(KEY_SMART_PIXELS),
+                com.android.internal.R.bool.config_enableSmartPixels, true, false);
 
-        if (!enableSmartPixels){
-            SmartPixels.getParent().removePreference(SmartPixels);
-        }
     }
 
     @Override
