@@ -83,21 +83,27 @@
             android:defaultValue="true"
             android:fragment="com.aicp.extras.fragments.StatusBarClockSettings" />
 
-        <!-- Show Network Traffic State on Statusbar -->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="network_traffic_state"
-            android:title="@string/network_traffic_state_title"
-            android:defaultValue="false" />
+    </PreferenceCategory>
 
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
-           android:key="network_traffic_autohide_threshold"
-           android:title="@string/network_traffic_autohide_threshold_title"
-           android:max="10"
-           android:min="0"
-           aicpextras:unitsLeft=""
-           aicpextras:unitsRight=""
-           android:defaultValue="1"
-           android:dependency="network_traffic_state" />
+    <!-- Show Network Traffic State on Statusbar -->
+    <PreferenceCategory
+        android:title="@string/network_traffic_category">
+
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+            android:key="network_traffic_state"
+            android:title="@string/network_traffic_title"
+            android:summary="@string/network_traffic_summary"
+            android:defaultValue="false"
+            android:fragment="com.aicp.extras.fragments.NetworkTraffic"
+            aicpextras:thereCanBeOnlyOneGroupId="1" />
+
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+            android:key="network_traffic_expanded_status_bar_state"
+            android:title="@string/network_traffic_expanded_status_bar_title"
+            android:summary="@string/network_traffic_expanded_status_bar_summary"
+            android:defaultValue="false"
+            android:fragment="com.aicp.extras.fragments.NetworkTraffic"
+            aicpextras:thereCanBeOnlyOneGroupId="1" />
 
     </PreferenceCategory>
 
