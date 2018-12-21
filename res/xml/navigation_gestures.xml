@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2017 AICP
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    android:title="@string/use_bottom_gesture_title">
+
+    <com.aicp.gear.preference.SeekBarPreferenceCham
+        android:key="gesture_swipe_length"
+        android:title="@string/gesture_swipe_length_title"
+        android:summary="@string/gesture_swipe_length_summary"
+        android:persistent="false"
+        android:defaultValue="@*android:integer/config_navgestureswipeminlength"
+        aicpextras:unitsRight="@string/unit_px" />
+
+    <com.aicp.gear.preference.SeekBarPreferenceCham
+        android:key="gesture_swipe_timeout"
+        android:title="@string/gesture_action_timeout_title"
+        android:summary="@string/gesture_action_timeout_summary"
+        android:max="500"
+        android:min="100"
+        android:defaultValue="@*android:integer/config_navgestureswipetimout"
+        android:persistent="false"
+        aicpextras:unitsRight="@string/unit_msec" />
+
+    <Preference
+        android:key="gestures_usage"
+        android:selectable="false"
+        android:summary="@string/gesture_settings_info" />
+
+</PreferenceScreen>
