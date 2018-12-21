@@ -34,6 +34,7 @@
             android:title="@string/use_bottom_gesture_title"
             android:summary="@string/use_bottom_gesture_summary"
             aicpextras:thereCanBeOnlyOneGroupId="1"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            android:fragment="com.aicp.extras.fragments.NavigationGestureSettings" />
 
 </PreferenceScreen>
