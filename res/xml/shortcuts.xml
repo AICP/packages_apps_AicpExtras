@@ -24,17 +24,4 @@
             android:action="android.intent.action.VIEW"
             android:data="http://gerrit.aicp-rom.com"/>
     </shortcut>
-
-    <shortcut
-        android:shortcutId="g_plus"
-        android:enabled="true"
-        android:icon="@drawable/ic_launcher_shortcut_g_plus"
-        android:shortcutDisabledMessage="@string/launcher_shortcut_disabled_message"
-        android:shortcutLongLabel="@string/g_plus_title"
-        android:shortcutShortLabel="@string/g_plus_title">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://plus.google.com/communities/101008638920580274588"/>
-    </shortcut>
-
 </shortcuts>
