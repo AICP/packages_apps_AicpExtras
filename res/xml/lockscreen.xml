@@ -64,6 +64,12 @@
               android:defaultValue="false" />
 
           <com.aicp.gear.preference.SystemSettingSwitchPreference
+              android:key="lockscreen_hide_status_bar"
+              android:title="@string/lockscreen_hide_status_bar_title"
+              android:summary="@string/lockscreen_hide_status_bar_summary"
+              android:defaultValue="false" />
+
+          <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="lockscreen_scramble_pin_layout"
               android:title="@string/unlock_scramble_pin_layout_title"
               android:summary="@string/unlock_scramble_pin_layout_summary"
