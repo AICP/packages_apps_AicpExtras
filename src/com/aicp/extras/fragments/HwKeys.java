@@ -35,6 +35,7 @@ import android.support.v14.preference.SwitchPreference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
+import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
 import com.android.internal.util.aicp.DeviceUtils;
 import com.android.internal.utils.ActionUtils;
@@ -52,6 +53,8 @@ public class HwKeys extends BaseSettingsFragment implements
             "torch_long_press_power_timeout";
     private static final String KEY_VOLUME_ROCKER_WAKE_SCREEN =
             "volrocker_wake_screen";
+    private static final String KEY_BUTTON_BRIGHTNESS_ENABLED =
+            "button_brightness_enabled";
 
     // Masks for checking presence of hardware keys.
     // Must match values in core/res/res/values/config.xml
@@ -129,16 +132,24 @@ public class HwKeys extends BaseSettingsFragment implements
             prefScreen.removePreference(volumeCategory);
         }
 
+        final boolean hasNavbarByDefault = ActionUtils.hasNavbarByDefault(getActivity());
         mNavbarVisible = Settings.Secure.getIntForUser(resolver,
                         Settings.Secure.NAVIGATION_BAR_VISIBLE,
-                        ActionUtils.hasNavbarByDefault(getActivity()) ? 1 : 0, UserHandle.USER_CURRENT) != 0;
+                        hasNavbarByDefault ? 1 : 0,
+                        UserHandle.USER_CURRENT) != 0;
         mButtonBrightness =  Settings.System.getInt(resolver,
                         Settings.System.BUTTON_BRIGHTNESS, BUTTON_BRIGHTNESS_DEFAULT);
         final boolean buttonBrightnessEnabled = Settings.System.getIntForUser(resolver,
-                Settings.System.BUTTON_BRIGHTNESS_ENABLED, 0, UserHandle.USER_CURRENT) == 1;
+                        Settings.System.BUTTON_BRIGHTNESS_ENABLED,
+                        hasNavbarByDefault ? 0 : 1,
+                        UserHandle.USER_CURRENT) == 1;
+
+        final SystemSettingSwitchPreference buttonBrightnessPreference =
+                        (SystemSettingSwitchPreference) prefScreen.findPreference(KEY_BUTTON_BRIGHTNESS_ENABLED);
+        buttonBrightnessPreference.setChecked(!mNavbarVisible && buttonBrightnessEnabled);
 
         // Remove backlight category when using navigation bar or when we don't have hw keys
-        if (hasNavigationBar() || mDeviceHardwareKeys == 0) {
+        if (hasNavigationBar() || (mDeviceHardwareKeys == 0 || mDeviceHardwareKeys == 32 || mDeviceHardwareKeys == 64)) {
             prefScreen.removePreference(backlightCategory);
         }
     }
