@@ -115,7 +115,7 @@
             android:key="button_brightness_enabled"
             android:title="@string/button_backlight_enable_title"
             android:summary="@string/button_backlight_enable_summary"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="button_brightness"
@@ -124,7 +124,8 @@
             android:min="0"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
-            android:defaultValue="180" />
+            android:defaultValue="180"
+            android:dependency="button_brightness_enabled" />
 
       </PreferenceCategory>
 
