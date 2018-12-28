@@ -19,7 +19,6 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
-    xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     android:title="@string/system_behaviour_title">
 
     <Preference
@@ -40,6 +39,18 @@
         android:fragment="com.aicp.extras.fragments.ChooserActivityBlacklist"
         android:title="@string/chooser_activity_blacklist_title"
         android:summary="@string/chooser_activity_blacklist_summary"
+        android:persistent="false" />
+
+    <com.aicp.extras.preference.HostnamePreference
+        android:key="device_hostname"
+        android:title="@string/device_hostname"
+        android:summary="@string/device_hostname_summary"
+        android:dialogTitle="@string/device_hostname"
+        android:positiveButtonText="@string/menu_save"
+        android:negativeButtonText="@string/menu_cancel"
+        android:selectAllOnFocus="true"
+        android:imeOptions="actionDone"
+        android:inputType="textNoSuggestions"
         android:persistent="false" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
