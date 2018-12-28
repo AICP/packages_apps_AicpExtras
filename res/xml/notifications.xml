@@ -50,7 +50,6 @@
         android:defaultValue="@*android:bool/config_intrusiveBatteryLed"
         android:title="@string/battery_light_title"
         android:summary="@string/battery_light_summary"
-        android:icon="@drawable/ic_settings_battery_light"
         android:fragment="com.aicp.extras.fragments.BatteryLight" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
