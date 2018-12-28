@@ -138,6 +138,12 @@
        android:key="statusbar_others_category"
        android:title="@string/status_bar_others_category_title">
 
+       <com.aicp.gear.preference.SystemSettingSwitchPreference
+           android:key="statusbar_hide_notch"
+           android:title="@string/hide_notch_title"
+           android:summary="@string/hide_notch_summary"
+           android:defaultValue="false" />
+
        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
            android:key="statusbar_battery_bar"
            android:title="@string/battery_bar_title"

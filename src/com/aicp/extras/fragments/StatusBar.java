@@ -40,6 +40,7 @@ public class StatusBar extends BaseSettingsFragment implements
 
     private static final String SMART_PULLDOWN = "qs_smart_pulldown";
     private static final String KEY_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
+    private static final String KEY_HIDE_NOTCH = "statusbar_hide_notch";
 
     private ListPreference mSmartPulldown;
     private Preference mCustomCarrierLabel;
@@ -64,6 +65,13 @@ public class StatusBar extends BaseSettingsFragment implements
 
         mCustomCarrierLabel = (Preference) findPreference(KEY_CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
+
+        final String displayCutout = getResources().getString(
+                com.android.internal.R.string.config_mainBuiltInDisplayCutout);
+        if(displayCutout.isEmpty()) {
+            final Preference hideNotchPref = (Preference) findPreference(KEY_HIDE_NOTCH);
+            hideNotchPref.getParent().removePreference(hideNotchPref);
+        }
     }
 
     @Override
