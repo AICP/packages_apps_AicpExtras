@@ -33,6 +33,12 @@
         android:summary="@string/media_art_summary"
         android:defaultValue="false" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="lockscreen_rotation"
+        android:title="@string/lockscreen_rotation_title"
+        android:summary="@string/lockscreen_rotation_summary"
+        android:defaultValue="@*android:bool/config_enableLockScreenRotation" />
+
     <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
         android:key="lockscreen_visualizer_enabled"
         android:title="@string/lockscreen_visualizer_title"
