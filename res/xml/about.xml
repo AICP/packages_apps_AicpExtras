@@ -84,6 +84,16 @@
             android:key="device_maintainer"
             android:title="@string/device_maintainer_title" />
 
+        <Preference
+            android:key="aicp_version"
+            android:selectable="false"
+            android:title="@string/aicp_version_title" />
+
+        <Preference
+            android:key="build_date"
+            android:selectable="false"
+            android:title="@string/build_date_title" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
