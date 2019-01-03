@@ -17,13 +17,26 @@
 
 package com.aicp.extras.fragments;
 
+import android.os.Bundle;
+import com.android.settingslib.widget.FooterPreferenceMixin;
+
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
 public class AmbientMediaTicker extends BaseSettingsFragment {
 
+    FooterPreferenceMixin mFooterPreferenceMixin;
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.ambient_media_ticker;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        mFooterPreferenceMixin = new FooterPreferenceMixin(this, getLifecycle());
+        mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.ambient_ticker_footer);
     }
 }

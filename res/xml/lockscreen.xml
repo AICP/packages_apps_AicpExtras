@@ -42,8 +42,8 @@
 
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="force_ambient_for_media"
-        android:title="@string/force_ambient_for_media_title"
-        android:summary="@string/force_ambient_for_media_summary"
+        android:title="@string/force_ambient_for_media_pref_title"
+        android:summary="@string/force_ambient_for_media_pref_summary"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.AmbientMediaTicker" />
 
