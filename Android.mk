@@ -21,8 +21,9 @@ LOCAL_PROGUARD_ENABLED := disabled
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
-LOCAL_ASSET_DIR := $(LOCAL_PATH)/assets
+LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 
+LOCAL_ASSET_DIR := $(LOCAL_PATH)/assets
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-support-v4 \
@@ -48,6 +49,8 @@ LOCAL_PACKAGE_NAME := AicpExtras
 LOCAL_PRIVATE_PLATFORM_APIS := true
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
+
+include frameworks/base/packages/SettingsLib/common.mk
 
 include $(BUILD_PACKAGE)
 

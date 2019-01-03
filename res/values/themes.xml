@@ -27,6 +27,7 @@
         <item name="value_popup_view_bg">#e6eeeeee</item>
         <item name="value_popup_view_fg">@*android:color/primary_text_default_material_light</item>
         <item name="color_two_target_preference_divider">?android:attr/dividerVertical</item>
+        <item name="footerPreferenceStyle">@style/Preference.FooterPreference.SettingsBase</item>
     </style>
 
     <style name="AppTheme_MoreAccent" parent="@style/AppTheme">
@@ -46,6 +47,7 @@
         <item name="android:navigationBarColor">@android:color/white</item>
         <item name="android:windowLightNavigationBar">true</item>
         <item name="color_two_target_preference_divider">#64000000</item>
+        <item name="footerPreferenceStyle">@style/Preference.FooterPreference.SettingsBase</item>
     </style>
 
     <style name="AppTheme_Light_MoreAccent" parent="@style/AppTheme_Light">
@@ -61,6 +63,7 @@
         <item name="value_popup_view_bg">#e6424242</item>
         <item name="value_popup_view_fg">@*android:color/primary_text_default_material_dark</item>
         <item name="color_two_target_preference_divider">#64ffffff</item>
+        <item name="footerPreferenceStyle">@style/Preference.FooterPreference.SettingsBase</item>
     </style>
 
     <style name="AppTheme_Dark_MoreAccent" parent="@style/AppTheme_Dark">
