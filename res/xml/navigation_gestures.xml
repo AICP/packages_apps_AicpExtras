@@ -39,9 +39,7 @@
         android:persistent="false"
         aicpextras:unitsRight="@string/unit_msec" />
 
-    <Preference
-        android:key="gestures_usage"
-        android:selectable="false"
-        android:summary="@string/gesture_settings_info" />
+    <com.android.settingslib.widget.FooterPreference
+        android:title="@string/gesture_settings_info" />
 
 </PreferenceScreen>
