@@ -16,13 +16,32 @@
 
 package com.aicp.extras.fragments;
 
+import android.provider.SearchIndexableResource;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
+
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class NetworkTraffic extends BaseSettingsFragment {
+public class NetworkTraffic extends BaseSettingsFragment implements Indexable {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.status_bar_network_traffic;
     }
+
+    /**
+     * For Search.
+     */
+    public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+        new BaseSearchIndexProvider() {
+
+            @Override
+            public List<SearchIndexableResource> getXmlResourcesToIndex(
+                    Context context, boolean enabled) {
+                final SearchIndexableResource sir = new SearchIndexableResource(context);
+                sir.xmlResId = R.xml.status_bar_network_traffic;
+                return Arrays.asList(sir);
+            }
+    };
 }
