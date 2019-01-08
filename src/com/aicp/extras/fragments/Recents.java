@@ -57,11 +57,13 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
     private static final String RECENTS_COMPONENT_TYPE = "recents_component";
     private static final String RECENTS_TYPE = "recents_layout_style";
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+    private static final int RECENTS_COMPONENT_OREO = 1;
 
     private ListPreference mRecentsComponentType;
     private ListPreference mRecentsClearAllLocation;
     private SwitchPreference mRecentsClearAll;
     private ListPreference mRecentsType;
+    private PreferenceCategory oreoRecentsCat;
 
     private PreferenceCategory mStockRecentsCategory;
     private PreferenceCategory mAlternativeRecentsCategory;
@@ -103,6 +105,9 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
         mRecentsType.setValue(String.valueOf(style));
         mRecentsType.setSummary(mRecentsType.getEntry());
         mRecentsType.setOnPreferenceChangeListener(this);
+
+        oreoRecentsCat = (PreferenceCategory)findPreference("recents_ui_oreo_recents_category");
+        oreoRecentsCat.setEnabled(type == RECENTS_COMPONENT_OREO);
 
         mStockRecentsCategory = (PreferenceCategory) findPreference(PREF_STOCK_RECENTS_CATEGORY);
         mAlternativeRecentsCategory =
@@ -184,7 +189,8 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.RECENTS_COMPONENT, type);
             mRecentsComponentType.setSummary(mRecentsComponentType.getEntries()[index]);
-            if (type == 1) { // Disable swipe up gesture, if oreo type selected
+            oreoRecentsCat.setEnabled(type == RECENTS_COMPONENT_OREO);
+            if (type == RECENTS_COMPONENT_OREO) { // Disable swipe up gesture, if oreo type selected
                Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, 0);
             }
