@@ -28,6 +28,7 @@ import android.os.UserHandle;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.support.v7.preference.Preference;
+import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
@@ -54,7 +55,11 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
     private static final String PREF_ALTERNATIVE_RECENTS_CATEGORY = "alternative_recents_category";
     private static final String PREF_SWIPE_UP_ENABLED = "swipe_up_enabled_warning";
     private static final String RECENTS_COMPONENT_TYPE = "recents_component";
+    private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+
     private ListPreference mRecentsComponentType;
+    private ListPreference mRecentsClearAllLocation;
+    private SwitchPreference mRecentsClearAll;
 
     private PreferenceCategory mStockRecentsCategory;
     private PreferenceCategory mAlternativeRecentsCategory;
@@ -78,6 +83,14 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
         mRecentsComponentType.setValue(String.valueOf(type));
         mRecentsComponentType.setSummary(mRecentsComponentType.getEntry());
         mRecentsComponentType.setOnPreferenceChangeListener(this);
+
+        // clear all recents
+        mRecentsClearAllLocation = (ListPreference) findPreference(RECENTS_CLEAR_ALL_LOCATION);
+        int location = Settings.System.getIntForUser(resolver,
+                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 3, UserHandle.USER_CURRENT);
+        mRecentsClearAllLocation.setValue(String.valueOf(location));
+        mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
+        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
 
         mStockRecentsCategory = (PreferenceCategory) findPreference(PREF_STOCK_RECENTS_CATEGORY);
         mAlternativeRecentsCategory =
@@ -164,6 +177,13 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
                     Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, 0);
             }
             Util.showSystemUiRestartDialog(getContext());
+        return true;
+        } else if (preference == mRecentsClearAllLocation) {
+            int location = Integer.valueOf((String) objValue);
+            int index = mRecentsClearAllLocation.findIndexOfValue((String) objValue);
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
+            mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
         return true;
         }
         return false;
