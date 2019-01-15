@@ -201,69 +201,64 @@ public class SettingsActivity extends BaseActivity {
     }
 
     public boolean onPreferenceClick(android.preference.Preference preference) {
-        if (preference instanceof android.preference.PreferenceScreen) {
-            String fragmentClass = preference.getFragment();
-            if (fragmentClass != null) {
-                startActivity(new Intent(this, SubSettingsActivity.class)
-                        .putExtra(EXTRA_FRAGMENT_CLASS, fragmentClass));
-                return true;
-            }
+        String fragmentClass = preference.getFragment();
+        if (fragmentClass != null) {
+            startActivity(new Intent(this, SubSettingsActivity.class)
+                    .putExtra(EXTRA_FRAGMENT_CLASS, fragmentClass));
+            return true;
         }
         return false;
     }
 
     public boolean onPreferenceClick(android.support.v7.preference.Preference preference) {
-        if (preference instanceof android.support.v7.preference.PreferenceScreen
-                || preference instanceof MasterSwitchPreference) {
-            String fragmentClass = preference.getFragment();
-            if (fragmentClass != null) {
-                Intent intent = new Intent(this, SubSettingsActivity.class);
-                intent.putExtra(EXTRA_FRAGMENT_CLASS, fragmentClass);
+        String fragmentClass = preference.getFragment();
+        if (fragmentClass != null) {
+            Intent intent = new Intent(this, SubSettingsActivity.class);
+            intent.putExtra(EXTRA_FRAGMENT_CLASS, fragmentClass);
 
-                if (preference instanceof MasterSwitchPreference) {
-                    if (fragmentClass.equals(ActionListViewSettings.class.getName())) {
-                        // New activity requires setting to be enabled
-                        ((MasterSwitchPreference) preference)
-                                .setCheckedPersisting(true);
-                    } else {
-                        if (preference instanceof SystemSettingMasterSwitchPreference) {
-                            intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY, preference.getKey());
-                            intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE,
-                                    ((SystemSettingMasterSwitchPreference) preference)
-                                            .getDefaultValue());
-                        }
-                        if (preference instanceof SecureSettingMasterSwitchPreference) {
-                            intent.putExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY, preference.getKey());
-                            intent.putExtra(EXTRA_SWITCH_SECURE_SETTINGS_DEFAULT_VALUE,
-                                    ((SecureSettingMasterSwitchPreference) preference)
-                                            .getDefaultValue());
-                        }
-                        if (preference instanceof GlobalSettingMasterSwitchPreference) {
-                            intent.putExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_KEY, preference.getKey());
-                            intent.putExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_DEFAULT_VALUE,
-                                    ((GlobalSettingMasterSwitchPreference) preference)
-                                            .getDefaultValue());
-                        }
-                        intent.putExtra(EXTRA_SWITCH_THERE_SHOULD_BE_ONE,
-                                ((MasterSwitchPreference) preference).getThereShouldBeOneSwitch());
-                        int groupId = ((MasterSwitchPreference) preference)
-                                .getThereCanBeOnlyOneGroupId();
-                        intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS,
-                                mMasterSwitchDependencyHandler.getSystemSettingsForGroup(groupId));
-                        intent.putExtra(EXTRA_SWITCH_SECURE_SETTINGS_MUTUAL_KEYS,
-                                mMasterSwitchDependencyHandler.getSecureSettingsForGroup(groupId));
-                        intent.putExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS,
-                                mMasterSwitchDependencyHandler.getGlobalSettingsForGroup(groupId));
+            if (preference instanceof MasterSwitchPreference) {
+                if (fragmentClass.equals(ActionListViewSettings.class.getName())) {
+                    // New activity requires setting to be enabled
+                    ((MasterSwitchPreference) preference)
+                            .setCheckedPersisting(true);
+                } else {
+                    if (preference instanceof SystemSettingMasterSwitchPreference) {
+                        intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY, preference.getKey());
+                        intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE,
+                                ((SystemSettingMasterSwitchPreference) preference)
+                                        .getDefaultValue());
                     }
+                    if (preference instanceof SecureSettingMasterSwitchPreference) {
+                        intent.putExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY, preference.getKey());
+                        intent.putExtra(EXTRA_SWITCH_SECURE_SETTINGS_DEFAULT_VALUE,
+                                ((SecureSettingMasterSwitchPreference) preference)
+                                        .getDefaultValue());
+                    }
+                    if (preference instanceof GlobalSettingMasterSwitchPreference) {
+                        intent.putExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_KEY, preference.getKey());
+                        intent.putExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_DEFAULT_VALUE,
+                                ((GlobalSettingMasterSwitchPreference) preference)
+                                        .getDefaultValue());
+                    }
+                    intent.putExtra(EXTRA_SWITCH_THERE_SHOULD_BE_ONE,
+                            ((MasterSwitchPreference) preference).getThereShouldBeOneSwitch());
+                    int groupId = ((MasterSwitchPreference) preference)
+                            .getThereCanBeOnlyOneGroupId();
+                    intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS,
+                            mMasterSwitchDependencyHandler.getSystemSettingsForGroup(groupId));
+                    intent.putExtra(EXTRA_SWITCH_SECURE_SETTINGS_MUTUAL_KEYS,
+                            mMasterSwitchDependencyHandler.getSecureSettingsForGroup(groupId));
+                    intent.putExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS,
+                            mMasterSwitchDependencyHandler.getGlobalSettingsForGroup(groupId));
                 }
-
-                if (preference.peekExtras() != null) {
-                    intent.putExtra(EXTRA_FRAGMENT_ARGUMENTS, preference.getExtras());
-                }
-
-                startActivity(intent);
-                return true;
             }
+
+            if (preference.peekExtras() != null) {
+                intent.putExtra(EXTRA_FRAGMENT_ARGUMENTS, preference.getExtras());
+            }
+
+            startActivity(intent);
+            return true;
         }
         return false;
     }
