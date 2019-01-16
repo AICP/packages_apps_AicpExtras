@@ -17,6 +17,7 @@
  */
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicp="http://schemas.android.com/apk/res-auto"
     android:title="@string/app_name">
 
     <!-- AICP logo -->
@@ -74,11 +75,12 @@
             android:icon="@drawable/ic_settings_lockscreen"
             android:fragment="com.aicp.extras.fragments.Lockscreen" />
 
-        <PreferenceScreen
+        <com.aicp.gear.preference.SelfRemovingPreference
             android:key="weather_option"
             android:title="@string/weather_title"
             android:summary="@string/weather_config_title"
             android:icon="@drawable/ic_settings_weather"
+            aicp:requiresPackageInstalled="org.omnirom.omnijaws"
             android:fragment="com.aicp.extras.fragments.Weather" />
 
         <PreferenceScreen
@@ -127,11 +129,14 @@
             android:icon="@drawable/ic_settings_about"
             android:fragment="com.aicp.extras.fragments.About" />
 
-        <Preference
+        <com.aicp.gear.preference.SelfRemovingPreference
             android:key="aicp_ota"
             android:title="@string/aicp_ota_title"
             android:summary="@string/aicp_ota_summary"
-            android:icon="@drawable/ic_settings_ota" />
+            android:icon="@drawable/ic_settings_ota" 
+            aicp:requiresPackageEnabled="com.aicp.updater">
+            <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS" />
+        </com.aicp.gear.preference.SelfRemovingPreference>
 
         <PreferenceScreen
             android:key="log_it"
