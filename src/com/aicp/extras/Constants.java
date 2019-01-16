@@ -42,9 +42,4 @@ public abstract class Constants {
      * device configuration detection.
      */
     public static final String PREF_SHOW_DEVICE_HIDDEN_PREFS = "show_device_hidden_prefs";
-
-    /**
-     * Package name of weather service
-     */
-    public static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
 }
