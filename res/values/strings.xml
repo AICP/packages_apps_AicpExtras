@@ -132,6 +132,10 @@
     <string name="clock_date_style_lowercase">Lowercase</string>
     <string name="clock_date_style_uppercase">Uppercase</string>
     <string name="clock_date_format_custom">Custom java format</string>
+    <string name="clock_position">Clock position</string>
+    <string name="clock_position_right">Right clock</string>
+    <string name="clock_position_center">Center clock</string>
+    <string name="clock_position_left">Left clock</string>
     <string name="menu_cancel">Cancel</string>
     <string name="menu_save">Save</string>
 
@@ -330,6 +334,14 @@
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
     <string name="fprint_sucess_vib_summary_on">Vibrate on successful fingerprint authentication enabled</string>
     <string name="fprint_sucess_vib_summary_off">Vibrate on successful fingerprint authentication disabled</string>
+
+    <!-- Lockscreen Clock styles -->
+    <string name="lockscreen_clock_selection_title">Clock style</string>
+    <string name="lockscreen_clock_selection_digital">Default</string>
+    <string name="lockscreen_clock_selection_digital_bold">Digital (bold)</string>
+    <string name="lockscreen_clock_selection_analog">Analog</string>
+    <string name="lockscreen_clock_selection_sammy">Sammy</string>
+    <string name="lockscreen_clock_selection_sammy_bold">Sammy (bold)</string>
 
     <!-- On-The-Go -->
     <string name="global_actions_onthego_title">On-The-Go</string>
@@ -934,10 +946,8 @@
     <string name="heads_up_time_out_8sec">8 seconds</string>
     <string name="heads_up_time_out_10sec">10 seconds</string>
 
-    <!-- Activity Blacklist -->
+   <!-- Blacklist strings-->
     <string name="chooser_activity_blacklist_title">Chooser activity blacklist</string>
-    <string name="chooser_activity_blacklist_summary">Apps to not show when tapping on a Share button</string>
-    <string name="chooser_activity_blacklist_cat_title">Blacklist</string>
     <string name="chooser_activity_blacklist_pref_title">Add app</string>
     <string name="chooser_activity_blacklist_pref_summary">Tap here to add to the list, tap on the listed app to remove</string>
     <string name="headsup_activity_blacklist_title">Heads up notifications blacklist</string>

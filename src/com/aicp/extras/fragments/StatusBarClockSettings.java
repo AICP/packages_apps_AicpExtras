@@ -27,11 +27,13 @@ import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.text.format.DateFormat;
 import android.view.Menu;
+import android.view.View;
 import android.widget.EditText;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
+import com.aicp.gear.preference.SecureSettingIntListPreference;
 import com.aicp.gear.preference.SecureSettingListPreference;
 
 import java.util.Date;
@@ -42,11 +44,13 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements
     private static final String TAG = "StatusBarClockSettings";
 
     private static final String CLOCK_DATE_FORMAT = "statusbar_clock_date_format";
+    private static final String CLOCK_POSITION = "status_bar_clock_position";
 
     public static final int CLOCK_DATE_STYLE_LOWERCASE = 1;
     public static final int CLOCK_DATE_STYLE_UPPERCASE = 2;
     private static final int CUSTOM_CLOCK_DATE_FORMAT_INDEX = 18;
 
+    private SecureSettingIntListPreference mClockPosition;
     private SecureSettingListPreference mClockDateFormat;
 
     @Override
@@ -60,6 +64,8 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements
 
         ContentResolver resolver = getActivity().getContentResolver();
 
+        mClockPosition = (SecureSettingIntListPreference) findPreference(CLOCK_POSITION);
+
         mClockDateFormat = (SecureSettingListPreference) findPreference(CLOCK_DATE_FORMAT);
         mClockDateFormat.setOnPreferenceChangeListener(this);
         if (mClockDateFormat.getValue() == null) {
@@ -67,6 +73,28 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements
         }
 
         parseClockDateFormats();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        final boolean hasNotch = getResources().getBoolean(
+                com.android.internal.R.bool.config_haveNotch);
+
+        // Adjust status bar preferences for RTL
+        if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
+            if (hasNotch) {
+                mClockPosition.setEntries(R.array.clock_position_entries_notch_rtl);
+                mClockPosition.setEntryValues(R.array.clock_position_values_notch_rtl);
+            } else {
+                mClockPosition.setEntries(R.array.clock_position_entries_rtl);
+                mClockPosition.setEntryValues(R.array.clock_position_values_rtl);
+            }
+        } else if (hasNotch) {
+            mClockPosition.setEntries(R.array.clock_position_entries_notch);
+            mClockPosition.setEntryValues(R.array.clock_position_values_notch);
+        }
     }
 
     @Override
