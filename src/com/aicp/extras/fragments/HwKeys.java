@@ -62,6 +62,7 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
             "torch_long_press_power_gesture";
     private static final String KEY_TORCH_LONG_PRESS_POWER_TIMEOUT =
             "torch_long_press_power_timeout";
+    private static final String KEY_SWAP_NAVIGATION_KEYS = "swap_navigation_keys";
 
     // Masks for checking presence of hardware keys.
     // Must match values in frameworks/base/core/res/res/values/config.xml
@@ -79,6 +80,7 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
     private PreferenceCategory mButtonBackLightCategory;
     private SwitchPreference mTorchLongPressPowerGesture;
     private ListPreference mTorchLongPressPowerTimeout;
+    private SwitchPreference mSwapHardwareKeys;
 
     @Override
     protected int getPreferenceResource() {
@@ -186,6 +188,8 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         final PreferenceCategory appSwitchCategory = (PreferenceCategory) prefScreen
                 .findPreference(CATEGORY_APPSWITCH);
 
+        mSwapHardwareKeys = (SwitchPreference) findPreference(KEY_SWAP_NAVIGATION_KEYS);
+
         // back key
         if (hasBackKey) {
             if (!showBackWake) {
@@ -193,6 +197,7 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
             }
         } else {
             prefScreen.removePreference(backCategory);
+            mSwapHardwareKeys.getParent().removePreference(mSwapHardwareKeys);
         }
 
         // home key
