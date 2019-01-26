@@ -28,6 +28,12 @@
         android:defaultValue="true"/>
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="qs_running_services_toggle"
+        android:title="@string/qs_running_services_title"
+        android:summary="@string/qs_running_services_summary"
+        android:defaultValue="true" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="music_tile_title"
         android:title="@string/qs_music_tile_track_optional_title"
         android:summary="@string/qs_music_tile_track_optional_summary"
