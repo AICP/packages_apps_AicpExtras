@@ -56,4 +56,27 @@
         android:entryValues="@array/theming_settings_dashboard_icons_values"
         android:defaultValue="0" />
 
+    <PreferenceCategory
+        android:key="power_menu"
+        android:title="@string/power_menu_category">
+
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+            android:key="transparent_power_menu"
+            android:title="@string/power_menu_transparency"
+            android:max="100"
+            android:min="0"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight="%"
+            android:defaultValue="100" />
+
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+            android:key="transparent_power_dialog_dim"
+            android:title="@string/power_menu_dialog_dim"
+            android:max="100"
+            android:min="0"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight="%"
+            android:defaultValue="50" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
