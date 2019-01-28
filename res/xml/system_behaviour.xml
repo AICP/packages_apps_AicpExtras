@@ -24,9 +24,10 @@
     <Preference
         android:key="app_ops"
         android:title="@string/app_ops_settings"
-        android:summary="@string/app_ops_settings_summary"
-        android:fragment="com.android.settings.applications.AppOpsSummary">
-        <intent android:action="android.settings.APP_OPS_SETTINGS" />
+        android:summary="@string/app_ops_settings_summary">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.settings"
+            android:targetClass="com.android.settings.applications.appops.AppOpsSummary" />
     </Preference>
 
     <com.aicp.extras.preference.HostnamePreference
