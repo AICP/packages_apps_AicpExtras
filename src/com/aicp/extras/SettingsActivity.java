@@ -25,6 +25,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 
 import com.aicp.extras.dslv.ActionListViewSettings;
@@ -48,10 +49,10 @@ public class SettingsActivity extends BaseActivity {
 
     // String extra containing the fragment class
     private static final String EXTRA_FRAGMENT_CLASS =
-            "com.aicp.extras.extra.preference_fragment";
+            PreferenceActivity.EXTRA_SHOW_FRAGMENT;
     // Bundle extra containing arguments for the fragment
     private static final String EXTRA_FRAGMENT_ARGUMENTS =
-            "com.aicp.extras.extra.preference_arguments";
+            PreferenceActivity.EXTRA_SHOW_FRAGMENT_ARGUMENTS;
     // String extra containing an optional system settings key to be controlled by the switch bar
     private static final String EXTRA_SWITCH_SYSTEM_SETTINGS_KEY =
             "com.aicp.extras.extra.preference_switch_system_settings_key";
@@ -200,19 +201,11 @@ public class SettingsActivity extends BaseActivity {
         }
     }
 
-    public boolean onPreferenceClick(android.preference.Preference preference) {
-        String fragmentClass = preference.getFragment();
-        if (fragmentClass != null) {
-            startActivity(new Intent(this, SubSettingsActivity.class)
-                    .putExtra(EXTRA_FRAGMENT_CLASS, fragmentClass));
-            return true;
-        }
-        return false;
-    }
-
     public boolean onPreferenceClick(android.support.v7.preference.Preference preference) {
         String fragmentClass = preference.getFragment();
-        if (fragmentClass != null) {
+        // Check if class is available - if it is not, let default Android magic kick in
+        // (might e.g. open a settings activity for App Ops)
+        if (checkClassAvailable(fragmentClass)) {
             Intent intent = new Intent(this, SubSettingsActivity.class);
             intent.putExtra(EXTRA_FRAGMENT_CLASS, fragmentClass);
 
@@ -259,6 +252,18 @@ public class SettingsActivity extends BaseActivity {
 
             startActivity(intent);
             return true;
+        }
+        return false;
+    }
+
+    private boolean checkClassAvailable(String fragmentClass) {
+        if (fragmentClass != null) {
+            try {
+                Class.forName(fragmentClass);
+                return true;
+            } catch (ClassNotFoundException e) {
+                return false;
+            }
         }
         return false;
     }
