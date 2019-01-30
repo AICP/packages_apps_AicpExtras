@@ -170,7 +170,7 @@ public class ReportingService extends Service {
 
                     SchemeRegistry schReg = new SchemeRegistry();
                     schReg.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
-                    schReg.register(new Scheme("https", socketFactory, 443));
+                    //schReg.register(new Scheme("https", socketFactory, 443));
 
                     ClientConnectionManager ccm = new ThreadSafeClientConnManager(params, schReg);
 
