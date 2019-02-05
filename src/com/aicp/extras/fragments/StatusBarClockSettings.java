@@ -28,7 +28,9 @@ import android.provider.Settings;
 import android.text.format.DateFormat;
 import android.view.Menu;
 import android.view.View;
+import android.view.Gravity;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
@@ -109,6 +111,12 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements OnPr
                 alert.setTitle(R.string.clock_date_string_edittext_title);
                 alert.setMessage(R.string.clock_date_string_edittext_summary);
 
+                LinearLayout container = new LinearLayout(getActivity());
+                container.setOrientation(LinearLayout.VERTICAL);
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+                lp.setMargins(55, 20, 55, 20);
+
                 final EditText input = new EditText(getActivity());
                 String oldText = Settings.Secure.getString(
                     resolver,
@@ -116,7 +124,10 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements OnPr
                 if (oldText != null) {
                     input.setText(oldText);
                 }
-                alert.setView(input);
+                input.setLayoutParams(lp);
+                input.setGravity(android.view.Gravity.TOP| Gravity.START);
+                container.addView(input);
+                alert.setView(container);
 
                 alert.setPositiveButton(R.string.menu_save, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialogInterface, int whichButton) {
