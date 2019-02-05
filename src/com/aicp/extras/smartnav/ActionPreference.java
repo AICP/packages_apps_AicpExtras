@@ -18,7 +18,7 @@
  * key is identical to the target ConfigMap tag in ActionConstants
  */
 
-package com.aicp.extras.preference;
+package com.aicp.extras.smartnav;
 
 import java.util.Map;
 

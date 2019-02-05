@@ -38,7 +38,7 @@ import android.support.v7.preference.PreferenceScreen;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.extras.preference.ActionPreference;
+import com.aicp.extras.smartnav.ActionPreference;
 import com.aicp.extras.smartnav.CustomActionListAdapter;
 import com.aicp.extras.smartnav.ShortcutPickHelper;
 
