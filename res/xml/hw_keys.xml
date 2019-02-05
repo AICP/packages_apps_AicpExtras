@@ -79,46 +79,6 @@
             android:summary="@string/volume_keys_control_ring_tone_summary"
             android:defaultValue="false" />
 
-        <!-- Volume keys music control -->
-        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-            android:key="volume_button_music_control"
-            android:title="@string/volume_rocker_music_controls_title"
-            android:summary="@string/volume_rocker_music_controls_summary"
-            aicpextras:thereCanBeOnlyOneGroupId="1"
-            aicpextras:plainSwitch="true"
-            android:defaultValue="false" />
-
-        <!-- Volume rocker wake screen -->
-        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-            android:key="volume_wake_screen"
-            android:title="@string/volume_wake_screen_title"
-            android:summary="@string/volume_wake_screen_summary"
-            aicpextras:thereCanBeOnlyOneGroupId="1"
-            aicpextras:plainSwitch="true"
-            android:defaultValue="false" />
-
     </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="button_lights_key"
-        android:title="@string/button_backlight_options_category" >
-
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="button_brightness_enabled"
-            android:title="@string/button_backlight_enable_title"
-            android:summary="@string/button_backlight_enable_summary"
-            android:defaultValue="true" />
-
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
-            android:key="button_brightness"
-            android:title="@string/button_manual_brightness"
-            android:max="255"
-            android:min="0"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight=""
-            android:defaultValue="180"
-            android:dependency="button_brightness_enabled" />
-
-      </PreferenceCategory>
 
 </PreferenceScreen>

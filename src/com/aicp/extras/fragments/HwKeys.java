@@ -45,36 +45,14 @@ public class HwKeys extends BaseSettingsFragment implements
     // category keys
     private static final String CATEGORY_POWER = "power_key";
     private static final String CATEGORY_VOLUME = "volume_keys";
-    private static final String CATEGORY_BACKLIGHT = "button_lights_key";
 
     private static final String KEY_TORCH_LONG_PRESS_POWER_GESTURE =
             "torch_long_press_power_gesture";
     private static final String KEY_TORCH_LONG_PRESS_POWER_TIMEOUT =
             "torch_long_press_power_timeout";
-    private static final String KEY_VOLUME_ROCKER_WAKE_SCREEN =
-            "volrocker_wake_screen";
-    private static final String KEY_BUTTON_BRIGHTNESS_ENABLED =
-            "button_brightness_enabled";
-
-    // Masks for checking presence of hardware keys.
-    // Must match values in core/res/res/values/config.xml
-    private static final int KEY_MASK_HOME = 0x01;
-    private static final int KEY_MASK_BACK = 0x02;
-    private static final int KEY_MASK_MENU = 0x04;
-    private static final int KEY_MASK_ASSIST = 0x08;
-    private static final int KEY_MASK_APP_SWITCH = 0x10;
-    private static final int KEY_MASK_CAMERA = 0x20;
-    private static final int KEY_MASK_VOLUME = 0x40;
-
-    private static final int BUTTON_BRIGHTNESS_DEFAULT = 180;
 
     private SwitchPreference mTorchLongPressPowerGesture;
     private ListPreference mTorchLongPressPowerTimeout;
-
-    private boolean mNavbarVisible = false;
-    private int mButtonBrightness;
-    private int mDeviceHardwareKeys;
-    private int mDeviceHardwareWakeKeys;
 
     @Override
     protected int getPreferenceResource() {
@@ -88,28 +66,12 @@ public class HwKeys extends BaseSettingsFragment implements
         ContentResolver resolver = getContentResolver();
         PreferenceScreen prefScreen = getPreferenceScreen();
 
-        mDeviceHardwareKeys = getActivity().getResources().getInteger(
-                com.android.internal.R.integer.config_deviceHardwareKeys);
-        mDeviceHardwareWakeKeys = getActivity().getResources().getInteger(
-                com.android.internal.R.integer.config_deviceHardwareWakeKeys);
         final boolean hasPowerKey = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_POWER);
-
-        // Read HW Device buttons.
-        final boolean hasHome = (mDeviceHardwareKeys & KEY_MASK_HOME) != 0;
-        final boolean hasAppSwitch = (mDeviceHardwareKeys & KEY_MASK_APP_SWITCH) != 0;
-        final boolean hasBack = (mDeviceHardwareKeys & KEY_MASK_BACK) != 0;
-        final boolean hasMenu = (mDeviceHardwareKeys & KEY_MASK_MENU) != 0;
-        final boolean hasAssist = (mDeviceHardwareKeys & KEY_MASK_ASSIST) != 0;
-        final boolean hasCamera = (mDeviceHardwareKeys & KEY_MASK_CAMERA) != 0;
-
-        final boolean hasVolumeRockerKey = (mDeviceHardwareWakeKeys & KEY_MASK_VOLUME) != 0;
 
         final PreferenceCategory powerCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_POWER);
         final PreferenceCategory volumeCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_VOLUME);
-        final PreferenceCategory backlightCategory =
-                (PreferenceCategory) prefScreen.findPreference(CATEGORY_BACKLIGHT);
 
         // Long press power while display is off to activate torchlight
         mTorchLongPressPowerGesture =
@@ -126,31 +88,6 @@ public class HwKeys extends BaseSettingsFragment implements
             }
         } else {
             prefScreen.removePreference(powerCategory);
-        }
-
-        if (!hasVolumeRockerKey) {
-            prefScreen.removePreference(volumeCategory);
-        }
-
-        final boolean hasNavbarByDefault = ActionUtils.hasNavbarByDefault(getActivity());
-        mNavbarVisible = Settings.Secure.getIntForUser(resolver,
-                        Settings.Secure.NAVIGATION_BAR_VISIBLE,
-                        hasNavbarByDefault ? 1 : 0,
-                        UserHandle.USER_CURRENT) != 0;
-        mButtonBrightness =  Settings.System.getInt(resolver,
-                        Settings.System.BUTTON_BRIGHTNESS, BUTTON_BRIGHTNESS_DEFAULT);
-        final boolean buttonBrightnessEnabled = Settings.System.getIntForUser(resolver,
-                        Settings.System.BUTTON_BRIGHTNESS_ENABLED,
-                        hasNavbarByDefault ? 0 : 1,
-                        UserHandle.USER_CURRENT) == 1;
-
-        final SystemSettingSwitchPreference buttonBrightnessPreference =
-                        (SystemSettingSwitchPreference) prefScreen.findPreference(KEY_BUTTON_BRIGHTNESS_ENABLED);
-        buttonBrightnessPreference.setChecked(!mNavbarVisible && buttonBrightnessEnabled);
-
-        // Remove backlight category when using navigation bar or when we don't have hw keys
-        if (hasNavigationBar() || (mDeviceHardwareKeys == 0 || mDeviceHardwareKeys == 32 || mDeviceHardwareKeys == 64)) {
-            prefScreen.removePreference(backlightCategory);
         }
     }
 
@@ -179,9 +116,4 @@ public class HwKeys extends BaseSettingsFragment implements
         }
         return false;
     }
-
-    public boolean hasNavigationBar() {
-        return mNavbarVisible;
-    }
-
 }
