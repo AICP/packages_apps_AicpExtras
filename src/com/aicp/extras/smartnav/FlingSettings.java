@@ -28,7 +28,7 @@ import com.android.internal.utils.ActionUtils;
 import com.android.internal.utils.Config.ButtonConfig;
 
 import com.aicp.extras.R;
-import com.aicp.extras.preference.ActionPreference;
+import com.aicp.extras.smartnav.ActionPreference;
 import com.aicp.extras.smartnav.IconPickHelper;
 import com.aicp.extras.smartnav.IconPickHelper.OnPickListener;
 
