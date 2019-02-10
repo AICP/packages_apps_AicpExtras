@@ -55,6 +55,12 @@
         android:fragment="com.aicp.extras.fragments.SuspendActions" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="edge_service_for_gestures"
+        android:title="@string/edge_gesture_service_title"
+        android:summary="@string/edge_gesture_service_summary"
+        android:defaultValue="true" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="sensor_block"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"

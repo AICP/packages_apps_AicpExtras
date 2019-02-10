@@ -29,11 +29,18 @@
         android:fragment="com.aicp.extras.smartnav.NavigationBarSettings" />
 
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-            android:key="use_bottom_gesture_navigation"
-            android:title="@string/use_bottom_gesture_title"
-            android:summary="@string/use_bottom_gesture_summary"
-            aicpextras:thereCanBeOnlyOneGroupId="1"
-            android:defaultValue="false"
-            android:fragment="com.aicp.extras.fragments.NavigationGestureSettings" />
+        android:key="use_bottom_gesture_navigation"
+        android:title="@string/use_bottom_gesture_title"
+        android:summary="@string/use_bottom_gesture_summary"
+        aicpextras:thereCanBeOnlyOneGroupId="1"
+        android:defaultValue="false"
+        android:fragment="com.aicp.extras.fragments.NavigationGestureSettings" />
+
+    <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
+        android:key="pie_state"
+        android:title="@string/pa_pie_control_title"
+        android:summary="@string/pa_pie_control_enable_title"
+        android:defaultValue="false"
+        android:fragment="com.aicp.extras.fragments.PieControl" />
 
 </PreferenceScreen>
