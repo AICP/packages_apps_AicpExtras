@@ -35,4 +35,9 @@
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.AppCircleBar" />
 
+    <com.aicp.extras.preference.SystemSettingSwitchPreference
+        android:key="edge_service_for_gestures"
+        android:title="@string/edge_gesture_service_title"
+        android:summary="@string/edge_gesture_service_summary"
+        android:defaultValue="true" />
 </PreferenceScreen>
