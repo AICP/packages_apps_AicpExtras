@@ -46,6 +46,7 @@ import com.android.internal.utils.ActionConstants;
 
 public class HwKeys extends ActionFragment implements Preference.OnPreferenceChangeListener {
     // category keys
+    private static final String CATEGORY_HWKEY = "hardware_keys";
     private static final String CATEGORY_BACK = "back_key";
     private static final String CATEGORY_HOME = "home_key";
     private static final String CATEGORY_MENU = "menu_key";
@@ -95,6 +96,8 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         PreferenceScreen prefScreen = getPreferenceScreen();
 
         final boolean needsNavbar = ActionUtils.hasNavbarByDefault(getActivity());
+        final PreferenceCategory hwkeyCategory = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_HWKEY);
         int keysDisabled = 0;
         mHwKeyDisable = (SwitchPreference) findPreference(HWKEY_DISABLE);
         if (!needsNavbar) {
@@ -104,7 +107,7 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
             mHwKeyDisable.setChecked(keysDisabled != 0);
             mHwKeyDisable.setOnPreferenceChangeListener(this);
         } else {
-            mHwKeyDisable.getParent().removePreference(mHwKeyDisable);
+            prefScreen.removePreference(hwkeyCategory);
         }
 
         final boolean hasPowerKey = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_POWER);
@@ -207,6 +210,7 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
             }
         } else {
             prefScreen.removePreference(homeCategory);
+            prefScreen.removePreference(hwkeyCategory);
         }
 
         // App switch key (recents)
