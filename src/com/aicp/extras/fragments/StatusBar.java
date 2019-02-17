@@ -35,15 +35,21 @@ import android.widget.EditText;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
+import com.aicp.gear.preference.SystemSettingListPreference;
+
+import com.android.internal.util.aicp.AicpUtils;
+
 public class StatusBar extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String SMART_PULLDOWN = "qs_smart_pulldown";
+    private static final String KEY_CARRIER_LABEL = "status_bar_show_carrier";
     private static final String KEY_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final String KEY_HIDE_NOTCH = "statusbar_hide_notch";
 
     private ListPreference mSmartPulldown;
     private Preference mCustomCarrierLabel;
+    private SystemSettingListPreference mShowCarrierLabel;
 
     private String mCustomCarrierLabelText;
 
@@ -63,6 +69,23 @@ public class StatusBar extends BaseSettingsFragment implements
         updateSmartPulldownSummary(smartPulldown);
         mSmartPulldown.setOnPreferenceChangeListener(this);
 
+        mShowCarrierLabel = (SystemSettingListPreference) findPreference(KEY_CARRIER_LABEL);
+        int showCarrierLabel = Settings.System.getInt(resolver,
+        Settings.System.STATUS_BAR_SHOW_CARRIER, 1);
+        CharSequence[] NonNotchEntries = { getResources().getString(R.string.show_carrier_disabled),
+                getResources().getString(R.string.show_carrier_keyguard),
+                getResources().getString(R.string.show_carrier_statusbar), getResources().getString(
+                        R.string.show_carrier_enabled) };
+        CharSequence[] NotchEntries = { getResources().getString(R.string.show_carrier_disabled),
+                getResources().getString(R.string.show_carrier_keyguard) };
+        CharSequence[] NonNotchValues = {"0", "1" , "2", "3"};
+        CharSequence[] NotchValues = {"0", "1"};
+        mShowCarrierLabel.setEntries(AicpUtils.hasNotch(getActivity()) ? NotchEntries : NonNotchEntries);
+        mShowCarrierLabel.setEntryValues(AicpUtils.hasNotch(getActivity()) ? NotchValues : NonNotchValues);
+        mShowCarrierLabel.setValue(String.valueOf(showCarrierLabel));
+        mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntry());
+        mShowCarrierLabel.setOnPreferenceChangeListener(this);
+
         mCustomCarrierLabel = (Preference) findPreference(KEY_CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
 
@@ -80,6 +103,10 @@ public class StatusBar extends BaseSettingsFragment implements
         if (preference == mSmartPulldown) {
             int value = Integer.parseInt((String) newValue);
             updateSmartPulldownSummary(value);
+            return true;
+        } else if (preference == mShowCarrierLabel) {
+            int value = Integer.parseInt((String) newValue);
+            updateCarrierLabelSummary(value);
             return true;
         }
         return false;
@@ -115,6 +142,21 @@ public class StatusBar extends BaseSettingsFragment implements
             return true;
         } else {
             return false;
+        }
+    }
+
+    private void updateCarrierLabelSummary(int value) {
+        Resources res = getResources();
+
+        if (value == 0) {
+            // Carrier Label disabled
+            mShowCarrierLabel.setSummary(res.getString(R.string.show_carrier_disabled));
+        } else if (value == 1) {
+            mShowCarrierLabel.setSummary(res.getString(R.string.show_carrier_keyguard));
+        } else if (value == 2) {
+            mShowCarrierLabel.setSummary(res.getString(R.string.show_carrier_statusbar));
+        } else if (value == 3) {
+            mShowCarrierLabel.setSummary(res.getString(R.string.show_carrier_enabled));
         }
     }
 
