@@ -32,7 +32,7 @@
     <com.aicp.extras.preference.HostnamePreference
         android:key="device_hostname"
         android:title="@string/device_hostname"
-        android:summary="@string/device_hostname_summary"
+        android:defaultValue="@string/device_hostname_summary"
         android:dialogTitle="@string/device_hostname"
         android:positiveButtonText="@string/menu_save"
         android:negativeButtonText="@string/menu_cancel"
