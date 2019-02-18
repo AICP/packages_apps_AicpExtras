@@ -25,15 +25,22 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 
+import com.aicp.extras.R;
+
 public class HostnamePreference extends EditTextPreference {
 
     private static final String TAG = "HostnamePreference";
 
     private static final String PROP_HOSTNAME = "net.hostname";
 
+    private String mDefaultSummary;
+    private boolean mHostEmpty;
+
     public HostnamePreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setSummary(getText());
+        String summaryString = getText();
+        mDefaultSummary = getContext().getResources().getString(R.string.device_hostname_summary);
+        setSummary(TextUtils.isEmpty(summaryString) ? mDefaultSummary : summaryString);
     }
 
     @Override
@@ -45,13 +52,15 @@ public class HostnamePreference extends EditTextPreference {
         // Remove any character that is not alphanumeric, period, or hyphen
         text = text.replaceAll("[^-.a-zA-Z0-9]", "");
         if (TextUtils.isEmpty(text)) {
+            mHostEmpty = true;
             Log.w(TAG, "setting empty hostname");
         } else {
+            mHostEmpty = false;
             Log.i(TAG, "hostname has been set: " + text);
         }
+        setSummary(!mHostEmpty ? text : mDefaultSummary);
         SystemProperties.set(PROP_HOSTNAME, text);
         persistHostname(text);
-        setSummary(text);
     }
 
     @Override
