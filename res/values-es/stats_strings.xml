@@ -21,7 +21,7 @@
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
     <string name="anonymous_statistics_title">Estadísticas AICP</string>
     <string name="anonymous_statistics_warning_title">Acerca de</string>
-    <string name="anonymous_statistics_warning">Activando las estadísticas AICP permitirá el envío de datos no personales a nuestros servidores. La información enviada incluye un identificador único que no compromete su privacidad ni la de sus datos personales. Los datos se envían cada 7 días.\n\nPara ver un ejemplo de los datos que se envían pulse en Previsualizar Datos.</string>
+    <string name="anonymous_statistics_warning">Activando las estadísticas AICP permitirá el envío de datos no personales a nuestros servidores. La información enviada incluye un identificador único que no compromete su privacidad ni la de sus datos personales. Los datos se envían cada día.\n\nPara ver un ejemplo de los datos que se envían pulse en Previsualizar Datos.</string>
     <string name="enable_reporting_title">Activar envío de estadísticas</string>
     <string name="disable_reporting_persistent">Deshabilitar de forma permanente</string>
     <string name="preview_data_title">Previsualizar Datos</string>
@@ -43,4 +43,8 @@
     <string name="preview_romname_title">Nombre de la ROM</string>
     <string name="preview_romversion_title">Versión AICP</string>
     <string name="preview_buildtype_title">Tipo de compilación AICP</string>
+    <!-- Anonymous Statistics - Notification -->
+    <string name="notification_romstats_name">Estadísticas AICP</string>
+    <string name="notification_title">Estadísticas AICP</string>
+    <string name="notification_desc">Activar el envío de estadísticas anónimas</string>
 </resources>

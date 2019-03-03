@@ -122,6 +122,10 @@
     <string name="clock_date_style_lowercase">Kisbetűs</string>
     <string name="clock_date_style_uppercase">Nagybetűs</string>
     <string name="clock_date_format_custom">Egyéni java formátum</string>
+    <string name="clock_position">Az óra helyzete</string>
+    <string name="clock_position_right">Óra jobb oldalon</string>
+    <string name="clock_position_center">Óra középen</string>
+    <string name="clock_position_left">Óra bal oldalon</string>
     <string name="menu_cancel">Törlés</string>
     <string name="menu_save">Mentés</string>
     <!-- Statusbar categories -->
@@ -167,6 +171,11 @@
     <string name="custom_header_pick_title">Fejléckép kiválasztása</string>
     <string name="custom_header_pick_summary">Válasszon ki egy képet a statikus üzemmód használatához</string>
     <string name="header_provider_disabled">Tiltva</string>
+    <!-- QS Settings background panel blur -->
+    <string name="qs_panel_translucency_category_title">A panel áttetszősége</string>
+    <string name="translucent_quick_settings">Átlátszóság-engedélyezés</string>
+    <string name="translucent_quick_settings_summary">Háttér-életlenítés</string>
+    <string name="translucent_quick_settings_percentage">A háttér átlátszóságának százalékos aránya</string>
     <!-- Tiles animation style -->
     <string name="qs_tiles">Gyorsbeállítási csempék</string>
     <string name="qs_tile_animation_style_title">Animáció stílusa</string>
@@ -288,6 +297,13 @@
     <string name="fprint_sucess_vib_title">Ujjlenyomat sikeres hitelesítésének jelzése rezgéssel</string>
     <string name="fprint_sucess_vib_summary_on">Rezgés sikeres ujjlenyomat hitelesítéskor engedélyezve</string>
     <string name="fprint_sucess_vib_summary_off">Rezgés sikeres ujjlenyomat hitelesítéskor letiltva</string>
+    <!-- Lockscreen Clock styles -->
+    <string name="lockscreen_clock_selection_title">Az Óra stílusa</string>
+    <string name="lockscreen_clock_selection_digital">Alapértelmezett</string>
+    <string name="lockscreen_clock_selection_digital_bold">Digitális (félkövér)</string>
+    <string name="lockscreen_clock_selection_analog">Analóg</string>
+    <string name="lockscreen_clock_selection_sammy">Sammy</string>
+    <string name="lockscreen_clock_selection_sammy_bold">Sammy (félkövér)</string>
     <!-- On-The-Go -->
     <string name="global_actions_onthego_title">Menet közben mód</string>
     <string name="global_actions_onthego_summary">Menet közben mód hozzáadása a Kikapcsolómenühöz</string>
@@ -296,8 +312,14 @@
     <string name="global_actions_screenrecord_summary">Képernyővideó hozzáadása a Kikapcsolómenühöz</string>
     <!-- Screenshot -->
     <string name="global_actions_screenshot_title">Képernyőmentés</string>
+    <string name="global_actions_screenshot_summary">Képernyőmentés hozzáadása a Kikapcsolómenühöz</string>
     <!-- Reboot -->
+    <string name="global_actions_reboot_title">Újraindítás</string>
+    <string name="global_actions_reboot_summary">Újraindítás hozzáadása a Kikapcsolómenühöz</string>
     <!-- Advanced Reboot -->
+    <string name="global_actions_advanced_reboot_title">Speciális újraindítás</string>
+    <string name="global_actions_advanced_reboot_summary">Speciális újraindítás hozzáadása a Kikapcsolómenühöz</string>
+    <!-- Emergency -->
     <!-- Power Menu -->
     <string name="global_actions_power_menu_title">Kikapcsolási menü a zárképernyőn</string>
     <!-- Hide statusbar on lockscreen -->
@@ -316,7 +338,7 @@
     <string name="volume_keys_control_ring_tone_summary">A gombok alapértelmezetten a médiahangerőt vezérlik. Lehetővé teszi, hogy a csengőhang erejét állítsa</string>
     <!-- Volume keys control music playback -->
     <string name="volume_rocker_music_controls_title">Zene vezérlése</string>
-    <string name="volume_rocker_music_controls_summary">Kikapcsolt képernyőnél a hangerőgombok hosszan nyomása a zeneszámok közötti keresésre szolgál. Ha ezt választja a képernyőébresztés nem fog működni</string>
+    <string name="volume_rocker_music_controls_summary">Kikapcsolt képernyőnél a hangerő gombok hosszan nyomásával léptethet zeneszámokat</string>
     <!-- Toast icon switch -->
     <string name="toast_icon_title">Buborék ikon</string>
     <string name="toast_icon_summary">Az alkalmazásnak megfelelő ikon kijelzése a buborékkal</string>
@@ -419,6 +441,8 @@
     <string name="aicp_website_summary">Látogasson el a AICP honlapjára</string>
     <string name="aicp_walls_title">Háttérképek</string>
     <string name="aicp_walls_summary">Nézze meg AICP háttereinket</string>
+    <string name="discord_title">Discord-kiszolgáló</string>
+    <string name="discord_summary">Látogassa meg Discord-szerverünket</string>
     <string name="aicp_gerrit_title">Gerrit</string>
     <string name="aicp_gerrit_summary">Látogassa meg a Gerrit-et, hogy tudja min dologzunk jelenleg</string>
     <string name="aicp_changelog_title">Változások</string>
@@ -484,6 +508,7 @@
     <string name="navigation_summary">Gyári / Okossáv / Fling / Mozdulatvezérlés</string>
     <!-- OP like navigation gestures -->
     <string name="gesture_settings_title">Navigációs vezérlőmozdulatok</string>
+    <string name="gesture_settings_info">A navigációs sávot le kell tiltani, így letiltásra kerül!\n\nElérhető gesztusok:\n\nVissza\n- Felfelé csúsztatás bal vagy jobb oldalon\n\nKezdőoldal\n- Felfelé csúsztatás középen\n\nAlkalmazáselőzmények\n- Felfelé csúsztatás középen majd megtartás\n\nKezdőoldal-gomb hosszan nyomása\n- Rövid felfelé csúsztatás és középentartás</string>
     <string name="use_bottom_gesture_title">Navigációs vezérlőmozdulatok</string>
     <string name="use_bottom_gesture_summary">Használja az alulról felfelé csúsztató vezérlőmozdulatokat a navigáláshoz\nNavigációs sávot le kell tiltani!</string>
     <string name="gesture_swipe_length_title">A csúsztatás területének magassága</string>
@@ -735,7 +760,13 @@ A kettős érintéses műveletek engedélyezése enyhén késlelteti az egyszeri
     <string name="screen_state_off_delay_summary">A lezárt képernyőnél elvégzendő műveletek előtti várakozás időtartama (percekben)</string>
     <string name="screen_state_on_delay_title">Bekapcsolt képernyős műveletek késleltetése</string>
     <string name="screen_state_on_delay_summary">A képernyő bekapcsolódásakor elvégzendő műveletek előtti várakozás időtartama (percekben)</string>
+    <!-- Swap hw keys -->
+    <string name="swap_navigation_keys_title">Hardvergombok megfordítása</string>
+    <string name="swap_navigation_keys_title_summary">Felcseréli az Előzmények és a Visszagomb sorrendjét</string>
     <!-- Ambient display music ticker -->
+    <string name="force_ambient_for_media_pref_title">Ambient Music jelzőszalag</string>
+    <string name="force_ambient_for_media_pref_summary">Az Ambient Music jelzőszalagjának konfigurálása</string>
+    <string name="ambient_ticker_footer">Az Ambient Music Jelzőszalag a zeneszámokat a kiterjesztett képernyőn jeleníti meg.\n\nAkkor is aktiválódik, ha a környezeti kijelző le van tiltva, amikor egy új zeneszám elindul, a képernyő közepén egy új infobox jelenik meg.\n\nA zeneszámok átugrásához duplán érintse meg a zene adatait.\n\nHa Pixel-e van, és engedélyezi a Now Playing szolgáltatást és annak értesítéseit a rendszer hangbeállításaiban, az Ambient Music Jelzőszalag is működni fog benne.</string>
     <string name="force_ambient_for_media_title">Engedélyezés</string>
     <!-- Screen Off animation -->
     <string name="screen_off_animation_title">Képernyő-kikapcsolási animáció</string>
@@ -750,6 +781,7 @@ A kettős érintéses műveletek engedélyezése enyhén késlelteti az egyszeri
     <!-- HW keys -->
     <string name="hw_keys_title">Hardvergombok</string>
     <string name="hw_keys_summary">A hardvergombok viselkedésének konfigurálása a készüléken</string>
+    <string name="hardware_keys_wake_title">Készülék felébresztése</string>
     <!-- Power keys -->
     <string name="category_power_key">Bekapcsológomb</string>
     <!-- Volume keys -->
@@ -757,13 +789,17 @@ A kettős érintéses műveletek engedélyezése enyhén késlelteti az egyszeri
     <string name="volume_keys_cursor_control_title">Kurzorvezérlés</string>
     <string name="volume_keys_cursor_control_summary">Lehetővé teszi, hogy kurzorvezérlésre használjuk a hangerőgombokat</string>
     <!-- Volume rocker wake -->
-    <string name="volume_wake_screen_title">Képernyőébresztés</string>
-    <string name="volume_wake_screen_summary">Használhatja képernyőébresztésre a hangerőgombokat. Lejátszás közben sem fogja tudni használni a gombokat</string>
+    <string name="volume_rocker_wake_title">Ébresztés hangerőgombbal</string>
+    <string name="volume_rocker_wake_summary">Hangerőgomb megnyomására ébredjen fel a készülék</string>
     <!-- Button brightness -->
     <string name="button_backlight_options_category">Háttérvilágítás beállításai</string>
     <string name="button_backlight_enable_title">Gombok háttérvilágításának engedélyezése</string>
-    <string name="button_backlight_enable_summary">Kapcsoló a hardvergombok háttérvilágításának ki és bekapcsolására</string>
+    <string name="button_link_brightness">Csatolás a képernyő fényerejéhez</string>
+    <string name="button_link_brightness_summary">Gomb háttérvilágításának fényerejét a képernyő fényerőszintje alapján fogja módosítani</string>
     <string name="button_manual_brightness">Fényerőszintek</string>
+    <string name="button_timeout_title">Háttérvilágítás időkorlátja</string>
+    <string name="button_backlight_on_touch_only_title">Gomb háttérvilágítása érintésre</string>
+    <string name="button_backlight_on_touch_only_summary">A gomb háttérvilágítása csak a gombok megnyomásakor jelenik meg, és nem állandóan. Az időkorlát továbbra is hatással van erre a szolgáltatásra.</string>
     <!-- Quick QS pull down -->
     <string name="status_bar_quick_qs_pulldown_summary_left">Gyorsbeállítások megjelenítése az állapotsor bal szélén lefelé húzással</string>
     <string name="status_bar_quick_qs_pulldown_summary_right">Gyorsbeállítások megjelenítése az állapotsor jobb szélén lefelé húzással</string>
@@ -804,10 +840,8 @@ A kettős érintéses műveletek engedélyezése enyhén késlelteti az egyszeri
     <string name="heads_up_time_out_6sec">6 másodperc</string>
     <string name="heads_up_time_out_8sec">8 másodperc</string>
     <string name="heads_up_time_out_10sec">10 másodperc</string>
-    <!-- Activity Blacklist -->
+    <!-- Blacklist strings-->
     <string name="chooser_activity_blacklist_title">Nem választható alkalmazások</string>
-    <string name="chooser_activity_blacklist_summary">A Megosztás-gomb megérintésekor nem megjelenítendő alkalmazások</string>
-    <string name="chooser_activity_blacklist_cat_title">Tiltólista</string>
     <string name="chooser_activity_blacklist_pref_title">Alkalmazás hozzáadása</string>
     <string name="chooser_activity_blacklist_pref_summary">Ha hozzá szeretne adni a listához, érintse meg itt. Vagy érintsen meg egyet a listában, annak eltávolításához.</string>
     <string name="headsup_activity_blacklist_title">A felugró értesítések tiltólistája</string>
@@ -934,4 +968,65 @@ A kettős érintéses műveletek engedélyezése enyhén késlelteti az egyszeri
     <!-- Data Disabled Icon -->
     <string name="data_disabled_icon_title">A kikapcsolt adatforgalom jele</string>
     <string name="data_disabled_icon_summary">A térerő-kijelző mellett jelenjen meg X , ha a mobiladat-forgalom le van tiltva</string>
+    <!-- MediaScanner behavior on boot -->
+    <string name="media_scanner_on_boot_title">Médiakereső viselkedése rendszerindításnál</string>
+    <string name="media_scanner_on_boot_enabled">Médiakeresés</string>
+    <string name="media_scanner_on_boot_ask">Kérdés a keresés előtt (értesítés)</string>
+    <string name="media_scanner_on_boot_disabled">Ne legyen médiakeresés</string>
+    <!-- Running Services Icon in QS Footer-->
+    <string name="qs_running_services_title">A Futó szolgáltatások ikonja</string>
+    <string name="qs_running_services_summary">A Futó szolgáltatások ikonjának engedélyezése a fejlécen</string>
+    <!-- Power menu and dialogs opacity -->
+    <string name="power_menu_category">Bekapcsolási és újraindítási párbeszédpanelek</string>
+    <string name="power_menu_transparency">Átlátszóság</string>
+    <string name="power_menu_dialog_dim">Háttér-elsötétítés</string>
+    <!-- SystemUI Tuner -->
+    <string name="systemui_tuner_title">Rendszerfelület-hangoló</string>
+    <string name="systemui_tuner_summary">Kísérleti rendszerfelületi trükkök</string>
+    <!-- Hardware button navigation -->
+    <string name="hardware_keys_volume_keys_title">Hangerőgomb</string>
+    <string name="hardware_keys_home_key_title">Főoldal gomb</string>
+    <string name="hardware_keys_menu_key_title">Menügomb</string>
+    <string name="hardware_keys_assist_key_title">Keresés gomb</string>
+    <string name="hardware_keys_appswitch_key_title">Áttekintésgomb</string>
+    <string name="hardware_keys_back_key_title">Visszagomb</string>
+    <string name="hardware_keys_double_tap_summary">Dupla érintési művelet beállítása</string>
+    <string name="hardware_keys_single_tap_summary">Egyszeri érintés műveletének beállítása</string>
+    <string name="hardware_keys_long_press_summary">Hosszan nyomási művelet beállítása</string>
+    <string name="hardware_keys_single_tap_title">Egyszeri érintés művelete</string>
+    <string name="hardware_keys_long_press_title">Hosszan nyomási művelet</string>
+    <string name="hardware_keys_double_tap_title">Dupla koppintás eseménye</string>
+    <string name="hardware_keys_category">Navigációs gombok</string>
+    <string name="hardware_keys_disable_title">Navigációs gombok letiltása</string>
+    <!-- doze on charge -->
+    <string name="doze_on_charge_title">AOD töltéskor</string>
+    <string name="doze_on_charge_summary">Engedélyezze az AOD megjelenítését töltéskor</string>
+    <!-- EdgeGesture service -->
+    <string name="edge_gesture_service_title">A kézmozdulat-vezérlések letiltása</string>
+    <string name="edge_gesture_service_summary">Az alkalmazások nem veszik figyelembe a navigációs- és állapotsáv érintéseket</string>
+    <!-- Pie control -->
+    <string name="pa_pie_control_title">Pie-vezérlés</string>
+    <string name="pa_pie_control_enable_title">A Pie-vezérlés engedélyezése</string>
+    <string name="pie_enable_title">Engedélyezés</string>
+    <string name="pie_enable_summary">Fő navigációnak állítja be a Pie-vezérlést</string>
+    <string name="pie_settings">A Pie-vezérlő beállításai</string>
+    <string name="pie_settings_summary">Állítsa be a Pie-t, ahogy tetszik önnek</string>
+    <string name="pie_theme_mode_title">Téma</string>
+    <string name="pie_auto">Automatikus</string>
+    <string name="pie_white">Fehér</string>
+    <string name="pie_dark">Sötét</string>
+    <string name="pie_battery_title">Akkumulátorkijelző</string>
+    <string name="pie_battery_text">Csak szöveg</string>
+    <string name="pie_battery_circle">Csak kör</string>
+    <string name="pie_battery_both">Mindkettő</string>
+    <string name="pie_status_indicator">Hálózatkijelző</string>
+    <string name="pie_status_wifi">Csak Wi-Fi</string>
+    <string name="pie_status_mobile">Csak mobilnet</string>
+    <string name="pie_status_none">Nincs</string>
+    <string name="pie_status_both">Mindkettő</string>
+    <string name="pa_pie_gravity_title">A Pie gravitációja</string>
+    <string name="pa_pie_gravity_summary">A hely, ahol a Pie elhelyezésre kerül</string>
+    <string name="pa_pie_gravity_bottom">Alul</string>
+    <string name="pa_pie_gravity_right">Jobb</string>
+    <string name="pa_pie_gravity_left">Bal</string>
 </resources>

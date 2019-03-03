@@ -21,7 +21,6 @@
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
     <string name="anonymous_statistics_title">AICP 統計</string>
     <string name="anonymous_statistics_warning_title">利用統計について</string>
-    <string name="anonymous_statistics_warning">AICP の利用統計にオプトインすると、匿名のデータがサーバーに送信されます。送信されるデータにはユニークな識別情報が含まれますが、プライバシーや個人情報に影響するものではありません。データは7日ごとに送信されます。\n\n送信されるデータの例を見るには、「データのプレビュー」をタップしてください。</string>
     <string name="enable_reporting_title">統計情報の送信を有効化</string>
     <string name="disable_reporting_persistent">オプトアウトする</string>
     <string name="preview_data_title">データのプレビュー</string>
@@ -42,4 +41,7 @@
     <string name="preview_romname_title">ROM 名</string>
     <string name="preview_romversion_title">AICP バージョン</string>
     <string name="preview_buildtype_title">AICP ビルド種別</string>
+    <!-- Anonymous Statistics - Notification -->
+    <string name="notification_romstats_name">AICP 統計</string>
+    <string name="notification_title">AICP 統計</string>
 </resources>

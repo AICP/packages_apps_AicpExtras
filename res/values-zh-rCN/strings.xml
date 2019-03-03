@@ -122,6 +122,10 @@
     <string name="clock_date_style_lowercase">小写字母</string>
     <string name="clock_date_style_uppercase">大写字母</string>
     <string name="clock_date_format_custom">自定义 java 格式</string>
+    <string name="clock_position">时钟位置</string>
+    <string name="clock_position_right">时钟右置</string>
+    <string name="clock_position_center">时钟中置</string>
+    <string name="clock_position_left">时钟左置</string>
     <string name="menu_cancel">取消</string>
     <string name="menu_save">保存</string>
     <!-- Statusbar categories -->
@@ -167,6 +171,11 @@
     <string name="custom_header_pick_title">选择顶部图像</string>
     <string name="custom_header_pick_summary">选择静态模式使用的图片</string>
     <string name="header_provider_disabled">禁用</string>
+    <!-- QS Settings background panel blur -->
+    <string name="qs_panel_translucency_category_title">面板透明度</string>
+    <string name="translucent_quick_settings">启用透明度</string>
+    <string name="translucent_quick_settings_summary">模糊背景面板</string>
+    <string name="translucent_quick_settings_percentage">背景透明度百分比</string>
     <!-- Tiles animation style -->
     <string name="qs_tiles">快速设置瓷块</string>
     <string name="qs_tile_animation_style_title">动画风格</string>
@@ -288,6 +297,13 @@
     <string name="fprint_sucess_vib_title">验证指纹震动</string>
     <string name="fprint_sucess_vib_summary_on">指纹验证成功时振动启用</string>
     <string name="fprint_sucess_vib_summary_off">指纹验证成功时振动禁用</string>
+    <!-- Lockscreen Clock styles -->
+    <string name="lockscreen_clock_selection_title">时钟风格</string>
+    <string name="lockscreen_clock_selection_digital">默认</string>
+    <string name="lockscreen_clock_selection_digital_bold">数字 (粗体)</string>
+    <string name="lockscreen_clock_selection_analog">模拟</string>
+    <string name="lockscreen_clock_selection_sammy">竖式时钟</string>
+    <string name="lockscreen_clock_selection_sammy_bold">竖式时钟 (粗体)</string>
     <!-- On-The-Go -->
     <string name="global_actions_onthego_title">行走模式</string>
     <string name="global_actions_onthego_summary">将行走模式切换添加到电源菜单</string>
@@ -296,8 +312,14 @@
     <string name="global_actions_screenrecord_summary">将屏幕录像切换添加到电源菜单</string>
     <!-- Screenshot -->
     <string name="global_actions_screenshot_title">屏幕截图</string>
+    <string name="global_actions_screenshot_summary">添加屏幕截图切换到电源菜单</string>
     <!-- Reboot -->
+    <string name="global_actions_reboot_title">重新启动</string>
+    <string name="global_actions_reboot_summary">将重新启动切换到电源菜单</string>
     <!-- Advanced Reboot -->
+    <string name="global_actions_advanced_reboot_title">高级重启</string>
+    <string name="global_actions_advanced_reboot_summary">将高级重启切换添加到电源菜单</string>
+    <!-- Emergency -->
     <!-- Power Menu -->
     <string name="global_actions_power_menu_title">锁屏电源菜单</string>
     <!-- Hide statusbar on lockscreen -->
@@ -316,7 +338,7 @@
     <string name="volume_keys_control_ring_tone_summary">默认情况下, 键控制媒体滑块。可切换到铃声滑块</string>
     <!-- Volume keys control music playback -->
     <string name="volume_rocker_music_controls_title">播放控制</string>
-    <string name="volume_rocker_music_controls_summary">当屏幕关闭时, 长按音量键将寻找音乐曲目。将禁用下面的唤醒控制</string>
+    <string name="volume_rocker_music_controls_summary">屏幕关闭时，长按音量键来切换不同曲目</string>
     <!-- Toast icon switch -->
     <string name="toast_icon_title">提示栏显示图标</string>
     <string name="toast_icon_summary">提示栏显示相应的应用图标</string>
@@ -419,6 +441,8 @@
     <string name="aicp_website_summary">访问 GIMP 网站</string>
     <string name="aicp_walls_title">壁纸</string>
     <string name="aicp_walls_summary">查看我们的 AICP 壁纸</string>
+    <string name="discord_title">Discord 服务器</string>
+    <string name="discord_summary">访问我们的 Discord 服务器</string>
     <string name="aicp_gerrit_title">Gerrit 代码审查</string>
     <string name="aicp_gerrit_summary">访问我们的 Gerrit 来知道我们在为什么而工作</string>
     <string name="aicp_changelog_title">更新日志</string>
@@ -484,6 +508,7 @@
     <string name="navigation_summary">原生/智能导航栏/扫动/手势</string>
     <!-- OP like navigation gestures -->
     <string name="gesture_settings_title">导航手势</string>
+    <string name="gesture_settings_info">必须关闭导航栏！\n\n可用手势\n\n后退\n-向左或向右滑动\n\n主页\n-上滑到中心\n\n最近打开的程序\n-向上滑到中心并长按住\n\n上一个应用\n-从中间向上短滑短并按住</string>
     <string name="use_bottom_gesture_title">导航手势</string>
     <string name="use_bottom_gesture_summary">使用底部向上滑动手势导航\n导航栏必须禁用!</string>
     <string name="gesture_swipe_length_title">滑动触发区高度</string>
@@ -733,7 +758,13 @@
     <string name="screen_state_off_delay_summary">在屏幕关闭后执行操作前等待的时长</string>
     <string name="screen_state_on_delay_title">屏幕点亮操作延迟</string>
     <string name="screen_state_on_delay_summary">在屏幕开启后执行操作前等待的时长</string>
+    <!-- Swap hw keys -->
+    <string name="swap_navigation_keys_title">交换硬件按钮</string>
+    <string name="swap_navigation_keys_title_summary">交换最近任务和返回按钮的顺序</string>
     <!-- Ambient display music ticker -->
+    <string name="force_ambient_for_media_pref_title">息屏音乐信息</string>
+    <string name="force_ambient_for_media_pref_summary">配置息屏音乐信息</string>
+    <string name="ambient_ticker_footer">环境音乐收录器显示在环境显示屏幕内播放音乐曲目信息。\n\n如果在启动新曲目时禁用环境显示，则会触发此操作，从而在屏幕中间强制显示带有曲目信息的干净环境屏幕。\n\n您也可以双击音轨信息以跳过音轨。\n\n如果您拥有Pixel并启用正在播放及其在系统音频设置中的通知，环境音乐收录器也可以在其中使用。</string>
     <string name="force_ambient_for_media_title">启用</string>
     <!-- Screen Off animation -->
     <string name="screen_off_animation_title">屏幕关闭动画</string>
@@ -748,6 +779,7 @@
     <!-- HW keys -->
     <string name="hw_keys_title">硬件按钮</string>
     <string name="hw_keys_summary">配置设备硬件按钮的行为</string>
+    <string name="hardware_keys_wake_title">唤醒设备</string>
     <!-- Power keys -->
     <string name="category_power_key">电源按钮</string>
     <!-- Volume keys -->
@@ -755,13 +787,17 @@
     <string name="volume_keys_cursor_control_title">光标控制</string>
     <string name="volume_keys_cursor_control_summary">启用用于光标控制的音量键</string>
     <!-- Volume rocker wake -->
-    <string name="volume_wake_screen_title">唤醒屏幕</string>
-    <string name="volume_wake_screen_summary">关闭时, 使用音量摇杆唤醒屏幕。将禁用上面的播放控制</string>
+    <string name="volume_rocker_wake_title">音量键唤醒</string>
+    <string name="volume_rocker_wake_summary">按下音量键唤醒您的设备</string>
     <!-- Button brightness -->
     <string name="button_backlight_options_category">背光设置</string>
     <string name="button_backlight_enable_title">允许按钮背光</string>
-    <string name="button_backlight_enable_summary">切换到启用/禁用硬件按键上的按钮背光</string>
+    <string name="button_link_brightness">跟随屏幕亮度</string>
+    <string name="button_link_brightness_summary">按钮背光亮度将根据屏幕亮度水平调整</string>
     <string name="button_manual_brightness">亮度等级</string>
+    <string name="button_timeout_title">背光灯超时</string>
+    <string name="button_backlight_on_touch_only_title">触摸时点亮按键背光</string>
+    <string name="button_backlight_on_touch_only_summary">按钮背光将只出现在按钮时, 而不是在所有的时间。超时仍然会影响此功能。</string>
     <!-- Quick QS pull down -->
     <string name="status_bar_quick_qs_pulldown_summary_left">状态栏左边缘下拉打开快速设置</string>
     <string name="status_bar_quick_qs_pulldown_summary_right">状态栏右边缘下拉打开快速设置</string>
@@ -802,10 +838,8 @@
     <string name="heads_up_time_out_6sec">6 秒</string>
     <string name="heads_up_time_out_8sec">8 秒</string>
     <string name="heads_up_time_out_10sec">10 秒</string>
-    <!-- Activity Blacklist -->
+    <!-- Blacklist strings-->
     <string name="chooser_activity_blacklist_title">选择器活动黑名单</string>
-    <string name="chooser_activity_blacklist_summary">在点击 \"分享\" 按钮时不显示的应用程序</string>
-    <string name="chooser_activity_blacklist_cat_title">黑名单</string>
     <string name="chooser_activity_blacklist_pref_title">添加应用程序</string>
     <string name="chooser_activity_blacklist_pref_summary">点击此处添加到列表中, 点击列出的应用以删除</string>
     <string name="headsup_activity_blacklist_title">HeadsUp 通知黑名单</string>
@@ -932,4 +966,65 @@
     <!-- Data Disabled Icon -->
     <string name="data_disabled_icon_title">显示数据禁用图标</string>
     <string name="data_disabled_icon_summary">当数据禁用时，不显示图标旁边的 “×“ 图标</string>
+    <!-- MediaScanner behavior on boot -->
+    <string name="media_scanner_on_boot_title">启动时的媒体扫描行为</string>
+    <string name="media_scanner_on_boot_enabled">扫描媒体</string>
+    <string name="media_scanner_on_boot_ask">请求扫描 (通知)</string>
+    <string name="media_scanner_on_boot_disabled">不扫描媒体</string>
+    <!-- Running Services Icon in QS Footer-->
+    <string name="qs_running_services_title">运行中的服务图标</string>
+    <string name="qs_running_services_summary">启用标题中的运行服务图标</string>
+    <!-- Power menu and dialogs opacity -->
+    <string name="power_menu_category">电源/重新启动对话框</string>
+    <string name="power_menu_transparency">不透明度</string>
+    <string name="power_menu_dialog_dim">背景暗淡</string>
+    <!-- SystemUI Tuner -->
+    <string name="systemui_tuner_title">系统界面调节工具</string>
+    <string name="systemui_tuner_summary">实验系统界面调整</string>
+    <!-- Hardware button navigation -->
+    <string name="hardware_keys_volume_keys_title">音量摇杆</string>
+    <string name="hardware_keys_home_key_title">主页键</string>
+    <string name="hardware_keys_menu_key_title">菜单键</string>
+    <string name="hardware_keys_assist_key_title">搜索键</string>
+    <string name="hardware_keys_appswitch_key_title">预览布局按键</string>
+    <string name="hardware_keys_back_key_title">返回键</string>
+    <string name="hardware_keys_double_tap_summary">设置双击操作</string>
+    <string name="hardware_keys_single_tap_summary">设置单击操作</string>
+    <string name="hardware_keys_long_press_summary">设置长按操作</string>
+    <string name="hardware_keys_single_tap_title">单击操作</string>
+    <string name="hardware_keys_long_press_title">长按操作</string>
+    <string name="hardware_keys_double_tap_title">双击操作</string>
+    <string name="hardware_keys_category">导航栏按钮</string>
+    <string name="hardware_keys_disable_title">禁用导航栏按钮</string>
+    <!-- doze on charge -->
+    <string name="doze_on_charge_title">充电时 AOD</string>
+    <string name="doze_on_charge_summary">充电时启用显示 AOD</string>
+    <!-- EdgeGesture service -->
+    <string name="edge_gesture_service_title">阻止手势触摸事件</string>
+    <string name="edge_gesture_service_summary">不要将导航和状态栏手势的触摸事件发送到应用程序</string>
+    <!-- Pie control -->
+    <string name="pa_pie_control_title">扇形控制</string>
+    <string name="pa_pie_control_enable_title">启用扇形控制</string>
+    <string name="pie_enable_title">启用</string>
+    <string name="pie_enable_summary">启用扇形控制为导航</string>
+    <string name="pie_settings">扇形设置</string>
+    <string name="pie_settings_summary">调整扇形到您喜欢的程度</string>
+    <string name="pie_theme_mode_title">主题</string>
+    <string name="pie_auto">自动</string>
+    <string name="pie_white">白色</string>
+    <string name="pie_dark">深色</string>
+    <string name="pie_battery_title">电量指示器</string>
+    <string name="pie_battery_text">仅文字</string>
+    <string name="pie_battery_circle">只显示环形</string>
+    <string name="pie_battery_both">都显示</string>
+    <string name="pie_status_indicator">网络指示器</string>
+    <string name="pie_status_wifi">只显示 Wifi</string>
+    <string name="pie_status_mobile">只显示移动网络</string>
+    <string name="pie_status_none">无</string>
+    <string name="pie_status_both">都显示</string>
+    <string name="pa_pie_gravity_title">扇形位置</string>
+    <string name="pa_pie_gravity_summary">选择放置扇形的位置</string>
+    <string name="pa_pie_gravity_bottom">底部</string>
+    <string name="pa_pie_gravity_right">右侧</string>
+    <string name="pa_pie_gravity_left">左侧</string>
 </resources>

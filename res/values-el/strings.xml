@@ -78,6 +78,9 @@
     <string name="clock_date_style_lowercase">Πεζά</string>
     <string name="clock_date_style_uppercase">Κεφαλαία</string>
     <string name="clock_date_format_custom">Προσαρμοσμένη μορφή java</string>
+    <string name="clock_position_right">Ρολόι δεξιά</string>
+    <string name="clock_position_center">Ρολόι στο κέντρο</string>
+    <string name="clock_position_left">Ρολόι αριστερά</string>
     <string name="menu_cancel">Άκυρο</string>
     <string name="menu_save">Αποθήκευση</string>
     <!-- Statusbar categories -->
@@ -99,6 +102,7 @@
     <!-- QS Headers -->
     <string name="custom_header_browse_title">Αναζήτηση εγκατεστημένων κεφαλίδων</string>
     <string name="header_provider_disabled">Απενεργοποιημένο</string>
+    <!-- QS Settings background panel blur -->
     <!-- Tiles animation style -->
     <string name="qs_tile_animation_duration_title">Tiles animation duration</string>
     <string name="qs_tile_animation_style_off">No animation</string>
@@ -185,11 +189,13 @@
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
     <string name="fprint_sucess_vib_summary_on">Δόνηση σε επιτυχημένο έλεγχο ταυτότητας δακτυλικών αποτυπωμάτων</string>
     <string name="fprint_sucess_vib_summary_off">Δόνηση σε επιτυχημένο έλεγχο ταυτότητας δακτυλικών αποτυπωμάτων απενεργοποιημένο</string>
+    <!-- Lockscreen Clock styles -->
     <!-- On-The-Go -->
     <!-- Screenrecord -->
     <!-- Screenshot -->
     <!-- Reboot -->
     <!-- Advanced Reboot -->
+    <!-- Emergency -->
     <!-- Power Menu -->
     <string name="global_actions_power_menu_title">Power menu on lock screen</string>
     <!-- Hide statusbar on lockscreen -->
@@ -349,6 +355,7 @@
     <string name="screen_state_off_delay_summary">Αριθμός των δευτερολέπτων για αναμονή πρώτου εκτελεστούν οι ενέργειες απενεργοποίησης οθόνης</string>
     <string name="screen_state_on_delay_title">Καθυστέρηση ενεργειών Ενεργοποίησης Οθόνης</string>
     <string name="screen_state_on_delay_summary">Αριθμός των λεπτών για αναμονή πρώτου εκτελεστούν οι ενέργειες απενεργοποίησης οθόνης</string>
+    <!-- Swap hw keys -->
     <!-- Ambient display music ticker -->
     <string name="force_ambient_for_media_title">Ενεργοποίηση</string>
     <!-- Screen Off animation -->
@@ -386,7 +393,7 @@
     <!-- Heads up snooze -->
     <string name="heads_up_snooze_1min">1 λεπτό</string>
     <!-- Heads up timeout -->
-    <!-- Activity Blacklist -->
+    <!-- Blacklist strings-->
     <!-- Carbon gestures -->
     <!-- Circle app bar -->
     <string name="unit_percent">\u0025</string>
@@ -407,4 +414,17 @@
     <!-- App Ops-->
     <!-- [CHAR LIMIT=NONE] App ops settings title, on main settings screen. If clicked, the user is taken to a settings screen for app operations -->
     <!-- Data Disabled Icon -->
+    <!-- MediaScanner behavior on boot -->
+    <!-- Running Services Icon in QS Footer-->
+    <!-- Power menu and dialogs opacity -->
+    <!-- SystemUI Tuner -->
+    <!-- Hardware button navigation -->
+    <!-- doze on charge -->
+    <!-- EdgeGesture service -->
+    <!-- Pie control -->
+    <string name="pie_enable_title">Ενεργοποίηση</string>
+    <string name="pie_theme_mode_title">Θέμα</string>
+    <string name="pie_status_none">None</string>
+    <string name="pa_pie_gravity_right">Δεξιά</string>
+    <string name="pa_pie_gravity_left">Αριστερά</string>
 </resources>
