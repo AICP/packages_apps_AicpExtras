@@ -21,9 +21,29 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/recents_title">
 
-    <PreferenceCategory
-        android:key="stock_recents_category"
-        android:title="@string/stock_recents_category">
+     <PreferenceCategory
+         android:key="stock_recents_category"
+         android:title="@string/stock_recents_category">
+
+    <ListPreference
+        android:key="recents_component"
+        android:title="@string/recents_component_type_title"
+        android:dialogTitle="@string/recents_component_type_title"
+        android:entries="@array/recents_component_type_title_entries"
+        android:defaultValue="0"
+        android:entryValues="@array/recents_component_type_title_values"/>
+
+    </PreferenceCategory>
+
+     <PreferenceCategory
+         android:key="recents_ui_oreo_recents_category"
+         android:title="@string/oreo_recents_category">
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="systemui_recents_mem_display"
+            android:title="@string/recents_show_membar_title"
+            android:summary="@string/recents_show_membar_summary"
+            android:defaultValue="false" />
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="show_clear_all_recents"
@@ -39,7 +59,15 @@
             android:defaultValue="3"
             android:dependency="show_clear_all_recents" />
 
-    </PreferenceCategory>
+        <com.aicp.gear.preference.SystemSettingIntListPreference
+            android:key="recents_layout_style"
+            android:title="@string/recents_type_title"
+            android:dialogTitle="@string/recents_type_title"
+            android:entries="@array/recents_type_title_entries"
+            android:defaultValue="0"
+            android:entryValues="@array/recents_type_title_values"/>
+
+     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="alternative_recents_category"

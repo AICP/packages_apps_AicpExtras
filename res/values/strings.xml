@@ -230,12 +230,18 @@
     <string name="recents_title">Recents</string>
     <string name="recents_summary">Edit recents apps screen appearance</string>
     <string name="stock_recents_category">Stock recents</string>
+    <string name="oreo_recents_category">Oreo recents</string>
     <string name="alternative_recents_category">Alternative recents</string>
     <string name="alternative_recents_swipe_up_enabled_warning_summary">When using swipe up home navigation to open recents, only stock recents are supported</string>
 
+    <!-- Stock Recents component Style -->
+    <string name="recents_component_type_title">Recents Style</string>
+    <string name="recents_pie">Pie</string>
+    <string name="recents_oreo">Oreo</string>
+
     <!-- Recents panel settings -->
     <string name="show_clear_all_recents_button_title">Clear all button</string>
-    <string name="show_clear_all_recents_button_summary">Show clear all button on legacy recents (Launcher3QuickStep uninstalled)</string>
+    <string name="show_clear_all_recents_button_summary">Show clear all button</string>
     <string name="recents_clear_all_location_title">Clear all location</string>
     <string name="recents_clear_all_location_top_right">Top right</string>
     <string name="recents_clear_all_location_top_left">Top left</string>
@@ -243,6 +249,14 @@
     <string name="recents_clear_all_location_bottom_right">Bottom right</string>
     <string name="recents_clear_all_location_bottom_left">Bottom left</string>
     <string name="recents_clear_all_location_bottom_center">Bottom center</string>
+    <string name="recents_show_membar_title">Memory bar</string>
+    <string name="recents_show_membar_summary">Show a bar with the device\'s available memory</string>
+
+   <!-- Oreo Recents Style -->
+    <string name="recents_type_title">Oreo Recents Layout</string>
+    <string name="recents_stock">Stock</string>
+    <string name="recents_grid">Grid</string>
+    <string name="recents_go">Android Go</string>
 
     <!-- Slim recents -->
     <string name="slim_recents_title">Slim recents</string>
@@ -1176,4 +1190,13 @@
     <string name="pa_pie_gravity_bottom">Bottom</string>
     <string name="pa_pie_gravity_right">Right</string>
     <string name="pa_pie_gravity_left">Left</string>
+
+    <!-- Audio Panel view  -->
+    <string name="audio_panel_view">Audio panel</string>
+    <string name="audio_panel_view_media_title">Media</string>
+    <string name="audio_panel_view_ringer_title">Ring</string>
+    <string name="audio_panel_view_notification_title">Notification</string>
+    <string name="audio_panel_view_alarm_title">Alarm</string>
+    <string name="audio_panel_view_voice_title">Voice</string>
+    <string name="audio_panel_view_bt_sco_title">Bluetooth</string>
 </resources>
