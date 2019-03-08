@@ -18,16 +18,12 @@
  */
 -->
 <resources>
-    <!-- Aicp Extras -->
     <string name="app_name">AICP Extras</string>
-    <!-- Dashboard -->
     <string name="user_interface_category">UI</string>
     <string name="system_category">System</string>
     <string name="other_category">Sonstiges</string>
-    <!-- Status bar -->
     <string name="status_bar_title">Statusleiste</string>
     <string name="status_bar_summary">Erscheinungsbild der Statusleiste bearbeiten</string>
-    <!-- StatusBar Battery Options -->
     <string name="status_bar_battery_title">Akku-Symbol</string>
     <string name="status_bar_battery_summary">Anwählen, um Optionen für das Akku-Symbol anzuzeigen</string>
     <string name="battery_style_title">Akkusymbol (Stil)</string>
@@ -42,13 +38,10 @@
     <string name="battery_percent_enabled">Aktiviert</string>
     <string name="battery_percent_embedded">Eingebettet ins Symbol</string>
     <string name="battery_percent_disabled">Deaktiviert</string>
-    <!-- Bluetooth status -->
     <string name="bluetooth_battery_title">Akkuladung für Bluetoothgeräte</string>
     <string name="bluetooth_battery_summary">Zeigt, sofern möglich, die Akkuladung für momentan verbundene Bluetoothgeräte an.</string>
-    <!-- Hide notch -->
     <string name="hide_notch_title">Notch ausblenden</string>
     <string name="hide_notch_summary">Bei Aktivierung wird die Notch ausgeblendet und seitliche Lücken gefüllt</string>
-    <!-- Statusbar net monitor -->
     <string name="network_traffic_category">Netzwerk-Datenverkehr</string>
     <string name="network_traffic_title">Netzwerk-Aktivität in der Statusleiste</string>
     <string name="network_traffic_summary">Netzwerk-Aktivität in der Statusleiste anzeigen</string>
@@ -56,7 +49,6 @@
     <string name="network_traffic_expanded_status_bar_summary">Zeigen Sie Netzwerk-Aktivität in der Statusleiste oberhalb der Schnelleinstellungen</string>
     <string name="network_traffic_autohide_threshold_title">Schwellenwert ab dem die Netzwerk-Aktivität nicht mehr angezeigt wird</string>
     <string name="network_traffic_autohide_threshold_kbs">kB/s</string>
-    <!-- Battery bar -->
     <string name="battery_bar_title">Akkustandbalken</string>
     <string name="battery_bar_summary">Anwählen, um Optionen für das Akkustandbalken anzuzeigen</string>
     <string name="battery_bar_location_title">Standort</string>
@@ -82,7 +74,6 @@
     <string name="battery_blend_start">Leer</string>
     <string name="battery_blend_end">Voll</string>
     <string name="battery_blend_between">Übergang</string>
-    <!-- Smart pulldown -->
     <string name="smart_pulldown_title">Intelligentes Herunterziehen</string>
     <string name="smart_pulldown_off">AUS</string>
     <string name="smart_pulldown_none">Keine Benachrichtigungen</string>
@@ -91,10 +82,8 @@
     <string name="smart_pulldown_summary">Schnelleinstellungen öffnen, wenn %1$s Benachrichtigungen vorliegen</string>
     <string name="smart_pulldown_none_summary">Schnelleinstellungen öffnen, wenn keine Benachrichtigungen vorhanden sind</string>
     <string name="smart_pulldown_off_summary">ist ausgeschaltet</string>
-    <!-- Double tap to sleep on status bar -->
     <string name="status_bar_double_tap_to_sleep_title">Doppeltippen für Standby (DT2S)</string>
     <string name="status_bar_double_tap_to_sleep_summary">Doppelt auf die Statusleiste tippen, um das Display auszuschalten</string>
-    <!-- Statusbar Clock options -->
     <string name="status_bar_clock_title">Uhrzeit</string>
     <string name="status_bar_clock_summary">Anwählen, um Optionen für die Uhrzeit anzuzeigen</string>
     <string name="status_bar_show_clock_title">Uhr &amp; Datum anzeigen</string>
@@ -128,55 +117,42 @@
     <string name="clock_position_left">Links</string>
     <string name="menu_cancel">Abbrechen</string>
     <string name="menu_save">Speichern</string>
-    <!-- Statusbar categories -->
     <string name="status_bar_gestures_category_title">Gesten</string>
     <string name="status_bar_icons_category_title">Symbole</string>
     <string name="status_bar_others_category_title">Sonstiges</string>
-    <!-- Show 4G instead of LTE -->
     <string name="show_4g_title">4G-Empfangssymbol anzeigen</string>
     <string name="show_4g_summary">Zeige 4G anstelle von LTE Empfangssymbolen</string>
-    <!-- Roaming indicator icon -->
     <string name="roaming_indicator_icon_title">Roaming-Anzeige</string>
     <string name="roaming_indicator_icon_summary">Zeigt im Roaming-Betrieb den Indikator im Mobilnetz-Symbol</string>
-    <!-- Notifications -->
     <string name="notifications_title">Benachrichtigungen</string>
     <string name="notifications_summary">Erweiterte Benachrichtigungseinstellungen</string>
-    <!-- Heads up -->
     <string name="notification_heads_up_title">Pop-ups</string>
     <string name="notification_heads_up_summary">Pop-Up Benachrichtigungen zulassen</string>
-    <!-- Quick settings -->
     <string name="quick_settings_title">Schnelleinstellungen</string>
     <string name="quick_settings_summary">Bearbeitung der Schnelleinstellungen/Kacheln</string>
-    <!-- Disable music track title in QS tile -->
     <string name="qs_music_tile_track_optional_title">Musiktitelanzeige</string>
     <string name="qs_music_tile_track_optional_summary">Zeigt den Titelnamen als Kachelbezeichnung</string>
-    <!-- Small quick settings scroller -->
     <string name="qqs_scroll_title">Mini-Kacheln blättern</string>
     <string name="qqs_scroll_summary">Erlaubt das Blättern durch die Mini-Kacheln</string>
     <string name="qqs_columns_title">Spaltenanzahl Mini-Kacheln</string>
     <string name="qqs_columns_auto_title">Automatische Spaltenanzahl für Mini-Kacheln</string>
     <string name="qqs_columns_auto_summary">Spaltenanzahl der Mini-Kacheln gemäß Spaltenvorgabe</string>
-    <!-- QS rows and columns -->
     <string name="qs_layout_category_title">Layout der Schnelleinstellungen</string>
     <string name="qs_rows_portrait_title">Kachel-Zeilen im Hochformat</string>
     <string name="qs_rows_landscape_title">Kachel-Zeilen im Querformat</string>
     <string name="qs_columns_portrait_title">Kachel-Spalten im Hochformat</string>
     <string name="qs_columns_landscape_title">Kachel-Spalten im Querformat</string>
-    <!-- QS tiles title visibility -->
     <string name="qs_tile_title_visibility_title">Kachelbeschriftung</string>
     <string name="qs_tile_title_visibility_summary">Aktivieren um Kachelbeschriftung anzuzeigen</string>
-    <!-- QS Headers -->
     <string name="custom_header_browse_title">Blättere durch installierte Pakete</string>
     <string name="custom_header_browse_summary_new">Alle verfügbaren Hintergrund-Pakete durchsuchen</string>
     <string name="custom_header_pick_title">Hintergrundbild für Kopfzeile auswählen</string>
     <string name="custom_header_pick_summary">Bild für statischen Modus wählen</string>
     <string name="header_provider_disabled">Deaktiviert</string>
-    <!-- QS Settings background panel blur -->
     <string name="qs_panel_translucency_category_title">Panel-Transparenz</string>
     <string name="translucent_quick_settings">Transparenz aktivieren</string>
     <string name="translucent_quick_settings_summary">Hintergrund weichzeichnen</string>
     <string name="translucent_quick_settings_percentage">Hintergrundtransparenz in Prozent</string>
-    <!-- Tiles animation style -->
     <string name="qs_tiles">Schnelleinstellungs-Kacheln</string>
     <string name="qs_tile_animation_style_title">Animationsstil</string>
     <string name="qs_tile_animation_duration_title">Dauer der Kachelanimation</string>
@@ -197,15 +173,17 @@
     <string name="qs_tile_animation_interpolator_overshootInterpolator">Überschwingen</string>
     <string name="qs_tile_animation_interpolator_anticipateInterpolator">Schwung holen</string>
     <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Schwung holen &amp; Überschwingen</string>
-    <!-- Recents -->
     <string name="recents_title">Anwendungsverlauf</string>
     <string name="recents_summary">Einstellungen für die App-Übersicht bearbeiten</string>
     <string name="stock_recents_category">Standard-Anwendungsverlauf</string>
+    <string name="oreo_recents_category">Oreo Anwendungsverlauf</string>
     <string name="alternative_recents_category">Alternativer Anwendungsverlauf</string>
     <string name="alternative_recents_swipe_up_enabled_warning_summary">Wenn die Wischgeste für die Anzeige des Verlaufs eingestellt wurde, kann der Verlauf nur im Standardformat angezeigt werden</string>
-    <!-- Recents panel settings -->
+    <string name="recents_component_type_title">Stil des Anwendungsverlaufs</string>
+    <string name="recents_pie">Pie</string>
+    <string name="recents_oreo">Oreo</string>
     <string name="show_clear_all_recents_button_title">Taste zum Schließen aller Apps</string>
-    <string name="show_clear_all_recents_button_summary">Zeigen eine Taste zum Schließen aller Apps im Standardverlauf (nur wenn Launcher3/QuickStep deinstalliert wurde)</string>
+    <string name="show_clear_all_recents_button_summary">Lösch-Taste für den gesamten Verlauf anzeigen</string>
     <string name="recents_clear_all_location_title">Position der Löschtaste</string>
     <string name="recents_clear_all_location_top_right">Oben rechts</string>
     <string name="recents_clear_all_location_top_left">Oben links</string>
@@ -213,7 +191,12 @@
     <string name="recents_clear_all_location_bottom_right">Unten rechts</string>
     <string name="recents_clear_all_location_bottom_left">Unten links</string>
     <string name="recents_clear_all_location_bottom_center">Unten mittig</string>
-    <!-- Slim recents -->
+    <string name="recents_show_membar_title">Arbeitsspeicheranzeige</string>
+    <string name="recents_show_membar_summary">Anzeige des verfügbaren Arbeitsspeichers als Leiste</string>
+    <string name="recents_type_title">Layout des Oreo Anwendungsverlaufs</string>
+    <string name="recents_stock">Standard (AOSP)</string>
+    <string name="recents_grid">Raster</string>
+    <string name="recents_go">Android Go</string>
     <string name="slim_recents_title">Slim Anwendungsverlauf</string>
     <string name="recents_max_apps_title">max. zulässige App-Anzahl</string>
     <string name="recent_panel_scale_title">Größe</string>
@@ -235,7 +218,6 @@
     <string name="slim_recents_corner_radius_title">Radius der Karten-Ecken</string>
     <string name="slim_recents_aicp_empty_drawable_title">Bild bei leerem Verlauf</string>
     <string name="slim_recents_aicp_empty_drawable_summary">Zeige das AICP-Bild, wenn keine Apps im Verlauf sind</string>
-    <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Anzeige auf der linken Seite</string>
     <string name="recent_panel_lefty_mode_summary">Zeige das Paneel des App-Verlaufs auf der linken Seite</string>
     <string name="profile_choose_app">Anwendung auswählen</string>
@@ -246,7 +228,6 @@
     <string name="slim_blacklist_apps_summary">Nicht angezeigte/blockierte Anwendungen</string>
     <string name="slim_blacklist_add_apps_title">Anwendung hinzufügen</string>
     <string name="slim_blacklist_add_apps_summary">Hier zum Hinzufügen tippen, zum Entfernen auf eine vorhandene App tippen</string>
-    <!-- Slim Recent App Sidebar -->
     <string name="recent_app_sidebar_title">Appverlauf-Seitenleiste</string>
     <string name="recent_app_sidebar_summary">App-Verknüpfungen auf der anderen Seite anzeigen</string>
     <string name="use_recent_app_sidebar_title">Appverlauf-Seitenleiste aktivieren</string>
@@ -261,93 +242,66 @@
     <string name="recent_app_sidebar_scale_title">Größe</string>
     <string name="recent_app_sidebar_open_simultaneously_title">Zusammen mit dem Verlauf öffnen</string>
     <string name="recent_app_sidebar_open_simultaneously_summary">Reduziert bei Deaktivierung die Verzögerung beim Öffnen</string>
-    <!-- Slim recents membar -->
     <string name="slim_recents_mem_display_category_title">Arbeitsspeicheranzeige</string>
     <string name="slim_recents_mem_display_title">Arbeitsspeicher anzeigen</string>
     <string name="slim_recents_mem_display_summaryOn">Anzeige der Leiste aktiviert</string>
     <string name="slim_recents_mem_display_summaryOff">Anzeige der Leiste deaktiviert</string>
     <string name="slim_recents_mem_display_color">Farbe der Leiste</string>
     <string name="slim_recents_mem_display_text_color">Farbe des Leistentextes</string>
-    <!-- Lockscreen -->
     <string name="lockscreen_title">Sperrbildschirm</string>
     <string name="lockscreen_summary">Einstellungen des Sperrbildschirms bearbeiten</string>
     <string name="lockscreen_security_category">Sicherheit</string>
-    <!-- Double tap to sleep on lockscreen -->
     <string name="double_tap_sleep_lockscreen">Zum Schlafen zweimal Tippen (DT2S)</string>
     <string name="double_tap_sleep_lockscreen_summary">Doppel-Tippen auf den Sperrbildschirm aktiviert den Standby-Modus</string>
-    <!-- Media art -->
     <string name="media_art_title">Albumcover anzeigen</string>
     <string name="media_art_summary">Zeigt Albumcover auf dem Sperrbildschirm als Hintergrund</string>
-    <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Auflade-Infos auf dem Sperrbildschirm</string>
     <string name="lockscreen_battery_info_summary">Zeige maximale ermittelte Ladespannung/-strom und Batterietemperatur während des Ladens auf dem Sperrbildschirm</string>
-    <!-- Power menu on secure lockscreen -->
     <string name="lockscreen_enable_power_menu_title">Ein/Aus-Menü auf Sperrbildschirm</string>
     <string name="lockscreen_enable_power_menu_summary">Anzeige des Ein-/Aus-Menüs bei gesichertem Sperrbildschirm</string>
-    <!-- Disable QS on secure Lockscreen -->
     <string name="lockscreen_qs_disabled_title">Keine Schnelleinstellungen auf sicherem Sperrbildschirm</string>
     <string name="lockscreen_qs_disabled_summary">Deaktiviert den Zugriff auf die Schnelleinstellungen bei gesichertem Sperrbildschirm</string>
-    <!-- Scramble PIN layout when unlocking -->
     <string name="unlock_scramble_pin_layout_title">Zufälliges PIN-Layout</string>
     <string name="unlock_scramble_pin_layout_summary">PIN-Layout zufällig neu anordnen, wenn das Gerät entsperrt wird</string>
-    <!-- Quick unlock -->
     <string name="unlock_quick_unlock_control_title">Schnelles Entsperren</string>
     <string name="unlock_quick_unlock_control_summary">Automatisch entsperren, sobald die PIN-/Passwort-Anfrage korrekt beantwortet wurde</string>
-    <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Vibration bei Authentifizierung per Fingerabdruck</string>
     <string name="fprint_sucess_vib_summary_on">Nach erfolgreicher Authentifizierung per Fingerabdruck vibrieren</string>
     <string name="fprint_sucess_vib_summary_off">Nach erfolgreicher Authentifizierung per Fingerabdruck nicht vibrieren</string>
-    <!-- Lockscreen Clock styles -->
     <string name="lockscreen_clock_selection_title">Uhrenstil</string>
     <string name="lockscreen_clock_selection_digital">Standard</string>
     <string name="lockscreen_clock_selection_digital_bold">Digital (Fett)</string>
     <string name="lockscreen_clock_selection_analog">Analog</string>
     <string name="lockscreen_clock_selection_sammy">Samsung</string>
     <string name="lockscreen_clock_selection_sammy_bold">Samsung (Fett)</string>
-    <!-- On-The-Go -->
     <string name="global_actions_onthego_title">On-The-Go</string>
     <string name="global_actions_onthego_summary">On-The-Go zum Ein-/Aus-Menü hinzufügen</string>
-    <!-- Screenrecord -->
     <string name="global_actions_screenrecord_title">Bildschirmaufnahme</string>
     <string name="global_actions_screenrecord_summary">Bildschirmaufnahme zum Ein-/Aus-Menü hinzufügen</string>
-    <!-- Screenshot -->
     <string name="global_actions_screenshot_title">Bildschirmfoto</string>
     <string name="global_actions_screenshot_summary">Bildschirmaufnahme zum Ein-/Aus-Menü hinzufügen</string>
-    <!-- Reboot -->
     <string name="global_actions_reboot_title">Neu starten</string>
     <string name="global_actions_reboot_summary">Neustart zum Ein-/Aus-Menü hinzufügen</string>
-    <!-- Advanced Reboot -->
     <string name="global_actions_advanced_reboot_title">Erweiterter Neustart</string>
     <string name="global_actions_advanced_reboot_summary">Erweiterten Neustart zum Ein-/Aus-Menü hinzufügen</string>
-    <!-- Emergency -->
     <string name="global_actions_emergency_title">Notruf</string>
     <string name="global_actions_emergency_summary">Notrufmöglichkeit zum Ein-/Aus-Menü hinzufügen</string>
-    <!-- Power Menu -->
     <string name="global_actions_power_menu_title">Ein/Aus-Menü auf Sperrbildschirm</string>
-    <!-- Hide statusbar on lockscreen -->
     <string name="lockscreen_hide_status_bar_title">Statusleiste ausblenden</string>
     <string name="lockscreen_hide_status_bar_summary">Bei Aktivierung, wird die Statusleiste auf dem Sperrbildschirm ausgeblendet</string>
-    <!-- Other UI tweaks -->
     <string name="other_ui_title">Andere UI-Verbesserungen</string>
     <string name="other_ui_summary">Verschiedene Zusatzfunktionen anpassen</string>
-    <!-- Volume dialog timeout -->
     <string name="volume_dialog_timeout_title"> Anzeigezeit des Lautstärkedialogs</string>
-    <!-- Swap volume keys based on device rotation -->
     <string name="swap_volume_buttons">Lautstärketasten tauschen</string>
     <string name="swap_volume_buttons_summary">Lautstärketasten je nach Drehung des Geräts wechseln</string>
-    <!-- Volume keys control rint tone stream -->
     <string name="volume_keys_control_ring_tone_title">Klingelton-Lautstärke ändern</string>
     <string name="volume_keys_control_ring_tone_summary">Die Tasten steuern standardmäßig die Medienlautstärke. Aktivieren, damit diese die Klingelton-Lautstärke steuern</string>
-    <!-- Volume keys control music playback -->
     <string name="volume_rocker_music_controls_title">Wiedergabesteuerung</string>
     <string name="volume_rocker_music_controls_summary">Bei ausgeschaltetem Bildschirm, wird durch langes Drücken der Lautstärketaste der Musiktitel gewechselt</string>
-    <!-- Toast icon switch -->
     <string name="toast_icon_title">Toast Symbol</string>
     <string name="toast_icon_summary">Zeige das zur Meldung zugehörige Symbol der Anwendung</string>
-    <!-- Show VoLTE icon on statusbar -->
     <string name="volte_icon_title">VoLTE-Symbol</string>
     <string name="volte_icon_summary">VoLTE-Symbol anzeigen</string>
-    <!-- Power Button - Long press for torch -->
     <string name="torch_long_press_power_gesture_title">Ein-/Aus-Taste lange drücken, um die Taschenlampe zu aktivieren</string>
     <string name="torch_long_press_power_gesture_summary">Schaltet bei langem Druck der Ein-/Aus-Taste und abgeschaltetem Display die Taschenlampe an bzw. aus</string>
     <string name="torch_long_press_power_timeout_title">Taschenlampe automatisch ausschalten</string>
@@ -356,13 +310,10 @@
     <string name="torch_long_press_power_timeout_2min">2 Minuten</string>
     <string name="torch_long_press_power_timeout_5min">5 Minuten</string>
     <string name="torch_long_press_power_timeout_10min">10 Minuten</string>
-    <!-- Setting: show CPU info -->
     <string name="show_cpu_info">Zeige CPU-Infos</string>
     <string name="show_cpu_info_summary">Bildschirmeinblendung mit aktuellem CPU-Infos</string>
-    <!-- Turn on display when power connected; turn off display when power disconnected -->
     <string name="wake_when_plugged_or_unplugged_title">Beim Anschließen aufwecken</string>
     <string name="wake_when_plugged_or_unplugged_summary">Beim Anschließen oder Trennen einer Stromquelle den Bildschirm einschalten</string>
-    <!-- System animations -->
     <string name="system_animations_title">Display und Animationen</string>
     <string name="system_animations_summary">Einstellungen zu verschiedenen Animationen</string>
     <string name="custom_bootanimation_title">Boot Animation</string>
@@ -376,14 +327,11 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="bootanimation_install_file_manager_error">Keine App zur Auswahl der ZIP-Datei gefunden. Bitte einen Dateimanager installieren.</string>
     <string name="bootanimation_apply">Anwenden</string>
     <string name="bootanimation_install_successful">Neue Bootanimation erfolgreich installiert.</string>
-    <!-- System behaviour -->
     <string name="system_behaviour_title">Systemverhalten</string>
     <string name="system_behaviour_summary">Zusätzliche Energie- und Sicherheitseinstellungen</string>
     <string name="system_ss_category_title">Bildschirmfoto-Optionen</string>
-    <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Ton bei Bildschirmfoto</string>
     <string name="screenshot_sound_summary">Spielt einen Ton ab, wenn ein Bildschirmfoto aufgenommen wird</string>
-    <!-- Hostname setting -->
     <string name="device_hostname">Netzwerkname des Geräts</string>
     <string name="device_hostname_summary">Ändern Sie den Netzwerknamen des Geräts für die IP-Auflösung (Nützlich bei der Verbindung mit diesem Gerät in einer dynamischen DHCP-Umgebung).</string>
     <string name="selinux_category">SELinux</string>
@@ -395,15 +343,12 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="selinux_persistence_summary">Stellt den oben eingestellten SELinux-Modus bei jedem Neustart wieder her.</string>
     <string name="selinux_permissive_toast_title">SELinux-Modus auf \"Moderat\" gesetzt!</string>
     <string name="selinux_enforcing_toast_title">SELinux auf \"Strikt\" gesetzt!</string>
-    <!-- System extensions -->
     <string name="system_extensions_title">Systemerweiterungen</string>
     <string name="system_extensions_summary">Funktionalitätserweiterungen des Systems</string>
-    <!-- System app remover -->
     <string name="system_app_remover_title">System-App Entferner</string>
     <string name="system_app_remover_summary">Vorinstallierte Apps entfernen</string>
     <string name="system_app_remover_message_delete">Sind Sie sicher, dass diese App gelöscht werden soll?</string>
     <string name="system_app_remover_message_noselect">Nichts ausgewählt</string>
-    <!-- Log it -->
     <string name="log_it_title">Logs erstellen</string>
     <string name="log_it_summary">Logcat, Kmesg, Dmesg</string>
     <string name="logcat_title">Gesamt log (logcat)</string>
@@ -421,7 +366,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="log_it_share_type_zip">ZIP-Datei</string>
     <string name="log_it_share_type_haste">Upload zur AICP hastebin-Seite</string>
     <string name="log_it_share_via">Teilen über</string>
-    <!-- AE settings -->
     <string name="ae_settings_title">AE-Anpassung</string>
     <string name="ae_settings_summary">Passe das Aussehen und Verhalten der Aicp Extras an</string>
     <string name="theme_title">Design</string>
@@ -435,7 +379,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="ae_launcher_enabled_title">Symbol in App-Übersicht anzeigen</string>
     <string name="ae_launcher_enabled_summary">Zeigen AICP Extras in der App-Übersicht</string>
     <string name="ae_launcher_enabled_update">Sichtbarkeit des Symbols aktualisiert. Es kann etwas dauern bis die Änderung wirksam wird</string>
-    <!-- About -->
     <string name="about_title">Über</string>
     <string name="about_summary">Informationen zu diesem ROM anzeigen</string>
     <string name="weblinks_category">Web-Links</string>
@@ -464,7 +407,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="no_root_summary">Für mehr Funktionalität bitte das Gerät rooten</string>
     <string name="aicp_version_title">AICP Version</string>
     <string name="build_date_title">Erstellungsdatum</string>
-    <!-- Other / general purpose -->
     <string name="on">An</string>
     <string name="off">Aus</string>
     <string name="reset">Zurücksetzen</string>
@@ -474,17 +416,14 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="launcher_shortcut_disabled_message">Verknüpfung deaktiviert</string>
     <string name="hidden_anim_activity_title">Zeit für \'Yoga\' !!!</string>
     <string name="hidden_anim_more_nice">SCHÖN</string>
-    <!-- Sensor block per-package -->
     <string name="sensor_block_title">Sensorblockierung je Anwendung</string>
     <string name="sensor_block_summary">Blockiert den Zugriff auf bestimmte Sensoren für einige Apps, um Strom zu sparen.</string>
-    <!-- Weather - OmniJaws Settings -->
     <string name="weather_title">Wetter</string>
     <string name="weather_config_title">Diensteinstellungen</string>
     <string name="header_weather_title">Wetter über den Schnelleinstellungen</string>
     <string name="header_weather_summary">Aktiviert die Wetteranzeige in der Kopfzeile der Benachrichtigungsleiste</string>
     <string name="weather_icon_pack_title">Wetter Symbol-Paket</string>
     <string name="weather_icon_pack_note">Hinweis\u003a Sie können neue Symbol-Pakete aus dem Playstore installieren, indem Sie nach \"Chronus Icons\" suchen</string>
-    <!-- Lockscreen Weather -->
     <string name="lock_screen_weather_category_title">Sperrbildschirm</string>
     <string name="lock_screen_show_weather_title">Wetteranzeige</string>
     <string name="lock_screen_show_weather_summaryOn">Wetteranzeige auf dem Sperrbildschirm aktiviert</string>
@@ -498,7 +437,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="lock_screen_weather_condition_icon_title">Anzeige des Wettersymbols</string>
     <string name="lock_screen_weather_condition_icon_summaryOn">Symbolanzeige auf dem Sperrbildschirm aktiviert</string>
     <string name="lock_screen_weather_condition_icon_summaryOff">Symbolanzeige auf dem Sperrbildschirm deaktiviert</string>
-    <!-- Statusbar ticker -->
     <string name="status_bar_ticker_title">Ticker</string>
     <string name="status_bar_show_ticker_title">Ticker</string>
     <string name="status_bar_show_ticker_summary">Benachrichtigungs-Vorschau in der Statusleiste anstelle von Pop-Up\'s</string>
@@ -506,10 +444,8 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="ticker_animation_mode_alpha_fade">Ausblenden</string>
     <string name="ticker_animation_mode_scroll">Textlauf</string>
     <string name="ticker_tick_duration_title">Ticker-Dauer</string>
-    <!-- Navigation-->
     <string name="navigation_title">Navigation</string>
     <string name="navigation_summary">AOSP/Smartbar/Fling/Gestensteuerung</string>
-    <!-- OP like navigation gestures -->
     <string name="gesture_settings_title">Gestennavigation</string>
     <string name="gesture_settings_info">Die Navigationsleiste muss und wird deaktiviert werden!\n\nVerfügbare Gesten:\n\nZurück - auf der linken oder rechten Seite nach oben wischen\n\nStart - mittig nach oben wischen\n\nStart (Langes Drücken) - mittig kurz nach oben wischen und halten\n\nVerlauf - mittig weiter nach oben wischen und halten</string>
     <string name="use_bottom_gesture_title">Gestennavigation</string>
@@ -521,15 +457,12 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="unit_dpi">DPI</string>
     <string name="unit_px">px</string>
     <string name="unit_msec">ms</string>
-    <!-- Navigation bar -->
     <string name="navigation_bar_title">Navigationsleiste</string>
     <string name="navigation_bar_summary">Navigationsleiste auf dem Bildschirm aktivieren</string>
-    <!-- DUI -->
     <string name="picker_activities">Aktionen</string>
     <string name="select_custom_app_title">Eigene App auswählen</string>
     <string name="select_custom_activity_title">Eigene Aktion auswählen</string>
     <string name="profile_applist_title">Anwendungen</string>
-    <!-- SmartNav -->
     <string name="bottom_nav_navigation_title">Navigation</string>
     <string name="navbar_interface_title">Schnittstelle</string>
     <string name="navbar_size">Größe der Leiste</string>
@@ -544,16 +477,13 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="icon_pack_picker_dialog_title">Symbolpakete</string>
     <string name="image_exceeds_max_allowed_size">Bild darf nicht größer als 512x512 sein</string>
     <string name="invalid_icon_from_uri">Kann den Bildinhalt im diesem Format nicht laden</string>
-    <!-- Stock Navbar -->
     <string name="default_string">Standard (AOSP)</string>
     <string name="default_settings">Standard-Einstellungen</string>
     <string name="default_settings_summary">Standard AOSP Navigationsleiste</string>
-    <!-- Actions dialog and default task values set in ActionPreference xml-->
     <string name="choose_action_title">Aktion wählen</string>
     <string name="action_entry_default_action">Grundeinstellungen</string>
     <string name="action_entry_select_app">Anwendung auswählen</string>
     <string name="action_entry_custom_action">Eigene Aktion wählen</string>
-    <!-- Fling -->
     <string name="fling_settings">Fling Einstellungen</string>
     <string name="fling_settings_summary">Eine vollständig anpassbare gestenbasierte Navigationsleiste</string>
     <string name="fling_interface">Fling Gesten-Schnittstelle</string>
@@ -622,7 +552,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="fling_config_restore_success_toast">Fling-Profil erfolgreich wiederhergestellt</string>
     <string name="fling_config_backup_error_toast">Fehler beim Speichern des Fling-Profils</string>
     <string name="fling_config_restore_error_toast">Fehler beim Wiederherstellen des Fling-Profils</string>
-    <!-- Pulse navigation bar music visualizer -->
     <string name="pulse_help_policy_notice_summary">Pulse funktioniert nicht mit einige Audioquellen, wenn Die Ausgabe über Lautsprecher erfolgt</string>
     <string name="pulse_settings">Pulse</string>
     <string name="pulse_settings_summary">Grafischer Navigationsleisten-Equalizer</string>
@@ -653,18 +582,15 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="pulse_blacklist_apps_summary">Nicht angezeigte/blockierte Anwendungen</string>
     <string name="pulse_blacklist_add_apps_title">Anwendung hinzufügen</string>
     <string name="pulse_blacklist_add_apps_summary">Hier zum Hinzufügen tippen, zum Entfernen auf eine vorhandene App tippen</string>
-    <!-- Pulse config -->
     <string name="pulse_custom_dimen">Breite der Balken</string>
     <string name="pulse_custom_div">Abstand der Balken</string>
     <string name="pulse_filled_block_size">Größe der Blöcke</string>
     <string name="pulse_empty_block_size">Abstand der Blöcke</string>
-    <!-- Navbar height -->
     <string name="navigation_bar_size_title">Leistengröße</string>
     <string name="portrait_title">Höhe im Hochformat</string>
     <string name="land_vert_title">Breite im Querformat</string>
     <string name="land_hor_title">Höhe im Querformat</string>
     <string name="positive_done">Fertig</string>
-    <!-- SmartBar -->
     <string name="smartbar_category">SmartBar</string>
     <string name="smartbar_settings_title">SmartBar-Einstellungen</string>
     <string name="smartbar_settings_summary">Eine vollständig anpassbare Navigationsleiste</string>
@@ -712,7 +638,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="smartbar_double_tap_sleep_title">Ruhezustand durch doppeltes Tippen (DT2S)</string>
     <string name="smartbar_double_tap_sleep_summary">Für Ruhrzustand zweimal auf einen leeren Bereich der Navigationsleiste tippen</string>
     <string name="write_settings_off">Ein-Hand-Modus</string>
-    <!-- Carrier Label -->
     <string name="carrier_options">Anzeigeseite wählen</string>
     <string name="custom_carrier_label_title">Eigene Anbieterbezeichnung</string>
     <string name="custom_carrier_label_explain">Bitte eine neue Bezeichnung eingeben. Leerlassen für die Standardanzeige.</string>
@@ -722,7 +647,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="show_carrier_keyguard">Nur auf Sperrbildschirm</string>
     <string name="show_carrier_statusbar">Nur in Statusleiste</string>
     <string name="show_carrier_enabled">Sperrbildschirm &amp; Statusleiste</string>
-    <!-- AOKP custom system animations -->
     <string name="animation_title">Display und Animationen</string>
     <string name="system_animation_title">Systemanimationen</string>
     <string name="activity_open_title">\"Aktivität starten\"-Animation</string>
@@ -739,13 +663,11 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="title_animation_no_override">Appbeeinflussung verhindern</string>
     <string name="summary_animation_no_override">Apps davon abhalten, die Übergangsanimationen zu beeinflussen</string>
     <string name="animation_duration_default">Standard</string>
-    <!-- Lock screen visualizer -->
     <string name="lockscreen_visualizer_title">Musikvisualisierung</string>
     <string name="lockscreen_visualizer_summary">Visualisierung auf dem Sperrbildschirm anzeigen, wenn Musik abgespielt wird</string>
     <string name="lockscreen_visualizer_enable_custom">Benutzerdefinierte Farbe verwenden</string>
     <string name="lockscreen_visualizer_enable_custom_summary">Verwenden Sie eine voreingestellte Farbe anstelle der generierten Farbe</string>
     <string name="lockscreen_visualizer_custom_color">Farbe der Visualisierung</string>
-    <!-- Screen state service -->
     <string name="screen_state_toggles_title">Energiespar-Optionen</string>
     <string name="screen_state_toggles_enable_title">Aktivieren</string>
     <string name="screen_state_toggles_enable_summary">Die Optionen werden bei Displayabschaltung aktiviert. Bei Einschaltung werden die vorherigen Werte wieder hergestellt.</string>
@@ -761,38 +683,28 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="screen_state_off_delay_summary">Anzahl der Minuten nach Displayabschaltung bevor die gewählten Optionen in Kraft treten</string>
     <string name="screen_state_on_delay_title">Verzögerung nach Reaktivierung des Displays</string>
     <string name="screen_state_on_delay_summary">Anzahl der Minuten nach Wiedereinschaltung des Displays bevor die gewählten Optionen rückgängig gemacht werden</string>
-    <!-- Swap hw keys -->
     <string name="swap_navigation_keys_title">Hardwaretasten tauschen</string>
     <string name="swap_navigation_keys_title_summary">Anordnung der Tasten für Anwendungsverlauf und Zurück tauschen</string>
-    <!-- Ambient display music ticker -->
     <string name="force_ambient_for_media_pref_title">Musiktitelanzeige im Inaktivitätsdisplay</string>
     <string name="force_ambient_for_media_pref_summary">Einstellungen für die Inaktivitätsdisplay-Musiktitelanzeige</string>
     <string name="ambient_ticker_footer">Die Musiktitelanzeige im Inaktivitätsdisplay stellt Titelinformationen auf dem Bildschirm während der Inaktivität an.\n\nDie Titelanzeige erfolgt auch, wenn das Inaktivitätsdisplay deaktiviert ist und ein neuer Titel startet. Der Titel wird an in der Bilschirmmitte auf einem sonst leeren Bildschirm angezeigt.\n\nDoppeltes Tippen auf die Titelanzeige springt zum nächsten Titel.\n\nSofern das Gerät ein Google Pixel Telefon ist und Now Playing mit Benachrichtigungen aktiviert wurde, wird die Titelanzeige auch hier angezeigt.</string>
     <string name="force_ambient_for_media_title">Aktivieren</string>
-    <!-- Screen Off animation -->
     <string name="screen_off_animation_title">Stil der Abschaltanimation</string>
     <string name="screen_off_animation_default">Standard</string>
     <string name="screen_off_animation_crt">CRT</string>
     <string name="screen_off_animation_scale">Skalieren</string>
-    <!-- Suppress notification sound/vibration -->
     <string name="notification_sound_vib_screen_on_title">Benachrichtigungen bei eingeschaltetem Bildschirm</string>
     <string name="notification_sound_vib_screen_on_summary">AUS zum Unterdrücken / AN zur Aktivierung von Klängen und Vibrationen für Benachrichtigungen, wenn der Bildschirm aktiviert ist</string>
-    <!-- Navigation -->
     <string name="navigation_category">Navigation</string>
-    <!-- HW keys -->
     <string name="hw_keys_title">Hardwaretasten</string>
     <string name="hw_keys_summary">Konfigurieren Sie das Verhalten der Hardwaretasten des Geräts</string>
     <string name="hardware_keys_wake_title">Gerät aufwecken</string>
-    <!-- Power keys -->
     <string name="category_power_key">Ein-/Aus-Taste</string>
-    <!-- Volume keys -->
     <string name="category_volume_keys">Lautstärketasten</string>
     <string name="volume_keys_cursor_control_title">Eingabenavigation</string>
     <string name="volume_keys_cursor_control_summary">Aktiviert die Eingabenavigation (Cursor) mittels Lautstärke-Tasten</string>
-    <!-- Volume rocker wake -->
     <string name="volume_rocker_wake_title">Lautstärketasten wecken Gerät</string>
     <string name="volume_rocker_wake_summary">Das Gerät wird durch Drücken der Lautstärketasten aufgeweckt</string>
-    <!-- Button brightness -->
     <string name="button_backlight_options_category">Tasten-Beleuchtungseinstellungen</string>
     <string name="button_backlight_enable_title">Tastenbeleuchtung erlauben</string>
     <string name="button_link_brightness">Verknüpfung mit Bildschirmhelligkeit</string>
@@ -801,11 +713,9 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="button_timeout_title">Timeout für Tastenbeleuchtung</string>
     <string name="button_backlight_on_touch_only_title">Tastenbeleuchtung bei Berührung</string>
     <string name="button_backlight_on_touch_only_summary">Tastenbeleuchtung nur einschalten, wenn die Tasten bedient werden. Das Timeout der Beleuchtung bleibt hierbei unverändert.</string>
-    <!-- Quick QS pull down -->
     <string name="status_bar_quick_qs_pulldown_summary_left">Das Herunterziehen auf der linken Seite öffnet die Schnelleinstellungen</string>
     <string name="status_bar_quick_qs_pulldown_summary_right">Das Herunterziehen auf der rechten Seite öffnet die Schnelleinstellungen</string>
     <string name="status_bar_quick_qs_pulldown_off">Aus</string>
-    <!-- Toast Animation -->
     <string name="toast_animation_title">Toast Animation</string>
     <string name="toast_none_animation">Keine</string>
     <string name="toast_default_animation">Standard</string>
@@ -824,7 +734,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="toast_SlideLeftRight_animation">Gleite von links nach rechts</string>
     <string name="toast_SlideRightLeft_animation">Gleite von rechts nach links</string>
     <string name="toast_animation_test">Dies ist ein Test für die ausgewählte Toast-Animation</string>
-    <!-- Heads up snooze -->
     <string name="heads_up_category">Pop-Up Benachrichtigungen</string>
     <string name="heads_up_snooze_title">Schlummerfunktion</string>
     <string name="heads_up_snooze_disabled">deaktiviert</string>
@@ -833,7 +742,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="heads_up_snooze_10min">10 Minuten</string>
     <string name="heads_up_snooze_15min">15 Minuten</string>
     <string name="heads_up_snooze_20min">20 Minuten</string>
-    <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Anzeigedauer</string>
     <string name="heads_up_time_out_2sec">2 Sekunden</string>
     <string name="heads_up_time_out_4sec">4 Sekunden</string>
@@ -841,7 +749,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="heads_up_time_out_6sec">6 Sekunden</string>
     <string name="heads_up_time_out_8sec">8 Sekunden</string>
     <string name="heads_up_time_out_10sec">10 Sekunden</string>
-    <!-- Blacklist strings-->
     <string name="chooser_activity_blacklist_title">Liste ausgeblendeter Apps in der Auswahl</string>
     <string name="chooser_activity_blacklist_pref_title">App hinzufügen</string>
     <string name="chooser_activity_blacklist_pref_summary">Tippen Sie hier, um zur Liste hinzufügen. Zum Entfernen auf eine App in der Liste tippen</string>
@@ -850,9 +757,7 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="headsup_activity_blacklist_cat_title">Blockierliste</string>
     <string name="headsup_activity_blacklist_pref_title">App hinzufügen</string>
     <string name="headsup_activity_blacklist_pref_summary">Tippen Sie hier, um zur Liste hinzufügen. Zum Entfernen auf eine App in der Liste tippen</string>
-    <!-- Carbon gestures -->
     <string name="carbon_gesture_launch">Starten</string>
-    <!-- Circle app bar -->
     <string name="category_app_circle_bar_title">Kreisleiste für Anwendungen</string>
     <string name="app_circle_bar_title">App-Kreisleiste</string>
     <string name="app_circle_bar_summary">Zeige die Kreisleiste bei Berührung des rechten Displayrands</string>
@@ -867,7 +772,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="app_circle_bar_appchooser_pref_summary">Tippen Sie hier, um zur Liste hinzufügen. Zum Entfernen auf eine App in der Liste tippen.\nSMS/MMS, Kamera, Play Store und Einstellungen werden standardmäßig angezeigt</string>
     <string name="app_circle_bar_show_trigger_title">Auslösebereich immer anzeigen</string>
     <string name="app_circle_bar_show_trigger_summary">Aktivieren, um den Auslösebereich der Kreisleiste anzuzeigen</string>
-    <!-- Themes -->
     <string name="theming_title">Designs</string>
     <string name="theming_summary">Standard-Design</string>
     <string name="theming_base_title">Basisdesign</string>
@@ -900,10 +804,8 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="theming_corners_default">Standard</string>
     <string name="theming_corners_round">Rund</string>
     <string name="theming_corners_nonround">Quadrat</string>
-    <!-- Device hidden prefs -->
     <string name="show_device_hidden_prefs_title">Einstellungen nicht ausblenden</string>
     <string name="show_device_hidden_prefs_summary">Standardmäßig werden Einstellungen, die auf Ihrem Gerät nicht richtig funktionieren würden (z.B. wegen Root-Zugriff oder einem Displayausschnitt) ausgeblendet</string>
-    <!-- QS shape theme -->
     <string name="theming_qs_shape_title">Kachel-Form</string>
     <string name="theming_qs_shape_default">Rund (Standard)</string>
     <string name="theming_qs_shape_plain">Einfach</string>
@@ -912,16 +814,13 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="theming_qs_shape_square">Quadrat</string>
     <string name="theming_qs_shape_rounded_square">Abgerundetes Quadrat</string>
     <string name="theming_qs_shape_hexagon">Sechseck</string>
-    <!-- Settings dashboard icon style -->
     <string name="theming_settings_dashboard_icons_title">Anpassen der Einstellungssymbole</string>
     <string name="theming_settings_dashboard_icons_default">Rund (Standard)</string>
     <string name="theming_settings_dashboard_icons_default_accent">Rund mit Akzent</string>
     <string name="theming_settings_dashboard_icons_plain">Einfach</string>
     <string name="theming_settings_dashboard_icons_plain_accent">Einfach mit Akzent</string>
-    <!-- Status bar brightness control -->
     <string name="status_bar_brightness_control_title">Helligkeitsregelung</string>
     <string name="status_bar_brightness_control_summary">Helligkeit durch Wischen über die Statusleiste ändern</string>
-    <!-- Less Notification sounds -->
     <string name="less_notification_sounds_title">Weniger Benachrichtigungstöne</string>
     <string name="less_notification_sounds_summary">Begrenze Benachrichtigungstöne je App, so dass diese nur einmal je Zeitspanne ertönen</string>
     <string name="less_notification_sounds_default">App-Standardeinstellung</string>
@@ -929,7 +828,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="less_notification_sounds_30s">Alle 30 Sekunden</string>
     <string name="less_notification_sounds_1m">Jede Minute</string>
     <string name="less_notification_sounds_2m">Alle 2 Minuten</string>
-    <!-- Smart Pixels -->
     <string name="smart_pixels_title">Smart Pixels</string>
     <string name="smart_pixels_summary">Durch das Abschalten von Bildschirm-Pixeln Energie sparen</string>
     <string name="smart_pixels_enable_title">Smart Pixels aktivieren</string>
@@ -939,10 +837,8 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="smart_pixels_percent">Prozentsatz der abzuschaltenden Pixel</string>
     <string name="smart_pixels_shift_title">Einbrenn-Schutz</string>
     <string name="smart_pixels_shift_summary">Verhindert das Einbrennen auf OLED-Displays durch das Verlagern von Pixeln</string>
-    <!-- Volume keys answer call -->
     <string name="call_volume_answer_title">Anruf annehmen</string>
     <string name="call_volume_answer_summary">Einschalten, damit per Druck einer Lautstärketaste Anrufe angenommen werden</string>
-    <!-- Battery light settings  -->
     <string name="battery_light_title">Akku-LED</string>
     <string name="battery_light_summary">LED-Farbe beim Ladevorgang</string>
     <string name="battery_low_pulse_title">Bei schwachem Akku pulsieren</string>
@@ -961,29 +857,21 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="battery_light_blend_summary">Allmählich die Farben zwischen voll und leer wechseln</string>
     <string name="battery_light_blend_colors_title">Farbauswahl</string>
     <string name="battery_light_blend_colors_summary">Verwendeter Farbbereich für den Farbübergang</string>
-    <!-- App Ops-->
     <string name="app_ops_settings_summary">App-Berechtigungen verwalten</string>
-    <!-- [CHAR LIMIT=NONE] App ops settings title, on main settings screen. If clicked, the user is taken to a settings screen for app operations -->
     <string name="app_ops_settings">Berechtigungen (App Ops)</string>
-    <!-- Data Disabled Icon -->
     <string name="data_disabled_icon_title">Symbol für ausgeschaltete Mobile Daten anzeigen</string>
     <string name="data_disabled_icon_summary">Zeige das \"X\" neben dem Signalbalken wenn Mobile Daten deaktiviert sind</string>
-    <!-- MediaScanner behavior on boot -->
     <string name="media_scanner_on_boot_title">Verhalten des MediaScanners beim Start</string>
     <string name="media_scanner_on_boot_enabled">Nach Mediendateien suchen</string>
     <string name="media_scanner_on_boot_ask">Nachfragen (Benachrichtigung)</string>
     <string name="media_scanner_on_boot_disabled">Nicht nach Mediendateien suchen</string>
-    <!-- Running Services Icon in QS Footer-->
     <string name="qs_running_services_title">Icon für laufende Dienste</string>
     <string name="qs_running_services_summary">Aktivieren Sie das Symbol für laufende Dienste in der Fußzeile</string>
-    <!-- Power menu and dialogs opacity -->
     <string name="power_menu_category">Ein-/Aus- und Neustartdialoge</string>
     <string name="power_menu_transparency">Deckkraft</string>
     <string name="power_menu_dialog_dim">Hintergrund-Abdunklung</string>
-    <!-- SystemUI Tuner -->
     <string name="systemui_tuner_title">SystemUI Tuner</string>
     <string name="systemui_tuner_summary">Experimentelle SystemUI Einstellungen</string>
-    <!-- Hardware button navigation -->
     <string name="hardware_keys_volume_keys_title">Lautstärketasten</string>
     <string name="hardware_keys_home_key_title">Home-Taste</string>
     <string name="hardware_keys_menu_key_title">Menü-Taste</string>
@@ -998,13 +886,10 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="hardware_keys_double_tap_title">Doppeltes Tippen (Aktion)</string>
     <string name="hardware_keys_category">Navigationstasten</string>
     <string name="hardware_keys_disable_title">Navigationstasten deaktivieren</string>
-    <!-- doze on charge -->
     <string name="doze_on_charge_title">AOD beim Laden</string>
     <string name="doze_on_charge_summary">Bei Aktivierung bleibt das Display beim Aufladen an (\"Always-On\")</string>
-    <!-- EdgeGesture service -->
     <string name="edge_gesture_service_title">Blockiere Gesten als Berührungseingabe</string>
     <string name="edge_gesture_service_summary">Sendet keine Berührungseingaben für die Navigations- und Statusleiste an Apps</string>
-    <!-- Pie control -->
     <string name="pa_pie_control_title">PIE Displaynavigation</string>
     <string name="pa_pie_control_enable_title">Schaltet die PIE Displaynavigation ein</string>
     <string name="pie_enable_title">Aktivieren</string>
@@ -1029,4 +914,11 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="pa_pie_gravity_bottom">Unten</string>
     <string name="pa_pie_gravity_right">Rechts</string>
     <string name="pa_pie_gravity_left">Links</string>
+    <string name="audio_panel_view">Lautstärke-Panel</string>
+    <string name="audio_panel_view_media_title">Medien</string>
+    <string name="audio_panel_view_ringer_title">Klingelton</string>
+    <string name="audio_panel_view_notification_title">Benachrichtigung</string>
+    <string name="audio_panel_view_alarm_title">Wecker</string>
+    <string name="audio_panel_view_voice_title">Telefon</string>
+    <string name="audio_panel_view_bt_sco_title">Bluetooth</string>
 </resources>
