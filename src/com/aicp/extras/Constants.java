@@ -20,12 +20,12 @@ public abstract class Constants {
     /**
      * Package name of AICP OTA
      */
-    public static final String AICP_OTA_PACKAGE = "com.aicp.updater";
+    public static final String AICP_OTA_PACKAGE = "com.aicp.updater3";
 
     /**
      * Default activity of AICP OTA
      */
-    public static final String AICP_OTA_ACTIVITY = AICP_OTA_PACKAGE + ".Settings";
+    public static final String AICP_OTA_ACTIVITY = "org.lineageos.updater.UpdatesActivity";
 
     /**
      * Key for SharedPreferences for selinux switch
