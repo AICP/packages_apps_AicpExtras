@@ -56,6 +56,13 @@
         android:entryValues="@array/theming_settings_dashboard_icons_values"
         android:defaultValue="0" />
 
+    <com.aicp.gear.preference.SystemPropListPreference
+        android:key="persist.aicp.iconshape"
+        android:title="@string/icon_shape_title"
+        android:entries="@array/icon_shape_entries"
+        android:entryValues="@array/icon_shape_values"
+        android:defaultValue="0" />
+
     <PreferenceCategory
         android:key="power_menu"
         android:title="@string/power_menu_category">

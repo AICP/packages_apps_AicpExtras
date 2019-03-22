@@ -841,4 +841,26 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+
+    <!-- Adaptive icon shape -->
+    <string-array translatable="false" name="icon_shape_entries">
+        <item>@string/icon_shape_system_default</item>
+        <item>@string/icon_shape_square</item>
+        <item>@string/icon_shape_rounded_square</item>
+        <item>@string/icon_shape_squircle</item>
+        <item>@string/icon_shape_circle</item>
+        <item>@string/icon_shape_teardrop</item>
+        <item>@string/icon_shape_hexagon</item>
+    </string-array>
+
+    <string-array name="icon_shape_values" translatable="false">
+        <!-- Indices of android.R.system_icon_masks -->
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
 </resources>
