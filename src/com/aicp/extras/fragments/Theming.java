@@ -18,6 +18,7 @@
 package com.aicp.extras.fragments;
 
 import android.content.Context;
+import android.graphics.drawable.AdaptiveIconDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
@@ -42,6 +43,7 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
 
         findPreference(Settings.System.THEMING_BASE).setOnPreferenceChangeListener(this);
         findPreference(Settings.System.THEMING_CORNERS).setOnPreferenceChangeListener(this);
+        findPreference(AdaptiveIconDrawable.MASK_SETTING_PROP).setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -58,6 +60,10 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
         } else if (Settings.System.THEMING_CORNERS.equals(preference.getKey())) {
             // Rounded corners of notifications need systemui restart
             postRestartSystemUi();
+            return true;
+        } else if (AdaptiveIconDrawable.MASK_SETTING_PROP.equals(preference.getKey())) {
+            Util.showRebootDialog(getActivity(), getString(R.string.icon_shape_changed_title),
+                    getString(R.string.icon_shape_changed_message));
             return true;
         } else {
             return false;

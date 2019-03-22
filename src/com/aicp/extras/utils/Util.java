@@ -27,6 +27,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.AsyncTask;
+import android.os.PowerManager;
 import android.os.SystemProperties;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
@@ -213,6 +214,11 @@ public abstract class Util {
         new RestartSystemUiTask(context).execute();
     }
 
+    public static void rebootSystem(Context context) {
+        PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+        pm.reboot(null);
+    }
+
     public static void showSystemUiRestartDialog(Context context) {
         new AlertDialog.Builder(context)
                 .setTitle(R.string.systemui_restart_title)
@@ -223,6 +229,25 @@ public abstract class Util {
                     }
                 })
                 .setNegativeButton(R.string.cancel, null)
+                .show();
+    }
+
+    public static void showRebootDialog(Context context, String title, String message) {
+        new AlertDialog.Builder(context)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton(R.string.reboot_dialog_ok,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                rebootSystem(context);
+                            }
+                })
+                .setNegativeButton(R.string.reboot_dialog_cancel,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // Only close dialog
+                            }
+                })
                 .show();
     }
 
