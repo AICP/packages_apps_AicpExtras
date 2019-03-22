@@ -19,6 +19,7 @@ package com.aicp.extras.utils;
 
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.ActivityManagerNative;
 import android.app.AlertDialog;
 import android.app.IActivityManager;
 import android.content.Context;
@@ -27,6 +28,9 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.AsyncTask;
+import android.os.PowerManager;
+import android.os.RemoteException;
+import android.os.ServiceManager;
 import android.os.SystemProperties;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
@@ -213,6 +217,11 @@ public abstract class Util {
         new RestartSystemUiTask(context).execute();
     }
 
+    public static void rebootSystem(Context context) {
+        PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+        pm.reboot(null);
+    }
+
     public static void showSystemUiRestartDialog(Context context) {
         new AlertDialog.Builder(context)
                 .setTitle(R.string.systemui_restart_title)
@@ -223,6 +232,30 @@ public abstract class Util {
                     }
                 })
                 .setNegativeButton(R.string.cancel, null)
+                .show();
+    }
+
+    public static void showRebootDialog(Context context, String title, String message,
+                                        boolean soft) {
+        new AlertDialog.Builder(context)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton(R.string.reboot_dialog_ok,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                if (soft) {
+                                    new SoftRebootTask(context).execute();
+                                } else {
+                                    rebootSystem(context);
+                                }
+                            }
+                })
+                .setNegativeButton(R.string.reboot_dialog_cancel,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // Only close dialog
+                            }
+                })
                 .show();
     }
 
@@ -262,6 +295,46 @@ public abstract class Util {
                 e.printStackTrace();
             }
             return null;
+        }
+    }
+
+    private static class SoftRebootTask extends AsyncTask<Void, Void, Void> {
+        private Context mContext;
+        private AlertDialog mDialog;
+
+        public SoftRebootTask(Context context) {
+            super();
+            mContext = context;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            mDialog = new AlertDialog.Builder(mContext)
+                .setTitle(R.string.soft_reboot_title)
+                .setMessage(R.string.soft_reboot_message)
+                .create();
+            mDialog.show();
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            try {
+                final IActivityManager am =
+                      ActivityManagerNative.asInterface(ServiceManager.checkService("activity"));
+                if (am != null) {
+                    am.restart();
+                }
+            } catch (RemoteException e) {
+                Log.e(TAG, "failure trying to perform soft reboot", e);
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+            mDialog.dismiss();
         }
     }
 }
