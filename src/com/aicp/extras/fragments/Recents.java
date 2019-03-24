@@ -80,32 +80,9 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefSet = getPreferenceScreen();
 
-        // recents component type
-        mRecentsComponentType = (ListPreference) findPreference(RECENTS_COMPONENT_TYPE);
-        int type = Settings.System.getInt(resolver,
-                Settings.System.RECENTS_COMPONENT, 0);
-        mRecentsComponentType.setValue(String.valueOf(type));
-        mRecentsComponentType.setSummary(mRecentsComponentType.getEntry());
-        mRecentsComponentType.setOnPreferenceChangeListener(this);
-
-        // clear all recents
-        mRecentsClearAllLocation = (ListPreference) findPreference(RECENTS_CLEAR_ALL_LOCATION);
-        int location = Settings.System.getIntForUser(resolver,
-                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 3, UserHandle.USER_CURRENT);
-        mRecentsClearAllLocation.setValue(String.valueOf(location));
-        mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
-        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
-
-        // oreo recents type
-        mRecentsType = (ListPreference) findPreference(RECENTS_TYPE);
-        int style = Settings.System.getIntForUser(resolver,
-                Settings.System.RECENTS_LAYOUT_STYLE, 0, UserHandle.USER_CURRENT);
-        mRecentsType.setValue(String.valueOf(style));
-        mRecentsType.setSummary(mRecentsType.getEntry());
-        mRecentsType.setOnPreferenceChangeListener(this);
-
-        oreoRecentsCat = (PreferenceCategory)findPreference("recents_ui_oreo_recents_category");
-        oreoRecentsCat.setEnabled(type == RECENTS_COMPONENT_OREO);
+        /**
+         * Nice clean code start
+         */
 
         mStockRecentsCategory = (PreferenceCategory) findPreference(PREF_STOCK_RECENTS_CATEGORY);
         mAlternativeRecentsCategory =
@@ -146,7 +123,48 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
         } else {
             mAlternativeRecentsCategory.removePreference(findPreference(PREF_SWIPE_UP_ENABLED));
         }
+
+        /*
+         * Nice clean code end
+         */
+
+
+        /**
+         * Probably better done in xml - code start
+         */
+
+        // recents component type
+        mRecentsComponentType = (ListPreference) findPreference(RECENTS_COMPONENT_TYPE);
+        int type = Settings.System.getInt(resolver,
+                Settings.System.RECENTS_COMPONENT, 0);
+        mRecentsComponentType.setValue(String.valueOf(type));
+        mRecentsComponentType.setSummary(mRecentsComponentType.getEntry());
+        mRecentsComponentType.setOnPreferenceChangeListener(this);
+
+        // clear all recents
+        mRecentsClearAllLocation = (ListPreference) findPreference(RECENTS_CLEAR_ALL_LOCATION);
+        int location = Settings.System.getIntForUser(resolver,
+                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 3, UserHandle.USER_CURRENT);
+        mRecentsClearAllLocation.setValue(String.valueOf(location));
+        mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
+        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
+
+        // oreo recents type
+        mRecentsType = (ListPreference) findPreference(RECENTS_TYPE);
+        int style = Settings.System.getIntForUser(resolver,
+                Settings.System.RECENTS_LAYOUT_STYLE, 0, UserHandle.USER_CURRENT);
+        mRecentsType.setValue(String.valueOf(style));
+        mRecentsType.setSummary(mRecentsType.getEntry());
+        mRecentsType.setOnPreferenceChangeListener(this);
+
+        oreoRecentsCat = (PreferenceCategory)findPreference("recents_ui_oreo_recents_category");
+        oreoRecentsCat.setEnabled(type == RECENTS_COMPONENT_OREO);
+
+        /**
+         * Most likely too much spagetti - code end
+         */
     }
+
 
     private void updateDependencies() {
         updateDependencies(null, null);
@@ -154,7 +172,6 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
 
     private void updateDependencies(Preference updatedPreference, Boolean newValue) {
         // Disable stock recents category if alternative enabled
-        /* TODO re-enable once we have stock recents settings
         boolean alternativeRecentsEnabled = newValue != null && newValue;
         if (!alternativeRecentsEnabled) {
             for (int i = 0; i < mAlternativeRecentsCategory.getPreferenceCount(); i++) {
@@ -171,16 +188,14 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
             }
         }
         mStockRecentsCategory.setEnabled(!alternativeRecentsEnabled);
-        */
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+        /*
+         * Ugly code start
+         */
         if (preference == mRecentsComponentType) {
             int type = Integer.valueOf((String) objValue);
             int index = mRecentsComponentType.findIndexOfValue((String) objValue);
@@ -193,23 +208,27 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
                     Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, 0);
             }
             Util.showSystemUiRestartDialog(getContext());
-        return true;
+            return true;
         } else if (preference == mRecentsClearAllLocation) {
             int location = Integer.valueOf((String) objValue);
             int index = mRecentsClearAllLocation.findIndexOfValue((String) objValue);
             Settings.System.putIntForUser(getActivity().getContentResolver(),
                     Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
             mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
-        return true;
+            return true;
         } else if (preference == mRecentsType) {
             int style = Integer.valueOf((String) objValue);
             int index = mRecentsType.findIndexOfValue((String) objValue);
             Settings.System.putIntForUser(getActivity().getContentResolver(),
                     Settings.System.RECENTS_LAYOUT_STYLE, style, UserHandle.USER_CURRENT);
             mRecentsType.setSummary(mRecentsType.getEntries()[index]);
-           Util.showSystemUiRestartDialog(getContext());
-        return true;
+            Util.showSystemUiRestartDialog(getContext());
+            return true;
         }
+        /*
+         * Ugly code end
+         */
         return false;
     }
+
 }
