@@ -28,6 +28,8 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 
+import com.aicp.gear.util.ThemeOverlayHelper;
+
 public class Theming extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
 
     private Handler mHandler = new Handler();
@@ -48,18 +50,12 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (Settings.System.THEMING_BASE.equals(preference.getKey())) {
-            // If notifications are themed (both previously or as a result),
-            // we need to restart SystemUI for changes to have effect
-            if (hasDarkNotifications(Integer.parseInt((String) newValue)) ||
-                    hasDarkNotifications(Settings.System.getInt(getActivity().getContentResolver(),
-                            Settings.System.THEMING_BASE, 0))) {
+        if (Settings.System.THEMING_BASE.equals(preference.getKey()) ||
+                Settings.System.THEMING_CORNERS.equals(preference.getKey())) {
+            if (ThemeOverlayHelper.doesThemeChangeRequireSystemUIRestart(getActivity(),
+                        preference.getKey(), null, Integer.parseInt((String) newValue))) {
                 postRestartSystemUi();
             }
-            return true;
-        } else if (Settings.System.THEMING_CORNERS.equals(preference.getKey())) {
-            // Rounded corners of notifications need systemui restart
-            postRestartSystemUi();
             return true;
         } else if (AdaptiveIconDrawable.MASK_SETTING_PROP.equals(preference.getKey())) {
             Util.showRebootDialog(getActivity(), getString(R.string.icon_shape_changed_title),
@@ -68,10 +64,6 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
         } else {
             return false;
         }
-    }
-
-    private boolean hasDarkNotifications(int baseThemePref) {
-            return baseThemePref >= 3 && baseThemePref <= 6;
     }
 
     private void postRestartSystemUi() {
