@@ -28,6 +28,12 @@
         android:entryValues="@array/theming_base_values"
         android:defaultValue="0" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="theming_control_night_mode"
+        android:title="@string/theming_control_night_mode_title"
+        android:summary="@string/theming_control_night_mode_summary"
+        android:defaultValue="true" />
+
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="theming_accent"
         android:title="@string/theming_accent_title"
