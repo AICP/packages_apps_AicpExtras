@@ -61,6 +61,13 @@
         android:summary="@string/recent_panel_lefty_mode_summary"
         android:defaultValue="false" />
 
+    <com.aicp.gear.preference.SystemSettingIntListPreference
+        android:key="slim_recent_enter_exit_animation"
+        android:title="@string/slim_recents_enter_exit_animation_title"
+        android:entries="@array/slim_recents_enter_exit_animation_entries"
+        android:entryValues="@array/slim_recents_enter_exit_animation_values"
+        android:defaultValue="0" />
+
     <com.aicp.gear.preference.SystemSettingSeekBarPreference
         android:key="slim_recents_corner_radius"
         android:title="@string/slim_recents_corner_radius_title"
