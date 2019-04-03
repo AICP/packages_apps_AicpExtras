@@ -61,6 +61,12 @@
         android:defaultValue="true" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="one_hand_mode_enabled"
+        android:title="@string/one_hand_mode_enabled_title"
+        android:summary="@string/one_hand_mode_enabled_summary"
+        android:defaultValue="false" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="sensor_block"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
