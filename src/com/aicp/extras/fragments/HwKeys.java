@@ -171,12 +171,14 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         final boolean hasMenuKey = (deviceKeys & KEY_MASK_MENU) != 0;
         final boolean hasAssistKey = (deviceKeys & KEY_MASK_ASSIST) != 0;
         final boolean hasAppSwitchKey = (deviceKeys & KEY_MASK_APP_SWITCH) != 0;
+        final boolean hasCameraKey = (deviceKeys & KEY_MASK_CAMERA) != 0;
 
         final boolean showHomeWake = (deviceWakeKeys & KEY_MASK_HOME) != 0;
         final boolean showBackWake = (deviceWakeKeys & KEY_MASK_BACK) != 0;
         final boolean showMenuWake = (deviceWakeKeys & KEY_MASK_MENU) != 0;
         final boolean showAssistWake = (deviceWakeKeys & KEY_MASK_ASSIST) != 0;
         final boolean showAppSwitchWake = (deviceWakeKeys & KEY_MASK_APP_SWITCH) != 0;
+        final boolean showCameraWake = (deviceWakeKeys & KEY_MASK_CAMERA) != 0;
 
         // load categories and init/remove preferences based on device
         // configuration
@@ -190,6 +192,8 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
                 .findPreference(CATEGORY_ASSIST);
         final PreferenceCategory appSwitchCategory = (PreferenceCategory) prefScreen
                 .findPreference(CATEGORY_APPSWITCH);
+        final PreferenceCategory cameraCategory = (PreferenceCategory)
+                findPreference(CATEGORY_CAMERA);
 
         mSwapHardwareKeys = (SwitchPreference) findPreference(KEY_SWAP_NAVIGATION_KEYS);
 
@@ -239,6 +243,17 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
             }
         } else {
             prefScreen.removePreference(assistCategory);
+        }
+
+        // camera button
+        if (hasCameraKey) {
+            if (!showCameraWake) {
+                cameraCategory.removePreference(
+                        findPreference(Settings.System.CAMERA_SLEEP_ON_RELEASE));
+                cameraCategory.removePreference(findPreference(Settings.System.CAMERA_WAKE_SCREEN));
+            }
+        } else {
+            cameraCategory.getParent().removePreference(cameraCategory);
         }
 
         // let super know we can load ActionPreferences
