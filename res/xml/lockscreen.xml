@@ -28,6 +28,24 @@
         android:entryValues="@array/lockscreen_clock_selection_values"
         android:defaultValue="0" />
 
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="lockclock_font_size"
+        android:title="@string/lockclock_font_size_title"
+        android:max="78"
+        android:min="50"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="dp"
+        android:defaultValue="78" />
+
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="lockdate_font_size"
+        android:title="@string/lockdate_font_size_title"
+        android:max="25"
+        android:min="8"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="sp"
+        android:defaultValue="14" />
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_lockscreen"
         android:title="@string/double_tap_sleep_lockscreen"
