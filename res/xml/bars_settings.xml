@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--  Copyright (C) 2017-2018 The OmniROM Project
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+            android:key="bars_settings"
+            android:title="@string/custom_bars_settings_title" >
+
+        <PreferenceCategory
+            android:key="aspect_ratio_category"
+            android:title="@string/aspect_ratio_category_title">
+
+            <com.aicp.gear.preference.SystemSettingSwitchPreference
+                android:key="aspect_ratio_apps_enabled"
+                android:title="@string/aspect_ratio_apps_enabled_title"
+                android:summary="@string/aspect_ratio_apps_enabled_summary"
+                android:defaultValue="false" />
+
+            <com.aicp.extras.preference.AppMultiSelectListPreference
+                android:dependency="aspect_ratio_apps_enabled"
+                android:key="aspect_ratio_apps_list"
+                android:summary="@string/aspect_ratio_apps_list_summary"
+                android:title="@string/aspect_ratio_apps_list_title" />
+
+            <com.aicp.extras.preference.ScrollAppsViewPreference
+                android:dependency="aspect_ratio_apps_enabled"
+                android:key="aspect_ratio_apps_list_scroller"
+                android:selectable="false" />
+
+            <Preference
+                android:dependency="aspect_ratio_apps_enabled"
+                android:icon="@drawable/ic_info_outline_24dp"
+                android:persistent="false"
+                android:summary="@string/aspect_ratio_apps_info" />
+        </PreferenceCategory>
+</PreferenceScreen>

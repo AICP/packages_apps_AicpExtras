@@ -29,6 +29,11 @@
         <intent android:action="android.settings.APP_OPS_SETTINGS" />
     </Preference>
 
+    <PreferenceScreen
+        android:key="bars_settings"
+        android:title="@string/custom_bars_settings_title"
+        android:fragment="com.aicp.extras.fragments.BarsSettings" />
+
     <com.aicp.extras.preference.HostnamePreference
         android:key="device_hostname"
         android:title="@string/device_hostname"

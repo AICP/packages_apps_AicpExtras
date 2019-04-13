@@ -40,6 +40,7 @@ public class SystemBehaviour extends BaseSettingsFragment
 
     private static final String KEY_SMART_PIXELS = "smart_pixels_enable";
     private static final String KEY_AUDIO_PANEL_POSITION = "audio_panel_view_position";
+    private static final String KEY_BARS = "bars_settings";
     private static final String SELINUX_CATEGORY = "selinux";
 
     private SwitchPreference mSelinuxMode;
@@ -72,6 +73,9 @@ public class SystemBehaviour extends BaseSettingsFragment
 
         Util.requireConfig(getActivity(), findPreference(KEY_AUDIO_PANEL_POSITION),
                 com.android.internal.R.bool.config_audioPanelOnLeftSide, true, false);
+
+        Util.requireConfig(getActivity(), findPreference(KEY_BARS),
+                com.android.internal.R.bool.config_haveHigherAspectRatioScreen, true, false);
     }
 
     @Override
