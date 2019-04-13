@@ -54,6 +54,11 @@
         android:title="@string/screen_state_toggles_title"
         android:fragment="com.aicp.extras.fragments.SuspendActions" />
 
+    <PreferenceScreen
+        android:key="bars_settings"
+        android:title="@string/custom_bars_settings_title"
+        android:fragment="com.aicp.extras.fragments.BarsSettings" />
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="edge_service_for_gestures"
         android:title="@string/edge_gesture_service_title"
