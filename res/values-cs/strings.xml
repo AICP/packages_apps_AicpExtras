@@ -128,6 +128,8 @@
     <string name="notifications_summary">Rozšířené ovládání oznámení</string>
     <string name="notification_heads_up_title">Plovoucí oznámení</string>
     <string name="notification_heads_up_summary">Povolit plovoucí oznámení</string>
+    <string name="force_expanded_notifications_title">Vynutit rozšířená oznámení</string>
+    <string name="force_expanded_notifications_summary">K dispozici pouze pro aplikace, které podporují rozšířená oznámení</string>
     <string name="quick_settings_title">Rychlá nastavení</string>
     <string name="quick_settings_summary">Upravit vzhled rychlého nastavení</string>
     <string name="qs_music_tile_track_optional_title">Dlaždice hudby</string>
@@ -218,6 +220,9 @@
     <string name="slim_recents_corner_radius_title">Poloměr rohů karty</string>
     <string name="slim_recents_aicp_empty_drawable_title">Obrázek AICP prázdného panelu nedávných</string>
     <string name="slim_recents_aicp_empty_drawable_summary">Obrázek, který se zobrazí v prázdném panelu nedávných</string>
+    <string name="slim_recents_enter_exit_animation_title">Animace</string>
+    <string name="slim_recents_enter_exit_animation_translate">Přeložit</string>
+    <string name="slim_recents_enter_exit_animation_fade">Slábnutí</string>
     <string name="recent_panel_lefty_mode_title">Zobrazit na levém okraji</string>
     <string name="recent_panel_lefty_mode_summary">Zobrazit panel nedávných aplikací na levém okraji</string>
     <string name="profile_choose_app">Vybrat aplikaci</string>
@@ -302,6 +307,8 @@
     <string name="toast_icon_summary">Zobrazit ikonu aplikace v oznámení Toast</string>
     <string name="volte_icon_title">Ikona VoLTE</string>
     <string name="volte_icon_summary">Zobrazit ikonu VoLTE</string>
+    <string name="statusbar_location_icon_title">Ikona polohy</string>
+    <string name="statusbar_location_icon_summary">Zobrazit ikonu polohy</string>
     <string name="torch_long_press_power_gesture_title">Dlouhým stisknutím tlačítka napájení zapnout svítilnu</string>
     <string name="torch_long_press_power_gesture_summary">Přepínání svítilny dlouhým stisknutím tlačítka napájení při vypnuté obrazovce</string>
     <string name="torch_long_press_power_timeout_title">Automatické vypnutí svítilny</string>
@@ -785,10 +792,12 @@
     <string name="theming_accent_default">Výchozí</string>
     <string name="theming_accent_amber">Jantarový</string>
     <string name="theming_accent_bluelight">Modrý</string>
+    <string name="theming_accent_carnation">Karafiát</string>
     <string name="theming_accent_cyan">Tyrkysový</string>
     <string name="theming_accent_denim">Džínový</string>
     <string name="theming_accent_gold">Zlatý</string>
     <string name="theming_accent_greenlight">Zelený</string>
+    <string name="theming_accent_grey">Šedý</string>
     <string name="theming_accent_lime">Limetkový</string>
     <string name="theming_accent_orange">Oranžový</string>
     <string name="theming_accent_oxygen">Oxygen</string>
@@ -798,6 +807,7 @@
     <string name="theming_accent_red">Červený</string>
     <string name="theming_accent_teal">Modrozelený</string>
     <string name="theming_accent_turquoise">Tyrkysový</string>
+    <string name="theming_accent_whiteblack">Bílá nebo černá</string>
     <string name="theming_accent_yellow">Žlutý</string>
     <string name="theming_corners_title">Rohy</string>
     <string name="theming_corners_default">Výchozí</string>
@@ -920,4 +930,23 @@
     <string name="audio_panel_view_alarm_title">Budík</string>
     <string name="audio_panel_view_voice_title">Hlas</string>
     <string name="audio_panel_view_bt_sco_title">Bluetooth</string>
+    <string name="audio_panel_position_title">Poloha</string>
+    <string name="audio_panel_position_summary">Přesunout panel hlasitosti z pravé na levou stranu</string>
+    <string name="icon_shape_title">Tvar ikony aplikace</string>
+    <string name="icon_shape_system_default">Systémový výchozí</string>
+    <string name="icon_shape_square">Čtverec</string>
+    <string name="icon_shape_rounded_square">Zaoblený čtverec</string>
+    <string name="icon_shape_squircle">Superelipsa</string>
+    <string name="icon_shape_circle">Kruh</string>
+    <string name="icon_shape_teardrop">Slza</string>
+    <string name="icon_shape_hexagon">Šestiúhelník</string>
+    <string name="icon_shape_changed_title">Aktualizovat tvar ikony</string>
+    <string name="icon_shape_changed_message">Změna tvaru ikony ovlivní pouze nově spuštěné aplikace. Aby bylo možné toto nastavení plně použít, doporučuje se proto zařízení restartovat. Pokud některé aplikace mají stále starý tvar, zkuste vymazat mezipaměť aplikací.</string>
+    <string name="reboot_dialog_ok">Restartovat</string>
+    <string name="soft_reboot_title">Restartování</string>
+    <string name="soft_reboot_message">Probíhá lehký restart, buďte trpěliví</string>
+    <string name="theming_control_night_mode_title">Ovládání nočního režimu</string>
+    <string name="theming_control_night_mode_summary">Nastavte noční režim pro aplikace založené na vybraném motivu</string>
+    <string name="one_hand_mode_enabled_title">Režim jedné ruky</string>
+    <string name="one_hand_mode_enabled_summary">Aktivujte režim jednou rukou. Přetažením doleva nebo doprava na navigačním panelu přepnete, použitím akcí lišty SmartBar přepínáte.</string>
 </resources>

@@ -128,6 +128,8 @@
     <string name="notifications_summary">Control de notificaciones</string>
     <string name="notification_heads_up_title">Notificaciones emergentes</string>
     <string name="notification_heads_up_summary">Permitir notificaciones emergentes</string>
+    <string name="force_expanded_notifications_title">Forzar notificaciones expandidas</string>
+    <string name="force_expanded_notifications_summary">Sólo disponible para aplicaciones que soporten notificaciones expandidas</string>
     <string name="quick_settings_title">Ajustes rápidos</string>
     <string name="quick_settings_summary">Editar aspecto de ajustes rápidos</string>
     <string name="qs_music_tile_track_optional_title">Título de la pista de audio en ajuste rápido</string>
@@ -218,6 +220,9 @@
     <string name="slim_recents_corner_radius_title">Modificar radio de la curva</string>
     <string name="slim_recents_aicp_empty_drawable_title">Panel vacío AICP</string>
     <string name="slim_recents_aicp_empty_drawable_summary">Imágen a mostrar cuando no hay aps. recientes que mostrar</string>
+    <string name="slim_recents_enter_exit_animation_title">Animación</string>
+    <string name="slim_recents_enter_exit_animation_translate">Entrada/salida</string>
+    <string name="slim_recents_enter_exit_animation_fade">Transición</string>
     <string name="recent_panel_lefty_mode_title">Mostrar en la lado izquierdo</string>
     <string name="recent_panel_lefty_mode_summary">Muestra el panel en el lado izquierdo de la pantalla</string>
     <string name="profile_choose_app">Elegir aplicación</string>
@@ -302,6 +307,8 @@
     <string name="toast_icon_summary">Muestra el icono de la aplicación que dispara la notificación</string>
     <string name="volte_icon_title">Icono de voLTE</string>
     <string name="volte_icon_summary">Mostrar el icono VoLTE</string>
+    <string name="statusbar_location_icon_title">Icono de ubicación</string>
+    <string name="statusbar_location_icon_summary">Mostrar icono de ubicación</string>
     <string name="torch_long_press_power_gesture_title">Pulsación larga del botón de encendido para activar la linterna</string>
     <string name="torch_long_press_power_gesture_summary">Activa la linterna cuando se pulsa de forma prolongada el botón de encendido con la pantalla apagada</string>
     <string name="torch_long_press_power_timeout_title">Apagar automáticamente la linterna</string>
@@ -786,10 +793,12 @@
     <string name="theming_accent_default">Predeterminado</string>
     <string name="theming_accent_amber">Ambar</string>
     <string name="theming_accent_bluelight">Azul</string>
+    <string name="theming_accent_carnation">Carne</string>
     <string name="theming_accent_cyan">Cian</string>
     <string name="theming_accent_denim">Azul vaquero</string>
     <string name="theming_accent_gold">Dorado</string>
     <string name="theming_accent_greenlight">Verde</string>
+    <string name="theming_accent_grey">Gris</string>
     <string name="theming_accent_lime">Lima</string>
     <string name="theming_accent_orange">Naranja</string>
     <string name="theming_accent_oxygen">Oxígeno</string>
@@ -799,6 +808,7 @@
     <string name="theming_accent_red">Rojo</string>
     <string name="theming_accent_teal">Verde azulado</string>
     <string name="theming_accent_turquoise">Turquesa</string>
+    <string name="theming_accent_whiteblack">Blanco o negro</string>
     <string name="theming_accent_yellow">Amarillo</string>
     <string name="theming_corners_title">Esquinas</string>
     <string name="theming_corners_default">Predeterminado</string>
@@ -921,4 +931,23 @@
     <string name="audio_panel_view_alarm_title">Alarma</string>
     <string name="audio_panel_view_voice_title">Voz</string>
     <string name="audio_panel_view_bt_sco_title">Bluetooth</string>
+    <string name="audio_panel_position_title">Ubicación</string>
+    <string name="audio_panel_position_summary">Mover panel de volumen de la derecha a la izquierda</string>
+    <string name="icon_shape_title">Forma de icono de aplicaciones</string>
+    <string name="icon_shape_system_default">Predeterminado del sistema</string>
+    <string name="icon_shape_square">Cuadrado</string>
+    <string name="icon_shape_rounded_square">Cuadrado redondeado</string>
+    <string name="icon_shape_squircle">Esquinas redondeadas</string>
+    <string name="icon_shape_circle">Círculo</string>
+    <string name="icon_shape_teardrop">Lágrima</string>
+    <string name="icon_shape_hexagon">Hexágono</string>
+    <string name="icon_shape_changed_title">Actualizar forma de iconos</string>
+    <string name="icon_shape_changed_message">Cambiar la forma del icono sólo afectará a las nuevas aplicaciones iniciadas. Por lo tanto, se recomienda reiniciar el dispositivo para aplicar esta configuración. Si algunas aplicaciones siguen usando la forma antigua después de eso, intente borrar su caché de aplicaciones.</string>
+    <string name="reboot_dialog_ok">Reiniciar</string>
+    <string name="soft_reboot_title">Reiniciando</string>
+    <string name="soft_reboot_message">El reinicio está en curso, por favor sea paciente</string>
+    <string name="theming_control_night_mode_title">Control de modo noche</string>
+    <string name="theming_control_night_mode_summary">Establecer modo nocturno para aplicaciones basadas en el tema seleccionado</string>
+    <string name="one_hand_mode_enabled_title">Modo a una mano</string>
+    <string name="one_hand_mode_enabled_summary">Activar el modo de una mano. Desliza a la izquierda o a la derecha en la barra de navegación stock para alternar, usa las acciones SmartBar para cambiar.</string>
 </resources>

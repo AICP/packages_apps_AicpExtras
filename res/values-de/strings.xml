@@ -128,6 +128,8 @@
     <string name="notifications_summary">Erweiterte Benachrichtigungseinstellungen</string>
     <string name="notification_heads_up_title">Pop-ups</string>
     <string name="notification_heads_up_summary">Pop-Up Benachrichtigungen zulassen</string>
+    <string name="force_expanded_notifications_title">Erzwinge erweiterte Benachrichtungen</string>
+    <string name="force_expanded_notifications_summary">Nur für Apps verfügbar, die erweiterte Benachrichtigungen unterstützen</string>
     <string name="quick_settings_title">Schnelleinstellungen</string>
     <string name="quick_settings_summary">Bearbeitung der Schnelleinstellungen/Kacheln</string>
     <string name="qs_music_tile_track_optional_title">Musiktitelanzeige</string>
@@ -218,6 +220,9 @@
     <string name="slim_recents_corner_radius_title">Radius der Karten-Ecken</string>
     <string name="slim_recents_aicp_empty_drawable_title">Bild bei leerem Verlauf</string>
     <string name="slim_recents_aicp_empty_drawable_summary">Zeige das AICP-Bild, wenn keine Apps im Verlauf sind</string>
+    <string name="slim_recents_enter_exit_animation_title">Animationen</string>
+    <string name="slim_recents_enter_exit_animation_translate">Ein-/Ausblenden</string>
+    <string name="slim_recents_enter_exit_animation_fade">Ausblenden</string>
     <string name="recent_panel_lefty_mode_title">Anzeige auf der linken Seite</string>
     <string name="recent_panel_lefty_mode_summary">Zeige das Paneel des App-Verlaufs auf der linken Seite</string>
     <string name="profile_choose_app">Anwendung auswählen</string>
@@ -302,6 +307,8 @@
     <string name="toast_icon_summary">Zeige das zur Meldung zugehörige Symbol der Anwendung</string>
     <string name="volte_icon_title">VoLTE-Symbol</string>
     <string name="volte_icon_summary">VoLTE-Symbol anzeigen</string>
+    <string name="statusbar_location_icon_title">GPS-Symbol</string>
+    <string name="statusbar_location_icon_summary">Zeige das GPS-Symbol</string>
     <string name="torch_long_press_power_gesture_title">Ein-/Aus-Taste lange drücken, um die Taschenlampe zu aktivieren</string>
     <string name="torch_long_press_power_gesture_summary">Schaltet bei langem Druck der Ein-/Aus-Taste und abgeschaltetem Display die Taschenlampe an bzw. aus</string>
     <string name="torch_long_press_power_timeout_title">Taschenlampe automatisch ausschalten</string>
@@ -786,10 +793,12 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="theming_accent_default">Standard</string>
     <string name="theming_accent_amber">Bernstein</string>
     <string name="theming_accent_bluelight">Blau</string>
+    <string name="theming_accent_carnation">Nelke</string>
     <string name="theming_accent_cyan">Blaugrün</string>
     <string name="theming_accent_denim">Denim</string>
     <string name="theming_accent_gold">Gold</string>
     <string name="theming_accent_greenlight">Grün</string>
+    <string name="theming_accent_grey">Grau</string>
     <string name="theming_accent_lime">Limette</string>
     <string name="theming_accent_orange">Orange</string>
     <string name="theming_accent_oxygen">Sauerstoff</string>
@@ -799,6 +808,7 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="theming_accent_red">Rot</string>
     <string name="theming_accent_teal">Blaugrün</string>
     <string name="theming_accent_turquoise">Türkis</string>
+    <string name="theming_accent_whiteblack">Weiß oder Schwarz</string>
     <string name="theming_accent_yellow">Gelb</string>
     <string name="theming_corners_title">Ecken</string>
     <string name="theming_corners_default">Standard</string>
@@ -921,4 +931,23 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="audio_panel_view_alarm_title">Wecker</string>
     <string name="audio_panel_view_voice_title">Telefon</string>
     <string name="audio_panel_view_bt_sco_title">Bluetooth</string>
+    <string name="audio_panel_position_title">Standort</string>
+    <string name="audio_panel_position_summary">Lautstärkepanel rechts anstatt links anzeigen</string>
+    <string name="icon_shape_title">Form der App-Symbole</string>
+    <string name="icon_shape_system_default">Systemstandard</string>
+    <string name="icon_shape_square">Quadrat</string>
+    <string name="icon_shape_rounded_square">Abgerundetes Quadrat</string>
+    <string name="icon_shape_squircle">Squircle</string>
+    <string name="icon_shape_circle">Kreis</string>
+    <string name="icon_shape_teardrop">Träne</string>
+    <string name="icon_shape_hexagon">Sechseck</string>
+    <string name="icon_shape_changed_title">Symbolform ändern</string>
+    <string name="icon_shape_changed_message">Das Ändern der Symbolform beeinflusst nur neu startende Apps. Daher wird empfohlen, das Gerät neu zu starten, um diese Einstellung vollständig anzuwenden. Wenn einige Apps die alte Form danach noch verwenden, versuchen Sie den App-Cache zu löschen.</string>
+    <string name="reboot_dialog_ok">Neu starten</string>
+    <string name="soft_reboot_title">Wird neugestartet...</string>
+    <string name="soft_reboot_message">Ein Neustart wird durchgeführt, bitte haben Sie etwas Geduld</string>
+    <string name="theming_control_night_mode_title">Nachtmodus steuern</string>
+    <string name="theming_control_night_mode_summary">Nachtmodus für Apps basierend auf dem ausgewählten Design festlegen</string>
+    <string name="one_hand_mode_enabled_title">Ein-Hand-Modus</string>
+    <string name="one_hand_mode_enabled_summary">Ein-Hand-Modus aktivieren. Wischen Sie links oder rechts zum Umschalten auf der Standard-Navigationsleiste (AOSP) oder konfigurieren Sie Aktionen zum Umschalten bei Verwendung der SmartBar.</string>
 </resources>

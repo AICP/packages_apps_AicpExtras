@@ -128,6 +128,8 @@
     <string name="notifications_summary">扩展通知控件</string>
     <string name="notification_heads_up_title">浮动通知</string>
     <string name="notification_heads_up_summary">允许弹出通知</string>
+    <string name="force_expanded_notifications_title">强制扩展通知</string>
+    <string name="force_expanded_notifications_summary">仅可用于支持扩展通知的应用程序</string>
     <string name="quick_settings_title">快速设置</string>
     <string name="quick_settings_summary">编辑快速设置外观</string>
     <string name="qs_music_tile_track_optional_title">音乐瓷块上的曲目</string>
@@ -176,9 +178,14 @@
     <string name="recents_title">最近任务面板</string>
     <string name="recents_summary">编辑“最近应用”屏幕外观</string>
     <string name="stock_recents_category">默认最近任务</string>
+    <string name="oreo_recents_category">Oreo 最近任务</string>
     <string name="alternative_recents_category">其他最近任务</string>
     <string name="alternative_recents_swipe_up_enabled_warning_summary">当使用向上滑动的主页导航打开最近应用时, 只支持库存保留项</string>
+    <string name="recents_component_type_title">最近任务样式</string>
+    <string name="recents_pie">Pie</string>
+    <string name="recents_oreo">Oreo</string>
     <string name="show_clear_all_recents_button_title">清除所有按钮</string>
+    <string name="show_clear_all_recents_button_summary">显示清空任务按钮</string>
     <string name="recents_clear_all_location_title">清除所有按钮位置</string>
     <string name="recents_clear_all_location_top_right">右上角</string>
     <string name="recents_clear_all_location_top_left">左上角</string>
@@ -187,6 +194,11 @@
     <string name="recents_clear_all_location_bottom_left">左下角</string>
     <string name="recents_clear_all_location_bottom_center">底部中心</string>
     <string name="recents_show_membar_title">内存栏</string>
+    <string name="recents_show_membar_summary">显示设备可用运行内存栏</string>
+    <string name="recents_type_title">Oreo 最近任务布局</string>
+    <string name="recents_stock">原生</string>
+    <string name="recents_grid">网格</string>
+    <string name="recents_go">安卓 Go</string>
     <string name="slim_recents_title">Slim 最近任务视图</string>
     <string name="recents_max_apps_title">最大允许的应用数</string>
     <string name="recent_panel_scale_title">尺寸</string>
@@ -208,6 +220,7 @@
     <string name="slim_recents_corner_radius_title">卡片圆角半径</string>
     <string name="slim_recents_aicp_empty_drawable_title">AICP 无最近任务</string>
     <string name="slim_recents_aicp_empty_drawable_summary">没有最近的应用程序时显示的图像</string>
+    <string name="slim_recents_enter_exit_animation_fade">淡入淡出</string>
     <string name="recent_panel_lefty_mode_title">显示在左侧边缘</string>
     <string name="recent_panel_lefty_mode_summary">在屏幕左侧显示最近任务列表</string>
     <string name="profile_choose_app">选择应用</string>
@@ -292,6 +305,8 @@
     <string name="toast_icon_summary">提示栏显示相应的应用图标</string>
     <string name="volte_icon_title">VoLTE 图标</string>
     <string name="volte_icon_summary">显示 VoLTE 图标</string>
+    <string name="statusbar_location_icon_title">位置图标</string>
+    <string name="statusbar_location_icon_summary">显示位置图标</string>
     <string name="torch_long_press_power_gesture_title">长按电源按钮以启动手电筒</string>
     <string name="torch_long_press_power_gesture_summary">显示屏关闭时长按电源按钮切换手电筒</string>
     <string name="torch_long_press_power_timeout_title">自动关闭手电筒</string>
@@ -780,6 +795,7 @@
     <string name="theming_accent_denim">牛仔色</string>
     <string name="theming_accent_gold">金色</string>
     <string name="theming_accent_greenlight">绿色</string>
+    <string name="theming_accent_grey">灰色</string>
     <string name="theming_accent_lime">黄绿色</string>
     <string name="theming_accent_orange">橙色</string>
     <string name="theming_accent_oxygen">氧气色</string>
@@ -900,8 +916,19 @@
     <string name="pie_status_none">无</string>
     <string name="pie_status_both">都显示</string>
     <string name="pa_pie_gravity_title">扇形位置</string>
-    <string name="pa_pie_gravity_summary">选择放置扇形的位置</string>
+    <string name="pa_pie_gravity_summary">选择扇形的显示位置</string>
     <string name="pa_pie_gravity_bottom">底部</string>
     <string name="pa_pie_gravity_right">右侧</string>
     <string name="pa_pie_gravity_left">左侧</string>
+    <string name="audio_panel_view">音频面板</string>
+    <string name="audio_panel_view_media_title">媒体</string>
+    <string name="audio_panel_view_ringer_title">铃声</string>
+    <string name="audio_panel_view_notification_title">通知</string>
+    <string name="audio_panel_view_alarm_title">闹钟</string>
+    <string name="audio_panel_view_voice_title">语音</string>
+    <string name="audio_panel_view_bt_sco_title">蓝牙</string>
+    <string name="audio_panel_position_title">地理位置</string>
+    <string name="audio_panel_position_summary">将音量面板从右侧移动到左侧</string>
+    <string name="icon_shape_square">方形</string>
+    <string name="icon_shape_circle">环形</string>
 </resources>

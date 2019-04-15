@@ -128,6 +128,8 @@
     <string name="notifications_summary">Kiterjesztett értesítések vezérlése</string>
     <string name="notification_heads_up_title">Felugró értesítések</string>
     <string name="notification_heads_up_summary">A felugró értesítések engedélyezése</string>
+    <string name="force_expanded_notifications_title">Kényszerített kiterjesztett értesítések</string>
+    <string name="force_expanded_notifications_summary">Csak azon alkalmazások esetén érhető el, melyek támogatják a kiterjesztett értesítéseket</string>
     <string name="quick_settings_title">Gyorsbeállítások</string>
     <string name="quick_settings_summary">Gyorsbeállítások kinézetének szerkesztése</string>
     <string name="qs_music_tile_track_optional_title">Zeneszám címe a zene csempén</string>
@@ -218,6 +220,9 @@
     <string name="slim_recents_corner_radius_title">Kártyák sarkainak sugármérete</string>
     <string name="slim_recents_aicp_empty_drawable_title">Üres AICP előzmények</string>
     <string name="slim_recents_aicp_empty_drawable_summary">Kép jelzi, ha nincs előzmények alkalmazás</string>
+    <string name="slim_recents_enter_exit_animation_title">Animáció</string>
+    <string name="slim_recents_enter_exit_animation_translate">Fordítás</string>
+    <string name="slim_recents_enter_exit_animation_fade">Áttűnés</string>
     <string name="recent_panel_lefty_mode_title">Mutassa a jobb szélen</string>
     <string name="recent_panel_lefty_mode_summary">Jelenítse meg az alkalmazáselőzményeket a baloldalon</string>
     <string name="profile_choose_app">Alkalmazás kiválasztása</string>
@@ -302,6 +307,8 @@
     <string name="toast_icon_summary">Az alkalmazásnak megfelelő ikon kijelzése a buborékkal</string>
     <string name="volte_icon_title">VoLTE ikon</string>
     <string name="volte_icon_summary">A VoLTE ikon megjelenítése</string>
+    <string name="statusbar_location_icon_title">Helymeghatározás-ikon</string>
+    <string name="statusbar_location_icon_summary">Megjeleníti a helymeghatározás ikonját az állapotsávon</string>
     <string name="torch_long_press_power_gesture_title">Zseblámpa indítása a kikapcsoló gomb nyomvatartásával</string>
     <string name="torch_long_press_power_gesture_summary">Kikapcsolt képernyőnél a bekapcsológomb hosszú nyomása indítsa el a zseblámpát</string>
     <string name="torch_long_press_power_timeout_title">Zseblámpa automatikus kikapcsolása</string>
@@ -788,10 +795,12 @@ A kettős érintéses műveletek engedélyezése enyhén késlelteti az egyszeri
     <string name="theming_accent_default">Alapértelmezett</string>
     <string name="theming_accent_amber">Borostyán</string>
     <string name="theming_accent_bluelight">Kék</string>
+    <string name="theming_accent_carnation">Szegfűrózsaszín</string>
     <string name="theming_accent_cyan">Ciánkék</string>
     <string name="theming_accent_denim">Farmerkék</string>
     <string name="theming_accent_gold">Arany</string>
     <string name="theming_accent_greenlight">Zöld</string>
+    <string name="theming_accent_grey">Szürke</string>
     <string name="theming_accent_lime">Lime</string>
     <string name="theming_accent_orange">Narancs</string>
     <string name="theming_accent_oxygen">Oxigén</string>
@@ -801,6 +810,7 @@ A kettős érintéses műveletek engedélyezése enyhén késlelteti az egyszeri
     <string name="theming_accent_red">Vörös</string>
     <string name="theming_accent_teal">Pávakék</string>
     <string name="theming_accent_turquoise">Türkiz</string>
+    <string name="theming_accent_whiteblack">Fehér vagy Fekete</string>
     <string name="theming_accent_yellow">Sárga</string>
     <string name="theming_corners_title">Sarkok</string>
     <string name="theming_corners_default">Alapértelmezett</string>
@@ -923,4 +933,23 @@ A kettős érintéses műveletek engedélyezése enyhén késlelteti az egyszeri
     <string name="audio_panel_view_alarm_title">Ébresztő</string>
     <string name="audio_panel_view_voice_title">Hang</string>
     <string name="audio_panel_view_bt_sco_title">Bluetooth</string>
+    <string name="audio_panel_position_title">Tartózkodási hely</string>
+    <string name="audio_panel_position_summary">A hangerőpanel áthelyezése jobbról balra</string>
+    <string name="icon_shape_title">Az alkalmazásikonok alakja</string>
+    <string name="icon_shape_system_default">Rendszer szerinti alapértelmezés</string>
+    <string name="icon_shape_square">Négyzet</string>
+    <string name="icon_shape_rounded_square">Lekerekített sarkok</string>
+    <string name="icon_shape_squircle">Négyzetes kör</string>
+    <string name="icon_shape_circle">Kör</string>
+    <string name="icon_shape_teardrop">Könnycsepp</string>
+    <string name="icon_shape_hexagon">Hatszög</string>
+    <string name="icon_shape_changed_title">Az ikonalakok frissítése</string>
+    <string name="icon_shape_changed_message">Az ikon alakjának megváltoztatása csak az újonnan indított alkalmazásokat érinti. Ezért ajánlott újraindítani a készüléket, hogy teljes mértékben alkalmazhassa ezt a beállítást. Ha ezután is a régi ikonok maradnak egy alkalmazáshoz, próbálkozzon az alkalmazás gyorsítótárának törlésével.</string>
+    <string name="reboot_dialog_ok">Újraindítás</string>
+    <string name="soft_reboot_title">Újraindítás</string>
+    <string name="soft_reboot_message">Kérjük, legyen türelemmel, a lágy újraindítás folyamatban van</string>
+    <string name="theming_control_night_mode_title">Az éjszakai mód vezérlése</string>
+    <string name="theming_control_night_mode_summary">A kiválasztott témához állítja be az alkalmazások éjszakai módját</string>
+    <string name="one_hand_mode_enabled_title">Egykezes üzemmód</string>
+    <string name="one_hand_mode_enabled_summary">Aktiválja az egykezes módot. Váltáshoz lapozzon jobbra vagy balra a gyári navigációs-sávon, vagy használja az Okossáv műveleteit.</string>
 </resources>
