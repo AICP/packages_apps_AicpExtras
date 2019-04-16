@@ -17,13 +17,18 @@
 
 package com.aicp.extras;
 
+import android.app.DialogFragment;
 import android.content.ContentResolver;
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v14.preference.PreferenceFragment;
 
+import com.android.settingslib.CustomDialogPreference;
+
 import com.aicp.extras.utils.Util;
+
+import java.util.UUID;
 
 public abstract class BaseSettingsFragment extends PreferenceFragment {
 
@@ -52,6 +57,24 @@ public abstract class BaseSettingsFragment extends PreferenceFragment {
     public boolean onPreferenceTreeClick(Preference preference) {
         return Util.onPreferenceTreeClick(this, preference)
                 || super.onPreferenceTreeClick(preference);
+    }
+
+    @Override
+    public void onDisplayPreferenceDialog(Preference preference) {
+        if (preference.getKey() == null) {
+            // Auto-key preferences that don't have a key, so the dialog can find them.
+            preference.setKey(UUID.randomUUID().toString());
+        }
+        DialogFragment f = null;
+        if (preference instanceof CustomDialogPreference) {
+            f = CustomDialogPreference.CustomPreferenceDialogFragment
+                    .newInstance(preference.getKey());
+        } else {
+            super.onDisplayPreferenceDialog(preference);
+            return;
+        }
+        f.setTargetFragment(this, 0);
+        f.show(getFragmentManager(), "dialog_preference");
     }
 
     public void setMasterDependencyState(boolean enabled) {

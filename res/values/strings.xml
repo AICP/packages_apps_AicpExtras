@@ -110,7 +110,7 @@
     <string name="status_bar_show_clock_title">Show clock &amp; date</string>
     <string name="clock_title_enable">Alignment</string>
     <string name="status_bar_clock_seconds_title">Clock seconds</string>
-    <string name="status_bar_clock_seconds_summary">Display seconds next to clock in status bar</string>
+    <string name="status_bar_clock_seconds_summary">Include seconds in statusbar clock display</string>
     <string name="status_bar_am_pm_title">AM/PM</string>
     <string name="status_bar_am_pm_info">24-hour clock is enabled</string>
     <string name="am_pm_clock_normal">Normal font size</string>
@@ -144,6 +144,50 @@
     <string name="status_bar_icons_category_title">Icons</string>
     <string name="status_bar_others_category_title">Others</string>
 
+    <!-- Statusbar AICP logo -->
+    <string name="status_bar_logo_category_title">Logo</string>
+    <string name="status_bar_logo_title">Logo</string>
+    <string name="status_bar_logo_summary">Enable to display logo in the status bar</string>
+    <string name="status_bar_logo_color_title">Color</string>
+    <string name="status_bar_logo_position_title">Position</string>
+    <string name="status_bar_logo_position_summary">Choose which side to display the logo on, left or right</string>
+    <string name="status_bar_logo_position_right">Right</string>
+    <string name="status_bar_logo_position_left">Left</string>
+    <string name="status_bar_logo_style_title">Style</string>
+    <string name="status_bar_logo_style_aicp">AICP</string>
+    <string name="status_bar_logo_style_android">Android</string>
+    <string name="status_bar_logo_style_apple">Apple</string>
+    <string name="status_bar_logo_style_ios">iOS</string>
+    <string name="status_bar_logo_style_emoticon">Emoticon</string>
+    <string name="status_bar_logo_style_emoticon_cool">Emoticon cool</string>
+    <string name="status_bar_logo_style_emoticon_dead">Emoticon dead</string>
+    <string name="status_bar_logo_style_emoticon_devil">Emoticon devil</string>
+    <string name="status_bar_logo_style_emoticon_happy">Emoticon happy</string>
+    <string name="status_bar_logo_style_emoticon_neutral">Emoticon neutral</string>
+    <string name="status_bar_logo_style_emoticon_poop">Emoticon poop</string>
+    <string name="status_bar_logo_style_emoticon_sad">Emoticon sad</string>
+    <string name="status_bar_logo_style_emoticon_tongue">Emoticon tongue</string>
+    <string name="status_bar_logo_style_blackberry">Blackberry</string>
+    <string name="status_bar_logo_style_cake">Cake</string>
+    <string name="status_bar_logo_style_blogger">Blogger</string>
+    <string name="status_bar_logo_style_biohazard">Biohazard</string>
+    <string name="status_bar_logo_style_linux">Linux</string>
+    <string name="status_bar_logo_style_yin_yang">Yin-Yang</string>
+    <string name="status_bar_logo_style_windows">Windows</string>
+    <string name="status_bar_logo_style_robot">Robot</string>
+    <string name="status_bar_logo_style_ninja">Ninja</string>
+    <string name="status_bar_logo_style_heart">Heart</string>
+    <string name="status_bar_logo_style_flower">Flower</string>
+    <string name="status_bar_logo_style_ghost">Ghost</string>
+    <string name="status_bar_logo_style_google">Google</string>
+    <string name="status_bar_logo_style_human_male">Man</string>
+    <string name="status_bar_logo_style_human_female">Woman</string>
+    <string name="status_bar_logo_style_human_male_female">Man &amp; woman</string>
+    <string name="status_bar_logo_style_gender_male">Male</string>
+    <string name="status_bar_logo_style_gender_female">Female</string>
+    <string name="status_bar_logo_style_gender_male_female">Male &amp; female</string>
+    <string name="status_bar_logo_style_guitar_electric">Electric guitar</string>
+
     <!-- Show 4G instead of LTE -->
     <string name="show_4g_title">Show 4G</string>
     <string name="show_4g_summary">Show 4G instead of LTE signal icon</string>
@@ -163,6 +207,10 @@
     <!-- Force expanded notifications -->
     <string name="force_expanded_notifications_title">Force Expanded Notifications</string>
     <string name="force_expanded_notifications_summary">Available only for apps that support expanded notifications</string>
+
+    <!-- Notification guts kill app button -->
+    <string name="notification_guts_kill_app_button_title">Kill app button</string>
+    <string name="notification_guts_kill_app_button_summary">Show a kill app button in the notification\'s longpress menu</string>
 
     <!-- Quick settings -->
     <string name="quick_settings_title">Quick settings</string>
@@ -366,9 +414,16 @@
     <string name="lockscreen_clock_selection_title">Clock style</string>
     <string name="lockscreen_clock_selection_digital">Default</string>
     <string name="lockscreen_clock_selection_digital_bold">Digital (bold)</string>
+    <string name="lockscreen_clock_selection_digital_accent">Digital (Accent)</string>
+    <string name="lockscreen_clock_selection_digital_accent_min">Digital (Accent - Minutes)</string>
+    <string name="lockscreen_clock_selection_digital_accent_hour">Digital (Accent - Hour)</string>
     <string name="lockscreen_clock_selection_analog">Analog</string>
     <string name="lockscreen_clock_selection_sammy">Sammy</string>
     <string name="lockscreen_clock_selection_sammy_bold">Sammy (bold)</string>
+    <string name="lockscreen_clock_selection_sammy_accent">Sammy with accent</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_hour">Sammy (bold) (Accent - Hour)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_min">Sammy (bold) (Accent - Minutes)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_alt">Sammy with accent (Alt)</string>
 
     <!-- On-The-Go -->
     <string name="global_actions_onthego_title">On-The-Go</string>
@@ -1242,4 +1297,25 @@
     <!-- One Hand mode-->
     <string name="one_hand_mode_enabled_title">One-handed mode</string>
     <string name="one_hand_mode_enabled_summary">Activate one-handed mode. Swipe left or right on stock navbar to toggle, use SmartBar actions for toggling.</string>
+
+    <!-- Camera button -->
+    <string name="hardware_keys_camera_key_title">Camera button</string>
+    <string name="camera_sleep_on_release_title">Screen peek</string>
+    <string name="camera_sleep_on_release_summary">A half press will keep the screen on only while the button is held down</string>
+    <string name="camera_launch_title">Launch camera</string>
+    <string name="camera_launch_summary">A longpress and release will launch camera</string>
+
+    <!-- Lock Clock & Date Size -->
+    <string name="lockdate_font_size_title">Date font size</string>
+    <string name="lockclock_font_size_title">Clock font size</string>
+
+    <!-- Long aspect ratio apps -->
+    <string name="aspect_ratio_apps_enabled_title">Enable scaling</string>
+    <string name="aspect_ratio_apps_enabled_summary">Allow legacy apps to use full screen</string>
+    <string name="aspect_ratio_apps_list_summary"></string>
+    <string name="aspect_ratio_apps_list_title">Apps allowed to use scaling</string>
+    <string name="aspect_ratio_category_title">Legacy app scaling</string>
+    <string name="aspect_ratio_apps_info">Applications need to be restarted after changes</string>
+    <string name="custom_bars_settings_title">App scaling</string>
+    <string name="action_save">Save</string>
 </resources>
