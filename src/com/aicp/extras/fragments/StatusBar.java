@@ -24,6 +24,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
@@ -43,11 +44,13 @@ public class StatusBar extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String SMART_PULLDOWN = "qs_smart_pulldown";
+    private static final String QUICK_PULLDOWN = "quick_pulldown";
     private static final String KEY_CARRIER_LABEL = "status_bar_show_carrier";
     private static final String KEY_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final String KEY_HIDE_NOTCH = "statusbar_hide_notch";
 
     private ListPreference mSmartPulldown;
+    private ListPreference mQuickPulldown;
     private Preference mCustomCarrierLabel;
     private SystemSettingListPreference mShowCarrierLabel;
 
@@ -68,6 +71,14 @@ public class StatusBar extends BaseSettingsFragment implements
                 Settings.System.QS_SMART_PULLDOWN, 0);
         updateSmartPulldownSummary(smartPulldown);
         mSmartPulldown.setOnPreferenceChangeListener(this);
+
+        // Quick Pulldown
+        mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
+        mQuickPulldown.setOnPreferenceChangeListener(this);
+        int quickPulldownValue = Settings.System.getIntForUser(resolver,
+                Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 0, UserHandle.USER_CURRENT);
+        mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
+        updateQuickPulldownSummary(quickPulldownValue);
 
         mShowCarrierLabel = (SystemSettingListPreference) findPreference(KEY_CARRIER_LABEL);
         int showCarrierLabel = Settings.System.getInt(resolver,
@@ -103,6 +114,12 @@ public class StatusBar extends BaseSettingsFragment implements
         if (preference == mSmartPulldown) {
             int value = Integer.parseInt((String) newValue);
             updateSmartPulldownSummary(value);
+            return true;
+        } else if (preference == mQuickPulldown) {
+            int quickPulldownValue = Integer.valueOf((String) newValue);
+            Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
+                    quickPulldownValue, UserHandle.USER_CURRENT);
+            updateQuickPulldownSummary(quickPulldownValue);
             return true;
         } else if (preference == mShowCarrierLabel) {
             int value = Integer.parseInt((String) newValue);
@@ -175,6 +192,24 @@ public class StatusBar extends BaseSettingsFragment implements
             mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_summary, type));
         }
     }
+
+    private void updateQuickPulldownSummary(int value) {
+        Resources res = getResources();
+
+        if (value == 0) {
+            // quick pulldown deactivated
+            mQuickPulldown.setSummary(res.getString(R.string.quick_pulldown_off));
+        } else if (value == 3) {
+            // quick pulldown always
+            mQuickPulldown.setSummary(res.getString(R.string.quick_pulldown_summary_always));
+        } else {
+            String direction = res.getString(value == 2
+                    ? R.string.quick_pulldown_left
+                    : R.string.quick_pulldown_right);
+            mQuickPulldown.setSummary(res.getString(R.string.quick_pulldown_summary, direction));
+        }
+    }
+
 
     private void updateCustomLabelTextSummary() {
         mCustomCarrierLabelText = Settings.System.getString(

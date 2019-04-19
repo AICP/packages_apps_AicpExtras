@@ -33,6 +33,15 @@
             android:defaultValue="0"
             android:title="@string/smart_pulldown_title" />
 
+        <!-- Quick pulldown -->
+        <com.aicp.gear.preference.SystemSettingIntListPreference
+            android:key="quick_pulldown"
+            android:entries="@array/quick_pulldown_entries"
+            android:entryValues="@array/quick_pulldown_values"
+            android:persistent="false"
+            android:defaultValue="0"
+            android:title="@string/quick_pulldown_title" />
+
         <!-- Double tap on Statusbar to sleep -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="double_tap_sleep_gesture"
