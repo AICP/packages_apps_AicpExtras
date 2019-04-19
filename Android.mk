@@ -37,7 +37,8 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     AicpGear-util
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
-    particles
+    particles \
+    glide
 
 # Apache http for stats
 LOCAL_JAVA_LIBRARIES := org.apache.http.legacy
