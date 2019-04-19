@@ -23,8 +23,6 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 
-LOCAL_ASSET_DIR := $(LOCAL_PATH)/assets
-
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-support-v4 \
     android-support-v7-appcompat \
@@ -37,7 +35,8 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     AicpGear-util
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
-    particles
+    particles \
+    glide
 
 # Apache http for stats
 LOCAL_JAVA_LIBRARIES := org.apache.http.legacy
