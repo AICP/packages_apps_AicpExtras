@@ -1,65 +1,59 @@
 package com.aicp.extras;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.os.Handler;
 import android.view.View;
-import android.view.Window;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.aicp.extras.BaseActivity;
-import com.aicp.extras.view.GifView;
+import com.aicp.extras.HiddenImgDialog;
+import com.bumptech.glide.Glide;
 
 public class HiddenAnimActivity extends BaseActivity {
 
-    private GifView gifView;
+	HiddenAnimActivityDialog hiddenAnimActivityDialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.animgif_layout);
+        setContentView(R.layout.hiddenactivity_main_layout);
 
-        gifView = (GifView) findViewById(R.id.gif_view);
-        gifView.setGifAssetPath("anim.gif");
-        gifView.setOnLongClickListener(new View.OnLongClickListener() {
+        hiddenAnimActivityDialog = new HiddenImgDialog(this);
+
+        final ImageView imgView = dialog.findViewById(R.id.imageView_1);
+        final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar_cyclic);
+
+        GlideDrawableImageViewTarget imgViewTarget = new GlideDrawableImageViewTarget(imgView);
+        Glide.with(this)
+            .load("https://imgur.com/download/fKZHIs6")
+            .listener(new RequestListener<Drawable>() {
+                @Override
+                public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                    progressBar.setVisibility(View.GONE);
+                    return false;
+                }
+
+                @Override
+                public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                    progressBar.setVisibility(View.GONE);
+                    return false;
+                }
+            })
+            .error(R.drawable.glide_error)
+            .into(imgViewTarget);
+
+        imgView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(HiddenAnimActivity.this);
-                builder.setPositiveButton(R.string.hidden_anim_more_nice,
-                        new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                        }
-                });
-                final AlertDialog dialog = builder.create();
-                LayoutInflater inflater = getLayoutInflater();
-                View dialogLayout = inflater.inflate(R.layout.hidden_img_layout, null);
-                dialog.setView(dialogLayout);
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-                dialog.show();
-
-                dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            	hiddenAnimActivityDialog.showDialog();
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
                     @Override
-                    public void onShow(DialogInterface d) {
-                        ImageView image = (ImageView) dialog.findViewById(R.id.hidden_img);
-                        Bitmap icon = BitmapFactory.decodeResource(getResources(),
-                                R.drawable.aicp_cool);
-                        float imageWidthInPX = (float)image.getWidth();
-
-                        LinearLayout.LayoutParams layoutParams =
-                                new LinearLayout.LayoutParams(Math.round(imageWidthInPX),
-                                Math.round(imageWidthInPX * (float)icon.getHeight() /
-                                (float)icon.getWidth()));
-                        image.setLayoutParams(layoutParams);
+                    public void run() {
+                        hiddenAnimActivityDialog.hideDialog();
                     }
-                });
+                }, 7000);
+
                 return true;
             }
         });
