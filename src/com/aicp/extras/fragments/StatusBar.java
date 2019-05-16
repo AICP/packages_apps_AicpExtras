@@ -36,7 +36,9 @@ import android.widget.EditText;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
+import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingListPreference;
+import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
 import com.android.internal.util.aicp.AicpUtils;
 
@@ -48,11 +50,15 @@ public class StatusBar extends BaseSettingsFragment implements
     private static final String KEY_CARRIER_LABEL = "status_bar_show_carrier";
     private static final String KEY_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final String KEY_HIDE_NOTCH = "statusbar_hide_notch";
+    private static final String KEY_ESTIMATE_IN_QQS = "show_battery_estimate_qqs";
+    private static final String KEY_BATTERY_PERCENTAGE = "status_bar_show_battery_percent";
 
     private ListPreference mSmartPulldown;
     private ListPreference mQuickPulldown;
     private Preference mCustomCarrierLabel;
+    private SystemSettingIntListPreference mShowBatteryPercentage;
     private SystemSettingListPreference mShowCarrierLabel;
+    private SystemSettingSwitchPreference mShowBatteryInQQS;
 
     private String mCustomCarrierLabelText;
 
@@ -100,6 +106,16 @@ public class StatusBar extends BaseSettingsFragment implements
         mCustomCarrierLabel = (Preference) findPreference(KEY_CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
 
+        // Battery Percentage
+        mShowBatteryPercentage = (SystemSettingIntListPreference) findPreference(KEY_BATTERY_PERCENTAGE);
+        int showBatteryPercentage = Settings.System.getIntForUser(resolver,
+                Settings.System.SHOW_BATTERY_PERCENT, 0, UserHandle.USER_CURRENT);
+        mShowBatteryPercentage.setOnPreferenceChangeListener(this);
+
+        // Battery estimate in Quick QS
+        mShowBatteryInQQS = (SystemSettingSwitchPreference) findPreference(KEY_ESTIMATE_IN_QQS);
+        updateShowBatteryInQQS(showBatteryPercentage);
+
         final String displayCutout = getResources().getString(
                 com.android.internal.R.string.config_mainBuiltInDisplayCutout);
         if(displayCutout.isEmpty()) {
@@ -120,6 +136,10 @@ public class StatusBar extends BaseSettingsFragment implements
             Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     quickPulldownValue, UserHandle.USER_CURRENT);
             updateQuickPulldownSummary(quickPulldownValue);
+            return true;
+        } else if (preference == mShowBatteryPercentage) {
+            int showBatteryPercentage = Integer.valueOf((String) newValue);
+            updateShowBatteryInQQS(showBatteryPercentage);
             return true;
         } else if (preference == mShowCarrierLabel) {
             int value = Integer.parseInt((String) newValue);
@@ -219,6 +239,20 @@ public class StatusBar extends BaseSettingsFragment implements
             mCustomCarrierLabel.setSummary(R.string.custom_carrier_label_notset);
         } else {
             mCustomCarrierLabel.setSummary(mCustomCarrierLabelText);
+        }
+    }
+
+    private void updateShowBatteryInQQS(int value) {
+        switch (value) {
+            case 1: {
+                mShowBatteryInQQS.setEnabled(true);
+                break;
+            }
+            case 0:
+            case 2: {
+                mShowBatteryInQQS.setEnabled(false);
+                break;
+            }
         }
     }
 }
