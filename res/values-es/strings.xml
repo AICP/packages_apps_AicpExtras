@@ -33,6 +33,7 @@
     <string name="battery_style_dotted_circle">Circular punteado</string>
     <string name="battery_style_big_circle">Círculo grande</string>
     <string name="battery_style_big_dotted_circle">Círculo grande punteado</string>
+    <string name="status_bar_battery_style_q">Estilo Android Q</string>
     <string name="battery_style_text">Texto</string>
     <string name="battery_percent_title">Porcentaje de batería</string>
     <string name="battery_percent_enabled">Habilitada</string>
@@ -82,6 +83,13 @@
     <string name="smart_pulldown_summary">Abrir ajustes rápidos cuando hay %1$s</string>
     <string name="smart_pulldown_none_summary">Abrir ajustes rápidos cuando no hay notificaciones</string>
     <string name="smart_pulldown_off_summary">está deshabilitado</string>
+    <string name="quick_pulldown_title">Despliegue rápido</string>
+    <string name="quick_pulldown_summary">%1$s borde de la barra de estado despliega los ajustes rápidos</string>
+    <string name="quick_pulldown_summary_always">Mostrar siempre los ajustes rápidos al desplegar la barra de estado</string>
+    <string name="quick_pulldown_off">Desactivado</string>
+    <string name="quick_pulldown_left">Izquierda</string>
+    <string name="quick_pulldown_right">Derecha</string>
+    <string name="quick_pulldown_always">Siempre</string>
     <string name="status_bar_double_tap_to_sleep_title">Tocar para apagar pantalla</string>
     <string name="status_bar_double_tap_to_sleep_summary">Doble toque en la barra de estado para apagar la pantalla</string>
     <string name="status_bar_clock_title">Reloj</string>
@@ -119,6 +127,7 @@
     <string name="menu_save">Guardar</string>
     <string name="status_bar_gestures_category_title">Gestos</string>
     <string name="status_bar_icons_category_title">Iconos</string>
+    <string name="status_bar_battery_category_title">Opciones de batería</string>
     <string name="status_bar_others_category_title">Otros</string>
     <string name="status_bar_logo_category_title">Logo</string>
     <string name="status_bar_logo_title">Logo</string>
@@ -1014,4 +1023,6 @@
     <string name="aspect_ratio_apps_info">Las aplicaciones deben reiniciarse después de los cambios</string>
     <string name="custom_bars_settings_title">Escalado de aplicaciones</string>
     <string name="action_save">Guardar</string>
+    <string name="battery_estimates_title">Estimaciones de batería en Ajustes rápidos</string>
+    <string name="battery_estimates_summary">Mostrar la duración estimada de la batería en el panel de Ajustes Rápidos</string>
 </resources>

@@ -33,6 +33,7 @@
     <string name="battery_style_dotted_circle">Noktalı daire</string>
     <string name="battery_style_big_circle">Büyük daire</string>
     <string name="battery_style_big_dotted_circle">Büyük noktalı daire</string>
+    <string name="status_bar_battery_style_q">Q stili</string>
     <string name="battery_style_text">Metin</string>
     <string name="battery_percent_title">Pil yüzdesi</string>
     <string name="battery_percent_enabled">Simge dışında</string>
@@ -82,6 +83,13 @@
     <string name="smart_pulldown_summary">Mevcut %1$s bildirimler olduğunda hızlı ayarları açar</string>
     <string name="smart_pulldown_none_summary">Bildirim olmadığında hızlı ayarları açar</string>
     <string name="smart_pulldown_off_summary">kapalı</string>
+    <string name="quick_pulldown_title">Hızlı aşağı çekme</string>
+    <string name="quick_pulldown_summary">Durum çubuğunun %1$s tarafından aşağı çekmek hızlı ayarları açar</string>
+    <string name="quick_pulldown_summary_always">Her zaman durum çubuğunu aşağı çekince hızlı ayarları göster</string>
+    <string name="quick_pulldown_off">Kapalı</string>
+    <string name="quick_pulldown_left">Sol</string>
+    <string name="quick_pulldown_right">Sağ</string>
+    <string name="quick_pulldown_always">Her zaman</string>
     <string name="status_bar_double_tap_to_sleep_title">Çift dokunuşla uyutma</string>
     <string name="status_bar_double_tap_to_sleep_summary">Cihazı uyutmak için durum çubuğuna iki kez hafifçe dokunun</string>
     <string name="status_bar_clock_title">Saat</string>
@@ -89,6 +97,7 @@
     <string name="status_bar_show_clock_title">Saat ve tarihi göster</string>
     <string name="clock_title_enable">Konum</string>
     <string name="status_bar_clock_seconds_title">Saniye göster</string>
+    <string name="status_bar_clock_seconds_summary">Durum çubuğu saat ekranına saniye ekle</string>
     <string name="status_bar_am_pm_title">ÖÖ/ÖS</string>
     <string name="status_bar_am_pm_info">24 saat görünümü etkin</string>
     <string name="am_pm_clock_normal">Normal yazı boyutu</string>
@@ -118,6 +127,7 @@
     <string name="menu_save">Kaydet</string>
     <string name="status_bar_gestures_category_title">Hareketler</string>
     <string name="status_bar_icons_category_title">Simgeler</string>
+    <string name="status_bar_battery_category_title">Pil seçenekleri</string>
     <string name="status_bar_others_category_title">Diğer</string>
     <string name="status_bar_logo_category_title">Logo</string>
     <string name="status_bar_logo_title">Logo</string>
@@ -319,9 +329,16 @@
     <string name="lockscreen_clock_selection_title">Saat stili</string>
     <string name="lockscreen_clock_selection_digital">Varsayılan</string>
     <string name="lockscreen_clock_selection_digital_bold">Dijital (kalın)</string>
+    <string name="lockscreen_clock_selection_digital_accent">Dijital (Vurgu renkli)</string>
+    <string name="lockscreen_clock_selection_digital_accent_min">Dijital (Vurgu renkli - Dakika)</string>
+    <string name="lockscreen_clock_selection_digital_accent_hour">Dijital (Vurgu renkli - Saat)</string>
     <string name="lockscreen_clock_selection_analog">Analog</string>
     <string name="lockscreen_clock_selection_sammy">Sammy</string>
     <string name="lockscreen_clock_selection_sammy_bold">Sammy (kalın)</string>
+    <string name="lockscreen_clock_selection_sammy_accent">Sammy ile vurgu rengi</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_hour">Sammy (kalın) (Vurgu renkli - Saat)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_min">Sammy (kalın) (Vurgu renkli - Dakika)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_alt">Sammy ile vurgu rengi (Alt)</string>
     <string name="global_actions_onthego_title">Yürüme modu</string>
     <string name="global_actions_onthego_summary">Güç menüsüne yürüme modu geçişi ekle</string>
     <string name="global_actions_screenrecord_title">Ekran kaydı</string>
@@ -998,5 +1015,15 @@
     <string name="camera_sleep_on_release_summary">Yarı basma işlemi, tuşa basılı tutulduğu sürece ekran açık kalacaktır</string>
     <string name="camera_launch_title">Kamerayı başlat</string>
     <string name="camera_launch_summary">Uzun basıp bırakma kamerayı başlatır</string>
+    <string name="lockdate_font_size_title">Tarih yazı tipi boyutu</string>
+    <string name="lockclock_font_size_title">Saat yazı tipi boyutu</string>
+    <string name="aspect_ratio_apps_enabled_title">Ölçeklemeyi etkinleştir</string>
+    <string name="aspect_ratio_apps_enabled_summary">Eski uygulamaların tam ekran kullanmasına izin ver</string>
+    <string name="aspect_ratio_apps_list_title">Uygulamaların ölçeklendirme kullanmasına izin verildi</string>
+    <string name="aspect_ratio_category_title">Eski uygulama ölçeklendirmesi</string>
+    <string name="aspect_ratio_apps_info">Değişikliklerden sonra uygulamaların yeniden başlatılması gerekiyor</string>
+    <string name="custom_bars_settings_title">Uygulama ölçeklendirmesi</string>
     <string name="action_save">Kaydet</string>
+    <string name="battery_estimates_title">Tahmini pil ömrü</string>
+    <string name="battery_estimates_summary">Tahmini pil ömrünü hızlı ayarlar panelinde göster</string>
 </resources>

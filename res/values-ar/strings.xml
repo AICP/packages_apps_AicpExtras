@@ -33,6 +33,7 @@
     <string name="battery_style_dotted_circle">دائرة منقطة</string>
     <string name="battery_style_big_circle">دائرة كبيرة</string>
     <string name="battery_style_big_dotted_circle">دائرة منقطة كبيرة</string>
+    <string name="status_bar_battery_style_q">نمط Q</string>
     <string name="battery_style_text">النص</string>
     <string name="battery_percent_title">النسبة المئوية للبطارية</string>
     <string name="battery_percent_enabled">مفعل</string>
@@ -82,6 +83,13 @@
     <string name="smart_pulldown_summary">إفتح الإعدادات السريعة عندما يكون هنالك %1$s</string>
     <string name="smart_pulldown_none_summary">فتح الاعدادات السريعة عندما لا يكون هناك اشعارات</string>
     <string name="smart_pulldown_off_summary">مطفي</string>
+    <string name="quick_pulldown_title">السحب السريع لأسفل</string>
+    <string name="quick_pulldown_summary">سحب الحافّة %1$s لشريط الحالة إلى أسفل يُظهر لوحة الإعدادات السّريعة</string>
+    <string name="quick_pulldown_summary_always">عرض الإعدادات السريعة دائماً على شريط الحالة المنسدل</string>
+    <string name="quick_pulldown_off">إيقاف</string>
+    <string name="quick_pulldown_left">يسار</string>
+    <string name="quick_pulldown_right">يمين</string>
+    <string name="quick_pulldown_always">دائماً</string>
     <string name="status_bar_double_tap_to_sleep_title">اضغط للنوم</string>
     <string name="status_bar_double_tap_to_sleep_summary">ضغطتين على شريط الحالة لإطفاء الشاشة</string>
     <string name="status_bar_clock_title">الساعة</string>
@@ -89,6 +97,7 @@
     <string name="status_bar_show_clock_title">إظهار الساعة والتاريخ</string>
     <string name="clock_title_enable">المحاذاة</string>
     <string name="status_bar_clock_seconds_title">ثواني الساعة</string>
+    <string name="status_bar_clock_seconds_summary">عرض الثواني في ساعة شريط الحالة</string>
     <string name="status_bar_am_pm_title">صباحاً/مساءاً</string>
     <string name="status_bar_am_pm_info">تم تمكين تنسيق 24 ساعة</string>
     <string name="am_pm_clock_normal">حجم الخط الطبيعي</string>
@@ -118,6 +127,7 @@
     <string name="menu_save">حفظ</string>
     <string name="status_bar_gestures_category_title">الإيماءات</string>
     <string name="status_bar_icons_category_title">الأيقونات</string>
+    <string name="status_bar_battery_category_title">خيارات البطارية</string>
     <string name="status_bar_others_category_title">أخرى</string>
     <string name="status_bar_logo_category_title">الشعار</string>
     <string name="status_bar_logo_title">الشعار</string>
@@ -319,9 +329,16 @@
     <string name="lockscreen_clock_selection_title">نمط الساعة</string>
     <string name="lockscreen_clock_selection_digital">الافتراضي</string>
     <string name="lockscreen_clock_selection_digital_bold">رقمي (عريض)</string>
+    <string name="lockscreen_clock_selection_digital_accent">رقمية (مميز)</string>
+    <string name="lockscreen_clock_selection_digital_accent_min">رقمية (مميزة - دقائق)</string>
+    <string name="lockscreen_clock_selection_digital_accent_hour">رقمية (مميزة - ساعة)</string>
     <string name="lockscreen_clock_selection_analog">تناظري</string>
     <string name="lockscreen_clock_selection_sammy">سامي</string>
     <string name="lockscreen_clock_selection_sammy_bold">سامي (عريض)</string>
+    <string name="lockscreen_clock_selection_sammy_accent">سامي مع اللكنة</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_hour">سامي (غامق) (مميز - ساعة)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_min">سامي (غامق) (مميز - دقائق)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_alt">سامي مع اللكنة (بديل)</string>
     <string name="global_actions_onthego_title">وضع المشي</string>
     <string name="global_actions_onthego_summary">إضافة مفتاح وضع المشي إلى قائمة التشغيل</string>
     <string name="global_actions_screenrecord_title">تسجيل الشاشة</string>
@@ -996,5 +1013,15 @@
     <string name="camera_sleep_on_release_summary">ضغطة بسيطة ستبقي الشاشة فعالة فقط عندما يكون المفتاح مضغوط عليه</string>
     <string name="camera_launch_title">تشغيل الكاميرا</string>
     <string name="camera_launch_summary">بضغطة طويلة على الزر ثم تحريره سيتم تشغيل الكاميرا</string>
+    <string name="lockdate_font_size_title">حجم خط التاريخ</string>
+    <string name="lockclock_font_size_title">حجم خط الساعة</string>
+    <string name="aspect_ratio_apps_enabled_title">تمكين التحجيم</string>
+    <string name="aspect_ratio_apps_enabled_summary">السماح للتطبيقات القديمة باستخدام ملء الشاشة</string>
+    <string name="aspect_ratio_apps_list_title">التطبيقات المسموح لها باستخدام التحجيم</string>
+    <string name="aspect_ratio_category_title">تحجيم التطبيق القديم</string>
+    <string name="aspect_ratio_apps_info">تحتاج التطبيقات إلى إعادة التشغيل بعد التغييرات</string>
+    <string name="custom_bars_settings_title">تحجيم التطبيق</string>
     <string name="action_save">حفظ</string>
+    <string name="battery_estimates_title">تقديرات البطارية في الإعدادات السريعة</string>
+    <string name="battery_estimates_summary">عرض عمر البطارية التقديري في لوحة الإعدادات السريعة</string>
 </resources>

@@ -33,6 +33,7 @@
     <string name="battery_style_dotted_circle">Tečkovaný kruh</string>
     <string name="battery_style_big_circle">Velký kruh</string>
     <string name="battery_style_big_dotted_circle">Velký tečkovaný kruh</string>
+    <string name="status_bar_battery_style_q">Styl Q</string>
     <string name="battery_style_text">Text</string>
     <string name="battery_percent_title">Procenta baterie</string>
     <string name="battery_percent_enabled">Povoleno</string>
@@ -82,6 +83,13 @@
     <string name="smart_pulldown_summary">Otevře nabídku rychlého nastavení, kde je přítomno %1$s</string>
     <string name="smart_pulldown_none_summary">Otevře Rychlé Nastavení pokud nejsou přítomny žádné oznámení</string>
     <string name="smart_pulldown_off_summary">je vypnuto</string>
+    <string name="quick_pulldown_title">Rychlé vysunutí nabídky</string>
+    <string name="quick_pulldown_summary">Tažením dolů z %1$s strany stavové lišty se vysune rychlé nastavení</string>
+    <string name="quick_pulldown_summary_always">Vždy zobrazovat rychlé nastavení na stavové liště</string>
+    <string name="quick_pulldown_off">Vypnuto</string>
+    <string name="quick_pulldown_left">Vlevo</string>
+    <string name="quick_pulldown_right">Vpravo</string>
+    <string name="quick_pulldown_always">Vždy</string>
     <string name="status_bar_double_tap_to_sleep_title">Klepnutím na obrazovku uzamknout zařízení</string>
     <string name="status_bar_double_tap_to_sleep_summary">Dvojitým poklepáním na stavovou lištu vypnout obrazovku</string>
     <string name="status_bar_clock_title">Hodiny</string>
@@ -89,6 +97,7 @@
     <string name="status_bar_show_clock_title">Zobrazit hodiny &amp; datum</string>
     <string name="clock_title_enable">Zarovnání</string>
     <string name="status_bar_clock_seconds_title">Sekundy hodin</string>
+    <string name="status_bar_clock_seconds_summary">Zahrnout sekundy do zobrazení hodin ve stavové liště</string>
     <string name="status_bar_am_pm_title">DOP/ODP</string>
     <string name="status_bar_am_pm_info">24-hodinový formát povolen</string>
     <string name="am_pm_clock_normal">Normální velikost písma</string>
@@ -118,6 +127,7 @@
     <string name="menu_save">Uložit</string>
     <string name="status_bar_gestures_category_title">Gesta</string>
     <string name="status_bar_icons_category_title">Ikony</string>
+    <string name="status_bar_battery_category_title">Možnosti baterie</string>
     <string name="status_bar_others_category_title">Ostatní</string>
     <string name="status_bar_logo_category_title">Logo</string>
     <string name="status_bar_logo_title">Logo</string>
@@ -319,9 +329,16 @@
     <string name="lockscreen_clock_selection_title">Styl hodin</string>
     <string name="lockscreen_clock_selection_digital">Výchozí</string>
     <string name="lockscreen_clock_selection_digital_bold">Digitální (tučné)</string>
+    <string name="lockscreen_clock_selection_digital_accent">Digitální (zvýraznění)</string>
+    <string name="lockscreen_clock_selection_digital_accent_min">Digitální (zvýraznění - minuty)</string>
+    <string name="lockscreen_clock_selection_digital_accent_hour">Digitální (zvýraznění - hodiny)</string>
     <string name="lockscreen_clock_selection_analog">Analogové</string>
     <string name="lockscreen_clock_selection_sammy">Sammy</string>
     <string name="lockscreen_clock_selection_sammy_bold">Sammy (tučné)</string>
+    <string name="lockscreen_clock_selection_sammy_accent">Sammy se zvýrazněním</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_hour">Sammy (tučné) (zvýraznění - hodiny)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_min">Sammy (tučné) (zvýraznění - minuty)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_alt">Sammy se zvýrazněním (alt)</string>
     <string name="global_actions_onthego_title">On-The-Go</string>
     <string name="global_actions_onthego_summary">Přidat přepínač On-The-Go do menu napájení</string>
     <string name="global_actions_screenrecord_title">Videozáznam obrazovky</string>
@@ -996,5 +1013,15 @@
     <string name="camera_sleep_on_release_summary">Polovičním stiskem tlačítka bude rozsvícena obrazovka pouze po dobu, po kterou je tlačítko stisknuté</string>
     <string name="camera_launch_title">Spustit fotoaparát</string>
     <string name="camera_launch_summary">Dlouhým stiskem a uvolněním spustit fotoaparát</string>
+    <string name="lockdate_font_size_title">Velikost písma data</string>
+    <string name="lockclock_font_size_title">Velikost písma hodin</string>
+    <string name="aspect_ratio_apps_enabled_title">Povolit změnu měřítka</string>
+    <string name="aspect_ratio_apps_enabled_summary">Povolit starším aplikacím používat celou obrazovku</string>
+    <string name="aspect_ratio_apps_list_title">Aplikace, které mohou používat změnu měřítka</string>
+    <string name="aspect_ratio_category_title">Změna měřítka starších aplikací</string>
+    <string name="aspect_ratio_apps_info">Po změnách je třeba aplikace restartovat</string>
+    <string name="custom_bars_settings_title">Změna měřítka aplikací</string>
     <string name="action_save">Uložit</string>
+    <string name="battery_estimates_title">Odhady baterie v QS</string>
+    <string name="battery_estimates_summary">Zobrazit odhadovanou výdrž baterie v panelu QS</string>
 </resources>

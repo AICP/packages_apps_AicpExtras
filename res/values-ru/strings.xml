@@ -33,6 +33,7 @@
     <string name="battery_style_dotted_circle">Пунктирный круг</string>
     <string name="battery_style_big_circle">Большой круг</string>
     <string name="battery_style_big_dotted_circle">Большой пунктирный круг</string>
+    <string name="status_bar_battery_style_q">Стиль Android Q</string>
     <string name="battery_style_text">Текст</string>
     <string name="battery_percent_title">Процент заряда</string>
     <string name="battery_percent_enabled">Включен</string>
@@ -82,6 +83,13 @@
     <string name="smart_pulldown_summary">Открыть панель быстрых настроек, когда там %1$s уведомлений/я</string>
     <string name="smart_pulldown_none_summary">Открывать панель быстрых настроек, когда уведомления отсутствуют</string>
     <string name="smart_pulldown_off_summary">выключено</string>
+    <string name="quick_pulldown_title">Быстрый доступ</string>
+    <string name="quick_pulldown_summary">%1$s край строки состояния раскрывает Быстрые настройки</string>
+    <string name="quick_pulldown_summary_always">Всегда показывать Быстрые настройки при вытягивании строки состояния</string>
+    <string name="quick_pulldown_off">Выкл.</string>
+    <string name="quick_pulldown_left">Слева</string>
+    <string name="quick_pulldown_right">Справа</string>
+    <string name="quick_pulldown_always">Всегда</string>
     <string name="status_bar_double_tap_to_sleep_title">Коснитесь для сна</string>
     <string name="status_bar_double_tap_to_sleep_summary">Двойное нажатие на строку состояния, чтобы выключить дисплей</string>
     <string name="status_bar_clock_title">Часы</string>
@@ -119,6 +127,7 @@
     <string name="menu_save">Сохранить</string>
     <string name="status_bar_gestures_category_title">Жесты</string>
     <string name="status_bar_icons_category_title">Иконки</string>
+    <string name="status_bar_battery_category_title">Параметры батареи</string>
     <string name="status_bar_others_category_title">Прочее</string>
     <string name="status_bar_logo_category_title">Логотип</string>
     <string name="status_bar_logo_title">Логотип</string>
@@ -445,9 +454,9 @@
     <string name="aicp_walls_title">Обои</string>
     <string name="aicp_walls_summary">Наши AICP обои</string>
     <string name="discord_title">Discord сервер</string>
-    <string name="discord_summary">Посесите на наш Discord сервер</string>
+    <string name="discord_summary">Посетить на наш Discord сервер</string>
     <string name="aicp_gerrit_title">Gerrit</string>
-    <string name="aicp_gerrit_summary">Посетите наш Gerrit, чтобы узнать, над чем мы работаем</string>
+    <string name="aicp_gerrit_summary">Посетить наш Gerrit, чтобы узнать, над чем мы работаем</string>
     <string name="aicp_changelog_title">Список изменений</string>
     <string name="aicp_changelog_summary">Посмотреть последние изменения в AICP</string>
     <string name="aicp_downloads_title">Загрузки</string>
@@ -1013,4 +1022,6 @@
     <string name="aspect_ratio_apps_info">Приложения необходимо перезапустить после изменений</string>
     <string name="custom_bars_settings_title">Масштабирование приложения</string>
     <string name="action_save">Сохранить</string>
+    <string name="battery_estimates_title">Оценка батареи в панели быстрых настроек</string>
+    <string name="battery_estimates_summary">Показывать оценку батареи в панели быстрых настроек</string>
 </resources>
