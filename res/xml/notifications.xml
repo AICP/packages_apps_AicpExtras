@@ -77,5 +77,10 @@
         android:entries="@array/less_notification_sounds_entries"
         android:entryValues="@array/less_notification_sounds_values"
         android:defaultValue="0" />
+    <com.aicp.gear.preferences.SystemSettingSwitchPreference
+        android:key="dialer_accent_enable"
+        android:title="@string/dialer_accent_enable_title"
+        android:summary="@string/dialer_accent_enable_summary"
+        android:defaultValue="false" />
 
 </PreferenceScreen>
