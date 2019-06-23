@@ -22,10 +22,10 @@
     android:title="@string/system_behaviour_title">
 
     <Preference
-        android:key="app_ops"
+        android:key="privacy_guard_manager"
         android:title="@string/app_ops_settings"
         android:summary="@string/app_ops_settings_summary"
-        android:fragment="com.android.settings.applications.AppOpsSummary">
+        android:fragment="com.android.settings.applications.appops.AppOpsDetails">
         <intent android:action="android.settings.APP_OPS_SETTINGS" />
     </Preference>
 
