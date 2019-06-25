@@ -67,13 +67,13 @@
         android:key="wake_when_plugged_or_unplugged"
         android:title="@string/wake_when_plugged_or_unplugged_title"
         android:summary="@string/wake_when_plugged_or_unplugged_summary"
-        android:defaultValue="false"/>
+        android:defaultValue="false" />
 
-    <!-- Charging NAimation -->
+    <!-- Wireless charging animation -->
     <com.aicp.gear.preference.GlobalSettingSwitchPreference
-        android:key="charging_animation"
-        android:title="@string/charging_animation_title"
-        android:summary="@string/charging_animation_summary"
-        android:defaultValue="true" />
+        android:key="wireless_charging_animation"
+        android:title="@string/wireless_charging_animation_title"
+        android:summary="@string/wireless_charging_animation_summary"
+        android:defaultValue="false" />
 
 </PreferenceScreen>
