@@ -27,7 +27,7 @@ public class HiddenAnimActivityDialog {
 
         GlideDrawableImageViewTarget imgViewTarget = new GlideDrawableImageViewTarget(imgView);
         Glide.with(activity)
-                .load("https://i.imgur.com/ZkBoyNA.jpg")
+                .load("https://i.postimg.cc/gJ1wZ7Tm/f44e770c62e391996824b09991bc7be6.jpg")
                 .placeholder(R.drawable.glide_loading)
                 .error(R.drawable.glide_error)
                 .into(imgViewTarget);
