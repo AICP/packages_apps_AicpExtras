@@ -26,7 +26,7 @@ public class HiddenAnimActivity extends BaseActivity {
 
         GlideDrawableImageViewTarget imgViewTarget = new GlideDrawableImageViewTarget(imgView);
         Glide.with(this)
-            .load("https://imgur.com/download/fKZHIs6")
+            .load("https://i.postimg.cc/d3Ksvcfk/c64520bbaf7e0b14aa77ae1d77571196.gif")
             .placeholder(R.drawable.glide_loading)
             .error(R.drawable.glide_error)
             .into(imgViewTarget);
