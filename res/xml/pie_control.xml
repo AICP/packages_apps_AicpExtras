@@ -40,8 +40,8 @@
           android:entryValues="@array/pie_status_mode_values"
           android:defaultValue="0" />
 
-      <com.aicp.gear.preference.SecureSettingListPreference
-          android:key="pa_pie_gravity"
+      <com.aicp.gear.preference.SecureSettingIntListPreference
+          android:key="pie_gravity"
           android:dialogTitle="@string/pa_pie_gravity_title"
           android:title="@string/pa_pie_gravity_title"
           android:entries="@array/entries_pa_pie_gravity"
