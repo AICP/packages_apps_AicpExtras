@@ -51,7 +51,7 @@
     <string name="network_traffic_autohide_threshold_title">Schwellenwert ab dem die Netzwerk-Aktivität nicht mehr angezeigt wird</string>
     <string name="network_traffic_autohide_threshold_kbs">kB/s</string>
     <string name="battery_bar_title">Akkustandbalken</string>
-    <string name="battery_bar_summary">Anwählen, um Optionen für das Akkustandbalken anzuzeigen</string>
+    <string name="battery_bar_summary">Anwählen, um Optionen für den Akkustandbalken anzuzeigen</string>
     <string name="battery_bar_location_title">Standort</string>
     <string name="battery_bar_location_statusbar_top">Über der Statusleiste</string>
     <string name="battery_bar_location_statusbar_bottom">Unter der Statusleiste</string>
@@ -455,8 +455,8 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="aicp_website_summary">Besuche die Website vom AICP</string>
     <string name="aicp_walls_title">Hintergrundbilder</string>
     <string name="aicp_walls_summary">AICP Hintergrundbilder ansehen und herunterladen</string>
-    <string name="discord_title">Discord Server</string>
-    <string name="discord_summary">Besuche unseren Discord Server</string>
+    <string name="discord_title">Discord-Server</string>
+    <string name="discord_summary">Besuche unseren Discord-Server</string>
     <string name="aicp_gerrit_title">Gerrit</string>
     <string name="aicp_gerrit_summary">Besuche unser Review-System online, um zu erfahren, an was wir gerade arbeiten</string>
     <string name="aicp_changelog_title">Änderungsprotokoll</string>
@@ -473,7 +473,7 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="device_maintainer_default">Unbekannt</string>
     <string name="no_root_title">Nicht gerootet</string>
     <string name="no_root_summary">Für mehr Funktionalität bitte das Gerät rooten</string>
-    <string name="aicp_version_title">AICP Version</string>
+    <string name="aicp_version_title">AICP-Version</string>
     <string name="build_date_title">Erstellungsdatum</string>
     <string name="on">An</string>
     <string name="off">Aus</string>
@@ -703,7 +703,7 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="one_handed_mode_title">Ein-Hand-Modus</string>
     <string name="one_handed_mode_summary">Aktiviert die Bedienung mit einer Hand, wenn über die Navigationsleiste gewischt wird</string>
     <string name="smartbar_double_tap_sleep_title">Ruhezustand durch doppeltes Tippen (DT2S)</string>
-    <string name="smartbar_double_tap_sleep_summary">Für Ruhrzustand zweimal auf einen leeren Bereich der Navigationsleiste tippen</string>
+    <string name="smartbar_double_tap_sleep_summary">Für Ruhezustand zweimal auf einen leeren Bereich der Navigationsleiste tippen</string>
     <string name="write_settings_off">Ein-Hand-Modus</string>
     <string name="carrier_options">Anzeigeseite wählen</string>
     <string name="custom_carrier_label_title">Eigene Anbieterbezeichnung</string>
@@ -819,7 +819,7 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="chooser_activity_blacklist_title">Liste ausgeblendeter Apps in der Auswahl</string>
     <string name="chooser_activity_blacklist_pref_title">App hinzufügen</string>
     <string name="chooser_activity_blacklist_pref_summary">Tippen Sie hier, um zur Liste hinzufügen. Zum Entfernen auf eine App in der Liste tippen</string>
-    <string name="headsup_activity_blacklist_title">Blockierliste für Pop-Up Benachrichtigungen</string>
+    <string name="headsup_activity_blacklist_title">Blockierliste für Pop-Up-Benachrichtigungen</string>
     <string name="headsup_activity_blacklist_summary">Apps, denen nicht erlaubt wird, Pop-Up Benachrichtigungen anzuzeigen</string>
     <string name="headsup_activity_blacklist_cat_title">Blockierliste</string>
     <string name="headsup_activity_blacklist_pref_title">App hinzufügen</string>
@@ -898,6 +898,9 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="less_notification_sounds_30s">Alle 30 Sekunden</string>
     <string name="less_notification_sounds_1m">Jede Minute</string>
     <string name="less_notification_sounds_2m">Alle 2 Minuten</string>
+    <string name="less_notification_sounds_5m">Alle 5 Minuten</string>
+    <string name="less_notification_sounds_15m">Alle 15 Minuten</string>
+    <string name="less_notification_sounds_30m">Alle 30 Minuten</string>
     <string name="smart_pixels_title">Smart Pixels</string>
     <string name="smart_pixels_summary">Durch das Abschalten von Bildschirm-Pixeln Energie sparen</string>
     <string name="smart_pixels_enable_title">Smart Pixels aktivieren</string>
@@ -916,7 +919,7 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="battery_light_list_title">Farben</string>
     <string name="battery_light_low_color_title">Niedriger Akkustand</string>
     <string name="battery_light_medium_color_title">Aufladen</string>
-    <string name="battery_light_full_color_title">Aufgeladen (90%)</string>
+    <string name="battery_light_full_color_title">Aufgeladen (90 %)</string>
     <string name="battery_light_really_full_color_title">Aufgeladen (100 %)</string>
     <string name="fast_color_cat_title">Schnelles Laden</string>
     <string name="fast_charging_led_enabled_title">Farbe für schnelles Laden aktivieren</string>
@@ -940,8 +943,8 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="power_menu_category">Ein-/Aus- und Neustartdialoge</string>
     <string name="power_menu_transparency">Deckkraft</string>
     <string name="power_menu_dialog_dim">Hintergrund-Abdunklung</string>
-    <string name="systemui_tuner_title">SystemUI Tuner</string>
-    <string name="systemui_tuner_summary">Experimentelle SystemUI Einstellungen</string>
+    <string name="systemui_tuner_title">SystemUI-Tuner</string>
+    <string name="systemui_tuner_summary">Experimentelle SystemUI-Einstellungen</string>
     <string name="hardware_keys_volume_keys_title">Lautstärketasten</string>
     <string name="hardware_keys_home_key_title">Home-Taste</string>
     <string name="hardware_keys_menu_key_title">Menü-Taste</string>
@@ -1008,8 +1011,8 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="soft_reboot_message">Ein Neustart wird durchgeführt, bitte haben Sie etwas Geduld</string>
     <string name="theming_control_night_mode_title">Nachtmodus steuern</string>
     <string name="theming_control_night_mode_summary">Nachtmodus für Apps basierend auf dem ausgewählten Design festlegen</string>
-    <string name="one_hand_mode_enabled_title">Ein-Hand-Modus</string>
-    <string name="one_hand_mode_enabled_summary">Ein-Hand-Modus aktivieren. Wischen Sie links oder rechts zum Umschalten auf der Standard-Navigationsleiste (AOSP) oder konfigurieren Sie Aktionen zum Umschalten bei Verwendung der SmartBar.</string>
+    <string name="one_hand_mode_enabled_title">Einhandmodus</string>
+    <string name="one_hand_mode_enabled_summary">Einhandmodus aktivieren. Wischen Sie links oder rechts zum Umschalten auf der Standard-Navigationsleiste (AOSP) oder konfigurieren Sie Aktionen zum Umschalten bei Verwendung der SmartBar.</string>
     <string name="hardware_keys_camera_key_title">Kamera-Taste</string>
     <string name="camera_sleep_on_release_title">Bilschirm-Vorschau</string>
     <string name="camera_sleep_on_release_summary">Der Bildschirm bleibt aktiviert, solange die Taste halb gedrückt gehalten wird</string>
@@ -1028,4 +1031,6 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="battery_estimates_summary">Zeigt die geschätzte Akku-Restlaufzeit in den Schnelleinstellungen</string>
     <string name="wireless_charging_animation_title">Animation beim Laden</string>
     <string name="wireless_charging_animation_summary">Animation anzeigen, wenn das Gerät angeschlossen ist</string>
+    <string name="disable_incall_home_title">Beim Klingeln deaktivieren</string>
+    <string name="disable_incall_home_summary">Start-Taste beim Klingeln deaktivieren</string>
 </resources>
