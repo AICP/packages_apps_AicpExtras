@@ -250,6 +250,7 @@ public class StatusBar extends BaseSettingsFragment implements
             }
             case 0:
             case 2: {
+                mShowBatteryInQQS.setChecked(false);
                 mShowBatteryInQQS.setEnabled(false);
                 break;
             }
