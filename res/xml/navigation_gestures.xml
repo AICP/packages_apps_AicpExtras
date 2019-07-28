@@ -30,6 +30,16 @@
         aicpextras:unitsRight="@string/unit_px" />
 
     <com.aicp.gear.preference.SeekBarPreferenceCham
+        android:key="gesture_swipe_start"
+        android:title="@string/gesture_swipe_start_title"
+        android:summary="@string/gesture_swipe_start_summary"
+        android:max="50"
+        android:min="20"
+        android:persistent="false"
+        android:defaultValue="@*android:integer/config_navgestureswipestart"
+        aicpextras:unitsRight="@string/unit_px" />
+
+    <com.aicp.gear.preference.SeekBarPreferenceCham
         android:key="gesture_swipe_timeout"
         android:title="@string/gesture_action_timeout_title"
         android:summary="@string/gesture_action_timeout_summary"
