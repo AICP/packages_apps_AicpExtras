@@ -14,12 +14,10 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;

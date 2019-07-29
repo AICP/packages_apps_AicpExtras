@@ -34,10 +34,8 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.aicp.extras.R;
 import com.android.settingslib.CustomDialogPreference;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -64,17 +62,17 @@ public class AppMultiSelectListPreference extends CustomDialogPreference {
 
         final Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
         mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
-        List<ResolveInfo> installedAppsInfo = getContext().getPackageManager().queryIntentActivities(
-                mainIntent, 0);
+        List<ResolveInfo> installedAppsInfo =
+                getContext().getPackageManager().queryIntentActivities(mainIntent, 0);
 
         for (ResolveInfo info : installedAppsInfo) {
-            ComponentName componentName = new ComponentName(
-                    info.activityInfo.applicationInfo.packageName,
-                    info.activityInfo.name);
+            ComponentName componentName =
+                    new ComponentName(
+                            info.activityInfo.applicationInfo.packageName, info.activityInfo.name);
 
             try {
-                final PackageItem item = new PackageItem(
-                        info.activityInfo.loadLabel(mPm), 0, componentName);
+                final PackageItem item =
+                        new PackageItem(info.activityInfo.loadLabel(mPm), 0, componentName);
                 mPackageInfoList.add(item);
             } catch (Exception e) {
                 if (DEBUG) Log.e(TAG, "Load installed apps", e);
@@ -102,22 +100,24 @@ public class AppMultiSelectListPreference extends CustomDialogPreference {
         mAdapter = new AppListAdapter(getContext());
         final ListView listView = (ListView) view.findViewById(R.id.app_list);
         listView.setAdapter(mAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                final AppViewHolder holder = (AppViewHolder) view.getTag();
-                final boolean isChecked = !holder.checkBox.isChecked();
+        listView.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(
+                            AdapterView<?> parent, View view, int position, long id) {
+                        final AppViewHolder holder = (AppViewHolder) view.getTag();
+                        final boolean isChecked = !holder.checkBox.isChecked();
 
-                holder.checkBox.setChecked(isChecked);
-                PackageItem info = mAdapter.getItem(position);
+                        holder.checkBox.setChecked(isChecked);
+                        PackageItem info = mAdapter.getItem(position);
 
-                if (isChecked) {
-                    mValues.add(info.mValue);
-                } else {
-                    mValues.remove(info.mValue);
-                }
-            }
-        });
+                        if (isChecked) {
+                            mValues.add(info.mValue);
+                        } else {
+                            mValues.remove(info.mValue);
+                        }
+                    }
+                });
     }
 
     @Override
@@ -150,7 +150,9 @@ public class AppMultiSelectListPreference extends CustomDialogPreference {
 
         @Override
         public int compareTo(PackageItem another) {
-            return mTitle.toString().toUpperCase().compareTo(another.mTitle.toString().toUpperCase());
+            return mTitle.toString()
+                    .toUpperCase()
+                    .compareTo(another.mTitle.toString().toUpperCase());
         }
 
         @Override

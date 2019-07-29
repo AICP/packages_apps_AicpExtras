@@ -25,7 +25,6 @@ import android.support.v7.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Switch;
-
 import com.aicp.extras.R;
 
 /**
@@ -50,8 +49,8 @@ public class MasterSwitchPreference extends TwoTargetPreference {
     private View mMainView;
     private boolean mPlainSwitch = false;
 
-    public MasterSwitchPreference(Context context, AttributeSet attrs,
-                                  int defStyleAttr, int defStyleRes) {
+    public MasterSwitchPreference(
+            Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs);
     }
@@ -73,16 +72,17 @@ public class MasterSwitchPreference extends TwoTargetPreference {
 
     private void init(Context context, AttributeSet attrs) {
         mContext = context;
-        final TypedArray a = context.obtainStyledAttributes(
-                attrs, R.styleable.MasterSwitchPreference);
-        mThereCanBeOnlyOneGroupId = a.getInt(
-                R.styleable.MasterSwitchPreference_thereCanBeOnlyOneGroupId,
-                mThereCanBeOnlyOneGroupId);
-        mThereShouldBeOne = a.getBoolean(R.styleable.MasterSwitchPreference_thereShouldBeOneSwitch,
-                mThereShouldBeOne);
-        setPlainSwitch(
-                a.getBoolean(R.styleable.MasterSwitchPreference_plainSwitch,
-                    mPlainSwitch));
+        final TypedArray a =
+                context.obtainStyledAttributes(attrs, R.styleable.MasterSwitchPreference);
+        mThereCanBeOnlyOneGroupId =
+                a.getInt(
+                        R.styleable.MasterSwitchPreference_thereCanBeOnlyOneGroupId,
+                        mThereCanBeOnlyOneGroupId);
+        mThereShouldBeOne =
+                a.getBoolean(
+                        R.styleable.MasterSwitchPreference_thereShouldBeOneSwitch,
+                        mThereShouldBeOne);
+        setPlainSwitch(a.getBoolean(R.styleable.MasterSwitchPreference_plainSwitch, mPlainSwitch));
         a.recycle();
     }
 
@@ -91,48 +91,50 @@ public class MasterSwitchPreference extends TwoTargetPreference {
         return R.layout.preference_widget_master_switch;
     }
 
-    private View.OnClickListener mClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mSwitch != null && !mSwitch.isEnabled()) {
-                    return;
-                }
-                if (!mChecked) {
-                    mDependencyHandler.onEnablePref(mThereCanBeOnlyOneGroupId, getKey());
-                } else if (mDependencyHandler != null && mThereShouldBeOne &&
-                        !mDependencyHandler.isAnotherEnabled(
-                                mThereCanBeOnlyOneGroupId, getKey())) {
-                    // It might not be safe to disable, so ask the user to make sure
-                    mDependencyHandler.showConfirmDisableDialog(mContext,
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    // Continue with disabling the preference
-                                    setChecked(false);
-                                    if (!callChangeListener(mChecked)) {
-                                        setChecked(!mChecked);
-                                    } else {
-                                        persistBoolean(mChecked);
+    private View.OnClickListener mClickListener =
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mSwitch != null && !mSwitch.isEnabled()) {
+                        return;
+                    }
+                    if (!mChecked) {
+                        mDependencyHandler.onEnablePref(mThereCanBeOnlyOneGroupId, getKey());
+                    } else if (mDependencyHandler != null
+                            && mThereShouldBeOne
+                            && !mDependencyHandler.isAnotherEnabled(
+                                    mThereCanBeOnlyOneGroupId, getKey())) {
+                        // It might not be safe to disable, so ask the user to make sure
+                        mDependencyHandler.showConfirmDisableDialog(
+                                mContext,
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        // Continue with disabling the preference
+                                        setChecked(false);
+                                        if (!callChangeListener(mChecked)) {
+                                            setChecked(!mChecked);
+                                        } else {
+                                            persistBoolean(mChecked);
+                                        }
                                     }
-                                }
-                            },
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    // Only close dialog
-                                }
-                            });
-                    return;
-                }
-                setChecked(!mChecked);
-                if (!callChangeListener(mChecked)) {
+                                },
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        // Only close dialog
+                                    }
+                                });
+                        return;
+                    }
                     setChecked(!mChecked);
-                } else {
-                    persistBoolean(mChecked);
+                    if (!callChangeListener(mChecked)) {
+                        setChecked(!mChecked);
+                    } else {
+                        persistBoolean(mChecked);
+                    }
                 }
-            }
-        };
-
+            };
 
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
@@ -162,7 +164,6 @@ public class MasterSwitchPreference extends TwoTargetPreference {
             mClickListener.onClick(null);
         }
     }
-
 
     public void setDependencyHandler(MasterSwitchPreferenceDependencyHandler dependencyHandler) {
         mDependencyHandler = dependencyHandler;
@@ -218,8 +219,8 @@ public class MasterSwitchPreference extends TwoTargetPreference {
             int sep1 = systemPropDefaultOverride.indexOf('?');
             int sep2 = systemPropDefaultOverride.indexOf(':');
             String override = SystemProperties.get(systemPropDefaultOverride.substring(0, sep1));
-            String onValue = systemPropDefaultOverride.substring(sep1+1, sep2);
-            String offValue = systemPropDefaultOverride.substring(sep2+1);
+            String onValue = systemPropDefaultOverride.substring(sep1 + 1, sep2);
+            String offValue = systemPropDefaultOverride.substring(sep2 + 1);
             if (onValue.equals(override)) {
                 return true;
             } else if (offValue.equals(override)) {
@@ -231,13 +232,13 @@ public class MasterSwitchPreference extends TwoTargetPreference {
 
     @Override
     protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
-        setChecked(restoreValue ? getPersistedBoolean((Boolean) defaultValue)
-                : (Boolean) defaultValue);
+        setChecked(
+                restoreValue
+                        ? getPersistedBoolean((Boolean) defaultValue)
+                        : (Boolean) defaultValue);
     }
 
-    /**
-     * Call from outside when value might have changed.
-     */
+    /** Call from outside when value might have changed. */
     void reloadValue() {
         boolean newValue = getPersistedBoolean(mChecked);
         if (newValue != mChecked) {
@@ -250,9 +251,7 @@ public class MasterSwitchPreference extends TwoTargetPreference {
         }
     }
 
-    /**
-     * Get default value for external use.
-     */
+    /** Get default value for external use. */
     public boolean getDefaultValue() {
         return mDefaultValue;
     }
@@ -262,9 +261,10 @@ public class MasterSwitchPreference extends TwoTargetPreference {
         if (mTwoTargetDivider != null) {
             mTwoTargetDivider.setVisibility(plainSwitch ? View.GONE : View.VISIBLE);
         }
-        int[] attrs = new int[] {
-            android.R.attr.selectableItemBackground,
-        };
+        int[] attrs =
+                new int[] {
+                    android.R.attr.selectableItemBackground,
+                };
         TypedArray ta = mContext.getTheme().obtainStyledAttributes(attrs);
         int selectableItemBackground = ta.getResourceId(0, 0);
         ta.recycle();

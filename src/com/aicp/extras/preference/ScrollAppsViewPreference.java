@@ -29,9 +29,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
 import com.aicp.extras.R;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -44,7 +42,8 @@ public class ScrollAppsViewPreference extends Preference {
     private PackageManager mPm;
     private LayoutInflater mInflater;
 
-    public ScrollAppsViewPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ScrollAppsViewPreference(
+            Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         initPreference(context);
     }

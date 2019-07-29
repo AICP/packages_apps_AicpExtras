@@ -14,10 +14,8 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
@@ -28,22 +26,18 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
 import android.text.Spannable;
 import android.text.TextUtils;
 import android.widget.EditText;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-
 import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingListPreference;
 import com.aicp.gear.preference.SystemSettingSwitchPreference;
-
 import com.android.internal.util.aicp.AicpUtils;
 
-public class StatusBar extends BaseSettingsFragment implements
-        Preference.OnPreferenceChangeListener {
+public class StatusBar extends BaseSettingsFragment
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String SMART_PULLDOWN = "qs_smart_pulldown";
     private static final String QUICK_PULLDOWN = "quick_pulldown";
@@ -73,32 +67,41 @@ public class StatusBar extends BaseSettingsFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
 
         mSmartPulldown = (ListPreference) findPreference(SMART_PULLDOWN);
-        int smartPulldown = Settings.System.getInt(resolver,
-                Settings.System.QS_SMART_PULLDOWN, 0);
+        int smartPulldown = Settings.System.getInt(resolver, Settings.System.QS_SMART_PULLDOWN, 0);
         updateSmartPulldownSummary(smartPulldown);
         mSmartPulldown.setOnPreferenceChangeListener(this);
 
         // Quick Pulldown
         mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
         mQuickPulldown.setOnPreferenceChangeListener(this);
-        int quickPulldownValue = Settings.System.getIntForUser(resolver,
-                Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 0, UserHandle.USER_CURRENT);
+        int quickPulldownValue =
+                Settings.System.getIntForUser(
+                        resolver,
+                        Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
+                        0,
+                        UserHandle.USER_CURRENT);
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         updateQuickPulldownSummary(quickPulldownValue);
 
         mShowCarrierLabel = (SystemSettingListPreference) findPreference(KEY_CARRIER_LABEL);
-        int showCarrierLabel = Settings.System.getInt(resolver,
-        Settings.System.STATUS_BAR_SHOW_CARRIER, 1);
-        CharSequence[] NonNotchEntries = { getResources().getString(R.string.show_carrier_disabled),
-                getResources().getString(R.string.show_carrier_keyguard),
-                getResources().getString(R.string.show_carrier_statusbar), getResources().getString(
-                        R.string.show_carrier_enabled) };
-        CharSequence[] NotchEntries = { getResources().getString(R.string.show_carrier_disabled),
-                getResources().getString(R.string.show_carrier_keyguard) };
-        CharSequence[] NonNotchValues = {"0", "1" , "2", "3"};
+        int showCarrierLabel =
+                Settings.System.getInt(resolver, Settings.System.STATUS_BAR_SHOW_CARRIER, 1);
+        CharSequence[] NonNotchEntries = {
+            getResources().getString(R.string.show_carrier_disabled),
+            getResources().getString(R.string.show_carrier_keyguard),
+            getResources().getString(R.string.show_carrier_statusbar),
+            getResources().getString(R.string.show_carrier_enabled)
+        };
+        CharSequence[] NotchEntries = {
+            getResources().getString(R.string.show_carrier_disabled),
+            getResources().getString(R.string.show_carrier_keyguard)
+        };
+        CharSequence[] NonNotchValues = {"0", "1", "2", "3"};
         CharSequence[] NotchValues = {"0", "1"};
-        mShowCarrierLabel.setEntries(AicpUtils.hasNotch(getActivity()) ? NotchEntries : NonNotchEntries);
-        mShowCarrierLabel.setEntryValues(AicpUtils.hasNotch(getActivity()) ? NotchValues : NonNotchValues);
+        mShowCarrierLabel.setEntries(
+                AicpUtils.hasNotch(getActivity()) ? NotchEntries : NonNotchEntries);
+        mShowCarrierLabel.setEntryValues(
+                AicpUtils.hasNotch(getActivity()) ? NotchValues : NonNotchValues);
         mShowCarrierLabel.setValue(String.valueOf(showCarrierLabel));
         mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntry());
         mShowCarrierLabel.setOnPreferenceChangeListener(this);
@@ -107,18 +110,21 @@ public class StatusBar extends BaseSettingsFragment implements
         updateCustomLabelTextSummary();
 
         // Battery Percentage
-        mShowBatteryPercentage = (SystemSettingIntListPreference) findPreference(KEY_BATTERY_PERCENTAGE);
-        int showBatteryPercentage = Settings.System.getIntForUser(resolver,
-                Settings.System.SHOW_BATTERY_PERCENT, 0, UserHandle.USER_CURRENT);
+        mShowBatteryPercentage =
+                (SystemSettingIntListPreference) findPreference(KEY_BATTERY_PERCENTAGE);
+        int showBatteryPercentage =
+                Settings.System.getIntForUser(
+                        resolver, Settings.System.SHOW_BATTERY_PERCENT, 0, UserHandle.USER_CURRENT);
         mShowBatteryPercentage.setOnPreferenceChangeListener(this);
 
         // Battery estimate in Quick QS
         mShowBatteryInQQS = (SystemSettingSwitchPreference) findPreference(KEY_ESTIMATE_IN_QQS);
         updateShowBatteryInQQS(showBatteryPercentage);
 
-        final String displayCutout = getResources().getString(
-                com.android.internal.R.string.config_mainBuiltInDisplayCutout);
-        if(displayCutout.isEmpty()) {
+        final String displayCutout =
+                getResources()
+                        .getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
+        if (displayCutout.isEmpty()) {
             final Preference hideNotchPref = (Preference) findPreference(KEY_HIDE_NOTCH);
             hideNotchPref.getParent().removePreference(hideNotchPref);
         }
@@ -133,8 +139,11 @@ public class StatusBar extends BaseSettingsFragment implements
             return true;
         } else if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) newValue);
-            Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
-                    quickPulldownValue, UserHandle.USER_CURRENT);
+            Settings.System.putIntForUser(
+                    resolver,
+                    Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
+                    quickPulldownValue,
+                    UserHandle.USER_CURRENT);
             updateQuickPulldownSummary(quickPulldownValue);
             return true;
         } else if (preference == mShowBatteryPercentage) {
@@ -160,14 +169,17 @@ public class StatusBar extends BaseSettingsFragment implements
 
             // Set an EditText view to get user input
             final EditText input = new EditText(getActivity());
-            input.setText(TextUtils.isEmpty(mCustomCarrierLabelText) ? "" : mCustomCarrierLabelText);
+            input.setText(
+                    TextUtils.isEmpty(mCustomCarrierLabelText) ? "" : mCustomCarrierLabelText);
             input.setSelection(input.getText().length());
             alert.setView(input);
-            alert.setPositiveButton(getString(android.R.string.ok),
+            alert.setPositiveButton(
+                    getString(android.R.string.ok),
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
                             String value = ((Spannable) input.getText()).toString().trim();
-                            Settings.System.putString(resolver, Settings.System.CUSTOM_CARRIER_LABEL, value);
+                            Settings.System.putString(
+                                    resolver, Settings.System.CUSTOM_CARRIER_LABEL, value);
                             updateCustomLabelTextSummary();
                             Intent i = new Intent();
                             i.setAction(Intent.ACTION_CUSTOM_CARRIER_LABEL_CHANGED);
@@ -206,9 +218,11 @@ public class StatusBar extends BaseSettingsFragment implements
         } else if (value == 3) {
             mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_none_summary));
         } else {
-            String type = res.getString(value == 1
-                    ? R.string.smart_pulldown_dismissable
-                    : R.string.smart_pulldown_ongoing);
+            String type =
+                    res.getString(
+                            value == 1
+                                    ? R.string.smart_pulldown_dismissable
+                                    : R.string.smart_pulldown_ongoing);
             mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_summary, type));
         }
     }
@@ -223,17 +237,19 @@ public class StatusBar extends BaseSettingsFragment implements
             // quick pulldown always
             mQuickPulldown.setSummary(res.getString(R.string.quick_pulldown_summary_always));
         } else {
-            String direction = res.getString(value == 2
-                    ? R.string.quick_pulldown_left
-                    : R.string.quick_pulldown_right);
+            String direction =
+                    res.getString(
+                            value == 2
+                                    ? R.string.quick_pulldown_left
+                                    : R.string.quick_pulldown_right);
             mQuickPulldown.setSummary(res.getString(R.string.quick_pulldown_summary, direction));
         }
     }
 
-
     private void updateCustomLabelTextSummary() {
-        mCustomCarrierLabelText = Settings.System.getString(
-                getActivity().getContentResolver(), Settings.System.CUSTOM_CARRIER_LABEL);
+        mCustomCarrierLabelText =
+                Settings.System.getString(
+                        getActivity().getContentResolver(), Settings.System.CUSTOM_CARRIER_LABEL);
 
         if (TextUtils.isEmpty(mCustomCarrierLabelText)) {
             mCustomCarrierLabel.setSummary(R.string.custom_carrier_label_notset);
@@ -244,16 +260,18 @@ public class StatusBar extends BaseSettingsFragment implements
 
     private void updateShowBatteryInQQS(int value) {
         switch (value) {
-            case 1: {
-                mShowBatteryInQQS.setEnabled(true);
-                break;
-            }
+            case 1:
+                {
+                    mShowBatteryInQQS.setEnabled(true);
+                    break;
+                }
             case 0:
-            case 2: {
-                mShowBatteryInQQS.setChecked(false);
-                mShowBatteryInQQS.setEnabled(false);
-                break;
-            }
+            case 2:
+                {
+                    mShowBatteryInQQS.setChecked(false);
+                    mShowBatteryInQQS.setEnabled(false);
+                    break;
+                }
         }
     }
 }

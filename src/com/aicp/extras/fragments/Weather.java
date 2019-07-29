@@ -27,12 +27,10 @@ import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Weather extends BaseSettingsFragment implements OnPreferenceChangeListener {
 
@@ -54,8 +52,8 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
         super.onCreate(savedInstanceState);
         final ContentResolver resolver = getActivity().getContentResolver();
 
-        String settingsJaws = Settings.System.getString(resolver,
-                Settings.System.OMNIJAWS_WEATHER_ICON_PACK);
+        String settingsJaws =
+                Settings.System.getString(resolver, Settings.System.OMNIJAWS_WEATHER_ICON_PACK);
         if (settingsJaws == null) {
             settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE + "." + DEFAULT_WEATHER_ICON_PREFIX;
         }
@@ -71,8 +69,8 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
         if (valueJawsIndex == -1) {
             // no longer found
             settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE + "." + DEFAULT_WEATHER_ICON_PREFIX;
-            Settings.System.putString(resolver,
-                    Settings.System.OMNIJAWS_WEATHER_ICON_PACK, settingsJaws);
+            Settings.System.putString(
+                    resolver, Settings.System.OMNIJAWS_WEATHER_ICON_PACK, settingsJaws);
             valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
         }
         mWeatherIconPack.setValueIndex(valueJawsIndex >= 0 ? valueJawsIndex : 0);
@@ -83,8 +81,10 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         if (preference == mWeatherIconPack) {
             String value = (String) objValue;
-            Settings.System.putString(getActivity().getContentResolver(),
-                    Settings.System.OMNIJAWS_WEATHER_ICON_PACK, value);
+            Settings.System.putString(
+                    getActivity().getContentResolver(),
+                    Settings.System.OMNIJAWS_WEATHER_ICON_PACK,
+                    value);
             int valueIndex = mWeatherIconPack.findIndexOfValue(value);
             mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[valueIndex]);
         }
@@ -126,15 +126,14 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
     }
 
     private boolean isOmniJawsEnabled() {
-        final Uri SETTINGS_URI
-            = Uri.parse("content://org.omnirom.omnijaws.provider/settings");
+        final Uri SETTINGS_URI = Uri.parse("content://org.omnirom.omnijaws.provider/settings");
 
-        final String[] SETTINGS_PROJECTION = new String[] {
-            "enabled"
-        };
+        final String[] SETTINGS_PROJECTION = new String[] {"enabled"};
 
-        final Cursor c = getActivity().getContentResolver().query(SETTINGS_URI, SETTINGS_PROJECTION,
-                null, null, null);
+        final Cursor c =
+                getActivity()
+                        .getContentResolver()
+                        .query(SETTINGS_URI, SETTINGS_PROJECTION, null, null, null);
         if (c != null) {
             int count = c.getCount();
             if (count == 1) {

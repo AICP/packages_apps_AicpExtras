@@ -19,39 +19,29 @@ package com.aicp.extras.fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.ContentResolver;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
-import android.support.v7.preference.PreferenceScreen;
-import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.RadioButton;
 import android.widget.ListView;
-
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.List;
-
 import com.aicp.extras.BaseSettingsFragment;
+import com.aicp.extras.R;
 import com.aicp.extras.utils.PackageListAdapter;
 import com.aicp.extras.utils.PackageListAdapter.PackageItem;
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.aicp.extras.R;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-public class SlimRecentsBlacklist extends BaseSettingsFragment implements
-        Preference.OnPreferenceClickListener {
+public class SlimRecentsBlacklist extends BaseSettingsFragment
+        implements Preference.OnPreferenceClickListener {
 
     private static final String TAG = "SlimRecentsBlacklist";
 
@@ -80,27 +70,32 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
 
     private void showDialog(int dialogId) {
         switch (dialogId) {
-            case DIALOG_BLACKLIST_APPS: {
-                Dialog dialog;
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                final ListView list = new ListView(getActivity());
-                list.setAdapter(mPackageAdapter);
-                alertDialog.setTitle(R.string.profile_choose_app);
-                alertDialog.setView(list);
-                dialog = alertDialog.create();
-                list.setOnItemClickListener(new OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        // Add empty application definition, the user will be able to edit it later
-                        PackageItem info = (PackageItem) parent.getItemAtPosition(position);
-                        addCustomApplicationPref(info.packageName, mBlacklistPackages);
-                        dialog.cancel();
-                    }
-                });
-                dialog.show();
-                break;
-            }
-         }
+            case DIALOG_BLACKLIST_APPS:
+                {
+                    Dialog dialog;
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                    final ListView list = new ListView(getActivity());
+                    list.setAdapter(mPackageAdapter);
+                    alertDialog.setTitle(R.string.profile_choose_app);
+                    alertDialog.setView(list);
+                    dialog = alertDialog.create();
+                    list.setOnItemClickListener(
+                            new OnItemClickListener() {
+                                @Override
+                                public void onItemClick(
+                                        AdapterView<?> parent, View view, int position, long id) {
+                                    // Add empty application definition, the user will be able to
+                                    // edit it later
+                                    PackageItem info =
+                                            (PackageItem) parent.getItemAtPosition(position);
+                                    addCustomApplicationPref(info.packageName, mBlacklistPackages);
+                                    dialog.cancel();
+                                }
+                            });
+                    dialog.show();
+                    break;
+                }
+        }
     }
 
     @Override
@@ -112,7 +107,7 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
     private void initializeAllPreferences() {
         mPackageManager = getActivity().getPackageManager();
         mPackageAdapter = new PackageListAdapter(getActivity());
-        //mBlacklistPrefList = (PreferenceGroup) findPreference("blacklist_applications");
+        // mBlacklistPrefList = (PreferenceGroup) findPreference("blacklist_applications");
         mBlacklistPrefList = getPreferenceScreen();
         mBlacklistPrefList.setOrderingAsAdded(false);
         mBlacklistPackages = new HashMap<String, Package>();
@@ -125,30 +120,33 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
         if (preference == mAddBlacklistPref) {
             showDialog(DIALOG_BLACKLIST_APPS);
         } else {
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity())
-                        .setTitle(R.string.dialog_delete_title)
-                        .setMessage(R.string.dialog_delete_message)
-                        //.setIconAttribute(android.R.attr.alertDialogIcon)
-                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                removeApplicationPref(preference.getKey(), mBlacklistPackages);
-                            }
-                        })
-                        .setNegativeButton(android.R.string.cancel, null);
+            AlertDialog.Builder builder =
+                    new AlertDialog.Builder(getActivity())
+                            .setTitle(R.string.dialog_delete_title)
+                            .setMessage(R.string.dialog_delete_message)
+                            // .setIconAttribute(android.R.attr.alertDialogIcon)
+                            .setPositiveButton(
+                                    android.R.string.ok,
+                                    new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            removeApplicationPref(
+                                                    preference.getKey(), mBlacklistPackages);
+                                        }
+                                    })
+                            .setNegativeButton(android.R.string.cancel, null);
 
             builder.show();
         }
         return true;
     }
 
-    /**
-     * Application class
-     */
+    /** Application class */
     private static class Package {
         public String name;
         /**
          * Stores all the application values in one call
+         *
          * @param name
          */
         public Package(String name) {
@@ -173,7 +171,6 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
                 return null;
             }
         }
-
     };
 
     private void refreshCustomApplicationPrefs() {
@@ -201,7 +198,7 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
         mBlacklistPrefList.addPreference(mAddBlacklistPref);
     }
 
-     private void addCustomApplicationPref(String packageName, Map<String,Package> map) {
+    private void addCustomApplicationPref(String packageName, Map<String, Package> map) {
         Package pkg = map.get(packageName);
         if (pkg == null) {
             pkg = new Package(packageName);
@@ -213,10 +210,8 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
 
     private Preference createPreferenceFromInfo(Package pkg)
             throws PackageManager.NameNotFoundException {
-        PackageInfo info = mPackageManager.getPackageInfo(pkg.name,
-                PackageManager.GET_META_DATA);
-        Preference pref =
-                new Preference(getActivity());
+        PackageInfo info = mPackageManager.getPackageInfo(pkg.name, PackageManager.GET_META_DATA);
+        Preference pref = new Preference(getActivity());
 
         pref.setKey(pkg.name);
         pref.setTitle(info.applicationInfo.loadLabel(mPackageManager));
@@ -226,7 +221,7 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
         return pref;
     }
 
-    private void removeApplicationPref(String packageName, Map<String,Package> map) {
+    private void removeApplicationPref(String packageName, Map<String, Package> map) {
         if (map.remove(packageName) != null) {
             savePackageList(false, map);
             refreshCustomApplicationPrefs();
@@ -235,8 +230,10 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
 
     private boolean parsePackageList() {
         boolean parsed = false;
-        final String blacklistString = Settings.System.getString(getActivity().getContentResolver(),
-                Settings.System.SLIM_RECENTS_BLACKLIST_VALUES);
+        final String blacklistString =
+                Settings.System.getString(
+                        getActivity().getContentResolver(),
+                        Settings.System.SLIM_RECENTS_BLACKLIST_VALUES);
 
         if (!TextUtils.equals(mBlacklistPackageList, blacklistString)) {
             mBlacklistPackageList = blacklistString;
@@ -248,7 +245,7 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
         return parsed;
     }
 
-    private void parseAndAddToMap(String baseString, Map<String,Package> map) {
+    private void parseAndAddToMap(String baseString, Map<String, Package> map) {
         if (baseString == null) {
             return;
         }
@@ -263,8 +260,7 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
         }
     }
 
-
-    private void savePackageList(boolean preferencesUpdated, Map<String,Package> map) {
+    private void savePackageList(boolean preferencesUpdated, Map<String, Package> map) {
         String setting = Settings.System.SLIM_RECENTS_BLACKLIST_VALUES;
 
         List<String> settings = new ArrayList<String>();
@@ -275,7 +271,6 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
         if (preferencesUpdated) {
             mBlacklistPackageList = value;
         }
-        Settings.System.putString(getActivity().getContentResolver(),
-                setting, value);
+        Settings.System.putString(getActivity().getContentResolver(), setting, value);
     }
 }

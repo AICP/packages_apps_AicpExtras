@@ -14,17 +14,14 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
 import android.content.ContentResolver;
 import android.content.Context;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
 import android.support.v14.preference.SwitchPreference;
-
+import android.support.v7.preference.PreferenceScreen;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
@@ -47,14 +44,16 @@ public class Lockscreen extends BaseSettingsFragment {
         ContentResolver resolver = getActivity().getContentResolver();
 
         try {
-            mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+            mFingerprintManager =
+                    (FingerprintManager)
+                            getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         } catch (Exception e) {
-            //ignore
+            // ignore
         }
         // Fingerprint vibration
         mFingerprintVib = (SwitchPreference) prefSet.findPreference(FP_SUCCESS_VIBRATION);
 
-        if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()){
+        if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()) {
             mFingerprintVib.getParent().removePreference(mFingerprintVib);
         }
     }

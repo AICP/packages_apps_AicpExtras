@@ -16,35 +16,19 @@
 
 package com.aicp.extras.smartnav;
 
-import java.util.ArrayList;
-
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.UserHandle;
-import android.support.v7.preference.ListPreference;
-import android.support.v14.preference.SwitchPreference;
+import android.provider.Settings;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.provider.Settings;
-
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.utils.ActionConstants;
-import com.android.internal.utils.Config;
-import com.android.internal.utils.ActionUtils;
-import com.android.internal.utils.Config.ButtonConfig;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-
-import com.aicp.gear.preference.SecureSettingIntListPreference;
 import com.aicp.extras.preference.SecureSettingMasterSwitchPreference;
+import com.aicp.gear.preference.SecureSettingIntListPreference;
+import com.android.internal.utils.ActionUtils;
 
-public class NavigationBarSettings extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
+public class NavigationBarSettings extends BaseSettingsFragment
+        implements Preference.OnPreferenceChangeListener {
     private static final String KEY_NAVBAR_MODE = "navigation_bar_mode";
     private static final String KEY_DEFAULT_NAVBAR_SETTINGS = "default_settings";
     private static final String KEY_FLING_NAVBAR_SETTINGS = "fling_settings";
@@ -78,8 +62,9 @@ public class NavigationBarSettings extends BaseSettingsFragment implements Prefe
         mSmartbarSettings = (PreferenceScreen) findPreference(KEY_SMARTBAR_SETTINGS);
         mPulseSettings = (SecureSettingMasterSwitchPreference) findPreference(KEY_PULSE_SETTINGS);
 
-        int mode = Settings.Secure.getInt(getContentResolver(), Settings.Secure.NAVIGATION_BAR_MODE,
-                0);
+        int mode =
+                Settings.Secure.getInt(
+                        getContentResolver(), Settings.Secure.NAVIGATION_BAR_MODE, 0);
 
         updateBarModeSettings(mode);
         mNavbarMode.setOnPreferenceChangeListener(this);

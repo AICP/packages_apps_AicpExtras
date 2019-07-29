@@ -1,9 +1,6 @@
 package com.aicp.extras.utils;
 
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.util.Log;
-
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.File;
@@ -11,7 +8,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
 
 public class SuShell {
 
@@ -21,20 +17,18 @@ public class SuShell {
     // set to false for release
     static final boolean DEBUG = false;
 
-    private SuShell() {
-    }
+    private SuShell() {}
 
     public static ArrayList<String> runWithSuCheck(String... commands) throws SuDeniedException {
         String suTestScript = "#!/system/bin/sh\necho ";
         String suTestScriptValid = "AICPSuPermsOk";
 
-        String[] commandsWithCheck = new String[commands.length+1];
+        String[] commandsWithCheck = new String[commands.length + 1];
         commandsWithCheck[0] = suTestScript + suTestScriptValid;
         System.arraycopy(commands, 0, commandsWithCheck, 1, commands.length);
 
         ArrayList<String> output = runWithSu(commandsWithCheck);
-        if (output.size() >= 1
-                && output.get(0).trim().equals(suTestScriptValid)) {
+        if (output.size() >= 1 && output.get(0).trim().equals(suTestScriptValid)) {
             if (DEBUG) {
                 Log.d(TAG, "Superuser command auth confirmed");
             }
@@ -68,10 +62,9 @@ public class SuShell {
         try {
             Process process = Runtime.getRuntime().exec(shell);
 
-            BufferedOutputStream shellInput = new BufferedOutputStream(
-                    process.getOutputStream());
-            BufferedReader shellOutput = new BufferedReader(
-                    new InputStreamReader(process.getInputStream()));
+            BufferedOutputStream shellInput = new BufferedOutputStream(process.getOutputStream());
+            BufferedReader shellOutput =
+                    new BufferedReader(new InputStreamReader(process.getInputStream()));
 
             for (String command : commands) {
                 if (DEBUG) {
@@ -103,8 +96,7 @@ public class SuShell {
         return output;
     }
 
-    public static String getCommandOutput(String command)
-            throws IOException {
+    public static String getCommandOutput(String command) throws IOException {
 
         StringBuilder output = new StringBuilder();
 

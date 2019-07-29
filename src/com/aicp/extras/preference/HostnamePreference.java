@@ -24,7 +24,6 @@ import android.support.v7.preference.EditTextPreference;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
-
 import com.aicp.extras.R;
 
 public class HostnamePreference extends EditTextPreference {
@@ -72,8 +71,7 @@ public class HostnamePreference extends EditTextPreference {
     }
 
     public void persistHostname(String hostname) {
-        Settings.Secure.putString(getContext().getContentResolver(),
-                Settings.Secure.DEVICE_HOSTNAME, hostname);
+        Settings.Secure.putString(
+                getContext().getContentResolver(), Settings.Secure.DEVICE_HOSTNAME, hostname);
     }
-
 }

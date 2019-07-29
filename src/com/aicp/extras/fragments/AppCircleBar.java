@@ -19,13 +19,10 @@ package com.aicp.extras.fragments;
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceClickListener;
-import android.provider.Settings;
-
-import com.aicp.extras.R;
 import com.aicp.extras.BaseSettingsFragment;
+import com.aicp.extras.R;
 
-public class AppCircleBar extends BaseSettingsFragment implements
-        OnPreferenceClickListener {
+public class AppCircleBar extends BaseSettingsFragment implements OnPreferenceClickListener {
     private static final String TAG = "AppCircleSidebar";
 
     @Override
@@ -36,10 +33,10 @@ public class AppCircleBar extends BaseSettingsFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
+
     @Override
     public boolean onPreferenceClick(Preference preference) {
-      return true;
+        return true;
     }
 }

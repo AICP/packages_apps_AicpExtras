@@ -10,10 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import java.util.List;
-
 import com.aicp.extras.R;
+import java.util.List;
 
 class ChangeLogAdapter extends RecyclerView.Adapter<ChangeLogAdapter.ViewHolder> {
 
@@ -41,26 +39,30 @@ class ChangeLogAdapter extends RecyclerView.Adapter<ChangeLogAdapter.ViewHolder>
             commitID.setTextAlignment(View.TEXT_ALIGNMENT_INHERIT);
             commitMessage.setVisibility(View.VISIBLE);
             commitMessage.setText(changelogItem.getCommit_message());
-            commitID.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+            commitID.setTextSize(
+                    TypedValue.COMPLEX_UNIT_PX,
                     getContext().getResources().getDimension(R.dimen.changelog_header_small));
             commitID.setTypeface(Typeface.DEFAULT_BOLD);
 
-            int[] attrs = new int[] {
-                    android.R.attr.textColorPrimary,
-            };
+            int[] attrs =
+                    new int[] {
+                        android.R.attr.textColorPrimary,
+                    };
             TypedArray ta = getContext().getTheme().obtainStyledAttributes(attrs);
             commitID.setTextColor(ta.getColor(0, Color.GRAY));
             ta.recycle();
         } else {
             commitID.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             commitMessage.setVisibility(View.GONE);
-            commitID.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+            commitID.setTextSize(
+                    TypedValue.COMPLEX_UNIT_PX,
                     getContext().getResources().getDimension(R.dimen.changelog_header_big));
             commitID.setTypeface(Typeface.DEFAULT);
 
-            int[] attrs = new int[] {
-                    R.attr.colorAccent,
-            };
+            int[] attrs =
+                    new int[] {
+                        R.attr.colorAccent,
+                    };
             TypedArray ta = getContext().getTheme().obtainStyledAttributes(attrs);
             commitID.setTextColor(ta.getColor(0, Color.GRAY));
             ta.recycle();

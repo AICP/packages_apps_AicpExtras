@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-
-//import com.crashlytics.android.Crashlytics;
-
+import com.aicp.extras.R;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.text.SimpleDateFormat;
@@ -15,10 +13,6 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
 
-//import io.fabric.sdk.android.Fabric;
-
-import com.aicp.extras.R;
-
 public class ChangelogActivity extends BaseChangelogActivity {
 
     private static final String CHANGELOG_PATH = "/system/etc/Changelog.txt";
@@ -26,7 +20,7 @@ public class ChangelogActivity extends BaseChangelogActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Fabric.with(this, new Crashlytics());
+        // Fabric.with(this, new Crashlytics());
         setContentView(R.layout.changelog_activity);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.changelog_name);
@@ -47,7 +41,7 @@ public class ChangelogActivity extends BaseChangelogActivity {
             boolean checknext = false;
             while ((line = reader.readLine()) != null) {
                 if (!line.matches("={20}") && !Objects.equals(line.trim(), "")) {
-                    if (line.matches("     (\\d\\d\\-\\d\\d\\-\\d{4})")) {//it's date
+                    if (line.matches("     (\\d\\d\\-\\d\\d\\-\\d{4})")) { // it's date
                         date = sdf.parse(line.trim());
                         long now = nowDate.getTime();
                         long time = date.getTime();
@@ -91,11 +85,13 @@ public class ChangelogActivity extends BaseChangelogActivity {
                             timeString = line.trim().replaceAll("-", "/");
                         }
                         changeLogArray.add(new ChangelogItem(timeString));
-                    } else if (line.matches("^\\s*(   \\* )\\S*")) {//it's directory
+                    } else if (line.matches("^\\s*(   \\* )\\S*")) { // it's directory
                         if (checknext) {
-                            commits = commits.substring(0, commits.lastIndexOf("\n\n"));//remove lf on end
+                            commits =
+                                    commits.substring(
+                                            0, commits.lastIndexOf("\n\n")); // remove lf on end
                             changeLogArray.add(new ChangelogItem(directory, commits));
-                            commits = ""; //reset commits
+                            commits = ""; // reset commits
                             checknext = false;
                         } else {
                             checknext = true;
@@ -117,6 +113,5 @@ public class ChangelogActivity extends BaseChangelogActivity {
         ChangeLogAdapter adapter = new ChangeLogAdapter(this, changeLogArray);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
     }
 }

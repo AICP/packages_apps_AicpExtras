@@ -32,12 +32,9 @@ import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-//import com.android.internal.statusbar.ThemeAccentUtils;
+import com.aicp.extras.R;
 import com.android.internal.utils.ActionHandler;
 import com.android.internal.utils.Config.ActionConfig;
-import com.aicp.extras.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,10 +51,12 @@ public class CustomActionListAdapter extends BaseAdapter {
     public CustomActionListAdapter(Context context) {
         mContext = context;
         mInflater = LayoutInflater.from(context);
-        mOverlayManager = IOverlayManager.Stub.asInterface(
-                ServiceManager.getService(Context.OVERLAY_SERVICE));
+        mOverlayManager =
+                IOverlayManager.Stub.asInterface(
+                        ServiceManager.getService(Context.OVERLAY_SERVICE));
         mCurrentUserId = ActivityManager.getCurrentUser();
-//        mIsUsingWhiteAccent = ThemeAccentUtils.isUsingWhiteAccent(mOverlayManager, mCurrentUserId);
+        //        mIsUsingWhiteAccent = ThemeAccentUtils.isUsingWhiteAccent(mOverlayManager,
+        // mCurrentUserId);
         reloadActions();
     }
 
@@ -110,16 +109,17 @@ public class CustomActionListAdapter extends BaseAdapter {
             convertView = mInflater.inflate(R.layout.custom_action_item, null, false);
             holder = new ViewHolder();
             holder.title = (TextView) convertView.findViewById(com.android.internal.R.id.title);
-            holder.summary = (TextView) convertView
-                    .findViewById(com.android.internal.R.id.summary);
+            holder.summary = (TextView) convertView.findViewById(com.android.internal.R.id.summary);
             holder.icon = (ImageView) convertView.findViewById(R.id.icon);
-            LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) holder.icon.getLayoutParams();
+            LinearLayout.LayoutParams params =
+                    (LinearLayout.LayoutParams) holder.icon.getLayoutParams();
             params.width = holder.icon.getMaxWidth();
             params.height = holder.icon.getMaxHeight();
             holder.icon.setLayoutParams(params);
             holder.icon.setScaleType(ScaleType.CENTER);
             holder.icon.setCropToPadding(true);
-            holder.icon.setBackgroundResource(mIsUsingWhiteAccent ? R.drawable.fab_white : R.drawable.fab_accent);
+            holder.icon.setBackgroundResource(
+                    mIsUsingWhiteAccent ? R.drawable.fab_white : R.drawable.fab_accent);
             convertView.setTag(holder);
         }
         ActionConfigs config = getItem(position);
@@ -128,7 +128,6 @@ public class CustomActionListAdapter extends BaseAdapter {
         holder.summary.setVisibility(View.GONE);
 
         return convertView;
-
     }
 
     private static class ViewHolder {

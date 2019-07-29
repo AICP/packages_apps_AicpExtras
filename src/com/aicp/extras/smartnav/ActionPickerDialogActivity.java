@@ -19,13 +19,6 @@
 
 package com.aicp.extras.smartnav;
 
-import com.android.internal.utils.ActionHandler;
-import com.android.internal.utils.ActionUtils;
-import com.android.internal.utils.Config.ActionConfig;
-import com.aicp.extras.R;
-import com.aicp.extras.smartnav.CustomActionListAdapter;
-import com.aicp.extras.smartnav.ShortcutPickHelper;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -33,9 +26,13 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import com.aicp.extras.R;
+import com.android.internal.utils.ActionHandler;
+import com.android.internal.utils.ActionUtils;
+import com.android.internal.utils.Config.ActionConfig;
 
-public class ActionPickerDialogActivity extends Activity implements
-        ShortcutPickHelper.OnPickListener {
+public class ActionPickerDialogActivity extends Activity
+        implements ShortcutPickHelper.OnPickListener {
 
     private static final int DIALOG_ROOT = 1;
     private static final int DIALOG_SYSTEM = 2;
@@ -48,10 +45,12 @@ public class ActionPickerDialogActivity extends Activity implements
         super.onCreate(savedInstanceState);
         mPicker = new ShortcutPickHelper(this, this);
         mCustomActionListAdapter = new CustomActionListAdapter(this);
-        mHasDefault = getIntent().getBooleanExtra(ActionUtils.INTENT_EXTRA_ACTION_HAS_DEFAULTS, false);
-        String[] excludedActions = getIntent().getStringArrayExtra(ActionUtils.INTENT_EXTRA_EXCLUDE_ACTIONS);
+        mHasDefault =
+                getIntent().getBooleanExtra(ActionUtils.INTENT_EXTRA_ACTION_HAS_DEFAULTS, false);
+        String[] excludedActions =
+                getIntent().getStringArrayExtra(ActionUtils.INTENT_EXTRA_EXCLUDE_ACTIONS);
         if (excludedActions != null) {
-            for (int i = 0; i < excludedActions.length; i ++) {
+            for (int i = 0; i < excludedActions.length; i++) {
                 mCustomActionListAdapter.removeAction(excludedActions[i]);
             }
         }
@@ -63,63 +62,79 @@ public class ActionPickerDialogActivity extends Activity implements
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         final Dialog dialog;
 
-        final DialogInterface.OnClickListener l = new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int item) {
-                switch (id) {
-                    case DIALOG_ROOT:
-                        onTargetChange(getResources().getStringArray(
-                                mHasDefault ? R.array.action_dialog_values
-                                        : R.array.action_dialog_no_default_values)[item]);
-                        break;
-                    case DIALOG_SYSTEM:
-                        sendResultAndFinish(mCustomActionListAdapter.getItem(item).action.getAction());
-                        finish();
-                        break;
-                    default:
-                        throw new IllegalArgumentException("Invalid dialog type "
-                                + id + " in ActionPicker dialog.");
-                }
-            }
-        };
+        final DialogInterface.OnClickListener l =
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int item) {
+                        switch (id) {
+                            case DIALOG_ROOT:
+                                onTargetChange(
+                                        getResources()
+                                                .getStringArray(
+                                                        mHasDefault
+                                                                ? R.array.action_dialog_values
+                                                                : R.array
+                                                                        .action_dialog_no_default_values)[
+                                                item]);
+                                break;
+                            case DIALOG_SYSTEM:
+                                sendResultAndFinish(
+                                        mCustomActionListAdapter.getItem(item).action.getAction());
+                                finish();
+                                break;
+                            default:
+                                throw new IllegalArgumentException(
+                                        "Invalid dialog type " + id + " in ActionPicker dialog.");
+                        }
+                    }
+                };
 
-        final DialogInterface.OnCancelListener cancel = new DialogInterface.OnCancelListener() {
-            @Override
-            public void onCancel(DialogInterface dialog) {
-                dialog.dismiss();
-                onTargetChange(null);
-            }
-        };
+        final DialogInterface.OnCancelListener cancel =
+                new DialogInterface.OnCancelListener() {
+                    @Override
+                    public void onCancel(DialogInterface dialog) {
+                        dialog.dismiss();
+                        onTargetChange(null);
+                    }
+                };
 
-        final DialogInterface.OnClickListener cancelClickListener = new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int item) {
-                cancel.onCancel(dialog);
-            }
-        };
+        final DialogInterface.OnClickListener cancelClickListener =
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int item) {
+                        cancel.onCancel(dialog);
+                    }
+                };
 
         switch (id) {
             case DIALOG_ROOT:
-                dialog = builder
-                        .setTitle(R.string.choose_action_title)
-                        .setItems(
-                                getResources().getStringArray(
-                                        mHasDefault ? R.array.action_dialog_entries
-                                                : R.array.action_dialog_no_default_entries), l)
-                        .setOnCancelListener(cancel)
-                        .setNegativeButton(getString(android.R.string.cancel), cancelClickListener)
-                        .create();
+                dialog =
+                        builder.setTitle(R.string.choose_action_title)
+                                .setItems(
+                                        getResources()
+                                                .getStringArray(
+                                                        mHasDefault
+                                                                ? R.array.action_dialog_entries
+                                                                : R.array
+                                                                        .action_dialog_no_default_entries),
+                                        l)
+                                .setOnCancelListener(cancel)
+                                .setNegativeButton(
+                                        getString(android.R.string.cancel), cancelClickListener)
+                                .create();
                 break;
             case DIALOG_SYSTEM:
-                dialog = builder.setTitle(getString(R.string.action_entry_custom_action))
-                        .setAdapter(mCustomActionListAdapter, l)
-                        .setOnCancelListener(cancel)
-                        .setNegativeButton(getString(android.R.string.cancel), cancelClickListener)
-                        .create();
+                dialog =
+                        builder.setTitle(getString(R.string.action_entry_custom_action))
+                                .setAdapter(mCustomActionListAdapter, l)
+                                .setOnCancelListener(cancel)
+                                .setNegativeButton(
+                                        getString(android.R.string.cancel), cancelClickListener)
+                                .create();
                 break;
             default:
-                throw new IllegalArgumentException("Invalid dialog type "
-                        + id + " in ActionPicker dialog.");
+                throw new IllegalArgumentException(
+                        "Invalid dialog type " + id + " in ActionPicker dialog.");
         }
         return dialog;
     }

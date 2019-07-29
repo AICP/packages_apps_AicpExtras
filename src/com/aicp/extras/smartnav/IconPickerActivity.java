@@ -18,18 +18,6 @@
 
 package com.aicp.extras.smartnav;
 
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import com.android.internal.utils.ActionHandler;
-import com.android.internal.utils.ActionUtils;
-import com.aicp.extras.R;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -38,23 +26,26 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.os.UserHandle;
-import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
+import com.aicp.extras.R;
+import com.android.internal.utils.ActionHandler;
+import com.android.internal.utils.ActionUtils;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class IconPickerActivity extends Activity implements DialogInterface.OnCancelListener {
     private static final int DIALOG_ICON_PACK = 1;
@@ -76,12 +67,11 @@ public class IconPickerActivity extends Activity implements DialogInterface.OnCa
                 dialog = getIconPackDialog(context);
         }
         return dialog;
-
     }
 
     private Dialog getIconPackDialog(Context context) {
-        final LayoutInflater inflater = (LayoutInflater) context
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        final LayoutInflater inflater =
+                (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final View view = inflater.inflate(R.layout.dialog_iconpack, null);
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         final IconPackageAdapter adapter = new IconPackageAdapter(this);
@@ -89,32 +79,37 @@ public class IconPickerActivity extends Activity implements DialogInterface.OnCa
         final Dialog dialog;
 
         adapter.load();
-        dialog = builder.setTitle(getString(R.string.icon_pack_picker_dialog_title))
-                .setView(view)
-                .setOnCancelListener(this)
-                .setNegativeButton(android.R.string.cancel, new OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        onCancel(dialog);
-                    }
-                })
-                .create();
+        dialog =
+                builder.setTitle(getString(R.string.icon_pack_picker_dialog_title))
+                        .setView(view)
+                        .setOnCancelListener(this)
+                        .setNegativeButton(
+                                android.R.string.cancel,
+                                new OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        onCancel(dialog);
+                                    }
+                                })
+                        .create();
 
         listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                    int position, long id) {
-                ResolveInfo info = adapter.getItem(position);
-                String packageName = info.activityInfo.packageName;
-                Intent intent = new Intent();
-                intent.setClassName(ActionUtils.PACKAGE_SETTINGS,
-                        ActionUtils.CLASS_NAME_ICON_PICKER_GRID_ACTIVITY);
-                intent.putExtra(ActionUtils.INTENT_EXTRA_ICON_PACKAGE_NAME, packageName);
-                dialog.dismiss();
-                startActivityForResult(intent, ICON_PACK_ICON_RESULT);
-            }
-        });
+        listView.setOnItemClickListener(
+                new OnItemClickListener() {
+                    @Override
+                    public void onItemClick(
+                            AdapterView<?> parent, View view, int position, long id) {
+                        ResolveInfo info = adapter.getItem(position);
+                        String packageName = info.activityInfo.packageName;
+                        Intent intent = new Intent();
+                        intent.setClassName(
+                                ActionUtils.PACKAGE_SETTINGS,
+                                ActionUtils.CLASS_NAME_ICON_PICKER_GRID_ACTIVITY);
+                        intent.putExtra(ActionUtils.INTENT_EXTRA_ICON_PACKAGE_NAME, packageName);
+                        dialog.dismiss();
+                        startActivityForResult(intent, ICON_PACK_ICON_RESULT);
+                    }
+                });
         return dialog;
     }
 
@@ -137,7 +132,8 @@ public class IconPickerActivity extends Activity implements DialogInterface.OnCa
         if (requestCode == ICON_PACK_ICON_RESULT) {
             if (resultCode == RESULT_OK) {
                 String iconType = data.getStringExtra(ActionUtils.INTENT_EXTRA_ICON_DATA_TYPE);
-                String iconPackage = data.getStringExtra(ActionUtils.INTENT_EXTRA_ICON_DATA_PACKAGE);
+                String iconPackage =
+                        data.getStringExtra(ActionUtils.INTENT_EXTRA_ICON_DATA_PACKAGE);
                 String iconName = data.getStringExtra(ActionUtils.INTENT_EXTRA_ICON_DATA_NAME);
                 Intent resultIntent = new Intent();
                 resultIntent.setAction(ActionUtils.INTENT_ICON_PICKER);
@@ -168,8 +164,7 @@ public class IconPickerActivity extends Activity implements DialogInterface.OnCa
             List<ResolveInfo> tmpList = new ArrayList<ResolveInfo>();
             Intent i = new Intent("org.adw.launcher.THEMES");
             i.addCategory(Intent.CATEGORY_DEFAULT);
-            tmpList.addAll(mPM.queryIntentActivities(i,
-                    PackageManager.GET_META_DATA));
+            tmpList.addAll(mPM.queryIntentActivities(i, PackageManager.GET_META_DATA));
 
             mIconPackage.clear();
             mIconPackage.addAll(tmpList);
@@ -189,13 +184,15 @@ public class IconPickerActivity extends Activity implements DialogInterface.OnCa
             }
             mIconPackage.removeAll(toRemove);
 
-            Collections.sort(mIconPackage, new Comparator<ResolveInfo>() {
-                @Override
-                public int compare(ResolveInfo lhs, ResolveInfo rhs) {
-                    return (lhs.loadLabel(mPM).toString()).compareTo(rhs.loadLabel(mPM).toString());
-                }
-
-            });
+            Collections.sort(
+                    mIconPackage,
+                    new Comparator<ResolveInfo>() {
+                        @Override
+                        public int compare(ResolveInfo lhs, ResolveInfo rhs) {
+                            return (lhs.loadLabel(mPM).toString())
+                                    .compareTo(rhs.loadLabel(mPM).toString());
+                        }
+                    });
             notifyDataSetChanged();
         }
 

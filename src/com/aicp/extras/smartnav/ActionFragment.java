@@ -19,14 +19,6 @@
 
 package com.aicp.extras.smartnav;
 
-import java.util.ArrayList;
-
-import com.android.internal.utils.ActionConstants.Defaults;
-import com.android.internal.utils.ActionHandler;
-import com.android.internal.utils.Config;
-import com.android.internal.utils.Config.ActionConfig;
-import com.android.internal.utils.Config.ButtonConfig;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -35,15 +27,17 @@ import android.os.Bundle;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.extras.smartnav.ActionPreference;
-import com.aicp.extras.smartnav.CustomActionListAdapter;
-import com.aicp.extras.smartnav.ShortcutPickHelper;
+import com.android.internal.utils.ActionConstants.Defaults;
+import com.android.internal.utils.ActionHandler;
+import com.android.internal.utils.Config;
+import com.android.internal.utils.Config.ActionConfig;
+import com.android.internal.utils.Config.ButtonConfig;
+import java.util.ArrayList;
 
-public abstract class ActionFragment extends BaseSettingsFragment implements
-        ShortcutPickHelper.OnPickListener {
+public abstract class ActionFragment extends BaseSettingsFragment
+        implements ShortcutPickHelper.OnPickListener {
 
     private static final int DIALOG_CATEGORY = 69;
     private static final int DIALOG_CUSTOM_ACTIONS = 70;
@@ -88,7 +82,7 @@ public abstract class ActionFragment extends BaseSettingsFragment implements
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference instanceof ActionPreference) {
-            mHolderTag = ((ActionPreference)preference).getTag();
+            mHolderTag = ((ActionPreference) preference).getTag();
             showDialog(DIALOG_CATEGORY);
             return true;
         }
@@ -118,46 +112,59 @@ public abstract class ActionFragment extends BaseSettingsFragment implements
 
     public Dialog onCreateDialog(int dialogId) {
         switch (dialogId) {
-            case DIALOG_CATEGORY: {
-                Dialog dialog;
-                final DialogInterface.OnClickListener categoryClickListener = new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int item) {
-                        onTargetChange(getResources().getStringArray(R.array.action_dialog_values)[item]);
-                        dialog.dismiss();
-                    }
-                };
-                dialog = new AlertDialog.Builder(getActivity())
-                        .setTitle(R.string.choose_action_title)
-                        .setItems(getResources().getStringArray(R.array.action_dialog_entries),
-                                categoryClickListener)
-                        .setNegativeButton(getString(android.R.string.cancel), null)
-                        .create();
-                return dialog;
-            }
-            case DIALOG_CUSTOM_ACTIONS: {
-                Dialog dialog;
-                final CustomActionListAdapter adapter = new CustomActionListAdapter(getActivity());
-                if (!usesExtendedActionsList()) {
-                    adapter.removeAction(ActionHandler.SYSTEMUI_TASK_HOME);
-                    adapter.removeAction(ActionHandler.SYSTEMUI_TASK_BACK);
+            case DIALOG_CATEGORY:
+                {
+                    Dialog dialog;
+                    final DialogInterface.OnClickListener categoryClickListener =
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int item) {
+                                    onTargetChange(
+                                            getResources()
+                                                    .getStringArray(R.array.action_dialog_values)[
+                                                    item]);
+                                    dialog.dismiss();
+                                }
+                            };
+                    dialog =
+                            new AlertDialog.Builder(getActivity())
+                                    .setTitle(R.string.choose_action_title)
+                                    .setItems(
+                                            getResources()
+                                                    .getStringArray(R.array.action_dialog_entries),
+                                            categoryClickListener)
+                                    .setNegativeButton(getString(android.R.string.cancel), null)
+                                    .create();
+                    return dialog;
                 }
-                final DialogInterface.OnClickListener customActionClickListener = new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int item) {
-                        findAndUpdatePreference(adapter.getItem(item).action, mHolderTag);
-                        dialog.dismiss();
+            case DIALOG_CUSTOM_ACTIONS:
+                {
+                    Dialog dialog;
+                    final CustomActionListAdapter adapter =
+                            new CustomActionListAdapter(getActivity());
+                    if (!usesExtendedActionsList()) {
+                        adapter.removeAction(ActionHandler.SYSTEMUI_TASK_HOME);
+                        adapter.removeAction(ActionHandler.SYSTEMUI_TASK_BACK);
                     }
-                };
-                dialog = new AlertDialog.Builder(getActivity())
-                        .setTitle(getString(R.string.action_entry_custom_action))
-                        .setAdapter(adapter, customActionClickListener)
-                        .setNegativeButton(getString(android.R.string.cancel), null)
-                        .create();
-                return dialog;
-            }
+                    final DialogInterface.OnClickListener customActionClickListener =
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int item) {
+                                    findAndUpdatePreference(
+                                            adapter.getItem(item).action, mHolderTag);
+                                    dialog.dismiss();
+                                }
+                            };
+                    dialog =
+                            new AlertDialog.Builder(getActivity())
+                                    .setTitle(getString(R.string.action_entry_custom_action))
+                                    .setAdapter(adapter, customActionClickListener)
+                                    .setNegativeButton(getString(android.R.string.cancel), null)
+                                    .create();
+                    return dialog;
+                }
         }
-        return null;//super.onCreateDialog(dialogId);
+        return null; // super.onCreateDialog(dialogId);
     }
 
     // subclass overrides to include back and home actions
@@ -165,8 +172,7 @@ public abstract class ActionFragment extends BaseSettingsFragment implements
         return false;
     }
 
-    protected void onActionPolicyEnforced(ArrayList<ActionPreference> prefs) {
-    }
+    protected void onActionPolicyEnforced(ArrayList<ActionPreference> prefs) {}
 
     protected void setActionPreferencesEnabled(boolean enabled) {
         for (ActionPreference pref : mPrefHolder) {

@@ -20,17 +20,15 @@
 
 package com.aicp.extras.smartnav;
 
-import java.util.Map;
-
+import android.content.Context;
+import android.support.v7.preference.Preference;
+import android.util.AttributeSet;
 import com.android.internal.utils.ActionConstants.ConfigMap;
 import com.android.internal.utils.ActionConstants.Defaults;
 import com.android.internal.utils.ActionHolder;
 import com.android.internal.utils.Config.ActionConfig;
 import com.android.internal.utils.Config.ButtonConfig;
-
-import android.content.Context;
-import android.support.v7.preference.Preference;
-import android.util.AttributeSet;
+import java.util.Map;
 
 public class ActionPreference extends Preference implements ActionHolder {
     private Defaults mDefaults;
@@ -50,8 +48,8 @@ public class ActionPreference extends Preference implements ActionHolder {
         this(context, attrs, defStyleAttr, 0);
     }
 
-    public ActionPreference(Context context, AttributeSet attrs, int defStyleAttr,
-            int defStyleRes) {
+    public ActionPreference(
+            Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs);
     }
 
@@ -98,8 +96,7 @@ public class ActionPreference extends Preference implements ActionHolder {
     }
 
     @Override
-    public void setButtonConfig(ButtonConfig button) {
-    }
+    public void setButtonConfig(ButtonConfig button) {}
 
     @Override
     public ActionConfig getActionConfig() {
@@ -118,9 +115,7 @@ public class ActionPreference extends Preference implements ActionHolder {
     }
 
     @Override
-    public void setDefaultButtonConfig(ButtonConfig button) {
-
-    }
+    public void setDefaultButtonConfig(ButtonConfig button) {}
 
     @Override
     public ActionConfig getDefaultActionConfig() {

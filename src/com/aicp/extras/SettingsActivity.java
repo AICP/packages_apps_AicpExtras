@@ -14,20 +14,17 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras;
 
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.Fragment;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
-
 import com.aicp.extras.dslv.ActionListViewSettings;
 import com.aicp.extras.fragments.Dashboard;
 import com.aicp.extras.preference.GlobalSettingMasterSwitchPreference;
@@ -48,8 +45,7 @@ public class SettingsActivity extends BaseActivity {
     private MasterSwitchPreferenceDependencyHandler mMasterSwitchDependencyHandler;
 
     // String extra containing the fragment class
-    private static final String EXTRA_FRAGMENT_CLASS =
-            PreferenceActivity.EXTRA_SHOW_FRAGMENT;
+    private static final String EXTRA_FRAGMENT_CLASS = PreferenceActivity.EXTRA_SHOW_FRAGMENT;
     // Bundle extra containing arguments for the fragment
     private static final String EXTRA_FRAGMENT_ARGUMENTS =
             PreferenceActivity.EXTRA_SHOW_FRAGMENT_ARGUMENTS;
@@ -98,25 +94,28 @@ public class SettingsActivity extends BaseActivity {
         mMasterSwitchDependencyHandler = new MasterSwitchPreferenceDependencyHandler(this);
         // Add switchbar preferences with reserved grou id -1
         if (mIntent.hasExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS)) {
-            mMasterSwitchDependencyHandler.addSystemSettingPreferences(-1,
-                    mIntent.getStringArrayExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS));
+            mMasterSwitchDependencyHandler.addSystemSettingPreferences(
+                    -1, mIntent.getStringArrayExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS));
         }
         if (mIntent.hasExtra(EXTRA_SWITCH_SECURE_SETTINGS_MUTUAL_KEYS)) {
-            mMasterSwitchDependencyHandler.addSecureSettingPreferences(-1,
-                    mIntent.getStringArrayExtra(EXTRA_SWITCH_SECURE_SETTINGS_MUTUAL_KEYS));
+            mMasterSwitchDependencyHandler.addSecureSettingPreferences(
+                    -1, mIntent.getStringArrayExtra(EXTRA_SWITCH_SECURE_SETTINGS_MUTUAL_KEYS));
         }
         if (mIntent.hasExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS)) {
-            mMasterSwitchDependencyHandler.addGlobalSettingPreferences(-1,
-                    mIntent.getStringArrayExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS));
+            mMasterSwitchDependencyHandler.addGlobalSettingPreferences(
+                    -1, mIntent.getStringArrayExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS));
         }
         boolean thereShouldBeOne = mIntent.getBooleanExtra(EXTRA_SWITCH_THERE_SHOULD_BE_ONE, false);
 
         mSwitchBar = (SwitchBar) findViewById(R.id.switch_bar);
         if (mIntent.hasExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY)) {
             mSwitchBar.show();
-            BaseSettingsFragment settingsFragment = mFragment instanceof BaseSettingsFragment
-                    ? (BaseSettingsFragment) mFragment : null;
-            new SystemSettingSwitchBarController(mSwitchBar,
+            BaseSettingsFragment settingsFragment =
+                    mFragment instanceof BaseSettingsFragment
+                            ? (BaseSettingsFragment) mFragment
+                            : null;
+            new SystemSettingSwitchBarController(
+                    mSwitchBar,
                     mIntent.getStringExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY),
                     mIntent.getBooleanExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE, false),
                     getContentResolver(),
@@ -125,9 +124,12 @@ public class SettingsActivity extends BaseActivity {
                     thereShouldBeOne);
         } else if (mIntent.hasExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY)) {
             mSwitchBar.show();
-            BaseSettingsFragment settingsFragment = mFragment instanceof BaseSettingsFragment
-                    ? (BaseSettingsFragment) mFragment : null;
-            new SecureSettingSwitchBarController(mSwitchBar,
+            BaseSettingsFragment settingsFragment =
+                    mFragment instanceof BaseSettingsFragment
+                            ? (BaseSettingsFragment) mFragment
+                            : null;
+            new SecureSettingSwitchBarController(
+                    mSwitchBar,
                     mIntent.getStringExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY),
                     mIntent.getBooleanExtra(EXTRA_SWITCH_SECURE_SETTINGS_DEFAULT_VALUE, false),
                     getContentResolver(),
@@ -136,9 +138,12 @@ public class SettingsActivity extends BaseActivity {
                     thereShouldBeOne);
         } else if (mIntent.hasExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_KEY)) {
             mSwitchBar.show();
-            BaseSettingsFragment settingsFragment = mFragment instanceof BaseSettingsFragment
-                    ? (BaseSettingsFragment) mFragment : null;
-            new GlobalSettingSwitchBarController(mSwitchBar,
+            BaseSettingsFragment settingsFragment =
+                    mFragment instanceof BaseSettingsFragment
+                            ? (BaseSettingsFragment) mFragment
+                            : null;
+            new GlobalSettingSwitchBarController(
+                    mSwitchBar,
                     mIntent.getStringExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_KEY),
                     mIntent.getBooleanExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_DEFAULT_VALUE, false),
                     getContentResolver(),
@@ -189,7 +194,7 @@ public class SettingsActivity extends BaseActivity {
     }
 
     private void handleMasterSwitchPreferences(
-                android.support.v7.preference.PreferenceGroup preferenceGroup) {
+            android.support.v7.preference.PreferenceGroup preferenceGroup) {
         for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
             android.support.v7.preference.Preference pref = preferenceGroup.getPreference(i);
             if (pref instanceof MasterSwitchPreference) {
@@ -212,36 +217,42 @@ public class SettingsActivity extends BaseActivity {
             if (preference instanceof MasterSwitchPreference) {
                 if (fragmentClass.equals(ActionListViewSettings.class.getName())) {
                     // New activity requires setting to be enabled
-                    ((MasterSwitchPreference) preference)
-                            .setCheckedPersisting(true);
+                    ((MasterSwitchPreference) preference).setCheckedPersisting(true);
                 } else {
                     if (preference instanceof SystemSettingMasterSwitchPreference) {
                         intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY, preference.getKey());
-                        intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE,
+                        intent.putExtra(
+                                EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE,
                                 ((SystemSettingMasterSwitchPreference) preference)
                                         .getDefaultValue());
                     }
                     if (preference instanceof SecureSettingMasterSwitchPreference) {
                         intent.putExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY, preference.getKey());
-                        intent.putExtra(EXTRA_SWITCH_SECURE_SETTINGS_DEFAULT_VALUE,
+                        intent.putExtra(
+                                EXTRA_SWITCH_SECURE_SETTINGS_DEFAULT_VALUE,
                                 ((SecureSettingMasterSwitchPreference) preference)
                                         .getDefaultValue());
                     }
                     if (preference instanceof GlobalSettingMasterSwitchPreference) {
                         intent.putExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_KEY, preference.getKey());
-                        intent.putExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_DEFAULT_VALUE,
+                        intent.putExtra(
+                                EXTRA_SWITCH_GLOBAL_SETTINGS_DEFAULT_VALUE,
                                 ((GlobalSettingMasterSwitchPreference) preference)
                                         .getDefaultValue());
                     }
-                    intent.putExtra(EXTRA_SWITCH_THERE_SHOULD_BE_ONE,
+                    intent.putExtra(
+                            EXTRA_SWITCH_THERE_SHOULD_BE_ONE,
                             ((MasterSwitchPreference) preference).getThereShouldBeOneSwitch());
-                    int groupId = ((MasterSwitchPreference) preference)
-                            .getThereCanBeOnlyOneGroupId();
-                    intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS,
+                    int groupId =
+                            ((MasterSwitchPreference) preference).getThereCanBeOnlyOneGroupId();
+                    intent.putExtra(
+                            EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS,
                             mMasterSwitchDependencyHandler.getSystemSettingsForGroup(groupId));
-                    intent.putExtra(EXTRA_SWITCH_SECURE_SETTINGS_MUTUAL_KEYS,
+                    intent.putExtra(
+                            EXTRA_SWITCH_SECURE_SETTINGS_MUTUAL_KEYS,
                             mMasterSwitchDependencyHandler.getSecureSettingsForGroup(groupId));
-                    intent.putExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS,
+                    intent.putExtra(
+                            EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS,
                             mMasterSwitchDependencyHandler.getGlobalSettingsForGroup(groupId));
                 }
             }
@@ -272,8 +283,10 @@ public class SettingsActivity extends BaseActivity {
         if (fragmentClass != null) {
             try {
                 return (Fragment) Class.forName(fragmentClass).newInstance();
-            } catch (ClassNotFoundException | InstantiationException | IllegalAccessException |
-                    ClassCastException e) {
+            } catch (ClassNotFoundException
+                    | InstantiationException
+                    | IllegalAccessException
+                    | ClassCastException e) {
                 e.printStackTrace();
             }
         }
@@ -295,13 +308,17 @@ public class SettingsActivity extends BaseActivity {
         new AlertDialog.Builder(this)
                 .setTitle(title)
                 .setMessage(message)
-                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int whichButton) {
-                            // No need to show again
-                            PreferenceManager.getDefaultSharedPreferences(SettingsActivity.this)
-                                    .edit().putBoolean("is_first_time", false).apply();
-                        }
-                })
+                .setPositiveButton(
+                        R.string.ok,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                // No need to show again
+                                PreferenceManager.getDefaultSharedPreferences(SettingsActivity.this)
+                                        .edit()
+                                        .putBoolean("is_first_time", false)
+                                        .apply();
+                            }
+                        })
                 .show();
     }
 }

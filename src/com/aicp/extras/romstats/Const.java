@@ -15,5 +15,4 @@ public class Const {
 
     public static final int ROMSTATS_REPORTING_MODE_NEW = 0;
     public static final int ROMSTATS_REPORTING_MODE_OLD = 1;
-
 }

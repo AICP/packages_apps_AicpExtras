@@ -14,14 +14,13 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.utils;
 
 import android.graphics.drawable.AnimationDrawable;
 
 /**
- * AnimationDrawable with OnAnimationFinishedListener.
- * Substitute to frameworks patch http://gerrit.aicp-rom.com/#/c/34280/
+ * AnimationDrawable with OnAnimationFinishedListener. Substitute to frameworks patch
+ * http://gerrit.aicp-rom.com/#/c/34280/
  */
 public class FinishingAnimationDrawable extends AnimationDrawable {
 

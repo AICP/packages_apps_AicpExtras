@@ -14,21 +14,17 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.v7.preference.Preference;
 import android.support.v14.preference.SwitchPreference;
-
+import android.support.v7.preference.Preference;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class OtherUi extends BaseSettingsFragment
-        implements Preference.OnPreferenceChangeListener {
+public class OtherUi extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = OtherUi.class.getSimpleName();
 
@@ -48,24 +44,35 @@ public class OtherUi extends BaseSettingsFragment
         super.onCreate(savedInstanceState);
 
         mShowCpuInfo = (SwitchPreference) findPreference(SHOW_CPU_INFO_KEY);
-        mShowCpuInfo.setChecked(Settings.Global.getInt(getActivity().getContentResolver(),
-                Settings.Global.SHOW_CPU_OVERLAY, 0) == 1);
+        mShowCpuInfo.setChecked(
+                Settings.Global.getInt(
+                                getActivity().getContentResolver(),
+                                Settings.Global.SHOW_CPU_OVERLAY,
+                                0)
+                        == 1);
         mShowCpuInfo.setOnPreferenceChangeListener(this);
 
-        boolean dozeAlwaysOnDisplayAvailable = getContext().getResources().
-                getBoolean(com.android.internal.R.bool.config_dozeAlwaysOnDisplayAvailable);
+        boolean dozeAlwaysOnDisplayAvailable =
+                getContext()
+                        .getResources()
+                        .getBoolean(
+                                com.android.internal.R.bool.config_dozeAlwaysOnDisplayAvailable);
         Preference DozeOnCharge = findPreference(KEY_DOZE_ON_CHARGE);
 
-        if (!dozeAlwaysOnDisplayAvailable){
+        if (!dozeAlwaysOnDisplayAvailable) {
             DozeOnCharge.getParent().removePreference(DozeOnCharge);
         }
     }
 
     private void writeCpuInfoOptions(boolean value) {
-        Settings.Global.putInt(getActivity().getContentResolver(),
-                Settings.Global.SHOW_CPU_OVERLAY, value ? 1 : 0);
-        Intent service = (new Intent())
-                .setClassName("com.android.systemui", "com.android.systemui.CPUInfoService");
+        Settings.Global.putInt(
+                getActivity().getContentResolver(),
+                Settings.Global.SHOW_CPU_OVERLAY,
+                value ? 1 : 0);
+        Intent service =
+                (new Intent())
+                        .setClassName(
+                                "com.android.systemui", "com.android.systemui.CPUInfoService");
         if (value) {
             getActivity().startService(service);
         } else {

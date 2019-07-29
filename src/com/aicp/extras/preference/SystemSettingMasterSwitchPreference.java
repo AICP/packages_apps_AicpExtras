@@ -18,7 +18,6 @@ package com.aicp.extras.preference;
 
 import android.content.Context;
 import android.util.AttributeSet;
-
 import com.aicp.gear.preference.SystemSettingsStore;
 
 public class SystemSettingMasterSwitchPreference extends MasterSwitchPreference {
@@ -37,5 +36,4 @@ public class SystemSettingMasterSwitchPreference extends MasterSwitchPreference 
         super(context);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
-
 }

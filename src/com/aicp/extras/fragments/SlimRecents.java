@@ -14,22 +14,20 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
-import android.support.v7.preference.Preference;
-import android.support.v14.preference.SwitchPreference;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v14.preference.SwitchPreference;
+import android.support.v7.preference.Preference;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,11 +39,9 @@ import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.preference.MasterSwitchPreference;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -64,15 +60,14 @@ public class SlimRecents extends BaseSettingsFragment
     private Preference mIconPack;
 
     // Icon pack
-    private final static String[] sSupportedActions = new String[] {
-        "org.adw.launcher.THEMES",
-        "com.gau.go.launcherex.theme"
-    };
-    private static final String[] sSupportedCategories = new String[] {
-        "com.fede.launcher.THEME_ICONPACK",
-        "com.anddoes.launcher.THEME",
-        "com.teslacoilsw.launcher.THEME"
-    };
+    private static final String[] sSupportedActions =
+            new String[] {"org.adw.launcher.THEMES", "com.gau.go.launcherex.theme"};
+    private static final String[] sSupportedCategories =
+            new String[] {
+                "com.fede.launcher.THEME_ICONPACK",
+                "com.anddoes.launcher.THEME",
+                "com.teslacoilsw.launcher.THEME"
+            };
     private AlertDialog mDialog;
     private ListView mListView;
 
@@ -96,15 +91,20 @@ public class SlimRecents extends BaseSettingsFragment
     public void onResume() {
         super.onResume();
 
-        boolean recentLeftyMode = Settings.System.getInt(getContext().getContentResolver(),
-                Settings.System.RECENT_PANEL_GRAVITY, Gravity.END) == Gravity.START;
+        boolean recentLeftyMode =
+                Settings.System.getInt(
+                                getContext().getContentResolver(),
+                                Settings.System.RECENT_PANEL_GRAVITY,
+                                Gravity.END)
+                        == Gravity.START;
         mRecentPanelLeftyMode.setChecked(recentLeftyMode);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mRecentPanelLeftyMode) {
-            Settings.System.putInt(getContext().getContentResolver(),
+            Settings.System.putInt(
+                    getContext().getContentResolver(),
                     Settings.System.RECENT_PANEL_GRAVITY,
                     ((Boolean) newValue) ? Gravity.START : Gravity.END);
             return true;
@@ -123,7 +123,7 @@ public class SlimRecents extends BaseSettingsFragment
         }
     }
 
-     /** Slim Recents Icon Pack Dialog **/
+    /** Slim Recents Icon Pack Dialog * */
     private void pickIconPack(final Context context) {
         if (mDialog != null) {
             return;
@@ -133,35 +133,40 @@ public class SlimRecents extends BaseSettingsFragment
             Toast.makeText(context, R.string.no_iconpacks_summary, Toast.LENGTH_SHORT).show();
             return;
         }
-        AlertDialog.Builder builder = new AlertDialog.Builder(context)
-        .setTitle(R.string.dialog_pick_iconpack_title)
-        .setOnDismissListener(this)
-        .setNegativeButton(R.string.cancel, null)
-        .setView(createDialogView(context, supportedPackages));
+        AlertDialog.Builder builder =
+                new AlertDialog.Builder(context)
+                        .setTitle(R.string.dialog_pick_iconpack_title)
+                        .setOnDismissListener(this)
+                        .setNegativeButton(R.string.cancel, null)
+                        .setView(createDialogView(context, supportedPackages));
         mDialog = builder.show();
     }
 
-    private View createDialogView(final Context context, Map<String, IconPackInfo> supportedPackages) {
-        final LayoutInflater inflater = (LayoutInflater) context
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    private View createDialogView(
+            final Context context, Map<String, IconPackInfo> supportedPackages) {
+        final LayoutInflater inflater =
+                (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final View view = inflater.inflate(R.layout.dialog_iconpack, null);
         final IconAdapter adapter = new IconAdapter(context, supportedPackages);
 
         mListView = (ListView) view.findViewById(R.id.iconpack_list);
         mListView.setAdapter(adapter);
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                        int position, long id) {
-                if (adapter.isCurrentIconPack(position)) {
-                    return;
-                }
-                String selectedPackage = adapter.getItem(position);
-                Settings.System.putString(getContext().getContentResolver(),
-                        Settings.System.SLIM_RECENTS_ICON_PACK, selectedPackage);
-                mDialog.dismiss();
-            }
-        });
+        mListView.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(
+                            AdapterView<?> parent, View view, int position, long id) {
+                        if (adapter.isCurrentIconPack(position)) {
+                            return;
+                        }
+                        String selectedPackage = adapter.getItem(position);
+                        Settings.System.putString(
+                                getContext().getContentResolver(),
+                                Settings.System.SLIM_RECENTS_ICON_PACK,
+                                selectedPackage);
+                        mDialog.dismiss();
+                    }
+                });
 
         return view;
     }
@@ -182,19 +187,22 @@ public class SlimRecents extends BaseSettingsFragment
         IconAdapter(Context ctx, Map<String, IconPackInfo> supportedPackages) {
             mLayoutInflater = LayoutInflater.from(ctx);
             mSupportedPackages = new ArrayList<IconPackInfo>(supportedPackages.values());
-            Collections.sort(mSupportedPackages, new Comparator<IconPackInfo>() {
-                @Override
-                public int compare(IconPackInfo lhs, IconPackInfo rhs) {
-                    return lhs.label.toString().compareToIgnoreCase(rhs.label.toString());
-                }
-            });
+            Collections.sort(
+                    mSupportedPackages,
+                    new Comparator<IconPackInfo>() {
+                        @Override
+                        public int compare(IconPackInfo lhs, IconPackInfo rhs) {
+                            return lhs.label.toString().compareToIgnoreCase(rhs.label.toString());
+                        }
+                    });
 
             Resources res = ctx.getResources();
             String defaultLabel = res.getString(R.string.default_iconpack_title);
             Drawable icon = res.getDrawable(android.R.drawable.sym_def_app_icon);
             mSupportedPackages.add(0, new IconPackInfo(defaultLabel, icon, ""));
-            mCurrentIconPack = Settings.System.getString(ctx.getContentResolver(),
-                Settings.System.SLIM_RECENTS_ICON_PACK);
+            mCurrentIconPack =
+                    Settings.System.getString(
+                            ctx.getContentResolver(), Settings.System.SLIM_RECENTS_ICON_PACK);
         }
 
         @Override
@@ -270,8 +278,7 @@ public class SlimRecents extends BaseSettingsFragment
             label = r.loadLabel(packageManager);
         }
 
-        IconPackInfo(){
-        }
+        IconPackInfo() {}
 
         public IconPackInfo(String label, Drawable icon, String packageName) {
             this.label = label;

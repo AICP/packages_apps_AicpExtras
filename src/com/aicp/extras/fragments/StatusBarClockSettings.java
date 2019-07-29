@@ -14,32 +14,26 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.provider.Settings;
 import android.text.format.DateFormat;
-import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-
 import com.aicp.gear.preference.SecureSettingIntListPreference;
 import com.aicp.gear.preference.SecureSettingListPreference;
-
 import java.util.Date;
 
-public class StatusBarClockSettings extends BaseSettingsFragment implements
-        OnPreferenceChangeListener {
+public class StatusBarClockSettings extends BaseSettingsFragment
+        implements OnPreferenceChangeListener {
 
     private static final String TAG = "StatusBarClockSettings";
 
@@ -79,8 +73,8 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements
     public void onResume() {
         super.onResume();
 
-        final boolean hasNotch = getResources().getBoolean(
-                com.android.internal.R.bool.config_haveNotch);
+        final boolean hasNotch =
+                getResources().getBoolean(com.android.internal.R.bool.config_haveNotch);
 
         // Adjust status bar preferences for RTL
         if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
@@ -110,39 +104,46 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements
                 alert.setMessage(R.string.clock_date_string_edittext_summary);
 
                 final EditText input = new EditText(getActivity());
-                String oldText = Settings.Secure.getString(
-                    resolver,
-                    Settings.Secure.STATUSBAR_CLOCK_DATE_FORMAT);
+                String oldText =
+                        Settings.Secure.getString(
+                                resolver, Settings.Secure.STATUSBAR_CLOCK_DATE_FORMAT);
                 if (oldText != null) {
                     input.setText(oldText);
                 }
                 alert.setView(input);
 
-                alert.setPositiveButton(R.string.menu_save, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialogInterface, int whichButton) {
-                        String value = input.getText().toString();
-                        if (value.equals("")) {
-                            return;
-                        }
-                        Settings.Secure.putString(resolver,
-                            Settings.Secure.STATUSBAR_CLOCK_DATE_FORMAT, value);
+                alert.setPositiveButton(
+                        R.string.menu_save,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialogInterface, int whichButton) {
+                                String value = input.getText().toString();
+                                if (value.equals("")) {
+                                    return;
+                                }
+                                Settings.Secure.putString(
+                                        resolver,
+                                        Settings.Secure.STATUSBAR_CLOCK_DATE_FORMAT,
+                                        value);
 
-                        return;
-                    }
-                });
+                                return;
+                            }
+                        });
 
-                alert.setNegativeButton(R.string.menu_cancel,
-                    new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialogInterface, int which) {
-                        return;
-                    }
-                });
+                alert.setNegativeButton(
+                        R.string.menu_cancel,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialogInterface, int which) {
+                                return;
+                            }
+                        });
                 dialog = alert.create();
                 dialog.show();
             } else {
                 if ((String) newValue != null) {
-                    Settings.Secure.putString(resolver,
-                        Settings.Secure.STATUSBAR_CLOCK_DATE_FORMAT, (String) newValue);
+                    Settings.Secure.putString(
+                            resolver,
+                            Settings.Secure.STATUSBAR_CLOCK_DATE_FORMAT,
+                            (String) newValue);
                 }
             }
             return true;
@@ -151,15 +152,18 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements
     }
 
     private void parseClockDateFormats() {
-        String[] dateEntries = getResources().getStringArray(
-                R.array.clock_date_format_entries_values);
+        String[] dateEntries =
+                getResources().getStringArray(R.array.clock_date_format_entries_values);
         CharSequence parsedDateEntries[];
         parsedDateEntries = new String[dateEntries.length];
         Date now = new Date();
 
         int lastEntry = dateEntries.length - 1;
-        int dateFormat = Settings.Secure.getInt(getActivity()
-                .getContentResolver(), Settings.Secure.STATUSBAR_CLOCK_DATE_STYLE, 0);
+        int dateFormat =
+                Settings.Secure.getInt(
+                        getActivity().getContentResolver(),
+                        Settings.Secure.STATUSBAR_CLOCK_DATE_STYLE,
+                        0);
         for (int i = 0; i < dateEntries.length; i++) {
             if (i == lastEntry) {
                 parsedDateEntries[i] = dateEntries[i];
