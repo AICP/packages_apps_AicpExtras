@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.view.Window;
 import android.widget.ImageView;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 
@@ -35,8 +34,7 @@ public class HiddenAnimActivityDialog {
         dialog.show();
     }
 
-    public void hideDialog(){
+    public void hideDialog() {
         dialog.dismiss();
     }
-
 }

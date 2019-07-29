@@ -14,10 +14,7 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
-
-import android.support.v7.preference.Preference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
@@ -28,5 +25,4 @@ public class SlimRecentAppSidebarStyle extends BaseSettingsFragment {
     protected int getPreferenceResource() {
         return R.xml.slim_recent_app_sidebar_style;
     }
-
 }

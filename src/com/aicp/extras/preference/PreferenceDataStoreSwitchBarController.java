@@ -16,11 +16,9 @@
 
 package com.aicp.extras.preference;
 
-import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.support.v7.preference.PreferenceDataStore;
 import android.widget.Switch;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.widget.SwitchBar;
 
@@ -36,11 +34,14 @@ public abstract class PreferenceDataStoreSwitchBarController
     private MasterSwitchPreferenceDependencyHandler mDependencyHandler;
     private boolean mThereShouldBeOne;
 
-    public PreferenceDataStoreSwitchBarController(PreferenceDataStore preferenceDataStore,
-                                            SwitchBar switchBar, String key, boolean defaultValue,
-                                            BaseSettingsFragment settingsFragment,
-                                            MasterSwitchPreferenceDependencyHandler depHndl,
-                                            boolean thereShouldBeOne) {
+    public PreferenceDataStoreSwitchBarController(
+            PreferenceDataStore preferenceDataStore,
+            SwitchBar switchBar,
+            String key,
+            boolean defaultValue,
+            BaseSettingsFragment settingsFragment,
+            MasterSwitchPreferenceDependencyHandler depHndl,
+            boolean thereShouldBeOne) {
         mKey = key;
         mPreferenceDataStore = preferenceDataStore;
         mSettingsFragment = settingsFragment;
@@ -65,7 +66,8 @@ public abstract class PreferenceDataStoreSwitchBarController
         if (isChecked) {
             mDependencyHandler.onEnablePref(-1, mKey);
         } else if (mThereShouldBeOne && !mDependencyHandler.isAnotherEnabled(-1, mKey)) {
-            mDependencyHandler.showConfirmDisableDialog(switchView.getContext(),
+            mDependencyHandler.showConfirmDisableDialog(
+                    switchView.getContext(),
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -85,5 +87,4 @@ public abstract class PreferenceDataStoreSwitchBarController
         }
         mPreferenceDataStore.putBoolean(mKey, isChecked);
     }
-
 }

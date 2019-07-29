@@ -14,12 +14,10 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
 import android.os.Bundle;
 import android.provider.Settings;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
@@ -34,7 +32,7 @@ public class Notifications extends BaseSettingsFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Util.requireFullStatusbar(getActivity(),
-                findPreference(Settings.System.STATUS_BAR_SHOW_TICKER));
+        Util.requireFullStatusbar(
+                getActivity(), findPreference(Settings.System.STATUS_BAR_SHOW_TICKER));
     }
 }

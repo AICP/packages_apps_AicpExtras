@@ -20,17 +20,9 @@
  */
 package com.aicp.extras;
 
-import java.io.DataOutputStream;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.ListIterator;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseBooleanArray;
@@ -40,9 +32,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import com.aicp.extras.utils.SuShell;
 import com.aicp.extras.utils.SuTask;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.ListIterator;
 
 public class SystemappRemover extends SubActivity {
 
@@ -89,64 +85,66 @@ public class SystemappRemover extends SubActivity {
         File system = new File(systemPath);
         File systemPriv = new File(systemPrivPath);
         String[] sysappArray = combine(system.list(), systemPriv.list());
-        mSysApp = new ArrayList<String>(
-                Arrays.asList(sysappArray));
+        mSysApp = new ArrayList<String>(Arrays.asList(sysappArray));
 
         filterOdex();
 
         mSysApp.removeAll(safetyList);
         Collections.sort(mSysApp);
 
-        adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_multiple_choice, mSysApp);
+        adapter =
+                new ArrayAdapter<String>(
+                        this, android.R.layout.simple_list_item_multiple_choice, mSysApp);
 
         final ListView lv = (ListView) findViewById(android.R.id.list);
         lv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         lv.setAdapter(adapter);
 
-        View footer = LayoutInflater.from(this)
-                .inflate(R.layout.system_app_remover_empty_list_entry_footer, lv, false);
+        View footer =
+                LayoutInflater.from(this)
+                        .inflate(R.layout.system_app_remover_empty_list_entry_footer, lv, false);
         lv.addFooterView(footer);
         lv.setFooterDividersEnabled(false);
         footer.setOnClickListener(null);
 
-        fabButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                String item = null;
-                SparseBooleanArray checked = lv.getCheckedItemPositions();
-                for (int i = lv.getCount() - 1; i >= 0; i--) {
-                    if (checked.get(i)) {
-                        item = mSysApp.get(i);
+        fabButton.setOnClickListener(
+                new View.OnClickListener() {
+                    public void onClick(View v) {
+                        String item = null;
+                        SparseBooleanArray checked = lv.getCheckedItemPositions();
+                        for (int i = lv.getCount() - 1; i >= 0; i--) {
+                            if (checked.get(i)) {
+                                item = mSysApp.get(i);
+                            }
+                        }
+                        if (item == null) {
+                            toast(
+                                    getResources()
+                                            .getString(
+                                                    R.string.system_app_remover_message_noselect));
+                            return;
+                        } else {
+                            showDialog(DELETE_DIALOG, item, adapter);
+                        }
                     }
-                }
-                if (item == null) {
-                    toast(getResources().getString(
-                            R.string.system_app_remover_message_noselect));
-                    return;
-                } else {
-                    showDialog(DELETE_DIALOG, item, adapter);
-                }
-            }
-        });
+                });
     }
 
     public void toast(String text) {
-        Toast toast = Toast.makeText(SystemappRemover.this, text,
-                Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(SystemappRemover.this, text, Toast.LENGTH_SHORT);
         toast.show();
     }
 
-    private void showDialog(int id, final String item,
-                            final ArrayAdapter<String> adapter) {
+    private void showDialog(int id, final String item, final ArrayAdapter<String> adapter) {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
         if (id == DELETE_DIALOG) {
             alert.setMessage(R.string.system_app_remover_message_delete)
                     .setCancelable(false)
-                    .setPositiveButton(R.string.ok,
+                    .setPositiveButton(
+                            R.string.ok,
                             new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog,
-                                                    int id) {
+                                public void onClick(DialogInterface dialog, int id) {
                                     final ListView lv = (ListView) findViewById(android.R.id.list);
                                     ArrayList<String> itemsList = new ArrayList<String>();
                                     SparseBooleanArray checked = lv.getCheckedItemPositions();
@@ -160,14 +158,15 @@ public class SystemappRemover extends SubActivity {
                                     }
                                     adapter.notifyDataSetChanged();
                                     new SystemappRemover.Deleter(SystemappRemover.this)
-                                            .execute(itemsList.toArray(
-                                                    new String[itemsList.size()]));
+                                            .execute(
+                                                    itemsList.toArray(
+                                                            new String[itemsList.size()]));
                                 }
                             })
-                    .setNegativeButton(R.string.cancel,
+                    .setNegativeButton(
+                            R.string.cancel,
                             new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog,
-                                                    int id) {
+                                public void onClick(DialogInterface dialog, int id) {
                                     dialog.cancel();
                                 }
                             });
@@ -185,9 +184,9 @@ public class SystemappRemover extends SubActivity {
 
     private void filterOdex() {
         ListIterator<String> it = mSysApp.listIterator();
-        while ( it.hasNext() ) {
+        while (it.hasNext()) {
             String str = it.next();
-            if ( str.endsWith(".odex") ) {
+            if (str.endsWith(".odex")) {
                 it.remove();
             }
         }
@@ -200,7 +199,7 @@ public class SystemappRemover extends SubActivity {
         }
 
         protected void sudoInBackground(String... params) throws SuShell.SuDeniedException {
-            String[] commands = new String[params.length+1];
+            String[] commands = new String[params.length + 1];
             commands[0] = "mount -o rw,remount /system";
             int commandCount = 1;
             for (String appName : params) {
@@ -208,14 +207,14 @@ public class SystemappRemover extends SubActivity {
                 File app = new File(basePath + appName);
 
                 if (!app.exists()) {
-                       basePath = systemPrivPath;
+                    basePath = systemPrivPath;
                 }
                 File app2rm = new File(basePath + appName);
                 Log.d(TAG, "Removing " + app2rm.getAbsolutePath());
                 commands[commandCount++] = "rm -rf " + app2rm.getAbsolutePath();
             }
             ArrayList<String> output = SuShell.runWithSuCheck(commands);
-            for (String out: output) {
+            for (String out : output) {
                 Log.e(TAG, out);
             }
         }

@@ -18,16 +18,15 @@ package com.aicp.extras.smartnav;
 
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.Preference;
 import android.provider.Settings;
-
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.gear.preference.SecureSettingIntListPreference;
 
-public class PulseSettings extends BaseSettingsFragment implements
-        Preference.OnPreferenceChangeListener {
+public class PulseSettings extends BaseSettingsFragment
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = PulseSettings.class.getSimpleName();
 
@@ -47,13 +46,18 @@ public class PulseSettings extends BaseSettingsFragment implements
 
         mRenderMode = (SecureSettingIntListPreference) findPreference("pulse_render_style");
         mRenderMode.setOnPreferenceChangeListener(this);
-        int renderMode = Settings.Secure.getIntForUser(getContentResolver(),
-                Settings.Secure.PULSE_RENDER_STYLE_URI, RENDER_STYLE_SOLID_LINES, UserHandle.USER_CURRENT);
+        int renderMode =
+                Settings.Secure.getIntForUser(
+                        getContentResolver(),
+                        Settings.Secure.PULSE_RENDER_STYLE_URI,
+                        RENDER_STYLE_SOLID_LINES,
+                        UserHandle.USER_CURRENT);
         updateCategoryDependencies(renderMode);
     }
 
     private void updateCategoryDependencies(int renderMode) {
-        PreferenceCategory fadingBarsCat = (PreferenceCategory)findPreference("pulse_fading_bars_category");
+        PreferenceCategory fadingBarsCat =
+                (PreferenceCategory) findPreference("pulse_fading_bars_category");
         fadingBarsCat.setEnabled(renderMode == RENDER_STYLE_FADING_BARS);
         PreferenceCategory solidBarsCat = (PreferenceCategory) findPreference("pulse_2");
         solidBarsCat.setEnabled(renderMode == RENDER_STYLE_SOLID_LINES);

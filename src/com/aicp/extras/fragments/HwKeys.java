@@ -14,35 +14,27 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.os.PowerManager;
-import android.os.ServiceManager;
+import android.os.UserHandle;
 import android.provider.Settings;
-import android.view.KeyCharacterMap;
-import android.view.KeyEvent;
+import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
-import android.support.v14.preference.SwitchPreference;
-import android.provider.Settings;
-
-import com.aicp.extras.BaseSettingsFragment;
+import android.view.KeyCharacterMap;
+import android.view.KeyEvent;
 import com.aicp.extras.R;
-import com.aicp.gear.preference.SystemSettingSwitchPreference;
-import com.aicp.gear.preference.SeekBarPreferenceCham;
-
-import com.android.internal.util.aicp.DeviceUtils;
-import com.android.internal.utils.ActionUtils;
 import com.aicp.extras.smartnav.ActionFragment;
+import com.aicp.gear.preference.SeekBarPreferenceCham;
+import com.android.internal.util.aicp.DeviceUtils;
 import com.android.internal.utils.ActionConstants;
+import com.android.internal.utils.ActionUtils;
 
 public class HwKeys extends ActionFragment implements Preference.OnPreferenceChangeListener {
     // category keys
@@ -86,7 +78,7 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
     @Override
     protected int getPreferenceResource() {
         return R.xml.hw_keys;
-}
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -96,14 +88,17 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         PreferenceScreen prefScreen = getPreferenceScreen();
 
         final boolean needsNavbar = ActionUtils.hasNavbarByDefault(getActivity());
-        final PreferenceCategory hwkeyCategory = (PreferenceCategory) prefScreen
-                .findPreference(CATEGORY_HWKEY);
+        final PreferenceCategory hwkeyCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_HWKEY);
         int keysDisabled = 0;
         mHwKeyDisable = (SwitchPreference) findPreference(HWKEY_DISABLE);
         if (!needsNavbar) {
-            keysDisabled = Settings.Secure.getIntForUser(resolver,
-                    Settings.Secure.HARDWARE_KEYS_DISABLE, 0,
-                    UserHandle.USER_CURRENT);
+            keysDisabled =
+                    Settings.Secure.getIntForUser(
+                            resolver,
+                            Settings.Secure.HARDWARE_KEYS_DISABLE,
+                            0,
+                            UserHandle.USER_CURRENT);
             mHwKeyDisable.setChecked(keysDisabled != 0);
             mHwKeyDisable.setOnPreferenceChangeListener(this);
         } else {
@@ -118,10 +113,10 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         // Long press power while display is off to activate torchlight
         mTorchLongPressPowerGesture =
                 (SwitchPreference) findPreference(KEY_TORCH_LONG_PRESS_POWER_GESTURE);
-        final int torchLongPressPowerTimeout = Settings.System.getInt(resolver,
-                Settings.System.TORCH_LONG_PRESS_POWER_TIMEOUT, 0);
-        mTorchLongPressPowerTimeout = initList(KEY_TORCH_LONG_PRESS_POWER_TIMEOUT,
-                torchLongPressPowerTimeout);
+        final int torchLongPressPowerTimeout =
+                Settings.System.getInt(resolver, Settings.System.TORCH_LONG_PRESS_POWER_TIMEOUT, 0);
+        mTorchLongPressPowerTimeout =
+                initList(KEY_TORCH_LONG_PRESS_POWER_TIMEOUT, torchLongPressPowerTimeout);
 
         if (hasPowerKey) {
             if (!DeviceUtils.deviceSupportsFlashLight(getActivity())) {
@@ -132,26 +127,30 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
             prefScreen.removePreference(powerCategory);
         }
 
-       final boolean enableBacklightOptions = getResources().getBoolean(
-                com.android.internal.R.bool.config_button_brightness_support);
+        final boolean enableBacklightOptions =
+                getResources()
+                        .getBoolean(com.android.internal.R.bool.config_button_brightness_support);
 
         mButtonBackLightCategory = (PreferenceCategory) findPreference(KEY_BUTON_BACKLIGHT_OPTIONS);
 
-        mManualButtonBrightness = (SeekBarPreferenceCham) findPreference(
-                KEY_BUTTON_MANUAL_BRIGHTNESS_NEW);
-        final int customButtonBrightness = getResources().getInteger(
-                com.android.internal.R.integer.config_button_brightness_default);
-        final int currentBrightness = Settings.System.getInt(resolver,
-                Settings.System.CUSTOM_BUTTON_BRIGHTNESS, customButtonBrightness);
-        PowerManager pm = (PowerManager)getActivity().getSystemService(Context.POWER_SERVICE);
+        mManualButtonBrightness =
+                (SeekBarPreferenceCham) findPreference(KEY_BUTTON_MANUAL_BRIGHTNESS_NEW);
+        final int customButtonBrightness =
+                getResources()
+                        .getInteger(
+                                com.android.internal.R.integer.config_button_brightness_default);
+        final int currentBrightness =
+                Settings.System.getInt(
+                        resolver, Settings.System.CUSTOM_BUTTON_BRIGHTNESS, customButtonBrightness);
+        PowerManager pm = (PowerManager) getActivity().getSystemService(Context.POWER_SERVICE);
         mManualButtonBrightness.setMax(pm.getMaximumScreenBrightnessSetting());
         mManualButtonBrightness.setValue(currentBrightness);
         mManualButtonBrightness.setDefaultValue(customButtonBrightness);
         mManualButtonBrightness.setOnPreferenceChangeListener(this);
 
         mButtonTimoutBar = (SeekBarPreferenceCham) findPreference(KEY_BUTTON_TIMEOUT);
-        int currentTimeout = Settings.System.getInt(resolver,
-                Settings.System.BUTTON_BACKLIGHT_TIMEOUT, 0);
+        int currentTimeout =
+                Settings.System.getInt(resolver, Settings.System.BUTTON_BACKLIGHT_TIMEOUT, 0);
         mButtonTimoutBar.setValue(currentTimeout);
         mButtonTimoutBar.setOnPreferenceChangeListener(this);
 
@@ -160,10 +159,11 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         }
 
         // bits for hardware keys present on device
-        final int deviceKeys = getResources().getInteger(
-                com.android.internal.R.integer.config_deviceHardwareKeys);
-        final int deviceWakeKeys = getResources().getInteger(
-                com.android.internal.R.integer.config_deviceHardwareWakeKeys);
+        final int deviceKeys =
+                getResources().getInteger(com.android.internal.R.integer.config_deviceHardwareKeys);
+        final int deviceWakeKeys =
+                getResources()
+                        .getInteger(com.android.internal.R.integer.config_deviceHardwareWakeKeys);
 
         // read bits for present hardware keys
         final boolean hasHomeKey = (deviceKeys & KEY_MASK_HOME) != 0;
@@ -182,18 +182,18 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
 
         // load categories and init/remove preferences based on device
         // configuration
-        final PreferenceCategory backCategory = (PreferenceCategory) prefScreen
-                .findPreference(CATEGORY_BACK);
-        final PreferenceCategory homeCategory = (PreferenceCategory) prefScreen
-                .findPreference(CATEGORY_HOME);
-        final PreferenceCategory menuCategory = (PreferenceCategory) prefScreen
-                .findPreference(CATEGORY_MENU);
-        final PreferenceCategory assistCategory = (PreferenceCategory) prefScreen
-                .findPreference(CATEGORY_ASSIST);
-        final PreferenceCategory appSwitchCategory = (PreferenceCategory) prefScreen
-                .findPreference(CATEGORY_APPSWITCH);
-        final PreferenceCategory cameraCategory = (PreferenceCategory)
-                findPreference(CATEGORY_CAMERA);
+        final PreferenceCategory backCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_BACK);
+        final PreferenceCategory homeCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_HOME);
+        final PreferenceCategory menuCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_MENU);
+        final PreferenceCategory assistCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_ASSIST);
+        final PreferenceCategory appSwitchCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_APPSWITCH);
+        final PreferenceCategory cameraCategory =
+                (PreferenceCategory) findPreference(CATEGORY_CAMERA);
 
         mSwapHardwareKeys = (SwitchPreference) findPreference(KEY_SWAP_NAVIGATION_KEYS);
 
@@ -220,8 +220,8 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         // App switch key (recents)
         if (hasAppSwitchKey) {
             if (!showAppSwitchWake) {
-                appSwitchCategory.removePreference(findPreference(
-                        Settings.System.APP_SWITCH_WAKE_SCREEN));
+                appSwitchCategory.removePreference(
+                        findPreference(Settings.System.APP_SWITCH_WAKE_SCREEN));
             }
         } else {
             prefScreen.removePreference(appSwitchCategory);
@@ -284,22 +284,23 @@ public class HwKeys extends ActionFragment implements Preference.OnPreferenceCha
         ContentResolver resolver = getContentResolver();
         if (preference == mHwKeyDisable) {
             boolean value = (Boolean) newValue;
-            Settings.Secure.putInt(resolver,
-                    Settings.Secure.HARDWARE_KEYS_DISABLE, value ? 1 : 0);
+            Settings.Secure.putInt(resolver, Settings.Secure.HARDWARE_KEYS_DISABLE, value ? 1 : 0);
             setActionPreferencesEnabled(!value);
             return true;
         } else if (preference == mButtonTimoutBar) {
             int buttonTimeout = (Integer) newValue;
-            Settings.System.putInt(resolver,
-                    Settings.System.BUTTON_BACKLIGHT_TIMEOUT, buttonTimeout);
+            Settings.System.putInt(
+                    resolver, Settings.System.BUTTON_BACKLIGHT_TIMEOUT, buttonTimeout);
             return true;
         } else if (preference == mManualButtonBrightness) {
             int buttonBrightness = (Integer) newValue;
-            Settings.System.putInt(resolver,
-                    Settings.System.CUSTOM_BUTTON_BRIGHTNESS, buttonBrightness);
+            Settings.System.putInt(
+                    resolver, Settings.System.CUSTOM_BUTTON_BRIGHTNESS, buttonBrightness);
             return true;
         } else if (preference == mTorchLongPressPowerTimeout) {
-            handleListChange(mTorchLongPressPowerTimeout, newValue,
+            handleListChange(
+                    mTorchLongPressPowerTimeout,
+                    newValue,
                     Settings.System.TORCH_LONG_PRESS_POWER_TIMEOUT);
             return true;
         }

@@ -14,14 +14,12 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import com.aicp.extras.R;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
-
-import com.aicp.extras.R;
 
 public abstract class HAFRAppChooserAdapter extends BaseAdapter implements Filterable {
 
@@ -41,8 +39,8 @@ public abstract class HAFRAppChooserAdapter extends BaseAdapter implements Filte
         mContext = context;
         mHandler = new Handler();
         mPackageManager = mContext.getPackageManager();
-        mLayoutInflater = (LayoutInflater) mContext
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mLayoutInflater =
+                (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mInstalledAppInfo = mPackageManager.getInstalledPackages(PackageManager.GET_PERMISSIONS);
         mTemporarylist = mInstalledAppInfo;
     }
@@ -50,38 +48,43 @@ public abstract class HAFRAppChooserAdapter extends BaseAdapter implements Filte
     public synchronized void update() {
         onStartUpdate();
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                isUpdating = true;
-                final List<AppItem> temp = new LinkedList<AppItem>();
-                for (PackageInfo info : mTemporarylist) {
-                    final AppItem item = new AppItem();
-                    item.title = info.applicationInfo.loadLabel(mPackageManager);
-                    item.icon = info.applicationInfo.loadIcon(mPackageManager);
-                    item.packageName = info.packageName;
-                    final int index = Collections.binarySearch(temp, item);
-                    final boolean isLauncherApp =
-                            mPackageManager.getLaunchIntentForPackage(info.packageName) != null;
-                    if (!hasLauncherFilter || isLauncherApp) {
-                        if (index < 0) {
-                            temp.add((-index - 1), item);
-                        } else {
-                            temp.add((index + 1), item);
-                        }
-                    }
-                }
-                mHandler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        mInstalledApps = temp;
-                        notifyDataSetChanged();
-                        isUpdating = false;
-                        onFinishUpdate();
-                    }
-                });
-            }
-        }).start();
+        new Thread(
+                        new Runnable() {
+                            @Override
+                            public void run() {
+                                isUpdating = true;
+                                final List<AppItem> temp = new LinkedList<AppItem>();
+                                for (PackageInfo info : mTemporarylist) {
+                                    final AppItem item = new AppItem();
+                                    item.title = info.applicationInfo.loadLabel(mPackageManager);
+                                    item.icon = info.applicationInfo.loadIcon(mPackageManager);
+                                    item.packageName = info.packageName;
+                                    final int index = Collections.binarySearch(temp, item);
+                                    final boolean isLauncherApp =
+                                            mPackageManager.getLaunchIntentForPackage(
+                                                            info.packageName)
+                                                    != null;
+                                    if (!hasLauncherFilter || isLauncherApp) {
+                                        if (index < 0) {
+                                            temp.add((-index - 1), item);
+                                        } else {
+                                            temp.add((index + 1), item);
+                                        }
+                                    }
+                                }
+                                mHandler.post(
+                                        new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                mInstalledApps = temp;
+                                                notifyDataSetChanged();
+                                                isUpdating = false;
+                                                onFinishUpdate();
+                                            }
+                                        });
+                            }
+                        })
+                .start();
     }
 
     public abstract void onStartUpdate();
@@ -138,8 +141,7 @@ public abstract class HAFRAppChooserAdapter extends BaseAdapter implements Filte
     public Filter getFilter() {
         return new Filter() {
             @Override
-            protected void publishResults(CharSequence constraint, FilterResults results) {
-            }
+            protected void publishResults(CharSequence constraint, FilterResults results) {}
 
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
@@ -153,8 +155,11 @@ public abstract class HAFRAppChooserAdapter extends BaseAdapter implements Filte
                 for (PackageInfo data : mInstalledAppInfo) {
                     final String filterText = constraint.toString().toLowerCase(Locale.ENGLISH);
                     try {
-                        if (data.applicationInfo.loadLabel(mPackageManager).toString()
-                                .toLowerCase(Locale.ENGLISH).contains(filterText)) {
+                        if (data.applicationInfo
+                                .loadLabel(mPackageManager)
+                                .toString()
+                                .toLowerCase(Locale.ENGLISH)
+                                .contains(filterText)) {
                             FilteredList.add(data);
                         } else if (data.packageName.contains(filterText)) {
                             FilteredList.add(data);

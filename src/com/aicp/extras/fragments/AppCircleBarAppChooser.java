@@ -18,10 +18,8 @@ package com.aicp.extras.fragments;
 
 import android.os.Bundle;
 import android.provider.Settings;
-
-import com.aicp.extras.utils.PackageListAdapter;
 import com.aicp.extras.R;
-
+import com.aicp.extras.utils.PackageListAdapter;
 import java.util.HashMap;
 
 public class AppCircleBarAppChooser extends ChooserActivityBlacklist {

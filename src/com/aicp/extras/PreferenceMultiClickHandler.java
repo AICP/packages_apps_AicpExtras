@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras;
 
 import android.support.v7.preference.Preference;

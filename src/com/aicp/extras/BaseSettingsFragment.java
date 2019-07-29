@@ -14,20 +14,16 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras;
 
 import android.app.DialogFragment;
 import android.content.ContentResolver;
 import android.os.Bundle;
+import android.support.v14.preference.PreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
-import android.support.v14.preference.PreferenceFragment;
-
-import com.android.settingslib.CustomDialogPreference;
-
 import com.aicp.extras.utils.Util;
-
+import com.android.settingslib.CustomDialogPreference;
 import java.util.UUID;
 
 public abstract class BaseSettingsFragment extends PreferenceFragment {
@@ -67,8 +63,9 @@ public abstract class BaseSettingsFragment extends PreferenceFragment {
         }
         DialogFragment f = null;
         if (preference instanceof CustomDialogPreference) {
-            f = CustomDialogPreference.CustomPreferenceDialogFragment
-                    .newInstance(preference.getKey());
+            f =
+                    CustomDialogPreference.CustomPreferenceDialogFragment.newInstance(
+                            preference.getKey());
         } else {
             super.onDisplayPreferenceDialog(preference);
             return;

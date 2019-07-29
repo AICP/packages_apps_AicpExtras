@@ -14,15 +14,13 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
-import android.support.v14.preference.SwitchPreference;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
@@ -50,55 +48,72 @@ public class BatteryLight extends BaseSettingsFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mOnlyFullyCharged = (SwitchPreference)
-                findPreference(Settings.System.OMNI_BATTERY_LIGHT_ONLY_FULLY_CHARGED);
+        mOnlyFullyCharged =
+                (SwitchPreference)
+                        findPreference(Settings.System.OMNI_BATTERY_LIGHT_ONLY_FULLY_CHARGED);
         mOnlyFullyCharged.setOnPreferenceChangeListener(this);
         mBatteryBlend = (SwitchPreference) findPreference(Settings.System.BATTERY_LIGHT_BLEND);
         mBatteryBlend.setOnPreferenceChangeListener(this);
         mChargeColorsCategory = (PreferenceCategory) findPreference(KEY_CATEGORY_CHARGE_COLORS);
         mFastChargeCategory = findPreference(KEY_CATEGORY_FAST_CHARGE);
-        mLowBlinking = (SwitchPreference)
-                findPreference(Settings.System.OMNI_BATTERY_LIGHT_LOW_BLINKING);
+        mLowBlinking =
+                (SwitchPreference) findPreference(Settings.System.OMNI_BATTERY_LIGHT_LOW_BLINKING);
         mLowBlinking.setOnPreferenceChangeListener(this);
         mLowColor = findPreference(Settings.System.OMNI_BATTERY_LIGHT_LOW_COLOR);
 
         // Preferences that need multi color LED
-        Util.requireConfig(getActivity(), findPreference(KEY_CATEGORY_COLOR_BLEND),
-                com.android.internal.R.bool.config_multiColorBatteryLed, true, false);
-        Util.requireConfig(getActivity(), mChargeColorsCategory,
-                com.android.internal.R.bool.config_multiColorBatteryLed, true, false);
-        Util.requireConfig(getActivity(), mFastChargeCategory,
-                com.android.internal.R.bool.config_multiColorBatteryLed, true, false);
+        Util.requireConfig(
+                getActivity(),
+                findPreference(KEY_CATEGORY_COLOR_BLEND),
+                com.android.internal.R.bool.config_multiColorBatteryLed,
+                true,
+                false);
+        Util.requireConfig(
+                getActivity(),
+                mChargeColorsCategory,
+                com.android.internal.R.bool.config_multiColorBatteryLed,
+                true,
+                false);
+        Util.requireConfig(
+                getActivity(),
+                mFastChargeCategory,
+                com.android.internal.R.bool.config_multiColorBatteryLed,
+                true,
+                false);
 
         // Preferences that need fast charging
-        Util.requireConfig(getActivity(), mFastChargeCategory,
-                com.android.internal.R.bool.config_FastChargingLedSupported, true, false);
+        Util.requireConfig(
+                getActivity(),
+                mFastChargeCategory,
+                com.android.internal.R.bool.config_FastChargingLedSupported,
+                true,
+                false);
 
-        updateDependencies(mOnlyFullyCharged.isChecked(), mBatteryBlend.isChecked(),
-                mLowBlinking.isChecked());
+        updateDependencies(
+                mOnlyFullyCharged.isChecked(), mBatteryBlend.isChecked(), mLowBlinking.isChecked());
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mOnlyFullyCharged) {
-            updateDependencies((Boolean) newValue, mBatteryBlend.isChecked(),
-                    mLowBlinking.isChecked());
+            updateDependencies(
+                    (Boolean) newValue, mBatteryBlend.isChecked(), mLowBlinking.isChecked());
             return true;
         } else if (preference == mBatteryBlend) {
-            updateDependencies(mOnlyFullyCharged.isChecked(), (Boolean) newValue,
-                    mLowBlinking.isChecked());
+            updateDependencies(
+                    mOnlyFullyCharged.isChecked(), (Boolean) newValue, mLowBlinking.isChecked());
             return true;
         } else if (preference == mLowBlinking) {
-            updateDependencies(mOnlyFullyCharged.isChecked(), mBatteryBlend.isChecked(),
-                    (Boolean) newValue);
+            updateDependencies(
+                    mOnlyFullyCharged.isChecked(), mBatteryBlend.isChecked(), (Boolean) newValue);
             return true;
         } else {
             return false;
         }
     }
 
-    private void updateDependencies(boolean onlyFullyCharged, boolean batteryBlend,
-                                    boolean lowBlinking) {
+    private void updateDependencies(
+            boolean onlyFullyCharged, boolean batteryBlend, boolean lowBlinking) {
         if (batteryBlend && !onlyFullyCharged) {
             for (int i = 0; i < mChargeColorsCategory.getPreferenceCount(); i++) {
                 Preference pref = mChargeColorsCategory.getPreference(i);
@@ -119,7 +134,5 @@ public class BatteryLight extends BaseSettingsFragment
             mLowColor.setEnabled(lowBlinking || !onlyFullyCharged);
             mFastChargeCategory.setEnabled(true);
         }
-
     }
-
 }

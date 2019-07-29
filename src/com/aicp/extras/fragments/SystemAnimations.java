@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
 import android.app.Activity;
@@ -33,9 +32,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.os.UserHandle;
-import android.provider.Settings;
-import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.util.Log;
 import android.view.Display;
@@ -46,7 +42,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.aicp.extras.BaseSettingsFragment;
+import com.aicp.extras.R;
+import com.aicp.extras.utils.FinishingAnimationDrawable;
+import com.aicp.extras.utils.SuShell;
+import com.aicp.extras.utils.SuTask;
+import com.aicp.extras.utils.Util;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -61,13 +62,6 @@ import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-import com.aicp.extras.BaseSettingsFragment;
-import com.aicp.extras.R;
-import com.aicp.extras.utils.FinishingAnimationDrawable;
-import com.aicp.extras.utils.SuShell;
-import com.aicp.extras.utils.SuTask;
-import com.aicp.extras.utils.Util;
-
 public class SystemAnimations extends BaseSettingsFragment {
 
     private static final String TAG = SystemAnimations.class.getSimpleName();
@@ -77,8 +71,8 @@ public class SystemAnimations extends BaseSettingsFragment {
     // Custom bootanimation
     private static final int REQUEST_PICK_BOOT_ANIMATION = 201;
     private static final String BOOTANIMATION_SYSTEM_PATH = "/system/media/bootanimation.zip";
-    private static final String BACKUP_PATH = new File(Environment
-            .getExternalStorageDirectory(), "/AICP_backup").getAbsolutePath();
+    private static final String BACKUP_PATH =
+            new File(Environment.getExternalStorageDirectory(), "/AICP_backup").getAbsolutePath();
 
     private Preference mCustomBootAnimation;
 
@@ -110,7 +104,6 @@ public class SystemAnimations extends BaseSettingsFragment {
             Log.d(TAG, "Did not create bootanimation backup dir");
         }
         Util.requireRoot(getActivity(), mCustomBootAnimation);
-
     }
 
     @Override
@@ -141,11 +134,11 @@ public class SystemAnimations extends BaseSettingsFragment {
                     FileOutputStream outputStream = null;
 
                     try {
-                        inputStream = getActivity().getContentResolver()
-                                .openInputStream(data.getData());
+                        inputStream =
+                                getActivity().getContentResolver().openInputStream(data.getData());
                         outputStream = new FileOutputStream(mBootAnimationPath, false);
                         byte[] buffer = new byte[1024];
-                        int length ;
+                        int length;
                         while ((length = inputStream.read(buffer)) > 0) {
                             outputStream.write(buffer, 0, length);
                         }
@@ -166,8 +159,8 @@ public class SystemAnimations extends BaseSettingsFragment {
     }
 
     /**
-     * Resets boot animation path. Essentially clears temporary-set boot animation
-     * set by the user from the dialog.
+     * Resets boot animation path. Essentially clears temporary-set boot animation set by the user
+     * from the dialog.
      *
      * @return returns true if a boot animation exists (user or system). false otherwise.
      */
@@ -191,7 +184,8 @@ public class SystemAnimations extends BaseSettingsFragment {
         builder.setTitle(R.string.bootanimation_preview);
         if (!mBootAnimationPath.isEmpty()
                 && (!BOOTANIMATION_SYSTEM_PATH.equalsIgnoreCase(mBootAnimationPath))) {
-            builder.setPositiveButton(R.string.bootanimation_apply,
+            builder.setPositiveButton(
+                    R.string.bootanimation_apply,
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -200,28 +194,32 @@ public class SystemAnimations extends BaseSettingsFragment {
                         }
                     });
         }
-        builder.setNeutralButton(R.string.bootanimation_set_custom,
+        builder.setNeutralButton(
+                R.string.bootanimation_set_custom,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         PackageManager packageManager = getActivity().getPackageManager();
                         Intent test = new Intent(Intent.ACTION_GET_CONTENT);
                         test.setType("application/zip");
-                        List<ResolveInfo> list = packageManager.queryIntentActivities(test,
-                                PackageManager.GET_ACTIVITIES);
+                        List<ResolveInfo> list =
+                                packageManager.queryIntentActivities(
+                                        test, PackageManager.GET_ACTIVITIES);
                         if (!list.isEmpty()) {
                             Intent intent = new Intent(Intent.ACTION_GET_CONTENT, null);
                             intent.setType("application/zip");
                             startActivityForResult(intent, REQUEST_PICK_BOOT_ANIMATION);
                         } else {
-                            //No app installed to handle the intent - file explorer required
-                            Toast.makeText(getActivity(),
-                                    R.string.bootanimation_install_file_manager_error,
-                                    Toast.LENGTH_SHORT).show();
+                            // No app installed to handle the intent - file explorer required
+                            Toast.makeText(
+                                            getActivity(),
+                                            R.string.bootanimation_install_file_manager_error,
+                                            Toast.LENGTH_SHORT)
+                                    .show();
                         }
-
                     }
                 });
-        builder.setNegativeButton(com.android.internal.R.string.cancel,
+        builder.setNegativeButton(
+                com.android.internal.R.string.cancel,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         resetBootAnimation();
@@ -229,11 +227,11 @@ public class SystemAnimations extends BaseSettingsFragment {
                     }
                 });
         LayoutInflater inflater =
-                (LayoutInflater) getActivity()
-                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View layout = inflater.inflate(R.layout.dialog_bootanimation_preview,
-                (ViewGroup) getActivity()
-                        .findViewById(R.id.bootanimation_layout_root));
+                (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View layout =
+                inflater.inflate(
+                        R.layout.dialog_bootanimation_preview,
+                        (ViewGroup) getActivity().findViewById(R.id.bootanimation_layout_root));
         mBootanimationError = (TextView) layout.findViewById(R.id.textViewError);
         mBootanimationView = (ImageView) layout.findViewById(R.id.imageViewPreview);
         mBootanimationView.setVisibility(View.GONE);
@@ -246,12 +244,14 @@ public class SystemAnimations extends BaseSettingsFragment {
         mCustomBootAnimationDialog = builder.create();
         mCustomBootAnimationDialog.setOwnerActivity(getActivity());
         mCustomBootAnimationDialog.show();
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                createBootanimationPreview(mBootAnimationPath);
-            }
-        });
+        Thread thread =
+                new Thread(
+                        new Runnable() {
+                            @Override
+                            public void run() {
+                                createBootanimationPreview(mBootAnimationPath);
+                            }
+                        });
         thread.start();
     }
 
@@ -278,8 +278,8 @@ public class SystemAnimations extends BaseSettingsFragment {
             desc = sb.toString();
         } catch (Exception handleAllException) {
             handleAllException.printStackTrace();
-            mBootanimationErrormsg = getActivity()
-                    .getString(R.string.bootanimation_error_reading_zip_file);
+            mBootanimationErrormsg =
+                    getActivity().getString(R.string.bootanimation_error_reading_zip_file);
             mBootanimationErrorHandler.sendEmptyMessage(0);
             return;
         } finally {
@@ -327,7 +327,7 @@ public class SystemAnimations extends BaseSettingsFragment {
         mBootanimationPart2 = new AnimationDrawable();
         try {
             for (Enumeration<? extends ZipEntry> enumeration = zipfile.entries();
-                 enumeration.hasMoreElements(); ) {
+                    enumeration.hasMoreElements(); ) {
                 ZipEntry entry = enumeration.nextElement();
                 if (entry.isDirectory()) {
                     continue;
@@ -337,9 +337,11 @@ public class SystemAnimations extends BaseSettingsFragment {
                     InputStream partOneInStream = null;
                     try {
                         partOneInStream = zipfile.getInputStream(entry);
-                        mBootanimationPart1.addFrame(new BitmapDrawable(getResources(),
-                                BitmapFactory.decodeStream(partOneInStream,
-                                        null, opt)), delay);
+                        mBootanimationPart1.addFrame(
+                                new BitmapDrawable(
+                                        getResources(),
+                                        BitmapFactory.decodeStream(partOneInStream, null, opt)),
+                                delay);
                     } finally {
                         if (partOneInStream != null) {
                             partOneInStream.close();
@@ -349,9 +351,11 @@ public class SystemAnimations extends BaseSettingsFragment {
                     InputStream partTwoInStream = null;
                     try {
                         partTwoInStream = zipfile.getInputStream(entry);
-                        mBootanimationPart2.addFrame(new BitmapDrawable(getResources(),
-                                BitmapFactory.decodeStream(partTwoInStream,
-                                        null, opt)), delay);
+                        mBootanimationPart2.addFrame(
+                                new BitmapDrawable(
+                                        getResources(),
+                                        BitmapFactory.decodeStream(partTwoInStream, null, opt)),
+                                delay);
                     } finally {
                         if (partTwoInStream != null) {
                             partTwoInStream.close();
@@ -360,8 +364,8 @@ public class SystemAnimations extends BaseSettingsFragment {
                 }
             }
         } catch (IOException e1) {
-            mBootanimationErrormsg = getActivity()
-                    .getString(R.string.bootanimation_error_creating_preview);
+            mBootanimationErrormsg =
+                    getActivity().getString(R.string.bootanimation_error_creating_preview);
             mBootanimationErrorHandler.sendEmptyMessage(0);
             return;
         } finally {
@@ -394,23 +398,25 @@ public class SystemAnimations extends BaseSettingsFragment {
         mBootanimationFinishedHandler.sendEmptyMessage(0);
     }
 
-    private Handler mBootanimationErrorHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            mBootanimationView.setVisibility(View.GONE);
-            mBootanimationError.setText(mBootanimationErrormsg);
-        }
-    };
+    private Handler mBootanimationErrorHandler =
+            new Handler() {
+                @Override
+                public void handleMessage(Message msg) {
+                    mBootanimationView.setVisibility(View.GONE);
+                    mBootanimationError.setText(mBootanimationErrormsg);
+                }
+            };
 
-    private Handler mBootanimationFinishedHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            mBootanimationView.setImageDrawable(mBootanimationPart1);
-            mBootanimationView.setVisibility(View.VISIBLE);
-            mBootanimationError.setVisibility(View.GONE);
-            mBootanimationPart1.start();
-        }
-    };
+    private Handler mBootanimationFinishedHandler =
+            new Handler() {
+                @Override
+                public void handleMessage(Message msg) {
+                    mBootanimationView.setImageDrawable(mBootanimationPart1);
+                    mBootanimationView.setVisibility(View.VISIBLE);
+                    mBootanimationError.setVisibility(View.GONE);
+                    mBootanimationPart1.start();
+                }
+            };
 
     private void installBootAnim(DialogInterface dialog, String bootAnimationPath) {
         DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy_HHmmss");
@@ -436,9 +442,15 @@ public class SystemAnimations extends BaseSettingsFragment {
             }
             String current = params[0];
             String bootAnimationPath = params[1];
-            SuShell.runWithSuCheck("mount -o rw,remount /system",
-                    "cp -f " + BOOTANIMATION_SYSTEM_PATH + " " +
-                            BACKUP_PATH + "/bootanimation_backup_" + current + ".zip",
+            SuShell.runWithSuCheck(
+                    "mount -o rw,remount /system",
+                    "cp -f "
+                            + BOOTANIMATION_SYSTEM_PATH
+                            + " "
+                            + BACKUP_PATH
+                            + "/bootanimation_backup_"
+                            + current
+                            + ".zip",
                     "cp -f " + bootAnimationPath + " " + BOOTANIMATION_SYSTEM_PATH,
                     "chmod 644 " + BOOTANIMATION_SYSTEM_PATH,
                     "mount -o ro,remount /system");
@@ -448,10 +460,12 @@ public class SystemAnimations extends BaseSettingsFragment {
         protected void onPostExecute(Boolean result) {
             super.onPostExecute(result);
             if (result && mSuccess) {
-                Toast.makeText(getActivity(), R.string.bootanimation_install_successful,
-                        Toast.LENGTH_SHORT).show();
+                Toast.makeText(
+                                getActivity(),
+                                R.string.bootanimation_install_successful,
+                                Toast.LENGTH_SHORT)
+                        .show();
             }
         }
     }
-
 }

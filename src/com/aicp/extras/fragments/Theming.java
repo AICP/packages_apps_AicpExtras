@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
 import android.content.Context;
@@ -23,11 +22,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.support.v7.preference.Preference;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
-
 import com.aicp.gear.util.ThemeOverlayHelper;
 
 public class Theming extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
@@ -50,16 +47,22 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (Settings.System.THEMING_BASE.equals(preference.getKey()) ||
-                Settings.System.THEMING_CORNERS.equals(preference.getKey())) {
-            if (ThemeOverlayHelper.doesThemeChangeRequireSystemUIRestart(getActivity(),
-                        preference.getKey(), null, Integer.parseInt((String) newValue))) {
+        if (Settings.System.THEMING_BASE.equals(preference.getKey())
+                || Settings.System.THEMING_CORNERS.equals(preference.getKey())) {
+            if (ThemeOverlayHelper.doesThemeChangeRequireSystemUIRestart(
+                    getActivity(),
+                    preference.getKey(),
+                    null,
+                    Integer.parseInt((String) newValue))) {
                 postRestartSystemUi();
             }
             return true;
         } else if (AdaptiveIconDrawable.MASK_SETTING_PROP.equals(preference.getKey())) {
-            Util.showRebootDialog(getActivity(), getString(R.string.icon_shape_changed_title),
-                    getString(R.string.icon_shape_changed_message), true);
+            Util.showRebootDialog(
+                    getActivity(),
+                    getString(R.string.icon_shape_changed_title),
+                    getString(R.string.icon_shape_changed_message),
+                    true);
             return true;
         } else {
             return false;
@@ -69,12 +72,13 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
     private void postRestartSystemUi() {
         // Keep a context even if activity gets closed
         final Context appContext = getActivity().getApplicationContext();
-        mHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    Util.restartSystemUi(appContext);
-                }
-        }, 200);
+        mHandler.postDelayed(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        Util.restartSystemUi(appContext);
+                    }
+                },
+                200);
     }
-
 }

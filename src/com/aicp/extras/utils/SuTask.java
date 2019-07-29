@@ -19,7 +19,6 @@ package com.aicp.extras.utils;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
-
 import com.aicp.extras.R;
 
 public abstract class SuTask<Params> extends AsyncTask<Params, Void, Boolean> {
@@ -30,8 +29,7 @@ public abstract class SuTask<Params> extends AsyncTask<Params, Void, Boolean> {
         mContext = context;
     }
 
-    abstract protected void sudoInBackground(Params... params)
-            throws SuShell.SuDeniedException;
+    protected abstract void sudoInBackground(Params... params) throws SuShell.SuDeniedException;
 
     @Override
     protected Boolean doInBackground(Params... params) {
@@ -47,8 +45,8 @@ public abstract class SuTask<Params> extends AsyncTask<Params, Void, Boolean> {
     protected void onPostExecute(Boolean result) {
         super.onPostExecute(result);
         if (!result) {
-            Toast.makeText(mContext, mContext.getString(R.string.cannot_get_su),
-                    Toast.LENGTH_LONG).show();
+            Toast.makeText(mContext, mContext.getString(R.string.cannot_get_su), Toast.LENGTH_LONG)
+                    .show();
         }
     }
 }

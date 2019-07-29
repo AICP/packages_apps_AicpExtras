@@ -50,8 +50,7 @@ public class ToggleSwitch extends Switch {
 
     @Override
     public void setChecked(boolean checked) {
-        if (mOnBeforeListener != null
-                && mOnBeforeListener.onBeforeCheckedChanged(this, checked)) {
+        if (mOnBeforeListener != null && mOnBeforeListener.onBeforeCheckedChanged(this, checked)) {
             return;
         }
         super.setChecked(checked);

@@ -16,47 +16,24 @@
 
 package com.aicp.extras.smartnav;
 
-import java.io.File;
-import java.io.FileFilter;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.util.ArrayList;
-
-import com.android.internal.utils.ActionConstants;
-import com.android.internal.utils.ActionHandler;
-import com.android.internal.utils.ActionUtils;
-import com.android.internal.utils.Config.ButtonConfig;
-
-import com.aicp.extras.R;
-import com.aicp.extras.smartnav.ActionPreference;
-import com.aicp.extras.smartnav.IconPickHelper;
-import com.aicp.extras.smartnav.IconPickHelper.OnPickListener;
-
-import com.aicp.gear.preference.SecureSettingColorPickerPreference;
-import com.aicp.gear.preference.SecureSettingSeekBarPreference;
-import com.aicp.gear.preference.SecureSettingSwitchPreference;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
-import android.os.Environment;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.UserHandle;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v14.preference.SwitchPreference;
+import android.provider.Settings;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
-import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -64,9 +41,22 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.aicp.extras.R;
+import com.aicp.gear.preference.SecureSettingColorPickerPreference;
+import com.aicp.gear.preference.SecureSettingSeekBarPreference;
+import com.aicp.gear.preference.SecureSettingSwitchPreference;
+import com.android.internal.utils.ActionConstants;
+import com.android.internal.utils.ActionHandler;
+import com.android.internal.utils.ActionUtils;
+import com.android.internal.utils.Config.ButtonConfig;
+import java.io.File;
+import java.io.FileFilter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.util.ArrayList;
 
-public class FlingSettings extends ActionFragment implements
-        Preference.OnPreferenceChangeListener, IconPickHelper.OnPickListener {
+public class FlingSettings extends ActionFragment
+        implements Preference.OnPreferenceChangeListener, IconPickHelper.OnPickListener {
     private static final String TAG = FlingSettings.class.getSimpleName();
     public static final String FLING_LOGO_URI = "fling_custom_icon_config";
 
@@ -77,9 +67,8 @@ public class FlingSettings extends ActionFragment implements
     private static final int DIALOG_RESET_CONFIRM = 1;
     private static final int DIALOG_RESTORE_PROFILE = 2;
     private static final int DIALOG_SAVE_PROFILE = 3;
-    private static final String CONFIG_STORAGE = Environment.getExternalStorageDirectory()
-            + File.separator
-            + "fling_configs";
+    private static final String CONFIG_STORAGE =
+            Environment.getExternalStorageDirectory() + File.separator + "fling_configs";
     private static final String FLING_CONFIGS_PREFIX = "fling_config_";
     private static final String KEY_FLING_BACKUP = "fling_profile_save";
     private static final String KEY_FLING_RESTORE = "fling_profile_restore";
@@ -94,15 +83,21 @@ public class FlingSettings extends ActionFragment implements
     private static final String PREF_FLING_TRAILS_COLOR = "fling_trails_color";
     private static final String PREF_FLING_TRAILS_WIDTH = "fling_trails_width";
     private static final String PREF_FLING_LONGPRESS_TIMEOUT = "fling_longpress_timeout";
-    private static final String PREF_FLING_LONGSWIPE_RIGHT_PORT = "fling_longswipe_threshold_right_port";
-    private static final String PREF_FLING_LONGSWIPE_LEFT_PORT = "fling_longswipe_threshold_left_port";
-    private static final String PREF_FLING_LONGSWIPE_RIGHT_LAND = "fling_longswipe_threshold_right_land";
-    private static final String PREF_FLING_LONGSWIPE_LEFT_LAND = "fling_longswipe_threshold_left_land";
+    private static final String PREF_FLING_LONGSWIPE_RIGHT_PORT =
+            "fling_longswipe_threshold_right_port";
+    private static final String PREF_FLING_LONGSWIPE_LEFT_PORT =
+            "fling_longswipe_threshold_left_port";
+    private static final String PREF_FLING_LONGSWIPE_RIGHT_LAND =
+            "fling_longswipe_threshold_right_land";
+    private static final String PREF_FLING_LONGSWIPE_LEFT_LAND =
+            "fling_longswipe_threshold_left_land";
     private static final String PREF_FLING_LONGSWIPE_UP_LAND = "fling_longswipe_threshold_up_land";
-    private static final String PREF_FLING_LONGSWIPE_DOWN_LAND = "fling_longswipe_threshold_down_land";
+    private static final String PREF_FLING_LONGSWIPE_DOWN_LAND =
+            "fling_longswipe_threshold_down_land";
 
     private static final String PREF_FLING_CUSTOM_LOGO_PICK = "fling_custom_logo_pick";
-    private static final String PREF_FLING_CUSTOM_LOGO_GALLERY_PICK = "fling_custom_logo_gallery_pick";
+    private static final String PREF_FLING_CUSTOM_LOGO_GALLERY_PICK =
+            "fling_custom_logo_gallery_pick";
     private static final String PREF_FLING_CUSTOM_LOGO_RESET = "fling_custom_logo_reset";
 
     private static final String KEY_LONG_SWIPE_CATEGORY = "eos_long_swipe_category";
@@ -155,68 +150,105 @@ public class FlingSettings extends ActionFragment implements
         // NOTE: we display to the user actual timeouts starting from touch event
         // but framework wants the value less tap timeout, which is 100ms
         // so we always write 100ms less but display 100ms more
-        mLongPressTimeout = (SecureSettingSeekBarPreference) findPreference(PREF_FLING_LONGPRESS_TIMEOUT);
-        int val = Settings.Secure.getIntForUser(getContentResolver(),
-                Settings.Secure.FLING_LONGPRESS_TIMEOUT, 250, UserHandle.USER_CURRENT);
+        mLongPressTimeout =
+                (SecureSettingSeekBarPreference) findPreference(PREF_FLING_LONGPRESS_TIMEOUT);
+        int val =
+                Settings.Secure.getIntForUser(
+                        getContentResolver(),
+                        Settings.Secure.FLING_LONGPRESS_TIMEOUT,
+                        250,
+                        UserHandle.USER_CURRENT);
         val += 100;
         mLongPressTimeout.setValue(val);
         mLongPressTimeout.setOnPreferenceChangeListener(this);
 
-        int rippleColor = Settings.Secure.getIntForUser(getContentResolver(),
-                Settings.Secure.FLING_RIPPLE_COLOR, Color.WHITE, UserHandle.USER_CURRENT);
+        int rippleColor =
+                Settings.Secure.getIntForUser(
+                        getContentResolver(),
+                        Settings.Secure.FLING_RIPPLE_COLOR,
+                        Color.WHITE,
+                        UserHandle.USER_CURRENT);
         mRippleColor = (SecureSettingColorPickerPreference) findPreference(PREF_FLING_RIPPLE_COLOR);
         mRippleColor.setNewPreviewColor(rippleColor);
 
-        int trailsColor = Settings.Secure.getIntForUser(getContentResolver(),
-                Settings.Secure.FLING_TRAILS_COLOR, Color.WHITE, UserHandle.USER_CURRENT);
+        int trailsColor =
+                Settings.Secure.getIntForUser(
+                        getContentResolver(),
+                        Settings.Secure.FLING_TRAILS_COLOR,
+                        Color.WHITE,
+                        UserHandle.USER_CURRENT);
         mTrailsColor = (SecureSettingColorPickerPreference) findPreference(PREF_FLING_TRAILS_COLOR);
         mTrailsColor.setNewPreviewColor(trailsColor);
 
         mIsTablet = !ActionUtils.navigationBarCanMove();
 
-        mSwipePortRight = (SecureSettingSeekBarPreference) findPreference(PREF_FLING_LONGSWIPE_RIGHT_PORT);
-        val = Settings.Secure.getIntForUser(
-                getContentResolver(), Settings.Secure.FLING_LONGSWIPE_THRESHOLD_RIGHT_PORT,
-                mIsTablet ? 30 : 40, UserHandle.USER_CURRENT);
+        mSwipePortRight =
+                (SecureSettingSeekBarPreference) findPreference(PREF_FLING_LONGSWIPE_RIGHT_PORT);
+        val =
+                Settings.Secure.getIntForUser(
+                        getContentResolver(),
+                        Settings.Secure.FLING_LONGSWIPE_THRESHOLD_RIGHT_PORT,
+                        mIsTablet ? 30 : 40,
+                        UserHandle.USER_CURRENT);
         mSwipePortRight.setValue(val);
 
-        mSwipePortLeft = (SecureSettingSeekBarPreference) findPreference(PREF_FLING_LONGSWIPE_LEFT_PORT);
-        val = Settings.Secure.getIntForUser(
-                getContentResolver(), Settings.Secure.FLING_LONGSWIPE_THRESHOLD_LEFT_PORT,
-                mIsTablet ? 30 : 40, UserHandle.USER_CURRENT);
+        mSwipePortLeft =
+                (SecureSettingSeekBarPreference) findPreference(PREF_FLING_LONGSWIPE_LEFT_PORT);
+        val =
+                Settings.Secure.getIntForUser(
+                        getContentResolver(),
+                        Settings.Secure.FLING_LONGSWIPE_THRESHOLD_LEFT_PORT,
+                        mIsTablet ? 30 : 40,
+                        UserHandle.USER_CURRENT);
         mSwipePortLeft.setValue(val);
 
-        mSwipeLandRight = (SecureSettingSeekBarPreference) findPreference(PREF_FLING_LONGSWIPE_RIGHT_LAND);
-        mSwipeLandLeft = (SecureSettingSeekBarPreference) findPreference(PREF_FLING_LONGSWIPE_LEFT_LAND);
-        mSwipeVertUp = (SecureSettingSeekBarPreference) findPreference(PREF_FLING_LONGSWIPE_UP_LAND);
-        mSwipeVertDown = (SecureSettingSeekBarPreference) findPreference(PREF_FLING_LONGSWIPE_DOWN_LAND);
+        mSwipeLandRight =
+                (SecureSettingSeekBarPreference) findPreference(PREF_FLING_LONGSWIPE_RIGHT_LAND);
+        mSwipeLandLeft =
+                (SecureSettingSeekBarPreference) findPreference(PREF_FLING_LONGSWIPE_LEFT_LAND);
+        mSwipeVertUp =
+                (SecureSettingSeekBarPreference) findPreference(PREF_FLING_LONGSWIPE_UP_LAND);
+        mSwipeVertDown =
+                (SecureSettingSeekBarPreference) findPreference(PREF_FLING_LONGSWIPE_DOWN_LAND);
 
-        PreferenceCategory longSwipeCategory = (PreferenceCategory) getPreferenceScreen()
-                .findPreference(KEY_LONG_SWIPE_CATEGORY);
+        PreferenceCategory longSwipeCategory =
+                (PreferenceCategory) getPreferenceScreen().findPreference(KEY_LONG_SWIPE_CATEGORY);
 
         if (mIsTablet) {
             longSwipeCategory.removePreference(mSwipeVertUp);
             longSwipeCategory.removePreference(mSwipeVertDown);
-            val = Settings.Secure.getIntForUser(
-                    getContentResolver(), Settings.Secure.FLING_LONGSWIPE_THRESHOLD_RIGHT_LAND,
-                    25, UserHandle.USER_CURRENT);
+            val =
+                    Settings.Secure.getIntForUser(
+                            getContentResolver(),
+                            Settings.Secure.FLING_LONGSWIPE_THRESHOLD_RIGHT_LAND,
+                            25,
+                            UserHandle.USER_CURRENT);
             mSwipeLandRight.setValue(val);
 
-            val = Settings.Secure.getIntForUser(
-                    getContentResolver(), Settings.Secure.FLING_LONGSWIPE_THRESHOLD_LEFT_LAND,
-                    25, UserHandle.USER_CURRENT);
+            val =
+                    Settings.Secure.getIntForUser(
+                            getContentResolver(),
+                            Settings.Secure.FLING_LONGSWIPE_THRESHOLD_LEFT_LAND,
+                            25,
+                            UserHandle.USER_CURRENT);
             mSwipeLandLeft.setValue(val);
         } else {
             longSwipeCategory.removePreference(mSwipeLandRight);
             longSwipeCategory.removePreference(mSwipeLandLeft);
-            val = Settings.Secure.getIntForUser(
-                    getContentResolver(), Settings.Secure.FLING_LONGSWIPE_THRESHOLD_UP_LAND,
-                    40, UserHandle.USER_CURRENT);
+            val =
+                    Settings.Secure.getIntForUser(
+                            getContentResolver(),
+                            Settings.Secure.FLING_LONGSWIPE_THRESHOLD_UP_LAND,
+                            40,
+                            UserHandle.USER_CURRENT);
             mSwipeVertUp.setValue(val);
 
-            val = Settings.Secure.getIntForUser(
-                    getContentResolver(), Settings.Secure.FLING_LONGSWIPE_THRESHOLD_DOWN_LAND,
-                    40, UserHandle.USER_CURRENT);
+            val =
+                    Settings.Secure.getIntForUser(
+                            getContentResolver(),
+                            Settings.Secure.FLING_LONGSWIPE_THRESHOLD_DOWN_LAND,
+                            40,
+                            UserHandle.USER_CURRENT);
             mSwipeVertDown.setValue(val);
         }
 
@@ -233,80 +265,103 @@ public class FlingSettings extends ActionFragment implements
     @Override
     public Dialog onCreateDialog(int dialogId) {
         switch (dialogId) {
-            case DIALOG_RESET_CONFIRM: {
-                Dialog dialog;
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle(R.string.fling_factory_reset_title);
-                alertDialog.setMessage(R.string.fling_factory_reset_confirm);
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        resetFling();
-                    }
-                });
-                alertDialog.setNegativeButton(android.R.string.cancel, null);
-                dialog = alertDialog.create();
-                return dialog;
-            }
-            case DIALOG_RESTORE_PROFILE: {
-                Dialog dialog;
-                final ConfigAdapter configAdapter = new ConfigAdapter(getActivity(),
-                        getConfigFiles(CONFIG_STORAGE));
-                AlertDialog.Builder configDialog = new AlertDialog.Builder(getActivity());
-                configDialog.setTitle(R.string.fling_config_dialog_title);
-                configDialog.setNegativeButton(getString(android.R.string.cancel), null);
-                configDialog.setAdapter(configAdapter, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int item) {
-                        String resultMsg;
-                        try {
-                            File configFile = (File) configAdapter.getItem(item);
-                            String config = getFlingConfigFromStorage(configFile);
-                            restoreConfig(getActivity(), config);
-                            loadAndSetConfigs();
-                            onActionPolicyEnforced(mPrefHolder);
-                            resultMsg = getString(R.string.fling_config_restore_success_toast);
-                        } catch (Exception e) {
-                            resultMsg = getString(R.string.fling_config_restore_error_toast);
-                        }
-                        Toast.makeText(getActivity(), resultMsg, Toast.LENGTH_SHORT).show();
-                    }
-                });
-                dialog = configDialog.create();
-                return dialog;
-            }
-            case DIALOG_SAVE_PROFILE: {
-                Dialog dialog;
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                final EditText input = new EditText(getActivity());
-                builder.setTitle(getString(R.string.fling_config_name_edit_dialog_title));
-                builder.setMessage(R.string.fling_config_name_edit_dialog_message);
-                builder.setView(input);
-                builder.setNegativeButton(getString(android.R.string.cancel), null);
-                builder.setPositiveButton(android.R.string.ok,
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int whichButton) {
-                                String inputText = input.getText().toString();
-                                if (TextUtils.isEmpty(inputText)) {
-                                    inputText = String.valueOf(android.text.format.DateFormat
-                                            .format("yyyy-MM-dd_hh:mm:ss", new java.util.Date()));
+            case DIALOG_RESET_CONFIRM:
+                {
+                    Dialog dialog;
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                    alertDialog.setTitle(R.string.fling_factory_reset_title);
+                    alertDialog.setMessage(R.string.fling_factory_reset_confirm);
+                    alertDialog.setPositiveButton(
+                            R.string.yes,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    resetFling();
                                 }
-                                String resultMsg;
-                                try {
-                                    String currentConfig = getCurrentConfig(getActivity());
-                                    backupFlingConfig(currentConfig, inputText);
-                                    resultMsg = getString(R.string.fling_config_backup_success_toast);
-                                } catch (Exception e) {
-                                    resultMsg = getString(R.string.fling_config_backup_error_toast);
+                            });
+                    alertDialog.setNegativeButton(android.R.string.cancel, null);
+                    dialog = alertDialog.create();
+                    return dialog;
+                }
+            case DIALOG_RESTORE_PROFILE:
+                {
+                    Dialog dialog;
+                    final ConfigAdapter configAdapter =
+                            new ConfigAdapter(getActivity(), getConfigFiles(CONFIG_STORAGE));
+                    AlertDialog.Builder configDialog = new AlertDialog.Builder(getActivity());
+                    configDialog.setTitle(R.string.fling_config_dialog_title);
+                    configDialog.setNegativeButton(getString(android.R.string.cancel), null);
+                    configDialog.setAdapter(
+                            configAdapter,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int item) {
+                                    String resultMsg;
+                                    try {
+                                        File configFile = (File) configAdapter.getItem(item);
+                                        String config = getFlingConfigFromStorage(configFile);
+                                        restoreConfig(getActivity(), config);
+                                        loadAndSetConfigs();
+                                        onActionPolicyEnforced(mPrefHolder);
+                                        resultMsg =
+                                                getString(
+                                                        R.string
+                                                                .fling_config_restore_success_toast);
+                                    } catch (Exception e) {
+                                        resultMsg =
+                                                getString(
+                                                        R.string.fling_config_restore_error_toast);
+                                    }
+                                    Toast.makeText(getActivity(), resultMsg, Toast.LENGTH_SHORT)
+                                            .show();
                                 }
-                                Toast.makeText(getActivity(), resultMsg, Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                dialog = builder.create();
-                dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
-                return dialog;
-            }
-            default: {
-                return super.onCreateDialog(dialogId);
-            }
+                            });
+                    dialog = configDialog.create();
+                    return dialog;
+                }
+            case DIALOG_SAVE_PROFILE:
+                {
+                    Dialog dialog;
+                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                    final EditText input = new EditText(getActivity());
+                    builder.setTitle(getString(R.string.fling_config_name_edit_dialog_title));
+                    builder.setMessage(R.string.fling_config_name_edit_dialog_message);
+                    builder.setView(input);
+                    builder.setNegativeButton(getString(android.R.string.cancel), null);
+                    builder.setPositiveButton(
+                            android.R.string.ok,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int whichButton) {
+                                    String inputText = input.getText().toString();
+                                    if (TextUtils.isEmpty(inputText)) {
+                                        inputText =
+                                                String.valueOf(
+                                                        android.text.format.DateFormat.format(
+                                                                "yyyy-MM-dd_hh:mm:ss",
+                                                                new java.util.Date()));
+                                    }
+                                    String resultMsg;
+                                    try {
+                                        String currentConfig = getCurrentConfig(getActivity());
+                                        backupFlingConfig(currentConfig, inputText);
+                                        resultMsg =
+                                                getString(
+                                                        R.string.fling_config_backup_success_toast);
+                                    } catch (Exception e) {
+                                        resultMsg =
+                                                getString(R.string.fling_config_backup_error_toast);
+                                    }
+                                    Toast.makeText(getActivity(), resultMsg, Toast.LENGTH_SHORT)
+                                            .show();
+                                }
+                            });
+                    dialog = builder.create();
+                    dialog.getWindow()
+                            .setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+                    return dialog;
+                }
+            default:
+                {
+                    return super.onCreateDialog(dialogId);
+                }
         }
     }
 
@@ -349,56 +404,54 @@ public class FlingSettings extends ActionFragment implements
         logoConfig.clearCustomIconIconUri();
         ButtonConfig.setButton(mContext, logoConfig, FLING_LOGO_URI, true);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_LOGO_VISIBLE, 1);
+        Settings.Secure.putInt(getContentResolver(), Settings.Secure.FLING_LOGO_VISIBLE, 1);
         mShowLogo.setChecked(true);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_LOGO_ANIMATES, 1);
+        Settings.Secure.putInt(getContentResolver(), Settings.Secure.FLING_LOGO_ANIMATES, 1);
         mAnimateLogo.setChecked(true);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_RIPPLE_ENABLED, 1);
+        Settings.Secure.putInt(getContentResolver(), Settings.Secure.FLING_RIPPLE_ENABLED, 1);
         mShowRipple.setChecked(true);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_RIPPLE_COLOR, Color.WHITE);
+        Settings.Secure.putInt(
+                getContentResolver(), Settings.Secure.FLING_RIPPLE_COLOR, Color.WHITE);
         mRippleColor.setNewPreviewColor(Color.WHITE);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_LONGPRESS_TIMEOUT, 250);
-        mLongPressTimeout.setValue(250+100);
+        Settings.Secure.putInt(getContentResolver(), Settings.Secure.FLING_LONGPRESS_TIMEOUT, 250);
+        mLongPressTimeout.setValue(250 + 100);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_LONGSWIPE_THRESHOLD_RIGHT_PORT, mIsTablet ? 30 : 40);
+        Settings.Secure.putInt(
+                getContentResolver(),
+                Settings.Secure.FLING_LONGSWIPE_THRESHOLD_RIGHT_PORT,
+                mIsTablet ? 30 : 40);
         mSwipePortRight.setValue(mIsTablet ? 30 : 40);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_LONGSWIPE_THRESHOLD_LEFT_PORT, mIsTablet ? 30 : 40);
+        Settings.Secure.putInt(
+                getContentResolver(),
+                Settings.Secure.FLING_LONGSWIPE_THRESHOLD_LEFT_PORT,
+                mIsTablet ? 30 : 40);
         mSwipePortLeft.setValue(mIsTablet ? 30 : 40);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_LONGSWIPE_THRESHOLD_RIGHT_LAND, 25);
+        Settings.Secure.putInt(
+                getContentResolver(), Settings.Secure.FLING_LONGSWIPE_THRESHOLD_RIGHT_LAND, 25);
         mSwipeLandRight.setValue(25);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_LONGSWIPE_THRESHOLD_LEFT_LAND, 25);
+        Settings.Secure.putInt(
+                getContentResolver(), Settings.Secure.FLING_LONGSWIPE_THRESHOLD_LEFT_LAND, 25);
         mSwipeLandLeft.setValue(25);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_LONGSWIPE_THRESHOLD_UP_LAND, 40);
+        Settings.Secure.putInt(
+                getContentResolver(), Settings.Secure.FLING_LONGSWIPE_THRESHOLD_UP_LAND, 40);
         mSwipeVertUp.setValue(40);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_LONGSWIPE_THRESHOLD_DOWN_LAND, 40);
+        Settings.Secure.putInt(
+                getContentResolver(), Settings.Secure.FLING_LONGSWIPE_THRESHOLD_DOWN_LAND, 40);
         mSwipeVertDown.setValue(40);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_KEYBOARD_CURSORS, 1);
+        Settings.Secure.putInt(getContentResolver(), Settings.Secure.FLING_KEYBOARD_CURSORS, 1);
         mKbCursors.setChecked(true);
 
-        Settings.Secure.putInt(getContentResolver(),
-                Settings.Secure.FLING_LOGO_OPACITY, 255);
+        Settings.Secure.putInt(getContentResolver(), Settings.Secure.FLING_LOGO_OPACITY, 255);
         mLogoOpacity.setValue(255);
     }
 
@@ -415,8 +468,9 @@ public class FlingSettings extends ActionFragment implements
         public View getView(int position, View convertView, ViewGroup parent) {
             View itemRow = convertView;
             File f = mConfigFiles.get(position);
-            itemRow = ((LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
-                    .inflate(android.R.layout.select_dialog_item, null);
+            itemRow =
+                    ((LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
+                            .inflate(android.R.layout.select_dialog_item, null);
             String name = f.getName();
             if (name.startsWith(FLING_CONFIGS_PREFIX)) {
                 name = f.getName().substring(FLING_CONFIGS_PREFIX.length(), f.getName().length());
@@ -446,10 +500,11 @@ public class FlingSettings extends ActionFragment implements
     }
 
     static String getCurrentConfig(Context ctx) {
-        String config = Settings.Secure.getStringForUser(
-                ctx.getContentResolver(), ActionConstants.getDefaults(ActionConstants.FLING)
-                        .getUri(),
-                UserHandle.USER_CURRENT);
+        String config =
+                Settings.Secure.getStringForUser(
+                        ctx.getContentResolver(),
+                        ActionConstants.getDefaults(ActionConstants.FLING).getUri(),
+                        UserHandle.USER_CURRENT);
         if (TextUtils.isEmpty(config)) {
             config = getDefaultConfig(ctx);
         }
@@ -461,9 +516,10 @@ public class FlingSettings extends ActionFragment implements
     }
 
     static void restoreConfig(Context context, String config) {
-        Settings.Secure.putStringForUser(context.getContentResolver(),
-                ActionConstants.getDefaults(ActionConstants.FLING)
-                        .getUri(), config,
+        Settings.Secure.putStringForUser(
+                context.getContentResolver(),
+                ActionConstants.getDefaults(ActionConstants.FLING).getUri(),
+                config,
                 UserHandle.USER_CURRENT);
     }
 
@@ -504,9 +560,7 @@ public class FlingSettings extends ActionFragment implements
             dir.mkdirs();
         }
         ArrayList<File> list = new ArrayList<File>();
-        for (File tmp : dir.listFiles(new StartsWithFilter(new String[] {
-                FLING_CONFIGS_PREFIX
-        }))) {
+        for (File tmp : dir.listFiles(new StartsWithFilter(new String[] {FLING_CONFIGS_PREFIX}))) {
             list.add(tmp);
         }
         return list;
@@ -561,8 +615,11 @@ public class FlingSettings extends ActionFragment implements
         if (preference == mLongPressTimeout) {
             int val = (Integer) newValue;
             val -= 100;
-            Settings.Secure.putIntForUser(getContentResolver(),
-                    Settings.Secure.FLING_LONGPRESS_TIMEOUT, val, UserHandle.USER_CURRENT);
+            Settings.Secure.putIntForUser(
+                    getContentResolver(),
+                    Settings.Secure.FLING_LONGPRESS_TIMEOUT,
+                    val,
+                    UserHandle.USER_CURRENT);
             return true;
         }
         return false;

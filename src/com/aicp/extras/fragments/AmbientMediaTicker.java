@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
 import com.aicp.extras.BaseSettingsFragment;

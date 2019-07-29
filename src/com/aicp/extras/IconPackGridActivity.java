@@ -18,43 +18,22 @@
 
 package com.aicp.extras;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserFactory;
-
-import com.aicp.extras.R;
-
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.content.pm.ResolveInfo;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Bitmap.Config;
+import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.ArrayMap;
-import android.util.ArraySet;
 import android.util.DisplayMetrics;
 import android.util.LruCache;
 import android.view.LayoutInflater;
@@ -66,8 +45,14 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Set;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
 
 public class IconPackGridActivity extends Activity {
     private IconGridAdapter mAdapter;
@@ -117,33 +102,35 @@ public class IconPackGridActivity extends Activity {
 
         // Get memory class of this device, exceeding this amount will throw an
         // OutOfMemory exception.
-        final int memClass = ((ActivityManager) getSystemService(Context.ACTIVITY_SERVICE))
-                .getMemoryClass();
+        final int memClass =
+                ((ActivityManager) getSystemService(Context.ACTIVITY_SERVICE)).getMemoryClass();
         // Use 1/8th of the available memory for this memory cache.
         final int cacheSize = 1024 * 1024 * memClass / 8;
-        mMemoryCache = new LruCache<String, Bitmap>(cacheSize) {
-            protected int sizeOf(String key, Bitmap bitmap) {
-                // The cache size will be measured in bytes rather than number of items.
-                return bitmap.getByteCount();
-            }
-        };
+        mMemoryCache =
+                new LruCache<String, Bitmap>(cacheSize) {
+                    protected int sizeOf(String key, Bitmap bitmap) {
+                        // The cache size will be measured in bytes rather than number of items.
+                        return bitmap.getByteCount();
+                    }
+                };
 
         mGridView = (GridView) findViewById(R.id.icon_grid);
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
         mGridData = new ArrayList<>();
         mAdapter = new IconGridAdapter(this);
         mGridView.setAdapter(mAdapter);
-        mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                IconInfo info = (IconInfo) parent.getItemAtPosition(position);
-                Intent resultIntent = new Intent();
-                resultIntent.putExtra("icon_data_type", "iconpack");
-                resultIntent.putExtra("icon_data_package", mPackageName);
-                resultIntent.putExtra("icon_data_name", info.name);
-                IconPackGridActivity.this.setResult(RESULT_OK, resultIntent);
-                IconPackGridActivity.this.finish();
-            }
-        });
+        mGridView.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
+                    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                        IconInfo info = (IconInfo) parent.getItemAtPosition(position);
+                        Intent resultIntent = new Intent();
+                        resultIntent.putExtra("icon_data_type", "iconpack");
+                        resultIntent.putExtra("icon_data_package", mPackageName);
+                        resultIntent.putExtra("icon_data_name", info.name);
+                        IconPackGridActivity.this.setResult(RESULT_OK, resultIntent);
+                        IconPackGridActivity.this.finish();
+                    }
+                });
         new AsyncIconLoaderTask().execute(mPackageName);
         mProgressBar.setVisibility(View.VISIBLE);
     }
@@ -164,7 +151,7 @@ public class IconPackGridActivity extends Activity {
             String packageName = params[0];
             Set<String> set = new HashSet<>();
 
-            //From assets
+            // From assets
             try {
                 InputStream appfilterstream = mIconRes.getAssets().open("drawable.xml");
                 set.addAll(xmlInputStreamToSet(appfilterstream, packageName));
@@ -172,7 +159,7 @@ public class IconPackGridActivity extends Activity {
                 e.printStackTrace();
             }
 
-            //From res/xml
+            // From res/xml
             try {
                 int xmlId = mIconRes.getIdentifier("drawable", "xml", packageName);
                 set.addAll(xmlPullParserToSet(mIconRes.getXml(xmlId)));
@@ -193,13 +180,14 @@ public class IconPackGridActivity extends Activity {
                 }
             }
 
-            Collections.sort(mGridData, new Comparator<IconInfo>() {
-                @Override
-                public int compare(IconInfo lhs, IconInfo rhs) {
-                    return lhs.name.compareTo(rhs.name);
-                }
-
-            });
+            Collections.sort(
+                    mGridData,
+                    new Comparator<IconInfo>() {
+                        @Override
+                        public int compare(IconInfo lhs, IconInfo rhs) {
+                            return lhs.name.compareTo(rhs.name);
+                        }
+                    });
             return !mGridData.isEmpty();
         }
 
@@ -256,9 +244,7 @@ public class IconPackGridActivity extends Activity {
             }
 
             return set;
-
         }
-
     }
 
     public static Bitmap drawableToBitmap(Drawable drawable) {
@@ -267,8 +253,11 @@ public class IconPackGridActivity extends Activity {
         } else if (drawable instanceof BitmapDrawable) {
             return ((BitmapDrawable) drawable).getBitmap();
         }
-        Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(),
-                drawable.getIntrinsicHeight(), Config.ARGB_8888);
+        Bitmap bitmap =
+                Bitmap.createBitmap(
+                        drawable.getIntrinsicWidth(),
+                        drawable.getIntrinsicHeight(),
+                        Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
         drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
         drawable.draw(canvas);

@@ -14,18 +14,15 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.SELinux;
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
 import android.support.v14.preference.SwitchPreference;
+import android.support.v7.preference.Preference;
 import android.util.Log;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.Constants;
 import com.aicp.extras.R;
@@ -60,22 +57,34 @@ public class SystemBehaviour extends BaseSettingsFragment
         mSelinuxMode = (SwitchPreference) findPreference(Constants.PREF_SELINUX_MODE);
         mSelinuxMode.setChecked(SELinux.isSELinuxEnforced());
         mSelinuxMode.setOnPreferenceChangeListener(this);
-        mSelinuxPersistence =
-                (SwitchPreference) findPreference(Constants.PREF_SELINUX_PERSISTENCE);
+        mSelinuxPersistence = (SwitchPreference) findPreference(Constants.PREF_SELINUX_PERSISTENCE);
         mSelinuxPersistence.setOnPreferenceChangeListener(this);
-        mSelinuxPersistence.setChecked(getContext()
-                .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
-                .contains(Constants.PREF_SELINUX_MODE));
+        mSelinuxPersistence.setChecked(
+                getContext()
+                        .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
+                        .contains(Constants.PREF_SELINUX_MODE));
         Util.requireRoot(getActivity(), selinuxCategory);
 
-        Util.requireConfig(getActivity(), findPreference(KEY_SMART_PIXELS),
-                com.android.internal.R.bool.config_enableSmartPixels, true, false);
+        Util.requireConfig(
+                getActivity(),
+                findPreference(KEY_SMART_PIXELS),
+                com.android.internal.R.bool.config_enableSmartPixels,
+                true,
+                false);
 
-        Util.requireConfig(getActivity(), findPreference(KEY_AUDIO_PANEL_POSITION),
-                com.android.internal.R.bool.config_audioPanelOnLeftSide, true, false);
+        Util.requireConfig(
+                getActivity(),
+                findPreference(KEY_AUDIO_PANEL_POSITION),
+                com.android.internal.R.bool.config_audioPanelOnLeftSide,
+                true,
+                false);
 
-        Util.requireConfig(getActivity(), findPreference(KEY_BARS),
-                com.android.internal.R.bool.config_haveHigherAspectRatioScreen, true, false);
+        Util.requireConfig(
+                getActivity(),
+                findPreference(KEY_BARS),
+                com.android.internal.R.bool.config_haveHigherAspectRatioScreen,
+                true,
+                false);
     }
 
     @Override
@@ -97,8 +106,8 @@ public class SystemBehaviour extends BaseSettingsFragment
     }
 
     private void setSelinuxEnabled(boolean status, boolean persistent) {
-        SharedPreferences.Editor editor = getContext()
-                .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE).edit();
+        SharedPreferences.Editor editor =
+                getContext().getSharedPreferences("selinux_pref", Context.MODE_PRIVATE).edit();
         if (persistent) {
             editor.putBoolean(Constants.PREF_SELINUX_MODE, status);
         } else {
@@ -112,6 +121,7 @@ public class SystemBehaviour extends BaseSettingsFragment
         public SwitchSelinuxTask(Context context) {
             super(context);
         }
+
         @Override
         protected void sudoInBackground(Boolean... params) throws SuShell.SuDeniedException {
             if (params.length != 1) {

@@ -16,12 +16,6 @@
 
 package com.aicp.extras;
 
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -39,9 +33,12 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
-
-import com.aicp.extras.R;
 import com.aicp.extras.ShortcutPickHelper.AppExpandableAdapter.GroupInfo;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class ShortcutPickHelper {
 
@@ -67,15 +64,15 @@ public class ShortcutPickHelper {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == Activity.RESULT_OK) {
             switch (requestCode) {
-            case REQUEST_PICK_APPLICATION:
-                completeSetCustomApp(data);
-                break;
-            case REQUEST_CREATE_SHORTCUT:
-                completeSetCustomShortcut(data);
-                break;
-            case REQUEST_PICK_SHORTCUT:
-                processShortcut(data, REQUEST_PICK_APPLICATION, REQUEST_CREATE_SHORTCUT);
-                break;
+                case REQUEST_PICK_APPLICATION:
+                    completeSetCustomApp(data);
+                    break;
+                case REQUEST_CREATE_SHORTCUT:
+                    completeSetCustomShortcut(data);
+                    break;
+                case REQUEST_PICK_SHORTCUT:
+                    processShortcut(data, REQUEST_PICK_APPLICATION, REQUEST_CREATE_SHORTCUT);
+                    break;
             }
         }
     }
@@ -99,7 +96,8 @@ public class ShortcutPickHelper {
                 shortcutIcons.add(s);
             }
         }
-        shortcutIcons.add(ShortcutIconResource.fromContext(mParent, android.R.drawable.sym_def_app_icon));
+        shortcutIcons.add(
+                ShortcutIconResource.fromContext(mParent, android.R.drawable.sym_def_app_icon));
         shortcutIcons.add(ShortcutIconResource.fromContext(mParent, R.drawable.activities_icon));
         bundle.putParcelableArrayList(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, shortcutIcons);
 
@@ -122,7 +120,8 @@ public class ShortcutPickHelper {
         }
     }
 
-    private void processShortcut(final Intent intent, int requestCodeApplication, int requestCodeShortcut) {
+    private void processShortcut(
+            final Intent intent, int requestCodeApplication, int requestCodeShortcut) {
         // Handle case where user selected "Applications"
         String applicationName = mParent.getString(R.string.profile_applist_title);
         String application2name = mParent.getString(R.string.picker_activities);
@@ -134,37 +133,53 @@ public class ShortcutPickHelper {
             Intent pickIntent = new Intent(Intent.ACTION_PICK_ACTIVITY);
             pickIntent.putExtra(Intent.EXTRA_INTENT, mainIntent);
             startFragmentOrActivity(pickIntent, requestCodeApplication);
-        } else if (application2name != null && application2name.equals(shortcutName)){
-            final List<PackageInfo> pInfos = mPackageManager.getInstalledPackages(PackageManager.GET_ACTIVITIES);
+        } else if (application2name != null && application2name.equals(shortcutName)) {
+            final List<PackageInfo> pInfos =
+                    mPackageManager.getInstalledPackages(PackageManager.GET_ACTIVITIES);
             ExpandableListView appListView = new ExpandableListView(mParent);
             AppExpandableAdapter appAdapter = new AppExpandableAdapter(pInfos, mParent);
             appListView.setAdapter(appAdapter);
-            appListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-                @Override
-                public boolean onChildClick(ExpandableListView parent, View v,
-                        int groupPosition, int childPosition, long id) {
-                    Intent shortIntent = new Intent(Intent.ACTION_MAIN);
-                    String pkgName = ((GroupInfo)parent.getExpandableListAdapter().getGroup(groupPosition))
-                            .info.packageName;
-                    String actName = ((GroupInfo)parent.getExpandableListAdapter().getGroup(groupPosition))
-                            .info.activities[childPosition].name;
-                    shortIntent.setClassName(pkgName, actName);
-                    completeSetCustomApp(shortIntent);
-                    mAlertDialog.dismiss();
-                    return true;
-                }
-            });
+            appListView.setOnChildClickListener(
+                    new ExpandableListView.OnChildClickListener() {
+                        @Override
+                        public boolean onChildClick(
+                                ExpandableListView parent,
+                                View v,
+                                int groupPosition,
+                                int childPosition,
+                                long id) {
+                            Intent shortIntent = new Intent(Intent.ACTION_MAIN);
+                            String pkgName =
+                                    ((GroupInfo)
+                                                    parent.getExpandableListAdapter()
+                                                            .getGroup(groupPosition))
+                                            .info
+                                            .packageName;
+                            String actName =
+                                    ((GroupInfo)
+                                                    parent.getExpandableListAdapter()
+                                                            .getGroup(groupPosition))
+                                            .info
+                                            .activities[childPosition]
+                                            .name;
+                            shortIntent.setClassName(pkgName, actName);
+                            completeSetCustomApp(shortIntent);
+                            mAlertDialog.dismiss();
+                            return true;
+                        }
+                    });
             Builder builder = new Builder(mParent);
             builder.setView(appListView);
             mAlertDialog = builder.create();
             mAlertDialog.setTitle(mParent.getString(R.string.select_custom_activity_title));
             mAlertDialog.show();
-            mAlertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                @Override
-                public void onCancel(DialogInterface dialog) {
-                    mListener.shortcutPicked(null, null, false);
-                }
-            });
+            mAlertDialog.setOnCancelListener(
+                    new DialogInterface.OnCancelListener() {
+                        @Override
+                        public void onCancel(DialogInterface dialog) {
+                            mListener.shortcutPicked(null, null, false);
+                        }
+                    });
         } else {
             startFragmentOrActivity(intent, requestCodeShortcut);
         }
@@ -175,15 +190,15 @@ public class ShortcutPickHelper {
         ArrayList<GroupInfo> allList = new ArrayList<GroupInfo>();
         final int groupPadding;
 
-        public class LabelCompare implements Comparator<GroupInfo>{
+        public class LabelCompare implements Comparator<GroupInfo> {
             @Override
             public int compare(GroupInfo item1, GroupInfo item2) {
                 String rank1 = item1.label.toLowerCase();
                 String rank2 = item2.label.toLowerCase();
                 int result = rank1.compareTo(rank2);
-                if(result == 0) {
+                if (result == 0) {
                     return 0;
-                } else if(result < 0) {
+                } else if (result < 0) {
                     return -1;
                 } else {
                     return +1;
@@ -194,7 +209,8 @@ public class ShortcutPickHelper {
         class GroupInfo {
             String label;
             PackageInfo info;
-            GroupInfo (String l, PackageInfo p) {
+
+            GroupInfo(String l, PackageInfo p) {
                 label = l;
                 info = p;
             }
@@ -202,10 +218,13 @@ public class ShortcutPickHelper {
 
         public AppExpandableAdapter(List<PackageInfo> pInfos, Context context) {
             for (PackageInfo i : pInfos) {
-                allList.add(new GroupInfo(i.applicationInfo.loadLabel(mPackageManager).toString(), i));
+                allList.add(
+                        new GroupInfo(i.applicationInfo.loadLabel(mPackageManager).toString(), i));
             }
             Collections.sort(allList, new LabelCompare());
-            groupPadding = context.getResources().getDimensionPixelSize(R.dimen.shortcut_picker_left_padding);
+            groupPadding =
+                    context.getResources()
+                            .getDimensionPixelSize(R.dimen.shortcut_picker_left_padding);
         }
 
         public String getChild(int groupPosition, int childPosition) {
@@ -224,16 +243,20 @@ public class ShortcutPickHelper {
             }
         }
 
-
-        public View getChildView(int groupPosition, int childPosition, boolean isLastChild,
-                View convertView, ViewGroup parent) {
+        public View getChildView(
+                int groupPosition,
+                int childPosition,
+                boolean isLastChild,
+                View convertView,
+                ViewGroup parent) {
             if (convertView == null) {
                 convertView = View.inflate(mParent, android.R.layout.simple_list_item_1, null);
                 convertView.setPadding(groupPadding, 0, 0, 0);
-
             }
-            TextView textView = (TextView)convertView.findViewById(android.R.id.text1);
-            textView.setText(getChild(groupPosition, childPosition).replaceFirst(allList.get(groupPosition).info.packageName + ".", ""));
+            TextView textView = (TextView) convertView.findViewById(android.R.id.text1);
+            textView.setText(
+                    getChild(groupPosition, childPosition)
+                            .replaceFirst(allList.get(groupPosition).info.packageName + ".", ""));
             return convertView;
         }
 
@@ -249,13 +272,13 @@ public class ShortcutPickHelper {
             return groupPosition;
         }
 
-        public View getGroupView(int groupPosition, boolean isExpanded, View convertView,
-                ViewGroup parent) {
+        public View getGroupView(
+                int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
             if (convertView == null) {
                 convertView = View.inflate(mParent, android.R.layout.simple_list_item_1, null);
                 convertView.setPadding(70, 0, 0, 0);
             }
-            TextView textView = (TextView)convertView.findViewById(android.R.id.text1);
+            TextView textView = (TextView) convertView.findViewById(android.R.id.text1);
             textView.setText(getGroup(groupPosition).label.toString());
             return convertView;
         }
@@ -267,7 +290,6 @@ public class ShortcutPickHelper {
         public boolean hasStableIds() {
             return true;
         }
-
     }
 
     private void completeSetCustomApp(Intent data) {
@@ -277,14 +299,18 @@ public class ShortcutPickHelper {
     private void completeSetCustomShortcut(Intent data) {
         Intent intent = data.getParcelableExtra(Intent.EXTRA_SHORTCUT_INTENT);
         /* preserve shortcut name, we want to restore it later */
-        intent.putExtra(Intent.EXTRA_SHORTCUT_NAME, data.getStringExtra(Intent.EXTRA_SHORTCUT_NAME));
+        intent.putExtra(
+                Intent.EXTRA_SHORTCUT_NAME, data.getStringExtra(Intent.EXTRA_SHORTCUT_NAME));
         String appUri = intent.toUri(0);
-        appUri = appUri.replaceAll("com.android.contacts.action.QUICK_CONTACT", "android.intent.action.VIEW");
+        appUri =
+                appUri.replaceAll(
+                        "com.android.contacts.action.QUICK_CONTACT", "android.intent.action.VIEW");
         mListener.shortcutPicked(appUri, getFriendlyShortcutName(intent), false);
     }
 
     private String getFriendlyActivityName(Intent intent, boolean labelOnly) {
-        ActivityInfo ai = intent.resolveActivityInfo(mPackageManager, PackageManager.GET_ACTIVITIES);
+        ActivityInfo ai =
+                intent.resolveActivityInfo(mPackageManager, PackageManager.GET_ACTIVITIES);
         String friendlyName = null;
         if (ai != null) {
             friendlyName = ai.loadLabel(mPackageManager).toString();

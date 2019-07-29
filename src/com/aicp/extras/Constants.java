@@ -17,34 +17,24 @@
 package com.aicp.extras;
 
 public abstract class Constants {
-    /**
-     * Package name of AICP OTA
-     */
+    /** Package name of AICP OTA */
     public static final String AICP_OTA_PACKAGE = "com.aicp.updater3";
 
-    /**
-     * Default activity of AICP OTA
-     */
+    /** Default activity of AICP OTA */
     public static final String AICP_OTA_ACTIVITY = "org.lineageos.updater.UpdatesActivity";
 
-    /**
-     * Key for SharedPreferences for selinux switch
-     */
+    /** Key for SharedPreferences for selinux switch */
     public static final String PREF_SELINUX_MODE = "selinux_mode";
 
-    /**
-     * Key for SharedPreferences for selinux switch persistence
-     */
+    /** Key for SharedPreferences for selinux switch persistence */
     public static final String PREF_SELINUX_PERSISTENCE = "selinux_persistence";
 
     /**
-     * Key for SharedPreferences for showing preferences usually hidden by
-     * device configuration detection.
+     * Key for SharedPreferences for showing preferences usually hidden by device configuration
+     * detection.
      */
     public static final String PREF_SHOW_DEVICE_HIDDEN_PREFS = "show_device_hidden_prefs";
 
-    /**
-     * Package name of weather service
-     */
+    /** Package name of weather service */
     public static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
 }

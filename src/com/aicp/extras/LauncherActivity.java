@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras;
 
 import android.content.ComponentName;
@@ -24,11 +23,8 @@ import android.content.pm.ShortcutManager;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-
-import java.util.Arrays;
-
 import com.aicp.extras.utils.Util;
+import java.util.Arrays;
 
 public class LauncherActivity extends SettingsActivity {
 
@@ -43,29 +39,39 @@ public class LauncherActivity extends SettingsActivity {
 
         if (Util.isPackageEnabled(Constants.AICP_OTA_PACKAGE, this.getPackageManager())) {
             // Intent for launching AICP OTA
-            final Intent INTENT_OTA = new Intent().setComponent(new ComponentName(
-                    Constants.AICP_OTA_PACKAGE, Constants.AICP_OTA_ACTIVITY));
+            final Intent INTENT_OTA =
+                    new Intent()
+                            .setComponent(
+                                    new ComponentName(
+                                            Constants.AICP_OTA_PACKAGE,
+                                            Constants.AICP_OTA_ACTIVITY));
             INTENT_OTA.setAction(Intent.ACTION_VIEW);
 
-            ShortcutInfo aicpotaShortcut = new ShortcutInfo.Builder(this, "aicpota")
-                    .setShortLabel(getString(R.string.aicp_ota_title))
-                    .setLongLabel(getString(R.string.aicp_ota_title))
-                    .setIcon(Icon.createWithResource(this,
-                            R.drawable.ic_launcher_shortcut_ota))
-                    .setIntent(INTENT_OTA)
-                    .setRank(0)
-                    .build();
+            ShortcutInfo aicpotaShortcut =
+                    new ShortcutInfo.Builder(this, "aicpota")
+                            .setShortLabel(getString(R.string.aicp_ota_title))
+                            .setLongLabel(getString(R.string.aicp_ota_title))
+                            .setIcon(
+                                    Icon.createWithResource(
+                                            this, R.drawable.ic_launcher_shortcut_ota))
+                            .setIntent(INTENT_OTA)
+                            .setRank(0)
+                            .build();
             shortcutManager.setDynamicShortcuts(Arrays.asList(aicpotaShortcut));
         } else {
-            ShortcutInfo downloadsShortcut = new ShortcutInfo.Builder(this, "downloads")
-                    .setShortLabel(getString(R.string.aicp_downloads_title))
-                    .setLongLabel(getString(R.string.aicp_downloads_title))
-                    .setIcon(Icon.createWithResource(this,
-                            R.drawable.ic_launcher_shortcut_downloads))
-                    .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse(
-                            Util.getDownloadLinkForDevice(this))))
-                    .setRank(0)
-                    .build();
+            ShortcutInfo downloadsShortcut =
+                    new ShortcutInfo.Builder(this, "downloads")
+                            .setShortLabel(getString(R.string.aicp_downloads_title))
+                            .setLongLabel(getString(R.string.aicp_downloads_title))
+                            .setIcon(
+                                    Icon.createWithResource(
+                                            this, R.drawable.ic_launcher_shortcut_downloads))
+                            .setIntent(
+                                    new Intent(
+                                            Intent.ACTION_VIEW,
+                                            Uri.parse(Util.getDownloadLinkForDevice(this))))
+                            .setRank(0)
+                            .build();
             shortcutManager.setDynamicShortcuts(Arrays.asList(downloadsShortcut));
         }
     }

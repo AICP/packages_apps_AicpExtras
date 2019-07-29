@@ -18,29 +18,12 @@ package com.aicp.extras.romstats;
 
 import android.app.job.JobParameters;
 import android.app.job.JobService;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.PersistableBundle;
 import android.support.v4.util.ArrayMap;
 import android.util.Log;
-import com.aicp.extras.R;
-import org.json.JSONObject;
-
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 import java.security.KeyManagementException;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
@@ -48,11 +31,12 @@ import java.security.NoSuchAlgorithmException;
 import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
-
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpVersion;
 import org.apache.http.NameValuePair;
@@ -75,12 +59,12 @@ import org.apache.http.util.EntityUtils;
 
 public class StatsUploadJobService extends JobService {
 
-//    private static final String TAG = StatsUploadJobService.class.getSimpleName();
+    //    private static final String TAG = StatsUploadJobService.class.getSimpleName();
     private static final String TAG = Const.TAG;
     private static final boolean DEBUG = false;
 
     public static final String KEY_JOB_TYPE = "job_type";
-    public static final int JOB_TYPE_AICP= 1;
+    public static final int JOB_TYPE_AICP = 1;
 
     public static final String KEY_UNIQUE_ID = "device_hash";
     public static final String KEY_DEVICE_NAME = "device_name";
@@ -152,7 +136,7 @@ public class StatsUploadJobService extends JobService {
             String romVersion = extras.getString(KEY_ROM_VERSION);
             String romStatsUrl = extras.getString(KEY_STATS_URL);
             String romStatsSignCert = extras.getString(KEY_SIGN_CERT);
-            //long timeStamp = extras.getLong(KEY_TIMESTAMP);
+            // long timeStamp = extras.getLong(KEY_TIMESTAMP);
 
             boolean success = false;
             if (!isCancelled()) {
@@ -161,10 +145,19 @@ public class StatsUploadJobService extends JobService {
                 switch (jobType) {
                     case JOB_TYPE_AICP:
                         try {
-                            success = uploadToAicp(deviceId, deviceName, deviceVersion,
-                                    deviceBuildType, deviceCountry, deviceCarrier,
-                                    deviceCarrierId, romName, romVersion,
-                                    romStatsSignCert, romStatsUrl);
+                            success =
+                                    uploadToAicp(
+                                            deviceId,
+                                            deviceName,
+                                            deviceVersion,
+                                            deviceBuildType,
+                                            deviceCountry,
+                                            deviceCarrier,
+                                            deviceCarrierId,
+                                            romName,
+                                            romVersion,
+                                            romStatsSignCert,
+                                            romStatsUrl);
                         } catch (IOException e) {
                             Log.e(TAG, "Could not upload stats checkin to aicp server", e);
                             success = false;
@@ -186,110 +179,127 @@ public class StatsUploadJobService extends JobService {
                 mFinishedJobs.add(mJobParams);
             }
             if (DEBUG)
-                Log.d(TAG, "job id " + mJobParams.getJobId() + ", has finished with success="
-                        + success);
+                Log.d(
+                        TAG,
+                        "job id "
+                                + mJobParams.getJobId()
+                                + ", has finished with success="
+                                + success);
             jobFinished(mJobParams, !success);
         }
     }
 
-
-    private boolean uploadToAicp(String deviceId, String deviceName, String deviceVersion,
-                               String deviceBuildType, String deviceCountry, String deviceCarrier,
-                               String deviceCarrierId, String romName, String romVersion,
-                               String romStatsSignCert, String romStatsUrl)
+    private boolean uploadToAicp(
+            String deviceId,
+            String deviceName,
+            String deviceVersion,
+            String deviceBuildType,
+            String deviceCountry,
+            String deviceCarrier,
+            String deviceCarrierId,
+            String romName,
+            String romVersion,
+            String romStatsSignCert,
+            String romStatsUrl)
             throws IOException {
 
-            HttpClient httpClient;
-            if (Const.SKIP_CERTIFICATE_CHECK) {
-                try {
-                    KeyStore trustStore = KeyStore.getInstance(KeyStore.getDefaultType());
-                    trustStore.load(null, null);
+        HttpClient httpClient;
+        if (Const.SKIP_CERTIFICATE_CHECK) {
+            try {
+                KeyStore trustStore = KeyStore.getInstance(KeyStore.getDefaultType());
+                trustStore.load(null, null);
 
-                    SSLSocketFactory socketFactory = new InsecureSSLSocketFactory(trustStore);
-                    socketFactory.setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+                SSLSocketFactory socketFactory = new InsecureSSLSocketFactory(trustStore);
+                socketFactory.setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
 
-                    HttpParams params = new BasicHttpParams();
-                    HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
-                    HttpProtocolParams.setContentCharset(params, HTTP.UTF_8);
+                HttpParams params = new BasicHttpParams();
+                HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
+                HttpProtocolParams.setContentCharset(params, HTTP.UTF_8);
 
-                    SchemeRegistry schReg = new SchemeRegistry();
-                    schReg.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
-                    schReg.register(new Scheme("https", socketFactory, 443));
+                SchemeRegistry schReg = new SchemeRegistry();
+                schReg.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
+                schReg.register(new Scheme("https", socketFactory, 443));
 
-                    ClientConnectionManager ccm = new ThreadSafeClientConnManager(params, schReg);
+                ClientConnectionManager ccm = new ThreadSafeClientConnManager(params, schReg);
 
-                    httpClient = new DefaultHttpClient(ccm, params);
-                } catch (KeyStoreException|IOException|NoSuchAlgorithmException
-                        |CertificateException|KeyManagementException|UnrecoverableKeyException e) {
-                    Log.w(Const.TAG, "Could not set up custom truststore", e);
-                    httpClient = new DefaultHttpClient();
-                }
-            } else {
+                httpClient = new DefaultHttpClient(ccm, params);
+            } catch (KeyStoreException
+                    | IOException
+                    | NoSuchAlgorithmException
+                    | CertificateException
+                    | KeyManagementException
+                    | UnrecoverableKeyException e) {
+                Log.w(Const.TAG, "Could not set up custom truststore", e);
                 httpClient = new DefaultHttpClient();
             }
-            HttpPost httpPost = new HttpPost(romStatsUrl + "submit");
-            boolean success = false;
+        } else {
+            httpClient = new DefaultHttpClient();
+        }
+        HttpPost httpPost = new HttpPost(romStatsUrl + "submit");
+        boolean success = false;
 
-            try {
-                List<NameValuePair> kv = new ArrayList<NameValuePair>(5);
-                kv.add(new BasicNameValuePair("device_hash", deviceId));
-                kv.add(new BasicNameValuePair("device_name", deviceName));
-                kv.add(new BasicNameValuePair("device_version", deviceVersion));
-                kv.add(new BasicNameValuePair("device_buildtype", deviceBuildType));
-                kv.add(new BasicNameValuePair("device_country", deviceCountry));
-                kv.add(new BasicNameValuePair("device_carrier", deviceCarrier));
-                kv.add(new BasicNameValuePair("device_carrier_id", deviceCarrierId));
-                kv.add(new BasicNameValuePair("rom_name", romName));
-                kv.add(new BasicNameValuePair("rom_version", romVersion));
-                kv.add(new BasicNameValuePair("sign_cert", romStatsSignCert));
+        try {
+            List<NameValuePair> kv = new ArrayList<NameValuePair>(5);
+            kv.add(new BasicNameValuePair("device_hash", deviceId));
+            kv.add(new BasicNameValuePair("device_name", deviceName));
+            kv.add(new BasicNameValuePair("device_version", deviceVersion));
+            kv.add(new BasicNameValuePair("device_buildtype", deviceBuildType));
+            kv.add(new BasicNameValuePair("device_country", deviceCountry));
+            kv.add(new BasicNameValuePair("device_carrier", deviceCarrier));
+            kv.add(new BasicNameValuePair("device_carrier_id", deviceCarrierId));
+            kv.add(new BasicNameValuePair("rom_name", romName));
+            kv.add(new BasicNameValuePair("rom_version", romVersion));
+            kv.add(new BasicNameValuePair("sign_cert", romStatsSignCert));
 
-                httpPost.setEntity(new UrlEncodedFormEntity(kv));
-                HttpResponse response = httpClient.execute(httpPost);
+            httpPost.setEntity(new UrlEncodedFormEntity(kv));
+            HttpResponse response = httpClient.execute(httpPost);
 
-                if (DEBUG) Log.d(Const.TAG, "RESULT: code=" + response.getStatusLine().getStatusCode());
-                if (DEBUG) Log.d(Const.TAG, "RESULT: message=" + EntityUtils.toString(response.getEntity()));
+            if (DEBUG) Log.d(Const.TAG, "RESULT: code=" + response.getStatusLine().getStatusCode());
+            if (DEBUG)
+                Log.d(Const.TAG, "RESULT: message=" + EntityUtils.toString(response.getEntity()));
 
-                success = true;
-            } catch (IOException e) {
-                Log.w(Const.TAG, "Could not upload stats checkin", e);
-            }
-            return success;
+            success = true;
+        } catch (IOException e) {
+            Log.w(Const.TAG, "Could not upload stats checkin", e);
+        }
+        return success;
     }
 
-    private class InsecureSSLSocketFactory extends SSLSocketFactory{
+    private class InsecureSSLSocketFactory extends SSLSocketFactory {
         private SSLContext sslContext = SSLContext.getInstance("TLS");
-        public InsecureSSLSocketFactory(KeyStore trustStore) throws NoSuchAlgorithmException,
-                KeyManagementException, KeyStoreException, UnrecoverableKeyException{
+
+        public InsecureSSLSocketFactory(KeyStore trustStore)
+                throws NoSuchAlgorithmException, KeyManagementException, KeyStoreException,
+                        UnrecoverableKeyException {
             super(trustStore);
 
-            TrustManager trustManager = new X509TrustManager() {
-                @Override
-                public void checkClientTrusted(X509Certificate[] chain, String authType)
-                        throws CertificateException {
-                }
+            TrustManager trustManager =
+                    new X509TrustManager() {
+                        @Override
+                        public void checkClientTrusted(X509Certificate[] chain, String authType)
+                                throws CertificateException {}
 
-                @Override
-                public void checkServerTrusted(X509Certificate[] chain, String authType)
-                        throws CertificateException {
-                }
+                        @Override
+                        public void checkServerTrusted(X509Certificate[] chain, String authType)
+                                throws CertificateException {}
 
-                @Override
-                public X509Certificate[] getAcceptedIssuers() {
-                    return null;
-                }
-            };
+                        @Override
+                        public X509Certificate[] getAcceptedIssuers() {
+                            return null;
+                        }
+                    };
 
-            sslContext.init(null, new TrustManager[]{trustManager}, null);
+            sslContext.init(null, new TrustManager[] {trustManager}, null);
         }
 
         @Override
         public Socket createSocket(Socket socket, String host, int port, boolean autoClose)
-                throws IOException{
+                throws IOException {
             return sslContext.getSocketFactory().createSocket(socket, host, port, autoClose);
         }
 
         @Override
-        public Socket createSocket() throws IOException{
+        public Socket createSocket() throws IOException {
             return sslContext.getSocketFactory().createSocket();
         }
     }

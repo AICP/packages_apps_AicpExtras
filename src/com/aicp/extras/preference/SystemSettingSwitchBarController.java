@@ -17,21 +17,28 @@
 package com.aicp.extras.preference;
 
 import android.content.ContentResolver;
-
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.widget.SwitchBar;
-
 import com.aicp.gear.preference.SystemSettingsStore;
 
 public class SystemSettingSwitchBarController extends PreferenceDataStoreSwitchBarController {
 
-    public SystemSettingSwitchBarController(SwitchBar switchBar, String key, boolean defaultValue,
-                                            ContentResolver resolver,
-                                            BaseSettingsFragment settingsFragment,
-                                            MasterSwitchPreferenceDependencyHandler depHndl,
-                                            boolean thereShouldBeOne) {
-        super(new SystemSettingsStore(resolver), switchBar, key, defaultValue, settingsFragment,
-                depHndl, thereShouldBeOne);
+    public SystemSettingSwitchBarController(
+            SwitchBar switchBar,
+            String key,
+            boolean defaultValue,
+            ContentResolver resolver,
+            BaseSettingsFragment settingsFragment,
+            MasterSwitchPreferenceDependencyHandler depHndl,
+            boolean thereShouldBeOne) {
+        super(
+                new SystemSettingsStore(resolver),
+                switchBar,
+                key,
+                defaultValue,
+                settingsFragment,
+                depHndl,
+                thereShouldBeOne);
         // -1 is reserved group id for switch bar
         depHndl.addSystemSettingPreferences(-1, key);
     }

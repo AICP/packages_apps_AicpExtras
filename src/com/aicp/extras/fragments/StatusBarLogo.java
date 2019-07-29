@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package com.aicp.extras.fragments;
 
 import com.aicp.extras.BaseSettingsFragment;
@@ -26,5 +25,4 @@ public class StatusBarLogo extends BaseSettingsFragment {
     protected int getPreferenceResource() {
         return R.xml.status_bar_logo_settings;
     }
-
 }

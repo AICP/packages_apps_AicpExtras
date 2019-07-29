@@ -26,12 +26,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.util.Log;
-
 import com.aicp.extras.R;
-
 import com.aicp.gear.util.AppHelper;
-
 import java.util.ArrayList;
 
 public class SlimShortcutPickerHelper {
@@ -93,14 +89,15 @@ public class SlimShortcutPickerHelper {
             bundle.putStringArrayList(Intent.EXTRA_SHORTCUT_NAME, shortcutNames);
 
             ArrayList<ShortcutIconResource> shortcutIcons = new ArrayList<ShortcutIconResource>();
-            shortcutIcons.add(ShortcutIconResource.fromContext(mParent,
-                    android.R.drawable.sym_def_app_icon));
+            shortcutIcons.add(
+                    ShortcutIconResource.fromContext(mParent, android.R.drawable.sym_def_app_icon));
             bundle.putParcelableArrayList(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, shortcutIcons);
 
             Intent pickIntent = new Intent(Intent.ACTION_PICK_ACTIVITY);
             pickIntent.putExtra(Intent.EXTRA_INTENT, new Intent(Intent.ACTION_CREATE_SHORTCUT));
-            pickIntent.putExtra(Intent.EXTRA_TITLE, mParent.getText(
-                    R.string.shortcuts_select_custom_app_title));
+            pickIntent.putExtra(
+                    Intent.EXTRA_TITLE,
+                    mParent.getText(R.string.shortcuts_select_custom_app_title));
             pickIntent.putExtras(bundle);
             startFragmentOrActivity(pickIntent, REQUEST_PICK_SHORTCUT);
         }
@@ -117,8 +114,8 @@ public class SlimShortcutPickerHelper {
         }
     }
 
-    private void processShortcut(Intent intent,
-        int requestCodeApplication, int requestCodeShortcut) {
+    private void processShortcut(
+            Intent intent, int requestCodeApplication, int requestCodeShortcut) {
         // Handle case where user selected "Applications"
         String applicationName = mParent.getResources().getString(R.string.shortcuts_applications);
         String shortcutName = intent.getStringExtra(Intent.EXTRA_SHORTCUT_NAME);
@@ -136,18 +133,22 @@ public class SlimShortcutPickerHelper {
     }
 
     private void completeSetCustomApp(Intent data) {
-        mListener.shortcutPicked(data.toUri(0),
-            AppHelper.getFriendlyActivityName(mParent, mPackageManager, data, false), null, true);
+        mListener.shortcutPicked(
+                data.toUri(0),
+                AppHelper.getFriendlyActivityName(mParent, mPackageManager, data, false),
+                null,
+                true);
     }
 
     private void completeSetCustomShortcut(Intent data) {
         Intent intent = data.getParcelableExtra(Intent.EXTRA_SHORTCUT_INTENT);
         /* preserve shortcut name, we want to restore it later */
-        intent.putExtra(Intent.EXTRA_SHORTCUT_NAME, data.getStringExtra(
-                Intent.EXTRA_SHORTCUT_NAME));
+        intent.putExtra(
+                Intent.EXTRA_SHORTCUT_NAME, data.getStringExtra(Intent.EXTRA_SHORTCUT_NAME));
         String appUri = intent.toUri(0);
-        appUri = appUri.replaceAll("com.android.contacts.action.QUICK_CONTACT",
-                "android.intent.action.VIEW");
+        appUri =
+                appUri.replaceAll(
+                        "com.android.contacts.action.QUICK_CONTACT", "android.intent.action.VIEW");
 
         // Check if icon is present
         Bitmap bmp = null;
@@ -170,8 +171,10 @@ public class SlimShortcutPickerHelper {
                 }
             }
         }
-        mListener.shortcutPicked(appUri,
-                AppHelper.getFriendlyShortcutName(mParent, mPackageManager, intent), bmp, false);
+        mListener.shortcutPicked(
+                appUri,
+                AppHelper.getFriendlyShortcutName(mParent, mPackageManager, intent),
+                bmp,
+                false);
     }
-
 }

@@ -33,20 +33,18 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
-
 import com.aicp.extras.R;
-
 import java.util.ArrayList;
 
-public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedChangeListener,
-        View.OnClickListener {
+public class SwitchBar extends LinearLayout
+        implements CompoundButton.OnCheckedChangeListener, View.OnClickListener {
 
     public interface OnSwitchChangeListener {
         /**
          * Called when the checked state of the Switch has changed.
          *
          * @param switchView The Switch view whose state has changed.
-         * @param isChecked  The new checked state of switchView.
+         * @param isChecked The new checked state of switchView.
          */
         void onSwitchChanged(Switch switchView, boolean isChecked);
     }
@@ -62,8 +60,8 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
             new ArrayList<OnSwitchChangeListener>();
 
     private static int[] XML_ATTRIBUTES = {
-            R.attr.switchBarMarginStart, R.attr.switchBarMarginEnd,
-            R.attr.switchBarBackgroundColor};
+        R.attr.switchBarMarginStart, R.attr.switchBarMarginEnd, R.attr.switchBarBackgroundColor
+    };
 
     public SwitchBar(Context context) {
         this(context, null);
@@ -105,25 +103,26 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
         lp.setMarginEnd(switchBarMarginEnd);
         // Don't set background color here, but instead from switchbar layout using
         // switchbar_background.xml
-        //setBackgroundColor(switchBarBackgroundColor);
+        // setBackgroundColor(switchBarBackgroundColor);
 
-        addOnSwitchChangeListener(new OnSwitchChangeListener() {
-            @Override
-            public void onSwitchChanged(Switch switchView, boolean isChecked) {
-                setTextViewLabel(isChecked);
-            }
-        });
+        addOnSwitchChangeListener(
+                new OnSwitchChangeListener() {
+                    @Override
+                    public void onSwitchChanged(Switch switchView, boolean isChecked) {
+                        setTextViewLabel(isChecked);
+                    }
+                });
 
         setOnClickListener(this);
 
         // Default is hide
         setVisibility(View.GONE);
-
     }
 
     public void setTextViewLabel(boolean isChecked) {
-        mLabel = getResources()
-                .getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text);
+        mLabel =
+                getResources()
+                        .getString(isChecked ? R.string.switch_on_text : R.string.switch_off_text);
         updateText();
     }
 
@@ -222,13 +221,11 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
             super(superState);
         }
 
-        /**
-         * Constructor called from {@link #CREATOR}
-         */
+        /** Constructor called from {@link #CREATOR} */
         private SavedState(Parcel in) {
             super(in);
-            checked = (Boolean)in.readValue(null);
-            visible = (Boolean)in.readValue(null);
+            checked = (Boolean) in.readValue(null);
+            visible = (Boolean) in.readValue(null);
         }
 
         @Override
@@ -242,20 +239,23 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
         public String toString() {
             return "SwitchBar.SavedState{"
                     + Integer.toHexString(System.identityHashCode(this))
-                    + " checked=" + checked
-                    + " visible=" + visible + "}";
+                    + " checked="
+                    + checked
+                    + " visible="
+                    + visible
+                    + "}";
         }
 
-        public static final Parcelable.Creator<SavedState> CREATOR
-                = new Parcelable.Creator<SavedState>() {
-            public SavedState createFromParcel(Parcel in) {
-                return new SavedState(in);
-            }
+        public static final Parcelable.Creator<SavedState> CREATOR =
+                new Parcelable.Creator<SavedState>() {
+                    public SavedState createFromParcel(Parcel in) {
+                        return new SavedState(in);
+                    }
 
-            public SavedState[] newArray(int size) {
-                return new SavedState[size];
-            }
-        };
+                    public SavedState[] newArray(int size) {
+                        return new SavedState[size];
+                    }
+                };
     }
 
     @Override

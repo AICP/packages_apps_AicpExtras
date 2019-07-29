@@ -16,19 +16,17 @@
 
 package com.aicp.extras.preference;
 
-
 import android.content.Context;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 import android.view.View;
-
 import com.aicp.extras.R;
 
 public class TwoTargetPreference extends Preference {
 
-    public TwoTargetPreference(Context context, AttributeSet attrs,
-                               int defStyleAttr, int defStyleRes) {
+    public TwoTargetPreference(
+            Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init();
     }
