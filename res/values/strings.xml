@@ -689,10 +689,13 @@
     <string name="gesture_settings_info">Navigation bar must and will be automatically disabled!\n\nAvailable gestures:\n\nBack\n- Swipe up on left or right side\n\nHome\n- Swipe up center\n\nRecent apps\n- Swipe up center and hold\n\nLong press home\n- Short swipe up and hold in the center</string>
     <string name="use_bottom_gesture_title">Navigation gestures</string>
     <string name="use_bottom_gesture_summary">Use bottom swipe up gestures for navigation\nNavigation bar must be disabled!</string>
-    <string name="gesture_swipe_length_title">Swipe trigger height</string>
-    <string name="gesture_swipe_length_summary">Heigth from bottom to trigger swipe</string>
+    <string name="gesture_swipe_length_title">Swipe trigger length</string>
+    <string name="gesture_swipe_length_summary">Length of the swipe required to trigger gesture</string>
+    <string name="gesture_swipe_start_title">Swipe trigger start height</string>
+    <string name="gesture_swipe_start_summary">Minimum height from bottom to start triggering gesture</string>
     <string name="gesture_action_timeout_title">Swipe trigger timeout</string>
     <string name="gesture_action_timeout_summary">Timeout before the gesture action is started</string>
+    <string name="bottom_gestures_feedback_duration_title">Haptic feedback duration</string>
     <string name="unit_dpi">dpi</string>
     <string name="unit_px">px</string>
     <string name="unit_msec">ms</string>
@@ -1349,4 +1352,5 @@
     <!-- Less boring heads-up-->
     <string name="less_boring_heads_up_title">Make heads up less annoying</string>
     <string name="less_boring_heads_up_summary">Show heads up only for dialer, alarm clock and messaging app</string>
+
 </resources>
