@@ -28,6 +28,12 @@
         android:defaultValue="true"/>
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="hide_tile_expand_indicator"
+        android:title="@string/hide_tile_expand_indicator_title"
+        android:summary="@string/hide_tile_expand_indicator_summary"
+        android:defaultValue="false" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="qs_running_services_toggle"
         android:title="@string/qs_running_services_title"
         android:summary="@string/qs_running_services_summary"
