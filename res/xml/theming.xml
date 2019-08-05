@@ -62,6 +62,13 @@
         android:entryValues="@array/theming_settings_dashboard_icons_values"
         android:defaultValue="0" />
 
+    <com.aicp.gear.preference.SystemSettingIntListPreference
+        android:key="theming_system_icons_style"
+        android:title="@string/theming_system_icons_style_title"
+        android:entries="@array/theming_system_icons_style_entries"
+        android:entryValues="@array/theming_system_icons_style_values"
+        android:defaultValue="0" />
+
     <com.aicp.gear.preference.SystemPropListPreference
         android:key="persist.aicp.iconshape"
         android:title="@string/icon_shape_title"

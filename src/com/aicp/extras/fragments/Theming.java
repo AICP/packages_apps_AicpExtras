@@ -45,13 +45,16 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
 
         findPreference(Settings.System.THEMING_BASE).setOnPreferenceChangeListener(this);
         findPreference(Settings.System.THEMING_CORNERS).setOnPreferenceChangeListener(this);
+        findPreference(Settings.System.THEMING_SYSTEM_ICONS_STYLE)
+                .setOnPreferenceChangeListener(this);
         findPreference(AdaptiveIconDrawable.MASK_SETTING_PROP).setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (Settings.System.THEMING_BASE.equals(preference.getKey()) ||
-                Settings.System.THEMING_CORNERS.equals(preference.getKey())) {
+                Settings.System.THEMING_CORNERS.equals(preference.getKey()) ||
+                Settings.System.THEMING_SYSTEM_ICONS_STYLE.equals(preference.getKey())) {
             if (ThemeOverlayHelper.doesThemeChangeRequireSystemUIRestart(getActivity(),
                         preference.getKey(), null, Integer.parseInt((String) newValue))) {
                 postRestartSystemUi();
