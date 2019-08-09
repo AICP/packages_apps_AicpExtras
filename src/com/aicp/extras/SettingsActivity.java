@@ -81,6 +81,9 @@ public class SettingsActivity extends BaseActivity {
     private static final String EXTRA_SWITCH_THERE_SHOULD_BE_ONE =
             "com.aicp.extras.extra.preference_switch_there_should_be_one";
 
+    private static final String FRAGMENT_TAG = "SettingsActivity.pref_fragment";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,12 +91,18 @@ public class SettingsActivity extends BaseActivity {
 
         Intent mIntent = getIntent();
 
-        String fragmentClass = mIntent.getStringExtra(EXTRA_FRAGMENT_CLASS);
-        mFragment = getNewFragment(fragmentClass);
-        if (mIntent.hasExtra(EXTRA_FRAGMENT_ARGUMENTS)) {
-            mFragment.setArguments(mIntent.getBundleExtra(EXTRA_FRAGMENT_ARGUMENTS));
+        // Search for existing fragment fron saved instance
+        mFragment = getFragmentManager().findFragmentByTag(FRAGMENT_TAG);
+        if (mFragment == null) {
+            // Get new fragment
+            String fragmentClass = mIntent.getStringExtra(EXTRA_FRAGMENT_CLASS);
+            mFragment = getNewFragment(fragmentClass);
+            if (mIntent.hasExtra(EXTRA_FRAGMENT_ARGUMENTS)) {
+                mFragment.setArguments(mIntent.getBundleExtra(EXTRA_FRAGMENT_ARGUMENTS));
+            }
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.main_content, mFragment, FRAGMENT_TAG).commit();
         }
-        getFragmentManager().beginTransaction().replace(R.id.main_content, mFragment).commit();
 
         mMasterSwitchDependencyHandler = new MasterSwitchPreferenceDependencyHandler(this);
         // Add switchbar preferences with reserved grou id -1
