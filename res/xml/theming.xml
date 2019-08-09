@@ -34,11 +34,13 @@
         android:summary="@string/theming_control_night_mode_summary"
         android:defaultValue="true" />
 
-    <com.aicp.gear.preference.SystemSettingIntListPreference
+    <com.aicp.gear.preference.SystemSettingIntColorMatrixListPreference
         android:key="theming_accent"
         android:title="@string/theming_accent_title"
         android:entries="@array/theming_accent_entries"
         android:entryValues="@array/theming_accent_values"
+        aicpextras:entryPreviews="@array/theming_accent_previews"
+        aicpextras:entryPreviewsLight="@array/theming_accent_previews_light"
         android:defaultValue="0" />
 
     <com.aicp.gear.preference.SystemSettingIntListPreference

@@ -22,15 +22,15 @@ import android.content.ContentResolver;
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
-import android.support.v14.preference.PreferenceFragment;
 
 import com.android.settingslib.CustomDialogPreference;
 
 import com.aicp.extras.utils.Util;
+import com.aicp.gear.preference.AicpPreferenceFragment;
 
 import java.util.UUID;
 
-public abstract class BaseSettingsFragment extends PreferenceFragment {
+public abstract class BaseSettingsFragment extends AicpPreferenceFragment {
 
     private static final String TAG = BaseSettingsFragment.class.getSimpleName();
 
