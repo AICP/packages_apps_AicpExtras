@@ -18,8 +18,8 @@ package com.aicp.extras.smartnav;
 
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.Preference;
 import android.provider.Settings;
 
 import com.aicp.extras.BaseSettingsFragment;

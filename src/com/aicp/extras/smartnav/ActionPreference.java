@@ -29,7 +29,7 @@ import com.android.internal.utils.Config.ActionConfig;
 import com.android.internal.utils.Config.ButtonConfig;
 
 import android.content.Context;
-import android.support.v7.preference.Preference;
+import androidx.preference.Preference;
 import android.util.AttributeSet;
 
 public class ActionPreference extends Preference implements ActionHolder {
