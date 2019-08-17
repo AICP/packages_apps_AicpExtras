@@ -20,7 +20,7 @@ package com.aicp.extras.preference;
 import android.content.Context;
 import android.os.SystemProperties;
 import android.provider.Settings;
-import android.support.v7.preference.EditTextPreference;
+import androidx.preference.EditTextPreference;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
