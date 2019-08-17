@@ -17,7 +17,7 @@
 
 package com.aicp.extras;
 
-import android.support.v7.preference.Preference;
+import androidx.preference.Preference;
 
 public class PreferenceMultiClickHandler implements Preference.OnPreferenceClickListener {
 
