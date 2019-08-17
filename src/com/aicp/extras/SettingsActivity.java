@@ -199,9 +199,9 @@ public class SettingsActivity extends BaseActivity {
                 if (preferenceScreen != null) {
                     actionBar.setTitle(preferenceScreen.getTitle());
                 }
-            } else if (mFragment instanceof android.support.v14.preference.PreferenceFragment) {
-                android.support.v7.preference.PreferenceScreen preferenceScreen =
-                        ((android.support.v14.preference.PreferenceFragment) mFragment)
+            } else if (mFragment instanceof androidx.preference.PreferenceFragment) {
+                androidx.preference.PreferenceScreen preferenceScreen =
+                        ((androidx.preference.PreferenceFragment) mFragment)
                                 .getPreferenceScreen();
                 if (preferenceScreen != null) {
                     actionBar.setTitle(preferenceScreen.getTitle());
@@ -218,19 +218,19 @@ public class SettingsActivity extends BaseActivity {
     }
 
     private void handleMasterSwitchPreferences(
-                android.support.v7.preference.PreferenceGroup preferenceGroup) {
+                androidx.preference.PreferenceGroup preferenceGroup) {
         for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
-            android.support.v7.preference.Preference pref = preferenceGroup.getPreference(i);
+            androidx.preference.Preference pref = preferenceGroup.getPreference(i);
             if (pref instanceof MasterSwitchPreference) {
                 mMasterSwitchDependencyHandler.addPreferences((MasterSwitchPreference) pref);
-            } else if (pref instanceof android.support.v7.preference.PreferenceGroup) {
+            } else if (pref instanceof androidx.preference.PreferenceGroup) {
                 // Recurse
-                handleMasterSwitchPreferences((android.support.v7.preference.PreferenceGroup) pref);
+                handleMasterSwitchPreferences((androidx.preference.PreferenceGroup) pref);
             }
         }
     }
 
-    public boolean onPreferenceClick(android.support.v7.preference.Preference preference) {
+    public boolean onPreferenceClick(androidx.preference.Preference preference) {
         String fragmentClass = preference.getFragment();
         // Check if class is available - if it is not, let default Android magic kick in
         // (might e.g. open a settings activity for App Ops)

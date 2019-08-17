@@ -38,7 +38,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.design.widget.Snackbar;
+import com.google.android.material.snackbar.Snackbar;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -323,9 +323,9 @@ public class ActionListViewSettings extends ListFragment implements
                 if (preferenceScreen != null) {
                     return preferenceScreen.getTitle();
                 }
-            } else if (fragment instanceof android.support.v14.preference.PreferenceFragment) {
-                android.support.v7.preference.PreferenceScreen preferenceScreen =
-                        ((android.support.v14.preference.PreferenceFragment) fragment)
+            } else if (fragment instanceof androidx.preference.PreferenceFragment) {
+                androidx.preference.PreferenceScreen preferenceScreen =
+                        ((androidx.preference.PreferenceFragment) fragment)
                                 .getPreferenceScreen();
                 if (preferenceScreen != null) {
                     return preferenceScreen.getTitle();

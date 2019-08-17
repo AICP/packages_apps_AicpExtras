@@ -30,13 +30,12 @@ LOCAL_SRC_FILES += src/com/aicp/extras/search/AeFragmentList.java
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
-    android-support-v4 \
-    android-support-v7-appcompat \
-    android-support-v7-cardview \
-    android-support-v7-preference \
-    android-support-v7-recyclerview \
-    android-support-v14-preference \
-    android-support-design \
+    androidx.core_core \
+    androidx.preference_preference \
+    androidx.appcompat_appcompat \
+    androidx.cardview_cardview \
+    androidx.recyclerview_recyclerview \
+    com.google.android.material_material \
     AicpGear-preference \
     AicpGear-util
 

@@ -27,11 +27,11 @@ import android.os.ServiceManager;
 import android.provider.Settings;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v14.preference.SwitchPreference;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 
 import com.aicp.extras.BaseSettingsFragment;

@@ -22,12 +22,12 @@ import static com.aicp.extras.SettingsActivity.EXTRA_PREFERENCE_KEY;
 import android.app.DialogFragment;
 import android.content.ContentResolver;
 import android.os.Bundle;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.settingslib.CustomDialogPreference;
+import com.android.settingslib.CustomDialogPreferenceCompat;
 
 import com.aicp.extras.utils.Util;
 import com.aicp.extras.widget.HighlightablePreferenceGroupAdapter;
@@ -142,8 +142,8 @@ public abstract class BaseSettingsFragment extends AicpPreferenceFragment {
             preference.setKey(UUID.randomUUID().toString());
         }
         DialogFragment f = null;
-        if (preference instanceof CustomDialogPreference) {
-            f = CustomDialogPreference.CustomPreferenceDialogFragment
+        if (preference instanceof CustomDialogPreferenceCompat) {
+            f = CustomDialogPreferenceCompat.CustomPreferenceDialogFragment
                     .newInstance(preference.getKey());
         } else {
             super.onDisplayPreferenceDialog(preference);

@@ -36,14 +36,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.aicp.extras.R;
-import com.android.settingslib.CustomDialogPreference;
+import com.aicp.gear.preference.AicpCustomDialogPreference;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class AppMultiSelectListPreference extends CustomDialogPreference {
+public class AppMultiSelectListPreference extends AicpCustomDialogPreference {
     private static final String TAG = "AppMultiSelectList";
     private static final boolean DEBUG = false;
 
