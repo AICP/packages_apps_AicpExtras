@@ -20,12 +20,11 @@ package com.aicp.extras;
 import android.app.DialogFragment;
 import android.content.ContentResolver;
 import android.os.Bundle;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
-
-import com.android.settingslib.CustomDialogPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 
 import com.aicp.extras.utils.Util;
+import com.aicp.gear.preference.AicpCustomDialogPreference;
 import com.aicp.gear.preference.AicpPreferenceFragment;
 
 import java.util.UUID;
@@ -66,8 +65,8 @@ public abstract class BaseSettingsFragment extends AicpPreferenceFragment {
             preference.setKey(UUID.randomUUID().toString());
         }
         DialogFragment f = null;
-        if (preference instanceof CustomDialogPreference) {
-            f = CustomDialogPreference.CustomPreferenceDialogFragment
+        if (preference instanceof AicpCustomDialogPreference) {
+            f = AicpCustomDialogPreference.AicpCustomPreferenceDialogFragment
                     .newInstance(preference.getKey());
         } else {
             super.onDisplayPreferenceDialog(preference);

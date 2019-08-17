@@ -18,7 +18,7 @@ package com.aicp.extras.preference;
 
 import android.content.ContentResolver;
 import android.content.DialogInterface;
-import android.support.v7.preference.PreferenceDataStore;
+import androidx.preference.PreferenceDataStore;
 import android.widget.Switch;
 
 import com.aicp.extras.BaseSettingsFragment;

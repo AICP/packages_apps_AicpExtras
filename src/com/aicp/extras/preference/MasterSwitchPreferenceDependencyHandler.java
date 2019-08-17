@@ -19,7 +19,7 @@ package com.aicp.extras.preference;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.v7.preference.PreferenceDataStore;
+import androidx.preference.PreferenceDataStore;
 import android.util.Log;
 
 import com.aicp.extras.R;

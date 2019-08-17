@@ -22,7 +22,7 @@ import android.graphics.drawable.AdaptiveIconDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
-import android.support.v7.preference.Preference;
+import androidx.preference.Preference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;

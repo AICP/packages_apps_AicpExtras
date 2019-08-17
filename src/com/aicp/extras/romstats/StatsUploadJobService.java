@@ -21,7 +21,7 @@ import android.app.job.JobService;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.PersistableBundle;
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 import android.util.Log;
 import com.aicp.extras.R;
 import org.json.JSONObject;
