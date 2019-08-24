@@ -71,8 +71,11 @@ public class BatteryLight extends BaseSettingsFragment
                 com.android.internal.R.bool.config_multiColorBatteryLed, true, false);
 
         // Preferences that need fast charging
-        Util.requireConfig(getActivity(), mFastChargeCategory,
-                com.android.internal.R.bool.config_FastChargingLedSupported, true, false);
+        if (com.android.internal.R.bool.config_multiColorBatteryLed == 1)
+        {
+            Util.requireConfig(getActivity(), mFastChargeCategory,
+                    com.android.internal.R.bool.config_FastChargingLedSupported, true, false);
+        }
 
         updateDependencies(mOnlyFullyCharged.isChecked(), mBatteryBlend.isChecked(),
                 mLowBlinking.isChecked());
