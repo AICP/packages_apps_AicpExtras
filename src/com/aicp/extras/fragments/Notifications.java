@@ -31,10 +31,12 @@ public class Notifications extends BaseSettingsFragment {
         return R.xml.notifications;
     }
 
+    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Util.requireFullStatusbar(getActivity(),
                 findPreference(Settings.System.STATUS_BAR_SHOW_TICKER));
     }
+    */
 }
