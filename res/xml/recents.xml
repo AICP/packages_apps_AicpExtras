@@ -22,6 +22,7 @@
     android:key="recents"
     android:title="@string/recents_title">
 
+<!--
      <PreferenceCategory
          android:key="stock_recents_category"
          android:title="@string/stock_recents_category">
@@ -34,8 +35,8 @@
             android:defaultValue="0"
             android:entryValues="@array/recents_component_type_title_values"/>
 
-    <!-- Yes, we do a PreferenceCategory within a PreferenceCategory here -
-    dependency reasons -->
+    <!- - Yes, we do a PreferenceCategory within a PreferenceCategory here -
+    dependency reasons - ->
     <PreferenceCategory
         android:key="recents_ui_oreo_recents_category"
         android:title="@string/oreo_recents_category">
@@ -89,5 +90,6 @@
             android:fragment="com.aicp.extras.fragments.SlimRecents" />
 
     </PreferenceCategory>
+    -->
 
 </PreferenceScreen>

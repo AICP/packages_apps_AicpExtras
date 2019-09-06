@@ -28,12 +28,14 @@
     <PreferenceCategory
         android:title="@string/navigation_category">
 
+<!--
         <PreferenceScreen
             android:title="@string/hw_keys_title"
             android:key="hw_keys"
             android:summary="@string/hw_keys_summary"
             android:icon="@drawable/ic_settings_hw_keys"
             android:fragment="com.aicp.extras.fragments.HwKeys" />
+-->
 
         <PreferenceScreen
             android:title="@string/navigation_title"
