@@ -35,11 +35,12 @@ import android.os.SystemProperties;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
+import android.util.Log;
+
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.PreferenceFragment;
-import android.util.Log;
+import androidx.preference.PreferenceFragmentCompat;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -59,7 +60,7 @@ public abstract class Util {
     public static final String PROPERTY_DEVICE = "ro.aicp.device";
     public static final String PROPERTY_DEVICE_EXT = "ro.product.device";
 
-    public static boolean onPreferenceTreeClick(PreferenceFragment fragment,
+    public static boolean onPreferenceTreeClick(PreferenceFragmentCompat fragment,
                                                 Preference preference) {
         Activity activity = fragment.getActivity();
         if (activity instanceof SettingsActivity) {

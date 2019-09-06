@@ -19,9 +19,10 @@ package com.aicp.extras;
 
 import static com.aicp.extras.SettingsActivity.EXTRA_PREFERENCE_KEY;
 
-import android.app.DialogFragment;
 import android.content.ContentResolver;
 import android.os.Bundle;
+
+import androidx.fragment.app.DialogFragment;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.LinearLayoutManager;
