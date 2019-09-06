@@ -43,6 +43,7 @@ public class OtherUi extends BaseSettingsFragment
         return R.xml.other_ui;
     }
 
+    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,13 +73,16 @@ public class OtherUi extends BaseSettingsFragment
             getActivity().stopService(service);
         }
     }
+    */
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        /*
         if (preference == mShowCpuInfo) {
             writeCpuInfoOptions((Boolean) newValue);
             return true;
         }
+        */
         return false;
     }
 }

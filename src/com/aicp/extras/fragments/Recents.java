@@ -73,6 +73,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
         return R.xml.recents;
     }
 
+    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,7 +83,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
 
         /**
          * Nice clean code start
-         */
+         * /
 
         mStockRecentsCategory = (PreferenceCategory) findPreference(PREF_STOCK_RECENTS_CATEGORY);
         mAlternativeRecentsCategory =
@@ -126,12 +127,12 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
 
         /*
          * Nice clean code end
-         */
+         * /
 
 
         /**
          * Probably better done in xml - code start
-         */
+         * /
 
         // recents component type
         mRecentsComponentType = (ListPreference) findPreference(RECENTS_COMPONENT_TYPE);
@@ -162,7 +163,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
 
         /**
          * Most likely too much spagetti - code end
-         */
+         * /
     }
 
 
@@ -189,6 +190,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
         }
         mStockRecentsCategory.setEnabled(!alternativeRecentsEnabled);
     }
+    */
 
 
     @Override
@@ -196,6 +198,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
         /*
          * Ugly code start
          */
+        /*
         if (preference == mRecentsComponentType) {
             int type = Integer.valueOf((String) objValue);
             int index = mRecentsComponentType.findIndexOfValue((String) objValue);
@@ -224,6 +227,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
             Util.showSystemUiRestartDialog(getContext());
             return true;
         }
+        */
         /*
          * Ugly code end
          */

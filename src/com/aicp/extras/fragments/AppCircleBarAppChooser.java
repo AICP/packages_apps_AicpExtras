@@ -33,6 +33,7 @@ public class AppCircleBarAppChooser extends ChooserActivityBlacklist {
         return R.xml.circlebar_appchooser;
     }
 
+    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,4 +50,5 @@ public class AppCircleBarAppChooser extends ChooserActivityBlacklist {
         mAddBlacklistPref = findPreference(KEY_SIDEBAR_APPLIST);
         mAddBlacklistPref.setOnPreferenceClickListener(this);
     }
+    */
 }

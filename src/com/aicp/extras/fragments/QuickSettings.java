@@ -44,6 +44,7 @@ public class QuickSettings extends BaseSettingsFragment
         return R.xml.quick_settings;
     }
 
+    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,9 +60,11 @@ public class QuickSettings extends BaseSettingsFragment
         mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
         mQQSColsAuto.setOnPreferenceChangeListener(this);
     }
+    */
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        /*
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mQQSColsAuto) {
             Boolean qqsColsAutoEnabled = (Boolean) newValue;
@@ -72,6 +75,7 @@ public class QuickSettings extends BaseSettingsFragment
             }
             return true;
         }
+        */
         return false;
     }
 }
