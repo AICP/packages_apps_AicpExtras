@@ -19,7 +19,6 @@ package com.aicp.extras;
 
 import android.app.ActionBar;
 import android.app.AlertDialog;
-import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -27,6 +26,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
+
+import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceScreen;
 
 import com.aicp.extras.dslv.ActionListViewSettings;
 import com.aicp.extras.fragments.Dashboard;
@@ -98,7 +101,7 @@ public class SettingsActivity extends BaseActivity {
         Intent mIntent = getIntent();
 
         // Search for existing fragment fron saved instance
-        mFragment = getFragmentManager().findFragmentByTag(FRAGMENT_TAG);
+        mFragment = getSupportFragmentManager().findFragmentByTag(FRAGMENT_TAG);
         if (mFragment == null) {
             // Get new fragment
             String action = mIntent.getAction();
@@ -120,7 +123,7 @@ public class SettingsActivity extends BaseActivity {
                         mIntent.getStringExtra(EXTRA_PREFERENCE_KEY));
             }
             mFragment.setArguments(arguments);
-            getFragmentManager().beginTransaction()
+            getSupportFragmentManager().beginTransaction()
                     .replace(R.id.main_content, mFragment, FRAGMENT_TAG).commit();
         }
 
@@ -193,16 +196,9 @@ public class SettingsActivity extends BaseActivity {
                 if (title != null) {
                     actionBar.setTitle(title);
                 }
-            } else if (mFragment instanceof android.preference.PreferenceFragment) {
-                android.preference.PreferenceScreen preferenceScreen =
-                        ((android.preference.PreferenceFragment) mFragment).getPreferenceScreen();
-                if (preferenceScreen != null) {
-                    actionBar.setTitle(preferenceScreen.getTitle());
-                }
-            } else if (mFragment instanceof androidx.preference.PreferenceFragment) {
-                androidx.preference.PreferenceScreen preferenceScreen =
-                        ((androidx.preference.PreferenceFragment) mFragment)
-                                .getPreferenceScreen();
+            } else if (mFragment instanceof PreferenceFragmentCompat) {
+                PreferenceScreen preferenceScreen =
+                        ((PreferenceFragmentCompat) mFragment).getPreferenceScreen();
                 if (preferenceScreen != null) {
                     actionBar.setTitle(preferenceScreen.getTitle());
                 }

@@ -17,7 +17,6 @@
 
 package com.aicp.extras;
 
-import android.app.Activity;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -27,7 +26,9 @@ import android.provider.Settings;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 
-public abstract class BaseActivity extends Activity {
+import androidx.fragment.app.FragmentActivity;
+
+public abstract class BaseActivity extends FragmentActivity {
 
     private int mThemeRes;
 
