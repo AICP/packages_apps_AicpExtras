@@ -15,9 +15,11 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
+GENERATED_AE_FRAGMENT_LIST = $(TARGET_OUT_INTERMEDIATES)/AicpExtrasCodeGeneration/src/com/aicp/extras/search/AeFragmentList.java
+
 # Auto-generate AeFragmentList for searchable fragments
-$(LOCAL_PATH)/src/com/aicp/extras/search/AeFragmentList.java: $(LOCAL_PATH)/gather_search_fragments.sh $(LOCAL_PATH)/AeFragmentList.java $(foreach dir, res/xml/ src/com/aicp/extras/fragments/, $(wildcard $(LOCAL_PATH)/$(dir)/*))
-	bash $<
+$(GENERATED_AE_FRAGMENT_LIST): $(LOCAL_PATH)/gather_search_fragments.sh $(LOCAL_PATH)/AeFragmentList.java $(foreach dir, res/xml/ src/com/aicp/extras/fragments/, $(wildcard $(LOCAL_PATH)/$(dir)/*))
+	bash $< $@
 
 LOCAL_MODULE_TAGS := optional
 
@@ -25,7 +27,7 @@ LOCAL_PROGUARD_ENABLED := disabled
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 # Depend on auto-generated source file
-LOCAL_SRC_FILES += src/com/aicp/extras/search/AeFragmentList.java
+LOCAL_SRC_FILES += ../../../$(GENERATED_AE_FRAGMENT_LIST)
 
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 
@@ -53,6 +55,7 @@ LOCAL_PACKAGE_NAME := AicpExtras
 LOCAL_PRIVATE_PLATFORM_APIS := true
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
+LOCAL_PRODUCT_MODULE := true
 
 include frameworks/base/packages/SettingsLib/common.mk
 
