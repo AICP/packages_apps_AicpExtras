@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 my_dir="$(dirname "$(realpath "$0")")"
 
