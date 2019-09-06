@@ -49,6 +49,7 @@ public class NavigationGestureSettings extends BaseSettingsFragment implements
         return R.xml.navigation_gestures;
     }
 
+    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,9 +78,11 @@ public class NavigationGestureSettings extends BaseSettingsFragment implements
         mSwipeTriggerTimeout.setValue(value);
         mSwipeTriggerTimeout.setOnPreferenceChangeListener(this);
     }
+    */
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        /*
         if (preference.equals(mSwipeTriggerLength)) {
             int value = (Integer) newValue;
             Settings.System.putIntForUser(getContentResolver(),
@@ -99,6 +102,7 @@ public class NavigationGestureSettings extends BaseSettingsFragment implements
                     value, UserHandle.USER_CURRENT);
             return true;
         }
+        */
         return false;
     }
 

@@ -49,6 +49,7 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
         return R.xml.weather;
     }
 
+    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,8 +80,11 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
         mWeatherIconPack.setSummary(mWeatherIconPack.getEntry());
         mWeatherIconPack.setOnPreferenceChangeListener(this);
     }
+    */
 
+    @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+        /*
         if (preference == mWeatherIconPack) {
             String value = (String) objValue;
             Settings.System.putString(getActivity().getContentResolver(),
@@ -88,6 +92,7 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
             int valueIndex = mWeatherIconPack.findIndexOfValue(value);
             mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[valueIndex]);
         }
+        */
         return true;
     }
 

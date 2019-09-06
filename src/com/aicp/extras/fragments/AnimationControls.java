@@ -32,7 +32,7 @@ import android.provider.Settings;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-import com.android.internal.util.aicp.AwesomeAnimationHelper;
+//import com.android.internal.util.aicp.AwesomeAnimationHelper;
 
 import java.util.Arrays;
 
@@ -76,6 +76,7 @@ public class AnimationControls extends BaseSettingsFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        /*
         PreferenceScreen prefs = getPreferenceScreen();
         mAnimations = AwesomeAnimationHelper.getAnimationsList();
         int animqty = mAnimations.length;
@@ -149,6 +150,7 @@ public class AnimationControls extends BaseSettingsFragment
         mWallpaperIntraClose.setSummary(getProperSummary(mWallpaperIntraClose));
         mWallpaperIntraClose.setEntries(mAnimationsStrings);
         mWallpaperIntraClose.setEntryValues(mAnimationsNum);
+        */
     }
 
     //@Override
@@ -167,6 +169,7 @@ public class AnimationControls extends BaseSettingsFragment
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         boolean result = false;
+        /*
         if (preference == mActivityOpenPref) {
             int val = Integer.parseInt((String) newValue);
             result = Settings.System.putInt(resolver,
@@ -209,9 +212,11 @@ public class AnimationControls extends BaseSettingsFragment
                     Settings.System.ACTIVITY_ANIMATION_CONTROLS[9], val);
         }
         preference.setSummary(getProperSummary(preference));
+        */
         return result;
     }
 
+    /*
     private String getProperSummary(Preference preference) {
         String mString = "";
         if (preference == mActivityOpenPref) {
@@ -239,4 +244,5 @@ public class AnimationControls extends BaseSettingsFragment
         int mNum = Settings.System.getInt(getActivity().getContentResolver(), mString, 0);
         return mAnimationsStrings[mNum];
     }
+    */
 }

@@ -235,6 +235,7 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
 
     private boolean parsePackageList() {
         boolean parsed = false;
+        /*
         final String blacklistString = Settings.System.getString(getActivity().getContentResolver(),
                 Settings.System.SLIM_RECENTS_BLACKLIST_VALUES);
 
@@ -244,6 +245,7 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
             parseAndAddToMap(blacklistString, mBlacklistPackages);
             parsed = true;
         }
+        */
 
         return parsed;
     }
@@ -265,6 +267,7 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
 
 
     private void savePackageList(boolean preferencesUpdated, Map<String,Package> map) {
+        /*
         String setting = Settings.System.SLIM_RECENTS_BLACKLIST_VALUES;
 
         List<String> settings = new ArrayList<String>();
@@ -277,5 +280,6 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
         }
         Settings.System.putString(getActivity().getContentResolver(),
                 setting, value);
+                */
     }
 }

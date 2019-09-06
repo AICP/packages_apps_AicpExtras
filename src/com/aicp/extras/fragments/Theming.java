@@ -39,6 +39,7 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
         return R.xml.theming;
     }
 
+    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,9 +50,11 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
                 .setOnPreferenceChangeListener(this);
         findPreference(AdaptiveIconDrawable.MASK_SETTING_PROP).setOnPreferenceChangeListener(this);
     }
+    */
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        /*
         if (Settings.System.THEMING_BASE.equals(preference.getKey()) ||
                 Settings.System.THEMING_CORNERS.equals(preference.getKey()) ||
                 Settings.System.THEMING_SYSTEM_ICONS_STYLE.equals(preference.getKey())) {
@@ -67,6 +70,8 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
         } else {
             return false;
         }
+        */
+        return false;
     }
 
     private void postRestartSystemUi() {

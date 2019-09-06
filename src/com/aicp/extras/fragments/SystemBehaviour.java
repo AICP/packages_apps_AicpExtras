@@ -68,6 +68,7 @@ public class SystemBehaviour extends BaseSettingsFragment
                 .contains(Constants.PREF_SELINUX_MODE));
         Util.requireRoot(getActivity(), selinuxCategory);
 
+        /*
         Util.requireConfig(getActivity(), findPreference(KEY_SMART_PIXELS),
                 com.android.internal.R.bool.config_enableSmartPixels, true, false);
 
@@ -76,6 +77,7 @@ public class SystemBehaviour extends BaseSettingsFragment
 
         Util.requireConfig(getActivity(), findPreference(KEY_BARS),
                 com.android.internal.R.bool.config_haveHigherAspectRatioScreen, true, false);
+                */
     }
 
     @Override
