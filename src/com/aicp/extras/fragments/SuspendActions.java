@@ -65,6 +65,7 @@ public class SuspendActions extends BaseSettingsFragment
         return R.xml.suspend_actions;
     }
 
+    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -144,8 +145,10 @@ public class SuspendActions extends BaseSettingsFragment
         mMobileDateCategory.setEnabled(enabled != 0);
         mLocationCategory.setEnabled(enabled != 0);
     }
+    */
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        /*
         ContentResolver resolver = getActivity().getContentResolver();
 
         if (preference == mEnableScreenStateToggles) {
@@ -206,7 +209,7 @@ public class SuspendActions extends BaseSettingsFragment
 
             return true;
         }
-
+        */
         return false;
     }
 

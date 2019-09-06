@@ -40,7 +40,7 @@ import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingListPreference;
 import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
-import com.android.internal.util.aicp.AicpUtils;
+//import com.android.internal.util.aicp.AicpUtils;
 
 public class StatusBar extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
@@ -67,6 +67,7 @@ public class StatusBar extends BaseSettingsFragment implements
         return R.xml.status_bar;
     }
 
+    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -123,9 +124,11 @@ public class StatusBar extends BaseSettingsFragment implements
             hideNotchPref.getParent().removePreference(hideNotchPref);
         }
     }
+    */
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        /*
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mSmartPulldown) {
             int value = Integer.parseInt((String) newValue);
@@ -146,9 +149,11 @@ public class StatusBar extends BaseSettingsFragment implements
             updateCarrierLabelSummary(value);
             return true;
         }
+        */
         return false;
     }
 
+    /*
     @Override
     public boolean onPreferenceTreeClick(final Preference preference) {
         super.onPreferenceTreeClick(preference);
@@ -256,4 +261,5 @@ public class StatusBar extends BaseSettingsFragment implements
             }
         }
     }
+    */
 }

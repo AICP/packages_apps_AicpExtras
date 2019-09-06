@@ -77,6 +77,7 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         return R.xml.chooser_activity_blacklist;
     }
 
+    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,9 +125,11 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         mAddBlacklistPref = findPreference(KEY_BLACKLIST);
         mAddBlacklistPref.setOnPreferenceClickListener(this);
     }
+    */
 
     @Override
     public boolean onPreferenceClick(Preference preference) {
+        /*
         if (preference == mAddBlacklistPref) {
             showDialog(DIALOG_BLACKLIST_APPS);
         } else {
@@ -144,18 +147,20 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
 
             builder.show();
         }
+        */
         return true;
     }
 
     /**
      * Application class
      */
+    /*
     protected static class Package {
         public String name;
         /**
          * Stores all the application values in one call
          * @param name
-         */
+         * /
         public Package(String name) {
             this.name = name;
         }
@@ -285,4 +290,5 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         Settings.System.putString(getActivity().getContentResolver(),
                 mBlacklistPackageStore, value);
     }
+    */
 }
