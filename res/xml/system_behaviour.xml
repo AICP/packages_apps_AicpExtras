@@ -22,6 +22,7 @@
     android:key="system_behaviour"
     android:title="@string/system_behaviour_title">
 
+<!--
     <Preference
         android:key="privacy_guard_manager"
         android:title="@string/app_ops_settings"
@@ -78,7 +79,7 @@
         android:summary="@string/sensor_block_summary"
         android:defaultValue="false" />
 
-    <!-- Smart Pixels -->
+    <!- - Smart Pixels - ->
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="smart_pixels_enable"
         android:title="@string/smart_pixels_title"
@@ -90,7 +91,7 @@
         android:key="system_ss_category"
         android:title="@string/system_ss_category_title">
 
-        <!-- Screenshot tone -->
+        <!- - Screenshot tone - ->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="screenshot_sound"
             android:title="@string/screenshot_sound_title"
@@ -98,7 +99,7 @@
             android:defaultValue="true" />
     </PreferenceCategory>
 
-    <!-- audio panel -->
+    <!- - audio panel - ->
     <PreferenceCategory
         android:title="@string/audio_panel_view">
 
@@ -139,6 +140,7 @@
         android:title="@string/audio_panel_view_bt_sco_title"
         android:defaultValue="false"/>
   </PreferenceCategory>
+  -->
 
     <!-- SELinux -->
     <PreferenceCategory

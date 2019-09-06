@@ -16,6 +16,7 @@
     android:key="battery_light"
     android:title="@string/battery_light_title" >
 
+<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="battery_light_low_blinking"
         android:title="@string/battery_low_pulse_title"
@@ -95,4 +96,5 @@
             android:dependency="fast_charging_led_enabled"
             android:defaultValue="@*android:integer/config_notificationsFastBatteryARGB" />
     </PreferenceCategory>
+-->
 </PreferenceScreen>
