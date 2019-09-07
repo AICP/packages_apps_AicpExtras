@@ -55,6 +55,7 @@
 
         <activity
             android:name=".changelog.ChangelogActivity"
+            android:theme="@style/ChangelogTheme"
             android:label="@string/changelog_name">
             <intent-filter>
                 <action android:name="com.aicp.extras.ViewChangelog" />

@@ -28,50 +28,16 @@
         <item name="value_popup_view_fg">@*android:color/primary_text_default_material_light</item>
         <item name="color_two_target_preference_divider">?android:attr/dividerVertical</item>
         <item name="footerPreferenceStyle">@style/Preference.FooterPreference.SettingsBase</item>
+        <!-- For AndroidX AlertDialog -->
+        <item name="alertDialogTheme">@style/Theme.AlertDialog</item>
     </style>
 
     <style name="AppTheme_MoreAccent" parent="@style/AppTheme">
         <item name="color_settings_icon">?android:attr/colorAccent</item>
     </style>
 
-    <style name="AppTheme_Light" parent="@android:style/Theme.Material.Light">
-        <item name="android:colorAccent">@color/accent_light</item>
-        <item name="color_settings_icon">?android:attr/colorControlNormal</item>
-        <item name="preferenceTheme">@style/AppPreferenceTheme</item>
-        <item name="switchBarTheme">@style/ThemeOverlay.SwitchBar.Settings</item>
-        <!-- SeekBarPreference popup view: match default toast style -->
-        <item name="value_popup_view_bg">#e6eeeeee</item>
-        <item name="value_popup_view_fg">@*android:color/primary_text_default_material_light</item>
-        <!-- White navbar -->
-        <item name="android:navigationBarDividerColor">#1f000000</item>
-        <item name="android:navigationBarColor">@android:color/white</item>
-        <item name="android:windowLightNavigationBar">true</item>
-        <item name="color_two_target_preference_divider">#64000000</item>
-        <item name="footerPreferenceStyle">@style/Preference.FooterPreference.SettingsBase</item>
-    </style>
-
-    <style name="AppTheme_Light_MoreAccent" parent="@style/AppTheme_Light">
-        <item name="color_settings_icon">?android:attr/colorAccent</item>
-    </style>
-
-    <style name="AppTheme_Dark" parent="@android:style/Theme.Material">
-        <item name="android:colorAccent">@color/accent_dark</item>
-        <item name="color_settings_icon">?android:attr/colorControlNormal</item>
-        <item name="preferenceTheme">@style/AppPreferenceTheme</item>
-        <item name="switchBarTheme">@style/ThemeOverlay.SwitchBar.Settings.Dark</item>
-        <!-- SeekBarPreference popup view -->
-        <item name="value_popup_view_bg">#e6424242</item>
-        <item name="value_popup_view_fg">@*android:color/primary_text_default_material_dark</item>
-        <item name="color_two_target_preference_divider">#64ffffff</item>
-        <item name="footerPreferenceStyle">@style/Preference.FooterPreference.SettingsBase</item>
-    </style>
-
-    <style name="AppTheme_Dark_MoreAccent" parent="@style/AppTheme_Dark">
-        <item name="color_settings_icon">?android:attr/colorAccent</item>
-    </style>
-
-    <style name="ChangelogTheme_Light" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorAccent">@color/accent_light</item>
+    <style name="ChangelogTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/accent_auto</item>
         <item name="changelog_color_bg">?android:attr/colorBackground</item>
         <item name="changelog_color_header_back">?attr/colorBackgroundFloating</item>
         <item name="changelog_color_commit_message">?android:attr/textColorPrimary</item>
@@ -82,16 +48,6 @@
         <item name="android:navigationBarDividerColor">#1f000000</item>
         <item name="android:navigationBarColor">@android:color/white</item>
         <item name="android:windowLightNavigationBar">true</item>
-    </style>
-
-    <style name="ChangelogTheme_Dark" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorAccent">@color/accent_dark</item>
-        <item name="changelog_color_bg">?android:attr/colorBackground</item>
-        <item name="changelog_color_header_back">?attr/colorBackgroundFloating</item>
-        <item name="changelog_color_commit_message">?android:attr/textColorPrimary</item>
-        <item name="changelog_color_commit_bg">#212121</item>
-        <!-- Changelog image behind status bar -->
-        <item name="android:windowTranslucentStatus">true</item>
     </style>
 
     <!-- DUI -->
