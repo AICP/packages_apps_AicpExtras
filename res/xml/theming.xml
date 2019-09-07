@@ -23,6 +23,12 @@
     android:title="@string/theming_title"
     android:summary="@string/theming_summary">
 
+    <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_accent"
+        android:title="@string/theming_accent_title"
+        aicpextras:overlayCategory="aicp.accent"
+        aicpextras:overlayTarget="android" />
+
 <!--
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="theming_base"
