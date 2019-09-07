@@ -37,7 +37,6 @@ public abstract class BaseActivity extends FragmentActivity {
         mThemeRes = getThemeRes();
         setTheme(mThemeRes);
         super.onCreate(savedInstanceState);
-        fixStatusBarFg();
     }
 
     @Override
@@ -49,84 +48,13 @@ public abstract class BaseActivity extends FragmentActivity {
     }
 
     protected int getThemeRes() {
-        int themePref = 0;//Settings.System.getInt(getContentResolver(), Settings.System.AE_THEME, 0);
+        int themePref = Settings.System.getInt(getContentResolver(), Settings.System.AE_THEME, 0);
         switch (themePref) {
-            /*
-            case 1:
-                return R.style.AppTheme_DarkAmber;
-            */
-            case 2:
-                return R.style.AppTheme_Light;
-            case 3:
-                return R.style.AppTheme_Dark;
-            case 4:
-                return R.style.AppTheme_Light_MoreAccent;
-            case 5:
-                return R.style.AppTheme_Dark_MoreAccent;
-            case 7:
-                return R.style.AppTheme;
+            case 6:
+                return R.style.AppTheme_MoreAccent;
             default:
-            {
-                // Decide on whether to use a light or dark theme by judging devicedefault
-                // settings theme (or descendant in this case) colors
-                ContextThemeWrapper themeContext = new ContextThemeWrapper(this, R.style.AppTheme);
-                TypedValue tv = new TypedValue();
-                themeContext.getTheme().resolveAttribute(android.R.attr.colorBackground, tv, true);
-                int bgColor = tv.data;
-                themeContext.getTheme().resolveAttribute(android.R.attr.colorForeground, tv, true);
-                int fgColor = tv.data;
-                if (Color.luminance(fgColor) <= Color.luminance(bgColor)) {
-                    // Use theme that follows DeviceDefault settings theme directly
-                    // to get possibly themed changes
-                    if (themePref == 6) {
-                        return R.style.AppTheme_MoreAccent;
-                    } else {
-                        return R.style.AppTheme;
-                    }
-                } else {
-                    // When using a dark theme, we could actually use AppTheme here too because
-                    // it inherits from DeviceDefault, but we have some dark theme improvements here
-                    if (themePref == 6) {
-                        return R.style.AppTheme_Dark_MoreAccent;
-                    } else {
-                        return R.style.AppTheme_Dark;
-                    }
-                }
-            }
+                return R.style.AppTheme;
         }
     }
 
-    /**
-     * When changing from a theme with light to one with dark status bar, recreating
-     * the activity seems to be not enough to update status bar foreground color,
-     * so it's black on black.
-     * This is a workaround for that, basically adapted from Launcher3's dynamic
-     * status bar color (fg color changing when opening/closing drawer).
-     */
-    private void fixStatusBarFg() {
-        int oldSystemUiFlags = getWindow().getDecorView().getSystemUiVisibility();
-        int newSystemUiFlags = oldSystemUiFlags;
-        int[] attrs = new int[] {
-                android.R.attr.windowLightStatusBar,
-                android.R.attr.windowLightNavigationBar,
-        };
-        TypedArray ta = getTheme().obtainStyledAttributes(attrs);
-        boolean lightStatusBar = ta.getBoolean(0, false);
-        boolean lightNavigationBar = ta.getBoolean(1, false);
-        ta.recycle();
-        if (lightStatusBar) {
-            newSystemUiFlags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-        } else {
-            newSystemUiFlags &= ~(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        }
-        if (lightNavigationBar) {
-            newSystemUiFlags |= View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-        } else {
-            newSystemUiFlags &= ~(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-        }
-
-        if (newSystemUiFlags != oldSystemUiFlags) {
-            getWindow().getDecorView().setSystemUiVisibility(newSystemUiFlags);
-        }
-    }
 }

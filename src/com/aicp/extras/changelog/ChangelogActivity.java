@@ -3,6 +3,7 @@ package com.aicp.extras.changelog;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 //import com.crashlytics.android.Crashlytics;
@@ -19,7 +20,7 @@ import java.util.Objects;
 
 import com.aicp.extras.R;
 
-public class ChangelogActivity extends BaseChangelogActivity {
+public class ChangelogActivity extends AppCompatActivity {
 
     private static final String CHANGELOG_PATH = "/system/etc/Changelog.txt";
 

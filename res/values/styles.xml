@@ -20,4 +20,28 @@
     <style name="AppPreferenceTheme" parent="PreferenceThemeOverlay.v14.Material" />
     <style name="Theme.SmartBar.Dialog" parent="@*android:style/Theme.DeviceDefault.Light.Dialog.Alert" />
 
+    <style name="Theme.AlertDialog.Base" parent="@style/Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="colorAccent">@*android:color/accent_device_default_light</item>
+        <item name="android:colorBackground">@color/dialog_background</item>
+    </style>
+
+    <style name="Theme.AlertDialog" parent="Theme.AlertDialog.Base">
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:clipToPadding">true</item>
+        <item name="android:clipChildren">true</item>
+
+        <!-- Redefine the ActionBar style for contentInsetStart -->
+        <!-- TODO match Settings?
+        <item name="android:actionBarStyle">@style/Widget.ActionBar</item>
+        -->
+
+        <!-- copied from Theme.DeviceDefault.Dialog.Alert -->
+        <item name="dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:windowTitleStyle">@*android:style/DialogWindowTitle.DeviceDefault</item>
+        <!-- TODO match Settings?
+        <item name="android:textAppearanceMedium">@style/TextAppearance.DialogMessage</item>
+        -->
+        <item name="buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+    </style>
+
 </resources>

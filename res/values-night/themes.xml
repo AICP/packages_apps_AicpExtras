@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2019 Android Ice Cold Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<resources>
+
+    <style name="ChangelogTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorAccent">@color/accent_auto</item>
+        <item name="changelog_color_bg">?android:attr/colorBackground</item>
+        <item name="changelog_color_header_back">?attr/colorBackgroundFloating</item>
+        <item name="changelog_color_commit_message">?android:attr/textColorPrimary</item>
+        <item name="changelog_color_commit_bg">#212121</item>
+        <!-- Changelog image behind status bar -->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="AppTheme" parent="@android:style/Theme.DeviceDefault.Settings">
+        <item name="color_settings_icon">?android:attr/colorControlNormal</item>
+        <item name="preferenceTheme">@style/AppPreferenceTheme</item>
+        <item name="switchBarTheme">@style/ThemeOverlay.SwitchBar.Settings.Dark</item>
+        <!-- SeekBarPreference popup view -->
+        <item name="value_popup_view_bg">#e6424242</item>
+        <item name="value_popup_view_fg">@*android:color/primary_text_default_material_dark</item>
+        <item name="color_two_target_preference_divider">#64ffffff</item>
+        <item name="footerPreferenceStyle">@style/Preference.FooterPreference.SettingsBase</item>
+        <!-- For AndroidX AlertDialog -->
+        <item name="alertDialogTheme">@style/Theme.AlertDialog</item>
+    </style>
+
+</resources>
