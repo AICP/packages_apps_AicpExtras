@@ -192,6 +192,8 @@
     <string name="qqs_columns_title">Количество колонок миниплиток</string>
     <string name="qqs_columns_auto_title">Автоматическое количество столбцов миниплиток</string>
     <string name="qqs_columns_auto_summary">Количество колонок миниплиток соответствует количеству колонок быстрых настроек</string>
+    <string name="hide_tile_expand_indicator_title">Скрыть индикатор детализации</string>
+    <string name="hide_tile_expand_indicator_summary">Переключить для скрытия индикатора детализации тайлов с двойной целью после заданного количества столбцов</string>
     <string name="qs_layout_category_title">Разметка быстрых настроек</string>
     <string name="qs_rows_portrait_title">Строки (портрет)</string>
     <string name="qs_rows_landscape_title">Строки (ландшафт)</string>
@@ -517,9 +519,12 @@
     <string name="use_bottom_gesture_title">Жесты навигации</string>
     <string name="use_bottom_gesture_summary">Используйте жесты снизу вверх для навигации\nПанель навигации должна быть отключена!</string>
     <string name="gesture_swipe_length_title">Высота области жестов</string>
-    <string name="gesture_swipe_length_summary">Высота снизу для срабатывания жестов</string>
+    <string name="gesture_swipe_length_summary">Длина свайпа, требуемая для запуска жеста</string>
+    <string name="gesture_swipe_start_title">Высота запуска вызова свайпа</string>
+    <string name="gesture_swipe_start_summary">Минимальная высота снизу для старта запуска жеста</string>
     <string name="gesture_action_timeout_title">Время обработки жеста</string>
     <string name="gesture_action_timeout_summary">Время ожидания до начала выполнения жест</string>
+    <string name="bottom_gestures_feedback_duration_title">Длительность виброотклика</string>
     <string name="unit_dpi">dpi</string>
     <string name="unit_px">пикс</string>
     <string name="unit_msec">мсек</string>
@@ -859,6 +864,7 @@
     <string name="theming_accent_greenlight">Зелёный</string>
     <string name="theming_accent_grey">Серый</string>
     <string name="theming_accent_indigo">Индиго</string>
+    <string name="theming_accent_lava">Лава</string>
     <string name="theming_accent_lime">Лаймовый</string>
     <string name="theming_accent_orange">Оранжевый</string>
     <string name="theming_accent_oxygen">Кислород</string>
@@ -884,7 +890,7 @@
     <string name="theming_qs_shape_square">Квадрат</string>
     <string name="theming_qs_shape_rounded_square">Скругленный квадрат</string>
     <string name="theming_qs_shape_hexagon">Шестиугольник</string>
-    <string name="theming_settings_dashboard_icons_title">Иконки панели настроек</string>
+    <string name="theming_settings_dashboard_icons_title">Значки панели настроек</string>
     <string name="theming_settings_dashboard_icons_default">Круглые (по умолчанию)</string>
     <string name="theming_settings_dashboard_icons_default_accent">Круглые с акцентом</string>
     <string name="theming_settings_dashboard_icons_plain">Обычные</string>
@@ -1035,4 +1041,7 @@
     <string name="disable_incall_home_summary">Отключить кнопку \"Домой\" при звонке</string>
     <string name="less_boring_heads_up_title">Менее надоедливые всплывающие уведомления</string>
     <string name="less_boring_heads_up_summary">Показывать всплывающие уведомления только для звонков, будильника и приложения для обмена сообщениями</string>
+    <string name="theming_system_icons_style_title">Стиль системных значков</string>
+    <string name="theming_system_icons_style_default">Системный по умолчанию</string>
+    <string name="theming_system_icons_style_old">Старые значки</string>
 </resources>

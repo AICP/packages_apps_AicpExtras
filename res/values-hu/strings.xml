@@ -328,8 +328,18 @@
     <string name="fprint_sucess_vib_summary_off">Rezgés sikeres ujjlenyomat hitelesítéskor letiltva</string>
     <string name="lockscreen_clock_selection_title">Az Óra stílusa</string>
     <string name="lockscreen_clock_selection_digital">Alapértelmezett</string>
+    <string name="lockscreen_clock_selection_digital_bold">Digitális, vastag</string>
+    <string name="lockscreen_clock_selection_digital_accent">Digitális, kiemelt</string>
+    <string name="lockscreen_clock_selection_digital_accent_hour">Digitális, vastag (az órák kiemelésével)</string>
+    <string name="lockscreen_clock_selection_digital_accent_min">Digitális, vastag (a percek kiemelésével)</string>
     <string name="lockscreen_clock_selection_analog">Analóg</string>
     <string name="lockscreen_clock_selection_sammy">Sammy</string>
+    <string name="lockscreen_clock_selection_sammy_bold">Sammy, vastag</string>
+    <string name="lockscreen_clock_selection_sammy_accent">Sammy, kiemelt</string>
+    <string name="lockscreen_clock_selection_sammy_accent_alt">Sammy, kiemelt (alternatív)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_hour">Sammy, vastag (az órák kiemelésével)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_min">Sammy, vastag (a percek kiemelésével)</string>
+    <string name="lockscreen_clock_selection_text">Android Q stílusú (rendszerfelület-újraindítás szükséges). </string>
     <string name="global_actions_onthego_title">Menet közben mód</string>
     <string name="global_actions_onthego_summary">Menet közben mód hozzáadása a Kikapcsolómenühöz</string>
     <string name="global_actions_screenrecord_title">Képernyővideó</string>
@@ -506,8 +516,6 @@
     <string name="gesture_settings_info">A navigációs sávot le kell tiltani, így letiltásra kerül!\n\nElérhető gesztusok:\n\nVissza\n- Felfelé csúsztatás bal vagy jobb oldalon\n\nKezdőoldal\n- Felfelé csúsztatás középen\n\nAlkalmazáselőzmények\n- Felfelé csúsztatás középen majd megtartás\n\nKezdőoldal-gomb hosszan nyomása\n- Rövid felfelé csúsztatás és középentartás</string>
     <string name="use_bottom_gesture_title">Navigációs vezérlőmozdulatok</string>
     <string name="use_bottom_gesture_summary">Használja az alulról felfelé csúsztató vezérlőmozdulatokat a navigáláshoz\nNavigációs sávot le kell tiltani!</string>
-    <string name="gesture_swipe_length_title">A csúsztatás területének magassága</string>
-    <string name="gesture_swipe_length_summary">Alulról meddig terjedjen a csúsztatás magassága</string>
     <string name="gesture_action_timeout_title">A csúsztatási mozdulatvezérlés időkorlátja</string>
     <string name="gesture_action_timeout_summary">Megadhatja mennyi idő teljen el, míg a művelet elindul</string>
     <string name="unit_dpi">dpi</string>
@@ -851,6 +859,7 @@ A kettős érintéses műveletek engedélyezése enyhén késlelteti az egyszeri
     <string name="theming_accent_gold">Arany</string>
     <string name="theming_accent_greenlight">Zöld</string>
     <string name="theming_accent_grey">Szürke</string>
+    <string name="theming_accent_indigo">Indigókék</string>
     <string name="theming_accent_lime">Lime</string>
     <string name="theming_accent_orange">Narancs</string>
     <string name="theming_accent_oxygen">Oxigén</string>
@@ -1025,4 +1034,6 @@ A kettős érintéses műveletek engedélyezése enyhén késlelteti az egyszeri
     <string name="wireless_charging_animation_summary">Animáció megjelenítése, ha a készülék töltőhöz van csatlakoztatva</string>
     <string name="disable_incall_home_title">Letiltás csengéskor</string>
     <string name="disable_incall_home_summary">A Kezdőképernyő gomb letiltásra kerül, ha a telefon csörög</string>
+    <string name="less_boring_heads_up_title">Kevésbé zavaró lebegő értesítések</string>
+    <string name="less_boring_heads_up_summary">Csak a tárcsázónál, az éresztőóránál és az üzenetek alkalmazásnál mutasson lebegő értesítéseket</string>
 </resources>

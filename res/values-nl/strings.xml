@@ -192,6 +192,7 @@
     <string name="qqs_columns_title">Kolommen Snelle instellingen</string>
     <string name="qqs_columns_auto_title">Automatische kolommen Snelle instellingen</string>
     <string name="qqs_columns_auto_summary">Aantal kolommen met Snelle instellingen-tegels volgt aantal kolommen in Snelle instellingen-paneel</string>
+    <string name="hide_tile_expand_indicator_title">Verberg detail indicator</string>
     <string name="qs_layout_category_title">Lay-out Snelle instellingen</string>
     <string name="qs_rows_portrait_title">Rijen met tegels staand</string>
     <string name="qs_rows_landscape_title">Rijen met tegels liggend</string>
@@ -328,8 +329,18 @@
     <string name="fprint_sucess_vib_summary_off">Trillen bij succesvolle vingerafdruk herkenning uitgeschakeld</string>
     <string name="lockscreen_clock_selection_title">Klok stijl</string>
     <string name="lockscreen_clock_selection_digital">Standaard</string>
+    <string name="lockscreen_clock_selection_digital_bold">Digitaal, vetgedrukt</string>
+    <string name="lockscreen_clock_selection_digital_accent">Digitaal, nadruk</string>
+    <string name="lockscreen_clock_selection_digital_accent_hour">Digitaal, vetgedrukt (nadruk op uren)</string>
+    <string name="lockscreen_clock_selection_digital_accent_min">Digitaal, vetgedrukt (nadruk op minuten)</string>
     <string name="lockscreen_clock_selection_analog">Analoog</string>
     <string name="lockscreen_clock_selection_sammy">Samsung</string>
+    <string name="lockscreen_clock_selection_sammy_bold">Sammy, vetgedrukt</string>
+    <string name="lockscreen_clock_selection_sammy_accent">Sammy, nadruk</string>
+    <string name="lockscreen_clock_selection_sammy_accent_alt">Sammy, nadruk (alternatief)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_hour">Sammy, vetgedrukt (nadruk op uren)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_min">Sammy, vetgedrukt (nadruk op minuten)</string>
+    <string name="lockscreen_clock_selection_text">Tekst, Android Q (herstart van SysUI vereist). </string>
     <string name="global_actions_onthego_title">On-The-Go</string>
     <string name="global_actions_onthego_summary">On-The-Go optie toevoegen aan Aan-/Uit menu</string>
     <string name="global_actions_screenrecord_title">Schermopname</string>
@@ -510,10 +521,9 @@
     <string name="gesture_settings_info">Navigatiebalk moet en zal automatisch worden uitgeschakeld!\n\nBeschikbare gebaren:\n\nTerug\n- Veeg omhoog aan de linker- of rechterkant\n\nHome\n- Veeg omhoog in het midden\n\nRecente apps\n- Omhoog vegen in het midden en vasthouden\n\nHome lang\n- Kort omhoog vegen in het midden en vasthouden</string>
     <string name="use_bottom_gesture_title">Navigatie gebaren</string>
     <string name="use_bottom_gesture_summary">Gebruik veegbewegingen vanaf onder om te navigeren\nNavigatiebalk moet worden uitgeschakeld!</string>
-    <string name="gesture_swipe_length_title">Hoogte van veeggebied</string>
-    <string name="gesture_swipe_length_summary">Hoogte van de onderkant vanaf waar het veeggebied begint</string>
     <string name="gesture_action_timeout_title">Time-out veegactie</string>
     <string name="gesture_action_timeout_summary">Time-out voordat de veegactie wordt gestart</string>
+    <string name="bottom_gestures_feedback_duration_title">Duur haptische feedback (trilsignaal)</string>
     <string name="unit_dpi">dpi</string>
     <string name="unit_px">px</string>
     <string name="unit_msec">ms</string>
@@ -853,6 +863,8 @@
     <string name="theming_accent_gold">Goud</string>
     <string name="theming_accent_greenlight">Groen</string>
     <string name="theming_accent_grey">Grijs</string>
+    <string name="theming_accent_indigo">Indigo</string>
+    <string name="theming_accent_lava">Lava</string>
     <string name="theming_accent_lime">Lichtgroen</string>
     <string name="theming_accent_orange">Oranje</string>
     <string name="theming_accent_oxygen">Zuurstof</string>
@@ -1027,4 +1039,9 @@
     <string name="wireless_charging_animation_summary">Een animatie weergeven wanneer het apparaat is aangesloten</string>
     <string name="disable_incall_home_title">Uitschakelen bij inkomende oproep</string>
     <string name="disable_incall_home_summary">Home-toets uitschakelen bij inkomende oproep</string>
+    <string name="less_boring_heads_up_title">Maak heads-up meldingen minder vervelend</string>
+    <string name="less_boring_heads_up_summary">Laat alleen heads-up meldingen zien voor de telefoon-, berichten- en alarm-app</string>
+    <string name="theming_system_icons_style_title">Systeempictogrammen stijl</string>
+    <string name="theming_system_icons_style_default">Systeemstandaard</string>
+    <string name="theming_system_icons_style_old">Oude iconen</string>
 </resources>

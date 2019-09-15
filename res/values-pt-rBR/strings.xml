@@ -192,6 +192,8 @@
     <string name="qqs_columns_title">Colunas das configurações rápidas</string>
     <string name="qqs_columns_auto_title">Colunas automáticas nas configurações rápidas</string>
     <string name="qqs_columns_auto_summary">As colunas das configurações rápidas seguem o número da coluna do painel de configurações rápidas</string>
+    <string name="hide_tile_expand_indicator_title">Ocultar indicador de detalhes</string>
+    <string name="hide_tile_expand_indicator_summary">Alternar para ocultar o indicador de detalhes do bloco de destino duplo após um número predefinido de colunas</string>
     <string name="qs_layout_category_title">Layoute da Configurações Rápidas</string>
     <string name="qs_rows_portrait_title">Número de linhas (retrato)</string>
     <string name="qs_rows_landscape_title">Número de linhas (paisagem)</string>
@@ -328,8 +330,18 @@
     <string name="fprint_sucess_vib_summary_off">Vibrar na autenticação de impressão digital com sucesso: desabilitado</string>
     <string name="lockscreen_clock_selection_title">Estilo do relógio</string>
     <string name="lockscreen_clock_selection_digital">Padrão</string>
+    <string name="lockscreen_clock_selection_digital_bold">Digital em Negrito</string>
+    <string name="lockscreen_clock_selection_digital_accent">Digital na cor do realce</string>
+    <string name="lockscreen_clock_selection_digital_accent_hour">Digital em Negrito (cor do realce - horas)</string>
+    <string name="lockscreen_clock_selection_digital_accent_min">Digital em Negrito (cor do realce - minutos)</string>
     <string name="lockscreen_clock_selection_analog">Analógico</string>
     <string name="lockscreen_clock_selection_sammy">Sammy</string>
+    <string name="lockscreen_clock_selection_sammy_bold">Vertical em Negrito</string>
+    <string name="lockscreen_clock_selection_sammy_accent">Vertical na cor do realce</string>
+    <string name="lockscreen_clock_selection_sammy_accent_alt">Vertical na cor do realce (caixa alta)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_hour">Vertical em Negrito (cor do realce - horas)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_min">Vertical em Negrito (cor do realce - minutos)</string>
+    <string name="lockscreen_clock_selection_text">Texto do Android Q (requer reinicialização). </string>
     <string name="global_actions_onthego_title">OTG</string>
     <string name="global_actions_onthego_summary">Adicionar OTG ao menu de energia</string>
     <string name="global_actions_screenrecord_title">Gravador de tela</string>
@@ -506,10 +518,13 @@
     <string name="gesture_settings_info">A barra de navegação deve e será automaticamente desativada!\n\nGestos disponíveis:\n\nVoltar\n- Deslize para cima no lado esquerdo ou direito\n\nInício\n- Deslizar para cima ao centro\n\nAplicativos recentes\n- Deslize para cima ao centro e segure\n\nPressione para início\n- Deslize rapidamente para cima e segure ao centro</string>
     <string name="use_bottom_gesture_title">Gestos de navegação</string>
     <string name="use_bottom_gesture_summary">Use os gestos de deslizar para baixo para navegação\nBarra de navegação deve estar desativada!</string>
-    <string name="gesture_swipe_length_title">Altura da área de deslize</string>
-    <string name="gesture_swipe_length_summary">Altura da parte inferior para deslizar</string>
+    <string name="gesture_swipe_length_title">Deslize a altura do acionador</string>
+    <string name="gesture_swipe_length_summary">Duração do deslize necessário para acionar o gesto</string>
+    <string name="gesture_swipe_start_title">Deslize a altura inicial do acionador</string>
+    <string name="gesture_swipe_start_summary">Altura mínima do fundo para iniciar o gesto de disparo</string>
     <string name="gesture_action_timeout_title">Tempo limite da área de deslize</string>
     <string name="gesture_action_timeout_summary">Tempo limite antes da ação do gesto ser iniciada</string>
+    <string name="bottom_gestures_feedback_duration_title">Duração da vibração</string>
     <string name="unit_dpi">dpi</string>
     <string name="unit_px">px</string>
     <string name="unit_msec">ms</string>
@@ -849,6 +864,8 @@
     <string name="theming_accent_gold">Dourado</string>
     <string name="theming_accent_greenlight">Verde</string>
     <string name="theming_accent_grey">Cinza</string>
+    <string name="theming_accent_indigo">Índigo</string>
+    <string name="theming_accent_lava">Lava</string>
     <string name="theming_accent_lime">Verde limão</string>
     <string name="theming_accent_orange">Laranja</string>
     <string name="theming_accent_oxygen">Oxigênio</string>
@@ -888,6 +905,9 @@
     <string name="less_notification_sounds_30s">A cada 30 segundos</string>
     <string name="less_notification_sounds_1m">A cada minuto</string>
     <string name="less_notification_sounds_2m">A cada 2 minutos</string>
+    <string name="less_notification_sounds_5m">A cada 5 minutos</string>
+    <string name="less_notification_sounds_15m">A cada 15 minutos</string>
+    <string name="less_notification_sounds_30m">A cada 30 minutos</string>
     <string name="smart_pixels_title">Smart pixels</string>
     <string name="smart_pixels_summary">Poupar bateria ao desligar alguns píxeis</string>
     <string name="smart_pixels_enable_title">Ativar os Píxeis Inteligentes</string>
@@ -918,6 +938,7 @@
     <string name="battery_light_blend_colors_title">Seleção de cor</string>
     <string name="battery_light_blend_colors_summary">Gama de cores usada ao misturar cores</string>
     <string name="app_ops_settings_summary">Controlar permissões de aplicativos</string>
+    <string name="app_ops_settings">Controle de Privacidade</string>
     <string name="data_disabled_icon_title">Mostrar ícone de dados desativados</string>
     <string name="data_disabled_icon_summary">Mostrar um X ao lado do ícone de rede quando os dados estiverem desativados</string>
     <string name="media_scanner_on_boot_title">Comportamento da pesquisa de mídia durante a inicialização</string>
@@ -1016,4 +1037,12 @@
     <string name="battery_estimates_title">Tempo de bateria no QS</string>
     <string name="battery_estimates_summary">Mostrar a duração estimada da bateria no painel QS</string>
     <string name="wireless_charging_animation_title">Animação de carregamento</string>
+    <string name="wireless_charging_animation_summary">Exibir uma animação quando o dispositivo estiver conectado</string>
+    <string name="disable_incall_home_title">Desativar quando tocar</string>
+    <string name="disable_incall_home_summary">Desativar botão Início ao tocar</string>
+    <string name="less_boring_heads_up_title">Torne as notificações pop-up menos irritantes</string>
+    <string name="less_boring_heads_up_summary">Mostrar pop-up apenas para os aplicativos de chamadas, mensagens e alarme</string>
+    <string name="theming_system_icons_style_title">Estilo de ícones do sistema</string>
+    <string name="theming_system_icons_style_default">Padrão do sistema</string>
+    <string name="theming_system_icons_style_old">Ícones antigos</string>
 </resources>

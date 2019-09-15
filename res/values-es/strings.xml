@@ -192,6 +192,8 @@
     <string name="qqs_columns_title">Columnas del panel de ajustes rápidos</string>
     <string name="qqs_columns_auto_title">Columnas del panel de ajustes rápidos automática</string>
     <string name="qqs_columns_auto_summary">Número de columnas del panel de ajustes rápidos</string>
+    <string name="hide_tile_expand_indicator_title">Ocultar indicador de detalle</string>
+    <string name="hide_tile_expand_indicator_summary">Toca para ocultar el indicador de detalle del ajuste rápido después de establecer un número predeterminado de columnas</string>
     <string name="qs_layout_category_title">Diseño de los ajustes rápidos</string>
     <string name="qs_rows_portrait_title">Filas en modo vertical</string>
     <string name="qs_rows_landscape_title">Filas en modo apaisado</string>
@@ -516,10 +518,13 @@
     <string name="gesture_settings_info">La barra de navegación debe estar desactivada! \n\nGestos disponibles:\n\nAtrás\n-Deslizar hacia arriba en el lado izquierdo o derecho\n\nInicio\n- Deslizar hacia arriba y mantener\n\nAps. recientes\n Deslizamiento corto y mantener en el centro\n\nPulsación larga en inicio\n- Deslizamiento corto hacia arriba y mantener en el centro</string>
     <string name="use_bottom_gesture_title">Gestos de navegación</string>
     <string name="use_bottom_gesture_summary">Usar gestor de deslizamiento hacia arriba en la parte inferior de la pantalla\nLa barra de navegación debe estar deshabilitada!</string>
-    <string name="gesture_swipe_length_title">Altura del área de pulsación</string>
-    <string name="gesture_swipe_length_summary">Altura de la parte inferior para disparar el gesto</string>
+    <string name="gesture_swipe_length_title">Altura del área de deslizamiento</string>
+    <string name="gesture_swipe_length_summary">Longitud del deslizamiento requerido para activar el gesto</string>
+    <string name="gesture_swipe_start_title">Altura del área de deslizamiento</string>
+    <string name="gesture_swipe_start_summary">Altura mínima desde abajo para empezar a activar el gesto</string>
     <string name="gesture_action_timeout_title">Tiempo de espera para disparar el gesto</string>
     <string name="gesture_action_timeout_summary">Tiempo de espera antes de iniciar la acción del gesto</string>
+    <string name="bottom_gestures_feedback_duration_title">Duración de retroalimentación háptica</string>
     <string name="unit_dpi">dpi</string>
     <string name="unit_px">px</string>
     <string name="unit_msec">ms</string>
@@ -860,6 +865,7 @@
     <string name="theming_accent_greenlight">Verde</string>
     <string name="theming_accent_grey">Gris</string>
     <string name="theming_accent_indigo">Añil</string>
+    <string name="theming_accent_lava">Lava</string>
     <string name="theming_accent_lime">Lima</string>
     <string name="theming_accent_orange">Naranja</string>
     <string name="theming_accent_oxygen">Oxígeno</string>
@@ -1036,4 +1042,7 @@
     <string name="disable_incall_home_summary">Desactivar botón Inicio al sonar</string>
     <string name="less_boring_heads_up_title">Hacer las notificaciones emergentes menos molestas</string>
     <string name="less_boring_heads_up_summary">Mostrar notificaciones emergentes sólo para teléfono, despertador y aplicación de mensajería</string>
+    <string name="theming_system_icons_style_title">Estilo de iconos del sistema</string>
+    <string name="theming_system_icons_style_default">Predeterminado del sistema</string>
+    <string name="theming_system_icons_style_old">Iconos antiguos</string>
 </resources>

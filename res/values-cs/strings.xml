@@ -192,6 +192,8 @@
     <string name="qqs_columns_title">Sloupce rychlých dlaždic QS</string>
     <string name="qqs_columns_auto_title">Autom. nastavení sloupců rychlých dlaždic QS</string>
     <string name="qqs_columns_auto_summary">Počet sloupců rychlých dlaždic QS závisí na počtu sloupců dlaždic v panelu QS</string>
+    <string name="hide_tile_expand_indicator_title">Skrýt indikátor detailu</string>
+    <string name="hide_tile_expand_indicator_summary">Přepnutím skrýt indikátor detailů dvou cílových dlaždic po přednastavení počtu sloupců</string>
     <string name="qs_layout_category_title">Rozložení panelu rychlého nastavení</string>
     <string name="qs_rows_portrait_title">Počet řádků dlaždic na výšku</string>
     <string name="qs_rows_landscape_title">Počet řádků dlaždic na šířku</string>
@@ -516,10 +518,13 @@
     <string name="gesture_settings_info">Navigační panel musí být a bude automaticky vypnutý!\n\nDostupná gesta:\n\nZpět\n- Přejeďte na levé nebo pravé straně\n\nDomů\n- Přejeďte nahoru\n\nNedávne aplikace\n- Přejeďte nahoru a podržte\n\nDlouhý stisk Domů\n- Krátce přejeďte nahoru a podržte uprostřed</string>
     <string name="use_bottom_gesture_title">Navigační gesta</string>
     <string name="use_bottom_gesture_summary">Pro navigaci použít přejetí zespodu nahoru\nNavigační panel musí být zakázán!</string>
-    <string name="gesture_swipe_length_title">Výška spouštěcí oblasti pro gesto</string>
-    <string name="gesture_swipe_length_summary">Výška odspodu ke spuštění gesta</string>
+    <string name="gesture_swipe_length_title">Délka spouštěcí oblasti pro gesto</string>
+    <string name="gesture_swipe_length_summary">Délka přejetí vyžadovaná ke spuštění gesta</string>
+    <string name="gesture_swipe_start_title">Počáteční výška spouštěcí oblasti pro gesto</string>
+    <string name="gesture_swipe_start_summary">Minimální výška odspodu ke spuštění gesta</string>
     <string name="gesture_action_timeout_title">Časový limit spuštění gesta</string>
     <string name="gesture_action_timeout_summary">Časový limit před zahájením akcí gesty</string>
+    <string name="bottom_gestures_feedback_duration_title">Doba trvání hmatové odezvy</string>
     <string name="unit_dpi">dpi</string>
     <string name="unit_px">px</string>
     <string name="unit_msec">ms</string>
@@ -859,6 +864,7 @@
     <string name="theming_accent_greenlight">Zelený</string>
     <string name="theming_accent_grey">Šedý</string>
     <string name="theming_accent_indigo">Tmavě modrá</string>
+    <string name="theming_accent_lava">Láva</string>
     <string name="theming_accent_lime">Limetkový</string>
     <string name="theming_accent_orange">Oranžový</string>
     <string name="theming_accent_oxygen">Oxygen</string>
@@ -1035,4 +1041,7 @@
     <string name="disable_incall_home_summary">Zakázat tlačítko Domů při vyzvánění</string>
     <string name="less_boring_heads_up_title">Omezit obtěžující plovoucí oznámení</string>
     <string name="less_boring_heads_up_summary">Zobrazit plovoucí oznámení pouze pro aplikace Telefon, Hodiny nebo Zprávy</string>
+    <string name="theming_system_icons_style_title">Styl systémových ikon</string>
+    <string name="theming_system_icons_style_default">Výchozí systémové</string>
+    <string name="theming_system_icons_style_old">Staré ikony</string>
 </resources>

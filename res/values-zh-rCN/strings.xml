@@ -192,6 +192,8 @@
     <string name="qqs_columns_title">快速 qs 磁贴列</string>
     <string name="qqs_columns_auto_title">自动快速 qs 磁贴列</string>
     <string name="qqs_columns_auto_summary">快速 qs 磁贴列跟随 qs 面板磁贴列编号</string>
+    <string name="hide_tile_expand_indicator_title">隐藏详细指示器</string>
+    <string name="hide_tile_expand_indicator_summary">切换显示预设列数后隐藏双目标瓷块详细指示数</string>
     <string name="qs_layout_category_title">QS 布局</string>
     <string name="qs_rows_portrait_title">纵向时瓷贴行数</string>
     <string name="qs_rows_landscape_title">横向时瓷贴行数</string>
@@ -328,8 +330,18 @@
     <string name="fprint_sucess_vib_summary_off">指纹验证成功时振动禁用</string>
     <string name="lockscreen_clock_selection_title">时钟风格</string>
     <string name="lockscreen_clock_selection_digital">默认</string>
+    <string name="lockscreen_clock_selection_digital_bold">粗体数字</string>
+    <string name="lockscreen_clock_selection_digital_accent">加速数字</string>
+    <string name="lockscreen_clock_selection_digital_accent_hour">粗体数字(加速-小时)</string>
+    <string name="lockscreen_clock_selection_digital_accent_min">数字时钟 (主题色-分钟)</string>
     <string name="lockscreen_clock_selection_analog">模拟</string>
     <string name="lockscreen_clock_selection_sammy">竖式时钟</string>
+    <string name="lockscreen_clock_selection_sammy_bold">粗体</string>
+    <string name="lockscreen_clock_selection_sammy_accent">主题萨米</string>
+    <string name="lockscreen_clock_selection_sammy_accent_alt">主题萨米 (alt)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_hour">粗体数字 (加速-小时)</string>
+    <string name="lockscreen_clock_selection_sammy_accent_bold_min">粗体数字 (加速-分钟)</string>
+    <string name="lockscreen_clock_selection_text">Android Q 文本 (需要重启系统界面)。</string>
     <string name="global_actions_onthego_title">行走模式</string>
     <string name="global_actions_onthego_summary">将行走模式切换添加到电源菜单</string>
     <string name="global_actions_screenrecord_title">屏幕录像</string>
@@ -507,9 +519,12 @@
     <string name="use_bottom_gesture_title">导航手势</string>
     <string name="use_bottom_gesture_summary">使用底部向上滑动手势导航\n导航栏必须禁用!</string>
     <string name="gesture_swipe_length_title">滑动触发区高度</string>
-    <string name="gesture_swipe_length_summary">从底部高度触发滑动</string>
+    <string name="gesture_swipe_length_summary">触发手势操作所需的滑动高度</string>
+    <string name="gesture_swipe_start_title">滑动触发区位置</string>
+    <string name="gesture_swipe_start_summary">滑动触发区高度</string>
     <string name="gesture_action_timeout_title">滑动触发器超时</string>
     <string name="gesture_action_timeout_summary">手势操作开始前超时</string>
+    <string name="bottom_gestures_feedback_duration_title">触摸震动持续时间</string>
     <string name="unit_dpi">点每英寸</string>
     <string name="unit_px">像素</string>
     <string name="unit_msec">毫秒</string>
@@ -849,6 +864,8 @@
     <string name="theming_accent_gold">金色</string>
     <string name="theming_accent_greenlight">绿色</string>
     <string name="theming_accent_grey">灰色</string>
+    <string name="theming_accent_indigo">靛蓝色</string>
+    <string name="theming_accent_lava">熔岩</string>
     <string name="theming_accent_lime">黄绿色</string>
     <string name="theming_accent_orange">橙色</string>
     <string name="theming_accent_oxygen">氧气色</string>
@@ -888,6 +905,9 @@
     <string name="less_notification_sounds_30s">每 30 秒</string>
     <string name="less_notification_sounds_1m">每分钟</string>
     <string name="less_notification_sounds_2m">每 2 分钟</string>
+    <string name="less_notification_sounds_5m">每 5 分钟</string>
+    <string name="less_notification_sounds_15m">每 15 分钟</string>
+    <string name="less_notification_sounds_30m">每 30 分钟</string>
     <string name="smart_pixels_title">智能像素</string>
     <string name="smart_pixels_summary">通过关闭额外的像素来节省电量</string>
     <string name="smart_pixels_enable_title">启用智能像素</string>
@@ -918,6 +938,7 @@
     <string name="battery_light_blend_colors_title">颜色选择</string>
     <string name="battery_light_blend_colors_summary">混合颜色时使用的颜色范围</string>
     <string name="app_ops_settings_summary">控制应用程序权限</string>
+    <string name="app_ops_settings">隐私防护</string>
     <string name="data_disabled_icon_title">显示数据禁用图标</string>
     <string name="data_disabled_icon_summary">当数据禁用时，不显示图标旁边的 “×“ 图标</string>
     <string name="media_scanner_on_boot_title">启动时的媒体扫描行为</string>
@@ -1014,5 +1035,14 @@
     <string name="custom_bars_settings_title">应用缩放</string>
     <string name="action_save">保存</string>
     <string name="battery_estimates_title">快速设置中的电池估算</string>
+    <string name="battery_estimates_summary">在快速设置面板中显示估计电量</string>
     <string name="wireless_charging_animation_title">充电动画</string>
+    <string name="wireless_charging_animation_summary">当设备被插入时显示动画</string>
+    <string name="disable_incall_home_title">振铃时禁用</string>
+    <string name="disable_incall_home_summary">振铃时禁用主屏幕按钮</string>
+    <string name="less_boring_heads_up_title">让浮动通知更少地打扰你</string>
+    <string name="less_boring_heads_up_summary">仅在电话、短信并非前台运行时显示浮动通知</string>
+    <string name="theming_system_icons_style_title">系统图标样式</string>
+    <string name="theming_system_icons_style_default">系统默认</string>
+    <string name="theming_system_icons_style_old">旧图标</string>
 </resources>

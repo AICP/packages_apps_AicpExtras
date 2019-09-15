@@ -192,6 +192,8 @@
     <string name="qqs_columns_title">Spaltenanzahl Mini-Kacheln</string>
     <string name="qqs_columns_auto_title">Automatische Spaltenanzahl für Mini-Kacheln</string>
     <string name="qqs_columns_auto_summary">Spaltenanzahl der Mini-Kacheln gemäß Spaltenvorgabe</string>
+    <string name="hide_tile_expand_indicator_title">Detailanzeige ausblenden</string>
+    <string name="hide_tile_expand_indicator_summary">Einschalten, um die Detailanzeigen bei Kacheln ab einer bestimmten Spaltenanzahl zu verstecken</string>
     <string name="qs_layout_category_title">Layout der Schnelleinstellungen</string>
     <string name="qs_rows_portrait_title">Kachel-Zeilen im Hochformat</string>
     <string name="qs_rows_landscape_title">Kachel-Zeilen im Querformat</string>
@@ -517,10 +519,13 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="gesture_settings_info">Die Navigationsleiste muss und wird deaktiviert werden!\n\nVerfügbare Gesten:\n\nZurück - auf der linken oder rechten Seite nach oben wischen\n\nStart - mittig nach oben wischen\n\nStart (Langes Drücken) - mittig kurz nach oben wischen und halten\n\nVerlauf - mittig weiter nach oben wischen und halten</string>
     <string name="use_bottom_gesture_title">Gestennavigation</string>
     <string name="use_bottom_gesture_summary">Benutze Wischgesten vom unteren Bilschirmrand\n(Die Navigationsleiste muss deaktiviert werden!)</string>
-    <string name="gesture_swipe_length_title">Höhe des Wischbereichs</string>
-    <string name="gesture_swipe_length_summary">Höhe von unten ab der eine Wischgeste erkannt wird</string>
+    <string name="gesture_swipe_length_title">Länge für Wischgesten</string>
+    <string name="gesture_swipe_length_summary">Länge der Wischbewegung, um eine Geste auszulösen</string>
+    <string name="gesture_swipe_start_title">Auslösehöhe für eine Wischgeste</string>
+    <string name="gesture_swipe_start_summary">Minimale Höhe vom unterem Bildschirmrand, ab der eine Wischgeste erkannt wird</string>
     <string name="gesture_action_timeout_title">Erkennungsdauer für Wischgesten</string>
     <string name="gesture_action_timeout_summary">Dauer bis zur Erkennung einer Wischgeste</string>
+    <string name="bottom_gestures_feedback_duration_title">Dauer der haptischen Rückmeldung (Vibration)</string>
     <string name="unit_dpi">DPI</string>
     <string name="unit_px">px</string>
     <string name="unit_msec">ms</string>
@@ -860,6 +865,7 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="theming_accent_greenlight">Grün</string>
     <string name="theming_accent_grey">Grau</string>
     <string name="theming_accent_indigo">Indigoblau</string>
+    <string name="theming_accent_lava">Lava</string>
     <string name="theming_accent_lime">Limette</string>
     <string name="theming_accent_orange">Orange</string>
     <string name="theming_accent_oxygen">Sauerstoff</string>
@@ -1036,4 +1042,7 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
     <string name="disable_incall_home_summary">Start-Taste beim Klingeln deaktivieren</string>
     <string name="less_boring_heads_up_title">Pop-Up Nachrichten einschränken</string>
     <string name="less_boring_heads_up_summary">Zeige Pop-Up Benachrichtigungen nur für Telefon, Wecker und SMS-App</string>
+    <string name="theming_system_icons_style_title">Stil der System-Symbole</string>
+    <string name="theming_system_icons_style_default">Systemstandard</string>
+    <string name="theming_system_icons_style_old">Alte Symbole</string>
 </resources>

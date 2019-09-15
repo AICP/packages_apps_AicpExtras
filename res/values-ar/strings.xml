@@ -192,6 +192,8 @@
     <string name="qqs_columns_title">أعمدة مربعات الإعدادات السريعة</string>
     <string name="qqs_columns_auto_title">أعمدة مربعات الإعدادات السريعة تلقائية</string>
     <string name="qqs_columns_auto_summary">أعمدة مربعات الإعدادات السريعة تتبع رقم عمود لوحة الإعدادات السريعة</string>
+    <string name="hide_tile_expand_indicator_title">إخفاء مؤشر التفاصيل</string>
+    <string name="hide_tile_expand_indicator_summary">قم بالتبديل لإخفاء مؤشر تفاصيل التجانب المزدوج الهدف بعد عدد من الأعمدة مسبقًا</string>
     <string name="qs_layout_category_title">تخطيط الإعدادات السريعة</string>
     <string name="qs_rows_portrait_title">صفوف المربعات في الوضع القائم</string>
     <string name="qs_rows_landscape_title">صفوف المربعات في الوضع العريض</string>
@@ -516,10 +518,13 @@
     <string name="gesture_settings_info">شريط التنقل يجب أن يعطل تلقائياً!\n\nالإيماءات المتاحة:\n\nرجوع\n- مرر لأعلى على الجانب الأيمن أو الأيسر\n\nالرجوع\n- مرر لأعلى من الجانب الأيسر او الأيمن\n\nالرئيسية\n- مرر لأعلى من الوسط\n\nالتطبيقات الحديثة\n- اسحب سريعاً لأعلى من الوسط مع الاستمرار\n\nضغط مطول على الرئيسية\n- سحبة قصيرة لاعلى مع الإستمرار في الوسط</string>
     <string name="use_bottom_gesture_title">إيماءات التنقل</string>
     <string name="use_bottom_gesture_summary">استخدم إيماءات التمرير السريع لأسفل للتنقل\nيجب تعطيل شريط التنقل!</string>
-    <string name="gesture_swipe_length_title">إرتفاع مشغل التمرير</string>
-    <string name="gesture_swipe_length_summary">الارتفاع من الأسفل إلى مشغل التمرير</string>
+    <string name="gesture_swipe_length_title">طول مشغل التمرير</string>
+    <string name="gesture_swipe_length_summary">طول التمرير المطلوب لتشغيل الإيماءة</string>
+    <string name="gesture_swipe_start_title">إرتفاع بدء مشغل التمرير</string>
+    <string name="gesture_swipe_start_summary">الحد الأدنى للارتفاع من الأسفل لبدء تشغيل الإيماءة</string>
     <string name="gesture_action_timeout_title">مهلة مشغل التمرير</string>
     <string name="gesture_action_timeout_summary">المهلة قبل بدء إجراء الإيماءة</string>
+    <string name="bottom_gestures_feedback_duration_title">مدة رد الفعل الإهتزازي</string>
     <string name="unit_dpi">النقاط لكل بوصة dpi</string>
     <string name="unit_px">بكسل px</string>
     <string name="unit_msec">ميلي ثانية</string>
@@ -859,6 +864,7 @@
     <string name="theming_accent_greenlight">أخضر</string>
     <string name="theming_accent_grey">رمادي</string>
     <string name="theming_accent_indigo">نيلي</string>
+    <string name="theming_accent_lava">الحمم</string>
     <string name="theming_accent_lime">ليموني</string>
     <string name="theming_accent_orange">برتقالي</string>
     <string name="theming_accent_oxygen">الأكسجين</string>
@@ -1035,4 +1041,7 @@
     <string name="disable_incall_home_summary">تعطيل زر الصفحة الرئيسية عند الرنين</string>
     <string name="less_boring_heads_up_title">جعل التنبيهات العلوية اقل أزعاجاً</string>
     <string name="less_boring_heads_up_summary">إظهار التنبيهات العلوية فقط للهاتف ، وساعة المنبه وتطبيق المراسلة</string>
+    <string name="theming_system_icons_style_title">نمط أيقونات النظام</string>
+    <string name="theming_system_icons_style_default">الافتراضي للنظام</string>
+    <string name="theming_system_icons_style_old">ايقونات قديمة</string>
 </resources>
