@@ -65,13 +65,13 @@
         android:title="@string/battery_light_title"
         android:summary="@string/battery_light_summary"
         android:fragment="com.aicp.extras.fragments.BatteryLight" />
-
+-->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="notification_sound_vib_screen_on"
         android:title="@string/notification_sound_vib_screen_on_title"
         android:summary="@string/notification_sound_vib_screen_on_summary"
         android:defaultValue="true" />
-
+<!--
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="mute_annoying_notifications_threshold"
         android:title="@string/less_notification_sounds_title"
