@@ -71,7 +71,7 @@
         android:title="@string/notification_sound_vib_screen_on_title"
         android:summary="@string/notification_sound_vib_screen_on_summary"
         android:defaultValue="true" />
-<!--
+
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="mute_annoying_notifications_threshold"
         android:title="@string/less_notification_sounds_title"
@@ -79,6 +79,6 @@
         android:entries="@array/less_notification_sounds_entries"
         android:entryValues="@array/less_notification_sounds_values"
         android:defaultValue="0" />
--->
+
 
 </PreferenceScreen>
