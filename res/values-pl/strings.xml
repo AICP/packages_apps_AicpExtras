@@ -192,6 +192,7 @@
     <string name="qqs_columns_title">Kolumny kafelek Szybkich Ustawień</string>
     <string name="qqs_columns_auto_title">Automatyczna liczba kolumn kafelek Szybkich Ustawień</string>
     <string name="qqs_columns_auto_summary">Liczba kolumn z kafelkami Szybkich Ustawień zależy od liczby kolumn w panelu Szybkich Ustawień</string>
+    <string name="hide_tile_expand_indicator_title">Ukryj znacznik szczegółów</string>
     <string name="qs_layout_category_title">Układ QS</string>
     <string name="qs_rows_portrait_title">Liczba kafelków w wierszu w pionie</string>
     <string name="qs_rows_landscape_title">Liczba kafelków w wierszu w poziomie</string>
@@ -516,8 +517,13 @@
     <string name="gesture_settings_info">Pasek nawigacji musi być i zostanie automatycznie wyłączony!\n\nDostępne gesty:\n\nWstecz\n- Przesuń od lewej lub prawej krawędzi\n\nEkran główny\n- Przesuń do środka\n\nOstatnie aplikacje\n- Przesuń do środka i przytrzymaj\n\nPrzytrzymanie przycisku Ekran główny\n- Szybko przesuń i przytrzymaj na środku</string>
     <string name="use_bottom_gesture_title">Gesty nawigacji</string>
     <string name="use_bottom_gesture_summary">Użyj gestu przeciągnięcia z dołu do góry do nawigacji\nPasek nawigacji musi być wyłączony!</string>
+    <string name="gesture_swipe_length_title">Wysokość gestu przeciągania</string>
+    <string name="gesture_swipe_length_summary">Wysokość pola przeciągania od dołu</string>
+    <string name="gesture_swipe_start_title">Wysokość pola przeciągania</string>
+    <string name="gesture_swipe_start_summary">Minimalna wysokość od dołu, aby rozpocząć gest przeciągania</string>
     <string name="gesture_action_timeout_title">Czas bezczynności dla przeciągania</string>
     <string name="gesture_action_timeout_summary">Czas bezczynności przed uruchomieniem akcji danego gestu</string>
+    <string name="bottom_gestures_feedback_duration_title">Czas reakcji dotknięcia</string>
     <string name="unit_dpi">dpi</string>
     <string name="unit_px">px</string>
     <string name="unit_msec">ms</string>
@@ -857,6 +863,7 @@
     <string name="theming_accent_greenlight">Zielony</string>
     <string name="theming_accent_grey">Szary</string>
     <string name="theming_accent_indigo">Indygo</string>
+    <string name="theming_accent_lava">Lawa</string>
     <string name="theming_accent_lime">Limonkowy</string>
     <string name="theming_accent_orange">Pomarańczowy</string>
     <string name="theming_accent_oxygen">Oxygen</string>
@@ -1033,4 +1040,7 @@
     <string name="disable_incall_home_summary">Wyłącz przycisk Home podczas dzwonienia</string>
     <string name="less_boring_heads_up_title">Mniej inwazyjne wyskakujące powiadomienia</string>
     <string name="less_boring_heads_up_summary">Pokazuj wyskakujące powiadomienia tylko dla połączeń lub wiadomości, będących w tle</string>
+    <string name="theming_system_icons_style_title">Styl ikon systemu</string>
+    <string name="theming_system_icons_style_default">Domyślny systemu</string>
+    <string name="theming_system_icons_style_old">Stare ikony</string>
 </resources>
