@@ -156,8 +156,8 @@
            android:fragment="com.aicp.extras.fragments.BatteryBar" />
 
     </PreferenceCategory>
-<!--
-    <!- - Show Network Traffic State on Statusbar - ->
+
+    <!-- Show Network Traffic State on Statusbar -->
     <PreferenceCategory
         android:title="@string/network_traffic_category">
 
@@ -178,7 +178,7 @@
             aicpextras:thereCanBeOnlyOneGroupId="1" />
 
     </PreferenceCategory>
-
+<!--
     <PreferenceCategory
        android:key="statusbar_others_category"
        android:title="@string/status_bar_others_category_title">
