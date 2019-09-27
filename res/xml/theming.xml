@@ -57,6 +57,11 @@
         aicpextras:overlayCategory="android.theme.customization.adaptive_icon_shape"
         aicpextras:overlayTarget="android" />
 
+    <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_default_dark"
+        android:title="TODO more dark apps"
+        aicpextras:overlayCategory="aicp.defaultdark"
+        aicpextras:overlayTarget="android;com.android.contacts;com.android.deskclock;com.android.dialer;com.android.messaging;com.android.phone;com.android.server.telecom" />
 <!--
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="theming_base"
