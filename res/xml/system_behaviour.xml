@@ -22,6 +22,11 @@
     android:key="system_behaviour"
     android:title="@string/system_behaviour_title">
 
+    <PreferenceScreen
+        android:key="bars_settings"
+        android:title="@string/aspect_ratio_category_title"
+        android:fragment="com.aicp.extras.fragments.BarsSettings" />
+
 <!--
     <Preference
         android:key="privacy_guard_manager"
@@ -30,11 +35,6 @@
         android:fragment="com.android.settings.applications.appops.AppOpsDetails">
         <intent android:action="android.settings.APP_OPS_SETTINGS" />
     </Preference>
-
-    <PreferenceScreen
-        android:key="bars_settings"
-        android:title="@string/custom_bars_settings_title"
-        android:fragment="com.aicp.extras.fragments.BarsSettings" />
 
     <com.aicp.extras.preference.HostnamePreference
         android:key="device_hostname"
@@ -98,17 +98,19 @@
             android:summary="@string/screenshot_sound_summary"
             android:defaultValue="true" />
     </PreferenceCategory>
-
-    <!- - audio panel - ->
+  -->
     <PreferenceCategory
         android:title="@string/audio_panel_view">
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="audio_panel_view_position"
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="volume_panel_on_left"
         android:title="@string/audio_panel_position_title"
         android:summary="@string/audio_panel_position_summary"
         android:defaultValue="false" />
 
+    </PreferenceCategory>
+
+<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="audio_panel_view_media"
         android:title="@string/audio_panel_view_media_title"
