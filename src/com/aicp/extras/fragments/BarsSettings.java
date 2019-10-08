@@ -58,7 +58,6 @@ public class BarsSettings extends BaseSettingsFragment implements
         return R.xml.bars_settings;
     }
 
-    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,11 +90,9 @@ public class BarsSettings extends BaseSettingsFragment implements
     public boolean onPreferenceTreeClick(Preference preference) {
         return super.onPreferenceTreeClick(preference);
     }
-    */
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        /*
          if (preference == mAspectRatioAppsSelect) {
             Collection<String> valueList = (Collection<String>) newValue;
             mAspectRatioApps.setVisible(false);
@@ -109,7 +106,6 @@ public class BarsSettings extends BaseSettingsFragment implements
             }
             return true;
         }
-        */
         return false;
     }
 }

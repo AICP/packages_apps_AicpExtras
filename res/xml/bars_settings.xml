@@ -18,30 +18,25 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
             android:key="bars_settings"
-            android:title="@string/custom_bars_settings_title" >
+            android:title="@string/aspect_ratio_category_title" >
 
-        <PreferenceCategory
-            android:key="aspect_ratio_category"
-            android:title="@string/aspect_ratio_category_title">
+      <com.aicp.gear.preference.SystemSettingSwitchPreference
+          android:key="aspect_ratio_apps_enabled"
+          android:title="@string/aspect_ratio_apps_enabled_title"
+          android:summary="@string/aspect_ratio_apps_enabled_summary"
+          android:defaultValue="false" />
 
-            <com.aicp.gear.preference.SystemSettingSwitchPreference
-                android:key="aspect_ratio_apps_enabled"
-                android:title="@string/aspect_ratio_apps_enabled_title"
-                android:summary="@string/aspect_ratio_apps_enabled_summary"
-                android:defaultValue="false" />
+      <com.aicp.extras.preference.AppMultiSelectListPreference
+          android:dependency="aspect_ratio_apps_enabled"
+          android:key="aspect_ratio_apps_list"
+          android:summary="@string/aspect_ratio_apps_list_summary"
+          android:title="@string/aspect_ratio_apps_list_title" />
 
-            <com.aicp.extras.preference.AppMultiSelectListPreference
-                android:dependency="aspect_ratio_apps_enabled"
-                android:key="aspect_ratio_apps_list"
-                android:summary="@string/aspect_ratio_apps_list_summary"
-                android:title="@string/aspect_ratio_apps_list_title" />
+      <com.aicp.extras.preference.ScrollAppsViewPreference
+          android:dependency="aspect_ratio_apps_enabled"
+          android:key="aspect_ratio_apps_list_scroller"
+          android:selectable="false" />
 
-            <com.aicp.extras.preference.ScrollAppsViewPreference
-                android:dependency="aspect_ratio_apps_enabled"
-                android:key="aspect_ratio_apps_list_scroller"
-                android:selectable="false" />
-
-            <com.android.settingslib.widget.FooterPreference
-                android:title="@string/aspect_ratio_apps_info" />
-        </PreferenceCategory>
+      <com.android.settingslib.widget.FooterPreference
+          android:title="@string/aspect_ratio_apps_info" />
 </PreferenceScreen>
