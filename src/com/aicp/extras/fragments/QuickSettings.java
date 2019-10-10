@@ -44,7 +44,6 @@ public class QuickSettings extends BaseSettingsFragment
         return R.xml.quick_settings;
     }
 
-    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,27 +54,24 @@ public class QuickSettings extends BaseSettingsFragment
         mQQSColsCount = (SystemSettingSeekBarPreference) findPreference(QS_QUICKBAR_COLUMNS_COUNT);
 
         boolean qqsColsAutoEnabled = Settings.System.getInt(resolver,
-                Settings.System.AICP_QS_QUICKBAR_COLUMNS, 6) == -1;
+                Settings.System.OMNI_QS_QUICKBAR_COLUMNS, 6) == -1;
         mQQSColsAuto.setChecked(qqsColsAutoEnabled);
         mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
         mQQSColsAuto.setOnPreferenceChangeListener(this);
     }
-    */
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        /*
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mQQSColsAuto) {
             Boolean qqsColsAutoEnabled = (Boolean) newValue;
             mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
             if (qqsColsAutoEnabled){
               Settings.System.putInt(resolver,
-                      Settings.System.AICP_QS_QUICKBAR_COLUMNS, -1);
+                      Settings.System.OMNI_QS_QUICKBAR_COLUMNS, -1);
             }
             return true;
         }
-        */
         return false;
     }
 }
