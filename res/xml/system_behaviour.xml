@@ -72,6 +72,7 @@
         android:title="@string/one_hand_mode_enabled_title"
         android:summary="@string/one_hand_mode_enabled_summary"
         android:defaultValue="false" />
+-->
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="sensor_block"
@@ -79,7 +80,6 @@
         android:summary="@string/sensor_block_summary"
         android:defaultValue="false" />
 
--->
     <!-- Smart Pixels -->
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="smart_pixels_enable"
