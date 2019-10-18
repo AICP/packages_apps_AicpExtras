@@ -166,8 +166,7 @@
             android:title="@string/network_traffic_title"
             android:summary="@string/network_traffic_summary"
             android:defaultValue="false"
-            android:fragment="com.aicp.extras.fragments.NetworkTraffic" />
-<!--
+            android:fragment="com.aicp.extras.fragments.NetworkTraffic"
             aicpextras:thereCanBeOnlyOneGroupId="1" />
 
 
@@ -178,7 +177,6 @@
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.NetworkTraffic"
             aicpextras:thereCanBeOnlyOneGroupId="1" />
-          -->
 
     </PreferenceCategory>
 
