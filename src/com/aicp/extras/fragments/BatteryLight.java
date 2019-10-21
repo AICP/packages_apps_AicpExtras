@@ -46,7 +46,6 @@ public class BatteryLight extends BaseSettingsFragment
         return R.xml.battery_light;
     }
 
-    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,11 +80,9 @@ public class BatteryLight extends BaseSettingsFragment
         updateDependencies(mOnlyFullyCharged.isChecked(), mBatteryBlend.isChecked(),
                 mLowBlinking.isChecked());
     }
-    */
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        /*
         if (preference == mOnlyFullyCharged) {
             updateDependencies((Boolean) newValue, mBatteryBlend.isChecked(),
                     mLowBlinking.isChecked());
@@ -101,11 +98,8 @@ public class BatteryLight extends BaseSettingsFragment
         } else {
             return false;
         }
-        */
-        return false;
     }
 
-    /*
     private void updateDependencies(boolean onlyFullyCharged, boolean batteryBlend,
                                     boolean lowBlinking) {
         if (batteryBlend && !onlyFullyCharged) {
@@ -130,6 +124,5 @@ public class BatteryLight extends BaseSettingsFragment
         }
 
     }
-    */
 
 }
