@@ -50,7 +50,7 @@
             android:title="@string/status_bar_double_tap_to_sleep_title"
             android:summary="@string/status_bar_double_tap_to_sleep_summary"
             android:defaultValue="false"/>
-    <!--
+<!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="status_bar_brightness_control"
             android:title="@string/status_bar_brightness_control_title"
@@ -84,21 +84,21 @@
             android:title="@string/roaming_indicator_icon_title"
             android:summary="@string/roaming_indicator_icon_summary"
             android:defaultValue="true"/>
-<!--
-        <!- - Data icon - show 4G instead of LTE - ->
+
+        <!-- Data icon - show 4G instead of LTE -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="show_lte_fourgee"
             android:title="@string/show_4g_title"
             android:summary="@string/show_4g_summary"
             android:defaultValue="false" />
 
-        <!- - Show VoLTE Indicator icon on Statusbar - ->
+        <!-- Show VoLTE Indicator icon on Statusbar -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="volte_icon"
             android:title="@string/volte_icon_title"
             android:summary="@string/volte_icon_summary"
             android:defaultValue="true"/>
-
+<!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="data_disabled_icon"
             android:title="@string/data_disabled_icon_title"
@@ -117,8 +117,9 @@
         android:key="statusbar_battery_category"
         android:title="@string/status_bar_battery_category_title">
 
-        <!-- Statusbar battery image styles -->
-<!--        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+<!--
+        <!- - Statusbar battery image styles - ->
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="status_bar_show_battery_image"
             android:title="@string/status_bar_battery_title"
             android:summary="@string/status_bar_battery_summary"
