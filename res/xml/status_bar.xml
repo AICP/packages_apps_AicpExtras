@@ -77,14 +77,14 @@
             android:title="@string/status_bar_logo_title"
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.StatusBarLogo" />
-<!--
-        <!- - Show Roaming Indicator icon on Statusbar - ->
+
+        <!-- Show Roaming Indicator icon on Statusbar -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="roaming_indicator_icon"
             android:title="@string/roaming_indicator_icon_title"
             android:summary="@string/roaming_indicator_icon_summary"
             android:defaultValue="true"/>
-
+<!--
         <!- - Data icon - show 4G instead of LTE - ->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="show_lte_fourgee"
