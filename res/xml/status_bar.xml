@@ -22,11 +22,11 @@
     android:key="status_bar"
     android:title="@string/status_bar_title">
 
-<!--
     <PreferenceCategory
         android:key="statusbar_gestures_category"
         android:title="@string/status_bar_gestures_category_title">
 
+<!--
         <!- - Smart pulldown - ->
         <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="qs_smart_pulldown"
@@ -56,9 +56,9 @@
             android:title="@string/status_bar_brightness_control_title"
             android:summary="@string/status_bar_brightness_control_summary"
             android:defaultValue="false"/>
-
+-->
     </PreferenceCategory>
-
+<!--
     <PreferenceCategory
         android:key="statusbar_icons_category"
         android:title="@string/status_bar_icons_category_title">
