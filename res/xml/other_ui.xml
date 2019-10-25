@@ -32,7 +32,6 @@
             android:targetClass="com.android.systemui.tuner.TunerActivity" />
     </Preference>
 
-<!--
     <com.aicp.gear.preference.SystemSettingSeekBarPreference
         android:key="volume_dialog_timeout"
         android:title="@string/volume_dialog_timeout_title"
@@ -42,7 +41,7 @@
         aicpextras:interval="100"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="ms" />
-
+<!--
     <!- - Toast icon switch - ->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="toast_icon"
