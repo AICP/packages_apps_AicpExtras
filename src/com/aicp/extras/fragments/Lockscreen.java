@@ -52,11 +52,10 @@ public class Lockscreen extends BaseSettingsFragment {
             //ignore
         }
         // Fingerprint vibration
-//        mFingerprintVib = (SwitchPreference) prefSet.findPreference(FP_SUCCESS_VIBRATION);
+        mFingerprintVib = (SwitchPreference) prefSet.findPreference(FP_SUCCESS_VIBRATION);
 
-
-  /*      if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()){
+        if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()){
             mFingerprintVib.getParent().removePreference(mFingerprintVib);
         }
-  */  }
+    }
 }
