@@ -20,10 +20,15 @@
     android:key="status_bar_logo"
     android:title="@string/status_bar_logo_title">
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="status_bar_logo_color_accent"
+        android:title="@string/status_bar_logo_color_accent_title"
+	android:defaultValue="true" />
+
     <com.aicp.gear.preference.SystemSettingColorPickerPreference
         android:key="status_bar_logo_color"
         android:title="@string/status_bar_logo_color_title"
-        android:defaultValue="0xffffffff" />
+	android:defaultValue="0xffffffff" />
 
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="status_bar_logo_position"
