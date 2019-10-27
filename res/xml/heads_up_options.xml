@@ -27,7 +27,7 @@
         android:title="@string/less_boring_heads_up_title"
         android:summary="@string/less_boring_heads_up_summary"
         android:defaultValue="0" />
-
+<!--
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="heads_up_notification_snooze"
         android:title="@string/heads_up_snooze_title"
@@ -35,7 +35,7 @@
         android:entries="@array/heads_up_snooze_entries"
         android:entryValues="@array/heads_up_snooze_values"
         android:defaultValue="0" />
-
+-->
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="heads_up_timeout"
         android:title="@string/heads_up_time_out_title"
