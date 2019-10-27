@@ -62,14 +62,14 @@
          android:title="@string/doze_on_charge_title"
          android:summary="@string/doze_on_charge_summary"
          android:defaultValue="false" />
-
-    <!- - Wake on plug - ->
+-->
+    <!-- Wake on plug -->
     <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
         android:title="@string/wake_when_plugged_or_unplugged_title"
         android:summary="@string/wake_when_plugged_or_unplugged_summary"
         android:defaultValue="false" />
--->
+
     <!-- Wireless charging animation -->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="wireless_charging_animation"
