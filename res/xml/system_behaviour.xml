@@ -27,6 +27,11 @@
         android:title="@string/aspect_ratio_category_title"
         android:fragment="com.aicp.extras.fragments.BarsSettings" />
 
+   <PreferenceScreen
+        android:key="chooser_activity_blacklist"
+        android:fragment="com.aicp.extras.fragments.ChooserActivityBlacklist"
+        android:title="@string/chooser_activity_blacklist_title" />
+
 <!--
     <Preference
         android:key="privacy_guard_manager"
