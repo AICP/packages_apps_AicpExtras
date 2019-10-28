@@ -33,7 +33,6 @@ public class HeadsUpActivityBlacklist extends ChooserActivityBlacklist {
         return R.xml.headsup_activity_blacklist;
     }
 
-    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,5 +49,4 @@ public class HeadsUpActivityBlacklist extends ChooserActivityBlacklist {
         mAddBlacklistPref = findPreference(KEY_HEADSUP_BLACKLIST);
         mAddBlacklistPref.setOnPreferenceClickListener(this);
     }
-    */
 }
