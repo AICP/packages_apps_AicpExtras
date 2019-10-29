@@ -115,9 +115,6 @@
         android:summary="@string/audio_panel_position_summary"
         android:defaultValue="@*android:bool/config_audioPanelOnLeftSide" />
 
-    </PreferenceCategory>
-
-<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="audio_panel_view_media"
         android:title="@string/audio_panel_view_media_title"
@@ -147,9 +144,8 @@
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="audio_panel_view_bt_sco"
         android:title="@string/audio_panel_view_bt_sco_title"
-        android:defaultValue="false"/>
+	android:defaultValue="false"/>
   </PreferenceCategory>
-  -->
 
     <!-- SELinux -->
     <PreferenceCategory
