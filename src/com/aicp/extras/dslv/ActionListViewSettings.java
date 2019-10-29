@@ -20,11 +20,7 @@ package com.aicp.extras.dslv;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.DialogInterface;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.ListFragment;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -38,7 +34,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import com.google.android.material.snackbar.Snackbar;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -53,7 +48,16 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ListView;
+
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.ListFragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceScreen;
 
 import com.aicp.gear.util.ActionConfig;
 import com.aicp.gear.util.ActionConstants;
@@ -196,6 +200,7 @@ public class ActionListViewSettings extends ListFragment implements
         mUseAppPickerOnly = getArguments().getBoolean("useAppPickerOnly", false);
         mUseFullAppsOnly = getArguments().getBoolean("useOnlyFullAppPicker", false);
         mDisableIconPicker = getArguments().getBoolean("disableIconPicker", false);
+        mDisableIconPicker = true;
         mDisableDeleteLastEntry = getArguments().getBoolean("disableDeleteLastEntry", false);
 
         mDisableMessage = (TextView) view.findViewById(R.id.disable_message);
@@ -317,16 +322,9 @@ public class ActionListViewSettings extends ListFragment implements
         if (mAdditionalFragmentAttached) {
             FragmentManager fragmentManager = getFragmentManager();
             Fragment fragment = fragmentManager.findFragmentById(R.id.fragment_container);
-            if (fragment instanceof android.preference.PreferenceFragment) {
-                android.preference.PreferenceScreen preferenceScreen =
-                        ((android.preference.PreferenceFragment) fragment).getPreferenceScreen();
-                if (preferenceScreen != null) {
-                    return preferenceScreen.getTitle();
-                }
-            } else if (fragment instanceof androidx.preference.PreferenceFragment) {
-                androidx.preference.PreferenceScreen preferenceScreen =
-                        ((androidx.preference.PreferenceFragment) fragment)
-                                .getPreferenceScreen();
+            if (fragment instanceof PreferenceFragmentCompat) {
+                PreferenceScreen preferenceScreen =
+                        ((PreferenceFragmentCompat) fragment).getPreferenceScreen();
                 if (preferenceScreen != null) {
                     return preferenceScreen.getTitle();
                 }
@@ -400,8 +398,8 @@ public class ActionListViewSettings extends ListFragment implements
             } else if (requestCode == REQUEST_PICK_CUSTOM_ICON && mPendingIndex != -1) {
                 if (mImageTmp.length() == 0 || !mImageTmp.exists()) {
                     mPendingIndex = -1;
-                    Snackbar.make(getView(), getString(R.string.shortcut_image_not_valid),
-                            Snackbar.LENGTH_LONG).show();
+                    Toast.makeText(mActivity, getString(R.string.shortcut_image_not_valid),
+                            Toast.LENGTH_LONG).show();
                     return;
                 }
                 if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
@@ -466,8 +464,8 @@ public class ActionListViewSettings extends ListFragment implements
         for (int i = 0; i < mActionConfigs.size(); i++) {
             actionConfig = mActionConfigsAdapter.getItem(i);
             if (actionConfig.getClickAction().equals(action)) {
-                Snackbar.make(getView(), getString(R.string.shortcut_duplicate_entry),
-                        Snackbar.LENGTH_LONG).show();
+                Toast.makeText(mActivity, getString(R.string.shortcut_duplicate_entry),
+                        Toast.LENGTH_LONG).show();
                 return true;
             }
         }
@@ -501,8 +499,8 @@ public class ActionListViewSettings extends ListFragment implements
         switch (item.getItemId()) {
             case MENU_ADD:
                 if (mActionConfigs.size() == mMaxAllowedActions) {
-                    Snackbar.make(getView(), getString(R.string.shortcut_action_max),
-                            Snackbar.LENGTH_LONG).show();
+                    Toast.makeText(mActivity, getString(R.string.shortcut_action_max),
+                            Toast.LENGTH_LONG).show();
                     break;
                 }
                 if (mUseFullAppsOnly) {

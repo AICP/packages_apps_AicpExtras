@@ -81,7 +81,6 @@ public class SlimRecents extends BaseSettingsFragment
         return R.xml.slim_recents;
     }
 
-    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,11 +100,9 @@ public class SlimRecents extends BaseSettingsFragment
                 Settings.System.RECENT_PANEL_GRAVITY, Gravity.END) == Gravity.START;
         mRecentPanelLeftyMode.setChecked(recentLeftyMode);
     }
-    */
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        /*
         if (preference == mRecentPanelLeftyMode) {
             Settings.System.putInt(getContext().getContentResolver(),
                     Settings.System.RECENT_PANEL_GRAVITY,
@@ -114,11 +111,8 @@ public class SlimRecents extends BaseSettingsFragment
         } else {
             return false;
         }
-        */
-        return false;
     }
 
-    /*
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mIconPack) {
@@ -129,7 +123,7 @@ public class SlimRecents extends BaseSettingsFragment
         }
     }
 
-     /** Slim Recents Icon Pack Dialog ** /
+     /** Slim Recents Icon Pack Dialog **/
     private void pickIconPack(final Context context) {
         if (mDialog != null) {
             return;
@@ -171,7 +165,6 @@ public class SlimRecents extends BaseSettingsFragment
 
         return view;
     }
-    */
 
     @Override
     public void onDismiss(DialogInterface dialog) {
@@ -180,7 +173,6 @@ public class SlimRecents extends BaseSettingsFragment
         }
     }
 
-    /*
     private static class IconAdapter extends BaseAdapter {
         ArrayList<IconPackInfo> mSupportedPackages;
         LayoutInflater mLayoutInflater;
@@ -287,5 +279,4 @@ public class SlimRecents extends BaseSettingsFragment
             this.packageName = packageName;
         }
     }
-    */
 }
