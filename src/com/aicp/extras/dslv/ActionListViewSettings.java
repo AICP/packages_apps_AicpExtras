@@ -20,11 +20,7 @@ package com.aicp.extras.dslv;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.DialogInterface;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.ListFragment;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -54,6 +50,14 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ListView;
+
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.ListFragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceScreen;
 
 import com.aicp.gear.util.ActionConfig;
 import com.aicp.gear.util.ActionConstants;
@@ -317,16 +321,9 @@ public class ActionListViewSettings extends ListFragment implements
         if (mAdditionalFragmentAttached) {
             FragmentManager fragmentManager = getFragmentManager();
             Fragment fragment = fragmentManager.findFragmentById(R.id.fragment_container);
-            if (fragment instanceof android.preference.PreferenceFragment) {
-                android.preference.PreferenceScreen preferenceScreen =
-                        ((android.preference.PreferenceFragment) fragment).getPreferenceScreen();
-                if (preferenceScreen != null) {
-                    return preferenceScreen.getTitle();
-                }
-            } else if (fragment instanceof androidx.preference.PreferenceFragment) {
-                androidx.preference.PreferenceScreen preferenceScreen =
-                        ((androidx.preference.PreferenceFragment) fragment)
-                                .getPreferenceScreen();
+            if (fragment instanceof PreferenceFragmentCompat) {
+                PreferenceScreen preferenceScreen =
+                        ((PreferenceFragmentCompat) fragment).getPreferenceScreen();
                 if (preferenceScreen != null) {
                     return preferenceScreen.getTitle();
                 }
