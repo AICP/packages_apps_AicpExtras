@@ -73,7 +73,6 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
         return R.xml.recents;
     }
 
-    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,7 +82,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
 
         /**
          * Nice clean code start
-         * /
+         */
 
         mStockRecentsCategory = (PreferenceCategory) findPreference(PREF_STOCK_RECENTS_CATEGORY);
         mAlternativeRecentsCategory =
@@ -108,10 +107,13 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
 
         // Warning for alternative recents when swipe up home navigation is enabled,
         // which controls quickstep (launcher) recents.
+        /*
         final int swipeUpDefaultValue = getActivity().getResources()
                 .getBoolean(com.android.internal.R.bool.config_swipe_up_gesture_default) ? 1: 0;
         final int swipeUpEnabled = Settings.Secure.getInt(getActivity().getContentResolver(),
                 Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, swipeUpDefaultValue);
+        */
+        final int swipeUpEnabled = 0;// TODO similar to above
         if (swipeUpEnabled == 1) {
             for (int i = 0; i < mAlternativeRecentsCategory.getPreferenceCount(); i++) {
                 Preference preference = mAlternativeRecentsCategory.getPreference(i);
@@ -130,6 +132,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
          * /
 
 
+        /*
         /**
          * Probably better done in xml - code start
          * /
@@ -164,6 +167,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
         /**
          * Most likely too much spagetti - code end
          * /
+        */
     }
 
 
@@ -188,9 +192,10 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
                 }
             }
         }
-        mStockRecentsCategory.setEnabled(!alternativeRecentsEnabled);
+        if (mStockRecentsCategory != null) {
+            mStockRecentsCategory.setEnabled(!alternativeRecentsEnabled);
+        }
     }
-    */
 
 
     @Override
