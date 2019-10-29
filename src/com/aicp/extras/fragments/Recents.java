@@ -73,7 +73,6 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
         return R.xml.recents;
     }
 
-    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,7 +82,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
 
         /**
          * Nice clean code start
-         * /
+         */
 
         mStockRecentsCategory = (PreferenceCategory) findPreference(PREF_STOCK_RECENTS_CATEGORY);
         mAlternativeRecentsCategory =
@@ -106,13 +105,15 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
         }
         updateDependencies();
 
-        // Warning for alternative recents when swipe up home navigation is enabled,
-        // which controls quickstep (launcher) recents.
-        final int swipeUpDefaultValue = getActivity().getResources()
-                .getBoolean(com.android.internal.R.bool.config_swipe_up_gesture_default) ? 1: 0;
-        final int swipeUpEnabled = Settings.Secure.getInt(getActivity().getContentResolver(),
-                Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, swipeUpDefaultValue);
-        if (swipeUpEnabled == 1) {
+        // Warning for alternative recents when gesture navigation is enabled,
+        // which directly controls quickstep (launcher) recents.
+        final int navigationMode = getActivity().getResources()
+                .getInteger(com.android.internal.R.integer.config_navBarInteractionMode);
+        // config_navBarInteractionMode:
+        //  0: 3 button mode (supports slim recents)
+        //  1: 2 button mode (currently does not support alternative recents)
+        //  2: gesture only (currently does not support alternative recents)
+        if (navigationMode != 0) {
             for (int i = 0; i < mAlternativeRecentsCategory.getPreferenceCount(); i++) {
                 Preference preference = mAlternativeRecentsCategory.getPreference(i);
                 if (PREF_SWIPE_UP_ENABLED.equals(preference.getKey())) {
@@ -130,6 +131,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
          * /
 
 
+        /*
         /**
          * Probably better done in xml - code start
          * /
@@ -164,6 +166,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
         /**
          * Most likely too much spagetti - code end
          * /
+        */
     }
 
 
@@ -188,9 +191,10 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
                 }
             }
         }
-        mStockRecentsCategory.setEnabled(!alternativeRecentsEnabled);
+        if (mStockRecentsCategory != null) {
+            mStockRecentsCategory.setEnabled(!alternativeRecentsEnabled);
+        }
     }
-    */
 
 
     @Override
