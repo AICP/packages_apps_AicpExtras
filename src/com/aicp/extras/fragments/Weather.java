@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017-2018 AICP
+ * Copyright (C) 2017-2019 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,7 +49,6 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
         return R.xml.weather;
     }
 
-    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,11 +79,9 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
         mWeatherIconPack.setSummary(mWeatherIconPack.getEntry());
         mWeatherIconPack.setOnPreferenceChangeListener(this);
     }
-    */
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        /*
         if (preference == mWeatherIconPack) {
             String value = (String) objValue;
             Settings.System.putString(getActivity().getContentResolver(),
@@ -92,7 +89,6 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
             int valueIndex = mWeatherIconPack.findIndexOfValue(value);
             mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[valueIndex]);
         }
-        */
         return true;
     }
 
