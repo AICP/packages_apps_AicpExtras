@@ -86,14 +86,14 @@
         android:entries="@array/theming_corners_entries"
         android:entryValues="@array/theming_corners_values"
         android:defaultValue="0" />
+    -->
 
-    <com.aicp.gear.preference.SystemSettingIntListPreference
+    <com.aicp.gear.preference.OverlayPreference
         android:key="theming_qs_shape"
         android:title="@string/theming_qs_shape_title"
-        android:entries="@array/theming_qs_shape_entries"
-        android:entryValues="@array/theming_qs_shape_values"
-        android:defaultValue="0" />
-
+        aicpextras:overlayCategory="aicp.qs_fg"
+        aicpextras:overlayTarget="com.android.systemui" />
+<!--
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="theming_settings_dashboard_icons"
         android:title="@string/theming_settings_dashboard_icons_title"
