@@ -38,12 +38,36 @@
         aicpextras:overlayCategory="aicp.bg_light"
         aicpextras:overlayTarget="android" />
 
+    <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_qs_bg_light"
+        android:title="@string/theming_qs_bg_light_title"
+        aicpextras:overlayCategory="aicp.qs_bg_light"
+        aicpextras:overlayTarget="com.android.systemui" />
+
+    <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_notif_light"
+        android:title="@string/theming_notif_light_title"
+        aicpextras:overlayCategory="aicp.notif_light"
+        aicpextras:overlayTarget="android;com.android.systemui" />
+
     <com.aicp.gear.preference.OverlayColorMatrixListPreference
         android:key="theming_background_dark"
         android:title="@string/theming_background_dark_title"
         aicpextras:previewResourceName="background_device_default_dark"
         aicpextras:overlayCategory="aicp.bg_dark"
         aicpextras:overlayTarget="android;com.android.settings;com.android.settings.intelligence" />
+
+    <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_qs_bg_dark"
+        android:title="@string/theming_qs_bg_dark_title"
+        aicpextras:overlayCategory="aicp.qs_bg_light"
+        aicpextras:overlayTarget="com.android.systemui" />
+
+    <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_notif_dark"
+        android:title="@string/theming_notif_dark_title"
+        aicpextras:overlayCategory="aicp.notif_dark"
+        aicpextras:overlayTarget="android;com.android.systemui" />
 
     <com.aicp.gear.preference.OverlayPreference
         android:key="theming_font"
