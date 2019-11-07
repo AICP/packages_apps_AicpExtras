@@ -57,6 +57,11 @@
         aicpextras:overlayCategory="android.theme.customization.adaptive_icon_shape"
         aicpextras:overlayTarget="android" />
 
+    <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_icon_pack"
+        android:title="@string/theming_icon_pack_title"
+        aicpextras:overlayCategory="android.theme.customization.icon_pack"
+        aicpextras:overlayTarget="android;launcher;settings;systemui;themepicker" />
 <!--
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="theming_base"
