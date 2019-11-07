@@ -57,6 +57,35 @@
         aicpextras:overlayCategory="android.theme.customization.adaptive_icon_shape"
         aicpextras:overlayTarget="android" />
 
+    <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_icon_pack_android"
+        android:title="@string/theming_icon_pack_title_android"
+        aicpextras:overlayCategory="android.theme.customization.icon_pack.android"
+        aicpextras:overlayTarget="android" />
+
+      <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_icon_pack_systemui"
+        android:title="@string/theming_icon_pack_title_systemui"
+        aicpextras:overlayCategory="android.theme.customization.icon_pack.systemui"
+        aicpextras:overlayTarget="com.android.systemui" />
+
+      <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_icon_pack_settings"
+        android:title="@string/theming_icon_pack_title_settings"
+        aicpextras:overlayCategory="android.theme.customization.icon_pack.settings"
+        aicpextras:overlayTarget="com.android.settings" />
+
+      <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_icon_pack_launcher"
+        android:title="@string/theming_icon_pack_title_launcher"
+        aicpextras:overlayCategory="android.theme.customization.icon_pack.launcher"
+        aicpextras:overlayTarget="com.android.launcher3" />
+
+      <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_icon_pack_themepicker"
+        android:title="@string/theming_icon_pack_title_themepicker"
+        aicpextras:overlayCategory="android.theme.customization.icon_pack.themepicker"
+        aicpextras:overlayTarget="com.android.wallpaper" />
 <!--
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="theming_base"
