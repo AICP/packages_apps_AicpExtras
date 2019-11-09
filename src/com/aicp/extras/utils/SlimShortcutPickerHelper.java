@@ -17,7 +17,6 @@
 package com.aicp.extras.utils;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.content.Intent.ShortcutIconResource;
 import android.content.pm.PackageManager;
@@ -27,6 +26,9 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 import com.aicp.extras.R;
 
@@ -107,12 +109,15 @@ public class SlimShortcutPickerHelper {
     }
 
     private void startFragmentOrActivity(Intent pickIntent, int requestCode) {
-        if (lastFragmentId == 0) {
+        if (lastFragmentId == 0 || !(mParent instanceof FragmentActivity)) {
             mParent.startActivityForResult(pickIntent, requestCode);
         } else {
-            Fragment cFrag = mParent.getFragmentManager().findFragmentById(lastFragmentId);
+            final FragmentActivity fa = (FragmentActivity) mParent;
+            Fragment cFrag = fa.getSupportFragmentManager().findFragmentById(lastFragmentId);
             if (cFrag != null) {
-                mParent.startActivityFromFragment(cFrag, pickIntent, requestCode);
+                fa.startActivityFromFragment(cFrag, pickIntent, requestCode);
+            } else {
+                mParent.startActivityForResult(pickIntent, requestCode);
             }
         }
     }
