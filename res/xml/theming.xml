@@ -57,6 +57,15 @@
         aicpextras:overlayCategory="android.theme.customization.font"
         aicpextras:overlayTarget="android" />
 
+    <Preference
+        android:key="clock_style"
+        android:title="@string/clock_style_title"
+        android:summary="@string/clock_style_summary">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.android.wallpaper"
+            android:targetClass="com.android.customization.picker.LockClockPickerActivity" />
+    </Preference>
 
     <PreferenceCategory
         android:key="theming_light"
@@ -108,7 +117,6 @@
             aicpextras:overlayTarget="android;com.android.systemui" />
 
     </PreferenceCategory>
-
 
     <PreferenceCategory
         android:key="power_menu"
