@@ -31,86 +31,11 @@
         aicpextras:overlayCategory="aicp.accent"
         aicpextras:overlayTarget="android" />
 
-    <com.aicp.gear.preference.OverlayColorMatrixListPreference
-        android:key="theming_background_light"
-        android:title="@string/theming_background_light_title"
-        aicpextras:previewResourceName="background_device_default_light"
-        aicpextras:overlayCategory="aicp.bg_light"
-        aicpextras:overlayTarget="android" />
-
-    <com.aicp.gear.preference.OverlayPreference
-        android:key="theming_qs_bg_light"
-        android:title="@string/theming_qs_bg_light_title"
-        aicpextras:overlayCategory="aicp.qs_bg_light"
-        aicpextras:overlayTarget="com.android.systemui" />
-
-    <com.aicp.gear.preference.OverlayPreference
-        android:key="theming_notif_light"
-        android:title="@string/theming_notif_light_title"
-        aicpextras:overlayCategory="aicp.notif_light"
-        aicpextras:overlayTarget="android;com.android.systemui" />
-
-    <com.aicp.gear.preference.OverlayColorMatrixListPreference
-        android:key="theming_background_dark"
-        android:title="@string/theming_background_dark_title"
-        aicpextras:previewResourceName="background_device_default_dark"
-        aicpextras:overlayCategory="aicp.bg_dark"
-        aicpextras:overlayTarget="android;com.android.settings;com.android.settings.intelligence" />
-
-    <com.aicp.gear.preference.OverlayPreference
-        android:key="theming_qs_bg_dark"
-        android:title="@string/theming_qs_bg_dark_title"
-        aicpextras:overlayCategory="aicp.qs_bg_dark"
-        aicpextras:overlayTarget="com.android.systemui" />
-
-    <com.aicp.gear.preference.OverlayPreference
-        android:key="theming_notif_dark"
-        android:title="@string/theming_notif_dark_title"
-        aicpextras:overlayCategory="aicp.notif_dark"
-        aicpextras:overlayTarget="android;com.android.systemui" />
-
-    <com.aicp.gear.preference.OverlayPreference
-        android:key="theming_font"
-        android:title="@string/theming_font"
-        aicpextras:overlayCategory="android.theme.customization.font"
-        aicpextras:overlayTarget="android" />
-
     <com.aicp.gear.preference.OverlayPreference
         android:key="theming_icon_shape"
         android:title="@string/theming_icon_shape_title"
         aicpextras:overlayCategory="android.theme.customization.adaptive_icon_shape"
         aicpextras:overlayTarget="android" />
-
-<!--
-    <com.aicp.gear.preference.SystemSettingIntListPreference
-        android:key="theming_base"
-        android:title="@string/theming_base_title"
-        android:entries="@array/theming_base_entries"
-        android:entryValues="@array/theming_base_values"
-        android:defaultValue="0" />
-
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="theming_control_night_mode"
-        android:title="@string/theming_control_night_mode_title"
-        android:summary="@string/theming_control_night_mode_summary"
-        android:defaultValue="true" />
-
-    <com.aicp.gear.preference.SystemSettingIntColorMatrixListPreference
-        android:key="theming_accent"
-        android:title="@string/theming_accent_title"
-        android:entries="@array/theming_accent_entries"
-        android:entryValues="@array/theming_accent_values"
-        aicpextras:entryPreviews="@array/theming_accent_previews"
-        aicpextras:entryPreviewsLight="@array/theming_accent_previews_light"
-        android:defaultValue="0" />
-
-    <com.aicp.gear.preference.SystemSettingIntListPreference
-        android:key="theming_corners"
-        android:title="@string/theming_corners_title"
-        android:entries="@array/theming_corners_entries"
-        android:entryValues="@array/theming_corners_values"
-        android:defaultValue="0" />
-    -->
 
     <com.aicp.gear.preference.OverlayPreference
         android:key="theming_qs_shape"
@@ -118,28 +43,65 @@
         aicpextras:overlayCategory="aicp.qs_fg"
         aicpextras:overlayTarget="com.android.systemui" />
 
-    <com.aicp.gear.preference.SystemSettingIntListPreference
-        android:key="theming_settings_dashboard_icons"
-        android:title="@string/theming_settings_dashboard_icons_title"
-        android:entries="@array/theming_settings_dashboard_icons_entries"
-        android:entryValues="@array/theming_settings_dashboard_icons_values"
-        android:defaultValue="0" />
+    <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_font"
+        android:title="@string/theming_font"
+        aicpextras:overlayCategory="android.theme.customization.font"
+        aicpextras:overlayTarget="android" />
 
-    <!--
-    <com.aicp.gear.preference.SystemSettingIntListPreference
-        android:key="theming_system_icons_style"
-        android:title="@string/theming_system_icons_style_title"
-        android:entries="@array/theming_system_icons_style_entries"
-        android:entryValues="@array/theming_system_icons_style_values"
-        android:defaultValue="0" />
 
-    <com.aicp.gear.preference.SystemPropListPreference
-        android:key="persist.aicp.iconshape"
-        android:title="@string/icon_shape_title"
-        android:entries="@array/icon_shape_entries"
-        android:entryValues="@array/icon_shape_values"
-        android:defaultValue="0" />
--->
+    <PreferenceCategory
+        android:key="theming_light"
+        android:title="@string/theming_light_title">
+
+        <com.aicp.gear.preference.OverlayColorMatrixListPreference
+            android:key="theming_background_light"
+            android:title="@string/theming_background_title"
+            aicpextras:previewResourceName="background_device_default_light"
+            aicpextras:overlayCategory="aicp.bg_light"
+            aicpextras:overlayTarget="android" />
+
+        <com.aicp.gear.preference.OverlayPreference
+            android:key="theming_qs_bg_light"
+            android:title="@string/theming_qs_bg_title"
+            aicpextras:overlayCategory="aicp.qs_bg_light"
+            aicpextras:overlayTarget="com.android.systemui" />
+
+        <com.aicp.gear.preference.OverlayPreference
+            android:key="theming_notif_light"
+            android:title="@string/theming_notif_title"
+            aicpextras:overlayCategory="aicp.notif_light"
+            aicpextras:overlayTarget="android;com.android.systemui" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:key="theming_dark"
+        android:title="@string/theming_dark_title">
+
+        <com.aicp.gear.preference.OverlayColorMatrixListPreference
+            android:key="theming_background_dark"
+            android:title="@string/theming_background_title"
+            aicpextras:previewResourceName="background_device_default_dark"
+            aicpextras:overlayCategory="aicp.bg_dark"
+            aicpextras:overlayTarget="android;com.android.settings;com.android.settings.intelligence" />
+
+        <com.aicp.gear.preference.OverlayPreference
+            android:key="theming_qs_bg_dark"
+            android:title="@string/theming_qs_bg_title"
+            aicpextras:overlayCategory="aicp.qs_bg_dark"
+            aicpextras:overlayTarget="com.android.systemui" />
+
+        <com.aicp.gear.preference.OverlayPreference
+            android:key="theming_notif_dark"
+            android:title="@string/theming_notif_title"
+            aicpextras:overlayCategory="aicp.notif_dark"
+            aicpextras:overlayTarget="android;com.android.systemui" />
+
+    </PreferenceCategory>
+
+
     <PreferenceCategory
         android:key="power_menu"
         android:title="@string/power_menu_category">
@@ -161,6 +123,20 @@
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="%"
             android:defaultValue="50" />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:key="theming_settings"
+        android:title="@string/theming_settings_title">
+
+        <com.aicp.gear.preference.SystemSettingIntListPreference
+            android:key="theming_settings_dashboard_icons"
+            android:title="@string/theming_settings_dashboard_icons_title"
+            android:entries="@array/theming_settings_dashboard_icons_entries"
+            android:entryValues="@array/theming_settings_dashboard_icons_values"
+            android:defaultValue="0" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
