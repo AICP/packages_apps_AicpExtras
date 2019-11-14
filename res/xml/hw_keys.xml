@@ -57,13 +57,14 @@
             android:title="@string/volume_keys_cursor_control_title"
             android:summary="@string/volume_keys_cursor_control_summary"
             android:defaultValue="false" />
-<!--
-       <!- - Swap volume buttons - ->
+
+       <!-- Swap volume buttons -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="swap_volume_buttons"
             android:title="@string/swap_volume_buttons"
             android:summary="@string/swap_volume_buttons_summary"
             android:defaultValue="false" />
+<!--
 
         <!- - Volume keys control media stream - ->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
