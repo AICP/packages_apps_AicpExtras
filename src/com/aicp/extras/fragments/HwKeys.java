@@ -45,12 +45,29 @@ import com.android.internal.util.hwkeys.ActionUtils;
 public class HwKeys extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
     // category keys
     private static final String CATEGORY_HWKEY = "hardware_keys";
+    private static final String CATEGORY_BACK = "back_key";
+    private static final String CATEGORY_HOME = "home_key";
+    private static final String CATEGORY_MENU = "menu_key";
+    private static final String CATEGORY_ASSIST = "assist_key";
+    private static final String CATEGORY_APPSWITCH = "app_switch_key";
+    private static final String CATEGORY_CAMERA = "camera_key";
+    private static final String CATEGORY_VOLUME = "volume_keys";
 
     // preference keys
     private static final String KEY_BUTTON_MANUAL_BRIGHTNESS_NEW = "button_manual_brightness_new";
     private static final String KEY_BUTTON_TIMEOUT = "button_timeout";
     private static final String KEY_BUTTON_BACKLIGHT_OPTIONS = "button_backlight_options_category";
     private static final String KEY_HWKEY_DISABLE = "hardware_keys_disable";
+
+    // Masks for checking presence of hardware keys.
+    // Must match values in frameworks/base/core/res/res/values/config.xml
+    public static final int KEY_MASK_HOME = 0x01;
+    public static final int KEY_MASK_BACK = 0x02;
+    public static final int KEY_MASK_MENU = 0x04;
+    public static final int KEY_MASK_ASSIST = 0x08;
+    public static final int KEY_MASK_APP_SWITCH = 0x10;
+    public static final int KEY_MASK_CAMERA = 0x20;
+    public static final int KEY_MASK_VOLUME = 0x40;
 
     private SeekBarPreferenceCham mButtonTimoutBar;
     private SeekBarPreferenceCham mManualButtonBrightness;
@@ -110,6 +127,98 @@ public class HwKeys extends BaseSettingsFragment implements Preference.OnPrefere
 
         if (!enableBacklightOptions) {
             mButtonBackLightCategory.getParent().removePreference(mButtonBackLightCategory);
+        }
+
+        // bits for hardware keys present on device
+        final int deviceKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+        final int deviceWakeKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareWakeKeys);
+
+        // read bits for present hardware keys
+        final boolean hasHomeKey = (deviceKeys & KEY_MASK_HOME) != 0;
+        final boolean hasBackKey = (deviceKeys & KEY_MASK_BACK) != 0;
+        final boolean hasMenuKey = (deviceKeys & KEY_MASK_MENU) != 0;
+        final boolean hasAssistKey = (deviceKeys & KEY_MASK_ASSIST) != 0;
+        final boolean hasAppSwitchKey = (deviceKeys & KEY_MASK_APP_SWITCH) != 0;
+        final boolean hasCameraKey = (deviceKeys & KEY_MASK_CAMERA) != 0;
+
+        final boolean showHomeWake = (deviceWakeKeys & KEY_MASK_HOME) != 0;
+        final boolean showBackWake = (deviceWakeKeys & KEY_MASK_BACK) != 0;
+        final boolean showMenuWake = (deviceWakeKeys & KEY_MASK_MENU) != 0;
+        final boolean showAssistWake = (deviceWakeKeys & KEY_MASK_ASSIST) != 0;
+        final boolean showAppSwitchWake = (deviceWakeKeys & KEY_MASK_APP_SWITCH) != 0;
+        final boolean showCameraWake = (deviceWakeKeys & KEY_MASK_CAMERA) != 0;
+
+        // load categories and init/remove preferences based on device
+        // configuration
+        final PreferenceCategory backCategory = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_BACK);
+        final PreferenceCategory homeCategory = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_HOME);
+        final PreferenceCategory menuCategory = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_MENU);
+        final PreferenceCategory assistCategory = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_ASSIST);
+        final PreferenceCategory appSwitchCategory = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_APPSWITCH);
+        final PreferenceCategory cameraCategory = (PreferenceCategory)
+                findPreference(CATEGORY_CAMERA);
+
+        // back key
+        if (hasBackKey) {
+            if (!showBackWake) {
+                backCategory.removePreference(findPreference(Settings.System.BACK_WAKE_SCREEN));
+            }
+        } else {
+            prefScreen.removePreference(backCategory);
+        }
+
+        // home key
+        if (hasHomeKey) {
+            if (!showHomeWake) {
+                homeCategory.removePreference(findPreference(Settings.System.HOME_WAKE_SCREEN));
+            }
+        } else {
+            prefScreen.removePreference(homeCategory);
+            prefScreen.removePreference(hwkeyCategory);
+        }
+
+        // App switch key (recents)
+        if (hasAppSwitchKey) {
+            if (!showAppSwitchWake) {
+                appSwitchCategory.removePreference(findPreference(
+                        Settings.System.APP_SWITCH_WAKE_SCREEN));
+            }
+        } else {
+            prefScreen.removePreference(appSwitchCategory);
+        }
+
+        // menu key
+        if (hasMenuKey) {
+            if (!showMenuWake) {
+                menuCategory.removePreference(findPreference(Settings.System.MENU_WAKE_SCREEN));
+            }
+        } else {
+            prefScreen.removePreference(menuCategory);
+        }
+
+        // search/assist key
+        if (hasAssistKey) {
+            if (!showAssistWake) {
+                assistCategory.removePreference(findPreference(Settings.System.ASSIST_WAKE_SCREEN));
+            }
+        } else {
+            prefScreen.removePreference(assistCategory);
+        }
+
+        // camera button
+        if (hasCameraKey) {
+            if (!showCameraWake) {
+                cameraCategory.removePreference(findPreference(Settings.System.CAMERA_WAKE_SCREEN));
+            }
+        } else {
+            cameraCategory.getParent().removePreference(cameraCategory);
         }
     }
 
