@@ -106,6 +106,18 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:title="@string/misc_category">
+
+    <Preference
+        android:key="gaming_mode"
+        android:icon="@drawable/ic_gaming"
+        android:title="@string/gaming_mode_title"
+        android:summary="@string/gaming_mode_summary"
+        android:fragment="com.aicp.extras.fragments.GamingMode"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/system_category">
 
         <PreferenceScreen
