@@ -129,6 +129,13 @@
             android:icon="@drawable/ic_settings_system_extensions"
             android:fragment="com.aicp.extras.fragments.SystemExtensions" />
 
+        <PreferenceScreen
+            android:title="@string/gaming_mode_title"
+            android:key="gaming_mode"
+            android:summary="@string/gaming_mode_summary"
+            android:icon="@drawable/ic_gaming"
+            android:fragment="com.aicp.extras.fragments.GamingMode"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
