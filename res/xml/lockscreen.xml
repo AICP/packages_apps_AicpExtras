@@ -60,14 +60,14 @@
         android:title="@string/media_art_title"
         android:summary="@string/media_art_summary"
         android:defaultValue="false" />
-
+-->
     <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
         android:key="lockscreen_visualizer_enabled"
         android:title="@string/lockscreen_visualizer_title"
         android:summary="@string/lockscreen_visualizer_summary"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.Visualizer" />
-
+<!--
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="force_ambient_for_media"
         android:title="@string/force_ambient_for_media_pref_title"
