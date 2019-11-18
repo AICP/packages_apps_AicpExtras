@@ -124,7 +124,7 @@
             android:key="back_wake_screen"
             android:title="@string/hardware_keys_wake_title"
             android:defaultValue="false" />
-<!--
+
         <com.aicp.extras.smartnav.ActionPreference
             android:key="hwkeys_button_back_single_tap"
             android:summary="@string/hardware_keys_single_tap_summary"
@@ -142,7 +142,6 @@
             android:summary="@string/hardware_keys_double_tap_summary"
             android:title="@string/hardware_keys_double_tap_title" >
         </com.aicp.extras.smartnav.ActionPreference>
--->
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -153,7 +152,6 @@
             android:key="home_wake_screen"
             android:title="@string/hardware_keys_wake_title"
             android:defaultValue="false" />
-<!--
 
         <com.aicp.extras.smartnav.ActionPreference
             android:key="hwkeys_button_home_single_tap"
@@ -178,7 +176,6 @@
             android:title="@string/disable_incall_home_title"
             android:summary="@string/disable_incall_home_summary"
             android:defaultValue="false" />
--->
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -189,7 +186,7 @@
             android:key="app_switch_wake_screen"
             android:title="@string/hardware_keys_wake_title"
             android:defaultValue="false" />
-<!--
+
         <com.aicp.extras.smartnav.ActionPreference
             android:key="hwkeys_button_overview_single_tap"
             android:summary="@string/hardware_keys_single_tap_summary"
@@ -207,7 +204,6 @@
             android:summary="@string/hardware_keys_double_tap_summary"
             android:title="@string/hardware_keys_double_tap_title" >
         </com.aicp.extras.smartnav.ActionPreference>
--->
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -218,7 +214,7 @@
             android:key="menu_wake_screen"
             android:title="@string/hardware_keys_wake_title"
             android:defaultValue="false" />
-<!--
+
         <com.aicp.extras.smartnav.ActionPreference
             android:key="hwkeys_button_menu_single_tap"
             android:summary="@string/hardware_keys_single_tap_summary"
@@ -236,7 +232,6 @@
             android:summary="@string/hardware_keys_double_tap_summary"
             android:title="@string/hardware_keys_double_tap_title" >
         </com.aicp.extras.smartnav.ActionPreference>
--->
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -247,7 +242,7 @@
             android:key="assist_wake_screen"
             android:title="@string/hardware_keys_wake_title"
             android:defaultValue="false" />
-<!--
+
         <com.aicp.extras.smartnav.ActionPreference
             android:key="hwkeys_button_assist_single_tap"
             android:summary="@string/hardware_keys_single_tap_summary"
@@ -265,7 +260,6 @@
             android:summary="@string/hardware_keys_double_tap_summary"
             android:title="@string/hardware_keys_double_tap_title" >
         </com.aicp.extras.smartnav.ActionPreference>
--->
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -276,7 +270,7 @@
             android:key="camera_wake_screen"
             android:title="@string/hardware_keys_wake_title"
             android:defaultValue="false" />
-<!--
+
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="camera_sleep_on_release"
             android:title="@string/camera_sleep_on_release_title"
@@ -289,7 +283,6 @@
             android:title="@string/camera_launch_title"
             android:summary="@string/camera_launch_summary"
             android:defaultValue="false" />
--->
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -336,3 +329,4 @@
     </PreferenceCategory>
 
 </PreferenceScreen>
+
