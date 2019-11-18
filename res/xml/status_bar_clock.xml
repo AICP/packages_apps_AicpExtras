@@ -22,7 +22,9 @@
     android:key="status_bar_clock"
     android:title="@string/status_bar_clock_title">
 
-    <!-- Clock position -->
+    <!--
+
+    <!- - Clock position - ->
     <com.aicp.gear.preference.SecureSettingIntListPreference
         android:key="status_bar_clock_position"
         android:entries="@array/clock_position_entries"
@@ -30,6 +32,7 @@
         android:defaultValue="2"
         android:title="@string/clock_position" />
 
+-->
     <!-- Clock AM/PM -->
     <com.aicp.gear.preference.SecureSettingIntListPreference
         android:key="statusbar_clock_am_pm_style"
