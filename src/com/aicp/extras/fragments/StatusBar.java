@@ -67,12 +67,12 @@ public class StatusBar extends BaseSettingsFragment implements
         return R.xml.status_bar;
     }
 
-    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
 
+    /*
         mSmartPulldown = (ListPreference) findPreference(SMART_PULLDOWN);
         int smartPulldown = Settings.System.getInt(resolver,
                 Settings.System.QS_SMART_PULLDOWN, 0);
@@ -116,6 +116,7 @@ public class StatusBar extends BaseSettingsFragment implements
         // Battery estimate in Quick QS
         mShowBatteryInQQS = (SystemSettingSwitchPreference) findPreference(KEY_ESTIMATE_IN_QQS);
         updateShowBatteryInQQS(showBatteryPercentage);
+        */
 
         final String displayCutout = getResources().getString(
                 com.android.internal.R.string.config_mainBuiltInDisplayCutout);
@@ -124,7 +125,6 @@ public class StatusBar extends BaseSettingsFragment implements
             hideNotchPref.getParent().removePreference(hideNotchPref);
         }
     }
-    */
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
