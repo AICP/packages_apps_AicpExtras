@@ -35,6 +35,7 @@ import com.aicp.extras.R;
 
 import com.aicp.gear.preference.SecureSettingIntListPreference;
 import com.aicp.gear.preference.SecureSettingListPreference;
+import com.android.internal.util.aicp.AicpUtils;
 
 import java.util.Date;
 
@@ -58,7 +59,6 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements
         return R.xml.status_bar_clock;
     }
 
-    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,8 +80,7 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements
     public void onResume() {
         super.onResume();
 
-        final boolean hasNotch = getResources().getBoolean(
-                com.android.internal.R.bool.config_haveNotch);
+        final boolean hasNotch = AicpUtils.hasNotch(getActivity());
 
         // Adjust status bar preferences for RTL
         if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
@@ -97,11 +96,9 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements
             mClockPosition.setEntryValues(R.array.clock_position_values_notch);
         }
     }
-    */
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        /*
         AlertDialog dialog;
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mClockDateFormat) {
@@ -150,11 +147,9 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements
             }
             return true;
         }
-        */
         return false;
     }
 
-    /*
     private void parseClockDateFormats() {
         String[] dateEntries = getResources().getStringArray(
                 R.array.clock_date_format_entries_values);
@@ -184,5 +179,4 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements
         }
         mClockDateFormat.setEntries(parsedDateEntries);
     }
-    */
 }
