@@ -78,6 +78,7 @@ public class StatusBar extends BaseSettingsFragment implements
                 Settings.System.QS_SMART_PULLDOWN, 0);
         updateSmartPulldownSummary(smartPulldown);
         mSmartPulldown.setOnPreferenceChangeListener(this);
+*/
 
         // Quick Pulldown
         mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
@@ -86,7 +87,6 @@ public class StatusBar extends BaseSettingsFragment implements
                 Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 0, UserHandle.USER_CURRENT);
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         updateQuickPulldownSummary(quickPulldownValue);
-*/
 
         mShowCarrierLabel = (SystemSettingIntListPreference) findPreference(KEY_CARRIER_LABEL);
         int showCarrierLabel = Settings.System.getInt(resolver,
@@ -134,18 +134,19 @@ public class StatusBar extends BaseSettingsFragment implements
             int value = Integer.parseInt((String) newValue);
             updateSmartPulldownSummary(value);
             return true;
-        } else if (preference == mQuickPulldown) {
+        } else */
+        if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     quickPulldownValue, UserHandle.USER_CURRENT);
             updateQuickPulldownSummary(quickPulldownValue);
-            return true;
+            return true;/*
         } else if (preference == mShowBatteryPercentage) {
             int showBatteryPercentage = Integer.valueOf((String) newValue);
             updateShowBatteryInQQS(showBatteryPercentage);
             return true;
         } else */
-        if (preference == mShowCarrierLabel) {
+        } else if (preference == mShowCarrierLabel) {
             int value = Integer.parseInt((String) newValue);
             updateCarrierLabelSummary(value);
             return true;
@@ -216,6 +217,7 @@ public class StatusBar extends BaseSettingsFragment implements
             mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_summary, type));
         }
     }
+*/
 
     private void updateQuickPulldownSummary(int value) {
         Resources res = getResources();
@@ -234,7 +236,6 @@ public class StatusBar extends BaseSettingsFragment implements
         }
     }
 
-*/
     private void updateCustomLabelTextSummary() {
         mCustomCarrierLabelText = Settings.System.getString(
                 getActivity().getContentResolver(), Settings.System.CUSTOM_CARRIER_LABEL);
