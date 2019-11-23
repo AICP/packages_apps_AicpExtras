@@ -22,7 +22,6 @@
     android:key="notifications"
     android:title="@string/notifications_title">
 
-<!--
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="status_bar_show_ticker"
         android:title="@string/status_bar_show_ticker_title"
@@ -30,7 +29,7 @@
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.StatusBarTicker"
         aicpextras:thereCanBeOnlyOneGroupId="1" />
--->
+
     <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
         android:key="heads_up_notifications_enabled"
         android:title="@string/notification_heads_up_title"
