@@ -40,7 +40,7 @@ import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingListPreference;
 import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
-//import com.android.internal.util.aicp.AicpUtils;
+import com.android.internal.util.aicp.AicpUtils;
 
 public class StatusBar extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
@@ -57,7 +57,7 @@ public class StatusBar extends BaseSettingsFragment implements
     private ListPreference mQuickPulldown;
     private Preference mCustomCarrierLabel;
     private SystemSettingIntListPreference mShowBatteryPercentage;
-    private SystemSettingListPreference mShowCarrierLabel;
+    private SystemSettingIntListPreference mShowCarrierLabel;
     private SystemSettingSwitchPreference mShowBatteryInQQS;
 
     private String mCustomCarrierLabelText;
@@ -72,7 +72,7 @@ public class StatusBar extends BaseSettingsFragment implements
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
 
-    /*
+/*
         mSmartPulldown = (ListPreference) findPreference(SMART_PULLDOWN);
         int smartPulldown = Settings.System.getInt(resolver,
                 Settings.System.QS_SMART_PULLDOWN, 0);
@@ -86,8 +86,9 @@ public class StatusBar extends BaseSettingsFragment implements
                 Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 0, UserHandle.USER_CURRENT);
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         updateQuickPulldownSummary(quickPulldownValue);
+*/
 
-        mShowCarrierLabel = (SystemSettingListPreference) findPreference(KEY_CARRIER_LABEL);
+        mShowCarrierLabel = (SystemSettingIntListPreference) findPreference(KEY_CARRIER_LABEL);
         int showCarrierLabel = Settings.System.getInt(resolver,
         Settings.System.STATUS_BAR_SHOW_CARRIER, 1);
         CharSequence[] NonNotchEntries = { getResources().getString(R.string.show_carrier_disabled),
@@ -106,7 +107,7 @@ public class StatusBar extends BaseSettingsFragment implements
 
         mCustomCarrierLabel = (Preference) findPreference(KEY_CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
-
+/*
         // Battery Percentage
         mShowBatteryPercentage = (SystemSettingIntListPreference) findPreference(KEY_BATTERY_PERCENTAGE);
         int showBatteryPercentage = Settings.System.getIntForUser(resolver,
@@ -128,9 +129,8 @@ public class StatusBar extends BaseSettingsFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        /*
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mSmartPulldown) {
+/*        if (preference == mSmartPulldown) {
             int value = Integer.parseInt((String) newValue);
             updateSmartPulldownSummary(value);
             return true;
@@ -144,16 +144,15 @@ public class StatusBar extends BaseSettingsFragment implements
             int showBatteryPercentage = Integer.valueOf((String) newValue);
             updateShowBatteryInQQS(showBatteryPercentage);
             return true;
-        } else if (preference == mShowCarrierLabel) {
+        } else */
+        if (preference == mShowCarrierLabel) {
             int value = Integer.parseInt((String) newValue);
             updateCarrierLabelSummary(value);
             return true;
         }
-        */
         return false;
     }
 
-    /*
     @Override
     public boolean onPreferenceTreeClick(final Preference preference) {
         super.onPreferenceTreeClick(preference);
@@ -201,7 +200,7 @@ public class StatusBar extends BaseSettingsFragment implements
             mShowCarrierLabel.setSummary(res.getString(R.string.show_carrier_enabled));
         }
     }
-
+/*
     private void updateSmartPulldownSummary(int value) {
         Resources res = getResources();
 
@@ -235,7 +234,7 @@ public class StatusBar extends BaseSettingsFragment implements
         }
     }
 
-
+*/
     private void updateCustomLabelTextSummary() {
         mCustomCarrierLabelText = Settings.System.getString(
                 getActivity().getContentResolver(), Settings.System.CUSTOM_CARRIER_LABEL);
@@ -246,7 +245,7 @@ public class StatusBar extends BaseSettingsFragment implements
             mCustomCarrierLabel.setSummary(mCustomCarrierLabelText);
         }
     }
-
+/*
     private void updateShowBatteryInQQS(int value) {
         switch (value) {
             case 1: {
