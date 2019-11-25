@@ -51,14 +51,14 @@ public class OtherUi extends BaseSettingsFragment
         mShowCpuInfo.setChecked(Settings.Global.getInt(getActivity().getContentResolver(),
                 Settings.Global.SHOW_CPU_OVERLAY, 0) == 1);
         mShowCpuInfo.setOnPreferenceChangeListener(this);
-/*
+
         boolean dozeAlwaysOnDisplayAvailable = getContext().getResources().
                 getBoolean(com.android.internal.R.bool.config_dozeAlwaysOnDisplayAvailable);
         Preference DozeOnCharge = findPreference(KEY_DOZE_ON_CHARGE);
 
         if (!dozeAlwaysOnDisplayAvailable){
             DozeOnCharge.getParent().removePreference(DozeOnCharge);
-        }*/
+        }
     }
 
     private void writeCpuInfoOptions(boolean value) {
