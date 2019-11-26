@@ -916,4 +916,19 @@
         <item>1</item>
     </string-array>
 
+    <!-- QS SystemInfo -->
+    <string-array name="qs_system_info_entries">
+        <item>@string/qs_system_info_off</item>
+        <item>@string/qs_system_info_cpu_temp</item>
+        <item>@string/qs_system_info_battery_temp</item>
+        <item>@string/qs_system_info_gpu_clock</item>
+        <item>@string/qs_system_info_gpu_busy</item>
+    </string-array>
+    <string-array name="qs_system_info_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
 </resources>
