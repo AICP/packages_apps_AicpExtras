@@ -20,6 +20,12 @@
     android:key="navigation"
     android:title="@string/navigation_title">
 
+
+    <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
+        android:key="sysui_nav_bar_inverse"
+        android:title="@string/navigation_bar_invert_layout_title"
+        android:defaultValue="false" />
+
 <!--
     <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
         android:key="navigation_bar_visible"
