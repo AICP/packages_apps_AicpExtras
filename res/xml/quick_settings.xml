@@ -57,6 +57,12 @@
         android:defaultValue="false"
         android:dependency="qs_tile_title_visibility" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="footer_text_show"
+        android:title="@string/footer_text_show_title"
+        android:summary="@string/footer_text_show_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:key="qs_layout_category"
         android:title="@string/qs_layout_category_title">
