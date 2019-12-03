@@ -78,12 +78,11 @@
             aicpextras:unitsRight=""
             android:defaultValue="6" />
 
-<!--
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_layout_rows"
             android:title="@string/qs_rows_portrait_title"
-            android:max="4"
-            android:min="1"
+            android:max="5"
+            android:min="2"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
             android:defaultValue="3" />
@@ -92,11 +91,11 @@
             android:key="qs_layout_rows_landscape"
             android:title="@string/qs_rows_landscape_title"
             android:max="4"
-            android:min="1"
+            android:min="2"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
             android:defaultValue="2" />
--->
+
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_layout_columns"
             android:title="@string/qs_columns_portrait_title"
