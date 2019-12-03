@@ -17,16 +17,23 @@
 
 package com.aicp.extras.fragments;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.provider.Settings;
 import android.util.Log;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
+import android.text.Spannable;
+import android.text.TextUtils;
+import android.widget.EditText;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
@@ -42,10 +49,15 @@ public class QuickSettings extends BaseSettingsFragment
     private static final String QS_QUICKBAR_COLUMNS_AUTO = "qs_quickbar_columns_auto";
     private static final String QS_QUICKBAR_COLUMNS_COUNT = "qs_quickbar_columns";
     private static final String SYSTEM_INFO = "qs_system_info";
+    private static final String KEY_CUSTOM_FOOTER_TEXT = "custom_footer_text";
+
 
     private ListPreference mSYSInfo;
+    private Preference mCustomFooterTextPref;
     private SwitchPreference mQQSColsAuto;
     private SystemSettingSeekBarPreference mQQSColsCount;
+
+    private String mCustomFooterText;
 
     @Override
     protected int getPreferenceResource() {
@@ -60,6 +72,10 @@ public class QuickSettings extends BaseSettingsFragment
 
         mSYSInfo = (ListPreference) findPreference(SYSTEM_INFO);
         configureSystemInfo();
+
+        mCustomFooterTextPref = (Preference) findPreference(KEY_CUSTOM_FOOTER_TEXT);
+        updateCustomFooterTextSummary();
+
 /*        mQQSColsAuto = (SwitchPreference) findPreference(QS_QUICKBAR_COLUMNS_AUTO);
         mQQSColsCount = (SystemSettingSeekBarPreference) findPreference(QS_QUICKBAR_COLUMNS_COUNT);
 
@@ -88,6 +104,39 @@ public class QuickSettings extends BaseSettingsFragment
         return false;
     }
 
+    @Override
+    public boolean onPreferenceTreeClick(final Preference preference) {
+        super.onPreferenceTreeClick(preference);
+        final ContentResolver resolver = getActivity().getContentResolver();
+        if (KEY_CUSTOM_FOOTER_TEXT.equals(preference.getKey())) {
+            AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+            alert.setTitle(R.string.footer_text_label_title);
+            alert.setMessage(R.string.footer_text_label_explain);
+
+            // Set an EditText view to get user input
+            final EditText input = new EditText(getActivity());
+            input.setText(TextUtils.isEmpty(mCustomFooterText) ? "" : mCustomFooterText);
+            input.setSelection(input.getText().length());
+            alert.setView(input);
+            alert.setPositiveButton(getString(android.R.string.ok),
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            String value = ((Spannable) input.getText()).toString().trim();
+                            Settings.System.putStringForUser(resolver, Settings.System.AICP_FOOTER_TEXT_STRING, value, UserHandle.USER_CURRENT);
+                            updateCustomFooterTextSummary();
+/*                            Intent i = new Intent();
+                            i.setAction(Intent.ACTION_CUSTOM_CARRIER_LABEL_CHANGED);
+                            getActivity().sendBroadcast(i);*/
+                        }
+                    });
+            alert.setNegativeButton(getString(android.R.string.cancel), null);
+            alert.show();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     private void configureSystemInfo() {
         Resources res = getResources();
         String[] entriesArray = res.getStringArray(R.array.qs_system_info_entries);
@@ -111,5 +160,16 @@ public class QuickSettings extends BaseSettingsFragment
         mSYSInfo.setEntries(entries.toArray(new String[entries.size()]));
         mSYSInfo.setEntryValues(values.toArray(new String[values.size()]));
         if (entries.size() < 2) mSYSInfo.getParent().removePreference(mSYSInfo);
+    }
+
+    private void updateCustomFooterTextSummary() {
+        mCustomFooterText = Settings.System.getStringForUser(
+                getActivity().getContentResolver(), Settings.System.AICP_FOOTER_TEXT_STRING, UserHandle.USER_CURRENT);
+
+        if (TextUtils.isEmpty(mCustomFooterText)) {
+            mCustomFooterTextPref.setSummary(R.string.footer_text_default);
+        } else {
+            mCustomFooterTextPref.setSummary(mCustomFooterText);
+        }
     }
 }

@@ -22,14 +22,6 @@
     android:key="quick_settings"
     android:title="@string/quick_settings_title">
 
-    <com.aicp.gear.preference.SystemSettingIntListPreference
-        android:key="qs_system_info"
-        android:title="@string/qs_system_info_title"
-        android:entries="@array/qs_system_info_entries"
-        android:entryValues="@array/qs_system_info_values"
-        android:defaultValue="0"
-        android:summary="%s" />
-
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
         android:title="@string/qs_tile_title_visibility_title"
@@ -57,11 +49,36 @@
         android:defaultValue="false"
         android:dependency="qs_tile_title_visibility" />
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="footer_text_show"
-        android:title="@string/footer_text_show_title"
-        android:summary="@string/footer_text_show_summary"
-        android:defaultValue="false" />
+    <PreferenceCategory
+        android:key="qs_header_category"
+        android:title="@string/qs_header_category_title">
+
+        <com.aicp.gear.preference.SystemSettingIntListPreference
+            android:key="qs_system_info"
+            android:title="@string/qs_system_info_title"
+            android:entries="@array/qs_system_info_entries"
+            android:entryValues="@array/qs_system_info_values"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="qs_footer_category"
+        android:title="@string/qs_footer_category_title">
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="footer_text_show"
+            android:title="@string/footer_text_show_title"
+            android:summary="@string/footer_text_show_summary"
+            android:defaultValue="false" />
+
+        <Preference
+           android:key="custom_footer_text"
+           android:title="@string/footer_text_label_title"
+           android:dependency="footer_text_show" />
+
+     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="qs_layout_category"
