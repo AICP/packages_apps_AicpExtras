@@ -79,5 +79,10 @@
         android:entryValues="@array/less_notification_sounds_values"
         android:defaultValue="0" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="vibrate_on_notifications"
+        android:title="@string/vibrate_on_notifications_title"
+        android:summary="@string/vibrate_on_notifications_summary"
+        android:defaultValue="true" />
 
 </PreferenceScreen>
