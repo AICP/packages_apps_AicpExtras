@@ -37,8 +37,7 @@ import com.aicp.extras.R;
 import com.android.settingslib.Utils;
 import com.android.settingslib.widget.LayoutPreference;
 
-public class FODIconPicker {
-//public class FODIconPicker extends LayoutPreference {
+public class FODIconPicker extends LayoutPreference {
 
     private Context mContext;
 
@@ -65,7 +64,7 @@ public class FODIconPicker {
     private static ImageButton Button20;
 
     private static final String TAG = "FODIconPicker";
-/*
+
     public FODIconPicker(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
@@ -323,5 +322,5 @@ public class FODIconPicker {
         Button19.setBackgroundTintList(defaulttint);
         Button20.setBackgroundTintList(defaulttint);
         activebutton.setBackgroundTintList(Utils.getColorAttr(getContext(), android.R.attr.colorAccent));
-    }*/
+    }
 }

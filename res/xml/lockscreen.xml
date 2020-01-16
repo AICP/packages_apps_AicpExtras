@@ -184,14 +184,13 @@
               android:key="lockscreen_quick_unlock_control"
               android:title="@string/unlock_quick_unlock_control_title"
               android:summary="@string/unlock_quick_unlock_control_summary"
-              android:defaultValue="false" />
+              android:defaultValue="false" />  -->
 
-    </PreferenceCategory>
     <PreferenceCategory
             android:key="fod_icon_picker"
             android:title="@string/fod_icon_picker_category_title" >
 
-            <!- FOD icon picker ->
+            <!-- FOD icon picker -->
             <Preference
                 android:key="fod_icon_picker_category"
                 android:title="@string/fod_icon_picker_title"
@@ -204,7 +203,7 @@
                 android:summary="@string/fod_wallpaper_color_summary"
                 android:defaultValue="false" />
 
-            <!- FOD recognizing animation ->
+            <!-- FOD recognizing animation ->
             <com.aicp.gear.preference.SystemSettingSwitchPreference
                 android:key="fod_recognizing_animation"
                 android:title="@string/fod_recog_animation"
@@ -217,7 +216,7 @@
                 android:entries="@array/fod_recog_animation_entries"
                 android:entryValues="@array/fod_recog_animation_values"
                 android:defaultValue="0"
-                android:dependency="fod_recognizing_animation" />
+                android:dependency="fod_recognizing_animation" /> -->
 
-    </PreferenceCategory> -->
+    </PreferenceCategory>
 </PreferenceScreen>
