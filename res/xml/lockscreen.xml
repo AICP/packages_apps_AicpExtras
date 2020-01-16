@@ -178,6 +178,24 @@
               android:defaultValue="false" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+            android:key="fod_icon_picker"
+            android:title="@string/fod_customization_category_title" >
+
+            <!-- FOD icon picker -->
+            <Preference
+                android:key="fod_icon_picker_category"
+                android:title="@string/fod_icon_picker_title"
+                android:summary="@string/fod_icon_picker_summary"
+                android:fragment="com.aicp.extras.fragments.FODIconPickerFragment" />
+
+            <com.aicp.gear.preference.SystemSettingSwitchPreference
+                android:key="fod_icon_wallpaper_color"
+                android:title="@string/fod_wallpaper_color"
+                android:summary="@string/fod_wallpaper_color_summary"
+                android:defaultValue="false" />
+    </PreferenceCategory>
+
 <!--  ******* Moved to settings *****
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="lockscreen_quick_unlock_control"
