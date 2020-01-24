@@ -85,4 +85,6 @@
         android:summary="@string/vibrate_on_notifications_summary"
         android:defaultValue="true" />
 
+    <com.android.settingslib.widget.FooterPreference
+        android:title="@string/status_bar_show_ticker_footer" />
 </PreferenceScreen>
