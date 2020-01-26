@@ -19,10 +19,13 @@ package com.aicp.extras.fragments;
 
 import android.os.Bundle;
 import android.provider.Settings;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
+import com.android.internal.util.aicp.DeviceUtils;
 
 public class Notifications extends BaseSettingsFragment {
 
@@ -31,12 +34,17 @@ public class Notifications extends BaseSettingsFragment {
         return R.xml.notifications;
     }
 
-    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Util.requireFullStatusbar(getActivity(),
                 findPreference(Settings.System.STATUS_BAR_SHOW_TICKER));
+
+        if (!DeviceUtils.deviceSupportsFlashLight(getActivity())) {
+            getPreferenceScreen().removePreference(findPreference(
+                    Settings.System.FLASHLIGHT_ON_CALL));
+        }
+
     }
-    */
 }
