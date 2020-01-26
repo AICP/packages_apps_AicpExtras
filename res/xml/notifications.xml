@@ -45,6 +45,14 @@
         android:summary="@string/headsup_activity_blacklist_summary"
         android:dependency="heads_up_notifications_enabled"
         android:persistent="false" />
+
+     <com.aicp.gear.preference.SystemSettingIntListPreference
+        android:key="flashlight_on_call"
+        android:title="@string/flashlight_on_call_title"
+        android:entries="@array/flashlight_on_call_entries"
+        android:entryValues="@array/flashlight_on_call_values"
+        android:defaultValue="0" />
+
 <!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="force_expanded_notifications"
