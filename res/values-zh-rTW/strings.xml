@@ -277,6 +277,8 @@
     <string name="show_cpu_info_summary">目前的處理器資訊重疊在螢幕上</string>
     <string name="wake_when_plugged_or_unplugged_title">接上時喚醒</string>
     <string name="wake_when_plugged_or_unplugged_summary">接上或移除電源時開啟螢幕</string>
+    <string name="headset_connect_player_title">在耳機連接上啟動音樂應用程式</string>
+    <string name="headset_connect_player_summary">插入耳機時啟動預設音樂應用程式</string>
     <string name="system_animations_title">動畫</string>
     <string name="system_animations_summary">系統動畫</string>
     <string name="custom_bootanimation_title">開機動畫</string>
@@ -641,10 +643,8 @@
     <string name="app_circle_bar_appchooser_pref_title">新增應用程式</string>
     <string name="app_circle_bar_show_trigger_title">顯示觸發區域</string>
     <string name="theming_accent_title">強調顏色</string>
-    <string name="theming_base_dark_notif">暗色</string>
-    <string name="theming_accent_default">預設</string>
-    <string name="theming_corners_default">預設</string>
-    <string name="theming_corners_nonround">正方形</string>
+    <string name="theming_notif_title">通知</string>
+    <string name="theming_icon_pack_title">圖示包</string>
     <string name="theming_qs_shape_square">正方形</string>
     <string name="smart_pixels_title">智慧 Pixels</string>
     <string name="smart_pixels_summary">透過關閉多餘的 pixels 來節省電池電量</string>
@@ -677,8 +677,6 @@
     <string name="pa_pie_gravity_right">右側</string>
     <string name="pa_pie_gravity_left">左側</string>
     <string name="audio_panel_position_title">定位</string>
-    <string name="icon_shape_square">正方形</string>
-    <string name="icon_shape_circle">環狀圖示</string>
     <string name="hardware_keys_camera_key_title">相機鍵</string>
     <string name="camera_sleep_on_release_title">預覽螢幕</string>
     <string name="camera_sleep_on_release_summary">只有當按住按鍵時，半按將會保持螢幕開啟</string>
@@ -686,4 +684,8 @@
     <string name="camera_launch_summary">長按後釋放將會開啟相機</string>
     <string name="action_save">儲存</string>
     <string name="wireless_charging_animation_title">充電動畫</string>
+    <string name="clock_style_title">時鐘樣式</string>
+    <string name="qs_system_info_off">關閉</string>
+    <string name="flashlight_on_call_disabled">已停用</string>
+    <string name="flashlight_on_call_always">一律</string>
 </resources>
