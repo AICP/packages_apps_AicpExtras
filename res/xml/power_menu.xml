@@ -38,6 +38,12 @@
         android:summary="@string/global_actions_screenshot_summary"
         android:defaultValue="true" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="partial_screenshot_as_default"
+        android:title="@string/partial_screenshot_as_default_title"
+        android:summary="@string/partial_screenshot_as_default_summary"
+        android:defaultValue="false" />
+
     <com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="emergency_in_power_menu"
         android:title="@string/global_actions_emergency_title"
