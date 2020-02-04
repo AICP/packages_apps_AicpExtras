@@ -119,11 +119,5 @@
             android:entryValues="@array/flashlight_on_call_values"
             android:defaultValue="0" />
 
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="flashlight_on_call_waiting"
-            android:title="@string/flashlight_on_call_wait_title"
-            android:summary="@string/flashlight_on_call_wait_summary"
-            android:defaultValue="false" />
-
     </PreferenceCategory>
 </PreferenceScreen>
