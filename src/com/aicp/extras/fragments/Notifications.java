@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
+import androidx.preference.SwitchPreference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
@@ -44,6 +45,11 @@ public class Notifications extends BaseSettingsFragment {
         if (!DeviceUtils.deviceSupportsFlashLight(getActivity())) {
             getPreferenceScreen().removePreference(findPreference(
                     Settings.System.FLASHLIGHT_ON_CALL));
+        }
+
+        if (!DeviceUtils.deviceSupportsFlashLight(getActivity())) {
+            getPreferenceScreen().removePreference(findPreference(
+                    Settings.System.FLASHLIGHT_ON_CALL_WAITING));
         }
 
     }
