@@ -55,6 +55,8 @@ public class SystemappRemover extends SubActivity {
     static final boolean DEBUG = true;
     public final String systemPath = "/system/app/";
     public final String systemPrivPath = "/system/priv-app/";
+    public final String productPath = "/system/product/app/";
+    public final String productPrivPath = "/system/product/priv-app/";
     protected Process superUser;
 
     @Override
@@ -88,7 +90,10 @@ public class SystemappRemover extends SubActivity {
 
         File system = new File(systemPath);
         File systemPriv = new File(systemPrivPath);
-        String[] sysappArray = combine(system.list(), systemPriv.list());
+        File product = new File(productPath);
+        File productPriv = new File(productPrivPath);
+        String[] sysappArray = combine(system.list(), systemPriv.list(), product.list(),
+                productPriv.list());
         mSysApp = new ArrayList<String>(
                 Arrays.asList(sysappArray));
 
@@ -175,11 +180,13 @@ public class SystemappRemover extends SubActivity {
         alert.show();
     }
 
-    private String[] combine(String[] a, String[] b) {
-        int length = a.length + b.length;
+    private String[] combine(String[] a, String[] b, String[] c, String[] d) {
+        int length = a.length + b.length + c.length + d.length;
         String[] result = new String[length];
         System.arraycopy(a, 0, result, 0, a.length);
         System.arraycopy(b, 0, result, a.length, b.length);
+        System.arraycopy(c, 0, result, b.length, c.length);
+        System.arraycopy(d, 0, result, c.length, d.length);
         return result;
     }
 
@@ -205,10 +212,20 @@ public class SystemappRemover extends SubActivity {
             int commandCount = 1;
             for (String appName : params) {
                 String basePath = systemPath;
-                File app = new File(basePath + appName);
+                String basePath1 = systemPrivPath;
+                String basePath2 = productPath;
+                File app1 = new File(basePath + appName);
+                File app2 = new File(basePath1 + appName);
+                File app3 = new File(basePath2 + appName);
 
-                if (!app.exists()) {
+                if (app1.exists()) {
+                       basePath = systemPath;
+                } else if (app2.exists()) {
                        basePath = systemPrivPath;
+                } else if (app3.exists()) {
+                       basePath = productPath;
+                } else {
+                       basePath = productPrivPath;
                 }
                 File app2rm = new File(basePath + appName);
                 Log.d(TAG, "Removing " + app2rm.getAbsolutePath());
