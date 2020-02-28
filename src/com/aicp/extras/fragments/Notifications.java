@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2017-2020 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,6 +30,8 @@ import com.android.internal.util.aicp.DeviceUtils;
 
 public class Notifications extends BaseSettingsFragment {
 
+    private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.notifications;
@@ -51,6 +53,11 @@ public class Notifications extends BaseSettingsFragment {
             getPreferenceScreen().removePreference(findPreference(
                     Settings.System.FLASHLIGHT_ON_CALL_WAITING));
         }
+
+        boolean alertSliderAvailable = getActivity().getResources().getBoolean(
+                com.android.internal.R.bool.config_hasAlertSlider);
+        if (!alertSliderAvailable)
+            getPreferenceScreen().removePreference(findPreference(ALERT_SLIDER_PREF));
 
     }
 }
