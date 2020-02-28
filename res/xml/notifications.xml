@@ -89,6 +89,12 @@
     <com.android.settingslib.widget.FooterPreference
         android:title="@string/status_bar_show_ticker_footer" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="alert_slider_notifications"
+        android:title="@string/alert_slider_notifications_title"
+        android:summary="@string/alert_slider_notifications_summary"
+        android:defaultValue="true" />
+
     <PreferenceCategory
         android:key="notification_flash"
         android:title="@string/notification_flash_title" >
