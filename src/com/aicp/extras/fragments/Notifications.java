@@ -30,6 +30,8 @@ import com.android.internal.util.aicp.DeviceUtils;
 
 public class Notifications extends BaseSettingsFragment {
 
+    private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.notifications;
@@ -51,6 +53,13 @@ public class Notifications extends BaseSettingsFragment {
             getPreferenceScreen().removePreference(findPreference(
                     Settings.System.FLASHLIGHT_ON_CALL_WAITING));
         }
+
+        Preference alertSliderPref = (Preference)
+                              prefScreen.findPreference(ALERT_SLIDER_PREF);
+        boolean alertSliderAvailable = res.getBoolean(
+                com.android.internal.R.bool.config_hasAlertSlider);
+        if (!alertSliderAvailable)
+            prefScreen.removePreference(alertSliderPref);
 
     }
 }
