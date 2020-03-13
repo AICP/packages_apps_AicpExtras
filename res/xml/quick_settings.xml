@@ -166,4 +166,46 @@
     </PreferenceCategory>
 -->
 
+      <PreferenceCategory
+        android:key="category_custom_header"
+        android:title="@string/custom_header_title">
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="status_bar_custom_header"
+            android:title="@string/status_bar_custom_header_title"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="custom_header_provider"
+            android:title="@string/custom_header_provider_title"
+            android:persistent="false"
+            android:entries="@array/custom_header_provider_entries"
+            android:entryValues="@array/custom_header_provider_values"
+            android:dependency="status_bar_custom_header" />
+
+        <ListPreference
+            android:key="daylight_header_pack"
+            android:title="@string/daylight_header_pack_title"
+            android:dependency="status_bar_custom_header" />
+
+        <Preference
+            android:key="custom_header_browse"
+            android:title="@string/custom_header_browse_title"
+            android:persistent="false"
+            android:dependency="status_bar_custom_header" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="org.omnirom.omnistyle"
+                    android:targetClass="org.omnirom.omnistyle.PickHeaderActivity" />
+        </Preference>
+
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+            android:key="status_bar_custom_header_shadow"
+            android:title="@string/status_bar_custom_header_shadow_title"
+            android:max="100"
+            android:min="0"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight="@string/unit_percent"
+            android:defaultValue="0"
+            android:dependency="status_bar_custom_header" />
+    </PreferenceCategory>
 </PreferenceScreen>
