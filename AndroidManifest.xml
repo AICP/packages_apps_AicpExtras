@@ -105,7 +105,12 @@
             </intent-filter>
         </receiver>
 
-
+        <receiver android:name="com.aicp.extras.fragments.GamingModeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.GAMING_MODE_TURN_OFF" />
+                <action android:name="android.intent.action.GAMING_MODE_TURN_ON" />
+            </intent-filter>
+        </receiver>
 
         <!-- DUI -->
 
