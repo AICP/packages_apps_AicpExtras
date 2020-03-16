@@ -201,7 +201,7 @@ public class SystemappRemover extends SubActivity {
 
         protected void sudoInBackground(String... params) throws SuShell.SuDeniedException {
             String[] commands = new String[params.length+1];
-            commands[0] = "mount -o rw,remount /system";
+            commands[0] = "mount -o rw,remount /";
             int commandCount = 1;
             for (String appName : params) {
                 String basePath = systemPath;
