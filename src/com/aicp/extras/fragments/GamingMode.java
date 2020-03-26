@@ -228,12 +228,12 @@ public class GamingMode extends BaseSettingsFragment
                     // Do nothing
                 }
             }
-        }
 
-        // Keep these at the top
-        mAddGamingPref.setOrder(0);
-        // Add 'add' options
-        mGamingPrefList.addPreference(mAddGamingPref);
+            // Keep these at the top
+            mAddGamingPref.setOrder(0);
+            // Add 'add' options
+            mGamingPrefList.addPreference(mAddGamingPref);
+        }
     }
 
     protected void showDialog(int dialogId) {
