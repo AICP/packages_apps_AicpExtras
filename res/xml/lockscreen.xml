@@ -156,5 +156,30 @@
               android:defaultValue="false" />
 -->
     </PreferenceCategory>
+    <PreferenceCategory
+            android:key="fod_icon_picker"
+            android:title="@string/fod_icon_picker_title" >
+
+            <!-- FOD icon picker -->
+            <Preference
+                android:key="fod_icon_picker_category"
+                android:title="@string/fod_icon_picker_title"
+                android:summary="@string/fod_icon_picker_summary"
+                android:fragment="com.aicp.extras.fragments.FODIconPickerFragment" />
+
+            <!-- FOD recognizing animation -->
+            <com.aicp.gear.preference.SystemSettingSwitchPreference
+                android:key="fod_recognizing_animation"
+                android:title="@string/fod_recog_animation"
+                android:summary="@string/fod_recog_animation_summary"
+                android:defaultValue="false" />
+
+            <com.aicp.gear.preference.SystemSettingSwitchPreference
+                android:key="fod_icon_wallpaper_color"
+                android:title="@string/fod_wallpaper_color"
+                android:summary="@string/fod_wallpaper_color_summary"
+                android:defaultValue="false" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

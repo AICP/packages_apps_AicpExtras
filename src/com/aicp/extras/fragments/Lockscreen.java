@@ -19,18 +19,22 @@ package com.aicp.extras.fragments;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
+import com.aicp.gear.util.AicpContextConstants;
 
 public class Lockscreen extends BaseSettingsFragment {
 
     private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
+    private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
@@ -53,9 +57,17 @@ public class Lockscreen extends BaseSettingsFragment {
         }
         // Fingerprint vibration
         mFingerprintVib = (SwitchPreference) prefSet.findPreference(FP_SUCCESS_VIBRATION);
-
         if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()){
             mFingerprintVib.getParent().removePreference(mFingerprintVib);
+        }
+
+        // FOD category
+        PreferenceCategory fodIconPickerCategory = (PreferenceCategory) findPreference(FOD_ICON_PICKER_CATEGORY);
+        PackageManager packageManager = getContext().getPackageManager();
+        boolean supportsFod = packageManager.hasSystemFeature(AicpContextConstants.Features.FOD);
+
+        if (fodIconPickerCategory != null && !supportsFod) {
+            fodIconPickerCategory.getParent().removePreference(fodIconPickerCategory);
         }
     }
 }
