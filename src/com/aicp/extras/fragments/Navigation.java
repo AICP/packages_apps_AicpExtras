@@ -29,6 +29,7 @@ import com.android.internal.util.hwkeys.ActionUtils;
 public class Navigation extends BaseSettingsFragment {
 
     private static final String KEY_KILLAPP_LONGPRESS_BACK = "kill_app_longpress_back";
+    private static final String KEY_SWAP_HW_NAVIGATION_KEYS = "swap_navigation_keys";
 
     @Override
     protected int getPreferenceResource() {
@@ -44,8 +45,10 @@ public class Navigation extends BaseSettingsFragment {
         final boolean needsNavbar = ActionUtils.hasNavbarByDefault(getActivity());
         final boolean hwkeysSupported = ActionUtils.isHWKeysSupported(getActivity());
         SwitchPreference longPressBackToKill = (SwitchPreference) findPreference(KEY_KILLAPP_LONGPRESS_BACK);
+        SwitchPreference swapHWNavKeys = (SwitchPreference) findPreference(KEY_SWAP_HW_NAVIGATION_KEYS);
         if (needsNavbar || !hwkeysSupported) {
             prefScreen.removePreference(longPressBackToKill);
+            prefScreen.removePreference(swapHWNavKeys);
         }
     }
 }

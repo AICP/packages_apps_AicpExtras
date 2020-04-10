@@ -38,16 +38,30 @@
             android:summary="@string/kill_app_longpress_back_summary"
             android:defaultValue="false" />
 
-<!--
-    <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
-        android:key="navigation_bar_visible"
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="swap_navigation_keys"
+        android:title="@string/hw_keys_swap_title"
+        android:summary="@string/hw_keys_swap_summary"
+        android:defaultValue="false" />
+
+    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+        android:key="navigation_bar_show_new"
         android:title="@string/navbar_visibility"
         android:summary="@string/navigation_bar_summary"
         android:defaultValue="@*android:bool/config_showNavigationBar"
-        aicpextras:systemPropDefaultOverride="qemu.hw.mainkeys?0:1"
-        aicpextras:thereCanBeOnlyOneGroupId="1"
-        android:fragment="com.aicp.extras.smartnav.NavigationBarSettings" />
+        aicpextras:systemPropDefaultOverride="qemu.hw.mainkeys?0:1" />
 
+    <Preference
+        android:key="layout_settings"
+        android:title="@string/navigation_bar_layout_title"
+        android:summary="@string/navigation_bar_layout_summary"
+        android:dependency="navigation_bar_show_new">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.systemui"
+            android:targetClass="com.android.systemui.tuner.NavbarActivity" />
+    </Preference>
+
+<!--
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="use_bottom_gesture_navigation"
         android:title="@string/use_bottom_gesture_title"
