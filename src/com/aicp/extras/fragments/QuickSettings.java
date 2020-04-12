@@ -31,6 +31,7 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.util.Log;
 import androidx.preference.ListPreference;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
@@ -55,6 +56,7 @@ public class QuickSettings extends BaseSettingsFragment
     private static final String QS_QUICKBAR_COLUMNS_AUTO = "qs_quickbar_columns_auto";
     private static final String QS_QUICKBAR_COLUMNS_COUNT = "qs_quickbar_columns";
     private static final String SYSTEM_INFO = "qs_system_info";
+    private static final String QS_HEADER_CATEGORY = "qs_header_category";
     private static final String KEY_CUSTOM_FOOTER_TEXT = "custom_footer_text";
 
     private static final String CUSTOM_HEADER_BROWSE = "custom_header_browse";
@@ -66,6 +68,7 @@ public class QuickSettings extends BaseSettingsFragment
     private static final String CUSTOM_HEADER_ENABLED = "status_bar_custom_header";
 
     private ListPreference mSYSInfo;
+    private PreferenceCategory mQSHeaderCategory;
     private Preference mCustomFooterTextPref;
     private SwitchPreference mQQSColsAuto;
     private SystemSettingSeekBarPreference mQQSColsCount;
@@ -90,6 +93,7 @@ public class QuickSettings extends BaseSettingsFragment
         ContentResolver resolver = getActivity().getContentResolver();
 
         mSYSInfo = (ListPreference) findPreference(SYSTEM_INFO);
+        mQSHeaderCategory = (PreferenceCategory) findPreference(QS_HEADER_CATEGORY);
         configureSystemInfo();
 
         mCustomFooterTextPref = (Preference) findPreference(KEY_CUSTOM_FOOTER_TEXT);
@@ -295,7 +299,7 @@ public class QuickSettings extends BaseSettingsFragment
         }
         mSYSInfo.setEntries(entries.toArray(new String[entries.size()]));
         mSYSInfo.setEntryValues(values.toArray(new String[values.size()]));
-        if (entries.size() < 2) mSYSInfo.getParent().removePreference(mSYSInfo);
+        if (entries.size() < 2) mQSHeaderCategory.getParent().removePreference(mQSHeaderCategory);
     }
 
     private void updateCustomFooterTextSummary() {
