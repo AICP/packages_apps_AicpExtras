@@ -22,12 +22,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.os.PowerManager;
-import android.os.ServiceManager;
 import android.provider.Settings;
-import android.view.KeyCharacterMap;
-import android.view.KeyEvent;
-import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
@@ -35,22 +30,22 @@ import androidx.preference.SwitchPreference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.gear.preference.SystemSettingSwitchPreference;
-import com.aicp.gear.preference.SeekBarPreferenceCham;
 
 import com.android.internal.util.aicp.DeviceUtils;
 import com.android.internal.util.hwkeys.ActionConstants;
 import com.android.internal.util.hwkeys.ActionUtils;
 
 public class HwKeys extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
-    // category keys
+
+    private static final String CATEGORY_CAMERA = "camera_key";
+    public static final int KEY_MASK_CAMERA = 0x20;
+/*    // category keys
     private static final String CATEGORY_HWKEY = "hardware_keys";
     private static final String CATEGORY_BACK = "back_key";
     private static final String CATEGORY_HOME = "home_key";
     private static final String CATEGORY_MENU = "menu_key";
     private static final String CATEGORY_ASSIST = "assist_key";
     private static final String CATEGORY_APPSWITCH = "app_switch_key";
-    private static final String CATEGORY_CAMERA = "camera_key";
     private static final String CATEGORY_VOLUME = "volume_keys";
 
     // preference keys
@@ -66,7 +61,6 @@ public class HwKeys extends BaseSettingsFragment implements Preference.OnPrefere
     public static final int KEY_MASK_MENU = 0x04;
     public static final int KEY_MASK_ASSIST = 0x08;
     public static final int KEY_MASK_APP_SWITCH = 0x10;
-    public static final int KEY_MASK_CAMERA = 0x20;
     public static final int KEY_MASK_VOLUME = 0x40;
 
     private SeekBarPreferenceCham mButtonTimoutBar;
@@ -74,7 +68,7 @@ public class HwKeys extends BaseSettingsFragment implements Preference.OnPrefere
     private PreferenceCategory mButtonBackLightCategory;
 
     private SwitchPreference mHwKeyDisable;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.hw_keys;
@@ -84,6 +78,27 @@ public class HwKeys extends BaseSettingsFragment implements Preference.OnPrefere
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // bits for hardware keys present on device
+        final int deviceKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+        final int deviceWakeKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareWakeKeys);
+
+        final boolean hasCameraKey = (deviceKeys & KEY_MASK_CAMERA) != 0;
+        final boolean showCameraWake = (deviceWakeKeys & KEY_MASK_CAMERA) != 0;
+        final PreferenceCategory cameraCategory = (PreferenceCategory)
+                findPreference(CATEGORY_CAMERA);
+
+        // camera button
+        if (hasCameraKey) {
+            if (!showCameraWake) {
+                cameraCategory.removePreference(findPreference(Settings.System.CAMERA_WAKE_SCREEN));
+            }
+        } else {
+            cameraCategory.getParent().removePreference(cameraCategory);
+        }
+
+/*
         ContentResolver resolver = getContentResolver();
         PreferenceScreen prefScreen = getPreferenceScreen();
 
@@ -219,12 +234,12 @@ public class HwKeys extends BaseSettingsFragment implements Preference.OnPrefere
             }
         } else {
             cameraCategory.getParent().removePreference(cameraCategory);
-        }
+        }*/
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = getContentResolver();
+/*        ContentResolver resolver = getContentResolver();
         if (preference == mHwKeyDisable) {
             boolean value = (Boolean) newValue;
             Settings.Secure.putInt(resolver,
@@ -240,7 +255,7 @@ public class HwKeys extends BaseSettingsFragment implements Preference.OnPrefere
             Settings.System.putInt(resolver,
                     Settings.System.CUSTOM_BUTTON_BRIGHTNESS, buttonBrightness);
             return true;
-        }
+        }*/
         return false;
     }
 }
