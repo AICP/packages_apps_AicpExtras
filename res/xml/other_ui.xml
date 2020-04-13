@@ -22,16 +22,6 @@
     android:key="other_ui"
     android:title="@string/other_ui_title">
 
-    <Preference
-        android:key="stock_tuner"
-        android:enabled="true"
-        android:title="@string/systemui_tuner_title"
-        android:summary="@string/systemui_tuner_summary">
-        <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.android.systemui"
-            android:targetClass="com.android.systemui.tuner.TunerActivity" />
-    </Preference>
-
     <com.aicp.gear.preference.SystemSettingSeekBarPreference
         android:key="volume_dialog_timeout"
         android:title="@string/volume_dialog_timeout_title"
