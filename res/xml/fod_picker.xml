@@ -18,10 +18,11 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:key="fod_icon_picker"
     android:title="@string/fod_icon_picker_title">
 
     <!-- Preview -->
-    <com.aicp.extras.fragments.FODIconPicker
+    <com.aicp.extras.prefence.FODIconPicker
             android:key="fod_icon"
             android:layout="@layout/fod_picker_preference"
             android:selectable="false"/>
