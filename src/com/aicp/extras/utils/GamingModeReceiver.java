@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.aicp.extras.fragments;
+package com.aicp.extras.utils;
 
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
