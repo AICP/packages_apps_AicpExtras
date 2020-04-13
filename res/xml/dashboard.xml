@@ -116,6 +116,13 @@
             android:fragment="com.aicp.extras.fragments.SystemAnimations" />
 
         <PreferenceScreen
+            android:title="@string/gaming_mode_title"
+            android:key="gaming_mode"
+            android:summary="@string/gaming_mode_summary"
+            android:icon="@drawable/ic_gaming"
+            android:fragment="com.aicp.extras.fragments.GamingMode"/>
+
+        <PreferenceScreen
             android:title="@string/system_behaviour_title"
             android:key="system_behaviour"
             android:summary="@string/system_behaviour_summary"
@@ -129,12 +136,16 @@
             android:icon="@drawable/ic_settings_system_extensions"
             android:fragment="com.aicp.extras.fragments.SystemExtensions" />
 
-        <PreferenceScreen
-            android:title="@string/gaming_mode_title"
-            android:key="gaming_mode"
-            android:summary="@string/gaming_mode_summary"
-            android:icon="@drawable/ic_gaming"
-            android:fragment="com.aicp.extras.fragments.GamingMode"/>
+        <Preference
+            android:title="@string/systemui_tuner_title"
+            android:key="stock_tuner"
+            android:summary="@string/systemui_tuner_summary"
+            android:icon="@drawable/ic_tuner"
+            android:enabled="true">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.TunerActivity" />
+        </Preference>
 
     </PreferenceCategory>
 
