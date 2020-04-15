@@ -1031,4 +1031,26 @@
         <item>16</item>
         <item>18</item>
     </string-array>
+
+
+    <!-- FOD Recognizing fingerprint animations -->
+    <string-array name="fod_recog_animation_entries" translatable="false">
+        <item>@string/fod_recog_animation_normal</item>
+        <item>@string/fod_recog_animation_aod</item>
+        <item>@string/fod_recog_animation_light</item>
+        <item>@string/fod_recog_animation_pop</item>
+        <item>@string/fod_recog_animation_pulse</item>
+        <item>@string/fod_recog_animation_pulse_white</item>
+        <item>@string/fod_recog_animation_rhythm</item>
+    </string-array>
+
+    <string-array name="fod_recog_animation_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
 </resources>
