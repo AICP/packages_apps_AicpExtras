@@ -1035,13 +1035,15 @@
 
     <!-- FOD Recognizing fingerprint animations -->
     <string-array name="fod_recog_animation_entries" translatable="false">
-        <item>@string/fod_recog_animation_normal</item>
-        <item>@string/fod_recog_animation_aod</item>
-        <item>@string/fod_recog_animation_light</item>
-        <item>@string/fod_recog_animation_pop</item>
-        <item>@string/fod_recog_animation_pulse</item>
-        <item>@string/fod_recog_animation_pulse_white</item>
-        <item>@string/fod_recog_animation_rhythm</item>
+        <item>@string/fod_recog_animation_miui_normal</item>
+        <item>@string/fod_recog_animation_miui_aod</item>
+        <item>@string/fod_recog_animation_miui_light</item>
+        <item>@string/fod_recog_animation_miui_pop</item>
+        <item>@string/fod_recog_animation_miui_pulse</item>
+        <item>@string/fod_recog_animation_miui_pulse_white</item>
+        <item>@string/fod_recog_animation_miui_rhythm</item>
+        <item>@string/fod_recog_animation_op_cosmos</item>
+        <item>@string/fod_recog_animation_op_mclaren</item>
     </string-array>
 
     <string-array name="fod_recog_animation_values" translatable="false">
@@ -1052,5 +1054,7 @@
         <item>4</item>
         <item>5</item>
         <item>6</item>
+        <item>7</item>
+        <item>8</item>
     </string-array>
 </resources>
