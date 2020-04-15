@@ -158,7 +158,7 @@
     </PreferenceCategory>
     <PreferenceCategory
             android:key="fod_icon_picker"
-            android:title="@string/fod_icon_picker_title" >
+            android:title="@string/fod_icon_picker_category_title" >
 
             <!-- FOD icon picker -->
             <Preference
@@ -167,6 +167,12 @@
                 android:summary="@string/fod_icon_picker_summary"
                 android:fragment="com.aicp.extras.fragments.FODIconPickerFragment" />
 
+            <com.aicp.gear.preference.SystemSettingSwitchPreference
+                android:key="fod_icon_wallpaper_color"
+                android:title="@string/fod_wallpaper_color"
+                android:summary="@string/fod_wallpaper_color_summary"
+                android:defaultValue="false" />
+
             <!-- FOD recognizing animation -->
             <com.aicp.gear.preference.SystemSettingSwitchPreference
                 android:key="fod_recognizing_animation"
@@ -174,11 +180,13 @@
                 android:summary="@string/fod_recog_animation_summary"
                 android:defaultValue="false" />
 
-            <com.aicp.gear.preference.SystemSettingSwitchPreference
-                android:key="fod_icon_wallpaper_color"
-                android:title="@string/fod_wallpaper_color"
-                android:summary="@string/fod_wallpaper_color_summary"
-                android:defaultValue="false" />
+            <com.aicp.gear.preference.SystemSettingIntListPreference
+                android:key="fod_anim"
+                android:title="@string/fod_recog_animation_picker_title"
+                android:entries="@array/fod_recog_animation_entries"
+                android:entryValues="@array/fod_recog_animation_values"
+                android:defaultValue="0"
+                android:dependency="fod_recognizing_animation" />
 
     </PreferenceCategory>
 
