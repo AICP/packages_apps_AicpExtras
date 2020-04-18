@@ -225,7 +225,7 @@ public abstract class BaseSettingsFragment extends AicpPreferenceFragment {
     }
 
     protected boolean isMasterDependencyEnabled() {
-        return mMasterDependencyEnabled;
+        return mMasterDependencyEnabled != null && mMasterDependencyEnabled;
     }
 
     protected ContentResolver getContentResolver() {
