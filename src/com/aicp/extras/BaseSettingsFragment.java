@@ -168,6 +168,9 @@ public abstract class BaseSettingsFragment extends AicpPreferenceFragment {
                 preference.setEnabled(enabled);
             }
         }
+        if (enabled) {
+            onMasterDependencyEnabled();
+        }
     }
 
     public void registerObserverIfNeeded() {
@@ -228,4 +231,6 @@ public abstract class BaseSettingsFragment extends AicpPreferenceFragment {
     protected ContentResolver getContentResolver() {
         return getActivity().getContentResolver();
     }
+
+    protected void onMasterDependencyEnabled() {};
 }
