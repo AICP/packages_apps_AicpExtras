@@ -170,7 +170,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
     }
 
 
-    private void updateDependencies() {
+    protected void updateDependencies() {
         updateDependencies(null, null);
     }
 
