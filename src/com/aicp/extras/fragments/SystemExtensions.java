@@ -18,15 +18,22 @@
 package com.aicp.extras.fragments;
 
 import android.os.Bundle;
+import android.os.Handler;
 import androidx.preference.Preference;
+
+import java.net.InetAddress;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 
-public class SystemExtensions extends BaseSettingsFragment {
+public class SystemExtensions extends BaseSettingsFragment
+            implements Preference.OnPreferenceChangeListener {
 
     private static final String PREF_SYSTEM_APP_REMOVER = "system_app_remover";
+    private static final String PREF_ADBLOCK = "persist.aicp.hosts_block";
+
+    private Handler mHandler = new Handler();
 
     @Override
     protected int getPreferenceResource() {
@@ -39,5 +46,24 @@ public class SystemExtensions extends BaseSettingsFragment {
 
         Preference systemAppRemover = findPreference(PREF_SYSTEM_APP_REMOVER);
         Util.requireRoot(getActivity(), systemAppRemover);
+
+        findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (PREF_ADBLOCK.equals(preference.getKey())) {
+            // Flush the java VM DNS cache to re-read the hosts file.
+            // Delay to ensure the value is persisted before we refresh
+            mHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        InetAddress.clearDnsCache();
+                    }
+            }, 1000);
+            return true;
+        } else {
+            return false;
+        }
     }
 }
