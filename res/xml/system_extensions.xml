@@ -29,6 +29,12 @@
         <intent android:action="com.aicp.extras.ViewSystemAppRemover" />
     </Preference>
 
+    <com.aicp.gear.preference.SystemPropSwitchPreference
+        android:key="persist.aicp.hosts_block"
+        android:title="@string/hosts_block_title"
+        android:summary="@string/hosts_block_summary"
+        android:defaultValue="false" />
+
 <!--
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="enable_app_circle_bar"
