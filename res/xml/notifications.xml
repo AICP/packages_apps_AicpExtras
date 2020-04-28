@@ -81,6 +81,12 @@
         android:defaultValue="0" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="notification_headers"
+        android:title="@string/notification_headers_title"
+        android:summary="@string/notification_headers_summary"
+        android:defaultValue="false" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="vibrate_on_notifications"
         android:title="@string/vibrate_on_notifications_title"
         android:summary="@string/vibrate_on_notifications_summary"
