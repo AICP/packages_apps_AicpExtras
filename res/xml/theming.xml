@@ -23,14 +23,6 @@
     android:title="@string/theming_title"
     android:summary="@string/theming_summary">
 
-    <com.aicp.gear.preference.OverlayColorMatrixListPreference
-        android:key="theming_accent"
-        android:title="@string/theming_accent_title"
-        aicpextras:previewResourceName="accent_device_default_dark"
-        aicpextras:previewResourceNameLight="accent_device_default_light"
-        aicpextras:overlayCategory="aicp.accent"
-        aicpextras:overlayTarget="android" />
-
     <!-- overlayTarget="anrdoid" is enough:
             we have some special treatment implemented for this category -->
     <com.aicp.gear.preference.OverlayPreference
@@ -72,6 +64,13 @@
         android:title="@string/theming_light_title">
 
         <com.aicp.gear.preference.OverlayColorMatrixListPreference
+            android:key="theming_accent_light"
+            android:title="@string/theming_accent_title"
+            aicpextras:previewResourceName="accent_device_default_light"
+            aicpextras:overlayCategory="aicp.accent.light"
+            aicpextras:overlayTarget="android" />
+
+        <com.aicp.gear.preference.OverlayColorMatrixListPreference
             android:key="theming_background_light"
             android:title="@string/theming_background_title"
             aicpextras:previewResourceName="background_device_default_light"
@@ -96,6 +95,13 @@
     <PreferenceCategory
         android:key="theming_dark"
         android:title="@string/theming_dark_title">
+
+        <com.aicp.gear.preference.OverlayColorMatrixListPreference
+            android:key="theming_accent_dark"
+            android:title="@string/theming_accent_title"
+            aicpextras:previewResourceName="accent_device_default_dark"
+            aicpextras:overlayCategory="aicp.accent.dark"
+            aicpextras:overlayTarget="android" />
 
         <com.aicp.gear.preference.OverlayColorMatrixListPreference
             android:key="theming_background_dark"
