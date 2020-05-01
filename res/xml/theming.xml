@@ -38,6 +38,12 @@
         aicpextras:overlayTarget="android" />
 
     <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_corner_radius"
+        android:title="@string/theming_corners_title"
+        aicpextras:overlayCategory="aicp.corner_radius"
+        aicpextras:overlayTarget="android" />
+
+    <com.aicp.gear.preference.OverlayPreference
         android:key="theming_qs_shape"
         android:title="@string/theming_qs_shape_title"
         aicpextras:overlayCategory="aicp.qs_fg"
