@@ -55,16 +55,12 @@
         android:entries="@array/media_scanner_on_boot_entries"
         android:entryValues="@array/media_scanner_on_boot_values"
         android:defaultValue="0" />
--->
 
-    <!-- Suspend Actions -->
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-        android:key="start_screen_state_service"
+    <PreferenceScreen
+        android:key="suspend_actions"
         android:title="@string/screen_state_toggles_title"
-        android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.SuspendActions" />
 
-<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="edge_service_for_gestures"
         android:title="@string/edge_gesture_service_title"

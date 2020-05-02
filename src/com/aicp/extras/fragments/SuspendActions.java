@@ -39,7 +39,7 @@ public class SuspendActions extends BaseSettingsFragment
             implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "SuspendActions";
-/*
+
     private static final String SCREEN_STATE_TOOGLES_ENABLE = "screen_state_toggles_enable_key";
     private static final String SCREEN_STATE_TOOGLES_TWOG = "screen_state_toggles_twog";
     private static final String SCREEN_STATE_TOOGLES_GPS = "screen_state_toggles_gps";
@@ -59,7 +59,7 @@ public class SuspendActions extends BaseSettingsFragment
     private SeekBarPreferenceCham mMinutesOnDelay;
     private PreferenceCategory mMobileDateCategory;
     private PreferenceCategory mLocationCategory;
-*/
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.suspend_actions;
