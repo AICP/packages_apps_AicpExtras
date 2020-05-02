@@ -51,6 +51,12 @@
             android:defaultValue="false"/>
 
        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="screen_state_threeg"
+            android:title="@string/screen_state_toggles_threeg"
+            android:summary="@string/screen_state_toggles_threeg_summary"
+            android:defaultValue="false"/>
+
+       <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="screen_state_mobile_data"
             android:title="@string/screen_state_toggles_mobile_data"
             android:summary="@string/screen_state_toggles_mobile_data_summary"
