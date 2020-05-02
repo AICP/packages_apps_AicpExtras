@@ -44,16 +44,28 @@
         android:key="screen_state_toggles_mobile_key"
         android:title="@string/screen_state_toggles_mobile_title">
 
-       <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="screen_state_twog"
             android:title="@string/screen_state_toggles_twog"
             android:summary="@string/screen_state_toggles_twog_summary"
+            aicpextras:thereCanBeOnlyOneGroupId="1"
+            aicpextras:plainSwitch="true"
             android:defaultValue="false"/>
 
-       <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+            android:key="screen_state_threeg"
+            android:title="@string/screen_state_toggles_threeg"
+            android:summary="@string/screen_state_toggles_threeg_summary"
+            aicpextras:thereCanBeOnlyOneGroupId="1"
+            aicpextras:plainSwitch="true"
+            android:defaultValue="false"/>
+
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="screen_state_mobile_data"
             android:title="@string/screen_state_toggles_mobile_data"
             android:summary="@string/screen_state_toggles_mobile_data_summary"
+            aicpextras:thereCanBeOnlyOneGroupId="1"
+            aicpextras:plainSwitch="true"
             android:defaultValue="false"/>
     </PreferenceCategory>
 
