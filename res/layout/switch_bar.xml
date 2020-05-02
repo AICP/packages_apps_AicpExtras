@@ -27,14 +27,14 @@
               android:maxLines="2"
               android:ellipsize="end"
               android:textAppearance="@style/TextAppearance.Switch"
-              android:textColor="?android:attr/textColorPrimary"
+              android:textColor="?attr/switchBarTextColor"
               android:textAlignment="viewStart" />
 
     <com.aicp.extras.widget.ToggleSwitch android:id="@+id/switch_widget"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:theme="@style/ThemeOverlay.SwitchBar.Settings" />
+            android:theme="@style/Widget.SwitchBar.Switch" />
 
 </merge>
 

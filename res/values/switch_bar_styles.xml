@@ -12,11 +12,34 @@
     <style name="ThemeOverlay.SwitchBar.Settings" parent="@android:style/ThemeOverlay.Material.ActionBar">
         <item name="switchBarMarginStart">@dimen/switchbar_margin_start</item>
         <item name="switchBarMarginEnd">@dimen/switchbar_margin_end</item>
-        <item name="switchBarBackgroundColor">?android:attr/colorSecondary</item>
+        <item name="switchBarBackgroundColor">@*android:color/material_grey_600</item>
+        <item name="switchBarBackgroundActivatedColor">?android:attr/colorAccent</item>
+        <item name="switchBarTextColor">?android:attr/textColorPrimaryInverse</item>
+
+        <item name="switchBarTrackTint">#BFFFFFFF</item>
+        <item name="switchBarThumbTint">@android:color/white</item>
     </style>
 
     <style name="ThemeOverlay.SwitchBar.Settings.Dark">
-        <item name="switchBarBackgroundColor">#ff424242</item>
+        <item name="switchBarTrackTint">#82000000</item>
+        <item name="switchBarThumbTint">@android:color/black</item>
+    </style>
+
+    <style name="Widget.SwitchBar.Switch" parent="@android:style/Widget.Material.CompoundButton.Switch">
+        <item name="android:trackTint">?switchBarTrackTint</item>
+        <item name="android:thumbTint">?switchBarThumbTint</item>
+        <item name="android:minHeight">@dimen/switchbar_min_tap_target_size</item>
+        <item name="android:minWidth">@dimen/switchbar_min_tap_target_size</item>
+    </style>
+
+    <!-- Less accent theme -->
+    <style name="ThemeOverlay.SwitchBar.Settings.LessAccent">
+        <item name="switchBarBackgroundColor">?android:attr/colorSecondary</item>
+        <item name="switchBarBackgroundActivatedColor">?android:attr/colorSecondary</item>
+        <item name="switchBarTextColor">?android:attr/textColorPrimary</item>
+
+        <item name="switchBarTrackTint">@null</item>
+        <item name="switchBarThumbTint">@null</item>
     </style>
 
 </resources>

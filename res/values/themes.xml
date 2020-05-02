@@ -36,6 +36,10 @@
         <item name="color_settings_icon">?android:attr/colorAccent</item>
     </style>
 
+    <style name="AppTheme_LessAccent" parent="@style/AppTheme">
+        <item name="switchBarTheme">@style/ThemeOverlay.SwitchBar.Settings.LessAccent</item>
+    </style>
+
     <style name="ChangelogTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorAccent">@color/accent_auto</item>
         <item name="changelog_color_bg">?android:attr/colorBackground</item>
