@@ -52,6 +52,8 @@ public abstract class BaseActivity extends FragmentActivity {
         switch (themePref) {
             case 6:
                 return R.style.AppTheme_MoreAccent;
+            case 8:
+                return R.style.AppTheme_LessAccent;
             default:
                 return R.style.AppTheme;
         }
