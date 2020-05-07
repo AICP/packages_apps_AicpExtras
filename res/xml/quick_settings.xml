@@ -55,6 +55,12 @@
         android:defaultValue="false"
         android:dependency="qs_tile_title_visibility" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="dismiss_all_button"
+        android:title="@string/enable_clear_all_button"
+        android:summary="@string/enable_clear_all_button_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:key="qs_header_category"
         android:title="@string/qs_header_category_title">
