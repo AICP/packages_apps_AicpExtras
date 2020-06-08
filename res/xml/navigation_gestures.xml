@@ -22,6 +22,12 @@
     android:key="navigation_gestures"
     android:title="@string/use_bottom_gesture_title">
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="back_swipe_extended"
+        android:title="@string/back_swipe_extended_title"
+        android:summary="@string/back_swipe_extended_summary"
+        android:defaultValue="false" />
+
     <com.aicp.gear.preference.SystemSettingListPreference
         android:key="long_back_swipe_timeout"
         android:title="@string/long_back_swipe_timeout_title"
