@@ -35,6 +35,20 @@
         android:defaultValue="false"/>
 
     <PreferenceCategory
+        android:key="gesture_nav_tweaks_category"
+        android:title="@string/navbar_gesture_tweaks_cat_title">
+
+        <PreferenceScreen
+            android:key="gesture_nav_custom_options"
+            android:fragment="com.aicp.extras.fragments.NavigationGestureSettings"
+            android:title="@string/use_bottom_gesture_title"
+            android:summary="@string/navbar_gesture_tweaks_pref_summary"
+            android:dependency="gesture_nav_tweaks_category"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="hardware_keys"
 	      android:title="@string/hardware_keys_category">
 

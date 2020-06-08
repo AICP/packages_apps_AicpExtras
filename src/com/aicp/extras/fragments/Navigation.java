@@ -35,9 +35,12 @@ import com.aicp.extras.R;
 import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
 import com.aicp.gear.preference.SeekBarPreferenceCham;
 
+import com.android.internal.util.aicp.AicpUtils;
 import com.android.internal.util.aicp.DeviceUtils;
 import com.android.internal.util.hwkeys.ActionConstants;
 import com.android.internal.util.hwkeys.ActionUtils;
+
+import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
 
 public class Navigation extends BaseSettingsFragment implements
             Preference.OnPreferenceChangeListener {
@@ -53,6 +56,7 @@ public class Navigation extends BaseSettingsFragment implements
 
     private static final String CATEGORY_HWKEY = "hardware_keys";
     private static final String CATEGORY_WAKE = "wake_keys";
+    private static final String CATEGORY_GESTURE_NAV_TWEAKS = "gesture_nav_tweaks_category";
 
     // Masks for checking presence of hardware keys.
     // Must match values in frameworks/base/core/res/res/values/config.xml
@@ -71,11 +75,13 @@ public class Navigation extends BaseSettingsFragment implements
     private SwitchPreference mSwapHWNavKeys;
     private PreferenceCategory mHwKeyCategory;
     private PreferenceCategory mWakeKeysCategory;
+    private PreferenceCategory mGestureTweaksCategory;
 
     private SystemSettingMasterSwitchPreference mNavigationBar;
     private boolean mIsNavSwitchingMode = false;
     private boolean mHwKeysSupported;
     private boolean mNeedsNavbar;
+    private boolean isGestureNavigation;
 
     private Handler mHandler;
 
@@ -93,6 +99,7 @@ public class Navigation extends BaseSettingsFragment implements
 
         mNeedsNavbar = ActionUtils.hasNavbarByDefault(getActivity());
         mHwKeysSupported = ActionUtils.isHWKeysSupported(getActivity());
+        isGestureNavigation = AicpUtils.isThemeEnabled(NAV_BAR_MODE_GESTURAL_OVERLAY);
 
         mHwKeyCategory = (PreferenceCategory) prefScreen
                 .findPreference(CATEGORY_HWKEY);
@@ -110,6 +117,8 @@ public class Navigation extends BaseSettingsFragment implements
         mManualButtonBrightness.setOnPreferenceChangeListener(this);
         mButtonTimoutBar = (SeekBarPreferenceCham) findPreference(KEY_BUTTON_TIMEOUT);
         mButtonTimoutBar.setOnPreferenceChangeListener(this);
+
+        mGestureTweaksCategory = (PreferenceCategory) findPreference(CATEGORY_GESTURE_NAV_TWEAKS);
 
         // bits for hardware keys present on device
         final int deviceKeys = getResources().getInteger(
@@ -182,6 +191,10 @@ public class Navigation extends BaseSettingsFragment implements
             } else {
                 mWakeKeysCategory.setVisible(true);
             }
+        }
+
+        if (!isGestureNavigation) {
+            mGestureTweaksCategory.getParent().removePreference(mGestureTweaksCategory);
         }
         if (navigationBarEnabled) {
             updateHWKeysVisibility(false);
