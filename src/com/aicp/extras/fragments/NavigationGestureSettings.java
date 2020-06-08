@@ -27,10 +27,13 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
 import com.aicp.gear.preference.SystemSettingListPreference;
+import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
 public class NavigationGestureSettings extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String KEY_LONG_BACK_SWIPE_TIMEOUT = "long_back_swipe_timeout";
+    private static final String KEY_BACK_SWIPE_EXTENDED = "back_swipe_extended";
     private static final String KEY_LEFT_SWIPE_ACTIONS = "left_long_back_swipe_action";
     private static final String KEY_RIGHT_SWIPE_ACTIONS = "right_long_back_swipe_action";
     private static final String KEY_LEFT_SWIPE_APP_ACTION = "left_swipe_app_action";
@@ -44,6 +47,9 @@ public class NavigationGestureSettings extends BaseSettingsFragment implements
 
     private Preference mLeftSwipeAppSelection;
     private Preference mRightSwipeAppSelection;
+
+    private SystemSettingListPreference mTimeout;
+    private SystemSettingSwitchPreference mExtendedSwipe;
 
     @Override
     protected int getPreferenceResource() {
@@ -79,6 +85,15 @@ public class NavigationGestureSettings extends BaseSettingsFragment implements
                 Settings.System.RIGHT_LONG_BACK_SWIPE_ACTION, 0, UserHandle.USER_CURRENT) == 5/*action_app_action*/;
         mRightSwipeAppSelection.setEnabled(isAppSelection);
         customAppCheck();
+
+        mTimeout = (SystemSettingListPreference) findPreference(KEY_LONG_BACK_SWIPE_TIMEOUT);
+        mExtendedSwipe = (SystemSettingSwitchPreference) findPreference(KEY_BACK_SWIPE_EXTENDED);
+        boolean extendedSwipe = Settings.System.getIntForUser(resolver,
+            Settings.System.BACK_SWIPE_EXTENDED, 0,
+            UserHandle.USER_CURRENT) != 0;
+        mExtendedSwipe.setChecked(extendedSwipe);
+        mExtendedSwipe.setOnPreferenceChangeListener(this);
+        mTimeout.setEnabled(!mExtendedSwipe.isChecked());
     }
 
     @Override
@@ -105,6 +120,10 @@ public class NavigationGestureSettings extends BaseSettingsFragment implements
             mRightSwipeAppSelection.setEnabled(rightSwipeActions == 5);
             customAppCheck();
             return true;
+        } else if (preference == mExtendedSwipe) {
+            boolean enabled = ((Boolean) newValue).booleanValue();
+            mExtendedSwipe.setChecked(enabled);
+            mTimeout.setEnabled(!enabled);
         }
         return false;
     }
