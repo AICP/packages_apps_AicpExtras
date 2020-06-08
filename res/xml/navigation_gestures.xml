@@ -62,6 +62,51 @@
             android:targetPackage="com.android.systemui"
             android:targetClass="com.android.systemui.statusbar.phone.RightBackSwipeCustomApp" />
     </Preference>
+
+    <PreferenceCategory
+        android:key="left_vertical_swipe"
+        android:dependency="back_swipe_extended"
+        android:title="@string/left_vertical_swipe_key_title">
+
+        <com.aicp.gear.preference.SystemSettingListPreference
+            android:key="left_vertical_back_swipe_action"
+            android:title="@string/left_vertical_swipe_actions_title"
+            android:entries="@array/long_swipe_actions_entries"
+            android:entryValues="@array/long_swipe_actions_values"
+            android:defaultValue="0" />
+
+        <Preference
+            android:key="left_vertical_swipe_app_action"
+            android:title="@string/left_vertical_swipe_app_action_title"
+            android:summary="@string/long_swipe_app_select_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.statusbar.phone.LeftBackVerticalSwipeCustomApp" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="right_vertical_swipe"
+        android:dependency="back_swipe_extended"
+        android:title="@string/right_vertical_swipe_key_title">
+
+        <com.aicp.gear.preference.SystemSettingListPreference
+            android:key="right_vertical_back_swipe_action"
+            android:title="@string/right_vertical_swipe_actions_title"
+            android:entries="@array/long_swipe_actions_entries"
+            android:entryValues="@array/long_swipe_actions_values"
+            android:defaultValue="0" />
+
+        <Preference
+            android:key="right_vertical_swipe_app_action"
+            android:title="@string/right_vertical_swipe_app_action_title"
+            android:summary="@string/long_swipe_app_select_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.statusbar.phone.RightBackVerticalSwipeCustomApp" />
+        </Preference>
+    </PreferenceCategory>
+
     <com.android.settingslib.widget.FooterPreference
         android:title="@string/gesture_nav_tweaks_footer_info" />
 </PreferenceScreen>
