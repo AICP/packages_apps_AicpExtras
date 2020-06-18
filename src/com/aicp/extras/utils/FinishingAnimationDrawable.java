@@ -21,7 +21,7 @@ import android.graphics.drawable.AnimationDrawable;
 
 /**
  * AnimationDrawable with OnAnimationFinishedListener.
- * Substitute to frameworks patch http://gerrit.aicp-rom.com/#/c/34280/
+ * Substitute to frameworks patch https://gerrit.aicp-rom.com/#/c/34280/
  */
 public class FinishingAnimationDrawable extends AnimationDrawable {
 
