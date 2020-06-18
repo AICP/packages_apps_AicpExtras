@@ -223,7 +223,7 @@ public class AnonymousStats extends BaseSettingsFragment implements
 		} else if (which == DialogInterface.BUTTON_NEGATIVE) {
 			mEnableReporting.setChecked(false);
 		} else {
-			Uri uri = Uri.parse("http://aicp-rom.com/");
+			Uri uri = Uri.parse("https://aicp-rom.com/");
 			startActivity(new Intent(Intent.ACTION_VIEW, uri));
 		}
 	}

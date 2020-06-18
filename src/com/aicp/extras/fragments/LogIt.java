@@ -74,7 +74,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     private static final String HASTE_DMESG_KEY = new File(Environment
             .getExternalStorageDirectory(), "aicp_haste_dmesg_key").getAbsolutePath();
 
-    private static final String AICP_HASTE = "http://haste.aicp-rom.com/documents";
+    private static final String AICP_HASTE = "https://haste.aicp-rom.com/documents";
     private static final File sdCardDirectory = Environment.getExternalStorageDirectory();
     private static final File logcatFile = new File(sdCardDirectory, "aicp_logcat.txt");
     private static final File logcatHasteKey = new File(sdCardDirectory, "aicp_haste_logcat_key");
@@ -232,7 +232,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         if (shareHaste) {
             command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + LOGCAT_FILE
                     + "&& curl -s -X POST -T " + LOGCAT_FILE + " " + AICP_HASTE
-                    + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > "
+                    + " | cut -d'\"' -f4 | echo \"https://haste.aicp-rom.com/$(cat -)\" > "
                             + HASTE_LOGCAT_KEY;
         } else {
             command += " > " + LOGCAT_FILE;
@@ -245,7 +245,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         if (shareHaste) {
             command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + LOGCAT_RADIO_FILE
                     + "&& curl -s -X POST -T " + LOGCAT_RADIO_FILE + " " + AICP_HASTE
-                    + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > "
+                    + " | cut -d'\"' -f4 | echo \"https://haste.aicp-rom.com/$(cat -)\" > "
                             + HASTE_LOGCAT_RADIO_KEY;
         } else {
             command += " > " + LOGCAT_RADIO_FILE;
@@ -258,7 +258,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         if (shareHaste) {
             command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + KMSG_FILE
                     + " && curl -s -X POST -T " + KMSG_FILE + " " + AICP_HASTE
-                    + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > "
+                    + " | cut -d'\"' -f4 | echo \"https://haste.aicp-rom.com/$(cat -)\" > "
                             + HASTE_KMSG_KEY;
         } else {
             command += " > " + KMSG_FILE;
@@ -271,7 +271,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         if (shareHaste) {
             command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + DMESG_FILE
                     + "&& curl -s -X POST -T " + DMESG_FILE + " " + AICP_HASTE
-                    + " | cut -d'\"' -f4 | echo \"http://haste.aicp-rom.com/$(cat -)\" > "
+                    + " | cut -d'\"' -f4 | echo \"https://haste.aicp-rom.com/$(cat -)\" > "
                             + HASTE_DMESG_KEY;
         } else {
             command += " > " + DMESG_FILE;
