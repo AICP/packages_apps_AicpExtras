@@ -188,6 +188,13 @@
                 android:defaultValue="0"
                 android:dependency="fod_recognizing_animation" />
 
+	    <!-- FOD color -->
+            <com.aicp.gear.preference.SystemSettingColorPickerPreference
+            android:key="fod_solid_color"
+            android:title="@string/fod_solid_color_title"
+            android:summary="@string/systemui_restart_title"
+            android:defaultValue="0xff00ffff" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
