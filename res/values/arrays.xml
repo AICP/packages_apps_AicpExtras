@@ -1052,6 +1052,21 @@
         <item>19</item>
     </string-array>
 
+    <!-- FOD Color -->
+    <string-array name="fod_color_entries">
+        <item>@string/fod_color_default</item>
+        <item>@string/fod_color_green</item>
+        <item>@string/fod_color_cyan</item>
+        <item>@string/fod_color_yellow</item>
+        <item>@string/fod_color_white</item>
+    </string-array>
+    <string-array name="fod_color_values" translatable="false">
+        <item>0</item>            <!-- default -->
+        <item>-16711936</item>    <!-- green -->
+        <item>-16711681</item>    <!-- cyan -->
+        <item>-256</item>         <!-- yellow -->
+        <item>-1</item>           <!-- white -->
+    </string-array>
 
     <!-- FOD Recognizing fingerprint animations -->
     <string-array name="fod_recog_animation_entries" translatable="false">
