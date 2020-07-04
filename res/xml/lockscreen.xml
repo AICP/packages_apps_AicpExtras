@@ -160,6 +160,15 @@
             android:key="fod_icon_picker"
             android:title="@string/fod_icon_picker_category_title" >
 
+	    <!-- FOD color -->
+            <com.aicp.gear.preference.SystemSettingListPreference
+                android:key="fod_color"
+                android:title="@string/fod_color_title"
+                android:summary="@string/fod_color_summary"
+                android:entries="@array/fod_color_entries"
+                android:entryValues="@array/fod_color_values"
+                android:defaultValue="-16711936" />
+
             <!-- FOD icon picker -->
             <Preference
                 android:key="fod_icon_picker_category"
