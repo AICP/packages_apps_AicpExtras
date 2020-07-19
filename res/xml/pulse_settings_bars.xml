@@ -1,0 +1,28 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    android:key="pulse_fading_bars"
+    android:title="@string/pulse_solid_dimen_category" >
+
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="pulse_solid_units_opacity"
+        android:title="@string/pulse_solid_units_opacity"
+        android:max="255"
+        android:min="0"
+        android:defaultValue="200"/>
+
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="pulse_solid_units_count"
+        android:title="@string/pulse_solid_units_count"
+        android:max="128"
+        android:min="32"
+        aicpextras:interval="16"
+        android:defaultValue="64"/>
+
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="pulse_solid_fudge_factor"
+        android:title="@string/pulse_custom_fudge_factor"
+        android:max="7"
+        android:min="2"
+        android:defaultValue="5"/>
+
+</PreferenceScreen>
