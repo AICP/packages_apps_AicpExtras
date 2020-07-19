@@ -17,16 +17,23 @@
  */
 -->
 <resources>
-    <string name="app_name">Extras AICP</string>
+    <!-- AICP Extras -->
+    <!-- Dashboard -->
     <string name="user_interface_category">Interface utilisateur</string>
     <string name="system_category">Système</string>
     <string name="other_category">Autre</string>
+    <!-- Status bar -->
     <string name="status_bar_title">Barre d\'état</string>
     <string name="status_bar_summary">Modifier l’apparence de barre de statut</string>
+    <!-- StatusBar Battery Options -->
     <string name="battery_style_circle">Cercle</string>
     <string name="battery_style_text">Texte</string>
     <string name="battery_percent_enabled">Activé</string>
     <string name="battery_percent_disabled">Désactivé</string>
+    <!-- Bluetooth status -->
+    <!-- Hide notch -->
+    <!-- Statusbar net monitor -->
+    <!-- Battery bar -->
     <string name="battery_bar_title">Barre de batterie</string>
     <string name="battery_bar_style_title">Alignement</string>
     <string name="battery_bar_thickness_title">Épaisseur</string>
@@ -35,14 +42,18 @@
     <string name="battery_bar_style_center_mirrored">Centrée, mode miroir</string>
     <string name="battery_bar_style_reversed">Inversé</string>
     <string name="battery_bar_use_charging_color_title">Couleur de charge personnalisée</string>
+    <!-- Smart pulldown -->
     <string name="smart_pulldown_off">désactivé</string>
     <string name="smart_pulldown_none">aucune notification</string>
+    <!-- Quick pull down-->
     <string name="quick_pulldown_off">Désactivé</string>
     <string name="quick_pulldown_left">Gauche</string>
     <string name="quick_pulldown_right">Droit</string>
     <string name="quick_pulldown_always">Toujours</string>
+    <!-- Double tap to sleep on status bar -->
     <string name="status_bar_double_tap_to_sleep_title">Tapoter pour mettre en veille</string>
     <string name="status_bar_double_tap_to_sleep_summary">Appui double sur la barre d\'état pour éteindre l\'écran</string>
+    <!-- Statusbar Clock options -->
     <string name="clock_title_enable">Alignement</string>
     <string name="status_bar_clock_seconds_title">Secondes</string>
     <string name="status_bar_am_pm_title">AM/PM</string>
@@ -71,7 +82,9 @@
     <string name="clock_position_left">Horloge à gauche</string>
     <string name="menu_cancel">Annuler</string>
     <string name="menu_save">Sauvegarder</string>
+    <!-- Statusbar categories -->
     <string name="status_bar_battery_category_title">Options batterie</string>
+    <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">Logo</string>
     <string name="status_bar_logo_title">Logo</string>
     <string name="status_bar_logo_summary">Activer pour afficher le logo dans la barre d\'état</string>
@@ -87,12 +100,28 @@
     <string name="status_bar_logo_style_ios">iOS</string>
     <string name="status_bar_logo_style_emoticon">Emoticônes</string>
     <string name="status_bar_logo_style_emoticon_neutral">Émoticône neutre</string>
+    <!-- Show 4G instead of LTE -->
+    <!-- Roaming indicator icon -->
+    <!-- Notifications -->
+    <!-- Heads up -->
+    <!-- Force expanded notifications -->
+    <!-- Notification guts kill app button -->
+    <!-- Quick settings -->
     <string name="quick_settings_title">Paramètres rapides</string>
+    <!-- Disable music track title in QS tile -->
+    <!-- Small quick settings scroller -->
+    <!-- Show expand indicator in dualtarget QS tiles -->
+    <!-- QS rows and columns -->
+    <!-- QS tiles title visibility -->
+    <!-- QS Headers -->
     <string name="header_provider_disabled">Désactivé</string>
+    <!-- QS Headers -->
     <string name="status_bar_custom_header_title">Activer</string>
     <string name="status_bar_custom_header_shadow_title">Ombre</string>
     <string name="status_bar_custom_header_shadow_summary">Appliquer une ombre sur l\'image d\'arrière-plan de l\'en-tête contextuel, pour une meilleure visibilité des images lumineuses</string>
     <string name="custom_header_title">En-tête contextuel</string>
+    <!-- QS Settings background panel blur -->
+    <!-- Tiles animation style -->
     <string name="qs_tile_animation_style_off">Aucune animation</string>
     <string name="qs_tile_animation_style_flip">Inverser</string>
     <string name="qs_tile_animation_style_rotate">Rotation</string>
@@ -105,6 +134,9 @@
     <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">Accélérer ralentir</string>
     <string name="qs_tile_animation_interpolator_bounceInterpolator">Rebondir</string>
     <string name="qs_tile_animation_interpolator_anticipateInterpolator">Anticiper</string>
+    <!-- Recents -->
+    <!-- Stock Recents component Style -->
+    <!-- Recents panel settings -->
     <string name="recents_clear_all_location_top_right">En haut à droite</string>
     <string name="recents_clear_all_location_top_left">En haut à gauche</string>
     <string name="recents_clear_all_location_top_center">En haut au milieu</string>
@@ -112,6 +144,8 @@
     <string name="recents_clear_all_location_bottom_left">En bas à gauche</string>
     <string name="recents_clear_all_location_bottom_center">En bas au milieu</string>
     <string name="recents_show_membar_title">Barre de mémoire</string>
+    <!-- Oreo Recents Style -->
+    <!-- Slim recents -->
     <string name="recents_max_apps_title">Max. d\'applications autorisées</string>
     <string name="recent_panel_scale_title">Taille</string>
     <string name="recent_panel_expanded_mode_title">Mode étendu</string>
@@ -124,42 +158,82 @@
     <string name="recent_card_bg_color_title">Couleur de fond de carte</string>
     <string name="default_iconpack_title">Icônes par défaut</string>
     <string name="slim_recents_enter_exit_animation_fade">Fondu</string>
+    <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Afficher sur le bord gauche</string>
     <string name="recent_panel_lefty_mode_summary">Afficher le panneau des applications récentes sur le bord gauche</string>
+    <!-- Slim Recent App Sidebar -->
     <string name="recent_app_sidebar_title">Barre d\'application latérale</string>
     <string name="recent_app_sidebar_scale_title">Taille</string>
+    <!-- Slim recents membar -->
     <string name="slim_recents_mem_display_category_title">Barre de mémoire</string>
     <string name="slim_recents_mem_display_title">Afficher la barre d\'utilisation mémoire</string>
     <string name="slim_recents_mem_display_summaryOn">Barre de mémoire activé</string>
     <string name="slim_recents_mem_display_summaryOff">Barre de mémoire désactivé</string>
     <string name="slim_recents_mem_display_color">Couleur de la barre de mémoire RAM</string>
+    <!-- Lockscreen -->
     <string name="lockscreen_title">Écran de Verrouillage</string>
+    <!-- Double tap to sleep on lockscreen -->
     <string name="double_tap_sleep_lockscreen">Double appui pour mettre en veille</string>
     <string name="double_tap_sleep_lockscreen_summary">Double appui pour mettre en vieille sur l\'écran de vérouillage</string>
+    <!-- Media art -->
+    <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Informations sur la batterie</string>
+    <!-- Power menu on secure lockscreen -->
     <string name="lockscreen_enable_power_menu_title">Écran de déverrouillage</string>
+    <!-- Disable QS on secure Lockscreen -->
+    <!-- Scramble PIN layout when unlocking -->
+    <!-- Quick unlock -->
+    <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_summary_on">Vibrer en cas de succès de l\'authentification par empreintes digitales activé</string>
     <string name="fprint_sucess_vib_summary_off">Vibrer en cas de succès de l\'authentification par empreintes digitales désactivé</string>
+    <!-- Lockscreen Clock styles -->
+    <!-- On-The-Go -->
+    <!-- Screenrecord -->
+    <!-- Screenshot -->
+    <!-- Reboot -->
+    <!-- Advanced Reboot -->
+    <!-- Emergency -->
+    <!-- Power Menu -->
     <string name="global_actions_power_menu_title">Écran de déverrouillage</string>
+    <!-- Hide statusbar on lockscreen -->
+    <!-- Other UI tweaks -->
+    <!-- Volume dialog timeout -->
+    <!-- Swap volume keys based on device rotation -->
+    <!-- Volume keys control rint tone stream -->
+    <!-- Volume keys control music playback -->
+    <!-- Toast icon switch -->
     <string name="toast_icon_title">Icône Toast</string>
     <string name="toast_icon_summary">Afficher l\'icône de l\'application correspondante dans la notification Toast</string>
+    <!-- Show VoLTE icon on statusbar -->
+    <!-- Show location icon on statusbar -->
+    <!-- Power Button - Long press for torch -->
     <string name="torch_long_press_power_timeout_never">Jamais</string>
     <string name="torch_long_press_power_timeout_1min">1 Minute</string>
     <string name="torch_long_press_power_timeout_5min">5 minutes</string>
     <string name="torch_long_press_power_timeout_10min">10 minutes</string>
+    <!-- Setting: show CPU info -->
     <string name="show_cpu_info">Afficher les infos CPU</string>
+    <!-- Turn on display when power connected; turn off display when power disconnected -->
     <string name="wake_when_plugged_or_unplugged_title">Réveiller au branchement</string>
     <string name="wake_when_plugged_or_unplugged_summary">Allumer l\'écran lorsque l\'appareil est connecté à une source d\'alimentation</string>
+    <!-- Launch music player when headset is connected -->
+    <!-- System animations -->
     <string name="system_animations_title">Affichage et animations</string>
     <string name="custom_bootanimation_title">Animation de démarrage</string>
     <string name="custom_bootanimation_summary">Sélectionner une animation de démarrage. Pour chaque changement, l\'animation de démarrage sera sauvegardée dans le dossier AICP_backup dans votre mémoire interne. Les anciennes animations doivent être supprimées manuellement si vous ne les utilisez plus.</string>
     <string name="bootanimation_apply">Appliquer</string>
+    <!-- System behaviour -->
+    <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Son de la capture d\'écran</string>
     <string name="screenshot_sound_summary">Jouer un son lors de la prise de capture d\'écran</string>
+    <!-- Hostname setting -->
     <string name="selinux_category">SELinux</string>
     <string name="selinux_mode_title">Mode de Selinux</string>
+    <!-- System extensions -->
+    <!-- System app remover -->
     <string name="system_app_remover_title">Suppression d\'application système</string>
     <string name="system_app_remover_summary">Supprimer les applications pre-installées</string>
+    <!-- Log it -->
     <string name="logcat_title">Logcat</string>
     <string name="kmesg_title">Kmesg</string>
     <string name="dmesg_title">Dmesg</string>
@@ -167,13 +241,14 @@
     <string name="log_it_dialog_title">Engage</string>
     <string name="logcat_warning">Partage la ou va te faire voir !</string>
     <string name="share_title">Partage...</string>
-    <string name="log_it_share_subject">Journaux AICP</string>
     <string name="log_it_now_summary">Soyez patiens le temps que les logs soient crées</string>
     <string name="log_it_share_type_title">Partager la méthode</string>
     <string name="log_it_share_type_zip">Fichier ZIP</string>
     <string name="log_it_share_via">Partager via</string>
+    <!-- AE settings -->
     <string name="theme_title">Thème</string>
     <string name="ae_launcher_enabled_title">Afficher l\'icône du launcher</string>
+    <!-- About -->
     <string name="about_title">A propos</string>
     <string name="about_summary">Afficher des informations au sujet de cette ROM</string>
     <string name="info_category">Information</string>
@@ -191,6 +266,7 @@
     <string name="device_maintainer_dialog">Mainteneur de l\'appareil</string>
     <string name="device_maintainers_dialog">Mainteneurs de l\'appareil</string>
     <string name="device_maintainer_default">Inconnu</string>
+    <!-- Other / general purpose -->
     <string name="on">Activé</string>
     <string name="off">Désactivé</string>
     <string name="reset">Réinitialiser </string>
@@ -199,22 +275,60 @@
     <string name="cannot_get_su">Permission de superuser non accordée, l\'action a échoué</string>
     <string name="launcher_shortcut_disabled_message">Raccourci désactivé</string>
     <string name="hidden_anim_activity_title">L\'heure du yoga !!!</string>
+    <!-- Sensor block per-package -->
+    <!-- Weather - OmniJaws Settings -->
     <string name="weather_title">Météo</string>
+    <!-- Lockscreen Weather -->
     <string name="lock_screen_weather_category_title">Écran de Verrouillage</string>
+    <!-- Statusbar ticker -->
     <string name="ticker_animation_mode_alpha_fade">Fondu</string>
+    <!-- Navigation-->
+    <!-- OP like navigation gestures -->
+    <!-- Navigation -->
+    <!-- Keys/Buttons -->
     <string name="home_key_title">Bouton d\'accueil</string>
     <string name="back_key_title">Bouton retour</string>
     <string name="menu_key_title">Bouton menu</string>
+    <!-- Custom actions
+          0 - Nothing
+          1 - Menu key
+          2 - Recent apps view in SystemUI
+          3 - Launch assist intent
+          4 - Voice search
+          5 - In-app search
+          6 - Launch camera
+          7 - Launch last app
+          8 - Split screen
+          9 - Flashlight
+          10 - Clear notifications
+          11 - Volume panel
+          12 - Screen off
+          13 - Notifications
+          14 - Power menu
+          15 - Screenshot
+          16 - QS panel
+          17 - Custom app
+          18 - Ringer modes -->
     <string name="action_power_menu">Écran de déverrouillage</string>
+    <!-- DUI -->
     <string name="picker_activities">Activités</string>
     <string name="select_custom_app_title">Sélectionner l\'application</string>
     <string name="select_custom_activity_title">Sélectionner l\'activité</string>
     <string name="profile_applist_title">Applications</string>
+    <!-- SmartNav -->
+    <!-- Stock Navbar -->
+    <!-- Actions dialog and default task values set in ActionPreference xml-->
+    <!-- Fling -->
     <string name="long_swipe_reset">Réinitialiser </string>
+    <!-- Pulse navigation bar music visualizer -->
+    <!-- Pulse config -->
+    <!-- Navbar height -->
+    <!-- SmartBar -->
     <string name="smartbar_right">Droit</string>
     <string name="smartbar_left">Gauche</string>
     <string name="smartbar_button_animation_flip">Inverser</string>
     <string name="smartbar_ime_action_none">Aucune</string>
+    <!-- Carrier Label -->
     <string name="custom_carrier_label_title">Libellé</string>
     <string name="custom_carrier_label_explain">Saisir un nouveau libellé. Laisser vide pour revenir au libellé d\'origine.</string>
     <string name="custom_carrier_label_notset">Non défini</string>
@@ -223,15 +337,30 @@
     <string name="show_carrier_keyguard">Écran de déverrouillage</string>
     <string name="show_carrier_statusbar">Barre d\'état</string>
     <string name="show_carrier_enabled">Sur les deux</string>
+    <!-- AOKP custom system animations -->
     <string name="animation_title">Affichage et animations</string>
     <string name="system_animation_title">Animations système</string>
     <string name="animation_duration_default">Par défaut</string>
+    <!-- Lock screen visualizer -->
+    <!-- Screen state service -->
     <string name="screen_state_toggles_enable_title">Activer</string>
     <string name="screen_state_toggles_gps">Désactiver le GPS</string>
+    <!-- Swap hw keys -->
+    <!-- Ambient display music ticker -->
     <string name="force_ambient_for_media_title">Activer</string>
+    <!-- Screen Off animation -->
     <string name="screen_off_animation_default">Par défaut</string>
+    <!-- Suppress notification sound/vibration -->
+    <!-- Navigation -->
+    <!-- HW keys -->
+    <!-- Power keys -->
+    <!-- Volume keys -->
+    <!-- Volume rocker wake -->
+    <!-- Button brightness -->
     <string name="button_manual_brightness">Niveau de luminosité</string>
+    <!-- Quick QS pull down -->
     <string name="status_bar_quick_qs_pulldown_off">Désactivé</string>
+    <!-- Toast Animation -->
     <string name="toast_animation_title">Animation Toast</string>
     <string name="toast_none_animation">Aucune</string>
     <string name="toast_default_animation">Par défaut</string>
@@ -249,25 +378,90 @@
     <string name="toast_Translucent_animation">Transparent</string>
     <string name="toast_SlideLeftRight_animation">Glisser de gauche à droite</string>
     <string name="toast_SlideRightLeft_animation">Glisser de droite à gauche</string>
+    <!-- Heads up snooze -->
     <string name="heads_up_snooze_1min">1 Minute</string>
+    <!-- Heads up timeout -->
+    <!-- Blacklist strings-->
+    <!-- Carbon gestures -->
+    <!-- Circle app bar -->
     <string name="unit_percent">\u0025</string>
+    <!-- Themes -->
     <string name="theming_accent_title">Couleur d’accentuation</string>
+    <!-- Device hidden prefs -->
+    <!-- QS shape theme -->
+    <!-- Settings dashboard icon style -->
+    <!-- Status bar brightness control -->
+    <!-- Less Notification sounds -->
+    <!-- Smart Pixels -->
+    <!-- Volume keys answer call -->
+    <!-- Battery light settings  -->
     <string name="fast_charging_light_color_title">Couleur</string>
     <string name="battery_light_blend_category">Mélanger les couleurs</string>
+    <!-- App Ops-->
+    <!-- [CHAR LIMIT=NONE] App ops settings title, on main settings screen. If clicked, the user is taken to a settings screen for app operations -->
+    <!-- Data Disabled Icon -->
+    <!-- MediaScanner behavior on boot -->
+    <!-- Running Services Icon in QS Footer-->
+    <!-- Power menu and dialogs opacity -->
+    <!-- SystemUI Tuner -->
+    <!-- Hardware button navigation -->
     <string name="hardware_keys_home_key_title">Bouton d\'accueil</string>
     <string name="hardware_keys_menu_key_title">Bouton menu</string>
     <string name="hardware_keys_assist_key_title">Bouton de recherche</string>
     <string name="hardware_keys_appswitch_key_title">Bouton Applications récentes</string>
     <string name="hardware_keys_back_key_title">Bouton retour</string>
+    <!-- doze on charge -->
+    <!-- EdgeGesture service -->
+    <!-- Pie control -->
     <string name="pie_enable_title">Activer</string>
     <string name="pie_theme_mode_title">Thème</string>
     <string name="pie_status_none">Aucune</string>
     <string name="pa_pie_gravity_right">Droit</string>
     <string name="pa_pie_gravity_left">Gauche</string>
+    <!-- Audio Panel view  -->
+    <!-- Audio Panel position  -->
+    <!-- Control night mode with themes -->
+    <!-- One Hand mode-->
+    <!-- Camera button -->
+    <!-- Lock Clock & Date Size -->
+    <!-- Long aspect ratio apps -->
     <string name="action_save">Sauvegarder</string>
+    <!-- Battery estimates -->
+    <!-- Wireless charging animation -->
     <string name="wireless_charging_animation_title">Animation lors de la charge</string>
+    <!-- Incall Home button behavior-->
+    <!-- Less boring heads-up-->
+    <!-- System icons style -->
+    <!-- lock screen media blur -->
+    <!-- Clock style -->
+    <!-- Custom lockscreen notifications count -->
+    <!-- QS SystemInfo -->
     <string name="qs_system_info_off">Désactivé</string>
+    <!-- QS Footer Text -->
+    <!-- Rotation suggestions -->
+    <!-- Notification Vibration -->
+    <!-- LockScreen Lock Icon -->
+    <!-- QS tiles haptic feedback -->
+    <!-- Blink flashlight for incoming calls -->
     <string name="flashlight_on_call_disabled">Désactivé</string>
     <string name="flashlight_on_call_always">Toujours</string>
+    <!-- Partial screenshot -->
+    <!-- Gaming mode -->
     <string name="gaming_mode_notifications_off_title">Désactivé</string>
+    <!-- Power Menu Category Titles-->
+    <!-- Alert Slider Notifications (OnePlus devices) -->
+    <!--FOD -->
+    <!--FOD Animations -->
+    <!-- Kill app long-press back -->
+    <!-- Show Media Headsup -->
+    <!-- R Notification headers -->
+    <!-- AICP ad-blocker -->
+    <!-- Headset ringtone audio focus -->
+    <!-- OOS clear all button -->
+    <!-- Long swipe gestures -->
+    <!-- Vertical Long swipes -->
+    <!-- QS DataUsage Toggle -->
+    <string name="qs_datausage_disabled">Désactivé</string>
+    <!-- QS Battery toggle -->
+    <string name="qs_header_battery_title">Informations sur la batterie</string>
 </resources>

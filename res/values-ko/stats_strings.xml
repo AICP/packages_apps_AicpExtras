@@ -17,6 +17,7 @@
  */
 -->
 <resources>
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
     <string name="anonymous_statistics_title">AICP 통계</string>
     <string name="anonymous_statistics_warning_title">소개</string>
     <string name="anonymous_statistics_warning">AICP 통계를 사용하면 기기 고유의 설치 상태를 추적하기 위해 개인 정보를 포함하지 않은 정보가 AICP의 개발자에게 전송됩니다. 정보는 매 주마다 전송됩니다.\n\n전송되는 정보를 보려면 데이터 미리 보기를 누르세요.</string>
@@ -31,6 +32,7 @@
         <item quantity="other">%d일 마다</item>
     </plurals>
     <string name="next_report_on">다음 보고</string>
+    <!-- Anonymous Statistics - Preview -->
     <string name="preview_id_title">고유 ID</string>
     <string name="preview_device_title">장치</string>
     <string name="preview_version_title">버전</string>
@@ -39,6 +41,7 @@
     <string name="preview_romname_title">ROM 이름</string>
     <string name="preview_romversion_title">AICP 버전</string>
     <string name="preview_buildtype_title">AICP 빌드 형식</string>
+    <!-- Anonymous Statistics - Notification -->
     <string name="notification_romstats_name">AICP 통계</string>
     <string name="notification_title">AICP 통계</string>
 </resources>

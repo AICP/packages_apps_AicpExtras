@@ -17,6 +17,7 @@
  */
 -->
 <resources>
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
     <string name="anonymous_statistics_title">AICP Statistieken</string>
     <string name="anonymous_statistics_warning_title">Over</string>
     <string name="anonymous_statistics_warning">Met het inschakelen van AICP statistieken geef je toestemming om niet-persoonlijke data naar onze servers
@@ -34,6 +35,7 @@
         <item quantity="other">%d dagen</item>
     </plurals>
     <string name="next_report_on">Volgende rapportage</string>
+    <!-- Anonymous Statistics - Preview -->
     <string name="preview_id_title">Unieke ID</string>
     <string name="preview_device_title">Apparaat</string>
     <string name="preview_version_title">Versie</string>
@@ -42,6 +44,7 @@
     <string name="preview_romname_title">ROM-naam</string>
     <string name="preview_romversion_title">AICP versie</string>
     <string name="preview_buildtype_title">AICP bouwtype</string>
+    <!-- Anonymous Statistics - Notification -->
     <string name="notification_romstats_name">AICP Statistieken</string>
     <string name="notification_title">AICP Statistieken</string>
     <string name="notification_desc">Opt-in anonieme statistieken rapportage</string>

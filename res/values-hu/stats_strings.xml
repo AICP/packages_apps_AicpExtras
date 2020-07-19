@@ -17,6 +17,7 @@
  */
 -->
 <resources>
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
     <string name="anonymous_statistics_title">AICP Statisztika</string>
     <string name="anonymous_statistics_warning_title">Rólunk</string>
     <string name="anonymous_statistics_warning">Az AICP Statisztika engedélyezése nem terjed ki személyes adatokra,
@@ -34,6 +35,7 @@
         <item quantity="other">%d nap</item>
     </plurals>
     <string name="next_report_on">Következő jelentés</string>
+    <!-- Anonymous Statistics - Preview -->
     <string name="preview_id_title">Egyedi azonosító</string>
     <string name="preview_device_title">Eszköz</string>
     <string name="preview_version_title">Verzió</string>
@@ -42,6 +44,7 @@
     <string name="preview_romname_title">ROM név</string>
     <string name="preview_romversion_title">AICP Verzió</string>
     <string name="preview_buildtype_title">AICP Build készítés típusa</string>
+    <!-- Anonymous Statistics - Notification -->
     <string name="notification_romstats_name">AICP Statisztika</string>
     <string name="notification_title">AICP Statisztika</string>
     <string name="notification_desc">Névtelen Opt-In statisztikajelentés</string>
