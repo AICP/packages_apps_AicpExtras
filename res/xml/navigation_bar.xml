@@ -19,7 +19,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="navigation_bar"
-    android:title="@string/navigation_bar_title" >
+    android:title="@string/navbar_visibility" >
 
     <PreferenceCategory
         android:key="category_navbar_layout">
@@ -141,4 +141,8 @@
             android:entryValues="@array/action_values" />
 
     </PreferenceCategory>
+
+    <com.android.settingslib.widget.FooterPreference
+        android:title="@string/navbar_visibility_footer" />
+
 </PreferenceScreen>
