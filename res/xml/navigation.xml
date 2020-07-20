@@ -23,7 +23,7 @@
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="navigation_bar_show_new"
         android:title="@string/navbar_visibility"
-        android:summary="@string/navigation_bar_summary"
+        android:summary="@string/navbar_visibility_summary"
         android:defaultValue="@*android:bool/config_showNavigationBar"
         aicpextras:systemPropDefaultOverride="qemu.hw.mainkeys?0:1"
         android:fragment="com.aicp.extras.fragments.NavigationBarSettings" />
