@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2017 AICP
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources>
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">ئاماری AICP</string>
+    <string name="anonymous_statistics_warning_title">دەربارە</string>
+    <string name="anonymous_statistics_warning">زانیاریپێدانی ئامارەکانی ڕێدەدات بە پێشکەشکردنی زانیارییە نا-تایبەتییەکانت بۆ
+          ڕاژەکانمان. زانیارییە پێشکەشکراوەکە پێناسێکی بێهاوتای تێدایە، کە یەکناگرێتەوە لەگەڵ زانیارییە تایبەتییەکانت.
+          زانیاری هەموو ڕۆژێک پێشکەشەکرێ.\n\n بۆنموونە ئەو زانیارییەی پێشکەشی دەکەی، پێشبینینی داتا داگرە.</string>
+    <string name="enable_reporting_title">چالاکردنی زانیاریپێدان</string>
+    <string name="preview_data_title">پێشبینینی داتا</string>
+    <string name="view_stats_title">بینینی پەڕەی ئامار</string>
+    <string name="anonymous_learn_more">زانینی زیاتر</string>
+    <string name="last_report_on">کۆتا گێڕدراو</string>
+    <string name="reporting_interval">مەودای زانیاریدان</string>
+    <plurals name="reporting_interval_days">
+        <item quantity="one">1 ڕۆژ</item>
+        <item quantity="other">%d ڕۆژ</item>
+    </plurals>
+    <string name="next_report_on">زانیاری دواتر</string>
+    <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">ID بێهاوتایە</string>
+    <string name="preview_device_title">ئامێر</string>
+    <string name="preview_version_title">وەشان</string>
+    <string name="preview_country_title">وڵات</string>
+    <string name="preview_carrier_title">بریکار</string>
+    <string name="preview_romname_title">ناوی ڕۆم</string>
+    <string name="preview_romversion_title">وەشانی AICP</string>
+    <string name="preview_buildtype_title">جۆری بنیاتی AICP</string>
+    <!-- Anonymous Statistics - Notification -->
+    <string name="notification_romstats_name">ئاماری AICP</string>
+    <string name="notification_title">ئاماری AICP</string>
+    <string name="notification_desc">زانیاریدانی ئامارەکان بەنەناسراوی</string>
+</resources>

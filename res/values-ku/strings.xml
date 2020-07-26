@@ -1,0 +1,1279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2017 AICP
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources>
+    <!-- AICP Extras -->
+    <string name="app_name">زیادکراوەکانی AICP</string>
+    <!-- Dashboard -->
+    <string name="user_interface_category">ڕووکار</string>
+    <string name="system_category">سیستەم</string>
+    <string name="other_category">هیتر</string>
+    <!-- Status bar -->
+    <string name="status_bar_title">ڕەوشبەند</string>
+    <string name="status_bar_summary">دەسکاری دیمەنی ڕەوشبەند</string>
+    <!-- StatusBar Battery Options -->
+    <string name="status_bar_battery_title">ئایکۆنی پاتری</string>
+    <string name="status_bar_battery_summary">گرتەبکە بۆ بژاردەکانی ئایکۆنی پاتری</string>
+    <string name="battery_style_title">شێوازی هێمای پاتری</string>
+    <string name="battery_style_summary">بژاردەکانی شێوازی پاتری ڕەوشبەند</string>
+    <string name="battery_style_port">ستوونی (P)</string>
+    <string name="battery_style_circle">بازنەیی</string>
+    <string name="battery_style_dotted_circle">بازنەیی خاڵدار</string>
+    <string name="battery_style_big_circle">بازنەی گەورە</string>
+    <string name="battery_style_big_dotted_circle">بازنەیی خاڵداری گەورە</string>
+    <string name="status_bar_battery_style_q">ستوونی</string>
+    <string name="battery_style_text">نوسین</string>
+    <string name="battery_percent_title">ڕێژەی سەدی ووزە</string>
+    <string name="battery_percent_enabled">کارایە</string>
+    <string name="battery_percent_embedded">لەنێو ئایکۆن</string>
+    <string name="battery_percent_disabled">ناکارا</string>
+    <!-- Bluetooth status -->
+    <string name="bluetooth_battery_title">ڕەوشی پاتری بلوتوث</string>
+    <string name="bluetooth_battery_summary">ڕێژەی پاتری ئامێری بلوتوثی پەیوەستکراو نیشان بدرێ، گەر بەردەست بوو.</string>
+    <!-- Hide notch -->
+    <string name="hide_notch_title">شاردنەوەی نۆچ</string>
+    <string name="hide_notch_summary">گەر کاراکرێ نۆچ ئەشارێتەوە و کەلێنەکان پڕەکاتەوە</string>
+    <!-- Statusbar net monitor -->
+    <string name="network_traffic_category">ترافیکی تۆڕ</string>
+    <string name="network_traffic_title">چالاکی تۆڕی ڕەوشبەند</string>
+    <string name="network_traffic_summary">پیشاندانی چالاکی تۆڕ لە ڕەوشبەندی ئاسایی</string>
+    <string name="network_traffic_expanded_status_bar_title">چالاکی تۆڕی ڕەوشبەندی فراوانکراو</string>
+    <string name="network_traffic_expanded_status_bar_summary">پیشاندانی چالاکی تۆڕ لە ڕەوشبەند لەسەرووی ڕێکخستنە خێراکان</string>
+    <string name="network_traffic_autohide_threshold_title">شاردنەوەی خۆکاری چالاکی تۆڕ</string>
+    <string name="network_traffic_autohide_threshold_kbs">kB/چ</string>
+    <!-- Battery bar -->
+    <string name="battery_bar_title">تووڵی پاتری</string>
+    <string name="battery_bar_summary">گرتەبکە بۆ بژاردەکانی تووڵی پاتری</string>
+    <string name="battery_bar_location_title">ناوچە</string>
+    <string name="battery_bar_location_statusbar_top">سەرووی ڕەوشبەند</string>
+    <string name="battery_bar_location_statusbar_bottom">خوارووی ڕەوشبەند</string>
+    <string name="battery_bar_location_navbar_top">سەرووی جێنیشاندەر</string>
+    <string name="battery_bar_location_navbar_bottom">خوارووی جێنیشاندەر</string>
+    <string name="battery_bar_color_title">ڕەنگە ڕۆشنەکان</string>
+    <string name="battery_bar_color_summary">ئەو ڕەنگانەی لە ڕەوشبەندی تاریک بەکاردێن</string>
+    <string name="battery_bar_dark_color_title">ڕەنگە تاریکەکان</string>
+    <string name="battery_bar_dark_color_summary">ئەو ڕەنگانەی لە ڕەوشبەندی ڕۆشن بەکاردێن</string>
+    <string name="battery_bar_charging_color_title">ڕەنگی ڕۆشنی بارگاوی</string>
+    <string name="battery_bar_charging_color_summary">ئەو ڕەنگانەی بارگاوی کە لەسەر ڕەوشبەندی تاریک بەکاردێن</string>
+    <string name="battery_bar_charging_dark_color_title">ڕەنگی تاریکی بارگاوی</string>
+    <string name="battery_bar_charging_dark_color_summary">ئەو ڕەنگانەی بارگاوی لەسەر ڕەوشبەندی ڕۆشن بەکاردێن</string>
+    <string name="battery_bar_style_title">یەکگرتوویی</string>
+    <string name="battery_bar_thickness_title">ئه‌ستووری</string>
+    <string name="battery_bar_animate_title">ئەنیمەیشنی بارگاوی</string>
+    <string name="battery_bar_style_regular">ئاسایی</string>
+    <string name="battery_bar_style_center_mirrored">ناوەند-ئاوێتەکراو</string>
+    <string name="battery_bar_style_reversed">هەڵگەڕاوە</string>
+    <string name="battery_bar_use_charging_color_title">ڕەنگی بارگاوی خۆکردی</string>
+    <string name="battery_blend_start">بەتاڵ</string>
+    <string name="battery_blend_end">پڕ</string>
+    <string name="battery_blend_between">لەنێوان</string>
+    <!-- Smart pulldown -->
+    <string name="smart_pulldown_title">هێنەرەخواری زیرەک</string>
+    <string name="smart_pulldown_off">ناکارا</string>
+    <string name="smart_pulldown_none">ئاگانامە نییە</string>
+    <string name="smart_pulldown_dismissable">ئاگانامەیەک نییە بۆ سافکردن</string>
+    <string name="smart_pulldown_ongoing">هیچ ئاگانامەیەک نەهاتووە</string>
+    <string name="smart_pulldown_summary">کردنەوەی ڕێکخستنە خێراکان کاتێ %1$s</string>
+    <string name="smart_pulldown_none_summary">کردنەوەی ڕێکخستنە خێراکان کاتێ ئاگانامە نەهاتبوو</string>
+    <string name="smart_pulldown_off_summary">ناکاراکراوە</string>
+    <!-- Quick pull down-->
+    <string name="quick_pulldown_title">خێرا ڕاکێشانەخوار</string>
+    <string name="quick_pulldown_summary">%1$s لێواری ڕەوشبەند ڕێکخستنە خێراکان دێنێتە خوارەوە</string>
+    <string name="quick_pulldown_summary_always">هەمیشە پیشاندانی ڕێکخستنە خێراکان لەهێنانە خوارەوەی ڕەوشبەند</string>
+    <string name="quick_pulldown_off">ناکارا</string>
+    <string name="quick_pulldown_left">چەپ</string>
+    <string name="quick_pulldown_right">ڕاست</string>
+    <string name="quick_pulldown_always">هەمیشە</string>
+    <!-- Double tap to sleep on status bar -->
+    <string name="status_bar_double_tap_to_sleep_title">داگرە بۆ کوژانەوە</string>
+    <string name="status_bar_double_tap_to_sleep_summary">دووانە-گرتە لەسەر ڕەوشبەند بۆ کوژانەوەی ڕوونماکەت</string>
+    <!-- Statusbar Clock options -->
+    <string name="status_bar_clock_title">کاتژمێر</string>
+    <string name="status_bar_clock_summary">گرتەبکە بۆ بژاردەکانی کاتژمێر</string>
+    <string name="status_bar_show_clock_title">پیشاندانی کاتژمێر &amp; بەروار</string>
+    <string name="clock_title_enable">یەکگرتوویی</string>
+    <string name="status_bar_clock_seconds_title">چرکەکانی کاتژمێر</string>
+    <string name="status_bar_clock_seconds_summary">لەنێویدا چرکەکانی کاتژمێر لە ڕەوشبەند نیشانبدرێ</string>
+    <string name="status_bar_am_pm_title">پ.ن/د.ن</string>
+    <string name="status_bar_am_pm_info">کاتژمێری 24ی کاراکراوە</string>
+    <string name="am_pm_clock_normal">قەبارەی فۆنتی ئاسایی</string>
+    <string name="am_pm_clock_small">قەبارەی فۆنتی بچووک</string>
+    <string name="am_pm_clock_none">نیشان نەدرێ</string>
+    <string name="clock_date_display">بەروار</string>
+    <string name="clock_date_display_summary">نیشاندانی بەروار لەپێش کاتژمێرەوە</string>
+    <string name="clock_date_style">شێوازی بەروار</string>
+    <string name="clock_date_position">شوێنی بەروار</string>
+    <string name="clock_date_format">جۆری بەروار</string>
+    <string name="clock_date_string_edittext_title">دەبێ لە جۆری بەرواردا بێت ن. مانگ/ڕۆژ/ساڵ</string>
+    <string name="clock_date_string_edittext_summary">زنجیرە داگرە</string>
+    <string name="clock_date_right">لەڕاستی کات</string>
+    <string name="clock_date_left">لە چەپی کاتەوە</string>
+    <string name="clock_date_display_none">نیشان نەدرێ</string>
+    <string name="clock_date_display_small">قەبارەی فۆنتی بچووک</string>
+    <string name="clock_date_display_normal">قەبارەی فۆنتی ئاسایی</string>
+    <string name="clock_date_style_normal">ئاسایی</string>
+    <string name="clock_date_style_lowercase">پیتی بچووک</string>
+    <string name="clock_date_style_uppercase">پیتی گەورە</string>
+    <string name="clock_date_format_custom">جۆری جاڤای خۆکرد</string>
+    <string name="clock_position">شوێنی کاتژمێر</string>
+    <string name="clock_position_right">کاتژمێری ڕاست</string>
+    <string name="clock_position_center">کاتژمێری ناوەند</string>
+    <string name="clock_position_left">کاتژمێری چەپ</string>
+    <string name="menu_cancel">لابردن</string>
+    <string name="menu_save">خەزنکردن</string>
+    <!-- Statusbar categories -->
+    <string name="status_bar_gestures_category_title">جوڵانه‌کان</string>
+    <string name="status_bar_icons_category_title">وێنۆچکەکان</string>
+    <string name="status_bar_battery_category_title">بژاردەکانی پاتری</string>
+    <string name="status_bar_others_category_title">ئەوانیتر</string>
+    <!-- Statusbar AICP logo -->
+    <string name="status_bar_logo_category_title">لۆگۆ</string>
+    <string name="status_bar_logo_title">لۆگۆ</string>
+    <string name="status_bar_logo_summary">کارابکە بۆ پیشاندانی لۆگۆ لە ڕەوشبەند</string>
+    <string name="status_bar_logo_color_title">ڕەنگ</string>
+    <string name="status_bar_logo_color_accent_title">بەکارهێنانی ڕەنگی شێوە</string>
+    <string name="status_bar_logo_position_title">شوێن</string>
+    <string name="status_bar_logo_position_summary">هەڵبژێرە لە کام لا لۆگۆکە نیشان بدرێت، چەپ یان ڕاست</string>
+    <string name="status_bar_logo_position_right">ڕاست</string>
+    <string name="status_bar_logo_position_left">چەپ</string>
+    <string name="status_bar_logo_position_right_quick">ڕاست لەگەڵ تەختەی ڕێکخستنی خێرا</string>
+    <string name="status_bar_logo_position_left_quick">چەپ لەگەڵ تەختەی ڕێکخستنی خێرا</string>
+    <string name="status_bar_logo_style_title">شێواز</string>
+    <string name="status_bar_logo_style_aicp">AICP</string>
+    <string name="status_bar_logo_style_android">ئەندرۆید</string>
+    <string name="status_bar_logo_style_apple">ئەپڵ</string>
+    <string name="status_bar_logo_style_ios">iOS</string>
+    <string name="status_bar_logo_style_emoticon">دەربڕینەکان</string>
+    <string name="status_bar_logo_style_emoticon_cool">دەربڕینی قۆزی</string>
+    <string name="status_bar_logo_style_emoticon_dead">دەربڕینی مردوو</string>
+    <string name="status_bar_logo_style_emoticon_devil">دەربڕینی شەیتانی</string>
+    <string name="status_bar_logo_style_emoticon_happy">دەربڕینی دڵخۆشی</string>
+    <string name="status_bar_logo_style_emoticon_neutral">دەربڕینی ئاسایی</string>
+    <string name="status_bar_logo_style_emoticon_poop">دەربڕینی پیسایی</string>
+    <string name="status_bar_logo_style_emoticon_sad">دەربڕینی خەمباری</string>
+    <string name="status_bar_logo_style_emoticon_tongue">دەربڕینی زمان</string>
+    <string name="status_bar_logo_style_blackberry">بلاکبێری</string>
+    <string name="status_bar_logo_style_cake">کێک</string>
+    <string name="status_bar_logo_style_blogger">بلۆگەر</string>
+    <string name="status_bar_logo_style_biohazard">Biohazard</string>
+    <string name="status_bar_logo_style_linux">لینوکس</string>
+    <string name="status_bar_logo_style_yin_yang">Yin-Yang</string>
+    <string name="status_bar_logo_style_windows">ویندۆز</string>
+    <string name="status_bar_logo_style_robot">ڕۆبۆت</string>
+    <string name="status_bar_logo_style_ninja">نینجا</string>
+    <string name="status_bar_logo_style_heart">دڵ</string>
+    <string name="status_bar_logo_style_flower">گوڵ</string>
+    <string name="status_bar_logo_style_ghost">تارمایی</string>
+    <string name="status_bar_logo_style_google">گوگڵ</string>
+    <string name="status_bar_logo_style_human_male">پیاو</string>
+    <string name="status_bar_logo_style_human_female">ئافرەت</string>
+    <string name="status_bar_logo_style_human_male_female">پیاو &amp; ئافرەت</string>
+    <string name="status_bar_logo_style_gender_male">نێر</string>
+    <string name="status_bar_logo_style_gender_female">مێ</string>
+    <string name="status_bar_logo_style_gender_male_female">نێر &amp; مێ</string>
+    <string name="status_bar_logo_style_guitar_electric">گیتار</string>
+    <!-- Show 4G instead of LTE -->
+    <string name="show_4g_title">پیشاندانی 4G</string>
+    <string name="show_4g_summary">پیشاندانی 4G لەباتی وێنۆچکەی LTE</string>
+    <!-- Roaming indicator icon -->
+    <string name="roaming_indicator_icon_title">نیشاندەری گەڕیدە</string>
+    <string name="roaming_indicator_icon_summary">پیشاندانی نیشاندەری گەڕیدە لە تاک ئایکۆنێکدا کاتێ لە دۆخی گەڕیدە بوو</string>
+    <!-- Notifications -->
+    <string name="notifications_title">ئاگانامەکان</string>
+    <string name="notifications_summary">کۆنتڕۆڵی ئاگانامە فراوانکراوەکان</string>
+    <!-- Heads up -->
+    <string name="notification_heads_up_title">ئاگانامەی زیندوو</string>
+    <string name="notification_heads_up_summary">ڕێدان بە ئاگانامەی زیندوو</string>
+    <!-- Force expanded notifications -->
+    <string name="force_expanded_notifications_title">فراوانکردنی تینی ئاگانامەکان</string>
+    <string name="force_expanded_notifications_summary">بەردەستە بۆ ئەو ئەپانەی پشتگیری فراوانی ئاگانامەکان ئەکەن</string>
+    <!-- Notification guts kill app button -->
+    <string name="notification_guts_kill_app_button_title">دوگمەی داخستنی ئەپ</string>
+    <string name="notification_guts_kill_app_button_summary">پیشاندانی دوگمەی داخستنی ئەپ لەکاتی پەنجەڕاگرتن لەسەر ئاگانامەکان</string>
+    <!-- Quick settings -->
+    <string name="quick_settings_title">ڕێکخستنە خێراکان</string>
+    <string name="quick_settings_summary">دەسکاری دیمەنی ڕێکخستنەخێراکان</string>
+    <!-- Disable music track title in QS tile -->
+    <string name="qs_music_tile_track_optional_title">ناونیشانی خشتی تراکی میوزیک</string>
+    <string name="qs_music_tile_track_optional_summary">پیشاندانی ناونیشانی تراکی میوزیک لە ناونیشانی خشتی ڕ-خ</string>
+    <!-- Small quick settings scroller -->
+    <string name="qqs_columns_title">خشتە ستوونییە خێراکانی ڕ-خ</string>
+    <string name="qqs_columns_auto_title">خشتەی ستوونی خێرای ڕ-خ خۆکار</string>
+    <string name="qqs_columns_auto_summary">خشتە ستوونییە خێراکانی ڕ-خ بەپێی ژمارەی خشتی ستوونی تەختەی ڕ-خ بن</string>
+    <!-- Show expand indicator in dualtarget QS tiles -->
+    <!-- QS rows and columns -->
+    <string name="qs_layout_category_title">نەخشی ڕ-خ</string>
+    <string name="qs_rows_portrait_title">ڕیزی خشتەکان بە درێژی</string>
+    <string name="qs_rows_landscape_title">ڕیزی خشتەکان بە پانی</string>
+    <string name="qs_columns_portrait_title">ستوونی خشتەکان بە درێژی</string>
+    <string name="qs_columns_landscape_title">ستوونی خشتەکان بە پانی</string>
+    <!-- QS tiles title visibility -->
+    <string name="qs_tile_title_visibility_title">نازناوی خشتەکان</string>
+    <string name="qs_tile_title_visibility_summary">کارایکە بۆ پیشاندانی نازناوی خشتەکانی ڕ-خ</string>
+    <!-- QS Headers -->
+    <string name="custom_header_browse_title">چاوخشاندن بە سەرپەڕە دامەزراوەکان</string>
+    <string name="custom_header_browse_summary_new">چاوپێخشاندن بە سەرجەم سەرپەڕە بەردەستەکان</string>
+    <string name="custom_header_pick_title">دیارکردنی وێنەی سەرپەڕە</string>
+    <string name="custom_header_pick_summary">وێنەیەک دیاربکە بۆ بەکارهێنان لە دۆخی نەگۆڕ</string>
+    <string name="header_provider_disabled">لەکارخراوە</string>
+    <!-- QS Headers -->
+    <string name="status_bar_custom_header_title">کاراکردن</string>
+    <string name="daylight_header_pack_title">وێنەی کۆکەرەوەی سەرپەڕە</string>
+    <string name="status_bar_custom_header_shadow_title">سێبەری وێنەی سەرپەڕە</string>
+    <string name="status_bar_custom_header_shadow_summary">بۆ دەرکەوتنی باشتر لەسەر وێنە ڕۆشنەکان</string>
+    <string name="static_header_provider_title">وێنەیەک لە کۆمەڵ</string>
+    <string name="daylight_header_provider_title">وێنەی کۆکەرەوە</string>
+    <string name="custom_header_provider_title">دابینگەری سەرپەڕە</string>
+    <string name="custom_header_browse_summary">گرتە لەسەر وێنەیەک بکە بۆ بەکارهێنان لە دۆخی نەگۆڕ</string>
+    <string name="style_enabled_summary">وێنەی سەرپەڕەی خۆکرد کارایە</string>
+    <string name="style_disabled_summary">وێنەی سەرپەڕەی خۆکرد ناکارایە</string>
+    <string name="custom_header_title">وێنەی سەرپەڕەی خۆکرد</string>
+    <string name="file_header_select_title">دیارکردنی وێنە</string>
+    <string name="file_header_select_summary">دیارکردنی وێنەی خۆکرد</string>
+    <string name="file_header_provider_title">وێنەی خۆکرد</string>
+    <!-- QS Settings background panel blur -->
+    <string name="qs_panel_translucency_category_title">ڕوونایەتی تەختە</string>
+    <string name="translucent_quick_settings">کاراکردنی ڕوونی</string>
+    <string name="translucent_quick_settings_summary">لێڵکردنی پاشبنەمای تەختە</string>
+    <string name="translucent_quick_settings_percentage">ڕێژەی ڕوونی پاشبنەما</string>
+    <!-- Tiles animation style -->
+    <string name="qs_tiles">خشتەکانی ڕ-خ</string>
+    <string name="qs_tile_animation_style_title">شێوازی ئەنیمەیشن</string>
+    <string name="qs_tile_animation_duration_title">وادەی ئەنیمەیشن</string>
+    <string name="qs_tile_animation_interpolator_title">ئەنیمەیشی تێهەڵکێشی خشتەکان</string>
+    <string name="qs_tile_animation_style_off">بێ ئەنیمەیشن</string>
+    <string name="qs_tile_animation_style_flip">هەڵگەڕان</string>
+    <string name="qs_tile_animation_style_rotate">خواربوونەوە</string>
+    <string name="qs_tile_animation_duration_low">کەم</string>
+    <string name="qs_tile_animation_duration_default">بنەڕەت</string>
+    <string name="qs_tile_animation_duration_fast">خێرا</string>
+    <string name="qs_tile_animation_duration_quite_fast">زۆر خێرا</string>
+    <string name="qs_tile_animation_duration_super_fast">خێراترین</string>
+    <string name="qs_tile_animation_interpolator_linearInterpolator">هێڵدار</string>
+    <string name="qs_tile_animation_interpolator_accelerateInterpolator">خێراکردن</string>
+    <string name="qs_tile_animation_interpolator_decelerateInterpolator">خاوکردن</string>
+    <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">خێراکردن خاوکردنەوە</string>
+    <string name="qs_tile_animation_interpolator_bounceInterpolator">هەڵپێکین</string>
+    <string name="qs_tile_animation_interpolator_overshootInterpolator">دەرچوو لە نیشانە</string>
+    <string name="qs_tile_animation_interpolator_anticipateInterpolator">پێشدانەوە</string>
+    <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">پێشدانەوەی دەرچوونی نیشانە</string>
+    <!-- Recents -->
+    <string name="recents_title">دوایینەکان</string>
+    <string name="recents_summary">دەسکاری دیمەنی ڕوونمای دواین ئەپەکان</string>
+    <string name="stock_recents_category">دوایینەکانی بنچینەیی</string>
+    <string name="oreo_recents_category">دوایینەکانی ئۆریۆ</string>
+    <string name="alternative_recents_category">دوایینەکانی گۆڕدراو</string>
+    <string name="alternative_recents_swipe_up_enabled_warning_summary">کاتی ڕاکێشان بۆ سەرەوەی هۆم بۆ کردنەوەی دوایینەکان، تەنها پشتگیری دوایینەکانی ستۆک ئەکات</string>
+    <!-- Stock Recents component Style -->
+    <string name="recents_component_type_title">شێوازی دوایینەکان</string>
+    <string name="recents_pie">پای</string>
+    <string name="recents_oreo">ئۆریۆ</string>
+    <!-- Recents panel settings -->
+    <string name="show_clear_all_recents_button_title">دوگمەی داخستنی گشتی</string>
+    <string name="show_clear_all_recents_button_summary">پیشاندانی دوگمەی داخستنی گشتی</string>
+    <string name="recents_clear_all_location_title">شوێنی داخستنی گشتی</string>
+    <string name="recents_clear_all_location_top_right">ڕاستی سەرەوە</string>
+    <string name="recents_clear_all_location_top_left">چەپی سەرەوە</string>
+    <string name="recents_clear_all_location_top_center">ناوەڕاستی سەرەوە</string>
+    <string name="recents_clear_all_location_bottom_right">خوارووی ڕاست</string>
+    <string name="recents_clear_all_location_bottom_left">خوارووی چەپ</string>
+    <string name="recents_clear_all_location_bottom_center">خوارووی ناوەند</string>
+    <string name="recents_show_membar_title">تووڵی بیرگە</string>
+    <string name="recents_show_membar_summary">پیشاندانی تووڵێک بۆ بیرگەی کاتی بەردەستی ئامێر</string>
+    <!-- Oreo Recents Style -->
+    <string name="recents_type_title">نەخشەی دوایینەکانی ئۆریۆ</string>
+    <string name="recents_stock">بنچینە</string>
+    <string name="recents_grid">چوارخانە</string>
+    <string name="recents_go">ئەندرۆید-گۆ</string>
+    <!-- Slim recents -->
+    <string name="slim_recents_title">دوایینەکانی Slim</string>
+    <string name="recents_max_apps_title">بەرزترین ڕێدانی ئەپەکان</string>
+    <string name="recent_panel_scale_title">قەبارە</string>
+    <string name="recent_panel_expanded_mode_title">دۆخی فراوانکراو</string>
+    <string name="recent_panel_expanded_mode_summary">دۆخی پێشبینینی فراوانکراوی دواین ئەرکەکان</string>
+    <string name="recent_panel_expanded_mode_auto">خۆکاری (بنەڕەت)</string>
+    <string name="recent_panel_expanded_mode_always">هەمیشە</string>
+    <string name="recent_panel_expanded_mode_never">هەرگیز</string>
+    <string name="recent_panel_expanded_mode_disabled">ناکارا</string>
+    <string name="recent_panel_bg_color_title">ڕەنگی پاشبنەمای تەختە</string>
+    <string name="recent_card_bg_color_title">ڕەنگی پاشبنەمای کارت</string>
+    <string name="slim_recents_mem_display_long_click_clear_title">گرتەدرێژی تووڵی بیرگە</string>
+    <string name="slim_recents_mem_display_long_click_clear_summary">داخستنی دوایینەکان بە داگرتنی درێژ لەسەر تووڵی بیرگە</string>
+    <string name="slim_icon_pack_title">دەستە ئایکۆن</string>
+    <string name="slim_icon_pack_summary">جێگیرکردنی دەستە ئایکۆنی خۆکرد بۆ ئەپەکانی تەختەکە</string>
+    <string name="no_iconpacks_summary">دەستە ئایکۆن دانەمەزراوە</string>
+    <string name="dialog_pick_iconpack_title">هەڵگرتنی دەستە ئایکۆن</string>
+    <string name="default_iconpack_title">ئایکۆنە بنەڕەتەکان</string>
+    <string name="slim_recents_aicp_empty_drawable_title">دوایینە بەتاڵەکانی AIC0</string>
+    <string name="slim_recents_aicp_empty_drawable_summary">وێنەیەک بۆ نیشاندان لەوکاتەی هیچ ئەپێک لە دوایین نییە</string>
+    <string name="slim_recents_enter_exit_animation_title">ئەنیمەیشن</string>
+    <string name="slim_recents_enter_exit_animation_translate">وەرگێڕ</string>
+    <string name="slim_recents_enter_exit_animation_fade">کاڵبوون</string>
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">پیشاندان لە لێواری چەپەوە</string>
+    <string name="recent_panel_lefty_mode_summary">پیشاندانی تەختەی دواین ئەپەکان لە لێواری چەپەوە</string>
+    <string name="profile_choose_app">هەڵبژاردنی ئەپ</string>
+    <string name="dialog_delete_title">سڕینەوە</string>
+    <string name="dialog_delete_message">بابەتی دیارکراو بسڕدرێتەوە؟</string>
+    <string name="slim_blacklist_apps_cat_title">لیستی ڕەش</string>
+    <string name="slim_blacklist_apps_title">ئەپەکانی لیستی ڕەش</string>
+    <string name="slim_blacklist_apps_summary">ئەو ئەپانەی تەختەکە نیشان نەدرێن</string>
+    <string name="slim_blacklist_add_apps_title">زیادکردنی ئەپ</string>
+    <string name="slim_blacklist_add_apps_summary">ئێرە داگرە بۆ زیادکردن، گرتە لە ئەپی زیادکراو بکە بۆ لادانی ئەپەکە</string>
+    <!-- Slim Recent App Sidebar -->
+    <string name="recent_app_sidebar_summary">پیشاندانی کورتەبڕەکانی ئەپ لەسەر لێوارەکەیتر</string>
+    <string name="use_recent_app_sidebar_summary">پیشاندانی کورتەبڕەکانی ئەپ لەسەر لێوارەکەیتر</string>
+    <string name="recent_app_sidebar_hide_labels_title">شاردنەوەی نازناوی ئەپەکان</string>
+    <string name="recent_app_sidebar_label_color_title">ڕەنگی نازناو</string>
+    <string name="recent_app_sidebar_bg_color_title">ڕەنگی پاشبنەما</string>
+    <string name="recent_app_sidebar_scale_title">قەبارە</string>
+    <string name="recent_app_sidebar_open_simultaneously_title">لەهەمانکاتدا بکرێتەوە لەگەڵ دوایینەکان</string>
+    <string name="recent_app_sidebar_open_simultaneously_summary">کەمکردنەوەی سستی کردنەوەی دوایینەکان بە ناچالاککردنی ئەمە</string>
+    <!-- Slim recents membar -->
+    <string name="slim_recents_mem_display_category_title">تووڵی بیرگە</string>
+    <string name="slim_recents_mem_display_title">پیشاندانی تووڵی بیرگە</string>
+    <string name="slim_recents_mem_display_summaryOn">تووڵی بیرگە کارایە</string>
+    <string name="slim_recents_mem_display_summaryOff">تووڵی بیرگە ناکارایە</string>
+    <string name="slim_recents_mem_display_color">ڕەنگی توڵی بیرگەی کاتی</string>
+    <string name="slim_recents_mem_display_text_color">ڕەنگی دەقی توڵی بیرگە</string>
+    <!-- Lockscreen -->
+    <string name="lockscreen_title">ڕوونماداخراو</string>
+    <string name="lockscreen_summary">دەسکاری دیمەنی ڕوونماداخراو</string>
+    <string name="lockscreen_security_category">ئاسایش</string>
+    <!-- Double tap to sleep on lockscreen -->
+    <string name="double_tap_sleep_lockscreen">دووانە-گرتە بۆ کوژاندنەوە</string>
+    <!-- Media art -->
+    <string name="media_art_title">وێنەی کەڤەری میدیا</string>
+    <string name="media_art_summary">کاراکردنی وێنەی کەڤەری میدیا لە ڕوونماداخراودا</string>
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">زانیاری پاتری</string>
+    <string name="lockscreen_battery_info_summary">نیشاندانی ئاستی ڕاستەوخۆی ڤۆڵتەیج و پلەی گەرمی پاتری لەسەر ڕوونماداخراو لەکاتی بارگاویبوونەوە</string>
+    <!-- Power menu on secure lockscreen -->
+    <string name="lockscreen_enable_power_menu_title">پێڕستی ووزە</string>
+    <string name="lockscreen_enable_power_menu_summary">ڕێدان بەچوونەنێو پێڕستی ووزە لە ڕوونماداخراودا</string>
+    <!-- Disable QS on secure Lockscreen -->
+    <string name="lockscreen_qs_disabled_title">نەبوونی ڕێکخستنەخێراکان لە پارێزراوی</string>
+    <string name="lockscreen_qs_disabled_summary">ناکاراکردنی ڕێکخستنەخێراکان لە ڕوونماداخراوی پارێزراودا</string>
+    <!-- Scramble PIN layout when unlocking -->
+    <string name="unlock_scramble_pin_layout_title">نەخشەی تێکه‌ڵکراو</string>
+    <string name="unlock_scramble_pin_layout_summary">نەخشەی PIN تێکه‌ڵ له‌کاتی کردنه‌وه‌ی ئامێره‌که‌</string>
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">کردنەوەی خێرا</string>
+    <string name="unlock_quick_unlock_control_summary">کردنەوەی خۆکاری لەگەڵ نوسینی پین/تێپەڕەوشەی دروست</string>
+    <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">لەرزین لەکاتی کردنەوە بە پەنجەمۆر</string>
+    <string name="fprint_sucess_vib_summary_on">لەرزین لەکاتی سەرکەوتنی کردنەوە بە پەنەجۆر کاراکرا</string>
+    <string name="fprint_sucess_vib_summary_off">لەرزین لەکاتی سەرکەوتنی کردنەوە بە پەنەجۆر ناکاراکرا</string>
+    <!-- Lockscreen Clock styles -->
+    <string name="lockscreen_clock_selection_title">شێوازی کاتژمێر</string>
+    <string name="lockscreen_clock_selection_digital">بنەڕەت</string>
+    <string name="lockscreen_clock_selection_digital_bold">دیجیتەڵ-تۆخ</string>
+    <string name="lockscreen_clock_selection_digital_accent">دیجیتەڵ-توندوتراو</string>
+    <string name="lockscreen_clock_selection_analog">Analog</string>
+    <string name="lockscreen_clock_selection_text">دەقی ئەندرۆید Q (پێویستی بەهەڵکردنەوەی سیستەم هەیە) </string>
+    <!-- On-The-Go -->
+    <string name="global_actions_onthego_title">پ. کامێرا</string>
+    <string name="global_actions_onthego_summary">چەسپاندنی پاشبنەمای کامێرا لە پێڕستی ووزە</string>
+    <!-- Screenrecord -->
+    <string name="global_actions_screenrecord_title">تۆمارکردنی ڕوونما</string>
+    <string name="global_actions_screenrecord_summary">چەسپاندنی تۆمارکردنی ڕوونما لە پێڕستی ووزە</string>
+    <!-- Screenshot -->
+    <string name="global_actions_screenshot_title">ڕوونماچرکان</string>
+    <string name="global_actions_screenshot_summary">چەسپاندنی چرکاندنی ڕوونما لە پێڕستی ووزە</string>
+    <!-- Reboot -->
+    <string name="global_actions_reboot_title">هەڵکردنەوە</string>
+    <string name="global_actions_reboot_summary">چەسپاندنی هەڵکردنەوە لە پێڕستی ووزە</string>
+    <!-- Advanced Reboot -->
+    <string name="global_actions_advanced_reboot_title">هەڵکردنەوەی پەرەسەندوو</string>
+    <string name="global_actions_advanced_reboot_summary">چەسپاندنی هەڵکردنەوەی پەرەسەندوو لە پێڕستی ووزە</string>
+    <!-- Emergency -->
+    <string name="global_actions_emergency_title">فریاگوزاری</string>
+    <string name="global_actions_emergency_summary">چەسپاندنی پەیوەندی بە فریاگوزاری لە پێڕستی ووزە</string>
+    <!-- Power Menu -->
+    <string name="global_actions_power_menu_title">پێڕستی ووزە</string>
+    <!-- Hide statusbar on lockscreen -->
+    <string name="lockscreen_hide_status_bar_title">شاردنەوەی ڕەوشبەند</string>
+    <string name="lockscreen_hide_status_bar_summary">کاتێ کاراکرا، ڕەوشبەند دەرناکەوێت لە ڕوونماداخراو</string>
+    <!-- Other UI tweaks -->
+    <string name="other_ui_title">تویکەکانیتری ڕووکار</string>
+    <string name="other_ui_summary">هەمەچەشنەکان</string>
+    <!-- Volume dialog timeout -->
+    <string name="volume_dialog_timeout_title">خێرایی لاچوونی تەختەی دەنگ</string>
+    <!-- Swap volume keys based on device rotation -->
+    <string name="swap_volume_buttons">ئاڵوگۆڕی دوگمەکانی دەنگ</string>
+    <string name="swap_volume_buttons_summary">دوگمەکانی دەنگ ئاڵوگۆڕ دەکات لەکاتی لاربوونەوە</string>
+    <!-- Volume keys control rint tone stream -->
+    <string name="volume_keys_control_ring_tone_title">کۆنترۆڵی دەنگی زەنگ</string>
+    <!-- Volume keys control music playback -->
+    <string name="volume_rocker_music_controls_title">کۆنڕۆڵی کارپێکەر</string>
+    <string name="volume_rocker_music_controls_summary">کاتێ ڕوونما کوژاوەتەوە، داگرتنی-درێژی دوگمەکانی دەنگ تراکەکانی میوزیک دەگۆڕیت</string>
+    <!-- Toast icon switch -->
+    <string name="toast_icon_title">هێمای پەیامەر</string>
+    <string name="toast_icon_summary">پیشاندانی هێمای ئەپی نامەگۆڕینەوە لەگەڵ پەیامەرەکە</string>
+    <!-- Show VoLTE icon on statusbar -->
+    <string name="volte_icon_title">هێمای VoLTE</string>
+    <string name="volte_icon_summary">پیشاندانی ئایکۆنی VoLTE</string>
+    <!-- Show location icon on statusbar -->
+    <string name="statusbar_location_icon_title">ئایکۆنی ناوچە</string>
+    <string name="statusbar_location_icon_summary">پیشاندانی ئایکۆنی ناوچە</string>
+    <!-- Power Button - Long press for torch -->
+    <string name="torch_long_press_power_gesture_title">داگرتنی درێژی دوگمەی سەرەکی بۆ فلاش</string>
+    <string name="torch_long_press_power_gesture_summary">فلاش لایت هەڵ ئەکات کاتێ دوگمەی سەرەکی بۆ ماوەیەک داگیرا لەسەر ڕوونماداخراو</string>
+    <string name="torch_long_press_power_timeout_title">کوژاندنەوەی خۆکاری فلاش لایت</string>
+    <string name="torch_long_press_power_timeout_never">هەرگیز</string>
+    <string name="torch_long_press_power_timeout_1min">1 خولەک</string>
+    <string name="torch_long_press_power_timeout_2min">2 خوله‌ک</string>
+    <string name="torch_long_press_power_timeout_5min">5 خوله‌ک</string>
+    <string name="torch_long_press_power_timeout_10min">10 خوله‌ک</string>
+    <!-- Setting: show CPU info -->
+    <string name="show_cpu_info">پیشاندانی زانیاری CPU</string>
+    <string name="show_cpu_info_summary">داپۆشی ڕوونما زانیاری ڕاستی CPU نیشانەدات</string>
+    <!-- Turn on display when power connected; turn off display when power disconnected -->
+    <string name="wake_when_plugged_or_unplugged_title">هەڵبوون لەگەڵ پێوەکردن</string>
+    <string name="wake_when_plugged_or_unplugged_summary">هەڵکردنی ڕوونماکە کاتێ کێبڵێک پێوەدەکرێ یان لێدەکرێتەوە</string>
+    <!-- Launch music player when headset is connected -->
+    <string name="headset_connect_player_title">چوونەنێو ئەپی میوزیک لەگەڵ پەیوەستبوونی بیستۆک</string>
+    <string name="headset_connect_player_summary">دەچێتە نێو ئەپی بنەڕەتی میوزیک لەکاتی پێوەکردنی بیستۆک</string>
+    <!-- System animations -->
+    <string name="system_animations_title">ئەنیمەیشنەکان</string>
+    <string name="system_animations_summary">ئەنیمەیشنەکانی سیستەم</string>
+    <string name="custom_bootanimation_title">ئەنیمەیشنی هەڵبوون</string>
+    <string name="custom_bootanimation_summary">دیارکردنی ئەنیمەیشنی هەڵبوونی خۆکرد. لەگەڵ هەر گۆڕینەێکدا، ئەنیمەیشنی بنەڕەتی دەپارێزرێ لە فۆڵدەری AICP_backup لە بیرگەی ناوەکیدا. کۆنەکان ئەتوانرێ بسڕدرێنەوە گەر پێویست نەبوون.</string>
+    <string name="bootanimation_preview">پێشبینینی ئەنیمەیشنی هەڵبوون</string>
+    <string name="bootanimation_set_custom">دانانی خۆکرد...</string>
+    <string name="bootanimation_creating_preview">بنیاتنانی پێشبینین...</string>
+    <string name="bootanimation_error_reading_zip_file">هەڵە لە خوێندنەوەی فایلی zip</string>
+    <string name="bootanimation_error_creating_preview">هەڵە لە بنیاتنانی پێشبینین</string>
+    <string name="bootanimation_install_file_manager_error">هیچ ئەپێک نەدۆزرایەوە بۆ هەڵگرتنی فایلە zip ەکە. تکایە ڕێبەری فایلڵک دابمەزرێنە.</string>
+    <string name="bootanimation_apply">جێبەجێکردن</string>
+    <string name="bootanimation_install_successful">ئەنیمەیشنی نوێی هەڵبوون جێبەجێکرا.</string>
+    <!-- System behaviour -->
+    <string name="system_behaviour_summary">تویکەکانی سیستەم</string>
+    <string name="system_ss_category_title">بژاردەکانی ڕوونماچرکان</string>
+    <!-- Screenshot sound -->
+    <string name="screenshot_sound_title">دەنگی ڕوونماچرکان</string>
+    <string name="screenshot_sound_summary">دەنگێک لێدەدات کاتێ وێنەی ڕوونما دەچرکێنیت</string>
+    <!-- Hostname setting -->
+    <string name="device_hostname">ناوی هۆستی ئامێر</string>
+    <string name="selinux_category">SELinux</string>
+    <string name="selinux_explanation_summary">SELinux ئەتوانێ گۆڕانکاری لە کەرنێڵ و ئامرازەکانی بەکارهێنەر بکات. گۆڕینی دۆخەکان ڕەنگە ببێتە هۆی ئەنجامی نەخوازراو. لەسەر مەترسی خۆت بەکاریبهێنە.</string>
+    <string name="selinux_mode_title">دۆخی SELinux</string>
+    <string name="selinux_permissive_summary">ڕێپێدەر</string>
+    <string name="selinux_enforcing_summary">سەپاندن</string>
+    <!-- System extensions -->
+    <string name="system_extensions_title">پێوەکراوەکانی سیستەم</string>
+    <string name="system_extensions_summary">پاشکۆکانی سیستەم</string>
+    <!-- System app remover -->
+    <string name="system_app_remover_title">لابەری ئەپی سیستەم</string>
+    <string name="system_app_remover_summary">ئەپە دامەزراوەکانی نێو-سیستەم لادەبات</string>
+    <string name="system_app_remover_message_delete">ئایا دڵنیایت لە سڕینەوەی ئەم ئەپە؟</string>
+    <string name="system_app_remover_message_noselect">هیچ دیارنەکراوە</string>
+    <!-- Log it -->
+    <string name="log_it_title">Log that shit!</string>
+    <string name="log_it_summary">Logcat, kmesg, dmesg</string>
+    <string name="logcat_title">Logcat</string>
+    <string name="logcat_radio_title">Radio log</string>
+    <string name="kmesg_title">Kmesg</string>
+    <string name="dmesg_title">Dmesg</string>
+    <string name="log_it_now_title">Engage</string>
+    <string name="log_it_dialog_title">Engage</string>
+    <string name="logcat_warning">Share it or GTFO!</string>
+    <string name="share_title">هاوبەشی...</string>
+    <string name="log_it_share_subject">تۆمارەکانی AICP</string>
+    <string name="log_it_now_summary">لەسەرخۆبە تا تۆمارەکان دروست ئەبن</string>
+    <string name="log_it_logs_in_progress">تۆمارەکان دروست ئەکرێن…</string>
+    <string name="log_it_share_type_title">هاوبەشکردنی ڕێباز</string>
+    <string name="log_it_share_type_zip">فایلی-ZIP</string>
+    <string name="log_it_share_type_haste">بەرزکردنەوە بۆ هۆستی AICP</string>
+    <string name="log_it_share_via">هاوبەشیکردن لەڕێی</string>
+    <!-- AE settings -->
+    <string name="ae_settings_title">AE کەستمزەیشن</string>
+    <string name="ae_settings_summary">گۆڕینی دیمەن و دەرکەوتنی زیاکراوەکانی AICP</string>
+    <string name="theme_title">ڕووکار</string>
+    <string name="theme_default">خۆکار</string>
+    <string name="theme_default_force">ڕێکخستنە بنەڕەتییەکانی ڕووکار</string>
+    <string name="theme_default_more_accent">ڕەنگی زیاتر</string>
+    <string name="theme_default_less_accent">کەم ڕەنگ</string>
+    <string name="theme_light">ڕۆشن</string>
+    <string name="theme_light_more_accent">ڕۆشن لەگەڵ ڕەنگی زیاتر</string>
+    <string name="theme_dark">تاریک</string>
+    <string name="theme_dark_more_accent">تاریک لەگەڵ ڕەنگی زیاتر</string>
+    <string name="ae_launcher_enabled_title">پیشاندانی ئایکۆنی لانچەر</string>
+    <string name="ae_launcher_enabled_summary">پیشاندانی زیاکراوەکانی AICP لە لانچەر</string>
+    <string name="ae_launcher_enabled_update">دەرکەوتنی ئایکۆنی لانچەر نوێکرایەوە. ڕەنگە چەند ساتێک بخایەنێ بۆ جێگیربوونی گۆڕانکارییەکە</string>
+    <!-- About -->
+    <string name="about_title">دەربارە</string>
+    <string name="about_summary">بینینی زانیاری دەربارەی ئەم ڕۆمە</string>
+    <string name="weblinks_category">بەستەری تۆڕ</string>
+    <string name="info_category">زانیاری</string>
+    <string name="aicp_website_title">ماڵپەڕ</string>
+    <string name="aicp_website_summary">سەردانی ماڵپەڕی AICP بکە</string>
+    <string name="aicp_walls_title">پاشبنەماکان</string>
+    <string name="aicp_walls_summary">پاشبنەماکانی AICP ببینە</string>
+    <string name="discord_title">ڕاژەی دیسکۆرد</string>
+    <string name="discord_summary">سەردانی ڕاژەی دیسکۆردمان بکە</string>
+    <string name="aicp_gerrit_title">Gerrit</string>
+    <string name="aicp_gerrit_summary">سەردانمان بکە تا بزانی چۆن کاردەکەین</string>
+    <string name="aicp_changelog_title">گۆڕانکارییەکان</string>
+    <string name="aicp_changelog_summary">بینینی دواین گۆڕانکارییەکانما بۆ AICP</string>
+    <string name="aicp_downloads_title">داگرتنەکان</string>
+    <string name="aicp_downloads_summary">سەردانی پەڕەی AICP بکە بۆ داگرتنی ڕۆمی ئامێر</string>
+    <string name="aicp_ota_title">ناوەندی نوێکردنەوە</string>
+    <string name="aicp_ota_summary">پشکنین بۆ نوێکردنەوەی AICP</string>
+    <string name="stats_title">ئامارەکان</string>
+    <string name="device_maintainer_title">پەرەپێدەری ئامێر</string>
+    <string name="device_maintainer_dialog">پەرەپێدەری ئامێر</string>
+    <string name="device_maintainers_dialog">پەرەپێدەرەکانی ئامێر</string>
+    <string name="device_maintainer_default">نەناسراو</string>
+    <string name="no_root_title">ڕووت نەکراوە</string>
+    <string name="no_root_summary">بۆ کارداری زیاتر، ئامێرەکەت ڕووت بکە</string>
+    <string name="aicp_version_title">وەشانی AICP</string>
+    <string name="build_date_title">بەرواری بنیاتنان</string>
+    <!-- Other / general purpose -->
+    <string name="on">کارا</string>
+    <string name="off">ناکارا</string>
+    <string name="reset">گێڕانەوە</string>
+    <string name="systemui_restart_title">هەڵکردنەوەی سیستەم داواکراوە</string>
+    <string name="systemui_restart_message">بۆ جێبەجێکردنی گۆڕینەکان، هەڵکردنەوەی سیستەمەکەت داواکراوە، ئێستا سیستەمەکە هەڵبکرێتەوە؟</string>
+    <string name="cannot_get_su">کردار شکستی هێنا بەهۆی نەگەیشتن بە ڕووت</string>
+    <string name="launcher_shortcut_disabled_message">کورتەبڕ ناکارایە</string>
+    <string name="hidden_anim_activity_title">کاتی یۆگایە!!!</string>
+    <!-- Sensor block per-package -->
+    <string name="sensor_block_title">سڕکردنی هەستەوەر بۆ-پاکێج</string>
+    <string name="sensor_block_summary">سڕکردنی گەیشتن بە هەنێ هەستەوەر لەلایەن هەنێ ئەپ بۆ پاراستنی زیاتری ووزە.</string>
+    <!-- Weather - OmniJaws Settings -->
+    <string name="weather_title">که‌ش وهەوا</string>
+    <string name="weather_config_title">ڕێکخستنی خزمەتگوزاری</string>
+    <string name="header_weather_title">بینینی کەشی سەرپەڕە</string>
+    <string name="header_weather_summary">کاراکردنی پیشاندانی کەش لە سەرپەڕەی تەختەی ئاگانامە</string>
+    <string name="weather_icon_pack_title">ڕەوشی دەستە ئایکۆن</string>
+    <string name="weather_icon_pack_note">تێبینی\u003a ئەتوانی دەستە ئایکۆنی نوێ لە پلەی ستۆر بەگەڕان بۆ \"Chronus icons\"</string>
+    <!-- Lockscreen Weather -->
+    <string name="lock_screen_weather_category_title">ڕوونماداخراو</string>
+    <string name="lock_screen_show_weather_title">نیشاندانی کەش</string>
+    <string name="lock_screen_show_weather_summaryOn">کەش نیشانەدرێ لە ڕوونماداخراو</string>
+    <string name="lock_screen_show_weather_summaryOff">کەش شاردراوەتەوە لە ڕوونماداخراو</string>
+    <string name="lock_screen_weather_style_title">شێوازی کەش</string>
+    <string name="lock_screen_weather_style_summaryOff">کەش نیشاندەدرێ لەخوار هێڵی بەروار لەگەڵ ناوچەدا</string>
+    <string name="lock_screen_weather_style_summaryOn">کەش نیشاندەدرێ لەخوار هێڵی بەروار بەبێ ناوچە</string>
+    <string name="lock_screen_show_location_title">نیشاندانی ناوچە</string>
+    <string name="lock_screen_show_location_summaryOn">ناوچە نیشانەدرێ لە ڕوونماداخراو</string>
+    <string name="lock_screen_show_location_summaryOff">ناوچە شاردراوەتەوە لە ڕوونماداخراو</string>
+    <string name="lock_screen_weather_condition_icon_title">ڕەوشی نیشاندانی ئایکۆن</string>
+    <!-- Statusbar ticker -->
+    <string name="status_bar_ticker_title">خاڵ</string>
+    <string name="status_bar_show_ticker_title">خاڵ</string>
+    <string name="status_bar_show_ticker_summary">پێشبینینی ئاگانامە لە ڕەوشبەند لەباتی ئاگانامەی زیندوو</string>
+    <string name="status_bar_show_ticker_footer">بلیت و ئاگانامە زیندووەکان ئاڵوگۆڕانە تایبەتن</string>
+    <string name="ticker_animation_mode_title">ئەنیمەیشنی خاڵ</string>
+    <string name="ticker_animation_mode_alpha_fade">کاڵبوون</string>
+    <string name="ticker_animation_mode_scroll">کێشان</string>
+    <string name="ticker_tick_duration_title">وادەی خاڵ</string>
+    <!-- Navigation-->
+    <string name="navigation_title">ڕێنیشاندەر</string>
+    <string name="navigation_summary">سازدانی هەمەجۆری دەرکەوتنی جێنیشاندەر</string>
+    <string name="navigation_bar_invert_layout_title">نەخشی هەڵگەڕاندنەوە</string>
+    <string name="navigation_footer">گرنگ: ناچالاککردنی توڵی جێنیشاندەر سەرجەم دوگمەکانی سەر ڕوونما ناچالاک دەکات لەنێویاندا جوڵانەکان!</string>
+    <!-- OP like navigation gestures -->
+    <string name="gesture_settings_title">جوڵانەکانی جێنیشاندەر</string>
+    <string name="gesture_settings_info">تووڵی جێنیشاندەر پێویستە خۆکارانە ناچالاک بکرێ!\n\n جوڵانە بەردەستەکان:\n\nگەڕانەوە\n-ڕاکێشانی لای چەپ یان ڕاست بۆ ناوەند\n\nماڵەوە\n ڕاکێشانە سەرەوەی ناوەند\n\nدوایین ئەپەکان\n-ڕاکێشانە سەرەوەی ناوەند و پەنجە ڕاگرتن\n\n گرتەدرێژی ماڵەوە\n- بەکورتی ڕاکێشانە سەرەوە و پەنجە لە ناوەند ڕاگرە</string>
+    <string name="use_bottom_gesture_title">جوڵانەکانی جێنیشاندەر</string>
+    <string name="use_bottom_gesture_summary">جوڵانەوەی ڕاکێشانە سەرەوەی خوار ڕوونما بۆ جێنیشاندەری\n دەبێ تووڵی جێنیشاندەر ناچالاککرابێت!</string>
+    <string name="gesture_swipe_length_title">درێژی ڕاکێشانی پەلەپیتکە</string>
+    <string name="gesture_swipe_length_summary">ماوە درێژی ڕاکێشانی داواکراو بۆ جوڵانەوەی تێزکە</string>
+    <string name="bottom_gestures_feedback_duration_title">وادەی وڵامدانەوەی لەرینەوە</string>
+    <string name="unit_dpi">dpi</string>
+    <string name="unit_px">px</string>
+    <string name="unit_msec">ms</string>
+    <string name="unit_sec">چ</string>
+    <!-- Navigation -->
+    <string name="category_navbar_layout">نه‌خش</string>
+    <string name="navigation_bar_title">دووگمەکانی سەر ڕوونما</string>
+    <string name="navigation_bar_summary">بیچەسپێنە بۆ کاراکردنی جێنیشاندەری سەر ڕوونما</string>
+    <string name="navigation_bar_layout_title">نه‌خش</string>
+    <string name="navigation_bar_layout_summary">گۆڕینی نەخشی سەر جێنیشاندەر</string>
+    <string name="system_navigation_title">ڕێکخستنی جێنیشاندەری سیستەم</string>
+    <!-- Keys/Buttons -->
+    <string name="hw_keys_swap_title">ئاڵوگۆڕی دوگمەکانی ڕەقەواڵا</string>
+    <string name="hw_keys_swap_summary">ئاڵوگۆڕی شوێنی دوگمەی دواین ئەپەکان و گەڕانەوە</string>
+    <string name="home_key_title">دوگمەی ماڵەوە</string>
+    <string name="back_key_title">دوگمەی گەڕانەوە</string>
+    <string name="menu_key_title">دوگمەی پێڕست</string>
+    <string name="assist_key_title">دوگمەی هاوکاری</string>
+    <string name="app_switch_key_title">دوگمەی دوایینەکان</string>
+    <string name="camera_key_title">دوگمەی کامێرا</string>
+    <string name="short_press_title">کرداری گرتەی کەم</string>
+    <string name="long_press_title">کرداری گرتە درێژ</string>
+    <string name="double_tap_title">کرداری دووانە گرتە</string>
+    <!-- Custom actions
+          0 - Nothing
+          1 - Menu key
+          2 - Recent apps view in SystemUI
+          3 - Launch assist intent
+          4 - Voice search
+          5 - In-app search
+          6 - Launch camera
+          7 - Launch last app
+          8 - Split screen
+          9 - Flashlight
+          10 - Clear notifications
+          11 - Volume panel
+          12 - Screen off
+          13 - Notifications
+          14 - Power menu
+          15 - Screenshot
+          16 - QS panel
+          17 - Custom app
+          18 - Ringer modes -->
+    <string name="action_nothing">بێ کردار</string>
+    <string name="action_menu">پێڕست</string>
+    <string name="action_app_switch">دوایینەکان</string>
+    <string name="action_search">یاریدەدەر</string>
+    <string name="action_voice_search">گەڕانی دەنگی</string>
+    <string name="action_in_app_search">گەڕانی نێو-ئەپ</string>
+    <string name="action_launch_camera">کامێرا</string>
+    <string name="action_last_app">کۆتا ئەپ</string>
+    <string name="action_splitscreen">دووبەشکردنی ڕوونما</string>
+    <string name="action_flashlight">فلاش لایت</string>
+    <string name="action_clear_notifications">سافکردنی ئاگانامەکان</string>
+    <string name="action_volume_panel">تەختەی دەنگ</string>
+    <string name="action_screen_off">کوژانه‌وه‌ی ڕوونما</string>
+    <string name="action_screenshot">ڕوونماچرکان</string>
+    <string name="action_notifications_panel">تەختەی ئاگانامەکان</string>
+    <string name="action_power_menu">پێڕستی ووزە</string>
+    <string name="action_qs_panel">تەختەی ڕ/خ</string>
+    <string name="action_custom_app">ئەپی خۆکردی</string>
+    <string name="action_ringer_modes">دۆخەکانی زەنگلێدەر</string>
+    <string name="action_kill_app">داخستنی ئەپی پێشبنەما</string>
+    <string name="action_skip_song">پەڕاندنی گۆرانی</string>
+    <string name="action_prev_song">گۆرانی پێشوو</string>
+    <!-- DUI -->
+    <string name="picker_activities">چالاکییەکان</string>
+    <string name="select_custom_app_title">دیارکردنی ئەپی خۆکرد</string>
+    <string name="select_custom_activity_title">دیاریکردنی چالاکی خۆکرد</string>
+    <string name="profile_applist_title">ئەپلیکەیشنەکان</string>
+    <!-- SmartNav -->
+    <string name="bottom_nav_navigation_title">جێنیشاندەر</string>
+    <string name="navbar_interface_title">ڕووکار</string>
+    <string name="navbar_layout_title">ڕووکار</string>
+    <string name="navbar_size">قەبارەی تووڵ</string>
+    <string name="navbar_mode">دۆخی ڕێنیشاندەری</string>
+    <string name="navbar_mode_summary">دیارکردنی دۆخی جێنیشاندەری بۆ ئامێر</string>
+    <string name="navbar_visibility">کاراکردنی تووڵی جێنیشاندەر</string>
+    <string name="navigationbar_settings_summary">سازدانی شێوازی جێنیشاندەر و دەرکەوتنی</string>
+    <string name="navbar_general_title">پەرەسەندوو</string>
+    <string name="navigation_bar_left_title">دۆخی ده‌ستی-چه‌پ</string>
+    <string name="navigation_bar_left_summary">تووڵی جێنیشاندەر دەخاتە چەپی ڕوونماوە لەکاتی لاربوونەوەی ئامێر بۆ پانی</string>
+    <string name="smartbar_interface">ژیربەند</string>
+    <string name="icon_pack_picker_dialog_title">دەستە ئایکۆن</string>
+    <string name="image_exceeds_max_allowed_size">وێنە پێویستە زیاتربێ لە 512×512</string>
+    <string name="invalid_icon_from_uri">ناتوانرێ وێنە باربکرێ لەلایەن دابیگەری ناوەڕۆکەوە</string>
+    <!-- Stock Navbar -->
+    <string name="default_string">بنچینەیی</string>
+    <string name="default_settings">ڕێکخستنە بنچەکان</string>
+    <string name="default_settings_summary">جێنیشاندەری بنەڕەتی AOSP</string>
+    <!-- Actions dialog and default task values set in ActionPreference xml-->
+    <string name="choose_action_title">کردارێ هەڵبژێرە</string>
+    <string name="action_entry_default_action">ڕێکخستنی بنەڕەتی</string>
+    <string name="action_entry_select_app">دیاریکردنی ئەپ</string>
+    <string name="action_entry_custom_action">دیارکردنی کردار خۆکرد</string>
+    <!-- Fling -->
+    <string name="fling_def_summary">هیچ کردەیەک دانەنراوە</string>
+    <string name="fling_swipe_actions">جووڵەکانی ڕاکێشان</string>
+    <string name="fling_tap_actions">جووڵەکانی گرتە</string>
+    <string name="fling_short_swipe_right">کورتە-ڕاکێشانی ڕاست</string>
+    <string name="fling_short_swipe_left">کورتە-ڕاکێشانی چەپ</string>
+    <string name="fling_long_swipe_right">زیاد-ڕاکێشانی ڕاست</string>
+    <string name="fling_long_swipe_left">زیاد-ڕاکێشانی چەپ</string>
+    <string name="fling_right_up_swipe">ڕاکێشانە-سەرەوەی ڕاست</string>
+    <string name="fling_left_up_swipe">ڕاکێشانە-سەرەوەی چەپ</string>
+    <string name="fling_single_tap">تاک-گرتەی ڕاست</string>
+    <string name="fling_double_tap">دووانە-گرتەی ڕاست</string>
+    <string name="fling_long_press">گرتە-درێژی ڕاست</string>
+    <string name="fling_single_left_tap">تاک-گرتەی چەپ</string>
+    <string name="fling_double_left_tap">دووانە-گرتەی چەپ</string>
+    <string name="fling_long_left_press">گرتە-درێژی چەپ</string>
+    <string name="long_swipe_portrait_title">ستوونی</string>
+    <string name="long_swipe_landscape_title">ئاسۆیی</string>
+    <string name="portrait_right_swipe_title">ڕاکێشانی-ڕاست ئەستوون</string>
+    <string name="portrait_left_swipe_title">ڕاکێشانی-چەپ ئەستوون</string>
+    <string name="landscape_right_swipe_title">ڕاکێشانی-ڕاست ئاسۆ</string>
+    <string name="landscape_left_swipe_title">ڕاکێشانی-چەپ ئاسۆ</string>
+    <string name="vertical_up_swipe_title">ڕاکێشانە-سەرووی ئەستوونی</string>
+    <string name="vertical_down_swipe_title">ڕاکێشانە-خوارووی ئەستوونی</string>
+    <string name="up_swipe_title">ڕاکێشانی-سەروو</string>
+    <string name="down_swipe_title">ڕاکێشانی-خواروو</string>
+    <string name="long_swipe_reset">گێڕانەوە</string>
+    <string name="fling_advanced">پەرەسەندوو</string>
+    <string name="fling_trails_enable_summary">پیشاندانی شوێنەوار لەگەڵ جوڵانەکانی ڕاکێشان</string>
+    <string name="fling_trails_color_title">ڕەنگی شوێنەوار</string>
+    <string name="fling_trails_width_title">پانی شوێنەوار</string>
+    <string name="fling_appearance">دیمەن</string>
+    <string name="fling_show_logo_title">پیشاندانی لۆگۆی هاویشتن</string>
+    <string name="fling_animate_logo_title">لۆگۆی گەشانەوە</string>
+    <string name="fling_logo_color">ڕەنگی لۆگۆ</string>
+    <string name="fling_logo_custom_logo_pick_title">ئایکۆنی لۆگۆ خۆکردی</string>
+    <string name="fling_logo_custom_logo_image_pick_title">وێنەی لۆگۆ خۆکردی</string>
+    <string name="fling_logo_custom_logo_reset_title">ڕێخستنەوەی ئایکۆنی لۆگۆ</string>
+    <string name="fling_longpress_title">دواکەوتنی گرتە-درێژ</string>
+    <string name="fling_longpress_summary">گونجاندنی کاتی پێش ئەنجامدانی کردارەکانی گرتەی درێژ</string>
+    <string name="fling_factory_reset_title">گێڕانەوە بۆ بنچەیی</string>
+    <string name="fling_backup_current_config_title">خەزنکردنی ژیننامە</string>
+    <string name="fling_restore_config_title">گێڕانەوەی ژیننامە</string>
+    <string name="fling_config_name_edit_dialog_message">ناوێ بنوسە یان بەبەتاڵی جێیبهێڵە</string>
+    <!-- Pulse navigation bar music visualizer -->
+    <string name="pulse_advanced_category">پەرەسەندوو</string>
+    <string name="pulse_blacklist_title">ئەپەکانی لیستی ڕەش</string>
+    <string name="pulse_blacklist_apps_cat_title">لیستی ڕەش</string>
+    <string name="pulse_blacklist_apps_title">ئەپەکانی لیستی ڕەش</string>
+    <string name="pulse_blacklist_apps_summary">ئەو ئەپانەی تەختەکە نیشان نەدرێن</string>
+    <string name="pulse_blacklist_add_apps_title">زیادکردنی ئەپ</string>
+    <string name="pulse_blacklist_add_apps_summary">ئێرە داگرە بۆ زیادکردن، گرتە لە ئەپی زیادکراو بکە بۆ لادانی ئەپەکە</string>
+    <!-- Pulse config -->
+    <string name="pulse_custom_dimen">پانی تووڵ</string>
+    <string name="pulse_custom_div">بۆشایی تووڵ</string>
+    <string name="pulse_filled_block_size">بلۆککردنی قەبارە</string>
+    <string name="pulse_empty_block_size">بلۆککردنی بۆشایی</string>
+    <!-- Navbar height -->
+    <string name="navigation_bar_size_title">قەبارەی تووڵ</string>
+    <string name="portrait_title">درێژی ستوون</string>
+    <string name="land_vert_title">پانی ئاسۆیی</string>
+    <string name="land_hor_title">بەرزی ئاسۆیی</string>
+    <string name="positive_done">تەواو</string>
+    <!-- SmartBar -->
+    <string name="smartbar_category">ژیربەند</string>
+    <string name="smartbar_settings_title">ڕێکخستنەکانی ژیربەند</string>
+    <string name="smartbar_editor_title">دەسپێکی دۆخی دەسکاری</string>
+    <string name="smartbar_editor_summary">کردنەوەی دەسکاری دوگمەکانی ژیربەند</string>
+    <string name="smartbar_right">ڕاست</string>
+    <string name="smartbar_left">چەپ</string>
+    <string name="smartbar_button_animation_title">ئەنیمەیشتی داگرتنی دوگمە</string>
+    <string name="smartbar_button_animation_summary">دانانی شێوازی ئەنیمەیشنی داگرتنی دوگمە سەرەکییەکان</string>
+    <string name="smartbar_button_animation_ripple">شەپۆلکە</string>
+    <string name="smartbar_button_animation_spring">بازدان</string>
+    <string name="smartbar_button_animation_flip">هەڵگەڕان</string>
+    <string name="smartbar_button_animation_pixel">پێکسڵ</string>
+    <string name="smartbar_button_animation_pixel_home">پێکسڵ (دوگمەی ماڵەوە)</string>
+    <string name="smartbar_button_animation_pixel_home_ripple">نەرم لەگەڵ پێکسڵ (دوگمەی ماڵەوە)</string>
+    <string name="smartbar_factory_reset_title">گێڕانەوە بۆ بنچەیی</string>
+    <string name="smartbar_factory_reset_confirm">ئایا دڵنیای ئەتەوێ ژیربەند بگەڕێنیتەوە بۆ ڕێکخستنەکانی بنچینەیی؟</string>
+    <string name="smartbar_ime_action_summary">هەڵبژێرە کام دوگمە نیشان بدرێ لەگەڵ تەختەکلیلی سەر ڕوونما و لەکاتی کارپێکردنی میوزیک</string>
+    <string name="smartbar_ime_action_none">هیچیان</string>
+    <string name="smartbar_ime_action_switcher">گۆڕەڕی تەختەکلیل</string>
+    <string name="smartbar_backup_current_config_title">خەزنکردنی ژیننامە</string>
+    <string name="smartbar_restore_config_title">گێڕانەوەی ژیننامە</string>
+    <string name="smartbar_config_name_edit_dialog_title">ناوی ژیاننامەی ژیربەند</string>
+    <string name="smartbar_config_name_edit_dialog_message">ناوێ بنوسە یان بەبەتاڵی جێیبهێڵە</string>
+    <string name="smartbar_config_dialog_title">ژیننامەکانی ژیربەند</string>
+    <string name="smartbar_config_backup_success_toast">ژیننامەی ژیربەند بەسەرکەوتوویی خەزنکرا</string>
+    <string name="smartbar_config_restore_success_toast">ژیننامەی ژیربەند بەسەرکەوتوویی گێڕایەوە</string>
+    <string name="smartbar_config_backup_error_toast">هەڵە لە خەزنکردنی ژیننامەی ژیربەند</string>
+    <string name="smartbar_config_restore_error_toast">هەڵە لە گێڕانەوەی ژیننامەی ژیربەند</string>
+    <string name="navbar_buttons_alpha_title">ڕوونایەتی دوگمە</string>
+    <string name="smartbar_longpress_delay_title">دواکەوتنی دوگمەی داگرتنی-درێژ</string>
+    <string name="smartbar_longpress_delay_summary">سازدانی ماوەی دواکەوتن بۆ کرداری داگرتنی-درێژ</string>
+    <string name="smartbar_longpress_delay_default">دواکەوتنی بنەڕەت (خێرا)</string>
+    <string name="smartbar_longpress_delay_normal">دواکەوتنی ئاسایی</string>
+    <string name="smartbar_longpress_delay_long">دواکەوتنی دوور</string>
+    <string name="one_handed_mode_title">دۆخی یەک-دەستی</string>
+    <string name="one_handed_mode_summary">ڕێدان بەڕاکێشان لەسەر تووڵی جێنیشاندەر بۆ کاراکردنی دۆخی یەک-دەستی</string>
+    <string name="smartbar_double_tap_sleep_title">دووانە-گرتە بۆ کوژاندنەوە</string>
+    <string name="smartbar_double_tap_sleep_summary">دووانە-گرتە لەسەر ناوچە بەتاڵەکانی تووڵی جێنیشاندەر بۆ کوژانەوە</string>
+    <string name="write_settings_off">دۆخی یەک دەستی</string>
+    <!-- Carrier Label -->
+    <string name="carrier_options">دیارکردنی ناوچەکانی نیشاندان</string>
+    <string name="custom_carrier_label_title">نازناوی بریکاری خۆکرد</string>
+    <string name="custom_carrier_label_explain">تکایە دەقێکی نوێ بنوسە. بەتاڵ جێیبێڵە بۆ گێڕانەوەی بنچینەیی.</string>
+    <string name="custom_carrier_label_notset">نازناوی خۆکرد پێشتر دانەنراوە</string>
+    <string name="show_carrier_title">نازناوی بریکار</string>
+    <string name="show_carrier_disabled">ناکارایە</string>
+    <string name="show_carrier_keyguard">تەنها ڕوونماداخراو</string>
+    <string name="show_carrier_statusbar">تەنها ڕەوشبەند</string>
+    <string name="show_carrier_enabled">ڕوونماداخراو &amp; ڕەوشبەند</string>
+    <!-- AOKP custom system animations -->
+    <string name="animation_title">ئەنیمەیشنەکان</string>
+    <string name="system_animation_title">ئەنیمەیشنەکانی سیستەم</string>
+    <string name="activity_open_title">ئەنیمەیشنی کردنەوەی چالاکی</string>
+    <string name="activity_close_title">ئەنیمەیشنی داخستنی چالاکی</string>
+    <string name="task_open_title">ئەنیمەیشنی کردنەوەی ئەرک</string>
+    <string name="task_close_title">ئەنیمەیشنی داخستنی ئەرک</string>
+    <string name="task_move_to_front_title">چوون بۆ ئەنیمەیشنی پێشەوە</string>
+    <string name="task_move_to_back_title">چوون بۆ ئەنیمەیشنی دواوە</string>
+    <string name="wallpaper_open_title">ئەنیمەیشنی کردنەوەی پاشبنەما</string>
+    <string name="wallpaper_close_title">ئەنیمەیشنی داخستنی پاشبنەما</string>
+    <string name="wallpaper_intra_open_title">ئەنیمەیشنی کردنەوەی نێو پاشبنەما</string>
+    <string name="wallpaper_intra_close_title">ئەنیمەیشنی داخستنی نێو پاشبنەما</string>
+    <string name="animation_duration_title">وادەی ئەنیمەیشن</string>
+    <string name="title_animation_no_override">ڕێگیری لەزاڵبوونی ئەپ</string>
+    <string name="summary_animation_no_override">ڕێگیری لە ئەپەکان لە زاڵبوون بەسەر گواستنەوە</string>
+    <string name="animation_duration_default">بنەڕەت</string>
+    <!-- Lock screen visualizer -->
+    <string name="lockscreen_visualizer_title">ڤیژولایزەری میوزیک</string>
+    <string name="lockscreen_visualizer_summary">پیشاندانی ڤیژوڵایزەر لە ڕوونماداخراو کاتێ کار بە میوزیک دەکرێ</string>
+    <string name="lockscreen_visualizer_enable_custom">دانانی ڕەنگی خۆکرد</string>
+    <string name="lockscreen_visualizer_enable_custom_summary">دانانی ڕەنگێکی ڕێکخراو لەباتی ڕەنگی بنیاتنراو</string>
+    <string name="lockscreen_visualizer_custom_color">ڕەنگی ڤیژوڵایزەر</string>
+    <!-- Screen state service -->
+    <string name="screen_state_toggles_title">کردە دواخراوەکان</string>
+    <string name="screen_state_toggles_enable_title">کاراکردن</string>
+    <string name="screen_state_toggles_mobile_title">تۆڕەکانی مۆبایل</string>
+    <string name="screen_state_toggles_location_title">ناوچە</string>
+    <string name="screen_state_toggles_twog">گۆڕین بۆ 2G</string>
+    <string name="screen_state_toggles_twog_summary">دۆخی تۆڕ دەگۆڕدرێ بۆ 2G کاتێ ڕوونما دادەخرێ</string>
+    <string name="screen_state_toggles_threeg">گۆڕین بۆ 3G</string>
+    <string name="screen_state_toggles_threeg_summary">دۆخی تۆڕ دەگۆڕدرێ بۆ 3G کاتێ ڕوونما دادەخرێ</string>
+    <string name="screen_state_toggles_gps">ناکاراکردنی GPS</string>
+    <string name="screen_state_toggles_gps_summary">خزمەتگوزاری ناوچەیی GPS ناکارا دەکرێ کاتی داخستنی ڕوونما</string>
+    <string name="screen_state_toggles_mobile_data">لەکارخستنی داتای مۆبایل</string>
+    <string name="screen_state_toggles_mobile_data_summary">داتای مۆبایل ناکارا دەکرێ کاتی داخستنی ڕوونما</string>
+    <string name="screen_state_off_delay_title">دواخرانی کردەکان ناکارایە</string>
+    <string name="screen_state_off_delay_summary">ژمارەی چرکەکان بۆ چاوەڕوانی پێش ئەنجامدانی کردەکانی ڕوونماداخراو</string>
+    <string name="screen_state_on_delay_title">دواخرانی کردەکان کارایە</string>
+    <string name="screen_state_on_delay_summary">ژمارەی چرکەکان بۆ چاوەڕوانی پێش ئەنجامدانی کردەکانی دوای هەڵکردنی ڕوونما</string>
+    <!-- Swap hw keys -->
+    <string name="swap_navigation_keys_title">ئاڵوگۆڕی دوگمەکانی ڕەقەواڵا</string>
+    <string name="swap_navigation_keys_title_summary">ئاڵوگۆڕی شوێنی دوگمەی دواین ئەپەکان و گەڕانەوە</string>
+    <!-- Ambient display music ticker -->
+    <string name="force_ambient_for_media_pref_title">بلیتی میوزیکی ڕوونمای زیندوو</string>
+    <string name="force_ambient_for_media_pref_summary">سازدانی بلیتی میوزیکی ڕوونمای زیندوو</string>
+    <string name="force_ambient_for_media_title">کاراکردن</string>
+    <!-- Screen Off animation -->
+    <string name="screen_off_animation_title">ئەنیمەیشنی کوژانەوەی ڕوونما</string>
+    <string name="screen_off_animation_default">بنەڕەت</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">کێشان</string>
+    <!-- Suppress notification sound/vibration -->
+    <string name="notification_sound_vib_screen_on_title">ئاگانامەکانی هەڵبوونی-ڕوونما</string>
+    <!-- Navigation -->
+    <string name="navigation_category">جێنیشاندەر</string>
+    <!-- HW keys -->
+    <string name="hw_keys_title">دوگمە پاشکۆکان</string>
+    <string name="hw_keys_summary">سازدانی دوگمە ڕەقەواڵاکانی پاڵپشتی ئامێر</string>
+    <string name="hardware_keys_wake_title">هەڵبوونی ئامێر</string>
+    <string name="hardware_keys_wake_keys_title">کلیلە پشتگیرکراوەکانی هەڵکردن</string>
+    <string name="hardware_keys_wake_keys_back_title">کلیلی گەڕانەوە</string>
+    <string name="hardware_keys_wake_keys_home_title">کلیلی ماڵەوە</string>
+    <string name="hardware_keys_wake_keys_menu_title">کلیلی پێڕست</string>
+    <string name="hardware_keys_wake_keys_assist_title">کلیلی هاوکاری</string>
+    <string name="hardware_keys_wake_keys_appswitch_title">کلیلی گۆڕینی ئەپ</string>
+    <string name="hardware_keys_wake_keys_camera_title">کلیلی کامێرا</string>
+    <!-- Power keys -->
+    <string name="category_power_key">دوگمه‌ی سەرەکی</string>
+    <!-- Volume keys -->
+    <string name="category_volume_keys">دوگمەکانی دەنگ</string>
+    <string name="volume_keys_cursor_control_title">کۆنتڕۆڵی جێنیشاندەر</string>
+    <string name="volume_keys_cursor_control_summary">کاراکردن بۆ بەکارهێنانی دوگمەکانی دەنگ بۆ کۆنتڕۆڵی جێنیشاندەر</string>
+    <!-- Volume rocker wake -->
+    <string name="volume_rocker_wake_title">هەڵبوون بە دەنگ</string>
+    <string name="volume_rocker_wake_summary">هەڵکردنی ڕوونما لەڕێگای داگرتنی دوگمەکانی دەنگەوە</string>
+    <!-- Button brightness -->
+    <string name="button_backlight_options_category">بژاردەکانی ڕۆشنایی پشتەوە</string>
+    <string name="button_backlight_enable_title">ڕێدان بە دوگمەی ڕووناکی پشتەوە</string>
+    <string name="button_link_brightness">گرێدان بە ڕۆشنایی ڕوونماوە</string>
+    <string name="button_link_brightness_summary">دوگمەی ڕۆشنایی ڕووناکی پشتەوە ڕێکەخرێ بەپێی ئاستی ڕۆشنایی ڕوونما</string>
+    <string name="button_manual_brightness">ئاستی ڕۆشنایی</string>
+    <string name="button_timeout_title">ووچانی ڕووناکی پشتەوە</string>
+    <!-- Quick QS pull down -->
+    <string name="status_bar_quick_qs_pulldown_summary_left">لێواری چەپی ڕەوشەند ڕێکخستنەخێراکان دەهێنێتەخوار</string>
+    <string name="status_bar_quick_qs_pulldown_summary_right">لێواری ڕاستی ڕەوشەند ڕێکخستنەخێراکان دەهێنێتەخوار</string>
+    <string name="status_bar_quick_qs_pulldown_off">ناکارا</string>
+    <!-- Toast Animation -->
+    <string name="toast_animation_title">ئەنیمەیشنی پەیامەر</string>
+    <string name="toast_none_animation">هیچیان</string>
+    <string name="toast_default_animation">بنەڕەت</string>
+    <string name="toast_fade_animation">کاڵبوون</string>
+    <string name="toast_SlideRight_animation">خزان لە ڕاستەوە</string>
+    <string name="toast_SlideLeft_animation">خزان لە چەپەوە</string>
+    <string name="toast_Xylon_animation">Xylon</string>
+    <string name="toast_Toko_animation">Toko</string>
+    <string name="toast_Tn_animation">Tn</string>
+    <string name="toast_Honami_animation">Honami</string>
+    <string name="toast_FastFade_animation">کاڵبوونەوەی خێرا</string>
+    <string name="toast_GrowFade_animation">کاڵبوونەوەی گەورە</string>
+    <string name="toast_Translucent_animation">ڕوونی</string>
+    <string name="toast_animation_test">ئەمە پشکنینە بۆ ئەنیمەیشنی دیارکراوی پەیامەر</string>
+    <!-- Heads up snooze -->
+    <string name="heads_up_category">ئاگانامەی زیندوو</string>
+    <string name="heads_up_snooze_disabled">لەکارخراوە</string>
+    <string name="heads_up_snooze_1min">1 خولەک</string>
+    <string name="heads_up_snooze_5min">5 خوله‌ک</string>
+    <string name="heads_up_snooze_10min">10 خوله‌ک</string>
+    <string name="heads_up_snooze_15min">15 خوله‌ک</string>
+    <string name="heads_up_snooze_20min">20 خوله‌ک</string>
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_2sec">2 چرکە</string>
+    <string name="heads_up_time_out_4sec">4 چرکە</string>
+    <string name="heads_up_time_out_5sec">5 چرکە</string>
+    <string name="heads_up_time_out_6sec">6 چرکە</string>
+    <string name="heads_up_time_out_8sec">8 چرکە</string>
+    <string name="heads_up_time_out_10sec">10 چرکە</string>
+    <!-- Blacklist strings-->
+    <string name="chooser_activity_blacklist_pref_title">زیادکردنی ئەپ</string>
+    <string name="chooser_activity_blacklist_pref_summary">گرتەبکە بۆ زیادکردن بۆ لیستەکە، گرتە لە لیستی ئەپ بکە بۆ لادان</string>
+    <string name="headsup_activity_blacklist_title">لیستی ڕەشی ئاگانامە زیندووەکان</string>
+    <string name="headsup_activity_blacklist_summary">ئەو ئەپانەی ڕێیان پێنادرێ بۆ نیشاندانی ئاگانامە زیندووەکان</string>
+    <string name="headsup_activity_blacklist_cat_title">لیستی ڕەش</string>
+    <string name="headsup_activity_blacklist_pref_title">زیادکردنی ئەپ</string>
+    <string name="headsup_activity_blacklist_pref_summary">گرتەبکە بۆ زیادکردن، گرتە لە لیستی ئەپ بکە بۆ لادان</string>
+    <!-- Carbon gestures -->
+    <string name="carbon_gesture_launch">چوونەنێو</string>
+    <!-- Circle app bar -->
+    <string name="app_circle_bar_included_apps_title">ئەپە دیارکراوەکان</string>
+    <string name="app_circle_bar_appchooser_pref_title">زیادکردنی ئەپ</string>
+    <string name="app_circle_bar_appchooser_pref_summary">گرتەبکە بۆ زیادکردن، گرتە لە لیستی ئەپ بکە بۆ لادان \nنامەکان ، کامێرا ، پلەی ستۆر ، ڕێکخستنەکان لەبنەڕەتەوە نیشان دەدرێن</string>
+    <!-- Themes -->
+    <string name="theming_title">ڕووکارەکان</string>
+    <string name="theming_light_title">ڕووکاری سپی</string>
+    <string name="theming_dark_title">ڕووکاری تاریک</string>
+    <string name="theming_summary">دیزاینی بنەڕەتی ئامێر</string>
+    <string name="theming_background_title">بەپێی ڕووکار</string>
+    <string name="theming_accent_title">ڕەنگی شێوە</string>
+    <string name="theming_corners_title">سوچەکان</string>
+    <string name="theming_font">فۆنت</string>
+    <string name="theming_icon_shape_title">ڕووخساری ئایکۆن</string>
+    <string name="theming_qs_bg_title">شێوازی ڕ/خ</string>
+    <string name="theming_notif_title">ئاگانامەکان</string>
+    <string name="theming_settings_title">ڕێکخستنەکان</string>
+    <string name="theming_icon_pack_title">دەستە ئایکۆن</string>
+    <!-- Device hidden prefs -->
+    <string name="show_device_hidden_prefs_title">هەڵبژاردەکان نەشاردرێنەوە</string>
+    <string name="show_device_hidden_prefs_summary">لە بنەڕەتەوە، هەڵبژاردەکان بەباشی لەسەر ئامێرەکەت کارناکەن (بەهۆکاری وەک ڕەوشی ڕووت یان بڕاوی ڕوونما) بۆیە پیشان نادرێ</string>
+    <!-- QS shape theme -->
+    <string name="theming_qs_shape_title">ڕوخساری ڕ/خ</string>
+    <string name="theming_qs_shape_default">چەماو (بنەڕەتی)</string>
+    <string name="theming_qs_shape_plain">سادە</string>
+    <string name="theming_qs_shape_plain_accent">شێوە سادە</string>
+    <string name="theming_qs_shape_square">چوارگۆشە</string>
+    <string name="theming_qs_shape_rounded_square">چوارگۆشەی چەماو</string>
+    <string name="theming_qs_shape_hexagon">شەشپاڵو</string>
+    <!-- Settings dashboard icon style -->
+    <string name="theming_settings_dashboard_icons_title">ڕێکخستنەکانی ئایکۆنی داشبۆرد</string>
+    <string name="theming_settings_dashboard_icons_default2">پاشبنەمای بنەڕەت</string>
+    <string name="theming_settings_dashboard_icons_default_accent2">پاشبنەمای شێوە</string>
+    <string name="theming_settings_dashboard_icons_plain">سادە</string>
+    <string name="theming_settings_dashboard_icons_plain_accent">شێوە سادە</string>
+    <!-- Status bar brightness control -->
+    <string name="status_bar_brightness_control_title">کۆنترۆڵی ڕۆشنایی</string>
+    <string name="status_bar_brightness_control_summary">ڕێکخستنی ڕۆشنایی بە هێنانەخوارەوەی ڕەوشبەند</string>
+    <!-- Less Notification sounds -->
+    <string name="less_notification_sounds_title">دەنگی ئاگانامەی ژیر</string>
+    <string name="less_notification_sounds_summary">دەنگی ئاگانامە لێبدرێ بۆ هەر ئەپێک یەکجار بۆ ماوەی دانراو</string>
+    <string name="less_notification_sounds_default">بنەڕەتی ئەپ</string>
+    <string name="less_notification_sounds_10s">هەموو 10 چرکەیەک</string>
+    <string name="less_notification_sounds_30s">هەموو 30 چرکەیەک</string>
+    <string name="less_notification_sounds_1m">هەموو خولەکێک</string>
+    <string name="less_notification_sounds_2m">هەموو 2 خولەکێک</string>
+    <string name="less_notification_sounds_5m">هەموو 5 خولەکێک</string>
+    <string name="less_notification_sounds_15m">هەموو 15 خولەکێک</string>
+    <string name="less_notification_sounds_30m">هەموو 30 خولەکێک</string>
+    <!-- Smart Pixels -->
+    <string name="smart_pixels_title">پیکسڵە ژیرەکان</string>
+    <string name="smart_pixels_summary">پاراستنی ووزە بە کوژاندنەوەی پیکسڵە ناپێویستەکان</string>
+    <string name="smart_pixels_enable_title">کاراکردنی پیکسڵە ژیرەکان</string>
+    <string name="smart_pixels_enable_summary">کوژاندنەوەی پیکسڵەکان بۆ کەمکردنەوەی بەکارهێنانی ووزە</string>
+    <string name="smart_pixels_on_power_save_title">کاراکردن-خۆکاری لە دۆخی پاراستنی ووزە</string>
+    <string name="smart_pixels_on_power_save_summary">کاراکردنی پیکسڵە ژیرەکان کاتێ دۆخی پاراستنی ووزە کاراکرابوو</string>
+    <string name="smart_pixels_percent">ڕێژەی سەدی پیکسڵە ناکاراکراوەکان</string>
+    <string name="smart_pixels_shift_title">پاراستن لە سووتانەوە</string>
+    <string name="smart_pixels_shift_summary">ڕێگیری لە سووتانەوەی ڕوونما ئۆلیدەکان لەڕێی گواستنەوەی پیکسڵەکان بەزۆری</string>
+    <!-- Volume keys answer call -->
+    <string name="call_volume_answer_title">وڵامدانەوەی پەیوەندی</string>
+    <string name="call_volume_answer_summary">کارایکە بۆ وڵامدانەوەی پەیوەندی بە دوگمەی دەنگ</string>
+    <!-- Battery light settings  -->
+    <string name="battery_light_title">لێدی پاتری</string>
+    <string name="battery_light_summary">ڕەنگی لێد لەکاتی بارگاوی</string>
+    <string name="battery_low_pulse_title">ترپە لەکاتی کەمی پاتری</string>
+    <string name="battery_light_only_full_charge_title">تەنها ڕۆشنبێتەوە کاتێ تەواو بارگاوی بۆوە</string>
+    <string name="battery_light_list_title">ڕەنگەکان</string>
+    <string name="battery_light_low_color_title">کەمی پاتری</string>
+    <string name="battery_light_medium_color_title">بارگاویکردن</string>
+    <string name="battery_light_full_color_title">بارگاویکرا (%90)</string>
+    <string name="battery_light_really_full_color_title">بارگاویکرا (%100)</string>
+    <string name="fast_color_cat_title">بارگاوی خێرا</string>
+    <string name="fast_charging_led_enabled_title">کاراکردنی ڕەنگی بارگاوی خێرا</string>
+    <string name="fast_charging_led_enabled_summary">لەکاتی بارگاویبوونەوە، ڕەنگی جیاواز بەکاربهێنە تا %90 بارگاوی ئەبێ</string>
+    <string name="fast_charging_light_color_title">ڕەنگ</string>
+    <string name="battery_light_blend_category">ڕەنگە تێکەڵەکان</string>
+    <string name="battery_light_blend_title">کاراکردنی ڕەنگی تێکەڵ</string>
+    <string name="battery_light_blend_summary">وردەوردە گۆڕینی ڕەنگەکان لەنێوان پاتری سفر و پڕ</string>
+    <string name="battery_light_blend_colors_title">دیاریکەری ڕەنگ</string>
+    <string name="battery_light_blend_colors_summary">پلەی ڕەنگی بەکارهێنان لەکاتی ڕەنگە تێکەڵەکان</string>
+    <!-- App Ops-->
+    <string name="app_ops_settings_summary">کۆنتڕۆڵی مۆڵەتی ئەپەکان</string>
+    <!-- [CHAR LIMIT=NONE] App ops settings title, on main settings screen. If clicked, the user is taken to a settings screen for app operations -->
+    <string name="app_ops_settings">پاسەوانی تایبەتی</string>
+    <!-- Data Disabled Icon -->
+    <string name="data_disabled_icon_title">پیشاندانی ئایکۆنی ناکاراکراوی داتا</string>
+    <string name="data_disabled_icon_summary">نیشاندانی پێچەوانە لەتەنیشت ڕەوشبەند کاتێ داتا ناکارابوو</string>
+    <!-- MediaScanner behavior on boot -->
+    <string name="media_scanner_on_boot_enabled">پشکنینی میدیا</string>
+    <string name="media_scanner_on_boot_ask">پرسین بۆ پشکنین (بەئاگانامە)</string>
+    <string name="media_scanner_on_boot_disabled">میدیا نەپشکنرێ</string>
+    <!-- Running Services Icon in QS Footer-->
+    <string name="qs_running_services_title">ئایکۆنی کارکردنی ئەرکەکان</string>
+    <string name="qs_running_services_summary">کاراکردنی ئایکۆنی ئەرکە چالاکەکان لەسەر سەرپەڕە</string>
+    <!-- Power menu and dialogs opacity -->
+    <string name="power_menu_category">دیالۆگەکانی ووزە/هەڵکردنەوە</string>
+    <string name="power_menu_transparency">ڕووناکگیری</string>
+    <!-- SystemUI Tuner -->
+    <string name="systemui_tuner_title">سازگەری سیستەم</string>
+    <!-- Hardware button navigation -->
+    <string name="hardware_keys_home_key_title">دوگمەی ماڵەوە</string>
+    <string name="hardware_keys_menu_key_title">دوگمەی پێڕست</string>
+    <string name="hardware_keys_assist_key_title">دوگمەی گەڕان</string>
+    <string name="hardware_keys_appswitch_key_title">دوگمەی دیمەنی گشتی</string>
+    <string name="hardware_keys_back_key_title">دوگمەی گەڕانەوە</string>
+    <string name="hardware_keys_double_tap_summary">دانانی کرداری دووانە گرتە</string>
+    <string name="hardware_keys_single_tap_summary">دانانی کرداری تاک گرتە</string>
+    <string name="hardware_keys_long_press_summary">دانانی کرداری گرتە درێژ</string>
+    <string name="hardware_keys_single_tap_title">کرداری تاک گرتە</string>
+    <string name="hardware_keys_long_press_title">کرداری گرتە درێژ</string>
+    <string name="hardware_keys_double_tap_title">کرداری دووانە گرتە</string>
+    <string name="hardware_keys_category">دوگمەکانی ڕەقەواڵا</string>
+    <string name="hardware_keys_disable_title">ناچالاککردنی دوگمە جێنیشاندەرەکانی ڕەقەواڵا</string>
+    <!-- doze on charge -->
+    <string name="doze_on_charge_title">AOD لەکاتی بارگاویکردنەوە</string>
+    <string name="doze_on_charge_summary">کارایکە بۆ پیشاندانی AOD لەکاتی بارگاویکردنەوە</string>
+    <!-- EdgeGesture service -->
+    <!-- Pie control -->
+    <string name="pa_pie_control_title">کۆنتڕۆڵی پای</string>
+    <string name="pa_pie_control_enable_title">کاراکردنی کۆنتڕۆڵی پای</string>
+    <string name="pie_enable_title">کاراکردن</string>
+    <string name="pie_enable_summary">کاراکردنی کۆنتڕۆڵی پای وەک جێنیشاندەر</string>
+    <string name="pie_settings">ڕێکخستنەکانی پای</string>
+    <string name="pie_theme_mode_title">ڕووکار</string>
+    <string name="pie_auto">خۆکار</string>
+    <string name="pie_white">سپی</string>
+    <string name="pie_dark">تاریک</string>
+    <string name="pie_battery_title">نیشاندەری پاتری</string>
+    <string name="pie_battery_text">تەنها نوسین</string>
+    <string name="pie_battery_circle">تەنها بازنەیی</string>
+    <string name="pie_battery_both">هەردووک</string>
+    <string name="pie_status_indicator">نیشاندەری تۆڕ</string>
+    <string name="pie_status_wifi">تەنها Wifi</string>
+    <string name="pie_status_mobile">تەنها تۆڕی مۆبایل</string>
+    <string name="pie_status_none">هیچیان</string>
+    <string name="pie_status_both">هەردووک</string>
+    <string name="pa_pie_gravity_title">کێشکرانی پای</string>
+    <string name="pa_pie_gravity_summary">ئەو ناوچەیەی پای تێدا جێگیرەکرێ</string>
+    <string name="pa_pie_gravity_bottom">خوارەوە</string>
+    <string name="pa_pie_gravity_right">ڕاست</string>
+    <string name="pa_pie_gravity_left">چەپ</string>
+    <!-- Audio Panel view  -->
+    <string name="audio_panel_view">تەختەی دەنگ</string>
+    <string name="audio_panel_view_media_title">میدیا</string>
+    <string name="audio_panel_view_ringer_title">زەنگ</string>
+    <string name="audio_panel_view_notification_title">ئاگانامە</string>
+    <string name="audio_panel_view_alarm_title">وریاکەرەوە</string>
+    <string name="audio_panel_view_voice_title">ده‌نگ</string>
+    <string name="audio_panel_view_bt_sco_title">بلوتوث</string>
+    <!-- Audio Panel position  -->
+    <string name="audio_panel_position_title">ناوچە</string>
+    <string name="audio_panel_position_summary">بردنی تەختەی دەنگ لەلای ڕاستەوە بۆ لای چەپ</string>
+    <string name="reboot_dialog_ok">هەڵکردنەوە</string>
+    <string name="soft_reboot_title">هەڵدەکرێتەوە</string>
+    <string name="soft_reboot_message">هەڵکردنەوەی نەرم لە کاردایە، تکایە لەسەرخۆبە</string>
+    <!-- Control night mode with themes -->
+    <string name="theming_control_night_mode_title">کۆنتڕۆڵی دۆخی شەو</string>
+    <string name="theming_control_night_mode_summary">دانانی دۆخی شەو بۆ ئەپەکان بەپێی ڕووکاری دیارکراو</string>
+    <!-- One Hand mode-->
+    <string name="one_hand_mode_enabled_title">دۆخی یەک-دەستی</string>
+    <string name="one_hand_mode_enabled_summary">چالاککردنی دۆخی یەک-دەستی. جێنیشاندەری بنچینەیی ڕاکێشە بۆلای ڕاست یان چەپ بۆ چەسپاندنی،کردەکانی ژیربەند بەکاربێنە بۆ چەسپاندن.</string>
+    <!-- Camera button -->
+    <string name="hardware_keys_camera_key_title">دوگمەی کامێرا</string>
+    <string name="camera_sleep_on_release_title">هەڵبژاردنی ڕوونما</string>
+    <string name="camera_sleep_on_release_summary">نیوە داگرتنێک هەمیشە وادەکات ڕوونماکە بە هەڵکراوی بمێنێتەوە</string>
+    <string name="camera_launch_title">چوونەنێو کامێرا</string>
+    <string name="camera_launch_summary">لەڕێگای پەنجە ڕاگرتنی درێژ و پاشان بەردان دەچیتە نێو کامێراوە</string>
+    <!-- Lock Clock & Date Size -->
+    <string name="lockdate_font_size_title">قەبارەی فۆنتی بەروار</string>
+    <string name="lockclock_font_size_title">قەبارەی فۆنتی کاتژمێر</string>
+    <!-- Long aspect ratio apps -->
+    <string name="aspect_ratio_apps_enabled_summary">ڕێدان بە ئەپەکان بۆ بەکارهێنانی ڕوونمای تەواو پڕ</string>
+    <string name="aspect_ratio_apps_info">ئەپەکان پێویستە دووبارە بکرێنەوە دوای گۆڕینەکان</string>
+    <string name="action_save">خەزنکردن</string>
+    <!-- Battery estimates -->
+    <string name="battery_estimates_title">ڕێژەی سەدی پاتری لە ڕ-خ</string>
+    <string name="battery_estimates_summary">پیشاندانی ڕێژەی ژیانی پاتری لە تەختەی ڕ-خ</string>
+    <!-- Wireless charging animation -->
+    <string name="wireless_charging_animation_title">ئەنیمەیشنی بارگاوی</string>
+    <string name="wireless_charging_animation_summary">پیشاندانی ئەنیمەیشنێک لەکاتی پێوەکردنی کێبڵی بارگاوی</string>
+    <!-- Incall Home button behavior-->
+    <string name="disable_incall_home_title">ناکارا لەکاتی زەنگلێدان</string>
+    <string name="disable_incall_home_summary">ناکاراکردنی دوگمەی ماڵەوە لەکاتی زەنگلێدان</string>
+    <!-- Less boring heads-up-->
+    <string name="less_boring_heads_up_title">وابکە ئاگانامەی زیندوو کەمتر بێزارکەر بێت</string>
+    <string name="less_boring_heads_up_summary">پیشاندانی ئاگانامەی زیندوو تەنها بۆ پەیوەندی ، ووریاکەرەوە ، ئەپی نامەکان</string>
+    <!-- System icons style -->
+    <string name="theming_system_icons_style_title">شێوازی ئایکۆنەکانی سیستەم</string>
+    <string name="theming_system_icons_style_default">بنه‌ڕه‌تی سیسته‌م</string>
+    <string name="theming_system_icons_style_old">ئایکۆنە کۆنەکان</string>
+    <!-- lock screen media blur -->
+    <string name="lockscreen_media_blur_title">ئاستی لێڵکردنی پشتی میدیا</string>
+    <string name="lockscreen_media_blur_summary">کۆنتڕۆڵی سەرجەمی لێڵکردنی پشتی میدیا</string>
+    <!-- Clock style -->
+    <string name="clock_style_title">شێوازی کاتژمێر</string>
+    <string name="clock_style_summary">دەسکاری کاتژمێری ڕوونماداخراو</string>
+    <!-- Custom lockscreen notifications count -->
+    <string name="lock_screen_custom_notif_title">خۆکردنی ژمارەی ئاگانامەکان</string>
+    <string name="lock_screen_custom_notif_summary">بیچەسپێنە بۆ چالاککردنی دانانی بەرزترین ژمارەی ئاگانامە لە ڕوونماداخراودا</string>
+    <string name="lockscreen_max_notif_config_title">بەرزترین ژمارەی ئاگانامەکان</string>
+    <string name="lockscreen_max_notif_config_summary">کۆنتڕۆڵی بەرزترین ژمارەی ئاگانامە فراوانەکان بۆ نیشاندان لە ڕوونماداخراو</string>
+    <!-- QS SystemInfo -->
+    <string name="qs_system_info_title">زانیاری سیسته‌م</string>
+    <string name="qs_system_info_off">ناکارا</string>
+    <string name="qs_system_info_cpu_temp">پلەی گەرمی CPU</string>
+    <string name="qs_system_info_battery_temp">پله‌ی گه‌رمی پاتری</string>
+    <string name="qs_system_info_gpu_clock">نوێبوونەوەی GPU</string>
+    <string name="qs_system_info_gpu_busy">بەکارهاتووی GPU</string>
+    <!-- QS Footer Text -->
+    <string name="qs_footer_category_title">پێپەڕەی ڕ/خ</string>
+    <string name="qs_header_category_title">سەرپەڕەی ڕ/خ</string>
+    <string name="footer_text_show_title">پیشاندانی دەقی پێپەڕە</string>
+    <string name="footer_text_show_summary">بیچەسپێنە بۆ پیشاندانی دەقی خۆکرد لە پێپەڕەی ڕ/خ</string>
+    <string name="footer_text_default">#AICP</string>
+    <string name="footer_text_label_title">دەقی پێپەڕەی خۆکرد</string>
+    <string name="footer_text_label_explain">تکایە دەقێکی نوێ بنوسە. بەتاڵ جێیبێڵە بۆ گێڕانەوەی بنچینەیی.</string>
+    <string name="footer_text_label_notset">لەئێستادا دەقی خۆکردی دانەنراوە</string>
+    <!-- Rotation suggestions -->
+    <string name="show_rotation_suggestions_title">پیشاندانی پێشنیارکراوەکانی خواربوونەوە</string>
+    <string name="show_rotation_suggestions_summary">دۆخی خواربوونەوەی کاتی قوفڵ</string>
+    <!-- Notification Vibration -->
+    <string name="vibrate_on_notifications_title">لەرزینی کاتی ئاگانامە</string>
+    <string name="vibrate_on_notifications_summary">لەرزین لەکاتی ئاگانامەکان</string>
+    <!-- LockScreen Lock Icon -->
+    <string name="lockscreen_lock_icon_title">ئایکۆنی قوفڵ</string>
+    <string name="lockscreen_lock_icon_summary">پیشاندانی ئایکۆنی قوفڵ لە ڕوونماداخراو</string>
+    <!-- QS tiles haptic feedback -->
+    <string name="qs_vibrate_title">لەرزین لەکاتی دەسلێدان</string>
+    <string name="qs_vibrate_summary">بلەرزێ کاتی دەسلێدان لە ڕێکخستنە خێراکان</string>
+    <!-- Blink flashlight for incoming calls -->
+    <string name="notification_flash_title">فلاش لایت</string>
+    <string name="flashlight_on_call_title">ترپەلێدان بۆ پەیوەندی هاتوو</string>
+    <string name="flashlight_on_call_disabled">ناکارا</string>
+    <string name="flashlight_on_call_not_dnd">تەنها لە دۆخی زەنگلێدان</string>
+    <string name="flashlight_on_call_dnd">تەنها لە دۆخی بێزارم مەکە</string>
+    <string name="flashlight_on_call_always">هەمیشە</string>
+    <string name="flashlight_on_call_wait_title">ترپە بۆ چاوەڕوانی پەیوەندی</string>
+    <string name="flashlight_on_call_wait_summary">ترپەلێدانی فلاش کاتێ پەیوەندی دەکەی</string>
+    <!-- Partial screenshot -->
+    <string name="partial_screenshot_as_default_title">ڕوونماچرکانی کەرتی وەک کردەی بنەڕەتی</string>
+    <string name="partial_screenshot_as_default_summary">دانانی ڕوونما چرکاندنی کەرتی وەک کردەی بنەڕەتی بۆ دوگمەی ڕوونماچرکان لە پێڕستی ووزە. بەپێچەوانەوە گرتە درێژ کردەکە دەکات.</string>
+    <!-- Gaming mode -->
+    <string name="gaming_mode_title">دۆخی یاریکردن</string>
+    <string name="gaming_mode_summary">گۆڕینی ڕێکخستنی دۆخی یاریکردن</string>
+    <string name="gaming_mode_enabled_summary">ڕێدان بە چالاککردنی دۆخی یاریکردن</string>
+    <string name="gaming_mode_app_picker_title">چالاککردنی خۆکاری بۆ ئەم یارییانە</string>
+    <string name="add_gaming_mode_package_title">زیادکردنی یاری بۆ دۆخی یاریکردن</string>
+    <string name="add_gaming_mode_package_summary">دۆخی یاریکردن خۆکاری چالاک ئەکرێ کاتێ ئەم یارییانە کرانەوە و ناچالاک دەبێ کاتی دەرچوون لەو یارییانە</string>
+    <string name="gaming_mode_headsup_title">سڕکردنی ئاگانامەکان</string>
+    <string name="gaming_mode_headsup_summary">پەیوەندی و ووریاکەرەوە ئازادن</string>
+    <string name="gaming_mode_hardware_keys_title">قوفڵکردنی دوگمەکان</string>
+    <string name="gaming_mode_hardware_keys_summary">کاتێ دۆخی یاریکردن چالاککرا، دوگمەکان قوفڵ دەبن</string>
+    <string name="gaming_mode_brightness_title">ناچالاککردنی ڕۆشنایی خۆکاری</string>
+    <string name="gaming_mode_brightness_summary">قوفڵکردنی ڕۆشنایی ڕوونما کاتێ دۆخی یاریکردن چالاکە</string>
+    <string name="gaming_mode_ringer_title">زەنگلێدان لە دۆخی یاریکردن</string>
+    <string name="gaming_mode_ringer_off_title">نەگۆڕدرێ</string>
+    <string name="gaming_mode_ringer_vibrate_title">لەرزین</string>
+    <string name="gaming_mode_ringer_dnd_title">بێزارم مەکە</string>
+    <string name="gaming_mode_ringer_silent_title">بێدەنگ</string>
+    <string name="gaming_mode_notifications_title">نیشانەی دۆخی یاریکردن</string>
+    <string name="gaming_mode_notifications_off_title">ناکارا</string>
+    <string name="gaming_mode_notifications_notif_title">پیشاندانی ئاگانامە</string>
+    <string name="gaming_mode_notifications_toast_title">پیشاندانی پەیامەرەکان</string>
+    <string name="gaming_mode_notifications_all_title">پیشاندانی پەیامەر و ئاگانامەکان</string>
+    <string name="gaming_mode_dynamic_title">دۆخی داینەمیک</string>
+    <string name="gaming_mode_dynamic_summary">هەوڵدان بۆ دۆزینەوە و زیادکردنی یارییەکان بەخۆکاری</string>
+    <!-- Power Menu Category Titles-->
+    <string name="power_menu_boot_options_category_title">بژاردەکانی هەڵبوون</string>
+    <string name="power_menu_actions_category_title">کردەکانی پێڕستی ووزە</string>
+    <string name="navigation_bar_menu_arrow_keys_title">کلیلی ئاراسته‌کان له‌کاتی نوسین</string>
+    <string name="navigation_bar_menu_arrow_keys_summary">نیشاندانی چه‌پ و ڕاستی دوگمەی جێنیشانده‌ر له‌کاتی نوسین</string>
+    <!-- Alert Slider Notifications (OnePlus devices) -->
+    <string name="alert_slider_notifications_title">تەختەی ئاگانامەکانی ووریاکەرەوە</string>
+    <string name="alert_slider_notifications_summary">پیشاندانی ئاگانامە کاتی گۆڕینی شوێنی تەختەی ووریاکەرەوە</string>
+    <!--FOD -->
+    <string name="fod_icon_picker_category_title">FOD کەستمزەیشن</string>
+    <string name="fod_icon_picker_title">هەڵبژەری ئایکۆن</string>
+    <string name="fod_icon_picker_summary">ئایکۆنی پەنجەمۆری دڵخوازت هەڵبژێرە</string>
+    <string name="fod_icon_picker_footer">بۆ زیادکردنی ئایکۆنی تایبەت بە خۆت، ئایکۆنی سەروی چەپ داگرە و ئەچی کەتمایزەری وەنپڵەس 6T بەکاربهێنە و ئەو ئایکۆنە دانێ کە ئەتەوێ.</string>
+    <string name="fod_wallpaper_color">بەکارهێنانی ڕەنگی پاشبنەما بۆ ئایکۆن</string>
+    <string name="fod_wallpaper_color_summary">ڕەنگی پاشبنەما چاک ئەکات و بەکاری دەهێنێ بۆ ئایکۆنی FOD \nتێبینی: بە بژاردەیەکی باش ئەچێت بۆ هەنێک پاشبنەما</string>
+    <!--FOD Animations -->
+    <string name="fod_recog_animation">ئەنیمەیشنی ناسەرەوە</string>
+    <string name="fod_recog_animation_summary">ئەنیمەیشنێ نیشانەدا لەکاتی خوێندنەوەی پەنجەت</string>
+    <string name="fod_recog_animation_picker_title">هەڵگرتنی ئەنیمەیشنی ناسەرەوە</string>
+    <string name="fod_recog_animation_miui_normal">MIUI - بنەڕەت</string>
+    <string name="fod_recog_animation_miui_aod">MIUI - AOD</string>
+    <string name="fod_recog_animation_miui_light">MIUI - ڕۆشن</string>
+    <string name="fod_recog_animation_miui_pop">MIUI - دەرپەڕین</string>
+    <string name="fod_recog_animation_miui_pulse">MIUI - ترپەلێدان</string>
+    <string name="fod_recog_animation_miui_pulse_white">MIUI - ترپە (سپی)</string>
+    <string name="fod_recog_animation_miui_rhythm">MIUI - ڕیتم</string>
+    <string name="fod_recog_animation_op_cosmos">OP - گەردوونی</string>
+    <string name="fod_recog_animation_op_mclaren">OP - ماکلارین</string>
+    <string name="fod_recog_animation_pureview_future">PureView - داهاتوو</string>
+    <string name="fod_recog_animation_pureview_molecular">PureView - گەردیلەیی</string>
+    <string name="fod_recog_animation_op_energy">OP8 - بزوێنەر</string>
+    <!-- Kill app long-press back -->
+    <string name="kill_app_longpress_back">داخستنی ئەپ بە دوگمەی گەڕانەوە</string>
+    <string name="kill_app_longpress_back_summary">داخستنی ئەپی کراوە لەڕێی پەنجە ڕاگرتن لەسەر دوگمەی گەڕانەوە</string>
+    <!-- Show Media Headsup -->
+    <string name="show_media_heads_up_title">پیشاندانی میدیای زیندوو</string>
+    <string name="show_media_heads_up_summary">پیشاندانی میدیای زیندوو کاتێ تراکێ لێدرا، گەر کارپێکەرەکە لە پێشبنەمادا نەبێت</string>
+    <!-- R Notification headers -->
+    <string name="notification_headers_title">پیشاندانی سەرپەڕەکانی ئاگانامە</string>
+    <string name="notification_headers_summary">نیشاندانی شێوازی R ی سەرپەڕەکانی ئاگانامە (پێویستی بەهەڵکردنەوەیە)</string>
+    <!-- AICP ad-blocker -->
+    <string name="hosts_block_title">لادەری بانگەشە</string>
+    <string name="hosts_block_summary">سڕکردنی بانگەشەکان بە فایلێکی هۆستکراو. ناچالاکی بکە گەر بووە هۆی تێکدانی چەند ئەپێک.</string>
+    <!-- Headset ringtone audio focus -->
+    <string name="ringtone_focus_mode_title">سەرنجی دەنگی زەنگلێدان</string>
+    <string name="ringtone_focus_mode_dynamic">تەنها بیستۆک گەر میوزیک چالاک بوو</string>
+    <string name="ringtone_focus_mode_stock">هەردووک بڵندگۆ و بیستۆک</string>
+    <!-- OOS clear all button -->
+    <string name="enable_clear_all_button">ئاڵوگۆڕی دەقی سافکردنی گشتی لەگەڵ دوگمەیەکی جوان</string>
+    <string name="enable_clear_all_button_summary">پیشاندانی دوگمەی سافکردنی گشت ئاگانامەکان لە ڕێکخستنەخێراکان لەجیاتی دەقی بنەڕەت</string>
+    <!-- Long swipe gestures -->
+    <string name="navbar_gesture_tweaks_cat_title">جوڵەکانی پەرەسەندوو</string>
+    <string name="navbar_gesture_tweaks_pref_summary">دەسکاری جوڵانەکان و دانانی کردەی خۆکردی</string>
+    <string name="long_back_swipe_timeout_title">ووچانی کردەی ڕاکێشانی درێژ</string>
+    <string name="left_swipe_actions_title">کردەی ڕاکێشانی درێژی چەپ</string>
+    <string name="left_swipe_app_action_title">هەڵگرتنی ئەپی ڕاکێشانی درێژی چەپ</string>
+    <string name="right_swipe_actions_title">کردەی ڕاکێشانی درێژی ڕاست</string>
+    <string name="right_swipe_app_action_title">هەڵگرتنی ئەپی ڕاکێشانی درێژی ڕاست</string>
+    <string name="gesture_nav_tweaks_footer_info">بۆ هەڵبژاردنی چالاکی ئەپی دیاریکراو بۆ ئەو کردەیە، پەنجە ڕاگرە لەسەر هەر ئەپێک لە هەڵبژێرەری ئەپ.\n\nگەر لانچەر پیشاندرا، خوارووی ڕوونماکە ڕاکێشە بۆ ئەنجامدانی ئەو کردەیە.</string>
+    <string name="long_swipe_app_select_summary">دیارکردنی ئەپێک</string>
+    <string name="back_swipe_extended_title">کردەی ڕاکێشانی فراوان</string>
+    <string name="back_swipe_extended_summary">کردەی تێزکە گەر ڕاکێشانەکە ئاسۆییانە بەرینتر بوو لە 3 لەسەر 4 ی ڕوونما</string>
+    <!-- Vertical Long swipes -->
+    <string name="left_vertical_swipe_key_title">ڕاکێشانەچەپی L</string>
+    <string name="right_vertical_swipe_key_title">ڕاکێشانەڕاستی L</string>
+    <string name="left_vertical_swipe_actions_title">کردەی ڕاکێشانەچەپی ئەستونی</string>
+    <string name="left_vertical_swipe_app_action_title">دیاریکردنی ئەپی ڕاکێشانی ئەستونی چەپ</string>
+    <string name="right_vertical_swipe_actions_title">کردەی ڕاکێشانەڕاستی ئەستونی</string>
+    <string name="right_vertical_swipe_app_action_title">دیاریکردنی ئەپی ڕاکێشانی ئەستونی ڕاست</string>
+    <!-- QS DataUsage Toggle -->
+    <string name="qs_datausage_title">داتای بەکاربراو لە سەرپەڕەی ڕ/خ</string>
+    <string name="qs_datausage_disabled">ناکارا</string>
+    <string name="qs_datausage_daily">بەکارهاتووی ڕۆژانە</string>
+    <string name="qs_datausage_monthly">بەکارهاتووی مانگانە</string>
+    <!-- QS Battery toggle -->
+    <string name="qs_header_battery_title">زانیاری پاتری</string>
+    <string name="qs_header_battery_summary">کارایکە بۆ ڕێژەی سەدی، ناکارایکە بۆ خەمڵانی کات.</string>
+</resources>

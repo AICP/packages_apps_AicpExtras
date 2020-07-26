@@ -18,6 +18,7 @@
 -->
 <resources>
     <!-- AICP Extras -->
+    <string name="app_name">AICP Extras</string>
     <!-- Dashboard -->
     <string name="user_interface_category">Interfaz de usuario</string>
     <string name="system_category">Sistema</string>
@@ -520,6 +521,7 @@
     <string name="log_it_dialog_title">Compartir</string>
     <string name="logcat_warning">Compartir o desechar!</string>
     <string name="share_title">Compartir...</string>
+    <string name="log_it_share_subject">AICP logs</string>
     <string name="log_it_now_summary">Se paciente hasta que los logs se creen</string>
     <string name="log_it_logs_in_progress">Creando logs…</string>
     <string name="log_it_share_type_title">Forma de envío</string>
@@ -528,6 +530,7 @@
     <string name="log_it_share_via">Compartir a través de</string>
     <!-- AE settings -->
     <string name="ae_settings_title">Personalización</string>
+    <string name="ae_settings_summary">Personalizar la apariencia y el comportamiento de AICP Extras</string>
     <string name="theme_title">Tema</string>
     <string name="theme_default">Automático</string>
     <string name="theme_default_force">Configuración predeterminada</string>
@@ -567,6 +570,7 @@
     <string name="device_maintainer_default">Desconocido</string>
     <string name="no_root_title">No rooteado</string>
     <string name="no_root_summary">Para obtener más funcionalidades, rootear el dispositivo</string>
+    <string name="aicp_version_title">Versión de AICP</string>
     <string name="build_date_title">Fecha de compilación</string>
     <!-- Other / general purpose -->
     <string name="on">Activado</string>
@@ -1265,8 +1269,10 @@
     <string name="qs_system_info_gpu_busy">Uso de la GPU</string>
     <!-- QS Footer Text -->
     <string name="qs_footer_category_title">Pie de Ajustes Rápidos</string>
+    <string name="qs_header_category_title">Cabecera de ajustes rapidos</string>
     <string name="footer_text_show_title">Mostrar texto al pie</string>
     <string name="footer_text_show_summary">Activar para mostrar texto personalizado bajo los ajustes rápidos</string>
+    <string name="footer_text_default">#AICP</string>
     <string name="footer_text_label_title">Texto del pie personalizado</string>
     <string name="footer_text_label_explain">Por favor, introduzca el texto. Dejar en blanco para restablecer el valor predeterminado.</string>
     <string name="footer_text_label_notset">Sin texto personalizado establecido</string>
@@ -1389,7 +1395,11 @@
     <string name="right_vertical_swipe_actions_title">Acción de deslizamiento vertical en la derecha</string>
     <string name="right_vertical_swipe_app_action_title">Seleccionar aplicación de deslizamiento vertical en la derecha</string>
     <!-- QS DataUsage Toggle -->
+    <string name="qs_datausage_title">Uso de datos en cabecera de Ajustes Rápidos</string>
     <string name="qs_datausage_disabled">Deshabilitada</string>
+    <string name="qs_datausage_daily">Uso diario</string>
+    <string name="qs_datausage_monthly">Uso mensual</string>
     <!-- QS Battery toggle -->
     <string name="qs_header_battery_title">Información de batería en la pantalla de bloqueo</string>
+    <string name="qs_header_battery_summary">Activar para porcentaje, desactivar para tiempo estimado.</string>
 </resources>
