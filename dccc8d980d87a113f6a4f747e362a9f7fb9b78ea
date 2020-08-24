@@ -22,6 +22,30 @@
       "revId": "dccc8d980d87a113f6a4f747e362a9f7fb9b78ea",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "38336d2e_5d1d060e",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 1485,
+      "author": {
+        "id": 1393
+      },
+      "writtenOn": "2020-08-24T10:07:26Z",
+      "side": 1,
+      "message": "yup that should be fine as \"When ringer is audible\" but I am still not sure this all fits well.\n\nMaybe we could use something like\n1485 \"When set to ring\"\n1486 \"When set to vibrate\"\n1487 \"When set to not ring or vibrate\"",
+      "parentUuid": "42d2559b_728b6828",
+      "range": {
+        "startLine": 1485,
+        "startChar": 45,
+        "endLine": 1485,
+        "endChar": 57
+      },
+      "revId": "dccc8d980d87a113f6a4f747e362a9f7fb9b78ea",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
     }
   ]
 }
