@@ -65,6 +65,13 @@
             android:targetClass="com.android.customization.picker.LockClockPickerActivity" />
     </Preference>
 
+    <!-- Navbar Style -->
+    <com.aicp.gear.preference.OverlayPreference
+        android:key="navbar_style"
+        android:title="@string/navbar_style_title"
+        aicpextras:overlayCategory="aicp.navbar_style"
+        aicpextras:overlayTarget="com.android.systemui" />
+
     <PreferenceCategory
         android:key="theming_light"
         android:title="@string/theming_light_title">
