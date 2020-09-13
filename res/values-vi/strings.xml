@@ -17,60 +17,30 @@
  */
 -->
 <resources>
-    <!-- AICP Extras -->
-    <!-- Dashboard -->
     <string name="user_interface_category">Giao diện người dùng</string>
     <string name="other_category">Khác</string>
-    <!-- Status bar -->
     <string name="status_bar_title">Thanh trạng thái</string>
-    <!-- StatusBar Battery Options -->
     <string name="battery_style_text">Văn bản</string>
     <string name="battery_percent_enabled">Kích hoạt</string>
     <string name="battery_percent_disabled">Đã vô hiệu hóa</string>
-    <!-- Bluetooth status -->
-    <!-- Hide notch -->
-    <!-- Statusbar net monitor -->
-    <!-- Battery bar -->
     <string name="battery_bar_title">Thanh pin</string>
     <string name="battery_bar_animate_title">Hoạt ảnh sạc</string>
     <string name="battery_bar_style_regular">Thường</string>
     <string name="battery_bar_style_center_mirrored">Đối xứng giữa</string>
     <string name="battery_bar_style_reversed">Đảo ngược</string>
     <string name="battery_bar_use_charging_color_title">Tùy chỉnh màu khi sạc</string>
-    <!-- Smart pulldown -->
-    <!-- Quick pull down-->
     <string name="quick_pulldown_off">Tắt</string>
     <string name="quick_pulldown_left">Trái</string>
     <string name="quick_pulldown_right">Phải</string>
-    <!-- Double tap to sleep on status bar -->
-    <!-- Statusbar Clock options -->
     <string name="menu_cancel">Hủy</string>
-    <!-- Statusbar categories -->
-    <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_position_summary">Chọn bên hiển thị logo, trái hoặc phải</string>
     <string name="status_bar_logo_position_right">Phải</string>
     <string name="status_bar_logo_position_left">Trái</string>
-    <!-- Show 4G instead of LTE -->
-    <!-- Roaming indicator icon -->
-    <!-- Notifications -->
     <string name="notifications_title">Thông báo</string>
-    <!-- Heads up -->
-    <!-- Force expanded notifications -->
-    <!-- Notification guts kill app button -->
-    <!-- Quick settings -->
     <string name="quick_settings_title">Cài đặt nhanh</string>
-    <!-- Disable music track title in QS tile -->
     <string name="qs_music_tile_track_optional_title">Ô tiêu đề bài hát</string>
     <string name="qs_music_tile_track_optional_summary">Hiển thị ô tiêu đề bài hát ô trên cài đặt nhanh</string>
-    <!-- Small quick settings scroller -->
-    <!-- Show expand indicator in dualtarget QS tiles -->
-    <!-- QS rows and columns -->
-    <!-- QS tiles title visibility -->
-    <!-- QS Headers -->
     <string name="header_provider_disabled">Đã vô hiệu hóa</string>
-    <!-- QS Headers -->
-    <!-- QS Settings background panel blur -->
-    <!-- Tiles animation style -->
     <string name="qs_tile_animation_duration_title">Thời lượng hoạt ảnh</string>
     <string name="qs_tile_animation_style_off">Không có hoạt ảnh</string>
     <string name="qs_tile_animation_style_flip">Lật lại</string>
@@ -86,10 +56,7 @@
     <string name="qs_tile_animation_interpolator_overshootInterpolator">Vượt quá</string>
     <string name="qs_tile_animation_interpolator_anticipateInterpolator">Nhanh chóng</string>
     <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Nhanh và vượt quá</string>
-    <!-- Recents -->
     <string name="recents_title">Ứng dụng gần đây</string>
-    <!-- Stock Recents component Style -->
-    <!-- Recents panel settings -->
     <string name="recents_clear_all_location_top_right">Phía trên bên phải</string>
     <string name="recents_clear_all_location_top_left">Phía trên bên trái</string>
     <string name="recents_clear_all_location_top_center">Chính giữa phía trên</string>
@@ -97,75 +64,33 @@
     <string name="recents_clear_all_location_bottom_left">Phía dưới bên trái</string>
     <string name="recents_clear_all_location_bottom_center">Chính giữa phía dưới</string>
     <string name="recents_show_membar_title">Thanh hiển thị bộ nhớ</string>
-    <!-- Oreo Recents Style -->
-    <!-- Slim recents -->
     <string name="recent_panel_expanded_mode_disabled">Đã vô hiệu hóa</string>
     <string name="slim_recents_enter_exit_animation_fade">Mờ dần</string>
-    <!-- ATTENTION: RTL languages need to replace left with right -->
-    <!-- Slim Recent App Sidebar -->
-    <!-- Slim recents membar -->
     <string name="slim_recents_mem_display_category_title">Thanh hiển thị bộ nhớ</string>
     <string name="slim_recents_mem_display_title">Hiển thị bộ nhớ sử dụng</string>
     <string name="slim_recents_mem_display_summaryOn">Kích hoạt thanh bộ nhớ</string>
     <string name="slim_recents_mem_display_summaryOff">Vô hiệu hóa thanh bộ nhớ</string>
     <string name="slim_recents_mem_display_color">Màu thanh bộ nhớ</string>
     <string name="slim_recents_mem_display_text_color">Màu chữ thanh bộ nhớ</string>
-    <!-- Lockscreen -->
-    <!-- Double tap to sleep on lockscreen -->
-    <!-- Media art -->
-    <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Thông tin pin</string>
     <string name="lockscreen_battery_info_summary">Hiển thị điện áp sạc tối đa hiện tại đã ước tính và nhiệt độ pin trên màn hình khóa trong khi sạc</string>
-    <!-- Power menu on secure lockscreen -->
     <string name="lockscreen_enable_power_menu_title">Menu nguồn</string>
-    <!-- Disable QS on secure Lockscreen -->
-    <!-- Scramble PIN layout when unlocking -->
-    <!-- Quick unlock -->
-    <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Rung khi xác thực dấu vân tay</string>
     <string name="fprint_sucess_vib_summary_on">Kích hoạt rung khi xác thực dấu vân tay thành công</string>
     <string name="fprint_sucess_vib_summary_off">Vô hiệu hóa rung khi xác thực dấu vân tay thành công</string>
-    <!-- Lockscreen Clock styles -->
-    <!-- On-The-Go -->
-    <!-- Screenrecord -->
-    <!-- Screenshot -->
-    <!-- Reboot -->
-    <!-- Advanced Reboot -->
-    <!-- Emergency -->
-    <!-- Power Menu -->
     <string name="global_actions_power_menu_title">Menu nguồn</string>
-    <!-- Hide statusbar on lockscreen -->
-    <!-- Other UI tweaks -->
-    <!-- Volume dialog timeout -->
-    <!-- Swap volume keys based on device rotation -->
-    <!-- Volume keys control rint tone stream -->
-    <!-- Volume keys control music playback -->
-    <!-- Toast icon switch -->
     <string name="toast_icon_title">Biểu tượng thông báo nhanh</string>
     <string name="toast_icon_summary">Hiển thị các biểu tượng ứng dụng tương ứng với thông báo nhanh</string>
-    <!-- Show VoLTE icon on statusbar -->
-    <!-- Show location icon on statusbar -->
-    <!-- Power Button - Long press for torch -->
     <string name="torch_long_press_power_timeout_1min">1 phút</string>
     <string name="torch_long_press_power_timeout_5min">5 phút</string>
     <string name="torch_long_press_power_timeout_10min">10 phút</string>
-    <!-- Setting: show CPU info -->
-    <!-- Turn on display when power connected; turn off display when power disconnected -->
-    <!-- Launch music player when headset is connected -->
-    <!-- System animations -->
     <string name="system_animations_title">Hoạt ảnh</string>
-    <!-- System behaviour -->
-    <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Âm thanh chụp màn hình</string>
     <string name="screenshot_sound_summary">Phát âm thanh khi màn hình được chụp</string>
-    <!-- Hostname setting -->
-    <!-- System extensions -->
     <string name="system_extensions_title">Tiện ích hệ thống</string>
-    <!-- System app remover -->
     <string name="system_app_remover_title">Trình gỡ bỏ ứng dụng hệ thống</string>
     <string name="system_app_remover_message_delete">Bạn có chắc chắn muốn xóa ứng dụng này?</string>
     <string name="system_app_remover_message_noselect">Không có gì được chọn</string>
-    <!-- Log it -->
     <string name="logcat_title">Logcat</string>
     <string name="kmesg_title">Kmesg</string>
     <string name="dmesg_title">Dmesg</string>
@@ -177,68 +102,27 @@
     <string name="log_it_share_type_title">Phương pháp chia sẻ</string>
     <string name="log_it_share_type_zip">File ZIP</string>
     <string name="log_it_share_type_haste">Tải lên AICP Haste</string>
-    <!-- AE settings -->
-    <!-- About -->
     <string name="about_title">Thông tin</string>
     <string name="aicp_gerrit_title">Gerrit</string>
     <string name="aicp_changelog_title">Nhật ký thay đổi</string>
     <string name="aicp_downloads_title">Tải xuống</string>
     <string name="aicp_ota_summary">Kiểm tra các cập nhật mới</string>
-    <!-- Other / general purpose -->
     <string name="on">Bật</string>
     <string name="off">Tắt</string>
     <string name="hidden_anim_activity_title">Thời gian cho Yoga!!!</string>
-    <!-- Sensor block per-package -->
-    <!-- Weather - OmniJaws Settings -->
-    <!-- Lockscreen Weather -->
-    <!-- Statusbar ticker -->
     <string name="status_bar_ticker_title">Thông báo dạng ticker</string>
     <string name="status_bar_show_ticker_title">Thông báo dạng ticker</string>
     <string name="ticker_animation_mode_alpha_fade">Mờ dần</string>
-    <!-- Navigation-->
-    <!-- OP like navigation gestures -->
-    <!-- Navigation -->
-    <!-- Keys/Buttons -->
-    <!-- Custom actions
-          0 - Nothing
-          1 - Menu key
-          2 - Recent apps view in SystemUI
-          3 - Launch assist intent
-          4 - Voice search
-          5 - In-app search
-          6 - Launch camera
-          7 - Launch last app
-          8 - Split screen
-          9 - Flashlight
-          10 - Clear notifications
-          11 - Volume panel
-          12 - Screen off
-          13 - Notifications
-          14 - Power menu
-          15 - Screenshot
-          16 - QS panel
-          17 - Custom app
-          18 - Ringer modes -->
     <string name="action_app_switch">Ứng dụng gần đây</string>
     <string name="action_power_menu">Menu nguồn</string>
-    <!-- DUI -->
     <string name="picker_activities">Kích hoạt</string>
     <string name="select_custom_app_title">Chọn ứng dụng tùy chỉnh</string>
     <string name="select_custom_activity_title">Chọn hoạt động tùy chỉnh</string>
     <string name="profile_applist_title">Ứng dụng</string>
-    <!-- SmartNav -->
-    <!-- Stock Navbar -->
-    <!-- Actions dialog and default task values set in ActionPreference xml-->
-    <!-- Fling -->
-    <!-- Pulse navigation bar music visualizer -->
-    <!-- Pulse config -->
-    <!-- Navbar height -->
-    <!-- SmartBar -->
     <string name="smartbar_right">Phải</string>
     <string name="smartbar_left">Trái</string>
     <string name="smartbar_button_animation_flip">Lật lại</string>
     <string name="smartbar_ime_action_none">Không</string>
-    <!-- Carrier Label -->
     <string name="custom_carrier_label_title">Tùy chỉnh tên nhà mạng</string>
     <string name="custom_carrier_label_explain">Vui lòng nhập một nhãn mới. Để trống để trở lại nhãn gốc.</string>
     <string name="custom_carrier_label_notset">Tên tùy chỉnh hiện chưa được thiết lập</string>
@@ -247,26 +131,11 @@
     <string name="show_carrier_keyguard">Chỉ màn hình khoá</string>
     <string name="show_carrier_statusbar">Chỉ thanh trạng thái</string>
     <string name="show_carrier_enabled">Màn hình khóa &amp; thanh trạng thái</string>
-    <!-- AOKP custom system animations -->
     <string name="animation_title">Hoạt ảnh</string>
     <string name="animation_duration_title">Thời lượng hoạt ảnh</string>
     <string name="animation_duration_default">Mặc định</string>
-    <!-- Lock screen visualizer -->
-    <!-- Screen state service -->
-    <!-- Swap hw keys -->
-    <!-- Ambient display music ticker -->
-    <!-- Screen Off animation -->
     <string name="screen_off_animation_default">Mặc định</string>
-    <!-- Suppress notification sound/vibration -->
-    <!-- Navigation -->
-    <!-- HW keys -->
-    <!-- Power keys -->
-    <!-- Volume keys -->
-    <!-- Volume rocker wake -->
-    <!-- Button brightness -->
-    <!-- Quick QS pull down -->
     <string name="status_bar_quick_qs_pulldown_off">Tắt</string>
-    <!-- Toast Animation -->
     <string name="toast_animation_title">Hoạt ảnh thông báo nhanh</string>
     <string name="toast_none_animation">Không</string>
     <string name="toast_default_animation">Mặc định</string>
@@ -284,80 +153,16 @@
     <string name="toast_Translucent_animation">Mờ</string>
     <string name="toast_SlideLeftRight_animation">Trượt từ trái sang phải</string>
     <string name="toast_SlideRightLeft_animation">Trượt từ phải sang trái</string>
-    <!-- Heads up snooze -->
     <string name="heads_up_snooze_1min">1 phút</string>
-    <!-- Heads up timeout -->
-    <!-- Blacklist strings-->
-    <!-- Carbon gestures -->
-    <!-- Circle app bar -->
-    <!-- Themes -->
     <string name="theming_accent_title">Màu đậm</string>
     <string name="theming_notif_title">Thông báo</string>
-    <!-- Device hidden prefs -->
-    <!-- QS shape theme -->
-    <!-- Settings dashboard icon style -->
-    <!-- Status bar brightness control -->
-    <!-- Less Notification sounds -->
-    <!-- Smart Pixels -->
-    <!-- Volume keys answer call -->
-    <!-- Battery light settings  -->
     <string name="battery_light_blend_category">Pha trộn màu</string>
-    <!-- App Ops-->
-    <!-- [CHAR LIMIT=NONE] App ops settings title, on main settings screen. If clicked, the user is taken to a settings screen for app operations -->
-    <!-- Data Disabled Icon -->
-    <!-- MediaScanner behavior on boot -->
-    <!-- Running Services Icon in QS Footer-->
-    <!-- Power menu and dialogs opacity -->
-    <!-- SystemUI Tuner -->
-    <!-- Hardware button navigation -->
-    <!-- doze on charge -->
-    <!-- EdgeGesture service -->
-    <!-- Pie control -->
     <string name="pie_status_none">Không</string>
     <string name="pa_pie_gravity_right">Phải</string>
     <string name="pa_pie_gravity_left">Trái</string>
-    <!-- Audio Panel view  -->
-    <!-- Audio Panel position  -->
-    <!-- Control night mode with themes -->
-    <!-- One Hand mode-->
-    <!-- Camera button -->
-    <!-- Lock Clock & Date Size -->
-    <!-- Long aspect ratio apps -->
-    <!-- Battery estimates -->
-    <!-- Wireless charging animation -->
     <string name="wireless_charging_animation_title">Hoạt ảnh sạc</string>
-    <!-- Incall Home button behavior-->
-    <!-- Less boring heads-up-->
-    <!-- System icons style -->
-    <!-- lock screen media blur -->
-    <!-- Clock style -->
-    <!-- Custom lockscreen notifications count -->
-    <!-- QS SystemInfo -->
     <string name="qs_system_info_off">Tắt</string>
-    <!-- QS Footer Text -->
-    <!-- Rotation suggestions -->
-    <!-- Notification Vibration -->
-    <!-- LockScreen Lock Icon -->
-    <!-- QS tiles haptic feedback -->
-    <!-- Blink flashlight for incoming calls -->
-    <string name="flashlight_on_call_disabled">Đã vô hiệu hóa</string>
-    <!-- Partial screenshot -->
-    <!-- Gaming mode -->
     <string name="gaming_mode_notifications_off_title">Đã vô hiệu hóa</string>
-    <!-- Power Menu Category Titles-->
-    <!-- Alert Slider Notifications (OnePlus devices) -->
-    <!--FOD -->
-    <!--FOD Animations -->
-    <!-- Kill app long-press back -->
-    <!-- Show Media Headsup -->
-    <!-- R Notification headers -->
-    <!-- AICP ad-blocker -->
-    <!-- Headset ringtone audio focus -->
-    <!-- OOS clear all button -->
-    <!-- Long swipe gestures -->
-    <!-- Vertical Long swipes -->
-    <!-- QS DataUsage Toggle -->
     <string name="qs_datausage_disabled">Đã vô hiệu hóa</string>
-    <!-- QS Battery toggle -->
     <string name="qs_header_battery_title">Thông tin pin</string>
 </resources>

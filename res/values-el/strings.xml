@@ -17,22 +17,14 @@
  */
 -->
 <resources>
-    <!-- AICP Extras -->
-    <!-- Dashboard -->
     <string name="user_interface_category">Περιβάλλον Χρήστη</string>
     <string name="system_category">Σύστημα</string>
     <string name="other_category">Διάφορα</string>
-    <!-- Status bar -->
     <string name="status_bar_title">Κατάσταση μπάρας</string>
     <string name="status_bar_summary">Επεξεργασία εμφάνισης γραμμής κατάστασης</string>
-    <!-- StatusBar Battery Options -->
     <string name="battery_style_text">Κείμενο</string>
     <string name="battery_percent_enabled">Ενεργοποιημένο</string>
     <string name="battery_percent_disabled">Απενεργοποιημένο</string>
-    <!-- Bluetooth status -->
-    <!-- Hide notch -->
-    <!-- Statusbar net monitor -->
-    <!-- Battery bar -->
     <string name="battery_bar_title">Μπάρα μπαταρίας</string>
     <string name="battery_bar_location_title">Τοποθεσία</string>
     <string name="battery_bar_style_title">Ευθυγράμμιση</string>
@@ -42,7 +34,6 @@
     <string name="battery_bar_style_center_mirrored">Center-mirrored</string>
     <string name="battery_bar_style_reversed">Reversed</string>
     <string name="battery_bar_use_charging_color_title">Προσαρμοσμένο χρώμα ένδειξης φόρτισης</string>
-    <!-- Smart pulldown -->
     <string name="smart_pulldown_title">Έξυπνο τράβηγμα προς τα κάτω</string>
     <string name="smart_pulldown_off">ανενεργό</string>
     <string name="smart_pulldown_none">χωρίς ειδοποιήσεις</string>
@@ -51,15 +42,12 @@
     <string name="smart_pulldown_summary">Ανοίξτε τις γρήγορες ρυθμίσεις όταν υπάρχουν %1$s ειδοποιήσεις</string>
     <string name="smart_pulldown_none_summary">Ανοίξτε τις γρήγορες ρυθμίσεις όταν δεν υπάρχουν ειδοποιήσεις</string>
     <string name="smart_pulldown_off_summary">Είναι ανενεργό</string>
-    <!-- Quick pull down-->
     <string name="quick_pulldown_off">Ανενεργό</string>
     <string name="quick_pulldown_left">Αριστερά</string>
     <string name="quick_pulldown_right">Δεξιά</string>
     <string name="quick_pulldown_always">Always</string>
-    <!-- Double tap to sleep on status bar -->
     <string name="status_bar_double_tap_to_sleep_title">Πατήστε για αναστολή</string>
     <string name="status_bar_double_tap_to_sleep_summary">Διπλό πάτημα στη γραμμή κατάστασης για αναστολή της συσκευής</string>
-    <!-- Statusbar Clock options -->
     <string name="status_bar_show_clock_title">Εμφάνιση ημερομηνίας &amp; ώρας</string>
     <string name="clock_title_enable">Ευθυγράμμιση</string>
     <string name="status_bar_clock_seconds_title">Δευτερόλεπτα</string>
@@ -86,8 +74,6 @@
     <string name="clock_position_left">Ρολόι αριστερά</string>
     <string name="menu_cancel">Άκυρο</string>
     <string name="menu_save">Αποθήκευση</string>
-    <!-- Statusbar categories -->
-    <!-- Statusbar AICP logo -->
     <string name="status_bar_logo_category_title">Λογότυπο</string>
     <string name="status_bar_logo_title">Λογότυπο</string>
     <string name="status_bar_logo_summary">Ενεργοποιήστε για εμφάνιση λογότυπου στην γραμμή κατάστασης</string>
@@ -117,37 +103,21 @@
     <string name="status_bar_logo_style_linux">Linux</string>
     <string name="status_bar_logo_style_yin_yang">Yin-Yang</string>
     <string name="status_bar_logo_style_windows">Windows</string>
-    <!-- Show 4G instead of LTE -->
-    <!-- Roaming indicator icon -->
-    <!-- Notifications -->
     <string name="notifications_title">Notifications</string>
-    <!-- Heads up -->
-    <!-- Force expanded notifications -->
-    <!-- Notification guts kill app button -->
     <string name="notification_guts_kill_app_button_title">Πλήκτρο τερματισμού εφαρμογής</string>
     <string name="notification_guts_kill_app_button_summary">Εμφάνιση πλήκτρου τερματισμού εφαρμογής στο παρατεταμένου μενού ειδοποιήσεων</string>
-    <!-- Quick settings -->
     <string name="quick_settings_title">Γρήγορες ρυθμίσεις</string>
-    <!-- Disable music track title in QS tile -->
     <string name="qs_music_tile_track_optional_title">Τίτλος Πλακιδίου μουσικού κομματιού</string>
     <string name="qs_music_tile_track_optional_summary">Προβολή πλακιδίου μουσικού κομματιού στις γρήγορες ρυθμίσεις</string>
-    <!-- Small quick settings scroller -->
     <string name="qqs_scroll_title">Ολισθήστε μικρά πλακίδια γρήγορων ρυθμίσεων</string>
     <string name="qqs_scroll_summary">Να επιτρέπεται η ολίσθηση ανάμεσα στα μικρά πλακίδια γρήγορων ρυθμίσεων</string>
-    <!-- Show expand indicator in dualtarget QS tiles -->
-    <!-- QS rows and columns -->
-    <!-- QS tiles title visibility -->
-    <!-- QS Headers -->
     <string name="custom_header_browse_title">Αναζήτηση εγκατεστημένων κεφαλίδων</string>
     <string name="header_provider_disabled">Απενεργοποιημένο</string>
-    <!-- QS Headers -->
     <string name="status_bar_custom_header_title">Ενεργοποίηση</string>
     <string name="status_bar_custom_header_shadow_title">Header image shadow</string>
     <string name="status_bar_custom_header_shadow_summary">For better visibility on bright images</string>
     <string name="custom_header_provider_title">Πάροχος κεφαλίδας</string>
     <string name="custom_header_title">Time contextual header</string>
-    <!-- QS Settings background panel blur -->
-    <!-- Tiles animation style -->
     <string name="qs_tile_animation_duration_title">Tiles animation duration</string>
     <string name="qs_tile_animation_style_off">No animation</string>
     <string name="qs_tile_animation_style_flip">Flip</string>
@@ -163,11 +133,8 @@
     <string name="qs_tile_animation_interpolator_overshootInterpolator">Overshoot</string>
     <string name="qs_tile_animation_interpolator_anticipateInterpolator">Anticipate</string>
     <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Anticipate overshoot</string>
-    <!-- Recents -->
     <string name="recents_title">Recents</string>
     <string name="alternative_recents_category">Εναλλακτικά πρόσφατα</string>
-    <!-- Stock Recents component Style -->
-    <!-- Recents panel settings -->
     <string name="recents_clear_all_location_top_right">Πάνω δεξιά</string>
     <string name="recents_clear_all_location_top_left">Πάνω αριστερά</string>
     <string name="recents_clear_all_location_top_center">Πάνω κέντρο</string>
@@ -175,8 +142,6 @@
     <string name="recents_clear_all_location_bottom_left">Κάτω αριστερά</string>
     <string name="recents_clear_all_location_bottom_center">Κάτω κέντρο</string>
     <string name="recents_show_membar_title">Μπάρα μνήμης</string>
-    <!-- Oreo Recents Style -->
-    <!-- Slim recents -->
     <string name="slim_recents_title">Στυλ Slim για πρόσφατες εφαρμογές</string>
     <string name="recents_max_apps_title">Max allowed apps</string>
     <string name="recent_panel_scale_title">Size</string>
@@ -190,7 +155,6 @@
     <string name="recent_card_bg_color_title">Card background color</string>
     <string name="slim_recents_mem_display_long_click_clear_title">Παρατεταμένη πίεση μπάρας μνήμης</string>
     <string name="slim_recents_enter_exit_animation_fade">Fade</string>
-    <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
     <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge</string>
     <string name="profile_choose_app">Επιλέξτε εφαρμογή</string>
@@ -199,7 +163,6 @@
     <string name="slim_blacklist_apps_cat_title">Λίστα αποκλεισμού</string>
     <string name="slim_blacklist_apps_summary">Εφαρμογές που δεν θα εμφανίζονται στον πίνακα</string>
     <string name="slim_blacklist_add_apps_title">Προσθήκη εφαρμογής</string>
-    <!-- Slim Recent App Sidebar -->
     <string name="recent_app_sidebar_title">App sidebar</string>
     <string name="recent_app_sidebar_summary">Εμφάνιση συντομεύσεις εφαρμογών στην άλλη άκρη</string>
     <string name="use_recent_app_sidebar_title">Ενεργοποίηση πλαϊνής γραμμής εφαρμογών</string>
@@ -212,81 +175,43 @@
     <string name="recent_app_sidebar_scale_title">Μέγεθος</string>
     <string name="recent_app_sidebar_open_simultaneously_title">Ανοιξε ταυτόχρονα με πρόσφατα</string>
     <string name="recent_app_sidebar_open_simultaneously_summary">Μείωση καθυστέρησης ανοίγματος προσφάτων απενεργοποιώντας αυτό</string>
-    <!-- Slim recents membar -->
     <string name="slim_recents_mem_display_category_title">Μπάρα μνήμης</string>
     <string name="slim_recents_mem_display_title">Εμφάνιση μπάρας μνήμης</string>
     <string name="slim_recents_mem_display_summaryOn">Μπάρα μνήμης ενεργοποιημένη</string>
     <string name="slim_recents_mem_display_summaryOff">Μπάρα μνήμης απενεργοποιήθηκε</string>
     <string name="slim_recents_mem_display_color">Μνήμη μπαρας χρώμα</string>
     <string name="slim_recents_mem_display_text_color">Μνήμη μπαρας χρώμα κειμένου</string>
-    <!-- Lockscreen -->
     <string name="lockscreen_title">Οθόνη κλειδώματος</string>
-    <!-- Double tap to sleep on lockscreen -->
-    <!-- Media art -->
     <string name="media_art_title">Εξώφυλλο μουσικών κομματιών</string>
     <string name="media_art_summary">Ενεργοποίηση εξωφύλλου άλμπουμ στην οθόνη κλειδώματος</string>
-    <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Πληροφορίες μπαταρίας</string>
     <string name="lockscreen_battery_info_summary">Εμφανίζει την διαπραματεύσιμη τρέχουσα μέγιστη τάση του φορτιστή και την θερμοκρασία της μπαταρίας στην οθόνη κλειδώματος ενώ φορτίζει</string>
-    <!-- Power menu on secure lockscreen -->
     <string name="lockscreen_enable_power_menu_title">Power menu on lock screen</string>
-    <!-- Disable QS on secure Lockscreen -->
-    <!-- Scramble PIN layout when unlocking -->
-    <!-- Quick unlock -->
-    <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
     <string name="fprint_sucess_vib_summary_on">Δόνηση σε επιτυχημένο έλεγχο ταυτότητας δακτυλικών αποτυπωμάτων</string>
     <string name="fprint_sucess_vib_summary_off">Δόνηση σε επιτυχημένο έλεγχο ταυτότητας δακτυλικών αποτυπωμάτων απενεργοποιημένο</string>
-    <!-- Lockscreen Clock styles -->
-    <!-- On-The-Go -->
-    <!-- Screenrecord -->
-    <!-- Screenshot -->
-    <!-- Reboot -->
-    <!-- Advanced Reboot -->
-    <!-- Emergency -->
-    <!-- Power Menu -->
     <string name="global_actions_power_menu_title">Power menu on lock screen</string>
-    <!-- Hide statusbar on lockscreen -->
-    <!-- Other UI tweaks -->
-    <!-- Volume dialog timeout -->
     <string name="volume_dialog_timeout_title">Χρονικό όριο πίνακα εντάσεων</string>
-    <!-- Swap volume keys based on device rotation -->
-    <!-- Volume keys control rint tone stream -->
-    <!-- Volume keys control music playback -->
-    <!-- Toast icon switch -->
     <string name="toast_icon_title">Εμφάνιση Toast</string>
     <string name="toast_icon_summary">Εμφάνιση εικονίδιο εφαρμογής σε περίπτωση Toast</string>
-    <!-- Show VoLTE icon on statusbar -->
-    <!-- Show location icon on statusbar -->
-    <!-- Power Button - Long press for torch -->
     <string name="torch_long_press_power_timeout_never">Never</string>
     <string name="torch_long_press_power_timeout_1min">1 λεπτό</string>
     <string name="torch_long_press_power_timeout_5min">5 λεπτά</string>
     <string name="torch_long_press_power_timeout_10min">10 λεπτά</string>
-    <!-- Setting: show CPU info -->
-    <!-- Turn on display when power connected; turn off display when power disconnected -->
-    <!-- Launch music player when headset is connected -->
-    <!-- System animations -->
     <string name="system_animations_title">Εμφάνιση και κινήσεις</string>
     <string name="custom_bootanimation_title">Γραφικά εκκίνησης</string>
     <string name="custom_bootanimation_summary">Επιλέξτε προσαρμοσμένα γραφικά εκκίνησης. Σε κάθε αλλαγή, το τρέχον γραφικό θα αποθηκεύεται στο φάκελο AICP_backup στον εσωτερικό χώρο αποθήκευσης. Το παλιό πρέπει να διαγραφεί χειροκίνητα εάν δεν χρειάζεται.</string>
-    <!-- System behaviour -->
     <string name="system_behaviour_title">Συμπεριφορά συστήματος.</string>
-    <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Ήχος στο Screenshot</string>
     <string name="screenshot_sound_summary">Αναπαραγωγή ήχου στο Screenshot</string>
-    <!-- Hostname setting -->
     <string name="selinux_category">SELinux</string>
     <string name="selinux_mode_title">SeLinux λειτουργία</string>
     <string name="selinux_enforcing_toast_title">SELinux να οριστεί στην επιβολή!</string>
-    <!-- System extensions -->
     <string name="system_extensions_title">Επεκτάσεις συστήματος</string>
-    <!-- System app remover -->
     <string name="system_app_remover_title">System App Remover</string>
     <string name="system_app_remover_summary">Καταργήστε προ-εγκατεστημένες εφαρμογές</string>
     <string name="system_app_remover_message_delete">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτή την εφαρμογή;</string>
     <string name="system_app_remover_message_noselect">Κενή επιλογή</string>
-    <!-- Log it -->
     <string name="log_it_title">Καταγραφή σε αρχείο </string>
     <string name="log_it_summary">Logcat, kmesg, dmesg</string>
     <string name="logcat_title">Logcat</string>
@@ -301,14 +226,12 @@
     <string name="log_it_share_type_zip">ZIP-αρχείο</string>
     <string name="log_it_share_type_haste">Ανεβάστε AICP βιαστικά</string>
     <string name="log_it_share_via">Κοινοποίηση μέσω</string>
-    <!-- AE settings -->
     <string name="ae_settings_title">Προσαρμογή ΑΕ</string>
     <string name="theme_title">Θέμα</string>
     <string name="theme_default_force">Θέμα προεπιλεγμένων ρυθμίσεων</string>
     <string name="ae_launcher_enabled_title">Εμφάνιση εικονιδίου εκκινητή</string>
     <string name="ae_launcher_enabled_summary">Εμφάνιση AICP πρόσθετα στον εκκινητή</string>
     <string name="ae_launcher_enabled_update">Η απεικόνιση του εικονιδίου εκκινητή ενημερώθηκε. Μπορεί να χρειαστεί λίγος χρόνος για να ισχύσει η αλλαγή</string>
-    <!-- About -->
     <string name="about_title">Σχετικά</string>
     <string name="about_summary">Δείτε πληροφορίες σχετικά με αυτή την ROM</string>
     <string name="weblinks_category">Σύνδεσμοι</string>
@@ -328,72 +251,34 @@
     <string name="device_maintainer_dialog">Συντηρητής συσκευής</string>
     <string name="device_maintainers_dialog">Συντηρητές συσκευής</string>
     <string name="device_maintainer_default">Άγνωστο</string>
-    <!-- Other / general purpose -->
     <string name="on">Ενεργό</string>
     <string name="off">Ανενεργό</string>
     <string name="reset">Επαναφορά</string>
     <string name="systemui_restart_title">Απαιτείται επανεκκίνηση του συστήματος</string>
     <string name="systemui_restart_message">Για να τεθούν σε ισχύ οι αλλαγές, απαιτείται επανεκκίνηση του συστήματος. Επανεκκίνηση του συστήματος τώρα;</string>
     <string name="hidden_anim_activity_title">Ώρα για Γιόγκα!!!</string>
-    <!-- Sensor block per-package -->
     <string name="sensor_block_title">Μπλοκάρισμα αισθητήρα ανά πακέτο</string>
     <string name="sensor_block_summary">Μπλοκάρισμα στην πρόσβαση ορισμένων αισθητήρων για κάποιες εφαρμογές για την εξοικονόμηση μπαταρίας.</string>
-    <!-- Weather - OmniJaws Settings -->
     <string name="weather_title">Καιρός</string>
-    <!-- Lockscreen Weather -->
     <string name="lock_screen_weather_category_title">Οθόνη κλειδώματος</string>
-    <!-- Statusbar ticker -->
     <string name="status_bar_ticker_title">Ticker</string>
     <string name="status_bar_show_ticker_title">Ticker</string>
     <string name="ticker_animation_mode_alpha_fade">Fade</string>
-    <!-- Navigation-->
-    <!-- OP like navigation gestures -->
-    <!-- Navigation -->
-    <!-- Keys/Buttons -->
-    <!-- Custom actions
-          0 - Nothing
-          1 - Menu key
-          2 - Recent apps view in SystemUI
-          3 - Launch assist intent
-          4 - Voice search
-          5 - In-app search
-          6 - Launch camera
-          7 - Launch last app
-          8 - Split screen
-          9 - Flashlight
-          10 - Clear notifications
-          11 - Volume panel
-          12 - Screen off
-          13 - Notifications
-          14 - Power menu
-          15 - Screenshot
-          16 - QS panel
-          17 - Custom app
-          18 - Ringer modes -->
     <string name="action_app_switch">Recents</string>
     <string name="action_power_menu">Power menu on lock screen</string>
-    <!-- DUI -->
     <string name="picker_activities">Activities</string>
     <string name="select_custom_app_title">Select custom app</string>
     <string name="select_custom_activity_title">Select custom activity</string>
     <string name="profile_applist_title">Applications</string>
-    <!-- SmartNav -->
-    <!-- Stock Navbar -->
-    <!-- Actions dialog and default task values set in ActionPreference xml-->
-    <!-- Fling -->
     <string name="long_swipe_reset">Επαναφορά</string>
-    <!-- Pulse navigation bar music visualizer -->
+    <string name="pulse_color">Χρώμα</string>
     <string name="pulse_blacklist_apps_cat_title">Λίστα αποκλεισμού</string>
     <string name="pulse_blacklist_apps_summary">Εφαρμογές που δεν θα εμφανίζονται στον πίνακα</string>
     <string name="pulse_blacklist_add_apps_title">Προσθήκη εφαρμογής</string>
-    <!-- Pulse config -->
-    <!-- Navbar height -->
-    <!-- SmartBar -->
     <string name="smartbar_right">Δεξιά</string>
     <string name="smartbar_left">Αριστερά</string>
     <string name="smartbar_button_animation_flip">Flip</string>
     <string name="smartbar_ime_action_none">None</string>
-    <!-- Carrier Label -->
     <string name="custom_carrier_label_title">Προσαρμογή Carrier Text</string>
     <string name="custom_carrier_label_explain">Γράψτε κάτι.</string>
     <string name="custom_carrier_label_notset">Δεν προστέθηκε.</string>
@@ -402,14 +287,11 @@
     <string name="show_carrier_keyguard">Μόνο στην LockScreen</string>
     <string name="show_carrier_statusbar">Μόνο στην StatusBar</string>
     <string name="show_carrier_enabled">Lockscreen &amp; statusbar</string>
-    <!-- AOKP custom system animations -->
     <string name="animation_title">Εμφάνιση και κινήσεις</string>
     <string name="animation_duration_title">Tiles animation duration</string>
     <string name="summary_animation_no_override">Να μην επιτρέπεται στις εφαρμογές να παρακάμπτουν τα εφέ</string>
     <string name="animation_duration_default">Default</string>
-    <!-- Lock screen visualizer -->
     <string name="lockscreen_visualizer_title">Visualizer μουσικής</string>
-    <!-- Screen state service -->
     <string name="screen_state_toggles_title">Αναστολή δράσεων</string>
     <string name="screen_state_toggles_enable_title">Ενεργοποίηση</string>
     <string name="screen_state_toggles_enable_summary">Οι ενέργειες θα εκτελεστούν κατά την απενεργοποίηση της οθόνης. Κατά την ενεργοποίηση οθόνης θα επαναφερθούν στη προηγούμενη κατάσταση.</string>
@@ -421,24 +303,12 @@
     <string name="screen_state_toggles_gps_summary">Οι υπηρεσίες τοποθεσίας βασισμένες στο GPS θα απενεργοποιηθούν κατά την απενεργοποίηση της οθόνης</string>
     <string name="screen_state_toggles_mobile_data">Απενεργοποίηση δεδομένων κινητής τηλεφωνίας</string>
     <string name="screen_state_toggles_mobile_data_summary">Τα δεδομένα κινητής τηλεφωνίας θα απενεργοποιηθούν κατά την απενεργοποίηση της οθόνης</string>
-    <!-- Swap hw keys -->
-    <!-- Ambient display music ticker -->
     <string name="force_ambient_for_media_title">Ενεργοποίηση</string>
-    <!-- Screen Off animation -->
     <string name="screen_off_animation_title">Εφέ απενεργοποίησης οθόνης</string>
     <string name="screen_off_animation_default">Default</string>
     <string name="screen_off_animation_crt">CRT Τηλεόραση</string>
     <string name="screen_off_animation_scale">Κλίμακα</string>
-    <!-- Suppress notification sound/vibration -->
-    <!-- Navigation -->
-    <!-- HW keys -->
-    <!-- Power keys -->
-    <!-- Volume keys -->
-    <!-- Volume rocker wake -->
-    <!-- Button brightness -->
-    <!-- Quick QS pull down -->
     <string name="status_bar_quick_qs_pulldown_off">Ανενεργό</string>
-    <!-- Toast Animation -->
     <string name="toast_animation_title">Toast animation</string>
     <string name="toast_none_animation">None</string>
     <string name="toast_default_animation">Default</string>
@@ -456,87 +326,24 @@
     <string name="toast_Translucent_animation">Translucent</string>
     <string name="toast_SlideLeftRight_animation">Slide left to right</string>
     <string name="toast_SlideRightLeft_animation">Slide right to left</string>
-    <!-- Heads up snooze -->
     <string name="heads_up_snooze_1min">1 λεπτό</string>
-    <!-- Heads up timeout -->
-    <!-- Blacklist strings-->
-    <!-- Carbon gestures -->
-    <!-- Circle app bar -->
     <string name="unit_percent">\u0025</string>
-    <!-- Themes -->
     <string name="theming_accent_title">Accent color</string>
     <string name="theming_notif_title">Notifications</string>
-    <!-- Device hidden prefs -->
-    <!-- QS shape theme -->
-    <!-- Settings dashboard icon style -->
-    <!-- Status bar brightness control -->
-    <!-- Less Notification sounds -->
-    <!-- Smart Pixels -->
-    <!-- Volume keys answer call -->
-    <!-- Battery light settings  -->
     <string name="fast_charging_light_color_title">Χρώμα</string>
     <string name="battery_light_blend_category">Ανάμειξη χρωμάτων</string>
-    <!-- App Ops-->
-    <!-- [CHAR LIMIT=NONE] App ops settings title, on main settings screen. If clicked, the user is taken to a settings screen for app operations -->
-    <!-- Data Disabled Icon -->
-    <!-- MediaScanner behavior on boot -->
-    <!-- Running Services Icon in QS Footer-->
-    <!-- Power menu and dialogs opacity -->
-    <!-- SystemUI Tuner -->
-    <!-- Hardware button navigation -->
-    <!-- doze on charge -->
-    <!-- EdgeGesture service -->
-    <!-- Pie control -->
     <string name="pie_enable_title">Ενεργοποίηση</string>
     <string name="pie_theme_mode_title">Θέμα</string>
     <string name="pie_status_none">None</string>
     <string name="pa_pie_gravity_right">Δεξιά</string>
     <string name="pa_pie_gravity_left">Αριστερά</string>
-    <!-- Audio Panel view  -->
-    <!-- Audio Panel position  -->
     <string name="audio_panel_position_title">Τοποθεσία</string>
-    <!-- Control night mode with themes -->
-    <!-- One Hand mode-->
-    <!-- Camera button -->
-    <!-- Lock Clock & Date Size -->
-    <!-- Long aspect ratio apps -->
     <string name="action_save">Αποθήκευση</string>
-    <!-- Battery estimates -->
-    <!-- Wireless charging animation -->
     <string name="wireless_charging_animation_title">Animate στην φόρτιση</string>
-    <!-- Incall Home button behavior-->
-    <!-- Less boring heads-up-->
-    <!-- System icons style -->
-    <!-- lock screen media blur -->
-    <!-- Clock style -->
-    <!-- Custom lockscreen notifications count -->
-    <!-- QS SystemInfo -->
     <string name="qs_system_info_off">Ανενεργό</string>
-    <!-- QS Footer Text -->
-    <!-- Rotation suggestions -->
-    <!-- Notification Vibration -->
-    <!-- LockScreen Lock Icon -->
-    <!-- QS tiles haptic feedback -->
-    <!-- Blink flashlight for incoming calls -->
-    <string name="flashlight_on_call_disabled">Απενεργοποιημένο</string>
+    <string name="flashlight_on_call_disabled">Never</string>
     <string name="flashlight_on_call_always">Always</string>
-    <!-- Partial screenshot -->
-    <!-- Gaming mode -->
     <string name="gaming_mode_notifications_off_title">Απενεργοποιημένο</string>
-    <!-- Power Menu Category Titles-->
-    <!-- Alert Slider Notifications (OnePlus devices) -->
-    <!--FOD -->
-    <!--FOD Animations -->
-    <!-- Kill app long-press back -->
-    <!-- Show Media Headsup -->
-    <!-- R Notification headers -->
-    <!-- AICP ad-blocker -->
-    <!-- Headset ringtone audio focus -->
-    <!-- OOS clear all button -->
-    <!-- Long swipe gestures -->
-    <!-- Vertical Long swipes -->
-    <!-- QS DataUsage Toggle -->
     <string name="qs_datausage_disabled">Απενεργοποιημένο</string>
-    <!-- QS Battery toggle -->
     <string name="qs_header_battery_title">Πληροφορίες μπαταρίας</string>
 </resources>
