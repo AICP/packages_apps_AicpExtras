@@ -27,6 +27,7 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 
+public class BatteryLight {/*
 public class BatteryLight extends BaseSettingsFragment
         implements Preference.OnPreferenceChangeListener {
 
@@ -118,5 +119,5 @@ public class BatteryLight extends BaseSettingsFragment
         }
 
     }
-
+*/
 }

@@ -22,7 +22,7 @@
     android:key="battery_bar"
     android:title="@string/battery_bar_title">
 
-    <com.aicp.gear.preference.SystemSettingIntListPreference
+    <!-- <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="statusbar_battery_bar_location"
         android:title="@string/battery_bar_location_title"
         android:entries="@array/battery_bar_location_entries"
@@ -91,6 +91,6 @@
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="statusbar_battery_bar_animate"
         android:title="@string/battery_bar_animate_title"
-        android:defaultValue="false" />
+        android:defaultValue="false" /> -->
 
 </PreferenceScreen>

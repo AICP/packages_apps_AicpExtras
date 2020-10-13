@@ -51,10 +51,10 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
 import java.util.Set;
-
-public class AnonymousStats extends BaseSettingsFragment implements
-		DialogInterface.OnClickListener, DialogInterface.OnDismissListener,
-		Preference.OnPreferenceChangeListener {
+public class AnonymousStats {
+// public class AnonymousStats extends BaseSettingsFragment implements
+// 		DialogInterface.OnClickListener, DialogInterface.OnDismissListener,
+// 		Preference.OnPreferenceChangeListener {
 
 	private static final String PREF_VIEW_STATS = "pref_view_stats";
 	private static final String PREF_LAST_REPORT_ON = "pref_last_report_on";
@@ -71,7 +71,7 @@ public class AnonymousStats extends BaseSettingsFragment implements
 	private boolean mOkClicked;
 
 	private SharedPreferences mPrefs;
-
+/*
 	public static SharedPreferences getPreferences(Context context) {
 		return context.getSharedPreferences(Utilities.SETTINGS_PREF_NAME, 0);
 	}
@@ -101,12 +101,12 @@ public class AnonymousStats extends BaseSettingsFragment implements
 				ReportingServiceManager.launchService(getActivity(), false);
 		}
 
-		Preference mPrefHolder;
+		Preference mPrefHolder;*/
 		/* Experimental feature 2 */
-		Long lastCheck = mPrefs.getLong(Const.ANONYMOUS_LAST_CHECKED, 0);
-		if (lastCheck > 1) {
+/*		Long lastCheck = mPrefs.getLong(Const.ANONYMOUS_LAST_CHECKED, 0);
+		if (lastCheck > 1) {*/
 			// show last checkin date
-			String lastCheckStr = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT).format(new java.util.Date(lastCheck));
+/*			String lastCheckStr = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT).format(new java.util.Date(lastCheck));
 			lastCheckStr = getResources().getString(R.string.last_report_on) + ": " + lastCheckStr;
 
 			mPrefHolder = prefSet.findPreference(PREF_LAST_REPORT_ON);
@@ -257,13 +257,13 @@ public class AnonymousStats extends BaseSettingsFragment implements
 	            .putStringSet(KEY_JOB_QUEUE, jobQueue)
 	            .commit();
 	}
-
+*/
 	/**
 	 * @param context context to use to get prefs
 	 * @return Returns the next unused int in the job queue, up until {@link #QUEUE_MAX_THRESHOLD}
 	 * is reached, then it will return -1
 	 */
-	public static int getNextJobId(Context context) {
+	/*public static int getNextJobId(Context context) {
 	    Set<String> currentQueue = getJobQueue(context);
 
 	    if (currentQueue == null) {
@@ -278,5 +278,5 @@ public class AnonymousStats extends BaseSettingsFragment implements
 	        return i;
 
 	    }
-	}
+	}*/
 }

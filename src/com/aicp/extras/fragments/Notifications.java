@@ -32,6 +32,7 @@ import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingSeekBarPreference;
 import com.android.internal.util.aicp.DeviceUtils;
 
+public class Notifications {/*
 public class Notifications extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
@@ -96,5 +97,5 @@ public class Notifications extends BaseSettingsFragment implements
             return true;
         }
         return false;
-    }
+    }*/
 }

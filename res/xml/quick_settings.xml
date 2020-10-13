@@ -22,7 +22,7 @@
     android:key="quick_settings"
     android:title="@string/quick_settings_title">
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
         android:title="@string/qs_tile_title_visibility_title"
         android:summary="@string/qs_tile_title_visibility_summary"
@@ -34,7 +34,6 @@
         android:summary="@string/qs_vibrate_summary"
         android:defaultValue="false" />
 
-<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="hide_tile_expand_indicator"
         android:title="@string/hide_tile_expand_indicator_title"
@@ -46,7 +45,6 @@
         android:title="@string/qs_running_services_title"
         android:summary="@string/qs_running_services_summary"
         android:defaultValue="false" />
--->
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="music_tile_title"
@@ -109,13 +107,11 @@
         android:key="qs_layout_category"
         android:title="@string/qs_layout_category_title">
 
-<!--
         <SwitchPreference
             android:key="qs_quickbar_columns_auto"
             android:title="@string/qqs_columns_auto_title"
             android:summary="@string/qqs_columns_auto_summary"
             android:defaultValue="false" />
--->
 
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_quickbar_columns"
@@ -162,7 +158,6 @@
             aicpextras:unitsRight=""
             android:defaultValue="3" />
     </PreferenceCategory>
-<!--
 
     <PreferenceCategory
         android:key="qs_panel_translucency"
@@ -183,7 +178,6 @@
             aicpextras:unitsRight="%"
             android:defaultValue="60" />
     </PreferenceCategory>
--->
 
       <PreferenceCategory
         android:key="category_custom_header"
@@ -234,5 +228,5 @@
             aicpextras:unitsRight="@string/unit_percent"
             android:defaultValue="0"
             android:dependency="status_bar_custom_header" />
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 </PreferenceScreen>

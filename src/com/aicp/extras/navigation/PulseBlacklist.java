@@ -46,9 +46,10 @@ import com.aicp.extras.R;
 import com.aicp.extras.utils.PackageListAdapter;
 import com.aicp.extras.utils.PackageListAdapter.PackageItem;
 
-public class PulseBlacklist extends BaseSettingsFragment implements
-        Preference.OnPreferenceClickListener {
-
+//public class PulseBlacklist extends BaseSettingsFragment implements
+//        Preference.OnPreferenceClickListener {
+          public class PulseBlacklist {
+/*
     private static final String TAG = "PulseBlacklist";
 
     private static final int DIALOG_BLACKLIST_APPS = 1;
@@ -140,13 +141,13 @@ public class PulseBlacklist extends BaseSettingsFragment implements
     /**
      * Application class
      */
-    private static class Package {
+  /*  private static class Package {
         public String name;
         /**
          * Stores all the application values in one call
          * @param name
          */
-        public Package(String name) {
+    /*    public Package(String name) {
             this.name = name;
         }
 
@@ -241,7 +242,7 @@ public class PulseBlacklist extends BaseSettingsFragment implements
             parsed = true;
         }
         */
-
+/*
         return parsed;
     }
 
@@ -276,5 +277,5 @@ public class PulseBlacklist extends BaseSettingsFragment implements
         Settings.System.putString(getActivity().getContentResolver(),
                 setting, value);
         */
-    }
+  //  }
 }

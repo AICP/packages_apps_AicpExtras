@@ -20,10 +20,11 @@ package com.aicp.extras.fragments;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
+public class BatteryBar {/*
 public class BatteryBar extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.battery_bar;
-    }
+    }*/
 }

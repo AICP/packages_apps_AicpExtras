@@ -20,7 +20,7 @@
     android:key="system_animation_controls"
     android:title="@string/system_animation_title">
 
-        <SwitchPreference
+        <!-- <SwitchPreference
             android:key="animation_no_override"
             android:title="@string/title_animation_no_override"
             android:summary="@string/summary_animation_no_override" />
@@ -63,6 +63,6 @@
 
         <ListPreference
             android:key="wallpaper_intra_close"
-            android:title="@string/wallpaper_intra_close_title" />
+            android:title="@string/wallpaper_intra_close_title" /> -->
 
 </PreferenceScreen>

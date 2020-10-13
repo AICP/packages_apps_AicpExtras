@@ -23,8 +23,9 @@ import com.aicp.extras.widget.SwitchBar;
 
 import com.aicp.gear.preference.GlobalSettingsStore;
 
-public class GlobalSettingSwitchBarController extends PreferenceDataStoreSwitchBarController {
-
+//public class GlobalSettingSwitchBarController extends PreferenceDataStoreSwitchBarController {
+public class GlobalSettingSwitchBarController {
+/*
     public GlobalSettingSwitchBarController(SwitchBar switchBar, String key, boolean defaultValue,
                                             ContentResolver resolver,
                                             BaseSettingsFragment settingsFragment,
@@ -34,5 +35,5 @@ public class GlobalSettingSwitchBarController extends PreferenceDataStoreSwitchB
                 depHndl, thereShouldBeOne);
         // -1 is reserved group id for switch bar
         depHndl.addGlobalSettingPreferences(-1, key);
-    }
+    }*/
 }

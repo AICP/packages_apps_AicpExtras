@@ -30,8 +30,9 @@ import com.aicp.extras.utils.Util;
 
 import com.aicp.gear.util.ThemeOverlayHelper;
 
-public class Theming extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
-
+//public class Theming extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
+public class Theming {
+/*
     private Handler mHandler = new Handler();
 
     @Override
@@ -51,7 +52,7 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
         findPreference(AdaptiveIconDrawable.MASK_SETTING_PROP).setOnPreferenceChangeListener(this);
     }
     */
-
+/*
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         /*
@@ -71,7 +72,7 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
             return false;
         }
         */
-        return false;
+  /*      return false;
     }
 
     private void postRestartSystemUi() {
@@ -84,5 +85,5 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
                 }
         }, 200);
     }
-
+*/
 }

@@ -24,7 +24,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
 
-public class ReportingServiceManager extends BroadcastReceiver {
+public class ReportingServiceManager {
+//public class ReportingServiceManager extends BroadcastReceiver {
 	private static final boolean DEBUG = false;
 
 	private static final long MILLIS_PER_HOUR = 60L * 60L * 1000L;
@@ -36,7 +37,7 @@ public class ReportingServiceManager extends BroadcastReceiver {
 
 	// UPDATE_INTERVAL days is set in the build.prop file
 	// private static final long UPDATE_INTERVAL = 1L * MILLIS_PER_DAY;
-
+/*
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
@@ -130,7 +131,7 @@ public class ReportingServiceManager extends BroadcastReceiver {
 			getUserResponse(context);
 			return;
 		}*/
-
+/*
 		long lastSynced = prefs.getLong(Const.ANONYMOUS_LAST_CHECKED, 0);
 		if (!force) {
 				if (lastSynced == 0) {
@@ -157,5 +158,5 @@ public class ReportingServiceManager extends BroadcastReceiver {
 		intent.setClass(context, ReportingService.class);
 		intent.putExtra("promptUser", false);
 		context.startService(intent);
-	}
+	}*/
 }

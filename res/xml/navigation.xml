@@ -20,7 +20,7 @@
     android:key="navigation"
     android:title="@string/navigation_title">
 
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+    <!-- <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="navigation_bar_show_new"
         android:title="@string/navbar_visibility"
         android:summary="@string/navbar_visibility_summary"
@@ -149,7 +149,7 @@
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference
-        android:title="@string/navigation_footer" />
+        android:title="@string/navigation_footer" /> -->
 
 <!--
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference

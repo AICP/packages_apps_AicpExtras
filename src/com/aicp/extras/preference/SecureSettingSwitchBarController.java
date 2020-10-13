@@ -23,8 +23,9 @@ import com.aicp.extras.widget.SwitchBar;
 
 import com.aicp.gear.preference.SecureSettingsStore;
 
-public class SecureSettingSwitchBarController extends PreferenceDataStoreSwitchBarController {
-
+//public class SecureSettingSwitchBarController extends PreferenceDataStoreSwitchBarController {
+public class SecureSettingSwitchBarController {
+/*
     public SecureSettingSwitchBarController(SwitchBar switchBar, String key, boolean defaultValue,
                                             ContentResolver resolver,
                                             BaseSettingsFragment settingsFragment,
@@ -34,5 +35,5 @@ public class SecureSettingSwitchBarController extends PreferenceDataStoreSwitchB
                 depHndl, thereShouldBeOne);
         // -1 is reserved group id for switch bar
         depHndl.addSecureSettingPreferences(-1, key);
-    }
+    }*/
 }

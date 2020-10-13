@@ -39,8 +39,9 @@ import com.android.internal.util.aicp.AicpUtils;
 
 import java.util.Date;
 
-public class StatusBarClockSettings extends BaseSettingsFragment implements
-        OnPreferenceChangeListener {
+public class StatusBarClockSettings {
+/*public class StatusBarClockSettings extends BaseSettingsFragment implements OnPreferenceChangeListener {
+
 
     private static final String TAG = "StatusBarClockSettings";
 
@@ -178,5 +179,5 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements
             }
         }
         mClockDateFormat.setEntries(parsedDateEntries);
-    }
+    }*/
 }

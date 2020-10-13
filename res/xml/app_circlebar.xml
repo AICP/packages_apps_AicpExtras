@@ -20,7 +20,7 @@
     android:key="app_circlebar"
     android:title="@string/category_app_circle_bar_title" >
 
-    <PreferenceScreen
+    <!-- <PreferenceScreen
         android:key="app_circle_bar_included_apps"
         android:title="@string/app_circle_bar_included_apps_title"
         android:fragment="com.aicp.extras.fragments.AppCircleBarAppChooser"
@@ -58,6 +58,6 @@
         android:key="app_circle_bar_show_trigger"
         android:title="@string/app_circle_bar_show_trigger_title"
         android:summary="@string/app_circle_bar_show_trigger_summary"
-        android:defaultValue="false"/>
+        android:defaultValue="false"/> -->
 
 </PreferenceScreen>

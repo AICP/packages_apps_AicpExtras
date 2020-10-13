@@ -51,6 +51,7 @@ import com.aicp.extras.utils.PackageListAdapter.PackageItem;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.aicp.extras.R;
 
+public class ChooserActivityBlacklist {/*
 public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         Preference.OnPreferenceClickListener {
 
@@ -150,13 +151,13 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
     /**
      * Application class
      */
-    protected static class Package {
+/*    protected static class Package {
         public String name;
         /**
          * Stores all the application values in one call
          * @param name
          */
-        public Package(String name) {
+  /*      public Package(String name) {
             this.name = name;
         }
 
@@ -284,5 +285,5 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         if (DEBUG) Log.v(TAG, "blackStringSaved: " + value);
         Settings.System.putString(getActivity().getContentResolver(),
                 mBlacklistPackageStore, value);
-    }
+    }*/
 }

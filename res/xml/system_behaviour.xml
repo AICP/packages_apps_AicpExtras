@@ -22,12 +22,12 @@
     android:key="system_behaviour"
     android:title="@string/system_behaviour_title">
 
-    <PreferenceScreen
+    <!-- <PreferenceScreen
         android:key="bars_settings"
         android:title="@string/aspect_ratio_category_title"
         android:fragment="com.aicp.extras.fragments.BarsSettings" />
 
-<!--
+
     <Preference
         android:key="privacy_guard_manager"
         android:title="@string/app_ops_settings"
@@ -35,7 +35,7 @@
         android:fragment="com.android.settings.applications.appops.AppOpsDetails">
         <intent android:action="android.settings.APP_OPS_SETTINGS" />
     </Preference>
--->
+
     <com.aicp.extras.preference.HostnamePreference
         android:key="device_hostname"
         android:title="@string/device_hostname"
@@ -47,7 +47,7 @@
         android:imeOptions="actionDone"
         android:inputType="textNoSuggestions"
         android:persistent="false" />
-<!--
+
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="media_scanner_on_boot"
         android:dialogTitle="@string/media_scanner_on_boot_title"
@@ -55,16 +55,15 @@
         android:entries="@array/media_scanner_on_boot_entries"
         android:entryValues="@array/media_scanner_on_boot_values"
         android:defaultValue="0" />
--->
 
-    <!-- Suspend Actions -->
+    <!- Suspend Actions ->
     <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
         android:key="start_screen_state_service"
         android:title="@string/screen_state_toggles_title"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.SuspendActions" />
 
-<!--
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="edge_service_for_gestures"
         android:title="@string/edge_gesture_service_title"
@@ -76,7 +75,7 @@
         android:title="@string/one_hand_mode_enabled_title"
         android:summary="@string/one_hand_mode_enabled_summary"
         android:defaultValue="false" />
--->
+
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="sensor_block"
@@ -84,7 +83,7 @@
         android:summary="@string/sensor_block_summary"
         android:defaultValue="false" />
 
-    <!-- Smart Pixels -->
+    <!- Smart Pixels ->
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="smart_pixels_enable"
         android:title="@string/smart_pixels_title"
@@ -96,7 +95,7 @@
         android:key="system_ss_category"
         android:title="@string/system_ss_category_title">
 
-        <!-- Screenshot tone -->
+        <!- Screenshot tone ->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="screenshot_sound"
             android:title="@string/screenshot_sound_title"
@@ -145,7 +144,7 @@
 	android:defaultValue="false"/>
   </PreferenceCategory>
 
-    <!-- SELinux -->
+    <!- SELinux ->
     <PreferenceCategory
         android:key="selinux"
         android:title="@string/selinux_category">
@@ -166,6 +165,6 @@
             android:summary="@string/selinux_persistence_summary"
             android:defaultValue="true" />
 
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
 </PreferenceScreen>

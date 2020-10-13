@@ -33,9 +33,10 @@ import com.aicp.extras.utils.SuShell;
 import com.aicp.extras.utils.SuTask;
 import com.aicp.extras.utils.Util;
 
-public class SystemBehaviour extends BaseSettingsFragment
-        implements Preference.OnPreferenceChangeListener {
-
+public class SystemBehaviour {
+// public class SystemBehaviour extends BaseSettingsFragment
+//         implements Preference.OnPreferenceChangeListener {
+/*
     private static final String TAG = SystemBehaviour.class.getSimpleName();
 
     private static final String KEY_SMART_PIXELS = "smart_pixels_enable";
@@ -130,5 +131,5 @@ public class SystemBehaviour extends BaseSettingsFragment
                 setSelinuxEnabled(SELinux.isSELinuxEnforced(), mSelinuxPersistence.isChecked());
             }
         }
-    }
+    }*/
 }

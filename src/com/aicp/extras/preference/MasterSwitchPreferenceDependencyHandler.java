@@ -35,7 +35,7 @@ import java.util.HashMap;
  * A class to handle mutual exclusive master switch preferences, reloadValue calls etc.
  */
 public class MasterSwitchPreferenceDependencyHandler {
-
+/*
     private static final String TAG =
             MasterSwitchPreferenceDependencyHandler.class.getSimpleName();
 
@@ -321,5 +321,5 @@ public class MasterSwitchPreferenceDependencyHandler {
                         }
                 })
                 .show();
-    }
+    }*/
 }

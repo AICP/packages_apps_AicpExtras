@@ -20,7 +20,7 @@
     android:key="smartbar_settings"
     android:title="@string/smartbar_interface" >
 
-    <Preference
+    <!-- <Preference
         android:key="smartbar_editor_mode"
         android:title="@string/smartbar_editor_title"
         android:summary="@string/smartbar_editor_summary" />
@@ -79,7 +79,7 @@
         android:key="smartbar_doubletap_sleep"
         android:title="@string/smartbar_double_tap_sleep_title"
         android:summary="@string/smartbar_double_tap_sleep_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false" /> -->
 
     <!--<com.android.settings.preferences.SecureSettingSwitchPreference
         android:key="one_handed_mode_ui"

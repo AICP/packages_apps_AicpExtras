@@ -67,24 +67,24 @@ public class Dashboard extends BaseSettingsFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        PackageManager pm = getActivity().getPackageManager();
+    //    PackageManager pm = getActivity().getPackageManager();
 
-        mAicpLogo = (LongClickablePreference) findPreference(PREF_AICP_LOGO);
+    //    mAicpLogo = (LongClickablePreference) findPreference(PREF_AICP_LOGO);
 
-        mWeatherOption = findPreference(PREF_WEATHER);
-        if (!Util.isPackageInstalled(Constants.WEATHER_SERVICE_PACKAGE, pm)) {
-            mWeatherOption.getParent().removePreference(mWeatherOption);
-        }
+        // mWeatherOption = findPreference(PREF_WEATHER);
+        // if (!Util.isPackageInstalled(Constants.WEATHER_SERVICE_PACKAGE, pm)) {
+        //     mWeatherOption.getParent().removePreference(mWeatherOption);
+        // }
 
-        mAicpOTA = findPreference(PREF_AICP_OTA);
-        if (!Util.isPackageEnabled(Constants.AICP_OTA_PACKAGE, pm)) {
-            mAicpOTA.getParent().removePreference(mAicpOTA);
-        }
+  //      mAicpOTA = findPreference(PREF_AICP_OTA);
+  //      if (!Util.isPackageEnabled(Constants.AICP_OTA_PACKAGE, pm)) {
+  //          mAicpOTA.getParent().removePreference(mAicpOTA);
+  //      }
 
-        Preference logIt = findPreference(PREF_LOG_IT);
-        Util.requireRoot(getActivity(), logIt);
+        // Preference logIt = findPreference(PREF_LOG_IT);
+        // Util.requireRoot(getActivity(), logIt);
 
-        mAicpLogo.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+/*        mAicpLogo.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
                 int firstRandom = mRandom.nextInt(91 - 0);
@@ -92,23 +92,23 @@ public class Dashboard extends BaseSettingsFragment {
                 int thirdRandom = mRandom.nextInt(181 - 0);
 
                 // Let's color the star randomly
-                Drawable star = getResources().getDrawable(R.drawable.star_white_border, null);
-                int randomColor;
-                randomColor = Color.rgb(
-                        Color.red(mRandom.nextInt(0xFFFFFF)),
-                        Color.green(mRandom.nextInt(0xFFFFFF)),
-                        Color.blue(mRandom.nextInt(0xFFFFFF)));
-                star.setTint(randomColor);
+                // Drawable star = getResources().getDrawable(R.drawable.star_white_border, null);
+                // int randomColor;
+                // randomColor = Color.rgb(
+                //         Color.red(mRandom.nextInt(0xFFFFFF)),
+                //         Color.green(mRandom.nextInt(0xFFFFFF)),
+                //         Color.blue(mRandom.nextInt(0xFFFFFF)));
+                // star.setTint(randomColor);
 
-                ParticleSystem ps = new ParticleSystem(getActivity(), 100, star, 3000);
-                ps.setScaleRange(0.7f, 1.3f);
-                ps.setSpeedRange(0.1f, 0.25f);
-                ps.setAcceleration(0.0001f, thirdRandom);
-                ps.setRotationSpeedRange(firstRandom, secondRandom);
-                ps.setFadeOut(200, new AccelerateInterpolator());
-                ps.oneShot(getView(), 100);
-
-                mAicpLogo.setLongClickBurst(2000/((++mLogoClickCount)%5+1));
+                // ParticleSystem ps = new ParticleSystem(getActivity(), 100, star, 3000);
+                // ps.setScaleRange(0.7f, 1.3f);
+                // ps.setSpeedRange(0.1f, 0.25f);
+                // ps.setAcceleration(0.0001f, thirdRandom);
+                // ps.setRotationSpeedRange(firstRandom, secondRandom);
+                // ps.setFadeOut(200, new AccelerateInterpolator());
+                // ps.oneShot(getView(), 100);
+                //
+                // mAicpLogo.setLongClickBurst(2000/((++mLogoClickCount)%5+1));
                 return true;
             }
         });
@@ -120,19 +120,19 @@ public class Dashboard extends BaseSettingsFragment {
                             int secondRandom = mRandom.nextInt(181 - 90) + 90;
                             int thirdRandom = mRandom.nextInt(181 - 0);
 
-                            Drawable star =
-                                    getResources().getDrawable(R.drawable.star_alternative, null);
-
-                            ParticleSystem ps = new ParticleSystem(getActivity(), 100, star, 3000);
-                            ps.setScaleRange(0.7f, 1.3f);
-                            ps.setSpeedRange(0.1f, 0.25f);
-                            ps.setAcceleration(0.0001f, thirdRandom);
-                            ps.setRotationSpeedRange(firstRandom, secondRandom);
-                            ps.setFadeOut(1000, new AccelerateInterpolator());
-                            ps.oneShot(getView(), 100);
+                            // Drawable star =
+                            //         getResources().getDrawable(R.drawable.star_alternative, null);
+                            //
+                            // ParticleSystem ps = new ParticleSystem(getActivity(), 100, star, 3000);
+                            // ps.setScaleRange(0.7f, 1.3f);
+                            // ps.setSpeedRange(0.1f, 0.25f);
+                            // ps.setAcceleration(0.0001f, thirdRandom);
+                            // ps.setRotationSpeedRange(firstRandom, secondRandom);
+                            // ps.setFadeOut(1000, new AccelerateInterpolator());
+                            // ps.oneShot(getView(), 100);
                             return true;
                         }
-                });
+                });*/
     }
 
     @Override

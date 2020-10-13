@@ -39,7 +39,8 @@ import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 */
 
-public class ReportingService extends IntentService {
+//public class ReportingService extends IntentService {
+public class ReportingService {
     private static final boolean DEBUG = false;
 
     private static final int NOTIFICATION_ID = 1;
@@ -49,7 +50,7 @@ public class ReportingService extends IntentService {
     private static final String AE_SETTINGSACTIVITY = "com.aicp.extras.SettingsActivity";
     private static final String SETTINGS_PACKAGE_NAME = "com.aicp.extras";
     private static final String ROMSTATS_SETTINGS = "com.aicp.extras.romstats.AnonymousStats";
-
+/*
     public ReportingService() {
         super(ReportingService.class.getSimpleName());
     }
@@ -184,5 +185,5 @@ public class ReportingService extends IntentService {
         notif.priority  = Notification.PRIORITY_HIGH;
 
         notificationManager.notify(NOTIFICATION_ID, notif);
-    }
+    }*/
 }

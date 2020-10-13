@@ -22,7 +22,7 @@
     android:key="heads_up_options"
     android:title="@string/notification_heads_up_title">
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="less_boring_heads_up"
         android:title="@string/less_boring_heads_up_title"
         android:summary="@string/less_boring_heads_up_summary"
@@ -48,6 +48,6 @@
         android:summary="%s"
         android:entries="@array/heads_up_time_out_entries"
         android:entryValues="@array/heads_up_time_out_values"
-        android:defaultValue="0" />
+        android:defaultValue="0" /> -->
 
 </PreferenceScreen>

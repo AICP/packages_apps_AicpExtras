@@ -24,7 +24,8 @@ import com.aicp.extras.R;
 
 import java.util.HashMap;
 
-public class AppCircleBarAppChooser extends ChooserActivityBlacklist {
+public class AppCircleBarAppChooser {
+/*public class AppCircleBarAppChooser extends ChooserActivityBlacklist {
 
     private static final String KEY_SIDEBAR_APPLIST = "add_appcirclebar_packages";
 

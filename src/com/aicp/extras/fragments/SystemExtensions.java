@@ -27,9 +27,10 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 
-public class SystemExtensions extends BaseSettingsFragment
-            implements Preference.OnPreferenceChangeListener {
-
+public class SystemExtensions {
+// public class SystemExtensions extends BaseSettingsFragment
+//             implements Preference.OnPreferenceChangeListener {
+/*
     private static final String PREF_SYSTEM_APP_REMOVER = "system_app_remover";
     private static final String PREF_ADBLOCK = "persist.aicp.hosts_block";
 
@@ -65,5 +66,5 @@ public class SystemExtensions extends BaseSettingsFragment
         } else {
             return false;
         }
-    }
+    }*/
 }

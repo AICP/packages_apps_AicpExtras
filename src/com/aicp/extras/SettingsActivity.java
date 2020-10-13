@@ -127,7 +127,7 @@ public class SettingsActivity extends BaseActivity {
                     .replace(R.id.main_content, mFragment, FRAGMENT_TAG).commit();
         }
 
-        mMasterSwitchDependencyHandler = new MasterSwitchPreferenceDependencyHandler(this);
+        /*mMasterSwitchDependencyHandler = new MasterSwitchPreferenceDependencyHandler(this);
         // Add switchbar preferences with reserved grou id -1
         if (mIntent.hasExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS)) {
             mMasterSwitchDependencyHandler.addSystemSettingPreferences(-1,
@@ -182,9 +182,9 @@ public class SettingsActivity extends BaseActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         if (sharedPreferences.getBoolean("is_first_time", true)) {
             firstStartNoRootDialog();
-        }
+        }*/
     }
-
+/*
     @Override
     protected void onStart() {
         super.onStart();
@@ -280,7 +280,7 @@ public class SettingsActivity extends BaseActivity {
         }
         return false;
     }
-
+*/
     private boolean checkClassAvailable(String fragmentClass) {
         if (fragmentClass != null) {
             try {

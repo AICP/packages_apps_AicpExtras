@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
+public class Preview  {/*
 public class Preview extends BaseSettingsFragment {
 
     private static final String UNIQUE_ID = "preview_id";
@@ -37,25 +38,25 @@ public class Preview extends BaseSettingsFragment {
     private static final String ROMNAME = "preview_romname";
     private static final String ROMVERSION = "preview_romversion";
 
-    @Override
-    protected int getPreferenceResource() {
-        return R.xml.preview_data;
+    /* @Override
+     protected int getPreferenceResource() {
+         return R.xml.preview_data;
     }
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+	 @Override
+	 public void onCreate(Bundle savedInstanceState) {
+	 	super.onCreate(savedInstanceState);
 
-		final PreferenceScreen prefSet = getPreferenceScreen();
-		final Context context = getActivity().getApplicationContext();
+	 	final PreferenceScreen prefSet = getPreferenceScreen();
+	 	final Context context = getActivity().getApplicationContext();
 
-        prefSet.findPreference(UNIQUE_ID).setSummary(Utilities.getUniqueID(context));
-        prefSet.findPreference(DEVICE).setSummary(Utilities.getDevice());
-        prefSet.findPreference(VERSION).setSummary(Utilities.getModVersion());
-        prefSet.findPreference(BUILDTYPE).setSummary(Utilities.getBuildType());
-        prefSet.findPreference(COUNTRY).setSummary(Utilities.getCountryCode(context));
-        prefSet.findPreference(CARRIER).setSummary(Utilities.getCarrier(context));
-        prefSet.findPreference(ROMNAME).setSummary(Utilities.getRomName());
-        prefSet.findPreference(ROMVERSION).setSummary(Utilities.getRomVersion());
-	}
+         prefSet.findPreference(UNIQUE_ID).setSummary(Utilities.getUniqueID(context));
+         prefSet.findPreference(DEVICE).setSummary(Utilities.getDevice());
+         prefSet.findPreference(VERSION).setSummary(Utilities.getModVersion());
+         prefSet.findPreference(BUILDTYPE).setSummary(Utilities.getBuildType());
+         prefSet.findPreference(COUNTRY).setSummary(Utilities.getCountryCode(context));
+         prefSet.findPreference(CARRIER).setSummary(Utilities.getCarrier(context));
+         prefSet.findPreference(ROMNAME).setSummary(Utilities.getRomName());
+         prefSet.findPreference(ROMVERSION).setSummary(Utilities.getRomVersion());
+	 }*/
 }

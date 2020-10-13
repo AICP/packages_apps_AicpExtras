@@ -35,9 +35,10 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.gear.preference.SeekBarPreferenceCham;
 
-public class SuspendActions extends BaseSettingsFragment
-            implements Preference.OnPreferenceChangeListener {
-
+public class SuspendActions {
+// public class SuspendActions extends BaseSettingsFragment
+//             implements Preference.OnPreferenceChangeListener {
+/*
     private static final String TAG = "SuspendActions";
 /*
     private static final String SCREEN_STATE_TOOGLES_ENABLE = "screen_state_toggles_enable_key";
@@ -60,7 +61,7 @@ public class SuspendActions extends BaseSettingsFragment
     private PreferenceCategory mMobileDateCategory;
     private PreferenceCategory mLocationCategory;
 */
-    @Override
+  /*  @Override
     protected int getPreferenceResource() {
         return R.xml.suspend_actions;
     }
@@ -147,7 +148,7 @@ public class SuspendActions extends BaseSettingsFragment
     }
     */
 
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
+    /*public boolean onPreferenceChange(Preference preference, Object newValue) {
         /*
         ContentResolver resolver = getActivity().getContentResolver();
 
@@ -210,7 +211,7 @@ public class SuspendActions extends BaseSettingsFragment
             return true;
         }
         */
-        return false;
+      /*  return false;
     }
 
     @Override
@@ -223,5 +224,5 @@ public class SuspendActions extends BaseSettingsFragment
                 .setClassName("com.android.systemui", "com.android.systemui.screenstate.ScreenStateService");
         getActivity().stopService(service);
         getActivity().startService(service);
-    }
+    }*/
 }

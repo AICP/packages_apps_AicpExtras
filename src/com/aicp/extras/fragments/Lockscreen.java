@@ -31,6 +31,7 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.gear.util.AicpContextConstants;
 
+public class Lockscreen {/*
 public class Lockscreen extends BaseSettingsFragment {
 
     private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
@@ -69,5 +70,5 @@ public class Lockscreen extends BaseSettingsFragment {
         if (fodIconPickerCategory != null && !supportsFod) {
             fodIconPickerCategory.getParent().removePreference(fodIconPickerCategory);
         }
-    }
+    }*/
 }

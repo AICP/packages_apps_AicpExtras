@@ -73,8 +73,8 @@ import org.apache.http.params.HttpProtocolParams;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 
-public class StatsUploadJobService extends JobService {
-
+public class StatsUploadJobService {
+//public class StatsUploadJobService extends JobService {
 //    private static final String TAG = StatsUploadJobService.class.getSimpleName();
     private static final String TAG = Const.TAG;
     private static final boolean DEBUG = false;
@@ -94,7 +94,7 @@ public class StatsUploadJobService extends JobService {
     public static final String KEY_STATS_URL = "rom_stats_url";
     public static final String KEY_SIGN_CERT = "sign_cert";
     public static final String KEY_TIMESTAMP = "timeStamp";
-
+/*
     List<JobParameters> mFinishedJobs = new LinkedList<>();
     ArrayMap<JobParameters, StatsUploadTask> mCurrentJobs = new ArrayMap<>();
 
@@ -292,5 +292,5 @@ public class StatsUploadJobService extends JobService {
         public Socket createSocket() throws IOException{
             return sslContext.getSocketFactory().createSocket();
         }
-    }
+    }*/
 }

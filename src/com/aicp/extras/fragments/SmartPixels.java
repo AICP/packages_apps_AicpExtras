@@ -20,10 +20,11 @@ package com.aicp.extras.fragments;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
+public class SmartPixels {/*
 public class SmartPixels extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.smart_pixels;
-    }
+    }*/
 }

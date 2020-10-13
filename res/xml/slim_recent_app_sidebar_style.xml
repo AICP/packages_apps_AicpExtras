@@ -22,7 +22,7 @@
     android:key="slim_recent_app_sidebar_style"
     android:title="@string/recent_app_sidebar_title">
 
-    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+    <!-- <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="recent_app_sidebar_scale_factor"
             android:title="@string/recent_app_sidebar_scale_title"
             android:defaultValue="100"
@@ -54,6 +54,6 @@
             android:key="recent_app_sidebar_open_simultaneously"
             android:title="@string/recent_app_sidebar_open_simultaneously_title"
             android:summary="@string/recent_app_sidebar_open_simultaneously_summary"
-            android:defaultValue="true" />
+            android:defaultValue="true" /> -->
 
 </PreferenceScreen>

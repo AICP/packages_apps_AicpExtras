@@ -36,6 +36,7 @@ import com.aicp.extras.R;
 
 import java.util.Arrays;
 
+public class AnimationControls {/*
 public class AnimationControls extends BaseSettingsFragment
             implements Preference.OnPreferenceChangeListener {
 
@@ -151,7 +152,7 @@ public class AnimationControls extends BaseSettingsFragment
         mWallpaperIntraClose.setEntries(mAnimationsStrings);
         mWallpaperIntraClose.setEntryValues(mAnimationsNum);
         */
-    }
+//    }
 
     //@Override
     //public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
@@ -164,7 +165,7 @@ public class AnimationControls extends BaseSettingsFragment
     //    }
     //    return false;
     //}
-
+/*
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
@@ -213,7 +214,7 @@ public class AnimationControls extends BaseSettingsFragment
         }
         preference.setSummary(getProperSummary(preference));
         */
-        return result;
+  /*      return result;
     }
 
     /*

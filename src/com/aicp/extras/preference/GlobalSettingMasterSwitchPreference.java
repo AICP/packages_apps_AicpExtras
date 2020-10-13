@@ -21,8 +21,9 @@ import android.util.AttributeSet;
 
 import com.aicp.gear.preference.GlobalSettingsStore;
 
-public class GlobalSettingMasterSwitchPreference extends MasterSwitchPreference {
-
+public class GlobalSettingMasterSwitchPreference {
+//public class GlobalSettingMasterSwitchPreference extends MasterSwitchPreference {
+/*
     public GlobalSettingMasterSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new GlobalSettingsStore(context.getContentResolver()));
@@ -37,5 +38,5 @@ public class GlobalSettingMasterSwitchPreference extends MasterSwitchPreference 
         super(context);
         setPreferenceDataStore(new GlobalSettingsStore(context.getContentResolver()));
     }
-
+*/
 }

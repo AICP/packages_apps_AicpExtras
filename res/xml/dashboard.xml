@@ -28,7 +28,7 @@
     <PreferenceCategory
         android:title="@string/navigation_category">
 
-        <PreferenceScreen
+        <!-- <PreferenceScreen
             android:title="@string/hw_keys_title"
             android:key="hw_keys"
             android:summary="@string/hw_keys_summary"
@@ -47,14 +47,14 @@
             android:key="recents"
             android:summary="@string/recents_summary"
             android:icon="@drawable/ic_settings_recents"
-            android:fragment="com.aicp.extras.fragments.Recents" />
+            android:fragment="com.aicp.extras.fragments.Recents" /> -->
 
     </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/user_interface_category">
 
-        <PreferenceScreen
+        <!-- <PreferenceScreen
             android:title="@string/status_bar_title"
             android:key="status_bar"
             android:summary="@string/status_bar_summary"
@@ -101,14 +101,14 @@
             android:key="other_ui"
             android:summary="@string/other_ui_summary"
             android:icon="@drawable/ic_settings_other_ui"
-            android:fragment="com.aicp.extras.fragments.OtherUi" />
+            android:fragment="com.aicp.extras.fragments.OtherUi" /> -->
 
     </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/system_category">
 
-        <PreferenceScreen
+        <!-- <PreferenceScreen
             android:title="@string/system_animations_title"
             android:key="system_animations"
             android:summary="@string/system_animations_summary"
@@ -145,7 +145,7 @@
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.TunerActivity" />
-        </Preference>
+        </Preference> -->
 
     </PreferenceCategory>
 
@@ -159,7 +159,7 @@
             android:icon="@drawable/ic_settings_about"
             android:fragment="com.aicp.extras.fragments.About" />
 
-        <Preference
+        <!-- <Preference
             android:title="@string/aicp_ota_title"
             android:key="aicp_ota"
             android:summary="@string/aicp_ota_summary"
@@ -177,7 +177,7 @@
             android:key="ae_settings"
             android:summary="@string/ae_settings_summary"
             android:icon="@drawable/ic_settings_ae_customization"
-            android:fragment="com.aicp.extras.fragments.AeSettings" />
+            android:fragment="com.aicp.extras.fragments.AeSettings" /> -->
 
     </PreferenceCategory>
 </PreferenceScreen>

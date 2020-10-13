@@ -20,10 +20,11 @@ package com.aicp.extras.fragments;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class Visualizer extends BaseSettingsFragment {
+public class Visualizer {
+//public class Visualizer extends BaseSettingsFragment {
 
-    @Override
-    protected int getPreferenceResource() {
-        return R.xml.visualizer_settings;
-    }
+    //@Override
+    //protected int getPreferenceResource() {
+    //    return R.xml.visualizer_settings;
+    //}
 }

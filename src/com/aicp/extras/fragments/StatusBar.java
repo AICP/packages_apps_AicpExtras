@@ -42,7 +42,8 @@ import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
 import com.android.internal.util.aicp.AicpUtils;
 
-public class StatusBar extends BaseSettingsFragment implements
+public class StatusBar {
+/*public class StatusBar extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String SMART_PULLDOWN = "qs_smart_pulldown";
@@ -81,7 +82,7 @@ public class StatusBar extends BaseSettingsFragment implements
 */
 
         // Quick Pulldown
-        mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
+  /*      mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
         mQuickPulldown.setOnPreferenceChangeListener(this);
         int quickPulldownValue = Settings.System.getIntForUser(resolver,
                 Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 0, UserHandle.USER_CURRENT);
@@ -119,7 +120,7 @@ public class StatusBar extends BaseSettingsFragment implements
         updateShowBatteryInQQS(showBatteryPercentage);
         */
 
-        final String displayCutout = getResources().getString(
+    /*    final String displayCutout = getResources().getString(
                 com.android.internal.R.string.config_mainBuiltInDisplayCutout);
         if(displayCutout.isEmpty()) {
             final Preference hideNotchPref = (Preference) findPreference(KEY_HIDE_NOTCH);
@@ -135,7 +136,7 @@ public class StatusBar extends BaseSettingsFragment implements
             updateSmartPulldownSummary(value);
             return true;
         } else */
-        if (preference == mQuickPulldown) {
+      /*  if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     quickPulldownValue, UserHandle.USER_CURRENT);
@@ -146,7 +147,7 @@ public class StatusBar extends BaseSettingsFragment implements
             updateShowBatteryInQQS(showBatteryPercentage);
             return true;
         } else */
-        } else if (preference == mShowCarrierLabel) {
+/*        } else if (preference == mShowCarrierLabel) {
             int value = Integer.parseInt((String) newValue);
             updateCarrierLabelSummary(value);
             return true;
@@ -219,7 +220,7 @@ public class StatusBar extends BaseSettingsFragment implements
     }
 */
 
-    private void updateQuickPulldownSummary(int value) {
+    /*private void updateQuickPulldownSummary(int value) {
         Resources res = getResources();
 
         if (value == 0) {

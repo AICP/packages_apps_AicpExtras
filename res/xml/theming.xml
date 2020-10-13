@@ -25,7 +25,7 @@
 
     <!-- overlayTarget="anrdoid" is enough:
             we have some special treatment implemented for this category -->
-    <com.aicp.gear.preference.OverlayPreference
+    <!-- <com.aicp.gear.preference.OverlayPreference
         android:key="theming_icon_pack"
         android:title="@string/theming_icon_pack_title"
         aicpextras:overlayCategory="android.theme.customization.icon_pack.android"
@@ -166,6 +166,6 @@
             android:entryValues="@array/theming_settings_dashboard_icons_values"
             android:defaultValue="0" />
 
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
 </PreferenceScreen>

@@ -49,6 +49,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+public class QuickSettings {/*
 public class QuickSettings extends BaseSettingsFragment
     implements OnPreferenceChangeListener {
 
@@ -148,7 +149,7 @@ public class QuickSettings extends BaseSettingsFragment
         mQQSColsAuto.setChecked(qqsColsAutoEnabled);
         mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
         mQQSColsAuto.setOnPreferenceChangeListener(this);
-        */
+        *//*
     }
 
     private void updateHeaderProviderSummary(boolean headerEnabled) {
@@ -222,7 +223,7 @@ public class QuickSettings extends BaseSettingsFragment
             }
             return true;
         }
-        */
+        *//*
         if (preference == mHeaderShadow) {
             Integer headerShadow = (Integer) newValue;
             int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
@@ -284,7 +285,7 @@ public class QuickSettings extends BaseSettingsFragment
                             updateCustomFooterTextSummary();
 /*                            Intent i = new Intent();
                             i.setAction(Intent.ACTION_CUSTOM_CARRIER_LABEL_CHANGED);
-                            getActivity().sendBroadcast(i);*/
+                            getActivity().sendBroadcast(i);*//*
                         }
                     });
             alert.setNegativeButton(getString(android.R.string.cancel), null);
@@ -333,5 +334,5 @@ public class QuickSettings extends BaseSettingsFragment
         } else {
             mCustomFooterTextPref.setSummary(mCustomFooterText);
         }
-    }
+    }*/
 }

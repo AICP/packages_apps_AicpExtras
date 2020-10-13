@@ -20,10 +20,11 @@ package com.aicp.extras.fragments;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
+public class PulseSettingsBars {/*
 public class PulseSettingsBars extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.pulse_settings_bars;
-    }
+    }*/
 }

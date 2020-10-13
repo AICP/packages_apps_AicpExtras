@@ -24,6 +24,7 @@ import com.aicp.extras.R;
 
 import java.util.HashMap;
 
+public class HeadsUpActivityBlacklist {/*
 public class HeadsUpActivityBlacklist extends ChooserActivityBlacklist {
 
     private static final String KEY_HEADSUP_BLACKLIST = "add_headsup_blacklist_packages";
@@ -48,5 +49,5 @@ public class HeadsUpActivityBlacklist extends ChooserActivityBlacklist {
         mBlacklistPackages = new HashMap<String, Package>();
         mAddBlacklistPref = findPreference(KEY_HEADSUP_BLACKLIST);
         mAddBlacklistPref.setOnPreferenceClickListener(this);
-    }
+    }*/
 }

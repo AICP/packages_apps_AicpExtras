@@ -22,7 +22,7 @@ import android.util.AttributeSet;
 import com.aicp.gear.preference.SecureSettingsStore;
 
 public class SecureSettingMasterSwitchPreference extends MasterSwitchPreference {
-
+/*
     public SecureSettingMasterSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
@@ -37,5 +37,5 @@ public class SecureSettingMasterSwitchPreference extends MasterSwitchPreference 
         super(context);
         setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
     }
-
+*/
 }

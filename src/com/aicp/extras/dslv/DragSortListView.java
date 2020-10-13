@@ -388,7 +388,7 @@ public class DragSortListView extends ListView {
      * a RelativeLayout) which
      * expands and collapses to simulate the item shuffling.
      */
-    private AdapterWrapper mAdapterWrapper;
+    //private AdapterWrapper mAdapterWrapper;
 
     /**
      * Turn on custom debugger.
@@ -517,15 +517,15 @@ public class DragSortListView extends ListView {
                         R.styleable.DragSortListView_floatBackgroundColor,
                         Color.BLACK);
 
-                DragSortController controller = new DragSortController(
-                        this, dragHandleId, dragInitMode, removeMode,
-                        clickRemoveId, flingHandleId);
-                controller.setRemoveEnabled(removeEnabled);
-                controller.setSortEnabled(sortEnabled);
-                controller.setBackgroundColor(bgColor);
-
-                mFloatViewManager = controller;
-                setOnTouchListener(controller);
+                // DragSortController controller = new DragSortController(
+                //         this, dragHandleId, dragInitMode, removeMode,
+                //         clickRemoveId, flingHandleId);
+                // controller.setRemoveEnabled(removeEnabled);
+                // controller.setSortEnabled(sortEnabled);
+                // controller.setBackgroundColor(bgColor);
+                //
+                // mFloatViewManager = controller;
+                // setOnTouchListener(controller);
             }
 
             a.recycle();
@@ -598,7 +598,7 @@ public class DragSortListView extends ListView {
      *
      * @see android.widget.ListView#setAdapter(android.widget.ListAdapter)
      */
-    @Override
+    /*@Override
     public void setAdapter(ListAdapter adapter) {
         if (adapter != null) {
             mAdapterWrapper = new AdapterWrapper(adapter);
@@ -627,7 +627,7 @@ public class DragSortListView extends ListView {
      *
      * @return The ListAdapter set as the argument of {@link setAdapter()}
      */
-    public ListAdapter getInputAdapter() {
+/*    public ListAdapter getInputAdapter() {
         if (mAdapterWrapper == null) {
             return null;
         } else {
@@ -840,7 +840,7 @@ public class DragSortListView extends ListView {
         Log.d("mobeta", "mSrcPos=" + mSrcPos + " mFirstExpPos=" + mFirstExpPos + " mSecondExpPos="
                 + mSecondExpPos);
     }
-
+*/
     private class HeightCache {
 
         private SparseIntArray mMap;
@@ -903,7 +903,7 @@ public class DragSortListView extends ListView {
      * floating View (treated as horizontal line) is dropped
      * immediately above this line, it lands in position-1. If
      * dropped immediately below this line, it lands in position.
-     */
+     *//*
     private int getShuffleEdge(int position, int top) {
 
         final int numHeaders = getHeaderViewsCount();
@@ -1120,7 +1120,7 @@ public class DragSortListView extends ListView {
             mDragSortTracker.appendState();
         }
     }
-
+*/
     private class SmoothAnimator implements Runnable {
         protected long mStartTime;
 
@@ -1448,7 +1448,7 @@ public class DragSortListView extends ListView {
      * this is a position in your input ListAdapter).
      * @param to Target position (NOTE: headers/footers ignored!
      * this is a position in your input ListAdapter).
-     */
+     *//*
     public void moveItem(int from, int to) {
         if (mDropListener != null) {
             final int count = getInputAdapter().getCount();
@@ -1457,7 +1457,7 @@ public class DragSortListView extends ListView {
             }
         }
     }
-
+*/
     /**
      * Cancel a drag. Calls {@link #stopDrag(boolean, boolean)} with
      * <code>true</code> as the first argument.
@@ -1890,13 +1890,13 @@ public class DragSortListView extends ListView {
         }
 
         // Adjust item gravity
-        if (position == mFirstExpPos || position == mSecondExpPos) {
-            if (position < mSrcPos) {
-                ((DragSortItemView) v).setGravity(Gravity.BOTTOM);
-            } else if (position > mSrcPos) {
-                ((DragSortItemView) v).setGravity(Gravity.TOP);
-            }
-        }
+        // if (position == mFirstExpPos || position == mSecondExpPos) {
+        //     if (position < mSrcPos) {
+        //         ((DragSortItemView) v).setGravity(Gravity.BOTTOM);
+        //     } else if (position > mSrcPos) {
+        //         ((DragSortItemView) v).setGravity(Gravity.TOP);
+        //     }
+        // }
 
         // Finally adjust item visibility
 
@@ -2315,20 +2315,20 @@ public class DragSortListView extends ListView {
         int oldFirstExpPos = mFirstExpPos;
         int oldSecondExpPos = mSecondExpPos;
 
-        boolean updated = updatePositions();
-
-        if (updated) {
-            adjustAllItems();
-            int scroll = adjustScroll(movePos, moveItem, oldFirstExpPos, oldSecondExpPos);
-            // Log.d("mobeta", "  adjust scroll="+scroll);
-
-            setSelectionFromTop(movePos, moveItem.getTop() + scroll - getPaddingTop());
-            layoutChildren();
-        }
-
-        if (updated || forceInvalidate) {
-            invalidate();
-        }
+        // boolean updated = updatePositions();
+        //
+        // if (updated) {
+        //     adjustAllItems();
+        //     int scroll = adjustScroll(movePos, moveItem, oldFirstExpPos, oldSecondExpPos);
+        //     // Log.d("mobeta", "  adjust scroll="+scroll);
+        //
+        //     setSelectionFromTop(movePos, moveItem.getTop() + scroll - getPaddingTop());
+        //     layoutChildren();
+        // }
+        //
+        // if (updated || forceInvalidate) {
+        //     invalidate();
+        // }
 
         mBlockLayoutRequests = false;
     }
@@ -2974,7 +2974,7 @@ public class DragSortListView extends ListView {
             mNumFlushes = 0;
             mTracking = true;
         }
-
+/*
         public void appendState() {
             if (!mTracking) {
                 return;
@@ -3028,7 +3028,7 @@ public class DragSortListView extends ListView {
                 mNumInBuffer = 0;
             }
         }
-
+*/
         public void flush() {
             if (!mTracking) {
                 return;

@@ -37,11 +37,12 @@ import com.aicp.gear.preference.SeekBarPreferenceCham;
 
 import com.android.internal.util.aicp.AicpUtils;
 import com.android.internal.util.aicp.DeviceUtils;
-import com.android.internal.util.hwkeys.ActionConstants;
-import com.android.internal.util.hwkeys.ActionUtils;
+//import com.android.internal.util.hwkeys.ActionConstants;
+//import com.android.internal.util.hwkeys.ActionUtils;
 
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
 
+public class Navigation {/*
 public class Navigation extends BaseSettingsFragment implements
             Preference.OnPreferenceChangeListener {
 
@@ -269,7 +270,7 @@ public class Navigation extends BaseSettingsFragment implements
             updateDependents(!value);
 /*            updateButtonBacklight(!value);
             updateWakeVisibility(!value);*/
-            if (mIsNavSwitchingMode) {
+            /*if (mIsNavSwitchingMode) {
                 return false;
             }
             mIsNavSwitchingMode = true;
@@ -298,5 +299,5 @@ public class Navigation extends BaseSettingsFragment implements
             return true;
         }
         return false;
-    }
+    }*/
 }

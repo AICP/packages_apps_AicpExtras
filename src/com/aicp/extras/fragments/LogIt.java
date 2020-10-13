@@ -45,6 +45,7 @@ import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 import com.aicp.extras.utils.SuShell;
 
+public class LogIt  {/*
 public class LogIt extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = LogIt.class.getSimpleName();
@@ -410,5 +411,5 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         shareHaste = false;
         shareZip = true;
 
-    }
+    }*/
 }

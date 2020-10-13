@@ -28,6 +28,7 @@ import androidx.preference.PreferenceScreen;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
+public class FODIconPickerFragment  {/*
 public class FODIconPickerFragment extends BaseSettingsFragment {
 
     @Override
@@ -39,5 +40,5 @@ public class FODIconPickerFragment extends BaseSettingsFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getActivity().getActionBar().setTitle(R.string.fod_icon_picker_title);
-    }
+    }*/
 }

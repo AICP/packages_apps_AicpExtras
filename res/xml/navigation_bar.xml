@@ -21,7 +21,7 @@
     android:key="navigation_bar"
     android:title="@string/navbar_visibility" >
 
-    <PreferenceCategory
+    <!-- <PreferenceCategory
         android:key="category_navbar_layout">
 
         <Preference
@@ -143,6 +143,6 @@
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference
-        android:title="@string/navbar_visibility_footer" />
+        android:title="@string/navbar_visibility_footer" /> -->
 
 </PreferenceScreen>

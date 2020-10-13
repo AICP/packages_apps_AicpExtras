@@ -50,6 +50,7 @@ import com.aicp.extras.utils.PackageListAdapter.PackageItem;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.aicp.extras.R;
 
+public class SlimRecentsBlacklist {/*
 public class SlimRecentsBlacklist extends BaseSettingsFragment implements
         Preference.OnPreferenceClickListener {
 
@@ -145,13 +146,13 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
     /**
      * Application class
      */
-    private static class Package {
+    /*private static class Package {
         public String name;
         /**
          * Stores all the application values in one call
          * @param name
          */
-        public Package(String name) {
+      /*  public Package(String name) {
             this.name = name;
         }
 
@@ -277,5 +278,5 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
         }
         Settings.System.putString(getActivity().getContentResolver(),
                 setting, value);
-    }
+    }*/
 }

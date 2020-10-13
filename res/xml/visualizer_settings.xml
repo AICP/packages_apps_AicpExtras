@@ -22,7 +22,7 @@
     android:key="visualizer_settings"
     android:title="@string/lockscreen_visualizer_title">
 
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="lock_screen_visualizer_use_custom_color"
             android:title="@string/lockscreen_visualizer_enable_custom"
             android:summary="@string/lockscreen_visualizer_enable_custom_summary"
@@ -33,6 +33,6 @@
             android:title="@string/lockscreen_visualizer_custom_color"
             android:dependency="lock_screen_visualizer_use_custom_color"
             android:defaultValue="0xffffffff"
-            android:dialogTitle="@string/lockscreen_visualizer_custom_color" />
+            android:dialogTitle="@string/lockscreen_visualizer_custom_color" /> -->
 
 </PreferenceScreen>

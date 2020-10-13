@@ -68,7 +68,8 @@ import com.aicp.extras.utils.SuShell;
 import com.aicp.extras.utils.SuTask;
 import com.aicp.extras.utils.Util;
 
-public class SystemAnimations extends BaseSettingsFragment {
+public class SystemAnimations {
+/*public class SystemAnimations extends BaseSettingsFragment {
 
     private static final String TAG = SystemAnimations.class.getSimpleName();
 
@@ -171,7 +172,7 @@ public class SystemAnimations extends BaseSettingsFragment {
      *
      * @return returns true if a boot animation exists (user or system). false otherwise.
      */
-    private boolean resetBootAnimation() {
+  /*  private boolean resetBootAnimation() {
         if (new File(BOOTANIMATION_SYSTEM_PATH).exists()) {
             mBootAnimationPath = BOOTANIMATION_SYSTEM_PATH;
             return true;
@@ -453,5 +454,5 @@ public class SystemAnimations extends BaseSettingsFragment {
             }
         }
     }
-
+*/
 }

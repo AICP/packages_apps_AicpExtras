@@ -22,7 +22,7 @@ import android.util.AttributeSet;
 import com.aicp.gear.preference.SystemSettingsStore;
 
 public class SystemSettingMasterSwitchPreference extends MasterSwitchPreference {
-
+/*
     public SystemSettingMasterSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
@@ -37,5 +37,5 @@ public class SystemSettingMasterSwitchPreference extends MasterSwitchPreference 
         super(context);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
-
+*/
 }

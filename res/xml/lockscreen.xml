@@ -49,7 +49,7 @@
         android:defaultValue="16" />
 -->
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="lockscreen_lock_icon"
         android:title="@string/lockscreen_lock_icon_title"
         android:summary="@string/lockscreen_lock_icon_summary"
@@ -73,14 +73,14 @@
         android:summary="@string/lockscreen_visualizer_summary"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.Visualizer" />
-<!--
+
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="force_ambient_for_media"
         android:title="@string/force_ambient_for_media_pref_title"
         android:summary="@string/force_ambient_for_media_pref_summary"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.AmbientMediaTicker" />
--->
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="lockscreen_media_metadata"
         android:title="@string/media_art_title"
@@ -148,19 +148,19 @@
               android:title="@string/unlock_scramble_pin_layout_title"
               android:summary="@string/unlock_scramble_pin_layout_summary"
               android:defaultValue="false" />
-<!--
+
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="lockscreen_quick_unlock_control"
               android:title="@string/unlock_quick_unlock_control_title"
               android:summary="@string/unlock_quick_unlock_control_summary"
               android:defaultValue="false" />
--->
+
     </PreferenceCategory>
     <PreferenceCategory
             android:key="fod_icon_picker"
             android:title="@string/fod_icon_picker_category_title" >
 
-            <!-- FOD icon picker -->
+            <!- FOD icon picker ->
             <Preference
                 android:key="fod_icon_picker_category"
                 android:title="@string/fod_icon_picker_title"
@@ -173,7 +173,7 @@
                 android:summary="@string/fod_wallpaper_color_summary"
                 android:defaultValue="false" />
 
-            <!-- FOD recognizing animation -->
+            <!- FOD recognizing animation ->
             <com.aicp.gear.preference.SystemSettingSwitchPreference
                 android:key="fod_recognizing_animation"
                 android:title="@string/fod_recog_animation"
@@ -188,6 +188,6 @@
                 android:defaultValue="0"
                 android:dependency="fod_recognizing_animation" />
 
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
 </PreferenceScreen>

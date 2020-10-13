@@ -32,9 +32,10 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
 import com.android.internal.util.aicp.DeviceUtils;
-import com.android.internal.util.hwkeys.ActionConstants;
-import com.android.internal.util.hwkeys.ActionUtils;
+//import com.android.internal.util.hwkeys.ActionConstants;
+//import com.android.internal.util.hwkeys.ActionUtils;
 
+public class HwKeys {/*
 public class HwKeys extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
 
     private static final String CATEGORY_CAMERA = "camera_key";
@@ -68,7 +69,7 @@ public class HwKeys extends BaseSettingsFragment implements Preference.OnPrefere
     private PreferenceCategory mButtonBackLightCategory;
 
     private SwitchPreference mHwKeyDisable;
-*/
+*//*
     @Override
     protected int getPreferenceResource() {
         return R.xml.hw_keys;
@@ -234,7 +235,7 @@ public class HwKeys extends BaseSettingsFragment implements Preference.OnPrefere
             }
         } else {
             cameraCategory.getParent().removePreference(cameraCategory);
-        }*/
+        }*//*
     }
 
     @Override
@@ -256,6 +257,6 @@ public class HwKeys extends BaseSettingsFragment implements Preference.OnPrefere
                     Settings.System.CUSTOM_BUTTON_BRIGHTNESS, buttonBrightness);
             return true;
         }*/
-        return false;
-    }
+        //return false;
+    //}
 }
