@@ -25,13 +25,13 @@
 
     <!-- overlayTarget="anrdoid" is enough:
             we have some special treatment implemented for this category -->
-    <!-- <com.aicp.gear.preference.OverlayPreference
+    <com.aicp.gear.preference.OverlayPreference
         android:key="theming_icon_pack"
         android:title="@string/theming_icon_pack_title"
         aicpextras:overlayCategory="android.theme.customization.icon_pack.android"
         aicpextras:overlayTarget="android" />
 
-    <com.aicp.gear.preference.OverlayPreference
+     <com.aicp.gear.preference.OverlayPreference
         android:key="theming_icon_shape"
         android:title="@string/theming_icon_shape_title"
         aicpextras:overlayCategory="android.theme.customization.adaptive_icon_shape"
@@ -64,7 +64,7 @@
             android:targetPackage="com.android.wallpaper"
             android:targetClass="com.android.customization.picker.LockClockPickerActivity" />
     </Preference>
-
+<!--
     <PreferenceCategory
         android:key="theming_light"
         android:title="@string/theming_light_title">
