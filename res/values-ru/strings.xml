@@ -554,6 +554,8 @@
     <string name="category_navbar_layout">Разметка</string>
     <string name="navigation_bar_title">Наэкранная панель навигации</string>
     <string name="navbar_visibility">Включить панель навигации</string>
+    <string name="navbar_visibility_summary">Вкл/Выкл для включения, нажмите для настроек</string>
+    <string name="navbar_visibility_footer">Различные параметры применимы только в режиме 2- или 3-кнопочной навигации</string>
     <string name="navigation_bar_summary">Переключатель для включения наэкранной панели навигации</string>
     <string name="navigation_bar_layout_title">Разметка</string>
     <string name="navigation_bar_layout_summary">Настройка разметки панели навигации</string>
@@ -693,6 +695,15 @@
     <string name="pulse_render_mode_fading_bars">Затухающие блоки</string>
     <string name="pulse_render_mode_solid_lines">Сплошные линии</string>
     <string name="pulse_color">Цвет</string>
+    <string name="pulse_color_mode">Режим цвета</string>
+    <string name="pulse_color_accent">Акцент</string>
+    <string name="pulse_color_custom">Пользовательский</string>
+    <string name="pulse_color_lava_lamp">Лавовая лампа</string>
+    <string name="pulse_color_auto">Обложка альбома</string>
+    <string name="pulse_color_chooser">Выбрать цвет</string>
+    <string name="pulse_color_chooser_title">Выберите цвет пульсации</string>
+    <string name="smoothing_enabled_title">Включить сглаживание</string>
+    <string name="smoothing_enabled_summary">Каждая полоса анимируется более гладко</string>
     <string name="pulse_advanced_category">Расширенные настройки</string>
     <string name="pulse_legacy_mode_advanced_category">Настройки режима затухающих блоков</string>
     <string name="pulse_custom_fudge_factor">Уровень вменяемости</string>
@@ -1107,9 +1118,15 @@
     <string name="notification_flash_title">Фонарик</string>
     <string name="flashlight_on_call_title">Мигать при входящем звонке</string>
     <string name="flashlight_on_call_disabled">Никогда</string>
+    <string name="flashlight_on_call_ringer">Когда установлено на звук</string>
+    <string name="flashlight_on_call_no_ringer">Когда установлено на вибрацию</string>
+    <string name="flashlight_on_call_silent">Когда установлено на без звука</string>
     <string name="flashlight_on_call_always">Всегда</string>
     <string name="flashlight_on_call_wait_title">Мигать в ожидании вызова</string>
     <string name="flashlight_on_call_wait_summary">Пульсировать вспышкой при ожидании вызова</string>
+    <string name="flashlight_on_call_ignore_dnd_title">Игнорировать \"Не беспокоить\"</string>
+    <string name="flashlight_on_call_ignore_dnd_summary">Мигать ли в режиме \"Не беспокоить\"</string>
+    <string name="flashlight_on_call_rate_title">Темп мигания</string>
     <string name="partial_screenshot_as_default_title">Частичный скриншот как действие по умолчанию</string>
     <string name="partial_screenshot_as_default_summary">Установить частичный скриншот в качестве действия по умолчанию для кнопки Скриншота в меню питания. Иначе долгое нажатие переключает его.</string>
     <string name="gaming_mode_title">Игровой режим</string>
@@ -1199,4 +1216,6 @@
     <string name="qs_datausage_monthly">Месячное использование</string>
     <string name="qs_header_battery_title">Информация о батарее</string>
     <string name="qs_header_battery_summary">Включить для процентов, отключите для оценки времени.</string>
+    <string name="vowifi_switch_title">Значок VoWiFi</string>
+    <string name="vowifi_switch_summary">Показывать значок VoWiFi</string>
 </resources>

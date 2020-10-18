@@ -554,6 +554,8 @@
     <string name="category_navbar_layout">布局</string>
     <string name="navigation_bar_title">屏幕导航栏</string>
     <string name="navbar_visibility">启用导航栏</string>
+    <string name="navbar_visibility_summary">启用开关，点击查看选项</string>
+    <string name="navbar_visibility_footer">仅适用于两个按钮或三个按钮导航模式的各种选项</string>
     <string name="navigation_bar_summary">启用屏幕内导航栏</string>
     <string name="navigation_bar_layout_title">布局</string>
     <string name="navigation_bar_layout_summary">自定义导航栏布局</string>
@@ -693,6 +695,15 @@
     <string name="pulse_render_mode_fading_bars">渐变</string>
     <string name="pulse_render_mode_solid_lines">实线</string>
     <string name="pulse_color">颜色</string>
+    <string name="pulse_color_mode">颜色模式</string>
+    <string name="pulse_color_accent">强调色</string>
+    <string name="pulse_color_custom">自定义</string>
+    <string name="pulse_color_lava_lamp">霓虹灯</string>
+    <string name="pulse_color_auto">专辑封面</string>
+    <string name="pulse_color_chooser">选择颜色</string>
+    <string name="pulse_color_chooser_title">选择脉冲颜色</string>
+    <string name="smoothing_enabled_title">开启平滑</string>
+    <string name="smoothing_enabled_summary">每条频谱线动画更平滑</string>
     <string name="pulse_advanced_category">高级</string>
     <string name="pulse_legacy_mode_advanced_category">渐变模式设置</string>
     <string name="pulse_custom_fudge_factor">清晰等级</string>
@@ -1108,9 +1119,15 @@
     <string name="notification_flash_title">手电筒</string>
     <string name="flashlight_on_call_title">来电时闪烁</string>
     <string name="flashlight_on_call_disabled">从不</string>
+    <string name="flashlight_on_call_ringer">当设置为铃声</string>
+    <string name="flashlight_on_call_no_ringer">当设置为振动</string>
+    <string name="flashlight_on_call_silent">当设置为静音</string>
     <string name="flashlight_on_call_always">总是</string>
     <string name="flashlight_on_call_wait_title">等待来电时闪烁</string>
     <string name="flashlight_on_call_wait_summary">等待通话时闪烁闪光灯</string>
+    <string name="flashlight_on_call_ignore_dnd_title">忽略免打扰</string>
+    <string name="flashlight_on_call_ignore_dnd_summary">在免打扰模式下是否闪烁</string>
+    <string name="flashlight_on_call_rate_title">闪烁频率</string>
     <string name="partial_screenshot_as_default_title">部分屏幕截图作为默认动作</string>
     <string name="partial_screenshot_as_default_summary">设置部分截图为电源菜单中屏幕截图按钮的默认动作。否则长按动动作会触发屏幕截图。</string>
     <string name="gaming_mode_title">游戏模式</string>
@@ -1200,4 +1217,6 @@
     <string name="qs_datausage_monthly">每月使用量</string>
     <string name="qs_header_battery_title">锁屏电池信息</string>
     <string name="qs_header_battery_summary">启用百分比，停用估算时间。</string>
+    <string name="vowifi_switch_title">VoWiFi 图标</string>
+    <string name="vowifi_switch_summary">显示 VoWiFi 图标</string>
 </resources>
