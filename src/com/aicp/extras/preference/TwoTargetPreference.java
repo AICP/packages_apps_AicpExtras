@@ -25,9 +25,8 @@ import android.view.View;
 
 import com.aicp.extras.R;
 
-public class TwoTargetPreference {
-//public class TwoTargetPreference extends Preference {
-/*
+public class TwoTargetPreference extends Preference {
+
     public TwoTargetPreference(Context context, AttributeSet attrs,
                                int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
@@ -77,5 +76,5 @@ public class TwoTargetPreference {
 
     protected int getSecondTargetResId() {
         return 0;
-    }*/
+    }
 }
