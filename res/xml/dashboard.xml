@@ -135,7 +135,7 @@
             android:summary="@string/system_extensions_summary"
             android:icon="@drawable/ic_settings_system_extensions"
             android:fragment="com.aicp.extras.fragments.SystemExtensions" />
-
+-->
         <Preference
             android:title="@string/systemui_tuner_title"
             android:key="stock_tuner"
@@ -145,10 +145,10 @@
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.TunerActivity" />
-        </Preference> -->
+        </Preference>
 
     </PreferenceCategory>
-
+<!--
     <PreferenceCategory
         android:title="@string/other_category">
 
@@ -159,7 +159,7 @@
             android:icon="@drawable/ic_settings_about"
             android:fragment="com.aicp.extras.fragments.About" />
 
-        <!-- <Preference
+        <Preference
             android:title="@string/aicp_ota_title"
             android:key="aicp_ota"
             android:summary="@string/aicp_ota_summary"
@@ -177,7 +177,8 @@
             android:key="ae_settings"
             android:summary="@string/ae_settings_summary"
             android:icon="@drawable/ic_settings_ae_customization"
-            android:fragment="com.aicp.extras.fragments.AeSettings" /> -->
+            android:fragment="com.aicp.extras.fragments.AeSettings" />
 
     </PreferenceCategory>
+ -->
 </PreferenceScreen>
