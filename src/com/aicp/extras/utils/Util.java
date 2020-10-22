@@ -63,13 +63,14 @@ public abstract class Util {
     public static boolean onPreferenceTreeClick(PreferenceFragmentCompat fragment,
                                                 Preference preference) {
         Activity activity = fragment.getActivity();
-      //  if (activity instanceof SettingsActivity) {
-      //      return ((SettingsActivity) activity).onPreferenceClick(preference);
-      //  } else {
+        if (activity instanceof SettingsActivity) {
+            return ((SettingsActivity) activity).onPreferenceClick(preference);
+        } else {
             Log.w(TAG, "Activity not instanceof SettingsActivity, ignoring preference click");
             return false;
-      //  }
+        }
     }
+
 
     public static void setSummaryToValue(ListPreference pref) {
         pref.setSummary(pref.getEntry());
