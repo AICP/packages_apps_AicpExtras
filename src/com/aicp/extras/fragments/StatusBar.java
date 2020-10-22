@@ -42,9 +42,9 @@ import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
 import com.android.internal.util.aicp.AicpUtils;
 
-public class StatusBar {
-/*public class StatusBar extends BaseSettingsFragment implements
+public class StatusBar extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
+//public class StatusBar extends BaseSettingsFragment {
 
     private static final String SMART_PULLDOWN = "qs_smart_pulldown";
     private static final String QUICK_PULLDOWN = "quick_pulldown";
@@ -125,7 +125,7 @@ public class StatusBar {
         if(displayCutout.isEmpty()) {
             final Preference hideNotchPref = (Preference) findPreference(KEY_HIDE_NOTCH);
             hideNotchPref.getParent().removePreference(hideNotchPref);
-        }
+        }*/
     }
 
     @Override
@@ -151,7 +151,7 @@ public class StatusBar {
             int value = Integer.parseInt((String) newValue);
             updateCarrierLabelSummary(value);
             return true;
-        }
+        }*/
         return false;
     }
 
@@ -159,7 +159,7 @@ public class StatusBar {
     public boolean onPreferenceTreeClick(final Preference preference) {
         super.onPreferenceTreeClick(preference);
         final ContentResolver resolver = getActivity().getContentResolver();
-        if (KEY_CUSTOM_CARRIER_LABEL.equals(preference.getKey())) {
+/*        if (KEY_CUSTOM_CARRIER_LABEL.equals(preference.getKey())) {
             AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
             alert.setTitle(R.string.custom_carrier_label_title);
             alert.setMessage(R.string.custom_carrier_label_explain);
@@ -183,11 +183,11 @@ public class StatusBar {
             alert.setNegativeButton(getString(android.R.string.cancel), null);
             alert.show();
             return true;
-        } else {
+        } else {*/
             return false;
-        }
+       // }
     }
-
+/*
     private void updateCarrierLabelSummary(int value) {
         Resources res = getResources();
 
