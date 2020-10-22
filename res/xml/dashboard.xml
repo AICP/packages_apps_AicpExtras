@@ -74,14 +74,14 @@
             android:summary="@string/quick_settings_summary"
             android:icon="@drawable/ic_settings_quick_settings"
             android:fragment="com.aicp.extras.fragments.QuickSettings" />
-
+-->
         <PreferenceScreen
             android:title="@string/lockscreen_title"
             android:key="lockscreen"
             android:summary="@string/lockscreen_summary"
             android:icon="@drawable/ic_settings_lockscreen"
             android:fragment="com.aicp.extras.fragments.Lockscreen" />
-
+<!--
         <PreferenceScreen
             android:title="@string/weather_title"
             android:key="weather_option"
