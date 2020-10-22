@@ -24,12 +24,11 @@ import android.widget.Switch;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.widget.SwitchBar;
 
-public class PreferenceDataStoreSwitchBarController {
-//public abstract class PreferenceDataStoreSwitchBarController
-//        implements SwitchBar.OnSwitchChangeListener {
+public abstract class PreferenceDataStoreSwitchBarController
+        implements SwitchBar.OnSwitchChangeListener {
     // Why abstract?
     // -> need to add appropriate setting to depHndl in constructor!
-/*
+
     private SwitchBar mSwitchBar;
     private String mKey;
     private PreferenceDataStore mPreferenceDataStore;
@@ -86,5 +85,4 @@ public class PreferenceDataStoreSwitchBarController {
         }
         mPreferenceDataStore.putBoolean(mKey, isChecked);
     }
-*/
 }

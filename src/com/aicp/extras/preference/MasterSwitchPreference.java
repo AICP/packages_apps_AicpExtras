@@ -32,9 +32,8 @@ import com.aicp.extras.R;
  * A custom preference that provides inline switch toggle. It has a mandatory field for title, and
  * optional fields for icon and sub-text.
  */
-public class MasterSwitchPreference {
-//public class MasterSwitchPreference extends TwoTargetPreference {
-/*
+public class MasterSwitchPreference extends TwoTargetPreference {
+
     private Context mContext;
     private Switch mSwitch;
     private boolean mChecked;
@@ -239,7 +238,7 @@ public class MasterSwitchPreference {
     /**
      * Call from outside when value might have changed.
      */
-    /*void reloadValue() {
+    void reloadValue() {
         boolean newValue = getPersistedBoolean(mChecked);
         if (newValue != mChecked) {
             // Update listener so it knows the value has changed e.g. on resume,
@@ -254,7 +253,7 @@ public class MasterSwitchPreference {
     /**
      * Get default value for external use.
      */
-    /*public boolean getDefaultValue() {
+    public boolean getDefaultValue() {
         return mDefaultValue;
     }
 
@@ -284,5 +283,5 @@ public class MasterSwitchPreference {
                 mMainView.setBackgroundResource(selectableItemBackground);
             }
         }
-    }*/
+    }
 }

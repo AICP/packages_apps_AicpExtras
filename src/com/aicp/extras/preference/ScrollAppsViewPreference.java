@@ -36,7 +36,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class ScrollAppsViewPreference {/*
 public class ScrollAppsViewPreference extends Preference {
     private static final String TAG = "ScrollAppsPreference";
 
@@ -90,5 +89,5 @@ public class ScrollAppsViewPreference extends Preference {
         setLayoutResource(R.layout.preference_selected_apps_view);
         mPm = context.getPackageManager();
         mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-    }*/
+    }
 }

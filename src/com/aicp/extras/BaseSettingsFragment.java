@@ -85,152 +85,152 @@ public abstract class BaseSettingsFragment extends AicpPreferenceFragment {
                 }
             };
 
-     protected abstract int getPreferenceResource();
+    protected abstract int getPreferenceResource();
 
-     @Override
-     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-         addPreferencesFromResource(getPreferenceResource());
-     }
+    @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        addPreferencesFromResource(getPreferenceResource());
+    }
 
-  //   @Override
-     public void onCreate(Bundle savedInstanceState) {
-         super.onCreate(savedInstanceState);
-         mInitialized = true;
-         if (savedInstanceState != null) {
-             mPreferenceHighlighted = savedInstanceState.getBoolean(SAVE_HIGHLIGHTED_KEY);
-         }
-         //HighlightablePreferenceGroupAdapter.adjustInitialExpandedChildCount(this /* host *///);
-         if (mMasterDependencyEnabled != null) {
-             setMasterDependencyState(mMasterDependencyEnabled);
-         }
-     }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mInitialized = true;
+        if (savedInstanceState != null) {
+            mPreferenceHighlighted = savedInstanceState.getBoolean(SAVE_HIGHLIGHTED_KEY);
+        }
+        //HighlightablePreferenceGroupAdapter.adjustInitialExpandedChildCount(this /* host */);
+        if (mMasterDependencyEnabled != null) {
+            setMasterDependencyState(mMasterDependencyEnabled);
+        }
+    }
 
-     @Override
-     public void onSaveInstanceState(Bundle outState) {
-         super.onSaveInstanceState(outState);
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
 
-         if (mAdapter != null) {
-             outState.putBoolean(SAVE_HIGHLIGHTED_KEY, mAdapter.isHighlightRequested());
-         }
-     }
+        if (mAdapter != null) {
+            outState.putBoolean(SAVE_HIGHLIGHTED_KEY, mAdapter.isHighlightRequested());
+        }
+    }
 
-     @Override
-     public void onResume() {
-         super.onResume();
-         highlightPreferenceIfNeeded();
-     }
+    @Override
+    public void onResume() {
+        super.onResume();
+        highlightPreferenceIfNeeded();
+    }
 
-     @Override
-     protected void onBindPreferences() {
-         registerObserverIfNeeded();
-     }
+    @Override
+    protected void onBindPreferences() {
+        registerObserverIfNeeded();
+    }
 
-     @Override
-     protected void onUnbindPreferences() {
-         unregisterObserverIfNeeded();
-     }
+    @Override
+    protected void onUnbindPreferences() {
+        unregisterObserverIfNeeded();
+    }
 
-     @Override
-     public boolean onPreferenceTreeClick(Preference preference) {
-         return Util.onPreferenceTreeClick(this, preference)
-                 || super.onPreferenceTreeClick(preference);
-     }
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        return Util.onPreferenceTreeClick(this, preference)
+                || super.onPreferenceTreeClick(preference);
+    }
 
-     @Override
-     public void onDisplayPreferenceDialog(Preference preference) {
-         if (preference.getKey() == null) {
-             // Auto-key preferences that don't have a key, so the dialog can find them.
-             preference.setKey(UUID.randomUUID().toString());
-         }
-         DialogFragment f = null;
-         if (preference instanceof CustomDialogPreferenceCompat) {
-             f = CustomDialogPreferenceCompat.CustomPreferenceDialogFragment
-                     .newInstance(preference.getKey());
-         } else {
-             super.onDisplayPreferenceDialog(preference);
-             return;
-         }
-         f.setTargetFragment(this, 0);
-         f.show(getFragmentManager(), "dialog_preference");
-     }
+    @Override
+    public void onDisplayPreferenceDialog(Preference preference) {
+        if (preference.getKey() == null) {
+            // Auto-key preferences that don't have a key, so the dialog can find them.
+            preference.setKey(UUID.randomUUID().toString());
+        }
+        DialogFragment f = null;
+        if (preference instanceof CustomDialogPreferenceCompat) {
+            f = CustomDialogPreferenceCompat.CustomPreferenceDialogFragment
+                    .newInstance(preference.getKey());
+        } else {
+            super.onDisplayPreferenceDialog(preference);
+            return;
+        }
+        f.setTargetFragment(this, 0);
+        f.show(getFragmentManager(), "dialog_preference");
+    }
 
-     public void setMasterDependencyState(boolean enabled) {
-         mMasterDependencyEnabled = enabled;
-         if (!mInitialized) {
-             return;
-         }
-         PreferenceScreen preferenceScreen = getPreferenceScreen();
-         for (int i = 0; i < preferenceScreen.getPreferenceCount(); i++) {
-             Preference preference = preferenceScreen.getPreference(i);
-             // Preferences that have a dependency declared will be disabled by disabling
-             // the dependency, so only disable those that don't have one
-             if (preference.getDependency() == null) {
-                 preference.setEnabled(enabled);
-             }
-         }
-         if (enabled) {
-             onMasterDependencyEnabled();
-         }
-     }
+    public void setMasterDependencyState(boolean enabled) {
+        mMasterDependencyEnabled = enabled;
+        if (!mInitialized) {
+            return;
+        }
+        PreferenceScreen preferenceScreen = getPreferenceScreen();
+        for (int i = 0; i < preferenceScreen.getPreferenceCount(); i++) {
+            Preference preference = preferenceScreen.getPreference(i);
+            // Preferences that have a dependency declared will be disabled by disabling
+            // the dependency, so only disable those that don't have one
+            if (preference.getDependency() == null) {
+                preference.setEnabled(enabled);
+            }
+        }
+        if (enabled) {
+            onMasterDependencyEnabled();
+        }
+    }
 
-     public void registerObserverIfNeeded() {
-         if (!mIsDataSetObserverRegistered) {
-             if (mCurrentRootAdapter != null) {
-                 mCurrentRootAdapter.unregisterAdapterDataObserver(mDataSetObserver);
-             }
-             mCurrentRootAdapter = getListView().getAdapter();
-             mCurrentRootAdapter.registerAdapterDataObserver(mDataSetObserver);
-             mIsDataSetObserverRegistered = true;
-             onDataSetChanged();
-         }
-     }
+    public void registerObserverIfNeeded() {
+        if (!mIsDataSetObserverRegistered) {
+            if (mCurrentRootAdapter != null) {
+                mCurrentRootAdapter.unregisterAdapterDataObserver(mDataSetObserver);
+            }
+            mCurrentRootAdapter = getListView().getAdapter();
+            mCurrentRootAdapter.registerAdapterDataObserver(mDataSetObserver);
+            mIsDataSetObserverRegistered = true;
+            onDataSetChanged();
+        }
+    }
 
-     public void unregisterObserverIfNeeded() {
-         if (mIsDataSetObserverRegistered) {
-             if (mCurrentRootAdapter != null) {
-                 mCurrentRootAdapter.unregisterAdapterDataObserver(mDataSetObserver);
-                 mCurrentRootAdapter = null;
-             }
-             mIsDataSetObserverRegistered = false;
-         }
-     }
+    public void unregisterObserverIfNeeded() {
+        if (mIsDataSetObserverRegistered) {
+            if (mCurrentRootAdapter != null) {
+                mCurrentRootAdapter.unregisterAdapterDataObserver(mDataSetObserver);
+                mCurrentRootAdapter = null;
+            }
+            mIsDataSetObserverRegistered = false;
+        }
+    }
 
-     public void highlightPreferenceIfNeeded() {
-         if (!isAdded()) {
-             return;
-         }
-         if (mAdapter != null) {
-             mAdapter.requestHighlight(getView(), getListView());
-         }
-     }
+    public void highlightPreferenceIfNeeded() {
+        if (!isAdded()) {
+            return;
+        }
+        if (mAdapter != null) {
+            mAdapter.requestHighlight(getView(), getListView());
+        }
+    }
 
-     protected void onDataSetChanged() {
-         highlightPreferenceIfNeeded();
-         //updateEmptyView();
-     }
+    protected void onDataSetChanged() {
+        highlightPreferenceIfNeeded();
+        //updateEmptyView();
+    }
 
-     @Override
-     public RecyclerView.LayoutManager onCreateLayoutManager() {
+    @Override
+    public RecyclerView.LayoutManager onCreateLayoutManager() {
         mLayoutManager = new LinearLayoutManager(getContext());
-         return mLayoutManager;
-     }
+        return mLayoutManager;
+    }
 
-     @Override
-     protected RecyclerView.Adapter onCreateAdapter(PreferenceScreen preferenceScreen) {
-         final Bundle arguments = getArguments();
-         mAdapter = new HighlightablePreferenceGroupAdapter(preferenceScreen,
-                 arguments == null ? null : arguments.getString(EXTRA_PREFERENCE_KEY),
-                 mPreferenceHighlighted);
-         return mAdapter;
-     }
+    @Override
+    protected RecyclerView.Adapter onCreateAdapter(PreferenceScreen preferenceScreen) {
+        final Bundle arguments = getArguments();
+        mAdapter = new HighlightablePreferenceGroupAdapter(preferenceScreen,
+                arguments == null ? null : arguments.getString(EXTRA_PREFERENCE_KEY),
+                mPreferenceHighlighted);
+        return mAdapter;
+    }
 
-     protected boolean isMasterDependencyEnabled() {
-         return mMasterDependencyEnabled != null && mMasterDependencyEnabled;
-     }
+    protected boolean isMasterDependencyEnabled() {
+        return mMasterDependencyEnabled != null && mMasterDependencyEnabled;
+    }
 
-     protected ContentResolver getContentResolver() {
-         return getActivity().getContentResolver();
-     }
+    protected ContentResolver getContentResolver() {
+        return getActivity().getContentResolver();
+    }
 
-     protected void onMasterDependencyEnabled() {};
+    protected void onMasterDependencyEnabled() {};
 }
