@@ -36,9 +36,9 @@ import android.widget.AdapterView;
  * {@link DragSortListView#setFloatViewManager()} of your
  * {@link DragSortListView} instance.
  */
-//public class DragSortController extends SimpleFloatViewManager
-//        implements View.OnTouchListener, GestureDetector.OnGestureListener {
-          public class DragSortController {
+public class DragSortController extends SimpleFloatViewManager
+        implements View.OnTouchListener, GestureDetector.OnGestureListener {
+
     /**
      * Drag init mode enum.
      */
@@ -107,7 +107,7 @@ import android.widget.AdapterView;
      *
      * @param dslv The DSLV instance
      */
-/*    public DragSortController(DragSortListView dslv) {
+    public DragSortController(DragSortListView dslv) {
         this(dslv, 0, ON_DOWN, FLING_REMOVE);
     }
 
@@ -128,7 +128,7 @@ import android.widget.AdapterView;
      * @param dragHandleId The resource id of the View that represents
      * the drag handle in a list item.
      */
-  /*  public DragSortController(DragSortListView dslv, int dragHandleId, int dragInitMode,
+    public DragSortController(DragSortListView dslv, int dragHandleId, int dragInitMode,
             int removeMode, int clickRemoveId, int flingHandleId) {
         super(dslv);
         mDslv = dslv;
@@ -153,7 +153,7 @@ import android.widget.AdapterView;
      * {@link ON_DOWN}, {@link ON_DRAG}, or {@link ON_LONG_PRESS}.
      *
      * @param mode The drag init mode.
-     *//*
+     */
     public void setDragInitMode(int mode) {
         mDragInitMode = mode;
     }
@@ -165,7 +165,7 @@ import android.widget.AdapterView;
      * @param enabled Set <code>true</code> to enable list
      * item sorting.
      */
-    /*public void setSortEnabled(boolean enabled) {
+    public void setSortEnabled(boolean enabled) {
         mSortEnabled = enabled;
     }
 
@@ -178,7 +178,7 @@ import android.widget.AdapterView;
      * {@link FLING_LEFT_REMOVE},
      * {@link SLIDE_RIGHT_REMOVE}, or {@link SLIDE_LEFT_REMOVE}.
      */
-    /*public void setRemoveMode(int mode) {
+    public void setRemoveMode(int mode) {
         mRemoveMode = mode;
     }
 
@@ -189,7 +189,7 @@ import android.widget.AdapterView;
     /**
      * Enable/Disable item removal without affecting remove mode.
      */
-    /*public void setRemoveEnabled(boolean enabled) {
+    public void setRemoveEnabled(boolean enabled) {
         mRemoveEnabled = enabled;
     }
 
@@ -203,7 +203,7 @@ import android.widget.AdapterView;
      *
      * @param id An android resource id.
      */
-    /*public void setDragHandleId(int id) {
+    public void setDragHandleId(int id) {
         mDragHandleId = id;
     }
 
@@ -213,7 +213,7 @@ import android.widget.AdapterView;
      *
      * @param id An android resource id.
      */
-    /*public void setFlingHandleId(int id) {
+    public void setFlingHandleId(int id) {
         mFlingHandleId = id;
     }
 
@@ -223,7 +223,7 @@ import android.widget.AdapterView;
      *
      * @param id An android resource id.
      */
-    /*public void setClickRemoveId(int id) {
+    public void setClickRemoveId(int id) {
         mClickRemoveId = id;
     }
 
@@ -238,7 +238,7 @@ import android.widget.AdapterView;
      *
      * @return True if drag started, false otherwise.
      */
-    /*public boolean startDrag(int position, int deltaX, int deltaY) {
+    public boolean startDrag(int position, int deltaX, int deltaY) {
 
         int dragFlags = 0;
         if (mSortEnabled && !mIsRemoving) {
@@ -291,7 +291,7 @@ import android.widget.AdapterView;
     /**
      * Overrides to provide fading when slide removal is enabled.
      */
-    /*@Override
+    @Override
     public void onDragFloatView(View floatView, Point position, Point touch) {
 
         if (mRemoveEnabled && mIsRemoving) {
@@ -312,7 +312,7 @@ import android.widget.AdapterView;
      * @return The list position to drag if a drag-init gesture is
      * detected; MISS if unsuccessful.
      */
-    /*public int startDragPosition(MotionEvent ev) {
+    public int startDragPosition(MotionEvent ev) {
         return dragHandleHitPosition(ev);
     }
 
@@ -330,7 +330,7 @@ import android.widget.AdapterView;
      * @return The list position of the item whose drag handle was
      * touched; MISS if unsuccessful.
      */
-    /*public int dragHandleHitPosition(MotionEvent ev) {
+    public int dragHandleHitPosition(MotionEvent ev) {
         return viewIdHitPosition(ev, mDragHandleId);
     }
 
@@ -484,5 +484,5 @@ import android.widget.AdapterView;
                     return false;
                 }
             };
-*/
+
 }
