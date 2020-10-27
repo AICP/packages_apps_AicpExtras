@@ -43,10 +43,10 @@ public class SlimShortcutPickerHelper {
     public static final int REQUEST_CREATE_SHORTCUT = 102;
 
     private Activity mParent;
-    //private OnPickListener mListener;
+    private OnPickListener mListener;
     private PackageManager mPackageManager;
     private int lastFragmentId;
-/*
+
     public interface OnPickListener {
         void shortcutPicked(String uri, String friendlyName, Bitmap bmp, boolean isApplication);
     }
@@ -148,7 +148,7 @@ public class SlimShortcutPickerHelper {
     private void completeSetCustomShortcut(Intent data) {
         Intent intent = data.getParcelableExtra(Intent.EXTRA_SHORTCUT_INTENT);
         /* preserve shortcut name, we want to restore it later */
-/*        intent.putExtra(Intent.EXTRA_SHORTCUT_NAME, data.getStringExtra(
+        intent.putExtra(Intent.EXTRA_SHORTCUT_NAME, data.getStringExtra(
                 Intent.EXTRA_SHORTCUT_NAME));
         String appUri = intent.toUri(0);
         appUri = appUri.replaceAll("com.android.contacts.action.QUICK_CONTACT",
@@ -178,5 +178,5 @@ public class SlimShortcutPickerHelper {
         mListener.shortcutPicked(appUri,
                 AppHelper.getFriendlyShortcutName(mParent, mPackageManager, intent), bmp, false);
     }
-*/
+
 }
