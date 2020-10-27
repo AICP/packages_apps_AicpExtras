@@ -47,7 +47,7 @@
         android:key="theming_qs_shape"
         android:title="@string/theming_qs_shape_title"
         aicpextras:overlayCategory="aicp.qs_fg"
-        aicpextras:overlayTarget="com.android.systemui" />
+        aicpextras:overlayTarget="com.android.systemui;android" />
 
     <com.aicp.gear.preference.OverlayPreference
         android:key="theming_font"
