@@ -22,38 +22,38 @@
     android:key="slim_recent_app_sidebar_style"
     android:title="@string/recent_app_sidebar_title">
 
-    <!-- <com.aicp.gear.preference.SystemSettingSeekBarPreference
-            android:key="recent_app_sidebar_scale_factor"
-            android:title="@string/recent_app_sidebar_scale_title"
-            android:defaultValue="100"
-            android:min="60"
-            android:max="160"
-            aicpextras:interval="5"
-            aicpextras:unitsRight="%" />
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="recent_app_sidebar_scale_factor"
+        android:title="@string/recent_app_sidebar_scale_title"
+        android:defaultValue="100"
+        android:min="60"
+        android:max="160"
+        aicpextras:interval="5"
+        aicpextras:unitsRight="%" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="recent_app_sidebar_disable_labels"
-            android:title="@string/recent_app_sidebar_hide_labels_title"
-            android:disableDependentsState="true"
-            android:defaultValue="false" />
+        android:key="recent_app_sidebar_disable_labels"
+        android:title="@string/recent_app_sidebar_hide_labels_title"
+        android:disableDependentsState="true"
+        android:defaultValue="false" />
 
     <com.aicp.gear.preference.SystemSettingColorPickerPreference
-            android:key="recent_app_sidebar_text_color"
-            android:title="@string/recent_app_sidebar_label_color_title"
-            android:defaultValue="0x00ffffff"
-            alphaSlider="false"
-            android:dependency="recent_app_sidebar_disable_labels" />
+        android:key="recent_app_sidebar_text_color"
+        android:title="@string/recent_app_sidebar_label_color_title"
+        android:defaultValue="0x00ffffff"
+        alphaSlider="false"
+        android:dependency="recent_app_sidebar_disable_labels" />
 
     <com.aicp.gear.preference.SystemSettingColorPickerPreference
-            android:key="recent_app_sidebar_bg_color"
-            android:title="@string/recent_app_sidebar_bg_color_title"
-            android:defaultValue="0x00ffffff"
-            alphaSlider="true" />
+        android:key="recent_app_sidebar_bg_color"
+        android:title="@string/recent_app_sidebar_bg_color_title"
+        android:defaultValue="0x00ffffff"
+        alphaSlider="true" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="recent_app_sidebar_open_simultaneously"
-            android:title="@string/recent_app_sidebar_open_simultaneously_title"
-            android:summary="@string/recent_app_sidebar_open_simultaneously_summary"
-            android:defaultValue="true" /> -->
+        android:key="recent_app_sidebar_open_simultaneously"
+        android:title="@string/recent_app_sidebar_open_simultaneously_title"
+        android:summary="@string/recent_app_sidebar_open_simultaneously_summary"
+        android:defaultValue="true" />
 
 </PreferenceScreen>

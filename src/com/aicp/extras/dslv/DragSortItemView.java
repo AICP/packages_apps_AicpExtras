@@ -40,9 +40,8 @@ import android.util.Log;
  * The purpose of this class is to optimize slide
  * shuffle animations.
  */
-public class DragSortItemView {
-//public class DragSortItemView extends ViewGroup {
-/*
+public class DragSortItemView extends ViewGroup {
+
     private int mGravity = Gravity.TOP;
 
     public DragSortItemView(Context context) {
@@ -83,7 +82,7 @@ public class DragSortItemView {
     /**
      *
      */
-  /*  @Override
+    @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
         int height = MeasureSpec.getSize(heightMeasureSpec);
@@ -115,5 +114,5 @@ public class DragSortItemView {
 
         setMeasuredDimension(width, height);
     }
-*/
+
 }
