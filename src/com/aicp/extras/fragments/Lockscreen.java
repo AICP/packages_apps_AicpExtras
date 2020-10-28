@@ -48,9 +48,9 @@ public class Lockscreen extends BaseSettingsFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         PreferenceScreen prefSet = getPreferenceScreen();
-        //ontentResolver resolver = getActivity().getContentResolver();
-
-        /*try {
+        ContentResolver resolver = getActivity().getContentResolver();
+/*
+        try {
             mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         } catch (Exception e) {
             //ignore

@@ -59,13 +59,13 @@
         android:title="@string/double_tap_sleep_lockscreen"
         android:summary="@string/double_tap_sleep_lockscreen_summary"
         android:defaultValue="false"/>
-
+-->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="lockscreen_battery_info"
         android:title="@string/lockscreen_battery_info_title"
         android:summary="@string/lockscreen_battery_info_summary"
         android:defaultValue="false" />
-
+<!--
     <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
         android:key="lockscreen_visualizer_enabled"
         android:title="@string/lockscreen_visualizer_title"
