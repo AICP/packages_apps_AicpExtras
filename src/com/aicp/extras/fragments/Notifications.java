@@ -32,10 +32,10 @@ import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingSeekBarPreference;
 import com.android.internal.util.aicp.DeviceUtils;
 
-public class Notifications {/*
 public class Notifications extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
+/*
     private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
     private static final String CAT_NOTIFICATION_FLASHLIGHT = "notification_flash";
     private static final String PREF_FLASHLIGHT_ON_CALL = "flashlight_on_call";
@@ -47,7 +47,7 @@ public class Notifications extends BaseSettingsFragment implements
     private SwitchPreference mFlashOnCallIgnoreDND;
     private SystemSettingIntListPreference mFlashOnCall;
     private SystemSettingSeekBarPreference mFlashOnCallRate;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.notifications;
@@ -56,7 +56,7 @@ public class Notifications extends BaseSettingsFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+/*
         Util.requireFullStatusbar(getActivity(),
                 findPreference(Settings.System.STATUS_BAR_SHOW_TICKER));
 
@@ -79,23 +79,24 @@ public class Notifications extends BaseSettingsFragment implements
                 com.android.internal.R.bool.config_hasAlertSlider);
         if (!alertSliderAvailable)
             getPreferenceScreen().removePreference(findPreference(ALERT_SLIDER_PREF));
-
     }
 
     private void updateDependencies(boolean enabled) {
         mFlashOnCallWaiting.setEnabled(enabled);
         mFlashOnCallIgnoreDND.setEnabled(enabled);
         mFlashOnCallRate.setEnabled(enabled);
+*/
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final ContentResolver resolver = getContentResolver();
-        if (preference == mFlashOnCall) {
+/*        if (preference == mFlashOnCall) {
             int value = Integer.parseInt((String) newValue);
             updateDependencies(value != 0);
             return true;
         }
+*/
         return false;
-    }*/
+    }
 }
