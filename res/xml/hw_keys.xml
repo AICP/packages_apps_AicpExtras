@@ -45,19 +45,18 @@
             android:entryValues="@array/torch_long_press_power_timeout_values"
             android:defaultValue="0"
             android:dependency="torch_long_press_power_gesture" />
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
     <PreferenceCategory
         android:key="volume_keys"
         android:title="@string/category_volume_keys">
 
-        <!- Volume key cursor control ->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="volume_key_cursor_control"
             android:title="@string/volume_keys_cursor_control_title"
             android:summary="@string/volume_keys_cursor_control_summary"
             android:defaultValue="false" />
-
+<!--
        <!- Swap volume buttons ->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="swap_volume_buttons"
@@ -95,10 +94,10 @@
             android:summary="@string/volume_rocker_music_controls_summary"
             aicpextras:thereCanBeOnlyOneGroupId="1"
             aicpextras:plainSwitch="true"
-            android:defaultValue="false" />
+            android:defaultValue="false" /> -->
 
     </PreferenceCategory>
-
+<!--
     <PreferenceCategory
         android:key="camera_key"
         android:title="@string/hardware_keys_camera_key_title">
