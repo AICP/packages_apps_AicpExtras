@@ -113,11 +113,11 @@
         aicpextras:unitsRight=""
         android:defaultValue="3"
         android:dependency="lock_screen_custom_notif" />
-
+-->
     <PreferenceCategory
           android:key="lockscreen_security_category"
           android:title="@string/lockscreen_security_category">
-
+<!--
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="fingerprint_success_vib"
               android:title="@string/fprint_sucess_vib_title"
@@ -141,13 +141,16 @@
               android:title="@string/lockscreen_hide_status_bar_title"
               android:summary="@string/lockscreen_hide_status_bar_summary"
               android:defaultValue="false" />
+-->
 
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="lockscreen_scramble_pin_layout"
               android:title="@string/unlock_scramble_pin_layout_title"
               android:summary="@string/unlock_scramble_pin_layout_summary"
               android:defaultValue="false" />
+    </PreferenceCategory>
 
+<!--
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="lockscreen_quick_unlock_control"
               android:title="@string/unlock_quick_unlock_control_title"
