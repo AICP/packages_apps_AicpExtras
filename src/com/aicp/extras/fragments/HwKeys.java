@@ -35,7 +35,6 @@ import com.android.internal.util.aicp.DeviceUtils;
 //import com.android.internal.util.hwkeys.ActionConstants;
 //import com.android.internal.util.hwkeys.ActionUtils;
 
-public class HwKeys {/*
 public class HwKeys extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
 
     private static final String CATEGORY_CAMERA = "camera_key";
@@ -69,7 +68,7 @@ public class HwKeys extends BaseSettingsFragment implements Preference.OnPrefere
     private PreferenceCategory mButtonBackLightCategory;
 
     private SwitchPreference mHwKeyDisable;
-*//*
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.hw_keys;
@@ -78,7 +77,7 @@ public class HwKeys extends BaseSettingsFragment implements Preference.OnPrefere
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+/*
         // bits for hardware keys present on device
         final int deviceKeys = getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
@@ -99,7 +98,7 @@ public class HwKeys extends BaseSettingsFragment implements Preference.OnPrefere
             cameraCategory.getParent().removePreference(cameraCategory);
         }
 
-/*
+
         ContentResolver resolver = getContentResolver();
         PreferenceScreen prefScreen = getPreferenceScreen();
 
@@ -235,13 +234,13 @@ public class HwKeys extends BaseSettingsFragment implements Preference.OnPrefere
             }
         } else {
             cameraCategory.getParent().removePreference(cameraCategory);
-        }*//*
+        }*/
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-/*        ContentResolver resolver = getContentResolver();
-        if (preference == mHwKeyDisable) {
+        ContentResolver resolver = getContentResolver();
+/*        if (preference == mHwKeyDisable) {
             boolean value = (Boolean) newValue;
             Settings.Secure.putInt(resolver,
                     Settings.Secure.HARDWARE_KEYS_DISABLE, value ? 1 : 0);
@@ -257,6 +256,6 @@ public class HwKeys extends BaseSettingsFragment implements Preference.OnPrefere
                     Settings.System.CUSTOM_BUTTON_BRIGHTNESS, buttonBrightness);
             return true;
         }*/
-        //return false;
-    //}
+        return false;
+    }
 }
