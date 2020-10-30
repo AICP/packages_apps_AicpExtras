@@ -58,10 +58,11 @@
             android:defaultValue="false"/>
 
     </PreferenceCategory>
+-->
     <PreferenceCategory
         android:key="statusbar_icons_category"
         android:title="@string/status_bar_icons_category_title">
-
+    <!--
         <!- Statusbar Clock styles ->
         <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
             android:key="status_bar_clock"
@@ -69,14 +70,14 @@
             android:summary="@string/status_bar_clock_summary"
             android:defaultValue="true"
             android:fragment="com.aicp.extras.fragments.StatusBarClockSettings" />
-
-        <!- Show logo on Statusbar ->
+    -->
+        <!-- Show logo on Statusbar -->
         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="status_bar_logo"
             android:title="@string/status_bar_logo_title"
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.StatusBarLogo" />
-
+<!--
         <!- Show Roaming Indicator icon on Statusbar ->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="roaming_indicator_icon"
@@ -115,13 +116,14 @@
             android:key="statusbar_location_icon"
             android:title="@string/statusbar_location_icon_title"
             android:summary="@string/statusbar_location_icon_summary"
-            android:defaultValue="true"/>
-    </PreferenceCategory>
+	android:defaultValue="true"/>
 -->
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:key="statusbar_battery_category"
         android:title="@string/status_bar_battery_category_title">
-    <!--
+<!--
         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="status_bar_show_battery_image"
             android:title="@string/status_bar_battery_title"
