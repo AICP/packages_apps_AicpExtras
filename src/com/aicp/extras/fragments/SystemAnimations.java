@@ -68,8 +68,7 @@ import com.aicp.extras.utils.SuShell;
 import com.aicp.extras.utils.SuTask;
 import com.aicp.extras.utils.Util;
 
-public class SystemAnimations {
-/*public class SystemAnimations extends BaseSettingsFragment {
+public class SystemAnimations extends BaseSettingsFragment {
 
     private static final String TAG = SystemAnimations.class.getSimpleName();
 
@@ -101,7 +100,7 @@ public class SystemAnimations {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
-
+/*
         // Custom bootanimation
         mCustomBootAnimation = findPreference(PREF_CUSTOM_BOOTANIM);
         resetBootAnimation();
@@ -111,9 +110,9 @@ public class SystemAnimations {
             Log.d(TAG, "Did not create bootanimation backup dir");
         }
         Util.requireRoot(getActivity(), mCustomBootAnimation);
-
+*/
     }
-
+/*
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mCustomBootAnimation) {
