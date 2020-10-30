@@ -100,7 +100,7 @@ public class SystemAnimations extends BaseSettingsFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
-
+/*
         // Custom bootanimation
         mCustomBootAnimation = findPreference(PREF_CUSTOM_BOOTANIM);
         resetBootAnimation();
@@ -110,9 +110,9 @@ public class SystemAnimations extends BaseSettingsFragment {
             Log.d(TAG, "Did not create bootanimation backup dir");
         }
         Util.requireRoot(getActivity(), mCustomBootAnimation);
-
+*/
     }
-
+/*
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mCustomBootAnimation) {
