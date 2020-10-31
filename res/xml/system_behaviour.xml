@@ -102,7 +102,7 @@
             android:summary="@string/screenshot_sound_summary"
             android:defaultValue="true" />
     </PreferenceCategory>
-
+-->
     <PreferenceCategory
         android:title="@string/audio_panel_view">
 
@@ -111,7 +111,7 @@
         android:title="@string/audio_panel_position_title"
         android:summary="@string/audio_panel_position_summary"
         android:defaultValue="@*android:bool/config_audioPanelOnLeftSide" />
-
+<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="audio_panel_view_media"
         android:title="@string/audio_panel_view_media_title"
@@ -142,8 +142,9 @@
         android:key="audio_panel_view_bt_sco"
         android:title="@string/audio_panel_view_bt_sco_title"
 	android:defaultValue="false"/>
+-->
   </PreferenceCategory>
-
+<!--
     <!- SELinux ->
     <PreferenceCategory
         android:key="selinux"

@@ -33,8 +33,7 @@ import com.aicp.extras.utils.SuShell;
 import com.aicp.extras.utils.SuTask;
 import com.aicp.extras.utils.Util;
 
-public class SystemBehaviour {
-// public class SystemBehaviour extends BaseSettingsFragment
+ public class SystemBehaviour extends BaseSettingsFragment {
 //         implements Preference.OnPreferenceChangeListener {
 /*
     private static final String TAG = SystemBehaviour.class.getSimpleName();
@@ -46,7 +45,7 @@ public class SystemBehaviour {
 
     private SwitchPreference mSelinuxMode;
     private SwitchPreference mSelinuxPersistence;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.system_behaviour;
@@ -55,7 +54,7 @@ public class SystemBehaviour {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+/*
         // SELinux
         Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
         mSelinuxMode = (SwitchPreference) findPreference(Constants.PREF_SELINUX_MODE);
@@ -74,8 +73,9 @@ public class SystemBehaviour {
 
         Util.requireConfig(getActivity(), findPreference(KEY_SMART_PIXELS),
                 com.android.internal.R.bool.config_enableSmartPixels, true, false);
+*/
     }
-
+/*
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mSelinuxMode) {
