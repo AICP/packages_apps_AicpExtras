@@ -22,20 +22,19 @@
     android:key="system_extensions"
     android:title="@string/system_extensions_title">
 
-    <!-- <Preference
+    <Preference
         android:key="system_app_remover"
         android:title="@string/system_app_remover_title"
         android:summary="@string/system_app_remover_summary">
         <intent android:action="com.aicp.extras.ViewSystemAppRemover" />
     </Preference>
-
+<!--
     <com.aicp.gear.preference.SystemPropSwitchPreference
         android:key="persist.aicp.hosts_block"
         android:title="@string/hosts_block_title"
         android:summary="@string/hosts_block_summary"
         android:defaultValue="false" /> -->
 
-<!--
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="enable_app_circle_bar"
         android:title="@string/app_circle_bar_title"
