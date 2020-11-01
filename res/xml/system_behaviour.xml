@@ -84,13 +84,14 @@
         android:defaultValue="false" />
 
     <!- Smart Pixels ->
+-->
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="smart_pixels_enable"
         android:title="@string/smart_pixels_title"
         android:summary="@string/smart_pixels_summary"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.SmartPixels" />
-
+<!--
     <PreferenceCategory
         android:key="system_ss_category"
         android:title="@string/system_ss_category_title">
