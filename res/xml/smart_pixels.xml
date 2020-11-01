@@ -22,7 +22,7 @@
     android:key="smart_pixels"
     android:title="@string/smart_pixels_title">
 
-    <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="smart_pixels_on_power_save"
         android:title="@string/smart_pixels_on_power_save_title"
         android:summary="@string/smart_pixels_on_power_save_summary"
@@ -43,6 +43,6 @@
         android:defaultValue="5"
         android:title="@string/smart_pixels_shift_title"
         android:summary="@string/smart_pixels_shift_summary"
-        android:dialogTitle="@string/smart_pixels_shift_title" /> -->
+        android:dialogTitle="@string/smart_pixels_shift_title" />
 
 </PreferenceScreen>
