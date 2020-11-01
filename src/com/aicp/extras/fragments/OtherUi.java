@@ -27,7 +27,6 @@ import androidx.preference.SwitchPreference;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class OtherUi {/*
 public class OtherUi extends BaseSettingsFragment
         implements Preference.OnPreferenceChangeListener {
 
@@ -81,5 +80,5 @@ public class OtherUi extends BaseSettingsFragment
             return true;
         }
         return false;
-    }*/
+    }
 }
