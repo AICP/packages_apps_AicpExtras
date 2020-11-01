@@ -52,14 +52,14 @@
         android:title="@string/headset_connect_player_title"
         android:summary="@string/headset_connect_player_summary"
         android:defaultValue="false" />
-
-    <!- Show CPU Info overlay ->
+	    -->
+    <!-- Show CPU Info overlay -->
     <SwitchPreference
         android:key="show_cpu_info"
         android:title="@string/show_cpu_info"
         android:summary="@string/show_cpu_info_summary"
         android:defaultValue="false" />
-
+    <!--
    <!- Always On when charging->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
          android:key="doze_on_charge"
