@@ -49,9 +49,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class QuickSettings {/*
-public class QuickSettings extends BaseSettingsFragment
-    implements OnPreferenceChangeListener {
+public class QuickSettings extends BaseSettingsFragment {
+/*    implements OnPreferenceChangeListener {
 
     private static final boolean DEBUG = false;
     private static final String QS_QUICKBAR_COLUMNS_AUTO = "qs_quickbar_columns_auto";
@@ -84,7 +83,7 @@ public class QuickSettings extends BaseSettingsFragment
     private String mFileHeaderProvider;
 
     private String mCustomFooterText;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.quick_settings;
@@ -95,7 +94,7 @@ public class QuickSettings extends BaseSettingsFragment
         super.onCreate(savedInstanceState);
 
         ContentResolver resolver = getActivity().getContentResolver();
-
+/*
         mSysInfo = (ListPreference) findPreference(SYSTEM_INFO);
         configureSystemInfo();
 
@@ -141,7 +140,7 @@ public class QuickSettings extends BaseSettingsFragment
 
         mFileHeader = findPreference(FILE_HEADER_SELECT);
         mFileHeader.setEnabled(providerName.equals(mFileHeaderProvider));
-/*        mQQSColsAuto = (SwitchPreference) findPreference(QS_QUICKBAR_COLUMNS_AUTO);
+        mQQSColsAuto = (SwitchPreference) findPreference(QS_QUICKBAR_COLUMNS_AUTO);
         mQQSColsCount = (SystemSettingSeekBarPreference) findPreference(QS_QUICKBAR_COLUMNS_COUNT);
 
         boolean qqsColsAutoEnabled = Settings.System.getInt(resolver,
@@ -149,9 +148,9 @@ public class QuickSettings extends BaseSettingsFragment
         mQQSColsAuto.setChecked(qqsColsAutoEnabled);
         mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
         mQQSColsAuto.setOnPreferenceChangeListener(this);
-        *//*
+        */
     }
-
+/*
     private void updateHeaderProviderSummary(boolean headerEnabled) {
         mDaylightHeaderPack.setSummary(getResources().getString(R.string.header_provider_disabled));
         if (headerEnabled) {
