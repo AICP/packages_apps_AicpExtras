@@ -45,15 +45,14 @@
         android:title="@string/qs_running_services_title"
         android:summary="@string/qs_running_services_summary"
         android:defaultValue="false" />
-
+-->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="music_tile_title"
         android:title="@string/qs_music_tile_track_optional_title"
         android:summary="@string/qs_music_tile_track_optional_summary"
-        android:defaultValue="false"
-        android:dependency="qs_tile_title_visibility" />
+        android:defaultValue="false" />
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="dismiss_all_button"
         android:title="@string/enable_clear_all_button"
         android:summary="@string/enable_clear_all_button_summary"
