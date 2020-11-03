@@ -19,11 +19,10 @@ package com.aicp.extras.fragments;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class NetworkTraffic {/*
 public class NetworkTraffic extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.status_bar_network_traffic;
-    }*/
+    }
 }
