@@ -130,12 +130,14 @@
               android:title="@string/lockscreen_enable_power_menu_title"
               android:summary="@string/lockscreen_enable_power_menu_summary"
               android:defaultValue="true"/>
-
+-->
           <com.aicp.gear.preference.SecureSettingSwitchPreference
               android:key="lockscreen_qs_disabled"
               android:title="@string/lockscreen_qs_disabled_title"
               android:summary="@string/lockscreen_qs_disabled_summary"
               android:defaultValue="false" />
+
+<!--
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="lockscreen_hide_status_bar"
               android:title="@string/lockscreen_hide_status_bar_title"
