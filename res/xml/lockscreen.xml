@@ -117,14 +117,13 @@
     <PreferenceCategory
           android:key="lockscreen_security_category"
           android:title="@string/lockscreen_security_category">
-<!--
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="fingerprint_success_vib"
               android:title="@string/fprint_sucess_vib_title"
               android:summaryOn="@string/fprint_sucess_vib_summary_on"
               android:summaryOff="@string/fprint_sucess_vib_summary_off"
               android:defaultValue="true" />
--->
+
           <com.aicp.gear.preference.GlobalSettingSwitchPreference
               android:key="lockscreen_enable_power_menu"
               android:title="@string/lockscreen_enable_power_menu_title"
