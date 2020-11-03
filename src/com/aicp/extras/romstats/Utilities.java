@@ -41,7 +41,7 @@ public class Utilities {
 	public static final String SETTINGS_PREF_NAME = "ROMStats";
 	public static final String TAG = "ROMStats";
 
-/*	public static String getUniqueID(Context ctx) {
+	public static String getUniqueID(Context ctx) {
 		TelephonyManager tm = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
 
 		String device_id = digest(tm.getDeviceId());
@@ -1944,7 +1944,7 @@ public class Utilities {
 
 		return signingCertHash;
 	}
-*/
+
 	/**
 	 * Gets the Ask First value
 	 * 0: RomStats will behave like CMStats, starts reporting automatically after the tframe (default)
@@ -1952,7 +1952,7 @@ public class Utilities {
 	 *
 	 * @return boolean
 	 */
-/*	public static int getReportingMode() {
+	public static int getReportingMode() {
 		String askFirst = SystemProperties.get("ro.romstats.askfirst", "0");
 
 		if ("0".equals(askFirst)) {
@@ -1961,7 +1961,7 @@ public class Utilities {
 			return Const.ROMSTATS_REPORTING_MODE_OLD;
 		}
 	}
-*/
+
 	/**
 	 *
 	 * @param context
@@ -1969,7 +1969,7 @@ public class Utilities {
 	 * 	false: opt out cookie not present, work normally
 	 * 	true: opt out cookie present, disable and close
 	 */
-/*	public static boolean persistentOptOut(Context context) {
+	public static boolean persistentOptOut(Context context) {
 		SharedPreferences prefs = AnonymousStats.getPreferences(context);
 
 		Log.d(Const.TAG, "[checkPersistentOptOut] Check prefs exist: " + prefs.contains(Const.ANONYMOUS_OPT_IN));
@@ -2022,5 +2022,5 @@ public class Utilities {
 			p.setComponentEnabledSetting(componentToDisable, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
 		}
         
-}*/
+}
 }

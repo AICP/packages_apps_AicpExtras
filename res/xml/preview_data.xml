@@ -19,7 +19,7 @@
     android:key="preview_data"
     android:title="@string/preview_data_title" >
 
-    <!-- <Preference
+    <Preference
         style="?android:preferenceInformationStyle"
         android:key="preview_id"
         android:summary="%s"
@@ -66,5 +66,5 @@
         android:key="preview_buildtype"
         android:summary="%s"
         android:title="@string/preview_buildtype_title"
-        android:selectable="false" /> -->
+        android:selectable="false" />
 </PreferenceScreen>
