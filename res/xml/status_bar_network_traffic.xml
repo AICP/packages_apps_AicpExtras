@@ -22,13 +22,13 @@
     android:key="status_bar_network_traffic"
     android:title="@string/network_traffic_title">
 
-    <!-- <com.aicp.gear.preference.SystemSettingSeekBarPreference
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
            android:key="network_traffic_autohide_threshold"
            android:title="@string/network_traffic_autohide_threshold_title"
            android:min="0"
            android:max="10"
            aicpextras:unitsLeft=""
            aicpextras:unitsRight="@string/network_traffic_autohide_threshold_kbs"
-           android:defaultValue="1" /> -->
+           android:defaultValue="1" />
 
 </PreferenceScreen>
