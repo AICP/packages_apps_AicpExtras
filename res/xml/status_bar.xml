@@ -147,13 +147,13 @@
             android:summary="@string/battery_estimates_summary"
             android:defaultValue="false" />
 
-        <!- Show BT Battery Level on Statusbar ->
+-->
+        <!-- Show BT Battery Level on Statusbar -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="bluetooth_show_battery"
             android:title="@string/bluetooth_battery_title"
             android:summary="@string/bluetooth_battery_summary"
             android:defaultValue="false"/>
--->
         <!-- Battery bar -->
        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
            android:key="statusbar_battery_bar"
