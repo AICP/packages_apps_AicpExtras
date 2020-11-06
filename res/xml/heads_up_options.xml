@@ -28,6 +28,14 @@
         android:summary="@string/less_boring_heads_up_summary"
         android:defaultValue="0" />
 
+    <PreferenceScreen
+        android:key="headsup_activity_blacklist"
+        android:fragment="com.aicp.extras.fragments.HeadsUpActivityBlacklist"
+        android:title="@string/headsup_activity_blacklist_title"
+        android:summary="@string/headsup_activity_blacklist_summary"
+        android:persistent="false" />
+
+
 <!--     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="show_media_heads_up"
         android:title="@string/show_media_heads_up_title"

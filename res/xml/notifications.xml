@@ -39,15 +39,6 @@
         aicpextras:thereCanBeOnlyOneGroupId="1" />
 
 <!--
-    <PreferenceScreen
-        android:key="headsup_activity_blacklist"
-        android:fragment="com.aicp.extras.fragments.HeadsUpActivityBlacklist"
-        android:title="@string/headsup_activity_blacklist_title"
-        android:summary="@string/headsup_activity_blacklist_summary"
-        android:dependency="heads_up_notifications_enabled"
-        android:persistent="false" />
-
-
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="force_expanded_notifications"
         android:title="@string/force_expanded_notifications_title"
