@@ -29,7 +29,7 @@
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.StatusBarTicker"
         aicpextras:thereCanBeOnlyOneGroupId="1" />
-
+-->
     <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
         android:key="heads_up_notifications_enabled"
         android:title="@string/notification_heads_up_title"
@@ -38,6 +38,7 @@
         android:fragment="com.aicp.extras.fragments.HeadsUpOptions"
         aicpextras:thereCanBeOnlyOneGroupId="1" />
 
+<!--
     <PreferenceScreen
         android:key="headsup_activity_blacklist"
         android:fragment="com.aicp.extras.fragments.HeadsUpActivityBlacklist"
