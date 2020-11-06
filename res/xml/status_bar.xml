@@ -91,6 +91,31 @@
             android:summary="@string/show_4g_summary"
             android:defaultValue="false" />
 
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+            android:key="volte_icon_style"
+            android:title="@string/volte_icon_title"
+            android:summary="@string/volte_icon_summary"
+            android:max="9"
+            android:min="0"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight=""
+            android:defaultValue="0"/>
+
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+            android:key="vowifi_icon_style"
+            android:title="@string/vowifi_icon_title"
+            android:summary="@string/vowifi_icon_summary"
+            android:max="6"
+            android:min="0"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight=""
+            android:defaultValue="0"/>
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="volte_vowifi_override"
+            android:title="@string/volte_vowifi_override_title"
+            android:summary="@string/volte_vowifi_override_summary"
+            android:defaultValue="true"/>
 <!--
         <!- Show VoLTE Indicator icon on Statusbar ->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
