@@ -35,7 +35,7 @@
         android:fragment="com.android.settings.applications.appops.AppOpsDetails">
         <intent android:action="android.settings.APP_OPS_SETTINGS" />
     </Preference>
-
+-->
     <com.aicp.extras.preference.HostnamePreference
         android:key="device_hostname"
         android:title="@string/device_hostname"
@@ -47,7 +47,7 @@
         android:imeOptions="actionDone"
         android:inputType="textNoSuggestions"
         android:persistent="false" />
-
+<!--
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="media_scanner_on_boot"
         android:dialogTitle="@string/media_scanner_on_boot_title"
