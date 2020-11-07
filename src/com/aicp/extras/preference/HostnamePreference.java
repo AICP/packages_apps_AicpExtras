@@ -41,7 +41,7 @@ public class HostnamePreference extends EditTextPreference {
         mDefaultSummary = getContext().getResources().getString(R.string.device_hostname_summary);
         setSummary(TextUtils.isEmpty(summaryString) ? mDefaultSummary : summaryString);
     }
-/*
+
     @Override
     public void setText(String text) {
         if (text == null) {
@@ -75,5 +75,4 @@ public class HostnamePreference extends EditTextPreference {
         Settings.Secure.putString(getContext().getContentResolver(),
                 Settings.Secure.DEVICE_HOSTNAME, hostname);
     }
-*/
 }
