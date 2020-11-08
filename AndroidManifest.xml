@@ -77,6 +77,16 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".fragments.Weather"
+            android:label="@string/weather_config_title"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.aicp.extras.fragments.ViewWeather" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <receiver
             android:name=".romstats.ReportingServiceManager"
             android:enabled="true"
