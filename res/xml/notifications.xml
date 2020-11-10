@@ -45,17 +45,6 @@
         android:summary="@string/force_expanded_notifications_summary"
         android:defaultValue="false" />
 -->
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="conversation_guts_kill_app_button"
-        android:title="@string/conversation_guts_kill_app_button_title"
-        android:summary="@string/conversation_guts_kill_app_button_summary"
-        android:defaultValue="false" />
-
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="notification_guts_kill_app_button"
-        android:title="@string/notification_guts_kill_app_button_title"
-        android:summary="@string/notification_guts_kill_app_button_summary"
-        android:defaultValue="false" />
 <!--
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="battery_light_enabled"
@@ -77,6 +66,23 @@
         android:entries="@array/less_notification_sounds_entries"
         android:entryValues="@array/less_notification_sounds_values"
         android:defaultValue="0" />
+
+    <PreferenceCategory
+        android:key="notification_buttons"
+        android:title="@string/category_guts_buttons_title" >
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="conversation_guts_kill_app_button"
+            android:title="@string/conversation_guts_kill_app_button_title"
+            android:summary="@string/conversation_guts_kill_app_button_summary"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="notification_guts_kill_app_button"
+            android:title="@string/notification_guts_kill_app_button_title"
+            android:summary="@string/notification_guts_kill_app_button_summary"
+            android:defaultValue="false" />
+    </PreferenceCategory>
 <!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="notification_headers"
