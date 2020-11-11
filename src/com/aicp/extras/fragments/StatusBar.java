@@ -104,7 +104,7 @@ public class StatusBar extends BaseSettingsFragment implements
         mShowCarrierLabel.setValue(String.valueOf(showCarrierLabel));
         mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntry());
         mShowCarrierLabel.setOnPreferenceChangeListener(this);
-
+*/
         mCustomCarrierLabel = (Preference) findPreference(KEY_CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
 /*
@@ -158,7 +158,7 @@ public class StatusBar extends BaseSettingsFragment implements
     public boolean onPreferenceTreeClick(final Preference preference) {
         super.onPreferenceTreeClick(preference);
         final ContentResolver resolver = getActivity().getContentResolver();
-/*        if (KEY_CUSTOM_CARRIER_LABEL.equals(preference.getKey())) {
+        if (KEY_CUSTOM_CARRIER_LABEL.equals(preference.getKey())) {
             AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
             alert.setTitle(R.string.custom_carrier_label_title);
             alert.setMessage(R.string.custom_carrier_label_explain);
@@ -182,9 +182,9 @@ public class StatusBar extends BaseSettingsFragment implements
             alert.setNegativeButton(getString(android.R.string.cancel), null);
             alert.show();
             return true;
-        } else {*/
+        } else {
             return false;
-       // }
+        }
     }
 /*
     private void updateCarrierLabelSummary(int value) {
@@ -235,7 +235,7 @@ public class StatusBar extends BaseSettingsFragment implements
             mQuickPulldown.setSummary(res.getString(R.string.quick_pulldown_summary, direction));
         }
     }
-
+*/
     private void updateCustomLabelTextSummary() {
         mCustomCarrierLabelText = Settings.System.getString(
                 getActivity().getContentResolver(), Settings.System.CUSTOM_CARRIER_LABEL);
