@@ -206,17 +206,17 @@
             aicpextras:thereCanBeOnlyOneGroupId="1" />
     </PreferenceCategory>
 
-<!--
     <PreferenceCategory
        android:key="statusbar_others_category"
        android:title="@string/status_bar_others_category_title">
 
+<!--
        <com.aicp.gear.preference.SystemSettingSwitchPreference
            android:key="statusbar_hide_notch"
            android:title="@string/hide_notch_title"
            android:summary="@string/hide_notch_summary"
            android:defaultValue="false" />
-
+ -->
        <com.aicp.gear.preference.SystemSettingIntListPreference
            android:key="status_bar_show_carrier"
            android:title="@string/show_carrier_title"
@@ -228,6 +228,6 @@
            android:key="custom_carrier_label"
            android:title="@string/custom_carrier_label_title" />
 
-   </PreferenceCategory> -->
+   </PreferenceCategory>
 
 </PreferenceScreen>
