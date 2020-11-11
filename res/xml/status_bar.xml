@@ -33,9 +33,8 @@
             android:entryValues="@array/smart_pulldown_values"
             android:defaultValue="0"
             android:title="@string/smart_pulldown_title" />
-
-
-        <!- Quick pulldown ->
+-->
+        <!-- Quick pulldown -->
         <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="quick_pulldown"
             android:entries="@array/quick_pulldown_entries"
@@ -43,7 +42,6 @@
             android:persistent="false"
             android:defaultValue="0"
             android:title="@string/quick_pulldown_title" />
--->
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="double_tap_sleep_gesture"
