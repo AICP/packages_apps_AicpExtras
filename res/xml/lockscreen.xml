@@ -97,7 +97,6 @@
         aicpextras:unitsRight="dp"
         android:defaultValue="25"
         android:dependency="lockscreen_media_metadata" />
-<!--
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="lock_screen_custom_notif"
@@ -115,7 +114,7 @@
         aicpextras:unitsRight=""
         android:defaultValue="3"
         android:dependency="lock_screen_custom_notif" />
--->
+
     <PreferenceCategory
           android:key="lockscreen_security_category"
           android:title="@string/lockscreen_security_category">
