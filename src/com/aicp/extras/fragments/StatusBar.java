@@ -87,7 +87,7 @@ public class StatusBar extends BaseSettingsFragment implements
                 Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 0, UserHandle.USER_CURRENT);
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         updateQuickPulldownSummary(quickPulldownValue);
-/*
+
         mShowCarrierLabel = (SystemSettingIntListPreference) findPreference(KEY_CARRIER_LABEL);
         int showCarrierLabel = Settings.System.getInt(resolver,
         Settings.System.STATUS_BAR_SHOW_CARRIER, 1);
@@ -104,11 +104,11 @@ public class StatusBar extends BaseSettingsFragment implements
         mShowCarrierLabel.setValue(String.valueOf(showCarrierLabel));
         mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntry());
         mShowCarrierLabel.setOnPreferenceChangeListener(this);
-*/
+
         mCustomCarrierLabel = (Preference) findPreference(KEY_CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
 
-        // Battery Percentage
+    /*     // Battery Percentage
         mShowBatteryPercentage = (SystemSettingIntListPreference) findPreference(KEY_BATTERY_PERCENTAGE);
         int showBatteryPercentage = Settings.System.getIntForUser(resolver,
                 Settings.System.SHOW_BATTERY_PERCENT, 0, UserHandle.USER_CURRENT);
@@ -141,15 +141,14 @@ public class StatusBar extends BaseSettingsFragment implements
                     quickPulldownValue, UserHandle.USER_CURRENT);
             updateQuickPulldownSummary(quickPulldownValue);
             return true;
+        } else if (preference == mShowCarrierLabel) {
+            int value = Integer.parseInt((String) newValue);
+            updateCarrierLabelSummary(value);
+            return true;
         }
 /*        } else if (preference == mShowBatteryPercentage) {
             int showBatteryPercentage = Integer.valueOf((String) newValue);
             updateShowBatteryInQQS(showBatteryPercentage);
-            return true;
-        } else */
-/*        } else if (preference == mShowCarrierLabel) {
-            int value = Integer.parseInt((String) newValue);
-            updateCarrierLabelSummary(value);
             return true;
         }*/
         return false;
@@ -187,7 +186,7 @@ public class StatusBar extends BaseSettingsFragment implements
             return false;
         }
     }
-/*
+
     private void updateCarrierLabelSummary(int value) {
         Resources res = getResources();
 
