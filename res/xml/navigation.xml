@@ -20,14 +20,14 @@
     android:key="navigation"
     android:title="@string/navigation_title">
 
-    <!-- <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="navigation_bar_show_new"
         android:title="@string/navbar_visibility"
         android:summary="@string/navbar_visibility_summary"
         android:defaultValue="@*android:bool/config_showNavigationBar"
-        aicpextras:systemPropDefaultOverride="qemu.hw.mainkeys?0:1"
         android:fragment="com.aicp.extras.fragments.NavigationBarSettings" />
-
+<!--
+        aicpextras:systemPropDefaultOverride="qemu.hw.mainkeys?0:1"
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="navigation_bar_menu_arrow_keys"
         android:title="@string/navigation_bar_menu_arrow_keys_title"

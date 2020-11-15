@@ -37,20 +37,19 @@ import com.aicp.gear.preference.SeekBarPreferenceCham;
 
 import com.android.internal.util.aicp.AicpUtils;
 import com.android.internal.util.aicp.DeviceUtils;
-//import com.android.internal.util.hwkeys.ActionConstants;
-//import com.android.internal.util.hwkeys.ActionUtils;
+import com.android.internal.util.hwkeys.ActionConstants;
+import com.android.internal.util.hwkeys.ActionUtils;
 
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
 
-public class Navigation {/*
-public class Navigation extends BaseSettingsFragment implements
-            Preference.OnPreferenceChangeListener {
+public class Navigation extends BaseSettingsFragment {
+//          implements Preference.OnPreferenceChangeListener {
 
-    private static final String KEY_KILLAPP_LONGPRESS_BACK = "kill_app_longpress_back";
-    private static final String KEY_SWAP_HW_NAVIGATION_KEYS = "swap_navigation_keys";
+//    private static final String KEY_KILLAPP_LONGPRESS_BACK = "kill_app_longpress_back";
+//    private static final String KEY_SWAP_HW_NAVIGATION_KEYS = "swap_navigation_keys";
     private static final String KEY_NAVIGATION_BAR_ENABLED = "navigation_bar_show_new";
     // preference keys
-    private static final String KEY_BUTTON_MANUAL_BRIGHTNESS_NEW = "button_manual_brightness_new";
+/*    private static final String KEY_BUTTON_MANUAL_BRIGHTNESS_NEW = "button_manual_brightness_new";
     private static final String KEY_BUTTON_TIMEOUT = "button_timeout";
     private static final String KEY_BUTTON_BACKLIGHT_OPTIONS = "button_backlight_options_category";
     private static final String KEY_HWKEY_DISABLE = "hardware_keys_disable";
@@ -77,7 +76,7 @@ public class Navigation extends BaseSettingsFragment implements
     private PreferenceCategory mHwKeyCategory;
     private PreferenceCategory mWakeKeysCategory;
     private PreferenceCategory mGestureTweaksCategory;
-
+*/
     private SystemSettingMasterSwitchPreference mNavigationBar;
     private boolean mIsNavSwitchingMode = false;
     private boolean mHwKeysSupported;
@@ -100,7 +99,7 @@ public class Navigation extends BaseSettingsFragment implements
 
         mNeedsNavbar = ActionUtils.hasNavbarByDefault(getActivity());
         mHwKeysSupported = ActionUtils.isHWKeysSupported(getActivity());
-        isGestureNavigation = AicpUtils.isThemeEnabled(NAV_BAR_MODE_GESTURAL_OVERLAY);
+/*        isGestureNavigation = AicpUtils.isThemeEnabled(NAV_BAR_MODE_GESTURAL_OVERLAY);
 
         mHwKeyCategory = (PreferenceCategory) prefScreen
                 .findPreference(CATEGORY_HWKEY);
@@ -209,9 +208,9 @@ public class Navigation extends BaseSettingsFragment implements
 
         mNavigationBar = (SystemSettingMasterSwitchPreference) findPreference(KEY_NAVIGATION_BAR_ENABLED);
         mNavigationBar.setOnPreferenceChangeListener(this);
-        mHandler = new Handler();
+        mHandler = new Handler();*/
     }
-
+/*
     private void updateDependents(boolean enabled) {
         updateWakeVisibility(enabled);
         updateButtonBacklight(enabled);
