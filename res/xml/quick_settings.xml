@@ -56,18 +56,18 @@
         android:key="dismiss_all_button"
         android:title="@string/enable_clear_all_button"
         android:summary="@string/enable_clear_all_button_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false" /> -->
 
     <PreferenceCategory
         android:key="qs_header_category"
         android:title="@string/qs_header_category_title">
 
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="qs_header_show_battery_percent"
             android:title="@string/qs_header_battery_title"
             android:summary="@string/qs_header_battery_summary"
             android:defaultValue="false" />
-
+-->
         <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="qs_system_info"
             android:title="@string/qs_system_info_title"
@@ -75,16 +75,16 @@
             android:entryValues="@array/qs_system_info_values"
             android:defaultValue="0"
             android:summary="%s" />
-
+<!--
         <com.aicp.gear.preference.SystemSettingListPreference
             android:key="qs_datausage"
             android:title="@string/qs_datausage_title"
             android:entries="@array/qs_datausage_entries"
             android:entryValues="@array/qs_datausage_values"
             android:defaultValue="0" />
-
+-->
     </PreferenceCategory>
-
+<!--
     <PreferenceCategory
         android:key="qs_footer_category"
         android:title="@string/qs_footer_category_title">
