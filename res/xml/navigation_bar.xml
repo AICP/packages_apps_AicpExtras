@@ -21,7 +21,7 @@
     android:key="navigation_bar"
     android:title="@string/navbar_visibility" >
 
-    <!-- <PreferenceCategory
+    <PreferenceCategory
         android:key="category_navbar_layout">
 
         <Preference
@@ -33,13 +33,13 @@
                 android:targetClass="com.android.systemui.tuner.NavBarActivity" />
         </Preference>
 
-        <com.aicp.gear.preference.SecureSettingSwitchPreference
+<!--         <com.aicp.gear.preference.SecureSettingSwitchPreference
             android:key="sysui_nav_bar_inverse"
             android:title="@string/navigation_bar_invert_layout_title"
             android:defaultValue="false" />
-
+-->
     </PreferenceCategory>
-
+<!--
     <PreferenceCategory
         android:key="category_navbar_pulse">
 
