@@ -70,9 +70,11 @@ public class QuickSettings extends BaseSettingsFragment
     private static final int REQUEST_PICK_IMAGE = 0;
 
     private ListPreference mSysInfo;
-//    private Preference mCustomFooterTextPref;
+    private Preference mCustomFooterTextPref;
     private SwitchPreference mQQSColsAuto;
     private SystemSettingSeekBarPreference mQQSColsCount;
+
+    private String mCustomFooterText;
 /*
     private Preference mHeaderBrowse;
     private ListPreference mDaylightHeaderPack;
@@ -82,7 +84,6 @@ public class QuickSettings extends BaseSettingsFragment
     private Preference mFileHeader;
     private String mFileHeaderProvider;
 
-    private String mCustomFooterText;
 */
     @Override
     protected int getPreferenceResource() {
@@ -97,10 +98,10 @@ public class QuickSettings extends BaseSettingsFragment
 
         mSysInfo = (ListPreference) findPreference(SYSTEM_INFO);
         configureSystemInfo();
-/*
+
         mCustomFooterTextPref = (Preference) findPreference(KEY_CUSTOM_FOOTER_TEXT);
         updateCustomFooterTextSummary();
-
+/*
         mHeaderBrowse = findPreference(CUSTOM_HEADER_BROWSE);
 
         mDaylightHeaderPack = (ListPreference) findPreference(DAYLIGHT_HEADER_PACK);
@@ -262,7 +263,7 @@ public class QuickSettings extends BaseSettingsFragment
             Settings.System.putString(getContentResolver(), Settings.System.OMNI_STATUS_BAR_FILE_HEADER_IMAGE, imageUri.toString());
         }
     }
-
+*/
     @Override
     public boolean onPreferenceTreeClick(final Preference preference) {
         final ContentResolver resolver = getActivity().getContentResolver();
@@ -284,21 +285,21 @@ public class QuickSettings extends BaseSettingsFragment
                             updateCustomFooterTextSummary();
 /*                            Intent i = new Intent();
                             i.setAction(Intent.ACTION_CUSTOM_CARRIER_LABEL_CHANGED);
-                            getActivity().sendBroadcast(i);*//*
+                            getActivity().sendBroadcast(i);*/
                         }
                     });
             alert.setNegativeButton(getString(android.R.string.cancel), null);
             alert.show();
             return true;
-        } else if (preference == mFileHeader) {
+/*        } else if (preference == mFileHeader) {
             Intent intent = new Intent(Intent.ACTION_PICK);
             intent.setType("image/*");
             startActivityForResult(intent, REQUEST_PICK_IMAGE);
-            return true;
+            return true;*/
         }
         return super.onPreferenceTreeClick(preference);
     }
-*/
+
     private void configureSystemInfo() {
         Resources res = getResources();
         String[] entriesArray = res.getStringArray(R.array.qs_system_info_entries);
@@ -323,7 +324,7 @@ public class QuickSettings extends BaseSettingsFragment
         mSysInfo.setEntryValues(values.toArray(new String[values.size()]));
         if (entries.size() < 2) mSysInfo.getParent().removePreference(mSysInfo);
     }
-/*
+
     private void updateCustomFooterTextSummary() {
         mCustomFooterText = Settings.System.getStringForUser(
                 getActivity().getContentResolver(), Settings.System.AICP_FOOTER_TEXT_STRING, UserHandle.USER_CURRENT);
@@ -333,5 +334,5 @@ public class QuickSettings extends BaseSettingsFragment
         } else {
             mCustomFooterTextPref.setSummary(mCustomFooterText);
         }
-    }*/
+    }
 }
