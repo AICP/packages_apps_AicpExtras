@@ -22,13 +22,13 @@
     android:key="quick_settings"
     android:title="@string/quick_settings_title">
 
-    <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
         android:title="@string/qs_tile_title_visibility_title"
         android:summary="@string/qs_tile_title_visibility_summary"
         android:defaultValue="true"/>
 
-    <com.aicp.gear.preference.SecureSettingSwitchPreference
+    <!--<com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="qs_vibrate"
         android:title="@string/qs_vibrate_title"
         android:summary="@string/qs_vibrate_summary"
@@ -101,7 +101,7 @@
            android:dependency="footer_text_show" />
 
      </PreferenceCategory>
-
+-->
     <PreferenceCategory
         android:key="qs_layout_category"
         android:title="@string/qs_layout_category_title">
@@ -125,7 +125,7 @@
             android:key="qs_layout_rows"
             android:title="@string/qs_rows_portrait_title"
             android:max="5"
-            android:min="2"
+            android:min="3"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
             android:defaultValue="3" />
@@ -133,7 +133,7 @@
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_layout_rows_landscape"
             android:title="@string/qs_rows_landscape_title"
-            android:max="4"
+            android:max="3"
             android:min="2"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
@@ -152,12 +152,12 @@
             android:key="qs_layout_columns_landscape"
             android:title="@string/qs_columns_landscape_title"
             android:max="8"
-            android:min="3"
+            android:min="4"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
-            android:defaultValue="3" />
+            android:defaultValue="4" />
     </PreferenceCategory>
-
+<!--
     <PreferenceCategory
         android:key="qs_panel_translucency"
         android:title="@string/qs_panel_translucency_category_title">
