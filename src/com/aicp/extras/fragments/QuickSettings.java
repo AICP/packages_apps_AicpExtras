@@ -49,8 +49,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class QuickSettings extends BaseSettingsFragment {
-/*    implements OnPreferenceChangeListener {
+public class QuickSettings extends BaseSettingsFragment
+    implements OnPreferenceChangeListener {
 
     private static final boolean DEBUG = false;
     private static final String QS_QUICKBAR_COLUMNS_AUTO = "qs_quickbar_columns_auto";
@@ -70,10 +70,10 @@ public class QuickSettings extends BaseSettingsFragment {
     private static final int REQUEST_PICK_IMAGE = 0;
 
     private ListPreference mSysInfo;
-    private Preference mCustomFooterTextPref;
+//    private Preference mCustomFooterTextPref;
     private SwitchPreference mQQSColsAuto;
     private SystemSettingSeekBarPreference mQQSColsCount;
-
+/*
     private Preference mHeaderBrowse;
     private ListPreference mDaylightHeaderPack;
     private SystemSettingSeekBarPreference mHeaderShadow;
@@ -94,10 +94,10 @@ public class QuickSettings extends BaseSettingsFragment {
         super.onCreate(savedInstanceState);
 
         ContentResolver resolver = getActivity().getContentResolver();
-/*
+
         mSysInfo = (ListPreference) findPreference(SYSTEM_INFO);
         configureSystemInfo();
-
+/*
         mCustomFooterTextPref = (Preference) findPreference(KEY_CUSTOM_FOOTER_TEXT);
         updateCustomFooterTextSummary();
 
@@ -140,15 +140,15 @@ public class QuickSettings extends BaseSettingsFragment {
 
         mFileHeader = findPreference(FILE_HEADER_SELECT);
         mFileHeader.setEnabled(providerName.equals(mFileHeaderProvider));
+*/
         mQQSColsAuto = (SwitchPreference) findPreference(QS_QUICKBAR_COLUMNS_AUTO);
         mQQSColsCount = (SystemSettingSeekBarPreference) findPreference(QS_QUICKBAR_COLUMNS_COUNT);
 
         boolean qqsColsAutoEnabled = Settings.System.getInt(resolver,
-                Settings.System.AICP_QS_QUICKBAR_COLUMNS, 6) == -1;
+                Settings.System.QS_QUICKBAR_COLUMNS, 6) == -1;
         mQQSColsAuto.setChecked(qqsColsAutoEnabled);
         mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
         mQQSColsAuto.setOnPreferenceChangeListener(this);
-        */
     }
 /*
     private void updateHeaderProviderSummary(boolean headerEnabled) {
@@ -208,21 +208,21 @@ public class QuickSettings extends BaseSettingsFragment {
             values.add(headerMap.get(label));
         }
     }
-
+*/
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        /*
+
         if (preference == mQQSColsAuto) {
             Boolean qqsColsAutoEnabled = (Boolean) newValue;
             mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
             if (qqsColsAutoEnabled){
               Settings.System.putInt(resolver,
-                      Settings.System.AICP_QS_QUICKBAR_COLUMNS, -1);
+                      Settings.System.QS_QUICKBAR_COLUMNS, -1);
             }
             return true;
         }
-        *//*
+/*
         if (preference == mHeaderShadow) {
             Integer headerShadow = (Integer) newValue;
             int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
@@ -248,10 +248,10 @@ public class QuickSettings extends BaseSettingsFragment {
             mHeaderBrowse.setSummary(valueIndex == 0 ? R.string.custom_header_browse_summary_new : R.string.custom_header_pick_summary);
             mFileHeader.setEnabled(value.equals(mFileHeaderProvider));
             return true;
-        }
+        }*/
         return false;
     }
-
+/*
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent result) {
         if (requestCode == REQUEST_PICK_IMAGE) {
@@ -298,7 +298,7 @@ public class QuickSettings extends BaseSettingsFragment {
         }
         return super.onPreferenceTreeClick(preference);
     }
-
+*/
     private void configureSystemInfo() {
         Resources res = getResources();
         String[] entriesArray = res.getStringArray(R.array.qs_system_info_entries);
@@ -323,7 +323,7 @@ public class QuickSettings extends BaseSettingsFragment {
         mSysInfo.setEntryValues(values.toArray(new String[values.size()]));
         if (entries.size() < 2) mSysInfo.getParent().removePreference(mSysInfo);
     }
-
+/*
     private void updateCustomFooterTextSummary() {
         mCustomFooterText = Settings.System.getStringForUser(
                 getActivity().getContentResolver(), Settings.System.AICP_FOOTER_TEXT_STRING, UserHandle.USER_CURRENT);
