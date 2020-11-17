@@ -177,7 +177,7 @@
             aicpextras:unitsRight="%"
             android:defaultValue="60" />
     </PreferenceCategory>
-
+ -->
       <PreferenceCategory
         android:key="category_custom_header"
         android:title="@string/custom_header_title">
@@ -227,5 +227,5 @@
             aicpextras:unitsRight="@string/unit_percent"
             android:defaultValue="0"
             android:dependency="status_bar_custom_header" />
-    </PreferenceCategory> -->
+    </PreferenceCategory>
 </PreferenceScreen>
