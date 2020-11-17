@@ -1563,10 +1563,6 @@
     <string name="show_media_heads_up_title">Show media heads up</string>
     <string name="show_media_heads_up_summary">Show media heads up when a new track is played, if the player is not already in foreground</string>
 
-    <!-- R Notification headers -->
-    <string name="notification_headers_title">Show notification headers</string>
-    <string name="notification_headers_summary">Whether to show R style notification headers (Requires a SystemUI restart)</string>
-
     <!-- AICP ad-blocker -->
     <string name="hosts_block_title">Ad-block</string>
     <string name="hosts_block_summary">Block ads with a modified hosts file. Turn off to use third party solutions or if apps cause issues.</string>
@@ -1627,5 +1623,7 @@
     <string name="category_lockscreen_gestures_title">Gestures</string>
     <string name="category_lockscreen_gestures_summary">Configure available lockscreen gestures</string>
 
-
+    <!-- Notification headers -->
+    <string name="notification_headers_title">Notification Headers</string>
+    <string name="notification_headers_summary">Show headers in the notification shade\nRequires a SystemUI restart</string>
 </resources>
