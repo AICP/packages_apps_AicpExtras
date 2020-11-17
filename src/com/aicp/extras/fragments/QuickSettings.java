@@ -75,7 +75,7 @@ public class QuickSettings extends BaseSettingsFragment
     private SystemSettingSeekBarPreference mQQSColsCount;
 
     private String mCustomFooterText;
-/*
+
     private Preference mHeaderBrowse;
     private ListPreference mDaylightHeaderPack;
     private SystemSettingSeekBarPreference mHeaderShadow;
@@ -84,7 +84,6 @@ public class QuickSettings extends BaseSettingsFragment
     private Preference mFileHeader;
     private String mFileHeaderProvider;
 
-*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.quick_settings;
@@ -101,7 +100,7 @@ public class QuickSettings extends BaseSettingsFragment
 
         mCustomFooterTextPref = (Preference) findPreference(KEY_CUSTOM_FOOTER_TEXT);
         updateCustomFooterTextSummary();
-/*
+
         mHeaderBrowse = findPreference(CUSTOM_HEADER_BROWSE);
 
         mDaylightHeaderPack = (ListPreference) findPreference(DAYLIGHT_HEADER_PACK);
@@ -141,7 +140,7 @@ public class QuickSettings extends BaseSettingsFragment
 
         mFileHeader = findPreference(FILE_HEADER_SELECT);
         mFileHeader.setEnabled(providerName.equals(mFileHeaderProvider));
-*/
+
         mQQSColsAuto = (SwitchPreference) findPreference(QS_QUICKBAR_COLUMNS_AUTO);
         mQQSColsCount = (SystemSettingSeekBarPreference) findPreference(QS_QUICKBAR_COLUMNS_COUNT);
 
@@ -151,7 +150,7 @@ public class QuickSettings extends BaseSettingsFragment
         mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
         mQQSColsAuto.setOnPreferenceChangeListener(this);
     }
-/*
+
     private void updateHeaderProviderSummary(boolean headerEnabled) {
         mDaylightHeaderPack.setSummary(getResources().getString(R.string.header_provider_disabled));
         if (headerEnabled) {
@@ -209,26 +208,23 @@ public class QuickSettings extends BaseSettingsFragment
             values.add(headerMap.get(label));
         }
     }
-*/
+
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-
-        if (preference == mQQSColsAuto) {
+        if (preference == mHeaderShadow) {
+            Integer headerShadow = (Integer) newValue;
+            int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
+            Settings.System.putInt(resolver,
+                    Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
+            return true;
+        } else if (preference == mQQSColsAuto) {
             Boolean qqsColsAutoEnabled = (Boolean) newValue;
             mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
             if (qqsColsAutoEnabled){
               Settings.System.putInt(resolver,
                       Settings.System.QS_QUICKBAR_COLUMNS, -1);
             }
-            return true;
-        }
-/*
-        if (preference == mHeaderShadow) {
-            Integer headerShadow = (Integer) newValue;
-            int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
-            Settings.System.putInt(resolver,
-                    Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
             return true;
         } else if (preference == mDaylightHeaderPack) {
             String value = (String) newValue;
@@ -249,10 +245,10 @@ public class QuickSettings extends BaseSettingsFragment
             mHeaderBrowse.setSummary(valueIndex == 0 ? R.string.custom_header_browse_summary_new : R.string.custom_header_pick_summary);
             mFileHeader.setEnabled(value.equals(mFileHeaderProvider));
             return true;
-        }*/
+        }
         return false;
     }
-/*
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent result) {
         if (requestCode == REQUEST_PICK_IMAGE) {
@@ -263,7 +259,7 @@ public class QuickSettings extends BaseSettingsFragment
             Settings.System.putString(getContentResolver(), Settings.System.OMNI_STATUS_BAR_FILE_HEADER_IMAGE, imageUri.toString());
         }
     }
-*/
+
     @Override
     public boolean onPreferenceTreeClick(final Preference preference) {
         final ContentResolver resolver = getActivity().getContentResolver();
@@ -291,11 +287,11 @@ public class QuickSettings extends BaseSettingsFragment
             alert.setNegativeButton(getString(android.R.string.cancel), null);
             alert.show();
             return true;
-/*        } else if (preference == mFileHeader) {
+        } else if (preference == mFileHeader) {
             Intent intent = new Intent(Intent.ACTION_PICK);
             intent.setType("image/*");
             startActivityForResult(intent, REQUEST_PICK_IMAGE);
-            return true;*/
+            return true;
         }
         return super.onPreferenceTreeClick(preference);
     }
