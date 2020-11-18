@@ -67,6 +67,12 @@
         android:entryValues="@array/less_notification_sounds_values"
         android:defaultValue="0" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="alert_slider_notifications"
+        android:title="@string/alert_slider_notifications_title"
+        android:summary="@string/alert_slider_notifications_summary"
+        android:defaultValue="true" />
+
     <PreferenceCategory
         android:key="notification_buttons"
         android:title="@string/category_guts_buttons_title" >
