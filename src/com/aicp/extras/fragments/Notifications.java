@@ -35,8 +35,8 @@ import com.android.internal.util.aicp.DeviceUtils;
 public class Notifications extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
-/*
     private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
+    /*
     private static final String CAT_NOTIFICATION_FLASHLIGHT = "notification_flash";
     private static final String PREF_FLASHLIGHT_ON_CALL = "flashlight_on_call";
     private static final String PREF_FLASHLIGHT_ON_CALL_WAITING = "flashlight_on_call_waiting";
@@ -74,20 +74,20 @@ public class Notifications extends BaseSettingsFragment implements
             getPreferenceScreen().removePreference(findPreference(
                     CAT_NOTIFICATION_FLASHLIGHT));
         }
-
+*/
         boolean alertSliderAvailable = getActivity().getResources().getBoolean(
                 com.android.internal.R.bool.config_hasAlertSlider);
         if (!alertSliderAvailable)
             getPreferenceScreen().removePreference(findPreference(ALERT_SLIDER_PREF));
     }
-
+/*
     private void updateDependencies(boolean enabled) {
         mFlashOnCallWaiting.setEnabled(enabled);
         mFlashOnCallIgnoreDND.setEnabled(enabled);
         mFlashOnCallRate.setEnabled(enabled);
-*/
-    }
 
+    }
+*/
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final ContentResolver resolver = getContentResolver();
