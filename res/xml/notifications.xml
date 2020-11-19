@@ -73,6 +73,13 @@
         android:summary="@string/alert_slider_notifications_summary"
         android:defaultValue="true" />
 
+    <com.aicp.gear.preference.GlobalSettingListPreference
+        android:key="ringtone_focus_mode"
+        android:title="@string/ringtone_focus_mode_title"
+        android:entries="@array/ringtone_focus_mode_entries"
+        android:entryValues="@array/ringtone_focus_mode_values"
+        android:defaultValue="1" />
+
     <PreferenceCategory
         android:key="notification_buttons"
         android:title="@string/category_guts_buttons_title" >
@@ -107,13 +114,6 @@
         android:title="@string/alert_slider_notifications_title"
         android:summary="@string/alert_slider_notifications_summary"
         android:defaultValue="true" />
-
-    <com.aicp.gear.preference.GlobalSettingListPreference
-        android:key="ringtone_focus_mode"
-        android:title="@string/ringtone_focus_mode_title"
-        android:entries="@array/ringtone_focus_mode_entries"
-        android:entryValues="@array/ringtone_focus_mode_values"
-        android:defaultValue="1" />
 
     <com.android.settingslib.widget.FooterPreference
         android:title="@string/status_bar_show_ticker_footer" />
