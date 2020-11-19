@@ -36,6 +36,7 @@ public class Notifications extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
+    private static final String KEY_RINGTONE_FOCUS = "ringtone_focus_mode";
     /*
     private static final String CAT_NOTIFICATION_FLASHLIGHT = "notification_flash";
     private static final String PREF_FLASHLIGHT_ON_CALL = "flashlight_on_call";
@@ -75,10 +76,11 @@ public class Notifications extends BaseSettingsFragment implements
                     CAT_NOTIFICATION_FLASHLIGHT));
         }
 */
-        boolean alertSliderAvailable = getActivity().getResources().getBoolean(
-                com.android.internal.R.bool.config_hasAlertSlider);
-        if (!alertSliderAvailable)
-            getPreferenceScreen().removePreference(findPreference(ALERT_SLIDER_PREF));
+        Util.requireConfig(getActivity(), findPreference(ALERT_SLIDER_PREF),
+                com.android.internal.R.bool.config_hasAlertSlider, true, false);
+
+        Util.requireConfig(getActivity(), findPreference(KEY_RINGTONE_FOCUS),
+                com.android.internal.R.bool.config_deviceRingtoneFocusMode, true, false);
     }
 /*
     private void updateDependencies(boolean enabled) {
