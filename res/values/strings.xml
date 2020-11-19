@@ -1077,8 +1077,8 @@
 
     <!-- Ambient display music ticker -->
     <string name="force_ambient_for_media_pref_title">Ambient music ticker</string>
-    <string name="force_ambient_for_media_pref_summary">Configure the Ambient music ticker</string>
-    <string name="ambient_ticker_footer">Ambient Music Ticker shows playing music track info within Ambient display screen.\n\nIt\'s triggered also if Ambient Display is disabled when a new track is started, forcing a clean ambient screen with track info in the middle of the screen.\n\nYou can also double tap on track info to skip track.\n\nIf you own a Pixel and enable Now Playing and its notification in system Audio settings, Ambient Music Ticker will also work within it.</string>
+    <string name="force_ambient_for_media_pref_summary">Enable to show active music track info in Ambient display</string>
+    <string name="ambient_ticker_footer">Ambient Music Ticker shows playing music track info within Ambient display screen.\n\nIt\'s triggered also if Ambient Display is disabled when a new track is started, forcing a clean ambient screen with track info in the middle of the screen.\n\nYou can also tap on track info to skip track.\n\nIf you own a Pixel and enable Now Playing and its notification in system Audio settings, Ambient Music Ticker will also work within it.</string>
     <string name="force_ambient_for_media_title">Enable</string>
 
     <!-- Screen Off animation -->
@@ -1630,4 +1630,11 @@
     <string name="vowifi_icon_summary">Display VoWiFi icon when available</string>
     <string name="volte_vowifi_override_title">VoWiFi override</string>
     <string name="volte_vowifi_override_summary">Hide VoLTE when VoWiFi is available. This also overrides old style signal icon for VoWiFi.</string>
+
+    <string name="category_lockscreen_items_title">Items</string>
+    <string name="category_lockscreen_items_summary">Various lockscreen items</string>
+
+    <string name="category_lockscreen_gestures_title">Gestures</string>
+    <string name="category_lockscreen_gestures_summary">Configure available lockscreen gestures</string>
+
 </resources>
