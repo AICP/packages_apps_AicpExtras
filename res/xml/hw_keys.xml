@@ -78,8 +78,8 @@
             android:title="@string/volume_keys_control_ring_tone_title"
             android:summary="@string/volume_keys_control_ring_tone_summary"
             android:defaultValue="false" />
-<!--
-        <!- Volume rocker wake screen ->
+
+        <!-- Volume rocker wake screen -->
         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="volume_rocker_wake"
             android:title="@string/volume_rocker_wake_title"
@@ -88,14 +88,14 @@
             aicpextras:plainSwitch="true"
             android:defaultValue="false" />
 
-        <!- Volume keys music control ->
+        <!-- Volume keys music control -->
         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="volume_button_music_control"
             android:title="@string/volume_rocker_music_controls_title"
             android:summary="@string/volume_rocker_music_controls_summary"
             aicpextras:thereCanBeOnlyOneGroupId="1"
             aicpextras:plainSwitch="true"
-            android:defaultValue="false" /> -->
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 <!--
