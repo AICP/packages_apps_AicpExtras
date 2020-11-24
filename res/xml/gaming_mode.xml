@@ -19,13 +19,13 @@
     android:title="@string/gaming_mode_title">
 
     <!-- Master switch -->
-    <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="gaming_mode_enabled"
         android:title="@string/gaming_mode_title"
         android:summary="@string/gaming_mode_enabled_summary"
         android:defaultValue="false" />
 
-    <!- Heads up ->
+    <!-- Heads up -->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="gaming_mode_headsup_toggle"
         android:title="@string/gaming_mode_headsup_title"
@@ -33,7 +33,7 @@
         android:dependency="gaming_mode_enabled"
         android:defaultValue="true" />
 
-    <!- Hardware keys ->
+    <!-- Hardware keys -->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="gaming_mode_hw_keys_toggle"
         android:title="@string/gaming_mode_hardware_keys_title"
@@ -41,7 +41,7 @@
         android:dependency="gaming_mode_enabled"
         android:defaultValue="false" />
 
-    <!- Manual brightness ->
+    <!-- Manual brightness -->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="gaming_mode_manual_brightness_toggle"
         android:title="@string/gaming_mode_brightness_title"
@@ -67,7 +67,7 @@
         android:dependency="gaming_mode_enabled"
         android:summary="%s" />
 
-    <!- Dynamic gaming mode ->
+    <!-- Dynamic gaming mode -->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="gaming_mode_dynamic_state"
         android:title="@string/gaming_mode_dynamic_title"
@@ -75,7 +75,7 @@
         android:dependency="gaming_mode_enabled"
         android:defaultValue="false" />
 
-    <!- App picker activity for gaming mode ->
+    <!-- App picker activity for gaming mode -->
     <PreferenceCategory
         android:title="@string/gaming_mode_app_picker_title"
         android:dependency="gaming_mode_enabled"
@@ -85,5 +85,5 @@
             android:icon="@drawable/ic_menu_add"
             android:title="@string/add_gaming_mode_package_title"
             android:summary="@string/add_gaming_mode_package_summary" />
-    </PreferenceCategory> -->
+    </PreferenceCategory>
 </PreferenceScreen>
