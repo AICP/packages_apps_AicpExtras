@@ -144,12 +144,11 @@
             android:defaultValue="0"
             android:persistent="false" />
 
-<!--        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="button_backlight_on_touch_only"
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="button_backlight_only_when_pressed"
             android:title="@string/button_backlight_on_touch_only_title"
             android:summary="@string/button_backlight_on_touch_only_summary"
-            android:defaultValue="false"
-            android:dependency="button_backlight_enable" /> -->
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 
