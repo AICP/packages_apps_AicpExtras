@@ -1289,23 +1289,13 @@
     <!-- Battery light settings  -->
     <string name="battery_light_title">Battery LED</string>
     <string name="battery_light_summary">LED color while charging</string>
-    <string name="battery_low_pulse_title">Pulse if battery low</string>
-    <string name="battery_light_only_full_charge_title">Only light up when fully charged</string>
-    <string name="battery_light_list_title">Colors</string>
-    <string name="battery_light_low_color_title">Battery low</string>
-    <string name="battery_light_medium_color_title">Charging</string>
-    <string name="battery_light_full_color_title">Charged (90%)</string>
-    <string name="battery_light_really_full_color_title">Charged (100%)</string>
-    <string name="fast_color_cat_title">Fast charging</string>
-    <string name="fast_charging_led_enabled_title">Enable fast charging color</string>
-    <string name="fast_charging_led_enabled_summary">When fast charging, use different color till 90% charged</string>
-    <string name="fast_charging_light_color_title">Color</string>
-    <string name="fast_charging_light_color_summary"></string>
-    <string name="battery_light_blend_category">Blend colors</string>
-    <string name="battery_light_blend_title">Enable color blend</string>
-    <string name="battery_light_blend_summary">Gradually change colors between full and empty</string>
-    <string name="battery_light_blend_colors_title">Color selection</string>
-    <string name="battery_light_blend_colors_summary">Color range used when blending colors</string>
+    <string name="battery_light_allow_on_dnd_title">Battery light in Do Not Disturb mode</string>
+    <string name="battery_light_low_blinking_title">Blinking light on low battery</string>
+    <string name="battery_light_cat">Battery light color when charging</string>
+    <string name="battery_light_low_color">Low battery</string>
+    <string name="battery_light_medium_color">Medium battery</string>
+    <string name="battery_light_full_color">Almost fully charged (90%)</string>
+    <string name="battery_light_reallyfull_color">Full charged battery (%100)</string>
 
     <!-- App Ops-->
     <string name="app_ops_settings_summary">Control apps permissions</string>
