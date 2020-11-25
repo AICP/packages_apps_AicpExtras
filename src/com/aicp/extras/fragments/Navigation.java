@@ -61,6 +61,7 @@ public class Navigation extends BaseSettingsFragment
 
     private static final String CATEGORY_HWKEY = "hardware_keys";
     private static final String CATEGORY_WAKE = "wake_keys";
+    private static final String PREFSCREEN_HWBUTTON_SETTINGS= "hw_button_settings";
 //    private static final String CATEGORY_GESTURE_NAV_TWEAKS = "gesture_nav_tweaks_category";
 
     // Masks for checking presence of hardware keys.
@@ -80,6 +81,7 @@ public class Navigation extends BaseSettingsFragment
 //    private SwitchPreference mSwapHWNavKeys;
     private PreferenceCategory mHwKeyCategory;
     private PreferenceCategory mWakeKeysCategory;
+    private PreferenceScreen mHwButtonSettingsScreen;
 //    private PreferenceCategory mGestureTweaksCategory;
 
     private SystemSettingMasterSwitchPreference mNavigationBar;
@@ -108,6 +110,8 @@ public class Navigation extends BaseSettingsFragment
 
         mHwKeyCategory = (PreferenceCategory) prefScreen
                 .findPreference(CATEGORY_HWKEY);
+        mHwButtonSettingsScreen = (PreferenceScreen) prefScreen
+                .findPreference(PREFSCREEN_HWBUTTON_SETTINGS);
         mLongPressBackToKill = (SwitchPreference) findPreference(KEY_KILLAPP_LONGPRESS_BACK);
 //        mSwapHWNavKeys = (SwitchPreference) findPreference(KEY_SWAP_HW_NAVIGATION_KEYS);
         mHwKeyDisable = (SwitchPreference) findPreference(KEY_HWKEY_DISABLE);
@@ -224,9 +228,12 @@ public class Navigation extends BaseSettingsFragment
     }
 
     private void updateDependents(boolean enabled) {
-        updateWakeVisibility(enabled);
+        updateHWButtonVisibilities(enabled);
         updateButtonBacklight(enabled);
-        mLongPressBackToKill.setEnabled(enabled);
+/*        updateWakeVisibility(enabled);
+        updateButtomCustomizationVisibility(enabled);*/
+//        mLongPressBackToKill.setEnabled(enabled);
+//        mHwButtonSettingsScreen.setEnabled(enabled);
 //        mSwapHWNavKeys.setEnabled(enabled);
     }
 
@@ -246,8 +253,19 @@ public class Navigation extends BaseSettingsFragment
         return areKeysDisabled;
     }
 
+    private void updateHWButtonVisibilities(boolean visible) {
+        if (mWakeKeysCategory != null) mWakeKeysCategory.setVisible(visible && !keysDisabled());
+        if (mHwButtonSettingsScreen != null) mHwButtonSettingsScreen.setVisible(visible && !keysDisabled());
+        if (mLongPressBackToKill != null) mLongPressBackToKill.setVisible(visible && !keysDisabled());
+    }
+
+
     private void updateWakeVisibility(boolean visible) {
         if (mWakeKeysCategory != null) mWakeKeysCategory.setVisible(visible && !keysDisabled());
+    }
+
+    private void updateButtomCustomizationVisibility(boolean visible) {
+        if (mHwButtonSettingsScreen != null) mHwButtonSettingsScreen.setVisible(visible && !keysDisabled());
     }
 
     private void updateButtonBacklight(boolean enabled) {

@@ -26,6 +26,7 @@
         android:summary="@string/navbar_visibility_summary"
         android:defaultValue="@*android:bool/config_showNavigationBar"
         android:fragment="com.aicp.extras.fragments.NavigationBarSettings" />
+
 <!--
         aicpextras:systemPropDefaultOverride="qemu.hw.mainkeys?0:1"
     <com.aicp.gear.preference.SystemSettingSwitchPreference
@@ -61,6 +62,11 @@
             android:title="@string/kill_app_longpress_back"
             android:summary="@string/kill_app_longpress_back_summary"
             android:defaultValue="false" />
+
+        <PreferenceScreen
+            android:key="hw_button_settings"
+            android:title="@string/hardware_keys_title"
+            android:fragment="com.aicp.extras.fragments.ActionFragment" />
 
 <!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
