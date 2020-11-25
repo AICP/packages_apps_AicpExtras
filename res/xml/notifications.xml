@@ -45,14 +45,14 @@
         android:summary="@string/force_expanded_notifications_summary"
         android:defaultValue="false" />
 -->
-<!--
+
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="battery_light_enabled"
         android:defaultValue="@*android:bool/config_intrusiveBatteryLed"
         android:title="@string/battery_light_title"
         android:summary="@string/battery_light_summary"
         android:fragment="com.aicp.extras.fragments.BatteryLight" />
--->
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="notification_sound_vib_screen_on"
         android:title="@string/notification_sound_vib_screen_on_title"
