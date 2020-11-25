@@ -50,7 +50,7 @@ public class Navigation extends BaseSettingsFragment
     private static final String TAG = "AENavigation";
     private static final boolean DEBUG = false;
 
-    private static final String KEY_KILLAPP_LONGPRESS_BACK = "kill_app_longpress_back";
+//    private static final String KEY_KILLAPP_LONGPRESS_BACK = "kill_app_longpress_back";
 //    private static final String KEY_SWAP_HW_NAVIGATION_KEYS = "swap_navigation_keys";
 //    private static final String KEY_NAVIGATION_BAR_ENABLED = "navigation_bar_show_new";
     // preference keys
@@ -77,7 +77,7 @@ public class Navigation extends BaseSettingsFragment
     private SeekBarPreferenceCham mManualButtonBrightness;
 
     private SwitchPreference mHwKeyDisable;
-    private SwitchPreference mLongPressBackToKill;
+//    private SwitchPreference mLongPressBackToKill;
 //    private SwitchPreference mSwapHWNavKeys;
     private PreferenceCategory mHwKeyCategory;
     private PreferenceCategory mWakeKeysCategory;
@@ -112,7 +112,7 @@ public class Navigation extends BaseSettingsFragment
                 .findPreference(CATEGORY_HWKEY);
         mHwButtonSettingsScreen = (PreferenceScreen) prefScreen
                 .findPreference(PREFSCREEN_HWBUTTON_SETTINGS);
-        mLongPressBackToKill = (SwitchPreference) findPreference(KEY_KILLAPP_LONGPRESS_BACK);
+//        mLongPressBackToKill = (SwitchPreference) findPreference(KEY_KILLAPP_LONGPRESS_BACK);
 //        mSwapHWNavKeys = (SwitchPreference) findPreference(KEY_SWAP_HW_NAVIGATION_KEYS);
         mHwKeyDisable = (SwitchPreference) findPreference(KEY_HWKEY_DISABLE);
         mHwKeyDisable.setOnPreferenceChangeListener(this);
@@ -256,7 +256,7 @@ public class Navigation extends BaseSettingsFragment
     private void updateHWButtonVisibilities(boolean visible) {
         if (mWakeKeysCategory != null) mWakeKeysCategory.setVisible(visible && !keysDisabled());
         if (mHwButtonSettingsScreen != null) mHwButtonSettingsScreen.setVisible(visible && !keysDisabled());
-        if (mLongPressBackToKill != null) mLongPressBackToKill.setVisible(visible && !keysDisabled());
+//        if (mLongPressBackToKill != null) mLongPressBackToKill.setVisible(visible && !keysDisabled());
     }
 
 
