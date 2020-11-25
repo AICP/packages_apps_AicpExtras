@@ -47,7 +47,7 @@
             android:persistent="false" />
 
     </PreferenceCategory>
-
+-->
     <PreferenceCategory
         android:key="hardware_keys"
 	      android:title="@string/hardware_keys_category">
@@ -62,12 +62,13 @@
             android:summary="@string/kill_app_longpress_back_summary"
             android:defaultValue="false" />
 
+<!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="swap_navigation_keys"
             android:title="@string/hw_keys_swap_title"
             android:summary="@string/hw_keys_swap_summary"
             android:defaultValue="false" />
-
+-->
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -108,7 +109,7 @@
     <PreferenceCategory
         android:key="button_backlight_options_category"
         android:title="@string/button_backlight_options_category" >
-
+<!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="button_backlight_enable"
             android:title="@string/button_backlight_enable_title"
@@ -121,30 +122,28 @@
             android:defaultValue="false"
             android:dependency="button_backlight_enable"
             android:disableDependentsState="true" />
-
+-->
         <com.aicp.gear.preference.SeekBarPreferenceCham
-            android:key="button_manual_brightness_new"
+            android:key="button_brightness"
             android:title="@string/button_manual_brightness"
             android:max="255"
-            android:min="1"
-            android:persistent="false"
-            android:dependency="custom_button_use_screen_brightness" />
+            android:min="0"
+            android:persistent="false" />
 
         <com.aicp.gear.preference.SeekBarPreferenceCham
-            android:key="button_timeout"
+            android:key="button_backlight_timeout"
             android:title="@string/button_timeout_title"
             android:max="30"
             android:min="0"
             android:defaultValue="0"
-            android:persistent="false"
-            android:dependency="button_backlight_enable" />
+            android:persistent="false" />
 
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="button_backlight_on_touch_only"
             android:title="@string/button_backlight_on_touch_only_title"
             android:summary="@string/button_backlight_on_touch_only_summary"
             android:defaultValue="false"
-            android:dependency="button_backlight_enable" />
+            android:dependency="button_backlight_enable" /> -->
 
     </PreferenceCategory>
 

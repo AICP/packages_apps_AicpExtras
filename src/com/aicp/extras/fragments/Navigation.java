@@ -40,23 +40,28 @@ import com.android.internal.util.aicp.DeviceUtils;
 import com.android.internal.util.hwkeys.ActionConstants;
 import com.android.internal.util.hwkeys.ActionUtils;
 
+import android.util.Log;
+
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
 
-public class Navigation extends BaseSettingsFragment {
-//          implements Preference.OnPreferenceChangeListener {
+public class Navigation extends BaseSettingsFragment
+          implements Preference.OnPreferenceChangeListener {
 
-//    private static final String KEY_KILLAPP_LONGPRESS_BACK = "kill_app_longpress_back";
+    private static final String TAG = "AENavigation";
+    private static final boolean DEBUG = false;
+
+    private static final String KEY_KILLAPP_LONGPRESS_BACK = "kill_app_longpress_back";
 //    private static final String KEY_SWAP_HW_NAVIGATION_KEYS = "swap_navigation_keys";
-    private static final String KEY_NAVIGATION_BAR_ENABLED = "navigation_bar_show_new";
+//    private static final String KEY_NAVIGATION_BAR_ENABLED = "navigation_bar_show_new";
     // preference keys
-/*    private static final String KEY_BUTTON_MANUAL_BRIGHTNESS_NEW = "button_manual_brightness_new";
-    private static final String KEY_BUTTON_TIMEOUT = "button_timeout";
+    private static final String KEY_BUTTON_MANUAL_BRIGHTNESS_NEW = "button_brightness";
+    private static final String KEY_BUTTON_TIMEOUT = "button_backlight_timeout";
     private static final String KEY_BUTTON_BACKLIGHT_OPTIONS = "button_backlight_options_category";
     private static final String KEY_HWKEY_DISABLE = "hardware_keys_disable";
 
     private static final String CATEGORY_HWKEY = "hardware_keys";
     private static final String CATEGORY_WAKE = "wake_keys";
-    private static final String CATEGORY_GESTURE_NAV_TWEAKS = "gesture_nav_tweaks_category";
+//    private static final String CATEGORY_GESTURE_NAV_TWEAKS = "gesture_nav_tweaks_category";
 
     // Masks for checking presence of hardware keys.
     // Must match values in frameworks/base/core/res/res/values/config.xml
@@ -72,16 +77,16 @@ public class Navigation extends BaseSettingsFragment {
 
     private SwitchPreference mHwKeyDisable;
     private SwitchPreference mLongPressBackToKill;
-    private SwitchPreference mSwapHWNavKeys;
+//    private SwitchPreference mSwapHWNavKeys;
     private PreferenceCategory mHwKeyCategory;
     private PreferenceCategory mWakeKeysCategory;
-    private PreferenceCategory mGestureTweaksCategory;
-*/
+//    private PreferenceCategory mGestureTweaksCategory;
+
     private SystemSettingMasterSwitchPreference mNavigationBar;
     private boolean mIsNavSwitchingMode = false;
     private boolean mHwKeysSupported;
     private boolean mNeedsNavbar;
-    private boolean isGestureNavigation;
+//    private boolean isGestureNavigation;
 
     private Handler mHandler;
 
@@ -99,26 +104,26 @@ public class Navigation extends BaseSettingsFragment {
 
         mNeedsNavbar = ActionUtils.hasNavbarByDefault(getActivity());
         mHwKeysSupported = ActionUtils.isHWKeysSupported(getActivity());
-/*        isGestureNavigation = AicpUtils.isThemeEnabled(NAV_BAR_MODE_GESTURAL_OVERLAY);
+//        isGestureNavigation = AicpUtils.isThemeEnabled(NAV_BAR_MODE_GESTURAL_OVERLAY);
 
         mHwKeyCategory = (PreferenceCategory) prefScreen
                 .findPreference(CATEGORY_HWKEY);
         mLongPressBackToKill = (SwitchPreference) findPreference(KEY_KILLAPP_LONGPRESS_BACK);
-        mSwapHWNavKeys = (SwitchPreference) findPreference(KEY_SWAP_HW_NAVIGATION_KEYS);
+//        mSwapHWNavKeys = (SwitchPreference) findPreference(KEY_SWAP_HW_NAVIGATION_KEYS);
         mHwKeyDisable = (SwitchPreference) findPreference(KEY_HWKEY_DISABLE);
         mHwKeyDisable.setOnPreferenceChangeListener(this);
 
-        final boolean navigationBarEnabled = Settings.System.getIntForUser(
+/*        final boolean navigationBarEnabled = Settings.System.getIntForUser(
                 getContentResolver(), Settings.System.FORCE_SHOW_NAVBAR,
                 mNeedsNavbar ? 1 : 0, UserHandle.USER_CURRENT) != 0;
-
+*/
         mManualButtonBrightness = (SeekBarPreferenceCham) findPreference(
                 KEY_BUTTON_MANUAL_BRIGHTNESS_NEW);
         mManualButtonBrightness.setOnPreferenceChangeListener(this);
         mButtonTimoutBar = (SeekBarPreferenceCham) findPreference(KEY_BUTTON_TIMEOUT);
         mButtonTimoutBar.setOnPreferenceChangeListener(this);
 
-        mGestureTweaksCategory = (PreferenceCategory) findPreference(CATEGORY_GESTURE_NAV_TWEAKS);
+//        mGestureTweaksCategory = (PreferenceCategory) findPreference(CATEGORY_GESTURE_NAV_TWEAKS);
 
         // bits for hardware keys present on device
         final int deviceKeys = getResources().getInteger(
@@ -192,7 +197,14 @@ public class Navigation extends BaseSettingsFragment {
                 mWakeKeysCategory.setVisible(true);
             }
         }
+        if (!keysDisabled()) {
+            updateHWKeysVisibility(true);
+            updateDependents(true);
+        } else {
+            updateDependents(false);
+        }
 
+/*
         if (!isGestureNavigation) {
             mGestureTweaksCategory.getParent().removePreference(mGestureTweaksCategory);
         }
@@ -207,15 +219,15 @@ public class Navigation extends BaseSettingsFragment {
         }
 
         mNavigationBar = (SystemSettingMasterSwitchPreference) findPreference(KEY_NAVIGATION_BAR_ENABLED);
-        mNavigationBar.setOnPreferenceChangeListener(this);
-        mHandler = new Handler();*/
+        mNavigationBar.setOnPreferenceChangeListener(this);*/
+        mHandler = new Handler();
     }
-/*
+
     private void updateDependents(boolean enabled) {
         updateWakeVisibility(enabled);
         updateButtonBacklight(enabled);
         mLongPressBackToKill.setEnabled(enabled);
-        mSwapHWNavKeys.setEnabled(enabled);
+//        mSwapHWNavKeys.setEnabled(enabled);
     }
 
     private void updateHWKeysVisibility(boolean enabled) {
@@ -242,19 +254,32 @@ public class Navigation extends BaseSettingsFragment {
         final PreferenceCategory buttonBackLightCategory = (PreferenceCategory)
                   findPreference(KEY_BUTTON_BACKLIGHT_OPTIONS);
         final boolean enableBacklightOptions = getResources().getBoolean(
-                com.android.internal.R.bool.config_button_brightness_support);
+                com.android.internal.R.bool.config_deviceHasVariableButtonBrightness);
         if (mHwKeysSupported && enableBacklightOptions && enabled){
-            final int customButtonBrightness = getResources().getInteger(
-                    com.android.internal.R.integer.config_button_brightness_default);
-            final int currentBrightness = Settings.System.getInt(getContentResolver(),
-                    Settings.System.CUSTOM_BUTTON_BRIGHTNESS, customButtonBrightness);
+            final float customDefaultButtonBrightness = getResources().getFloat(
+                    com.android.internal.R.dimen.config_buttonBrightnessSettingDefaultFloat);
+            if (DEBUG) Log.d(TAG, "customDefaultButtonBrightness: " + customDefaultButtonBrightness);
+            final float currentBrightness = Settings.System.getFloat(getContentResolver(),
+                    Settings.System.BUTTON_BRIGHTNESS, customDefaultButtonBrightness);
+            if (DEBUG) Log.d(TAG, "currentBrightness: " + currentBrightness);
             PowerManager pm = (PowerManager) getActivity().getSystemService(Context.POWER_SERVICE);
-            mManualButtonBrightness.setMax(pm.getMaximumScreenBrightnessSetting());
-            mManualButtonBrightness.setValue(currentBrightness);
-            mManualButtonBrightness.setDefaultValue(customButtonBrightness);
+            final float buttonBrightnessSettingDefault = pm.getBrightnessConstraint(
+                    PowerManager.BRIGHTNESS_CONSTRAINT_TYPE_DEFAULT_BUTTON);
+            if (DEBUG) Log.d(TAG, "pm: buttonBrightnessSettingDefault: " + buttonBrightnessSettingDefault);
+            final float screenBrightnessSettingMinimum = pm.getBrightnessConstraint(
+                    PowerManager.BRIGHTNESS_CONSTRAINT_TYPE_MINIMUM);
+            if (DEBUG) Log.d(TAG, "pm: screenBrightnessSettingMinimum: " + screenBrightnessSettingMinimum);
+            final float screenBrightnessSettingMaximum = pm.getBrightnessConstraint(
+                    PowerManager.BRIGHTNESS_CONSTRAINT_TYPE_MAXIMUM);
+            if (DEBUG) Log.d(TAG, "pm: screenBrightnessSettingMaximum: " + screenBrightnessSettingMaximum);
+
+            mManualButtonBrightness.setMax((int)(screenBrightnessSettingMaximum*100));
+            mManualButtonBrightness.setMin((int)screenBrightnessSettingMinimum);
+            mManualButtonBrightness.setValue((int)(currentBrightness*100));
+            mManualButtonBrightness.setDefaultValue((int)(buttonBrightnessSettingDefault*100));
 
             int currentTimeout = Settings.System.getInt(getContentResolver(),
-                    Settings.System.BUTTON_BACKLIGHT_TIMEOUT, 0);
+                    Settings.System.BUTTON_BACKLIGHT_TIMEOUT, 0) / 1000;
             mButtonTimoutBar.setValue(currentTimeout);
             buttonBackLightCategory.setVisible(true);
         } else {
@@ -267,7 +292,7 @@ public class Navigation extends BaseSettingsFragment {
             boolean value = (Boolean) objValue;
             updateHWKeysVisibility(!value);
             updateDependents(!value);
-/*            updateButtonBacklight(!value);
+            /*updateButtonBacklight(!value);
             updateWakeVisibility(!value);*/
             /*if (mIsNavSwitchingMode) {
                 return false;
@@ -278,7 +303,7 @@ public class Navigation extends BaseSettingsFragment {
                 public void run() {
                     mIsNavSwitchingMode = false;
                 }
-            }, 1500);
+            }, 1500);*/
             return true;
         } else if (preference == mHwKeyDisable) {
             boolean value = (Boolean) objValue;
@@ -287,16 +312,16 @@ public class Navigation extends BaseSettingsFragment {
             updateDependents(!value);
             return true;
         } else if (preference == mButtonTimoutBar) {
-            int buttonTimeout = (Integer) objValue;
+            int buttonTimeout = 1000 * (int) objValue;
             Settings.System.putInt(resolver,
                     Settings.System.BUTTON_BACKLIGHT_TIMEOUT, buttonTimeout);
             return true;
         } else if (preference == mManualButtonBrightness) {
-            int buttonBrightness = (Integer) objValue;
-            Settings.System.putInt(resolver,
-                    Settings.System.CUSTOM_BUTTON_BRIGHTNESS, buttonBrightness);
+            int buttonBrightness = (int) objValue;
+            Settings.System.putFloat(resolver,
+                    Settings.System.BUTTON_BRIGHTNESS, buttonBrightness/100f);
             return true;
         }
         return false;
-    }*/
+    }
 }
