@@ -57,18 +57,17 @@
             android:key="hardware_keys_disable"
             android:title="@string/hardware_keys_disable_title" />
 
-        <PreferenceScreen
-            android:key="hw_button_settings"
-            android:title="@string/hardware_keys_title"
-            android:fragment="com.aicp.extras.fragments.ActionFragment" />
-
-<!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="swap_navigation_keys"
             android:title="@string/hw_keys_swap_title"
             android:summary="@string/hw_keys_swap_summary"
             android:defaultValue="false" />
--->
+
+        <PreferenceScreen
+            android:key="hw_button_settings"
+            android:title="@string/hardware_keys_title"
+            android:fragment="com.aicp.extras.fragments.ActionFragment" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

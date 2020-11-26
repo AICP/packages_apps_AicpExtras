@@ -50,13 +50,12 @@ public class Navigation extends BaseSettingsFragment
     private static final String TAG = "AENavigation";
     private static final boolean DEBUG = false;
 
-//    private static final String KEY_KILLAPP_LONGPRESS_BACK = "kill_app_longpress_back";
-//    private static final String KEY_SWAP_HW_NAVIGATION_KEYS = "swap_navigation_keys";
-//    private static final String KEY_NAVIGATION_BAR_ENABLED = "navigation_bar_show_new";
     // preference keys
     private static final String KEY_BUTTON_BRIGHTNESS = "button_brightness";
     private static final String KEY_BUTTON_TIMEOUT = "button_backlight_timeout";
     private static final String KEY_HWKEY_DISABLE = "hardware_keys_disable";
+    private static final String KEY_NAVIGATION_BAR_ENABLED = "navigation_bar_show_new";
+    private static final String KEY_SWAP_HW_NAVIGATION_KEYS = "swap_navigation_keys";
 
     private static final String CATEGORY_BUTTON_BACKLIGHT_OPTIONS = "button_backlight_options_category";
     private static final String CATEGORY_HWKEYS = "hardware_keys";
@@ -129,6 +128,7 @@ public class Navigation extends BaseSettingsFragment
         mHwKeyDisable.setOnPreferenceChangeListener(this);
         mHwButtonSettingsScreen = (PreferenceScreen) prefScreen
                 .findPreference(PREFSCREEN_HWBUTTON_SETTINGS);
+        mSwapHWNavKeys = (SwitchPreference) findPreference(KEY_SWAP_HW_NAVIGATION_KEYS);
 
         mManualButtonBrightness = (SeekBarPreferenceCham) findPreference(
                 KEY_BUTTON_BRIGHTNESS);
@@ -136,7 +136,6 @@ public class Navigation extends BaseSettingsFragment
         mButtonTimoutBar = (SeekBarPreferenceCham) findPreference(KEY_BUTTON_TIMEOUT);
         mButtonTimoutBar.setOnPreferenceChangeListener(this);
 
-//        mSwapHWNavKeys = (SwitchPreference) findPreference(KEY_SWAP_HW_NAVIGATION_KEYS);
 //        isGestureNavigation = AicpUtils.isThemeEnabled(NAV_BAR_MODE_GESTURAL_OVERLAY);
 //        mGestureTweaksCategory = (PreferenceCategory) findPreference(CATEGORY_GESTURE_NAV_TWEAKS);
 /*
@@ -299,6 +298,7 @@ public class Navigation extends BaseSettingsFragment
         updateCategoryState(mWakeKeysCategory, enable);
         updateCategoryState(mButtonBacklightCategory, enable);
         mHwButtonSettingsScreen.setEnabled(enable);
+        mSwapHWNavKeys.setEnabled(enable);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
