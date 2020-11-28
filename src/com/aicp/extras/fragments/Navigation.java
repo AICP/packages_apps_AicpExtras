@@ -306,7 +306,7 @@ public class Navigation extends BaseSettingsFragment
         if (preference == mNavigationBar) {
             boolean value = (Boolean) objValue;
             mNavigationBarEnabled = value;
-            updateHardwareCategories(!value);
+            updateHardwareCategories(!value && mHwKeysSupported);
             setKeysDisabled(value);
             initializeWakeCategory();
             if (mIsNavSwitchingMode) {
