@@ -21,12 +21,6 @@
     android:key="navigation_bar"
     android:title="@string/navbar_visibility" >
 
-    <com.aicp.gear.preference.SecureSettingSwitchPreference
-        android:key="kill_app_longpress_back"
-        android:title="@string/kill_app_longpress_back"
-        android:summary="@string/kill_app_longpress_back_summary"
-        android:defaultValue="false" />
-
     <PreferenceCategory
         android:key="category_navbar_layout">
 
@@ -57,7 +51,7 @@
             android:fragment="com.aicp.extras.fragments.PulseSettings" />
 
     </PreferenceCategory>
-
+-->
     <PreferenceCategory
         android:key="back_key"
         android:title="@string/back_key_title">

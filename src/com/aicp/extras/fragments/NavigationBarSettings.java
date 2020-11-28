@@ -32,16 +32,16 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
 import com.android.internal.util.aicp.AicpUtils;
-//import com.android.internal.util.aicp.NavUtils;
-//import com.android.internal.util.hwkeys.ActionUtils;
+import com.android.internal.util.aicp.NavUtils;
+import com.android.internal.util.hwkeys.ActionUtils;
 
 import android.util.Log;
 
-public class NavigationBarSettings extends BaseSettingsFragment {
-//        implements Preference.OnPreferenceChangeListener {
+public class NavigationBarSettings extends BaseSettingsFragment
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String CATEGORY_LAYOUT = "category_navbar_layout";
-/*
+
     private static final String KEY_BACK_LONG_PRESS_ACTION = "back_key_long_press";
     private static final String KEY_BACK_DOUBLE_TAP_ACTION = "back_key_double_tap";
     private static final String KEY_HOME_LONG_PRESS_ACTION = "home_key_long_press";
@@ -88,7 +88,7 @@ public class NavigationBarSettings extends BaseSettingsFragment {
     public static final int KEY_MASK_MENU = 0x04;
     public static final int KEY_MASK_ASSIST = 0x08;
     public static final int KEY_MASK_APP_SWITCH = 0x10;
-*/
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.navigation_bar;
@@ -100,7 +100,7 @@ public class NavigationBarSettings extends BaseSettingsFragment {
 
         final PreferenceScreen prefSet = getPreferenceScreen();
         final ContentResolver resolver = getActivity().getContentResolver();
-/*
+
         final boolean needsNavbar = ActionUtils.hasNavbarByDefault(getActivity());
         final boolean hwkeysSupported = ActionUtils.isHWKeysSupported(getActivity());
 
@@ -218,8 +218,8 @@ public class NavigationBarSettings extends BaseSettingsFragment {
         if (isMasterDependencyEnabled()) {
             onMasterDependencyEnabled();
         }
-*/    }
-/*
+    }
+
     @Override
     protected void onMasterDependencyEnabled() {
         if (!mCreated) {
@@ -339,5 +339,5 @@ public class NavigationBarSettings extends BaseSettingsFragment {
             return true;
         }
         return false;
-    }*/
+    }
 }
