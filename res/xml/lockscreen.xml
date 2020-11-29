@@ -157,6 +157,20 @@
               android:defaultValue="false" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+            android:title="@string/fod_customization_category_title" >
+
+	    <!-- FOD color -->
+            <com.aicp.gear.preference.SystemSettingListPreference
+                android:key="fod_color"
+                android:title="@string/fod_color_title"
+                android:summary="@string/fod_color_summary"
+                android:entries="@array/fod_color_entries"
+                android:entryValues="@array/fod_color_values"
+                android:defaultValue="0" />
+
+    </PreferenceCategory>
+
 <!--  ******* Moved to settings *****
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="lockscreen_quick_unlock_control"
