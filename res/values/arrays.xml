@@ -1168,4 +1168,17 @@
         <item>2</item>
     </string-array>
 
+    <!-- FOD Color -->
+    <string-array name="fod_color_entries">
+        <item>@string/fod_color_default</item>
+        <item>@string/fod_color_1</item>
+        <item>@string/fod_color_2</item>
+        <item>@string/fod_color_3</item>
+    </string-array>
+    <string-array name="fod_color_values" translatable="false">
+        <item>0</item>            <!-- default -->
+        <item>-16711936</item>    <!-- green #FF00FF00-->
+        <item>-256</item>         <!-- yellow #FFFFFF00-->
+        <item>-1</item>           <!-- white #FFFFFFFF-->
+    </string-array>
 </resources>

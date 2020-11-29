@@ -35,6 +35,7 @@ public class Lockscreen extends BaseSettingsFragment {
 
     private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
     //private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
+    private static final String FOD_COLOR_PICKER_CATEGORY = "fod_color";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
@@ -69,5 +70,12 @@ public class Lockscreen extends BaseSettingsFragment {
         if (fodIconPickerCategory != null && !supportsFod) {
             fodIconPickerCategory.getParent().removePreference(fodIconPickerCategory);
         }*/
+
+        // FOD pressed color
+        final boolean configfodcolor = getResources().getBoolean(com.android.internal.R.bool.config_fod_color_picker);
+        if(configfodcolor == false) {
+            final Preference hideFODColorPicker = (Preference) findPreference(FOD_COLOR_PICKER_CATEGORY);
+            hideFODColorPicker.getParent().removePreference(hideFODColorPicker);
+        }
     }
 }
