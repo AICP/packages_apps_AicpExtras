@@ -65,6 +65,12 @@
         android:summary="@string/notification_headers_summary"
         android:defaultValue="true" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="vibrate_on_notifications"
+        android:title="@string/vibrate_on_notifications_title"
+        android:summary="@string/vibrate_on_notifications_summary"
+        android:defaultValue="true" />
+
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="mute_annoying_notifications_threshold"
         android:title="@string/less_notification_sounds_title"
