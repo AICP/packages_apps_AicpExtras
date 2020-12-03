@@ -37,7 +37,6 @@ public class Notifications extends BaseSettingsFragment implements
 
     private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
     private static final String KEY_RINGTONE_FOCUS = "ringtone_focus_mode";
-    /*
     private static final String CAT_NOTIFICATION_FLASHLIGHT = "notification_flash";
     private static final String PREF_FLASHLIGHT_ON_CALL = "flashlight_on_call";
     private static final String PREF_FLASHLIGHT_ON_CALL_WAITING = "flashlight_on_call_waiting";
@@ -48,7 +47,6 @@ public class Notifications extends BaseSettingsFragment implements
     private SwitchPreference mFlashOnCallIgnoreDND;
     private SystemSettingIntListPreference mFlashOnCall;
     private SystemSettingSeekBarPreference mFlashOnCallRate;
-*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.notifications;
@@ -60,7 +58,7 @@ public class Notifications extends BaseSettingsFragment implements
 /*
         Util.requireFullStatusbar(getActivity(),
                 findPreference(Settings.System.STATUS_BAR_SHOW_TICKER));
-
+*/
         mFlashOnCallWaiting = (SwitchPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL_WAITING);
         mFlashOnCallIgnoreDND = (SwitchPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL_IGNORE_DND);
         mFlashOnCallRate = (SystemSettingSeekBarPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL_RATE);
@@ -75,30 +73,29 @@ public class Notifications extends BaseSettingsFragment implements
             getPreferenceScreen().removePreference(findPreference(
                     CAT_NOTIFICATION_FLASHLIGHT));
         }
-*/
+
         Util.requireConfig(getActivity(), findPreference(ALERT_SLIDER_PREF),
                 com.android.internal.R.bool.config_hasAlertSlider, true, false);
 
         Util.requireConfig(getActivity(), findPreference(KEY_RINGTONE_FOCUS),
                 com.android.internal.R.bool.config_deviceRingtoneFocusMode, true, false);
     }
-/*
+
     private void updateDependencies(boolean enabled) {
         mFlashOnCallWaiting.setEnabled(enabled);
         mFlashOnCallIgnoreDND.setEnabled(enabled);
         mFlashOnCallRate.setEnabled(enabled);
 
     }
-*/
+
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final ContentResolver resolver = getContentResolver();
-/*        if (preference == mFlashOnCall) {
+        if (preference == mFlashOnCall) {
             int value = Integer.parseInt((String) newValue);
             updateDependencies(value != 0);
             return true;
         }
-*/
         return false;
     }
 }
