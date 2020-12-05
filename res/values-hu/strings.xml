@@ -554,6 +554,8 @@
     <string name="category_navbar_layout">Elrendezés</string>
     <string name="navigation_bar_title">Képernyőn megjelenő navigációs sáv</string>
     <string name="navbar_visibility">A Navigációs sáv engedélyezése</string>
+    <string name="navbar_visibility_summary">Kapcsoló az engedélyezéshez, kattintás a beállításokhoz</string>
+    <string name="navbar_visibility_footer">A különböző opciók csak 2 vagy 3 gombos navigációs módban használhatók</string>
     <string name="navigation_bar_summary">Kapcsoló a képernyőn megjelenő szoftveres navigációs sáv engedélyezéséhez</string>
     <string name="navigation_bar_layout_title">Elrendezés</string>
     <string name="navigation_bar_layout_summary">A navigációs sáv elrendezésének testreszabása</string>
@@ -698,6 +700,11 @@ A dupla érintéses műveletek engedélyezése enyhe késést fog okozni az egys
     <string name="pulse_color_accent">Kiemelőszín</string>
     <string name="pulse_color_custom">Egyéni</string>
     <string name="pulse_color_lava_lamp">Lávalámpa</string>
+    <string name="pulse_color_auto">Albumborító</string>
+    <string name="pulse_color_chooser">Színválasztás</string>
+    <string name="pulse_color_chooser_title">Kiemelőszín kiválasztása a pulzáláshoz</string>
+    <string name="smoothing_enabled_title">Az egyenletesség bekapcsolása</string>
+    <string name="smoothing_enabled_summary">Az összes sávanimáció sokkal egyenletesebb</string>
     <string name="pulse_advanced_category">Haladó</string>
     <string name="pulse_legacy_mode_advanced_category">Halványuló blokkok üzemmód beállításai</string>
     <string name="pulse_custom_fudge_factor">Az ésszerűség szintje</string>
@@ -1114,9 +1121,15 @@ A kettős érintéses műveletek engedélyezése enyhén késlelteti az egyszeri
     <string name="notification_flash_title">Zseblámpa</string>
     <string name="flashlight_on_call_title">Bejövő hívások villogó jelzése</string>
     <string name="flashlight_on_call_disabled">Soha</string>
+    <string name="flashlight_on_call_ringer">Ha csengésre lett állítva</string>
+    <string name="flashlight_on_call_no_ringer">Ha rezgésre lett állítva</string>
+    <string name="flashlight_on_call_silent">Ha némára lett állítva</string>
     <string name="flashlight_on_call_always">Mindig</string>
     <string name="flashlight_on_call_wait_title">Hívásvárakoztatás villogó jelzése</string>
     <string name="flashlight_on_call_wait_summary">Pulzáló fénnyel jelzi az aktív hívásvárakoztatást</string>
+    <string name="flashlight_on_call_ignore_dnd_title">A \'Ne zavarjanak\' figyelmen kívül hagyása</string>
+    <string name="flashlight_on_call_ignore_dnd_summary">Villogjon-e \'Ne zavarjanak\' üzemmódban</string>
+    <string name="flashlight_on_call_rate_title">A villogás intenzitása</string>
     <string name="partial_screenshot_as_default_title">A részleges képernyőkép az alapértelmezett</string>
     <string name="partial_screenshot_as_default_summary">A Képernyőkép gomb alapértelezett műveletének a részleges képernyőkép kerül beállításra. Hosszannyomással váltható a kapcsoló.</string>
     <string name="gaming_mode_title">Játékmód</string>
@@ -1206,4 +1219,6 @@ A kettős érintéses műveletek engedélyezése enyhén késlelteti az egyszeri
     <string name="qs_datausage_monthly">Havi használat</string>
     <string name="qs_header_battery_title">Akkuinformáció</string>
     <string name="qs_header_battery_summary">Ebgedélyezve: százalékos, letiltva: hátralévő idő.</string>
+    <string name="vowifi_switch_title">VoWIFI-ikon</string>
+    <string name="vowifi_switch_summary">A VoWIFI-ikon megjelenítése</string>
 </resources>
