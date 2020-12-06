@@ -171,8 +171,8 @@
                 android:title="@string/fod_wallpaper_color"
                 android:summary="@string/fod_wallpaper_color_summary"
                 android:defaultValue="false" />
-
-            <!- FOD recognizing animation ->
+-->
+            <!-- FOD recognizing animation -->
             <com.aicp.gear.preference.SystemSettingSwitchPreference
                 android:key="fod_recognizing_animation"
                 android:title="@string/fod_recog_animation"
@@ -180,13 +180,14 @@
                 android:defaultValue="false" />
 
             <com.aicp.gear.preference.SystemSettingIntListPreference
-                android:key="fod_anim"
-                android:title="@string/fod_recog_animation_picker_title"
-                android:entries="@array/fod_recog_animation_entries"
-                android:entryValues="@array/fod_recog_animation_values"
+                android:key="fod_recognizing_animation_list"
+                android:title="@string/fod_recog_animation_effect_title"
+                android:summary="%s"
+                android:entries="@array/fod_recognizing_animation_entries"
+                android:entryValues="@array/fod_recognizing_animation_values"
                 android:defaultValue="0"
                 android:dependency="fod_recognizing_animation" />
-
+<!--
     </PreferenceCategory> -->
 
 </PreferenceScreen>
