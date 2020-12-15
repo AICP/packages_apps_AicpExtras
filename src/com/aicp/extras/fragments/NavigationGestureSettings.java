@@ -30,7 +30,6 @@ import com.aicp.extras.R;
 import com.aicp.gear.preference.SystemSettingListPreference;
 import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
-public class NavigationGestureSettings {/*
 public class NavigationGestureSettings extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
@@ -94,11 +93,11 @@ public class NavigationGestureSettings extends BaseSettingsFragment implements
         mLeftSwipeAppSelection = (Preference) findPreference(KEY_LEFT_SWIPE_APP_ACTION);
         boolean isAppSelection = Settings.System.getIntForUser(resolver,
                 Settings.System.LEFT_LONG_BACK_SWIPE_ACTION, 0, UserHandle.USER_CURRENT) == 5/*action_app_action*/;
-        /*mLeftSwipeAppSelection.setEnabled(isAppSelection);
+        mLeftSwipeAppSelection.setEnabled(isAppSelection);
         mRightSwipeAppSelection = (Preference) findPreference(KEY_RIGHT_SWIPE_APP_ACTION);
         isAppSelection = Settings.System.getIntForUser(resolver,
                 Settings.System.RIGHT_LONG_BACK_SWIPE_ACTION, 0, UserHandle.USER_CURRENT) == 5/*action_app_action*/;
-        /*mRightSwipeAppSelection.setEnabled(isAppSelection);
+        mRightSwipeAppSelection.setEnabled(isAppSelection);
         customAppCheck();
 
         leftVerticalSwipeCategory = (PreferenceCategory) findPreference(KEY_CATEGORY_LEFT_VERTICAL_SWIPE);
@@ -124,11 +123,11 @@ public class NavigationGestureSettings extends BaseSettingsFragment implements
         mLeftVerticalSwipeAppSelection = (Preference) findPreference(KEY_LEFT_VERTICAL_SWIPE_APP_ACTION);
         isAppSelection = Settings.System.getIntForUser(resolver,
                 Settings.System.LEFT_VERTICAL_BACK_SWIPE_ACTION, 0, UserHandle.USER_CURRENT) == 5/*action_app_action*/;
-        /*mLeftVerticalSwipeAppSelection.setEnabled(isAppSelection);
+        mLeftVerticalSwipeAppSelection.setEnabled(isAppSelection);
         mRightVerticalSwipeAppSelection = (Preference) findPreference(KEY_RIGHT_VERTICAL_SWIPE_APP_ACTION);
         isAppSelection = Settings.System.getIntForUser(resolver,
                 Settings.System.RIGHT_VERTICAL_BACK_SWIPE_ACTION, 0, UserHandle.USER_CURRENT) == 5/*action_app_action*/;
-        /*mRightVerticalSwipeAppSelection.setEnabled(isAppSelection);
+        mRightVerticalSwipeAppSelection.setEnabled(isAppSelection);
 
         boolean extendedSwipe = Settings.System.getIntForUser(resolver,
             Settings.System.BACK_SWIPE_EXTENDED, 0,
@@ -196,7 +195,7 @@ public class NavigationGestureSettings extends BaseSettingsFragment implements
 
     /* Helper for reloading both short and long gesture as they might change on
        package uninstallation */
-    /*private void actionPreferenceReload() {
+    private void actionPreferenceReload() {
         int leftSwipeActions = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.LEFT_LONG_BACK_SWIPE_ACTION, 0,
                 UserHandle.USER_CURRENT);
@@ -230,5 +229,5 @@ public class NavigationGestureSettings extends BaseSettingsFragment implements
                 String.valueOf(Settings.System.LEFT_LONG_BACK_SWIPE_APP_FR_ACTION), UserHandle.USER_CURRENT));
         mRightSwipeAppSelection.setSummary(Settings.System.getStringForUser(getContentResolver(),
                 String.valueOf(Settings.System.RIGHT_LONG_BACK_SWIPE_APP_FR_ACTION), UserHandle.USER_CURRENT));
-    }*/
+    }
 }

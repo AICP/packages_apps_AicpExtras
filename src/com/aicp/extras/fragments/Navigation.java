@@ -36,6 +36,7 @@ import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
 import com.aicp.gear.preference.SeekBarPreferenceCham;
 
 import com.android.internal.util.aicp.AicpUtils;
+import com.android.internal.util.aicp.NavUtils;
 import com.android.internal.util.aicp.DeviceUtils;
 import com.android.internal.util.hwkeys.ActionConstants;
 import com.android.internal.util.hwkeys.ActionUtils;
@@ -61,7 +62,7 @@ public class Navigation extends BaseSettingsFragment
     private static final String CATEGORY_HWKEYS = "hardware_keys";
     private static final String CATEGORY_WAKEKEYS = "wake_keys";
     private static final String PREFSCREEN_HWBUTTON_SETTINGS= "hw_button_settings";
-//    private static final String CATEGORY_GESTURE_NAV_TWEAKS = "gesture_nav_tweaks_category";
+    private static final String CATEGORY_GESTURE_NAV_TWEAKS = "gesture_nav_tweaks_category";
 
     // Masks for checking presence of hardware keys.
     // Must match values in frameworks/base/core/res/res/values/config.xml
@@ -81,7 +82,7 @@ public class Navigation extends BaseSettingsFragment
     private PreferenceCategory mHwKeysCategory;
     private PreferenceCategory mWakeKeysCategory;
     private PreferenceScreen mHwButtonSettingsScreen;
-//    private PreferenceCategory mGestureTweaksCategory;
+    private PreferenceCategory mGestureTweaksCategory;
 
     private SystemSettingMasterSwitchPreference mNavigationBar;
     private boolean mIsNavSwitchingMode = false;
@@ -89,7 +90,7 @@ public class Navigation extends BaseSettingsFragment
     private boolean mNeedsNavbar;
     private boolean mNavigationBarEnabled;
     private boolean mWakeInitialized = false;
-//    private boolean isGestureNavigation;
+    private boolean isGestureNavigation;
 
     private Handler mHandler;
 
@@ -136,12 +137,12 @@ public class Navigation extends BaseSettingsFragment
         mButtonTimoutBar = (SeekBarPreferenceCham) findPreference(KEY_BUTTON_TIMEOUT);
         mButtonTimoutBar.setOnPreferenceChangeListener(this);
 
-//        isGestureNavigation = AicpUtils.isThemeEnabled(NAV_BAR_MODE_GESTURAL_OVERLAY);
-//        mGestureTweaksCategory = (PreferenceCategory) findPreference(CATEGORY_GESTURE_NAV_TWEAKS);
-/*
+        isGestureNavigation = NavUtils.isEdgeToEdgeEnabled(getContext());
+        mGestureTweaksCategory = (PreferenceCategory) findPreference(CATEGORY_GESTURE_NAV_TWEAKS);
+
         if (!isGestureNavigation) {
             mGestureTweaksCategory.getParent().removePreference(mGestureTweaksCategory);
-        }*/
+        }
 
         initializeHWKeysCategory();
         initializeWakeCategory();
