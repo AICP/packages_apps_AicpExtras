@@ -33,7 +33,6 @@ import com.aicp.gear.preference.SystemSettingColorPickerPreference;
 import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingSeekBarPreference;
 
-public class PulseSettings {/*
 public class PulseSettings extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
@@ -144,5 +143,5 @@ public class PulseSettings extends BaseSettingsFragment implements
                     Settings.System.PULSE_COLOR_TYPE, COLOR_TYPE_ACCENT, UserHandle.USER_CURRENT);
             updateColorPrefs(colorMode);
         }
-    }*/
+    }
 }
