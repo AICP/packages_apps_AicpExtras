@@ -20,11 +20,11 @@
     android:key="pulse_settings"
     android:title="@string/pulse_settings" >
 
-    <!-- <PreferenceCategory
+    <PreferenceCategory
         android:key="pulse_render_mode_category"
         android:title="@string/pulse_render_mode_title" >
 
-        <!- Fading bars ->
+        <!-- Fading bars -->
         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="pulse_render_mode_fading_lines"
             android:title="@string/pulse_render_mode_solid_lines"
@@ -33,7 +33,7 @@
             android:defaultValue="true"
             android:fragment="com.aicp.extras.fragments.PulseSettingsBars" />
 
-        <!- Fading blocks ->
+        <!-- Fading blocks -->
         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="pulse_render_mode_fading_blocks"
             android:title="@string/pulse_render_mode_fading_bars"
@@ -80,6 +80,6 @@
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference
-        android:title="@string/pulse_help_policy_notice_summary" /> -->
+        android:title="@string/pulse_help_policy_notice_summary" />
 
 </PreferenceScreen>
