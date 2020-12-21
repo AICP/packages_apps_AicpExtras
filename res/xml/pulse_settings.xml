@@ -20,6 +20,16 @@
     android:key="pulse_settings"
     android:title="@string/pulse_settings" >
 
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="lockscreen_pulse_enabled"
+        android:title="@string/lockscreen_pulse_settings"
+        android:defaultValue="false" />
+
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="ambient_pulse_enabled"
+        android:title="@string/ambient_pulse_settings"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:key="pulse_render_mode_category"
         android:title="@string/pulse_render_mode_title" >
