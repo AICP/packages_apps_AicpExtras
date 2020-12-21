@@ -27,11 +27,11 @@ import android.util.TypedValue;
 import android.widget.CompoundButton;
 
 import com.aicp.extras.BaseSettingsFragment;
-import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
+import com.aicp.extras.preference.SecureSettingMasterSwitchPreference;
 import com.aicp.extras.R;
-import com.aicp.gear.preference.SystemSettingColorPickerPreference;
-import com.aicp.gear.preference.SystemSettingIntListPreference;
-import com.aicp.gear.preference.SystemSettingSeekBarPreference;
+import com.aicp.gear.preference.SecureSettingColorPickerPreference;
+import com.aicp.gear.preference.SecureSettingIntListPreference;
+import com.aicp.gear.preference.SecureSettingSeekBarPreference;
 
 public class PulseSettings extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
@@ -57,12 +57,12 @@ public class PulseSettings extends BaseSettingsFragment implements
     private static final int RENDER_STYLE_FADING_BARS = 0;
     private static final int RENDER_STYLE_SOLID_LINES = 1;
 
-    private SystemSettingColorPickerPreference mColorPickerPref;
-    private SystemSettingIntListPreference mRenderMode;
-    private SystemSettingIntListPreference mColorModePref;
-    private SystemSettingMasterSwitchPreference mRenderModeBlocks;
-    private SystemSettingMasterSwitchPreference mRenderModeLines;
-    private SystemSettingSeekBarPreference mLavaSpeedPref;
+    private SecureSettingColorPickerPreference mColorPickerPref;
+    private SecureSettingIntListPreference mRenderMode;
+    private SecureSettingIntListPreference mColorModePref;
+    private SecureSettingMasterSwitchPreference mRenderModeBlocks;
+    private SecureSettingMasterSwitchPreference mRenderModeLines;
+    private SecureSettingSeekBarPreference mLavaSpeedPref;
 
     @Override
     protected int getPreferenceResource() {
@@ -73,20 +73,20 @@ public class PulseSettings extends BaseSettingsFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mColorModePref = (SystemSettingIntListPreference) findPreference(PULSE_COLOR_MODE_KEY);
-        mLavaSpeedPref = (SystemSettingSeekBarPreference) findPreference(PULSE_COLOR_MODE_LAVA_SPEED_KEY);
-        mColorPickerPref = (SystemSettingColorPickerPreference) findPreference(PULSE_COLOR_MODE_CHOOSER_KEY);
+        mColorModePref = (SecureSettingIntListPreference) findPreference(PULSE_COLOR_MODE_KEY);
+        mLavaSpeedPref = (SecureSettingSeekBarPreference) findPreference(PULSE_COLOR_MODE_LAVA_SPEED_KEY);
+        mColorPickerPref = (SecureSettingColorPickerPreference) findPreference(PULSE_COLOR_MODE_CHOOSER_KEY);
         mColorModePref.setOnPreferenceChangeListener(this);
-        int colorMode = Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.PULSE_COLOR_TYPE, COLOR_TYPE_ACCENT, UserHandle.USER_CURRENT);
+        int colorMode = Settings.Secure.getIntForUser(getContentResolver(),
+                Settings.Secure.PULSE_COLOR_TYPE, COLOR_TYPE_ACCENT, UserHandle.USER_CURRENT);
         updateColorPrefs(colorMode);
 
-        int renderMode = Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.PULSE_RENDER_STYLE_URI, RENDER_STYLE_SOLID_LINES, UserHandle.USER_CURRENT);
-        mRenderModeBlocks = (SystemSettingMasterSwitchPreference) findPreference(KEY_RENDER_MODE_FADING_BLOCKS);
+        int renderMode = Settings.Secure.getIntForUser(getContentResolver(),
+                Settings.Secure.PULSE_RENDER_STYLE_URI, RENDER_STYLE_SOLID_LINES, UserHandle.USER_CURRENT);
+        mRenderModeBlocks = (SecureSettingMasterSwitchPreference) findPreference(KEY_RENDER_MODE_FADING_BLOCKS);
         mRenderModeBlocks.setChecked(renderMode == 0);
         mRenderModeBlocks.setOnPreferenceChangeListener(this);
-        mRenderModeLines = (SystemSettingMasterSwitchPreference) findPreference(KEY_RENDER_MODE_FADING_LINES);
+        mRenderModeLines = (SecureSettingMasterSwitchPreference) findPreference(KEY_RENDER_MODE_FADING_LINES);
         mRenderModeLines.setChecked(renderMode != 0);
         mRenderModeLines.setOnPreferenceChangeListener(this);
     }
@@ -117,8 +117,8 @@ public class PulseSettings extends BaseSettingsFragment implements
         if (!mRenderModeLines.isChecked() && mRenderModeBlocks.isChecked()) {
             renderMode = 0;
         }
-        Settings.System.putIntForUser(getContentResolver(),
-              Settings.System.PULSE_RENDER_STYLE_URI, renderMode,
+        Settings.Secure.putIntForUser(getContentResolver(),
+              Settings.Secure.PULSE_RENDER_STYLE_URI, renderMode,
               UserHandle.USER_CURRENT);
     }
 
@@ -137,10 +137,10 @@ public class PulseSettings extends BaseSettingsFragment implements
     @Override
     public void onResume() {
         super.onResume();
-        if (Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.PULSE_ENABLED, 0, UserHandle.USER_CURRENT) != 0) {
-            int colorMode = Settings.System.getIntForUser(getContentResolver(),
-                    Settings.System.PULSE_COLOR_TYPE, COLOR_TYPE_ACCENT, UserHandle.USER_CURRENT);
+        if (Settings.Secure.getIntForUser(getContentResolver(),
+                Settings.Secure.PULSE_ENABLED, 0, UserHandle.USER_CURRENT) != 0) {
+            int colorMode = Settings.Secure.getIntForUser(getContentResolver(),
+                    Settings.Secure.PULSE_COLOR_TYPE, COLOR_TYPE_ACCENT, UserHandle.USER_CURRENT);
             updateColorPrefs(colorMode);
         }
     }
