@@ -30,6 +30,7 @@ import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingSeekBarPreference;
+import com.aicp.gear.preference.SystemSettingSwitchPreference;
 import com.android.internal.util.aicp.DeviceUtils;
 
 public class Notifications extends BaseSettingsFragment implements
@@ -42,11 +43,14 @@ public class Notifications extends BaseSettingsFragment implements
     private static final String PREF_FLASHLIGHT_ON_CALL_WAITING = "flashlight_on_call_waiting";
     private static final String PREF_FLASHLIGHT_ON_CALL_IGNORE_DND = "flashlight_on_call_ignore_dnd";
     private static final String PREF_FLASHLIGHT_ON_CALL_RATE = "flashlight_on_call_rate";
+    private static final String PREF_NOTIFICATION_HEADER = "notification_headers";
 
     private SwitchPreference mFlashOnCallWaiting;
     private SwitchPreference mFlashOnCallIgnoreDND;
     private SystemSettingIntListPreference mFlashOnCall;
     private SystemSettingSeekBarPreference mFlashOnCallRate;
+    private SystemSettingSwitchPreference mNotificationHeader;
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.notifications;
@@ -64,6 +68,8 @@ public class Notifications extends BaseSettingsFragment implements
         mFlashOnCallRate = (SystemSettingSeekBarPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL_RATE);
 
         mFlashOnCall = (SystemSettingIntListPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL);
+        mNotificationHeader = (SystemSettingSwitchPreference) getPreferenceScreen().findPreference(PREF_NOTIFICATION_HEADER);
+
         boolean optionEnabled = Settings.System.getInt(getContentResolver(),
                 Settings.System.FLASHLIGHT_ON_CALL, 0) != 0;
         updateDependencies(optionEnabled);
@@ -79,6 +85,8 @@ public class Notifications extends BaseSettingsFragment implements
 
         Util.requireConfig(getActivity(), findPreference(KEY_RINGTONE_FOCUS),
                 com.android.internal.R.bool.config_deviceRingtoneFocusMode, true, false);
+
+        mNotificationHeader.setOnPreferenceChangeListener(this);
     }
 
     private void updateDependencies(boolean enabled) {
@@ -94,6 +102,9 @@ public class Notifications extends BaseSettingsFragment implements
         if (preference == mFlashOnCall) {
             int value = Integer.parseInt((String) newValue);
             updateDependencies(value != 0);
+            return true;
+        } else if (preference == mNotificationHeader) {
+            Util.showSystemUiRestartDialog(getActivity());
             return true;
         }
         return false;

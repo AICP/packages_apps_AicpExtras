@@ -37,7 +37,9 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 import android.text.Spannable;
 import android.text.TextUtils;
+import android.view.Gravity;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
@@ -268,11 +270,20 @@ public class QuickSettings extends BaseSettingsFragment
             alert.setTitle(R.string.footer_text_label_title);
             alert.setMessage(R.string.footer_text_label_explain);
 
+            LinearLayout container = new LinearLayout(getActivity());
+            container.setOrientation(LinearLayout.VERTICAL);
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+            lp.setMargins(55, 20, 55, 20);
+
             // Set an EditText view to get user input
             final EditText input = new EditText(getActivity());
             input.setText(TextUtils.isEmpty(mCustomFooterText) ? "" : mCustomFooterText);
             input.setSelection(input.getText().length());
-            alert.setView(input);
+            input.setLayoutParams(lp);
+            input.setGravity(android.view.Gravity.TOP| Gravity.START);
+            container.addView(input);
+            alert.setView(container);
             alert.setPositiveButton(getString(android.R.string.ok),
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
