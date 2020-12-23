@@ -16,6 +16,41 @@
       "message": "...and now, after merging, I am sure you can explain the purpose and change in this to me, please. 🤔",
       "revId": "188c4e6fe54443fb06f2e3abcf4965fd044a0797",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb65a5cd_f0962589",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2020-12-23T06:40:14Z",
+      "side": 1,
+      "message": "There was an issue with line endings on the files, and was a pain getting the changes committed.\n\nFor instance, I had to use `git diff -w | git apply --cached --ignore-whitespace` to stage the changes every time one of these files were touched",
+      "parentUuid": "80e7047b_cdb49af7",
+      "revId": "188c4e6fe54443fb06f2e3abcf4965fd044a0797",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23de0e3b_b5eecf25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2020-12-23T06:40:14Z",
+      "side": 1,
+      "message": "A probable test:\n- `git reset --hard` the AicpExtras Repo to a commit before this change.\n- Open any of the file in this change, making a change is not required, close file.\n- Check the changes with `git diff`, observe lines with \"^M\" in the output\n\n- With this patch, such a behavior is not observed\n\nThis was observed on a Ubuntu 18.04\n",
+      "revId": "188c4e6fe54443fb06f2e3abcf4965fd044a0797",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
