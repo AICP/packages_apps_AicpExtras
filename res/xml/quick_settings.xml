@@ -156,25 +156,25 @@
             aicpextras:unitsRight=""
             android:defaultValue="4" />
     </PreferenceCategory>
-<!--
     <PreferenceCategory
         android:key="qs_panel_translucency"
-        android:title="@string/qs_panel_translucency_category_title">
+        android:title="@string/qs_panel_opacity_category_title">
 
+<!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="blur_quicksettings_enabled"
             android:title="@string/translucent_quick_settings"
             android:summary="@string/translucent_quick_settings_summary"
             android:defaultValue="false" />
-
+-->
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
-            android:key="blur_quicksettings_percentage"
-            android:title="@string/translucent_quick_settings_percentage"
-            android:max="100"
+            android:key="qs_panel_bg_alpha"
+            android:title="@string/opacity_quick_settings"
+            android:max="255"
             android:min="0"
             aicpextras:unitsLeft=""
-            aicpextras:unitsRight="%"
-            android:defaultValue="60" />
+            aicpextras:unitsRight=""
+            android:defaultValue="255" />
     </PreferenceCategory>
  -->
       <PreferenceCategory
