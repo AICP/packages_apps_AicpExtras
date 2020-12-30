@@ -20,11 +20,10 @@ package com.aicp.extras.fragments;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class PowerMenu {/*
 public class PowerMenu extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.power_menu;
-    }*/
+    }
 }
