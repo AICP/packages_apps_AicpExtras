@@ -25,12 +25,12 @@
     <PreferenceCategory
         android:key="power_key"
         android:title="@string/category_power_key" >
-    <!--
+
         <PreferenceScreen
             android:key="power_menu"
             android:title="@string/global_actions_power_menu_title"
             android:fragment="com.aicp.extras.fragments.PowerMenu" />
- -->
+
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="torch_long_press_power_gesture"
             android:title="@string/torch_long_press_power_gesture_title"
