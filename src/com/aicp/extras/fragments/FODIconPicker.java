@@ -63,6 +63,9 @@ public class FODIconPicker extends LayoutPreference {
     private static ImageButton Button18;
     private static ImageButton Button19;
     private static ImageButton Button20;
+    private static ImageButton Button21;
+    private static ImageButton Button22;
+    private static ImageButton Button23;
 
     private static final String TAG = "FODIconPicker";
 
@@ -98,6 +101,9 @@ public class FODIconPicker extends LayoutPreference {
         Button18 = findViewById(R.id.fodicon18_button);
         Button19 = findViewById(R.id.fodicon19_button);
         Button20 = findViewById(R.id.fodicon20_button);
+        Button21 = findViewById(R.id.fodicon21_button);
+        Button22 = findViewById(R.id.fodicon22_button);
+        Button23 = findViewById(R.id.fodicon23_button);
 
         int defaultfodicon = Settings.System.getInt(
                 mContext.getContentResolver(), Settings.System.FOD_ICON, 0);
@@ -143,6 +149,12 @@ public class FODIconPicker extends LayoutPreference {
             updateHighlightedItem(Button19);
         } else if (defaultfodicon == 20) {
             updateHighlightedItem(Button20);
+        } else if (defaultfodicon == 21) {
+            updateHighlightedItem(Button21);
+        } else if (defaultfodicon == 22) {
+            updateHighlightedItem(Button22);
+        } else if (defaultfodicon == 23) {
+            updateHighlightedItem(Button23);
         }
 
         Button0.setOnClickListener(new View.OnClickListener() {
@@ -291,7 +303,29 @@ public class FODIconPicker extends LayoutPreference {
                 updateSettings(20);
                 updateHighlightedItem(Button20);
             }
+        }); 
+        Button21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateSettings(21);
+                updateHighlightedItem(Button21);
+            }
+        }); 
+        Button22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateSettings(22);
+                updateHighlightedItem(Button22);
+            }
         });
+        Button23.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateSettings(23);
+                updateHighlightedItem(Button23);
+            }
+        });
+
     }
 
     private void updateSettings(int fodicon) {
@@ -322,6 +356,9 @@ public class FODIconPicker extends LayoutPreference {
         Button18.setBackgroundTintList(defaulttint);
         Button19.setBackgroundTintList(defaulttint);
         Button20.setBackgroundTintList(defaulttint);
+        Button21.setBackgroundTintList(defaulttint);
+        Button22.setBackgroundTintList(defaulttint);
+        Button23.setBackgroundTintList(defaulttint);
         activebutton.setBackgroundTintList(Utils.getColorAttr(getContext(), android.R.attr.colorAccent));
     }
 }
