@@ -63,6 +63,9 @@ public class FODIconPicker extends LayoutPreference {
     private static ImageButton Button18;
     private static ImageButton Button19;
     private static ImageButton Button20;
+    private static ImageButton Button21;
+    private static ImageButton Button22;
+    private static ImageButton Button23;
 
     private static final String TAG = "FODIconPicker";
 
@@ -98,51 +101,86 @@ public class FODIconPicker extends LayoutPreference {
         Button18 = findViewById(R.id.fodicon18_button);
         Button19 = findViewById(R.id.fodicon19_button);
         Button20 = findViewById(R.id.fodicon20_button);
+        Button21 = findViewById(R.id.fodicon21_button);
+        Button22 = findViewById(R.id.fodicon22_button);
+        Button23 = findViewById(R.id.fodicon23_button);
 
         int defaultfodicon = Settings.System.getInt(
                 mContext.getContentResolver(), Settings.System.FOD_ICON, 0);
-        if (defaultfodicon==0) {
-            updateHighlightedItem(Button0);
-        } else if (defaultfodicon == 1) {
-            updateHighlightedItem(Button1);
-        } else if (defaultfodicon == 2) {
-            updateHighlightedItem(Button2);
-        } else if (defaultfodicon == 3) {
-            updateHighlightedItem(Button3);
-        } else if (defaultfodicon == 4) {
-            updateHighlightedItem(Button4);
-        } else if (defaultfodicon == 5) {
-            updateHighlightedItem(Button5);
-        } else if (defaultfodicon == 6) {
-            updateHighlightedItem(Button6);
-        } else if (defaultfodicon == 7) {
-            updateHighlightedItem(Button7);
-        } else if (defaultfodicon == 8) {
-            updateHighlightedItem(Button8);
-        } else if (defaultfodicon == 9) {
-            updateHighlightedItem(Button9);
-        } else if (defaultfodicon == 10) {
-            updateHighlightedItem(Button10);
-        } else if (defaultfodicon == 11) {
-            updateHighlightedItem(Button11);
-        } else if (defaultfodicon == 12) {
-            updateHighlightedItem(Button12);
-        } else if (defaultfodicon == 13) {
-            updateHighlightedItem(Button13);
-        } else if (defaultfodicon == 14) {
-            updateHighlightedItem(Button14);
-        } else if (defaultfodicon == 15) {
-            updateHighlightedItem(Button15);
-        } else if (defaultfodicon == 16) {
-            updateHighlightedItem(Button16);
-        } else if (defaultfodicon == 17) {
-            updateHighlightedItem(Button17);
-        } else if (defaultfodicon == 18) {
-            updateHighlightedItem(Button18);
-        } else if (defaultfodicon == 19) {
-            updateHighlightedItem(Button19);
-        } else if (defaultfodicon == 20) {
-            updateHighlightedItem(Button20);
+
+        switch(defaultfodicon){
+            case 0:
+                updateHighlightedItem(Button0);
+                break;
+            case 1:
+                updateHighlightedItem(Button1);
+                break;
+            case 2:
+                updateHighlightedItem(Button2);
+                break;
+            case 3:
+                updateHighlightedItem(Button3);
+                break;
+            case 4:
+                updateHighlightedItem(Button4);
+                break;
+            case 5:
+                updateHighlightedItem(Button5);
+                break;
+            case 6:
+                updateHighlightedItem(Button6);
+                break;
+            case 7:
+                updateHighlightedItem(Button7);
+                break;
+            case 8:
+                updateHighlightedItem(Button8);
+                break;
+            case 9:
+                updateHighlightedItem(Button9);
+                break;
+            case 10:
+                updateHighlightedItem(Button10);
+                break;
+            case 11:
+                updateHighlightedItem(Button11);
+                break;
+            case 12:
+                updateHighlightedItem(Button12);
+                break;
+            case 13:
+                updateHighlightedItem(Button13);
+                break;
+            case 14:
+                updateHighlightedItem(Button14);
+                break;
+            case 15:
+                updateHighlightedItem(Button15);
+                break;
+            case 16:
+                updateHighlightedItem(Button16);
+                break;
+            case 17:
+                updateHighlightedItem(Button17);
+                break;
+            case 18:
+                updateHighlightedItem(Button18);
+                break;
+            case 19:
+                updateHighlightedItem(Button19);
+                break;
+            case 20:
+                updateHighlightedItem(Button20);
+                break;
+            case 21:
+                updateHighlightedItem(Button21);
+                break;
+            case 22:
+                updateHighlightedItem(Button22);
+                break;
+            case 23:
+                updateHighlightedItem(Button23);
+                break;
         }
 
         Button0.setOnClickListener(new View.OnClickListener() {
@@ -292,6 +330,28 @@ public class FODIconPicker extends LayoutPreference {
                 updateHighlightedItem(Button20);
             }
         });
+        Button21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateSettings(21);
+                updateHighlightedItem(Button21);
+            }
+        });
+        Button22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateSettings(22);
+                updateHighlightedItem(Button22);
+            }
+        });
+        Button23.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateSettings(23);
+                updateHighlightedItem(Button23);
+            }
+        });
+
     }
 
     private void updateSettings(int fodicon) {
@@ -322,6 +382,9 @@ public class FODIconPicker extends LayoutPreference {
         Button18.setBackgroundTintList(defaulttint);
         Button19.setBackgroundTintList(defaulttint);
         Button20.setBackgroundTintList(defaulttint);
+        Button21.setBackgroundTintList(defaulttint);
+        Button22.setBackgroundTintList(defaulttint);
+        Button23.setBackgroundTintList(defaulttint);
         activebutton.setBackgroundTintList(Utils.getColorAttr(getContext(), android.R.attr.colorAccent));
     }
 }
