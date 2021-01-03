@@ -52,6 +52,12 @@
         android:summary="@string/qs_music_tile_track_optional_summary"
         android:defaultValue="false" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="qsmplayer_ignore_layout_change"
+        android:title="@string/quick_settings_player_layout_title"
+        android:summary="@string/quick_settings_player_layout_summary"
+        android:defaultValue="false" />
+
 <!--     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="dismiss_all_button"
         android:title="@string/enable_clear_all_button"
