@@ -41,6 +41,7 @@ public class Lockscreen extends BaseSettingsFragment {
     private static final String KEY_AOD_SCHEDULE = "always_on_display_schedule";
     private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
     private static final String KEY_LOCKSCREEN_BLUR = "lockscreen_blur";
+    private static final String SCREEN_OFF_FOD_CATEGORY = "fod_gesture";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
@@ -87,6 +88,13 @@ public class Lockscreen extends BaseSettingsFragment {
 
         if (fodIconPickerCategory != null && !supportsFod) {
             fodIconPickerCategory.getParent().removePreference(fodIconPickerCategory);
+        }
+
+        // Sceen off FOD
+        final boolean configscreenofffod = getResources().getBoolean(com.android.internal.R.bool.config_supportsInDisplayFingerprintGesture);
+        if(configscreenofffod == false) {
+            final Preference hideScreeOffFOD = (Preference) findPreference(SCREEN_OFF_FOD_CATEGORY);
+            hideScreeOffFOD.getParent().removePreference(hideScreeOffFOD);
         }
 
     }
