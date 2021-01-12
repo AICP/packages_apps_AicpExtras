@@ -19,6 +19,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="lockscreen"
     android:title="@string/lockscreen_title">
 
@@ -177,6 +178,7 @@
               android:title="@string/unlock_scramble_pin_layout_title"
               android:summary="@string/unlock_scramble_pin_layout_summary"
               android:defaultValue="false" />
+
     </PreferenceCategory>
 
 <!--  ******* Moved to settings *****
@@ -189,6 +191,14 @@
     <PreferenceCategory
             android:key="fod_icon_picker"
             android:title="@string/fod_icon_picker_category_title" >
+
+            <!-- Screen off fod -->
+            <com.aicp.gear.preference.SystemSettingSwitchPreference
+                android:key="fod_gesture"
+                android:title="@string/fod_gesture_title"
+                android:summary="@string/fod_gesture_summary"
+                android:defaultValue="false"
+                settings:controller="com.android.settings.security.screenlock.ScreenOffFodPreferenceController" />
 
             <!-- FOD icon picker -->
             <Preference
