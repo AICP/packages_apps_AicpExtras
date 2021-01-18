@@ -34,7 +34,7 @@ public class OtherUi extends BaseSettingsFragment
 
     private static final String SHOW_CPU_INFO_KEY = "show_cpu_info";
 
-  //  private static final String KEY_DOZE_ON_CHARGE = "doze_on_charge";
+    private static final String KEY_DOZE_ON_CHARGE = "doze_on_charge";
 
     private SwitchPreference mShowCpuInfo;
 
