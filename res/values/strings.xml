@@ -1645,4 +1645,9 @@
     <!-- Lockscreen charge temperature unit -->
     <string name="lockscreen_charge_temp_unit_title">Temperature unit</string>
     <string name="lockscreen_charge_temp_unit_summary">Enable for Celcius, disable for Fahrenheit</string>
+
+    <!-- Enable Signature spoofing -->
+    <string name="signature_spoofing_title">Spoof package signature</string>
+    <string name="signature_spoofing_summary">Enable to allow package signature spoofing</string>
+    <string name="signature_spoofing_footnote">Signature spoofing allows an app to pretend to be a different app. Malicious applications might be able to use this to access private application data. Legitimate uses include an emulator pretending to be what it emulates. Grant this permission with caution only!</string>
 </resources>
