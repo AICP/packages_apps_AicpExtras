@@ -144,8 +144,8 @@
 	android:defaultValue="false"/>
 -->
   </PreferenceCategory>
-<!--
-    <!- SELinux ->
+
+    <!-- SELinux -->
     <PreferenceCategory
         android:key="selinux"
         android:title="@string/selinux_category">
@@ -166,6 +166,6 @@
             android:summary="@string/selinux_persistence_summary"
             android:defaultValue="true" />
 
-    </PreferenceCategory> -->
+    </PreferenceCategory>
 
 </PreferenceScreen>
