@@ -23,21 +23,30 @@ import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
 import androidx.preference.Preference;
+import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
+import com.aicp.extras.utils.Util;
+import com.aicp.gear.preference.SystemSettingListPreference;
+import com.aicp.gear.preference.SystemSettingSeekBarPreference;
 import com.aicp.gear.util.AicpContextConstants;
 
-public class Lockscreen extends BaseSettingsFragment {
+public class Lockscreen extends BaseSettingsFragment
+        implements OnPreferenceChangeListener {
 
     private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
+    private static final String LOCKSCREEN_MEDIA_BLUR = "lockscreen_media_blur";
+    private static final String LS_ALBUM_ART_FILTER = "lockscreen_album_art_filter";
     //private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
+    private SystemSettingSeekBarPreference mLockscreenMediaBlur;
+    private SystemSettingListPreference mLsAlbumArtFilter;
 
     @Override
     protected int getPreferenceResource() {
@@ -61,6 +70,12 @@ public class Lockscreen extends BaseSettingsFragment {
             mFingerprintVib.getParent().removePreference(mFingerprintVib);
         }
 
+        mLockscreenMediaBlur = (SystemSettingSeekBarPreference) prefSet.findPreference(LOCKSCREEN_MEDIA_BLUR);
+        mLockscreenMediaBlur.setOnPreferenceChangeListener(this);
+
+        mLsAlbumArtFilter = (SystemSettingListPreference) prefSet.findPreference(LS_ALBUM_ART_FILTER);
+        mLsAlbumArtFilter.setOnPreferenceChangeListener(this);
+
         // FOD category
 /*        PreferenceCategory fodIconPickerCategory = (PreferenceCategory) findPreference(FOD_ICON_PICKER_CATEGORY);
         PackageManager packageManager = getContext().getPackageManager();
@@ -69,5 +84,19 @@ public class Lockscreen extends BaseSettingsFragment {
         if (fodIconPickerCategory != null && !supportsFod) {
             fodIconPickerCategory.getParent().removePreference(fodIconPickerCategory);
         }*/
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mLsAlbumArtFilter) {
+            Boolean isBlurValue = (Integer) mLsAlbumArtFilter.findIndexOfValue((String) newValue) > 2;
+            mLockscreenMediaBlur.setEnabled(isBlurValue);
+            Util.showSystemUiRestartDialog(getActivity());
+            return true;
+        } else if (preference == mLockscreenMediaBlur) {
+            // Util.showSystemUiRestartDialog(getActivity());
+            return true;
+        }
+        return false;
     }
 }
