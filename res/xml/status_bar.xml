@@ -76,18 +76,30 @@
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.StatusBarLogo" />
 
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="show_lte_fourgee"
+            android:title="@string/show_4g_title"
+            android:summary="@string/show_4g_summary"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+          android:key="use_old_mobiletype"
+          android:title="@string/use_old_mobiletype_title"
+          android:summary="@string/use_old_mobiletype_summary"
+          android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="data_disabled_icon"
+            android:title="@string/data_disabled_icon_title"
+            android:summary="@string/data_disabled_icon_summary"
+            android:defaultValue="true"/>
+
         <!-- Show Roaming Indicator icon on Statusbar -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="roaming_indicator_icon"
             android:title="@string/roaming_indicator_icon_title"
             android:summary="@string/roaming_indicator_icon_summary"
             android:defaultValue="true"/>
-
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="show_lte_fourgee"
-            android:title="@string/show_4g_title"
-            android:summary="@string/show_4g_summary"
-            android:defaultValue="false" />
 
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="volte_icon_style"
@@ -128,25 +140,12 @@
             android:title="@string/vowifi_switch_title"
             android:summary="@string/vowifi_switch_summary"
             android:defaultValue="false"/>
--->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="data_disabled_icon"
-            android:title="@string/data_disabled_icon_title"
-            android:summary="@string/data_disabled_icon_summary"
-            android:defaultValue="true"/>
-<!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="statusbar_location_icon"
             android:title="@string/statusbar_location_icon_title"
             android:summary="@string/statusbar_location_icon_summary"
             android:defaultValue="true"/>
 -->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="use_old_mobiletype"
-            android:title="@string/use_old_mobiletype_title"
-            android:summary="@string/use_old_mobiletype_summary"
-            android:defaultValue="false" />
-
     </PreferenceCategory>
     <PreferenceCategory
         android:key="statusbar_battery_category"
