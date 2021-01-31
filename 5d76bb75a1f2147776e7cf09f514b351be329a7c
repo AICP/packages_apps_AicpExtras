@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "25b376bc_d9e167a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-01-31T02:17:20Z",
+      "side": 1,
+      "message": "Test:\n- Compiles\n- The SELinux preference is invisible on a unrooted device\n- Toggling the preference changes the SELinux state\n- Toggling the persistence toggle preserves the SELinux state after reboot\n\nPS: Class needs a cleanup which can be taken up later with some more cruft",
+      "revId": "5d76bb75a1f2147776e7cf09f514b351be329a7c",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
