@@ -39,13 +39,8 @@
         android:title="@string/hide_tile_expand_indicator_title"
         android:summary="@string/hide_tile_expand_indicator_summary"
         android:defaultValue="false" />
-
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="qs_running_services_toggle"
-        android:title="@string/qs_running_services_title"
-        android:summary="@string/qs_running_services_summary"
-        android:defaultValue="false" />
 -->
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="music_tile_title"
         android:title="@string/qs_music_tile_track_optional_title"
@@ -93,6 +88,30 @@
     <PreferenceCategory
         android:key="qs_footer_category"
         android:title="@string/qs_footer_category_title">
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="qs_footer_show_edit"
+            android:title="@string/qs_footer_edit_title"
+            android:summary="@string/qs_footer_edit_summary"
+            android:defaultValue="true" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="qs_footer_show_user"
+            android:title="@string/qs_footer_show_user_title"
+            android:summary="@string/qs_footer_show_user_summary"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="qs_footer_show_services"
+            android:title="@string/qs_footer_running_services_title"
+            android:summary="@string/qs_footer_running_services_summary"
+            android:defaultValue="true" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="qs_footer_show_settings"
+            android:title="@string/qs_footer_settings_title"
+            android:summary="@string/qs_footer_settings_summary"
+            android:defaultValue="true" />
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="footer_text_show"
