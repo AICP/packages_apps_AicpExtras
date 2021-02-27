@@ -29,11 +29,13 @@ import androidx.preference.SwitchPreference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
+import com.aicp.extras.utils.Util;
 import com.aicp.gear.util.AicpContextConstants;
 
 public class Lockscreen extends BaseSettingsFragment {
 
     private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
+    private static final String KEY_AOD_SCHEDULE = "always_on_display_schedule";
     //private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
 
     private FingerprintManager mFingerprintManager;
@@ -60,6 +62,9 @@ public class Lockscreen extends BaseSettingsFragment {
         if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()){
             mFingerprintVib.getParent().removePreference(mFingerprintVib);
         }
+
+        Util.requireConfig(getActivity(), findPreference(KEY_AOD_SCHEDULE),
+                com.android.internal.R.bool.config_dozeAlwaysOnDisplayAvailable, true, false);
 
         // FOD category
 /*        PreferenceCategory fodIconPickerCategory = (PreferenceCategory) findPreference(FOD_ICON_PICKER_CATEGORY);

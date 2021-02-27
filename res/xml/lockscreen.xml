@@ -137,6 +137,11 @@
         android:defaultValue="3"
         android:dependency="lock_screen_custom_notif" />
 
+    <Preference
+        android:key="always_on_display_schedule"
+        android:title="@string/always_on_display_schedule_title"
+        android:fragment="com.aicp.extras.fragments.AODSchedule" />
+
     <PreferenceCategory
           android:key="lockscreen_security_category"
           android:title="@string/lockscreen_security_category">
