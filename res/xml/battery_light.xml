@@ -27,25 +27,52 @@
         android:defaultValue="false" />
 
     <PreferenceCategory
+        android:key="blend_category"
+        android:title="@string/battery_light_blend_category">
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="battery_light_blend"
+            android:title="@string/battery_light_blend_title"
+            android:summary="@string/battery_light_blend_summary"
+            android:defaultValue="false" />
+        <com.aicp.gear.preference.SystemSettingColorBlendPreference
+            android:title="@string/battery_light_blend_colors_title"
+            android:summary="@string/battery_light_blend_colors_summary"
+            android:dependency="battery_light_blend"
+            aicpextras:ledPreview="true"
+            aicpextras:keyColorStart="battery_light_blend_empty_color"
+            aicpextras:keyColorEnd="battery_light_blend_full_color"
+            aicpextras:keyBlendReverse="battery_light_blend_reverse"
+            aicpextras:defaultValueColorStart="#ffff0000"
+            aicpextras:defaultValueColorEnd="#ff00ff00"
+            aicpextras:previewStartText="@string/battery_blend_start"
+            aicpextras:previewBetweenText="@string/battery_blend_between"
+            aicpextras:previewEndText="@string/battery_blend_end" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="battery_light_cat"
         android:title="@string/battery_light_cat">
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
+        <com.aicp.gear.preference.SystemSettingColorPickerPreference
             android:key="battery_light_low_color"
+            aicpextras:ledPreview="true"
             android:title="@string/battery_light_low_color"
             android:defaultValue="0xFFFF0000" />
 
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
+        <com.aicp.gear.preference.SystemSettingColorPickerPreference
             android:key="battery_light_medium_color"
+            aicpextras:ledPreview="true"
             android:title="@string/battery_light_medium_color"
             android:defaultValue="0xFFFFFF00" />
 
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
+        <com.aicp.gear.preference.SystemSettingColorPickerPreference
             android:key="battery_light_full_color"
+            aicpextras:ledPreview="true"
             android:title="@string/battery_light_full_color"
             android:defaultValue="0xFFFFFF00" />
 
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
+        <com.aicp.gear.preference.SystemSettingColorPickerPreference
             android:key="battery_light_reallyfull_color"
+            aicpextras:ledPreview="true"
             android:title="@string/battery_light_reallyfull_color"
             android:defaultValue="0xFF00FF00" />
     </PreferenceCategory>
