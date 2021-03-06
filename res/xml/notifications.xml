@@ -47,6 +47,12 @@
 -->
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="notification_material_dismiss"
+        android:title="@string/enable_clear_all_button"
+        android:summary="@string/enable_clear_all_button_summary"
+        android:defaultValue="false" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="status_bar_notif_count"
         android:title="@string/notif_count_title"
         android:summary="@string/notif_count_summary"
