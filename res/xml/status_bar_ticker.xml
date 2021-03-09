@@ -22,7 +22,7 @@
     android:key="status_bar_ticker"
     android:title="@string/status_bar_ticker_title">
 
-    <!-- <com.aicp.gear.preference.SystemSettingIntListPreference
+    <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="status_bar_ticker_animation_mode"
         android:title="@string/ticker_animation_mode_title"
         android:entries="@array/ticker_animation_mode_entries"
@@ -37,6 +37,6 @@
         android:defaultValue="3000"
         aicpextras:interval="100"
         aicpextras:unitsLeft=""
-        aicpextras:unitsRight="ms" /> -->
+        aicpextras:unitsRight="ms" />
 
 </PreferenceScreen>
