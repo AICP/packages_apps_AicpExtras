@@ -20,11 +20,10 @@ package com.aicp.extras.fragments;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class StatusBarTicker {
-/*public class StatusBarTicker extends BaseSettingsFragment {
+public class StatusBarTicker extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.status_bar_ticker;
-    }*/
+    }
 }
