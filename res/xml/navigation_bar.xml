@@ -30,6 +30,17 @@
         android:defaultValue="false" /> -->
 
     <PreferenceCategory
+        android:key="category_gesture_navigation">
+        <Preference
+            android:key="gesture_system_navigation"
+            android:title="@string/gesture_navigation_title">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.android.settings.Settings$GestureNavigationSettingsActivity" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="category_navbar_pulse">
 
         <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
