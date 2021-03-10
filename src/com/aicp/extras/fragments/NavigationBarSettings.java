@@ -53,6 +53,7 @@ public class NavigationBarSettings extends BaseSettingsFragment
     private static final String KEY_ASSIST_LONG_PRESS_ACTION = "assist_key_long_press";
     private static final String KEY_ASSIST_DOUBLE_TAP_ACTION = "assist_key_double_tap";
 
+    private static final String KEY_CATEGORY_GESTURAL      = "category_gesture_navigation";
     private static final String KEY_CATEGORY_HOME          = "home_key";
     private static final String KEY_CATEGORY_BACK          = "back_key";
     private static final String KEY_CATEGORY_MENU          = "menu_key";
@@ -70,6 +71,7 @@ public class NavigationBarSettings extends BaseSettingsFragment
     private ListPreference mAssistLongPress;
     private ListPreference mAssistDoubleTap;
 
+    private PreferenceCategory mGesturalCategory;
     private PreferenceCategory mHomeCategory;
     private PreferenceCategory mBackCategory;
     private PreferenceCategory mMenuCategory;
@@ -124,6 +126,8 @@ public class NavigationBarSettings extends BaseSettingsFragment
         boolean hasAppSwitch = (deviceKeys & KEY_MASK_APP_SWITCH) != 0 || (navigationBarEnabled && navigationMode3Button);
 
         mLayoutCategory = (PreferenceCategory) prefSet.findPreference(CATEGORY_LAYOUT);
+        mGesturalCategory =
+                (PreferenceCategory) prefSet.findPreference(KEY_CATEGORY_GESTURAL);
         mHomeCategory =
                 (PreferenceCategory) prefSet.findPreference(KEY_CATEGORY_HOME);
         mBackCategory =
@@ -238,11 +242,13 @@ public class NavigationBarSettings extends BaseSettingsFragment
             mBackCategory.setEnabled(true);
             mHomeCategory.setEnabled(true);
             mAppSwitchCategory.setEnabled(navigationMode3Button);
+            mGesturalCategory.setEnabled(false);
         } else {        // gesture navigation enabled
             mLayoutCategory.setEnabled(false);
             mBackCategory.setEnabled(false);
             mHomeCategory.setEnabled(false);
             mAppSwitchCategory.setEnabled(false);
+            mGesturalCategory.setEnabled(true);
         }
     }
 
