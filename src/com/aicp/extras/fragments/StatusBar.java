@@ -37,6 +37,7 @@ import android.widget.LinearLayout;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
+import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
 
 import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingListPreference;
@@ -54,6 +55,7 @@ public class StatusBar extends BaseSettingsFragment implements
     private static final String KEY_HIDE_NOTCH = "statusbar_hide_notch";
     private static final String KEY_ESTIMATE_IN_QQS = "show_battery_estimate_qqs";
     private static final String KEY_BATTERY_PERCENTAGE = "status_bar_show_battery_percent";
+    private static final String KEY_NETWORK_TRAFFIC_STATUSBAR = "network_traffic_state";
 
     private ListPreference mSmartPulldown;
     private ListPreference mQuickPulldown;
@@ -109,6 +111,12 @@ public class StatusBar extends BaseSettingsFragment implements
 
         mCustomCarrierLabel = (Preference) findPreference(KEY_CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
+
+        SystemSettingMasterSwitchPreference prefNetTrafficStatusBar =
+                  findPreference(KEY_NETWORK_TRAFFIC_STATUSBAR);
+        if(getResources().getBoolean(R.bool.config_haveIntrusiveNotch)) {
+            prefNetTrafficStatusBar.getParent().removePreference(prefNetTrafficStatusBar);
+        }
 
     /*     // Battery Percentage
         mShowBatteryPercentage = (SystemSettingIntListPreference) findPreference(KEY_BATTERY_PERCENTAGE);
