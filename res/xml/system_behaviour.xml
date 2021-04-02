@@ -78,11 +78,12 @@
 
 -->
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="sensor_block"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        android:fragment="com.aicp.extras.fragments.SensorBlock"/>
 
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="smart_pixels_enable"

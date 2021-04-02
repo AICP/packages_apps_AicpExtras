@@ -1,0 +1,14 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    android:key="sensor_block"
+    android:title="@string/sensor_block_title">
+
+    <!-- App picker activity for sensor block -->
+    <PreferenceScreen
+        android:key="sensor_activity_blacklist"
+        android:title="@string/sensor_block_app_picker_title"
+        android:summary="@string/sensor_block_app_picker_summary"
+        android:fragment="com.aicp.extras.fragments.SensorActivityBlacklist"
+        android:persistent="false" />
+
+</PreferenceScreen>
