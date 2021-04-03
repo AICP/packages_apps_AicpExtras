@@ -20,7 +20,7 @@
     android:key="suspend_actions"
     android:title="@string/screen_state_toggles_title">
 
-    <!-- <com.aicp.gear.preference.GlobalSettingSeekBarPreference
+    <com.aicp.gear.preference.GlobalSettingSeekBarPreference
         android:key="screen_state_off_delay"
         android:title="@string/screen_state_off_delay_title"
         android:summary="@string/screen_state_off_delay_summary"
@@ -79,5 +79,5 @@
             android:summary="@string/screen_state_toggles_gps_summary"
             android:defaultValue="false"/>
 
-    </PreferenceCategory> -->
+    </PreferenceCategory>
 </PreferenceScreen>
