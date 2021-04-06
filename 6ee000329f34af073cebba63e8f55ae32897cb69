@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c14037c4_65420d1d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-04-06T14:15:01Z",
+      "side": 1,
+      "message": "Test:\n- Compiles:\n- Logit preference is removed when root is absent\n- Weather preference is removed if OmniJaws is disabled\n\n- Without this patch, Log it preference is present on a non-rooted build and causes a crash when \"Engage\" option is used",
+      "revId": "6ee000329f34af073cebba63e8f55ae32897cb69",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
