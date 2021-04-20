@@ -188,21 +188,40 @@
 -->
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_panel_bg_alpha"
-            android:title="@string/opacity_quick_settings"
+            android:title="@string/qs_panel_alpha_title"
             android:max="255"
             android:min="0"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
             android:defaultValue="255" />
+
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+            android:key="qs_sb_bg_alpha"
+            android:title="@string/qs_sb_bg_alpha_title"
+            android:max="255"
+            android:min="0"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight=""
+            android:defaultValue="255" />
+
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+            android:key="qs_sb_bg_gradient"
+            android:title="@string/qs_panel_gradient_title"
+            android:summary="@string/qs_panel_gradient_summary"
+            aicpextras:thereCanBeOnlyOneGroupId="1"
+            aicpextras:plainSwitch="true"
+            android:defaultValue="false" />
     </PreferenceCategory>
  -->
       <PreferenceCategory
         android:key="category_custom_header"
         android:title="@string/custom_header_title">
 
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="status_bar_custom_header"
             android:title="@string/status_bar_custom_header_title"
+            aicpextras:thereCanBeOnlyOneGroupId="1"
+            aicpextras:plainSwitch="true"
             android:defaultValue="false" />
 
         <ListPreference
