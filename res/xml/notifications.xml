@@ -83,6 +83,12 @@
         android:summary="@string/vibrate_on_notifications_summary"
         android:defaultValue="true" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="alert_slider_notifications"
+        android:title="@string/alert_slider_notifications_title"
+        android:summary="@string/alert_slider_notifications_summary"
+        android:defaultValue="true" />
+
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="mute_annoying_notifications_threshold"
         android:title="@string/less_notification_sounds_title"
@@ -91,11 +97,13 @@
         android:entryValues="@array/less_notification_sounds_values"
         android:defaultValue="0" />
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="alert_slider_notifications"
-        android:title="@string/alert_slider_notifications_title"
-        android:summary="@string/alert_slider_notifications_summary"
-        android:defaultValue="true" />
+    <!-- Clipboard access toasts -->
+    <com.aicp.gear.preference.SystemSettingIntListPreference
+        android:key="clipboard_toast_info"
+        android:title="@string/clipboard_toast_info_title"
+        android:entries="@array/clipboard_toast_info_entries"
+        android:entryValues="@array/clipboard_toast_info_values"
+        android:defaultValue="0" />
 
     <com.aicp.gear.preference.GlobalSettingListPreference
         android:key="ringtone_focus_mode"
