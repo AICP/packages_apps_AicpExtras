@@ -27,6 +27,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
+import com.android.internal.util.aicp.AicpUtils;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
@@ -37,6 +38,7 @@ public class Lockscreen extends BaseSettingsFragment {
     private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
     private static final String KEY_AOD_SCHEDULE = "always_on_display_schedule";
     private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
+    private static final String KEY_LOCKSCREEN_BLUR = "lockscreen_blur";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
@@ -65,6 +67,12 @@ public class Lockscreen extends BaseSettingsFragment {
 
         Util.requireConfig(getActivity(), findPreference(KEY_AOD_SCHEDULE),
                 com.android.internal.R.bool.config_dozeAlwaysOnDisplayAvailable, true, false);
+
+        // Lockscreen blur
+        Preference lockscreenBlur = (Preference) findPreference(KEY_LOCKSCREEN_BLUR);
+        if (!AicpUtils.supportsBlur()) {
+            lockscreenBlur.getParent().removePreference(lockscreenBlur);
+        }
 
         // FOD category
         PreferenceCategory fodIconPickerCategory = (PreferenceCategory) findPreference(FOD_ICON_PICKER_CATEGORY);
