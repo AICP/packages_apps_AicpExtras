@@ -54,6 +54,15 @@
         android:summary="@string/lockscreen_lock_icon_summary"
         android:defaultValue="true" />
 
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="lockscreen_blur"
+        android:title="@string/lockscreen_blur_title"
+        android:max="100"
+        android:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="%"
+        android:defaultValue="0" />
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_lockscreen"
         android:title="@string/double_tap_sleep_lockscreen"
