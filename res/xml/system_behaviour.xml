@@ -133,6 +133,12 @@
         android:title="@string/audio_panel_view">
 
         <com.aicp.gear.preference.SecureSettingSwitchPreference
+          android:key="show_app_volume"
+          android:title="@string/show_app_volume_title"
+          android:summary="@string/show_app_volume_summary"
+          android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
             android:key="volume_panel_on_left"
             android:title="@string/audio_panel_position_title"
             android:summary="@string/audio_panel_position_summary"
