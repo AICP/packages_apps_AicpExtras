@@ -343,7 +343,7 @@
     <string name="stock_recents_category">Stock recents</string>
     <string name="oreo_recents_category">Oreo recents</string>
     <string name="alternative_recents_category">Alternative recents</string>
-    <string name="alternative_recents_swipe_up_enabled_warning_summary">When using swipe up home navigation to open recents, only stock recents are supported</string>
+    <string name="alternative_recents_swipe_up_enabled_warning_summary">Only 3-button navigation mode is supported</string>
 
     <!-- Stock Recents component Style -->
     <string name="recents_component_type_title">Recents Style</string>
@@ -1256,20 +1256,11 @@
     <string name="theming_notif_title">Notifications</string>
     <string name="theming_settings_title">Settings</string>
     <string name="theming_icon_pack_title">Icon pack</string>
+    <string name="theming_qs_shape_title">QS shape</string>
 
     <!-- Device hidden prefs -->
     <string name="show_device_hidden_prefs_title">Do not hide preferences</string>
     <string name="show_device_hidden_prefs_summary">By default, preferences that will probably not work well on your device (because of e.g. root status or display cutout) will not be shown</string>
-
-    <!-- QS shape theme -->
-    <string name="theming_qs_shape_title">QS shape</string>
-    <string name="theming_qs_shape_default">Round (default)</string>
-    <string name="theming_qs_shape_plain">Plain</string>
-    <string name="theming_qs_shape_plain_accent">Plain accent</string>
-    <string name="theming_qs_shape_squircle">Squircle</string>
-    <string name="theming_qs_shape_square">Square</string>
-    <string name="theming_qs_shape_rounded_square">Rounded square</string>
-    <string name="theming_qs_shape_hexagon">Hexagon</string>
 
     <!-- Settings dashboard icon style -->
     <string name="theming_settings_dashboard_icons_title">Settings dashboard icons</string>
@@ -1318,7 +1309,7 @@
     <string name="battery_light_low_color">Low battery</string>
     <string name="battery_light_medium_color">Medium battery</string>
     <string name="battery_light_full_color">Almost fully charged (90%)</string>
-    <string name="battery_light_reallyfull_color">Full charged battery (%100)</string>
+    <string name="battery_light_reallyfull_color">Fully charged battery (100%)</string>
     <string name="battery_light_blend_category">Blend colors</string>
     <string name="battery_light_blend_title">Enable color blend</string>
     <string name="battery_light_blend_summary">Gradually change colors between full and empty</string>
@@ -1665,7 +1656,7 @@
     <string name="category_lockscreen_gestures_summary">Configure available lockscreen gestures</string>
 
     <!-- Notification headers -->
-    <string name="notification_headers_title">Notification Headers</string>
+    <string name="notification_headers_title">Notification headers</string>
     <string name="notification_headers_summary">Show headers in the notification shade</string>
 
     <!-- Navbar styles -->
@@ -1677,7 +1668,7 @@
 
     <!-- Lockscreen charge temperature unit -->
     <string name="lockscreen_charge_temp_unit_title">Temperature unit</string>
-    <string name="lockscreen_charge_temp_unit_summary">Enable for Celcius, disable for Fahrenheit</string>
+    <string name="lockscreen_charge_temp_unit_summary">Enable for Celsius, disable for Fahrenheit</string>
 
     <!-- Enable Signature spoofing -->
     <string name="signature_spoofing_title">Spoof package signature</string>
@@ -1685,7 +1676,7 @@
 
     <!-- Old Style Mobile -->
     <string name="use_old_mobiletype_title">Use old mobile signal style</string>
-    <string name="use_old_mobiletype_summary">Enable to switch to oreo- or earlier mobile icon style with raised connection type indicator</string>
+    <string name="use_old_mobiletype_summary">Enable to switch to mobile icon style with raised connection type indicator</string>
 
     <!-- Lockscreen cover art filter -->
      <string name="lockscreen_cover_filter_title">Lockscreen album art filter</string>
