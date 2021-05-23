@@ -21,14 +21,6 @@
     android:key="navigation_bar"
     android:title="@string/navbar_visibility" >
 
-<!--
-<!-Arrow keys switch applies to both gestural and 2-3 button navigation ->
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="navigation_bar_menu_arrow_keys"
-        android:title="@string/navigation_bar_menu_arrow_keys_title"
-        android:summary="@string/navigation_bar_menu_arrow_keys_summary"
-        android:defaultValue="false" /> -->
-
     <PreferenceCategory
         android:key="category_gesture_navigation">
         <Preference
@@ -63,6 +55,18 @@
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.NavBarActivity" />
         </Preference>
+
+        <!--Arrow keys switch applies to both gestural and 2-3 button navigation -->
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="navigation_bar_menu_arrow_keys"
+            android:title="@string/navigation_bar_menu_arrow_keys_title"
+            android:summary="@string/navigation_bar_menu_arrow_keys_summary"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="sysui_nav_bar_inverse"
+            android:title="@string/navigation_bar_invert_layout_title"
+            android:defaultValue="false" />
 
         <com.aicp.gear.preference.SecureSettingSwitchPreference
             android:key="sysui_nav_bar_inverse"
