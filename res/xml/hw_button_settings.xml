@@ -49,6 +49,15 @@
         android:key="home_key"
         android:title="@string/hardware_keys_home_key_title" >
 
+        <!-- Volume keys control media stream -->
+        <com.aicp.gear.preference.SecureSettingIntListPreference
+            android:key="ring_home_button_behavior"
+            android:dialogTitle="@string/home_button_mode_title"
+            android:title="@string/home_button_mode_title"
+            android:entries="@array/home_button_mode_entries"
+            android:entryValues="@array/home_button_mode_values"
+            android:defaultValue="1" />
+
         <com.aicp.extras.preference.ActionPreference
             android:key="hwkeys_button_home_single_tap"
             android:summary="@string/hardware_keys_single_tap_summary"
