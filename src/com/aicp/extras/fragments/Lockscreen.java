@@ -17,11 +17,13 @@
 
 package com.aicp.extras.fragments;
 
+import android.app.WallpaperManager;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
+import android.os.ParcelFileDescriptor;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
@@ -51,8 +53,10 @@ public class Lockscreen extends BaseSettingsFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Context mContext = getContext();
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
+        WallpaperManager manager = WallpaperManager.getInstance(mContext);
 
         try {
             mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
@@ -70,7 +74,8 @@ public class Lockscreen extends BaseSettingsFragment {
 
         // Lockscreen blur
         Preference lockscreenBlur = (Preference) findPreference(KEY_LOCKSCREEN_BLUR);
-        if (!AicpUtils.supportsBlur()) {
+        ParcelFileDescriptor pfd = manager.getWallpaperFile(WallpaperManager.FLAG_LOCK);
+        if (!AicpUtils.supportsBlur() || pfd != null) {
             lockscreenBlur.getParent().removePreference(lockscreenBlur);
         }
 
