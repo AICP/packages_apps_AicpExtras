@@ -76,7 +76,8 @@ public class Lockscreen extends BaseSettingsFragment {
         Preference lockscreenBlur = (Preference) findPreference(KEY_LOCKSCREEN_BLUR);
         ParcelFileDescriptor pfd = manager.getWallpaperFile(WallpaperManager.FLAG_LOCK);
         if (!AicpUtils.supportsBlur() || pfd != null) {
-            lockscreenBlur.getParent().removePreference(lockscreenBlur);
+            lockscreenBlur.setEnabled(false);
+            lockscreenBlur.setSummary(getResources().getString(R.string.lockscreen_blur_disabled));
         }
 
         // FOD category
