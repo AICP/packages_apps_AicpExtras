@@ -100,7 +100,8 @@ public class ReportingServiceManager extends BroadcastReceiver {
 		long nextAlarm = System.currentTimeMillis() + millisFromNow;
 
 		AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-		alarmManager.set(AlarmManager.RTC_WAKEUP, nextAlarm, PendingIntent.getBroadcast(context, 0, intent, 0));
+		alarmManager.set(AlarmManager.RTC_WAKEUP, nextAlarm, PendingIntent.getBroadcast(context,
+				0, intent, PendingIntent.FLAG_IMMUTABLE));
 		Log.d(Const.TAG, "[setAlarm] Next sync attempt in : " + millisFromNow / MILLIS_PER_HOUR + " hours");
 
 		prefs.edit().putLong(Const.ANONYMOUS_NEXT_ALARM, nextAlarm).apply();
