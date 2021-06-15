@@ -44,6 +44,7 @@ public class Notifications extends BaseSettingsFragment implements
     private static final String PREF_FLASHLIGHT_ON_CALL_IGNORE_DND = "flashlight_on_call_ignore_dnd";
     private static final String PREF_FLASHLIGHT_ON_CALL_RATE = "flashlight_on_call_rate";
     private static final String PREF_NOTIFICATION_HEADER = "notification_headers";
+    private static final String PREF_BATTERY_LIGHT = "battery_light_enabled";
 
     private SwitchPreference mFlashOnCallWaiting;
     private SwitchPreference mFlashOnCallIgnoreDND;
@@ -79,6 +80,9 @@ public class Notifications extends BaseSettingsFragment implements
             getPreferenceScreen().removePreference(findPreference(
                     CAT_NOTIFICATION_FLASHLIGHT));
         }
+
+        Util.requireConfig(getActivity(), findPreference(PREF_BATTERY_LIGHT),
+                com.android.internal.R.bool.config_intrusiveNotificationLed, true, false);
 
         Util.requireConfig(getActivity(), findPreference(ALERT_SLIDER_PREF),
                 com.android.internal.R.bool.config_hasAlertSlider, true, false);
