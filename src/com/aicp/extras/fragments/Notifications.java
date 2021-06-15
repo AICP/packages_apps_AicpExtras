@@ -80,10 +80,10 @@ public class Notifications extends BaseSettingsFragment implements
             getPreferenceScreen().removePreference(findPreference(
                     CAT_NOTIFICATION_FLASHLIGHT));
         }
-/*
+
         Util.requireConfig(getActivity(), findPreference(PREF_BATTERY_LIGHT),
                 com.android.internal.R.bool.config_intrusiveNotificationLed, true, false);
-*/
+
         Util.requireConfig(getActivity(), findPreference(ALERT_SLIDER_PREF),
                 com.android.internal.R.bool.config_hasAlertSlider, true, false);
         Util.requireConfig(getActivity(), findPreference(KEY_RINGTONE_FOCUS),
