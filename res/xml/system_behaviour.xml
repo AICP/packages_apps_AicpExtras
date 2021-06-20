@@ -94,11 +94,22 @@
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.SmartPixels" />
 
-    <com.aicp.gear.preference.SecureSettingSwitchPreference
-        android:key="allow_signature_fake"
-        android:title="@string/signature_spoofing_title"
-        android:summary="@string/signature_spoofing_summary"
-        android:defaultValue="true" />
+    <!-- SELinux -->
+    <PreferenceCategory
+        android:key="spoofing"
+        android:title="@string/spoofing_category">
+
+        <Preference
+            android:summary="@string/signature_spoofing_explanation"
+            android:selectable="false"/>
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="allow_signature_fake"
+            android:title="@string/signature_spoofing_title"
+            android:summary="@string/signature_spoofing_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
 <!--
     <PreferenceCategory
         android:key="system_ss_category"
@@ -145,7 +156,7 @@
             android:key="audio_panel_view_bt_sco"
             android:title="@string/audio_panel_view_bt_sco_title"
             android:defaultValue="false" />
-  </PreferenceCategory>
+    </PreferenceCategory>
 
     <!-- SELinux -->
     <PreferenceCategory
