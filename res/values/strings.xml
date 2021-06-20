@@ -1672,8 +1672,10 @@
     <string name="lockscreen_charge_temp_unit_fahrenheit">Fahrenheit</string>
 
     <!-- Enable Signature spoofing -->
+    <string name="spoofing_category">Spoofing</string>
     <string name="signature_spoofing_title">Spoof package signature</string>
-    <string name="signature_spoofing_summary">Enable to allow package signature spoofing, this allows an app to pretend to be a different app. Malicious applications might be able to use this to access private application data. Legitimate uses include an emulator pretending to be what it emulates. Grant this permission with caution only!</string>
+    <string name="signature_spoofing_summary">Disable to revoke package signature spoofing for all apps.</string>
+    <string name="signature_spoofing_explanation">Signature spoofing allows an app to pretend to be a different app. Malicious applications might be able to use this to access private application data (however this would only be possible if you granted that permission to the app!). Legitimate uses include emulators such as MicroG etc.</string>
 
     <!-- Old Style Mobile -->
     <string name="use_old_mobiletype_title">Use old mobile signal style</string>
