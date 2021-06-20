@@ -99,6 +99,11 @@
         android:title="@string/signature_spoofing_title"
         android:summary="@string/signature_spoofing_summary"
         android:defaultValue="true" />
+
+    <Preference
+        android:summary="@string/signature_spoofing_explanation"
+        android:selectable="false"/>
+
 <!--
     <PreferenceCategory
         android:key="system_ss_category"
