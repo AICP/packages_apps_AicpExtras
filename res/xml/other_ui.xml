@@ -39,6 +39,13 @@
         android:summary="@string/show_rotation_suggestions_summary"
         android:defaultValue="true"/>
 -->
+    <!-- Launch music player when headset is connected -->
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="use_new_searchbar"
+        android:title="@string/search_bar_style_title"
+        android:summary="@string/search_bar_style_summary"
+        android:defaultValue="false" />
+
     <!-- Toast icon switch -->
      <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="toast_icon"
