@@ -60,31 +60,12 @@ public class QuickSettings extends BaseSettingsFragment
     private static final String SYSTEM_INFO = "qs_system_info";
     private static final String KEY_CUSTOM_FOOTER_TEXT = "custom_footer_text";
 
-    private static final String CUSTOM_HEADER_BROWSE = "custom_header_browse";
-    private static final String CUSTOM_HEADER_IMAGE = "status_bar_custom_header";
-    private static final String DAYLIGHT_HEADER_PACK = "daylight_header_pack";
-    private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
-    private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
-    private static final String STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
-    private static final String CUSTOM_HEADER_ENABLED = "status_bar_custom_header";
-    private static final String FILE_HEADER_SELECT = "file_header_select";
-
-    private static final int REQUEST_PICK_IMAGE = 0;
-
     private ListPreference mSysInfo;
     private Preference mCustomFooterTextPref;
     private SwitchPreference mQQSColsAuto;
     private SystemSettingSeekBarPreference mQQSColsCount;
 
     private String mCustomFooterText;
-
-    private Preference mHeaderBrowse;
-    private ListPreference mDaylightHeaderPack;
-    private SystemSettingSeekBarPreference mHeaderShadow;
-    private ListPreference mHeaderProvider;
-    private String mDaylightHeaderProvider;
-    private Preference mFileHeader;
-    private String mFileHeaderProvider;
 
     @Override
     protected int getPreferenceResource() {
@@ -103,46 +84,6 @@ public class QuickSettings extends BaseSettingsFragment
         mCustomFooterTextPref = (Preference) findPreference(KEY_CUSTOM_FOOTER_TEXT);
         updateCustomFooterTextSummary();
 
-        mHeaderBrowse = findPreference(CUSTOM_HEADER_BROWSE);
-
-        mDaylightHeaderPack = (ListPreference) findPreference(DAYLIGHT_HEADER_PACK);
-
-        List<String> entries = new ArrayList<String>();
-        List<String> values = new ArrayList<String>();
-        getAvailableHeaderPacks(entries, values);
-        mDaylightHeaderPack.setEntries(entries.toArray(new String[entries.size()]));
-        mDaylightHeaderPack.setEntryValues(values.toArray(new String[values.size()]));
-
-        boolean headerEnabled = Settings.System.getInt(resolver,
-                Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, 0) != 0;
-        updateHeaderProviderSummary(headerEnabled);
-        mDaylightHeaderPack.setOnPreferenceChangeListener(this);
-
-        mHeaderShadow = (SystemSettingSeekBarPreference) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
-        final int headerShadow = Settings.System.getInt(resolver,
-                Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER_SHADOW, 0);
-        mHeaderShadow.setValue((int)(((double) headerShadow / 255) * 100));
-        mHeaderShadow.setOnPreferenceChangeListener(this);
-
-        mDaylightHeaderProvider = getResources().getString(R.string.daylight_header_provider);
-        mFileHeaderProvider = getResources().getString(R.string.file_header_provider);
-        String providerName = Settings.System.getString(resolver,
-                Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER_PROVIDER);
-        if (providerName == null) {
-            providerName = mDaylightHeaderProvider;
-        }
-        mHeaderBrowse.setEnabled(isBrowseHeaderAvailable() && !providerName.equals(mFileHeaderProvider));
-
-        mHeaderProvider = (ListPreference) findPreference(CUSTOM_HEADER_PROVIDER);
-        int valueIndex = mHeaderProvider.findIndexOfValue(providerName);
-        mHeaderProvider.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
-        mHeaderProvider.setSummary(mHeaderProvider.getEntry());
-        mHeaderProvider.setOnPreferenceChangeListener(this);
-        mDaylightHeaderPack.setEnabled(providerName.equals(mDaylightHeaderProvider));
-
-        mFileHeader = findPreference(FILE_HEADER_SELECT);
-        mFileHeader.setEnabled(providerName.equals(mFileHeaderProvider));
-
         mQQSColsAuto = (SwitchPreference) findPreference(QS_QUICKBAR_COLUMNS_AUTO);
         mQQSColsCount = (SystemSettingSeekBarPreference) findPreference(QS_QUICKBAR_COLUMNS_COUNT);
 
@@ -153,74 +94,10 @@ public class QuickSettings extends BaseSettingsFragment
         mQQSColsAuto.setOnPreferenceChangeListener(this);
     }
 
-    private void updateHeaderProviderSummary(boolean headerEnabled) {
-        mDaylightHeaderPack.setSummary(getResources().getString(R.string.header_provider_disabled));
-        if (headerEnabled) {
-            String settingHeaderPackage = Settings.System.getString(getActivity().getContentResolver(),
-                    Settings.System.OMNI_STATUS_BAR_DAYLIGHT_HEADER_PACK);
-            int valueIndex = mDaylightHeaderPack.findIndexOfValue(settingHeaderPackage);
-            if (valueIndex == -1) {
-                // no longer found
-                Settings.System.putInt(getActivity().getContentResolver(),
-                        Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, 0);
-            } else {
-                mDaylightHeaderPack.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
-                mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntry());
-            }
-        }
-    }
-
-    private boolean isBrowseHeaderAvailable() {
-        PackageManager pm = getActivity().getPackageManager();
-        Intent browse = new Intent();
-        browse.setClassName("org.omnirom.omnistyle", "org.omnirom.omnistyle.PickHeaderActivity");
-        return pm.resolveActivity(browse, 0) != null;
-    }
-
-    private void getAvailableHeaderPacks(List<String> entries, List<String> values) {
-        Map<String, String> headerMap = new HashMap<String, String>();
-        Intent i = new Intent();
-        PackageManager packageManager = getActivity().getPackageManager();
-        i.setAction("org.omnirom.DaylightHeaderPack");
-        for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
-            String packageName = r.activityInfo.packageName;
-            String label = r.activityInfo.loadLabel(getActivity().getPackageManager()).toString();
-            if (label == null) {
-                label = r.activityInfo.packageName;
-            }
-            headerMap.put(label, packageName);
-        }
-        i.setAction("org.omnirom.DaylightHeaderPack1");
-        for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
-            String packageName = r.activityInfo.packageName;
-            String label = r.activityInfo.loadLabel(getActivity().getPackageManager()).toString();
-            if (r.activityInfo.name.endsWith(".theme")) {
-                continue;
-            }
-            if (label == null) {
-                label = packageName;
-            }
-            headerMap.put(label, packageName  + "/" + r.activityInfo.name);
-        }
-        List<String> labelList = new ArrayList<String>();
-        labelList.addAll(headerMap.keySet());
-        Collections.sort(labelList);
-        for (String label : labelList) {
-            entries.add(label);
-            values.add(headerMap.get(label));
-        }
-    }
-
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mHeaderShadow) {
-            Integer headerShadow = (Integer) newValue;
-            int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
-            Settings.System.putInt(resolver,
-                    Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
-            return true;
-        } else if (preference == mQQSColsAuto) {
+        if (preference == mQQSColsAuto) {
             Boolean qqsColsAutoEnabled = (Boolean) newValue;
             mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
             if (qqsColsAutoEnabled){
@@ -228,38 +105,8 @@ public class QuickSettings extends BaseSettingsFragment
                       Settings.System.QS_QUICKBAR_COLUMNS, -1);
             }
             return true;
-        } else if (preference == mDaylightHeaderPack) {
-            String value = (String) newValue;
-            Settings.System.putString(resolver,
-                    Settings.System.OMNI_STATUS_BAR_DAYLIGHT_HEADER_PACK, value);
-            int valueIndex = mDaylightHeaderPack.findIndexOfValue(value);
-            mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntries()[valueIndex]);
-            return true;
-        } else if (preference == mHeaderProvider) {
-            String value = (String) newValue;
-            Settings.System.putString(resolver,
-                    Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER_PROVIDER, value);
-            int valueIndex = mHeaderProvider.findIndexOfValue(value);
-            mHeaderProvider.setSummary(mHeaderProvider.getEntries()[valueIndex]);
-            mDaylightHeaderPack.setEnabled(value.equals(mDaylightHeaderProvider));
-            mHeaderBrowse.setEnabled(!value.equals(mFileHeaderProvider));
-            mHeaderBrowse.setTitle(valueIndex == 0 ? R.string.custom_header_browse_title : R.string.custom_header_pick_title);
-            mHeaderBrowse.setSummary(valueIndex == 0 ? R.string.custom_header_browse_summary_new : R.string.custom_header_pick_summary);
-            mFileHeader.setEnabled(value.equals(mFileHeaderProvider));
-            return true;
         }
         return false;
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent result) {
-        if (requestCode == REQUEST_PICK_IMAGE) {
-            if (resultCode != Activity.RESULT_OK) {
-                return;
-            }
-            final Uri imageUri = result.getData();
-            Settings.System.putString(getContentResolver(), Settings.System.OMNI_STATUS_BAR_FILE_HEADER_IMAGE, imageUri.toString());
-        }
     }
 
     @Override
@@ -290,18 +137,10 @@ public class QuickSettings extends BaseSettingsFragment
                             String value = ((Spannable) input.getText()).toString().trim();
                             Settings.System.putStringForUser(resolver, Settings.System.AICP_FOOTER_TEXT_STRING, value, UserHandle.USER_CURRENT);
                             updateCustomFooterTextSummary();
-/*                            Intent i = new Intent();
-                            i.setAction(Intent.ACTION_CUSTOM_CARRIER_LABEL_CHANGED);
-                            getActivity().sendBroadcast(i);*/
                         }
                     });
             alert.setNegativeButton(getString(android.R.string.cancel), null);
             alert.show();
-            return true;
-        } else if (preference == mFileHeader) {
-            Intent intent = new Intent(Intent.ACTION_PICK);
-            intent.setType("image/*");
-            startActivityForResult(intent, REQUEST_PICK_IMAGE);
             return true;
         }
         return super.onPreferenceTreeClick(preference);
