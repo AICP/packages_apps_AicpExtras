@@ -80,6 +80,12 @@
 
 -->
 
+    <com.aicp.gear.preference.SystemPropSwitchPreference
+        android:key="persist.sys.sf.disable_blurs"
+        android:title="@string/enable_blurs_on_windows_title"
+        android:summary="@string/enable_blurs_on_windows_summary"
+        android:defaultValue="false" />
+
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="sensor_block"
         android:title="@string/sensor_block_title"
