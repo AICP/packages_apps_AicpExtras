@@ -80,6 +80,12 @@
 
 -->
 
+    <SwitchPreference
+        android:key="enable_blurs_on_windows"
+        android:title="@string/enable_blurs_on_windows_title"
+        android:summary="@string/enable_blurs_on_windows_summary"
+        android:defaultValue="false" />
+
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="sensor_block"
         android:title="@string/sensor_block_title"

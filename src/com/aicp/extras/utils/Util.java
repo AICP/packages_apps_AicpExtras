@@ -209,6 +209,14 @@ public abstract class Util {
         }
     }
 
+    public static void requireProp(Context context, Preference preference, String property,
+                                     boolean defaultValue, boolean expectValue) {
+        if (preference == null) return;
+        if (SystemProperties.getBoolean(property, defaultValue) != expectValue) {
+            preference.getParent().removePreference(preference);
+        }
+    }
+
     private static boolean showAllPrefs(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(Constants.PREF_SHOW_DEVICE_HIDDEN_PREFS, false);
