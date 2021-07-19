@@ -48,6 +48,7 @@ import java.util.List;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.utils.PackageListAdapter;
 import com.aicp.extras.utils.PackageListAdapter.PackageItem;
+import com.aicp.gear.preference.AppListPreference;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.aicp.extras.R;
 
@@ -221,7 +222,7 @@ public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         PackageInfo info = mPackageManager.getPackageInfo(pkg.name,
                 PackageManager.GET_META_DATA);
         Preference pref =
-                new Preference(getActivity());
+                new AppListPreference(getActivity());
 
         pref.setKey(pkg.name);
         pref.setTitle(info.applicationInfo.loadLabel(mPackageManager));
