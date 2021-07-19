@@ -80,7 +80,7 @@
         android:title="@string/gaming_mode_app_picker_title"
         android:dependency="gaming_mode_enabled"
         android:key="gamingmode_applications">
-        <Preference
+        <com.aicp.gear.preference.AppListPreference
             android:key="add_gamingmode_packages"
             android:icon="@drawable/ic_menu_add"
             android:title="@string/add_gaming_mode_package_title"
