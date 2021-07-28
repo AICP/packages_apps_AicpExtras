@@ -155,6 +155,13 @@
     <PreferenceCategory
           android:key="lockscreen_security_category"
           android:title="@string/lockscreen_security_category">
+
+          <com.aicp.gear.preference.SystemSettingSwitchPreference
+              android:key="fp_wake_unlock"
+              android:title="@string/fp_wake_unlock_title"
+              android:summary="@string/fp_wake_unlock_summary"
+              android:defaultValue="true" />
+
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="fingerprint_success_vib"
               android:title="@string/fprint_sucess_vib_title"
