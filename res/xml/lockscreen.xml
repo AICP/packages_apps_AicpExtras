@@ -197,10 +197,20 @@
                 android:summary="@string/fod_icon_picker_summary"
                 android:fragment="com.aicp.extras.fragments.FODIconPickerFragment" />
 
-            <com.aicp.gear.preference.SystemSettingSwitchPreference
+            <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+                android:key="fod_icon_accent_default_color"
+                android:title="@string/fod_icon_accent_default_color"
+                android:summary="@string/fod_icon_accent_default_color_summary"
+                aicpextras:thereCanBeOnlyOneGroupId="1"
+                aicpextras:plainSwitch="true"
+                android:defaultValue="false" />
+
+            <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
                 android:key="fod_icon_wallpaper_color"
                 android:title="@string/fod_wallpaper_color"
                 android:summary="@string/fod_wallpaper_color_summary"
+                aicpextras:thereCanBeOnlyOneGroupId="1"
+                aicpextras:plainSwitch="true"
                 android:defaultValue="false" />
 
             <!-- FOD recognizing animation ->
