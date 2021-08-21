@@ -39,18 +39,13 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
         return R.xml.theming;
     }
 
-    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        findPreference(Settings.System.THEMING_BASE).setOnPreferenceChangeListener(this);
-        findPreference(Settings.System.THEMING_CORNERS).setOnPreferenceChangeListener(this);
-        findPreference(Settings.System.THEMING_SYSTEM_ICONS_STYLE)
-                .setOnPreferenceChangeListener(this);
-        findPreference(AdaptiveIconDrawable.MASK_SETTING_PROP).setOnPreferenceChangeListener(this);
+        Util.requireConfig(getActivity(), findPreference(Settings.System.DISPLAY_HIDE_NOTCH),
+                com.android.internal.R.bool.config_showHideNotchSettings, true, false);
     }
-    */
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {

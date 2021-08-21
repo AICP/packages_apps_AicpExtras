@@ -180,6 +180,13 @@
             android:entryValues="@array/theming_settings_dashboard_icons_values"
             android:defaultValue="0" />
 
+    <!-- Hide notch fill -->
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="display_hide_notch"
+            android:title="@string/display_hide_notch_title"
+            android:summary="@string/display_hide_notch_summary"
+            android:defaultValue="0" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
