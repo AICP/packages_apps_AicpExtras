@@ -100,6 +100,20 @@
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.SmartPixels" />
 
+    <!-- Battery Options -->
+    <PreferenceCategory
+        android:key="battery_options"
+        android:title="@string/battery_category">
+
+        <!-- Suspend Actions -->
+        <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
+            android:key="aggressive_battery_saver"
+            android:title="@string/aggressive_battery_saver_title"
+            android:summary="@string/aggressive_battery_saver_summary"
+            android:defaultValue="true"
+            android:fragment="com.aicp.extras.fragments.AggressiveBattery" />
+    </PreferenceCategory>
+
     <!-- Spoofing -->
     <PreferenceCategory
         android:key="spoofing"
