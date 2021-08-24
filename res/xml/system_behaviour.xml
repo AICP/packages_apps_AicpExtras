@@ -57,14 +57,6 @@
         android:defaultValue="0" />
 -->
 
-    <!-- Suspend Actions -->
-    <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
-        android:key="start_screen_state_service"
-        android:title="@string/screen_state_toggles_title"
-        android:summary="@string/screen_state_toggles_enable_summary"
-        android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.SuspendActions" />
-
 <!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="edge_service_for_gestures"
@@ -86,24 +78,10 @@
         android:summary="@string/enable_blurs_on_windows_summary"
         android:defaultValue="false" />
 
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-        android:key="sensor_block"
-        android:title="@string/sensor_block_title"
-        android:summary="@string/sensor_block_summary"
-        android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.SensorBlock"/>
-
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-        android:key="smart_pixels_enable"
-        android:title="@string/smart_pixels_title"
-        android:summary="@string/smart_pixels_summary"
-        android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.SmartPixels" />
-
     <!-- Battery Options -->
     <PreferenceCategory
         android:key="battery_options"
-        android:title="@string/battery_category">
+        android:title="@string/battery_category_title">
 
         <Preference
             android:key="sleep_mode"
@@ -113,10 +91,34 @@
         <!-- Aggressive Battery Saver -->
         <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
             android:key="aggressive_battery_saver"
-            android:title="@string/aggressive_battery_saver_title"
-            android:summary="@string/aggressive_battery_saver_summary"
+            android:title="@string/aggressive_battery_title"
+            android:summary="@string/aggressive_battery_summary"
             android:defaultValue="true"
             android:fragment="com.aicp.extras.fragments.AggressiveBattery" />
+
+        <!-- Sensor block -->
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+            android:key="sensor_block"
+            android:title="@string/sensor_block_title"
+            android:summary="@string/sensor_block_summary"
+            android:defaultValue="false"
+            android:fragment="com.aicp.extras.fragments.SensorBlock"/>
+
+        <!-- Smart Pixels -->
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+            android:key="smart_pixels_enable"
+            android:title="@string/smart_pixels_title"
+            android:summary="@string/smart_pixels_summary"
+            android:defaultValue="false"
+            android:fragment="com.aicp.extras.fragments.SmartPixels" />
+
+        <!-- Suspend Actions -->
+        <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
+            android:key="start_screen_state_service"
+            android:title="@string/screen_state_toggles_title"
+            android:summary="@string/screen_state_toggles_enable_summary"
+            android:defaultValue="false"
+            android:fragment="com.aicp.extras.fragments.SuspendActions" />
     </PreferenceCategory>
 
     <!-- Spoofing -->
