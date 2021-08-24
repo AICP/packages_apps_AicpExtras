@@ -93,6 +93,16 @@
             android:exported="false" >
         </activity>
 
+        <activity
+            android:name=".fragments.SleepMode"
+            android:label="@string/sleep_mode_title"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.aicp.extras.fragments.ViewSleepMode" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <receiver
             android:name=".romstats.ReportingServiceManager"
             android:enabled="true"
@@ -125,6 +135,13 @@
             <intent-filter>
                 <action android:name="android.intent.action.GAMING_MODE_TURN_OFF" />
                 <action android:name="android.intent.action.GAMING_MODE_TURN_ON" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Sleep Mode -->
+        <receiver android:name="com.aicp.extras.fragments.SleepModeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.SLEEP_MODE_TURN_OFF" />
             </intent-filter>
         </receiver>
 
