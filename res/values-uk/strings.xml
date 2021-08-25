@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2017 AICP
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources>
+    <string name="user_interface_category">Інтерфейс користувача</string>
+    <string name="system_category">Система</string>
+    <string name="other_category">Інші</string>
+    <string name="status_bar_title">Панель статусу</string>
+    <string name="status_bar_summary">Редагувати вигляд панелі статусу</string>
+    <string name="battery_bar_title">Індикатор заряду батареї</string>
+    <string name="battery_bar_style_title">Вирівнювання</string>
+    <string name="battery_bar_thickness_title">Товщина</string>
+    <string name="battery_bar_animate_title">Анімація заряджання</string>
+    <string name="battery_bar_style_regular">Звичайне</string>
+    <string name="battery_bar_style_center_mirrored">Дзеркально від центра</string>
+    <string name="battery_bar_style_reversed">Реверсивний</string>
+    <string name="battery_bar_use_charging_color_title">Інший колір при заряджанні</string>
+    <string name="smart_pulldown_title">\"Розумна\" панель сповіщень</string>
+    <string name="smart_pulldown_off">вимк</string>
+    <string name="smart_pulldown_none">без сповіщень</string>
+    <string name="smart_pulldown_dismissable">немає відхилених повідомлень</string>
+    <string name="smart_pulldown_ongoing">немає повідомлень</string>
+    <string name="smart_pulldown_summary">Відкрити швидкі налаштування при %1$s сповіщеннях</string>
+    <string name="smart_pulldown_none_summary">Відкрити швидкі налаштування коли немає сповіщень</string>
+    <string name="smart_pulldown_off_summary">вмкнено</string>
+    <string name="status_bar_double_tap_to_sleep_title">Торкніться статус бару для сну</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Двічі натисніть на панель стану, щоб вимкнути дисплей</string>
+    <string name="status_bar_show_clock_title">Показати час &amp;amp і дату</string>
+    <string name="clock_title_enable">Вирівнювання</string>
+    <string name="status_bar_clock_seconds_title">Показувати секунди</string>
+    <string name="status_bar_am_pm_title">Стиль AM/PM</string>
+    <string name="status_bar_am_pm_info">24-годинний формат часу</string>
+    <string name="am_pm_clock_normal">Стандартний розмір шрифта</string>
+    <string name="am_pm_clock_small">Малий розмір шрифта</string>
+    <string name="am_pm_clock_none">Не показувати</string>
+    <string name="clock_date_display">Дата</string>
+    <string name="clock_date_display_summary">Відображати користувацький формат дати перед годинником</string>
+    <string name="clock_date_style">Стиль дати</string>
+    <string name="clock_date_position">Розташування дати</string>
+    <string name="clock_date_format">Формат дати:</string>
+    <string name="clock_date_string_edittext_title">Значення має відповідати формату дати, наприклад: ММ/ДД/РР</string>
+    <string name="clock_date_string_edittext_summary">Введіть значення</string>
+    <string name="clock_date_right">Праворуч від годинника</string>
+    <string name="clock_date_left">Ліворуч від годинника</string>
+    <string name="clock_date_display_none">Не показувати</string>
+    <string name="clock_date_display_small">Малий розмір шрифта</string>
+    <string name="clock_date_display_normal">Стандартний розмір шрифта</string>
+    <string name="clock_date_style_normal">Нормальний</string>
+    <string name="clock_date_style_lowercase">Нижній регістр</string>
+    <string name="clock_date_style_uppercase">Верхній регістр</string>
+    <string name="clock_date_format_custom">Власний Java формат</string>
+    <string name="clock_position_right">Годинник праворуч</string>
+    <string name="clock_position_center">Годинник в центрі</string>
+    <string name="clock_position_left">Годинник ліворуч</string>
+    <string name="menu_cancel">Скасувати</string>
+    <string name="menu_save">Зберегти</string>
+    <string name="status_bar_gestures_category_title">Жести</string>
+    <string name="status_bar_icons_category_title">Значки</string>
+    <string name="status_bar_battery_category_title">Параметри батареї</string>
+    <string name="status_bar_others_category_title">Інше</string>
+    <string name="status_bar_logo_category_title">Логотип</string>
+    <string name="status_bar_logo_title">Логотип</string>
+    <string name="status_bar_logo_summary">Увімкнути задля відображння лого у рядку стану</string>
+    <string name="status_bar_logo_color_title">Колір</string>
+    <string name="status_bar_logo_position_title">Позиція</string>
+    <string name="status_bar_logo_position_summary">Оберіть позицію логотипу: ліворуч чи праворуч</string>
+    <string name="status_bar_logo_position_right">Праворуч</string>
+    <string name="status_bar_logo_position_left">Ліворуч</string>
+    <string name="status_bar_logo_style_title">Стиль</string>
+    <string name="status_bar_logo_style_aicp">AICP</string>
+    <string name="status_bar_logo_style_android">Android</string>
+    <string name="status_bar_logo_style_apple">Apple</string>
+    <string name="status_bar_logo_style_ios">iOS</string>
+    <string name="status_bar_logo_style_emoticon">Смайлики</string>
+    <string name="status_bar_logo_style_emoticon_cool">Смайлик крутий</string>
+    <string name="status_bar_logo_style_emoticon_dead">Смайлик мертвий</string>
+    <string name="status_bar_logo_style_emoticon_devil">Смайлик лихий</string>
+    <string name="status_bar_logo_style_emoticon_happy">Смайлик щасливий</string>
+    <string name="status_bar_logo_style_emoticon_neutral">Смайлик нейтральний</string>
+    <string name="status_bar_logo_style_emoticon_poop">Смайлик лайно</string>
+    <string name="status_bar_logo_style_emoticon_sad">Смайлик сумний</string>
+    <string name="status_bar_logo_style_emoticon_tongue">Смайлик язик</string>
+    <string name="status_bar_logo_style_blackberry">Blackberry</string>
+    <string name="status_bar_logo_style_cake">Тістечко</string>
+    <string name="status_bar_logo_style_blogger">Блогер</string>
+    <string name="status_bar_logo_style_biohazard">Biohazard</string>
+    <string name="status_bar_logo_style_linux">Linux</string>
+    <string name="status_bar_logo_style_yin_yang">Інь і ян</string>
+    <string name="status_bar_logo_style_windows">Windows</string>
+    <string name="status_bar_logo_style_robot">Робот</string>
+    <string name="status_bar_logo_style_ninja">Ніндзя</string>
+    <string name="status_bar_logo_style_heart">Серце</string>
+    <string name="status_bar_logo_style_flower">Квітка</string>
+    <string name="status_bar_logo_style_ghost">Привид</string>
+    <string name="status_bar_logo_style_google">Google</string>
+    <string name="status_bar_logo_style_human_male">Чоловік</string>
+    <string name="status_bar_logo_style_human_female">Жінка</string>
+    <string name="status_bar_logo_style_human_male_female">Чоловік &amp; жінка</string>
+    <string name="status_bar_logo_style_gender_male">Чоловік</string>
+    <string name="status_bar_logo_style_gender_female">Жіночий</string>
+    <string name="status_bar_logo_style_gender_male_female">Чоловіча стать &amp; жіноча стать</string>
+    <string name="status_bar_logo_style_guitar_electric">Електрогітара</string>
+    <string name="show_4g_title">Показати 4G</string>
+    <string name="show_4g_summary">Показати 4G замість LTE</string>
+    <string name="notifications_title">Сповіщення</string>
+    <string name="notifications_summary">Розширене налаштування сповіщень</string>
+    <string name="notification_heads_up_title">Спливаючі сповіщення</string>
+    <string name="notification_heads_up_summary">Дозволити спливаючі сповіщення</string>
+    <string name="custom_header_browse_title">Огляд встановлених заголовків</string>
+    <string name="custom_header_browse_summary_new">Перегляд всіх доступних колекцій заголовків</string>
+    <string name="custom_header_pick_title">Користувацька картинка заголовку</string>
+    <string name="custom_header_pick_summary">Виберіть зображення для статичного режиму</string>
+    <string name="daylight_header_provider_title">Колекція зображень</string>
+    <string name="custom_header_provider_title">Оператор у заголовку</string>
+    <string name="custom_header_browse_summary">Натисніть на зображення для статичного режиму</string>
+    <string name="style_enabled_summary">Користувацьке зображення заголовка увімкнено</string>
+    <string name="pulse_color">Колір</string>
+    <string name="theming_notif_title">Сповіщення</string>
+    <string name="battery_light_blend_category">Змішування кольорів</string>
+    <string name="action_save">Зберегти</string>
+    <string name="charging_animation_title">Анімація заряджання</string>
+    <string name="category_lockscreen_gestures_title">Жести</string>
+</resources>
