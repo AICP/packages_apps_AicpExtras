@@ -72,6 +72,13 @@
         aicpextras:overlayCategory="aicp.navbar_style"
         aicpextras:overlayTarget="com.android.systemui" />
 
+    <!-- Brightness Slider Style -->
+    <com.aicp.gear.preference.OverlayPreference
+        android:key="slider_style"
+        android:title="@string/slider_style_title"
+        aicpextras:overlayCategory="aicp.slider_style"
+        aicpextras:overlayTarget="com.android.systemui" />
+
     <PreferenceCategory
         android:key="theming_light"
         android:title="@string/theming_light_title">
