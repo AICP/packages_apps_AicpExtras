@@ -79,6 +79,14 @@
         aicpextras:overlayCategory="aicp.slider_style"
         aicpextras:overlayTarget="com.android.systemui" />
 
+    <!-- Volume Panel Style -->
+    <com.aicp.gear.preference.SystemSettingListPreference
+        android:key="systemui_plugin_volume"
+        android:title="@string/volume_panel"
+        android:entries="@array/volume_panel_entries"
+        android:entryValues="@array/volume_panel_values"
+        android:defaultValue="com.android.systemui.volume" />
+
     <PreferenceCategory
         android:key="theming_light"
         android:title="@string/theming_light_title">
@@ -188,5 +196,4 @@
             android:defaultValue="0" />
 
     </PreferenceCategory>
-
 </PreferenceScreen>
