@@ -31,6 +31,17 @@
         aicpextras:interval="100"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="ms" />
+
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="screenshot_compression"
+        android:title="@string/global_actions_screenshot_compression_title"
+        android:summary="@string/global_actions_screenshot_compression_summary"
+        android:max="100"
+        android:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="%"
+        android:defaultValue="100"/>
+
 <!--
     <!- Rotation suggestions ->
     <com.aicp.gear.preference.SecureSettingSwitchPreference
