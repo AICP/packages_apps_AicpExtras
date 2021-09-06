@@ -132,6 +132,13 @@
     <PreferenceCategory
         android:title="@string/audio_panel_view">
 
+        <com.aicp.gear.preference.SystemSettingListPreference
+            android:key="systemui_plugin_volume"
+            android:title="@string/volume_panel"
+            android:entries="@array/volume_panel_entries"
+            android:entryValues="@array/volume_panel_values"
+            android:defaultValue="com.android.systemui.volume" />
+
         <com.aicp.gear.preference.SecureSettingSwitchPreference
             android:key="volume_panel_on_left"
             android:title="@string/audio_panel_position_title"
