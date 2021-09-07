@@ -17,6 +17,9 @@
 
 package com.aicp.extras.fragments;
 
+import static android.view.DisplayCutout.BOUNDS_POSITION_LEFT;
+import static android.view.DisplayCutout.BOUNDS_POSITION_RIGHT;
+
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
@@ -26,6 +29,7 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.Gravity;
@@ -37,6 +41,7 @@ import com.aicp.extras.R;
 
 import com.aicp.gear.preference.SecureSettingIntListPreference;
 import com.aicp.gear.preference.SecureSettingListPreference;
+import com.aicp.gear.util.DeviceUtils;
 import com.android.internal.util.aicp.AicpUtils;
 
 import java.util.Date;
@@ -83,17 +88,19 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements OnPr
         super.onResume();
 
         final boolean hasNotch = AicpUtils.hasNotch(getActivity());
+        final int notchType = DeviceUtils.getCutoutType(getActivity());
+        Log.v(TAG,"notchType: " + notchType);
 
         // Adjust status bar preferences for RTL
         if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
-            if (hasNotch) {
+            if (hasNotch && !(notchType == BOUNDS_POSITION_LEFT || notchType == BOUNDS_POSITION_RIGHT)) {
                 mClockPosition.setEntries(R.array.clock_position_entries_notch_rtl);
                 mClockPosition.setEntryValues(R.array.clock_position_values_notch_rtl);
             } else {
                 mClockPosition.setEntries(R.array.clock_position_entries_rtl);
                 mClockPosition.setEntryValues(R.array.clock_position_values_rtl);
             }
-        } else if (hasNotch) {
+        } else if (hasNotch && !(notchType == BOUNDS_POSITION_LEFT || notchType == BOUNDS_POSITION_RIGHT)) {
             mClockPosition.setEntries(R.array.clock_position_entries_notch);
             mClockPosition.setEntryValues(R.array.clock_position_values_notch);
         }
