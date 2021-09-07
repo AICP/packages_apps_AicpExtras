@@ -22,6 +22,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.provider.Settings;
 
+import androidx.preference.PreferenceCategory;
 import androidx.preference.SwitchPreference;
 import androidx.preference.PreferenceScreen;
 
@@ -38,6 +39,8 @@ public class GamingModeSettings extends BaseSettingsFragment {
 
     private PackageListPreference mGamingPrefList;
 
+    private boolean performance_supported;
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.settings_gaming;
@@ -48,6 +51,11 @@ public class GamingModeSettings extends BaseSettingsFragment {
         super.onCreate(icicle);
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        final PreferenceCategory perfCat = (PreferenceCategory) prefScreen
+                .findPreference("performance_category");
+
+            prefScreen.removePreference(perfCat);
 
         mGamingPrefList = (PackageListPreference) findPreference("gaming_mode_app_list");
         mGamingPrefList.setRemovedListKey(Settings.System.GAMING_MODE_REMOVED_APP_LIST);
