@@ -57,14 +57,15 @@ import com.aicp.gear.preference.SystemSettingListPreference;
 import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
 import com.android.internal.util.aicp.DeviceUtils;
-import com.android.internal.util.hwkeys.ActionConstants;
-import com.android.internal.util.hwkeys.ActionUtils;
+//import com.android.internal.util.hwkeys.ActionConstants;
+//import com.android.internal.util.hwkeys.ActionUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+public class GamingMode {/*
 public class GamingMode extends BaseSettingsFragment
         implements Preference.OnPreferenceClickListener {
 
@@ -179,13 +180,13 @@ public class GamingMode extends BaseSettingsFragment
 
     /**
      * Application class
-     */
+     *//*
     private static class Package {
         public String name;
         /**
          * Stores all the application values in one call
          * @param name
-         */
+         *//*
         public Package(String name) {
             this.name = name;
         }
@@ -364,5 +365,5 @@ public class GamingMode extends BaseSettingsFragment
         }
         Settings.System.putString(getContentResolver(),
                 setting, value);
-    }
+    }*/
 }
