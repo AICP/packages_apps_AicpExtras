@@ -112,14 +112,6 @@
             android:summary="@string/system_animations_summary"
             android:icon="@drawable/ic_settings_system_animations"
             android:fragment="com.aicp.extras.fragments.SystemAnimations" />
-<!--
-        <PreferenceScreen
-            android:title="@string/gaming_mode_title"
-            android:key="gaming_mode"
-            android:summary="@string/gaming_mode_summary"
-            android:icon="@drawable/ic_gaming"
-            android:fragment="com.aicp.extras.fragments.GamingMode"/>
--->
 
         <PreferenceScreen
             android:title="@string/system_behaviour_title"
@@ -145,7 +137,6 @@
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.TunerActivity" />
         </Preference>
-
     </PreferenceCategory>
 
     <PreferenceCategory
