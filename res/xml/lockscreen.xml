@@ -229,13 +229,13 @@
                 aicpextras:plainSwitch="true"
                 android:defaultValue="false" />
 
-            <!-- FOD recognizing animation ->
+            <!-- FOD recognizing animation -->
             <com.aicp.gear.preference.SystemSettingSwitchPreference
                 android:key="fod_recognizing_animation"
                 android:title="@string/fod_recog_animation"
                 android:summary="@string/fod_recog_animation_summary"
                 android:defaultValue="false" />
-
+            <!--
             <com.aicp.gear.preference.SystemSettingIntListPreference
                 android:key="fod_anim"
                 android:title="@string/fod_recog_animation_picker_title"
