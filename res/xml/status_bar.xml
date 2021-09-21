@@ -243,6 +243,13 @@
        android:key="statusbar_others_category"
        android:title="@string/status_bar_others_category_title">
 
+       <!-- Hide notch fill -->
+       <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="display_hide_notch"
+            android:title="@string/display_hide_notch_title"
+            android:summary="@string/display_hide_notch_summary"
+            android:defaultValue="0" />
+
 <!--
        <com.aicp.gear.preference.SystemSettingSwitchPreference
            android:key="statusbar_hide_notch"
