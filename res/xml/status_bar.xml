@@ -217,6 +217,29 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+       android:key="statusbar_padding_settings_category"
+       android:title="@string/status_bar_padding_settings_category_title">
+
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+           android:key="statusbar_left_padding"
+           android:title="@string/statusbar_left_padding"
+           android:max="50"
+           android:min="-5"
+           aicpextras:unitsLeft=""
+           aicpextras:unitsRight=""
+           android:defaultValue="8"/>
+
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+           android:key="statusbar_right_padding"
+           android:title="@string/statusbar_right_padding"
+           android:max="50"
+           android:min="-5"
+           aicpextras:unitsLeft=""
+           aicpextras:unitsRight=""
+           android:defaultValue="8"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
        android:key="statusbar_others_category"
        android:title="@string/status_bar_others_category_title">
 
