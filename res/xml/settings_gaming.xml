@@ -40,6 +40,13 @@
         android:dependency="gaming_mode_enabled" />
 
     <SwitchPreference
+        android:key="gaming_mode_fps_info"
+        android:title="@string/gaming_mode_show_fpsinfo_title"
+        android:summary="@string/gaming_mode_show_fpsinfo_summary"
+        android:defaultValue="false"
+        android:dependency="gaming_mode_enabled" />
+
+    <SwitchPreference
         android:key="gaming_mode_use_overlay_menu"
         android:title="@string/gaming_mode_use_menu_overlay_title"
         android:summary="@string/gaming_mode_use_menu_overlay_summary"
