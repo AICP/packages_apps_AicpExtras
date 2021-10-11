@@ -202,7 +202,7 @@ public class QSHeaderImage extends BaseSettingsFragment
         } else if (preference == mHeaderProvider) {
             String value = (String) newValue;
             Settings.System.putString(resolver,
-                    STATUS_BAR_CUSTOM_HEADER_PROVIDER, value);
+                    Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER_PROVIDER, value);
             int valueIndex = mHeaderProvider.findIndexOfValue(value);
             mHeaderProvider.setSummary(mHeaderProvider.getEntries()[valueIndex]);
             mDaylightHeaderPack.setEnabled(value.equals(mDaylightHeaderProvider));
