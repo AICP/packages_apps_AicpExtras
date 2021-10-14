@@ -3,6 +3,12 @@
     android:key="pulse_fading_bars"
     android:title="@string/pulse_solid_dimen_category" >
 
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="pulse_solid_units_rounded"
+        android:title="@string/pulse_solid_units_rounded_title"
+        android:summary="@string/pulse_solid_units_rounded_summary"
+        android:defaultValue="false"/>
+
     <com.aicp.gear.preference.SecureSettingSeekBarPreference
         android:key="pulse_solid_units_opacity"
         android:title="@string/pulse_solid_units_opacity"
