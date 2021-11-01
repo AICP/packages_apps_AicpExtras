@@ -31,7 +31,7 @@ import com.aicp.extras.utils.Util;
 import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingSeekBarPreference;
 import com.aicp.gear.preference.SystemSettingSwitchPreference;
-import com.android.internal.util.aicp.DeviceUtils;
+import com.aicp.gear.util.DeviceUtils;
 
 public class Notifications extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {

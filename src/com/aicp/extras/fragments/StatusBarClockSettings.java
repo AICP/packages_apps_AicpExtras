@@ -42,7 +42,7 @@ import com.aicp.extras.R;
 import com.aicp.gear.preference.SecureSettingIntListPreference;
 import com.aicp.gear.preference.SecureSettingListPreference;
 import com.aicp.gear.util.DeviceUtils;
-import com.android.internal.util.aicp.AicpUtils;
+import com.aicp.gear.util.AicpUtils;
 
 import java.util.Date;
 
