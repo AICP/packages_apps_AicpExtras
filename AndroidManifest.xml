@@ -41,6 +41,7 @@
 
         <activity
             android:name=".LauncherActivity"
+            android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,6 +57,7 @@
         <activity
             android:name=".changelog.ChangelogActivity"
             android:theme="@style/ChangelogTheme"
+            android:exported="true"
             android:label="@string/changelog_name">
             <intent-filter>
                 <action android:name="com.aicp.extras.ViewChangelog" />
@@ -70,6 +72,7 @@
 
         <activity
             android:name=".SystemappRemover"
+            android:exported="true"
             android:label="@string/system_app_remover_title">
             <intent-filter>
                 <action android:name="com.aicp.extras.ViewSystemAppRemover" />
@@ -106,7 +109,7 @@
         <receiver
             android:name=".romstats.ReportingServiceManager"
             android:enabled="true"
-            android:exported="false"
+            android:exported="true"
             android:label="ReportingServiceManager" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -125,13 +128,17 @@
                  android:permission="android.permission.BIND_JOB_SERVICE" />
 
 
-        <receiver android:name="com.aicp.extras.utils.OnBoot">
+	<receiver android:name="com.aicp.extras.utils.OnBoot"
+            android:exported="true"
+            android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.aicp.extras.utils.GamingModeReceiver">
+        <receiver android:name="com.aicp.extras.utils.GamingModeReceiver"
+            android:exported="true"
+            android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.GAMING_MODE_TURN_OFF" />
                 <action android:name="android.intent.action.GAMING_MODE_TURN_ON" />
@@ -144,6 +151,7 @@
         <activity android:name="com.aicp.extras.smartnav.ActionPickerDialogActivity"
                 android:theme="@style/Theme.SmartBar.Dialog"
                 android:label="@string/choose_action_title"
+                android:exported="true"
                 android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -154,6 +162,7 @@
         <activity android:name="com.aicp.extras.smartnav.IconPickerActivity"
                 android:theme="@style/Theme.SmartBar.Dialog"
                 android:label="@string/icon_pack_picker_dialog_title"
+                android:exported="true"
                 android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -164,6 +173,7 @@
         <activity android:name="com.aicp.extras.smartnav.IconPickerGallery"
             android:theme="@style/Theme.SmartBar.Dialog"
             android:label="@string/icon_pack_picker_dialog_title"
+            android:exported="true"
             android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -172,6 +182,7 @@
 
         <!-- Icon pack grid -->
         <activity android:name="com.aicp.extras.smartnav.IconPackGridActivity"
+                android:exported="true"
                 android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
