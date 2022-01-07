@@ -32,11 +32,11 @@ import android.provider.Settings;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-import com.android.internal.util.aicp.AwesomeAnimationHelper;
+//import com.android.internal.util.aicp.AwesomeAnimationHelper;
 
 import java.util.Arrays;
 
-public class AnimationControls extends BaseSettingsFragment
+public class AnimationControls {/*extends BaseSettingsFragment
             implements Preference.OnPreferenceChangeListener {
 
     private static final String ACTIVITY_OPEN = "activity_open";
@@ -230,5 +230,5 @@ public class AnimationControls extends BaseSettingsFragment
         String mString = Settings.Global.ACTIVITY_ANIMATION_CONTROLS[getPreferenceIndex(preference)];
         int mNum = Settings.Global.getInt(getActivity().getContentResolver(), mString, 0);
         return mAnimationsStrings[mNum];
-    }
+    }*/
 }

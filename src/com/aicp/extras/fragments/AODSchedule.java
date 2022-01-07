@@ -29,11 +29,11 @@ import androidx.preference.PreferenceScreen;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.extras.utils.Util;
+//import com.aicp.extras.utils.Util;
 
-import com.aicp.gear.preference.SecureSettingListPreference;
+//import com.aicp.gear.preference.SecureSettingListPreference;
 
-public class AODSchedule extends BaseSettingsFragment implements
+public class AODSchedule {/* extends BaseSettingsFragment implements
         Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
 
     static final int MODE_DISABLED = 0;
@@ -184,5 +184,5 @@ public class AODSchedule extends BaseSettingsFragment implements
                 Settings.Secure.DOZE_ALWAYS_ON_AUTO_TIME,
                 times[0] + "," + times[1], UserHandle.USER_CURRENT);
         updateTimeSummary(times, Integer.parseInt(mModePref.getValue()));
-    }
+    }*/
 }

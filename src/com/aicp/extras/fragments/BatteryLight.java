@@ -25,9 +25,9 @@ import androidx.preference.SwitchPreference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.extras.utils.Util;
+//import com.aicp.extras.utils.Util;
 
-public class BatteryLight extends BaseSettingsFragment
+public class BatteryLight {/*extends BaseSettingsFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String KEY_CATEGORY_CHARGE_COLORS = "battery_light_cat";
@@ -75,5 +75,5 @@ public class BatteryLight extends BaseSettingsFragment
     private void updateDependencies(boolean batteryBlend) {
         mChargeColorsCategory.setEnabled(!batteryBlend);
     }
-
+*/
 }

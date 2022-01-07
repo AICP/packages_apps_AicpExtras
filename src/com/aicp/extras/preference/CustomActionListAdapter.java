@@ -32,12 +32,12 @@ import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.android.internal.util.hwkeys.ActionHandler;
-import com.android.internal.util.hwkeys.Config.ActionConfig;
+//import com.android.internal.util.hwkeys.ActionHandler;
+//import com.android.internal.util.hwkeys.Config.ActionConfig;
 
 import com.aicp.extras.R;
 
-public class CustomActionListAdapter extends BaseAdapter {
+public class CustomActionListAdapter {/* extends BaseAdapter {
     private LayoutInflater mInflater;
     private Context mContext;
     private List<ActionConfig> mCustomActions = new ArrayList<ActionConfig>();
@@ -119,5 +119,5 @@ public class CustomActionListAdapter extends BaseAdapter {
         TextView title;
         TextView summary;
         ImageView icon;
-    }
+    }*/
 }

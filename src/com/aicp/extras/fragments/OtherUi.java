@@ -27,7 +27,7 @@ import androidx.preference.SwitchPreference;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class OtherUi extends BaseSettingsFragment
+public class OtherUi {/*extends BaseSettingsFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = OtherUi.class.getSimpleName();
@@ -80,5 +80,5 @@ public class OtherUi extends BaseSettingsFragment
             return true;
         }
         return false;
-    }
+    }*/
 }

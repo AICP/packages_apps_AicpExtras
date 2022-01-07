@@ -19,7 +19,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="pulse_settings"
     android:title="@string/pulse_settings" >
-
+<!--
     <com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="lockscreen_pulse_enabled"
         android:title="@string/lockscreen_pulse_settings"
@@ -33,18 +33,18 @@
     <PreferenceCategory
         android:key="pulse_render_mode_category"
         android:title="@string/pulse_render_mode_title" >
-
+-->
         <!-- Fading bars -->
-        <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
+<!--        <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
             android:key="pulse_render_mode_fading_lines"
             android:title="@string/pulse_render_mode_solid_lines"
             aicpextras:thereCanBeOnlyOneGroupId="1"
             aicpextras:plainSwitch="false"
             android:defaultValue="true"
             android:fragment="com.aicp.extras.fragments.PulseSettingsBars" />
-
+-->
         <!-- Fading blocks -->
-        <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
+<!--        <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
             android:key="pulse_render_mode_fading_blocks"
             android:title="@string/pulse_render_mode_fading_bars"
             aicpextras:thereCanBeOnlyOneGroupId="1"
@@ -110,5 +110,5 @@
 
     <com.android.settingslib.widget.FooterPreference
         android:title="@string/pulse_help_policy_notice_summary" />
-
+-->
 </PreferenceScreen>

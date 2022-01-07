@@ -71,7 +71,7 @@ public class Dashboard extends BaseSettingsFragment {
 
         mAicpLogo = (LongClickablePreference) findPreference(PREF_AICP_LOGO);
 
-        mWeatherOption = findPreference(PREF_WEATHER);
+/*        mWeatherOption = findPreference(PREF_WEATHER);
         if (!Util.isPackageEnabled(Constants.WEATHER_SERVICE_PACKAGE, pm)) {
             mWeatherOption.getParent().removePreference(mWeatherOption);
         }
@@ -80,7 +80,7 @@ public class Dashboard extends BaseSettingsFragment {
         if (!Util.isPackageEnabled(Constants.AICP_OTA_PACKAGE, pm)) {
             mAicpOTA.getParent().removePreference(mAicpOTA);
         }
-
+*/
         Preference logIt = findPreference(PREF_LOG_IT);
         Util.requireRoot(getActivity(), logIt);
 

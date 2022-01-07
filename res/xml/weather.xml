@@ -22,7 +22,7 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="weather"
     android:title="@string/weather_title">
-
+<!--
     <PreferenceScreen
         android:title="@string/weather_config_title"
         android:summary="@string/weather_config_summary" >
@@ -35,9 +35,9 @@
         android:key="weather_icon_pack"
         android:title="@string/weather_icon_pack_title"
         android:persistent="false" />
-
+-->
     <!-- Lockscreen weather -->
-    <PreferenceCategory
+<!--    <PreferenceCategory
         android:key="lock_screen_weather_category"
         android:title="@string/lock_screen_weather_category_title" >
 
@@ -61,5 +61,5 @@
     <com.android.settingslib.widget.FooterPreference
         android:title="@string/lock_screen_weather_style_footer"
         android:selectable="false"
-        settings:allowDividerAbove="true" />
+settings:allowDividerAbove="true" />-->
 </PreferenceScreen>

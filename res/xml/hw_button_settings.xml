@@ -21,7 +21,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="hw_button_settings"
     android:title="@string/hardware_keys_title">
-
+<!--
     <PreferenceCategory
         android:key="back_key"
         android:title="@string/hardware_keys_back_key_title" >
@@ -48,9 +48,9 @@
     <PreferenceCategory
         android:key="home_key"
         android:title="@string/hardware_keys_home_key_title" >
-
+-->
         <!-- Volume keys control media stream -->
-        <com.aicp.gear.preference.SecureSettingIntListPreference
+<!--        <com.aicp.gear.preference.SecureSettingIntListPreference
             android:key="ring_home_button_behavior"
             android:dialogTitle="@string/home_button_mode_title"
             android:title="@string/home_button_mode_title"
@@ -148,5 +148,5 @@
             android:title="@string/hardware_keys_double_tap_title" >
         </com.aicp.extras.preference.ActionPreference>
 
-    </PreferenceCategory>
+</PreferenceCategory>-->
 </PreferenceScreen>

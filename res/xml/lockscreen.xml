@@ -47,7 +47,7 @@
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="sp"
         android:defaultValue="16" />
--->
+--><!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="lockscreen_lock_icon"
         android:title="@string/lockscreen_lock_icon_title"
@@ -82,7 +82,7 @@
         android:entryValues="@array/lockscreen_charge_temp_unit_values"
         android:dependency="lockscreen_battery_info"
         android:defaultValue="1" />
-
+-->
 <!--
     <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
         android:key="lockscreen_visualizer_enabled"
@@ -98,7 +98,7 @@
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.AmbientMediaTicker" />
 -->
-
+<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="pulse_on_new_tracks"
         android:title="@string/force_ambient_for_media_pref_title"
@@ -194,20 +194,20 @@
               android:summary="@string/unlock_scramble_pin_layout_summary"
               android:defaultValue="false" />
     </PreferenceCategory>
-
+-->
 <!--  ******* Moved to settings *****
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="lockscreen_quick_unlock_control"
               android:title="@string/unlock_quick_unlock_control_title"
               android:summary="@string/unlock_quick_unlock_control_summary"
               android:defaultValue="false" />  -->
-
+<!--
     <PreferenceCategory
             android:key="fod_icon_picker"
             android:title="@string/fod_icon_picker_category_title" >
-
+-->
             <!-- FOD icon picker -->
-            <Preference
+<!--            <Preference
                 android:key="fod_icon_picker_category"
                 android:title="@string/fod_icon_picker_title"
                 android:summary="@string/fod_icon_picker_summary"
@@ -228,13 +228,13 @@
                 aicpextras:thereCanBeOnlyOneGroupId="1"
                 aicpextras:plainSwitch="true"
                 android:defaultValue="false" />
-
+-->
             <!-- FOD recognizing animation -->
-            <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--            <com.aicp.gear.preference.SystemSettingSwitchPreference
                 android:key="fod_recognizing_animation"
                 android:title="@string/fod_recog_animation"
                 android:summary="@string/fod_recog_animation_summary"
-                android:defaultValue="false" />
+android:defaultValue="false" />-->
             <!--
             <com.aicp.gear.preference.SystemSettingIntListPreference
                 android:key="fod_anim"
@@ -243,6 +243,6 @@
                 android:entryValues="@array/fod_recog_animation_values"
                 android:defaultValue="0"
                 android:dependency="fod_recognizing_animation" /> -->
-
-    </PreferenceCategory>
+<!--
+</PreferenceCategory>-->
 </PreferenceScreen>

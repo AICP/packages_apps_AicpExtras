@@ -19,14 +19,14 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="navigation"
     android:title="@string/navigation_title">
-
+<!--
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="navigation_bar_show_new"
         android:title="@string/navbar_visibility"
         android:summary="@string/navbar_visibility_summary"
         android:defaultValue="@*android:bool/config_showNavigationBar"
         android:fragment="com.aicp.extras.fragments.NavigationBarSettings" />
-
+-->
 <!--
         aicpextras:systemPropDefaultOverride="qemu.hw.mainkeys?0:1"
     <com.aicp.gear.preference.SystemSettingSwitchPreference
@@ -34,7 +34,7 @@
         android:title="@string/navigation_bar_menu_arrow_keys_title"
         android:summary="@string/navigation_bar_menu_arrow_keys_summary"
         android:defaultValue="false"/>
--->
+--><!--
     <PreferenceCategory
         android:key="gesture_nav_tweaks_category"
         android:title="@string/navbar_gesture_tweaks_cat_title">
@@ -107,7 +107,7 @@
 
     <PreferenceCategory
         android:key="button_backlight_options_category"
-        android:title="@string/button_backlight_options_category" >
+android:title="@string/button_backlight_options_category" >-->
 <!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="button_backlight_enable"
@@ -121,7 +121,7 @@
             android:defaultValue="false"
             android:dependency="button_backlight_enable"
             android:disableDependentsState="true" />
--->
+--><!--
         <com.aicp.gear.preference.SeekBarPreferenceCham
             android:key="button_brightness"
             android:title="@string/button_manual_brightness"

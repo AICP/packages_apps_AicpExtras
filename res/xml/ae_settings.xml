@@ -20,7 +20,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:key="ae_settings"
     android:title="@string/ae_settings_title">
-
+<!--
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="ae_theme"
         android:title="@string/theme_title"
@@ -39,5 +39,5 @@
         android:title="@string/show_device_hidden_prefs_title"
         android:summary="@string/show_device_hidden_prefs_summary"
         android:defaultValue="false" />
-
+-->
 </PreferenceScreen>

@@ -19,7 +19,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/gaming_mode_notification_danmaku_title" >
-
+<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="gaming_mode_show_danmaku"
         android:title="@string/gaming_mode_show_danmaku_title"
@@ -76,5 +76,5 @@
         android:title="@string/gaming_mode_danmaku_blacklist"
         android:key="gaming_mode_danmaku_app_blacklist"
         android:dependency="gaming_mode_show_danmaku" />
-
+-->
 </PreferenceScreen>

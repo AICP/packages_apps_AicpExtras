@@ -20,7 +20,7 @@
 package com.aicp.extras.fragments;
 
 import java.util.ArrayList;
-
+/*
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.hwkeys.ActionConstants;
 import com.android.internal.util.hwkeys.ActionConstants.Defaults;
@@ -45,8 +45,8 @@ import androidx.preference.PreferenceScreen;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.aicp.extras.R;
 import com.aicp.extras.BaseSettingsFragment;
-
-public class ActionFragment extends BaseSettingsFragment implements
+**/
+public class ActionFragment { /* extends BaseSettingsFragment implements
         ShortcutPickHelper.OnPickListener {
 
     private static final int DIALOG_CATEGORY = 69;
@@ -184,7 +184,7 @@ public class ActionFragment extends BaseSettingsFragment implements
             onActionPolicyEnforced(mPrefHolder);
         }
     }
-
+/*
 /*
     @Override
     public void onSaveInstanceState(Bundle outState) {
@@ -193,7 +193,7 @@ public class ActionFragment extends BaseSettingsFragment implements
             outState.putString(KEY_FOCUSED_PREFERENCE, mHolderTag);
         }
     }
-*/
+*//*
     protected void showDialog(int dialogId) {
         switch (dialogId) {
             case DIALOG_CATEGORY: {
@@ -262,12 +262,12 @@ public class ActionFragment extends BaseSettingsFragment implements
             pref.setEnabled(enabled);
         }
     }
-
+*/
     /**
      * load our button lists and ActionPreferences map button action targets from preference keys
      * and defaults config maps subclass is required to set desired Defaults interface int
      * ActionContants
-     */
+     *//*
     protected void onPreferenceScreenLoaded(Defaults defaults) {
         mDefaults = defaults;
         final PreferenceScreen prefScreen = getPreferenceScreen();
@@ -330,5 +330,5 @@ public class ActionFragment extends BaseSettingsFragment implements
                 break;
             }
         }
-    }
+    }*/
 }

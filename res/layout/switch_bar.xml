@@ -18,7 +18,7 @@
 -->
 
 <merge xmlns:android="http://schemas.android.com/apk/res/android" >
-
+	<!--
     <TextView android:id="@+id/switch_text"
               android:layout_height="wrap_content"
               android:layout_width="0dp"
@@ -29,6 +29,16 @@
               android:textAppearance="@style/TextAppearance.Switch"
               android:textColor="?attr/switchBarTextColor"
               android:textAlignment="viewStart" />
+	-->
+    <TextView android:id="@+id/switch_text"
+              android:layout_height="wrap_content"
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_gravity="center_vertical"
+              android:maxLines="2"
+              android:ellipsize="end"
+              android:textAlignment="viewStart" />
+
 
     <com.aicp.extras.widget.ToggleSwitch android:id="@+id/switch_widget"
             android:layout_width="wrap_content"
@@ -37,4 +47,5 @@
             android:theme="@style/Widget.SwitchBar.Switch" />
 
 </merge>
+
 

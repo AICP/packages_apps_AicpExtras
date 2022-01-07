@@ -30,7 +30,7 @@ import com.aicp.extras.R;
 import java.util.ArrayList;
 
 // TODO Switch to ThemePicker's CustomizationOption
-public class FODIconPicker extends LayoutPreference {
+public class FODIconPicker {/* extends LayoutPreference {
 
     private Context mContext;
 
@@ -99,5 +99,5 @@ public class FODIconPicker extends LayoutPreference {
             mButtons.get(i).setBackgroundTintList(defaulttint);
         }
         activebutton.setBackgroundTintList(Utils.getColorAttr(getContext(), android.R.attr.colorAccent));
-    }
+    }*/
 }

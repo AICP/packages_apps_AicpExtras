@@ -28,9 +28,9 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 
-import com.aicp.gear.util.ThemeOverlayHelper;
+//import com.aicp.gear.util.ThemeOverlayHelper;
 
-public class Theming extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
+public class Theming {/* extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
 
     private Handler mHandler = new Handler();
 
@@ -66,7 +66,7 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
             return false;
         }
         */
-        return false;
+ /*       return false;
     }
 
     private void postRestartSystemUi() {
@@ -79,5 +79,5 @@ public class Theming extends BaseSettingsFragment implements Preference.OnPrefer
                 }
         }, 200);
     }
-
+*/
 }

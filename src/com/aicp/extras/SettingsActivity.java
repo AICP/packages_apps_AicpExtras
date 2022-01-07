@@ -42,13 +42,13 @@ import com.aicp.extras.preference.SecureSettingSwitchBarController;
 import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
 import com.aicp.extras.preference.SystemSettingSwitchBarController;
 import com.aicp.extras.utils.Util;
-import com.aicp.extras.widget.SwitchBar;
+//import com.aicp.extras.widget.SwitchBar;
 
 public class SettingsActivity extends BaseActivity {
 
     private Fragment mFragment;
-    private SwitchBar mSwitchBar;
-    private MasterSwitchPreferenceDependencyHandler mMasterSwitchDependencyHandler;
+   // private SwitchBar mSwitchBar;
+//    private MasterSwitchPreferenceDependencyHandler mMasterSwitchDependencyHandler;
 
     // Action prefix for launching specific fragments without using intent extras
     public static final String AE_FRAGMENT_ACTION_PREFIX = "com.aicp.extras.fragmentaction";
@@ -126,7 +126,7 @@ public class SettingsActivity extends BaseActivity {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.main_content, mFragment, FRAGMENT_TAG).commit();
         }
-
+/*
         mMasterSwitchDependencyHandler = new MasterSwitchPreferenceDependencyHandler(this);
         // Add switchbar preferences with reserved grou id -1
         if (mIntent.hasExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS)) {
@@ -140,9 +140,9 @@ public class SettingsActivity extends BaseActivity {
         if (mIntent.hasExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS)) {
             mMasterSwitchDependencyHandler.addGlobalSettingPreferences(-1,
                     mIntent.getStringArrayExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS));
-        }
+        }*/
         boolean thereShouldBeOne = mIntent.getBooleanExtra(EXTRA_SWITCH_THERE_SHOULD_BE_ONE, false);
-
+/*
         mSwitchBar = (SwitchBar) findViewById(R.id.switch_bar);
         if (mIntent.hasExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY)) {
             mSwitchBar.show();
@@ -182,7 +182,7 @@ public class SettingsActivity extends BaseActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         if (sharedPreferences.getBoolean("is_first_time", true)) {
             firstStartNoRootDialog();
-        }
+        }*/
     }
 
     @Override
@@ -202,7 +202,7 @@ public class SettingsActivity extends BaseActivity {
                 if (preferenceScreen != null) {
                     actionBar.setTitle(preferenceScreen.getTitle());
                 }
-                handleMasterSwitchPreferences(preferenceScreen);
+               // handleMasterSwitchPreferences(preferenceScreen);
             }
         }
     }
@@ -210,9 +210,9 @@ public class SettingsActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        mMasterSwitchDependencyHandler.onResume();
+  //      mMasterSwitchDependencyHandler.onResume();
     }
-
+/*
     private void handleMasterSwitchPreferences(
                 androidx.preference.PreferenceGroup preferenceGroup) {
         for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
@@ -225,7 +225,7 @@ public class SettingsActivity extends BaseActivity {
             }
         }
     }
-
+*/
     public boolean onPreferenceClick(androidx.preference.Preference preference) {
         String fragmentClass = preference.getFragment();
         // Check if class is available - if it is not, let default Android magic kick in
@@ -262,13 +262,13 @@ public class SettingsActivity extends BaseActivity {
                             ((MasterSwitchPreference) preference).getThereShouldBeOneSwitch());
                     int groupId = ((MasterSwitchPreference) preference)
                             .getThereCanBeOnlyOneGroupId();
-                    intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS,
+                   /* intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS,
                             mMasterSwitchDependencyHandler.getSystemSettingsForGroup(groupId));
                     intent.putExtra(EXTRA_SWITCH_SECURE_SETTINGS_MUTUAL_KEYS,
                             mMasterSwitchDependencyHandler.getSecureSettingsForGroup(groupId));
                     intent.putExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS,
                             mMasterSwitchDependencyHandler.getGlobalSettingsForGroup(groupId));
-                }
+               */ }
             }
 
             if (preference.peekExtras() != null) {

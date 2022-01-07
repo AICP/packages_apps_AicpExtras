@@ -51,7 +51,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class QuickSettings extends BaseSettingsFragment
+public class QuickSettings {/*extends BaseSettingsFragment
     implements OnPreferenceChangeListener {
 
     private static final boolean DEBUG = false;
@@ -180,5 +180,5 @@ public class QuickSettings extends BaseSettingsFragment
         } else {
             mCustomFooterTextPref.setSummary(mCustomFooterText);
         }
-    }
+    }*/
 }

@@ -25,7 +25,7 @@
 
     <!-- overlayTarget="anrdoid" is enough:
             we have some special treatment implemented for this category -->
-    <com.aicp.gear.preference.OverlayPreference
+<!--    <com.aicp.gear.preference.OverlayPreference
         android:key="theming_icon_pack"
         android:title="@string/theming_icon_pack_title"
         aicpextras:overlayCategory="android.theme.customization.icon_pack.android"
@@ -64,23 +64,23 @@
             android:targetPackage="com.android.wallpaper"
             android:targetClass="com.android.customization.picker.LockClockPickerActivity" />
     </Preference>
-
+-->
     <!-- Navbar Style -->
-    <com.aicp.gear.preference.OverlayPreference
+<!--    <com.aicp.gear.preference.OverlayPreference
         android:key="navbar_style"
         android:title="@string/navbar_style_title"
         aicpextras:overlayCategory="aicp.navbar_style"
         aicpextras:overlayTarget="com.android.systemui" />
-
+-->
     <!-- Brightness Slider Style -->
-    <com.aicp.gear.preference.OverlayPreference
+<!--    <com.aicp.gear.preference.OverlayPreference
         android:key="slider_style"
         android:title="@string/slider_style_title"
         aicpextras:overlayCategory="aicp.slider_style"
         aicpextras:overlayTarget="com.android.systemui" />
-
+-->
     <!-- Volume Panel Style -->
-    <com.aicp.gear.preference.SystemSettingListPreference
+<!--    <com.aicp.gear.preference.SystemSettingListPreference
         android:key="systemui_plugin_volume"
         android:title="@string/volume_panel"
         android:entries="@array/volume_panel_entries"
@@ -150,7 +150,7 @@
             aicpextras:overlayCategory="aicp.notif_dark"
             aicpextras:overlayTarget="android;com.android.systemui" />
 
-    </PreferenceCategory>
+</PreferenceCategory>-->
 <!--
 
     <PreferenceCategory
@@ -176,7 +176,7 @@
             android:defaultValue="50" />
     </PreferenceCategory>
 -->
-
+<!--
     <PreferenceCategory
         android:key="theming_settings"
         android:title="@string/theming_settings_title">
@@ -188,5 +188,5 @@
             android:entryValues="@array/theming_settings_dashboard_icons_values"
             android:defaultValue="0" />
 
-    </PreferenceCategory>
+</PreferenceCategory>-->
 </PreferenceScreen>

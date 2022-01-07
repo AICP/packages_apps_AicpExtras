@@ -35,17 +35,17 @@ import com.aicp.extras.R;
 import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
 import com.aicp.gear.preference.SeekBarPreferenceCham;
 
-import com.android.internal.util.aicp.AicpUtils;
+/*import com.android.internal.util.aicp.AicpUtils;
 import com.android.internal.util.aicp.NavUtils;
 import com.android.internal.util.aicp.DeviceUtils;
 import com.android.internal.util.hwkeys.ActionConstants;
 import com.android.internal.util.hwkeys.ActionUtils;
-
+*/
 import android.util.Log;
 
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
 
-public class Navigation extends BaseSettingsFragment
+public class Navigation {/*extends BaseSettingsFragment
           implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "AENavigation";
@@ -338,5 +338,5 @@ public class Navigation extends BaseSettingsFragment
             return true;
         }
         return false;
-    }
+    }*/
 }

@@ -31,12 +31,12 @@
         android:summary="@string/aicp_changelog_summary">
         <intent android:action="com.aicp.extras.ViewChangelog" />
     </PreferenceScreen>
-
+    <!--
     <PreferenceScreen
         android:title="@string/stats_title"
         android:summary="@string/stats_summary"
         android:fragment="com.aicp.extras.romstats.AnonymousStats" />
-
+    -->
     <PreferenceCategory
         android:title="@string/weblinks_category">
 

@@ -25,10 +25,10 @@ import androidx.preference.Preference;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
-import com.aicp.gear.preference.SystemSettingSwitchPreference;
+//import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
+//import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
-public class SuspendActions extends BaseSettingsFragment
+public class SuspendActions {/*extends BaseSettingsFragment
            implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "SuspendActions";
@@ -97,5 +97,5 @@ public class SuspendActions extends BaseSettingsFragment
     @Override
     public void onResume() {
         super.onResume();
-    }
+    }*/
 }

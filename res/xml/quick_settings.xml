@@ -21,7 +21,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="quick_settings"
     android:title="@string/quick_settings_title">
-
+<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
         android:title="@string/qs_tile_title_visibility_title"
@@ -33,14 +33,14 @@
         android:title="@string/qs_vibrate_title"
         android:summary="@string/qs_vibrate_summary"
         android:defaultValue="false" />
-
+-->
     <!--<com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="hide_tile_expand_indicator"
         android:title="@string/hide_tile_expand_indicator_title"
         android:summary="@string/hide_tile_expand_indicator_summary"
         android:defaultValue="false" />
 -->
-
+<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="music_tile_title"
         android:title="@string/qs_music_tile_track_optional_title"
@@ -212,5 +212,5 @@
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.QSHeaderImage" />
 
-    </PreferenceCategory>
+</PreferenceCategory>-->
 </PreferenceScreen>

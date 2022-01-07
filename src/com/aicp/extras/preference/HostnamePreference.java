@@ -27,7 +27,7 @@ import android.util.Log;
 
 import com.aicp.extras.R;
 
-public class HostnamePreference extends EditTextPreference {
+public class HostnamePreference {/* extends EditTextPreference {
 
     private static final String TAG = "HostnamePreference";
 
@@ -74,5 +74,5 @@ public class HostnamePreference extends EditTextPreference {
     public void persistHostname(String hostname) {
         Settings.Secure.putString(getContext().getContentResolver(),
                 Settings.Secure.DEVICE_HOSTNAME, hostname);
-    }
+    }*/
 }

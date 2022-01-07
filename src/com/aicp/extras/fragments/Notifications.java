@@ -31,9 +31,9 @@ import com.aicp.extras.utils.Util;
 import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingSeekBarPreference;
 import com.aicp.gear.preference.SystemSettingSwitchPreference;
-import com.android.internal.util.aicp.DeviceUtils;
+//import com.android.internal.util.aicp.DeviceUtils;
 
-public class Notifications extends BaseSettingsFragment implements
+public class Notifications {/*extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
@@ -63,7 +63,7 @@ public class Notifications extends BaseSettingsFragment implements
 /*
         Util.requireFullStatusbar(getActivity(),
                 findPreference(Settings.System.STATUS_BAR_SHOW_TICKER));
-*/
+*//*
         mFlashOnCallWaiting = (SwitchPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL_WAITING);
         mFlashOnCallIgnoreDND = (SwitchPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL_IGNORE_DND);
         mFlashOnCallRate = (SystemSettingSeekBarPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL_RATE);
@@ -112,5 +112,5 @@ public class Notifications extends BaseSettingsFragment implements
             return true;
         }
         return false;
-    }
+    }*/
 }

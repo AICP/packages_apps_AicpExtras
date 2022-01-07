@@ -35,7 +35,7 @@ import com.aicp.extras.utils.Util;
 
 import com.android.settingslib.development.SystemPropPoker;
 
-public class SystemBehaviour extends BaseSettingsFragment
+public class SystemBehaviour {/*extends BaseSettingsFragment
          implements Preference.OnPreferenceChangeListener {
     private static final String TAG = SystemBehaviour.class.getSimpleName();
 
@@ -43,11 +43,11 @@ public class SystemBehaviour extends BaseSettingsFragment
     private static final String KEY_ENABLE_BLURS = "enable_blurs_on_windows";
     private static final String DISABLE_BLURS_SYSPROP = "persist.sys.sf.disable_blurs";
     private static final String SF_PROP_REQUIRED_FOR_BLUR = "ro.surface_flinger.supports_background_blur";
-
+*/
 /*
     private static final String KEY_AUDIO_PANEL_POSITION = "volume_panel_on_left";
     private static final String KEY_BARS = "bars_settings";
-*/
+*//*
     private static final String SELINUX_CATEGORY = "selinux";
 
     private SwitchPreference mSelinuxMode;
@@ -79,15 +79,15 @@ public class SystemBehaviour extends BaseSettingsFragment
 /*
         Util.requireConfig(getActivity(), findPreference(KEY_BARS),
                 com.android.internal.R.bool.config_haveHigherAspectRatioScreen, true, false);
-*/
+*//*
         Util.requireConfig(getActivity(), findPreference(KEY_SMART_PIXELS),
                 com.android.internal.R.bool.config_enableSmartPixels, true, false);
 
         mEnableBlurPref = (SwitchPreference) findPreference(KEY_ENABLE_BLURS);
         mEnableBlurPref.setChecked(!SystemProperties.getBoolean(
-                DISABLE_BLURS_SYSPROP, false /* default */));
+                DISABLE_BLURS_SYSPROP, false /* default *//*));
         mEnableBlurPref.setOnPreferenceChangeListener(this);
-        Util.requireProp(getActivity(), mEnableBlurPref, SF_PROP_REQUIRED_FOR_BLUR, false /* default */, true);
+        Util.requireProp(getActivity(), mEnableBlurPref, SF_PROP_REQUIRED_FOR_BLUR, false /* default *//*, true);
     }
 
     @Override
@@ -150,5 +150,5 @@ public class SystemBehaviour extends BaseSettingsFragment
                 setSelinuxEnabled(SELinux.isSELinuxEnforced(), mSelinuxPersistence.isChecked());
             }
         }
-    }
+    }*/
 }

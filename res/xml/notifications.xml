@@ -21,7 +21,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="notifications"
     android:title="@string/notifications_title">
-
+<!--
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="status_bar_show_ticker"
         android:title="@string/status_bar_show_ticker_title"
@@ -37,7 +37,7 @@
         android:defaultValue="true"
         android:fragment="com.aicp.extras.fragments.HeadsUpOptions"
         aicpextras:thereCanBeOnlyOneGroupId="1" />
-
+-->
 <!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="force_expanded_notifications"
@@ -45,15 +45,15 @@
         android:summary="@string/force_expanded_notifications_summary"
         android:defaultValue="false" />
 -->
-
+<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="notification_material_dismiss"
         android:title="@string/enable_clear_all_button"
         android:summary="@string/enable_clear_all_button_summary"
         android:defaultValue="false" />
-
+-->
     <!-- Notification background opacity -->
-    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+<!--    <com.aicp.gear.preference.SystemSettingSeekBarPreference
         android:key="notification_bg_alpha"
         android:title="@string/notification_alpha_title"
         android:max="255"
@@ -106,9 +106,9 @@
         android:entries="@array/less_notification_sounds_entries"
         android:entryValues="@array/less_notification_sounds_values"
         android:defaultValue="0" />
-
+-->
     <!-- Clipboard access toasts -->
-    <com.aicp.gear.preference.SystemSettingIntListPreference
+<!--    <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="clipboard_toast_info"
         android:title="@string/clipboard_toast_info_title"
         android:entries="@array/clipboard_toast_info_entries"
@@ -137,7 +137,7 @@
             android:title="@string/notification_guts_kill_app_button_title"
             android:summary="@string/notification_guts_kill_app_button_summary"
             android:defaultValue="false" />
-    </PreferenceCategory>
+</PreferenceCategory>-->
 <!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="notification_headers"
@@ -159,7 +159,7 @@
 
     <com.android.settingslib.widget.FooterPreference
         android:title="@string/status_bar_show_ticker_footer" />
--->
+--><!--
     <PreferenceCategory
         android:key="notification_flash"
         android:title="@string/notification_flash_title" >
@@ -191,5 +191,5 @@
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="Hz"
             android:defaultValue="1" />
-    </PreferenceCategory>
+</PreferenceCategory>-->
 </PreferenceScreen>

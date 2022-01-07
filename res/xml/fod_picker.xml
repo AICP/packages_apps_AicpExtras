@@ -20,13 +20,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:key="fod_icon_picker"
     android:title="@string/fod_icon_picker_title">
-
-    <!-- Preview -->
+    <!-- Preview --><!--
     <com.aicp.extras.preference.FODIconPicker
             android:key="fod_icon"
             android:layout="@layout/fod_picker_preference"
             android:selectable="false"/>
 
     <com.android.settingslib.widget.FooterPreference
-        android:title="@string/fod_icon_picker_footer" />
+	    android:title="@string/fod_icon_picker_footer" />
+    -->
 </PreferenceScreen>

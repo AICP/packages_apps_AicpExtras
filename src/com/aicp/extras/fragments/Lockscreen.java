@@ -29,13 +29,13 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
-import com.android.internal.util.aicp.AicpUtils;
+//import com.android.internal.util.aicp.AicpUtils;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 import com.aicp.gear.util.AicpContextConstants;
 
-public class Lockscreen extends BaseSettingsFragment {
+public class Lockscreen {/*extends BaseSettingsFragment {
 
     private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
     private static final String KEY_AOD_SCHEDULE = "always_on_display_schedule";
@@ -89,5 +89,5 @@ public class Lockscreen extends BaseSettingsFragment {
             fodIconPickerCategory.getParent().removePreference(fodIconPickerCategory);
         }
 
-    }
+    }*/
 }

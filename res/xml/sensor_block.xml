@@ -4,11 +4,11 @@
     android:title="@string/sensor_block_title">
 
     <!-- App picker activity for sensor block -->
-    <PreferenceScreen
+<!--    <PreferenceScreen
         android:key="sensor_activity_blacklist"
         android:title="@string/sensor_block_app_picker_title"
         android:summary="@string/sensor_block_app_picker_summary"
         android:fragment="com.aicp.extras.fragments.SensorActivityBlacklist"
         android:persistent="false" />
-
+-->
 </PreferenceScreen>

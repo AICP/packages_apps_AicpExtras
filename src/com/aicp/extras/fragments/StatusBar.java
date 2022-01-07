@@ -43,9 +43,9 @@ import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingListPreference;
 import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
-import com.android.internal.util.aicp.AicpUtils;
+//import com.android.internal.util.aicp.AicpUtils;
 
-public class StatusBar extends BaseSettingsFragment implements
+public class StatusBar {/* extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String SMART_PULLDOWN = "qs_smart_pulldown";
@@ -82,7 +82,7 @@ public class StatusBar extends BaseSettingsFragment implements
                 Settings.System.QS_SMART_PULLDOWN, 0);
         updateSmartPulldownSummary(smartPulldown);
         mSmartPulldown.setOnPreferenceChangeListener(this);
-*/
+*//*
 
         // Quick Pulldown
         mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
@@ -134,7 +134,7 @@ public class StatusBar extends BaseSettingsFragment implements
         if(displayCutout.isEmpty()) {
             final Preference hideNotchPref = (Preference) findPreference(KEY_HIDE_NOTCH);
             hideNotchPref.getParent().removePreference(hideNotchPref);
-        }*/
+        }*//*
     }
 
     @Override
@@ -144,7 +144,7 @@ public class StatusBar extends BaseSettingsFragment implements
             int value = Integer.parseInt((String) newValue);
             updateSmartPulldownSummary(value);
             return true;
-        } else */
+        } else *//*
         if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
@@ -160,7 +160,7 @@ public class StatusBar extends BaseSettingsFragment implements
             int showBatteryPercentage = Integer.valueOf((String) newValue);
             updateShowBatteryInQQS(showBatteryPercentage);
             return true;
-        }*/
+        }*//*
         return false;
     }
 
@@ -237,7 +237,7 @@ public class StatusBar extends BaseSettingsFragment implements
         }
     }
 */
-
+/*
     private void updateQuickPulldownSummary(int value) {
         Resources res = getResources();
 

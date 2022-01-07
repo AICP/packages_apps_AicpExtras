@@ -39,7 +39,7 @@ import java.util.ArrayList;
 import com.aicp.extras.preference.PackageListPreference;
 import com.aicp.gear.preference.SystemSettingSeekBarPreference;
 
-public class GamingModeSettings extends BaseSettingsFragment implements OnPreferenceChangeListener {
+public class GamingModeSettings {/*extends BaseSettingsFragment implements OnPreferenceChangeListener {
 
     private PackageListPreference mGamingPrefList;
     private SwitchPreference mUseMenuSwitch;
@@ -115,5 +115,5 @@ public class GamingModeSettings extends BaseSettingsFragment implements OnPrefer
         }
         return false;
     }
-
+*/
 }

@@ -51,7 +51,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class QSHeaderImage extends BaseSettingsFragment
+public class QSHeaderImage {/* extends BaseSettingsFragment
     implements OnPreferenceChangeListener {
 
     private static final boolean DEBUG = false;
@@ -236,5 +236,5 @@ public class QSHeaderImage extends BaseSettingsFragment
             return true;
         }
         return super.onPreferenceTreeClick(preference);
-    }
+    }*/
 }
