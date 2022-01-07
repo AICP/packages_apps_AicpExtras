@@ -46,6 +46,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
 
 # Apache http for stats
 LOCAL_JAVA_LIBRARIES := org.apache.http.legacy
+LOCAL_USES_LIBRARIES := org.apache.http.legacy
 
 LOCAL_USE_AAPT2 := true
 
