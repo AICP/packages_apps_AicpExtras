@@ -163,7 +163,7 @@ public class ReportingService extends IntentService {
         mainActivity.setClassName(SETTINGS_PACKAGE_NAME, AE_SETTINGSACTIVITY);
         mainActivity.putExtra(PreferenceActivity.EXTRA_SHOW_FRAGMENT, ROMSTATS_SETTINGS);
 
-        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, mainActivity, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, mainActivity, PendingIntent.FLAG_IMMUTABLE);
 
         NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,
                 getApplicationContext().getString(R.string.notification_romstats_name),
