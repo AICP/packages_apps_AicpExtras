@@ -35,8 +35,8 @@ import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 import com.aicp.gear.util.AicpContextConstants;
 
-public class Lockscreen {/*extends BaseSettingsFragment {
-
+public class Lockscreen extends BaseSettingsFragment {
+/*
     private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
     private static final String KEY_AOD_SCHEDULE = "always_on_display_schedule";
     private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
@@ -44,12 +44,12 @@ public class Lockscreen {/*extends BaseSettingsFragment {
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.lockscreen;
     }
-
+/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

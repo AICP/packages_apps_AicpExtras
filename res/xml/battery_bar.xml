@@ -21,8 +21,14 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="battery_bar"
     android:title="@string/battery_bar_title">
-<!--
-    <com.aicp.gear.preference.SystemSettingIntListPreference
+
+     <com.aicp.gear.preference.SystemSettingSwitchPreference
+         android:key="statusbar_battery_bar"
+         android:title="@string/battery_bar_title"
+         android:summary="@string/battery_bar_summary"
+         android:defaultValue="false" />
+
+    <com.aicp.gear.preference.SystemSettingListPreference
         android:key="statusbar_battery_bar_location"
         android:title="@string/battery_bar_location_title"
         android:entries="@array/battery_bar_location_entries"
@@ -72,7 +78,7 @@
         android:defaultValue="0xff0d47a1"
         android:dependency="statusbar_battery_bar_enable_charging_color" />
 
-    <com.aicp.gear.preference.SystemSettingIntListPreference
+    <com.aicp.gear.preference.SystemSettingListPreference
         android:key="statusbar_battery_bar_style"
         android:title="@string/battery_bar_style_title"
         android:entries="@array/battery_bar_style_entries"
@@ -92,5 +98,5 @@
         android:key="statusbar_battery_bar_animate"
         android:title="@string/battery_bar_animate_title"
         android:defaultValue="false" />
--->
+
 </PreferenceScreen>

@@ -50,7 +50,7 @@
             android:fragment="com.aicp.extras.fragments.Recents" />
 
     </PreferenceCategory>
-
+-->
     <PreferenceCategory
         android:title="@string/user_interface_category">
 
@@ -60,7 +60,7 @@
             android:summary="@string/status_bar_summary"
             android:icon="@drawable/ic_settings_status_bar"
             android:fragment="com.aicp.extras.fragments.StatusBar" />
-        <PreferenceScreen
+<!--        <PreferenceScreen
             android:title="@string/notifications_title"
             android:key="notifications"
             android:summary="@string/notifications_summary"
@@ -73,14 +73,14 @@
             android:summary="@string/quick_settings_summary"
             android:icon="@drawable/ic_settings_quick_settings"
             android:fragment="com.aicp.extras.fragments.QuickSettings" />
-
+-->
         <PreferenceScreen
             android:title="@string/lockscreen_title"
             android:key="lockscreen"
             android:summary="@string/lockscreen_summary"
             android:icon="@drawable/ic_settings_lockscreen"
             android:fragment="com.aicp.extras.fragments.Lockscreen" />
-        <PreferenceScreen
+<!--         <PreferenceScreen
             android:title="@string/weather_title"
             android:key="weather_option"
             android:summary="@string/weather_config_title"
@@ -100,9 +100,9 @@
             android:summary="@string/other_ui_summary"
             android:icon="@drawable/ic_settings_other_ui"
             android:fragment="com.aicp.extras.fragments.OtherUi" />
-
+-->
     </PreferenceCategory>
-
+<!--
     <PreferenceCategory
         android:title="@string/system_category">
 
@@ -148,6 +148,17 @@
     -->
     <PreferenceCategory
         android:title="@string/other_category">
+
+        <Preference
+            android:title="@string/systemui_tuner_title"
+            android:key="stock_tuner"
+            android:summary="@string/systemui_tuner_summary"
+            android:icon="@drawable/ic_tuner"
+            android:enabled="true">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+        </Preference>
 
         <PreferenceScreen
             android:title="@string/about_title"
