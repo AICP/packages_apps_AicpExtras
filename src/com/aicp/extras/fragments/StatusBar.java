@@ -45,7 +45,7 @@ import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
 //import com.android.internal.util.aicp.AicpUtils;
 
-public class StatusBar {/* extends BaseSettingsFragment implements
+public class StatusBar  extends BaseSettingsFragment {/*implements
         Preference.OnPreferenceChangeListener {
 
     private static final String SMART_PULLDOWN = "qs_smart_pulldown";
@@ -65,18 +65,18 @@ public class StatusBar {/* extends BaseSettingsFragment implements
     private SystemSettingSwitchPreference mShowBatteryInQQS;
 
     private String mCustomCarrierLabelText;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.status_bar;
     }
-
+/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
 
-/*
+
         mSmartPulldown = (ListPreference) findPreference(SMART_PULLDOWN);
         int smartPulldown = Settings.System.getInt(resolver,
                 Settings.System.QS_SMART_PULLDOWN, 0);
