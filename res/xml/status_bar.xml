@@ -79,11 +79,11 @@
             aicpextras:unitsRight="dip"
             android:defaultValue="@*android:integer/config_statusbarPaddingEndDefault" />
     </PreferenceCategory>
-
+-->
     <PreferenceCategory
         android:key="statusbar_icons_category"
         android:title="@string/status_bar_icons_category_title">
--->
+
         <!-- Statusbar Clock styles -->
 <!--        <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
             android:key="status_bar_clock"
@@ -175,9 +175,19 @@
             android:title="@string/statusbar_location_icon_title"
             android:summary="@string/statusbar_location_icon_summary"
             android:defaultValue="true"/>
-
+-->
+        <Preference
+            android:title="@string/systemui_tuner_title"
+            android:key="stock_tuner"
+            android:summary="@string/systemui_tuner_summary"
+            android:icon="@drawable/ic_tuner"
+            android:enabled="true">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+        </Preference>
     </PreferenceCategory>
--->    <PreferenceCategory
+    <PreferenceCategory
         android:key="statusbar_battery_category"
         android:title="@string/status_bar_battery_category_title">
 <!--
