@@ -35,11 +35,11 @@ import com.aicp.extras.R;
 //import com.android.internal.util.hwkeys.ActionConstants;
 //import com.android.internal.util.hwkeys.ActionUtils;
 
-public class HwKeys {/*extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
+public class HwKeys extends BaseSettingsFragment { //implements Preference.OnPreferenceChangeListener {
 
-    private static final String CATEGORY_CAMERA = "camera_key";
+/*    private static final String CATEGORY_CAMERA = "camera_key";
     public static final int KEY_MASK_CAMERA = 0x20;
-/*    // category keys
+    // category keys
     private static final String CATEGORY_HWKEY = "hardware_keys";
     private static final String CATEGORY_BACK = "back_key";
     private static final String CATEGORY_HOME = "home_key";
@@ -68,16 +68,16 @@ public class HwKeys {/*extends BaseSettingsFragment implements Preference.OnPref
     private PreferenceCategory mButtonBackLightCategory;
 
     private SwitchPreference mHwKeyDisable;
-*//*
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.hw_keys;
     }
-
+/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-/*
+
         // bits for hardware keys present on device
         final int deviceKeys = getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
