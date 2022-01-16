@@ -51,8 +51,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class QuickSettings {/*extends BaseSettingsFragment
-    implements OnPreferenceChangeListener {
+public class QuickSettings extends BaseSettingsFragment {
+/*    implements OnPreferenceChangeListener {
 
     private static final boolean DEBUG = false;
     private static final String QS_QUICKBAR_COLUMNS_AUTO = "qs_quickbar_columns_auto";
@@ -66,12 +66,12 @@ public class QuickSettings {/*extends BaseSettingsFragment
     private SystemSettingSeekBarPreference mQQSColsCount;
 
     private String mCustomFooterText;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.quick_settings;
     }
-
+/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
