@@ -24,7 +24,7 @@
     <com.aicp.gear.preference.LongClickablePreference
         android:key="aicp_logo"
         android:layout="@layout/dashboard_logo" />
-    <!--
+
     <PreferenceCategory
         android:title="@string/navigation_category">
 
@@ -35,7 +35,7 @@
             android:icon="@drawable/ic_settings_hw_keys"
             android:fragment="com.aicp.extras.fragments.HwKeys" />
 
-        <PreferenceScreen
+    <!--        <PreferenceScreen
             android:title="@string/navigation_title"
             android:key="navigation"
             android:summary="@string/navigation_summary"
@@ -48,9 +48,9 @@
             android:summary="@string/recents_summary"
             android:icon="@drawable/ic_settings_recents"
             android:fragment="com.aicp.extras.fragments.Recents" />
-
-    </PreferenceCategory>
 -->
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:title="@string/user_interface_category">
 

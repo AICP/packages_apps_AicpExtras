@@ -46,7 +46,7 @@
             android:defaultValue="0"
             android:dependency="torch_long_press_power_gesture" />
     </PreferenceCategory>
-
+-->
     <PreferenceCategory
         android:key="volume_keys"
         android:title="@string/category_volume_keys">
@@ -56,7 +56,7 @@
             android:title="@string/volume_keys_cursor_control_title"
             android:summary="@string/volume_keys_cursor_control_summary"
             android:defaultValue="false" />
--->
+
        <!-- Swap volume buttons -->
 <!--        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="swap_volume_buttons"
@@ -95,7 +95,7 @@
             aicpextras:thereCanBeOnlyOneGroupId="1"
             aicpextras:plainSwitch="true"
             android:defaultValue="false" />
-
+-->
 </PreferenceCategory>-->
 <!--
     <PreferenceCategory
