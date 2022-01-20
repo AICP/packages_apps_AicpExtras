@@ -20,12 +20,13 @@ import android.content.ContentResolver;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.widget.SwitchBar;
+import com.android.settingslib.widget.MainSwitchBar;
 
 import com.aicp.gear.preference.SystemSettingsStore;
 
 public class SystemSettingSwitchBarController extends PreferenceDataStoreSwitchBarController {
 
-    public SystemSettingSwitchBarController(SwitchBar switchBar, String key, boolean defaultValue,
+    public SystemSettingSwitchBarController(MainSwitchBar switchBar, String key, boolean defaultValue,
                                             ContentResolver resolver,
                                             BaseSettingsFragment settingsFragment,
                                             MasterSwitchPreferenceDependencyHandler depHndl,

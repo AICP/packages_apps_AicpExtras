@@ -23,13 +23,15 @@ import android.widget.Switch;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.widget.SwitchBar;
+import com.android.settingslib.widget.MainSwitchBar;
+import com.android.settingslib.widget.OnMainSwitchChangeListener;
 
 public abstract class PreferenceDataStoreSwitchBarController
-        implements SwitchBar.OnSwitchChangeListener {
+        implements OnMainSwitchChangeListener {
     // Why abstract?
     // -> need to add appropriate setting to depHndl in constructor!
 
-    private SwitchBar mSwitchBar;
+    private MainSwitchBar mSwitchBar;
     private String mKey;
     private PreferenceDataStore mPreferenceDataStore;
     private BaseSettingsFragment mSettingsFragment;
@@ -37,7 +39,7 @@ public abstract class PreferenceDataStoreSwitchBarController
     private boolean mThereShouldBeOne;
 
     public PreferenceDataStoreSwitchBarController(PreferenceDataStore preferenceDataStore,
-                                            SwitchBar switchBar, String key, boolean defaultValue,
+                                            MainSwitchBar switchBar, String key, boolean defaultValue,
                                             BaseSettingsFragment settingsFragment,
                                             MasterSwitchPreferenceDependencyHandler depHndl,
                                             boolean thereShouldBeOne) {
