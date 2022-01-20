@@ -28,8 +28,13 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
+
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.widget.MainSwitchBar;
 
 import com.aicp.extras.dslv.ActionListViewSettings;
 import com.aicp.extras.fragments.Dashboard;
@@ -41,10 +46,14 @@ import com.aicp.extras.preference.SecureSettingMasterSwitchPreference;
 import com.aicp.extras.preference.SecureSettingSwitchBarController;
 import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
 import com.aicp.extras.preference.SystemSettingSwitchBarController;
+import com.aicp.extras.search.PartsList;
 import com.aicp.extras.utils.Util;
 //import com.aicp.extras.widget.SwitchBar;
 
-public class SettingsActivity extends BaseActivity {
+
+public class SettingsActivity extends CollapsingToolbarBaseActivity implements
+        PreferenceFragment.OnPreferenceStartFragmentCallback,
+        PreferenceFragment.OnPreferenceStartScreenCallback {
 
     private Fragment mFragment;
    // private SwitchBar mSwitchBar;
@@ -93,6 +102,15 @@ public class SettingsActivity extends BaseActivity {
     private static final String FRAGMENT_TAG = "SettingsActivity.pref_fragment";
 
 
+        public static final String EXTRA_SHOW_FRAGMENT = ":settings:show_fragment";
+    public static final String EXTRA_SHOW_FRAGMENT_ARGUMENTS = ":settings:show_fragment_args";
+    public static final String EXTRA_SHOW_FRAGMENT_TITLE = ":settings:show_fragment_title";
+    public static final String EXTRA_FRAGMENT_ARG_KEY = ":settings:fragment_args_key";
+    public static final String EXTRA_SHOW_FRAGMENT_TITLE_RESID =
+            ":settings:show_fragment_title_resid";
+
+    private CharSequence mInitialTitle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,6 +144,8 @@ public class SettingsActivity extends BaseActivity {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.main_content, mFragment, FRAGMENT_TAG).commit();
         }
+
+        setTitleFromIntent(getIntent());
 /*
         mMasterSwitchDependencyHandler = new MasterSwitchPreferenceDependencyHandler(this);
         // Add switchbar preferences with reserved grou id -1
@@ -186,10 +206,19 @@ public class SettingsActivity extends BaseActivity {
     }
 
     @Override
+    public boolean onPreferenceStartFragment(PreferenceFragment caller, Preference pref) {
+        startPreferencePanel(pref.getFragment(), pref.getExtras(), -1, pref.getTitle(),
+                null, 0);
+        setTitle(pref.getTitle());
+        return true;
+    }
+
+
+    @Override
     protected void onStart() {
         super.onStart();
 
-        ActionBar actionBar = getActionBar();
+        /*ActionBar actionBar = getActionBar();
         if (actionBar != null) {
             if (mFragment instanceof TitleProvider) {
                 CharSequence title = ((TitleProvider) mFragment).getTitle();
@@ -204,7 +233,7 @@ public class SettingsActivity extends BaseActivity {
                 }
                // handleMasterSwitchPreferences(preferenceScreen);
             }
-        }
+        }*/
     }
 
     @Override
@@ -274,7 +303,7 @@ public class SettingsActivity extends BaseActivity {
             if (preference.peekExtras() != null) {
                 intent.putExtra(EXTRA_FRAGMENT_ARGUMENTS, preference.getExtras());
             }
-
+            setTitleFromIntent(intent);
             startActivity(intent);
             return true;
         }
@@ -328,5 +357,55 @@ public class SettingsActivity extends BaseActivity {
                         }
                 })
                 .show();
+    }
+
+    @Override
+    public boolean onPreferenceStartScreen(PreferenceFragment caller, PreferenceScreen pref) {
+        startPreferencePanel(pref.getFragment(), pref.getExtras(), -1, pref.getTitle(),
+                null, 0);
+        return true;
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+    }
+
+    public void startPreferencePanel(String fragmentClass, Bundle args, int titleRes,
+                                     CharSequence titleText, Fragment resultTo, int resultRequestCode) {
+        String title = null;
+        if (titleRes < 0) {
+            if (titleText != null) {
+                title = titleText.toString();
+            } else {
+                // There not much we can do in that case
+                title = "";
+            }
+        }
+
+        Intent intent = new Intent();
+        intent.setComponent(PartsList.AE_ACTIVITY);
+        intent.putExtra(EXTRA_SHOW_FRAGMENT, fragmentClass);
+        intent.putExtra(EXTRA_SHOW_FRAGMENT_ARGUMENTS, args);
+        intent.putExtra(EXTRA_SHOW_FRAGMENT_TITLE_RESID, titleRes);
+        intent.putExtra(EXTRA_SHOW_FRAGMENT_TITLE, titleText);
+
+        if (resultTo == null) {
+            startActivity(intent);
+        } else {
+            resultTo.startActivityForResult(intent, resultRequestCode);
+        }
+    }
+
+    private void setTitleFromIntent(Intent intent) {
+
+        final int initialTitleResId = intent.getIntExtra(EXTRA_SHOW_FRAGMENT_TITLE_RESID, -1);
+        if (initialTitleResId > 0) {
+            mInitialTitle = getResources().getString(initialTitleResId);
+        } else {
+            final String initialTitle = intent.getStringExtra(EXTRA_SHOW_FRAGMENT_TITLE);
+            mInitialTitle = (initialTitle != null) ? initialTitle : getTitle();
+        }
+        setTitle(mInitialTitle);
     }
 }
