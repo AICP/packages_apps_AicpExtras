@@ -280,7 +280,7 @@ public class MasterSwitchPreference extends TwoTargetPreference {
                 mWidgetView.setClickable(true);
                 mWidgetView.setBackground(null);
                 mBaseView.setBackgroundColor(Color.TRANSPARENT);
-                mMainView.setBackgroundResource(selectableItemBackground);
+                // mMainView.setBackgroundResource(selectableItemBackground);
             }
         }
     }

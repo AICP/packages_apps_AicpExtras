@@ -26,10 +26,17 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
+
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.widget.MainSwitchBar;
 
 import com.aicp.extras.dslv.ActionListViewSettings;
 import com.aicp.extras.fragments.Dashboard;
@@ -41,14 +48,17 @@ import com.aicp.extras.preference.SecureSettingMasterSwitchPreference;
 import com.aicp.extras.preference.SecureSettingSwitchBarController;
 import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
 import com.aicp.extras.preference.SystemSettingSwitchBarController;
+import com.aicp.extras.search.PartsList;
 import com.aicp.extras.utils.Util;
-//import com.aicp.extras.widget.SwitchBar;
+import com.aicp.extras.widget.SwitchBar;
 
-public class SettingsActivity extends BaseActivity {
+public class SettingsActivity extends CollapsingToolbarBaseActivity implements
+        PreferenceFragment.OnPreferenceStartFragmentCallback,
+        PreferenceFragment.OnPreferenceStartScreenCallback {
 
     private Fragment mFragment;
-   // private SwitchBar mSwitchBar;
-//    private MasterSwitchPreferenceDependencyHandler mMasterSwitchDependencyHandler;
+    private MainSwitchBar mSwitchBar;
+    private MasterSwitchPreferenceDependencyHandler mMasterSwitchDependencyHandler;
 
     // Action prefix for launching specific fragments without using intent extras
     public static final String AE_FRAGMENT_ACTION_PREFIX = "com.aicp.extras.fragmentaction";
@@ -93,6 +103,15 @@ public class SettingsActivity extends BaseActivity {
     private static final String FRAGMENT_TAG = "SettingsActivity.pref_fragment";
 
 
+        public static final String EXTRA_SHOW_FRAGMENT = ":settings:show_fragment";
+    public static final String EXTRA_SHOW_FRAGMENT_ARGUMENTS = ":settings:show_fragment_args";
+    public static final String EXTRA_SHOW_FRAGMENT_TITLE = ":settings:show_fragment_title";
+    public static final String EXTRA_FRAGMENT_ARG_KEY = ":settings:fragment_args_key";
+    public static final String EXTRA_SHOW_FRAGMENT_TITLE_RESID =
+            ":settings:show_fragment_title_resid";
+
+    private CharSequence mInitialTitle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,7 +145,7 @@ public class SettingsActivity extends BaseActivity {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.main_content, mFragment, FRAGMENT_TAG).commit();
         }
-/*
+
         mMasterSwitchDependencyHandler = new MasterSwitchPreferenceDependencyHandler(this);
         // Add switchbar preferences with reserved grou id -1
         if (mIntent.hasExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS)) {
@@ -140,10 +159,10 @@ public class SettingsActivity extends BaseActivity {
         if (mIntent.hasExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS)) {
             mMasterSwitchDependencyHandler.addGlobalSettingPreferences(-1,
                     mIntent.getStringArrayExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS));
-        }*/
+        }
         boolean thereShouldBeOne = mIntent.getBooleanExtra(EXTRA_SWITCH_THERE_SHOULD_BE_ONE, false);
-/*
-        mSwitchBar = (SwitchBar) findViewById(R.id.switch_bar);
+
+        mSwitchBar = (MainSwitchBar) findViewById(R.id.main_switch_bar);
         if (mIntent.hasExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY)) {
             mSwitchBar.show();
             BaseSettingsFragment settingsFragment = mFragment instanceof BaseSettingsFragment
@@ -182,27 +201,35 @@ public class SettingsActivity extends BaseActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         if (sharedPreferences.getBoolean("is_first_time", true)) {
             firstStartNoRootDialog();
-        }*/
+        }
     }
+
+    @Override
+    public boolean onPreferenceStartFragment(PreferenceFragment caller, Preference pref) {
+        startPreferencePanel(pref.getFragment(), pref.getExtras(), -1, pref.getTitle(),
+                null, 0);
+        return true;
+    }
+
 
     @Override
     protected void onStart() {
         super.onStart();
-
-        ActionBar actionBar = getActionBar();
-        if (actionBar != null) {
+        // getTopIntro()
+        //ActionBar actionBar = getActionBar();
+        if (getTopIntro() != null) {
             if (mFragment instanceof TitleProvider) {
                 CharSequence title = ((TitleProvider) mFragment).getTitle();
                 if (title != null) {
-                    actionBar.setTitle(title);
+                    setTitle(title);
                 }
             } else if (mFragment instanceof PreferenceFragmentCompat) {
                 PreferenceScreen preferenceScreen =
                         ((PreferenceFragmentCompat) mFragment).getPreferenceScreen();
                 if (preferenceScreen != null) {
-                    actionBar.setTitle(preferenceScreen.getTitle());
+                    setTitle(preferenceScreen.getTitle());
                 }
-               // handleMasterSwitchPreferences(preferenceScreen);
+                handleMasterSwitchPreferences(preferenceScreen);
             }
         }
     }
@@ -210,9 +237,9 @@ public class SettingsActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-  //      mMasterSwitchDependencyHandler.onResume();
+        mMasterSwitchDependencyHandler.onResume();
     }
-/*
+
     private void handleMasterSwitchPreferences(
                 androidx.preference.PreferenceGroup preferenceGroup) {
         for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
@@ -225,7 +252,16 @@ public class SettingsActivity extends BaseActivity {
             }
         }
     }
-*/
+
+
+    public TextView getTopIntro() {
+        return (TextView) findViewById(R.id.top_intro);
+    }
+
+    public void showTopIntro(boolean show) {
+        findViewById(R.id.top_intro).setVisibility(show ? View.VISIBLE : View.GONE);
+    }
+
     public boolean onPreferenceClick(androidx.preference.Preference preference) {
         String fragmentClass = preference.getFragment();
         // Check if class is available - if it is not, let default Android magic kick in
@@ -262,19 +298,18 @@ public class SettingsActivity extends BaseActivity {
                             ((MasterSwitchPreference) preference).getThereShouldBeOneSwitch());
                     int groupId = ((MasterSwitchPreference) preference)
                             .getThereCanBeOnlyOneGroupId();
-                   /* intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS,
+                    intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_MUTUAL_KEYS,
                             mMasterSwitchDependencyHandler.getSystemSettingsForGroup(groupId));
                     intent.putExtra(EXTRA_SWITCH_SECURE_SETTINGS_MUTUAL_KEYS,
                             mMasterSwitchDependencyHandler.getSecureSettingsForGroup(groupId));
                     intent.putExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_MUTUAL_KEYS,
                             mMasterSwitchDependencyHandler.getGlobalSettingsForGroup(groupId));
-               */ }
+                }
             }
 
             if (preference.peekExtras() != null) {
                 intent.putExtra(EXTRA_FRAGMENT_ARGUMENTS, preference.getExtras());
             }
-
             startActivity(intent);
             return true;
         }
@@ -328,5 +363,43 @@ public class SettingsActivity extends BaseActivity {
                         }
                 })
                 .show();
+    }
+
+    @Override
+    public boolean onPreferenceStartScreen(PreferenceFragment caller, PreferenceScreen pref) {
+        startPreferencePanel(pref.getFragment(), pref.getExtras(), -1, pref.getTitle(),
+                null, 0);
+        return true;
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+    }
+
+    public void startPreferencePanel(String fragmentClass, Bundle args, int titleRes,
+                                     CharSequence titleText, Fragment resultTo, int resultRequestCode) {
+        String title = null;
+        if (titleRes < 0) {
+            if (titleText != null) {
+                title = titleText.toString();
+            } else {
+                // There not much we can do in that case
+                title = "";
+            }
+        }
+
+        Intent intent = new Intent();
+        intent.setComponent(PartsList.AE_ACTIVITY);
+        intent.putExtra(EXTRA_SHOW_FRAGMENT, fragmentClass);
+        intent.putExtra(EXTRA_SHOW_FRAGMENT_ARGUMENTS, args);
+        intent.putExtra(EXTRA_SHOW_FRAGMENT_TITLE_RESID, titleRes);
+        intent.putExtra(EXTRA_SHOW_FRAGMENT_TITLE, titleText);
+
+        if (resultTo == null) {
+            startActivity(intent);
+        } else {
+            resultTo.startActivityForResult(intent, resultRequestCode);
+        }
     }
 }
