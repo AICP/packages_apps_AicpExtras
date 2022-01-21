@@ -61,7 +61,7 @@
         android:min="0"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="%"
-        android:defaultValue="0" />
+    android:defaultValue="0" />-->
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_lockscreen"
@@ -69,7 +69,7 @@
         android:summary="@string/double_tap_sleep_lockscreen_summary"
         android:defaultValue="false"/>
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <!--<com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="lockscreen_battery_info"
         android:title="@string/lockscreen_battery_info_title"
         android:summary="@string/lockscreen_battery_info_summary"

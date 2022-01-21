@@ -42,7 +42,7 @@
             android:entryValues="@array/quick_pulldown_values"
             android:persistent="false"
             android:defaultValue="0"
-            android:title="@string/quick_pulldown_title" />
+        android:title="@string/quick_pulldown_title" />-->
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="double_tap_sleep_gesture"
@@ -50,7 +50,7 @@
             android:summary="@string/status_bar_double_tap_to_sleep_summary"
             android:defaultValue="false"/>
 
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <!--<com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="status_bar_brightness_control"
             android:title="@string/status_bar_brightness_control_title"
             android:summary="@string/status_bar_brightness_control_summary"
@@ -211,14 +211,14 @@
             android:summary="@string/bluetooth_battery_summary"
 android:defaultValue="false"/>-->
         <!-- Battery bar -->
-<!--       <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+      <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
            android:key="statusbar_battery_bar"
            android:title="@string/battery_bar_title"
            android:summary="@string/battery_bar_summary"
            android:defaultValue="false"
            android:fragment="com.aicp.extras.fragments.BatteryBar" />
 
-    </PreferenceCategory>
+    <!--</PreferenceCategory>
     <PreferenceCategory
         android:title="@string/network_traffic_category">
 

@@ -23,7 +23,7 @@
     android:title="@string/about_title">
 
     <!-- AICP logo -->
-    <Preference
+    <PreferenceScreen
         android:key="aicp_logo"
         android:layout="@layout/about_logo" />
 

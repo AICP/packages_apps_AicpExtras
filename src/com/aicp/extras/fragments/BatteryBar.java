@@ -17,6 +17,8 @@
 
 package com.aicp.extras.fragments;
 
+import android.os.Bundle;
+
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
@@ -25,5 +27,10 @@ public class BatteryBar extends BaseSettingsFragment {
     @Override
     protected int getPreferenceResource() {
         return R.xml.battery_bar;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 }

@@ -19,15 +19,17 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="hw_keys"
     android:title="@string/hw_keys_title">
-<!--
+
     <PreferenceCategory
         android:key="power_key"
         android:title="@string/category_power_key" >
 
         <PreferenceScreen
             android:key="power_menu"
+            app:iconSpaceReserved="false"
             android:title="@string/global_actions_power_menu_title"
             android:fragment="com.aicp.extras.fragments.PowerMenu" />
 
@@ -47,7 +49,7 @@
             android:dependency="torch_long_press_power_gesture" />
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!--<PreferenceCategory
         android:key="volume_keys"
         android:title="@string/category_volume_keys">
 

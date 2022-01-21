@@ -23,6 +23,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,7 +52,7 @@ public class Dashboard extends BaseSettingsFragment {
     private static final Intent INTENT_OTA = new Intent().setComponent(new ComponentName(
             Constants.AICP_OTA_PACKAGE, Constants.AICP_OTA_ACTIVITY));
 
-    private LongClickablePreference mAicpLogo;
+    private PreferenceScreen mAicpLogo;
     private Preference mAicpOTA;
     private Preference mWeatherOption;
 
@@ -69,7 +70,7 @@ public class Dashboard extends BaseSettingsFragment {
 
         PackageManager pm = getActivity().getPackageManager();
 
-        mAicpLogo = (LongClickablePreference) findPreference(PREF_AICP_LOGO);
+        mAicpLogo = (PreferenceScreen) findPreference(PREF_AICP_LOGO);
 
 /*        mWeatherOption = findPreference(PREF_WEATHER);
         if (!Util.isPackageEnabled(Constants.WEATHER_SERVICE_PACKAGE, pm)) {
@@ -108,11 +109,11 @@ public class Dashboard extends BaseSettingsFragment {
                  ps.setFadeOut(200, new AccelerateInterpolator());
                  ps.oneShot(getView(), 100);
 
-                 mAicpLogo.setLongClickBurst(2000/((++mLogoClickCount)%5+1));
+                 //mAicpLogo.setLongClickBurst(2000/((++mLogoClickCount)%5+1));
                 return true;
             }
         });
-        mAicpLogo.setOnLongClickListener(R.id.logo_view, 1000,
+        /* mAicpLogo.setOnLongClickListener(
                 new Preference.OnPreferenceClickListener() {
                         @Override
                         public boolean onPreferenceClick(Preference preference) {
@@ -132,7 +133,7 @@ public class Dashboard extends BaseSettingsFragment {
                              ps.oneShot(getView(), 100);
                             return true;
                         }
-                });
+                }); */
     }
 
     @Override

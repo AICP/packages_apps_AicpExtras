@@ -45,10 +45,10 @@ import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
 //import com.android.internal.util.aicp.AicpUtils;
 
-public class StatusBar {/* extends BaseSettingsFragment implements
+public class StatusBar  extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
-    private static final String SMART_PULLDOWN = "qs_smart_pulldown";
+    /*private static final String SMART_PULLDOWN = "qs_smart_pulldown";
     private static final String QUICK_PULLDOWN = "quick_pulldown";
     private static final String KEY_CARRIER_LABEL = "status_bar_show_carrier";
     private static final String KEY_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
@@ -64,7 +64,7 @@ public class StatusBar {/* extends BaseSettingsFragment implements
     private SystemSettingIntListPreference mShowCarrierLabel;
     private SystemSettingSwitchPreference mShowBatteryInQQS;
 
-    private String mCustomCarrierLabelText;
+    private String mCustomCarrierLabelText;*/
 
     @Override
     protected int getPreferenceResource() {
@@ -75,6 +75,7 @@ public class StatusBar {/* extends BaseSettingsFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
+    }
 
 /*
         mSmartPulldown = (ListPreference) findPreference(SMART_PULLDOWN);
@@ -137,6 +138,7 @@ public class StatusBar {/* extends BaseSettingsFragment implements
         }*//*
     }
 
+    */
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
@@ -160,12 +162,13 @@ public class StatusBar {/* extends BaseSettingsFragment implements
             int showBatteryPercentage = Integer.valueOf((String) newValue);
             updateShowBatteryInQQS(showBatteryPercentage);
             return true;
-        }*//*
+        }*//**/
         return false;
     }
 
     @Override
     public boolean onPreferenceTreeClick(final Preference preference) {
+    /*
         super.onPreferenceTreeClick(preference);
         final ContentResolver resolver = getActivity().getContentResolver();
         if (KEY_CUSTOM_CARRIER_LABEL.equals(preference.getKey())) {
@@ -204,9 +207,11 @@ public class StatusBar {/* extends BaseSettingsFragment implements
         } else {
             return false;
         }
+        */
+        return false;
     }
 
-    private void updateCarrierLabelSummary(int value) {
+    /*private void updateCarrierLabelSummary(int value) {
         Resources res = getResources();
 
         if (value == 0) {
@@ -219,7 +224,7 @@ public class StatusBar {/* extends BaseSettingsFragment implements
         } else if (value == 3) {
             mShowCarrierLabel.setSummary(res.getString(R.string.show_carrier_enabled));
         }
-    }
+    }*/
 /*
     private void updateSmartPulldownSummary(int value) {
         Resources res = getResources();

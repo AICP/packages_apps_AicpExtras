@@ -35,15 +35,15 @@ import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 import com.aicp.gear.util.AicpContextConstants;
 
-public class Lockscreen {/*extends BaseSettingsFragment {
+public class Lockscreen extends BaseSettingsFragment {
 
-    private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
+    /*private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
     private static final String KEY_AOD_SCHEDULE = "always_on_display_schedule";
     private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
     private static final String KEY_LOCKSCREEN_BLUR = "lockscreen_blur";
 
     private FingerprintManager mFingerprintManager;
-    private SwitchPreference mFingerprintVib;
+    private SwitchPreference mFingerprintVib;*/
 
     @Override
     protected int getPreferenceResource() {
@@ -53,7 +53,7 @@ public class Lockscreen {/*extends BaseSettingsFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Context mContext = getContext();
+        /*Context mContext = getContext();
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
         WallpaperManager manager = WallpaperManager.getInstance(mContext);
@@ -87,7 +87,7 @@ public class Lockscreen {/*extends BaseSettingsFragment {
 
         if (fodIconPickerCategory != null && !supportsFod) {
             fodIconPickerCategory.getParent().removePreference(fodIconPickerCategory);
-        }
+        }*/
 
-    }*/
+    }
 }
