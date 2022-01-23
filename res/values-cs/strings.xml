@@ -261,6 +261,9 @@
     <string name="qs_tile_animation_interpolator_overshootInterpolator">Překročení</string>
     <string name="qs_tile_animation_interpolator_anticipateInterpolator">Předbíhání</string>
     <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Předbíhání a překročení</string>
+    <string name="qs_set_animation_style">%1$s</string>
+    <string name="qs_set_animation_duration">%1$s</string>
+    <string name="qs_set_animation_interpolator">%1$s</string>
     <string name="recents_title">Nedávné</string>
     <string name="recents_summary">Upravit vzhled obrazovky nedávných aplikací</string>
     <string name="stock_recents_category">Původní nedávné</string>
@@ -513,8 +516,12 @@
     <string name="no_root_summary">Pro více funkcí proveďte root zařízení</string>
     <string name="aicp_version_title">Verze AICP</string>
     <string name="build_date_title">Datum sestavení</string>
+    <string name="ok">@android:string/ok</string>
+    <string name="cancel">@android:string/cancel</string>
     <string name="on">Zapnuto</string>
     <string name="off">Vypnuto</string>
+    <string name="yes">@android:string/yes</string>
+    <string name="no">@android:string/no</string>
     <string name="reset">Obnovit</string>
     <string name="disabled">Zakázáno</string>
     <string name="systemui_restart_title">Je vyžadován restart SystemUI</string>
@@ -854,6 +861,7 @@
     <string name="lockscreen_visualizer_enable_custom">Použít vlastní barvu</string>
     <string name="lockscreen_visualizer_enable_custom_summary">Použít přednastavenou barvu namísto barvy generované</string>
     <string name="lockscreen_visualizer_custom_color">Barva vizualizéru</string>
+    <string name="screen_state_toggles_summary">\@null</string>
     <string name="screen_state_toggles_title">Akce po zhasnutí obrazovky</string>
     <string name="screen_state_toggles_enable_title">Povolit</string>
     <string name="screen_state_toggles_enable_summary">Akce budou provedeny při vypnutí obrazovky. Při zapnutí a uvedení do předchozího stavu budou obnoveny.</string>
@@ -967,6 +975,7 @@
     <string name="app_circle_bar_appchooser_pref_summary">Klepnutím sem přidáte, klepnutím na příslušnou aplikaci odstraníte\nZprávy, Fotoaparát, Obchod Play a Nastavení jsou zobrazeny jako výchozí</string>
     <string name="app_circle_bar_show_trigger_title">Zobrazit aktivační oblast</string>
     <string name="app_circle_bar_show_trigger_summary">Povolit zobrazení nastavené aktivační oblasti pro kruhový spouštěč aplikací</string>
+    <string name="unit_percent">\u0025</string>
     <string name="theming_title">Motivy</string>
     <string name="theming_light_title">Světlý motiv</string>
     <string name="theming_dark_title">Tmavý motiv</string>
@@ -1084,6 +1093,7 @@
     <string name="audio_panel_position_title">Poloha</string>
     <string name="audio_panel_position_summary">Přesunout panel hlasitosti z pravé na levou stranu</string>
     <string name="reboot_dialog_ok">Restartovat</string>
+    <string name="reboot_dialog_cancel">@string/cancel</string>
     <string name="soft_reboot_title">Restartování</string>
     <string name="soft_reboot_message">Probíhá lehký restart, buďte trpěliví</string>
     <string name="theming_control_night_mode_title">Ovládání nočního režimu</string>
