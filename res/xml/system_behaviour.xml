@@ -22,6 +22,12 @@
     android:key="system_behaviour"
     android:title="@string/system_behaviour_title">
 
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="volume_panel_on_left"
+            android:title="@string/audio_panel_position_title"
+            android:summary="@string/audio_panel_position_summary"
+            android:defaultValue="@*android:bool/config_audioPanelOnLeftSide" />
+
     <!-- <PreferenceScreen
         android:key="bars_settings"
         android:title="@string/aspect_ratio_category_title"
