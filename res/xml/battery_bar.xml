@@ -22,12 +22,6 @@
     android:key="battery_bar"
     android:title="@string/battery_bar_title">
 
-     <com.aicp.gear.preference.SystemSettingSwitchPreference
-         android:key="statusbar_battery_bar"
-         android:title="@string/battery_bar_title"
-         android:summary="@string/battery_bar_summary"
-         android:defaultValue="false" />
-
     <com.aicp.gear.preference.SystemSettingListPreference
         android:key="statusbar_battery_bar_location"
         android:title="@string/battery_bar_location_title"
