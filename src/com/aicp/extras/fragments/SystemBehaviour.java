@@ -35,10 +35,10 @@ import com.aicp.extras.utils.Util;
 
 import com.android.settingslib.development.SystemPropPoker;
 
-public class SystemBehaviour {/*extends BaseSettingsFragment
+public class SystemBehaviour extends BaseSettingsFragment { /*
          implements Preference.OnPreferenceChangeListener {
-    private static final String TAG = SystemBehaviour.class.getSimpleName();
-
+*/    private static final String TAG = SystemBehaviour.class.getSimpleName();
+/*
     private static final String KEY_SMART_PIXELS = "smart_pixels_enable";
     private static final String KEY_ENABLE_BLURS = "enable_blurs_on_windows";
     private static final String DISABLE_BLURS_SYSPROP = "persist.sys.sf.disable_blurs";
@@ -54,12 +54,12 @@ public class SystemBehaviour {/*extends BaseSettingsFragment
     private SwitchPreference mSelinuxPersistence;
 
     private SwitchPreference mEnableBlurPref;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.system_behaviour;
     }
-
+/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

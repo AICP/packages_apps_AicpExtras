@@ -102,10 +102,10 @@
             android:fragment="com.aicp.extras.fragments.OtherUi" />
 -->
     </PreferenceCategory>
-<!--
     <PreferenceCategory
         android:title="@string/system_category">
 
+<!--
         <PreferenceScreen
             android:title="@string/system_animations_title"
             android:key="system_animations"
@@ -113,20 +113,20 @@
             android:icon="@drawable/ic_settings_system_animations"
             android:fragment="com.aicp.extras.fragments.SystemAnimations" />
 
-    <Preference
-        android:key="gaming_category"
-        android:icon="@drawable/ic_gaming"
-        android:title="@string/gaming_title"
-        android:summary="@string/gaming_title_summary"
-        android:fragment="com.aicp.extras.fragments.GamingModeSettings" />
-
+        <Preference
+            android:key="gaming_category"
+            android:icon="@drawable/ic_gaming"
+            android:title="@string/gaming_title"
+            android:summary="@string/gaming_title_summary"
+            android:fragment="com.aicp.extras.fragments.GamingModeSettings" />
+-->
         <PreferenceScreen
             android:title="@string/system_behaviour_title"
             android:key="system_behaviour"
             android:summary="@string/system_behaviour_summary"
             android:icon="@drawable/ic_settings_system_behaviour"
             android:fragment="com.aicp.extras.fragments.SystemBehaviour" />
-
+<!--
         <PreferenceScreen
             android:title="@string/system_extensions_title"
             android:key="system_extensions"
@@ -144,8 +144,9 @@
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.TunerActivity" />
         </Preference>
+-->
     </PreferenceCategory>
-    -->
+
     <PreferenceCategory
         android:title="@string/other_category">
 
