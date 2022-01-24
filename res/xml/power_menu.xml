@@ -19,6 +19,53 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras"
     android:key="power_menu"
     android:title="@string/global_actions_power_menu_title">
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="powermenu_advanced"
+        android:title="@string/global_actions_advanced_reboot_title"
+        android:summary="@string/global_actions_advanced_reboot_summary"
+        android:defaultValue="false" />
+
+    <PreferenceCategory
+        android:key="power_menu_actions"
+        android:title="@string/power_menu_actions_category_title" >
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="powermenu_screenshot"
+            android:title="@string/global_actions_screenshot"
+            android:defaultValue="false" />
+
+        <!--com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="powermenu_airplane"
+            android:title="@string/global_actions_airplane"
+            android:defaultValue="false" /-->
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="powermenu_settings"
+            android:title="@string/global_actions_settings"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="powermenu_lockdown"
+            android:title="@string/global_actions_lockdown"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="powermenu_torch"
+            android:title="@string/global_actions_flashlight"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="powermenu_users"
+            android:title="@string/global_actions_users"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="powermenu_emergency"
+            android:title="@string/global_actions_emergency"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
 <!--
     <PreferenceCategory
         android:key="boot_options"
