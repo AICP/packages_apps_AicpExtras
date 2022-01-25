@@ -180,7 +180,6 @@
             android:title="@string/systemui_tuner_title"
             android:key="stock_tuner"
             android:summary="@string/systemui_tuner_summary"
-            android:icon="@drawable/ic_tuner"
             android:enabled="true">
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
