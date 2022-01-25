@@ -133,7 +133,14 @@
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
             android:defaultValue="0"/>
-
+-->
+        <!-- Location privacy indicator on Statusbar -->
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+           android:key="enable_location_privacy_indicator"
+           android:title="@string/location_privacy_indicator_title"
+           android:summary="@string/location_privacy_indicator_summary"
+           android:defaultValue="false" />
+<!--
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="vowifi_icon_style"
             android:title="@string/vowifi_icon_title"
