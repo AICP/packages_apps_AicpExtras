@@ -22,6 +22,12 @@
     android:key="lockscreen"
     android:title="@string/lockscreen_title">
 
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="lockscreen_small_clock"
+        android:title="@string/lockscreen_small_clock_title"
+        android:summary="@string/lockscreen_small_clock_summary"
+        android:defaultValue="false" />
 <!--
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="lockscreen_clock_selection"
@@ -152,11 +158,11 @@
         android:key="always_on_display_schedule"
         android:title="@string/always_on_display_schedule_title"
         android:fragment="com.aicp.extras.fragments.AODSchedule" />
-
+-->
     <PreferenceCategory
           android:key="lockscreen_security_category"
           android:title="@string/lockscreen_security_category">
-
+<!--
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="fp_wake_unlock"
               android:title="@string/fp_wake_unlock_title"
@@ -188,7 +194,7 @@
               android:title="@string/lockscreen_hide_status_bar_title"
               android:summary="@string/lockscreen_hide_status_bar_summary"
               android:defaultValue="false" />
-
+-->
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="lockscreen_scramble_pin_layout"
               android:title="@string/unlock_scramble_pin_layout_title"
