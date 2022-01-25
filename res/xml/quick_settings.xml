@@ -21,6 +21,92 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="quick_settings"
     android:title="@string/quick_settings_title">
+
+
+    <PreferenceCategory
+        android:key="tile_layout_category"
+        android:title="@string/qs_tile_layout_category_title">
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="qs_tile_label_hide"
+            android:title="@string/qs_tile_title_visibility_title"
+            android:summary="@string/qs_tile_title_visibility_summary"
+            android:defaultValue="false"/>
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="qs_tile_vertical_layout"
+            android:title="@string/qs_tile_layout_title"
+            android:summary="@string/qs_tile_layout_summary"
+            android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="qs_layout_category"
+        android:title="@string/qs_layout_category_title">
+
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+            android:key="qs_layout_columns"
+            android:title="@string/qs_columns_portrait_title"
+            android:max="4"
+            android:min="2"
+            aicpextras:interval="2"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight=""
+            android:defaultValue="2" />
+
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+            android:key="qs_layout_columns_landscape"
+            android:title="@string/qs_columns_landscape_title"
+            android:max="8"
+            android:min="2"
+            aicpextras:interval="2"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight=""
+            android:defaultValue="2" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="quick_settings_haptic_feedback_category"
+        android:title="@string/quick_settings_haptic_feedback_category">
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="qs_vibrate"
+            android:title="@string/quick_settings_vibrate_title"
+            android:summary="@string/quick_settings_vibrate_summary"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="quick_setting_footer_category"
+        android:title="@string/quick_settings_footer_category">
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="qs_footer_show_settings"
+            android:title="@string/qs_footer_settings"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="qs_footer_show_services"
+            android:title="@string/qs_footer_services"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="qs_footer_show_edit"
+            android:title="@string/qs_footer_edit"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="qs_footer_show_user"
+            android:title="@string/qs_footer_user"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="qs_footer_show_power_menu"
+            android:title="@string/qs_footer_powermenu"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
 <!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
@@ -28,11 +114,6 @@
         android:summary="@string/qs_tile_title_visibility_summary"
         android:defaultValue="true"/>
 -->
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="qs_vibrate"
-        android:title="@string/qs_vibrate_title"
-        android:summary="@string/qs_vibrate_summary"
-        android:defaultValue="false" />
 
     <!--<com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="hide_tile_expand_indicator"
@@ -78,7 +159,6 @@
             android:entryValues="@array/qs_datausage_values"
             android:defaultValue="0" />
     </PreferenceCategory>
--->
     <PreferenceCategory
         android:key="qs_footer_category"
         android:title="@string/qs_footer_category_title">
@@ -113,7 +193,7 @@
             android:summary="@string/qs_footer_show_powermenu_summary"
             android:defaultValue="true" />
 
-<!--        <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="footer_text_show"
             android:title="@string/footer_text_show_title"
             android:summary="@string/footer_text_show_summary"
@@ -123,9 +203,7 @@
            android:key="custom_footer_text"
            android:title="@string/footer_text_label_title"
            android:dependency="footer_text_show" />
--->
     </PreferenceCategory>
-<!--
     <PreferenceCategory
         android:key="qs_layout_category"
         android:title="@string/qs_layout_category_title">
