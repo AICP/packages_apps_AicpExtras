@@ -27,7 +27,7 @@ import androidx.preference.SwitchPreference;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class OtherUi {/*extends BaseSettingsFragment
+public class OtherUi extends BaseSettingsFragment {/*
         implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = OtherUi.class.getSimpleName();
@@ -37,12 +37,12 @@ public class OtherUi {/*extends BaseSettingsFragment
     private static final String KEY_DOZE_ON_CHARGE = "doze_on_charge";
 
     private SwitchPreference mShowCpuInfo;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.other_ui;
     }
-
+/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
