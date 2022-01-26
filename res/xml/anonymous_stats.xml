@@ -31,7 +31,7 @@
         android:key="pref_anonymous_opt_out_persist"
         android:title="@string/disable_reporting_persistent" />
 
-    <PreferenceScreen
+    <Preference
         android:title="@string/preview_data_title"
         android:fragment="com.aicp.extras.romstats.Preview" />
 
