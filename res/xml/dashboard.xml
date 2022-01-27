@@ -105,7 +105,6 @@
     <PreferenceCategory
         android:title="@string/system_category">
 
-<!--
         <PreferenceScreen
             android:title="@string/system_animations_title"
             android:key="system_animations"
@@ -113,6 +112,7 @@
             android:icon="@drawable/ic_settings_system_animations"
             android:fragment="com.aicp.extras.fragments.SystemAnimations" />
 
+<!--
         <Preference
             android:key="gaming_category"
             android:icon="@drawable/ic_gaming"

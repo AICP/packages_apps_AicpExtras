@@ -32,7 +32,7 @@
         android:key="custom_bootanimation"
         android:title="@string/custom_bootanimation_title"
         android:summary="@string/custom_bootanimation_summary" />
---><!--
+-->
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="screen_off_animation"
         android:title="@string/screen_off_animation_title"
@@ -40,7 +40,7 @@
         android:entries="@array/screen_off_animation_entries"
         android:entryValues="@array/screen_off_animation_values"
         android:defaultValue="0" />
-
+<!--
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="toast_animation"
         android:title="@string/toast_animation_title"
