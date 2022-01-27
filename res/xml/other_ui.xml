@@ -79,12 +79,12 @@
         android:defaultValue="false" />
 -->
    <!-- Always On when charging -->
-<!--    <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
          android:key="doze_on_charge"
          android:title="@string/doze_on_charge_title"
          android:summary="@string/doze_on_charge_summary"
          android:defaultValue="false" />
--->
+
     <!-- Wake on plug -->
     <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
