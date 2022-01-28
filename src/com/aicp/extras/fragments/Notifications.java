@@ -31,10 +31,10 @@ import com.aicp.extras.utils.Util;
 import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingSeekBarPreference;
 import com.aicp.gear.preference.SystemSettingSwitchPreference;
-//import com.android.internal.util.aicp.DeviceUtils;
+import com.android.internal.util.aicp.DeviceUtils;
 
-public class Notifications {/*extends BaseSettingsFragment implements
-        Preference.OnPreferenceChangeListener {
+public class Notifications extends BaseSettingsFragment {/*} implements
+        Preference.OnPreferenceChangeListener { */
 
     private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
     private static final String KEY_RINGTONE_FOCUS = "ringtone_focus_mode";
@@ -83,16 +83,16 @@ public class Notifications {/*extends BaseSettingsFragment implements
 
         Util.requireConfig(getActivity(), findPreference(PREF_BATTERY_LIGHT),
                 com.android.internal.R.bool.config_intrusiveNotificationLed, true, false);
-
+*/
         Util.requireConfig(getActivity(), findPreference(ALERT_SLIDER_PREF),
                 com.android.internal.R.bool.config_hasAlertSlider, true, false);
-
+/*
         Util.requireConfig(getActivity(), findPreference(KEY_RINGTONE_FOCUS),
                 com.android.internal.R.bool.config_deviceRingtoneFocusMode, true, false);
 
-        mNotificationHeader.setOnPreferenceChangeListener(this);
+        mNotificationHeader.setOnPreferenceChangeListener(this);*/
     }
-
+/*
     private void updateDependencies(boolean enabled) {
         mFlashOnCallWaiting.setEnabled(enabled);
         mFlashOnCallIgnoreDND.setEnabled(enabled);

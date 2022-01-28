@@ -29,6 +29,7 @@
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.StatusBarTicker"
         aicpextras:thereCanBeOnlyOneGroupId="1" />
+-->
 
     <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
         android:key="heads_up_notifications_enabled"
@@ -37,7 +38,6 @@
         android:defaultValue="true"
         android:fragment="com.aicp.extras.fragments.HeadsUpOptions"
         aicpextras:thereCanBeOnlyOneGroupId="1" />
--->
 <!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="force_expanded_notifications"
@@ -75,11 +75,13 @@
         android:summary="@string/battery_light_summary"
         android:fragment="com.aicp.extras.fragments.BatteryLight" />
 
+-->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="notification_sound_vib_screen_on"
         android:title="@string/notification_sound_vib_screen_on_title"
         android:summary="@string/notification_sound_vib_screen_on_summary"
         android:defaultValue="true" />
+<!--
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="notification_headers"
@@ -92,6 +94,7 @@
         android:title="@string/vibrate_on_notifications_title"
         android:summary="@string/vibrate_on_notifications_summary"
         android:defaultValue="true" />
+-->
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="alert_slider_notifications"
@@ -106,7 +109,7 @@
         android:entries="@array/less_notification_sounds_entries"
         android:entryValues="@array/less_notification_sounds_values"
         android:defaultValue="0" />
--->
+
     <!-- Clipboard access toasts -->
 <!--    <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="clipboard_toast_info"
