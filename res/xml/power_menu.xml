@@ -61,6 +61,11 @@
             android:defaultValue="false" />
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="global_actions_onthego"
+            android:title="@string/global_actions_onthego_title"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="powermenu_emergency"
             android:title="@string/global_actions_emergency"
             android:defaultValue="false" />
