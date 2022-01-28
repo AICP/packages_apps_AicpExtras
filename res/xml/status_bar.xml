@@ -226,7 +226,7 @@ android:defaultValue="false"/>-->
            android:summary="@string/battery_bar_summary"
            android:defaultValue="false"
            android:fragment="com.aicp.extras.fragments.BatteryBar" />
-<!--
+
     </PreferenceCategory>
     <PreferenceCategory
         android:title="@string/network_traffic_category">
@@ -251,7 +251,7 @@ android:defaultValue="false"/>-->
     <PreferenceCategory
        android:key="statusbar_others_category"
        android:title="@string/status_bar_others_category_title">
--->
+
        <!-- Hide notch fill -->
 <!--       <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="display_hide_notch"
@@ -276,5 +276,5 @@ android:defaultValue="0" />-->
            android:key="custom_carrier_label"
            android:title="@string/custom_carrier_label_title" />
 -->
-</PreferenceCategory>
+    </PreferenceCategory>
 </PreferenceScreen>
