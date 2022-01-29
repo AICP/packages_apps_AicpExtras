@@ -21,7 +21,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="slim_recents"
     android:title="@string/slim_recents_title">
-<!--
+
     <com.aicp.gear.preference.SystemSettingSeekBarPreference
         android:key="recent_panel_scale_factor"
         android:title="@string/recent_panel_scale_title"
@@ -139,5 +139,5 @@
             android:defaultValue="0x00ffffff"
             android:dependency="slim_recents_mem_display"/>
 
-</PreferenceCategory>-->
+</PreferenceCategory>
 </PreferenceScreen>
