@@ -36,7 +36,6 @@ import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.widget.MainSwitchBar;
 
 import com.aicp.extras.dslv.ActionListViewSettings;
 import com.aicp.extras.fragments.Dashboard;
@@ -57,7 +56,7 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity implements
         PreferenceFragment.OnPreferenceStartScreenCallback {
 
     private Fragment mFragment;
-    private MainSwitchBar mSwitchBar;
+    private SwitchBar mSwitchBar;
     private MasterSwitchPreferenceDependencyHandler mMasterSwitchDependencyHandler;
 
     // Action prefix for launching specific fragments without using intent extras
@@ -103,7 +102,7 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity implements
     private static final String FRAGMENT_TAG = "SettingsActivity.pref_fragment";
 
 
-        public static final String EXTRA_SHOW_FRAGMENT = ":settings:show_fragment";
+    public static final String EXTRA_SHOW_FRAGMENT = ":settings:show_fragment";
     public static final String EXTRA_SHOW_FRAGMENT_ARGUMENTS = ":settings:show_fragment_args";
     public static final String EXTRA_SHOW_FRAGMENT_TITLE = ":settings:show_fragment_title";
     public static final String EXTRA_FRAGMENT_ARG_KEY = ":settings:fragment_args_key";
@@ -162,7 +161,7 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity implements
         }
         boolean thereShouldBeOne = mIntent.getBooleanExtra(EXTRA_SWITCH_THERE_SHOULD_BE_ONE, false);
 
-        mSwitchBar = (MainSwitchBar) findViewById(R.id.main_switch_bar);
+        mSwitchBar = (SwitchBar) findViewById(R.id.main_switch_bar);
         if (mIntent.hasExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY)) {
             mSwitchBar.show();
             BaseSettingsFragment settingsFragment = mFragment instanceof BaseSettingsFragment
