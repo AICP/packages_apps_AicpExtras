@@ -35,13 +35,13 @@
             android:icon="@drawable/ic_settings_hw_keys"
             android:fragment="com.aicp.extras.fragments.HwKeys" />
 
-    <!--        <PreferenceScreen
+        <PreferenceScreen
             android:title="@string/navigation_title"
             android:key="navigation"
             android:summary="@string/navigation_summary"
             android:icon="@drawable/ic_settings_navbar"
             android:fragment="com.aicp.extras.fragments.Navigation" />
--->
+
         <PreferenceScreen
             android:title="@string/recents_title"
             android:key="recents"

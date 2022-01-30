@@ -20,7 +20,7 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="navigation_bar"
     android:title="@string/navbar_visibility" >
-<!--
+
     <PreferenceCategory
         android:key="category_gesture_navigation">
         <Preference
@@ -32,7 +32,7 @@
         </Preference>
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!--PreferenceCategory
         android:key="category_navbar_pulse">
 
         <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
@@ -42,11 +42,11 @@
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.PulseSettings" />
 
-    </PreferenceCategory>
+    </PreferenceCategory-->
 
     <PreferenceCategory
         android:key="category_navbar_layout">
-
+<!--
         <Preference
             android:key="layout_settings"
             android:title="@string/navigation_bar_layout_title"
@@ -57,11 +57,11 @@
         </Preference>
 -->
         <!--Arrow keys switch applies to both gestural and 2-3 button navigation -->
-<!--        <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <!--com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="navigation_bar_menu_arrow_keys"
             android:title="@string/navigation_bar_menu_arrow_keys_title"
             android:summary="@string/navigation_bar_menu_arrow_keys_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" /-->
 
         <com.aicp.gear.preference.SecureSettingSwitchPreference
             android:key="sysui_nav_bar_inverse"
@@ -161,6 +161,6 @@
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference
-        android:title="@string/navbar_visibility_footer" /> -->
+        android:title="@string/navbar_visibility_footer" />
 
 </PreferenceScreen>
