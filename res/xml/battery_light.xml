@@ -15,7 +15,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="battery_light"
     android:title="@string/battery_light_title" >
-<!--
+
      <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="battery_light_allow_on_dnd"
         android:title="@string/battery_light_allow_on_dnd_title"
@@ -76,5 +76,4 @@
             android:title="@string/battery_light_reallyfull_color"
             android:defaultValue="0xFF00FF00" />
     </PreferenceCategory>
--->
 </PreferenceScreen>
