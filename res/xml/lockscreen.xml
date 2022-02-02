@@ -159,6 +159,12 @@
         android:title="@string/always_on_display_schedule_title"
         android:fragment="com.aicp.extras.fragments.AODSchedule" />
 -->
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="authorization_ripple_effect"
+        android:title="@string/lockscreen_ripple_effect_title"
+        android:summary="@string/lockscreen_ripple_effect_summary"
+        android:defaultValue="true" />
+
     <PreferenceCategory
           android:key="lockscreen_security_category"
           android:title="@string/lockscreen_security_category">
