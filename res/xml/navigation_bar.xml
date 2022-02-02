@@ -32,17 +32,17 @@
         </Preference>
     </PreferenceCategory>
 
-    <!--PreferenceCategory
+    <PreferenceCategory
         android:key="category_navbar_pulse">
 
-        <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
-            android:key="navbar_pulse_enabled"
+        <PreferenceScreen
+            android:key="navbar_pulse_options"
             android:title="@string/pulse_settings"
             android:summary="@string/pulse_settings_summary"
-            android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.PulseSettings" />
 
-    </PreferenceCategory-->
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="category_navbar_layout">
