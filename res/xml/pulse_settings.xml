@@ -22,18 +22,18 @@
 
     <com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="navbar_pulse_enabled"
-        android:title="@string/pulse_settings"
+        android:title="@string/navbar_pulse_setting"
         android:summary="@string/pulse_settings_summary"
         android:defaultValue="false" />
 
     <com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="lockscreen_pulse_enabled"
-        android:title="@string/lockscreen_pulse_settings"
+        android:title="@string/lockscreen_pulse_setting"
         android:defaultValue="false" />
 
     <com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="ambient_pulse_enabled"
-        android:title="@string/ambient_pulse_settings"
+        android:title="@string/ambient_pulse_setting"
         android:defaultValue="false" />
 
     <PreferenceCategory
