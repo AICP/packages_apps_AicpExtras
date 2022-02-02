@@ -22,6 +22,7 @@ import android.os.UserHandle;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.Preference;
+import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 import android.util.TypedValue;
 import android.widget.CompoundButton;
@@ -32,14 +33,17 @@ import com.aicp.extras.R;
 import com.aicp.gear.preference.SecureSettingColorPickerPreference;
 import com.aicp.gear.preference.SecureSettingIntListPreference;
 import com.aicp.gear.preference.SecureSettingSeekBarPreference;
+import com.aicp.gear.preference.SecureSettingSwitchPreference;
 
 public class PulseSettings extends BaseSettingsFragment implements
-        Preference.OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener {
 
     private static final String TAG = PulseSettings.class.getSimpleName();
 
     private static final String CATEGORY_PULSE_FADING_BARS = "pulse_fading_bars_category";
     private static final String CATEGORY_PULSE_2 = "pulse_2";
+    private static final String CATEGORY_PULSE_COLOR = "pulse_color_category";
+    private static final String CATEGORY_PULSE_RENDER_MODE = "pulse_render_mode_category";
 
     private static final String KEY_RENDER_MODE_FADING_LINES = "pulse_render_mode_fading_lines";
     private static final String KEY_RENDER_MODE_FADING_BLOCKS = "pulse_render_mode_fading_blocks";
@@ -48,6 +52,10 @@ public class PulseSettings extends BaseSettingsFragment implements
     private static final String PULSE_COLOR_MODE_KEY = "navbar_pulse_color_type";
     private static final String PULSE_COLOR_MODE_CHOOSER_KEY = "navbar_pulse_color_user";
     private static final String PULSE_COLOR_MODE_LAVA_SPEED_KEY = "navbar_pulse_lavalamp_speed";
+
+    private static final String KEY_NAVBAR_PULSE = "navbar_pulse_enabled";
+    private static final String KEY_LOCKSCREEN_PULSE = "lockscreen_pulse_enabled";
+    private static final String KEY_AMBIENTDISPLAY_PULSE = "ambient_pulse_enabled";
 
     private static final int COLOR_TYPE_ACCENT = 0;
     private static final int COLOR_TYPE_USER = 1;
@@ -63,6 +71,11 @@ public class PulseSettings extends BaseSettingsFragment implements
     private SecureSettingMasterSwitchPreference mRenderModeBlocks;
     private SecureSettingMasterSwitchPreference mRenderModeLines;
     private SecureSettingSeekBarPreference mLavaSpeedPref;
+    private SwitchPreference mNavBarPulse;
+    private SwitchPreference mLockscreenPulse;
+    private SwitchPreference mAmbientDisplayPulse;
+    private PreferenceCategory mPulseColorCategory;
+    private PreferenceCategory mPulseRenderModeCategory;
 
     @Override
     protected int getPreferenceResource() {
@@ -89,6 +102,26 @@ public class PulseSettings extends BaseSettingsFragment implements
         mRenderModeLines = (SecureSettingMasterSwitchPreference) findPreference(KEY_RENDER_MODE_FADING_LINES);
         mRenderModeLines.setChecked(renderMode != 0);
         mRenderModeLines.setOnPreferenceChangeListener(this);
+
+        mPulseColorCategory = (PreferenceCategory) findPreference(CATEGORY_PULSE_COLOR);
+        mPulseRenderModeCategory = (PreferenceCategory) findPreference(CATEGORY_PULSE_RENDER_MODE);
+
+        mNavBarPulse = (SwitchPreference) findPreference(KEY_NAVBAR_PULSE);
+        mNavBarPulse.setOnPreferenceClickListener(this);
+        mLockscreenPulse = (SwitchPreference) findPreference(KEY_LOCKSCREEN_PULSE);
+        mLockscreenPulse.setOnPreferenceClickListener(this);
+        mAmbientDisplayPulse = (SwitchPreference) findPreference(KEY_AMBIENTDISPLAY_PULSE);
+        mAmbientDisplayPulse.setOnPreferenceClickListener(this);
+        updateDependentCategories();
+    }
+
+    private void updateDependentCategories() {
+        int pulseLocations = 0;
+        if (!mNavBarPulse.isChecked()) pulseLocations += 1;
+        if (!mLockscreenPulse.isChecked()) pulseLocations += 1;
+        if (!mAmbientDisplayPulse.isChecked()) pulseLocations += 1;
+        mPulseColorCategory.setEnabled(pulseLocations < 3 ? true : false);
+        mPulseRenderModeCategory.setEnabled(pulseLocations < 3 ? true : false);
     }
 
     private void updateColorPrefs(int val) {
@@ -135,6 +168,16 @@ public class PulseSettings extends BaseSettingsFragment implements
     }
 
     @Override
+    public boolean onPreferenceClick(Preference preference) {
+        if (preference.equals(mNavBarPulse) ||
+                  preference.equals(mLockscreenPulse) ||
+                  preference.equals(mAmbientDisplayPulse)) {
+            updateDependentCategories();
+        }
+        return true;
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
         if (Settings.Secure.getIntForUser(getContentResolver(),
@@ -142,6 +185,7 @@ public class PulseSettings extends BaseSettingsFragment implements
             int colorMode = Settings.Secure.getIntForUser(getContentResolver(),
                     Settings.Secure.PULSE_COLOR_TYPE, COLOR_TYPE_ACCENT, UserHandle.USER_CURRENT);
             updateColorPrefs(colorMode);
+            updateDependentCategories();
         }
     }
 }
