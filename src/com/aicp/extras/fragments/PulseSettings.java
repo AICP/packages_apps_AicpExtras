@@ -33,7 +33,7 @@ import com.aicp.gear.preference.SecureSettingColorPickerPreference;
 import com.aicp.gear.preference.SecureSettingIntListPreference;
 import com.aicp.gear.preference.SecureSettingSeekBarPreference;
 
-public class PulseSettings {/* extends BaseSettingsFragment implements
+public class PulseSettings extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String TAG = PulseSettings.class.getSimpleName();
@@ -143,5 +143,5 @@ public class PulseSettings {/* extends BaseSettingsFragment implements
                     Settings.Secure.PULSE_COLOR_TYPE, COLOR_TYPE_ACCENT, UserHandle.USER_CURRENT);
             updateColorPrefs(colorMode);
         }
-    }*/
+    }
 }
