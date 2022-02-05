@@ -1237,7 +1237,7 @@
     </string-array>
 
     <!--  Volume Panel  -->
-    <string-array name="volume_panel_entries">
+    <string-array name="volume_panel_entries" translatable="false">
         <item>@string/volume_panel_stock</item>
         <item>@string/volume_panel_aosp</item>
         <item>@string/volume_panel_compact</item>
@@ -1259,5 +1259,28 @@
         <item>com.android.plugin.volume.p404</item>
         <item>com.android.plugin.volume.ssos</item>
         <item>com.android.plugin.volume.tiled</item>
+    </string-array>
+
+    <!-- Clipboard toast info -->
+    <string-array name="volte_icon_style_array" translatable="false">
+        <item>@string/default</item>
+        <item>@string/volte_icon_standard</item>
+        <item>@string/volte_icon_oos</item>
+        <item>@string/volte_icon_hd</item>
+        <item>@string/volte_icon_asus</item>
+        <item>@string/volte_icon_miui</item>
+        <item>@string/volte_icon_emui</item>
+        <item>@string/volte_icon_caf</item>
+    </string-array>
+
+    <string-array name="volte_icon_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
     </string-array>
 </resources>
