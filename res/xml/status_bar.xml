@@ -147,6 +147,19 @@
             android:entryValues="@array/volte_icon_style_values"
             android:defaultValue="0" />
 
+        <com.aicp.gear.preference.SystemSettingIntListPreference
+            android:key="vowifi_icon"
+            android:title="@string/vowifi_icon_title"
+            android:entries="@array/vowifi_icon_array"
+            android:entryValues="@array/vowifi_icon_values"
+            android:defaultValue="0" />
+
+        <com.aicp.gear.preference.SystemSettingIntListPreference
+            android:key="vowifi_icon_style"
+            android:title="@string/vowifi_icon_title"
+            android:entries="@array/vowifi_icon_style_array"
+            android:entryValues="@array/vowifi_icon_style_values"
+            android:defaultValue="0" />
 <!--
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="vowifi_icon_style"

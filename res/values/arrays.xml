@@ -1261,16 +1261,18 @@
         <item>com.android.plugin.volume.tiled</item>
     </string-array>
 
-    <!-- Clipboard toast info -->
+    <!-- VoLTE icon style -->
     <string-array name="volte_icon_style_array" translatable="false">
-        <item>@string/default</item>
-        <item>@string/volte_icon_standard</item>
+        <item>@string/volte_icon_vo</item>
+        <item>@string/volte_icon_volte</item>
         <item>@string/volte_icon_oos</item>
         <item>@string/volte_icon_hd</item>
         <item>@string/volte_icon_asus</item>
         <item>@string/volte_icon_miui</item>
         <item>@string/volte_icon_emui</item>
-        <item>@string/volte_icon_caf</item>
+        <item>@string/volte_icon_margaritov</item>
+        <item>@string/volte_icon_margaritov2</item>
+        <item>@string/volte_icon_vivo</item>
     </string-array>
 
     <string-array name="volte_icon_style_values" translatable="false">
@@ -1282,5 +1284,48 @@
         <item>5</item>
         <item>6</item>
         <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <!-- VoWiFi icon -->
+    <string-array name="vowifi_icon_array" translatable="false">
+        <item>@string/vowifi_icon_hide</item>
+        <item>@string/vowifi_icon_show</item>
+        <item>@string/vowifi_icon_replace_volte</item>
+    </string-array>
+
+    <string-array name="vowifi_icon_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- VoWiFi icon style -->
+    <string-array name="vowifi_icon_style_array" translatable="false">
+        <item>@string/vowifi_icon_stock</item>
+        <item>@string/vowifi_icon_oneplus</item>
+        <item>@string/vowifi_icon_moto</item>
+        <item>@string/vowifi_icon_asus</item>
+        <item>@string/vowifi_icon_emui</item>
+        <item>@string/vowifi_icon_simple1</item>
+        <item>@string/vowifi_icon_simple2</item>
+        <item>@string/vowifi_icon_simple3</item>
+        <item>@string/vowifi_icon_vivo</item>
+        <item>@string/vowifi_icon_margaritov</item>
+    </string-array>
+
+    <string-array name="vowifi_icon_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
     </string-array>
 </resources>
