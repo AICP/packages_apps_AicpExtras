@@ -125,21 +125,29 @@
             android:defaultValue="true"/>
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="show_volte"
+            android:key="show_volte_icon"
             android:title="@string/volte_icon_title"
             android:summary="@string/volte_icon_summary"
             android:defaultValue="true"/>
-<!--
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+
+        <!--com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="volte_icon_style"
-            android:title="@string/volte_icon_title"
-            android:summary="@string/volte_icon_summary"
-            android:max="10"
+            android:title="@string/volte_icon_style_title"
+            android:summary="@string/volte_icon_style_summary"
+            android:max="3"
             android:min="0"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
-            android:defaultValue="0"/>
+            android:defaultValue="0"/-->
 
+        <com.aicp.gear.preference.SystemSettingIntListPreference
+            android:key="volte_icon_style"
+            android:title="@string/volte_icon_style_title"
+            android:entries="@array/volte_icon_style_array"
+            android:entryValues="@array/volte_icon_style_values"
+            android:defaultValue="0" />
+
+<!--
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="vowifi_icon_style"
             android:title="@string/vowifi_icon_title"
