@@ -696,6 +696,7 @@
     <string name="no">@android:string/no</string>
     <string name="reset">Reset</string>
     <string name="disabled">Disabled</string>
+    <string name="default">Default</string>
     <string name="systemui_restart_title">SystemUI restart required</string>
     <string name="systemui_restart_message">For all changes to take effect, a SystemUI restart is required. Restart SystemUI now?</string>
     <string name="cannot_get_su">Action failed because of missing superuser access</string>
@@ -1882,7 +1883,14 @@
     <string name="quick_qs_brightness_slider_title">Show brightness slider in Quick QS Panel</string>
     <string name="quick_qs_brightness_slider_summary">Show a brightness slider in the quick qs panel</string>
 
-    <!-- VoLTE switch -->
-    <string name="volte_icon_title">VoLTE icon</string>
-    <string name="volte_icon_summary">Display VoLTE icon</string>
+    <!-- VoLTE icon style -->
+    <string name="volte_icon_style_title">Choose VoLTE icon</string>
+    <string name="volte_icon_style_summary">Select VoLTE icon to display on statusbar</string>
+    <string name="volte_icon_standard">Stock</string>
+    <string name="volte_icon_oos">OOS</string>
+    <string name="volte_icon_hd">HD</string>
+    <string name="volte_icon_asus">Asus</string>
+    <string name="volte_icon_miui">MIUI</string>
+    <string name="volte_icon_emui">EMUI</string>
+    <string name="volte_icon_caf">CAF</string>
 </resources>
