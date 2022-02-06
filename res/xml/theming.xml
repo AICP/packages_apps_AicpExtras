@@ -19,9 +19,23 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="theming"
     android:title="@string/theming_title"
     android:summary="@string/theming_summary">
+
+    <PreferenceCategory
+        android:key="theming_monet"
+        android:title="@string/monet_title">
+
+        <PreferenceScreen
+            android:key="monet_engine"
+            android:title="@string/monet_title"
+            android:summary="@string/monet_summary"
+            app:iconSpaceReserved="false"
+            android:fragment="com.aicp.extras.fragments.MonetSettings" />
+
+    </PreferenceCategory>
 
     <!-- overlayTarget="anrdoid" is enough:
             we have some special treatment implemented for this category -->
