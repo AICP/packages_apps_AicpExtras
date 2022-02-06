@@ -127,7 +127,7 @@
             android:summary="@string/system_behaviour_summary"
             android:icon="@drawable/ic_settings_system_behaviour"
             android:fragment="com.aicp.extras.fragments.SystemBehaviour" />
-<!--
+
         <PreferenceScreen
             android:title="@string/system_extensions_title"
             android:key="system_extensions"
@@ -135,7 +135,7 @@
             android:icon="@drawable/ic_settings_system_extensions"
             android:fragment="com.aicp.extras.fragments.SystemExtensions" />
 
-        <Preference
+<!--        <Preference
             android:title="@string/systemui_tuner_title"
             android:key="stock_tuner"
             android:summary="@string/systemui_tuner_summary"
