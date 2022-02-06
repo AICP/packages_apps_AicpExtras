@@ -30,9 +30,9 @@ import com.aicp.extras.utils.Util;
 
 //import com.aicp.gear.util.ThemeOverlayHelper;
 
-public class Theming {/* extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
+public class Theming extends BaseSettingsFragment { // implements Preference.OnPreferenceChangeListener {
 
-    private Handler mHandler = new Handler();
+    //private Handler mHandler = new Handler();
 
     @Override
     protected int getPreferenceResource() {
@@ -43,10 +43,11 @@ public class Theming {/* extends BaseSettingsFragment implements Preference.OnPr
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Util.requireConfig(getActivity(), findPreference(Settings.System.DISPLAY_HIDE_NOTCH),
-                com.android.internal.R.bool.config_showHideNotchSettings, true, false);
+        /*Util.requireConfig(getActivity(), findPreference(Settings.System.DISPLAY_HIDE_NOTCH),
+                com.android.internal.R.bool.config_showHideNotchSettings, true, false);*/
     }
 
+    /*
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         /*
@@ -65,8 +66,7 @@ public class Theming {/* extends BaseSettingsFragment implements Preference.OnPr
         } else {
             return false;
         }
-        */
- /*       return false;
+    return false;
     }
 
     private void postRestartSystemUi() {
