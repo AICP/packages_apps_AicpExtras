@@ -126,13 +126,14 @@
             android:summary="@string/system_behaviour_summary"
             android:icon="@drawable/ic_settings_system_behaviour"
             android:fragment="com.aicp.extras.fragments.SystemBehaviour" />
-<!--
+
         <PreferenceScreen
             android:title="@string/system_extensions_title"
             android:key="system_extensions"
             android:summary="@string/system_extensions_summary"
             android:icon="@drawable/ic_settings_system_extensions"
             android:fragment="com.aicp.extras.fragments.SystemExtensions" />
+<!--
 
         <Preference
             android:title="@string/systemui_tuner_title"
