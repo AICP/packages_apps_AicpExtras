@@ -43,7 +43,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class AppMultiSelectListPreference {/*
 public class AppMultiSelectListPreference extends CustomDialogPreferenceCompat {
     private static final String TAG = "AppMultiSelectList";
     private static final boolean DEBUG = false;
@@ -241,5 +240,5 @@ public class AppMultiSelectListPreference extends CustomDialogPreferenceCompat {
             appIcon = getDefaultActivityIcon();
         }
         return appIcon;
-    }*/
+    }
 }
