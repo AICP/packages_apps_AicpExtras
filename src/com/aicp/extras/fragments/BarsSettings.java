@@ -42,7 +42,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class BarsSettings {/*
 public class BarsSettings extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "BarsSettings";
@@ -108,5 +107,5 @@ public class BarsSettings extends BaseSettingsFragment implements
             return true;
         }
         return false;
-    }*/
+    }
 }
