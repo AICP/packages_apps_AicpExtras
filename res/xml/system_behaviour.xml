@@ -29,12 +29,11 @@
         android:summary="@string/audio_panel_position_summary"
         android:defaultValue="@*android:bool/config_audioPanelOnLeftSide" />
 
-    <!--<PreferenceScreen
+    <PreferenceScreen
         android:key="bars_settings"
         android:title="@string/aspect_ratio_category_title"
         app:iconSpaceReserved="false"
-        android:fragment="com.aicp.extras.fragments.BarsSettings" />-->
-
+        android:fragment="com.aicp.extras.fragments.BarsSettings" />
 
     <com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="display_settings_wallpaper_zoom"
