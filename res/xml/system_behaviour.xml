@@ -29,12 +29,11 @@
         android:summary="@string/audio_panel_position_summary"
         android:defaultValue="@*android:bool/config_audioPanelOnLeftSide" />
 
-    <!--<PreferenceScreen
+    <PreferenceScreen
         android:key="bars_settings"
         android:title="@string/aspect_ratio_category_title"
         app:iconSpaceReserved="false"
-        android:fragment="com.aicp.extras.fragments.BarsSettings" />-->
-
+        android:fragment="com.aicp.extras.fragments.BarsSettings" />
 
     <!-- <Preference
         android:key="privacy_guard_manager"
@@ -98,7 +97,7 @@ android:persistent="false" />-->
         android:key="sensor_block"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
-        android:defaultValue="false"/> -->
+        android:defaultValue="false"/-->
 
 <!--    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="sensor_block"
