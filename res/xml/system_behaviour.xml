@@ -18,6 +18,7 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="system_behaviour"
     android:title="@string/system_behaviour_title">
@@ -28,13 +29,14 @@
             android:summary="@string/audio_panel_position_summary"
             android:defaultValue="@*android:bool/config_audioPanelOnLeftSide" />
 
-    <!-- <PreferenceScreen
+    <PreferenceScreen
         android:key="bars_settings"
         android:title="@string/aspect_ratio_category_title"
+        app:iconSpaceReserved="false"
         android:fragment="com.aicp.extras.fragments.BarsSettings" />
 
 
-    <Preference
+    <!-- <Preference
         android:key="privacy_guard_manager"
         android:title="@string/app_ops_settings"
         android:summary="@string/app_ops_settings_summary"
@@ -91,12 +93,11 @@ android:persistent="false" />-->
         android:defaultValue="false" />
 -->
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <!--com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="sensor_block"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
-        android:defaultValue="false"/>
-<!--
+        android:defaultValue="false"/-->
 
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="sensor_block"
@@ -111,7 +112,7 @@ android:persistent="false" />-->
         android:summary="@string/smart_pixels_summary"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.SmartPixels" />
--->
+
     <!-- Spoofing -->
 <!--    <PreferenceCategory
         android:key="spoofing"
