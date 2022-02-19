@@ -21,7 +21,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="other_ui"
     android:title="@string/other_ui_title">
-<!--
+
     <com.aicp.gear.preference.SystemSettingSeekBarPreference
         android:key="volume_dialog_timeout"
         android:title="@string/volume_dialog_timeout_title"
@@ -31,6 +31,7 @@
         aicpextras:interval="100"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="ms" />
+<!--
 
     <com.aicp.gear.preference.SystemSettingSeekBarPreference
         android:key="screenshot_compression"
