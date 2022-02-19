@@ -49,34 +49,4 @@
         android:entryValues="@array/toast_animation_values"
         android:summary="%s"
         android:defaultValue="1" />
-
-    <PreferenceCategory
-      android:key="quick_settings_animations"
-      android:title="@string/qs_tiles">
-
-        <com.aicp.gear.preference.SystemSettingIntListPreference
-            android:key="anim_tile_style"
-            android:title="@string/qs_tile_animation_style_title"
-            android:entries="@array/qs_tile_animation_style_entries"
-            android:entryValues="@array/qs_tile_animation_style_values"
-            android:summary="%s"
-            android:defaultValue="0" />
-
-        <com.aicp.gear.preference.SystemSettingIntListPreference
-            android:key="anim_tile_duration"
-            android:title="@string/qs_tile_animation_duration_title"
-            android:entries="@array/qs_tile_animation_duration_entries"
-            android:entryValues="@array/qs_tile_animation_duration_values"
-            android:summary="%s"
-            android:defaultValue="2000" />
-
-        <com.aicp.gear.preference.SystemSettingIntListPreference
-            android:key="anim_tile_interpolator"
-            android:title="@string/qs_tile_animation_interpolator_title"
-            android:entries="@array/qs_tile_animation_interpolator_entries"
-            android:entryValues="@array/qs_tile_animation_interpolator_values"
-            android:summary="%s"
-            android:defaultValue="0" />
-
-    </PreferenceCategory>
 </PreferenceScreen>
