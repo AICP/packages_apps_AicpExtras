@@ -23,17 +23,6 @@
     android:title="@string/hw_keys_title">
 
     <PreferenceCategory
-        android:key="alert_slider_category"
-        android:title="@string/alert_slider_category_title">
-
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="alert_slider_notifications"
-            android:title="@string/alert_slider_notifications_title"
-            android:summary="@string/alert_slider_notifications_summary"
-            android:defaultValue="true" />
-
-    </PreferenceCategory>
-    <PreferenceCategory
         android:key="power_key"
         android:title="@string/category_power_key" >
 
