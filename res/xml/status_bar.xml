@@ -228,7 +228,7 @@
     <PreferenceCategory
         android:key="statusbar_battery_category"
         android:title="@string/status_bar_battery_category_title">
-<!--
+
         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="status_bar_show_battery_image"
             android:title="@string/status_bar_battery_title"
@@ -242,7 +242,7 @@
             android:entries="@array/battery_percent_entries"
             android:entryValues="@array/battery_percent_values"
             android:defaultValue="0" />
--->
+
 <!--
         <!- - Quick QS battery estimate - ->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
