@@ -39,14 +39,14 @@ import android.widget.LinearLayout;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-/*import com.aicp.gear.preference.SecureSettingIntListPreference;
+import com.aicp.gear.preference.SecureSettingIntListPreference;
 import com.aicp.gear.preference.SecureSettingListPreference;
 import com.aicp.gear.util.DeviceUtils;
 import com.android.internal.util.aicp.AicpUtils;
-*/
+
 import java.util.Date;
 
-public class StatusBarClockSettings {/* extends BaseSettingsFragment implements OnPreferenceChangeListener {
+public class StatusBarClockSettings extends BaseSettingsFragment implements OnPreferenceChangeListener {
 
 
     private static final String TAG = "StatusBarClockSettings";
@@ -196,5 +196,5 @@ public class StatusBarClockSettings {/* extends BaseSettingsFragment implements 
             }
         }
         mClockDateFormat.setEntries(parsedDateEntries);
-    }*/
+    }
 }
