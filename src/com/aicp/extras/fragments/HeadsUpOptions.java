@@ -53,7 +53,7 @@ import com.aicp.extras.utils.PackageListAdapter.PackageItem;
 import com.aicp.gear.preference.AppListPreference;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
-public class HeadsUpOptions extends BaseSettingsFragment { /*implements
+public class HeadsUpOptions extends BaseSettingsFragment implements
         Preference.OnPreferenceClickListener{
 
     private static final String TAG = "HeadsUpOptions";
@@ -74,12 +74,11 @@ public class HeadsUpOptions extends BaseSettingsFragment { /*implements
     protected AlertDialog mDialog;
     protected ListView mListView;
 
-*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.heads_up_options;
     }
-/*
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -152,13 +151,13 @@ public class HeadsUpOptions extends BaseSettingsFragment { /*implements
 
     /**
      * Application class
-     *//*
+     */
     protected static class Package {
         public String name;
         /**
          * Stores all the application values in one call
          * @param name
-         *//*
+         */
         public Package(String name) {
             this.name = name;
         }
@@ -287,5 +286,5 @@ public class HeadsUpOptions extends BaseSettingsFragment { /*implements
         if (DEBUG) Log.v(TAG, "blackStringSaved: " + value);
         Settings.System.putString(getActivity().getContentResolver(),
                 mBlacklistPackageStore, value);
-    }*/
+    }
 }
