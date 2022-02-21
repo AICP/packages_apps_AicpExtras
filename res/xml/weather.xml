@@ -18,14 +18,16 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="weather"
     android:title="@string/weather_title">
-<!--
+
     <PreferenceScreen
         android:title="@string/weather_config_title"
-        android:summary="@string/weather_config_summary" >
+        android:summary="@string/weather_config_summary"
+        app:iconSpaceReserved="false" >
         <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="org.omnirom.omnijaws"
                 android:targetClass="org.omnirom.omnijaws.SettingsActivityService" />
@@ -35,9 +37,9 @@
         android:key="weather_icon_pack"
         android:title="@string/weather_icon_pack_title"
         android:persistent="false" />
--->
+
     <!-- Lockscreen weather -->
-<!--    <PreferenceCategory
+    <PreferenceCategory
         android:key="lock_screen_weather_category"
         android:title="@string/lock_screen_weather_category_title" >
 
@@ -58,8 +60,8 @@
 
     </PreferenceCategory>
 
-    <com.android.settingslib.widget.FooterPreference
+    <!--com.android.settingslib.widget.FooterPreference
         android:title="@string/lock_screen_weather_style_footer"
         android:selectable="false"
-settings:allowDividerAbove="true" />-->
+        settings:allowDividerAbove="true" /-->
 </PreferenceScreen>
