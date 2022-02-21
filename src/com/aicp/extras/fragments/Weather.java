@@ -34,7 +34,7 @@ import com.aicp.extras.R;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Weather {/* extends BaseSettingsFragment implements OnPreferenceChangeListener {
+public class Weather extends BaseSettingsFragment implements OnPreferenceChangeListener {
     private static final String TAG = "OmniJawsSettings";
     private static final String WEATHER_ICON_PACK = "weather_icon_pack";
     private static final String DEFAULT_WEATHER_ICON_PACKAGE = "org.omnirom.omnijaws";
@@ -144,5 +144,5 @@ public class Weather {/* extends BaseSettingsFragment implements OnPreferenceCha
             }
         }
         return true;
-    }*/
+    }
 }
