@@ -21,7 +21,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="navigation_gestures"
     android:title="@string/use_bottom_gesture_title">
-<!--
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="back_swipe_extended"
         android:title="@string/back_swipe_extended_title"
@@ -108,5 +108,5 @@
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference
-android:title="@string/gesture_nav_tweaks_footer_info" />-->
+        android:title="@string/gesture_nav_tweaks_footer_info" />
 </PreferenceScreen>
