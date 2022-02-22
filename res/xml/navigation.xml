@@ -17,6 +17,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="navigation"
     android:title="@string/navigation_title">
 
@@ -40,7 +41,7 @@
         android:title="@string/navigation_bar_menu_arrow_keys_title"
         android:summary="@string/navigation_bar_menu_arrow_keys_summary"
         android:defaultValue="false"/>
-<!--
+
     <PreferenceCategory
         android:key="gesture_nav_tweaks_category"
         android:title="@string/navbar_gesture_tweaks_cat_title">
@@ -48,13 +49,14 @@
         <PreferenceScreen
             android:key="gesture_nav_custom_options"
             android:fragment="com.aicp.extras.fragments.NavigationGestureSettings"
+            app:iconSpaceReserved="false"
             android:title="@string/use_bottom_gesture_title"
             android:summary="@string/navbar_gesture_tweaks_pref_summary"
             android:dependency="gesture_nav_tweaks_category"
             android:persistent="false" />
 
     </PreferenceCategory>
--->
+
     <PreferenceCategory
         android:key="hardware_keys"
 	      android:title="@string/hardware_keys_category">
