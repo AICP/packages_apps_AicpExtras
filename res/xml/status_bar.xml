@@ -291,6 +291,12 @@ android:defaultValue="false"/>-->
        android:key="statusbar_others_category"
        android:title="@string/status_bar_others_category_title">
 
+       <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="statusbar_colored_icons"
+            android:title="@string/statusbar_colored_icons_title"
+            android:summary="@string/statusbar_colored_icons_summary"
+            android:defaultValue="false" />
+
        <!-- Hide notch fill -->
 <!--       <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="display_hide_notch"
