@@ -86,10 +86,9 @@ public class Notifications extends BaseSettingsFragment implements
 */
         Util.requireConfig(getActivity(), findPreference(ALERT_SLIDER_PREF),
                 com.android.internal.R.bool.config_hasAlertSlider, true, false);
-/*
         Util.requireConfig(getActivity(), findPreference(KEY_RINGTONE_FOCUS),
                 com.android.internal.R.bool.config_deviceRingtoneFocusMode, true, false);
-
+/*
         mNotificationHeader.setOnPreferenceChangeListener(this);*/
     }
 
