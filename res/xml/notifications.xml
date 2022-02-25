@@ -159,7 +159,7 @@
 
     <com.android.settingslib.widget.FooterPreference
         android:title="@string/status_bar_show_ticker_footer" />
---><!--
+-->
     <PreferenceCategory
         android:key="notification_flash"
         android:title="@string/notification_flash_title" >
@@ -191,5 +191,5 @@
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="Hz"
             android:defaultValue="1" />
-</PreferenceCategory>-->
+    </PreferenceCategory>
 </PreferenceScreen>
