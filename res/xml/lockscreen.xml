@@ -163,6 +163,12 @@
         android:summary="@string/lockscreen_ripple_effect_summary"
         android:defaultValue="true" />
 
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="sysui_keyguard_transition_animations"
+        android:title="@string/keyguard_transition_animations_title"
+        android:summary="@string/keyguard_transition_animations_summary"
+        android:defaultValue="true" />
+
     <PreferenceCategory
           android:key="lockscreen_security_category"
           android:title="@string/lockscreen_security_category">
