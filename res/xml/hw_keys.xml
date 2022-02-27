@@ -94,9 +94,9 @@
             aicpextras:plainSwitch="true"
             android:defaultValue="false" />
 
-</PreferenceCategory>-->
+    </PreferenceCategory>
 
-    <PreferenceCategory
+    <!--PreferenceCategory
         android:key="camera_key"
         android:title="@string/hardware_keys_camera_key_title">
 
@@ -104,7 +104,7 @@
             android:key="camera_wake_screen"
             android:title="@string/hardware_keys_wake_title"
             android:defaultValue="false" />
-<!--
+
          <com.aicp.gear.preference.SystemSettingSwitchPreference
              android:key="camera_sleep_on_release"
              android:title="@string/camera_sleep_on_release_title"
@@ -117,6 +117,5 @@
             android:title="@string/camera_launch_title"
             android:summary="@string/camera_launch_summary"
             android:defaultValue="false" />
--->
-    </PreferenceCategory> -->
+    </PreferenceCategory-->
 </PreferenceScreen>
