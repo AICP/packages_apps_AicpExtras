@@ -81,7 +81,6 @@
         android:summary="@string/lockscreen_battery_info_summary"
         android:defaultValue="false" />
 
-<!--
     <com.aicp.gear.preference.SystemSettingListPreference
         android:key="lockscreen_charge_temp_unit"
         android:title="@string/lockscreen_charge_temp_unit_title"
@@ -89,7 +88,6 @@
         android:entryValues="@array/lockscreen_charge_temp_unit_values"
         android:dependency="lockscreen_battery_info"
         android:defaultValue="1" />
--->
 <!--
     <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
         android:key="lockscreen_visualizer_enabled"
