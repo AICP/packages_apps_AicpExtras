@@ -108,7 +108,6 @@
         android:title="@string/force_ambient_for_media_pref_title"
         android:summary="@string/force_ambient_for_media_pref_summary"
         android:defaultValue="true" />
-<!--
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="lockscreen_media_metadata"
@@ -134,7 +133,7 @@
         aicpextras:unitsRight="dp"
         android:defaultValue="25"
         android:dependency="lockscreen_media_metadata" />
--->
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="lock_screen_custom_notif"
         android:title="@string/lock_screen_custom_notif_title"
