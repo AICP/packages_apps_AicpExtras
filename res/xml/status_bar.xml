@@ -26,7 +26,6 @@
         android:key="statusbar_gestures_category"
         android:title="@string/status_bar_gestures_category_title">
 
-
         <!-- Smart pulldown -->
         <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="qs_smart_pulldown"
@@ -104,13 +103,13 @@
             android:title="@string/show_4g_title"
             android:summary="@string/show_4g_summary"
             android:defaultValue="false" />
-<!--
+
         <com.aicp.gear.preference.SystemSettingSwitchPreference
           android:key="use_old_mobiletype"
           android:title="@string/use_old_mobiletype_title"
           android:summary="@string/use_old_mobiletype_summary"
           android:defaultValue="false" />
--->
+
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="data_disabled_icon"
             android:title="@string/data_disabled_icon_title"
