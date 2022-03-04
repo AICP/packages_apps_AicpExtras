@@ -35,6 +35,13 @@
         android:title="@string/hosts_block_title"
         android:summary="@string/hosts_block_summary"
         android:defaultValue="false" />
+
+    <PreferenceScreen
+        android:title="@string/recents_title"
+        android:key="recents"
+        android:summary="@string/recents_summary"
+        android:fragment="com.aicp.extras.fragments.Recents" />
+
 <!--
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="enable_app_circle_bar"
