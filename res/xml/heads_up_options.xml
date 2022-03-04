@@ -29,6 +29,14 @@
         android:summary="@string/less_boring_heads_up_summary"
         android:defaultValue="0" />
 
+    <com.aicp.gear.preference.SystemSettingIntListPreference
+        android:key="heads_up_notifications_threshold"
+        android:title="@string/hun_importance_title"
+        android:summary="%s"
+        android:entries="@array/hun_importance_entries"
+        android:entryValues="@array/hun_importance_values"
+        android:defaultValue="4" />
+
 <!--    <PreferenceScreen
         android:key="headsup_activity_blacklist"
         android:fragment="com.aicp.extras.fragments.HeadsUpActivityBlacklist"
