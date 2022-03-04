@@ -42,13 +42,6 @@
             android:icon="@drawable/ic_settings_navbar"
             android:fragment="com.aicp.extras.fragments.Navigation" />
 
-        <PreferenceScreen
-            android:title="@string/recents_title"
-            android:key="recents"
-            android:summary="@string/recents_summary"
-            android:icon="@drawable/ic_settings_recents"
-            android:fragment="com.aicp.extras.fragments.Recents" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
