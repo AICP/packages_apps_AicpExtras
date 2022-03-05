@@ -30,13 +30,6 @@
         <intent android:action="com.aicp.extras.ViewSystemAppRemover" />
     </Preference>
 -->
-
-    <com.aicp.gear.preference.SystemPropSwitchPreference
-        android:key="persist.aicp.hosts_block"
-        android:title="@string/hosts_block_title"
-        android:summary="@string/hosts_block_summary"
-        android:defaultValue="false" />
-
     <PreferenceScreen
         android:key="gaming_category"
         android:title="@string/gaming_title"
@@ -54,6 +47,33 @@
         android:summary="@string/recents_summary"
         app:iconSpaceReserved="false"
         android:fragment="com.aicp.extras.fragments.Recents" />
+
+    <PreferenceCategory
+        android:key="blockers_category"
+        android:title="@string/blockers_category">
+
+        <com.aicp.gear.preference.SystemPropSwitchPreference
+            android:key="persist.aicp.hosts_block"
+            android:title="@string/hosts_block_title"
+            android:summary="@string/hosts_block_summary"
+            android:defaultValue="false" />
+
+        <Preference
+            android:key="alarm_blocker_activity"
+            android:title="@string/alarm_blocker_title">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.android.settings.Settings$DevAlarmBlockerActivity" />
+        </Preference>
+        <Preference
+            android:key="wakelock_blocker_activity"
+            android:title="@string/wakelock_blocker_title">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.android.settings.Settings$DevWakeLockBlockerActivity" />
+        </Preference>
+    </PreferenceCategory>
+
 
 <!--
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
