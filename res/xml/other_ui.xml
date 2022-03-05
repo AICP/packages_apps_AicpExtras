@@ -59,12 +59,12 @@
         android:defaultValue="false" />
 -->
     <!-- Toast icon switch -->
-<!--     <com.aicp.gear.preference.SystemSettingSwitchPreference
+     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="toast_icon"
         android:title="@string/toast_icon_title"
         android:summary="@string/toast_icon_summary"
-        android:defaultValue="true" />
--->
+        android:defaultValue="false" />
+
     <!-- Launch music player when headset is connected -->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="headset_connect_player"
