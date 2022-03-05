@@ -113,7 +113,7 @@ android:persistent="false" />-->
         android:fragment="com.aicp.extras.fragments.SmartPixels" />
 -->
     <!-- Spoofing -->
-<!--    <PreferenceCategory
+    <PreferenceCategory
         android:key="spoofing"
         android:title="@string/spoofing_category">
 
@@ -127,7 +127,6 @@ android:persistent="false" />-->
             android:summary="@string/signature_spoofing_summary"
             android:defaultValue="true" />
     </PreferenceCategory>
--->
 <!--
     <PreferenceCategory
         android:key="system_ss_category"
