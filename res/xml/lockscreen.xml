@@ -175,6 +175,12 @@
               android:summary="@string/lockscreen_enable_power_menu_summary"
               android:defaultValue="true"/>
 
+          <com.aicp.gear.preference.GlobalSettingSwitchPreference
+              android:key="lockscreen_secure_power_action"
+              android:title="@string/lockscreen_secure_power_action_title"
+              android:summary="@string/lockscreen_secure_power_action_summary"
+              android:defaultValue="true"/>
+
           <com.aicp.gear.preference.SecureSettingSwitchPreference
               android:key="lockscreen_qs_disabled"
               android:title="@string/lockscreen_qs_disabled_title"
