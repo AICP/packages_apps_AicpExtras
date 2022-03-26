@@ -44,7 +44,7 @@
         android:title="@string/theming_icon_pack_title"
         aicpextras:overlayCategory="android.theme.customization.icon_pack.android"
         aicpextras:overlayTarget="android" />
-
+-->
      <com.aicp.gear.preference.OverlayPreference
         android:key="theming_icon_shape"
         android:title="@string/theming_icon_shape_title"
@@ -56,19 +56,19 @@
         android:title="@string/theming_corners_title"
         aicpextras:overlayCategory="aicp.corner_radius"
         aicpextras:overlayTarget="android" />
-
+<!--
     <com.aicp.gear.preference.OverlayPreference
         android:key="theming_qs_shape"
         android:title="@string/theming_qs_shape_title"
         aicpextras:overlayCategory="aicp.qs_fg"
         aicpextras:overlayTarget="com.android.systemui;android" />
-
+-->
     <com.aicp.gear.preference.OverlayPreference
         android:key="theming_font"
         android:title="@string/theming_font"
         aicpextras:overlayCategory="android.theme.customization.font"
         aicpextras:overlayTarget="android" />
-
+<!-->
     <Preference
         android:key="clock_style"
         android:title="@string/clock_style_title"
