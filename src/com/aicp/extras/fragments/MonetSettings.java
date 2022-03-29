@@ -33,7 +33,8 @@ import java.util.List;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class MonetSettings extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
+public class MonetSettings extends BaseSettingsFragment implements
+        Preference.OnPreferenceChangeListener {
 
     final static String TAG = "MonetSettings";
 
@@ -56,14 +57,12 @@ public class MonetSettings extends BaseSettingsFragment implements Preference.On
         // addPreferencesFromResource(R.xml.monet_engine);
     }
 
-
-
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         return false;
     }
 
-    /*public static void reset(Context mContext) {
+    public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
         Settings.Secure.putIntForUser(resolver,
                 PREF_CUSTOM_COLOR, 0, UserHandle.USER_CURRENT);
@@ -77,7 +76,7 @@ public class MonetSettings extends BaseSettingsFragment implements Preference.On
                 PREF_LINEAR_LIGHTNESS, 0, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
                 PREF_WHITE_LUMINANCE, 425, UserHandle.USER_CURRENT);
-    }*/
+    }
 
     /*@Override
     public int getMetricsCategory() {
