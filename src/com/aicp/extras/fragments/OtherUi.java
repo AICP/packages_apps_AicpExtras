@@ -27,7 +27,7 @@ import androidx.preference.SwitchPreference;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class OtherUi extends BaseSettingsFragment {/*
+public class OtherUi extends BaseSettingsFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = OtherUi.class.getSimpleName();
@@ -37,19 +37,19 @@ public class OtherUi extends BaseSettingsFragment {/*
     private static final String KEY_DOZE_ON_CHARGE = "doze_on_charge";
 
     private SwitchPreference mShowCpuInfo;
-*/
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.other_ui;
     }
-/*
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         mShowCpuInfo = (SwitchPreference) findPreference(SHOW_CPU_INFO_KEY);
         mShowCpuInfo.setChecked(Settings.Global.getInt(getActivity().getContentResolver(),
-                Settings.Global.SHOW_CPU_OVERLAY, 0) == 1);
+                Settings.Secure.SHOW_CPU_OVERLAY, 0) == 1);
         mShowCpuInfo.setOnPreferenceChangeListener(this);
 
         boolean dozeAlwaysOnDisplayAvailable = getContext().getResources().
@@ -63,7 +63,7 @@ public class OtherUi extends BaseSettingsFragment {/*
 
     private void writeCpuInfoOptions(boolean value) {
         Settings.Global.putInt(getActivity().getContentResolver(),
-                Settings.Global.SHOW_CPU_OVERLAY, value ? 1 : 0);
+                Settings.Secure.SHOW_CPU_OVERLAY, value ? 1 : 0);
         Intent service = (new Intent())
                 .setClassName("com.android.systemui", "com.android.systemui.CPUInfoService");
         if (value) {
@@ -80,5 +80,5 @@ public class OtherUi extends BaseSettingsFragment {/*
             return true;
         }
         return false;
-    }*/
+    }
 }
