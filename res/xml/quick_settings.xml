@@ -54,9 +54,9 @@
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_layout_columns"
             android:title="@string/qs_columns_portrait_title"
-            android:max="4"
+            android:max="8"
             android:min="2"
-            aicpextras:interval="2"
+            aicpextras:interval="1"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
             android:defaultValue="2" />
@@ -66,7 +66,7 @@
             android:title="@string/qs_columns_landscape_title"
             android:max="8"
             android:min="2"
-            aicpextras:interval="2"
+            aicpextras:interval="1"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
             android:defaultValue="2" />
