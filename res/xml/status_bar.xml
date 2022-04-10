@@ -160,6 +160,12 @@
             android:entries="@array/vowifi_icon_style_array"
             android:entryValues="@array/vowifi_icon_style_values"
             android:defaultValue="0" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="volte_vowifi_override"
+            android:title="@string/volte_vowifi_override_title"
+            android:summary="@string/volte_vowifi_override_summary"
+            android:defaultValue="true"/>
 <!--
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="vowifi_icon_style"
