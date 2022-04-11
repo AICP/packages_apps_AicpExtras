@@ -94,16 +94,6 @@
         </activity>
 
         <activity
-            android:name=".fragments.GamingModeSettings"
-            android:label="@string/weather_config_title"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="com.aicp.extras.fragments.ViewGamingModeSettings" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity
             android:name=".romstats.AnonymousStats"
             android:label="@string/anonymous_statistics_title"
             android:exported="false" >
