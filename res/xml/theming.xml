@@ -46,6 +46,12 @@
         aicpextras:overlayTarget="android" />
 
      <com.aicp.gear.preference.OverlayPreference
+        android:key="theming_systemui_icon_pack"
+        android:title="@string/theming_systemui_icon_pack_title"
+        aicpextras:overlayCategory="android.theme.customization.icon_pack.systemui"
+        aicpextras:overlayTarget="com.android.systemui" />
+
+     <com.aicp.gear.preference.OverlayPreference
         android:key="theming_icon_shape"
         android:title="@string/theming_icon_shape_title"
         aicpextras:overlayCategory="android.theme.customization.adaptive_icon_shape"
