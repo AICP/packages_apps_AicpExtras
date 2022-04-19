@@ -45,13 +45,6 @@
         android:summary="@string/force_expanded_notifications_summary"
         android:defaultValue="false" />
 -->
-<!--
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="notification_material_dismiss"
-        android:title="@string/enable_clear_all_button"
-        android:summary="@string/enable_clear_all_button_summary"
-        android:defaultValue="false" />
--->
     <!-- Notification background opacity -->
 <!--    <com.aicp.gear.preference.SystemSettingSeekBarPreference
         android:key="notification_bg_alpha"
@@ -163,6 +156,37 @@
     <com.android.settingslib.widget.FooterPreference
         android:title="@string/status_bar_show_ticker_footer" />
 -->
+    <PreferenceCategory
+        android:title="@string/notification_material_dismiss_title">
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="notification_material_dismiss"
+            android:title="@string/notification_material_dismiss_title"
+            android:summary="@string/notification_material_dismiss_summary"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+            android:key="notification_material_dismiss_style"
+            android:title="@string/notification_material_dismiss_style_title"
+            android:dependency="notification_material_dismiss"
+            android:max="9"
+            android:min="0"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight=""
+            android:defaultValue="0"/>
+
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+            android:key="notification_material_dismiss_bgstyle"
+            android:title="@string/notification_material_dismiss_bgstyle_title"
+            android:dependency="notification_material_dismiss"
+            android:max="4"
+            android:min="0"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight=""
+            android:defaultValue="0"/>
+
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:key="notification_flash"
         android:title="@string/notification_flash_title" >
