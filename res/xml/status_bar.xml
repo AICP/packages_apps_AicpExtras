@@ -236,15 +236,13 @@
             android:entryValues="@array/battery_percent_values"
             android:defaultValue="0" />
 
-<!--
-        <!- - Quick QS battery estimate - ->
+        <!-- Quick QS battery estimate -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="show_battery_estimate_qqs"
             android:title="@string/battery_estimates_title"
             android:summary="@string/battery_estimates_summary"
             android:defaultValue="false" />
 
--->
         <!-- Show BT Battery Level on Statusbar -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="bluetooth_show_battery"
