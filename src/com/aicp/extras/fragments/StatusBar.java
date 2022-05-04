@@ -53,7 +53,7 @@ public class StatusBar  extends BaseSettingsFragment implements
     private static final String KEY_CARRIER_LABEL = "status_bar_show_carrier";
     private static final String KEY_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final String KEY_HIDE_NOTCH = "statusbar_hide_notch";
-    private static final String KEY_ESTIMATE_IN_QQS = "show_battery_estimate_qqs";
+    private static final String KEY_ESTIMATE_IN_QQS = "qs_show_battery_estimate";
     private static final String KEY_BATTERY_PERCENTAGE = "status_bar_show_battery_percent";
     private static final String KEY_NETWORK_TRAFFIC_STATUSBAR = "network_traffic_state";
 
@@ -115,18 +115,19 @@ public class StatusBar  extends BaseSettingsFragment implements
                   findPreference(KEY_NETWORK_TRAFFIC_STATUSBAR);
         if(getResources().getBoolean(R.bool.config_haveIntrusiveNotch)) {
             prefNetTrafficStatusBar.getParent().removePreference(prefNetTrafficStatusBar);
-        }
+        }*/
 
-    /*     // Battery Percentage
+        // Battery Percentage
         mShowBatteryPercentage = (SystemSettingIntListPreference) findPreference(KEY_BATTERY_PERCENTAGE);
-        int showBatteryPercentage = Settings.System.getIntForUser(resolver,
-                Settings.System.SHOW_BATTERY_PERCENT, 0, UserHandle.USER_CURRENT);
+        int showBatteryPercentageValue = Settings.System.getIntForUser(resolver,
+                Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, 0, UserHandle.USER_CURRENT);
+        mShowBatteryPercentage.setValue(String.valueOf(showBatteryPercentageValue));
+        updateShowBatteryPercentageSummary(showBatteryPercentageValue);
         mShowBatteryPercentage.setOnPreferenceChangeListener(this);
 
-    /*    // Battery estimate in Quick QS
+        // Battery estimate in Quick QS
         mShowBatteryInQQS = (SystemSettingSwitchPreference) findPreference(KEY_ESTIMATE_IN_QQS);
-        updateShowBatteryInQQS(showBatteryPercentage);
-    */
+        updateShowBatteryInQQS(showBatteryPercentageValue);
 
     /*    final String displayCutout = getResources().getString(
                 com.android.internal.R.string.config_mainBuiltInDisplayCutout);
@@ -150,16 +151,18 @@ public class StatusBar  extends BaseSettingsFragment implements
                     quickPulldownValue, UserHandle.USER_CURRENT);
             updateQuickPulldownSummary(quickPulldownValue);
             return true;
-        } /*else if (preference == mShowCarrierLabel) {
+        /*} else if (preference == mShowCarrierLabel) {
             int value = Integer.parseInt((String) newValue);
             updateCarrierLabelSummary(value);
             return true;
-        }
-/*        } else if (preference == mShowBatteryPercentage) {
-            int showBatteryPercentage = Integer.valueOf((String) newValue);
-            updateShowBatteryInQQS(showBatteryPercentage);
-            return true;
         }*/
+        } else if (preference == mShowBatteryPercentage) {
+            int showBatteryPercentageValue = Integer.valueOf((String) newValue);
+            Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT,
+                    showBatteryPercentageValue, UserHandle.USER_CURRENT);
+            updateShowBatteryInQQS(showBatteryPercentageValue);
+            return true;
+        }
         return false;
     }
 
@@ -262,6 +265,21 @@ public class StatusBar  extends BaseSettingsFragment implements
         } else {
             mCustomCarrierLabel.setSummary(mCustomCarrierLabelText);
         }
+    }*/
+
+    private void updateShowBatteryPercentageSummary(int value) {
+        Resources res = getResources();
+
+        if (value == 0) {
+            // Battery percentage disaabled
+            mShowBatteryPercentage.setSummary(res.getString(R.string.status_bar_battery_percentage_default));
+        } else if (value == 1) {
+            // Battery percentage inside the battery icon
+            mShowBatteryPercentage.setSummary(res.getString(R.string.status_bar_battery_percentage_text_inside));
+        } else if (value == 2) {
+            //  Battery percentage next to the battery icon
+            mShowBatteryPercentage.setSummary(res.getString(R.string.status_bar_battery_percentage_text_next));
+        }
     }
 
     private void updateShowBatteryInQQS(int value) {
@@ -278,5 +296,4 @@ public class StatusBar  extends BaseSettingsFragment implements
             }
         }
     }
-    */
 }
