@@ -75,12 +75,12 @@ public class Dashboard extends BaseSettingsFragment {
         if (!Util.isPackageEnabled(Constants.WEATHER_SERVICE_PACKAGE, pm)) {
             mWeatherOption.getParent().removePreference(mWeatherOption);
         }
-
+*/
         mAicpOTA = findPreference(PREF_AICP_OTA);
         if (!Util.isPackageEnabled(Constants.AICP_OTA_PACKAGE, pm)) {
             mAicpOTA.getParent().removePreference(mAicpOTA);
         }
-*/
+
         Preference logIt = findPreference(PREF_LOG_IT);
         Util.requireRoot(getActivity(), logIt);
 
