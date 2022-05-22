@@ -181,10 +181,10 @@
               android:defaultValue="true" />
 
           <com.aicp.gear.preference.GlobalSettingSwitchPreference
-              android:key="lockscreen_enable_power_menu"
-              android:title="@string/lockscreen_enable_power_menu_title"
-              android:summary="@string/lockscreen_enable_power_menu_summary"
-              android:defaultValue="true"/>
+              android:key="lockscreen_hide_power_menu_on_secure"
+              android:title="@string/power_menu_hide_on_secure_title"
+              android:summary="@string/power_menu_hide_on_secure_summary"
+              android:defaultValue="false" />
 
           <com.aicp.gear.preference.SecureSettingSwitchPreference
               android:key="lockscreen_qs_disabled"
