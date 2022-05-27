@@ -231,10 +231,10 @@ public class Navigation extends BaseSettingsFragment
                 }
 
                 // camera key
-                if (!hasCameraKey || !showCameraWake) {
+                /*if (!hasCameraKey || !showCameraWake) {
                     mWakeKeysCategory.removePreference(findPreference(Settings.System.CAMERA_WAKE_SCREEN));
                     wakePrefRemoved += 1;
-                }
+                } */
 
                 if (wakePrefRemoved == 6 && mWakeKeysCategory != null) {
                     mWakeKeysCategory.getParent().removePreference(mWakeKeysCategory);
