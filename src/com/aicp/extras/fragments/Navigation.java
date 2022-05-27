@@ -231,10 +231,10 @@ public class Navigation extends BaseSettingsFragment
                 }
 
                 // camera key
-                if (!hasCameraKey || !showCameraWake) {
+                /*if (!hasCameraKey || !showCameraWake) {
                     mWakeKeysCategory.removePreference(findPreference(Settings.System.CAMERA_WAKE_SCREEN));
                     wakePrefRemoved += 1;
-                }
+                } */
 
                 if (wakePrefRemoved == 6 && mWakeKeysCategory != null) {
                     mWakeKeysCategory.getParent().removePreference(mWakeKeysCategory);
@@ -334,7 +334,7 @@ public class Navigation extends BaseSettingsFragment
         } else if (preference == mManualButtonBrightness) {
             int buttonBrightness = (int) objValue;
             Settings.System.putFloat(resolver,
-                    Settings.System.BUTTON_BRIGHTNESS, buttonBrightness/100f);
+                    Settings.System.BUTTON_BRIGHTNESS, buttonBrightness/0f);
             return true;
         }
         return false;
