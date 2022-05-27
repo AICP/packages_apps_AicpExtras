@@ -31,13 +31,13 @@ import androidx.preference.SwitchPreference;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-//import com.android.internal.util.aicp.DeviceUtils;
-//import com.android.internal.util.hwkeys.ActionConstants;
-//import com.android.internal.util.hwkeys.ActionUtils;
+import com.android.internal.util.aicp.DeviceUtils;
+import com.android.internal.util.hwkeys.ActionConstants;
+import com.android.internal.util.hwkeys.ActionUtils;
 
 public class HwKeys extends BaseSettingsFragment { //implements Preference.OnPreferenceChangeListener {
 
-/*    private static final String CATEGORY_CAMERA = "camera_key";
+    private static final String CATEGORY_CAMERA = "camera_key";
     public static final int KEY_MASK_CAMERA = 0x20;
     // category keys
     private static final String CATEGORY_HWKEY = "hardware_keys";
@@ -68,12 +68,12 @@ public class HwKeys extends BaseSettingsFragment { //implements Preference.OnPre
     private PreferenceCategory mButtonBackLightCategory;
 
     private SwitchPreference mHwKeyDisable;
-*/
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.hw_keys;
     }
-/*
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -234,13 +234,13 @@ public class HwKeys extends BaseSettingsFragment { //implements Preference.OnPre
             }
         } else {
             cameraCategory.getParent().removePreference(cameraCategory);
-        }*//*
+        }
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getContentResolver();
-/*        if (preference == mHwKeyDisable) {
+        if (preference == mHwKeyDisable) {
             boolean value = (Boolean) newValue;
             Settings.Secure.putInt(resolver,
                     Settings.Secure.HARDWARE_KEYS_DISABLE, value ? 1 : 0);
@@ -255,7 +255,7 @@ public class HwKeys extends BaseSettingsFragment { //implements Preference.OnPre
             Settings.System.putInt(resolver,
                     Settings.System.CUSTOM_BUTTON_BRIGHTNESS, buttonBrightness);
             return true;
-        }*//*
+        }
         return false;
-    }*/
+    }
 }
