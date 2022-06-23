@@ -29,11 +29,11 @@
         android:summary="@string/audio_panel_position_summary"
         android:defaultValue="@*android:bool/config_audioPanelOnLeftSide" />
 
-    <PreferenceScreen
+    <!--<PreferenceScreen
         android:key="bars_settings"
         android:title="@string/aspect_ratio_category_title"
         app:iconSpaceReserved="false"
-        android:fragment="com.aicp.extras.fragments.BarsSettings" />
+        android:fragment="com.aicp.extras.fragments.BarsSettings" />-->
 
 
     <!-- <Preference
@@ -93,25 +93,25 @@ android:persistent="false" />-->
         android:defaultValue="false" />
 -->
 
-    <!--com.aicp.gear.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="sensor_block"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
-        android:defaultValue="false"/-->
+        android:defaultValue="false"/>
 
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+<!--    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="sensor_block"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
         android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.SensorBlock"/>
+        android:fragment="com.aicp.extras.fragments.SensorBlock"/>-->
 
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+<!--    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="smart_pixels_enable"
         android:title="@string/smart_pixels_title"
         android:summary="@string/smart_pixels_summary"
         android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.SmartPixels" />
+        android:fragment="com.aicp.extras.fragments.SmartPixels" />-->
 
     <!-- Spoofing -->
     <PreferenceCategory
