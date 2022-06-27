@@ -35,6 +35,12 @@
         app:iconSpaceReserved="false"
         android:fragment="com.aicp.extras.fragments.BarsSettings" />
 
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="display_settings_wallpaper_zoom"
+        android:title="@string/wallpaper_zoom_effect_title"
+        android:summary="@string/wallpaper_zoom_effect_summary"
+        android:defaultValue="true" />
+
     <!-- <Preference
         android:key="privacy_guard_manager"
         android:title="@string/app_ops_settings"
