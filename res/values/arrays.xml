@@ -159,14 +159,16 @@
     <!-- Tiles animation style -->
     <string-array name="qs_tile_animation_style_entries" translatable="false">
         <item>@string/qs_tile_animation_style_off</item>
-        <item>@string/qs_tile_animation_style_flip</item>
         <item>@string/qs_tile_animation_style_rotate</item>
+        <item>@string/qs_tile_animation_style_flipx</item>
+        <item>@string/qs_tile_animation_style_flipy</item>
     </string-array>
 
     <string-array name="qs_tile_animation_style_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
+        <item>3</item>
     </string-array>
 
     <!-- Tiles animation duration -->
@@ -1264,16 +1266,31 @@
 
     <!-- VoLTE Icon Style -->
     <string-array name="volte_icon_style_array" translatable="false">
-        <item>@string/volte_icon_vo</item>
         <item>@string/volte_icon_volte</item>
-        <item>@string/volte_icon_oos</item>
+        <item>@string/volte_icon_volte1</item>
+        <item>@string/volte_icon_volte2</item>
+        <item>@string/volte_icon_volte3</item>
         <item>@string/volte_icon_hd</item>
-        <item>@string/volte_icon_asus</item>
+        <item>@string/volte_icon_hd2</item>
         <item>@string/volte_icon_miui</item>
         <item>@string/volte_icon_emui</item>
         <item>@string/volte_icon_margaritov</item>
         <item>@string/volte_icon_margaritov2</item>
         <item>@string/volte_icon_vivo</item>
+        <item>@string/volte_icon_aris</item>
+        <item>@string/volte_icon_beast</item>
+        <item>@string/volte_icon_ios</item>
+        <item>@string/volte_icon_lr</item>
+        <item>@string/volte_icon_realme</item>
+        <item>@string/volte_icon_typeA</item>
+        <item>@string/volte_icon_typeB</item>
+        <item>@string/volte_icon_typeC</item>
+        <item>@string/volte_icon_typeD</item>
+        <item>@string/volte_icon_typeE</item>
+        <item>@string/volte_icon_vcircle</item>
+        <item>@string/volte_icon_vimeo</item>
+        <item>@string/volte_icon_volit</item>
+        <item>@string/volte_icon_zirco</item>
     </string-array>
 
     <string-array name="volte_icon_style_values" translatable="false">
@@ -1288,6 +1305,20 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
     </string-array>
 
     <!-- VoWiFi icon -->

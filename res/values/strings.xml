@@ -314,13 +314,14 @@
     <string name="qs_sb_bg_alpha_title">Status bar opacity</string>
 
     <!-- Tiles animation style -->
-    <string name="qs_tiles">QS Tiles</string>
-    <string name="qs_tile_animation_style_title">Animation style</string>
-    <string name="qs_tile_animation_duration_title">Animation duration</string>
-    <string name="qs_tile_animation_interpolator_title">Tiles animation interpolator</string>
+    <string name="qs_tile_animation">Animation</string>
+    <string name="qs_tile_animation_style_title">Style</string>
+    <string name="qs_tile_animation_duration_title">Duration</string>
+    <string name="qs_tile_animation_interpolator_title">Interpolator</string>
     <string name="qs_tile_animation_style_off">No animation</string>
-    <string name="qs_tile_animation_style_flip">Flip</string>
     <string name="qs_tile_animation_style_rotate">Rotate</string>
+    <string name="qs_tile_animation_style_flipx">Flip X</string>
+    <string name="qs_tile_animation_style_flipy">Flip Y</string>
     <string name="qs_tile_animation_duration_low">Low</string>
     <string name="qs_tile_animation_duration_default">Default</string>
     <string name="qs_tile_animation_duration_fast">Fast</string>
@@ -1830,17 +1831,31 @@
     <!-- VoLTE icon style -->
     <string name="volte_icon_style_title">Choose VoLTE icon</string>
     <string name="volte_icon_style_summary">Select VoLTE icon to display on statusbar</string>
-    <string name="volte_icon_vo">Vo only</string>
-    <string name="volte_icon_volte">VoLTE</string>
-    <string name="volte_icon_oos">OOS</string>
-    <string name="volte_icon_hd">HD</string>
-    <string name="volte_icon_asus">Asus</string>
+    <string name="volte_icon_volte">Stock</string>
+    <string name="volte_icon_volte1">Vo only</string>
+    <string name="volte_icon_volte2">OOS</string>
+    <string name="volte_icon_volte3">HD</string>
+    <string name="volte_icon_hd">Asus</string>
+    <string name="volte_icon_hd2">CAF HD</string>
     <string name="volte_icon_miui">MIUI 11</string>
     <string name="volte_icon_emui">EMUI</string>
-    <string name="volte_icon_caf">CAF HD</string>
     <string name="volte_icon_margaritov">HD Filled</string>
     <string name="volte_icon_margaritov2">Margaritov</string>
     <string name="volte_icon_vivo">Vivo</string>
+    <string name="volte_icon_aris">Aris</string>
+    <string name="volte_icon_beast">Beast</string>
+    <string name="volte_icon_ios">IOS</string>
+    <string name="volte_icon_lr">LR</string>
+    <string name="volte_icon_realme">RealMe</string>
+    <string name="volte_icon_typeA">Vo type A</string>
+    <string name="volte_icon_typeB">Vo type B</string>
+    <string name="volte_icon_typeC">Vo type C</string>
+    <string name="volte_icon_typeD">Vo type D</string>
+    <string name="volte_icon_typeE">Vo type E</string>
+    <string name="volte_icon_vcircle">V Circle</string>
+    <string name="volte_icon_vimeo">Vimeo</string>
+    <string name="volte_icon_volit">VoLIT</string>
+    <string name="volte_icon_zirco">Zirco</string>
 
     <!-- VoWifi icon style -->
     <string name="vowifi_icon_title">VoWiFi icon</string>
