@@ -85,13 +85,14 @@ android:persistent="false" />-->
         android:title="@string/one_hand_mode_enabled_title"
         android:summary="@string/one_hand_mode_enabled_summary"
         android:defaultValue="false" />
+-->
 
     <SwitchPreference
         android:key="enable_blurs_on_windows"
         android:title="@string/enable_blurs_on_windows_title"
         android:summary="@string/enable_blurs_on_windows_summary"
         android:defaultValue="false" />
--->
+
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="sensor_block"
