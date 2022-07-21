@@ -22,6 +22,22 @@
     android:key="hw_keys"
     android:title="@string/hw_keys_title">
 
+    <com.aicp.gear.preference.SelfRemovingPreferenceCategory
+        android:key="additional_buttons"
+        android:title="@string/alert_slider_category_title"
+        aicpextras:requiresPackageInstalled="com.aicp.oplus.AlertSliderSettings">
+
+        <Preference
+            android:key="alert_slider"
+            android:title="@string/alert_slider_category_title"
+            android:summary="@string/alert_slider_category_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.aicp.oplus.AlertSliderSettings"
+                android:targetClass="com.aicp.oplus.AlertSliderSettings.AlertSliderSettings" />
+        </Preference>
+
+    </com.aicp.gear.preference.SelfRemovingPreferenceCategory>
+
     <PreferenceCategory
         android:key="power_key"
         android:title="@string/category_power_key" >
@@ -47,6 +63,7 @@
             android:dependency="torch_long_press_power_gesture" />
 
     </PreferenceCategory>
+
     <PreferenceCategory
         android:key="volume_keys"
         android:title="@string/category_volume_keys">
