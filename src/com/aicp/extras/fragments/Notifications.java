@@ -19,6 +19,7 @@ package com.aicp.extras.fragments;
 
 import android.content.ContentResolver;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.provider.Settings;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -28,10 +29,13 @@ import androidx.preference.SwitchPreference;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
+import com.aicp.gear.preference.SecureSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingSeekBarPreference;
 import com.aicp.gear.preference.SystemSettingSwitchPreference;
 import com.android.internal.util.aicp.DeviceUtils;
+
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class Notifications extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
@@ -46,11 +50,16 @@ public class Notifications extends BaseSettingsFragment implements
     private static final String PREF_NOTIFICATION_HEADER = "notification_headers";
     private static final String PREF_BATTERY_LIGHT = "battery_light_enabled";
 
+    private static final String PULSE_AMBIENT_LIGHT_COLOR_MODE = "pulse_ambient_light_color_mode";
+    private static final String PULSE_AMBIENT_LIGHT_COLOR = "pulse_ambient_light_color";
+
     private SwitchPreference mFlashOnCallWaiting;
     private SwitchPreference mFlashOnCallIgnoreDND;
     private SystemSettingIntListPreference mFlashOnCall;
     private SystemSettingSeekBarPreference mFlashOnCallRate;
     private SystemSettingSwitchPreference mNotificationHeader;
+    private ColorPickerPreference mEdgeLightColorPref;
+    private SecureSettingIntListPreference mEdgeLightColorModePref;
 
     @Override
     protected int getPreferenceResource() {
@@ -90,6 +99,14 @@ public class Notifications extends BaseSettingsFragment implements
                 com.android.internal.R.bool.config_deviceRingtoneFocusMode, true, false);
 /*
         mNotificationHeader.setOnPreferenceChangeListener(this);*/
+
+        mEdgeLightColorModePref = (SecureSettingIntListPreference) findPreference(PULSE_AMBIENT_LIGHT_COLOR_MODE);
+        mEdgeLightColorModePref.setOnPreferenceChangeListener(this);
+        mEdgeLightColorPref = (ColorPickerPreference) findPreference(PULSE_AMBIENT_LIGHT_COLOR);
+        mEdgeLightColorPref.setOnPreferenceChangeListener(this);
+        int edgeLightColorMode = Settings.Secure.getIntForUser(getActivity().getContentResolver(),
+                Settings.Secure.PULSE_AMBIENT_LIGHT_COLOR_MODE, 1, UserHandle.USER_CURRENT);
+        updateColorPrefs(edgeLightColorMode);
     }
 
     private void updateDependencies(boolean enabled) {
@@ -110,6 +127,15 @@ public class Notifications extends BaseSettingsFragment implements
             Util.showSystemUiRestartDialog(getActivity());
             return true;
         }*/
+        if (mEdgeLightColorModePref.equals(preference)) {
+            int edgeLightColorMode = Integer.valueOf((String) newValue);
+            updateColorPrefs(edgeLightColorMode);
+            return true;
+        }
         return false;
+    }
+
+    private void updateColorPrefs(int mode) {
+        mEdgeLightColorPref.setEnabled(mode == 2);
     }
 }

@@ -28,7 +28,9 @@ LOCAL_PROGUARD_ENABLED := disabled
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 LOCAL_GENERATED_SOURCES += $(GENERATED_AE_FRAGMENT_LIST)
 
-LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
+LOCAL_RESOURCE_DIR := \
+    $(LOCAL_PATH)/res \
+    $(TOP)/packages/resources/devicesettings/res
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.core_core \
