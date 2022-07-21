@@ -47,6 +47,14 @@
             android:dependency="torch_long_press_power_gesture" />
 
     </PreferenceCategory>
+
+        <com.aicp.gear.preference.SelfRemovingPreference
+            android:key="additional_buttons"
+            android:title="@string/alert_slider_category_title"
+            android:summary="@string/alert_slider_category_summary">
+            <intent android:action="org.lineageos.settings.device.ADDITIONAL_BUTTONS_SETTINGS" />
+        </com.aicp.gear.preference.SelfRemovingPreference>
+
     <PreferenceCategory
         android:key="volume_keys"
         android:title="@string/category_volume_keys">
