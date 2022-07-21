@@ -17,6 +17,8 @@
  */
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="dashboard"
     android:title="@string/app_name">
 
@@ -53,7 +55,7 @@
             android:summary="@string/status_bar_summary"
             android:icon="@drawable/ic_settings_status_bar"
             android:fragment="com.aicp.extras.fragments.StatusBar" />
-n
+
         <PreferenceScreen
             android:title="@string/notifications_title"
             android:key="notifications"
@@ -120,6 +122,16 @@ n
             android:summary="@string/system_extensions_summary"
             android:icon="@drawable/ic_settings_system_extensions"
             android:fragment="com.aicp.extras.fragments.SystemExtensions" />
+
+        <com.aicp.gear.preference.SelfRemovingPreference
+            android:key="oplus_extras"
+            android:title="@string/oplus_extras_category_title"
+            android:summary="@string/oplus_extras_category_summary"
+            android:icon="@drawable/ic_settings_device">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.aicp.oplus.OplusExtras"
+                android:targetClass="com.aicp.oplus.OplusExtras.OplusExtrasActivity" />
+        </com.aicp.gear.preference.SelfRemovingPreference>
 
 <!--        <Preference
             android:title="@string/systemui_tuner_title"
