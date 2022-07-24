@@ -21,32 +21,21 @@
     android:key="navigation"
     android:title="@string/navigation_title">
 
-    <!--com.aicp.gear.preference.SecureSettingSwitchPreference
-        android:key="kill_app_longpress_back"
-        android:title="@string/kill_app_longpress_back"
-        android:summary="@string/kill_app_longpress_back_summary"
-        android:defaultValue="false"/-->
+    <PreferenceCategory
+        android:key="screenon_navigation"
+        android:title="@string/navbar_visibility">
 
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-        android:key="navigation_bar_show_new"
-        android:title="@string/navbar_visibility"
-        android:summary="@string/navbar_visibility_summary"
-        android:defaultValue="@*android:bool/config_showNavigationBar"
-        android:fragment="com.aicp.extras.fragments.NavigationBarSettings" />
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+            android:key="navigation_bar_show_new"
+            android:title="@string/navbar_visibility"
+            android:summary="@string/navbar_visibility_summary"
+            android:defaultValue="@*android:bool/config_showNavigationBar"
+            android:fragment="com.aicp.extras.fragments.NavigationBarSettings" />
 
-<!--
-        aicpextras:systemPropDefaultOverride="qemu.hw.mainkeys?0:1"
--->    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="navigation_bar_menu_arrow_keys"
-        android:title="@string/navigation_bar_menu_arrow_keys_title"
-        android:summary="@string/navigation_bar_menu_arrow_keys_summary"
-        android:defaultValue="false"/>
+        <com.android.settingslib.widget.FooterPreference
+            android:title="@string/navigation_footer" />
 
-       <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="navigation_bar_disable_taskbar"
-        android:title="@string/navigation_bar_disable_taskbar_title"
-        android:summary="@string/navigation_bar_disable_taskbar_summary"
-        android:defaultValue="false" />
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="gesture_nav_tweaks_category"
@@ -64,8 +53,26 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="misc_gestures"
+        android:title="@string/other_category">
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="navigation_bar_menu_arrow_keys"
+            android:title="@string/navigation_bar_menu_arrow_keys_title"
+            android:summary="@string/navigation_bar_menu_arrow_keys_summary"
+            android:defaultValue="false"/>
+
+	       <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="navigation_bar_disable_taskbar"
+            android:title="@string/navigation_bar_disable_taskbar_title"
+            android:summary="@string/navigation_bar_disable_taskbar_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="hardware_keys"
-	      android:title="@string/hardware_keys_category">
+	       android:title="@string/hardware_keys_category">
 
         <SwitchPreference
             android:key="hardware_keys_disable"
@@ -122,21 +129,6 @@
     <PreferenceCategory
         android:key="button_backlight_options_category"
         android:title="@string/button_backlight_options_category" >
-<!--
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="button_backlight_enable"
-            android:title="@string/button_backlight_enable_title"
-            android:defaultValue="true"/>
-
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="custom_button_use_screen_brightness"
-            android:title="@string/button_link_brightness"
-            android:summary="@string/button_link_brightness_summary"
-            android:defaultValue="false"
-            android:dependency="button_backlight_enable"
-            android:disableDependentsState="true" />
-Above OMNI implementation options. Didnt work well. so switch to CM version below
--->
         <com.aicp.gear.preference.SeekBarPreferenceCham
             android:key="button_brightness"
             android:title="@string/button_manual_brightness"
@@ -159,26 +151,5 @@ Above OMNI implementation options. Didnt work well. so switch to CM version belo
             android:defaultValue="false" />
 
     </PreferenceCategory>
-
-    <com.android.settingslib.widget.FooterPreference
-        android:title="@string/navigation_footer" /> -->
-
-<!--
-PIE leftovers
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-        android:key="use_bottom_gesture_navigation"
-        android:title="@string/use_bottom_gesture_title"
-        android:summary="@string/use_bottom_gesture_summary"
-        aicpextras:thereCanBeOnlyOneGroupId="1"
-        android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.NavigationGestureSettings" />
-
-    <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
-        android:key="pie_state"
-        android:title="@string/pa_pie_control_title"
-        android:summary="@string/pa_pie_control_enable_title"
-        android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.PieControl" />
--->
 
 </PreferenceScreen>
