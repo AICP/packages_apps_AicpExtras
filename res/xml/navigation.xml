@@ -27,27 +27,6 @@
         android:summary="@string/kill_app_longpress_back_summary"
         android:defaultValue="false"/-->
 
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
-        android:key="navigation_bar_show_new"
-        android:title="@string/navbar_visibility"
-        android:summary="@string/navbar_visibility_summary"
-        android:defaultValue="@*android:bool/config_showNavigationBar"
-        android:fragment="com.aicp.extras.fragments.NavigationBarSettings" />
-
-<!--
-        aicpextras:systemPropDefaultOverride="qemu.hw.mainkeys?0:1"
--->    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="navigation_bar_menu_arrow_keys"
-        android:title="@string/navigation_bar_menu_arrow_keys_title"
-        android:summary="@string/navigation_bar_menu_arrow_keys_summary"
-        android:defaultValue="false"/>
-
-       <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="navigation_bar_disable_taskbar"
-        android:title="@string/navigation_bar_disable_taskbar_title"
-        android:summary="@string/navigation_bar_disable_taskbar_summary"
-        android:defaultValue="false" />
-
     <PreferenceCategory
         android:key="gesture_nav_tweaks_category"
         android:title="@string/navbar_gesture_tweaks_cat_title">
@@ -62,6 +41,46 @@
             android:persistent="false" />
 
     </PreferenceCategory>
+
+    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+        android:key="navigation_bar_show_new"
+        android:title="@string/navbar_visibility"
+        android:summary="@string/navbar_visibility_summary"
+        android:defaultValue="@*android:bool/config_showNavigationBar"
+        android:fragment="com.aicp.extras.fragments.NavigationBarSettings" />
+
+    <com.android.settingslib.widget.FooterPreference
+        android:title="@string/navigation_footer" /> -->
+
+<!--  aicpextras:systemPropDefaultOverride="qemu.hw.mainkeys?0:1"-->
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="navigation_bar_menu_arrow_keys"
+        android:title="@string/navigation_bar_menu_arrow_keys_title"
+        android:summary="@string/navigation_bar_menu_arrow_keys_summary"
+        android:defaultValue="false"/>
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="navigation_bar_disable_taskbar"
+        android:title="@string/navigation_bar_disable_taskbar_title"
+        android:summary="@string/navigation_bar_disable_taskbar_summary"
+        android:defaultValue="false" />
+
+    <com.aicp.gear.preference.SelfRemovingPreferenceCategory
+        android:key="touchscreen_gestures"
+        android:title="@string/touchscreen_gestures_category_title"
+        aicpextras:requiresPackageInstalled="com.android.touch.gestures">
+
+        <Preference
+            android:key="screenoff_gestures"
+            android:title="@string/touchscreen_gestures_title"
+            android:summary="@string/touchscreen_gestures_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.touch.gestures"
+                android:targetClass="com.android.touch.gestures.TouchscreenGestureSettings" />
+        </Preference>
+
+    </com.aicp.gear.preference.SelfRemovingPreferenceCategory>
 
     <PreferenceCategory
         android:key="hardware_keys"
@@ -136,7 +155,8 @@
             android:dependency="button_backlight_enable"
             android:disableDependentsState="true" />
 Above OMNI implementation options. Didnt work well. so switch to CM version below
--->
+-->    <com.android.settingslib.widget.FooterPreference
+        android:title="@string/navigation_footer" /> -->
         <com.aicp.gear.preference.SeekBarPreferenceCham
             android:key="button_brightness"
             android:title="@string/button_manual_brightness"
@@ -159,9 +179,6 @@ Above OMNI implementation options. Didnt work well. so switch to CM version belo
             android:defaultValue="false" />
 
     </PreferenceCategory>
-
-    <com.android.settingslib.widget.FooterPreference
-        android:title="@string/navigation_footer" /> -->
 
 <!--
 PIE leftovers
