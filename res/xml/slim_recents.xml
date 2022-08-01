@@ -19,6 +19,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="slim_recents"
     android:title="@string/slim_recents_title">
 
@@ -93,6 +94,7 @@
 
     <PreferenceScreen
         android:key="blacklist_fragment"
+        app:iconSpaceReserved="false"
         android:fragment="com.aicp.extras.fragments.SlimRecentsBlacklist"
         android:title="@string/slim_blacklist_apps_cat_title"
         android:summary="@string/slim_blacklist_apps_summary" />
