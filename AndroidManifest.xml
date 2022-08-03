@@ -193,5 +193,18 @@
             </intent-filter>
         </provider>
 
+        <service
+            android:name="com.aicp.extras.tiles.LogThatShitTile"
+            android:exported="true"
+            android:icon="@drawable/ic_settings_log_it"
+            android:label="@string/log_it_title"
+            android:enabled="true"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
     </application>
 </manifest>
