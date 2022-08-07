@@ -180,6 +180,13 @@
               android:summaryOff="@string/fprint_sucess_vib_summary_off"
               android:defaultValue="true" />
 
+          <com.aicp.gear.preference.SystemSettingSwitchPreference
+              android:key="fingerprint_wake_unlock"
+              android:title="@string/fingerprint_wake_unlock_title"
+              android:summaryOn="@string/fingerprint_wake_unlock_touch"
+              android:summaryOff="@string/fingerprint_wake_unlock_press"
+              android:defaultValue="true" />
+
           <com.aicp.gear.preference.GlobalSettingSwitchPreference
               android:key="lockscreen_enable_power_menu"
               android:title="@string/lockscreen_enable_power_menu_title"
