@@ -162,6 +162,20 @@
         android:summary="@string/lockscreen_ripple_effect_summary"
         android:defaultValue="true" />
 
+    <com.aicp.gear.preference.SelfRemovingPreferenceCategory
+        android:key="sfps_unlock"
+        android:title="@string/fingerprint_wake_unlock_category_title"
+        aicpextras:requiresConfig="@*android:bool/config_sfps_sensor_props">
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="fingerprint_wake_unlock"
+            android:title="@string/fingerprint_wake_unlock_title"
+            android:summaryOn="@string/fingerprint_wake_unlock_touch"
+            android:summaryOff="@string/fingerprint_wake_unlock_press"
+            android:defaultValue="true" />
+
+    </com.aicp.gear.preference.SelfRemovingPreferenceCategory>
+
     <PreferenceCategory
           android:key="lockscreen_security_category"
           android:title="@string/lockscreen_security_category">
@@ -178,13 +192,6 @@
               android:title="@string/fprint_sucess_vib_title"
               android:summaryOn="@string/fprint_sucess_vib_summary_on"
               android:summaryOff="@string/fprint_sucess_vib_summary_off"
-              android:defaultValue="true" />
-
-          <com.aicp.gear.preference.SystemSettingSwitchPreference
-              android:key="fingerprint_wake_unlock"
-              android:title="@string/fingerprint_wake_unlock_title"
-              android:summaryOn="@string/fingerprint_wake_unlock_touch"
-              android:summaryOff="@string/fingerprint_wake_unlock_press"
               android:defaultValue="true" />
 
           <com.aicp.gear.preference.GlobalSettingSwitchPreference
