@@ -46,7 +46,7 @@
         android:summary="@string/long_swipe_app_select_summary">
         <intent android:action="android.intent.action.MAIN"
             android:targetPackage="com.android.systemui"
-            android:targetClass="com.android.systemui.statusbar.phone.LeftBackSwipeCustomApp" />
+            android:targetClass="com.android.systemui.navigationbar.gestural.LeftBackSwipeCustomApp" />
     </Preference>
     <com.aicp.gear.preference.SystemSettingListPreference
         android:key="right_long_back_swipe_action"
@@ -60,7 +60,7 @@
         android:summary="@string/long_swipe_app_select_summary">
         <intent android:action="android.intent.action.MAIN"
             android:targetPackage="com.android.systemui"
-            android:targetClass="com.android.systemui.statusbar.phone.RightBackSwipeCustomApp" />
+            android:targetClass="com.android.systemui.navigationbar.gestural.RightBackSwipeCustomApp" />
     </Preference>
 
     <PreferenceCategory
@@ -81,7 +81,7 @@
             android:summary="@string/long_swipe_app_select_summary">
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.statusbar.phone.LeftBackVerticalSwipeCustomApp" />
+                android:targetClass="com.android.systemui.navigationbar.gestural.LeftBackVerticalSwipeCustomApp" />
         </Preference>
     </PreferenceCategory>
 
@@ -103,7 +103,7 @@
             android:summary="@string/long_swipe_app_select_summary">
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.statusbar.phone.RightBackVerticalSwipeCustomApp" />
+                android:targetClass="com.android.systemui.navigationbar.gestural.RightBackVerticalSwipeCustomApp" />
         </Preference>
     </PreferenceCategory>
 
