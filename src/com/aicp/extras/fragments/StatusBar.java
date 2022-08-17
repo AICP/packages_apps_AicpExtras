@@ -41,6 +41,7 @@ import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
 
 import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingListPreference;
+import com.aicp.gear.preference.SystemSettingSeekBarPreference;
 import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
 //import com.android.internal.util.aicp.AicpUtils;
@@ -56,6 +57,8 @@ public class StatusBar  extends BaseSettingsFragment implements
     private static final String KEY_ESTIMATE_IN_QQS = "qs_show_battery_estimate";
     private static final String KEY_BATTERY_PERCENTAGE = "status_bar_show_battery_percent";
     private static final String KEY_NETWORK_TRAFFIC_STATUSBAR = "network_traffic_state";
+    private static final String STATUS_BAR_CLOCK_SIZE  = "status_bar_clock_size";
+    private static final String QS_HEADER_CLOCK_SIZE = "qs_header_clock_size";
 
     private ListPreference mSmartPulldown;
     private ListPreference mQuickPulldown;
@@ -63,6 +66,8 @@ public class StatusBar  extends BaseSettingsFragment implements
     private SystemSettingIntListPreference mShowBatteryPercentage;
     private SystemSettingIntListPreference mShowCarrierLabel;
     private SystemSettingSwitchPreference mShowBatteryInQQS;
+    private SystemSettingSeekBarPreference mClockSize;
+    private SystemSettingSeekBarPreference mQsClockSize;
 
     private String mCustomCarrierLabelText;
 
@@ -135,6 +140,18 @@ public class StatusBar  extends BaseSettingsFragment implements
             final Preference hideNotchPref = (Preference) findPreference(KEY_HIDE_NOTCH);
             hideNotchPref.getParent().removePreference(hideNotchPref);
         }*/
+
+        mClockSize = (SystemSettingSeekBarPreference) findPreference(STATUS_BAR_CLOCK_SIZE);
+        int clockSize = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_CLOCK_SIZE, 14);
+        mClockSize.setValue(clockSize / 1);
+        mClockSize.setOnPreferenceChangeListener(this);
+
+        mQsClockSize = (SystemSettingSeekBarPreference) findPreference(QS_HEADER_CLOCK_SIZE);
+        int qsClockSize = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.QS_HEADER_CLOCK_SIZE, 14);
+        mQsClockSize.setValue(qsClockSize / 1);
+        mQsClockSize.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -161,6 +178,16 @@ public class StatusBar  extends BaseSettingsFragment implements
             Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT,
                     showBatteryPercentageValue, UserHandle.USER_CURRENT);
             updateShowBatteryInQQS(showBatteryPercentageValue);
+            return true;
+        } else if (preference == mQsClockSize) {
+            int width = ((Integer)newValue).intValue();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.QS_HEADER_CLOCK_SIZE, width);
+            return true;
+        } else if (preference == mClockSize) {
+            int width = ((Integer)newValue).intValue();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_CLOCK_SIZE, width);
             return true;
         }
         return false;
