@@ -49,7 +49,7 @@ import com.aicp.extras.R;
 import com.aicp.extras.preference.MasterSwitchPreference;
 import com.aicp.extras.utils.Util;
 
-public class Recents extends BaseSettingsFragment implements OnPreferenceChangeListener {
+public class Recents {/* extends BaseSettingsFragment implements OnPreferenceChangeListener {
 
     private static final String PREF_STOCK_RECENTS_CATEGORY = "stock_recents_category";
     private static final String PREF_ALTERNATIVE_RECENTS_CATEGORY = "alternative_recents_category";
@@ -83,7 +83,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
         /**
          * Nice clean code start
          */
-        mStockRecentsCategory = (PreferenceCategory) findPreference(PREF_STOCK_RECENTS_CATEGORY);
+        /* mStockRecentsCategory = (PreferenceCategory) findPreference(PREF_STOCK_RECENTS_CATEGORY);
         mAlternativeRecentsCategory =
                 (PreferenceCategory) findPreference(PREF_ALTERNATIVE_RECENTS_CATEGORY);
 
@@ -123,7 +123,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
             }
         } else {
             mAlternativeRecentsCategory.removePreference(findPreference(PREF_SWIPE_UP_ENABLED));
-        }
+        } */
 
         /*
          * Nice clean code end
@@ -166,7 +166,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
          * Most likely too much spagetti - code end
          * /
         */
-    }
+    /* }
 
 
     private void updateDependencies() {
@@ -197,7 +197,7 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
 
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object objValue) { */
         /*
          * Ugly code start
          */
@@ -234,6 +234,6 @@ public class Recents extends BaseSettingsFragment implements OnPreferenceChangeL
         /*
          * Ugly code end
          */
-        return false;
-    }
+        /* return false;
+    } */
 }

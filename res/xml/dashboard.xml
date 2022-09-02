@@ -23,7 +23,7 @@
     android:title="@string/app_name">
 
     <!-- AICP logo -->
-    <com.aicp.gear.preference.LongClickablePreference
+    <!-- <com.aicp.gear.preference.LongClickablePreference
         android:key="aicp_logo"
         android:layout="@layout/dashboard_logo" />
 
@@ -133,7 +133,7 @@
                 android:targetClass="com.aicp.oplus.OplusParts.OplusPartsActivity" />
         </com.aicp.gear.preference.SelfRemovingPreference>
 
-<!--        <Preference
+        <Preference
             android:title="@string/systemui_tuner_title"
             android:key="stock_tuner"
             android:summary="@string/systemui_tuner_summary"
@@ -143,7 +143,7 @@
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.TunerActivity" />
         </Preference>
--->
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -168,13 +168,13 @@
             android:summary="@string/log_it_summary"
             android:icon="@drawable/ic_settings_log_it"
             android:fragment="com.aicp.extras.fragments.LogIt" />
-	<!--
+
         <PreferenceScreen
             android:title="@string/ae_settings_title"
             android:key="ae_settings"
             android:summary="@string/ae_settings_summary"
             android:icon="@drawable/ic_settings_ae_customization"
             android:fragment="com.aicp.extras.fragments.AeSettings" />
-	-->
-    </PreferenceCategory>
+
+    </PreferenceCategory> -->
 </PreferenceScreen>

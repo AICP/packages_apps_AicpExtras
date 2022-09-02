@@ -52,7 +52,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SlimRecents extends BaseSettingsFragment
+public class SlimRecents {/* extends BaseSettingsFragment
         implements Preference.OnPreferenceChangeListener, DialogInterface.OnDismissListener {
 
     private static final String RECENT_PANEL_LEFTY_MODE = "recent_panel_lefty_mode";
@@ -124,7 +124,7 @@ public class SlimRecents extends BaseSettingsFragment
     }
 
      /** Slim Recents Icon Pack Dialog **/
-    private void pickIconPack(final Context context) {
+    /* private void pickIconPack(final Context context) {
         if (mDialog != null) {
             return;
         }
@@ -278,5 +278,5 @@ public class SlimRecents extends BaseSettingsFragment
             this.icon = icon;
             this.packageName = packageName;
         }
-    }
+    } */
 }

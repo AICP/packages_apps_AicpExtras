@@ -33,7 +33,7 @@ import com.aicp.gear.preference.SystemSettingSeekBarPreference;
 import com.aicp.gear.preference.SystemSettingSwitchPreference;
 import com.android.internal.util.aicp.DeviceUtils;
 
-public class Notifications extends BaseSettingsFragment implements
+public class Notifications {/* extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
@@ -64,14 +64,14 @@ public class Notifications extends BaseSettingsFragment implements
         Util.requireFullStatusbar(getActivity(),
                 findPreference(Settings.System.STATUS_BAR_SHOW_TICKER));
 */
-        mFlashOnCallWaiting = (SwitchPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL_WAITING);
+        /* mFlashOnCallWaiting = (SwitchPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL_WAITING);
         mFlashOnCallIgnoreDND = (SwitchPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL_IGNORE_DND);
         mFlashOnCallRate = (SystemSettingSeekBarPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL_RATE);
 
-        mFlashOnCall = (SystemSettingIntListPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL);
+        mFlashOnCall = (SystemSettingIntListPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL); */
 //        mNotificationHeader = (SystemSettingSwitchPreference) getPreferenceScreen().findPreference(PREF_NOTIFICATION_HEADER);
 
-        boolean optionEnabled = Settings.System.getInt(getContentResolver(),
+        /* boolean optionEnabled = Settings.System.getInt(getContentResolver(),
                 Settings.System.FLASHLIGHT_ON_CALL, 0) != 0;
         updateDependencies(optionEnabled);
         mFlashOnCall.setOnPreferenceChangeListener(this);
@@ -90,7 +90,7 @@ public class Notifications extends BaseSettingsFragment implements
                 com.android.internal.R.bool.config_deviceRingtoneFocusMode, true, false);
 /*
         mNotificationHeader.setOnPreferenceChangeListener(this);*/
-    }
+    /* }
 
     private void updateDependencies(boolean enabled) {
         mFlashOnCallWaiting.setEnabled(enabled);
@@ -106,10 +106,10 @@ public class Notifications extends BaseSettingsFragment implements
             int value = Integer.parseInt((String) newValue);
             updateDependencies(value != 0);
             return true;
-        }/* else if (preference == mNotificationHeader) {
+        } *//* else if (preference == mNotificationHeader) {
             Util.showSystemUiRestartDialog(getActivity());
             return true;
-        }*/
+        }*//*
         return false;
-    }
+    } */
 }

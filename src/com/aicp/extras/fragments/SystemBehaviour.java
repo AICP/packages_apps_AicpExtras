@@ -35,7 +35,7 @@ import com.aicp.extras.utils.Util;
 
 import com.android.settingslib.development.SystemPropPoker;
 
-public class SystemBehaviour extends BaseSettingsFragment
+public class SystemBehaviour {/* extends BaseSettingsFragment
          implements Preference.OnPreferenceChangeListener {
     private static final String TAG = SystemBehaviour.class.getSimpleName();
 
@@ -48,7 +48,7 @@ public class SystemBehaviour extends BaseSettingsFragment
     private static final String KEY_AUDIO_PANEL_POSITION = "volume_panel_on_left";
     private static final String KEY_BARS = "bars_settings";
 */
-    private static final String SELINUX_CATEGORY = "selinux";
+/*     private static final String SELINUX_CATEGORY = "selinux";
 
     private SwitchPreference mSelinuxMode;
     private SwitchPreference mSelinuxPersistence;
@@ -75,7 +75,7 @@ public class SystemBehaviour extends BaseSettingsFragment
         mSelinuxPersistence.setChecked(getContext()
                 .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
                 .contains(Constants.PREF_SELINUX_MODE));
-        Util.requireRoot(getActivity(), selinuxCategory);
+        Util.requireRoot(getActivity(), selinuxCategory); */
 /*
         Util.requireConfig(getActivity(), findPreference(KEY_BARS),
                 com.android.internal.R.bool.config_haveHigherAspectRatioScreen, true, false);
@@ -84,15 +84,15 @@ public class SystemBehaviour extends BaseSettingsFragment
                 com.android.internal.R.bool.config_enableSmartPixels, true, false);
 */
 
-        mEnableBlurPref = (SwitchPreference) findPreference(KEY_ENABLE_BLURS);
+/*         mEnableBlurPref = (SwitchPreference) findPreference(KEY_ENABLE_BLURS);
         mEnableBlurPref.setChecked(!SystemProperties.getBoolean(
                 DISABLE_BLURS_SYSPROP, false /* default */));
-        mEnableBlurPref.setOnPreferenceChangeListener(this);
-        Util.requireProp(getActivity(), mEnableBlurPref, SF_PROP_REQUIRED_FOR_BLUR, false /* default */, true);
+/*         mEnableBlurPref.setOnPreferenceChangeListener(this);
+        Util.requireProp(getActivity(), mEnableBlurPref, SF_PROP_REQUIRED_FOR_BLUR, false /* default *//* , true);
 
-    }
+    } */
 
-    @Override
+/*     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mSelinuxMode) {
             if ((Boolean) newValue) {
@@ -113,9 +113,9 @@ public class SystemBehaviour extends BaseSettingsFragment
             return true;
         }
         return false;
-    }
+    } */
 
-    private void setSelinuxEnabled(boolean status, boolean persistent) {
+/*     private void setSelinuxEnabled(boolean status, boolean persistent) {
         SharedPreferences.Editor editor = getContext()
                 .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE).edit();
         if (persistent) {
@@ -125,9 +125,9 @@ public class SystemBehaviour extends BaseSettingsFragment
         }
         editor.apply();
         mSelinuxMode.setChecked(status);
-    }
+    } */
 
-    private class SwitchSelinuxTask extends SuTask<Boolean> {
+/*     private class SwitchSelinuxTask extends SuTask<Boolean> {
         public SwitchSelinuxTask(Context context) {
             super(context);
         }
@@ -152,5 +152,5 @@ public class SystemBehaviour extends BaseSettingsFragment
                 setSelinuxEnabled(SELinux.isSELinuxEnforced(), mSelinuxPersistence.isChecked());
             }
         }
-    }
+    } */
 }

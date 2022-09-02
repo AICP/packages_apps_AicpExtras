@@ -33,7 +33,7 @@ import java.util.List;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class MonetSettings extends BaseSettingsFragment implements
+public class MonetSettings {/*  extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     final static String TAG = "MonetSettings";
@@ -76,7 +76,7 @@ public class MonetSettings extends BaseSettingsFragment implements
                 PREF_LINEAR_LIGHTNESS, 0, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
                 PREF_WHITE_LUMINANCE, 425, UserHandle.USER_CURRENT);
-    }
+    } */
 
     /*@Override
     public int getMetricsCategory() {

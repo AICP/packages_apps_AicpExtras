@@ -22,10 +22,10 @@ import androidx.preference.Preference;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class SlimRecentAppSidebarStyle extends BaseSettingsFragment {
+public class SlimRecentAppSidebarStyle{/*  extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.slim_recent_app_sidebar_style;
-    }
+    } */
 }

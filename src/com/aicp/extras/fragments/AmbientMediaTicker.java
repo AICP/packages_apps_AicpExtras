@@ -20,10 +20,10 @@ package com.aicp.extras.fragments;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class AmbientMediaTicker extends BaseSettingsFragment {
+public class AmbientMediaTicker {/*  extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.ambient_media_ticker;
-    }
+    } */
 }

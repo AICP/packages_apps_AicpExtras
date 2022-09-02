@@ -31,7 +31,7 @@ import com.aicp.extras.LauncherActivity;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 
-public class AeSettings extends BaseSettingsFragment
+public class AeSettings { /* extends BaseSettingsFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String PREF_THEME = "ae_theme";
@@ -93,5 +93,5 @@ public class AeSettings extends BaseSettingsFragment
                 : PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
         Toast.makeText(getContext(), R.string.ae_launcher_enabled_update, Toast.LENGTH_LONG)
                 .show();
-    }
+    } */
 }

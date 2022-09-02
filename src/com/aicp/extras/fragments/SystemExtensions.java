@@ -27,7 +27,7 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 
- public class SystemExtensions extends BaseSettingsFragment
+ public class SystemExtensions {/* extends BaseSettingsFragment
              implements Preference.OnPreferenceChangeListener {
 
     private static final String PREF_SYSTEM_APP_REMOVER = "system_app_remover";
@@ -65,5 +65,5 @@ import com.aicp.extras.utils.Util;
         } else {
             return false;
         }
-    }
+    } */
 }

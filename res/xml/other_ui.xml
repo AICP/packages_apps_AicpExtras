@@ -22,7 +22,7 @@
     android:key="other_ui"
     android:title="@string/other_ui_title">
 
-    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+<!--     <com.aicp.gear.preference.SystemSettingSeekBarPreference
         android:key="volume_dialog_timeout"
         android:title="@string/volume_dialog_timeout_title"
         android:min="500"
@@ -30,7 +30,7 @@
         android:defaultValue="3000"
         aicpextras:interval="100"
         aicpextras:unitsLeft=""
-        aicpextras:unitsRight="ms" />
+        aicpextras:unitsRight="ms" /> -->
 <!--
 
     <com.aicp.gear.preference.SystemSettingSeekBarPreference
@@ -59,44 +59,44 @@
         android:defaultValue="false" />
 -->
     <!-- Toast icon switch -->
-     <com.aicp.gear.preference.SystemSettingSwitchPreference
+     <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="toast_icon"
         android:title="@string/toast_icon_title"
         android:summary="@string/toast_icon_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false" /> -->
 
     <!-- Launch music player when headset is connected -->
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="headset_connect_player"
         android:title="@string/headset_connect_player_title"
         android:summary="@string/headset_connect_player_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false" /> -->
 
     <!-- Show CPU Info overlay -->
-    <SwitchPreference
+<!--     <SwitchPreference
         android:key="show_cpu_info"
         android:title="@string/show_cpu_info"
         android:summary="@string/show_cpu_info_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false" /> -->
 
    <!-- Always On when charging -->
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--     <com.aicp.gear.preference.SystemSettingSwitchPreference
          android:key="doze_on_charge"
          android:title="@string/doze_on_charge_title"
          android:summary="@string/doze_on_charge_summary"
-         android:defaultValue="false" />
+         android:defaultValue="false" /> -->
 
     <!-- Wake on plug -->
-    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+<!--     <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
         android:title="@string/wake_when_plugged_or_unplugged_title"
         android:summary="@string/wake_when_plugged_or_unplugged_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false" /> -->
 
     <!-- Wireless charging animation -->
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="charging_animation"
         android:title="@string/charging_animation_title"
         android:summary="@string/charging_animation_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false" /> -->
 </PreferenceScreen>

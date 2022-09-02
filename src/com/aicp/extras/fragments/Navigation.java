@@ -45,7 +45,7 @@ import android.util.Log;
 
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
 
-public class Navigation extends BaseSettingsFragment
+public class Navigation {/*  extends BaseSettingsFragment
           implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "AENavigation";
@@ -236,7 +236,7 @@ public class Navigation extends BaseSettingsFragment
                     wakePrefRemoved += 1;
                 } */
 
-                if (wakePrefRemoved == 6 && mWakeKeysCategory != null) {
+                /* if (wakePrefRemoved == 6 && mWakeKeysCategory != null) {
                     mWakeKeysCategory.getParent().removePreference(mWakeKeysCategory);
                 } else {
                     updateCategoryVisibility(mWakeKeysCategory, true);
@@ -330,13 +330,13 @@ public class Navigation extends BaseSettingsFragment
             int buttonTimeout = 1000 * (int) objValue;
             Settings.System.putInt(resolver,
                     Settings.System.BUTTON_BACKLIGHT_TIMEOUT, buttonTimeout);
-            return true;
+            return true; */
 /*        } else if (preference == mManualButtonBrightness) {
             int buttonBrightness = (int) objValue;
             Settings.System.putFloat(resolver,
                     Settings.System.BUTTON_BRIGHTNESS, buttonBrightness/100f);
             return true;*/
-        }
+        /* }
         return false;
-    }
+    } */
 }

@@ -35,7 +35,7 @@ import com.aicp.extras.R;
 //import com.android.internal.util.hwkeys.ActionConstants;
 //import com.android.internal.util.hwkeys.ActionUtils;
 
-public class HwKeys extends BaseSettingsFragment { //implements Preference.OnPreferenceChangeListener {
+public class HwKeys {/*  extends BaseSettingsFragment {  *///implements Preference.OnPreferenceChangeListener {
 
 /*    private static final String CATEGORY_CAMERA = "camera_key";
     public static final int KEY_MASK_CAMERA = 0x20;
@@ -69,10 +69,10 @@ public class HwKeys extends BaseSettingsFragment { //implements Preference.OnPre
 
     private SwitchPreference mHwKeyDisable;
 */
-    @Override
+/*     @Override
     protected int getPreferenceResource() {
         return R.xml.hw_keys;
-    }
+    } */
 /*
     @Override
     public void onCreate(Bundle savedInstanceState) {

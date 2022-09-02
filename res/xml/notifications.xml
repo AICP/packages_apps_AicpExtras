@@ -31,7 +31,7 @@
         aicpextras:thereCanBeOnlyOneGroupId="1" />
 -->
 
-    <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
+    <!-- <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
         android:key="heads_up_notifications_enabled"
         android:title="@string/notification_heads_up_title"
         android:summary="@string/notification_heads_up_summary"
@@ -44,7 +44,7 @@
         android:title="@string/pulse_ambient_light_title"
         android:summary="@string/pulse_ambient_light_summary"
         android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.AmbientEdgeLights" />
+        android:fragment="com.aicp.extras.fragments.AmbientEdgeLights" /> -->
 <!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="force_expanded_notifications"
@@ -69,7 +69,7 @@
         android:defaultValue="false" />
 -->
 
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+<!--     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="battery_light_enabled"
         android:defaultValue="@*android:bool/config_intrusiveBatteryLed"
         android:title="@string/battery_light_title"
@@ -80,7 +80,7 @@
         android:key="notification_sound_vib_screen_on"
         android:title="@string/notification_sound_vib_screen_on_title"
         android:summary="@string/notification_sound_vib_screen_on_summary"
-        android:defaultValue="true" />
+        android:defaultValue="true" /> -->
 <!--
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
@@ -90,7 +90,7 @@
         android:defaultValue="true" />
 -->
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="vibrate_on_notifications"
         android:title="@string/vibrate_on_notifications_title"
         android:summary="@string/vibrate_on_notifications_summary"
@@ -116,7 +116,7 @@
         android:entries="@array/ringtone_focus_mode_entries"
         android:entryValues="@array/ringtone_focus_mode_values"
         android:defaultValue="1" />
-
+ -->
     <!-- Clipboard access toasts -->
 <!--    <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="clipboard_toast_info"
@@ -163,7 +163,7 @@
     <com.android.settingslib.widget.FooterPreference
         android:title="@string/status_bar_show_ticker_footer" />
 -->
-    <PreferenceCategory
+    <!-- <PreferenceCategory
         android:title="@string/notification_material_dismiss_title">
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
@@ -224,5 +224,5 @@
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="Hz"
             android:defaultValue="1" />
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 </PreferenceScreen>

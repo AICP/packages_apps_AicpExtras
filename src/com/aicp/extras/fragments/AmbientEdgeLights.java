@@ -30,7 +30,7 @@ import com.aicp.gear.preference.SecureSettingIntListPreference;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class AmbientEdgeLights extends BaseSettingsFragment implements
+public class AmbientEdgeLights { /* extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String PULSE_AMBIENT_LIGHT_COLOR_MODE = "pulse_ambient_light_color_mode";
@@ -70,5 +70,5 @@ public class AmbientEdgeLights extends BaseSettingsFragment implements
 
     private void updateColorPrefs(int mode) {
         mEdgeLightColorPref.setEnabled(mode == 2);
-    }
+    } */
 }

@@ -22,38 +22,39 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="status_bar"
     android:title="@string/status_bar_title">
+
     <PreferenceCategory
         android:key="statusbar_gestures_category"
         android:title="@string/status_bar_gestures_category_title">
 
         <!-- Smart pulldown -->
-        <com.aicp.gear.preference.SystemSettingIntListPreference
+<!--         <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="qs_smart_pulldown"
             android:entries="@array/smart_pulldown_entries"
             android:entryValues="@array/smart_pulldown_values"
             android:defaultValue="0"
-            android:title="@string/smart_pulldown_title" />
+            android:title="@string/smart_pulldown_title" /> -->
 
         <!-- Quick pulldown -->
-       <com.aicp.gear.preference.SystemSettingIntListPreference
+<!--        <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="status_bar_quick_qs_pulldown"
             android:entries="@array/quick_pulldown_entries"
             android:entryValues="@array/quick_pulldown_values"
             android:persistent="false"
             android:defaultValue="0"
-            android:title="@string/quick_pulldown_title" />
+            android:title="@string/quick_pulldown_title" /> -->
 
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="double_tap_sleep_gesture"
             android:title="@string/status_bar_double_tap_to_sleep_title"
             android:summary="@string/status_bar_double_tap_to_sleep_summary"
-            android:defaultValue="false"/>
-
+            android:defaultValue="false"/> -->
+<!-- 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="status_bar_brightness_control"
             android:title="@string/status_bar_brightness_control_title"
             android:summary="@string/status_bar_brightness_control_summary"
-            android:defaultValue="false"/>
+            android:defaultValue="false"/> -->
 
     </PreferenceCategory>
 <!--
@@ -84,21 +85,21 @@
         android:title="@string/status_bar_icons_category_title">
 
         <!-- Statusbar Clock styles -->
-        <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
+<!--         <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
             android:key="status_bar_clock"
             android:title="@string/status_bar_clock_title"
             android:summary="@string/status_bar_clock_summary"
             android:defaultValue="true"
-            android:fragment="com.aicp.extras.fragments.StatusBarClockSettings" />
+            android:fragment="com.aicp.extras.fragments.StatusBarClockSettings" /> -->
 
         <!-- Show logo on Statusbar -->
-        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+<!--         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="status_bar_logo"
             android:title="@string/status_bar_logo_title"
             android:defaultValue="false"
-            android:fragment="com.aicp.extras.fragments.StatusBarLogo" />
+            android:fragment="com.aicp.extras.fragments.StatusBarLogo" /> -->
 
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="show_lte_fourgee"
             android:title="@string/show_4g_title"
             android:summary="@string/show_4g_summary"
@@ -120,20 +121,20 @@
             android:key="combined_status_bar_signal_icons"
             android:title="@string/combined_status_bar_signal_icons_title"
             android:summary="@string/combined_status_bar_signal_icons_summary"
-            android:defaultValue="false"/>
+            android:defaultValue="false"/> -->
 
         <!-- Show Roaming Indicator icon on Statusbar -->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="roaming_indicator_icon"
             android:title="@string/roaming_indicator_icon_title"
             android:summary="@string/roaming_indicator_icon_summary"
-            android:defaultValue="true"/>
+            android:defaultValue="true"/> -->
 
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="show_volte_icon"
             android:title="@string/volte_icon_title"
             android:summary="@string/volte_icon_summary"
-            android:defaultValue="true"/>
+            android:defaultValue="true"/> -->
 
         <!--com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="volte_icon_style"
@@ -145,7 +146,7 @@
             aicpextras:unitsRight=""
             android:defaultValue="0"/-->
 
-        <com.aicp.gear.preference.SystemSettingIntListPreference
+        <!-- <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="volte_icon_style"
             android:title="@string/volte_icon_style_title"
             android:entries="@array/volte_icon_style_array"
@@ -170,7 +171,7 @@
             android:key="volte_vowifi_override"
             android:title="@string/volte_vowifi_override_title"
             android:summary="@string/volte_vowifi_override_summary"
-            android:defaultValue="true"/>
+            android:defaultValue="true"/> -->
 <!--
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="vowifi_icon_style"
@@ -208,7 +209,7 @@
             android:summary="@string/statusbar_location_icon_summary"
             android:defaultValue="true"/>
 -->
-        <Preference
+        <!-- <Preference
             android:title="@string/systemui_tuner_title"
             android:key="stock_tuner"
             android:summary="@string/systemui_tuner_summary"
@@ -234,31 +235,31 @@
             android:title="@string/status_bar_battery_percentage_title"
             android:entries="@array/battery_percent_entries"
             android:entryValues="@array/battery_percent_values"
-            android:defaultValue="0" />
+            android:defaultValue="0" /> -->
 
         <!-- Quick QS battery estimate -->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="qs_show_battery_estimate"
             android:title="@string/battery_estimates_title"
             android:summary="@string/battery_estimates_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" /> -->
 
         <!-- Show BT Battery Level on Statusbar -->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="bluetooth_show_battery"
             android:title="@string/bluetooth_battery_title"
             android:summary="@string/bluetooth_battery_summary"
-            android:defaultValue="false"/>
+            android:defaultValue="false"/> -->
 
        <!-- Battery bar -->
-       <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+<!--        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
            android:key="statusbar_battery_bar"
            android:title="@string/battery_bar_title"
            android:summary="@string/battery_bar_summary"
            android:defaultValue="false"
-           android:fragment="com.aicp.extras.fragments.BatteryBar" />
+           android:fragment="com.aicp.extras.fragments.BatteryBar" /> -->
 
-    </PreferenceCategory>
+    <!-- </PreferenceCategory>
     <PreferenceCategory
         android:title="@string/network_traffic_category">
 
@@ -293,7 +294,7 @@
             android:key="show_wifi_standard_icon"
             android:title="@string/show_wifi_standard_icon_title"
             android:summary="@string/show_wifi_standard_icon_summary"
-            android:defaultValue="false"/>
+            android:defaultValue="false"/> -->
 
        <!-- Hide notch fill -->
 <!--       <com.aicp.gear.preference.SystemSettingSwitchPreference
@@ -319,5 +320,5 @@ android:defaultValue="0" />-->
            android:key="custom_carrier_label"
            android:title="@string/custom_carrier_label_title" />
 -->
-    </PreferenceCategory>
+    <!-- </PreferenceCategory> -->
 </PreferenceScreen>

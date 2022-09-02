@@ -21,7 +21,7 @@
     android:key="navigation"
     android:title="@string/navigation_title">
 
-    <PreferenceCategory
+    <!-- <PreferenceCategory
         android:key="screenon_navigation"
         android:title="@string/navbar_visibility">
 
@@ -120,10 +120,10 @@
             android:title="@string/hardware_keys_wake_keys_assist_title"
             android:defaultValue="false" />
 
-<!--        <com.aicp.gear.preference.SystemSettingSwitchPreference
+       <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="camera_wake_screen"
             android:title="@string/hardware_keys_wake_keys_camera_title"
-            android:defaultValue="false" /> -->
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -150,6 +150,6 @@
             android:summary="@string/button_backlight_on_touch_only_summary"
             android:defaultValue="false" />
 
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
 </PreferenceScreen>

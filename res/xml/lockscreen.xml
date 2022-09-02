@@ -23,11 +23,11 @@
     android:title="@string/lockscreen_title">
 
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="lockscreen_small_clock"
         android:title="@string/lockscreen_small_clock_title"
         android:summary="@string/lockscreen_small_clock_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false" /> -->
 <!--
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="lockscreen_clock_selection"
@@ -69,7 +69,7 @@
         aicpextras:unitsRight="%"
         android:defaultValue="0" />
 -->
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+   <!--  <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_lockscreen"
         android:title="@string/double_tap_sleep_lockscreen"
         android:summary="@string/double_tap_sleep_lockscreen_summary"
@@ -87,7 +87,7 @@
         android:entries="@array/lockscreen_charge_temp_unit_entries"
         android:entryValues="@array/lockscreen_charge_temp_unit_values"
         android:dependency="lockscreen_battery_info"
-        android:defaultValue="1" />
+        android:defaultValue="1" /> -->
 <!--
     <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
         android:key="lockscreen_visualizer_enabled"
@@ -103,7 +103,7 @@
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.AmbientMediaTicker" />
 -->
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="pulse_on_new_tracks"
         android:title="@string/force_ambient_for_media_pref_title"
         android:summary="@string/force_ambient_for_media_pref_summary"
@@ -149,14 +149,14 @@
         aicpextras:unitsLeft=""
         aicpextras:unitsRight=""
         android:defaultValue="3"
-        android:dependency="lock_screen_custom_notif" />
+        android:dependency="lock_screen_custom_notif" /> -->
 <!--
     <Preference
         android:key="always_on_display_schedule"
         android:title="@string/always_on_display_schedule_title"
         android:fragment="com.aicp.extras.fragments.AODSchedule" />
 -->
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="authorization_ripple_effect"
         android:title="@string/lockscreen_ripple_effect_title"
         android:summary="@string/lockscreen_ripple_effect_summary"
@@ -178,7 +178,7 @@
 
     <PreferenceCategory
           android:key="lockscreen_security_category"
-          android:title="@string/lockscreen_security_category">
+          android:title="@string/lockscreen_security_category"> -->
 <!--
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="fp_wake_unlock"
@@ -187,7 +187,7 @@
               android:defaultValue="true" />
 -->
 
-          <com.aicp.gear.preference.SystemSettingSwitchPreference
+          <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="fingerprint_success_vib"
               android:title="@string/fprint_sucess_vib_title"
               android:summaryOn="@string/fprint_sucess_vib_summary_on"
@@ -217,8 +217,8 @@
               android:title="@string/unlock_scramble_pin_layout_title"
               android:summary="@string/unlock_scramble_pin_layout_summary"
               android:defaultValue="false" />
-    </PreferenceCategory>
--->
+    </PreferenceCategory> -->
+
 <!--  ******* Moved to settings *****
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="lockscreen_quick_unlock_control"

@@ -37,7 +37,7 @@ import com.android.internal.util.hwkeys.ActionUtils;
 
 import android.util.Log;
 
-public class NavigationBarSettings extends BaseSettingsFragment
+public class NavigationBarSettings {/*  extends BaseSettingsFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String CATEGORY_LAYOUT = "category_navbar_layout";
@@ -345,5 +345,5 @@ public class NavigationBarSettings extends BaseSettingsFragment
             return true;
         }
         return false;
-    }
+    } */
 }

@@ -24,7 +24,7 @@ import com.aicp.extras.R;
 
 import java.util.HashMap;
 
-public class SensorActivityBlacklist {/* extends ChooserActivityBlacklist {
+public class SensorActivityBlacklist{/*  extends ChooserActivityBlacklist {
 
     private static final String KEY_SENSOR_BLACKLIST = "add_sensor_block_packages";
 
@@ -48,5 +48,5 @@ public class SensorActivityBlacklist {/* extends ChooserActivityBlacklist {
         mBlacklistPackages = new HashMap<String, Package>();
         mAddBlacklistPref = findPreference(KEY_SENSOR_BLACKLIST);
         mAddBlacklistPref.setOnPreferenceClickListener(this);
-    }*/
+    } */
 }

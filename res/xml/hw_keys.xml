@@ -26,7 +26,7 @@
         android:key="power_key"
         android:title="@string/category_power_key" >
 
-        <Preference
+<!--         <Preference
             android:key="power_menu"
             android:title="@string/global_actions_power_menu_title"
             android:fragment="com.aicp.extras.fragments.PowerMenu" />
@@ -44,55 +44,55 @@
             android:entries="@array/torch_long_press_power_timeout_entries"
             android:entryValues="@array/torch_long_press_power_timeout_values"
             android:defaultValue="0"
-            android:dependency="torch_long_press_power_gesture" />
+            android:dependency="torch_long_press_power_gesture" /> -->
 
     </PreferenceCategory>
     <PreferenceCategory
         android:key="volume_keys"
         android:title="@string/category_volume_keys">
-
+<!-- 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="volume_key_cursor_control"
             android:title="@string/volume_keys_cursor_control_title"
             android:summary="@string/volume_keys_cursor_control_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" /> -->
 
        <!-- Swap volume buttons -->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="swap_volume_buttons"
             android:title="@string/swap_volume_buttons"
             android:summary="@string/swap_volume_buttons_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" /> -->
 
         <!-- Volume keys answer call -->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="volume_answer_call"
             android:title="@string/call_volume_answer_title"
             android:summary="@string/call_volume_answer_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" /> -->
 
         <!-- Volume keys control media stream -->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="volume_keys_control_ring_tone"
             android:title="@string/volume_keys_control_ring_tone_title"
             android:summary="@string/volume_keys_control_ring_tone_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" /> -->
 
         <!-- Volume rocker wake screen -->
-        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+<!--         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="volume_rocker_wake"
             android:title="@string/volume_rocker_wake_title"
             android:summary="@string/volume_rocker_wake_summary"
             aicpextras:plainSwitch="true"
-            android:defaultValue="false" />
+            android:defaultValue="false" /> -->
 
         <!-- Volume keys music control -->
-        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+<!--         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="volume_button_music_control"
             android:title="@string/volume_rocker_music_controls_title"
             android:summary="@string/volume_rocker_music_controls_summary"
             aicpextras:plainSwitch="true"
-            android:defaultValue="false" />
+            android:defaultValue="false" /> -->
 
     </PreferenceCategory>
 

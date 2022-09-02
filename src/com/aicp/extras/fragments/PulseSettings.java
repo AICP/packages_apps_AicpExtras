@@ -35,7 +35,7 @@ import com.aicp.gear.preference.SecureSettingIntListPreference;
 import com.aicp.gear.preference.SecureSettingSeekBarPreference;
 import com.aicp.gear.preference.SecureSettingSwitchPreference;
 
-public class PulseSettings extends BaseSettingsFragment implements
+public class PulseSettings { /* extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener {
 
     private static final String TAG = PulseSettings.class.getSimpleName();
@@ -187,5 +187,5 @@ public class PulseSettings extends BaseSettingsFragment implements
             updateColorPrefs(colorMode);
             updateDependentCategories();
         }
-    }
+    } */
 }

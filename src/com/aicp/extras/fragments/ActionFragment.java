@@ -45,7 +45,7 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.aicp.extras.R;
 import com.aicp.extras.BaseSettingsFragment;
 
-public class ActionFragment extends BaseSettingsFragment implements
+public class ActionFragment {/* extends BaseSettingsFragment implements
         ShortcutPickHelper.OnPickListener {
 
     private static final int DIALOG_CATEGORY = 69;
@@ -56,13 +56,13 @@ public class ActionFragment extends BaseSettingsFragment implements
     private static final String CATEGORY_MENU = "menu_key";
     private static final String CATEGORY_BACK = "back_key";
     private static final String CATEGORY_ASSIST = "assist_key";
-    private static final String CATEGORY_APPSWITCH = "app_switch_key";
+    private static final String CATEGORY_APPSWITCH = "app_switch_key"; */
 
     // Masks for checking presence of hardware keys.
     // Must match values in frameworks/base/core/res/res/values/config.xml
     // Masks for checking presence of hardware keys.
     // Must match values in frameworks/base/core/res/res/values/config.xml
-    public static final int KEY_MASK_HOME = 0x01;
+/*     public static final int KEY_MASK_HOME = 0x01;
     public static final int KEY_MASK_BACK = 0x02;
     public static final int KEY_MASK_MENU = 0x04;
     public static final int KEY_MASK_ASSIST = 0x08;
@@ -75,9 +75,9 @@ public class ActionFragment extends BaseSettingsFragment implements
     private String mHolderTag;
     private Defaults mDefaults;
     private ArrayList<ButtonConfig> mButtons;
-    private ArrayList<ButtonConfig> mDefaultButtons;
+    private ArrayList<ButtonConfig> mDefaultButtons; */
 
-    @Override
+/*     @Override
     protected int getPreferenceResource() {
         return R.xml.hw_button_settings;
     }
@@ -193,7 +193,7 @@ public class ActionFragment extends BaseSettingsFragment implements
         }
     }
 */
-    protected void showDialog(int dialogId) {
+/*     protected void showDialog(int dialogId) {
         switch (dialogId) {
             case DIALOG_CATEGORY: {
                 Dialog dialog;
@@ -267,7 +267,7 @@ public class ActionFragment extends BaseSettingsFragment implements
      * and defaults config maps subclass is required to set desired Defaults interface int
      * ActionContants
      */
-    protected void onPreferenceScreenLoaded(Defaults defaults) {
+/*     protected void onPreferenceScreenLoaded(Defaults defaults) {
         mDefaults = defaults;
         final PreferenceScreen prefScreen = getPreferenceScreen();
         for (int i = 0; i < prefScreen.getPreferenceCount(); i++) {
@@ -285,9 +285,9 @@ public class ActionFragment extends BaseSettingsFragment implements
             }
         }
         loadAndSetConfigs();
-    }
+    } */
 
-    protected void loadAndSetConfigs() {
+    /* protected void loadAndSetConfigs() {
         mButtons = Config.getConfig(getActivity(), mDefaults);
         mDefaultButtons = Config.getDefaultConfig(getActivity(), mDefaults);
         for (ActionPreference pref : mPrefHolder) {
@@ -311,9 +311,9 @@ public class ActionFragment extends BaseSettingsFragment implements
         } else if (uri.equals(getString(R.string.action_value_custom_action))) {
             showDialog(DIALOG_CUSTOM_ACTIONS);
         }
-    }
+    } */
 
-    protected void findAndUpdatePreference(ActionConfig action, String tag) {
+/*     protected void findAndUpdatePreference(ActionConfig action, String tag) {
         for (ActionPreference pref : mPrefHolder) {
             if (pref.getTag().equals(mHolderTag)) {
                 if (action == null) {
@@ -329,5 +329,5 @@ public class ActionFragment extends BaseSettingsFragment implements
                 break;
             }
         }
-    }
+    } */
 }

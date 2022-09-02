@@ -45,10 +45,10 @@ public class Lockscreen extends BaseSettingsFragment {
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
 */
-    @Override
+/*     @Override
     protected int getPreferenceResource() {
         return R.xml.lockscreen;
-    }
+    } */
 /*
     @Override
     public void onCreate(Bundle savedInstanceState) {

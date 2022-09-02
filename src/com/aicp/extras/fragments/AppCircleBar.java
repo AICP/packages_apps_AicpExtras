@@ -24,7 +24,7 @@ import android.provider.Settings;
 import com.aicp.extras.R;
 import com.aicp.extras.BaseSettingsFragment;
 
-public class AppCircleBar extends BaseSettingsFragment implements
+public class AppCircleBar { /* extends BaseSettingsFragment implements
         OnPreferenceClickListener {
     private static final String TAG = "AppCircleSidebar";
 
@@ -41,5 +41,5 @@ public class AppCircleBar extends BaseSettingsFragment implements
     @Override
     public boolean onPreferenceClick(Preference preference) {
       return true;
-    }
+    } */
 }

@@ -20,7 +20,7 @@
     android:key="pulse_settings"
     android:title="@string/pulse_settings" >
 
-    <com.aicp.gear.preference.SecureSettingSwitchPreference
+<!--     <com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="navbar_pulse_enabled"
         android:title="@string/navbar_pulse_setting"
         android:summary="@string/pulse_settings_summary"
@@ -38,27 +38,27 @@
 
     <PreferenceCategory
         android:key="pulse_render_mode_category"
-        android:title="@string/pulse_render_mode_title" >
+        android:title="@string/pulse_render_mode_title" > -->
 
         <!-- Fading bars -->
-        <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
+        <!-- <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
             android:key="pulse_render_mode_fading_lines"
             android:title="@string/pulse_render_mode_solid_lines"
             aicpextras:thereCanBeOnlyOneGroupId="1"
             aicpextras:plainSwitch="false"
             android:defaultValue="true"
-            android:fragment="com.aicp.extras.fragments.PulseSettingsBars" />
+            android:fragment="com.aicp.extras.fragments.PulseSettingsBars" /> -->
 
         <!-- Fading blocks -->
-        <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
+<!--         <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
             android:key="pulse_render_mode_fading_blocks"
             android:title="@string/pulse_render_mode_fading_bars"
             aicpextras:thereCanBeOnlyOneGroupId="1"
             aicpextras:plainSwitch="false"
             android:defaultValue="false"
-            android:fragment="com.aicp.extras.fragments.PulseSettingsBlocks" />
+            android:fragment="com.aicp.extras.fragments.PulseSettingsBlocks" /> -->
 
-        <com.aicp.gear.preference.SecureSettingIntListPreference
+        <!-- <com.aicp.gear.preference.SecureSettingIntListPreference
             android:key="pulse_custom_gravity"
             android:title="@string/pulse_custom_gravity_title"
             android:entries="@array/pulse_custom_gravity_entries"
@@ -115,6 +115,6 @@
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference
-        android:title="@string/pulse_help_policy_notice_summary" />
+        android:title="@string/pulse_help_policy_notice_summary" /> -->
 
 </PreferenceScreen>

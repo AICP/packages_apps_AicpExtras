@@ -23,11 +23,11 @@
     android:key="system_behaviour"
     android:title="@string/system_behaviour_title">
 
-    <com.aicp.gear.preference.SecureSettingSwitchPreference
+<!--     <com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="volume_panel_on_left"
         android:title="@string/audio_panel_position_title"
         android:summary="@string/audio_panel_position_summary"
-        android:defaultValue="@*android:bool/config_audioPanelOnLeftSide" />
+        android:defaultValue="@*android:bool/config_audioPanelOnLeftSide" /> -->
 
     <!--<PreferenceScreen
         android:key="bars_settings"
@@ -87,7 +87,7 @@ android:persistent="false" />-->
         android:defaultValue="false" />
 -->
 
-    <SwitchPreference
+<!--     <SwitchPreference
         android:key="enable_blurs_on_windows"
         android:title="@string/enable_blurs_on_windows_title"
         android:summary="@string/enable_blurs_on_windows_summary"
@@ -98,7 +98,7 @@ android:persistent="false" />-->
         android:key="sensor_block"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
-        android:defaultValue="false"/>
+        android:defaultValue="false"/> -->
 
 <!--    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="sensor_block"
@@ -107,7 +107,7 @@ android:persistent="false" />-->
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.SensorBlock"/>-->
 
-    <com.aicp.gear.preference.SelfRemovingPreferenceCategory
+<!--     <com.aicp.gear.preference.SelfRemovingPreferenceCategory
         android:key="smart_pixels"
         android:title="@string/smart_pixels_title"
         aicpextras:requiresConfig="@*android:bool/config_supportSmartPixels">
@@ -119,10 +119,10 @@ android:persistent="false" />-->
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.SmartPixels" />
 
-    </com.aicp.gear.preference.SelfRemovingPreferenceCategory>
+    </com.aicp.gear.preference.SelfRemovingPreferenceCategory> -->
 
     <!-- Spoofing -->
-    <PreferenceCategory
+<!--     <PreferenceCategory
         android:key="spoofing"
         android:title="@string/spoofing_category">
 
@@ -135,7 +135,7 @@ android:persistent="false" />-->
             android:title="@string/signature_spoofing_title"
             android:summary="@string/signature_spoofing_summary"
             android:defaultValue="true" />
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 <!--
     <PreferenceCategory
         android:key="system_ss_category"
@@ -191,7 +191,7 @@ android:persistent="false" />-->
     </PreferenceCategory>
 -->
     <!-- SELinux -->
-    <PreferenceCategory
+<!--     <PreferenceCategory
         android:key="selinux"
         android:title="@string/selinux_category">
 
@@ -211,5 +211,5 @@ android:persistent="false" />-->
             android:summary="@string/selinux_persistence_summary"
             android:defaultValue="true" />
 
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 </PreferenceScreen>
