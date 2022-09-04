@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2017 AICP
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources>
+    <string name="anonymous_statistics_title">Statistici AICP</string>
+    <string name="anonymous_statistics_warning_title">Despre</string>
+    <string name="anonymous_statistics_warning">Optând către Statisticile AICP va permite ca datele non-personale să fie trimise la
+         serverele noastre. Informațiile trimise includ un identificator unic, care nu compromite confidențialitatea sau datele dvs. personale.
+         Datele sunt trimise în fiecare zi.\n\nPentru un exemplu de date trimise, apăsați pe datele de previzualizare.</string>
+    <string name="enable_reporting_title">Activare raportare</string>
+    <string name="disable_reporting_persistent">Renunţare persistentă</string>
+    <string name="preview_data_title">Previzualizare date</string>
+    <string name="view_stats_title">Vezi pagina cu statistici</string>
+    <string name="anonymous_learn_more">Aflați mai multe</string>
+    <string name="last_report_on">Ultima raportare</string>
+    <string name="reporting_interval">Interval de raportare</string>
+    <plurals name="reporting_interval_days">
+        <item quantity="one">1 zi</item>
+        <item quantity="few">%d de zile</item>
+        <item quantity="other">%d de zile</item>
+    </plurals>
+    <string name="next_report_on">Următoarea raportare</string>
+    <string name="preview_id_title">ID-ul unic</string>
+    <string name="preview_device_title">Dispozitiv</string>
+    <string name="preview_version_title">Versiune</string>
+    <string name="preview_country_title">Ţara</string>
+    <string name="preview_carrier_title">Cariera</string>
+    <string name="preview_romname_title">Numele ROM-ului</string>
+    <string name="preview_romversion_title">Versiune AICP</string>
+    <string name="preview_buildtype_title">Tip construcție AICP</string>
+    <string name="notification_romstats_name">Statistici AICP</string>
+    <string name="notification_title">Statistici AICP</string>
+    <string name="notification_desc">Raportarea anonimă cu statistici opționale</string>
+</resources>

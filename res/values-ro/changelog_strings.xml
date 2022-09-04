@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * Copyright (C) 2018 AICP
+ * Copyright (C) 2017 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,9 +16,8 @@
  * limitations under the License.
  */
 -->
-<resources>
-    <string name="switch_disable_warning_title">Varování</string>
-    <string name="switch_disable_warning_message">Zakázání tohoto nastavení bez povolení alternativy může způsobit, že vaše zařízení bude nepoužitelné. Pokračovat?</string>
-    <string name="switch_disable_warning_continue">@android:string/ok</string>
-    <string name="switch_disable_warning_cancel">@android:string/cancel</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="changelog_name">Istoricul modificărilor</string>
+    <string name="commit_id">Lockscreen Commit ID</string>
+    <string name="commit_message">Mesajul commit-ului</string>
 </resources>

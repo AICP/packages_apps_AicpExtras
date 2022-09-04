@@ -17,7 +17,6 @@
  */
 -->
 <resources>
-    <string name="battery_style_solid">پیوسته</string>
     <string name="network_traffic_indicator_mode_title">ترافیک مستقیم</string>
     <string name="network_traffic_indicator_updown">بارگیری و بارگذاری</string>
     <string name="network_traffic_indicator_up">تنها بارگذاری</string>
@@ -68,6 +67,7 @@
     <string name="qs_panel_gradient_title">طیف رنگ نوار وضعیت</string>
     <string name="qs_panel_gradient_summary">نمایش طیف رنگ زیر نوار وضعیت پنل سریع</string>
     <string name="qs_sb_bg_alpha_title">تاری نوار وضعیت</string>
+    <string name="qs_tile_animation_style_title">سبک</string>
     <string name="alternative_recents_swipe_up_enabled_warning_summary">تنها حالت ناوبری ۳ دکمه‌ای پشتیبانی می‌شود</string>
     <string name="global_actions_screenshot_compression_title">سطح فشرده‌سازی عکس صفحه</string>
     <string name="global_actions_screenshot_compression_summary">برای کیفیت عکس صفحه نمایش، فشرده‌سازی را انتخاب کنید</string>
@@ -79,8 +79,6 @@
     <string name="hardware_keys_disable_title">دکمه‌های غیرفعال</string>
     <string name="hardware_keys_title">دکمه‌های سفارشی</string>
     <string name="pulse_help_policy_notice_summary">پالس‌ها روی برخی از منبع‌های صوتی کار نمی‌کند زمانی که با اسپیکر تلفن گوش می‌کنید</string>
-    <string name="lockscreen_pulse_settings">نمایش در صفحه قفل</string>
-    <string name="ambient_pulse_settings">نمایش در صفحه نمایش محیطی</string>
     <string name="pulse_solid_units_rounded_title">خطوط توپر گرد</string>
     <string name="pulse_solid_units_rounded_summary">خطوط ثابت را گرد کنید</string>
     <string name="pulse_custom_gravity_title">جاذبه</string>
@@ -111,12 +109,6 @@
     <string name="action_save">ذخیره</string>
     <string name="fod_icon_accent_default_color">از رنگ پیش‌فرض تاکیدی برای شمایل استفاده کنید</string>
     <string name="fod_icon_accent_default_color_summary">از رنگ پیش فرض تاکیدی برای شمایل FOD استفاده کنید</string>
-    <string name="enable_clear_all_button">دکمه‌ی پاک کردن همه</string>
-    <string name="enable_clear_all_button_summary">فعال‌کردن استفاده از دکمه مرکزی پایین به جای پاک کردن همه اولیه</string>
-    <string name="vowifi_switch_summary">نمایش شمایل VoWiFi هنگامی که در دسترس است</string>
-    <string name="vowifi_icon_summary">نمایش شمایل VoWiFi هنگامی که در دسترس است</string>
-    <string name="volte_vowifi_override_title">لغو VoWiFi</string>
-    <string name="volte_vowifi_override_summary">زمانی که VoWiFi در دسترس است VoLTE پنهان شود. این همچنین شمایل سیگنال سبک قدیمی را برای VoWiFi لغو می‌کند.</string>
     <string name="category_lockscreen_items_title">موارد</string>
     <string name="category_lockscreen_items_summary">موارد مختلف صفحه قفل</string>
     <string name="category_lockscreen_gestures_summary">حرکات صفحه قفل موجود را پیکربندی کنید</string>
@@ -181,41 +173,12 @@
     <string name="volume_panel_p404">P404</string>
     <string name="volume_panel_ssos">تغییر شکل</string>
     <string name="volume_panel_tiled">کاشی‌کاری</string>
-    <string name="gaming_title_summary">ویژگی‌های اضافی برای تجربه بازی همه‌جانبه</string>
-    <string name="gaming_mode_enabled_title">فعال‌سازی حالت بازی</string>
-    <string name="gaming_mode_disable_auto_brightness_summary">هنگام ورود به حالت بازی، روشنایی خودکار را غیرفعال کنید</string>
-    <string name="gaming_mode_notification_danmaku_title">اعلان Danmaku</string>
-    <string name="gaming_mode_notification_danmaku_summary">نمایش محتوای اعلان به صورت danmaku در بازی</string>
-    <string name="gaming_mode_quick_start_apps_title">برنامه‌های شروع سریع</string>
-    <string name="gaming_mode_quick_start_apps_summary">برنامه‌ای را که می‌خواهید با یک توپ شناور راه‌اندازی کنید، انتخاب نمایید</string>
-    <string name="gaming_mode_menu_opacity_title">سطح شفافیت فهرست</string>
-    <string name="gaming_mode_use_menu_overlay_title">نمایش هم‌پوشانی فهرست</string>
-    <string name="gaming_mode_use_menu_overlay_summary">نمایش همپوشانی فهرست هنگام اجرای بازی. اگر این گزینه غیرفعال باشد، برخی از ویژگی‌های حالت بازی مانند اعلان‌های Danmaku غیرفعال می‌شوند</string>
-    <string name="gaming_mode_show_fpsinfo_title">نمایش اطلاعات نرخ فریم</string>
-    <string name="gaming_mode_show_fpsinfo_summary">در صورت پشتیبانی، اطلاعات نرخ فریم نمایش داده شود</string>
-    <string name="gaming_mode_performance">کارایی</string>
-    <string name="gaming_mode_use_game_driver_title">از درایور بازی استفاده کنید</string>
-    <string name="gaming_mode_use_game_driver_summary">از درایورهای ویژه بازی استفاده کنید</string>
-    <string name="gaming_mode_change_performance_title">تنظیم کارایی</string>
-    <string name="gaming_mode_change_performance_summary">هنگام شروع بازی سطح کارایی را تنظیم کنید</string>
-    <string name="gaming_mode_performance_title">سطح کارایی</string>
-    <string name="gaming_mode_disable_notification_alert_title">غیرفعال کردن هشدار اعلان‌ها</string>
-    <string name="gaming_mode_disable_notification_alert_summary">اجازه ندهید اعلان‌ها و حباب‌های مکالمه شناور به جز تماس‌های ورودی و زنگ هشدار وجود داشته باشد</string>
-    <string name="gaming_mode_disable_ringtone_title">بدون زنگ خوردن</string>
-    <string name="gaming_mode_disable_ringtone_summary">زنگ تماس‌های دریافتی و اعلان‌ها را در حالت بازی خاموش کنید</string>
-    <string name="gaming_mode_auto_answer_call_title">پاسخ خودکار تماس‌ها</string>
-    <string name="gaming_mode_auto_answer_call_summary">در بازی به طور خودکار به تماس‌ها پاسخ دهید و وقتی هدفونی وصل نیستید</string>
-    <string name="gaming_mode_disable_gesture_title">غیرفعال کردن کشیدن‌ها</string>
-    <string name="gaming_mode_apps">فهرست بازی</string>
-    <string name="gaming_mode_show_danmaku_title">نمایش danmaku</string>
-    <string name="gaming_mode_danmaku_dynamic_notification_filter_title">اعلان فیلتر پویا</string>
-    <string name="gaming_mode_danmaku_dynamic_notification_filter_summary">فیلتر کردن خودکار اعلان‌ها مانند پیشرفت بارگیری</string>
-    <string name="gaming_mode_danmaku_size_horizontal_title">اندازه Danmaku (افقی)</string>
-    <string name="gaming_mode_danmaku_size_vertical_title">اندازه Danmaku (عمودی)</string>
-    <string name="gaming_mode_danmaku_speed_horizontal_title">سرعت Danmaku (افقی)</string>
-    <string name="gaming_mode_danmaku_speed_vertical_title">سرعت Danmaku (عمودی)</string>
-    <string name="add_package_to_title">افزودن برنامک</string>
     <string name="statusbar_padding_category">حاشیه‌گذاری</string>
     <string name="statusbar_left_padding">حاشیه چپ</string>
     <string name="statusbar_right_padding">حاشیه راست</string>
+    <string name="volte_icon_volte2">OOS</string>
+    <string name="vowifi_icon_oneplus">OOS</string>
+    <string name="volte_vowifi_override_title">لغو VoWiFi</string>
+    <string name="volte_vowifi_override_summary">زمانی که VoWiFi در دسترس است VoLTE پنهان شود. این همچنین شمایل سیگنال سبک قدیمی را برای VoWiFi لغو می‌کند.</string>
+    <string name="gaming_mode_summary">ویژگی‌های اضافی برای تجربه بازی همه‌جانبه</string>
 </resources>
