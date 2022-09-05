@@ -36,10 +36,10 @@ import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
 import com.aicp.gear.preference.SeekBarPreferenceCham;
 
 import com.android.internal.util.aicp.AicpUtils;
-import com.android.internal.util.aicp.NavUtils;
+//import com.android.internal.util.aicp.NavUtils;
 import com.android.internal.util.aicp.DeviceUtils;
-import com.android.internal.util.hwkeys.ActionConstants;
-import com.android.internal.util.hwkeys.ActionUtils;
+//import com.android.internal.util.hwkeys.ActionConstants;
+//import com.android.internal.util.hwkeys.ActionUtils;
 
 import android.util.Log;
 

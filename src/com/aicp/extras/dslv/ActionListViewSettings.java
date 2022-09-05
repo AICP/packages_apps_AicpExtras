@@ -76,7 +76,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
 
-public class ActionListViewSettings extends ListFragment implements
+public class ActionListViewSettings {/* extends ListFragment implements
             SlimShortcutPickerHelper.OnPickListener, TitleProvider {
 
     private static final int DLG_SHOW_ACTION_DIALOG   = 0;
@@ -579,7 +579,7 @@ public class ActionListViewSettings extends ListFragment implements
                     mActivity, mActionValuesKey, mActionEntriesKey);
             case SHAKE_EVENTS_DISABLED:
                 return ActionHelper.getDisabledShakeApps(mActivity);
-*/
+/
             case RECENT_APP_SIDEBAR:
                 return ActionHelper.getRecentAppSidebarConfigWithDescription(
                         mActivity, mActionValuesKey, mActionEntriesKey);
@@ -611,7 +611,7 @@ public class ActionListViewSettings extends ListFragment implements
             case SHAKE_EVENTS_DISABLED:
                 ActionHelper.setDisabledShakeApps(mActivity, actionConfigs, reset);
                 break;
-*/
+
             case RECENT_APP_SIDEBAR:
                 ActionHelper.setRecentAppSidebarConfig(mActivity, actionConfigs, reset);
                 break;
@@ -676,7 +676,7 @@ public class ActionListViewSettings extends ListFragment implements
                 d = ImageHelper.resize(
                         mActivity, PolicyHelper.getPowerMenuIconImage(mActivity,
                         getItem(position).getClickAction(),
-                        iconUri, false), 36); */
+                        iconUri, false), 36); 
             } else {
                 d = ImageHelper.resize(
                         mActivity, ActionHelper.getActionIconImage(mActivity,
@@ -928,7 +928,7 @@ public class ActionListViewSettings extends ListFragment implements
                                     holoDialog.show();
                                     break;
                                 case 2: // Custom user icon
-                                    */
+                                    
                                     Intent intent = new Intent(Intent.ACTION_GET_CONTENT, null);
                                     intent.setType("image/*");
                                     intent.putExtra("crop", "true");
@@ -1018,5 +1018,5 @@ public class ActionListViewSettings extends ListFragment implements
         }
 
     }
-
+*/
 }

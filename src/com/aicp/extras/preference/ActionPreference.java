@@ -22,17 +22,17 @@ package com.aicp.extras.preference;
 
 import java.util.Map;
 
-import com.android.internal.util.hwkeys.ActionConstants.ConfigMap;
-import com.android.internal.util.hwkeys.ActionConstants.Defaults;
-import com.android.internal.util.hwkeys.ActionHolder;
-import com.android.internal.util.hwkeys.Config.ActionConfig;
-import com.android.internal.util.hwkeys.Config.ButtonConfig;
+//import com.android.internal.util.hwkeys.ActionConstants.ConfigMap;
+//import com.android.internal.util.hwkeys.ActionConstants.Defaults;
+//import com.android.internal.util.hwkeys.ActionHolder;
+//import com.android.internal.util.hwkeys.Config.ActionConfig;
+//import com.android.internal.util.hwkeys.Config.ButtonConfig;
 
 import android.content.Context;
 import androidx.preference.Preference;
 import android.util.AttributeSet;
 
-public class ActionPreference extends Preference implements ActionHolder {
+public class ActionPreference {/* extends Preference implements ActionHolder {
     private Defaults mDefaults;
     private ConfigMap mMap;
     private ActionConfig mAction;
@@ -131,4 +131,5 @@ public class ActionPreference extends Preference implements ActionHolder {
     public void setDefaultActionConfig(ActionConfig action) {
         mDefaultAction = action;
     }
+*/
 }
