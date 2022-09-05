@@ -84,9 +84,9 @@ public class SystemBehaviour {/* extends BaseSettingsFragment
                 com.android.internal.R.bool.config_enableSmartPixels, true, false);
 */
 
-/*         mEnableBlurPref = (SwitchPreference) findPreference(KEY_ENABLE_BLURS);
-        mEnableBlurPref.setChecked(!SystemProperties.getBoolean(
-                DISABLE_BLURS_SYSPROP, false /* default */));
+//           mEnableBlurPref = (SwitchPreference) findPreference(KEY_ENABLE_BLURS);
+//        mEnableBlurPref.setChecked(!SystemProperties.getBoolean(
+//                DISABLE_BLURS_SYSPROP, false /* default */));
 /*         mEnableBlurPref.setOnPreferenceChangeListener(this);
         Util.requireProp(getActivity(), mEnableBlurPref, SF_PROP_REQUIRED_FOR_BLUR, false /* default *//* , true);
 

@@ -188,7 +188,7 @@
             android:title="@string/status_bar_system_icons_title"
             android:summary="@string/status_bar_system_icons_summary">
             <intent android:action="com.android.settings.action.STATUS_BAR_TUNER" />
-</Preference>-->
+        </Preference>-->
 <!--
         <!- Show VoLTE Indicator icon on Statusbar ->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
@@ -217,8 +217,9 @@
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
-        </Preference>
+        </Preference>-->
     </PreferenceCategory>
+<!-->
     <PreferenceCategory
         android:key="statusbar_battery_category"
         android:title="@string/status_bar_battery_category_title">
