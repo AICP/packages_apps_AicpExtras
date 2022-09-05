@@ -128,7 +128,7 @@
                  android:permission="android.permission.BIND_JOB_SERVICE" />
 
 
-	<receiver android:name="com.aicp.extras.utils.OnBoot"
+        <receiver android:name="com.aicp.extras.utils.OnBoot"
             android:exported="true"
             android:enabled="true">
             <intent-filter>

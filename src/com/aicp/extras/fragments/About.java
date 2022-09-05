@@ -37,7 +37,7 @@ import com.aicp.extras.utils.Util;
 
 import java.lang.System;
 
-public class About { /* extends BaseSettingsFragment {
+public class About extends BaseSettingsFragment {
 
     private static final String PROPERTY_MAINTAINER = "ro.aicp.maintainer";
     private static final String PREF_DEVICE_MAINTAINER = "device_maintainer";
@@ -119,5 +119,4 @@ public class About { /* extends BaseSettingsFragment {
             e.printStackTrace();
         }
     }
- */
 }

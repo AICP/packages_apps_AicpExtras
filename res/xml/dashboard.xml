@@ -23,10 +23,10 @@
     android:title="@string/app_name">
 
     <!-- AICP logo -->
-    <!-- <com.aicp.gear.preference.LongClickablePreference
+    <com.aicp.gear.preference.LongClickablePreference
         android:key="aicp_logo"
         android:layout="@layout/dashboard_logo" />
-
+<!-->
     <PreferenceCategory
         android:title="@string/buttons_keys_category">
 
@@ -99,9 +99,10 @@
             android:icon="@drawable/ic_settings_other_ui"
             android:fragment="com.aicp.extras.fragments.OtherUi" />
     </PreferenceCategory>
+-->
     <PreferenceCategory
         android:title="@string/system_category">
-
+<!--
         <PreferenceScreen
             android:title="@string/system_animations_title"
             android:key="system_animations"
@@ -122,7 +123,7 @@
             android:summary="@string/system_extensions_summary"
             android:icon="@drawable/ic_settings_system_extensions"
             android:fragment="com.aicp.extras.fragments.SystemExtensions" />
-
+-->
         <com.aicp.gear.preference.SelfRemovingPreference
             android:key="oplus_parts"
             android:title="@string/oplus_parts_category_title"
@@ -161,7 +162,7 @@
             android:summary="@string/about_summary"
             android:icon="@drawable/ic_settings_about"
             android:fragment="com.aicp.extras.fragments.About" />
-
+<!--
         <PreferenceScreen
             android:title="@string/log_it_title"
             android:key="log_it"
@@ -175,6 +176,6 @@
             android:summary="@string/ae_settings_summary"
             android:icon="@drawable/ic_settings_ae_customization"
             android:fragment="com.aicp.extras.fragments.AeSettings" />
-
+-->
     </PreferenceCategory> -->
 </PreferenceScreen>
