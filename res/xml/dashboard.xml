@@ -45,10 +45,10 @@
             android:fragment="com.aicp.extras.fragments.HwKeys" />
 
     </PreferenceCategory>
-
+-->
     <PreferenceCategory
         android:title="@string/user_interface_category">
-
+<!-->
         <PreferenceScreen
             android:title="@string/status_bar_title"
             android:key="status_bar"
@@ -62,14 +62,14 @@
             android:summary="@string/notifications_summary"
             android:icon="@drawable/ic_settings_notifications"
             android:fragment="com.aicp.extras.fragments.Notifications" />
-
+-->
         <PreferenceScreen
             android:title="@string/quick_settings_title"
             android:key="quick_settings"
             android:summary="@string/quick_settings_summary"
             android:icon="@drawable/ic_settings_quick_settings"
             android:fragment="com.aicp.extras.fragments.QuickSettings" />
-
+<!-->
         <PreferenceScreen
             android:title="@string/lockscreen_title"
             android:key="lockscreen"
@@ -97,8 +97,9 @@
             android:summary="@string/other_ui_summary"
             android:icon="@drawable/ic_settings_other_ui"
             android:fragment="com.aicp.extras.fragments.OtherUi" />
-    </PreferenceCategory>
 -->
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:title="@string/system_category">
 
