@@ -51,7 +51,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class QuickSettings {/*  extends BaseSettingsFragment {/*
+public class QuickSettings extends BaseSettingsFragment {/*
     implements OnPreferenceChangeListener {*/
 
     //private static final boolean DEBUG = false;
@@ -64,14 +64,14 @@ public class QuickSettings {/*  extends BaseSettingsFragment {/*
     private Preference mCustomFooterTextPref; */
 /*    private SwitchPreference mQQSColsAuto;
     private SystemSettingSeekBarPreference mQQSColsCount;
-*/
-/*     private String mCustomFooterText;
 
+     private String mCustomFooterText;
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.quick_settings;
     }
-
+/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
