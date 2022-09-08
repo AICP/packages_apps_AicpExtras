@@ -31,7 +31,7 @@ import androidx.preference.SwitchPreference;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-//import com.android.internal.util.aicp.DeviceUtils;
+import com.android.internal.util.aicp.DeviceUtils;
 //import com.android.internal.util.hwkeys.ActionConstants;
 //import com.android.internal.util.hwkeys.ActionUtils;
 
