@@ -33,7 +33,7 @@ import java.util.List;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class MonetSettings {/*  extends BaseSettingsFragment implements
+public class MonetSettings extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     final static String TAG = "MonetSettings";
@@ -43,7 +43,7 @@ public class MonetSettings {/*  extends BaseSettingsFragment implements
     private static final String PREF_CHROMA_FACTOR = "monet_engine_chroma_factor";
     private static final String PREF_ACCURATE_SHADES = "monet_engine_accurate_shades";
     private static final String PREF_LINEAR_LIGHTNESS = "monet_engine_linear_lightness";
-    private static final String PREF_WHITE_LUMINANCE = "monet_engine_white_luminance_user";
+    private static final String PREF_WHITE_LUMINANCE = "monet_engine_white_luminance";
 
     @Override
     protected int getPreferenceResource() {
@@ -76,7 +76,7 @@ public class MonetSettings {/*  extends BaseSettingsFragment implements
                 PREF_LINEAR_LIGHTNESS, 0, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
                 PREF_WHITE_LUMINANCE, 425, UserHandle.USER_CURRENT);
-    } */
+    }
 
     /*@Override
     public int getMetricsCategory() {
