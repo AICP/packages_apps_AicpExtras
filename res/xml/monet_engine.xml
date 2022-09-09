@@ -20,7 +20,7 @@
     android:key="monet_settings"
     android:title="@string/monet_title">
 
-    <!-- <com.aicp.gear.preference.SecureSettingSwitchPreference
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="monet_engine_custom_color"
         android:title="@string/monet_engine_custom_color_title"
         android:summary="@string/monet_engine_custom_color_summary"
@@ -56,6 +56,6 @@
     <com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="monet_engine_linear_lightness"
         android:title="@string/monet_engine_linear_lightness_title"
-        android:defaultValue="false" /> -->
+        android:defaultValue="false" />
 
 </PreferenceScreen>
