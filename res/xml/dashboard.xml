@@ -83,15 +83,14 @@
             android:summary="@string/weather_config_title"
             android:icon="@drawable/ic_settings_weather"
             android:fragment="com.aicp.extras.fragments.Weather" />
-
+-->
         <PreferenceScreen
             android:title="@string/theming_title"
             android:key="theming"
             android:summary="@string/theming_summary"
             android:icon="@drawable/ic_settings_theming"
             android:fragment="com.aicp.extras.fragments.Theming" />
-
-
+<!-->
         <PreferenceScreen
             android:title="@string/other_ui_title"
             android:key="other_ui"
@@ -133,7 +132,7 @@
                 android:targetPackage="com.aicp.oplus.OplusParts"
                 android:targetClass="com.aicp.oplus.OplusParts.OplusPartsActivity" />
         </com.aicp.gear.preference.SelfRemovingPreference>
-
+<!-->
         <Preference
             android:title="@string/systemui_tuner_title"
             android:key="stock_tuner"
@@ -144,7 +143,7 @@
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.TunerActivity" />
         </Preference>
-
+-->
     </PreferenceCategory>
 
     <PreferenceCategory
