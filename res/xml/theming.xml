@@ -24,7 +24,7 @@
     android:title="@string/theming_title"
     android:summary="@string/theming_summary">
 
-    <!-- PreferenceCategory
+    <PreferenceCategory
         android:key="theming_monet"
         android:title="@string/monet_title">
 
@@ -35,7 +35,7 @@
             app:iconSpaceReserved="false"
             android:fragment="com.aicp.extras.fragments.MonetSettings" />
 
-    </PreferenceCategory> -->
+    </PreferenceCategory>
 
     <!-- overlayTarget="anrdoid" is enough:
             we have some special treatment implemented for this category -->
