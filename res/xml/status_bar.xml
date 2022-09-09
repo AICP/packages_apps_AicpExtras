@@ -209,7 +209,7 @@
             android:summary="@string/statusbar_location_icon_summary"
             android:defaultValue="true"/>
 -->
-        <!-- <Preference
+        <Preference
             android:title="@string/systemui_tuner_title"
             android:key="stock_tuner"
             android:summary="@string/systemui_tuner_summary"
@@ -217,7 +217,7 @@
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
-        </Preference>-->
+        </Preference>
     </PreferenceCategory>
 <!-->
     <PreferenceCategory
