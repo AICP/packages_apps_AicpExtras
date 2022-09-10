@@ -68,10 +68,10 @@ import com.aicp.extras.utils.SuShell;
 import com.aicp.extras.utils.SuTask;
 import com.aicp.extras.utils.Util;
 
-public class SystemAnimations {/* extends BaseSettingsFragment {
+public class SystemAnimations extends BaseSettingsFragment {
 
     private static final String TAG = SystemAnimations.class.getSimpleName();
-
+/*
     private static final String PREF_CUSTOM_BOOTANIM = "custom_bootanimation";
 
     // Custom bootanimation
@@ -90,17 +90,17 @@ public class SystemAnimations {/* extends BaseSettingsFragment {
     private AnimationDrawable mBootanimationPart2;
     private String mBootanimationErrormsg;
     private String mBootAnimationPath;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.system_animations;
     }
-
+/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
-/*
+
         // Custom bootanimation
         mCustomBootAnimation = findPreference(PREF_CUSTOM_BOOTANIM);
         resetBootAnimation();
