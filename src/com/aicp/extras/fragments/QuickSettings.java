@@ -54,35 +54,35 @@ import java.util.Map;
 public class QuickSettings extends BaseSettingsFragment {/*
     implements OnPreferenceChangeListener {*/
 
-    //private static final boolean DEBUG = false;
+    private static final boolean DEBUG = false;
 /*    private static final String QS_QUICKBAR_COLUMNS_AUTO = "qs_quickbar_columns_auto";
     private static final String QS_QUICKBAR_COLUMNS_COUNT = "qs_quickbar_columns";*/
-/*     private static final String SYSTEM_INFO = "qs_system_info";
+/*     private static final String SYSTEM_INFO = "qs_system_info";*/
     private static final String KEY_CUSTOM_FOOTER_TEXT = "custom_footer_text";
 
-    private ListPreference mSysInfo;
-    private Preference mCustomFooterTextPref; */
-/*    private SwitchPreference mQQSColsAuto;
+/*  private ListPreference mSysInfo;*/
+    private Preference mCustomFooterTextPref;
+/*  private SwitchPreference mQQSColsAuto;
     private SystemSettingSeekBarPreference mQQSColsCount;
-
-     private String mCustomFooterText;
 */
+     private String mCustomFooterText;
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.quick_settings;
     }
-/*
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         ContentResolver resolver = getActivity().getContentResolver();
 
-        mSysInfo = (ListPreference) findPreference(SYSTEM_INFO);
-        configureSystemInfo();
+/*        mSysInfo = (ListPreference) findPreference(SYSTEM_INFO);
+        configureSystemInfo(); */
 
         mCustomFooterTextPref = (Preference) findPreference(KEY_CUSTOM_FOOTER_TEXT);
-        updateCustomFooterTextSummary(); */
+        updateCustomFooterTextSummary();
 /*
         mQQSColsAuto = (SwitchPreference) findPreference(QS_QUICKBAR_COLUMNS_AUTO);
         mQQSColsCount = (SystemSettingSeekBarPreference) findPreference(QS_QUICKBAR_COLUMNS_COUNT);
@@ -106,10 +106,10 @@ public class QuickSettings extends BaseSettingsFragment {/*
             }
             return true;
         }
-        return false;
+        return false;*/
     }
-*/
-    /* @Override
+
+    @Override
     public boolean onPreferenceTreeClick(final Preference preference) {
         final ContentResolver resolver = getActivity().getContentResolver();
         if (KEY_CUSTOM_FOOTER_TEXT.equals(preference.getKey())) {
@@ -145,7 +145,7 @@ public class QuickSettings extends BaseSettingsFragment {/*
         }
         return super.onPreferenceTreeClick(preference);
     }
-
+/*
     private void configureSystemInfo() {
         Resources res = getResources();
         String[] entriesArray = res.getStringArray(R.array.qs_system_info_entries);
@@ -169,7 +169,7 @@ public class QuickSettings extends BaseSettingsFragment {/*
         mSysInfo.setEntries(entries.toArray(new String[entries.size()]));
         mSysInfo.setEntryValues(values.toArray(new String[values.size()]));
         if (entries.size() < 2) mSysInfo.getParent().removePreference(mSysInfo);
-    }
+    } */
 
     private void updateCustomFooterTextSummary() {
         mCustomFooterText = Settings.System.getStringForUser(
@@ -180,5 +180,5 @@ public class QuickSettings extends BaseSettingsFragment {/*
         } else {
             mCustomFooterTextPref.setSummary(mCustomFooterText);
         }
-    } */
+    }
 }
