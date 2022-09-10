@@ -19,7 +19,7 @@
     android:key="anonymous_stats"
     android:title="@string/anonymous_statistics_title" >
 
-    <!-- <SwitchPreference
+    <SwitchPreference
         android:key="pref_anonymous_opt_in"
         android:defaultValue="false"
         android:disableDependentsState="true"
@@ -45,5 +45,5 @@
     <Preference
         android:key="pref_reporting_interval"
         android:title="@string/reporting_interval"
-        android:selectable="false" /> -->
+        android:selectable="false" />
 </PreferenceScreen>
