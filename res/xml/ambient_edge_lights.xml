@@ -22,7 +22,7 @@
     android:key="ambient_edge_lights"
     android:title="@string/pulse_ambient_light_enable_title">
 
-        <!-- <com.aicp.gear.preference.SecureSettingSwitchPreference
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
             android:key="pulse_ambient_light_color_automatic"
             android:defaultValue="false"
             android:title="@string/pulse_ambient_light_color_automatic_title"
@@ -71,6 +71,6 @@
             android:min="1"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="px"
-            android:defaultValue="125" /> -->
+            android:defaultValue="125" />
 
 </PreferenceScreen>
