@@ -37,7 +37,7 @@
         android:defaultValue="true"
         android:fragment="com.aicp.extras.fragments.HeadsUpOptions"
         aicpextras:thereCanBeOnlyOneGroupId="1" />
-    <!--
+
     <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
         android:key="pulse_ambient_light"
         android:title="@string/pulse_ambient_light_title"
@@ -45,6 +45,7 @@
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.AmbientEdgeLights" />
 
+<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="force_expanded_notifications"
         android:title="@string/force_expanded_notifications_title"
