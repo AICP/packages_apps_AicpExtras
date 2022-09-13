@@ -23,7 +23,7 @@
     android:key="heads_up_options"
     android:title="@string/notification_heads_up_title">
 
-    <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="less_boring_heads_up"
         android:title="@string/less_boring_heads_up_title"
         android:summary="@string/less_boring_heads_up_summary"
@@ -36,7 +36,7 @@
         android:entries="@array/hun_importance_entries"
         android:entryValues="@array/hun_importance_values"
         android:defaultValue="4" />
-
+<!-->
     <PreferenceScreen
         android:key="headsup_activity_blacklist"
         android:fragment="com.aicp.extras.fragments.HeadsUpActivityBlacklist"
