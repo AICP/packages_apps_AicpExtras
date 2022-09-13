@@ -53,12 +53,12 @@ import com.aicp.extras.utils.PackageListAdapter.PackageItem;
 import com.aicp.gear.preference.AppListPreference;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
-public class HeadsUpOptions {/* extends BaseSettingsFragment implements
+public class HeadsUpOptions extends BaseSettingsFragment {/* implements
         Preference.OnPreferenceClickListener{
-
+*/
     private static final String TAG = "HeadsUpOptions";
     private static final boolean DEBUG = false;
-
+/*
     private static final String KEY_HEADSUP_BLACKLIST_PACKAGES = "add_headsup_blacklist_packages";
     private static final String KEY_HEADSUP_PREFERENCE_GROUP = "headsup_activity_blacklist";
     private static final int DIALOG_BLACKLIST_APPS = 1;
@@ -73,12 +73,12 @@ public class HeadsUpOptions {/* extends BaseSettingsFragment implements
 
     protected AlertDialog mDialog;
     protected ListView mListView;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.heads_up_options;
     }
-
+/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
