@@ -48,7 +48,7 @@ import com.aicp.gear.preference.SystemSettingSwitchPreference;
 public class StatusBar extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
-//    private static final String SMART_PULLDOWN = "qs_smart_pulldown";
+    private static final String SMART_PULLDOWN = "qs_smart_pulldown";
     private static final String QUICK_PULLDOWN = "qs_quick_pulldown";
 /*    private static final String KEY_CARRIER_LABEL = "status_bar_show_carrier";
     private static final String KEY_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
@@ -56,8 +56,8 @@ public class StatusBar extends BaseSettingsFragment implements
     private static final String KEY_ESTIMATE_IN_QQS = "qs_show_battery_estimate";
     private static final String KEY_BATTERY_PERCENTAGE = "status_bar_show_battery_percent";
     private static final String KEY_NETWORK_TRAFFIC_STATUSBAR = "network_traffic_state";
-
-    private ListPreference mSmartPulldown;*/
+*/
+    private ListPreference mSmartPulldown;
     private ListPreference mQuickPulldown;
 /*    private Preference mCustomCarrierLabel;
     private SystemSettingIntListPreference mShowBatteryPercentage;
@@ -76,13 +76,13 @@ public class StatusBar extends BaseSettingsFragment implements
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
 
-/*
+        // Smart Pulldown
         mSmartPulldown = (ListPreference) findPreference(SMART_PULLDOWN);
         int smartPulldown = Settings.System.getInt(resolver,
                 Settings.System.QS_SMART_PULLDOWN, 0);
         updateSmartPulldownSummary(smartPulldown);
         mSmartPulldown.setOnPreferenceChangeListener(this);
-*/
+
         // Quick Pulldown
         mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
         mQuickPulldown.setOnPreferenceChangeListener(this);
@@ -140,11 +140,11 @@ public class StatusBar extends BaseSettingsFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-/*        if (preference == mSmartPulldown) {
+        if (preference == mSmartPulldown) {
             int value = Integer.parseInt((String) newValue);
             updateSmartPulldownSummary(value);
             return true;
-        } else*/
+        } else
         if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
@@ -223,7 +223,7 @@ public class StatusBar extends BaseSettingsFragment implements
         }
     } */
 
-    /* private void updateSmartPulldownSummary(int value) {
+    private void updateSmartPulldownSummary(int value) {
         Resources res = getResources();
 
         if (value == 0) {
@@ -237,7 +237,7 @@ public class StatusBar extends BaseSettingsFragment implements
                     : R.string.smart_pulldown_ongoing);
             mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_summary, type));
         }
-    } */
+    }
 
      private void updateQuickPulldownSummary(int value) {
         Resources res = getResources();
