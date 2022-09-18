@@ -113,12 +113,24 @@
             android:summary="@string/quick_settings_vibrate_summary"
             android:defaultValue="false" />
     </PreferenceCategory>
-
+-->
     <PreferenceCategory
         android:key="qs_header_category"
         android:title="@string/qs_header_category_title">
 
-        com.aicp.gear.preference.SystemSettingSwitchPreference
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="show_qs_clock"
+            android:title="@string/qs_clock_title"
+            android:summary="@string/qs_clock_summary"
+            android:defaultValue="true" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="show_qs_date"
+            android:title="@string/qs_date_title"
+            android:summary="@string/qs_date_summary"
+            android:defaultValue="true" />
+<!--
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="qs_header_show_battery_percent"
             android:title="@string/qs_header_battery_title"
             android:summary="@string/qs_header_battery_summary"
@@ -138,8 +150,9 @@
             android:entries="@array/qs_datausage_entries"
             android:entryValues="@array/qs_datausage_values"
             android:defaultValue="0" />
-    </PreferenceCategory>
  -->
+    </PreferenceCategory>
+
     <!--<PreferenceCategory
         android:key="quick_setting_footer_category"
         android:title="@string/quick_settings_footer_category">
