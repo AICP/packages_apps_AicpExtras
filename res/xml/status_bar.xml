@@ -280,7 +280,7 @@
             android:fragment="com.aicp.extras.fragments.NetworkTraffic"
             aicpextras:thereCanBeOnlyOneGroupId="1" />
     </PreferenceCategory>
-<!-->
+
     <PreferenceCategory
        android:key="statusbar_others_category"
        android:title="@string/status_bar_others_category_title">
@@ -290,7 +290,7 @@
             android:title="@string/statusbar_colored_icons_title"
             android:summary="@string/statusbar_colored_icons_summary"
             android:defaultValue="false" />
-
+<!-->
        <com.aicp.gear.preference.SecureSettingSwitchPreference
             android:key="show_wifi_standard_icon"
             android:title="@string/show_wifi_standard_icon_title"
@@ -319,7 +319,7 @@ android:defaultValue="0" />-->
 
        <Preference
            android:key="custom_carrier_label"
-           android:title="@string/custom_carrier_label_title" />
--->
-    <!-- </PreferenceCategory> -->
+           android:title="@string/custom_carrier_label_title" /> -->
+
+    </PreferenceCategory>
 </PreferenceScreen>
