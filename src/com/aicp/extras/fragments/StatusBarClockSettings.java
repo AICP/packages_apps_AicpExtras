@@ -52,7 +52,7 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements OnPr
     private static final String TAG = "StatusBarClockSettings";
 
     private static final String CLOCK_DATE_FORMAT = "status_bar_clock_date_format";
-    private static final String CLOCK_POSITION = "status_bar_clock";
+    private static final String CLOCK_POSITION = "status_bar_clock_position";
 
     public static final int CLOCK_DATE_STYLE_LOWERCASE = 1;
     public static final int CLOCK_DATE_STYLE_UPPERCASE = 2;
