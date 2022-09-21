@@ -162,7 +162,7 @@
     <com.android.settingslib.widget.FooterPreference
         android:title="@string/status_bar_show_ticker_footer" />
 -->
-    <!-- <PreferenceCategory
+    <PreferenceCategory
         android:title="@string/notification_material_dismiss_title">
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
@@ -191,7 +191,7 @@
             aicpextras:unitsRight=""
             android:defaultValue="0"/>
 
-    </PreferenceCategory>-->
+    </PreferenceCategory>
     <PreferenceCategory
         android:key="notification_flash"
         android:title="@string/notification_flash_title" >
