@@ -43,7 +43,7 @@
         android:title="@string/pulse_ambient_light_title"
         android:summary="@string/pulse_ambient_light_summary"
         android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.AmbientEdgeLights" /> -->
+        android:fragment="com.aicp.extras.fragments.AmbientEdgeLights" />
 <!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="force_expanded_notifications"
@@ -191,7 +191,7 @@
             aicpextras:unitsRight=""
             android:defaultValue="0"/>
 
-    </PreferenceCategory>
+    </PreferenceCategory>-->
     <PreferenceCategory
         android:key="notification_flash"
         android:title="@string/notification_flash_title" >
@@ -223,5 +223,5 @@
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="Hz"
             android:defaultValue="1" />
-    </PreferenceCategory> -->
+    </PreferenceCategory>
 </PreferenceScreen>
