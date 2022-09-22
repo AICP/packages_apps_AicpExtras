@@ -346,9 +346,10 @@
             android:defaultValue="4" />
     </PreferenceCategory>
 -->
-<!--     <PreferenceCategory
+     <PreferenceCategory
         android:key="qs_panel_bg_options"
         android:title="@string/qs_panel_opacity_category_title">
+
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_transparency"
             android:title="@string/qs_panel_translucency_category_title"
@@ -356,7 +357,7 @@
             android:min="1"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="%"
-            android:defaultValue="100" /> -->
+            android:defaultValue="100" />
 <!--
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_sb_bg_alpha"
@@ -383,5 +384,5 @@
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.QSHeaderImage" />
 -->
-<!-- </PreferenceCategory> -->
+     </PreferenceCategory>
 </PreferenceScreen>
