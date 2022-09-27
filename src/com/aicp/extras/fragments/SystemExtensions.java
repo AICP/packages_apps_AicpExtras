@@ -27,10 +27,10 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 
- public class SystemExtensions {/* extends BaseSettingsFragment
+ public class SystemExtensions extends BaseSettingsFragment
              implements Preference.OnPreferenceChangeListener {
 
-    private static final String PREF_SYSTEM_APP_REMOVER = "system_app_remover";
+//    private static final String PREF_SYSTEM_APP_REMOVER = "system_app_remover";
     private static final String PREF_ADBLOCK = "persist.aicp.hosts_block";
 
     private Handler mHandler = new Handler();
@@ -44,9 +44,9 @@ import com.aicp.extras.utils.Util;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Preference systemAppRemover = findPreference(PREF_SYSTEM_APP_REMOVER);
+/*        Preference systemAppRemover = findPreference(PREF_SYSTEM_APP_REMOVER);
         Util.requireRoot(getActivity(), systemAppRemover);
-
+*/
         findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
     }
 
@@ -65,5 +65,5 @@ import com.aicp.extras.utils.Util;
         } else {
             return false;
         }
-    } */
+    }
 }
