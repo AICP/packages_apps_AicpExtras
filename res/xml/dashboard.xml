@@ -45,7 +45,7 @@
             android:fragment="com.aicp.extras.fragments.HwKeys" />
 
     </PreferenceCategory>
--->
+
     <PreferenceCategory
         android:title="@string/user_interface_category">
 
@@ -90,14 +90,14 @@
             android:summary="@string/theming_summary"
             android:icon="@drawable/ic_settings_theming"
             android:fragment="com.aicp.extras.fragments.Theming" />
-<!-->
+
         <PreferenceScreen
             android:title="@string/other_ui_title"
             android:key="other_ui"
             android:summary="@string/other_ui_summary"
             android:icon="@drawable/ic_settings_other_ui"
             android:fragment="com.aicp.extras.fragments.OtherUi" />
--->
+
     </PreferenceCategory>
 
     <PreferenceCategory
