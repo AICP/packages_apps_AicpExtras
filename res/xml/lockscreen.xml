@@ -175,10 +175,10 @@
             android:defaultValue="true" />
 
     </com.aicp.gear.preference.SelfRemovingPreferenceCategory>
-<!-->
+
     <PreferenceCategory
           android:key="lockscreen_security_category"
-          android:title="@string/lockscreen_security_category"> -->
+          android:title="@string/lockscreen_security_category">
 <!--
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="fp_wake_unlock"
@@ -211,13 +211,13 @@
               android:title="@string/lockscreen_hide_status_bar_title"
               android:summary="@string/lockscreen_hide_status_bar_summary"
               android:defaultValue="false" />
-
+<!-->
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="lockscreen_scramble_pin_layout"
               android:title="@string/unlock_scramble_pin_layout_title"
               android:summary="@string/unlock_scramble_pin_layout_summary"
               android:defaultValue="false" />
-    </PreferenceCategory> -->
+    </PreferenceCategory>
 
 <!--  ******* Moved to settings *****
           <com.aicp.gear.preference.SystemSettingSwitchPreference
