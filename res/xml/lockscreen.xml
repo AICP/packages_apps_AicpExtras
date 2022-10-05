@@ -205,6 +205,11 @@
               android:title="@string/lockscreen_qs_disabled_title"
               android:summary="@string/lockscreen_qs_disabled_summary"
               android:defaultValue="false" />
+
+          <com.aicp.gear.preference.SecureSettingSwitchPreference
+              android:key="disable_secure_tiles_on_lockscreen"
+              android:title="@string/secure_keyguard_tiles_title"
+              android:defaultValue="true" />
 <!-->
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="lockscreen_hide_status_bar"
