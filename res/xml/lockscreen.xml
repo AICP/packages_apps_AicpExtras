@@ -186,20 +186,19 @@
               android:summary="@string/fp_wake_unlock_summary"
               android:defaultValue="true" />
 -->
-
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="fingerprint_success_vib"
               android:title="@string/fprint_sucess_vib_title"
               android:summaryOn="@string/fprint_sucess_vib_summary_on"
               android:summaryOff="@string/fprint_sucess_vib_summary_off"
               android:defaultValue="true" />
-<!-->
+
           <com.aicp.gear.preference.GlobalSettingSwitchPreference
               android:key="lockscreen_enable_power_menu"
               android:title="@string/lockscreen_enable_power_menu_title"
               android:summary="@string/lockscreen_enable_power_menu_summary"
               android:defaultValue="true"/>
--->
+
           <com.aicp.gear.preference.SecureSettingSwitchPreference
               android:key="secure_lockscreen_qs_disabled"
               android:title="@string/lockscreen_qs_disabled_title"
