@@ -108,7 +108,7 @@
         android:title="@string/force_ambient_for_media_pref_title"
         android:summary="@string/force_ambient_for_media_pref_summary"
         android:defaultValue="true" />
-
+-->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="lockscreen_media_metadata"
         android:title="@string/media_art_title"
@@ -116,7 +116,7 @@
         android:defaultValue="false" />
 
     <com.aicp.gear.preference.SystemSettingListPreference
-        android:key="lockscreen_album_art_filter"
+        android:key="lockscreen_albumart_filter"
         android:title="@string/lockscreen_cover_filter_title"
         android:entries="@array/lockscreen_cover_filter_entries"
         android:entryValues="@array/lockscreen_cover_filter_values"
@@ -133,7 +133,7 @@
         aicpextras:unitsRight="dp"
         android:defaultValue="25"
         android:dependency="lockscreen_media_metadata" />
-
+<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="lock_screen_custom_notif"
         android:title="@string/lock_screen_custom_notif_title"
@@ -155,8 +155,8 @@
         android:key="always_on_display_schedule"
         android:title="@string/always_on_display_schedule_title"
         android:fragment="com.aicp.extras.fragments.AODSchedule" />
--->
-    <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="authorization_ripple_effect"
         android:title="@string/lockscreen_ripple_effect_title"
         android:summary="@string/lockscreen_ripple_effect_summary"
