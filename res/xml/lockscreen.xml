@@ -209,13 +209,13 @@
               android:key="disable_secure_tiles_on_lockscreen"
               android:title="@string/secure_keyguard_tiles_title"
               android:defaultValue="true" />
-<!-->
+
           <com.aicp.gear.preference.SystemSettingSwitchPreference
-              android:key="lockscreen_hide_status_bar"
+              android:key="hide_lockscreen_status_bar"
               android:title="@string/lockscreen_hide_status_bar_title"
               android:summary="@string/lockscreen_hide_status_bar_summary"
               android:defaultValue="false" />
-<!-->
+
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="lockscreen_scramble_pin_layout"
               android:title="@string/unlock_scramble_pin_layout_title"
