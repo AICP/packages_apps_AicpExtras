@@ -37,7 +37,7 @@ public class Notifications extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
-/*    private static final String KEY_RINGTONE_FOCUS = "ringtone_focus_mode";*/
+    private static final String KEY_RINGTONE_FOCUS = "ringtone_focus_mode";
     private static final String CAT_NOTIFICATION_FLASHLIGHT = "notification_flash";
     private static final String PREF_FLASHLIGHT_ON_CALL = "flashlight_on_call";
     private static final String PREF_FLASHLIGHT_ON_CALL_WAITING = "flashlight_on_call_waiting";
@@ -86,10 +86,10 @@ public class Notifications extends BaseSettingsFragment implements
 
         Util.requireConfig(getActivity(), findPreference(ALERT_SLIDER_PREF),
                 com.android.internal.R.bool.config_hasAlertSlider, true, false);
-/*
+
         Util.requireConfig(getActivity(), findPreference(KEY_RINGTONE_FOCUS),
                 com.android.internal.R.bool.config_deviceRingtoneFocusMode, true, false);
-        mNotificationHeader.setOnPreferenceChangeListener(this);*/
+//        mNotificationHeader.setOnPreferenceChangeListener(this);
     }
 
     private void updateDependencies(boolean enabled) {
