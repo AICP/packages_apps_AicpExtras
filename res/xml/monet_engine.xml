@@ -58,10 +58,26 @@
         android:title="@string/monet_engine_linear_lightness_title"
         android:defaultValue="false" />
 
-    <com.aicp.gear.preference.SecureSettingSwitchPreference
-        android:key="berry_black_theme"
-        android:title="@string/berry_black_theme_title"
-        android:summary="@string/berry_black_theme_summary"
-        android:defaultValue="false" />
+    <!-- Monet themes -->
+    <PreferenceCategory
+        android:key="custom_monet_styles"
+        android:title="@string/monet_styles_category_title">
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="berry_black_theme"
+            android:title="@string/berry_black_theme_title"
+            android:summary="@string/berry_black_theme_summary"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SecureSettingIntListPreference
+            android:key="monet_themes_style"
+            android:title="@string/monet_styles_title"
+            android:summary="@string/monet_styles_title_summary"
+            android:dialogTitle="@string/monet_styles_dialog_title"
+            android:entries="@array/monet_styles_entries"
+            android:entryValues="@array/monet_styles_values"
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
