@@ -107,7 +107,7 @@ android:persistent="false" />-->
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.SensorBlock"/>-->
 
-<!--     <com.aicp.gear.preference.SelfRemovingPreferenceCategory
+    <com.aicp.gear.preference.SelfRemovingPreferenceCategory
         android:key="smart_pixels"
         android:title="@string/smart_pixels_title"
         aicpextras:requiresConfig="@*android:bool/config_supportSmartPixels">
@@ -119,7 +119,7 @@ android:persistent="false" />-->
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.SmartPixels" />
 
-    </com.aicp.gear.preference.SelfRemovingPreferenceCategory> -->
+    </com.aicp.gear.preference.SelfRemovingPreferenceCategory>
 
     <!-- Spoofing -->
 <!--     <PreferenceCategory
