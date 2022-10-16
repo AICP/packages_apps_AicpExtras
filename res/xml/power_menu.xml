@@ -60,16 +60,22 @@
             android:title="@string/global_actions_users"
             android:defaultValue="false" />
 
-        <!--com.aicp.gear.preference.SystemSettingSwitchPreference
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="global_actions_onthego"
             android:title="@string/global_actions_onthego_title"
-            android:defaultValue="false" /-->
+            android:defaultValue="false" />
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="powermenu_emergency"
             android:title="@string/global_actions_emergency"
             android:defaultValue="false" />
-    </PreferenceCategory> -->
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="powermenu_devicecontrols"
+            android:title="@string/global_actions_devicecontrols"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
 <!--
     <PreferenceCategory
