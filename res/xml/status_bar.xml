@@ -282,6 +282,33 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+       android:key="statusbar_privacy_category"
+       android:title="@string/status_bar_privacy_category_title">
+
+       <!-- Mic/Camera privacy indicator -->
+       <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="enable_camera_privacy_indicator"
+            android:title="@string/mic_camera_privacy_indicator_title"
+            android:summary="@string/mic_camera_privacy_indicator_summary"
+            android:defaultValue="true" />
+
+       <!-- Location privacy indicator -->
+       <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="enable_location_privacy_indicator"
+            android:title="@string/location_privacy_indicator_title"
+            android:summary="@string/location_privacy_indicator_summary"
+            android:defaultValue="true" />
+
+       <!-- Projection privacy indicator -->
+       <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="enable_projection_privacy_indicator"
+            android:title="@string/projection_privacy_indicator_title"
+            android:summary="@string/projection_privacy_indicator_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
        android:key="statusbar_others_category"
        android:title="@string/status_bar_others_category_title">
 
