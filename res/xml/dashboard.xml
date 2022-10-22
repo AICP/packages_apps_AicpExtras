@@ -133,18 +133,7 @@
                 android:targetPackage="com.aicp.oplus.OplusParts"
                 android:targetClass="com.aicp.oplus.OplusParts.OplusPartsActivity" />
         </com.aicp.gear.preference.SelfRemovingPreference>
-<!-->
-        <Preference
-            android:title="@string/systemui_tuner_title"
-            android:key="stock_tuner"
-            android:summary="@string/systemui_tuner_summary"
-            android:icon="@drawable/ic_tuner"
-            android:enabled="true">
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.tuner.TunerActivity" />
-        </Preference>
--->
+
     </PreferenceCategory>
 
     <PreferenceCategory
