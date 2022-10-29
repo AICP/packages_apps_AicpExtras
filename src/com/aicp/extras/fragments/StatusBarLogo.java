@@ -20,11 +20,10 @@ package com.aicp.extras.fragments;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 
-public class StatusBarLogo {/* extends BaseSettingsFragment {
+public class StatusBarLogo extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.status_bar_logo_settings;
     }
- */
 }
