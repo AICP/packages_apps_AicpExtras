@@ -139,14 +139,32 @@
             android:title="@string/qs_date_title"
             android:summary="@string/qs_date_summary"
             android:defaultValue="true" />
-<!--
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="qs_header_show_battery_percent"
-            android:title="@string/qs_header_battery_title"
-            android:summary="@string/qs_header_battery_summary"
-            android:defaultValue="false" />
 
-        <com.aicp.gear.preference.SystemSettingIntListPreference
+        <!-- Battery styles -->
+        <com.aicp.gear.preference.SystemSettingListPreference
+            android:key="qs_battery_style"
+            android:title="@string/status_bar_battery_style_title"
+            android:entries="@array/qs_battery_style_entries"
+            android:entryValues="@array/qs_battery_style_values"
+            android:defaultValue="-1" />
+
+        <!-- Battery location -->
+        <com.aicp.gear.preference.SystemSettingListPreference
+            android:key="qs_battery_location"
+            android:title="@string/qs_battery_location_title"
+            android:entries="@array/qs_battery_location_entries"
+            android:entryValues="@array/qs_battery_location_values"
+            android:defaultValue="0" />
+
+        <!-- Battery percent -->
+        <com.aicp.gear.preference.SystemSettingListPreference
+            android:key="qs_show_battery_percent"
+            android:title="@string/status_bar_battery_percent_title"
+            android:entries="@array/status_bar_battery_percent_entries"
+            android:entryValues="@array/status_bar_battery_percent_values"
+            android:defaultValue="2" />
+
+        <!--com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="qs_system_info"
             android:title="@string/qs_system_info_title"
             android:entries="@array/qs_system_info_entries"
