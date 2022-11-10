@@ -164,6 +164,13 @@
             android:entryValues="@array/status_bar_battery_percentage_values"
             android:defaultValue="2" />
 
+        <!-- Quick QS battery estimate -->
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="qs_show_battery_estimate"
+            android:title="@string/battery_estimates_title"
+            android:summary="@string/battery_estimates_summary"
+            android:defaultValue="0" />
+
         <!--com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="qs_system_info"
             android:title="@string/qs_system_info_title"
