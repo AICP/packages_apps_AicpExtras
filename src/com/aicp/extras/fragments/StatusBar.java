@@ -24,11 +24,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreference;
 import android.text.Spannable;
 import android.text.TextUtils;
 import android.view.Gravity;
@@ -43,6 +46,8 @@ import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingListPreference;
 import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
+import com.android.settingslib.development.SystemPropPoker;
+
 //import com.android.internal.util.aicp.AicpUtils;
 
 public class StatusBar extends BaseSettingsFragment implements
@@ -50,6 +55,8 @@ public class StatusBar extends BaseSettingsFragment implements
 
     private static final String SMART_PULLDOWN = "qs_smart_pulldown";
     private static final String QUICK_PULLDOWN = "qs_quick_pulldown";
+    private static final String KEY_COMBINED_SIGNAL_ICONS = "enable_combined_signal_icons";
+    private static final String SYS_COMBINED_SIGNAL_ICONS = "persist.sys.enable.combined_signal_icons";
 /*    private static final String KEY_CARRIER_LABEL = "status_bar_show_carrier";
     private static final String KEY_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final String KEY_HIDE_NOTCH = "statusbar_hide_notch";
@@ -59,6 +66,7 @@ public class StatusBar extends BaseSettingsFragment implements
 */
     private ListPreference mSmartPulldown;
     private ListPreference mQuickPulldown;
+    private SwitchPreference mCombinedSignalIcons;
 /*    private Preference mCustomCarrierLabel;
     private SystemSettingIntListPreference mShowBatteryPercentage;
     private SystemSettingIntListPreference mShowCarrierLabel;
@@ -90,6 +98,11 @@ public class StatusBar extends BaseSettingsFragment implements
                 Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 0, UserHandle.USER_CURRENT);
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         updateQuickPulldownSummary(quickPulldownValue);
+
+        // Combined signal icons
+        mCombinedSignalIcons = (SwitchPreference) findPreference(KEY_COMBINED_SIGNAL_ICONS);
+        mCombinedSignalIcons.setChecked(SystemProperties.getBoolean(SYS_COMBINED_SIGNAL_ICONS, false));
+        mCombinedSignalIcons.setOnPreferenceChangeListener(this);
 
         /* mShowCarrierLabel = (SystemSettingIntListPreference) findPreference(KEY_CARRIER_LABEL);
         int showCarrierLabel = Settings.System.getInt(resolver,
@@ -144,12 +157,18 @@ public class StatusBar extends BaseSettingsFragment implements
             int value = Integer.parseInt((String) newValue);
             updateSmartPulldownSummary(value);
             return true;
-        } else
-        if (preference == mQuickPulldown) {
+        } else if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     quickPulldownValue, UserHandle.USER_CURRENT);
             updateQuickPulldownSummary(quickPulldownValue);
+            return true;
+        } else if (preference == mCombinedSignalIcons) {
+            boolean value = (Boolean) newValue;
+            Settings.Secure.putIntForUser(getContentResolver(),
+                Settings.Secure.ENABLE_COMBINED_SIGNAL_ICONS, value ? 1 : 0, UserHandle.USER_CURRENT);
+            SystemProperties.set(SYS_COMBINED_SIGNAL_ICONS, value ? "true" : "false");
+            SystemPropPoker.getInstance().poke();
             return true;
         /*} else if (preference == mShowCarrierLabel) {
             int value = Integer.parseInt((String) newValue);

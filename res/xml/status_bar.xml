@@ -116,12 +116,12 @@
             android:title="@string/data_disabled_icon_title"
             android:summary="@string/data_disabled_icon_summary"
             android:defaultValue="true"/>
-<!-->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="combined_status_bar_signal_icons"
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="enable_combined_signal_icons"
             android:title="@string/combined_status_bar_signal_icons_title"
             android:summary="@string/combined_status_bar_signal_icons_summary"
-            android:defaultValue="false"/> -->
+            android:defaultValue="false" />
 
         <!-- Show Roaming Indicator icon on Statusbar -->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
