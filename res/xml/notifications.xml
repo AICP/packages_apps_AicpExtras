@@ -115,7 +115,13 @@
         android:entries="@array/ringtone_focus_mode_entries"
         android:entryValues="@array/ringtone_focus_mode_values"
         android:defaultValue="1" />
- -->
+
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="show_clipboard_overlay"
+        android:title="@string/show_clipboard_overlay_title"
+        android:summary="@string/show_clipboard_overlay_summary"
+        android:defaultValue="true"/>
+
     <!-- Clipboard access toasts -->
 <!--    <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="clipboard_toast_info"
