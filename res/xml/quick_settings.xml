@@ -329,6 +329,7 @@
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_layout_columns"
             android:title="@string/qs_columns_portrait_title"
+            android:summary="@string/systemui_restart_title"
             android:max="8"
             android:min="2"
             aicpextras:interval="1"
@@ -339,6 +340,7 @@
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_layout_columns_landscape"
             android:title="@string/qs_columns_landscape_title"
+            android:summary="@string/systemui_restart_title"
             android:max="8"
             android:min="2"
             aicpextras:interval="1"
