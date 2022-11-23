@@ -22,6 +22,11 @@
     android:key="lockscreen"
     android:title="@string/lockscreen_title">
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="use_secondary_color_clock"
+        android:title="@string/lockscreen_clock_color_title"
+        android:summary="@string/lockscreen_clock_color_summary"
+        android:defaultValue="false" />
 
 <!--     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="lockscreen_small_clock"
