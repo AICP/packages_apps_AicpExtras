@@ -24,6 +24,8 @@ import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
 import android.os.ParcelFileDescriptor;
+import android.os.RemoteException;
+import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
@@ -33,30 +35,34 @@ import androidx.preference.SwitchPreference;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
+import com.aicp.gear.preference.SystemSettingSwitchPreference;
 import com.aicp.gear.util.AicpContextConstants;
 
-public class Lockscreen extends BaseSettingsFragment {
+public class Lockscreen extends BaseSettingsFragment implements OnPreferenceChangeListener  {
 /*
     private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
     private static final String KEY_AOD_SCHEDULE = "always_on_display_schedule";
     private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
-    private static final String KEY_LOCKSCREEN_BLUR = "lockscreen_blur";
+    private static final String KEY_LOCKSCREEN_BLUR = "lockscreen_blur";*/
+    private static final String SECONDARY_COLOR_CLOCK = "use_secondary_color_clock";
 
-    private FingerprintManager mFingerprintManager;
-    private SwitchPreference mFingerprintVib;
-*/
+/*    private FingerprintManager mFingerprintManager;
+    private SwitchPreference mFingerprintVib;*/
+    private SystemSettingSwitchPreference mSecondaryColorClock;
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.lockscreen;
     }
-/*
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Context mContext = getContext();
-        PreferenceScreen prefSet = getPreferenceScreen();
-        ContentResolver resolver = getActivity().getContentResolver();
-        WallpaperManager manager = WallpaperManager.getInstance(mContext);
+
+//        Context mContext = getContext();
+        final ContentResolver resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefSet = getPreferenceScreen();
+/*        WallpaperManager manager = WallpaperManager.getInstance(mContext);
 
         try {
             mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
@@ -86,8 +92,24 @@ public class Lockscreen extends BaseSettingsFragment {
         boolean supportsFod = packageManager.hasSystemFeature(AicpContextConstants.Features.FOD);
 
         if (fodIconPickerCategory != null && !supportsFod) {
-            fodIconPickerCategory.getParent().removePreference(fodIconPickerCategory);
-        }
+            fodIconPickerCategory.getParent().removePreference(fodIconPickerCategory);*/
 
-    }*/
+        mSecondaryColorClock = (SystemSettingSwitchPreference) findPreference(SECONDARY_COLOR_CLOCK);
+        mSecondaryColorClock.setOnPreferenceChangeListener(this);
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        if (preference == mSecondaryColorClock) {
+            Util.showSystemUiRestartDialog(getContext());
+            return true;
+        }
+        return false;
+    }
 }
