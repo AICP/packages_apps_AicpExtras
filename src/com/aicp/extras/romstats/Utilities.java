@@ -32,10 +32,11 @@ import android.content.pm.Signature;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Environment;
 import android.os.SystemProperties;
-import android.preference.PreferenceManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.util.Slog;
+
+import androidx.preference.PreferenceManager;
 
 public class Utilities {
 	public static final String SETTINGS_PREF_NAME = "ROMStats";

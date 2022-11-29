@@ -33,12 +33,12 @@ import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.SystemProperties;
 import android.os.Vibrator;
-import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceFragmentCompat;
 

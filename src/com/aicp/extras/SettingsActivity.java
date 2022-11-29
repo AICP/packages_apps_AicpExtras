@@ -25,7 +25,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.TextView;
 
@@ -33,6 +32,7 @@ import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
