@@ -24,7 +24,7 @@ import android.content.pm.ShortcutManager;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
+import androidx.preference.PreferenceManager;
 
 import java.util.Arrays;
 
