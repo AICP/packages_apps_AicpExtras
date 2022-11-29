@@ -134,6 +134,16 @@
                 android:targetClass="com.aicp.oplus.OplusParts.OplusPartsActivity" />
         </com.aicp.gear.preference.SelfRemovingPreference>
 
+        <com.aicp.gear.preference.SelfRemovingPreference
+            android:key="oneplus_parts"
+            android:title="@string/oneplus_parts_category_title"
+            android:summary="@string/oneplus_parts_category_summary"
+            android:icon="@drawable/ic_settings_device">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.aicp.oneplus.OneplusParts"
+                android:targetClass="com.aicp.oneplus.OneplusParts.OneplusPartsActivity" />
+        </com.aicp.gear.preference.SelfRemovingPreference>
+
     </PreferenceCategory>
 
     <PreferenceCategory
