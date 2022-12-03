@@ -288,63 +288,6 @@
            android:title="@string/footer_text_label_title"
            android:dependency="qs_footer_text_show" />
     </PreferenceCategory>
-<!-->
-    <PreferenceCategory
-        android:key="qs_layout_category"
-        android:title="@string/qs_layout_category_title">
-
-        <SwitchPreference
-            android:key="qs_quickbar_columns_auto"
-            android:title="@string/qqs_columns_auto_title"
-            android:summary="@string/qqs_columns_auto_summary"
-            android:defaultValue="false" />
-
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
-            android:key="qs_quickbar_columns"
-            android:title="@string/qqs_columns_title"
-            android:max="8"
-            android:min="6"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight=""
-            android:defaultValue="6" />
-
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
-            android:key="qs_layout_rows"
-            android:title="@string/qs_rows_portrait_title"
-            android:max="5"
-            android:min="2"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight=""
-            android:defaultValue="3" />
-
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
-            android:key="qs_layout_rows_landscape"
-            android:title="@string/qs_rows_landscape_title"
-            android:max="3"
-            android:min="2"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight=""
-            android:defaultValue="2" />
-
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
-            android:key="qs_layout_columns"
-            android:title="@string/qs_columns_portrait_title"
-            android:max="8"
-            android:min="3"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight=""
-            android:defaultValue="3" />
-
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
-            android:key="qs_layout_columns_landscape"
-            android:title="@string/qs_columns_landscape_title"
-            android:max="8"
-            android:min="4"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight=""
-            android:defaultValue="4" />
-    </PreferenceCategory>
--->
      <PreferenceCategory
         android:key="qs_panel_bg_options"
         android:title="@string/qs_panel_opacity_category_title">
@@ -390,40 +333,25 @@
         android:title="@string/qs_layout_category_title">
 
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
-            android:key="qs_rows_portrait"
-            android:title="@string/qs_rows_portrait_title"
-            android:max="5"
-            android:min="1"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight=""
-            android:defaultValue="3" />
-
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
-            android:key="qs_rows_landscape"
-            android:title="@string/qs_rows_landscape_title"
-            android:max="3"
-            android:min="1"
+            android:key="qs_layout_columns"
+            android:title="@string/qs_columns_portrait_title"
+            android:max="8"
+            android:min="2"
+            aicpextras:interval="1"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
             android:defaultValue="2" />
 
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
-            android:key="qs_columns_portrait"
-            android:title="@string/qs_columns_portrait_title"
-            android:max="7"
-            android:min="1"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight=""
-            android:defaultValue="3" />
-
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
-            android:key="qs_columns_landscape"
+            android:key="qs_layout_columns_landscape"
             android:title="@string/qs_columns_landscape_title"
-            android:max="9"
-            android:min="1"
+            android:max="8"
+            android:min="2"
+            aicpextras:interval="1"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
-            android:defaultValue="3" />
+            android:defaultValue="2" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
