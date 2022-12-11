@@ -162,13 +162,13 @@
         android:key="always_on_display_schedule"
         android:title="@string/always_on_display_schedule_title"
         android:fragment="com.aicp.extras.fragments.AODSchedule" />
--->
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="authorization_ripple_effect"
         android:title="@string/lockscreen_ripple_effect_title"
         android:summary="@string/lockscreen_ripple_effect_summary"
         android:defaultValue="true" />
-
+-->
     <com.aicp.gear.preference.SelfRemovingPreferenceCategory
         android:key="sfps_unlock"
         android:title="@string/fingerprint_wake_unlock_category_title"
