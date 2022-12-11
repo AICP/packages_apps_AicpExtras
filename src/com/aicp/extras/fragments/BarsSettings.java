@@ -42,7 +42,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class BarsSettings extends BaseSettingsFragment implements
+public class BarsSettings { /* extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "BarsSettings";
     private static final String KEY_ASPECT_RATIO_APPS_ENABLED = "aspect_ratio_apps_enabled";
@@ -107,5 +107,5 @@ public class BarsSettings extends BaseSettingsFragment implements
             return true;
         }
         return false;
-    }
+    } */
 }

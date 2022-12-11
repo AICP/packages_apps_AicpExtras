@@ -20,7 +20,7 @@
             android:key="bars_settings"
             android:title="@string/aspect_ratio_category_title" >
 
-      <com.aicp.gear.preference.SystemSettingSwitchPreference
+      <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
           android:key="aspect_ratio_apps_enabled"
           android:title="@string/aspect_ratio_apps_enabled_title"
           android:summary="@string/aspect_ratio_apps_enabled_summary"
@@ -38,5 +38,5 @@
           android:selectable="false" />
 
       <com.android.settingslib.widget.FooterPreference
-          android:title="@string/aspect_ratio_apps_info" />
+          android:title="@string/aspect_ratio_apps_info" /> -->
 </PreferenceScreen>
