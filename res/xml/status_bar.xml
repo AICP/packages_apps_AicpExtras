@@ -27,13 +27,13 @@
         android:key="statusbar_gestures_category"
         android:title="@string/status_bar_gestures_category_title">
 
-        <!-- Smart pulldown -->
+        <!-- Smart pulldown
          <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="qs_smart_pulldown"
             android:entries="@array/smart_pulldown_entries"
             android:entryValues="@array/smart_pulldown_values"
             android:defaultValue="0"
-            android:title="@string/smart_pulldown_title" />
+            android:title="@string/smart_pulldown_title" /> -->
 
         <!-- Quick pulldown -->
         <com.aicp.gear.preference.SystemSettingIntListPreference
