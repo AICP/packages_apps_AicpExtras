@@ -34,7 +34,7 @@ import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.Constants;
 import com.aicp.extras.PreferenceMultiClickHandler;
 import com.aicp.extras.R;
-import com.aicp.gear.preference.LongClickablePreference;
+import com.android.settingslib.widget.LayoutPreference;
 import com.aicp.extras.utils.Util;
 
 import com.plattysoft.leonids.ParticleSystem;
@@ -51,7 +51,7 @@ public class Dashboard extends BaseSettingsFragment {
     private static final Intent INTENT_OTA = new Intent().setComponent(new ComponentName(
             Constants.AICP_OTA_PACKAGE, Constants.AICP_OTA_ACTIVITY));
 
-    private LongClickablePreference mAicpLogo;
+    private LayoutPreference mAicpLogo;
     private Preference mAicpOTA;
     //private Preference mWeatherOption;
 
@@ -69,7 +69,7 @@ public class Dashboard extends BaseSettingsFragment {
 
         PackageManager pm = getActivity().getPackageManager();
 
-        mAicpLogo = (LongClickablePreference) findPreference(PREF_AICP_LOGO);
+        mAicpLogo = (LayoutPreference) findPreference(PREF_AICP_LOGO);
 
 /*        mWeatherOption = findPreference(PREF_WEATHER);
         if (!Util.isPackageEnabled(Constants.WEATHER_SERVICE_PACKAGE, pm)) {
@@ -92,13 +92,13 @@ public class Dashboard extends BaseSettingsFragment {
                 int thirdRandom = mRandom.nextInt(181 - 0);
 
                 // Let's color the star randomly
-                 Drawable star = getResources().getDrawable(R.drawable.star_white_border, null);
-                 int randomColor;
+                 Drawable star = getResources().getDrawable(R.drawable.star_alternative, null);
+                 /*int randomColor;
                  randomColor = Color.rgb(
                          Color.red(mRandom.nextInt(0xFFFFFF)),
                          Color.green(mRandom.nextInt(0xFFFFFF)),
                          Color.blue(mRandom.nextInt(0xFFFFFF)));
-                 star.setTint(randomColor);
+                 star.setTint(randomColor);*/
 
                  ParticleSystem ps = new ParticleSystem(getActivity(), 100, star, 3000);
                  ps.setScaleRange(0.7f, 1.3f);
@@ -108,11 +108,11 @@ public class Dashboard extends BaseSettingsFragment {
                  ps.setFadeOut(200, new AccelerateInterpolator());
                  ps.oneShot(getView(), 100);
 
-                 mAicpLogo.setLongClickBurst(2000/((++mLogoClickCount)%5+1));
+                 //mAicpLogo.setLongClickBurst(2000/((++mLogoClickCount)%5+1));
                 return true;
             }
         });
-        mAicpLogo.setOnLongClickListener(R.id.logo_view, 1000,
+        /*mAicpLogo.setOnLongClickListener(R.id.logo_view, 1000,
                 new Preference.OnPreferenceClickListener() {
                         @Override
                         public boolean onPreferenceClick(Preference preference) {
@@ -132,7 +132,7 @@ public class Dashboard extends BaseSettingsFragment {
                              ps.oneShot(getView(), 100);
                             return true;
                         }
-                });
+                });*/
     }
 
     @Override

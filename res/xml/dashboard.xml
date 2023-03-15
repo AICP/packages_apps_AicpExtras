@@ -23,7 +23,7 @@
     android:title="@string/app_name">
 
     <!-- AICP logo -->
-    <com.aicp.gear.preference.LongClickablePreference
+    <com.android.settingslib.widget.LayoutPreference
         android:key="aicp_logo"
         android:layout="@layout/dashboard_logo" />
 
