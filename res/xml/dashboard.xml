@@ -25,7 +25,7 @@
     <!-- AICP logo -->
     <com.aicp.gear.preference.LongClickablePreference
         android:key="aicp_logo"
-        android:layout="@layout/dashboard_logo" />
+        app:layout="@layout/dashboard_logo" />
 
     <PreferenceCategory
         android:title="@string/buttons_keys_category">
