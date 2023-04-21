@@ -177,7 +177,7 @@
             android:summary="@string/notification_material_dismiss_summary"
             android:defaultValue="false" />
 
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        <!--com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="notification_material_dismiss_style"
             android:title="@string/notification_material_dismiss_style_title"
             android:dependency="notification_material_dismiss"
@@ -195,7 +195,7 @@
             android:min="0"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
-            android:defaultValue="0"/>
+            android:defaultValue="0"/-->
 
     </PreferenceCategory>
     <PreferenceCategory
