@@ -58,6 +58,20 @@
             android:defaultValue="false"
             android:dependency="lockscreen_weather_enabled" />
 
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="lockscreen_weather_show_city"
+            android:title="@string/lockscreen_weather_show_city_title"
+            android:summary="@string/lockscreen_weather_show_city_summary"
+            android:dependency="lockscreen_weather_enabled"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="lockscreen_weather_show_temp"
+            android:title="@string/lockscreen_weather_show_temp_title"
+            android:summary="@string/lockscreen_weather_show_temp_summary"
+            android:dependency="lockscreen_weather_enabled"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
     <!--com.android.settingslib.widget.FooterPreference
