@@ -294,6 +294,17 @@
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="%"
             android:defaultValue="100" />
+
+        <!-- QS Header Image -->
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+            android:key="qs_header_image"
+            android:title="@string/custom_header_title"
+            settings:interval="1"
+            android:max="11"
+            android:min="0"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight=""
+            android:defaultValue="0"/>
 <!--
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_sb_bg_alpha"
