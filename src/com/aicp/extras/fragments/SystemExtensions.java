@@ -19,6 +19,7 @@ package com.aicp.extras.fragments;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import androidx.preference.Preference;
 
 import java.net.InetAddress;
@@ -48,6 +49,8 @@ import com.aicp.extras.utils.Util;
         Util.requireRoot(getActivity(), systemAppRemover);
 */
         findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
+
+        Util.require3Nav(getActivity(), findPreference(Settings.System.USE_SLIM_RECENTS));
     }
 
     @Override
