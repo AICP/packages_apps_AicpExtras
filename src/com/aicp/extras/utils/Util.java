@@ -17,6 +17,8 @@
 
 package com.aicp.extras.utils;
 
+import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_3BUTTON;
+
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ActivityManagerNative;
@@ -214,6 +216,15 @@ public abstract class Util {
         if (preference == null) return;
         if (SystemProperties.getBoolean(property, defaultValue) != expectValue) {
             preference.getParent().removePreference(preference);
+        }
+    }
+
+    public static void require3Nav(Context context, Preference preference) {
+        if (preference == null) return;
+        if (NAV_BAR_MODE_3BUTTON != context.getResources().getInteger(
+                com.android.internal.R.integer.config_navBarInteractionMode)) {
+            preference.setEnabled(false);
+            preference.setSummary(R.string.alternative_recents_swipe_up_enabled_warning_summary);
         }
     }
 
