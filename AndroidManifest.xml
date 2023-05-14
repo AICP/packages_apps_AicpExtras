@@ -38,6 +38,10 @@
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <!-- More actions will be added below by code generation,
+                    in order to encode searchable fragments as intent actions.
+                    Actions are inserted as replacement for following comment (don't touch!) -->
+                <!-- xx1xx -->
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
