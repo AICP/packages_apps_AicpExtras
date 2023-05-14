@@ -57,8 +57,11 @@ import static android.provider.SearchIndexablesContract.COLUMN_INDEX_XML_RES_RES
 import static android.provider.SearchIndexablesContract.INDEXABLES_RAW_COLUMNS;
 import static android.provider.SearchIndexablesContract.INDEXABLES_XML_RES_COLUMNS;
 import static android.provider.SearchIndexablesContract.NON_INDEXABLES_KEYS_COLUMNS;
+import static android.provider.SearchIndexablesContract.SITE_MAP_COLUMNS;
 
 import static com.aicp.extras.search.PartsList.AE_ACTIVITY;
+
+import android.provider.SearchIndexablesContract;
 
 /**
  * Provides search metadata to the Settings app
@@ -188,6 +191,34 @@ public class AeSearchIndexablesProvider extends SearchIndexablesProvider {
             ref[COLUMN_INDEX_NON_INDEXABLE_KEYS_KEY_VALUE] = nik;
             cursor.addRow(ref);
         }
+        return cursor;
+    }
+
+    @Override
+    public Cursor querySiteMapPairs() {
+        final MatrixCursor cursor = new MatrixCursor(SITE_MAP_COLUMNS);
+        final Set<String> keys = PartsList.get(getContext()).getPartsList();
+
+        for (String key : keys) {
+            PartInfo i = PartsList.get(getContext()).getPartInfo(key);
+            if (i == null) {
+                continue;
+            }
+
+            // TODO parent fragment as well?
+            String fragment = i.getFragmentClass();
+            String title = i.getTitle();
+
+            android.util.Log.e("SCSCSC", "index " + title + "/" + fragment);
+            if (fragment == null) {
+                continue;
+            }
+            cursor.newRow()
+                    .add(SearchIndexablesContract.SiteMapColumns.PARENT_CLASS, fragment)
+                    .add(SearchIndexablesContract.SiteMapColumns.CHILD_CLASS, fragment)
+                    .add(SearchIndexablesContract.SiteMapColumns.CHILD_TITLE, title);
+        }
+
         return cursor;
     }
 
