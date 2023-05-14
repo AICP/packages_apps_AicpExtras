@@ -15,11 +15,15 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
-GENERATED_AE_FRAGMENT_LIST = $(TARGET_OUT_INTERMEDIATES)/AicpExtrasCodeGeneration/src/com/aicp/extras/search/AeFragmentList.java
+AICP_CODE_GENERATION_OUT = $(TARGET_OUT_INTERMEDIATES)/AicpExtrasCodeGeneration
+GENERATED_AE_FRAGMENT_LIST = $(AICP_CODE_GENERATION_OUT)/src/com/aicp/extras/search/AeFragmentList.java
+GENERATED_MANIFEST = $(AICP_CODE_GENERATION_OUT)/AndroidManifest.xml
 
 # Auto-generate AeFragmentList for searchable fragments
-$(GENERATED_AE_FRAGMENT_LIST): $(LOCAL_PATH)/gather_search_fragments.sh $(LOCAL_PATH)/AeFragmentList.java $(foreach dir, res/xml/ src/com/aicp/extras/fragments/, $(wildcard $(LOCAL_PATH)/$(dir)/*))
-	bash $< $@
+$(GENERATED_AE_FRAGMENT_LIST): $(LOCAL_PATH)/gather_search_fragments.sh $(LOCAL_PATH)/AeFragmentList.java $(LOCAL_PATH)/AndroidManifest.xml $(foreach dir, res/xml/ src/com/aicp/extras/fragments/, $(wildcard $(LOCAL_PATH)/$(dir)/*))
+	bash $< $(GENERATED_AE_FRAGMENT_LIST) $(GENERATED_MANIFEST)
+
+$(GENERATED_MANIFEST): $(GENERATED_AE_FRAGMENT_LIST)
 
 LOCAL_MODULE_TAGS := optional
 
@@ -27,6 +31,7 @@ LOCAL_PROGUARD_ENABLED := disabled
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 LOCAL_GENERATED_SOURCES += $(GENERATED_AE_FRAGMENT_LIST)
+LOCAL_MANIFEST_FILE := ../../../$(GENERATED_MANIFEST)
 
 LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res \
