@@ -21,8 +21,6 @@ import android.os.Parcelable;
 
 import java.util.Objects;
 
-import static com.aicp.extras.SettingsActivity.AE_FRAGMENT_ACTION_PREFIX;
-
 public class PartInfo implements Parcelable {
 
     private static final String TAG = PartInfo.class.getSimpleName();
@@ -169,7 +167,7 @@ public class PartInfo implements Parcelable {
     }
 
     public String getAction() {
-        return AE_FRAGMENT_ACTION_PREFIX + "." + mFragmentClass;
+        return Intent.ACTION_MAIN;
     }
 
     public Intent getIntentForActivity() {

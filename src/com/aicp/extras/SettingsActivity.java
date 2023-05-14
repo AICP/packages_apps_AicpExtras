@@ -23,8 +23,12 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -56,12 +60,11 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity implements
         PreferenceFragment.OnPreferenceStartFragmentCallback,
         PreferenceFragment.OnPreferenceStartScreenCallback {
 
+    private static final String LOG_TAG = "AeSettingsActivity";
+
     private Fragment mFragment;
     private MainSwitchBar mSwitchBar;
     private MasterSwitchPreferenceDependencyHandler mMasterSwitchDependencyHandler;
-
-    // Action prefix for launching specific fragments without using intent extras
-    public static final String AE_FRAGMENT_ACTION_PREFIX = "com.aicp.extras.fragmentaction";
 
     // String extra containing the fragment class
     private static final String EXTRA_FRAGMENT_CLASS =
@@ -103,12 +106,19 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity implements
     private static final String FRAGMENT_TAG = "SettingsActivity.pref_fragment";
 
 
-        public static final String EXTRA_SHOW_FRAGMENT = ":settings:show_fragment";
+    public static final String EXTRA_SHOW_FRAGMENT = ":settings:show_fragment";
     public static final String EXTRA_SHOW_FRAGMENT_ARGUMENTS = ":settings:show_fragment_args";
     public static final String EXTRA_SHOW_FRAGMENT_TITLE = ":settings:show_fragment_title";
     public static final String EXTRA_FRAGMENT_ARG_KEY = ":settings:fragment_args_key";
     public static final String EXTRA_SHOW_FRAGMENT_TITLE_RESID =
             ":settings:show_fragment_title_resid";
+
+
+    // Copies from SettingsActivity in packages/apps/Settings
+    public static final String META_DATA_KEY_FRAGMENT_CLASS =
+            "com.android.settings.FRAGMENT_CLASS";
+    public static final String META_DATA_KEY_HIGHLIGHT_MENU_KEY =
+            "com.android.settings.HIGHLIGHT_MENU_KEY";
 
     private CharSequence mInitialTitle;
 
@@ -124,11 +134,32 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity implements
         if (mFragment == null) {
             // Get new fragment
             String action = mIntent.getAction();
-            String fragmentClass;
-            if (action != null && action.startsWith(AE_FRAGMENT_ACTION_PREFIX)) {
-                fragmentClass = action.substring(AE_FRAGMENT_ACTION_PREFIX.length()+1);
-            } else {
+            String fragmentClass = null;
+            String highlightMenuKey = null;
+
+            // For launching search results: from SettingsActivity.getMetaData():
+            try {
+                ActivityInfo ai = getPackageManager().getActivityInfo(getComponentName(),
+                        PackageManager.GET_META_DATA);
+                android.util.Log.e("SCSCSC", "ai " + ai);
+                if (ai != null) {
+                    android.util.Log.e("SCSCSC", "ai.metadata " + ai.metaData);
+                }
+                if (ai != null && ai.metaData != null) {
+                    fragmentClass = ai.metaData.getString(META_DATA_KEY_FRAGMENT_CLASS);
+                    android.util.Log.e("SCSCSC", "ai.metadata.fragmentClass " + fragmentClass);
+                    highlightMenuKey = ai.metaData.getString(META_DATA_KEY_HIGHLIGHT_MENU_KEY);
+                }
+            } catch (NameNotFoundException nnfe) {
+                // No recovery
+                Log.d(LOG_TAG, "Cannot get Metadata for: " + getComponentName().toString());
+            }
+
+            if (fragmentClass == null) {
                 fragmentClass = mIntent.getStringExtra(EXTRA_FRAGMENT_CLASS);
+            }
+            if (highlightMenuKey == null && mIntent.hasExtra(EXTRA_PREFERENCE_KEY)) {
+                highlightMenuKey = mIntent.getStringExtra(EXTRA_PREFERENCE_KEY);
             }
             mFragment = getNewFragment(fragmentClass);
             Bundle arguments;
@@ -137,9 +168,8 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity implements
             } else {
                 arguments = new Bundle();
             }
-            if (mIntent.hasExtra(EXTRA_PREFERENCE_KEY)) {
-                arguments.putString(EXTRA_PREFERENCE_KEY,
-                        mIntent.getStringExtra(EXTRA_PREFERENCE_KEY));
+            if (highlightMenuKey != null) {
+                arguments.putString(EXTRA_PREFERENCE_KEY, highlightMenuKey);
             }
             mFragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
