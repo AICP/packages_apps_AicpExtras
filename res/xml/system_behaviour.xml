@@ -156,6 +156,21 @@ android:persistent="false" />-->
             android:defaultValue="false"/>
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="system_security_category"
+        android:title="@string/system_security_category_title">
+
+        <com.aicp.gear.preference.GlobalSettingIntListPreference
+            android:key="settings_reboot_after_timeout"
+            android:title="@string/auto_reboot_title"
+            android:summary="@string/auto_reboot_summary"
+            android:entries="@array/reboot_after_timeout_entries"
+            android:entryValues="@array/reboot_after_timeout_values"
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
+
 <!--
     <PreferenceCategory
         android:title="@string/audio_panel_view">
