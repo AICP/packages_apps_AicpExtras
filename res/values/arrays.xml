@@ -1475,4 +1475,36 @@
         <item>2</item>
         <item>3</item>
     </string-array>
+
+    <!-- Reboot after timeout without unlocking the device.
+         Use ./power_off_after_timeout_values.py to generate without having to worry about miscalculations. -->
+    <string-array name="reboot_after_timeout_entries" translatable="false">
+        <item>@string/reboot_after_timeout_off</item>
+        <item>@string/reboot_after_timeout_minutes_10</item>
+        <item>@string/reboot_after_timeout_minutes_30</item>
+        <item>@string/reboot_after_timeout_hours_1</item>
+        <item>@string/reboot_after_timeout_hours_2</item>
+        <item>@string/reboot_after_timeout_hours_4</item>
+        <item>@string/reboot_after_timeout_hours_8</item>
+        <item>@string/reboot_after_timeout_hours_12</item>
+        <item>@string/reboot_after_timeout_hours_24</item>
+        <item>@string/reboot_after_timeout_hours_36</item>
+        <item>@string/reboot_after_timeout_hours_48</item>
+        <item>@string/reboot_after_timeout_hours_72</item>
+    </string-array>
+    <!-- values in milliseconds -->
+    <string-array name="reboot_after_timeout_values" translatable="false">
+        <item>0</item>
+        <item>600000</item>
+        <item>1800000</item>
+        <item>3600000</item>
+        <item>7200000</item>
+        <item>14400000</item>
+        <item>28800000</item>
+        <item>43200000</item>
+        <item>86400000</item>
+        <item>129600000</item>
+        <item>172800000</item>
+        <item>259200000</item>
+    </string-array>
 </resources>
