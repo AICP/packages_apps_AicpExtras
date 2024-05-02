@@ -579,10 +579,11 @@ public class ActionListViewSettings extends ListFragment implements
                     mActivity, mActionValuesKey, mActionEntriesKey);
             case SHAKE_EVENTS_DISABLED:
                 return ActionHelper.getDisabledShakeApps(mActivity);
-*/
+
             case RECENT_APP_SIDEBAR:
                 return ActionHelper.getRecentAppSidebarConfigWithDescription(
                         mActivity, mActionValuesKey, mActionEntriesKey);
+        */
         }
         return null;
     }
@@ -611,10 +612,11 @@ public class ActionListViewSettings extends ListFragment implements
             case SHAKE_EVENTS_DISABLED:
                 ActionHelper.setDisabledShakeApps(mActivity, actionConfigs, reset);
                 break;
-*/
+
             case RECENT_APP_SIDEBAR:
                 ActionHelper.setRecentAppSidebarConfig(mActivity, actionConfigs, reset);
                 break;
+                */
         }
     }
 
@@ -678,10 +680,10 @@ public class ActionListViewSettings extends ListFragment implements
                         getItem(position).getClickAction(),
                         iconUri, false), 36); */
             } else {
-                d = ImageHelper.resize(
+                /* d = ImageHelper.resize(
                         mActivity, ActionHelper.getActionIconImage(mActivity,
                         getItem(position).getClickAction(),
-                        iconUri), 36);
+                        iconUri), 36); */
             }
 
             if (iconUri != null && iconUri.startsWith(ActionConstants.SYSTEM_ICON_IDENTIFIER)) {
