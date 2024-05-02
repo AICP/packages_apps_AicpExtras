@@ -24,7 +24,7 @@ import android.os.SystemProperties;
 import androidx.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.Switch;
+import android.widget.CompoundButton;
 
 import com.aicp.extras.R;
 
@@ -35,7 +35,7 @@ import com.aicp.extras.R;
 public class MasterSwitchPreference extends TwoTargetPreference {
 
     private Context mContext;
-    private Switch mSwitch;
+    private CompoundButton mSwitch;
     private boolean mChecked;
     private boolean mEnableSwitch = true;
     private boolean mDefaultValue;
@@ -144,7 +144,7 @@ public class MasterSwitchPreference extends TwoTargetPreference {
             mWidgetView.setOnClickListener(mClickListener);
         }
 
-        mSwitch = (Switch) holder.findViewById(R.id.switchWidget);
+        mSwitch = (CompoundButton) holder.findViewById(R.id.switchWidget);
         if (mSwitch != null) {
             mSwitch.setContentDescription(getTitle());
             mSwitch.setChecked(mChecked);

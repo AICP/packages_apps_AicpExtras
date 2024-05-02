@@ -19,15 +19,15 @@ package com.aicp.extras.preference;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
 import androidx.preference.PreferenceDataStore;
-import android.widget.Switch;
+import android.widget.CompoundButton;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.widget.SwitchBar;
 import com.android.settingslib.widget.MainSwitchBar;
-import com.android.settingslib.widget.OnMainSwitchChangeListener;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 
 public abstract class PreferenceDataStoreSwitchBarController
-        implements OnMainSwitchChangeListener {
+        implements OnCheckedChangeListener {
     // Why abstract?
     // -> need to add appropriate setting to depHndl in constructor!
 
@@ -60,14 +60,14 @@ public abstract class PreferenceDataStoreSwitchBarController
     }
 
     @Override
-    public void onSwitchChanged(Switch switchView, boolean isChecked) {
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if (mSettingsFragment != null) {
             mSettingsFragment.setMasterDependencyState(isChecked);
         }
         if (isChecked) {
             mDependencyHandler.onEnablePref(-1, mKey);
         } else if (mThereShouldBeOne && !mDependencyHandler.isAnotherEnabled(-1, mKey)) {
-            mDependencyHandler.showConfirmDisableDialog(switchView.getContext(),
+            mDependencyHandler.showConfirmDisableDialog(buttonView.getContext(),
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
