@@ -33,6 +33,7 @@ import com.aicp.extras.utils.Util;
 
 //    private static final String PREF_SYSTEM_APP_REMOVER = "system_app_remover";
     private static final String PREF_ADBLOCK = "persist.aicp.hosts_block";
+    private static final String PREF_HIDE_TETHER = "net.tether.hide";
 
     private Handler mHandler = new Handler();
 
@@ -49,6 +50,7 @@ import com.aicp.extras.utils.Util;
         Util.requireRoot(getActivity(), systemAppRemover);
 */
         findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
+        findPreference(PREF_HIDE_TETHER).setOnPreferenceChangeListener(this);
 
         Util.require3Nav(getActivity(), findPreference(Settings.System.USE_SLIM_RECENTS));
     }
@@ -64,6 +66,9 @@ import com.aicp.extras.utils.Util;
                         InetAddress.clearDnsCache();
                     }
             }, 1000);
+            return true;
+        } else if (PREF_HIDE_TETHER.equals(preference.getKey())) {
+            // Handle any required refresh action here
             return true;
         } else {
             return false;
