@@ -50,12 +50,12 @@
 -->
 
     <!-- TODO: in case we get more recents settings, use above recents fragment instead again -->
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+    <!-- <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="use_slim_recents"
         android:title="@string/slim_recents_title"
         aicpextras:thereCanBeOnlyOneGroupId="1"
         android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.SlimRecents" />
+        android:fragment="com.aicp.extras.fragments.SlimRecents" /> -->
 
     <PreferenceCategory
         android:key="blockers_category"

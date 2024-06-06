@@ -50,7 +50,7 @@ import com.aicp.extras.utils.Util;
 */
         findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
 
-        Util.require3Nav(getActivity(), findPreference(Settings.System.USE_SLIM_RECENTS));
+        // Util.require3Nav(getActivity(), findPreference(Settings.System.USE_SLIM_RECENTS));
     }
 
     @Override
