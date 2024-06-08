@@ -37,12 +37,12 @@
             android:icon="@drawable/ic_settings_navbar"
             android:fragment="com.aicp.extras.fragments.Navigation" />
 -->
-        <!-- <PreferenceScreen
+        <PreferenceScreen
             android:title="@string/hw_keys_title"
             android:key="hw_keys"
             android:summary="@string/hw_keys_summary"
             android:icon="@drawable/ic_settings_hw_keys"
-            android:fragment="com.aicp.extras.fragments.HwKeys" /> -->
+            android:fragment="com.aicp.extras.fragments.HwKeys" />
 
     </PreferenceCategory>
 
@@ -63,12 +63,12 @@
             android:icon="@drawable/ic_settings_notifications"
             android:fragment="com.aicp.extras.fragments.Notifications" /> -->
 
-        <!-- <PreferenceScreen
+        <PreferenceScreen
             android:title="@string/quick_settings_title"
             android:key="quick_settings"
             android:summary="@string/quick_settings_summary"
             android:icon="@drawable/ic_settings_quick_settings"
-            android:fragment="com.aicp.extras.fragments.QuickSettings" /> -->
+            android:fragment="com.aicp.extras.fragments.QuickSettings" />
 
         <!-- <PreferenceScreen
             android:title="@string/lockscreen_title"
@@ -161,7 +161,7 @@
             android:summary="@string/about_summary"
             android:icon="@drawable/ic_settings_about"
             android:fragment="com.aicp.extras.fragments.About" />
-<!--
+
         <PreferenceScreen
             android:title="@string/log_it_title"
             android:key="log_it"
@@ -169,7 +169,7 @@
             android:icon="@drawable/ic_settings_log_it"
             android:fragment="com.aicp.extras.fragments.LogIt" />
 
-        <PreferenceScreen
+        <!-- <PreferenceScreen
             android:title="@string/ae_settings_title"
             android:key="ae_settings"
             android:summary="@string/ae_settings_summary"
