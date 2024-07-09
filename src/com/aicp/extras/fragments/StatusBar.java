@@ -84,13 +84,13 @@ public class StatusBar extends BaseSettingsFragment implements
         mSmartPulldown.setOnPreferenceChangeListener(this);*/
 
         // Quick Pulldown
-        mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
+    /*    mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
         mQuickPulldown.setOnPreferenceChangeListener(this);
         int quickPulldownValue = Settings.System.getIntForUser(resolver,
                 Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 0, UserHandle.USER_CURRENT);
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         updateQuickPulldownSummary(quickPulldownValue);
-
+*/
         /* mShowCarrierLabel = (SystemSettingIntListPreference) findPreference(KEY_CARRIER_LABEL);
         int showCarrierLabel = Settings.System.getInt(resolver,
         Settings.System.STATUS_BAR_SHOW_CARRIER, 1);
@@ -145,12 +145,12 @@ public class StatusBar extends BaseSettingsFragment implements
             updateSmartPulldownSummary(value);
             return true;
         } else*/
-        if (preference == mQuickPulldown) {
+/*        if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     quickPulldownValue, UserHandle.USER_CURRENT);
             updateQuickPulldownSummary(quickPulldownValue);
-            return true;
+            return true;*/
         /*} else if (preference == mShowCarrierLabel) {
             int value = Integer.parseInt((String) newValue);
             updateCarrierLabelSummary(value);
@@ -162,7 +162,7 @@ public class StatusBar extends BaseSettingsFragment implements
                     showBatteryPercentageValue, UserHandle.USER_CURRENT);
             updateShowBatteryInQQS(showBatteryPercentageValue);
             return true;*/
-        }
+       // }
         return false;
     }
 
@@ -239,7 +239,7 @@ public class StatusBar extends BaseSettingsFragment implements
         }
     }*/
 
-     private void updateQuickPulldownSummary(int value) {
+    /* private void updateQuickPulldownSummary(int value) {
         Resources res = getResources();
 
         if (value == 0) {
@@ -255,7 +255,7 @@ public class StatusBar extends BaseSettingsFragment implements
             mQuickPulldown.setSummary(res.getString(R.string.quick_pulldown_summary, direction));
         }
     }
-
+*/
     /* private void updateCustomLabelTextSummary() {
         mCustomCarrierLabelText = Settings.System.getString(
                 getActivity().getContentResolver(), Settings.System.CUSTOM_CARRIER_LABEL);
