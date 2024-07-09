@@ -36,7 +36,7 @@
             android:title="@string/smart_pulldown_title" /> -->
 
         <!-- Quick pulldown -->
-        <com.aicp.gear.preference.SystemSettingIntListPreference
+	 <!--    <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="qs_quick_pulldown"
             android:entries="@array/quick_pulldown_entries"
             android:entryValues="@array/quick_pulldown_values"
@@ -49,7 +49,7 @@
             android:title="@string/status_bar_double_tap_to_sleep_title"
             android:summary="@string/status_bar_double_tap_to_sleep_summary"
             android:defaultValue="false"/>
-<!-- 
+ 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="status_bar_brightness_control"
             android:title="@string/status_bar_brightness_control_title"
@@ -85,15 +85,15 @@
         android:title="@string/status_bar_icons_category_title">
 
         <!-- Statusbar Clock styles -->
-        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+    <!--        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="status_bar_clock"
             android:title="@string/status_bar_clock_title"
             android:summary="@string/status_bar_clock_summary"
             android:defaultValue="true"
             android:fragment="com.aicp.extras.fragments.StatusBarClockSettings" />
-
+    -->
         <!-- Show logo on Statusbar -->
-        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+    <!--        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="status_bar_logo"
             android:title="@string/status_bar_logo_title"
             android:defaultValue="false"
@@ -116,7 +116,7 @@
             android:title="@string/data_disabled_icon_title"
             android:summary="@string/data_disabled_icon_summary"
             android:defaultValue="true"/>
-<!-->
+
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="combined_status_bar_signal_icons"
             android:title="@string/combined_status_bar_signal_icons_title"
@@ -124,13 +124,13 @@
             android:defaultValue="false"/> -->
 
         <!-- Show Roaming Indicator icon on Statusbar -->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+	<!--        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="roaming_indicator_icon"
             android:title="@string/roaming_indicator_icon_title"
             android:summary="@string/roaming_indicator_icon_summary"
             android:defaultValue="true"/>
 
-<!--         <com.aicp.gear.preference.SystemSettingSwitchPreference
+-         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="show_volte_icon"
             android:title="@string/volte_icon_title"
             android:summary="@string/volte_icon_summary"
@@ -208,7 +208,7 @@
             android:title="@string/statusbar_location_icon_title"
             android:summary="@string/statusbar_location_icon_summary"
             android:defaultValue="true"/>
--->
+
         <Preference
             android:title="@string/systemui_tuner_title"
             android:key="stock_tuner"
@@ -223,21 +223,21 @@
     <PreferenceCategory
         android:key="statusbar_battery_category"
         android:title="@string/status_bar_battery_category_title">
-
+ 
         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="status_bar_show_battery_image"
             android:title="@string/status_bar_battery_title"
             android:summary="@string/status_bar_battery_summary"
             android:defaultValue="true"
             android:fragment="com.aicp.extras.fragments.BatteryStyles" />
-
+    -->
         <!-- Show BT Battery Level on Statusbar -->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+	<!--        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="bluetooth_show_battery"
             android:title="@string/bluetooth_battery_title"
             android:summary="@string/bluetooth_battery_summary"
             android:defaultValue="false"/>
-
+	-->
        <!-- Battery bar -->
        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
            android:key="statusbar_battery_bar"
@@ -247,7 +247,7 @@
            android:fragment="com.aicp.extras.fragments.BatteryBar" />
 
     </PreferenceCategory>
-    <PreferenceCategory
+    <!--    <PreferenceCategory
         android:title="@string/network_traffic_category">
 
         <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
@@ -270,23 +270,23 @@
     <PreferenceCategory
        android:key="statusbar_privacy_category"
        android:title="@string/status_bar_privacy_category_title">
-
+    -->
        <!-- Mic/Camera privacy indicator -->
-       <com.aicp.gear.preference.SecureSettingSwitchPreference
+    <!--       <com.aicp.gear.preference.SecureSettingSwitchPreference
             android:key="enable_camera_privacy_indicator"
             android:title="@string/mic_camera_privacy_indicator_title"
             android:summary="@string/mic_camera_privacy_indicator_summary"
             android:defaultValue="true" />
-
+    -->
        <!-- Location privacy indicator -->
-       <com.aicp.gear.preference.SecureSettingSwitchPreference
+    <!--       <com.aicp.gear.preference.SecureSettingSwitchPreference
             android:key="enable_location_privacy_indicator"
             android:title="@string/location_privacy_indicator_title"
             android:summary="@string/location_privacy_indicator_summary"
             android:defaultValue="true" />
-
+    -->
        <!-- Projection privacy indicator -->
-       <com.aicp.gear.preference.SecureSettingSwitchPreference
+    <!--       <com.aicp.gear.preference.SecureSettingSwitchPreference
             android:key="enable_projection_privacy_indicator"
             android:title="@string/projection_privacy_indicator_title"
             android:summary="@string/projection_privacy_indicator_summary"
@@ -309,7 +309,7 @@
             android:title="@string/show_wifi_standard_icon_title"
             android:summary="@string/show_wifi_standard_icon_summary"
             android:defaultValue="false"/>
-
+    -->
        <!-- Hide notch fill -->
 <!--       <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="display_hide_notch"
