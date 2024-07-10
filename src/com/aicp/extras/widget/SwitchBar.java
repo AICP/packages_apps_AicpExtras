@@ -33,7 +33,7 @@ import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
-import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.aicp.extras.R;
@@ -46,12 +46,12 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
 
     public interface OnSwitchChangeListener {
         /**
-         * Called when the checked state of the CompoundButton has changed.
+         * Called when the checked state of the Switch has changed.
          *
-         * @param switchView The CompoundButton view whose state has changed.
+         * @param switchView The Switch view whose state has changed.
          * @param isChecked  The new checked state of switchView.
          */
-        void onSwitchChanged(CompoundButton switchView, boolean isChecked);
+        void onSwitchChanged(Switch switchView, boolean isChecked);
     }
 
     private static final int[] XML_ATTRIBUTES = {
@@ -105,7 +105,7 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
         lp.setMarginStart(switchBarMarginStart);
 
         mSwitch = findViewById(R.id.switch_widget);
-        // Prevent onSaveInstanceState() to be called as we are managing the state of the CompoundButton
+        // Prevent onSaveInstanceState() to be called as we are managing the state of the Switch
         // on our own
         mSwitch.setSaveEnabled(false);
         mSwitch.setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_NO);
@@ -287,7 +287,7 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
 
     @Override
     public CharSequence getAccessibilityClassName() {
-        return CompoundButton.class.getName();
+        return Switch.class.getName();
     }
 
     @Override

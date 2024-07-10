@@ -18,9 +18,9 @@ package com.aicp.extras.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.CompoundButton;
+import android.widget.Switch;
 
-public class ToggleSwitch extends CompoundButton {
+public class ToggleSwitch extends Switch {
 
     private ToggleSwitch.OnBeforeCheckedChangeListener mOnBeforeListener;
 
