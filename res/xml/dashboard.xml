@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * Copyright (C) 2017-2018 AICP
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+* Copyright (C) 2017-2018 AICP
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:key="dashboard"
-    android:title="@string/app_name">
+                  xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                  android:key="dashboard"
+                  android:title="@string/app_name">
 
     <!-- AICP logo -->
     <com.aicp.gear.preference.LongClickablePreference
@@ -29,14 +29,14 @@
 
     <PreferenceCategory
         android:title="@string/buttons_keys_category">
-<!-->
+        <!-->
         <PreferenceScreen
-            android:title="@string/navigation_title"
-            android:key="navigation"
-            android:summary="@string/navigation_summary"
-            android:icon="@drawable/ic_settings_navbar"
-            android:fragment="com.aicp.extras.fragments.Navigation" />
--->
+        android:title="@string/navigation_title"
+        android:key="navigation"
+        android:summary="@string/navigation_summary"
+        android:icon="@drawable/ic_settings_navbar"
+        android:fragment="com.aicp.extras.fragments.Navigation" />
+        -->
         <PreferenceScreen
             android:title="@string/hw_keys_title"
             android:key="hw_keys"
@@ -44,137 +44,137 @@
             android:icon="@drawable/ic_settings_hw_keys"
             android:fragment="com.aicp.extras.fragments.HwKeys" />
 
-    </PreferenceCategory>
+        </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="@string/user_interface_category">
+        <PreferenceCategory
+            android:title="@string/user_interface_category">
 
-        <PreferenceScreen
-            android:title="@string/status_bar_title"
-            android:key="status_bar"
-            android:summary="@string/status_bar_summary"
-            android:icon="@drawable/ic_settings_status_bar"
-            android:fragment="com.aicp.extras.fragments.StatusBar" />
+            <PreferenceScreen
+                android:title="@string/status_bar_title"
+                android:key="status_bar"
+                android:summary="@string/status_bar_summary"
+                android:icon="@drawable/ic_settings_status_bar"
+                android:fragment="com.aicp.extras.fragments.StatusBar" />
 
-        <PreferenceScreen
-            android:title="@string/notifications_title"
-            android:key="notifications"
-            android:summary="@string/notifications_summary"
-            android:icon="@drawable/ic_settings_notifications"
-            android:fragment="com.aicp.extras.fragments.Notifications" /> -->
+            <PreferenceScreen
+                android:title="@string/notifications_title"
+                android:key="notifications"
+                android:summary="@string/notifications_summary"
+                android:icon="@drawable/ic_settings_notifications"
+                android:fragment="com.aicp.extras.fragments.Notifications" /> -->
 
-        <PreferenceScreen
-            android:title="@string/quick_settings_title"
-            android:key="quick_settings"
-            android:summary="@string/quick_settings_summary"
-            android:icon="@drawable/ic_settings_quick_settings"
-            android:fragment="com.aicp.extras.fragments.QuickSettings" />
+            <PreferenceScreen
+                android:title="@string/quick_settings_title"
+                android:key="quick_settings"
+                android:summary="@string/quick_settings_summary"
+                android:icon="@drawable/ic_settings_quick_settings"
+                android:fragment="com.aicp.extras.fragments.QuickSettings" />
 
-        <!-- <PreferenceScreen
+            <!-- <PreferenceScreen
             android:title="@string/lockscreen_title"
             android:key="lockscreen"
             android:summary="@string/lockscreen_summary"
             android:icon="@drawable/ic_settings_lockscreen"
             android:fragment="com.aicp.extras.fragments.Lockscreen" /> -->
 
-       <PreferenceScreen
-            android:title="@string/weather_title"
-            android:key="weather_option"
-            android:summary="@string/weather_config_title"
-            android:icon="@drawable/ic_settings_weather"
-            android:fragment="com.aicp.extras.fragments.Weather" />
+            <PreferenceScreen
+                android:title="@string/weather_title"
+                android:key="weather_option"
+                android:summary="@string/weather_config_title"
+                android:icon="@drawable/ic_settings_weather"
+                android:fragment="com.aicp.extras.fragments.Weather" />
 
-        <!-- <PreferenceScreen
+            <!-- <PreferenceScreen
             android:title="@string/theming_title"
             android:key="theming"
             android:summary="@string/theming_summary"
             android:icon="@drawable/ic_settings_theming"
             android:fragment="com.aicp.extras.fragments.Theming" /> -->
 
-        <!-- <PreferenceScreen
+            <!-- <PreferenceScreen
             android:title="@string/other_ui_title"
             android:key="other_ui"
             android:summary="@string/other_ui_summary"
             android:icon="@drawable/ic_settings_other_ui"
             android:fragment="com.aicp.extras.fragments.OtherUi" /> -->
 
-    </PreferenceCategory>
+            </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="@string/system_category">
+            <PreferenceCategory
+                android:title="@string/system_category">
 
-        <!-- <PreferenceScreen
-            android:title="@string/system_animations_title"
-            android:key="system_animations"
-            android:summary="@string/system_animations_summary"
-            android:icon="@drawable/ic_settings_system_animations"
-            android:fragment="com.aicp.extras.fragments.SystemAnimations" /> -->
+                <!-- <PreferenceScreen
+                android:title="@string/system_animations_title"
+                android:key="system_animations"
+                android:summary="@string/system_animations_summary"
+                android:icon="@drawable/ic_settings_system_animations"
+                android:fragment="com.aicp.extras.fragments.SystemAnimations" /> -->
 
-        <PreferenceScreen
-            android:title="@string/system_behaviour_title"
-            android:key="system_behaviour"
-            android:summary="@string/system_behaviour_summary"
-            android:icon="@drawable/ic_settings_system_behaviour"
-            android:fragment="com.aicp.extras.fragments.SystemBehaviour" />
+                <PreferenceScreen
+                    android:title="@string/system_behaviour_title"
+                    android:key="system_behaviour"
+                    android:summary="@string/system_behaviour_summary"
+                    android:icon="@drawable/ic_settings_system_behaviour"
+                    android:fragment="com.aicp.extras.fragments.SystemBehaviour" />
 
-        <PreferenceScreen
-            android:title="@string/system_extensions_title"
-            android:key="system_extensions"
-            android:summary="@string/system_extensions_summary"
-            android:icon="@drawable/ic_settings_system_extensions"
-            android:fragment="com.aicp.extras.fragments.SystemExtensions" />
+                <PreferenceScreen
+                    android:title="@string/system_extensions_title"
+                    android:key="system_extensions"
+                    android:summary="@string/system_extensions_summary"
+                    android:icon="@drawable/ic_settings_system_extensions"
+                    android:fragment="com.aicp.extras.fragments.SystemExtensions" />
 
-        <!-- <com.aicp.gear.preference.SelfRemovingPreference
-            android:key="oplus_parts"
-            android:title="@string/oplus_parts_category_title"
-            android:summary="@string/oplus_parts_category_summary"
-            android:icon="@drawable/ic_settings_device">
-            <intent android:action="android.intent.action.MAIN"
+                <!-- <com.aicp.gear.preference.SelfRemovingPreference
+                android:key="oplus_parts"
+                android:title="@string/oplus_parts_category_title"
+                android:summary="@string/oplus_parts_category_summary"
+                android:icon="@drawable/ic_settings_device">
+                <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.aicp.oplus.OplusParts"
                 android:targetClass="com.aicp.oplus.OplusParts.OplusPartsActivity" />
-        </com.aicp.gear.preference.SelfRemovingPreference> -->
+                </com.aicp.gear.preference.SelfRemovingPreference> -->
 
-        <!-- <com.aicp.gear.preference.SelfRemovingPreference
-            android:key="oneplus_parts"
-            android:title="@string/oneplus_parts_category_title"
-            android:summary="@string/oneplus_parts_category_summary"
-            android:icon="@drawable/ic_settings_device">
-            <intent android:action="android.intent.action.MAIN"
+                <!-- <com.aicp.gear.preference.SelfRemovingPreference
+                android:key="oneplus_parts"
+                android:title="@string/oneplus_parts_category_title"
+                android:summary="@string/oneplus_parts_category_summary"
+                android:icon="@drawable/ic_settings_device">
+                <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.aicp.oneplus.OneplusParts"
                 android:targetClass="com.aicp.oneplus.OneplusParts.OneplusPartsActivity" />
-        </com.aicp.gear.preference.SelfRemovingPreference> -->
+                </com.aicp.gear.preference.SelfRemovingPreference> -->
 
-    </PreferenceCategory>
+                </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="@string/other_category">
+                <PreferenceCategory
+                    android:title="@string/other_category">
 
-        <Preference
-            android:title="@string/aicp_ota_title"
-            android:key="aicp_ota"
-            android:summary="@string/aicp_ota_summary"
-            android:icon="@drawable/ic_settings_ota" />
+                    <Preference
+                        android:title="@string/aicp_ota_title"
+                        android:key="aicp_ota"
+                        android:summary="@string/aicp_ota_summary"
+                        android:icon="@drawable/ic_settings_ota" />
 
-        <PreferenceScreen
-            android:title="@string/about_title"
-            android:key="about"
-            android:summary="@string/about_summary"
-            android:icon="@drawable/ic_settings_about"
-            android:fragment="com.aicp.extras.fragments.About" />
+                    <PreferenceScreen
+                        android:title="@string/about_title"
+                        android:key="about"
+                        android:summary="@string/about_summary"
+                        android:icon="@drawable/ic_settings_about"
+                        android:fragment="com.aicp.extras.fragments.About" />
 
-        <PreferenceScreen
-            android:title="@string/log_it_title"
-            android:key="log_it"
-            android:summary="@string/log_it_summary"
-            android:icon="@drawable/ic_settings_log_it"
-            android:fragment="com.aicp.extras.fragments.LogIt" />
+                    <PreferenceScreen
+                        android:title="@string/log_it_title"
+                        android:key="log_it"
+                        android:summary="@string/log_it_summary"
+                        android:icon="@drawable/ic_settings_log_it"
+                        android:fragment="com.aicp.extras.fragments.LogIt" />
 
-        <!-- <PreferenceScreen
-            android:title="@string/ae_settings_title"
-            android:key="ae_settings"
-            android:summary="@string/ae_settings_summary"
-            android:icon="@drawable/ic_settings_ae_customization"
-            android:fragment="com.aicp.extras.fragments.AeSettings" />
--->
-    </PreferenceCategory>
-</PreferenceScreen>
+                    <!-- <PreferenceScreen
+                    android:title="@string/ae_settings_title"
+                    android:key="ae_settings"
+                    android:summary="@string/ae_settings_summary"
+                    android:icon="@drawable/ic_settings_ae_customization"
+                    android:fragment="com.aicp.extras.fragments.AeSettings" />
+                    -->
+                    </PreferenceCategory>
+                </PreferenceScreen>
