@@ -23,12 +23,12 @@
     android:key="quick_settings"
     android:title="@string/quick_settings_title">
 
-
+<!--
     <PreferenceCategory
         android:key="tile_layout_category"
         android:title="@string/qs_tile_layout_category_title">
 
-        <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="qs_tile_label_hide"
             android:title="@string/qs_tile_title_visibility_title"
             android:summaryOn="@string/qs_tile_title_visibility_summary_on"
@@ -40,7 +40,7 @@
             android:title="@string/qs_music_tile_track_optional_title"
             android:summary="@string/qs_music_tile_track_optional_summary"
             android:defaultValue="false" /> -->
-
+	<!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="qs_tile_vertical_layout"
             android:title="@string/qs_tile_layout_title"
@@ -49,7 +49,7 @@
 
     </PreferenceCategory>
 
-    <!-- <PreferenceCategory
+    <PreferenceCategory
         android:key="qs_layout_category"
         android:title="@string/qs_layout_category_title">
 
@@ -114,7 +114,7 @@
             android:summary="@string/quick_settings_vibrate_summary"
             android:defaultValue="false" />
     </PreferenceCategory>
--->
+
     <PreferenceCategory
         android:key="qs_header_category"
         android:title="@string/qs_header_category_title">
@@ -140,13 +140,13 @@
             android:summary="@string/qs_date_summary"
             android:defaultValue="true" />
 
-        <!--com.aicp.gear.preference.SystemSettingIntListPreference
+        <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="qs_system_info"
             android:title="@string/qs_system_info_title"
             android:entries="@array/qs_system_info_entries"
             android:entryValues="@array/qs_system_info_values"
             android:defaultValue="0"
-            android:summary="%s" /-->
+            android:summary="%s" />
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="qs_data_usage_panel"
@@ -156,7 +156,7 @@
 
     </PreferenceCategory>
 
-    <!--<PreferenceCategory
+    <PreferenceCategory
         android:key="quick_setting_footer_category"
         android:title="@string/quick_settings_footer_category">
 
@@ -185,7 +185,7 @@
             android:title="@string/qs_footer_powermenu"
             android:defaultValue="false" />
     </PreferenceCategory>
--->
+
     <PreferenceCategory
         android:title="@string/qs_brightness_slider_category">
 
@@ -207,7 +207,7 @@
             android:title="@string/brightness_icon_summary"
             android:defaultValue="false" />
     </PreferenceCategory>
-<!-->
+
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
@@ -235,12 +235,12 @@
         android:summary="@string/quick_settings_player_layout_summary"
         android:defaultValue="false" />
 
--->
+
 
     <PreferenceCategory
         android:key="qs_footer_category"
         android:title="@string/qs_footer_category_title">
-<!--
+
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="qs_footer_show_edit"
             android:title="@string/qs_footer_edit_title"
@@ -270,7 +270,7 @@
             android:title="@string/qs_footer_show_powermenu_title"
             android:summary="@string/qs_footer_show_powermenu_summary"
             android:defaultValue="true" />
--->
+
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="qs_footer_text_show"
             android:title="@string/footer_text_show_title"
@@ -294,7 +294,7 @@
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="%"
             android:defaultValue="100" />
-<!--
+
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_sb_bg_alpha"
             android:title="@string/qs_sb_bg_alpha_title"
@@ -319,7 +319,7 @@
             aicpextras:plainSwitch="false"
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.QSHeaderImage" />
--->
+
      </PreferenceCategory>
 
     <PreferenceCategory
@@ -349,5 +349,5 @@
             android:defaultValue="2" />
 
     </PreferenceCategory>
-
+-->
 </PreferenceScreen>
