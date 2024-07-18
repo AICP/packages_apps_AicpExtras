@@ -51,8 +51,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class QuickSettings extends BaseSettingsFragment {/*
-    implements OnPreferenceChangeListener {*/
+public class QuickSettings extends BaseSettingsFragment {
+//    implements OnPreferenceChangeListener {
 
     private static final boolean DEBUG = false;
 /*    private static final String QS_QUICKBAR_COLUMNS_AUTO = "qs_quickbar_columns_auto";
@@ -71,19 +71,19 @@ public class QuickSettings extends BaseSettingsFragment {/*
     protected int getPreferenceResource() {
         return R.xml.quick_settings;
     }
-
+/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         ContentResolver resolver = getActivity().getContentResolver();
 
-/*        mSysInfo = (ListPreference) findPreference(SYSTEM_INFO);
-        configureSystemInfo(); */
+        mSysInfo = (ListPreference) findPreference(SYSTEM_INFO);
+        configureSystemInfo();
 
         mCustomFooterTextPref = (Preference) findPreference(KEY_CUSTOM_FOOTER_TEXT);
         updateCustomFooterTextSummary();
-/*
+
         mQQSColsAuto = (SwitchPreference) findPreference(QS_QUICKBAR_COLUMNS_AUTO);
         mQQSColsCount = (SystemSettingSeekBarPreference) findPreference(QS_QUICKBAR_COLUMNS_COUNT);
 
@@ -106,7 +106,7 @@ public class QuickSettings extends BaseSettingsFragment {/*
             }
             return true;
         }
-        return false;*/
+        return false;
     }
 
     @Override
@@ -145,7 +145,7 @@ public class QuickSettings extends BaseSettingsFragment {/*
         }
         return super.onPreferenceTreeClick(preference);
     }
-/*
+
     private void configureSystemInfo() {
         Resources res = getResources();
         String[] entriesArray = res.getStringArray(R.array.qs_system_info_entries);
@@ -169,7 +169,7 @@ public class QuickSettings extends BaseSettingsFragment {/*
         mSysInfo.setEntries(entries.toArray(new String[entries.size()]));
         mSysInfo.setEntryValues(values.toArray(new String[values.size()]));
         if (entries.size() < 2) mSysInfo.getParent().removePreference(mSysInfo);
-    } */
+    }
 
     private void updateCustomFooterTextSummary() {
         mCustomFooterText = Settings.System.getStringForUser(
@@ -180,5 +180,5 @@ public class QuickSettings extends BaseSettingsFragment {/*
         } else {
             mCustomFooterTextPref.setSummary(mCustomFooterText);
         }
-    }
+    }*/
 }
