@@ -37,14 +37,14 @@
         android:defaultValue="true"
         android:fragment="com.aicp.extras.fragments.HeadsUpOptions"
         aicpextras:thereCanBeOnlyOneGroupId="1" />
-
+    <!--
     <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
         android:key="pulse_ambient_light"
         android:title="@string/pulse_ambient_light_title"
         android:summary="@string/pulse_ambient_light_summary"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.AmbientEdgeLights" />
-<!--
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="force_expanded_notifications"
         android:title="@string/force_expanded_notifications_title"
@@ -94,13 +94,13 @@
         android:title="@string/vibrate_on_notifications_title"
         android:summary="@string/vibrate_on_notifications_summary"
         android:defaultValue="true" />
--->
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="alert_slider_notifications"
         android:title="@string/alert_slider_notifications_title"
         android:summary="@string/alert_slider_notifications_summary"
         android:defaultValue="true" />
-<!--
+
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="mute_annoying_notifications_threshold"
         android:title="@string/less_notification_sounds_title"
@@ -108,7 +108,7 @@
         android:entries="@array/less_notification_sounds_entries"
         android:entryValues="@array/less_notification_sounds_values"
         android:defaultValue="0" />
--->
+
     <com.aicp.gear.preference.GlobalSettingListPreference
         android:key="ringtone_focus_mode"
         android:title="@string/ringtone_focus_mode_title"
@@ -121,7 +121,7 @@
         android:title="@string/show_clipboard_overlay_title"
         android:summary="@string/show_clipboard_overlay_summary"
         android:defaultValue="true"/>
-
+-->
     <!-- Clipboard access toasts -->
 <!--    <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="clipboard_toast_info"
@@ -167,7 +167,7 @@
 
     <com.android.settingslib.widget.FooterPreference
         android:title="@string/status_bar_show_ticker_footer" />
--->
+
     <PreferenceCategory
         android:title="@string/notification_material_dismiss_title">
 
@@ -176,7 +176,7 @@
             android:title="@string/notification_material_dismiss_title"
             android:summary="@string/notification_material_dismiss_summary"
             android:defaultValue="false" />
-
+-->
         <!--com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="notification_material_dismiss_style"
             android:title="@string/notification_material_dismiss_style_title"
@@ -196,7 +196,7 @@
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
             android:defaultValue="0"/-->
-
+	<!--
     </PreferenceCategory>
     <PreferenceCategory
         android:key="notification_flash"
@@ -229,5 +229,6 @@
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="Hz"
             android:defaultValue="1" />
-    </PreferenceCategory>
+		</PreferenceCategory>
+-->
 </PreferenceScreen>
