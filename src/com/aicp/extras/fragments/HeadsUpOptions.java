@@ -148,13 +148,13 @@ public class HeadsUpOptions extends BaseSettingsFragment {/* implements
         }
         return true;
     }
-
+*/
     /**
      * Application class
      */
     /* protected static class Package {
         public String name;
-        /**
+    */    /**
          * Stores all the application values in one call
          * @param name
          */
