@@ -59,11 +59,11 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
     protected int getPreferenceResource() {
         return R.xml.system_behaviour;
     }
-/*
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+/*
         // SELinux
         Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
         mSelinuxMode = (SwitchPreference) findPreference(Constants.PREF_SELINUX_MODE);
@@ -89,7 +89,7 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
 //                DISABLE_BLURS_SYSPROP, false /* default */));
 /*         mEnableBlurPref.setOnPreferenceChangeListener(this);
         Util.requireProp(getActivity(), mEnableBlurPref, SF_PROP_REQUIRED_FOR_BLUR, false /* default *//* , true);
-
+*/
     }
 
 /*     @Override
