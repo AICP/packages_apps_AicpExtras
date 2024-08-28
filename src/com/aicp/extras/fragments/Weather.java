@@ -52,7 +52,7 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final ContentResolver resolver = getActivity().getContentResolver();
+        /* final ContentResolver resolver = getActivity().getContentResolver();
 
         String settingsJaws = Settings.System.getString(resolver,
                 Settings.System.OMNIJAWS_WEATHER_ICON_PACK);
@@ -75,24 +75,24 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
                     Settings.System.OMNIJAWS_WEATHER_ICON_PACK, settingsJaws);
             valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
         }
-        mWeatherIconPack.setValueIndex(valueJawsIndex >= 0 ? valueJawsIndex : 0);
+        mWeatherIconPack.setValueIndex(valueJawsIndex >= 0 ? valueJawsIndex : 0); 
         mWeatherIconPack.setSummary(mWeatherIconPack.getEntry());
-        mWeatherIconPack.setOnPreferenceChangeListener(this);
+        mWeatherIconPack.setOnPreferenceChangeListener(this); */
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mWeatherIconPack) {
+        /* if (preference == mWeatherIconPack) {
             String value = (String) objValue;
             Settings.System.putString(getActivity().getContentResolver(),
                     Settings.System.OMNIJAWS_WEATHER_ICON_PACK, value);
             int valueIndex = mWeatherIconPack.findIndexOfValue(value);
             mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[valueIndex]);
-        }
+        } */
         return true;
     }
 
-    private void getAvailableWeatherIconPacks(List<String> entries, List<String> values) {
+    /* private void getAvailableWeatherIconPacks(List<String> entries, List<String> values) {
         Intent i = new Intent();
         PackageManager packageManager = getActivity().getPackageManager();
         i.setAction("org.omnirom.WeatherIconPack");
@@ -145,5 +145,5 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
             }
         }
         return true;
-    }
+    } */
 }

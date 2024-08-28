@@ -30,13 +30,13 @@
         app:iconSpaceReserved="false" >
         <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="org.omnirom.omnijaws"
-                android:targetClass="org.omnirom.omnijaws.SettingsActivityService" />
+                android:targetClass="org.omnirom.omnijaws.SettingsActivity" />
     </PreferenceScreen>
 
-    <ListPreference
+    <!-- <ListPreference
         android:key="weather_icon_pack"
         android:title="@string/weather_icon_pack_title"
-        android:persistent="false" />
+        android:persistent="false" /> -->
 
     <!-- Lockscreen weather -->
     <PreferenceCategory
@@ -50,27 +50,27 @@
             android:summaryOff="@string/lock_screen_show_weather_summaryOff"
             android:defaultValue="false" />
 
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="lockscreen_weather_style"
             android:title="@string/lock_screen_weather_style_title"
             android:summaryOn="@string/lock_screen_weather_style_summaryOn"
             android:summaryOff="@string/lock_screen_weather_style_summaryOff"
             android:defaultValue="false"
-            android:dependency="lockscreen_weather_enabled" />
+            android:dependency="lockscreen_weather_enabled" /> -->
 
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="lockscreen_weather_show_city"
             android:title="@string/lockscreen_weather_show_city_title"
             android:summary="@string/lockscreen_weather_show_city_summary"
             android:dependency="lockscreen_weather_enabled"
-            android:defaultValue="false" />
+            android:defaultValue="false" /> -->
 
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="lockscreen_weather_show_temp"
             android:title="@string/lockscreen_weather_show_temp_title"
             android:summary="@string/lockscreen_weather_show_temp_summary"
             android:dependency="lockscreen_weather_enabled"
-            android:defaultValue="true" />
+            android:defaultValue="true" /> -->
 
     </PreferenceCategory>
 
