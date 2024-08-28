@@ -77,12 +77,12 @@
             android:icon="@drawable/ic_settings_lockscreen"
             android:fragment="com.aicp.extras.fragments.Lockscreen" /> -->
 
-       <!-- <PreferenceScreen
+       <PreferenceScreen
             android:title="@string/weather_title"
             android:key="weather_option"
             android:summary="@string/weather_config_title"
             android:icon="@drawable/ic_settings_weather"
-            android:fragment="com.aicp.extras.fragments.Weather" /> -->
+            android:fragment="com.aicp.extras.fragments.Weather" />
 
         <!-- <PreferenceScreen
             android:title="@string/theming_title"
