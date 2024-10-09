@@ -21,7 +21,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="other_ui"
     android:title="@string/other_ui_title">
-
+<!--
      <com.aicp.gear.preference.SystemSettingSeekBarPreference
         android:key="volume_dialog_timeout"
         android:title="@string/volume_dialog_timeout_title"
@@ -30,7 +30,7 @@
         android:defaultValue="3000"
         aicpextras:interval="100"
         aicpextras:unitsLeft=""
-        aicpextras:unitsRight="ms" />
+aicpextras:unitsRight="ms" />-->
 <!--
 
     <com.aicp.gear.preference.SystemSettingSeekBarPreference
@@ -58,13 +58,13 @@
         android:summary="@string/search_bar_style_summary"
         android:defaultValue="false" />
 -->
-    <!-- Toast icon switch -->
+<!-- Toast icon switch --><!--
      <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="toast_icon"
         android:title="@string/toast_icon_title"
         android:summary="@string/toast_icon_summary"
         android:defaultValue="false" />
-
+-->
     <!-- Launch music player when headset is connected -->
 <!--     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="headset_connect_player"
@@ -73,11 +73,11 @@
         android:defaultValue="false" /> -->
 
     <!-- Show CPU Info overlay -->
-<!--     <SwitchPreference
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="show_cpu_info"
         android:title="@string/show_cpu_info"
         android:summary="@string/show_cpu_info_summary"
-        android:defaultValue="false" /> -->
+        android:defaultValue="false" />
 
    <!-- Always On when charging -->
 <!--     <com.aicp.gear.preference.SystemSettingSwitchPreference
@@ -93,10 +93,10 @@
         android:summary="@string/wake_when_plugged_or_unplugged_summary"
         android:defaultValue="false" /> -->
 
-    <!-- Wireless charging animation -->
+<!-- Wireless charging animation --><!--
      <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="charging_animation"
         android:title="@string/charging_animation_title"
         android:summary="@string/charging_animation_summary"
-        android:defaultValue="false" />
+android:defaultValue="false" />-->
 </PreferenceScreen>
