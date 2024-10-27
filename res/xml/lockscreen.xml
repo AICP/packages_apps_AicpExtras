@@ -182,11 +182,11 @@
             android:defaultValue="true" />
 
     </com.aicp.gear.preference.SelfRemovingPreferenceCategory>
-
+-->
     <PreferenceCategory
           android:key="lockscreen_security_category"
           android:title="@string/lockscreen_security_category">
-
+    <!--
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="fp_wake_unlock"
               android:title="@string/fp_wake_unlock_title"
@@ -199,13 +199,13 @@
               android:summaryOn="@string/fprint_sucess_vib_summary_on"
               android:summaryOff="@string/fprint_sucess_vib_summary_off"
               android:defaultValue="true" />
-
+    -->
           <com.aicp.gear.preference.GlobalSettingSwitchPreference
               android:key="lockscreen_enable_power_menu"
               android:title="@string/lockscreen_enable_power_menu_title"
               android:summary="@string/lockscreen_enable_power_menu_summary"
               android:defaultValue="true"/>
-
+	  <!--
           <com.aicp.gear.preference.SecureSettingSwitchPreference
               android:key="secure_lockscreen_qs_disabled"
               android:title="@string/lockscreen_qs_disabled_title"
@@ -228,9 +228,9 @@
               android:key="lockscreen_scramble_pin_layout"
               android:title="@string/unlock_scramble_pin_layout_title"
               android:summary="@string/unlock_scramble_pin_layout_summary"
-              android:defaultValue="false" />
+	  android:defaultValue="false" />-->
     </PreferenceCategory>
--->
+
 <!--  ******* Moved to settings *****
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="lockscreen_quick_unlock_control"
