@@ -29,27 +29,27 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
-//import com.android.internal.util.aicp.AicpUtils;
+import com.android.internal.util.aicp.AicpUtils;
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
 import com.aicp.extras.utils.Util;
 import com.aicp.gear.util.AicpContextConstants;
 
 public class Lockscreen extends BaseSettingsFragment {
-/*
-    private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
-    private static final String KEY_AOD_SCHEDULE = "always_on_display_schedule";
-    private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
+
+//    private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
+//    private static final String KEY_AOD_SCHEDULE = "always_on_display_schedule";
+//    private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
     private static final String KEY_LOCKSCREEN_BLUR = "lockscreen_blur";
 
-    private FingerprintManager mFingerprintManager;
-    private SwitchPreference mFingerprintVib;
-*/
+//    private FingerprintManager mFingerprintManager;
+//    private SwitchPreference mFingerprintVib;
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.lockscreen;
     }
-/*
+*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +57,7 @@ public class Lockscreen extends BaseSettingsFragment {
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
         WallpaperManager manager = WallpaperManager.getInstance(mContext);
-
+/*
         try {
             mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         } catch (Exception e) {
@@ -71,7 +71,7 @@ public class Lockscreen extends BaseSettingsFragment {
 
         Util.requireConfig(getActivity(), findPreference(KEY_AOD_SCHEDULE),
                 com.android.internal.R.bool.config_dozeAlwaysOnDisplayAvailable, true, false);
-
+*/
         // Lockscreen blur
         Preference lockscreenBlur = (Preference) findPreference(KEY_LOCKSCREEN_BLUR);
         ParcelFileDescriptor pfd = manager.getWallpaperFile(WallpaperManager.FLAG_LOCK);
@@ -81,13 +81,13 @@ public class Lockscreen extends BaseSettingsFragment {
         }
 
         // FOD category
-        PreferenceCategory fodIconPickerCategory = (PreferenceCategory) findPreference(FOD_ICON_PICKER_CATEGORY);
+/*        PreferenceCategory fodIconPickerCategory = (PreferenceCategory) findPreference(FOD_ICON_PICKER_CATEGORY);
         PackageManager packageManager = getContext().getPackageManager();
         boolean supportsFod = packageManager.hasSystemFeature(AicpContextConstants.Features.FOD);
 
         if (fodIconPickerCategory != null && !supportsFod) {
             fodIconPickerCategory.getParent().removePreference(fodIconPickerCategory);
         }
-
-    }*/
+*/
+    }
 }
