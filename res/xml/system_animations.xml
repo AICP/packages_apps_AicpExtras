@@ -49,7 +49,7 @@
         android:entryValues="@array/toast_animation_values"
         android:summary="%s"
         android:defaultValue="1" />
-
+    -->
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="power_menu_animations"
         android:title="@string/power_menu_animation_title"
@@ -59,5 +59,5 @@
         android:summary="%s"
         android:persistent="false"
         android:defaultValue="0" />
-    -->
+ 
 </PreferenceScreen>
