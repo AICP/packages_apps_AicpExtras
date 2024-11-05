@@ -156,11 +156,11 @@ android:persistent="false" />-->
             android:defaultValue="false"/>
 
     </PreferenceCategory>
-<!--
+
     <PreferenceCategory
         android:title="@string/audio_panel_view">
 
-        <com.aicp.gear.preference.SecureSettingSwitchPreference
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
           android:key="show_app_volume"
           android:title="@string/show_app_volume_title"
           android:summary="@string/show_app_volume_summary"
@@ -171,7 +171,7 @@ android:persistent="false" />-->
             android:title="@string/audio_panel_position_title"
             android:summary="@string/audio_panel_position_summary"
             android:defaultValue="@*android:bool/config_audioPanelOnLeftSide" />
-
+	<!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="audio_panel_view_ringer"
             android:title="@string/audio_panel_view_ringer_title"
@@ -195,9 +195,9 @@ android:persistent="false" />-->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="audio_panel_view_bt_sco"
             android:title="@string/audio_panel_view_bt_sco_title"
-            android:defaultValue="false" />
+	android:defaultValue="false" />-->
     </PreferenceCategory>
--->
+
     <!-- SELinux -->
 <!--     <PreferenceCategory
         android:key="selinux"
