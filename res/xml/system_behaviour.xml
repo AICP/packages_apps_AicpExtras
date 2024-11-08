@@ -18,8 +18,8 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="system_behaviour"
     android:title="@string/system_behaviour_title">
 
@@ -43,7 +43,7 @@
         android:fragment="com.android.settings.applications.appops.AppOpsDetails">
         <intent android:action="android.settings.APP_OPS_SETTINGS" />
     </Preference>
---><!--
+
     <com.aicp.extras.preference.HostnamePreference
         android:key="device_hostname"
         android:title="@string/device_hostname"
@@ -171,7 +171,7 @@ android:persistent="false" />-->
             android:title="@string/audio_panel_position_title"
             android:summary="@string/audio_panel_position_summary"
             android:defaultValue="@*android:bool/config_audioPanelOnLeftSide" />
-	<!--
+       <!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="audio_panel_view_ringer"
             android:title="@string/audio_panel_view_ringer_title"
@@ -197,6 +197,29 @@ android:persistent="false" />-->
             android:title="@string/audio_panel_view_bt_sco_title"
 	android:defaultValue="false" />-->
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/adaptive_playback_title">
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="adaptive_playback_enabled"
+            android:title="@string/enable"
+            android:defaultValue="false" />
+
+	<com.android.settingslib.widget.TopIntroPreference
+            android:key="adaptive_playback_intro_text"
+	    android:title="@string/adaptive_playback_intro_text" />
+
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+            android:key="adaptive_playback_timeout"
+            android:title="@string/adaptive_playback_timeout_title"
+            android:defaultValue="30"
+            android:max="600"
+            android:min="10"
+            aicpextras:interval="10"
+            android:dependency="adaptive_playback_enabled" />
+
+   </PreferenceCategory>
 
     <!-- SELinux -->
 <!--     <PreferenceCategory
