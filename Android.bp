@@ -63,6 +63,8 @@ android_app {
         "AicpGear-util",
         "particles",
     "com.aicp.settings.resources",
+        "colorpickerview",
+        "androidx.palette_palette",
     ],
 
   libs: [
@@ -101,3 +103,7 @@ java_import {
     jars: ["lib/LeonidsLib-1.3.2.jar"],
 }
 
+android_library_import {
+    name: "colorpickerview",
+    aars: ["libs/colorpickerview-release.aar"],
+}
