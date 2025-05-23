@@ -110,12 +110,12 @@
             android:icon="@drawable/ic_settings_system_animations"
             android:fragment="com.aicp.extras.fragments.SystemAnimations" /> -->
 
-        <!-- <PreferenceScreen
+        <PreferenceScreen
             android:title="@string/system_behaviour_title"
             android:key="system_behaviour"
             android:summary="@string/system_behaviour_summary"
             android:icon="@drawable/ic_settings_system_behaviour"
-            android:fragment="com.aicp.extras.fragments.SystemBehaviour" /> -->
+            android:fragment="com.aicp.extras.fragments.SystemBehaviour" />
 
         <PreferenceScreen
             android:title="@string/system_extensions_title"
