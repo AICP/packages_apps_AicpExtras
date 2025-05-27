@@ -80,5 +80,5 @@ public class OtherUi extends BaseSettingsFragment { /*
             return true;
         }
         return false;
-    } */
+    }*/
 }
