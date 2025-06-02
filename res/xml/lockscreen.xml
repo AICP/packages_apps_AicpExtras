@@ -140,7 +140,7 @@
         android:title="@string/show_squiggle_animation_title"
         android:summary="@string/show_squiggle_animation_summary"
         android:defaultValue="true" />
-
+    -->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="lock_screen_custom_notif"
         android:title="@string/lock_screen_custom_notif_title"
@@ -156,7 +156,7 @@
         aicpextras:unitsLeft=""
         aicpextras:unitsRight=""
         android:defaultValue="3"
-        android:dependency="lock_screen_custom_notif" /> -->
+        android:dependency="lock_screen_custom_notif" />
 <!--
     <Preference
         android:key="always_on_display_schedule"
