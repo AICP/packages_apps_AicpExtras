@@ -55,13 +55,13 @@
             android:summary="@string/status_bar_summary"
             android:icon="@drawable/ic_settings_status_bar"
             android:fragment="com.aicp.extras.fragments.StatusBar" /> -->
-<!-- 
+
         <PreferenceScreen
             android:title="@string/notifications_title"
             android:key="notifications"
             android:summary="@string/notifications_summary"
             android:icon="@drawable/ic_settings_notifications"
-            android:fragment="com.aicp.extras.fragments.Notifications" /> -->
+            android:fragment="com.aicp.extras.fragments.Notifications" />
 
 	<PreferenceScreen
             android:title="@string/quick_settings_title"
@@ -76,8 +76,8 @@
             android:summary="@string/lockscreen_summary"
             android:icon="@drawable/ic_settings_lockscreen"
             android:fragment="com.aicp.extras.fragments.Lockscreen" />
-
-       <!-- <PreferenceScreen
+	<!--
+        <PreferenceScreen
             android:title="@string/weather_title"
             android:key="weather_option"
             android:summary="@string/weather_config_title"
