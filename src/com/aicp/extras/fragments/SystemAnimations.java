@@ -163,8 +163,8 @@ public class SystemAnimations extends BaseSettingsFragment {
             }
         }
     }
-
-    /**
+*/
+    /*
      * Resets boot animation path. Essentially clears temporary-set boot animation
      * set by the user from the dialog.
      *
