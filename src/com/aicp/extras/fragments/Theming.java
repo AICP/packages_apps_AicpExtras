@@ -50,7 +50,7 @@ public class Theming extends BaseSettingsFragment { // implements Preference.OnP
     /*
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        /*
+
         if (Settings.System.THEMING_BASE.equals(preference.getKey()) ||
                 Settings.System.THEMING_CORNERS.equals(preference.getKey()) ||
                 Settings.System.THEMING_SYSTEM_ICONS_STYLE.equals(preference.getKey())) {
