@@ -1897,7 +1897,7 @@ public class Utilities {
 	}
 
 	public static String getModVersion() {
-		return SystemProperties.get("ro.build.display.id");
+		return SystemProperties.get("ro.build.id");
 	}
 
         public static String getBuildType() {
