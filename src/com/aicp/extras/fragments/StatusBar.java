@@ -49,7 +49,7 @@ public class StatusBar extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
 //    private static final String SMART_PULLDOWN = "qs_smart_pulldown";
-    private static final String QUICK_PULLDOWN = "qs_quick_pulldown";
+//    private static final String QUICK_PULLDOWN = "qs_quick_pulldown";
 /*    private static final String KEY_CARRIER_LABEL = "status_bar_show_carrier";
     private static final String KEY_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final String KEY_HIDE_NOTCH = "statusbar_hide_notch";
@@ -81,7 +81,7 @@ public class StatusBar extends BaseSettingsFragment implements
         int smartPulldown = Settings.System.getInt(resolver,
                 Settings.System.QS_SMART_PULLDOWN, 0);
         updateSmartPulldownSummary(smartPulldown);
-        mSmartPulldown.setOnPreferenceChangeListener(this);*/
+        mSmartPulldown.setOnPreferenceChangeListener(this);
 
         // Quick Pulldown
         mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
@@ -91,7 +91,7 @@ public class StatusBar extends BaseSettingsFragment implements
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         updateQuickPulldownSummary(quickPulldownValue);
 
-        /* mShowCarrierLabel = (SystemSettingIntListPreference) findPreference(KEY_CARRIER_LABEL);
+        mShowCarrierLabel = (SystemSettingIntListPreference) findPreference(KEY_CARRIER_LABEL);
         int showCarrierLabel = Settings.System.getInt(resolver,
         Settings.System.STATUS_BAR_SHOW_CARRIER, 1);
         CharSequence[] NonNotchEntries = { getResources().getString(R.string.show_carrier_disabled),
@@ -115,10 +115,10 @@ public class StatusBar extends BaseSettingsFragment implements
                   findPreference(KEY_NETWORK_TRAFFIC_STATUSBAR);
         if(getResources().getBoolean(R.bool.config_haveIntrusiveNotch)) {
             prefNetTrafficStatusBar.getParent().removePreference(prefNetTrafficStatusBar);
-        }*/
+        }
 
         // Battery Percentage
-        /* mShowBatteryPercentage = (SystemSettingIntListPreference) findPreference(KEY_BATTERY_PERCENTAGE);
+        mShowBatteryPercentage = (SystemSettingIntListPreference) findPreference(KEY_BATTERY_PERCENTAGE);
         mShowBatteryPercentage.setOnPreferenceChangeListener(this);
         int showBatteryPercentageValue = Settings.System.getIntForUser(resolver,
                 Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, 0, UserHandle.USER_CURRENT);
@@ -127,9 +127,9 @@ public class StatusBar extends BaseSettingsFragment implements
 
         // Battery estimate in Quick QS
         mShowBatteryInQQS = (SystemSettingSwitchPreference) findPreference(KEY_ESTIMATE_IN_QQS);
-        updateShowBatteryInQQS(showBatteryPercentageValue); */
+        updateShowBatteryInQQS(showBatteryPercentageValue);
 
-    /*    final String displayCutout = getResources().getString(
+        final String displayCutout = getResources().getString(
                 com.android.internal.R.string.config_mainBuiltInDisplayCutout);
         if(displayCutout.isEmpty()) {
             final Preference hideNotchPref = (Preference) findPreference(KEY_HIDE_NOTCH);
@@ -144,29 +144,29 @@ public class StatusBar extends BaseSettingsFragment implements
             int value = Integer.parseInt((String) newValue);
             updateSmartPulldownSummary(value);
             return true;
-        } else*/
+        } else
         if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     quickPulldownValue, UserHandle.USER_CURRENT);
             updateQuickPulldownSummary(quickPulldownValue);
             return true;
-        /*} else if (preference == mShowCarrierLabel) {
+        } else if (preference == mShowCarrierLabel) {
             int value = Integer.parseInt((String) newValue);
             updateCarrierLabelSummary(value);
             return true;
-        }*/
-        /* } else if (preference == mShowBatteryPercentage) {
+        }
+         } else if (preference == mShowBatteryPercentage) {
             int showBatteryPercentageValue = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT,
                     showBatteryPercentageValue, UserHandle.USER_CURRENT);
             updateShowBatteryInQQS(showBatteryPercentageValue);
-            return true;*/
-        }
+            return true;
+        }*/
         return false;
     }
-
-/*    @Override
+/*
+    @Override
     public boolean onPreferenceTreeClick(final Preference preference) {
         super.onPreferenceTreeClick(preference);
         final ContentResolver resolver = getActivity().getContentResolver();
@@ -237,7 +237,7 @@ public class StatusBar extends BaseSettingsFragment implements
                     : R.string.smart_pulldown_ongoing);
             mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_summary, type));
         }
-    }*/
+    }
 
      private void updateQuickPulldownSummary(int value) {
         Resources res = getResources();
@@ -256,7 +256,7 @@ public class StatusBar extends BaseSettingsFragment implements
         }
     }
 
-    /* private void updateCustomLabelTextSummary() {
+     private void updateCustomLabelTextSummary() {
         mCustomCarrierLabelText = Settings.System.getString(
                 getActivity().getContentResolver(), Settings.System.CUSTOM_CARRIER_LABEL);
 
@@ -265,9 +265,9 @@ public class StatusBar extends BaseSettingsFragment implements
         } else {
             mCustomCarrierLabel.setSummary(mCustomCarrierLabelText);
         }
-    }*/
+    }
 
-/*     private void updateShowBatteryPercentageSummary(int value) {
+     private void updateShowBatteryPercentageSummary(int value) {
         Resources res = getResources();
 
         if (value == 0) {
@@ -280,9 +280,9 @@ public class StatusBar extends BaseSettingsFragment implements
             // Show battery percentage next to the battery icon
             mShowBatteryPercentage.setSummary(res.getString(R.string.status_bar_battery_percentage_text_next));
         }
-    } */
+    }
 
-/*     private void updateShowBatteryInQQS(int value) {
+     private void updateShowBatteryInQQS(int value) {
         switch (value) {
             case 1: {
                 mShowBatteryInQQS.setEnabled(true);
