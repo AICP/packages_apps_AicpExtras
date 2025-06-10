@@ -79,11 +79,11 @@
             aicpextras:unitsRight="dip"
             android:defaultValue="@*android:integer/config_statusbarPaddingEndDefault" />
     </PreferenceCategory>
-
+	 -->
     <PreferenceCategory
         android:key="statusbar_icons_category"
         android:title="@string/status_bar_icons_category_title">
-	    -->
+
         <!-- Statusbar Clock styles -->
     <!--        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="status_bar_clock"
@@ -93,12 +93,12 @@
             android:fragment="com.aicp.extras.fragments.StatusBarClockSettings" />
     -->
         <!-- Show logo on Statusbar -->
-    <!--        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
             android:key="status_bar_logo"
             android:title="@string/status_bar_logo_title"
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.StatusBarLogo" />
-
+	<!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="show_fourg_icon"
             android:title="@string/show_4g_title"
@@ -217,9 +217,8 @@
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
-        </Preference>
+</Preference>-->
     </PreferenceCategory>
--->
     <PreferenceCategory
         android:key="statusbar_battery_category"
         android:title="@string/status_bar_battery_category_title">
