@@ -236,11 +236,11 @@
         android:defaultValue="false" />
 
 
-
+	--> 
     <PreferenceCategory
         android:key="qs_footer_category"
         android:title="@string/qs_footer_category_title">
-
+    <!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="qs_footer_show_edit"
             android:title="@string/qs_footer_edit_title"
@@ -270,7 +270,7 @@
             android:title="@string/qs_footer_show_powermenu_title"
             android:summary="@string/qs_footer_show_powermenu_summary"
             android:defaultValue="true" />
-
+	-->
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="qs_footer_text_show"
             android:title="@string/footer_text_show_title"
@@ -281,7 +281,7 @@
            android:key="custom_footer_text"
            android:title="@string/footer_text_label_title"
            android:dependency="qs_footer_text_show" />
-    </PreferenceCategory>
+	</PreferenceCategory><!--
      <PreferenceCategory
         android:key="qs_panel_bg_options"
         android:title="@string/qs_panel_opacity_category_title">
