@@ -51,17 +51,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class QuickSettings extends BaseSettingsFragment {/*
-    implements OnPreferenceChangeListener {*/
+public class QuickSettings extends BaseSettingsFragment 
+    implements OnPreferenceChangeListener {
 
     private static final boolean DEBUG = false;
 /*    private static final String QS_QUICKBAR_COLUMNS_AUTO = "qs_quickbar_columns_auto";
     private static final String QS_QUICKBAR_COLUMNS_COUNT = "qs_quickbar_columns";*/
 /*     private static final String SYSTEM_INFO = "qs_system_info";*/
-//    private static final String KEY_CUSTOM_FOOTER_TEXT = "custom_footer_text";
+    private static final String KEY_CUSTOM_FOOTER_TEXT = "custom_footer_text";
 
 /*  private ListPreference mSysInfo;*/
-//    private Preference mCustomFooterTextPref;
+    private Preference mCustomFooterTextPref;
 /*  private SwitchPreference mQQSColsAuto;
     private SystemSettingSeekBarPreference mQQSColsCount;
 */
@@ -78,26 +78,26 @@ public class QuickSettings extends BaseSettingsFragment {/*
 
         ContentResolver resolver = getActivity().getContentResolver();
 
-/*        mSysInfo = (ListPreference) findPreference(SYSTEM_INFO);
-        configureSystemInfo(); 
+//        mSysInfo = (ListPreference) findPreference(SYSTEM_INFO);
+//        configureSystemInfo(); 
 
         mCustomFooterTextPref = (Preference) findPreference(KEY_CUSTOM_FOOTER_TEXT);
         updateCustomFooterTextSummary();
 
-        mQQSColsAuto = (SwitchPreference) findPreference(QS_QUICKBAR_COLUMNS_AUTO);
+  /*      mQQSColsAuto = (SwitchPreference) findPreference(QS_QUICKBAR_COLUMNS_AUTO);
         mQQSColsCount = (SystemSettingSeekBarPreference) findPreference(QS_QUICKBAR_COLUMNS_COUNT);
 
         boolean qqsColsAutoEnabled = Settings.System.getInt(resolver,
                 Settings.System.QS_QUICKBAR_COLUMNS, 6) == -1;
         mQQSColsAuto.setChecked(qqsColsAutoEnabled);
         mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
-        mQQSColsAuto.setOnPreferenceChangeListener(this);
+        mQQSColsAuto.setOnPreferenceChangeListener(this);*/
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mQQSColsAuto) {
+/*        if (preference == mQQSColsAuto) {
             Boolean qqsColsAutoEnabled = (Boolean) newValue;
             mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
             if (qqsColsAutoEnabled){
@@ -105,10 +105,10 @@ public class QuickSettings extends BaseSettingsFragment {/*
                       Settings.System.QS_QUICKBAR_COLUMNS, -1);
             }
             return true;
-        }
-        return false;*/
+        }*/
+        return false;
     }
-/*
+
     @Override
     public boolean onPreferenceTreeClick(final Preference preference) {
         final ContentResolver resolver = getActivity().getContentResolver();
@@ -145,7 +145,7 @@ public class QuickSettings extends BaseSettingsFragment {/*
         }
         return super.onPreferenceTreeClick(preference);
     }
-
+/*
     private void configureSystemInfo() {
         Resources res = getResources();
         String[] entriesArray = res.getStringArray(R.array.qs_system_info_entries);
@@ -170,7 +170,7 @@ public class QuickSettings extends BaseSettingsFragment {/*
         mSysInfo.setEntryValues(values.toArray(new String[values.size()]));
         if (entries.size() < 2) mSysInfo.getParent().removePreference(mSysInfo);
     }
-
+*/
     private void updateCustomFooterTextSummary() {
         mCustomFooterText = Settings.System.getStringForUser(
                 getActivity().getContentResolver(), Settings.System.QS_FOOTER_TEXT_STRING, UserHandle.USER_CURRENT);
@@ -180,5 +180,5 @@ public class QuickSettings extends BaseSettingsFragment {/*
         } else {
             mCustomFooterTextPref.setSummary(mCustomFooterText);
         }
-    }*/
+    }
 }
