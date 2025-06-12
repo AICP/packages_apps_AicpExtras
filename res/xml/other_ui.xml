@@ -98,4 +98,10 @@
         android:title="@string/charging_animation_title"
         android:summary="@string/charging_animation_summary"
         android:defaultValue="false" />
+
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="volume_dialog_haptic_feedback"
+        android:summary="@string/volume_dialog_haptic_feedback_summary"
+        android:title="@string/volume_dialog_haptic_feedback_title"
+        android:defaultValue="false" />
 </PreferenceScreen>
