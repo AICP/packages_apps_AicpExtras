@@ -20,7 +20,7 @@ public abstract class Constants {
     /**
      * Package name of AICP OTA
      */
-    public static final String AICP_OTA_PACKAGE = "com.aicp.updater3";
+    public static final String AICP_OTA_PACKAGE = "org.lineageos.updater";
 
     /**
      * Default activity of AICP OTA
