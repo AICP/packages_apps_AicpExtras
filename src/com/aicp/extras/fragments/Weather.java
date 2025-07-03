@@ -52,43 +52,43 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final ContentResolver resolver = getActivity().getContentResolver();
+        // final ContentResolver resolver = getActivity().getContentResolver();
 
-        String settingsJaws = Settings.System.getString(resolver,
-                Settings.System.OMNIJAWS_WEATHER_ICON_PACK);
-        if (settingsJaws == null) {
-            settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE + "." + DEFAULT_WEATHER_ICON_PREFIX;
-        }
-        mWeatherIconPack = (ListPreference) findPreference(WEATHER_ICON_PACK);
+        // String settingsJaws = Settings.System.getString(resolver,
+        //         Settings.System.OMNIJAWS_WEATHER_ICON_PACK);
+        // if (settingsJaws == null) {
+        //     settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE + "." + DEFAULT_WEATHER_ICON_PREFIX;
+        // }
+        // mWeatherIconPack = (ListPreference) findPreference(WEATHER_ICON_PACK);
 
-        List<String> entries = new ArrayList<String>();
-        List<String> values = new ArrayList<String>();
-        getAvailableWeatherIconPacks(entries, values);
-        mWeatherIconPack.setEntries(entries.toArray(new String[entries.size()]));
-        mWeatherIconPack.setEntryValues(values.toArray(new String[values.size()]));
+        // List<String> entries = new ArrayList<String>();
+        // List<String> values = new ArrayList<String>();
+        // getAvailableWeatherIconPacks(entries, values);
+        // mWeatherIconPack.setEntries(entries.toArray(new String[entries.size()]));
+        // mWeatherIconPack.setEntryValues(values.toArray(new String[values.size()]));
 
-        int valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
-        if (valueJawsIndex == -1) {
-            // no longer found
-            settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE + "." + DEFAULT_WEATHER_ICON_PREFIX;
-            Settings.System.putString(resolver,
-                    Settings.System.OMNIJAWS_WEATHER_ICON_PACK, settingsJaws);
-            valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
-        }
-        mWeatherIconPack.setValueIndex(valueJawsIndex >= 0 ? valueJawsIndex : 0);
-        mWeatherIconPack.setSummary(mWeatherIconPack.getEntry());
-        mWeatherIconPack.setOnPreferenceChangeListener(this);
+        // int valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
+        // if (valueJawsIndex == -1) {
+        //     // no longer found
+        //     settingsJaws = DEFAULT_WEATHER_ICON_PACKAGE + "." + DEFAULT_WEATHER_ICON_PREFIX;
+        //     Settings.System.putString(resolver,
+        //             Settings.System.OMNIJAWS_WEATHER_ICON_PACK, settingsJaws);
+        //     valueJawsIndex = mWeatherIconPack.findIndexOfValue(settingsJaws);
+        // }
+        // mWeatherIconPack.setValueIndex(valueJawsIndex >= 0 ? valueJawsIndex : 0);
+        // mWeatherIconPack.setSummary(mWeatherIconPack.getEntry());
+        // mWeatherIconPack.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mWeatherIconPack) {
-            String value = (String) objValue;
-            Settings.System.putString(getActivity().getContentResolver(),
-                    Settings.System.OMNIJAWS_WEATHER_ICON_PACK, value);
-            int valueIndex = mWeatherIconPack.findIndexOfValue(value);
-            mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[valueIndex]);
-        }
+        // if (preference == mWeatherIconPack) {
+        //     String value = (String) objValue;
+        //     Settings.System.putString(getActivity().getContentResolver(),
+        //             Settings.System.OMNIJAWS_WEATHER_ICON_PACK, value);
+        //     int valueIndex = mWeatherIconPack.findIndexOfValue(value);
+        //     mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[valueIndex]);
+        // }
         return true;
     }
 
