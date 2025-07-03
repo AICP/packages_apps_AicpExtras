@@ -27,7 +27,7 @@ string_ref_xml_to_java() {
 components=""
 actions=""
 
-for fragment in "$my_dir/src/com/aicp/extras/fragments/"*; do
+for fragment in "$my_dir/src/com/aicp/extras/fragments/"*.java; do
     fragment_short="$(basename "$fragment" .java)"
     fragment_full="com.aicp.extras.fragments.$fragment_short"
 
