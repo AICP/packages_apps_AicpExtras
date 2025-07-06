@@ -31,8 +31,7 @@
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="qs_tile_label_hide"
             android:title="@string/qs_tile_title_visibility_title"
-            android:summaryOn="@string/qs_tile_title_visibility_summary_on"
-            android:summaryOff="@string/qs_tile_title_visibility_summary_off"
+            android:summary="@string/systemui_restart_title"
             android:defaultValue="false"/>
 
         <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
