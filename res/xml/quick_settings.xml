@@ -23,6 +23,9 @@
     android:key="quick_settings"
     android:title="@string/quick_settings_title">
 
+    <Preference
+        android:key="restart_system_ui"
+        android:title="@string/restart_systemui_title" />
 
     <PreferenceCategory
         android:key="tile_layout_category"

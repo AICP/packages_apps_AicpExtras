@@ -43,6 +43,7 @@ import android.widget.LinearLayout;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
+import com.aicp.extras.utils.Util;
 import com.aicp.gear.preference.SystemSettingSeekBarPreference;
 
 import java.util.ArrayList;
@@ -59,6 +60,7 @@ public class QuickSettings extends BaseSettingsFragment
     private static final String QS_QUICKBAR_COLUMNS_COUNT = "qs_quickbar_columns";*/
 /*     private static final String SYSTEM_INFO = "qs_system_info";*/
     private static final String KEY_CUSTOM_FOOTER_TEXT = "custom_footer_text";
+    private static final String KEY_RESTART_SYSTEM_UI = "restart_system_ui";
 
 /*  private ListPreference mSysInfo;*/
     private Preference mCustomFooterTextPref;
@@ -112,7 +114,10 @@ public class QuickSettings extends BaseSettingsFragment
     @Override
     public boolean onPreferenceTreeClick(final Preference preference) {
         final ContentResolver resolver = getActivity().getContentResolver();
-        if (KEY_CUSTOM_FOOTER_TEXT.equals(preference.getKey())) {
+        if (KEY_RESTART_SYSTEM_UI.equals(preference.getKey())) {
+            Util.restartSystemUi(getContext());
+            return true;
+        } else if (KEY_CUSTOM_FOOTER_TEXT.equals(preference.getKey())) {
             AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
             alert.setTitle(R.string.footer_text_label_title);
             alert.setMessage(R.string.footer_text_label_explain);
