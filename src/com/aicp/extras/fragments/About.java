@@ -40,6 +40,7 @@ import java.lang.System;
 public class About extends BaseSettingsFragment {
 
     private static final String PROPERTY_MAINTAINER = "ro.aicp.maintainer";
+    private static final String PREF_AICP_DOWNLOADS = "aicp_downloads";
     private static final String PREF_DEVICE_MAINTAINER = "device_maintainer";
     private static final String PROPERTY_AICP_VERSION = "ro.aicp.version";
     private static final String PREF_AICP_VERSION = "aicp_version";
@@ -47,6 +48,7 @@ public class About extends BaseSettingsFragment {
     private static final String PREF_BUILD_DATE = "build_date";
     private static final String PREF_AICP_LOGO = "aicp_logo";
 
+    private Preference mAicpDownloads;
     private Preference mDeviceMaintainer;
     private Preference mAicpVersion;
     private Preference mBuildDate;
@@ -61,6 +63,8 @@ public class About extends BaseSettingsFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mAicpDownloads = findPreference(PREF_AICP_DOWNLOADS);
 
         mDeviceMaintainer = findPreference(PREF_DEVICE_MAINTAINER);
         mDeviceMaintainer.setSummary(Build.MODEL);
@@ -80,7 +84,13 @@ public class About extends BaseSettingsFragment {
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        if (preference == mDeviceMaintainer) {
+        if (preference == mAicpDownloads) {
+            String url = Util.getDownloadLinkForDevice(getContext());
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(url));
+            startActivity(intent);
+            return true;
+        } else if (preference == mDeviceMaintainer) {
             showMaintainerDialog();
             return true;
         } else {
