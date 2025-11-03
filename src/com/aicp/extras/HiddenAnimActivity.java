@@ -1,47 +1,65 @@
 package com.aicp.extras;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.aicp.extras.BaseActivity;
-import com.aicp.extras.HiddenAnimActivityDialog;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
+import com.aicp.extras.view.GifView;
 
 public class HiddenAnimActivity extends BaseActivity {
 
-    HiddenAnimActivityDialog hiddenAnimActivityDialog;
+    private GifView gifView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.hiddenactivity_main_layout);
+        setContentView(R.layout.animgif_layout);
 
-        hiddenAnimActivityDialog = new HiddenAnimActivityDialog(this);
-
-        final ImageView imgView = (ImageView) findViewById(R.id.imageView_1);
-
-        GlideDrawableImageViewTarget imgViewTarget = new GlideDrawableImageViewTarget(imgView);
-        Glide.with(this)
-            .load("https://i.postimg.cc/d3Ksvcfk/c64520bbaf7e0b14aa77ae1d77571196.gif")
-            .placeholder(R.drawable.glide_loading)
-            .error(R.drawable.glide_error)
-            .into(imgViewTarget);
-
-        imgView.setOnLongClickListener(new View.OnLongClickListener() {
+        gifView = (GifView) findViewById(R.id.gif_view);
+        gifView.setGifAssetPath("anim.gif");
+        gifView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                hiddenAnimActivityDialog.showDialog();
-                final Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
+                AlertDialog.Builder builder = new AlertDialog.Builder(HiddenAnimActivity.this);
+                builder.setPositiveButton(R.string.hidden_anim_more_nice,
+                        new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                });
+                final AlertDialog dialog = builder.create();
+                LayoutInflater inflater = getLayoutInflater();
+                View dialogLayout = inflater.inflate(R.layout.hidden_img_layout, null);
+                dialog.setView(dialogLayout);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+                dialog.show();
+
+                dialog.setOnShowListener(new DialogInterface.OnShowListener() {
                     @Override
-                    public void run() {
-                        hiddenAnimActivityDialog.hideDialog();
+                    public void onShow(DialogInterface d) {
+                        ImageView image = (ImageView) dialog.findViewById(R.id.hidden_img);
+                        Bitmap icon = BitmapFactory.decodeResource(getResources(),
+                                R.drawable.aicp_cool);
+                        float imageWidthInPX = (float)image.getWidth();
+
+                        LinearLayout.LayoutParams layoutParams =
+                                new LinearLayout.LayoutParams(Math.round(imageWidthInPX),
+                                Math.round(imageWidthInPX * (float)icon.getHeight() /
+                                (float)icon.getWidth()));
+                        image.setLayoutParams(layoutParams);
                     }
-                }, 7000);
+                });
                 return true;
             }
         });

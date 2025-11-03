@@ -37,6 +37,8 @@ LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res \
     $(TOP)/packages/resources/devicesettings/res
 
+LOCAL_ASSET_DIR := $(LOCAL_PATH)/assets
+
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.core_core \
     androidx.preference_preference \
@@ -49,8 +51,7 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     AicpGear-util
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
-    particles \
-    glide
+    particles
 
 # Apache http for stats
 
