@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -18,41 +18,32 @@ package com.aicp.extras.fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.ContentResolver;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceGroup;
-import androidx.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.RadioButton;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.List;
+import java.util.Map;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.utils.PackageListAdapter;
 import com.aicp.extras.utils.PackageListAdapter.PackageItem;
 import com.aicp.gear.preference.AppListPreference;
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.aicp.extras.R;
 
-public class ChooserActivityBlacklist {/*extends BaseSettingsFragment implements
+public class ChooserActivityBlacklist extends BaseSettingsFragment implements
         Preference.OnPreferenceClickListener {
 
     private static final String TAG = "Blacklist";
@@ -134,7 +125,6 @@ public class ChooserActivityBlacklist {/*extends BaseSettingsFragment implements
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity())
                         .setTitle(R.string.dialog_delete_title)
                         .setMessage(R.string.dialog_delete_message)
-                        //.setIconAttribute(android.R.attr.alertDialogIcon)
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -150,13 +140,13 @@ public class ChooserActivityBlacklist {/*extends BaseSettingsFragment implements
 
     /**
      * Application class
-     *//*
+     */
     protected static class Package {
         public String name;
         /**
          * Stores all the application values in one call
          * @param name
-         *//*
+         */
         public Package(String name) {
             this.name = name;
         }
@@ -179,7 +169,6 @@ public class ChooserActivityBlacklist {/*extends BaseSettingsFragment implements
                 return null;
             }
         }
-
     };
 
     protected void refreshCustomApplicationPrefs() {
@@ -187,7 +176,6 @@ public class ChooserActivityBlacklist {/*extends BaseSettingsFragment implements
             return;
         }
 
-        // Add the Application Preferences
         if (mBlacklistPrefList != null) {
             mBlacklistPrefList.removeAll();
 
@@ -201,9 +189,7 @@ public class ChooserActivityBlacklist {/*extends BaseSettingsFragment implements
             }
         }
 
-        // Keep these at the top
         mAddBlacklistPref.setOrder(0);
-        // Add 'add' options
         mBlacklistPrefList.addPreference(mAddBlacklistPref);
     }
 
@@ -285,5 +271,5 @@ public class ChooserActivityBlacklist {/*extends BaseSettingsFragment implements
         if (DEBUG) Log.v(TAG, "blackStringSaved: " + value);
         Settings.System.putString(getActivity().getContentResolver(),
                 mBlacklistPackageStore, value);
-    }*/
+    }
 }
