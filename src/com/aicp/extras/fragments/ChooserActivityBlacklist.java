@@ -52,7 +52,7 @@ import com.aicp.gear.preference.AppListPreference;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.aicp.extras.R;
 
-public class ChooserActivityBlacklist {/*extends BaseSettingsFragment implements
+public class ChooserActivityBlacklist { extends BaseSettingsFragment implements
         Preference.OnPreferenceClickListener {
 
     private static final String TAG = "Blacklist";
@@ -285,5 +285,5 @@ public class ChooserActivityBlacklist {/*extends BaseSettingsFragment implements
         if (DEBUG) Log.v(TAG, "blackStringSaved: " + value);
         Settings.System.putString(getActivity().getContentResolver(),
                 mBlacklistPackageStore, value);
-    }*/
+    }
 }
