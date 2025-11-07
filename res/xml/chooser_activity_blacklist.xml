@@ -13,14 +13,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:key="chooser_activity_blacklist"
         android:title="@string/chooser_activity_blacklist_title" >
-<!--
+
         <com.aicp.gear.preference.AppListPreference
             android:key="add_blacklist_packages"
             android:title="@string/chooser_activity_blacklist_pref_title"
-            android:summary="@string/chooser_activity_blacklist_pref_summary" /> -->
+            android:summary="@string/chooser_activity_blacklist_pref_summary" />
 </PreferenceScreen>
