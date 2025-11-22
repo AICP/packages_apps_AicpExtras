@@ -47,7 +47,6 @@ public class Theming extends BaseSettingsFragment { // implements Preference.OnP
                 com.android.internal.R.bool.config_showHideNotchSettings, true, false);*/
     }
 
-    /*
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
 
@@ -78,5 +77,5 @@ public class Theming extends BaseSettingsFragment { // implements Preference.OnP
                     Util.restartSystemUi(appContext);
                 }
         }, 200);
-    }*/
+    }
 }
