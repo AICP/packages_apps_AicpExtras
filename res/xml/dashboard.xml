@@ -84,7 +84,7 @@
             android:icon="@drawable/ic_settings_weather"
             android:fragment="com.aicp.extras.fragments.Weather" /> -->
 
-        <PreferenceScreen
+       <PreferenceScreen
             android:title="@string/theming_title"
             android:key="theming"
             android:summary="@string/theming_summary"
@@ -124,7 +124,7 @@
             android:icon="@drawable/ic_settings_system_extensions"
             android:fragment="com.aicp.extras.fragments.SystemExtensions" />
 
-        <!-- <com.aicp.gear.preference.SelfRemovingPreference
+        <com.aicp.gear.preference.SelfRemovingPreference
             android:key="oplus_parts"
             android:title="@string/oplus_parts_category_title"
             android:summary="@string/oplus_parts_category_summary"
@@ -132,9 +132,9 @@
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.aicp.oplus.OplusParts"
                 android:targetClass="com.aicp.oplus.OplusParts.OplusPartsActivity" />
-        </com.aicp.gear.preference.SelfRemovingPreference> -->
+        </com.aicp.gear.preference.SelfRemovingPreference>
 
-        <!-- <com.aicp.gear.preference.SelfRemovingPreference
+        <com.aicp.gear.preference.SelfRemovingPreference
             android:key="oneplus_parts"
             android:title="@string/oneplus_parts_category_title"
             android:summary="@string/oneplus_parts_category_summary"
@@ -142,7 +142,7 @@
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.aicp.oneplus.OneplusParts"
                 android:targetClass="com.aicp.oneplus.OneplusParts.OneplusPartsActivity" />
-        </com.aicp.gear.preference.SelfRemovingPreference> -->
+        </com.aicp.gear.preference.SelfRemovingPreference>
 
     </PreferenceCategory>
 
@@ -161,7 +161,7 @@
             android:summary="@string/about_summary"
             android:icon="@drawable/ic_settings_about"
             android:fragment="com.aicp.extras.fragments.About" />
-<!--
+
         <PreferenceScreen
             android:title="@string/log_it_title"
             android:key="log_it"
@@ -175,6 +175,6 @@
             android:summary="@string/ae_settings_summary"
             android:icon="@drawable/ic_settings_ae_customization"
             android:fragment="com.aicp.extras.fragments.AeSettings" />
--->
+
     </PreferenceCategory>
 </PreferenceScreen>
