@@ -46,7 +46,6 @@ public abstract class BaseActivity extends FragmentActivity {
  //           recreate();
    //     }
     }
-/*
     protected int getThemeRes() {
         int themePref = Settings.System.getInt(getContentResolver(), Settings.System.AE_THEME, 0);
         switch (themePref) {
@@ -58,5 +57,4 @@ public abstract class BaseActivity extends FragmentActivity {
                 return R.style.AppTheme;
         }
     }
-*/
 }
