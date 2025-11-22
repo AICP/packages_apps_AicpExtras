@@ -36,14 +36,14 @@
         android:fragment="com.aicp.extras.fragments.BarsSettings" />-->
 
 
-    <!-- <Preference
+    <Preference
         android:key="privacy_guard_manager"
         android:title="@string/app_ops_settings"
         android:summary="@string/app_ops_settings_summary"
         android:fragment="com.android.settings.applications.appops.AppOpsDetails">
         <intent android:action="android.settings.APP_OPS_SETTINGS" />
     </Preference>
---><!--
+<!--
     <com.aicp.extras.preference.HostnamePreference
         android:key="device_hostname"
         android:title="@string/device_hostname"
