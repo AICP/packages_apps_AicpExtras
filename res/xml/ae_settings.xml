@@ -28,12 +28,15 @@
         android:entryValues="@array/theme_values"
         android:defaultValue="0" />
 
+-->
+
     <SwitchPreference
         android:key="ae_launcher_enabled"
         android:title="@string/ae_launcher_enabled_title"
         android:summary="@string/ae_launcher_enabled_summary"
         android:persistent="false" />
 
+<!--
     <SwitchPreference
         android:key="show_device_hidden_prefs"
         android:title="@string/show_device_hidden_prefs_title"

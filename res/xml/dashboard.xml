@@ -168,6 +168,7 @@
             android:summary="@string/log_it_summary"
             android:icon="@drawable/ic_settings_log_it"
             android:fragment="com.aicp.extras.fragments.LogIt" />
+-->
 
         <PreferenceScreen
             android:title="@string/ae_settings_title"
@@ -175,6 +176,5 @@
             android:summary="@string/ae_settings_summary"
             android:icon="@drawable/ic_settings_ae_customization"
             android:fragment="com.aicp.extras.fragments.AeSettings" />
--->
     </PreferenceCategory>
 </PreferenceScreen>
