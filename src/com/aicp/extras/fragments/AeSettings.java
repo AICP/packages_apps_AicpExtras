@@ -34,13 +34,13 @@ import com.aicp.extras.utils.Util;
 public class AeSettings extends BaseSettingsFragment
         implements Preference.OnPreferenceChangeListener {
 
-    private static final String PREF_THEME = "ae_theme";
+//    private static final String PREF_THEME = "ae_theme";
 
     private static final String PREF_AE_LAUNCHER = "ae_launcher_enabled";
 
     private ComponentName mAeLauncherComponent;
 
-    private ListPreference mTheme;
+//    private ListPreference mTheme;
     private SwitchPreference mAeLauncher;
 
     @Override
@@ -56,8 +56,8 @@ public class AeSettings extends BaseSettingsFragment
         mAeLauncherComponent = new ComponentName(getContext(),
             LauncherActivity.class);
 
-        mTheme = (ListPreference) findPreference(PREF_THEME);
-        mTheme.setOnPreferenceChangeListener(this);
+//        mTheme = (ListPreference) findPreference(PREF_THEME);
+//       mTheme.setOnPreferenceChangeListener(this);
         mAeLauncher = (SwitchPreference) findPreference(PREF_AE_LAUNCHER);
         mAeLauncher.setChecked(pm.getComponentEnabledSetting(mAeLauncherComponent) !=
                 PackageManager.COMPONENT_ENABLED_STATE_DISABLED);
@@ -72,13 +72,15 @@ public class AeSettings extends BaseSettingsFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+/*
         if (preference == mTheme) {
             Util.setSummaryToValue(mTheme, newValue);
             if (!mTheme.getValue().equals(newValue)) {
                 getActivity().recreate();
             }
             return true;
-        } else if (preference == mAeLauncher) {
+*/
+        if (preference == mAeLauncher) {
             setAeLauncherEnabled((Boolean) newValue);
             return true;
         } else {
