@@ -67,7 +67,7 @@ public class AeSettings extends BaseSettingsFragment
     @Override
     public void onResume() {
         super.onResume();
-        Util.setSummaryToValue(mTheme);
+//        Util.setSummaryToValue(mTheme);
     }
 
     @Override
