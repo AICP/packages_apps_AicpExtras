@@ -580,10 +580,10 @@ public class ActionListViewSettings extends ListFragment implements
             case SHAKE_EVENTS_DISABLED:
                 return ActionHelper.getDisabledShakeApps(mActivity);
 
-        */
             case RECENT_APP_SIDEBAR:
                 return ActionHelper.getRecentAppSidebarConfigWithDescription(
                         mActivity, mActionValuesKey, mActionEntriesKey);
+        */                        
         }
         return null;
     }
@@ -613,10 +613,10 @@ public class ActionListViewSettings extends ListFragment implements
                 ActionHelper.setDisabledShakeApps(mActivity, actionConfigs, reset);
                 break;
 
-                */
             case RECENT_APP_SIDEBAR:
                 ActionHelper.setRecentAppSidebarConfig(mActivity, actionConfigs, reset);
                 break;
+                */
         }
     }
 
