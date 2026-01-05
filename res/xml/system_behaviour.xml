@@ -172,6 +172,36 @@ android:persistent="false" />-->
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="quick_setting_footer_category"
+        android:title="@string/quick_settings_footer_category">
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="qs_footer_show_settings"
+            android:title="@string/qs_footer_settings"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="qs_footer_show_services"
+            android:title="@string/qs_footer_services"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="qs_footer_show_edit"
+            android:title="@string/qs_footer_edit"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="qs_footer_show_user"
+            android:title="@string/qs_footer_user"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="qs_footer_show_power_menu"
+            android:title="@string/qs_footer_powermenu"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
 <!--
     <PreferenceCategory
         android:title="@string/audio_panel_view">
