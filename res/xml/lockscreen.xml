@@ -207,11 +207,12 @@
               android:defaultValue="true"/>
 
           <com.aicp.gear.preference.SecureSettingSwitchPreference
-              android:key="secure_lockscreen_qs_disabled"
-              android:title="@string/lockscreen_qs_disabled_title"
-              android:summary="@string/lockscreen_qs_disabled_summary"
+              android:key="enable_lockscreen_quick_settings"
+              android:title="@string/lockscreen_quick_settings_title"
+              android:summary="@string/lockscreen_quick_settings_summary"
               android:defaultValue="false" />
-	  <!--
+
+      <!--
           <com.aicp.gear.preference.SecureSettingSwitchPreference
               android:key="qstile_requires_unlocking"
               android:title="@string/qstile_requires_unlocking_title"
