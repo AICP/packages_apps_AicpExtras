@@ -46,7 +46,8 @@ import com.android.internal.util.aicp.AicpUtils;
 
 import java.util.Date;
 
-public class StatusBarClockSettings extends BaseSettingsFragment implements OnPreferenceChangeListener {
+//public class StatusBarClockSettings extends BaseSettingsFragment implements OnPreferenceChangeListener {
+public class StatusBarClockSettings extends BaseSettingsFragment {
 
 
     private static final String TAG = "StatusBarClockSettings";
@@ -71,7 +72,7 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements OnPr
         super.onCreate(savedInstanceState);
 
         ContentResolver resolver = getActivity().getContentResolver();
-
+/*
         mClockPosition = (SystemSettingIntListPreference) findPreference(CLOCK_POSITION);
 
         mClockDateFormat = (SystemSettingListPreference) findPreference(CLOCK_DATE_FORMAT);
@@ -80,7 +81,7 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements OnPr
             mClockDateFormat.setValue("EEE");
         }
 
-        parseClockDateFormats();
+        parseClockDateFormats();*/
     }
 
     @Override
@@ -105,7 +106,7 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements OnPr
             mClockPosition.setEntryValues(R.array.clock_position_values_notch);
         }
     }
-
+/*
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         AlertDialog dialog;
@@ -196,5 +197,5 @@ public class StatusBarClockSettings extends BaseSettingsFragment implements OnPr
             }
         }
         mClockDateFormat.setEntries(parsedDateEntries);
-    }
+    }*/
 }
