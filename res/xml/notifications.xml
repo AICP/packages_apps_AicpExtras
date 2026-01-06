@@ -45,6 +45,13 @@
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.AmbientEdgeLights" />
 
+    <!-- Ambient Wallpaper -->
+    <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
+        android:key="doze_always_on_wallpaper_enabled"
+        android:title="@string/doze_always_on_wallpaper_title"
+        android:summary="@string/doze_always_on_wallpaper_summary"
+        android:defaultValue="@*android:bool/config_dozeSupportsAodWallpaper" />
+
 <!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="force_expanded_notifications"
