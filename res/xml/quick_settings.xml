@@ -54,6 +54,7 @@
             android:defaultValue="0" />
 
     </PreferenceCategory>
+
 <!--
     <PreferenceCategory
         android:key="qs_layout_category"
@@ -191,10 +192,17 @@
             android:title="@string/qs_footer_powermenu"
             android:defaultValue="false" />
     </PreferenceCategory>
-
+-->
     <PreferenceCategory
         android:title="@string/qs_brightness_slider_category">
 
+        <com.aicp.gear.preference.SystemSettingIntListPreference
+            android:key="qs_brightness_slider_shape"
+            android:title="@string/qs_brightness_slider_shape_title"
+            android:entries="@array/qs_brightness_slider_shape_entries"
+            android:entryValues="@array/qs_brightness_slider_shape_values"
+            android:defaultValue="0" />
+<!--
         <com.aicp.gear.preference.SystemSettingListPreference
             android:key="brightness_slider_position"
             android:title="@string/brightness_slider_position_title"
@@ -212,8 +220,9 @@
             android:key="show_auto_brightness_button"
             android:title="@string/brightness_icon_summary"
             android:defaultValue="false" />
+-->
     </PreferenceCategory>
-
+<!--
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
