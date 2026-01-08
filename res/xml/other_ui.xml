@@ -42,6 +42,13 @@
         aicpextras:unitsRight="%"
         android:defaultValue="100"/>
 -->
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="flashlight_brightness"
+        android:title="@string/flashlight_brightness_title"
+        android:summary="@string/flashlight_brightness_summary"
+        android:max="100"
+        android:min="0"
+        android:defaultValue="100"/>
 <!--
     <!- Rotation suggestions ->
     <com.aicp.gear.preference.SecureSettingSwitchPreference
