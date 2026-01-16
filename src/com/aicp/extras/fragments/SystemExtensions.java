@@ -32,7 +32,7 @@ import com.aicp.extras.utils.Util;
              implements Preference.OnPreferenceChangeListener {
 
 //    private static final String PREF_SYSTEM_APP_REMOVER = "system_app_remover";
-    private static final String PREF_ADBLOCK = "persist.aicp.hosts_block";
+//    private static final String PREF_ADBLOCK = "persist.aicp.hosts_block";
 
     private Handler mHandler = new Handler();
 
@@ -48,12 +48,12 @@ import com.aicp.extras.utils.Util;
 /*        Preference systemAppRemover = findPreference(PREF_SYSTEM_APP_REMOVER);
         Util.requireRoot(getActivity(), systemAppRemover);
 */
-        findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
+//        findPreference(PREF_ADBLOCK).setOnPreferenceChangeListener(this);
 
 //        Util.require3Nav(getActivity(), findPreference(Settings.System.USE_SLIM_RECENTS));
     }
 
-    @Override
+/*    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (PREF_ADBLOCK.equals(preference.getKey())) {
             // Flush the java VM DNS cache to re-read the hosts file.
@@ -68,5 +68,5 @@ import com.aicp.extras.utils.Util;
         } else {
             return false;
         }
-    }
+    }*/
 }
