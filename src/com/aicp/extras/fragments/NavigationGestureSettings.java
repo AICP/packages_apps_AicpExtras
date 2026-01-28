@@ -30,9 +30,9 @@ import com.aicp.extras.R;
 import com.aicp.gear.preference.SystemSettingListPreference;
 import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
-public class NavigationGestureSettings {/* extends BaseSettingsFragment implements
+public class NavigationGestureSettings extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
-
+/*
     private static final String KEY_LONG_BACK_SWIPE_TIMEOUT = "long_back_swipe_timeout";
     private static final String KEY_BACK_SWIPE_EXTENDED = "back_swipe_extended";
     private static final String KEY_LEFT_SWIPE_ACTIONS = "left_long_back_swipe_action";
@@ -64,12 +64,12 @@ public class NavigationGestureSettings {/* extends BaseSettingsFragment implemen
 
     private PreferenceCategory leftVerticalSwipeCategory;
     private PreferenceCategory rightVerticalSwipeCategory;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.navigation_gestures;
     }
-
+/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -134,12 +134,12 @@ public class NavigationGestureSettings {/* extends BaseSettingsFragment implemen
         mExtendedSwipe.setChecked(extendedSwipe);
         mExtendedSwipe.setOnPreferenceChangeListener(this);
         mTimeout.setEnabled(!mExtendedSwipe.isChecked());
-        customAppCheck(); */
-    /* }
-
+        customAppCheck();
+     }
+*/
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mLeftSwipeActions) {
+/*        if (preference == mLeftSwipeActions) {
             int leftSwipeActions = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.LEFT_LONG_BACK_SWIPE_ACTION, leftSwipeActions,
@@ -189,9 +189,9 @@ public class NavigationGestureSettings {/* extends BaseSettingsFragment implemen
             actionPreferenceReload();
             customAppCheck();
             return true;
-        }
+        }*/
         return false;
-    } */
+    }
 
     /* Helper for reloading both short and long gesture as they might change on
        package uninstallation */
@@ -222,6 +222,7 @@ public class NavigationGestureSettings {/* extends BaseSettingsFragment implemen
                 [leftVerticalSwipeActions].equals("5"));
         mRightVerticalSwipeAppSelection.setEnabled(mRightVerticalSwipeActions.getEntryValues()
                 [rightVerticalSwipeActions].equals("5"));
+
     }
 
     private void customAppCheck() {

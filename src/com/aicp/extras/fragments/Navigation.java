@@ -45,12 +45,12 @@ import android.util.Log;
 
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
 
-public class Navigation {/*  extends BaseSettingsFragment
+public class Navigation extends BaseSettingsFragment
           implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "AENavigation";
     private static final boolean DEBUG = false;
-
+/*
     // preference keys
     private static final String KEY_BUTTON_BRIGHTNESS = "button_brightness";
     private static final String KEY_BUTTON_TIMEOUT = "button_backlight_timeout";
@@ -93,12 +93,12 @@ public class Navigation {/*  extends BaseSettingsFragment
     private boolean isGestureNavigation;
 
     private Handler mHandler;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.navigation;
     }
-
+/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -301,10 +301,10 @@ public class Navigation {/*  extends BaseSettingsFragment
         mHwButtonSettingsScreen.setEnabled(enable);
         mSwapHWNavKeys.setEnabled(enable);
     }
-
+*/
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         ContentResolver resolver = getContentResolver();
-        if (preference == mNavigationBar) {
+/*        if (preference == mNavigationBar) {
             boolean value = (Boolean) objValue;
             mNavigationBarEnabled = value;
             updateHardwareCategories(!value && mHwKeysSupported);
@@ -330,13 +330,13 @@ public class Navigation {/*  extends BaseSettingsFragment
             int buttonTimeout = 1000 * (int) objValue;
             Settings.System.putInt(resolver,
                     Settings.System.BUTTON_BACKLIGHT_TIMEOUT, buttonTimeout);
-            return true; */
-/*        } else if (preference == mManualButtonBrightness) {
+            return true;
+        } else if (preference == mManualButtonBrightness) {
             int buttonBrightness = (int) objValue;
             Settings.System.putFloat(resolver,
                     Settings.System.BUTTON_BRIGHTNESS, buttonBrightness/100f);
-            return true;*/
-        /* }
+            return true;
+         }*/
         return false;
-    } */
+    }
 }
