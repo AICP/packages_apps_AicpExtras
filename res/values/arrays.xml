@@ -1242,23 +1242,25 @@
         <item>2</item>
     </string-array>
 
-    <!-- Lockscreen media art filter -->
-    <string-array name="lockscreen_cover_filter_entries">
-        <item>@string/lockscreen_cover_filter_none</item>
-        <item>@string/lockscreen_cover_filter_grayscale</item>
-        <item>@string/lockscreen_cover_filter_tint</item>
-        <item>@string/lockscreen_cover_filter_blur</item>
-        <item>@string/lockscreen_cover_filter_grayblur</item>
-        <item>@string/lockscreen_cover_filter_gradientblur</item>
+    <!-- Lock screen album art filter -->
+    <string-array name="ls_media_art_filter_entries">
+        <item>@string/ls_media_art_filter_none</item>
+        <item>@string/ls_media_art_filter_blur</item>
+        <item>@string/ls_media_art_filter_grayscale</item>
+        <item>@string/ls_media_art_filter_sepia</item>
+        <item>@string/ls_media_art_filter_tint</item>
+        <item>@string/ls_media_art_filter_invert</item>
+        <item>@string/ls_media_art_filter_grayblur</item>
     </string-array>
 
-    <string-array name="lockscreen_cover_filter_values" translatable="false">
+    <string-array name="ls_media_art_filter_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
+        <item>6</item>
     </string-array>
 
     <!-- Network traffic indicators -->

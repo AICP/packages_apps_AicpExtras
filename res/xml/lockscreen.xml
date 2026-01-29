@@ -108,31 +108,40 @@
         android:title="@string/force_ambient_for_media_pref_title"
         android:summary="@string/force_ambient_for_media_pref_summary"
         android:defaultValue="true" />
-
-    <com.aicp.gear.preference.SecureSettingSwitchPreference
-        android:key="lockscreen_media_metadata"
-        android:title="@string/media_art_title"
-        android:summary="@string/media_art_summary"
+-->
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="ls_media_art_enabled"
+        android:title="@string/ls_media_art_title"
+        android:summary="@string/ls_media_art_summary"
         android:defaultValue="false" />
 
     <com.aicp.gear.preference.SystemSettingListPreference
-        android:key="lockscreen_albumart_filter"
-        android:title="@string/lockscreen_cover_filter_title"
-        android:entries="@array/lockscreen_cover_filter_entries"
-        android:entryValues="@array/lockscreen_cover_filter_values"
-        android:dependency="lockscreen_media_metadata"
-        android:defaultValue="5" />
+        android:key="ls_media_art_filter"
+        android:title="@string/ls_media_art_filter_title"
+        android:entries="@array/ls_media_art_filter_entries"
+        android:entryValues="@array/ls_media_art_filter_values"
+        android:dependency="ls_media_art_enabled"
+        android:defaultValue="0" />
 
     <com.aicp.gear.preference.SystemSettingSeekBarPreference
-        android:key="lockscreen_media_blur"
-        android:title="@string/lockscreen_media_blur_title"
-        android:summary="@string/lockscreen_media_blur_summary"
-        android:max="2500"
-        android:min="1"
+        android:key="ls_media_art_fade_level"
+        android:title="@string/ls_media_art_fade_level_title"
+        android:summary="@string/ls_media_art_fade_level_summary"
+        android:defaultValue="40"
+        android:max="100"
+        android:min="0"
+        android:dependency="ls_media_art_enabled" />
+
+    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="ls_media_art_blur_level"
+        android:title="@string/ls_media_art_blur_level_title"
+        android:summary="@string/ls_media_art_blur_level_summary"
+        android:max="600"
+        android:min="0"
         aicpextras:unitsLeft=""
         aicpextras:unitsRight="dp"
-        android:defaultValue="25"
-        android:dependency="lockscreen_media_metadata" />
+        android:defaultValue="200"
+        android:dependency="ls_media_art_enabled" />
     -->
     <!-- Squiggle animation -->
     <!--    <com.aicp.gear.preference.SecureSettingSwitchPreference

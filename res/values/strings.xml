@@ -478,9 +478,28 @@
     <string name="double_tap_sleep_lockscreen">Double tap to sleep</string>
     <string name="double_tap_sleep_lockscreen_summary">Double tap to sleep on lockscreen to sleep device</string>
 
-    <!-- Media art -->
-    <string name="media_art_title">Media cover art</string>
-    <string name="media_art_summary">Enable media cover art on the lockscreen</string>
+
+    <!-- Lock screen media art -->
+    <string name="ls_media_art_title">Media cover art</string>
+    <string name="ls_media_art_summary">Display media cover art when available</string>
+
+    <!-- Lock screen album art filter -->
+    <string name="ls_media_art_filter_title">Media cover art filter</string>
+    <string name="ls_media_art_filter_none">None</string>
+    <string name="ls_media_art_filter_blur">Blur</string>
+    <string name="ls_media_art_filter_grayscale">Grayscale</string>
+    <string name="ls_media_art_filter_sepia">Sepia</string>
+    <string name="ls_media_art_filter_tint">Accent tinted</string>
+    <string name="ls_media_art_filter_invert">Invert</string>
+    <string name="ls_media_art_filter_grayblur">Grayscale and blur</string>
+
+    <!-- Lock screen media art fade level -->
+    <string name="ls_media_art_fade_level_title">Media cover art fade level</string>
+    <string name="ls_media_art_fade_level_summary">Set media cover art fade level</string>
+
+    <!-- Lock screen media art blur level -->
+    <string name="ls_media_art_blur_level_title">Media art blur level</string>
+    <string name="ls_media_art_blur_level_summary">Blur intensity when blur filter is applied</string>
 
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Battery info</string>
@@ -1532,10 +1551,6 @@
     <string name="theming_system_icons_style_title">System icons style</string>
     <string name="theming_system_icons_style_default">System default</string>
     <string name="theming_system_icons_style_old">Old icons</string>
-
-    <!-- lock screen media blur -->
-    <string name="lockscreen_media_blur_title">Media artwork blur level</string>
-    <string name="lockscreen_media_blur_summary">Control the blur amount of media artwork</string>
 
     <!-- Clock style -->
     <string name="clock_style_title">Clock style</string>
