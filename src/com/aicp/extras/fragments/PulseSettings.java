@@ -35,7 +35,7 @@ import com.aicp.gear.preference.SecureSettingIntListPreference;
 import com.aicp.gear.preference.SecureSettingSeekBarPreference;
 import com.aicp.gear.preference.SecureSettingSwitchPreference;
 
-public class PulseSettings { /* extends BaseSettingsFragment implements
+public class PulseSettings extends BaseSettingsFragment { /* implements
         Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener {
 
     private static final String TAG = PulseSettings.class.getSimpleName();
@@ -76,12 +76,12 @@ public class PulseSettings { /* extends BaseSettingsFragment implements
     private SwitchPreference mAmbientDisplayPulse;
     private PreferenceCategory mPulseColorCategory;
     private PreferenceCategory mPulseRenderModeCategory;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.pulse_settings;
     }
-
+/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -187,5 +187,5 @@ public class PulseSettings { /* extends BaseSettingsFragment implements
             updateColorPrefs(colorMode);
             updateDependentCategories();
         }
-    } */
+    }*/
 }

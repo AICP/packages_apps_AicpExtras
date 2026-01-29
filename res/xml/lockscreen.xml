@@ -95,6 +95,12 @@
         android:summary="@string/lockscreen_visualizer_summary"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.Visualizer" />
+-->
+        <Preference
+            android:key="navbar_pulse_options"
+            android:title="@string/pulse_settings"
+            android:summary="@string/pulse_settings_summary"
+            android:fragment="com.aicp.extras.fragments.PulseSettings" />
 
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="force_ambient_for_media"

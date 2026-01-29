@@ -20,12 +20,6 @@
     android:key="pulse_settings"
     android:title="@string/pulse_settings" >
 
-<!--     <com.aicp.gear.preference.SecureSettingSwitchPreference
-        android:key="navbar_pulse_enabled"
-        android:title="@string/navbar_pulse_setting"
-        android:summary="@string/pulse_settings_summary"
-        android:defaultValue="false" />
-
     <com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="lockscreen_pulse_enabled"
         android:title="@string/lockscreen_pulse_setting"
@@ -34,87 +28,52 @@
     <com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="ambient_pulse_enabled"
         android:title="@string/ambient_pulse_setting"
-        android:defaultValue="false" />
+        android:defaultValue="true"
+        android:dependency="lockscreen_pulse_enabled" />
 
     <PreferenceCategory
         android:key="pulse_render_mode_category"
-        android:title="@string/pulse_render_mode_title" > -->
+        android:title="@string/pulse_render_mode_title" >
 
-        <!-- Fading bars -->
-        <!-- <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
-            android:key="pulse_render_mode_fading_lines"
-            android:title="@string/pulse_render_mode_solid_lines"
-            aicpextras:thereCanBeOnlyOneGroupId="1"
-            aicpextras:plainSwitch="false"
-            android:defaultValue="true"
-            android:fragment="com.aicp.extras.fragments.PulseSettingsBars" /> -->
+    <com.aicp.gear.preference.SecureSettingListPreference
+        android:key="pulse_renderer"
+        android:title="@string/pulse_renderer"
+        android:summary="%s"
+        android:dialogTitle="@string/pulse_renderer"
+        android:entries="@array/pulse_renderer_entries"
+        android:entryValues="@array/pulse_renderer_values"
+        android:defaultValue="solid"
+        android:dependency="lockscreen_pulse_enabled" />
 
-        <!-- Fading blocks -->
-<!--         <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
-            android:key="pulse_render_mode_fading_blocks"
-            android:title="@string/pulse_render_mode_fading_bars"
-            aicpextras:thereCanBeOnlyOneGroupId="1"
-            aicpextras:plainSwitch="false"
-            android:defaultValue="false"
-            android:fragment="com.aicp.extras.fragments.PulseSettingsBlocks" /> -->
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="pulse_rounded_bars"
+        android:title="@string/pulse_rounded_bars_title"
+        android:summary="@string/pulse_rounded_bars_summary"
+        android:defaultValue="false"
+        android:dependency="lockscreen_pulse_enabled" />
 
-        <!-- <com.aicp.gear.preference.SecureSettingIntListPreference
-            android:key="pulse_custom_gravity"
-            android:title="@string/pulse_custom_gravity_title"
-            android:entries="@array/pulse_custom_gravity_entries"
-            android:entryValues="@array/pulse_custom_gravity_values"
-            android:defaultValue="0"/>
+    <com.aicp.gear.preference.SecureSettingListPreference
+        android:key="pulse_color"
+        android:title="@string/pulse_color"
+        android:summary="%s"
+        android:dialogTitle="@string/pulse_color"
+        android:entries="@array/pulse_color_entries"
+        android:entryValues="@array/pulse_color_values"
+        android:defaultValue="lavalamp"
+        android:dependency="lockscreen_pulse_enabled" />
 
-        <com.aicp.gear.preference.SecureSettingSwitchPreference
-            android:key="pulse_center_mirrored"
-            android:title="@string/pulse_center_mirrored_title"
-            android:summary="@string/pulse_center_mirrored_summary"
-            android:defaultValue="false"/>
-
-        <com.aicp.gear.preference.SecureSettingSwitchPreference
-            android:key="pulse_vertical_mirror"
-            android:title="@string/pulse_vertical_mirror_title"
-            android:summary="@string/pulse_vertical_mirror_summary"
-            android:defaultValue="false"/>
-
-        <com.aicp.gear.preference.SecureSettingSwitchPreference
-            android:key="pulse_smoothing_enabled"
-            android:title="@string/smoothing_enabled_title"
-            android:summary="@string/smoothing_enabled_summary"
-            android:defaultValue="false" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="pulse_color_category"
-        android:title="@string/pulse_color" >
-
-        <com.aicp.gear.preference.SecureSettingIntListPreference
-            android:key="navbar_pulse_color_type"
-            android:title="@string/pulse_color_mode"
-            android:entries="@array/pulse_color_mode_entries"
-            android:entryValues="@array/pulse_color_mode_values"
-            android:defaultValue="0"/>
-
-        <com.aicp.gear.preference.SecureSettingColorPickerPreference
-            android:key="navbar_pulse_color_user"
-            android:title="@string/pulse_color_chooser"
-            android:defaultValue="0xffffffff"
-            android:dialogTitle="@string/pulse_color_chooser_title" />
-
-        <com.aicp.gear.preference.SecureSettingSeekBarPreference
-            android:key="navbar_pulse_lavalamp_speed"
-            android:title="@string/lavamp_speed_title"
-            android:max="30000"
-            android:min="200"
-            aicpextras:interval="200"
-            aicpextras:unitsLeft=""
-            aicpextras:unitsRight="ms"
-            android:defaultValue="10000"/>
+    <com.aicp.gear.preference.SecureSettingSeekBarPreference
+        android:key="pulse_bar_count"
+        android:title="@string/pulse_bar_count_title"
+        android:summary="@string/pulse_bar_count_summary"
+        android:defaultValue="32"
+        aicpextras:min="8"
+        aicpextras:interval="4"
+        android:max="64"
+        android:dependency="lockscreen_pulse_enabled" />
 
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference
-        android:title="@string/pulse_help_policy_notice_summary" /> -->
-
+        android:title="@string/pulse_help_policy_notice_summary" />
 </PreferenceScreen>
