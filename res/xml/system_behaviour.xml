@@ -99,6 +99,12 @@ android:persistent="false" />-->
         android:summary="@string/sensor_block_summary"
         android:defaultValue="false"/>
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="pocket_judge"
+        android:title="@string/pocket_judge_title"
+        android:summary="@string/pocket_judge_summary"
+        android:defaultValue="false" />
+
 <!--
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="sensor_block"
