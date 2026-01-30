@@ -102,7 +102,7 @@
             android:summary="@string/pulse_settings_summary"
             android:fragment="com.aicp.extras.fragments.PulseSettings" />
 
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="force_ambient_for_media"
         android:title="@string/force_ambient_for_media_pref_title"
         android:summary="@string/force_ambient_for_media_pref_summary"
