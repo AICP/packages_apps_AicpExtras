@@ -105,6 +105,14 @@ android:persistent="false" />-->
         android:summary="@string/pocket_judge_summary"
         android:defaultValue="false" />
 
+    <!-- Three fingers swipe action -->
+    <com.aicp.gear.preference.SystemSettingListPreference
+        android:key="three_fingers_swipe"
+        android:dialogTitle="@string/three_fingers_swipe_title"
+        android:title="@string/three_fingers_swipe_title"
+        android:entries="@array/hardware_keys_action_entries"
+        android:entryValues="@array/hardware_keys_action_values"
+        android:persistent="false" />
 <!--
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="sensor_block"
