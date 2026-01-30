@@ -107,12 +107,11 @@ android:persistent="false" />-->
 
     <!-- Three fingers swipe action -->
     <com.aicp.gear.preference.SystemSettingListPreference
-        android:key="three_fingers_swipe"
+        android:key="key_three_fingers_swipe_action"
         android:dialogTitle="@string/three_fingers_swipe_title"
         android:title="@string/three_fingers_swipe_title"
         android:entries="@array/hardware_keys_action_entries"
-        android:entryValues="@array/hardware_keys_action_values"
-        android:persistent="false" />
+        android:entryValues="@array/hardware_keys_action_values" />
 <!--
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="sensor_block"
