@@ -296,4 +296,21 @@ android:defaultValue="false" />-->
                 android:dependency="fod_recognizing_animation" /> -->
 <!--
 </PreferenceCategory>-->
+
+    <PreferenceCategory
+       android:key="lockscreen_others_category"
+       android:title="@string/lockscreen_others_category_title">
+
+       <com.aicp.gear.preference.SystemSettingSwitchPreference
+           android:key="lockscreen_show_carrier"
+           android:title="@string/show_carrier_title"
+           android:defaultValue="true" />
+
+       <Preference
+           android:key="lockscreen_show_custom_carrier_text"
+           android:title="@string/custom_carrier_label_title"
+           android:dependency="lockscreen_show_carrier" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
