@@ -65,6 +65,11 @@
             android:title="@string/global_actions_onthego_title"
             android:defaultValue="false" />
 
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="powermenu_restart_systemui"
+            android:title="@string/global_actions_systemui_title"
+            android:defaultValue="false" />
+
         <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="powermenu_emergency"
             android:title="@string/global_actions_emergency"
