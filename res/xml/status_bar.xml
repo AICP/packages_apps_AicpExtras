@@ -322,16 +322,15 @@ android:defaultValue="0" />-->
            android:summary="@string/hide_notch_summary"
            android:defaultValue="false" />
  -->
-       <com.aicp.gear.preference.SystemSettingIntListPreference
+       <com.aicp.gear.preference.SystemSettingSwitchPreference
            android:key="lockscreen_show_carrier"
            android:title="@string/show_carrier_title"
-           android:entries="@array/carrier_label_entries"
-           android:entryValues="@array/carrier_label_values"
-           android:defaultValue="1" />
+           android:defaultValue="true" />
 
        <Preference
            android:key="custom_carrier_label"
-           android:title="@string/custom_carrier_label_title" />
+           android:title="@string/custom_carrier_label_title"
+           android:dependency="lockscreen_show_carrier" />
 
        </PreferenceCategory>
 </PreferenceScreen>
