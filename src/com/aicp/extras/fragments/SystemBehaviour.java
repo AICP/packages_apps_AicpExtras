@@ -35,7 +35,7 @@ import com.aicp.extras.utils.Util;
 
 import com.android.settingslib.development.SystemPropPoker;
 
-public class SystemBehaviour extends BaseSettingsFragment {/*
+public class SystemBehaviour extends BaseSettingsFragment
          implements Preference.OnPreferenceChangeListener {
     private static final String TAG = SystemBehaviour.class.getSimpleName();
 /*
@@ -55,15 +55,19 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
 
     private SwitchPreference mEnableBlurPref;
 */
+
+    private static final String KEY_DESKTOP_MODE = "canInternalDisplayHostDesktops";
+    private SwitchPreference mDesktopModePref;
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.system_behaviour;
     }
-/*
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+/*
         // SELinux
         Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
         mSelinuxMode = (SwitchPreference) findPreference(Constants.PREF_SELINUX_MODE);
@@ -89,11 +93,26 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
 //                DISABLE_BLURS_SYSPROP, false /* default */));
 /*         mEnableBlurPref.setOnPreferenceChangeListener(this);
         Util.requireProp(getActivity(), mEnableBlurPref, SF_PROP_REQUIRED_FOR_BLUR, false /* default *//* , true);
-
+*/
+        mDesktopModePref = (SwitchPreference) findPreference(KEY_DESKTOP_MODE);
+        mDesktopModePref.setChecked(!SystemProperties.getBoolean(
+                canInternalDisplayHostDesktops, false /* default */));
+        mDesktopModePref.setOnPreferenceChangeListener(this);
+        Util.requireProp(getActivity(), mDesktopModePref, isDesktopModeSupported, true /* default */, false);
     }
 
-/*     @Override
+     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mDesktopModePref) {
+            final boolean isDisabled = !(Boolean) newValue;
+            SystemProperties.set(canInternalDisplayHostDesktops, isDisabled ? "1" : "0");
+            SystemPropPoker.getInstance().poke();
+            return true;
+        }
+        return false;
+    }
+
+/*
         if (preference == mSelinuxMode) {
             if ((Boolean) newValue) {
                 new SwitchSelinuxTask(getActivity()).execute(true);
