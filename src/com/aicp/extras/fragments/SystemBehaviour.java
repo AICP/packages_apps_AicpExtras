@@ -46,6 +46,7 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
 
     private static final String KEY_SMART_PIXELS = "smart_pixels_enable";*/
     private static final String KEY_AUDIO_PANEL_POSITION = "volume_panel_on_left";
+    private static final String KEY_DESKTOP_MODE = "canInternalDisplayHostDesktops";
 /*    private static final String KEY_BARS = "bars_settings";
 
      private static final String SELINUX_CATEGORY = "selinux";
@@ -55,15 +56,18 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
 
     private SwitchPreference mEnableBlurPref;
 */
+
+    private SwitchPreference mDesktopModePref;
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.system_behaviour;
     }
-/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+/*
         // SELinux
         Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
         mSelinuxMode = (SwitchPreference) findPreference(Constants.PREF_SELINUX_MODE);
@@ -87,13 +91,18 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
 //           mEnableBlurPref = (SwitchPreference) findPreference(KEY_ENABLE_BLURS);
 //        mEnableBlurPref.setChecked(!SystemProperties.getBoolean(
 //                DISABLE_BLURS_SYSPROP, false /* default */));
-/*         mEnableBlurPref.setOnPreferenceChangeListener(this);
-        Util.requireProp(getActivity(), mEnableBlurPref, SF_PROP_REQUIRED_FOR_BLUR, false /* default *//* , true);
-
+//         mEnableBlurPref.setOnPreferenceChangeListener(this);
+//        Util.requireProp(getActivity(), mEnableBlurPref, SF_PROP_REQUIRED_FOR_BLUR, false /* default *//* , true);
+        mDesktopModePref = (SwitchPreference) findPreference(KEY_DESKTOP_MODE);
+        mDesktopModePref.setChecked(!SystemProperties.getBoolean(
+                canInternalDisplayHostDesktops, false /* default */));
+        mDesktopModePref.setOnPreferenceChangeListener(this);
+        Util.requireProp(getActivity(), mDesktopModePref, isDesktopModeSupported, true /* default */, false);
     }
 
-/*     @Override
+     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+/*
         if (preference == mSelinuxMode) {
             if ((Boolean) newValue) {
                 new SwitchSelinuxTask(getActivity()).execute(true);
@@ -106,14 +115,15 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
         } else if (preference == mSelinuxPersistence) {
             setSelinuxEnabled(mSelinuxMode.isChecked(), (Boolean) newValue);
             return true;
-        } else if (preference == mEnableBlurPref) {
+*/
+        if (preference == mDesktopModePref) {
             final boolean isDisabled = !(Boolean) newValue;
-            SystemProperties.set(DISABLE_BLURS_SYSPROP, isDisabled ? "1" : "0");
+            SystemProperties.set(canInternalDisplayHostDesktops, isDisabled ? "1" : "0");
             SystemPropPoker.getInstance().poke();
             return true;
         }
         return false;
-    } */
+    }
 
 /*     private void setSelinuxEnabled(boolean status, boolean persistent) {
         SharedPreferences.Editor editor = getContext()
