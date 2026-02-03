@@ -24,6 +24,7 @@ import android.os.SELinux;
 import android.os.SystemProperties;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
+import android.provider.Settings;
 import android.util.Log;
 
 import com.aicp.extras.BaseSettingsFragment;
@@ -35,8 +36,7 @@ import com.aicp.extras.utils.Util;
 
 import com.android.settingslib.development.SystemPropPoker;
 
-public class SystemBehaviour extends BaseSettingsFragment {/*
-         implements Preference.OnPreferenceChangeListener {
+public class SystemBehaviour extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
     private static final String TAG = SystemBehaviour.class.getSimpleName();
 /*
     private static final String KEY_ENABLE_BLURS = "enable_blurs_on_windows";
@@ -44,28 +44,32 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
     private static final String SF_PROP_REQUIRED_FOR_BLUR = "ro.surface_flinger.supports_background_blur";
 
 
-    private static final String KEY_SMART_PIXELS = "smart_pixels_enable";*/
+    private static final String KEY_SMART_PIXELS = "smart_pixels_enable";
     private static final String KEY_AUDIO_PANEL_POSITION = "volume_panel_on_left";
-/*    private static final String KEY_BARS = "bars_settings";
+    private static final String KEY_BARS = "bars_settings";
 
-     private static final String SELINUX_CATEGORY = "selinux";
+    private static final String SELINUX_CATEGORY = "selinux";
 
     private SwitchPreference mSelinuxMode;
     private SwitchPreference mSelinuxPersistence;
 
     private SwitchPreference mEnableBlurPref;
 */
+    private static final String KEY_DESKTOP_EXPERIENCE = "override_desktop_experience_features";
+    private SwitchPreference mDesktopExperience;
+
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.system_behaviour;
     }
-/*
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // SELinux
-        Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
+ /*       Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
         mSelinuxMode = (SwitchPreference) findPreference(Constants.PREF_SELINUX_MODE);
         mSelinuxMode.setChecked(SELinux.isSELinuxEnforced());
         mSelinuxMode.setOnPreferenceChangeListener(this);
@@ -75,8 +79,8 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
         mSelinuxPersistence.setChecked(getContext()
                 .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
                 .contains(Constants.PREF_SELINUX_MODE));
-        Util.requireRoot(getActivity(), selinuxCategory); */
-/*
+        Util.requireRoot(getActivity(), selinuxCategory);
+
         Util.requireConfig(getActivity(), findPreference(KEY_BARS),
                 com.android.internal.R.bool.config_haveHigherAspectRatioScreen, true, false);
 
@@ -87,14 +91,23 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
 //           mEnableBlurPref = (SwitchPreference) findPreference(KEY_ENABLE_BLURS);
 //        mEnableBlurPref.setChecked(!SystemProperties.getBoolean(
 //                DISABLE_BLURS_SYSPROP, false /* default */));
-/*         mEnableBlurPref.setOnPreferenceChangeListener(this);
-        Util.requireProp(getActivity(), mEnableBlurPref, SF_PROP_REQUIRED_FOR_BLUR, false /* default *//* , true);
+//         mEnableBlurPref.setOnPreferenceChangeListener(this);
+//        Util.requireProp(getActivity(), mEnableBlurPref, SF_PROP_REQUIRED_FOR_BLUR, false /* default *//* , true);
 
+        mDesktopExperience = findPreference(KEY_DESKTOP_EXPERIENCE);
+        int value = Settings.Global.getInt(
+                getContext().getContentResolver(),
+                Settings.Global.persist.sys.desktop_mode,
+                0
+        );
+
+        mDesktopExperience.setChecked(value == 1);
+        mDesktopExperience.setOnPreferenceChangeListener(this);
     }
 
-/*     @Override
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mSelinuxMode) {
+/*        if (preference == mSelinuxMode) {
             if ((Boolean) newValue) {
                 new SwitchSelinuxTask(getActivity()).execute(true);
                 setSelinuxEnabled(true, mSelinuxPersistence.isChecked());
@@ -111,9 +124,19 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
             SystemProperties.set(DISABLE_BLURS_SYSPROP, isDisabled ? "1" : "0");
             SystemPropPoker.getInstance().poke();
             return true;
-        }
+        }*/
+        if (preference == mDesktopExperience) {
+            boolean enabled = (Boolean) newValue;
+
+            Settings.Global.putInt(
+                getContext().getContentResolver(),
+                Settings.Global.DEVELOPMENT_OVERRIDE_DESKTOP_EXPERIENCE_FEATURES,
+                enabled ? 1 : 0
+            );
+            return true;
+	}
         return false;
-    } */
+    } 
 
 /*     private void setSelinuxEnabled(boolean status, boolean persistent) {
         SharedPreferences.Editor editor = getContext()
