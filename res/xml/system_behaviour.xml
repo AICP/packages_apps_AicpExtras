@@ -178,6 +178,11 @@ android:persistent="false" />-->
 
     </PreferenceCategory>
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="override_desktop_experience_features"
+        android:title="@string/canInternalDisplayHostDesktops_title"
+        android:summary="@string/canInternalDisplayHostDesktops_summary"
+        android:defaultValue="false" />
 <!--
     <PreferenceCategory
         android:title="@string/audio_panel_view">
