@@ -178,6 +178,11 @@ android:persistent="false" />-->
 
     </PreferenceCategory>
 
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+        android:key="desktop_mode_internal_display"
+        android:title="@string/canInternalDisplayHostDesktops_title"
+        android:summary="@string/canInternalDisplayHostDesktops_summary"
+        android:defaultValue="false" />
 <!--
     <PreferenceCategory
         android:title="@string/audio_panel_view">
