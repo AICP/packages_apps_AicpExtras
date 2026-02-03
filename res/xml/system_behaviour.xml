@@ -178,6 +178,12 @@ android:persistent="false" />-->
 
     </PreferenceCategory>
 
+    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+        android:key="canInternalDisplayHostDesktops"
+        android:title="@string/canInternalDisplayHostDesktops_title"
+        android:summary="@string/canInternalDisplayHostDesktops_summary"
+        aicpextras:systemPropDefaultOverride="persist.sys.desktop_mode?true:false"
+        android:defaultValue="false" />
 <!--
     <PreferenceCategory
         android:title="@string/audio_panel_view">
