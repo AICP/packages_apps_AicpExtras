@@ -178,6 +178,11 @@ android:persistent="false" />-->
 
     </PreferenceCategory>
 
+<SwitchPreference
+        android:key="canInternalDisplayHostDesktops"
+        android:title="@string/canInternalDisplayHostDesktops_title"
+        android:summary="@string/canInternalDisplayHostDesktops_summary"
+        android:defaultValue="false" />
 <!--
     <PreferenceCategory
         android:title="@string/audio_panel_view">
