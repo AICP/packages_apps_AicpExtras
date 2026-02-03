@@ -178,6 +178,12 @@ android:persistent="false" />-->
 
     </PreferenceCategory>
 
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="desktop_mode"
+        android:title="@string/desktop_mode_title"
+        android:summary="@string/desktop_mode_summary"
+        android:defaultValue="@*android:bool/config_canInternalDisplayHostDesktops"/>
+
 <!--
     <PreferenceCategory
         android:title="@string/audio_panel_view">
