@@ -87,6 +87,14 @@ android:persistent="false" />-->
         android:defaultValue="false" />
 -->
 
+   <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        android:key="background_blur_radius"
+        android:title="@string/background_blur_radius_title"
+        android:summary="@string/background_blur_radius_summary"
+        android:max="175"
+        android:min="5"
+        android:defaultValue="34" />
+
 <!--     <SwitchPreference
         android:key="enable_blurs_on_windows"
         android:title="@string/enable_blurs_on_windows_title"
