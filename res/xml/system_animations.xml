@@ -59,11 +59,4 @@
         android:summary="%s"
         android:defaultValue="0" />
 
-   <com.aicp.gear.preference.SystemSettingSeekBarPreference
-        android:key="background_blur_radius"
-        android:title="@string/background_blur_radius"
-        android:max="175"
-        android:min="5"
-        android:defaultValue="34" />
-
 </PreferenceScreen>
