@@ -23,7 +23,7 @@
     android:key="slim_recents"
     android:title="@string/slim_recents_title">
 
-    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+    <com.aicp.gear.preference.SystemSettingSliderPreference
         android:key="recent_panel_scale_factor"
         android:title="@string/recent_panel_scale_title"
         android:min="60"
@@ -44,7 +44,7 @@
         android:defaultValue="0x00ffffff"
         alphaSlider="true" />
 
-    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+    <com.aicp.gear.preference.SystemSettingSliderPreference
         android:key="recents_max_apps"
         android:title="@string/recents_max_apps_title"
         android:defaultValue="15"
@@ -70,7 +70,7 @@
         android:entryValues="@array/slim_recents_enter_exit_animation_values"
         android:defaultValue="0" />
 
-    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+    <com.aicp.gear.preference.SystemSettingSliderPreference
         android:key="slim_recents_corner_radius"
         android:title="@string/slim_recents_corner_radius_title"
         android:min="0"

@@ -79,7 +79,7 @@
         android:entryValues="@array/battery_bar_style_values"
         android:defaultValue="0" />
 
-    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+    <com.aicp.gear.preference.SystemSettingSliderPreference
         android:key="statusbar_battery_bar_thickness"
         android:title="@string/battery_bar_thickness_title"
         android:min="1"
