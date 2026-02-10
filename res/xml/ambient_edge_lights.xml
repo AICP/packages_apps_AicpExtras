@@ -40,7 +40,7 @@
             android:title="@string/pulse_ambient_light_color_title"
             android:defaultValue="0xFF3980FF" />
 
-        <com.aicp.gear.preference.SecureSettingSeekBarPreference
+        <com.aicp.gear.preference.SecureSettingSliderPreference
             android:key="pulse_ambient_light_duration"
             android:title="@string/pulse_ambient_light_duration_title"
             android:max="10"
@@ -49,7 +49,7 @@
             aicpextras:unitsRight="sec"
             android:defaultValue="3" />
 
-        <com.aicp.gear.preference.SecureSettingSeekBarPreference
+        <com.aicp.gear.preference.SecureSettingSliderPreference
             android:key="pulse_ambient_light_repeat_count"
             android:title="@string/pulse_ambient_light_repeat_count_title"
             android:max="10"
@@ -64,7 +64,7 @@
             android:title="@string/pulse_ambient_light_repeat_direction_title"
             android:summary="@string/pulse_ambient_light_repeat_direction_summary" />
 
-        <com.aicp.gear.preference.SecureSettingSeekBarPreference
+        <com.aicp.gear.preference.SecureSettingSliderPreference
             android:key="pulse_ambient_light_width"
             android:title="@string/pulse_ambient_light_width_title"
             android:max="150"

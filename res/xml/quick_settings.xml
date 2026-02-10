@@ -66,7 +66,7 @@
         android:key="qs_layout_category"
         android:title="@string/qs_layout_category_title">
 
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSliderPreference
             android:key="qs_tiles_columns"
             android:title="@string/qs_columns_portrait_title"
             android:max="6"
@@ -76,7 +76,7 @@
             aicpextras:unitsRight=""
             android:defaultValue="4" />
 
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSliderPreference
             android:key="qs_tiles_columns_landscape"
             android:title="@string/qs_columns_landscape_title"
             android:max="3"
@@ -86,7 +86,7 @@
             aicpextras:unitsRight=""
             android:defaultValue="2" />
 
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSliderPreference
             android:key="qs_tiles_rows"
             android:title="@string/qs_rows_portrait_title"
             android:max="5"
@@ -94,7 +94,7 @@
             aicpextras:interval="1"
             android:defaultValue="4" />
 
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSliderPreference
             android:key="qs_tiles_rows_landscape"
             android:title="@string/qs_rows_landscape_title"
             android:max="3"
@@ -102,7 +102,7 @@
             aicpextras:interval="1"
             android:defaultValue="2" />
 
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSliderPreference
             android:key="qqs_tiles_rows"
             android:title="@string/qqs_rows_portrait_title"
             android:max="3"

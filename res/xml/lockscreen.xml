@@ -129,7 +129,7 @@
         android:dependency="ls_media_art_enabled"
         android:defaultValue="0" />
 
-    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+    <com.aicp.gear.preference.SystemSettingSliderPreference
         android:key="ls_media_art_fade_level"
         android:title="@string/ls_media_art_fade_level_title"
         android:summary="@string/ls_media_art_fade_level_summary"
@@ -138,7 +138,7 @@
         android:min="0"
         android:dependency="ls_media_art_enabled" />
 
-    <com.aicp.gear.preference.SystemSettingSeekBarPreference
+    <com.aicp.gear.preference.SystemSettingSliderPreference
         android:key="ls_media_art_blur_level"
         android:title="@string/ls_media_art_blur_level_title"
         android:summary="@string/ls_media_art_blur_level_summary"
