@@ -87,19 +87,20 @@ android:persistent="false" />-->
         android:defaultValue="false" />
 -->
 
+   <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="enable_blurs_on_windows"
+        android:title="@string/enable_blurs_on_windows_title"
+        android:summary="@string/enable_blurs_on_windows_summary"
+        android:defaultValue="true" />
+
    <com.aicp.gear.preference.SystemSettingSliderPreference
         android:key="background_blur_radius"
         android:title="@string/background_blur_radius_title"
         android:summary="@string/background_blur_radius_summary"
         android:max="175"
         android:min="5"
-        android:defaultValue="34" />
-
-<!--     <SwitchPreference
-        android:key="enable_blurs_on_windows"
-        android:title="@string/enable_blurs_on_windows_title"
-        android:summary="@string/enable_blurs_on_windows_summary"
-        android:defaultValue="false" />-->
+        android:defaultValue="34"
+        android:dependency="enable_blurs_on_windows" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="sensor_block"

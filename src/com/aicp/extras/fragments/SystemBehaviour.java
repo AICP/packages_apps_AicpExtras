@@ -22,6 +22,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.SELinux;
 import android.os.SystemProperties;
+import android.provider.Settings;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 import android.util.Log;
@@ -35,37 +36,36 @@ import com.aicp.extras.utils.Util;
 
 import com.android.settingslib.development.SystemPropPoker;
 
-public class SystemBehaviour extends BaseSettingsFragment {/*
+public class SystemBehaviour extends BaseSettingsFragment
          implements Preference.OnPreferenceChangeListener {
     private static final String TAG = SystemBehaviour.class.getSimpleName();
-/*
+
     private static final String KEY_ENABLE_BLURS = "enable_blurs_on_windows";
-    private static final String DISABLE_BLURS_SYSPROP = "persist.sys.sf.disable_blurs";
     private static final String SF_PROP_REQUIRED_FOR_BLUR = "ro.surface_flinger.supports_background_blur";
 
-
-    private static final String KEY_SMART_PIXELS = "smart_pixels_enable";*/
+/*
+    private static final String KEY_SMART_PIXELS = "smart_pixels_enable";
     private static final String KEY_AUDIO_PANEL_POSITION = "volume_panel_on_left";
-/*    private static final String KEY_BARS = "bars_settings";
+    private static final String KEY_BARS = "bars_settings";
 
-     private static final String SELINUX_CATEGORY = "selinux";
+    private static final String SELINUX_CATEGORY = "selinux";
 
     private SwitchPreference mSelinuxMode;
     private SwitchPreference mSelinuxPersistence;
-
-    private SwitchPreference mEnableBlurPref;
 */
+    private SwitchPreference mEnableBlurPref;
+
     @Override
     protected int getPreferenceResource() {
         return R.xml.system_behaviour;
     }
-/*
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // SELinux
-        Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
+/*        Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
         mSelinuxMode = (SwitchPreference) findPreference(Constants.PREF_SELINUX_MODE);
         mSelinuxMode.setChecked(SELinux.isSELinuxEnforced());
         mSelinuxMode.setOnPreferenceChangeListener(this);
@@ -84,17 +84,25 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
                 com.android.internal.R.bool.config_enableSmartPixels, true, false);
 */
 
-//           mEnableBlurPref = (SwitchPreference) findPreference(KEY_ENABLE_BLURS);
-//        mEnableBlurPref.setChecked(!SystemProperties.getBoolean(
-//                DISABLE_BLURS_SYSPROP, false /* default */));
-/*         mEnableBlurPref.setOnPreferenceChangeListener(this);
-        Util.requireProp(getActivity(), mEnableBlurPref, SF_PROP_REQUIRED_FOR_BLUR, false /* default *//* , true);
+        mEnableBlurPref = (SwitchPreference) findPreference(KEY_ENABLE_BLURS);
+        if (mEnableBlurPref == null) return;
 
+        if (mEnableBlurPref.isChecked()) {
+            setWindowBlur(true);
+        }
+        mEnableBlurPref.setOnPreferenceChangeListener(this);
+        // disable toggle, if needed property is not set
+        int blurpropvalue = SystemProperties.getInt(SF_PROP_REQUIRED_FOR_BLUR, 0);
+        boolean blurprop = blurpropvalue == 1;
+        //boolean blurprop = SystemProperties.getBoolean("SF_PROP_REQUIRED_FOR_BLUR", 1);
+        if (!blurprop){
+             mEnableBlurPref.setEnabled(false);
+        }
     }
 
-/*     @Override
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mSelinuxMode) {
+/*        if (preference == mSelinuxMode) {
             if ((Boolean) newValue) {
                 new SwitchSelinuxTask(getActivity()).execute(true);
                 setSelinuxEnabled(true, mSelinuxPersistence.isChecked());
@@ -106,16 +114,21 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
         } else if (preference == mSelinuxPersistence) {
             setSelinuxEnabled(mSelinuxMode.isChecked(), (Boolean) newValue);
             return true;
-        } else if (preference == mEnableBlurPref) {
-            final boolean isDisabled = !(Boolean) newValue;
-            SystemProperties.set(DISABLE_BLURS_SYSPROP, isDisabled ? "1" : "0");
-            SystemPropPoker.getInstance().poke();
+        } else if (preference == mEnableBlurPref) {*/
+        if (preference == mEnableBlurPref) {
+            final boolean blurenabled = !(Boolean) newValue;
+
+            if (blurenabled) {
+                setWindowBlur(true);
+            } else {
+                setWindowBlur(false);
+            }
             return true;
         }
         return false;
-    } */
-
-/*     private void setSelinuxEnabled(boolean status, boolean persistent) {
+    }
+/*
+     private void setSelinuxEnabled(boolean status, boolean persistent) {
         SharedPreferences.Editor editor = getContext()
                 .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE).edit();
         if (persistent) {
@@ -125,9 +138,9 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
         }
         editor.apply();
         mSelinuxMode.setChecked(status);
-    } */
+    }
 
-/*     private class SwitchSelinuxTask extends SuTask<Boolean> {
+    private class SwitchSelinuxTask extends SuTask<Boolean> {
         public SwitchSelinuxTask(Context context) {
             super(context);
         }
@@ -153,4 +166,18 @@ public class SystemBehaviour extends BaseSettingsFragment {/*
             }
         }
     }*/
+
+    private void setWindowBlur(boolean disable) {
+        if (getContext() == null) return;
+
+        try {
+           Settings.Global.putInt(
+                   requireContext().getContentResolver(),
+                   "disable_window_blurs",
+                   disable ? 1 : 0
+           );
+        } catch (Exception e) {
+           e.printStackTrace();
+        }
+    }
 }
