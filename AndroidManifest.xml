@@ -30,13 +30,13 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.SubSettingsBase"
+            android:theme="@style/Theme.AE"
             android:exported="true" />
 
         <activity
             android:name=".SubSettingsActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.SubSettingsBase"
+            android:theme="@style/Theme.AE"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,7 +51,7 @@
         <activity
             android:name=".LauncherActivity"
             android:exported="true"
-            android:theme="@style/Theme.SubSettingsBase"
+            android:theme="@style/Theme.AE"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
