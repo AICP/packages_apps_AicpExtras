@@ -19,9 +19,8 @@
 
 <resources>
 
-    <style name="AppTheme" parent="@android:style/Theme.DeviceDefault.Settings">
+    <style name="Theme.AE" parent="@android:style/Theme.DeviceDefault.Settings">
         <item name="color_settings_icon">?android:attr/colorControlNormal</item>
-        <item name="preferenceTheme">@style/AppPreferenceTheme</item>
         <item name="switchBarTheme">@style/ThemeOverlay.SwitchBar.Settings</item>
         <!-- SeekBarPreference popup view: match default toast style -->
         <!-- <item name="value_popup_view_bg">#e6eeeeee</item>
@@ -32,11 +31,11 @@
         <item name="alertDialogTheme">@style/Theme.AlertDialog</item>
     </style>
 
-    <style name="AppTheme_MoreAccent" parent="@style/AppTheme">
+    <style name="AppTheme_MoreAccent" parent="@style/Theme.AE">
         <item name="color_settings_icon">?android:attr/colorAccent</item>
     </style>
 
-    <style name="AppTheme_LessAccent" parent="@style/AppTheme">
+    <style name="AppTheme_LessAccent" parent="@style/Theme.AE">
         <item name="switchBarTheme">@style/ThemeOverlay.SwitchBar.Settings.LessAccent</item>
     </style>
 
