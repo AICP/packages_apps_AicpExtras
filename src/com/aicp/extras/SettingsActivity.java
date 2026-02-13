@@ -215,8 +215,8 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity implements
     @Override
     protected void onStart() {
         super.onStart();
-        // getTopIntro()
-        //ActionBar actionBar = getActionBar();
+        getTopIntro();
+        ActionBar actionBar = getActionBar();
         if (getTopIntro() != null) {
             if (mFragment instanceof TitleProvider) {
                 CharSequence title = ((TitleProvider) mFragment).getTitle();
