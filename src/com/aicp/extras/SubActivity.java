@@ -20,8 +20,9 @@ package com.aicp.extras;
 import android.app.ActionBar;
 import android.os.Bundle;
 import android.view.MenuItem;
+import androidx.fragment.app.FragmentActivity;
 
-public class SubActivity extends BaseActivity {
+public class SubActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

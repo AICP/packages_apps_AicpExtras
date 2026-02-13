@@ -30,7 +30,7 @@ import java.util.Arrays;
 
 import com.aicp.extras.utils.Util;
 
-public class LauncherActivity extends SettingsActivity {
+public class LauncherActivity extends BaseActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

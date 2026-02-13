@@ -25,10 +25,9 @@ import android.provider.Settings;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 
-import androidx.fragment.app.FragmentActivity;
 import androidx.preference.PreferenceManager;
 
-public abstract class BaseActivity extends FragmentActivity {
+public abstract class BaseActivity extends SettingsActivity {
 
     private int mThemeRes;
 

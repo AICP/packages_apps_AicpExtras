@@ -21,7 +21,7 @@ import android.app.ActionBar;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class SubSettingsActivity extends SettingsActivity {
+public class SubSettingsActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
