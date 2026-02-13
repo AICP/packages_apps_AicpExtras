@@ -22,14 +22,14 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="system_extensions"
     android:title="@string/system_extensions_title">
-<!--
+
     <Preference
         android:key="system_app_remover"
         android:title="@string/system_app_remover_title"
         android:summary="@string/system_app_remover_summary">
         <intent android:action="com.aicp.extras.ViewSystemAppRemover" />
     </Preference>
--->
+
      <PreferenceScreen
         android:key="gaming_category"
         android:title="@string/gaming_mode_title"
