@@ -141,10 +141,13 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity implements
                 arguments.putString(EXTRA_PREFERENCE_KEY,
                         mIntent.getStringExtra(EXTRA_PREFERENCE_KEY));
             }
-            mFragment.setArguments(arguments);
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.main_content, mFragment, FRAGMENT_TAG).commit();
-        }
+
+            if (savedInstanceState == null) {
+	        mFragment.setArguments(arguments);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.main_content, mFragment, FRAGMENT_TAG).commit();
+           }
+       }
 
         mMasterSwitchDependencyHandler = new MasterSwitchPreferenceDependencyHandler(this);
         // Add switchbar preferences with reserved grou id -1
