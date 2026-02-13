@@ -19,25 +19,34 @@
 
 <resources>
 
-    <style name="AppTheme" parent="@android:style/Theme.DeviceDefault.Settings">
-        <item name="color_settings_icon">?android:attr/colorControlNormal</item>
-        <item name="preferenceTheme">@style/AppPreferenceTheme</item>
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Switch / Toggle -->
+        <item name="colorControlActivated">@android:color/system_accent1_300</item>
+        <item name="colorControlHighlight">@android:color/system_accent1_300</item>
+	<item name="android:colorActivatedHighlight">@android:color/system_accent1_300</item>
+
         <item name="switchBarTheme">@style/ThemeOverlay.SwitchBar.Settings</item>
         <!-- SeekBarPreference popup view: match default toast style -->
         <!-- <item name="value_popup_view_bg">#e6eeeeee</item>
         <item name="value_popup_view_fg">@*android:color/primary_text_default_material_light</item> -->
         <item name="color_two_target_preference_divider">?android:attr/dividerVertical</item>
-	<!--<item name="footerPreferenceStyle">@style/Preference.FooterPreference.SettingsBase</item>-->
+        <!--<item name="footerPreferenceStyle">@style/Preference.FooterPreference.SettingsBase</item>-->
         <!-- For AndroidX AlertDialog -->
         <item name="alertDialogTheme">@style/Theme.AlertDialog</item>
     </style>
 
     <style name="AppTheme_MoreAccent" parent="@style/AppTheme">
-        <item name="color_settings_icon">?android:attr/colorAccent</item>
+        <!-- Switch / Ripple -->
+        <item name="colorControlActivated">@android:color/system_accent1_700</item>
+        <item name="colorControlHighlight">@android:color/system_accent1_700</item>
+        <item name="android:colorActivatedHighlight">@android:color/system_accent1_700</item>
     </style>
 
     <style name="AppTheme_LessAccent" parent="@style/AppTheme">
-        <item name="switchBarTheme">@style/ThemeOverlay.SwitchBar.Settings.LessAccent</item>
+        <!-- Switch / Ripple minimal -->
+        <item name="colorControlActivated">@android:color/system_accent1_100</item>
+        <item name="colorControlHighlight">@android:color/system_accent1_100</item>
+        <item name="android:colorActivatedHighlight">@android:color/system_accent1_100</item>
     </style>
 
     <style name="ChangelogTheme" parent="Theme.AppCompat.Light.NoActionBar">
