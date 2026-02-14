@@ -124,11 +124,10 @@
         aicpextras:unitsRight="dp"
         android:defaultValue="14" />
 -->
-    <com.aicp.gear.preference.SystemSettingListPreference
+
+ <com.aicp.extras.preference.StatusBarClockChipStylePreference
         android:key="statusbar_clock_chip"
         android:title="@string/statusbar_clock_chip_title"
-        android:entries="@array/statusbar_clock_chip_entries"
-        android:entryValues="@array/statusbar_clock_chip_values"
         android:summary="%s"
         android:defaultValue="0" />
 

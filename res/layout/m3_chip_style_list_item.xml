@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: DerpFest AOSP
+     SPDX-License-Identifier: Apache-2.0
+     Chip style list item: clock chip preview (4:20) + label
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="48dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <FrameLayout
+        android:id="@+id/chip_preview_container"
+        android:layout_width="72dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/chip_time_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="4:20"
+            android:textSize="12sp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:duplicateParentState="true" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="?android:attr/textColorPrimary"
+        android:duplicateParentState="true" />
+
+</LinearLayout>
