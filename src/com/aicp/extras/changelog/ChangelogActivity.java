@@ -28,6 +28,7 @@ public class ChangelogActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Fabric.with(this, new Crashlytics());
+        setTheme(R.style.ChangelogTheme);
         setContentView(R.layout.changelog_activity);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.changelog_name);
