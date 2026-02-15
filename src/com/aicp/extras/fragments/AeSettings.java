@@ -22,7 +22,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import android.widget.Toast;
 
 import com.aicp.extras.BaseSettingsFragment;
@@ -41,7 +41,7 @@ public class AeSettings extends BaseSettingsFragment
     private ComponentName mAeLauncherComponent;
 
     private ListPreference mTheme;
-    private SwitchPreference mAeLauncher;
+    private SwitchPreferenceCompat mAeLauncher;
 
     @Override
     protected int getPreferenceResource() {
@@ -58,7 +58,7 @@ public class AeSettings extends BaseSettingsFragment
 
         mTheme = (ListPreference) findPreference(PREF_THEME);
         mTheme.setOnPreferenceChangeListener(this);
-        mAeLauncher = (SwitchPreference) findPreference(PREF_AE_LAUNCHER);
+        mAeLauncher = (SwitchPreferenceCompat) findPreference(PREF_AE_LAUNCHER);
         mAeLauncher.setChecked(pm.getComponentEnabledSetting(mAeLauncherComponent) !=
                 PackageManager.COMPONENT_ENABLED_STATE_DISABLED);
         mAeLauncher.setOnPreferenceChangeListener(this);

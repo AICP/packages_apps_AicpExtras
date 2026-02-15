@@ -72,7 +72,7 @@
         android:defaultValue="false" /> -->
 
     <!-- Show CPU Info overlay -->
-    <SwitchPreference
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
         android:key="show_cpu_info"
         android:title="@string/show_cpu_info"
         android:summary="@string/show_cpu_info_summary"
