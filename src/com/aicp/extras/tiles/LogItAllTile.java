@@ -24,7 +24,7 @@ import com.aicp.extras.SettingsActivity;
 import com.aicp.extras.utils.Util;
 import com.aicp.extras.R;
 
-public class LogThatShitTile extends TileService {
+public class LogItAllTile extends TileService {
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -55,10 +55,10 @@ public class LogThatShitTile extends TileService {
     @Override
     public void onClick() {
         super.onClick();
-        Intent logThatShit = new Intent(this, SettingsActivity.class);
-        logThatShit.putExtra(":android:show_fragment", "com.aicp.extras.fragments.LogIt");
-        logThatShit.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivityAndCollapse(logThatShit);
+        Intent LogItAll = new Intent(this, SettingsActivity.class);
+        LogItAll.putExtra(":android:show_fragment", "com.aicp.extras.fragments.LogIt");
+        LogItAll.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivityAndCollapse(LogItAll);
     }
 
     private void checkRootAndSetState() {
