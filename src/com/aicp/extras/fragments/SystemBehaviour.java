@@ -24,7 +24,7 @@ import android.os.SELinux;
 import android.os.SystemProperties;
 import android.provider.Settings;
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import android.util.Log;
 
 import com.aicp.extras.BaseSettingsFragment;
@@ -50,10 +50,10 @@ public class SystemBehaviour extends BaseSettingsFragment
 
     private static final String SELINUX_CATEGORY = "selinux";
 
-    private SwitchPreference mSelinuxMode;
-    private SwitchPreference mSelinuxPersistence;
+    private SwitchPreferenceCompat mSelinuxMode;
+    private SwitchPreferenceCompat mSelinuxPersistence;
 */
-    private SwitchPreference mEnableBlurPref;
+    private SwitchPreferenceCompat mEnableBlurPref;
 
     @Override
     protected int getPreferenceResource() {
@@ -66,11 +66,11 @@ public class SystemBehaviour extends BaseSettingsFragment
 
         // SELinux
 /*        Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
-        mSelinuxMode = (SwitchPreference) findPreference(Constants.PREF_SELINUX_MODE);
+        mSelinuxMode = (SwitchPreferenceCompat) findPreference(Constants.PREF_SELINUX_MODE);
         mSelinuxMode.setChecked(SELinux.isSELinuxEnforced());
         mSelinuxMode.setOnPreferenceChangeListener(this);
         mSelinuxPersistence =
-                (SwitchPreference) findPreference(Constants.PREF_SELINUX_PERSISTENCE);
+                (SwitchPreferenceCompat) findPreference(Constants.PREF_SELINUX_PERSISTENCE);
         mSelinuxPersistence.setOnPreferenceChangeListener(this);
         mSelinuxPersistence.setChecked(getContext()
                 .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
@@ -84,7 +84,7 @@ public class SystemBehaviour extends BaseSettingsFragment
                 com.android.internal.R.bool.config_enableSmartPixels, true, false);
 */
 
-        mEnableBlurPref = (SwitchPreference) findPreference(KEY_ENABLE_BLURS);
+        mEnableBlurPref = (SwitchPreferenceCompat) findPreference(KEY_ENABLE_BLURS);
         if (mEnableBlurPref == null) return;
 
         if (mEnableBlurPref.isChecked()) {
