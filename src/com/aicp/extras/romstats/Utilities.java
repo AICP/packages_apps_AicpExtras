@@ -30,34 +30,63 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.os.Build;
 import android.os.Environment;
 import android.os.SystemProperties;
+import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.util.Slog;
 
 import androidx.preference.PreferenceManager;
 
+import java.util.UUID;
+
 public class Utilities {
 	public static final String SETTINGS_PREF_NAME = "ROMStats";
 	public static final String TAG = "ROMStats";
 
-	public static String getUniqueID(Context ctx) {
-		TelephonyManager tm = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
+        public static String getUniqueID(Context ctx) {
+            // first try to get legacy device Id
+            try {
+                TelephonyManager tm = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
+                String device_id = tm.getDeviceId();
+                if (device_id != null) return digest(device_id);
+            } catch (Exception e) {}
 
-		String device_id = digest(tm.getDeviceId());
-		if (device_id == null) {
-			String wifiInterface = SystemProperties.get("wifi.interface");
-			try {
-				String wifiMac = new String(NetworkInterface.getByName(wifiInterface).getHardwareAddress());
-				device_id = digest(wifiMac);
-			} catch (Exception e) {
-				device_id = null;
-			}
-		}
+	    // second try to get IMEI
+            try {
+                TelephonyManager tm = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
+                String imei = tm.getImei();
+                if (imei != null) return digest(imei);
+            } catch (Exception e) {}
 
-		return device_id;
-	}
+            // third try is get MAC2 adress
+            try {
+                String wifiInterface = SystemProperties.get("wifi.interface");
+                String wifiMac = new String(NetworkInterface.getByName(wifiInterface).getHardwareAddress());
+                if (wifiMac != null) return digest(wifiMac);
+            } catch (Exception e) {}
+
+            // forth try is fallback to use ANDROID_ID
+            // last try is fallback to use Installation-ID
+            String androidId = Settings.Secure.getString(
+                ctx.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+            return androidId != null ? androidId : generateInstallationId(ctx);
+        }
+
+        private static String generateInstallationId(Context ctx) {
+            SharedPreferences prefs = ctx.getSharedPreferences("AicpExtrasPrefs", Context.MODE_PRIVATE);
+            String id = prefs.getString("INSTALLATION_ID", null);
+
+            if (id == null) {
+                id = UUID.randomUUID().toString();
+                prefs.edit().putString("INSTALLATION_ID", id).apply();
+            }
+
+            return id;
+        }
 
 	public static String getStatsUrl() {
 		String returnUrl = SystemProperties.get("ro.romstats.url");
