@@ -23,7 +23,10 @@
         <!-- Switch / Toggle -->
         <item name="colorControlActivated">@android:color/system_accent1_500</item>
         <item name="colorControlHighlight">@android:color/system_accent1_500</item>
-	<item name="android:colorActivatedHighlight">@android:color/system_accent1_500</item>
+        <item name="android:colorActivatedHighlight">@android:color/system_accent1_500</item>
+        <!-- dashboard logo -->
+        <item name="textColorPrimary">@android:color/system_accent1_500</item>
+        <item name="colorAccent">@android:color/system_accent1_500</item>
 
         <item name="switchBarTheme">@style/ThemeOverlay.SwitchBar.Settings</item>
         <!-- SeekBarPreference popup view: match default toast style -->
@@ -40,6 +43,9 @@
         <item name="colorControlActivated">@android:color/system_accent1_800</item>
         <item name="colorControlHighlight">@android:color/system_accent1_800</item>
         <item name="android:colorActivatedHighlight">@android:color/system_accent1_800</item>
+        <!-- dashboard logo -->
+        <item name="textColorPrimary">@android:color/system_accent1_800</item>
+        <item name="colorAccent">@android:color/system_accent1_800</item>
     </style>
 
     <style name="AppTheme_LessAccent" parent="@style/AppTheme">
@@ -47,6 +53,9 @@
         <item name="colorControlActivated">@android:color/system_accent1_200</item>
         <item name="colorControlHighlight">@android:color/system_accent1_200</item>
         <item name="android:colorActivatedHighlight">@android:color/system_accent1_200</item>
+        <!-- dashboard logo -->
+        <item name="textColorPrimary">@android:color/system_accent1_200</item>
+        <item name="colorAccent">@android:color/system_accent1_200</item>
     </style>
 
     <style name="ChangelogTheme" parent="Theme.AppCompat.Light.NoActionBar">
