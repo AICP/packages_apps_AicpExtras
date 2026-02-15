@@ -22,7 +22,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
@@ -36,7 +36,7 @@ public class OtherUi extends BaseSettingsFragment
 
     private static final String KEY_DOZE_ON_CHARGE = "doze_on_charge";
 
-    private SwitchPreference mShowCpuInfo;
+    private SwitchPreferenceCompat mShowCpuInfo;
 
     @Override
     protected int getPreferenceResource() {
@@ -47,7 +47,7 @@ public class OtherUi extends BaseSettingsFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mShowCpuInfo = (SwitchPreference) findPreference(SHOW_CPU_INFO_KEY);
+        mShowCpuInfo = (SwitchPreferenceCompat) findPreference(SHOW_CPU_INFO_KEY);
         mShowCpuInfo.setChecked(Settings.Global.getInt(getActivity().getContentResolver(),
                 Settings.Secure.SHOW_CPU_OVERLAY, 0) == 1);
         mShowCpuInfo.setOnPreferenceChangeListener(this);
