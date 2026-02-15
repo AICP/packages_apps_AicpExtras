@@ -80,10 +80,14 @@ public class Dashboard extends BaseSettingsFragment {
         if (!Util.isPackageEnabled(Constants.AICP_OTA_PACKAGE, pm)) {
             mAicpOTA.getParent().removePreference(mAicpOTA);
         }
-/*
+
         Preference logIt = findPreference(PREF_LOG_IT);
-        Util.requireRoot(getActivity(), logIt);
-*/
+//        Util.requireRoot(getActivity(), logIt);
+        if (!Util.hasSu()){
+             logit.setEnabled(false);
+        }
+
+
         mAicpLogo.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
