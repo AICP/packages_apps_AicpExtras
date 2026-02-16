@@ -21,21 +21,20 @@ import android.content.DialogInterface;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.SystemProperties;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.CompoundButton;
 
 import com.aicp.extras.R;
 
 /**
- * A custom preference that provides inline switch toggle. It has a mandatory field for title, and
- * optional fields for icon and sub-text.
+ * A custom preference that provides inline switch toggle with SwitchCompat.
  */
 public class MasterSwitchPreference extends TwoTargetPreference {
 
     private Context mContext;
-    private CompoundButton mSwitch;
+    private SwitchCompat mSwitch;
     private boolean mChecked;
     private boolean mEnableSwitch = true;
     private boolean mDefaultValue;
@@ -92,47 +91,40 @@ public class MasterSwitchPreference extends TwoTargetPreference {
     }
 
     private View.OnClickListener mClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mSwitch != null && !mSwitch.isEnabled()) {
-                    return;
-                }
-                if (!mChecked) {
-                    mDependencyHandler.onEnablePref(mThereCanBeOnlyOneGroupId, getKey());
-                } else if (mDependencyHandler != null && mThereShouldBeOne &&
-                        !mDependencyHandler.isAnotherEnabled(
-                                mThereCanBeOnlyOneGroupId, getKey())) {
-                    // It might not be safe to disable, so ask the user to make sure
-                    mDependencyHandler.showConfirmDisableDialog(mContext,
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    // Continue with disabling the preference
-                                    setChecked(false);
-                                    if (!callChangeListener(mChecked)) {
-                                        setChecked(!mChecked);
-                                    } else {
-                                        persistBoolean(mChecked);
-                                    }
-                                }
-                            },
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    // Only close dialog
-                                }
-                            });
-                    return;
-                }
-                setChecked(!mChecked);
-                if (!callChangeListener(mChecked)) {
-                    setChecked(!mChecked);
-                } else {
-                    persistBoolean(mChecked);
-                }
+        @Override
+        public void onClick(View v) {
+            if (mSwitch != null && !mSwitch.isEnabled()) {
+                return;
             }
-        };
-
+            if (!mChecked) {
+                if (mDependencyHandler != null) {
+                    mDependencyHandler.onEnablePref(mThereCanBeOnlyOneGroupId, getKey());
+                }
+            } else if (mDependencyHandler != null && mThereShouldBeOne &&
+                    !mDependencyHandler.isAnotherEnabled(
+                            mThereCanBeOnlyOneGroupId, getKey())) {
+                mDependencyHandler.showConfirmDisableDialog(mContext,
+                        (dialog, which) -> {
+                            setChecked(false);
+                            if (!callChangeListener(mChecked)) {
+                                setChecked(!mChecked);
+                            } else {
+                                persistBoolean(mChecked);
+                            }
+                        },
+                        (dialog, which) -> {
+                            // Nur Dialog schließen
+                        });
+                return;
+            }
+            setChecked(!mChecked);
+            if (!callChangeListener(mChecked)) {
+                setChecked(!mChecked);
+            } else {
+                persistBoolean(mChecked);
+            }
+        }
+    };
 
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
@@ -144,7 +136,8 @@ public class MasterSwitchPreference extends TwoTargetPreference {
             mWidgetView.setOnClickListener(mClickListener);
         }
 
-        mSwitch = (CompoundButton) holder.findViewById(R.id.switchWidget);
+        // Cast zu SwitchCompat
+        mSwitch = (SwitchCompat) holder.findViewById(R.id.switchWidget);
         if (mSwitch != null) {
             mSwitch.setContentDescription(getTitle());
             mSwitch.setChecked(mChecked);
@@ -157,12 +150,10 @@ public class MasterSwitchPreference extends TwoTargetPreference {
     @Override
     protected void onClick() {
         super.onClick();
-
         if (mPlainSwitch) {
             mClickListener.onClick(null);
         }
     }
-
 
     public void setDependencyHandler(MasterSwitchPreferenceDependencyHandler dependencyHandler) {
         mDependencyHandler = dependencyHandler;
@@ -209,8 +200,6 @@ public class MasterSwitchPreference extends TwoTargetPreference {
 
     @Override
     protected Object onGetDefaultValue(TypedArray a, int index) {
-        // This is called in super constructor, so we cannot load required
-        // attrs for this method from init() -> do here (and use Preference stylables only)
         String systemPropDefaultOverride =
                 a.getString(R.styleable.Preference_systemPropDefaultOverride);
 
@@ -224,7 +213,7 @@ public class MasterSwitchPreference extends TwoTargetPreference {
                 return true;
             } else if (offValue.equals(override)) {
                 return false;
-            } // else: don't override
+            }
         }
         return mDefaultValue = a.getBoolean(index, false);
     }
@@ -235,24 +224,14 @@ public class MasterSwitchPreference extends TwoTargetPreference {
                 : (Boolean) defaultValue);
     }
 
-    /**
-     * Call from outside when value might have changed.
-     */
     void reloadValue() {
         boolean newValue = getPersistedBoolean(mChecked);
         if (newValue != mChecked) {
-            // Update listener so it knows the value has changed e.g. on resume,
-            // but ignore return result: we don't allow listener to prevent change
-            // since it already has changed
             callChangeListener(newValue);
-            // Update UI
             setChecked(newValue);
         }
     }
 
-    /**
-     * Get default value for external use.
-     */
     public boolean getDefaultValue() {
         return mDefaultValue;
     }
@@ -262,30 +241,27 @@ public class MasterSwitchPreference extends TwoTargetPreference {
         if (mTwoTargetDivider != null) {
             mTwoTargetDivider.setVisibility(plainSwitch ? View.GONE : View.VISIBLE);
         }
-        int[] attrs = new int[] {
-            android.R.attr.selectableItemBackground,
-        };
+        int[] attrs = new int[] { android.R.attr.selectableItemBackground };
         TypedArray ta = mContext.getTheme().obtainStyledAttributes(attrs);
         int selectableItemBackground = ta.getResourceId(0, 0);
         ta.recycle();
         if (mWidgetView != null) {
-            // When imitating a plain switch, whole preference is clickable,
-            // so disable individual clickabilities for better visual appearance
             if (plainSwitch) {
                 mWidgetView.setClickable(false);
                 mWidgetView.setBackgroundColor(Color.TRANSPARENT);
                 if (mBaseView != null && selectableItemBackground != 0) {
-                mBaseView.setBackgroundResource(selectableItemBackground);
-		}
-		mMainView.setBackgroundColor(Color.TRANSPARENT);
+                    mBaseView.setBackgroundResource(selectableItemBackground);
+                }
+                mMainView.setBackgroundColor(Color.TRANSPARENT);
             } else {
                 mWidgetView.setClickable(true);
                 mWidgetView.setBackground(null);
                 mBaseView.setBackgroundColor(Color.TRANSPARENT);
                 if (mMainView != null && selectableItemBackground != 0) {
-		mMainView.setBackgroundResource(selectableItemBackground);
-		}
+                    mMainView.setBackgroundResource(selectableItemBackground);
+                }
             }
         }
     }
 }
+
