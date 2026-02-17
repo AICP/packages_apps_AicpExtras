@@ -44,7 +44,7 @@ import android.widget.Toast;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.R;
-import com.aicp.extras.preference.MasterSwitchPreference;
+import com.aicp.extras.preference.SystemSettingMasterSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -60,7 +60,7 @@ public class SlimRecents extends BaseSettingsFragment
     private static final String RECENT_ICON_PACK = "slim_icon_pack";
 
     private SwitchPreference mRecentPanelLeftyMode;
-    private MasterSwitchPreference mAppSidebar;
+    private SystemSettingMasterSwitchPreference mAppSidebar;
     private Preference mIconPack;
 
     // Icon pack
@@ -88,7 +88,7 @@ public class SlimRecents extends BaseSettingsFragment
         mRecentPanelLeftyMode = (SwitchPreference) findPreference(RECENT_PANEL_LEFTY_MODE);
         mRecentPanelLeftyMode.setOnPreferenceChangeListener(this);
         mAppSidebar =
-                (MasterSwitchPreference) findPreference(Settings.System.USE_RECENT_APP_SIDEBAR);
+                (SystemSettingMasterSwitchPreference) findPreference(Settings.System.USE_RECENT_APP_SIDEBAR);
         mIconPack = findPreference(RECENT_ICON_PACK);
     }
 

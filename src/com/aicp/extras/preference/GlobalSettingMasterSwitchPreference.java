@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2017-2026 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,11 +17,18 @@
 package com.aicp.extras.preference;
 
 import android.content.Context;
+import android.content.res.TypedArray;
+import android.os.SystemProperties;
 import android.util.AttributeSet;
 
 import com.aicp.gear.preference.GlobalSettingsStore;
+import com.android.settingslib.PrimarySwitchPreference;
 
-public class GlobalSettingMasterSwitchPreference extends MasterSwitchPreference {
+import com.aicp.extras.R;
+
+public class GlobalSettingMasterSwitchPreference extends PrimarySwitchPreference {
+
+    private boolean mDefaultValue;
 
     public GlobalSettingMasterSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
@@ -36,6 +43,35 @@ public class GlobalSettingMasterSwitchPreference extends MasterSwitchPreference 
     public GlobalSettingMasterSwitchPreference(Context context) {
         super(context);
         setPreferenceDataStore(new GlobalSettingsStore(context.getContentResolver()));
+    }
+
+    @Override
+    protected Object onGetDefaultValue(TypedArray a, int index) {
+        // This is called in super constructor, so we cannot load required
+        // attrs for this method from init() -> do here (and use Preference stylables only)
+        String systemPropDefaultOverride =
+                a.getString(R.styleable.Preference_systemPropDefaultOverride);
+
+        if (systemPropDefaultOverride != null) {
+            int sep1 = systemPropDefaultOverride.indexOf('?');
+            int sep2 = systemPropDefaultOverride.indexOf(':');
+            String override = SystemProperties.get(systemPropDefaultOverride.substring(0, sep1));
+            String onValue = systemPropDefaultOverride.substring(sep1+1, sep2);
+            String offValue = systemPropDefaultOverride.substring(sep2+1);
+            if (onValue.equals(override)) {
+                return true;
+            } else if (offValue.equals(override)) {
+                return false;
+            } // else: don't override
+        }
+        return mDefaultValue = a.getBoolean(index, false);
+    }
+
+    /**
+     * Get default value for external use.
+     */
+    public boolean getDefaultValue() {
+        return mDefaultValue;
     }
 
 }
