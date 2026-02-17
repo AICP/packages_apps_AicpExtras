@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2017-2026 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,9 +17,14 @@
 package com.aicp.extras.preference;
 
 import android.content.Context;
+import android.content.res.TypedArray;
+import android.os.SystemProperties;
 import android.util.AttributeSet;
 
 import com.aicp.gear.preference.SecureSettingsStore;
+import com.android.settingslib.PrimarySwitchPreference;
+
+import com.aicp.extras.R;
 
 public class SecureSettingMasterSwitchPreference extends MasterSwitchPreference {
 

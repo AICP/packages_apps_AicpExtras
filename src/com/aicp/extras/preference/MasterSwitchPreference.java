@@ -25,6 +25,8 @@ import androidx.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.CompoundButton;
+import com.android.settingslib.PrimarySwitchPreference;
+
 
 import com.aicp.extras.R;
 
@@ -32,7 +34,7 @@ import com.aicp.extras.R;
  * A custom preference that provides inline switch toggle. It has a mandatory field for title, and
  * optional fields for icon and sub-text.
  */
-public class MasterSwitchPreference extends TwoTargetPreference {
+public class MasterSwitchPreference extends PrimarySwitchPreference {
 
     private Context mContext;
     private CompoundButton mSwitch;
@@ -85,84 +87,6 @@ public class MasterSwitchPreference extends TwoTargetPreference {
                     mPlainSwitch));
         a.recycle();
     }
-
-    @Override
-    protected int getSecondTargetResId() {
-        return R.layout.preference_widget_master_switch;
-    }
-
-    private View.OnClickListener mClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mSwitch != null && !mSwitch.isEnabled()) {
-                    return;
-                }
-                if (!mChecked) {
-                    mDependencyHandler.onEnablePref(mThereCanBeOnlyOneGroupId, getKey());
-                } else if (mDependencyHandler != null && mThereShouldBeOne &&
-                        !mDependencyHandler.isAnotherEnabled(
-                                mThereCanBeOnlyOneGroupId, getKey())) {
-                    // It might not be safe to disable, so ask the user to make sure
-                    mDependencyHandler.showConfirmDisableDialog(mContext,
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    // Continue with disabling the preference
-                                    setChecked(false);
-                                    if (!callChangeListener(mChecked)) {
-                                        setChecked(!mChecked);
-                                    } else {
-                                        persistBoolean(mChecked);
-                                    }
-                                }
-                            },
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    // Only close dialog
-                                }
-                            });
-                    return;
-                }
-                setChecked(!mChecked);
-                if (!callChangeListener(mChecked)) {
-                    setChecked(!mChecked);
-                } else {
-                    persistBoolean(mChecked);
-                }
-            }
-        };
-
-
-    @Override
-    public void onBindViewHolder(PreferenceViewHolder holder) {
-        super.onBindViewHolder(holder);
-        mWidgetView = holder.findViewById(android.R.id.widget_frame);
-        mBaseView = holder.itemView;
-        mMainView = holder.findViewById(R.id.main_view);
-        if (mWidgetView != null) {
-            mWidgetView.setOnClickListener(mClickListener);
-        }
-
-        mSwitch = (CompoundButton) holder.findViewById(R.id.switchWidget);
-        if (mSwitch != null) {
-            mSwitch.setContentDescription(getTitle());
-            mSwitch.setChecked(mChecked);
-            mSwitch.setEnabled(mEnableSwitch);
-        }
-        mTwoTargetDivider = holder.findViewById(R.id.two_target_divider);
-        setPlainSwitch(mPlainSwitch);
-    }
-
-    @Override
-    protected void onClick() {
-        super.onClick();
-
-        if (mPlainSwitch) {
-            mClickListener.onClick(null);
-        }
-    }
-
 
     public void setDependencyHandler(MasterSwitchPreferenceDependencyHandler dependencyHandler) {
         mDependencyHandler = dependencyHandler;
