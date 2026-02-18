@@ -17,10 +17,11 @@
 
 <com.google.android.material.materialswitch.MaterialSwitch
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/Theme.Material3.DynamicColors.DayNight"
     android:id="@+id/switchWidget"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@null"
     android:focusable="false"
-    android:theme="@style/Theme.Material3.DynamicColors.DayNight"
-    android:clickable="false" />
+    android:clickable="false"
+    style="?expressiveSwitchStyle"/>
