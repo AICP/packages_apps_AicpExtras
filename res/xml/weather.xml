@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * Copyright (C) 2017-2018 AICP
+ * Copyright (C) 2017-2026 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,13 +30,8 @@
         app:iconSpaceReserved="false" >
         <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="org.omnirom.omnijaws"
-                android:targetClass="org.omnirom.omnijaws.SettingsActivityService" />
+                android:targetClass="org.omnirom.omnijaws.SettingsActivity" />
     </PreferenceScreen>
-
-    <ListPreference
-        android:key="weather_icon_pack"
-        android:title="@string/weather_icon_pack_title"
-        android:persistent="false" />
 
     <!-- Lockscreen weather -->
     <PreferenceCategory
@@ -51,31 +46,31 @@
             android:defaultValue="false" />
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="lockscreen_weather_style"
-            android:title="@string/lock_screen_weather_style_title"
-            android:summaryOn="@string/lock_screen_weather_style_summaryOn"
-            android:summaryOff="@string/lock_screen_weather_style_summaryOff"
+            android:key="lockscreen_weather_location"
+            android:title="@string/lockscreen_weather_location_title"
+            android:summary="@string/lockscreen_weather_location_summary"
+            android:dependency="lockscreen_weather_enabled" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="lockscreen_weather_text"
+            android:title="@string/lockscreen_weather_text_title"
+            android:summary="@string/lockscreen_weather_text_summary"
             android:defaultValue="false"
             android:dependency="lockscreen_weather_enabled" />
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="lockscreen_weather_show_city"
-            android:title="@string/lockscreen_weather_show_city_title"
-            android:summary="@string/lockscreen_weather_show_city_summary"
-            android:dependency="lockscreen_weather_enabled"
-            android:defaultValue="false" />
+            android:key="lockscreen_weather_wind_info"
+            android:title="@string/lockscreen_weather_wind_info_title"
+            android:summary="@string/lockscreen_weather_wind_info_summary"
+            android:defaultValue="false"
+            android:dependency="lockscreen_weather_enabled" />
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="lockscreen_weather_show_temp"
-            android:title="@string/lockscreen_weather_show_temp_title"
-            android:summary="@string/lockscreen_weather_show_temp_summary"
-            android:dependency="lockscreen_weather_enabled"
-            android:defaultValue="true" />
+            android:key="lockscreen_weather_humidity_info"
+            android:title="@string/lockscreen_weather_humidity_info_title"
+            android:summary="@string/lockscreen_weather_humidity_info_summary"
+            android:defaultValue="false"
+            android:dependency="lockscreen_weather_enabled" />
 
     </PreferenceCategory>
-
-    <!--com.android.settingslib.widget.FooterPreference
-        android:title="@string/lock_screen_weather_style_footer"
-        android:selectable="false"
-        settings:allowDividerAbove="true" /-->
 </PreferenceScreen>
