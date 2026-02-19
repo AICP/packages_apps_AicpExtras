@@ -53,7 +53,7 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final ContentResolver resolver = getActivity().getContentResolver();
-
+/*
         String settingsJaws = Settings.System.getString(resolver,
                 Settings.System.OMNIJAWS_WEATHER_ICON_PACK);
         if (settingsJaws == null) {
@@ -77,18 +77,18 @@ public class Weather extends BaseSettingsFragment implements OnPreferenceChangeL
         }
         mWeatherIconPack.setValueIndex(valueJawsIndex >= 0 ? valueJawsIndex : 0);
         mWeatherIconPack.setSummary(mWeatherIconPack.getEntry());
-        mWeatherIconPack.setOnPreferenceChangeListener(this);
+        mWeatherIconPack.setOnPreferenceChangeListener(this);*/
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mWeatherIconPack) {
+/*        if (preference == mWeatherIconPack) {
             String value = (String) objValue;
             Settings.System.putString(getActivity().getContentResolver(),
                     Settings.System.OMNIJAWS_WEATHER_ICON_PACK, value);
             int valueIndex = mWeatherIconPack.findIndexOfValue(value);
             mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[valueIndex]);
-        }
+        }*/
         return true;
     }
 
