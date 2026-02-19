@@ -141,12 +141,13 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity implements
                 arguments.putString(EXTRA_PREFERENCE_KEY,
                         mIntent.getStringExtra(EXTRA_PREFERENCE_KEY));
             }
-
-            if (savedInstanceState == null) {
-                mFragment.setArguments(arguments);
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.main_content, mFragment, FRAGMENT_TAG).commit();
-           }
+	    if (!(this instanceof HiddenAnimActivity)) {
+               if (savedInstanceState == null) {
+                   mFragment.setArguments(arguments);
+                   getSupportFragmentManager().beginTransaction()
+                           .replace(R.id.main_content, mFragment, FRAGMENT_TAG).commit();
+               }
+	   }
        }
 
         mMasterSwitchDependencyHandler = new MasterSwitchPreferenceDependencyHandler(this);
