@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2017-2026 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.aicp.extras
 
-package com.aicp.extras;
-
-public interface TitleProvider {
-    CharSequence getTitle();
+interface TitleProvider {
+    fun getTitle(): CharSequence
 }
+
