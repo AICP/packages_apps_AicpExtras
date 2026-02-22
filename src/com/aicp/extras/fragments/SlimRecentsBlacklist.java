@@ -93,7 +93,7 @@ public class SlimRecentsBlacklist extends BaseSettingsFragment implements
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         // Add empty application definition, the user will be able to edit it later
                         PackageItem info = (PackageItem) parent.getItemAtPosition(position);
-                        addCustomApplicationPref(info.packageName, mBlacklistPackages);
+                        addCustomApplicationPref(info.getPackageName(), mBlacklistPackages);
                         dialog.cancel();
                     }
                 });
