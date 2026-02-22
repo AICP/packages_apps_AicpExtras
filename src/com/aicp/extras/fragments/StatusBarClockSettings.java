@@ -83,7 +83,7 @@ public class StatusBarClockSettings extends BaseSettingsFragment {
 
         parseClockDateFormats();*/
     }
-
+/*
     @Override
     public void onResume() {
         super.onResume();
@@ -106,7 +106,7 @@ public class StatusBarClockSettings extends BaseSettingsFragment {
             mClockPosition.setEntryValues(R.array.clock_position_values_notch);
         }
     }
-/*
+
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         AlertDialog dialog;
