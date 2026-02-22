@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2016 The CyanogenMod Project
+ * Copyright (C) 2026 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +14,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.aicp.extras.search
 
-package com.aicp.extras;
+import android.content.Context
 
-public interface TitleProvider {
-    CharSequence getTitle();
+/**
+ * Convenience class which can be used to return additional search metadata without
+ * having to implement all methods.
+ */
+open class BaseSearchIndexProvider : Searchable.SearchIndexProvider {
+
+    override fun getRawDataToIndex(context: Context): List<SearchIndexableRaw> {
+        return emptyList()
+    }
+
+    override fun getNonIndexableKeys(context: Context): Set<String> {
+        return emptySet()
+    }
 }
+
