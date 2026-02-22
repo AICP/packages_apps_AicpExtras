@@ -27,8 +27,9 @@ string_ref_xml_to_java() {
 components=""
 actions=""
 
-for fragment in "$my_dir/src/com/aicp/extras/fragments/"*; do
-    fragment_short="$(basename "$fragment" .java)"
+for fragment in "$my_dir/src/com/aicp/extras/fragments/"*.{java,kt}; do
+    fragment_short=$(basename "$fragment" .java)
+    fragment_short=${fragment_short%.kt}  # remove .kt, if existing
     fragment_full="com.aicp.extras.fragments.$fragment_short"
 
     # Get xml resource
