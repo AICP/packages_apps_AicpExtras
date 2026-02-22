@@ -41,6 +41,7 @@ android_app {
 
     srcs: [
         "src/**/*.java",
+        "src/**/*.kt",
         ":aicp_extras_generate_ae_fragment_list",
     ],
 
