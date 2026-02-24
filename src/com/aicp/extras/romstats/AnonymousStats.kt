@@ -29,7 +29,7 @@ import android.util.ArraySet
 import android.util.Log
 import androidx.preference.Preference
 import androidx.preference.PreferenceScreen
-import androidx.preference.SwitchPreference
+import androidx.preference.SwitchPreferenceCompat
 import com.aicp.extras.BaseSettingsFragment
 import com.aicp.extras.R
 import java.io.File
@@ -95,8 +95,8 @@ class AnonymousStats : BaseSettingsFragment(), DialogInterface.OnClickListener, 
     }
 
     // Rest des Codes bleibt unverändert
-    private lateinit var mEnableReporting: SwitchPreference
-    private lateinit var mPersistentOptout: SwitchPreference
+    private lateinit var mEnableReporting: SwitchPreferenceCompat
+    private lateinit var mPersistentOptout: SwitchPreferenceCompat
     private lateinit var mViewStats: Preference
     private var mOkDialog: Dialog? = null
     private var mOkClicked: Boolean = false
