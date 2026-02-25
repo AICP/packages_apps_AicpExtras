@@ -1,9 +1,7 @@
 /*
- * Copyright (C) 2018 Android Ice Cold Project
+ * Copyright (C) 2017-2026 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -14,16 +12,15 @@
  * limitations under the License.
  */
 
+package com.aicp.extras.fragments
 
-package com.aicp.extras.fragments;
+import com.aicp.extras.BaseSettingsFragment
+import com.aicp.extras.R
 
-import com.aicp.extras.BaseSettingsFragment;
-import com.aicp.extras.R;
+class SlimRecentAppSidebarStyle : BaseSettingsFragment() {
 
-public class AmbientMediaTicker extends BaseSettingsFragment {
-
-    @Override
-    protected int getPreferenceResource() {
-        return R.xml.ambient_media_ticker;
+    override fun getPreferenceResource(): Int {
+        return R.xml.slim_recent_app_sidebar_style
     }
 }
+
