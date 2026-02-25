@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Android Ice Cold Project
+ * Copyright (C) 2017-2026 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,16 +14,15 @@
  * limitations under the License.
  */
 
+package com.aicp.extras.fragments
 
-package com.aicp.extras.fragments;
+import com.aicp.extras.BaseSettingsFragment
+import com.aicp.extras.R
 
-import com.aicp.extras.BaseSettingsFragment;
-import com.aicp.extras.R;
+class SlimRecentAppSidebar : BaseSettingsFragment() {
 
-public class SmartPixels extends BaseSettingsFragment {
-
-    @Override
-    protected int getPreferenceResource() {
-        return R.xml.smart_pixels;
+    override fun getPreferenceResource(): Int {
+        return R.xml.slim_recent_app_sidebar
     }
 }
+

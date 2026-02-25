@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2018 Android Ice Cold Project
+ * Copyright (C) 2015 The Dirty Unicorns Project
+ * Copyright (C) 2019-2026 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,17 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.aicp.extras.fragments
 
+import com.aicp.extras.BaseSettingsFragment
+import com.aicp.extras.R
 
-package com.aicp.extras.fragments;
+class PulseSettings : BaseSettingsFragment() {
 
-import com.aicp.extras.BaseSettingsFragment;
-import com.aicp.extras.R;
+    override fun getPreferenceResource(): Int = R.xml.pulse_settings
 
-public class BatteryBar  extends BaseSettingsFragment {
-
-    @Override
-    protected int getPreferenceResource() {
-        return R.xml.battery_bar;
-    }
 }
+
