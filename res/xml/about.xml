@@ -73,6 +73,13 @@
         </Preference>
 
         <Preference
+            android:title="@string/mastodon_title"
+            android:summary="@string/mastodon_summary">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="@string/mastodon_link" />
+        </Preference>
+
+        <Preference
             android:title="@string/aicp_gerrit_title"
             android:summary="@string/aicp_gerrit_summary">
             <intent android:action="android.intent.action.VIEW"
