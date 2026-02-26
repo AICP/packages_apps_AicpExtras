@@ -53,6 +53,7 @@
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="use_slim_recents"
         android:title="@string/slim_recents_title"
+        android:summary="@string/alternative_recents_swipe_up_enabled_warning_summary"
         aicpextras:thereCanBeOnlyOneGroupId="1"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.SlimRecents" />
