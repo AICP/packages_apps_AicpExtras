@@ -158,14 +158,14 @@ open class SettingsActivity :
             intent.hasExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY) -> {
                 mSwitchBar?.show()
                 SystemSettingSwitchBarController(
-                    mSwitchBar,
-                    intent.getStringExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY),
+                    mSwitchBar!!,
+                    intent.getStringExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY)!!,
                     intent.getBooleanExtra(
                         EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE,
                         false
                     ),
                     contentResolver,
-                    settingsFragment,
+                    settingsFragment!!,
                     mMasterSwitchDependencyHandler,
                     thereShouldBeOne
                 )
@@ -173,14 +173,14 @@ open class SettingsActivity :
             intent.hasExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY) -> {
                 mSwitchBar?.show()
                 SecureSettingSwitchBarController(
-                    mSwitchBar,
-                    intent.getStringExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY),
+                    mSwitchBar!!,
+                    intent.getStringExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY)!!,
                     intent.getBooleanExtra(
                         EXTRA_SWITCH_SECURE_SETTINGS_DEFAULT_VALUE,
                         false
                     ),
                     contentResolver,
-                    settingsFragment,
+                    settingsFragment!!,
                     mMasterSwitchDependencyHandler,
                     thereShouldBeOne
                 )
@@ -188,14 +188,14 @@ open class SettingsActivity :
             intent.hasExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_KEY) -> {
                 mSwitchBar?.show()
                 GlobalSettingSwitchBarController(
-                    mSwitchBar,
-                    intent.getStringExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_KEY),
+                    mSwitchBar!!,
+                    intent.getStringExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_KEY)!!,
                     intent.getBooleanExtra(
                         EXTRA_SWITCH_GLOBAL_SETTINGS_DEFAULT_VALUE,
                         false
                     ),
                     contentResolver,
-                    settingsFragment,
+                    settingsFragment!!,
                     mMasterSwitchDependencyHandler,
                     thereShouldBeOne
                 )
