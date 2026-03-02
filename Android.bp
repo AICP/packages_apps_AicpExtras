@@ -40,6 +40,7 @@ android_app {
     name: "AicpExtras",
 
     srcs: [
+        "../Settings/src",
         "src/**/*.java",
         "src/**/*.kt",
         ":aicp_extras_generate_ae_fragment_list",
