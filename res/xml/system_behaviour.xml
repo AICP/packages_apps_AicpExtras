@@ -125,6 +125,13 @@
 
     </com.aicp.gear.preference.SelfRemovingPreferenceCategory>
 
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="spoofing"
+        android:title="@string/spoofing_title"
+        android:summary="@string/spoofing_summary"
+        android:fragment="com.aicp.extras.fragments.Spoofing"
+        android:defaultValue="false" />
+
     <!-- Spoofing -->
 <!--     <PreferenceCategory
         android:key="spoofing"
