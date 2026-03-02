@@ -1939,15 +1939,42 @@
     <!-- UI settings -->
     <string name="monet_title">Monet settings</string>
     <string name="monet_summary">Customize Monet theme engine</string>
+    <string name="monet_settings">Monet settings</string>
 
-    <!-- Monet Engine -->
-    <string name="monet_engine_custom_color_title">Use custom color</string>
-    <string name="monet_engine_custom_color_summary">Use custom color for monet engine instead of wallpaper colors</string>
+    <!-- Monet settings -->
+    <string name="monet_settings_title">Monet Personalization</string>
+    <string name="monet_settings_sammary">Customize the dynamic theme engine</string>
+    <string name="monet_engine_custom_color_title">Accent color</string>
+    <string name="monet_engine_custom_color_summary">Choose custom color for accent</string>
+    <string name="monet_engine_custom_bgcolor_title">Background color</string>
+    <string name="monet_engine_custom_bgcolor_summary">Choose custom color for background</string>
     <string name="monet_engine_color_override_title">Custom color</string>
-    <string name="monet_engine_white_luminance_user_title">White luminance</string>
-    <string name="monet_engine_accurate_shades_title">Use accurate shades</string>
+    <string name="monet_engine_luminance_factor_title">Luminance</string>
+    <string name="monet_engine_luminance_factor_summary">Higher values produce brighter colors</string>
     <string name="monet_engine_chroma_factor_title">Chroma factor</string>
-    <string name="monet_engine_linear_lightness_title">Use linear lightness</string>
+    <string name="monet_engine_chroma_factor_summary">Higher values produce stronger colors</string>
+    <string name="monet_engine_whole_palette_title">Whole palette</string>
+    <string name="monet_engine_whole_palette_summary">Make Luminance and Chroma selection affect secondary colors as well</string>
+    <string name="monet_engine_tint_background_title">Tint background</string>
+    <string name="monet_engine_tint_background_summary">Make luminance and chroma selection affect background colors as well</string>
+    <string name="monet_engine_style_title">Theme style</string>
+    <string name="monet_engine_style_tonal_spot">Tonal Spot (Default)</string>
+    <string name="monet_engine_style_vibrant">Vibrant</string>
+    <string name="monet_engine_style_expressive">Expressive</string>
+    <string name="monet_engine_style_spritz">Spritz</string>
+    <string name="monet_engine_style_rainbow">Rainbow</string>
+    <string name="monet_engine_style_fruit_salad">Fruit Salad</string>
+    <string name="monet_engine_style_content">Content</string>
+    <string name="monet_engine_style_monochromatic">Monochromatic</string>
+    <string name="monet_engine_style_fidelity">Fidelity</string>
+    <string name="monet_engine_color_source_title">Color source</string>
+    <string name="monet_engine_color_source_both">Both (Default)</string>
+    <string name="monet_engine_color_source_home">Home wallpaper</string>
+    <string name="monet_engine_color_source_lock">Lock wallpaper</string>
+    <string name="monet_engine_color_source_preset">Preset</string>
+    <string name="monet_engine_wallpaper_color_title">Select a different accent color from your wallpaper</string>
+    <string name="monet_engine_wallpaper_color_summary">Wallpaper color selector</string>
+    <string name="monet_engine_wallpaper_color_not_available">Not available</string>
 
     <!-- Lockscreen auth ripple effect  -->
     <string name="lockscreen_ripple_effect_title">Ripple animation</string>
@@ -2136,4 +2163,41 @@
     <!-- background blur -->
     <string name="background_blur_radius_title">Background blur depth</string>
     <string name="background_blur_radius_summary">Blur must be activated and restart of SystemUI is needed to take effect</string>
+
+    <!-- Keybox Data -->
+    <string name="keybox_data_title">Keybox attestation override</string>
+    <string name="keybox_data_summary">Load a custom keybox XML to override device key attestation</string>
+    <string name="keybox_data_loaded_summary">Loaded %1$s keybox with %2$d certificates (%3$s)</string>
+    <string name="keybox_delete_content_description">Clear keybox data</string>
+    <string name="keybox_toast_invalid_file_selected">Not an XML file. Choose a valid keybox XML.</string>
+    <string name="keybox_toast_missing_data">Invalid keybox XML: required fields missing</string>
+    <string name="keybox_toast_file_loaded">Keybox loaded</string>
+    <string name="keybox_toast_file_cleared">Keybox cleared</string>
+
+    <!-- Pif Data -->
+    <string name="pif_data_title">Select PIF JSON to spoof</string>
+    <string name="pif_data_summary">Select PIF JSON used for prop attestation spoofing for google mobile services and play store. Click the delete button in order to reset the PIF data props and use dynamic PIF props which are used by default.</string>
+    <string name="pif_data_loaded_summary">Loaded %1$d props (%2$s)</string>
+    <string name="pif_delete_content_description">Clear PIF data</string>
+    <string name="pif_toast_invalid_file_selected">Not a JSON file. Choose a valid PIF JSON.</string>
+    <string name="pif_toast_file_loaded">PIF JSON loaded</string>
+    <string name="pif_toast_file_cleared">PIF JSON cleared</string>
+
+    <!-- Spoofing Categories -->
+    <string name="spoofing_attestation_category_title">Attestation</string>
+    <string name="spoofing_apps_category_title">App Spoofing</string>
+
+    <!-- Google Play Integrity Spoof -->
+    <string name="spoofing_integrity_category_title">Google Play Integrity</string>
+    <string name="pi_spoof_title">Google Play Integrity spoof</string>
+    <string name="pi_spoof_summary">Spoof your device as different model for Google Play Integrity</string>
+
+    <!-- Spoofing -->
+    <string name="pixel_spoofing_apps_title">Pixel spoofing apps</string>
+    <string name="pixel_spoofing_apps_summary">Select apps to spoof as Pixel 10 Pro XL</string>
+    <string name="spoofing_title">Spoofing</string>
+    <string name="spoofing_summary">Bypass app restrictions by spoofing components</string>
+    <string name="app_list_search">Search</string>
+    <string name="app_list_search_apps">Search apps</string>
+    <string name="app_list_loading">Loading apps\u2026</string>
 </resources>
