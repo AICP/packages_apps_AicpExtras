@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: DerpFest AOSP
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/spoofing_title" >
+
+    <PreferenceCategory
+        android:title="@string/spoofing_integrity_category_title">
+
+        <com.aicp.extras.preference.SystemPropertySwitchPreference
+            android:key="persist.sys.pihooks.pi"
+            android:title="@string/pi_spoof_title"
+            android:summary="@string/pi_spoof_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/spoofing_attestation_category_title">
+
+        <com.aicp.extras.preference.KeyboxDataPreference
+            android:key="keybox_data_setting"
+            android:title="@string/keybox_data_title"/>
+
+        <com.aicp.extras.preference.PifDataPreference
+            android:key="pif_data_setting"
+            android:title="@string/pif_data_title"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/spoofing_apps_category_title">
+
+        <Preference
+            android:key="pixel_spoofing_apps"
+            android:title="@string/pixel_spoofing_apps_title"
+            android:summary="@string/pixel_spoofing_apps_summary"
+            android:fragment="com.aicp.extras.fragments.PixelSpoofingAppsSettings" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
