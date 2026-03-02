@@ -20,4 +20,14 @@
     <attr name="textColorPrimary" format="color" />
     <attr name="color_two_target_preference_divider" format="color" />
 
+    <!-- Base attributes available to ProperSeekBarPreference. -->
+    <declare-styleable name="ProperSeekBarPreference">
+        <attr name="interval" format="integer" />
+        <attr name="showSign" format="boolean" />
+        <attr name="units" format="string|reference" />
+        <attr name="continuousUpdates" format="boolean" />
+        <attr name="textStart" format="string|reference" />
+        <attr name="textEnd" format="string|reference" />
+        <attr name="showButtons" format="boolean" />
+    </declare-styleable>
 </resources>

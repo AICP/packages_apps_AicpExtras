@@ -19,10 +19,10 @@ import android.os.Bundle
 import com.aicp.extras.BaseSettingsFragment
 import com.aicp.extras.R
 
-// class Theming : BaseSettingsFragment(), Preference.OnPreferenceChangeListener {
-class Theming : BaseSettingsFragment() {
+class Theming : BaseSettingsFragment(), Preference.OnPreferenceChangeListener {
+//class Theming : BaseSettingsFragment() {
 
-    // private val mHandler = Handler()
+     private val mHandler = Handler()
 
     override fun getPreferenceResource(): Int {
         return R.xml.theming
@@ -30,19 +30,8 @@ class Theming : BaseSettingsFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        /*
-        Util.requireConfig(
-            requireActivity(),
-            findPreference(Settings.System.DISPLAY_HIDE_NOTCH),
-            com.android.internal.R.bool.config_showHideNotchSettings,
-            true,
-            false
-        )
-        */
     }
 
-    /*
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
 
         if (Settings.System.THEMING_BASE == preference.key ||
@@ -81,5 +70,4 @@ class Theming : BaseSettingsFragment() {
             Util.restartSystemUi(appContext)
         }, 200)
     }
-    */
 }
