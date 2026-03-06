@@ -26,6 +26,7 @@ import android.os.PowerManager
 import android.os.ServiceManager
 import android.os.SystemProperties
 import android.os.Vibrator
+import android.telephony.TelephonyManager
 import android.text.TextUtils
 import android.util.Log
 import androidx.preference.ListPreference
@@ -266,5 +267,14 @@ object Util {
         override fun onPostExecute(result: Void?) {
             dialog?.dismiss()
         }
+    }
+
+    fun is5GSupported(context: Context): Boolean {
+        val telephonyManager =
+            context.getSystemService(Context.TELEPHONY_SERVICE) as? TelephonyManager
+                ?: return false
+
+        return telephonyManager.supportedRadioAccessFamily and
+                TelephonyManager.NETWORK_TYPE_BITMASK_NR != 0L
     }
 }
