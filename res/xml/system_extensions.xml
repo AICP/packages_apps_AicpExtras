@@ -30,6 +30,14 @@
         <intent android:action="com.aicp.extras.ViewSystemAppRemover" />
     </Preference>
 
+    <!-- 5G smart service -->
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="smart_5g"
+        android:title="@string/smart_5g_title"
+        android:summary="@string/smart_5g_summary"
+        android:defaultValue="false" />
+
+
      <PreferenceScreen
         android:key="gaming_category"
         android:title="@string/gaming_mode_title"

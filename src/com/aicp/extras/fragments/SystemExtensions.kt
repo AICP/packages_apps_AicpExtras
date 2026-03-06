@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2017-2026 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,6 +23,8 @@ import com.aicp.extras.BaseSettingsFragment
 import com.aicp.extras.R
 import com.aicp.extras.utils.Util
 import java.net.InetAddress
+import android.telephony.TelephonyManager;
+import android.content.Context;
 
 class SystemExtensions : BaseSettingsFragment(),
     Preference.OnPreferenceChangeListener {
@@ -30,6 +32,7 @@ class SystemExtensions : BaseSettingsFragment(),
     companion object {
         private const val PREF_SYSTEM_APP_REMOVER = "system_app_remover"
         private const val PREF_ADBLOCK = "persist.aicp.hosts_block"
+        private const val PREF_SYSTEM_SMART_5G = "smart_5g"
     }
 
     private val handler = Handler(Looper.getMainLooper())
@@ -44,6 +47,13 @@ class SystemExtensions : BaseSettingsFragment(),
 
         if (!Util.hasSu()) {
             systemAppRemover?.isEnabled = false
+        }
+
+
+        val smart5g = findPreference<Preference>(PREF_SYSTEM_SMART_5G)
+
+        if (!Util.is5GSupported(requireContext())) {
+            smart5g?.isEnabled = false
         }
 
         findPreference<Preference>(PREF_ADBLOCK)
