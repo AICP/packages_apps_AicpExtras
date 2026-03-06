@@ -1448,19 +1448,44 @@
         <item>10</item>
     </string-array>
 
-    <!-- Monet styles  -->
-    <string-array name="monet_styles_entries" translatable="false">
-        <item>@string/monet_default</item>
-        <item>@string/monet_vivid</item>
-        <item>@string/monet_snowpaint</item>
-        <item>@string/monet_espresso</item>
+    <!-- Monet theme styles  -->
+    <string-array name="monet_engine_style_entries">
+        <item>@string/monet_engine_style_tonal_spot</item>
+        <item>@string/monet_engine_style_vibrant</item>
+        <item>@string/monet_engine_style_expressive</item>
+        <item>@string/monet_engine_style_spritz</item>
+        <item>@string/monet_engine_style_rainbow</item>
+        <item>@string/monet_engine_style_fruit_salad</item>
+        <item>@string/monet_engine_style_content</item>
+        <item>@string/monet_engine_style_monochromatic</item>
+        <item>@string/monet_engine_style_fidelity</item>
     </string-array>
 
-    <string-array name="monet_styles_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
+    <string-array name="monet_engine_style_values" translatable="false">
+        <item>TONAL_SPOT</item>
+        <item>VIBRANT</item>
+        <item>EXPRESSIVE</item>
+        <item>SPRITZ</item>
+        <item>RAINBOW</item>
+        <item>FRUIT_SALAD</item>
+        <item>CONTENT</item>
+        <item>MONOCHROMATIC</item>
+        <item>FIDELITY</item>
+    </string-array>
+
+    <!-- Monet color sources  -->
+    <string-array name="monet_engine_color_source_entries">
+        <item>@string/monet_engine_color_source_both</item>
+        <item>@string/monet_engine_color_source_home</item>
+        <item>@string/monet_engine_color_source_lock</item>
+        <item>@string/monet_engine_color_source_preset</item>
+    </string-array>
+
+    <string-array name="monet_engine_color_source_values" translatable="false">
+        <item>both</item>
+        <item>home_wallpaper</item>
+        <item>lock_wallpaper</item>
+        <item>preset</item>
     </string-array>
 
     <!-- Reboot after timeout without unlocking the device.
