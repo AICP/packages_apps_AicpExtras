@@ -98,6 +98,12 @@
             android:title="@string/status_bar_logo_title"
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.StatusBarLogo" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="tint_statusbar_icons_with_accent"
+            android:title="@string/tint_statusbar_icons_with_accent_title"
+            android:summary="@string/tint_statusbar_icons_with_accent_summary"
+            android:defaultValue="false" />
 	<!--
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="show_fourg_icon"
