@@ -23,7 +23,7 @@
     android:key="theming"
     android:title="@string/theming_title"
     android:summary="@string/theming_summary">
-<!--
+
     <PreferenceCategory
         android:key="theming_monet"
         android:title="@string/monet_title">
@@ -36,10 +36,10 @@
             android:fragment="com.aicp.extras.fragments.MonetSettings" />
 
     </PreferenceCategory>
--->
-    <!-- overlayTarget="anrdoid" is enough:
+
+    <!-- overlayTarget="android" is enough:
             we have some special treatment implemented for this category -->
-    <!--     <com.aicp.gear.preference.OverlayPreference
+     <com.aicp.gear.preference.OverlayPreference
         android:key="theming_icon_pack"
         android:title="@string/theming_icon_pack_title"
         aicpextras:overlayCategory="android.theme.customization.icon_pack.android"
@@ -78,7 +78,7 @@
             android:targetPackage="com.android.wallpaper"
             android:targetClass="com.android.customization.picker.LockClockPickerActivity" />
     </Preference>
--->
+
     <!-- Navbar Style -->
 <!--    <com.aicp.gear.preference.OverlayPreference
         android:key="navbar_style"
