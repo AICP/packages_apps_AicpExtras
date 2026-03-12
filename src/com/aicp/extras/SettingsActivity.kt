@@ -157,51 +157,56 @@ open class SettingsActivity :
         when {
             intent.hasExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY) -> {
                 mSwitchBar?.show()
-                SystemSettingSwitchBarController(
-                    mSwitchBar!!,
-                    intent.getStringExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY)!!,
-                    intent.getBooleanExtra(
-                        EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE,
-                        false
-                    ),
-                    contentResolver,
-                    settingsFragment!!,
-                    mMasterSwitchDependencyHandler,
-                    thereShouldBeOne
-                )
+                settingsFragment?.let { fragment ->
+                    SystemSettingSwitchBarController(
+                        mSwitchBar!!,
+                        intent.getStringExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY)!!,
+                        intent.getBooleanExtra(
+                            EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE,
+                            false
+                        ),
+                        contentResolver,
+                        settingsFragment,
+                        mMasterSwitchDependencyHandler,
+                        thereShouldBeOne
+                    )
+                }
             }
             intent.hasExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY) -> {
                 mSwitchBar?.show()
-                SecureSettingSwitchBarController(
-                    mSwitchBar!!,
-                    intent.getStringExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY)!!,
-                    intent.getBooleanExtra(
-                        EXTRA_SWITCH_SECURE_SETTINGS_DEFAULT_VALUE,
-                        false
-                    ),
-                    contentResolver,
-                    settingsFragment!!,
-                    mMasterSwitchDependencyHandler,
-                    thereShouldBeOne
-                )
+                settingsFragment?.let { fragment ->
+                    SecureSettingSwitchBarController(
+                        mSwitchBar!!,
+                        intent.getStringExtra(EXTRA_SWITCH_SECURE_SETTINGS_KEY)!!,
+                        intent.getBooleanExtra(
+                            EXTRA_SWITCH_SECURE_SETTINGS_DEFAULT_VALUE,
+                            false
+                        ),
+                        contentResolver,
+                        settingsFragment,
+                        mMasterSwitchDependencyHandler,
+                        thereShouldBeOne
+                    )
+                }
             }
             intent.hasExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_KEY) -> {
                 mSwitchBar?.show()
-                GlobalSettingSwitchBarController(
-                    mSwitchBar!!,
-                    intent.getStringExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_KEY)!!,
-                    intent.getBooleanExtra(
-                        EXTRA_SWITCH_GLOBAL_SETTINGS_DEFAULT_VALUE,
-                        false
-                    ),
-                    contentResolver,
-                    settingsFragment!!,
-                    mMasterSwitchDependencyHandler,
-                    thereShouldBeOne
-                )
+                settingsFragment?.let { fragment ->
+                    GlobalSettingSwitchBarController(
+                        mSwitchBar!!,
+                        intent.getStringExtra(EXTRA_SWITCH_GLOBAL_SETTINGS_KEY)!!,
+                        intent.getBooleanExtra(
+                            EXTRA_SWITCH_GLOBAL_SETTINGS_DEFAULT_VALUE,
+                            false
+                        ),
+                        contentResolver,
+                        settingsFragment,
+                        mMasterSwitchDependencyHandler,
+                        thereShouldBeOne
+                    )
+                }
             }
         }
-
         val sharedPreferences: SharedPreferences =
             PreferenceManager.getDefaultSharedPreferences(this)
 
