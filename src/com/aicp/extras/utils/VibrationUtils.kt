@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2020 Havoc-OS
+ * Copyright (C) 2026 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,21 +15,22 @@
  * limitations under the License.
  */
 
-package com.aicp.extras.utils;
+package com.aicp.extras.utils
 
-import android.content.Context;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
-import android.provider.Settings;
+import android.content.Context
+import android.os.VibrationEffect
+import android.os.Vibrator
+import android.provider.Settings
 
-public class VibrationUtils {
+object VibrationUtils {
 
-    public static void doHapticFeedback(Context context, int effect) {
-        final Vibrator mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        final boolean hapticEnabled = Settings.System.getInt(context.getContentResolver(),
-                Settings.System.HAPTIC_FEEDBACK_ENABLED, 1) != 0;
+    @JvmStatic
+    fun doHapticFeedback(context: Context, effect: Int) {
+        val mVibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator?
+        val hapticEnabled = Settings.System.getInt(context.contentResolver,
+                Settings.System.HAPTIC_FEEDBACK_ENABLED, 1) != 0
         if (mVibrator != null && mVibrator.hasVibrator() && hapticEnabled) {
-            mVibrator.vibrate(VibrationEffect.get(effect));
+            mVibrator.vibrate(VibrationEffect.get(effect))
         }
     }
 }
