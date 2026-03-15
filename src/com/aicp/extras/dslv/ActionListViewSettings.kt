@@ -165,8 +165,8 @@ class ActionListViewSettings : ListFragment(), SlimShortcutPickerHelper.OnPickLi
             res.getStringArray(res.getIdentifier(mActionValuesKey, "array", "com.aicp.extras")),
             res.getStringArray(res.getIdentifier(mActionEntriesKey, "array", "com.aicp.extras"))
         )
-        mActionDialogValues = finalActionDialogArray.values
-        mActionDialogEntries = finalActionDialogArray.entries
+        mActionDialogValues = finalActionDialogArray?.values ?: emptyArray()
+        mActionDialogEntries = finalActionDialogArray?.entries ?: emptyArray()
 
         mPicker = SlimShortcutPickerHelper(mActivity, this)
 
@@ -453,7 +453,11 @@ class ActionListViewSettings : ListFragment(), SlimShortcutPickerHelper.OnPickLi
 
     private fun setConfig(actionConfigs: ArrayList<ActionConfig>?, reset: Boolean) {
         when (mActionMode) {
-            RECENT_APP_SIDEBAR -> ActionHelper.setRecentAppSidebarConfig(mActivity, actionConfigs, reset)
+            RECENT_APP_SIDEBAR -> {
+                actionConfigs?.let {
+                    ActionHelper.setRecentAppSidebarConfig(mActivity, it, reset)
+                }
+            }
             else -> {}
         }
     }
