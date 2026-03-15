@@ -75,6 +75,13 @@
         android:defaultValue="false" />
 -->
 
+   <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
+        android:key="spoofing"
+        android:title="@string/spoofing_title"
+        android:summary="@string/spoofing_summary"
+        android:fragment="com.aicp.extras.fragments.Spoofing"
+        android:defaultValue="false" />
+
    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="enable_blurs_on_windows"
         android:title="@string/enable_blurs_on_windows_title"
@@ -124,13 +131,6 @@
             android:fragment="com.aicp.extras.fragments.SmartPixels" />
 
     </com.aicp.gear.preference.SelfRemovingPreferenceCategory>
-
-    <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
-        android:key="spoofing"
-        android:title="@string/spoofing_title"
-        android:summary="@string/spoofing_summary"
-        android:fragment="com.aicp.extras.fragments.Spoofing"
-        android:defaultValue="false" />
 
     <!-- Spoofing -->
 <!--     <PreferenceCategory
