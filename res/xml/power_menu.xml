@@ -63,11 +63,13 @@
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="powermenu_onthego"
             android:title="@string/global_actions_onthego_title"
+            android:summary="@string/global_actions_power_menu_summary"
             android:defaultValue="false" />
 
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="powermenu_restart_systemui"
             android:title="@string/global_actions_systemui_title"
+            android:summary="@string/global_actions_systemui_summary"
             android:defaultValue="false" />
 
         <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
