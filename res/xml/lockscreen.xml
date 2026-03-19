@@ -304,6 +304,7 @@ android:defaultValue="false" />-->
        <com.aicp.gear.preference.SystemSettingSwitchPreference
            android:key="lockscreen_show_carrier"
            android:title="@string/show_carrier_title"
+           android:summary="@string/show_carrier_summary"
            android:defaultValue="true" />
 
        <Preference
