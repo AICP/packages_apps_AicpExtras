@@ -152,13 +152,14 @@
             aicpextras:unitsRight=""
             android:defaultValue="0"/-->
 
-        <!-- <com.aicp.gear.preference.SystemSettingIntListPreference
+        <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="volte_icon_style"
             android:title="@string/volte_icon_style_title"
+            android:summary="@string/volte_icon_style_summary"
             android:entries="@array/volte_icon_style_array"
             android:entryValues="@array/volte_icon_style_values"
             android:defaultValue="0" />
-
+<!--
         <com.aicp.gear.preference.SystemSettingIntListPreference
             android:key="vowifi_icon"
             android:title="@string/vowifi_icon_title"
