@@ -23,6 +23,7 @@ import android.widget.CompoundButton;
 
 import com.aicp.extras.BaseSettingsFragment;
 import com.aicp.extras.widget.SwitchBar;
+import com.aicp.gear.preference.MasterSwitchPreferenceDependencyHandler;
 import com.android.settingslib.widget.MainSwitchBar;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 

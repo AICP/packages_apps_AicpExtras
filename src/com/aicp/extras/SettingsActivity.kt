@@ -37,6 +37,7 @@ import com.aicp.extras.fragments.Dashboard
 import com.aicp.extras.preference.*
 import com.aicp.extras.search.PartsList
 import com.aicp.extras.utils.Util
+import com.aicp.gear.preference.*
 
 const val AE_FRAGMENT_ACTION_PREFIX =
     "com.aicp.extras.fragmentaction"

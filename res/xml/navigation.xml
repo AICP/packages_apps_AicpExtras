@@ -25,7 +25,7 @@
         android:key="screenon_navigation"
         android:title="@string/navbar_visibility">
 
-        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+        <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
             android:key="navigation_bar_show_new"
             android:title="@string/navbar_visibility"
             android:summary="@string/navbar_visibility_summary"

@@ -22,7 +22,7 @@
     android:key="notifications"
     android:title="@string/notifications_title">
 <!--
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+    <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
         android:key="status_bar_show_ticker"
         android:title="@string/status_bar_show_ticker_title"
         android:summary="@string/status_bar_show_ticker_summary"
@@ -30,7 +30,7 @@
         android:fragment="com.aicp.extras.fragments.StatusBarTicker"
         aicpextras:thereCanBeOnlyOneGroupId="1" />
 -->
-    <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
+    <com.aicp.gear.preference.GlobalSettingMasterSwitchPreference
         android:key="heads_up_notifications_enabled"
         android:title="@string/notification_heads_up_title"
         android:summary="@string/notification_heads_up_summary"
@@ -38,7 +38,7 @@
         android:fragment="com.aicp.extras.fragments.HeadsUpOptions"
         aicpextras:thereCanBeOnlyOneGroupId="1" />
 
-    <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
+    <com.aicp.gear.preference.SecureSettingMasterSwitchPreference
         android:key="pulse_ambient_light"
         android:title="@string/pulse_ambient_light_title"
         android:summary="@string/pulse_ambient_light_summary"
@@ -76,7 +76,7 @@
         android:defaultValue="false" />
 -->
 
-<!--     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+<!--     <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
         android:key="battery_light_enabled"
         android:defaultValue="@*android:bool/config_intrusiveBatteryLed"
         android:title="@string/battery_light_title"

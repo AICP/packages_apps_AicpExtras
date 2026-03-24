@@ -35,7 +35,7 @@ import android.widget.LinearLayout
 
 import com.aicp.extras.BaseSettingsFragment
 import com.aicp.extras.R
-import com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+import com.aicp.gear.preference.SystemSettingMasterSwitchPreference
 
 import com.aicp.gear.preference.SystemSettingIntListPreference
 import com.aicp.gear.preference.SystemSettingListPreference

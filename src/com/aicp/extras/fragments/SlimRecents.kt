@@ -34,7 +34,7 @@ import androidx.preference.Preference
 import androidx.preference.SwitchPreference
 import com.aicp.extras.BaseSettingsFragment
 import com.aicp.extras.R
-import com.aicp.extras.preference.MasterSwitchPreference
+import com.aicp.gear.preference.MasterSwitchPreference
 import java.util.*
 
 class SlimRecents : BaseSettingsFragment(),

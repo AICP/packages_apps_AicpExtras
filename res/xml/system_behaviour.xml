@@ -54,7 +54,7 @@
 -->
 
     <!-- Suspend Actions --><!--
-    <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
+    <com.aicp.gear.preference.GlobalSettingMasterSwitchPreference
         android:key="start_screen_state_service"
         android:title="@string/screen_state_toggles_title"
         android:summary="@string/screen_state_toggles_enable_summary"
@@ -75,7 +75,7 @@
         android:defaultValue="false" />
 -->
 
-   <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
+   <com.aicp.gear.preference.SecureSettingMasterSwitchPreference
         android:key="spoofing"
         android:title="@string/spoofing_title"
         android:summary="@string/spoofing_summary"
@@ -110,7 +110,7 @@
         android:defaultValue="false" />
 
 <!--
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+    <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
         android:key="sensor_block"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
@@ -123,7 +123,7 @@
         android:title="@string/smart_pixels_title"
         aicpextras:requiresConfig="@*android:bool/config_supportSmartPixels">
 
-        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+        <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
             android:key="smart_pixels_enable"
             android:title="@string/smart_pixels_title"
             android:summary="@string/smart_pixels_summary"

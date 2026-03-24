@@ -19,6 +19,7 @@ import android.content.ContentResolver
 import com.aicp.extras.BaseSettingsFragment
 import com.android.settingslib.widget.MainSwitchBar
 import com.aicp.gear.preference.GlobalSettingsStore
+import com.aicp.gear.preference.MasterSwitchPreferenceDependencyHandler
 
 class GlobalSettingSwitchBarController(
     switchBar: MainSwitchBar,

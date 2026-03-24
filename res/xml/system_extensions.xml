@@ -58,7 +58,7 @@
 -->
 
     <!-- TODO: in case we get more recents settings, use above recents fragment instead again -->
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+    <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
         android:key="use_slim_recents"
         android:title="@string/slim_recents_title"
         android:summary="@string/alternative_recents_swipe_up_enabled_warning_summary"
@@ -94,7 +94,7 @@
 
 
 <!--
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+    <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
         android:key="enable_app_circle_bar"
         android:title="@string/app_circle_bar_title"
         android:summary="@string/app_circle_bar_summary"

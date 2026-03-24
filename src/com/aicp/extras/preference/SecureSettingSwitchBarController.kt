@@ -18,6 +18,7 @@ package com.aicp.extras.preference
 import android.content.ContentResolver
 import com.aicp.extras.BaseSettingsFragment
 import com.android.settingslib.widget.MainSwitchBar
+import com.aicp.gear.preference.MasterSwitchPreferenceDependencyHandler
 import com.aicp.gear.preference.SecureSettingsStore
 
 class SecureSettingSwitchBarController(
