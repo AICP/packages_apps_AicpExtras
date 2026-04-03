@@ -45,8 +45,8 @@ class AmbientEdgeLights : BaseSettingsFragment(),
     Preference.OnPreferenceChangeListener {
 
     companion object {
-        private const val PULSE_AMBIENT_LIGHT_COLOR_MODE = "pulse_ambient_light_color_mode"
-        private const val PULSE_AMBIENT_LIGHT_COLOR = "pulse_ambient_light_color"
+        private const val EDGE_LIGHT_COLOR_MODE = "edge_light_color_mode"
+        private const val EDGE_LIGHT_CUSTOM_COLOR = "edge_light_custom_color"
     }
 
     private lateinit var edgeLightColorPref: ColorPickerPreference
@@ -60,16 +60,16 @@ class AmbientEdgeLights : BaseSettingsFragment(),
         super.onCreate(savedInstanceState)
 
         edgeLightColorModePref =
-            findPreference(PULSE_AMBIENT_LIGHT_COLOR_MODE)!!
+            findPreference(EDGE_LIGHT_COLOR_MODE)!!
         edgeLightColorModePref.onPreferenceChangeListener = this
 
         edgeLightColorPref =
-            findPreference(PULSE_AMBIENT_LIGHT_COLOR)!!
+            findPreference(EDGE_LIGHT_CUSTOM_COLOR)!!
         edgeLightColorPref.onPreferenceChangeListener = this
 
         val edgeLightColorMode = Settings.Secure.getIntForUser(
             requireActivity().contentResolver,
-            Settings.Secure.PULSE_AMBIENT_LIGHT_COLOR_MODE,
+            Settings.Secure.EDGE_LIGHT_COLOR_MODE,
             1,
             UserHandle.USER_CURRENT
         )
