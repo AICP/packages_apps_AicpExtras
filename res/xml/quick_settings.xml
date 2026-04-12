@@ -413,5 +413,12 @@
             aicpextras:unitsRight=""
             android:defaultValue="2" />
     
-	</PreferenceCategory>-->
+    </PreferenceCategory>-->
+    <!-- More pulse screens -->
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="pulse_qs_enabled"
+        android:title="@string/pulse_qs_title"
+        android:summary="@string/pulse_qs_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
