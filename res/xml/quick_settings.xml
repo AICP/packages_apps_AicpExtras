@@ -335,11 +335,10 @@
             android:defaultValue="false" />
 	</PreferenceCategory>
 
-<!--
      <PreferenceCategory
         android:key="qs_panel_bg_options"
         android:title="@string/qs_panel_opacity_category_title">
-
+<!--
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_transparency"
             android:title="@string/qs_panel_translucency_category_title"
@@ -373,9 +372,16 @@
             aicpextras:plainSwitch="false"
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.QSHeaderImage" />
+-->
+    <!-- More pulse screens -->
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="pulse_qs_enabled"
+        android:title="@string/pulse_qs_title"
+        android:summary="@string/pulse_qs_summary"
+        android:defaultValue="false" />
 
      </PreferenceCategory>
-
+<!--
     <PreferenceCategory
         android:key="qs_layout_category"
         android:title="@string/qs_layout_category_title">
@@ -413,5 +419,5 @@
             aicpextras:unitsRight=""
             android:defaultValue="2" />
     
-	</PreferenceCategory>-->
+    </PreferenceCategory>-->
 </PreferenceScreen>
