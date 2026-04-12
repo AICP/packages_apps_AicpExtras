@@ -99,4 +99,11 @@
         android:summary="@string/charging_animation_summary"
         android:defaultValue="false" />
 
+    <!-- More pulse screens -->
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="more_screen_pulse_enabled"
+        android:title="@string/more_pulse_screen_title"
+        android:summary="@string/more_pulse_screen_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
