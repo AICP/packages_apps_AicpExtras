@@ -15,6 +15,7 @@
  */
 package com.aicp.extras.fragments
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.os.SystemProperties
 import android.provider.Settings
@@ -22,62 +23,67 @@ import androidx.preference.Preference
 import androidx.preference.SwitchPreferenceCompat
 import com.aicp.extras.BaseSettingsFragment
 import com.aicp.extras.R
+import com.aicp.gear.preference.SecureSettingMasterSwitchPreference
 
-class SystemBehaviour : BaseSettingsFragment(),
-    Preference.OnPreferenceChangeListener {
+class SystemBehaviour : BaseSettingsFragment(), 
+   Preference.OnPreferenceChangeListener {
 
     companion object {
         private const val KEY_ENABLE_BLURS = "enable_blurs_on_windows"
-        private const val SF_PROP_REQUIRED_FOR_BLUR =
-            "ro.surface_flinger.supports_background_blur"
+        private const val SF_PROP_REQUIRED_FOR_BLUR = "ro.surface_flinger.supports_background_blur"
+        private const val SPOOFING_KEY = "spoofing"
     }
 
+    private lateinit var mEnableSpoofing: SecureSettingMasterSwitchPreference
     private var enableBlurPref: SwitchPreferenceCompat? = null
 
-    override fun getPreferenceResource(): Int =
-        R.xml.system_behaviour
+    override fun getPreferenceResource(): Int = R.xml.system_behaviour
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        super.onCreatePreferences(savedInstanceState, rootKey)
 
         enableBlurPref = findPreference(KEY_ENABLE_BLURS)
-
         enableBlurPref?.let { pref ->
-
-            if (pref.isChecked) {
-                setWindowBlur(true)
-            }
-
+            if (pref.isChecked) setWindowBlur(true)
             pref.onPreferenceChangeListener = this
+            val blurSupported = SystemProperties.getInt(SF_PROP_REQUIRED_FOR_BLUR, 0) == 1
+            pref.isEnabled = blurSupported
+        }
 
-            val blurPropValue =
-                SystemProperties.getInt(SF_PROP_REQUIRED_FOR_BLUR, 0)
-            val blurSupported = blurPropValue == 1
-
-            if (!blurSupported) {
-                pref.isEnabled = false
+        mEnableSpoofing = findPreference(SPOOFING_KEY)!!
+        mEnableSpoofing.onPreferenceClickListener = Preference.OnPreferenceClickListener {
+            if (!mEnableSpoofing.isChecked) {
+                showSpoofingWarningDialog()
+                return@OnPreferenceClickListener true
             }
+            false
         }
     }
 
-    override fun onPreferenceChange(
-        preference: Preference,
-        newValue: Any?
-    ): Boolean {
-
+    override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
         if (preference == enableBlurPref) {
             val blurEnabled = !(newValue as Boolean)
-
             setWindowBlur(blurEnabled)
             return true
         }
+        return true
+    }
 
-        return false
+    private fun showSpoofingWarningDialog() {
+        val activity = activity ?: return
+        AlertDialog.Builder(activity)
+            .setTitle(R.string.spoofing_warning_title)
+            .setMessage(R.string.spoofing_warning)
+            .setPositiveButton(android.R.string.yes) { _, _ ->
+                Settings.Secure.putInt(requireContext().contentResolver, SPOOFING_KEY, 1)
+                mEnableSpoofing.isChecked = true
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
     }
 
     private fun setWindowBlur(disable: Boolean) {
         val context = context ?: return
-
         try {
             Settings.Global.putInt(
                 context.contentResolver,
@@ -89,4 +95,3 @@ class SystemBehaviour : BaseSettingsFragment(),
         }
     }
 }
-
