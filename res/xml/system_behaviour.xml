@@ -75,12 +75,22 @@
         android:defaultValue="false" />
 -->
 
+    <!-- Spoofing -->
+     <PreferenceCategory
+        android:key="spoofing"
+        android:title="@string/spoofing_category">
+
+        <Preference
+            android:summary="@string/spoofing_warning"
+            android:selectable="false"/>
+
    <com.aicp.gear.preference.SecureSettingMasterSwitchPreference
         android:key="spoofing"
         android:title="@string/spoofing_title"
         android:summary="@string/spoofing_summary"
         android:fragment="com.aicp.extras.fragments.Spoofing"
         android:defaultValue="false" />
+    </PreferenceCategory>
 
    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="enable_blurs_on_windows"
