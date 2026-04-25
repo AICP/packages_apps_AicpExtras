@@ -7,8 +7,13 @@
 package com.aicp.extras.fragments
 
 import android.app.Activity
+import android.app.AlertDialog
+import android.app.Dialog
+import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.Resources
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
@@ -20,8 +25,10 @@ import com.aicp.extras.BaseSettingsFragment
 import com.aicp.extras.R
 import com.aicp.extras.preference.KeyboxDataPreference
 import com.aicp.extras.preference.PifDataPreference
+import com.aicp.extras.utils.Util
+import com.aicp.gear.preference.SecureSettingMasterSwitchPreference
 
-class Spoofing : BaseSettingsFragment(), Preference.OnPreferenceChangeListener {
+class Spoofing : BaseSettingsFragment(), DialogInterface.OnClickListener, DialogInterface.OnDismissListener, Preference.OnPreferenceChangeListener {
 
     companion object {
         const val TAG = "Spoofing"
@@ -29,18 +36,26 @@ class Spoofing : BaseSettingsFragment(), Preference.OnPreferenceChangeListener {
         private const val PIF_DATA_KEY = "pif_data_setting"
     }
 
+    private lateinit var mEnableSpoofing: SecureSettingMasterSwitchPreference
     private lateinit var mKeyboxFilePickerLauncher: ActivityResultLauncher<Intent>
     private lateinit var mPifFilePickerLauncher: ActivityResultLauncher<Intent>
+    private lateinit var mPrefs: SharedPreferences
     private var mKeyboxDataPreference: KeyboxDataPreference? = null
+    private var mOkDialog: Dialog? = null
+    private var mOkClicked: Boolean = false
     private var mPifDataPreference: PifDataPreference? = null
 
     override fun getPreferenceResource(): Int = R.xml.spoofing
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        super.onCreatePreferences(savedInstanceState, rootKey)
 
         val prefScreen: PreferenceScreen? = preferenceScreen
         val res: Resources = resources
+        mPrefs = requireActivity().getSharedPreferences(requireActivity().packageName + "_preferences", Context.MODE_PRIVATE)
+        val prefSet = preferenceScreen
+
+        mEnableSpoofing = prefSet.findPreference<SecureSettingMasterSwitchPreference>("pixel_spoofing_enabled")!!
 
         mKeyboxFilePickerLauncher = registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
@@ -67,8 +82,47 @@ class Spoofing : BaseSettingsFragment(), Preference.OnPreferenceChangeListener {
         }
     }
 
+    override fun onPreferenceTreeClick(preference: Preference): Boolean {
+        return when (preference) {
+            mEnableSpoofing -> {
+                if (mEnableSpoofing.isChecked) {
+                    mOkClicked = false
+                    mOkDialog?.dismiss()
+                    mOkDialog = AlertDialog.Builder(requireActivity())
+                        .setMessage(R.string.spoofing_warning)
+                        .setTitle(R.string.spoofing_warning_title)
+                        .setPositiveButton(android.R.string.yes, this)
+                        .setNegativeButton(android.R.string.no, this)
+                        .setOnDismissListener(this)
+                        .show()
+                } else {
+                    mPrefs.edit().putBoolean("pixel_spoofing_enabled", false).apply()
+                }
+                true
+            }
+            else -> super.onPreferenceTreeClick(preference)
+        }
+    }
+
+    override fun onClick(dialog: DialogInterface?, which: Int) {
+        if (which == DialogInterface.BUTTON_POSITIVE) {
+            mOkClicked = true
+            mPrefs.edit().putBoolean("pixel_spoofing_enabled", true).apply()
+        } else {
+            mOkClicked = false
+            mEnableSpoofing.isChecked = false
+            mPrefs.edit().putBoolean("pixel_spoofing_enabled", false).apply()
+        }
+    }
+
+    override fun onDismiss(dialog: DialogInterface) {
+        if (!mOkClicked) {
+            mEnableSpoofing.isChecked = false
+        }
+    }
+
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-        return false
+        return true
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
