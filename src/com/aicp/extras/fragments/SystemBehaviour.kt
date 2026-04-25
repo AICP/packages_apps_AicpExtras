@@ -15,6 +15,8 @@
  */
 package com.aicp.extras.fragments
 
+import android.app.AlertDialog
+import android.content.Context
 import android.os.Bundle
 import android.os.SystemProperties
 import android.provider.Settings
@@ -22,6 +24,7 @@ import androidx.preference.Preference
 import androidx.preference.SwitchPreferenceCompat
 import com.aicp.extras.BaseSettingsFragment
 import com.aicp.extras.R
+import com.aicp.gear.preference.SecureSettingMasterSwitchPreference
 
 class SystemBehaviour : BaseSettingsFragment(),
     Preference.OnPreferenceChangeListener {
@@ -32,13 +35,14 @@ class SystemBehaviour : BaseSettingsFragment(),
             "ro.surface_flinger.supports_background_blur"
     }
 
+    private lateinit var mEnableSpoofing: SecureSettingMasterSwitchPreference
     private var enableBlurPref: SwitchPreferenceCompat? = null
 
     override fun getPreferenceResource(): Int =
         R.xml.system_behaviour
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        super.onCreatePreferences(savedInstanceState, rootKey)
 
         enableBlurPref = findPreference(KEY_ENABLE_BLURS)
 
@@ -58,6 +62,9 @@ class SystemBehaviour : BaseSettingsFragment(),
                 pref.isEnabled = false
             }
         }
+        mEnableSpoofing = findPreference("spoofing")!!
+        mEnableSpoofing.onPreferenceChangeListener = this
+
     }
 
     override fun onPreferenceChange(
@@ -71,8 +78,29 @@ class SystemBehaviour : BaseSettingsFragment(),
             setWindowBlur(blurEnabled)
             return true
         }
+        if (preference == mEnableSpoofing) {
+            val shouldEnable = newValue as Boolean
+            if (shouldEnable) {
+                showSpoofingWarningDialog()
+                return false
+            } else {
+                return true
+            }
+        }
+        return true
+    }
 
-        return false
+    private fun showSpoofingWarningDialog() {
+        AlertDialog.Builder(requireActivity())
+            .setTitle(R.string.spoofing_warning_title)
+            .setMessage(R.string.spoofing_warning)
+            .setPositiveButton(android.R.string.yes) { _, _ ->
+            Settings.Secure.putInt(requireContext().contentResolver, "spoofing", 1)
+                mEnableSpoofing.isChecked = true
+                updateSpoofingAccess(true)
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
     }
 
     private fun setWindowBlur(disable: Boolean) {
@@ -89,4 +117,3 @@ class SystemBehaviour : BaseSettingsFragment(),
         }
     }
 }
-
