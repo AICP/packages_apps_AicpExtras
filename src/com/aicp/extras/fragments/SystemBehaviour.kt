@@ -15,6 +15,11 @@
  */
 package com.aicp.extras.fragments
 
+import android.app.AlertDialog
+import android.app.Dialog
+import android.content.Context
+import android.content.DialogInterface
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.SystemProperties
 import android.provider.Settings
@@ -22,9 +27,12 @@ import androidx.preference.Preference
 import androidx.preference.SwitchPreferenceCompat
 import com.aicp.extras.BaseSettingsFragment
 import com.aicp.extras.R
+import com.aicp.extras.utils.Util
+import com.aicp.gear.preference.SecureSettingMasterSwitchPreference
+
 
 class SystemBehaviour : BaseSettingsFragment(),
-    Preference.OnPreferenceChangeListener {
+    DialogInterface.OnClickListener, DialogInterface.OnDismissListener, Preference.OnPreferenceChangeListener {
 
     companion object {
         private const val KEY_ENABLE_BLURS = "enable_blurs_on_windows"
@@ -32,13 +40,17 @@ class SystemBehaviour : BaseSettingsFragment(),
             "ro.surface_flinger.supports_background_blur"
     }
 
+    private lateinit var mEnableSpoofing: SecureSettingMasterSwitchPreference
+    private lateinit var mPrefs: SharedPreferences
     private var enableBlurPref: SwitchPreferenceCompat? = null
+    private var mOkDialog: Dialog? = null
+    private var mOkClicked: Boolean = false
 
     override fun getPreferenceResource(): Int =
         R.xml.system_behaviour
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        super.onCreatePreferences(savedInstanceState, rootKey)
 
         enableBlurPref = findPreference(KEY_ENABLE_BLURS)
 
@@ -58,6 +70,10 @@ class SystemBehaviour : BaseSettingsFragment(),
                 pref.isEnabled = false
             }
         }
+        mPrefs = requireActivity().getSharedPreferences(requireActivity().packageName + "_preferences", Context.MODE_PRIVATE)
+        val prefSet = preferenceScreen
+
+        mEnableSpoofing = prefSet.findPreference<SecureSettingMasterSwitchPreference>("spoofing")!!
     }
 
     override fun onPreferenceChange(
@@ -86,6 +102,45 @@ class SystemBehaviour : BaseSettingsFragment(),
             )
         } catch (e: Exception) {
             e.printStackTrace()
+        }
+    }
+
+    override fun onPreferenceTreeClick(preference: Preference): Boolean {
+        return when (preference) {
+            mEnableSpoofing -> {
+                if (mEnableSpoofing.isChecked) {
+                    mOkClicked = false
+                    mOkDialog?.dismiss()
+                    mOkDialog = AlertDialog.Builder(requireActivity())
+                        .setMessage(R.string.spoofing_warning)
+                        .setTitle(R.string.spoofing_warning_title)
+                        .setPositiveButton(android.R.string.yes, this)
+                        .setNegativeButton(android.R.string.no, this)
+                        .setOnDismissListener(this)
+                        .show()
+                } else {
+                    mPrefs.edit().putBoolean("spoofing", false).apply()
+                }
+                true
+            }
+            else -> super.onPreferenceTreeClick(preference)
+        }
+    }
+
+    override fun onClick(dialog: DialogInterface?, which: Int) {
+        if (which == DialogInterface.BUTTON_POSITIVE) {
+            mOkClicked = true
+            mPrefs.edit().putBoolean("spoofing", true).apply()
+        } else {
+            mOkClicked = false
+            mEnableSpoofing.isChecked = false
+            mPrefs.edit().putBoolean("spoofing", false).apply()
+        }
+    }
+
+    override fun onDismiss(dialog: DialogInterface) {
+        if (!mOkClicked) {
+            mEnableSpoofing.isChecked = false
         }
     }
 }
