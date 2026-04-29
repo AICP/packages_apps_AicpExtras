@@ -58,7 +58,7 @@ class SystemappRemover : SubActivity() {
 
         val safetyList = arrayListOf(
             "CertInstaller", "DrmProvider", "PackageInstaller", "TelephonyProvider",
-            "AicpExtras", "CMAudioService", "CMParts", "CMSettingsProvider",
+            "AicpExtras", "LineageAudioService", "LineageParts", "LineageSettingsProvider",
             "ContactsProvider", "DefaultContainerService", "Dialer", "DownloadProvider",
             "FusedLocation", "Keyguard", "MediaProvider", "ProxyHandler", "Settings",
             "SettingsProvider", "SystemUI", "TeleService"
