@@ -56,6 +56,11 @@ class QuickSettings : BaseSettingsFragment(), OnPreferenceChangeListener {
     override fun onPreferenceTreeClick(preference: Preference): Boolean {
         val resolver: ContentResolver = requireContext().contentResolver
 
+        Settings.System.putIntForUser(resolver,
+                Settings.System.QS_SHOW_VOLUME_SLIDER, 1, UserHandle.USER_CURRENT)
+        Settings.System.putIntForUser(resolver,
+                Settings.System.QS_SHOW_RINGER_MODE, 1, UserHandle.USER_CURRENT)
+
         if (preference.key == KEY_CUSTOM_FOOTER_TEXT) {
 
             val alert = android.app.AlertDialog.Builder(requireContext())

@@ -420,4 +420,19 @@
             android:defaultValue="2" />
     
     </PreferenceCategory>-->
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="qs_show_volume_slider"
+            android:icon="@drawable/ic_music_note"
+            android:title="@string/qs_show_volume_slider_title"
+            android:summary="@string/qs_show_volume_slider_summary"
+            android:defaultValue="true" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="qs_show_ringer_mode"
+            android:icon="@drawable/ic_speaker_on"
+            android:title="@string/qs_show_ringer_mode_title"
+            android:summary="@string/qs_show_ringer_mode_summary"
+            android:defaultValue="true"
+            android:dependency="qs_show_volume_slider" />
 </PreferenceScreen>
