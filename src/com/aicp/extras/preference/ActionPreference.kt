@@ -24,12 +24,6 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.preference.Preference
 
-//import com.android.internal.util.hwkeys.ActionConstants.Defaults
-//import com.android.internal.util.hwkeys.ActionConstants.ConfigMap
-//import com.android.internal.util.hwkeys.ActionHolder
-//import com.android.internal.util.hwkeys.Config.ActionConfig
-//import com.android.internal.util.hwkeys.Config.ButtonConfig
-
 // Dummy / Stub classes to get it compiled
 class Defaults {
     val actionMap: Map<String, ConfigMap> = emptyMap()

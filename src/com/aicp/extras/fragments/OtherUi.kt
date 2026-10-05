@@ -44,17 +44,6 @@ class OtherUi : BaseSettingsFragment(), Preference.OnPreferenceChangeListener {
             ) == 1
             onPreferenceChangeListener = this@OtherUi
         }
-
-        // Optional: Doze on charge check (auskommentiert)
-        /*
-        val dozeAlwaysOnAvailable = resources.getBoolean(
-            com.android.internal.R.bool.config_dozeAlwaysOnDisplayAvailable
-        )
-        val dozeOnChargePref = findPreference<Preference>(KEY_DOZE_ON_CHARGE)
-        if (!dozeAlwaysOnAvailable) {
-            dozeOnChargePref?.parent?.removePreference(dozeOnChargePref)
-        }
-        */
     }
 
     private fun writeCpuInfoOptions(enabled: Boolean) {

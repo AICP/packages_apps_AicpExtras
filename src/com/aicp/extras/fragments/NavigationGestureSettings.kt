@@ -25,86 +25,15 @@ class NavigationGestureSettings :
     BaseSettingsFragment(),
     Preference.OnPreferenceChangeListener {
 
-    /*
-    private static final String KEY_LONG_BACK_SWIPE_TIMEOUT = "long_back_swipe_timeout";
-    private static final String KEY_BACK_SWIPE_EXTENDED = "back_swipe_extended";
-    private static final String KEY_LEFT_SWIPE_ACTIONS = "left_long_back_swipe_action";
-    private static final String KEY_RIGHT_SWIPE_ACTIONS = "right_long_back_swipe_action";
-    private static final String KEY_LEFT_SWIPE_APP_ACTION = "left_swipe_app_action";
-    private static final String KEY_RIGHT_SWIPE_APP_ACTION = "right_swipe_app_action";
-    private static final String KEY_LEFT_VERTICAL_SWIPE_ACTIONS = "left_vertical_back_swipe_action";
-    private static final String KEY_RIGHT_VERTICAL_SWIPE_ACTIONS = "right_vertical_back_swipe_action";
-    private static final String KEY_LEFT_VERTICAL_SWIPE_APP_ACTION = "left_vertical_swipe_app_action";
-    private static final String KEY_RIGHT_VERTICAL_SWIPE_APP_ACTION = "right_vertical_swipe_app_action";
-    private static final String KEY_CATEGORY_LEFT_VERTICAL_SWIPE = "left_vertical_swipe";
-    private static final String KEY_CATEGORY_RIGHT_VERTICAL_SWIPE = "right_vertical_swipe";
-
-    private int leftSwipeActions;
-    private int rightSwipeActions;
-
-    private SystemSettingListPreference mLeftSwipeActions;
-    private SystemSettingListPreference mRightSwipeActions;
-    private SystemSettingListPreference mLeftVerticalSwipeActions;
-    private SystemSettingListPreference mRightVerticalSwipeActions;
-
-    private Preference mLeftSwipeAppSelection;
-    private Preference mRightSwipeAppSelection;
-    private Preference mLeftVerticalSwipeAppSelection;
-    private Preference mRightVerticalSwipeAppSelection;
-
-    private SystemSettingListPreference mTimeout;
-    private SystemSettingSwitchPreference mExtendedSwipe;
-
-    private PreferenceCategory leftVerticalSwipeCategory;
-    private PreferenceCategory rightVerticalSwipeCategory;
-    */
-
     override fun getPreferenceResource(): Int {
         return R.xml.navigation_gestures
     }
-
-    /*
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        // Original Java logic intentionally kept commented out
-    }
-    */
 
     override fun onPreferenceChange(
         preference: Preference,
         newValue: Any?
     ): Boolean {
 
-        /*
-        if (preference == mLeftSwipeActions) {
-            // original implementation
-            return true
-        } else if (preference == mRightSwipeActions) {
-            return true
-        } else if (preference == mExtendedSwipe) {
-        } else if (preference == mLeftVerticalSwipeActions) {
-            return true
-        } else if (preference == mRightVerticalSwipeActions) {
-            return true
-        }
-        */
-
         return false
     }
-
-    /*
-    Helper for reloading both short and long gesture as they might change on
-    package uninstallation
-    */
-
-    /*
-    private void actionPreferenceReload() {
-        // original implementation
-    }
-
-    private void customAppCheck() {
-        // original implementation
-    }
-    */
 }
