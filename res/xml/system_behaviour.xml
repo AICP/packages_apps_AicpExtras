@@ -71,15 +71,6 @@
 
     </com.aicp.gear.preference.SelfRemovingPreferenceCategory>
 
-    <PreferenceCategory
-        android:key="system_ss_category"
-        android:title="@string/system_ss_category_title">
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="system_security_category"
-        android:title="@string/system_security_category_title">
-
         <com.aicp.gear.preference.SecureSettingSwitchPreference
             android:key="window_ignore_secure"
             android:title="@string/ignore_window_secure_title"
@@ -94,5 +85,42 @@
             android:entryValues="@array/reboot_after_timeout_values"
             android:defaultValue="0" />
 
-    </PreferenceCategory>
+    <Preference
+        android:key="system_app_remover"
+        android:title="@string/system_app_remover_title"
+        android:summary="@string/system_app_remover_summary">
+        <intent android:action="com.aicp.extras.ViewSystemAppRemover" />
+    </Preference>
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="smart_5g"
+        android:title="@string/smart_5g_title"
+        android:summary="@string/smart_5g_summary"
+        android:defaultValue="false" />
+
+     <PreferenceScreen
+        android:key="gaming_category"
+        android:title="@string/gaming_mode_title"
+        android:summary="@string/gaming_mode_summary"
+        app:iconSpaceReserved="false"
+        android:enabled="true">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="io.chaldeaprjkt.gamespace"
+            android:targetClass="io.chaldeaprjkt.gamespace.settings.SettingsActivity" />
+    </PreferenceScreen>
+
+    <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
+        android:key="use_slim_recents"
+        android:title="@string/slim_recents_title"
+        android:summary="@string/alternative_recents_swipe_up_enabled_warning_summary"
+        aicpextras:thereCanBeOnlyOneGroupId="1"
+        android:defaultValue="false"
+        android:fragment="com.aicp.extras.fragments.SlimRecents" />
+
+        <com.aicp.gear.preference.SystemPropSwitchPreference
+            android:key="persist.aicp.hosts_block"
+            android:title="@string/hosts_block_title"
+            android:summary="@string/hosts_block_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
