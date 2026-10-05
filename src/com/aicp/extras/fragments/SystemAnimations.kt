@@ -70,101 +70,11 @@ class SystemAnimations : BaseSettingsFragment() {
 
     private val TAG = SystemAnimations::class.java.simpleName
 
-    /*
-    private val PREF_CUSTOM_BOOTANIM = "custom_bootanimation"
-
-    // Custom bootanimation
-    private val REQUEST_PICK_BOOT_ANIMATION = 201
-    private val BOOTANIMATION_SYSTEM_PATH = "/system/media/bootanimation.zip"
-    private val BACKUP_PATH = File(Environment.getExternalStorageDirectory(), "/AICP_backup").absolutePath
-
-    private var mCustomBootAnimation: Preference? = null
-
-    // Custom bootanimation
-    private var mBootanimationView: ImageView? = null
-    private var mBootanimationError: TextView? = null
-    private var mCustomBootAnimationDialog: AlertDialog? = null
-    private var mBootanimationPart1: FinishingAnimationDrawable? = null
-    private var mBootanimationPart2: AnimationDrawable? = null
-    private var mBootanimationErrormsg: String? = null
-    private var mBootAnimationPath: String? = null
-    */
 
     override fun getPreferenceResource(): Int {
         return R.xml.system_animations
     }
 
-    /*
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val resolver: ContentResolver = requireActivity().contentResolver
-
-        // Custom bootanimation
-        mCustomBootAnimation = findPreference(PREF_CUSTOM_BOOTANIM)
-        resetBootAnimation()
-        if (File(BACKUP_PATH).mkdirs()) {
-            Log.d(TAG, "Created bootanimation backup dir")
-        } else {
-            Log.d(TAG, "Did not create bootanimation backup dir")
-        }
-        Util.requireRoot(requireActivity(), mCustomBootAnimation)
-    }
-
-    override fun onPreferenceTreeClick(preference: Preference): Boolean {
-        return if (preference == mCustomBootAnimation) {
-            openBootAnimationDialog()
-            true
-        } else {
-            super.onPreferenceTreeClick(preference)
-        }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (resultCode == Activity.RESULT_OK) {
-            if (requestCode == REQUEST_PICK_BOOT_ANIMATION) {
-                if (data == null) {
-                    // Nothing returned by user, probably pressed back button in file manager
-                    return
-                }
-                mBootAnimationPath = data.data?.path
-                if (mBootAnimationPath!!.contains(":")) {
-                    // mBootAnimationPath is not really a path yet, which we need
-                    // for copying as root; so copy file to a known path first
-                    mBootAnimationPath = "$BACKUP_PATH${File.separator}tmpbootanim.zip"
-
-                    var inputStream: InputStream? = null
-                    var outputStream: FileOutputStream? = null
-
-                    try {
-                        inputStream = requireActivity().contentResolver.openInputStream(data.data!!)
-                        outputStream = FileOutputStream(mBootAnimationPath, false)
-                        val buffer = ByteArray(1024)
-                        var length: Int
-                        while (inputStream!!.read(buffer).also { length = it } > 0) {
-                            outputStream.write(buffer, 0, length)
-                        }
-                    } catch (e: IOException) {
-                        e.printStackTrace()
-                    } finally {
-                        try {
-                            inputStream?.close()
-                            outputStream?.close()
-                        } catch (e: IOException) {
-                            e.printStackTrace()
-                        }
-                    }
-                }
-                openBootAnimationDialog()
-            }
-        }
-    }
-
-    /*
-     * Resets boot animation path. Essentially clears temporary-set boot animation
-     * set by the user from the dialog.
-     *
-     * @return returns true if a boot animation exists (user or system). false otherwise.
-     */
     private fun resetBootAnimation(): Boolean {
         return if (File(BOOTANIMATION_SYSTEM_PATH).exists()) {
             mBootAnimationPath = BOOTANIMATION_SYSTEM_PATH
