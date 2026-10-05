@@ -19,10 +19,8 @@ import android.os.Bundle
 import com.aicp.extras.BaseSettingsFragment
 import com.aicp.extras.R
 
-// class Theming : BaseSettingsFragment(), Preference.OnPreferenceChangeListener {
 class Theming : BaseSettingsFragment() {
 
-    // private val mHandler = Handler()
 
     override fun getPreferenceResource(): Int {
         return R.xml.theming
@@ -31,55 +29,6 @@ class Theming : BaseSettingsFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        /*
-        Util.requireConfig(
-            requireActivity(),
-            findPreference(Settings.System.DISPLAY_HIDE_NOTCH),
-            com.android.internal.R.bool.config_showHideNotchSettings,
-            true,
-            false
-        )
-        */
     }
 
-    /*
-    override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-
-        if (Settings.System.THEMING_BASE == preference.key ||
-            Settings.System.THEMING_CORNERS == preference.key ||
-            Settings.System.THEMING_SYSTEM_ICONS_STYLE == preference.key) {
-
-            if (ThemeOverlayHelper.doesThemeChangeRequireSystemUIRestart(
-                    requireActivity(),
-                    preference.key,
-                    null,
-                    (newValue as String).toInt()
-                )
-            ) {
-                postRestartSystemUi()
-            }
-            return true
-
-        } else if (AdaptiveIconDrawable.MASK_SETTING_PROP == preference.key) {
-
-            Util.showRebootDialog(
-                requireActivity(),
-                getString(R.string.icon_shape_changed_title),
-                getString(R.string.icon_shape_changed_message),
-                true
-            )
-            return true
-
-        } else {
-            return false
-        }
-    }
-
-    private fun postRestartSystemUi() {
-        val appContext = requireActivity().applicationContext
-        mHandler.postDelayed({
-            Util.restartSystemUi(appContext)
-        }, 200)
-    }
-    */
 }

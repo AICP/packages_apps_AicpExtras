@@ -23,60 +23,7 @@ import com.aicp.extras.R
 
 class Notifications : BaseSettingsFragment() /*, Preference.OnPreferenceChangeListener*/ {
 
-    /*
-    companion object {
-        private const val ALERT_SLIDER_PREF = "alert_slider_notifications"
-        private const val KEY_RINGTONE_FOCUS = "ringtone_focus_mode"
-        private const val CAT_NOTIFICATION_FLASHLIGHT = "notification_flash"
-        private const val PREF_FLASHLIGHT_ON_CALL = "flashlight_on_call"
-        private const val PREF_FLASHLIGHT_ON_CALL_WAITING = "flashlight_on_call_waiting"
-        private const val PREF_FLASHLIGHT_ON_CALL_IGNORE_DND = "flashlight_on_call_ignore_dnd"
-        private const val PREF_FLASHLIGHT_ON_CALL_RATE = "flashlight_on_call_rate"
-        private const val PREF_NOTIFICATION_HEADER = "notification_headers"
-        private const val PREF_BATTERY_LIGHT = "battery_light_enabled"
-    }
-
-    private lateinit var flashOnCallWaiting: SwitchPreference
-    private lateinit var flashOnCallIgnoreDND: SwitchPreference
-    private lateinit var flashOnCall: SystemSettingIntListPreference
-    private lateinit var flashOnCallRate: SystemSettingSeekBarPreference
-    private lateinit var notificationHeader: SystemSettingSwitchPreference
-    private lateinit var resolver: ContentResolver
-    */
-
     override fun getPreferenceResource(): Int = R.xml.notifications
 
-    /*
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        resolver = requireContext().contentResolver
-
-        // Beispiel für spätere Initialisierung:
-        // flashOnCallWaiting = findPreference(PREF_FLASHLIGHT_ON_CALL_WAITING)!!
-        // flashOnCall.setOnPreferenceChangeListener(this)
-        // updateDependencies(Settings.System.getInt(resolver, Settings.System.FLASHLIGHT_ON_CALL, 0) != 0)
-    }
-
-    private fun updateDependencies(enabled: Boolean) {
-        flashOnCallWaiting.isEnabled = enabled
-        flashOnCallIgnoreDND.isEnabled = enabled
-        flashOnCallRate.isEnabled = enabled
-    }
-
-    override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-        return when (preference) {
-            flashOnCall -> {
-                val value = (newValue as String).toInt()
-                updateDependencies(value != 0)
-                true
-            }
-            notificationHeader -> {
-                Util.showSystemUiRestartDialog(requireActivity())
-                true
-            }
-            else -> false
-        }
-    }
-    */
 }
 
