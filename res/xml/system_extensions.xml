@@ -30,13 +30,11 @@
         <intent android:action="com.aicp.extras.ViewSystemAppRemover" />
     </Preference>
 
-    <!-- 5G smart service -->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="smart_5g"
         android:title="@string/smart_5g_title"
         android:summary="@string/smart_5g_summary"
         android:defaultValue="false" />
-
 
      <PreferenceScreen
         android:key="gaming_category"
@@ -49,15 +47,6 @@
             android:targetClass="io.chaldeaprjkt.gamespace.settings.SettingsActivity" />
     </PreferenceScreen>
 
-    <!-- <PreferenceScreen
-        android:title="@string/recents_title"
-        android:key="recents"
-        android:summary="@string/recents_summary"
-        app:iconSpaceReserved="false"
-        android:fragment="com.aicp.extras.fragments.Recents" />
--->
-
-    <!-- TODO: in case we get more recents settings, use above recents fragment instead again -->
     <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
         android:key="use_slim_recents"
         android:title="@string/slim_recents_title"
@@ -75,31 +64,7 @@
             android:title="@string/hosts_block_title"
             android:summary="@string/hosts_block_summary"
             android:defaultValue="false" />
-<!-->
-        <Preference
-            android:key="alarm_blocker_activity"
-            android:title="@string/alarm_blocker_title">
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.settings"
-                android:targetClass="com.android.settings.Settings$DevAlarmBlockerActivity" />
-        </Preference>
-        <Preference
-            android:key="wakelock_blocker_activity"
-            android:title="@string/wakelock_blocker_title">
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.settings"
-                android:targetClass="com.android.settings.Settings$DevWakeLockBlockerActivity" />
-        </Preference> -->
+
     </PreferenceCategory>
-
-
-<!--
-    <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
-        android:key="enable_app_circle_bar"
-        android:title="@string/app_circle_bar_title"
-        android:summary="@string/app_circle_bar_summary"
-        android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.AppCircleBar" />
--->
 
 </PreferenceScreen>

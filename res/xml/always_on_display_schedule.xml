@@ -16,21 +16,4 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/always_on_display_schedule_title" >
-<!--
-    <com.aicp.gear.preference.SecureSettingListPreference
-        android:key="doze_always_on_auto_mode"
-        android:title="@string/always_on_display_auto_mode_title"
-        android:dialogTitle="@string/always_on_display_auto_mode_title"
-        android:entries="@array/doze_always_on_auto_mode_entries"
-        android:entryValues="@array/doze_always_on_auto_mode_values"
-        android:defaultValue="0" />
-
-    <Preference
-        android:key="doze_always_on_auto_from"
-        android:title="@string/always_on_display_start_time_title" />
-
-    <Preference
-        android:key="doze_always_on_auto_to"
-        android:title="@string/always_on_display_end_time_title" />
--->
 </PreferenceScreen>
