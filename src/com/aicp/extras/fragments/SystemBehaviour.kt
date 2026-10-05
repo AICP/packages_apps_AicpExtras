@@ -17,13 +17,17 @@ package com.aicp.extras.fragments
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.os.SystemProperties
 import android.provider.Settings
 import androidx.preference.Preference
 import androidx.preference.SwitchPreferenceCompat
 import com.aicp.extras.BaseSettingsFragment
 import com.aicp.extras.R
+import com.aicp.extras.utils.Util
 import com.aicp.gear.preference.SecureSettingMasterSwitchPreference
+import java.net.InetAddress
 
 class SystemBehaviour : BaseSettingsFragment(),
     Preference.OnPreferenceChangeListener {
@@ -32,8 +36,12 @@ class SystemBehaviour : BaseSettingsFragment(),
         private const val KEY_ENABLE_BLURS = "enable_blurs_on_windows"
         private const val SF_PROP_REQUIRED_FOR_BLUR = "ro.surface_flinger.supports_background_blur"
         private const val SPOOFING_KEY = "spoofing"
+        private const val PREF_SYSTEM_APP_REMOVER = "system_app_remover"
+        private const val PREF_ADBLOCK = "persist.aicp.hosts_block"
+        private const val PREF_SYSTEM_SMART_5G = "smart_5g"
     }
 
+    private val handler = Handler(Looper.getMainLooper())
     private lateinit var mEnableSpoofing: SecureSettingMasterSwitchPreference
     private var enableBlurPref: SwitchPreferenceCompat? = null
 
@@ -52,6 +60,18 @@ class SystemBehaviour : BaseSettingsFragment(),
 
         mEnableSpoofing = findPreference(SPOOFING_KEY)!!
         mEnableSpoofing.onPreferenceChangeListener = this
+
+        val systemAppRemover = findPreference<Preference>(PREF_SYSTEM_APP_REMOVER)
+        if (!Util.hasSu()) {
+            systemAppRemover?.isEnabled = false
+        }
+
+        val smart5g = findPreference<Preference>(PREF_SYSTEM_SMART_5G)
+        if (!Util.is5GSupported(requireContext())) {
+            smart5g?.isEnabled = false
+        }
+
+        findPreference<Preference>(PREF_ADBLOCK)?.onPreferenceChangeListener = this
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
@@ -72,6 +92,16 @@ class SystemBehaviour : BaseSettingsFragment(),
             Settings.Secure.putInt(requireContext().contentResolver, SPOOFING_KEY, 0)
             return true
         }
+
+        if (preference.key == PREF_ADBLOCK) {
+            // Delay, damit die Property persistiert wird,
+            // bevor der DNS-Cache geleert wird
+            handler.postDelayed({
+                InetAddress.clearDnsCache()
+            }, 1000)
+            return true
+        }
+
         return true
     }
 
