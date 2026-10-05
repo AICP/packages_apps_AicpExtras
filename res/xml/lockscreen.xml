@@ -22,53 +22,6 @@
     android:key="lockscreen"
     android:title="@string/lockscreen_title">
 
-
-<!--     <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="lockscreen_small_clock"
-        android:title="@string/lockscreen_small_clock_title"
-        android:summary="@string/lockscreen_small_clock_summary"
-        android:defaultValue="false" /> -->
-<!--
-    <com.aicp.gear.preference.SystemSettingIntListPreference
-        android:key="lockscreen_clock_selection"
-        android:title="@string/lockscreen_clock_selection_title"
-        android:entries="@array/lockscreen_clock_selection_entries"
-        android:entryValues="@array/lockscreen_clock_selection_values"
-        android:defaultValue="0" />
-
-    <com.aicp.gear.preference.SystemSettingSeekBarPreference
-        android:key="lockclock_font_size"
-        android:title="@string/lockclock_font_size_title"
-        android:max="108"
-        android:min="50"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="dp"
-        android:defaultValue="64" />
-
-    <com.aicp.gear.preference.SystemSettingSeekBarPreference
-        android:key="lockdate_font_size"
-        android:title="@string/lockdate_font_size_title"
-        android:max="25"
-        android:min="8"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="sp"
-        android:defaultValue="16" />
-
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="lockscreen_lock_icon"
-        android:title="@string/lockscreen_lock_icon_title"
-        android:summary="@string/lockscreen_lock_icon_summary"
-        android:defaultValue="true" />
-
-    <com.aicp.gear.preference.SystemSettingSeekBarPreference
-        android:key="lockscreen_blur"
-        android:title="@string/lockscreen_blur_title"
-        android:max="100"
-        android:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="%"
-        android:defaultValue="0" />
--->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_lockscreen"
         android:title="@string/double_tap_sleep_lockscreen"
@@ -88,14 +41,6 @@
         android:entryValues="@array/lockscreen_charge_temp_unit_values"
         android:dependency="lockscreen_battery_info"
         android:defaultValue="1" />
-<!--
-    <com.aicp.gear.preference.SecureSettingMasterSwitchPreference
-        android:key="lockscreen_visualizer_enabled"
-        android:title="@string/lockscreen_visualizer_title"
-        android:summary="@string/lockscreen_visualizer_summary"
-        android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.Visualizer" />
--->
         <Preference
             android:key="navbar_pulse_options"
             android:title="@string/pulse_settings"
@@ -149,153 +94,22 @@
         android:defaultValue="200"
         android:dependency="ls_media_art_enabled" />
     -->
-    <!-- Squiggle animation -->
-    <!--    <com.aicp.gear.preference.SecureSettingSwitchPreference
-        android:key="show_media_squiggle_animation"
-        android:title="@string/show_squiggle_animation_title"
-        android:summary="@string/show_squiggle_animation_summary"
-        android:defaultValue="true" />
-
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="lock_screen_custom_notif"
-        android:title="@string/lock_screen_custom_notif_title"
-        android:summary="@string/lock_screen_custom_notif_summary"
-        android:defaultValue="false" />
-
-    <com.aicp.gear.preference.SystemSettingSeekBarPreference
-        android:key="lockscreen_max_notif_config"
-        android:title="@string/lockscreen_max_notif_config_title"
-        android:summary="@string/lockscreen_max_notif_config_summary"
-        android:max="3"
-        android:min="1"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight=""
-        android:defaultValue="3"
-        android:dependency="lock_screen_custom_notif" /> -->
-<!--
-    <Preference
-        android:key="always_on_display_schedule"
-        android:title="@string/always_on_display_schedule_title"
-        android:fragment="com.aicp.extras.fragments.AODSchedule" />
-
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="enable_ripple_effect"
-        android:title="@string/lockscreen_ripple_effect_title"
-        android:summary="@string/lockscreen_ripple_effect_summary"
-        android:defaultValue="true" />
-
-    <com.aicp.gear.preference.SelfRemovingPreferenceCategory
-        android:key="sfps_unlock"
-        android:title="@string/fingerprint_wake_unlock_category_title"
-        aicpextras:requiresConfig="@*android:bool/config_is_powerbutton_fps">
-
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="fingerprint_wake_unlock"
-            android:title="@string/fingerprint_wake_unlock_title"
-            android:summaryOn="@string/fingerprint_wake_unlock_touch"
-            android:summaryOff="@string/fingerprint_wake_unlock_press"
-            android:defaultValue="true" />
-
-    </com.aicp.gear.preference.SelfRemovingPreferenceCategory>
--->
+    
     <PreferenceCategory
           android:key="lockscreen_security_category"
           android:title="@string/lockscreen_security_category">
-<!--
-          <com.aicp.gear.preference.SystemSettingSwitchPreference
-              android:key="fp_wake_unlock"
-              android:title="@string/fp_wake_unlock_title"
-              android:summary="@string/fp_wake_unlock_summary"
-              android:defaultValue="true" />
-
-          <com.aicp.gear.preference.SystemSettingSwitchPreference
-              android:key="fingerprint_success_vib"
-              android:title="@string/fprint_sucess_vib_title"
-              android:summaryOn="@string/fprint_sucess_vib_summary_on"
-              android:summaryOff="@string/fprint_sucess_vib_summary_off"
-              android:defaultValue="true" />
-		  -->
           <com.aicp.gear.preference.GlobalSettingSwitchPreference
               android:key="lockscreen_enable_power_menu"
               android:title="@string/lockscreen_enable_power_menu_title"
               android:summary="@string/lockscreen_enable_power_menu_summary"
               android:defaultValue="true"/>
 
-<!--          <com.aicp.gear.preference.SecureSettingSwitchPreference
-              android:key="secure_lockscreen_qs_disabled"
-              android:title="@string/lockscreen_qs_disabled_title"
-              android:summary="@string/lockscreen_qs_disabled_summary"
-              android:defaultValue="false" />
-
-          <com.aicp.gear.preference.SecureSettingSwitchPreference
-              android:key="qstile_requires_unlocking"
-              android:title="@string/qstile_requires_unlocking_title"
-              android:summary="@string/qstile_requires_unlocking_summary"
-              android:defaultValue="true" />
--->
           <com.aicp.gear.preference.SystemSettingSwitchPreference
               android:key="hide_lockscreen_status_bar"
               android:title="@string/lockscreen_hide_status_bar_title"
               android:summary="@string/lockscreen_hide_status_bar_summary"
               android:defaultValue="false" />
-<!--
-          <com.aicp.gear.preference.SystemSettingSwitchPreference
-              android:key="lockscreen_scramble_pin_layout"
-              android:title="@string/unlock_scramble_pin_layout_title"
-              android:summary="@string/unlock_scramble_pin_layout_summary"
-		  android:defaultValue="false" />-->
     </PreferenceCategory>
-
-<!--  ******* Moved to settings *****
-          <com.aicp.gear.preference.SystemSettingSwitchPreference
-              android:key="lockscreen_quick_unlock_control"
-              android:title="@string/unlock_quick_unlock_control_title"
-              android:summary="@string/unlock_quick_unlock_control_summary"
-              android:defaultValue="false" />  -->
-<!--
-    <PreferenceCategory
-            android:key="fod_icon_picker"
-            android:title="@string/fod_icon_picker_category_title" >
--->
-            <!-- FOD icon picker -->
-<!--            <Preference
-                android:key="fod_icon_picker_category"
-                android:title="@string/fod_icon_picker_title"
-                android:summary="@string/fod_icon_picker_summary"
-                android:fragment="com.aicp.extras.fragments.FODIconPickerFragment" />
-
-            <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
-                android:key="fod_icon_accent_default_color"
-                android:title="@string/fod_icon_accent_default_color"
-                android:summary="@string/fod_icon_accent_default_color_summary"
-                aicpextras:thereCanBeOnlyOneGroupId="1"
-                aicpextras:plainSwitch="true"
-                android:defaultValue="false" />
-
-            <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
-                android:key="fod_icon_wallpaper_color"
-                android:title="@string/fod_wallpaper_color"
-                android:summary="@string/fod_wallpaper_color_summary"
-                aicpextras:thereCanBeOnlyOneGroupId="1"
-                aicpextras:plainSwitch="true"
-                android:defaultValue="false" />
--->
-            <!-- FOD recognizing animation -->
-<!--            <com.aicp.gear.preference.SystemSettingSwitchPreference
-                android:key="fod_recognizing_animation"
-                android:title="@string/fod_recog_animation"
-                android:summary="@string/fod_recog_animation_summary"
-android:defaultValue="false" />-->
-            <!--
-            <com.aicp.gear.preference.SystemSettingIntListPreference
-                android:key="fod_anim"
-                android:title="@string/fod_recog_animation_picker_title"
-                android:entries="@array/fod_recog_animation_entries"
-                android:entryValues="@array/fod_recog_animation_values"
-                android:defaultValue="0"
-                android:dependency="fod_recognizing_animation" /> -->
-<!--
-</PreferenceCategory>-->
 
     <PreferenceCategory
        android:key="lockscreen_others_category"

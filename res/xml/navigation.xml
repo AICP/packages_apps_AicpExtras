@@ -21,22 +21,6 @@
     android:key="navigation"
     android:title="@string/navigation_title">
 
-    <!-- <PreferenceCategory
-        android:key="screenon_navigation"
-        android:title="@string/navbar_visibility">
-
-        <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
-            android:key="navigation_bar_show_new"
-            android:title="@string/navbar_visibility"
-            android:summary="@string/navbar_visibility_summary"
-            android:defaultValue="@*android:bool/config_showNavigationBar"
-            android:fragment="com.aicp.extras.fragments.NavigationBarSettings" />
-
-        <com.android.settingslib.widget.FooterPreference
-            android:title="@string/navigation_footer" />
-
-    </PreferenceCategory>
--->
     <PreferenceCategory
         android:key="gesture_nav_tweaks_category"
         android:title="@string/navbar_gesture_tweaks_cat_title">
@@ -51,105 +35,5 @@
             android:persistent="false" />
 
     </PreferenceCategory>
-<!--
-    <PreferenceCategory
-        android:key="misc_gestures"
-        android:title="@string/other_category">
-
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="navigation_bar_menu_arrow_keys"
-            android:title="@string/navigation_bar_menu_arrow_keys_title"
-            android:summary="@string/navigation_bar_menu_arrow_keys_summary"
-            android:defaultValue="false"/>
-
-	       <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="navigation_bar_disable_taskbar"
-            android:title="@string/navigation_bar_disable_taskbar_title"
-            android:summary="@string/navigation_bar_disable_taskbar_summary"
-            android:defaultValue="false" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="hardware_keys"
-	       android:title="@string/hardware_keys_category">
-
-        <SwitchPreference
-            android:key="hardware_keys_disable"
-            android:title="@string/hardware_keys_disable_title" />
-
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="swap_navigation_keys"
-            android:title="@string/hw_keys_swap_title"
-            android:summary="@string/hw_keys_swap_summary"
-            android:defaultValue="false" />
-
-        <PreferenceScreen
-            android:key="hw_button_settings"
-            android:title="@string/hardware_keys_title"
-            android:fragment="com.aicp.extras.fragments.ActionFragment" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="wake_keys"
-        android:title="@string/hardware_keys_wake_keys_title" >
-
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="back_wake_screen"
-            android:title="@string/hardware_keys_wake_keys_back_title"
-            android:defaultValue="false" />
-
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="home_wake_screen"
-            android:title="@string/hardware_keys_wake_keys_home_title"
-            android:defaultValue="false" />
-
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="app_switch_wake_screen"
-            android:title="@string/hardware_keys_wake_keys_appswitch_title"
-            android:defaultValue="false" />
-
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="menu_wake_screen"
-            android:title="@string/hardware_keys_wake_keys_menu_title"
-            android:defaultValue="false" />
-
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="assist_wake_screen"
-            android:title="@string/hardware_keys_wake_keys_assist_title"
-            android:defaultValue="false" />
-
-       <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="camera_wake_screen"
-            android:title="@string/hardware_keys_wake_keys_camera_title"
-            android:defaultValue="false" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="button_backlight_options_category"
-        android:title="@string/button_backlight_options_category" >
-        <com.aicp.gear.preference.SeekBarPreferenceCham
-            android:key="button_brightness"
-            android:title="@string/button_manual_brightness"
-            android:max="255"
-            android:min="0"
-            android:persistent="false" />
-
-        <com.aicp.gear.preference.SeekBarPreferenceCham
-            android:key="button_backlight_timeout"
-            android:title="@string/button_timeout_title"
-            android:max="30"
-            android:min="0"
-            android:defaultValue="0"
-            android:persistent="false" />
-
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
-            android:key="button_backlight_only_when_pressed"
-            android:title="@string/button_backlight_on_touch_only_title"
-            android:summary="@string/button_backlight_on_touch_only_summary"
-            android:defaultValue="false" />
-
-    </PreferenceCategory> -->
 
 </PreferenceScreen>
