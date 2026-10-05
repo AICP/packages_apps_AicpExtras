@@ -23,13 +23,6 @@
     android:key="system_behaviour"
     android:title="@string/system_behaviour_title">
 
-   <com.aicp.gear.preference.SecureSettingMasterSwitchPreference
-        android:key="spoofing"
-        android:title="@string/spoofing_title"
-        android:summary="@string/spoofing_summary"
-        android:fragment="com.aicp.extras.fragments.Spoofing"
-        android:defaultValue="false" />
-
    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="enable_blurs_on_windows"
         android:title="@string/enable_blurs_on_windows_title"
@@ -45,11 +38,19 @@
         android:defaultValue="34"
         android:dependency="enable_blurs_on_windows" />
 
+    <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
+        android:key="use_slim_recents"
+        android:title="@string/slim_recents_title"
+        android:summary="@string/alternative_recents_swipe_up_enabled_warning_summary"
+        aicpextras:thereCanBeOnlyOneGroupId="1"
+        android:defaultValue="false"
+        android:fragment="com.aicp.extras.fragments.SlimRecents" />
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="sensor_block"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
-        android:defaultValue="false"/>
+        android:defaultValue="false" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="pocket_judge"
@@ -71,6 +72,35 @@
 
     </com.aicp.gear.preference.SelfRemovingPreferenceCategory>
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="smart_5g"
+        android:title="@string/smart_5g_title"
+        android:summary="@string/smart_5g_summary"
+        android:defaultValue="false" />
+
+    <PreferenceScreen
+        android:key="gaming_category"
+        android:title="@string/gaming_mode_title"
+        android:summary="@string/gaming_mode_summary"
+        app:iconSpaceReserved="false"
+        android:enabled="true">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="io.chaldeaprjkt.gamespace"
+            android:targetClass="io.chaldeaprjkt.gamespace.settings.SettingsActivity" />
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:key="blockers_category"
+        android:title="@string/blockers_category">
+
+        <com.aicp.gear.preference.SystemPropSwitchPreference
+            android:key="persist.aicp.hosts_block"
+            android:title="@string/hosts_block_title"
+            android:summary="@string/hosts_block_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
     <PreferenceCategory
         android:key="system_ss_category"
         android:title="@string/system_ss_category_title">
@@ -80,19 +110,33 @@
         android:key="system_security_category"
         android:title="@string/system_security_category_title">
 
-        <com.aicp.gear.preference.SecureSettingSwitchPreference
-            android:key="window_ignore_secure"
-            android:title="@string/ignore_window_secure_title"
-            android:summary="@string/ignore_window_secure_summary"
-            android:defaultValue="false"/>
+   <com.aicp.gear.preference.SecureSettingMasterSwitchPreference
+        android:key="spoofing"
+        android:title="@string/spoofing_title"
+        android:summary="@string/spoofing_summary"
+        android:fragment="com.aicp.extras.fragments.Spoofing"
+        android:defaultValue="false" />
 
-        <com.aicp.gear.preference.GlobalSettingIntListPreference
-            android:key="settings_reboot_after_timeout"
-            android:title="@string/auto_reboot_title"
-            android:summary="@string/auto_reboot_summary"
-            android:entries="@array/reboot_after_timeout_entries"
-            android:entryValues="@array/reboot_after_timeout_values"
-            android:defaultValue="0" />
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="window_ignore_secure"
+        android:title="@string/ignore_window_secure_title"
+        android:summary="@string/ignore_window_secure_summary"
+        android:defaultValue="false"/>
+
+    <com.aicp.gear.preference.GlobalSettingIntListPreference
+        android:key="settings_reboot_after_timeout"
+        android:title="@string/auto_reboot_title"
+        android:summary="@string/auto_reboot_summary"
+        android:entries="@array/reboot_after_timeout_entries"
+        android:entryValues="@array/reboot_after_timeout_values"
+        android:defaultValue="0" />
+
+    <Preference
+        android:key="system_app_remover"
+        android:title="@string/system_app_remover_title"
+        android:summary="@string/system_app_remover_summary">
+        <intent android:action="com.aicp.extras.ViewSystemAppRemover" />
+    </Preference>
 
     </PreferenceCategory>
 </PreferenceScreen>
