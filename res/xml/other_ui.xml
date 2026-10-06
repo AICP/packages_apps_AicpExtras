@@ -22,7 +22,28 @@
     android:key="other_ui"
     android:title="@string/other_ui_title">
 
-    <com.aicp.gear.preference.SystemSettingIntListPreference
+   <com.aicp.gear.preference.GlobalSettingMasterSwitchPreference
+        android:key="heads_up_notifications_enabled"
+        android:title="@string/notification_heads_up_title"
+        android:summary="@string/notification_heads_up_summary"
+        android:defaultValue="true"
+        android:fragment="com.aicp.extras.fragments.HeadsUpOptions"
+        aicpextras:thereCanBeOnlyOneGroupId="1" />
+
+   <com.aicp.gear.preference.SystemSettingMasterSwitchPreference
+        android:key="edge_light_enabled"
+        android:title="@string/edge_light_title"
+        android:summary="@string/edge_light_summary"
+        android:defaultValue="false"
+        android:fragment="com.aicp.extras.fragments.AmbientEdgeLights" />
+
+   <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="doze_always_on_wallpaper_enabled"
+        android:title="@string/doze_always_on_wallpaper_title"
+        android:summary="@string/doze_always_on_wallpaper_summary"
+        android:defaultValue="@*android:bool/config_dozeSupportsAodWallpaper" />
+
+   <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="theming_settings_dashboard_icons"
         android:title="@string/theming_settings_dashboard_icons_title"
         android:entries="@array/theming_settings_dashboard_icons_entries"
