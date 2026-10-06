@@ -11,6 +11,8 @@ import com.aicp.extras.preference.BaseAppListSettingsFragment
 
 class PixelSpoofingAppsSettings : BaseAppListSettingsFragment() {
 
+    override fun getPreferenceResource(): Int = R.xml.system_behaviour
+
     override fun getTitleResId(): Int = R.string.pixel_spoofing_apps_title
 
     override fun excludeSystemApps(): Boolean = false
