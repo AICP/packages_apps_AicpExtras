@@ -22,24 +22,7 @@
     android:key="other_ui"
     android:title="@string/other_ui_title">
 
-    <com.aicp.gear.preference.SystemSettingIntListPreference
-        android:key="screen_off_animation"
-        android:title="@string/screen_off_animation_title"
-        android:dialogTitle="@string/screen_off_animation_title"
-        android:entries="@array/screen_off_animation_entries"
-        android:entryValues="@array/screen_off_animation_values"
-        android:defaultValue="0" />
-
-    <com.aicp.gear.preference.SystemSettingIntListPreference
-        android:key="power_menu_animations"
-        android:title="@string/power_menu_animation_title"
-        android:dialogTitle="@string/power_menu_animation_dialog_title"
-        android:entries="@array/power_menu_animations_entries"
-        android:entryValues="@array/power_menu_animations_values"
-        android:summary="%s"
-        android:defaultValue="0" />
-
-     <com.aicp.gear.preference.SecureSettingSliderPreference
+    <com.aicp.gear.preference.SecureSettingSliderPreference
         android:key="volume_dialog_dismiss_timeout"
         android:title="@string/volume_dialog_timeout_title"
         android:min="500"
@@ -61,4 +44,60 @@
         android:summary="@string/charging_animation_summary"
         android:defaultValue="false" />
 
+    <com.aicp.gear.preference.SystemSettingIntListPreference
+        android:key="screen_off_animation"
+        android:title="@string/screen_off_animation_title"
+        android:dialogTitle="@string/screen_off_animation_title"
+        android:entries="@array/screen_off_animation_entries"
+        android:entryValues="@array/screen_off_animation_values"
+        android:defaultValue="0" />
+
+    <PreferenceCategory
+        android:key="power_menu"
+        android:title="@string/power_menu_category">
+
+    <com.aicp.gear.preference.SystemSettingIntListPreference
+        android:key="power_menu_animations"
+        android:title="@string/power_menu_animation_title"
+        android:dialogTitle="@string/power_menu_animation_dialog_title"
+        android:entries="@array/power_menu_animations_entries"
+        android:entryValues="@array/power_menu_animations_values"
+        android:summary="%s"
+        android:defaultValue="0" />
+
+    <com.aicp.gear.preference.SystemSettingSliderPreference
+        android:key="transparent_power_menu"
+        android:title="@string/power_menu_transparency"
+        android:max="100"
+        android:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="%"
+        android:defaultValue="100" />
+
+    <com.aicp.gear.preference.SystemSettingSliderPreference
+        android:key="transparent_power_dialog_dim"
+        android:title="@string/power_menu_dialog_dim"
+        android:max="100"
+        android:min="0"
+        aicpextras:unitsLeft=""
+        aicpextras:unitsRight="%"
+        android:defaultValue="50" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="power_menu_actions"
+        android:title="@string/power_menu_actions_category_title" >
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="powermenu_onthego"
+        android:title="@string/global_actions_onthego_title"
+        android:summary="@string/global_actions_power_menu_summary"
+        android:defaultValue="false" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="powermenu_restart_systemui"
+        android:title="@string/global_actions_systemui_title"
+        android:summary="@string/global_actions_systemui_summary"
+        android:defaultValue="false" />
+    </PreferenceCategory>
 </PreferenceScreen>
