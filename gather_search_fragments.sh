@@ -33,7 +33,7 @@ for fragment in "$my_dir/src/com/aicp/extras/fragments/"*.{java,kt}; do
     fragment_full="com.aicp.extras.fragments.$fragment_short"
 
     # Get xml resource
-    xmlres="$(grep -A1 getPreferenceResource "$fragment" | grep return | sed 's/.* //' | sed 's/;//')"
+    xmlres="$(grep -E "getPreferenceResource|R\.xml\." "$fragment" | grep -oE "R\.xml\.[a-zA-Z0-9_]+" | head -n 1)"
     if echo "$xmlres" | grep -q "R.xml."; then
         xmlfile="$my_dir/res/xml/$(echo "$xmlres" | sed 's/R.xml.//').xml"
         #cat "$fragment" | tr '\n' '\r' | sed 's/getPreferenceResource()
