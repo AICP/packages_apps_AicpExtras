@@ -27,14 +27,15 @@ string_ref_xml_to_java() {
 components=""
 actions=""
 
-for fragment in "$my_dir/src/com/aicp/extras/fragments/"*.{java,kt}; do
-    fragment_short=$(basename "$fragment" .java)
-    fragment_short=${fragment_short%.kt}  # remove .kt, if existing
+for fragment in "$my_dir/src/com/aicp/extras/fragments/"*; do
+    fragment_short=$(basename "$fragment")
+    fragment_short="${fragment_short%.java}"
+    fragment_short="${fragment_short%.kt}" # remove .kt, if existing
     fragment_full="com.aicp.extras.fragments.$fragment_short"
 
     # Get xml resource
-    xmlres="$(grep -A1 getPreferenceResource "$fragment" | grep return | sed 's/.* //' | sed 's/;//')"
-    if echo "$xmlres" | grep -q "R.xml."; then
+    xmlres="$(grep -A3 "getPreferenceResource" "$fragment" 2>/dev/null | grep -E "R\.xml\.[a-zA-Z0-9_]+" -o | head -n1)"
+    if [ -n "$xmlres" ]; then
         xmlfile="$my_dir/res/xml/$(echo "$xmlres" | sed 's/R.xml.//').xml"
         #cat "$fragment" | tr '\n' '\r' | sed 's/getPreferenceResource()
         title="$(get_xml_root_string $xmlfile android:title)"
