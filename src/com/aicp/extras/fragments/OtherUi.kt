@@ -27,15 +27,14 @@ class OtherUi : BaseSettingsFragment(), Preference.OnPreferenceChangeListener {
 
     companion object {
         private const val SHOW_CPU_INFO_KEY = "show_cpu_info"
-        private const val KEY_DOZE_ON_CHARGE = "doze_on_charge"
     }
 
     private lateinit var showCpuInfoPref: SwitchPreferenceCompat
 
     override fun getPreferenceResource(): Int = R.xml.other_ui
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        super.onCreatePreferences(savedInstanceState, rootKey)
 
         showCpuInfoPref = findPreference<SwitchPreferenceCompat>(SHOW_CPU_INFO_KEY)!!.apply {
             isChecked = Settings.Global.getInt(
@@ -44,8 +43,6 @@ class OtherUi : BaseSettingsFragment(), Preference.OnPreferenceChangeListener {
             ) == 1
             onPreferenceChangeListener = this@OtherUi
         }
-
-        // Optional: Doze on charge check (auskommentiert)
     }
 
     private fun writeCpuInfoOptions(enabled: Boolean) {
@@ -55,12 +52,10 @@ class OtherUi : BaseSettingsFragment(), Preference.OnPreferenceChangeListener {
             Settings.Secure.SHOW_CPU_OVERLAY,
             if (enabled) 1 else 0
         )
-
         val serviceIntent = Intent().setClassName(
             "com.android.systemui",
             "com.android.systemui.CPUInfoService"
         )
-
         if (enabled) {
             requireActivity().startService(serviceIntent)
         } else {
@@ -77,4 +72,3 @@ class OtherUi : BaseSettingsFragment(), Preference.OnPreferenceChangeListener {
         }
     }
 }
-
