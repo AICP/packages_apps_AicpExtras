@@ -22,6 +22,23 @@
     android:key="other_ui"
     android:title="@string/other_ui_title">
 
+    <com.aicp.gear.preference.SystemSettingIntListPreference
+        android:key="screen_off_animation"
+        android:title="@string/screen_off_animation_title"
+        android:dialogTitle="@string/screen_off_animation_title"
+        android:entries="@array/screen_off_animation_entries"
+        android:entryValues="@array/screen_off_animation_values"
+        android:defaultValue="0" />
+
+    <com.aicp.gear.preference.SystemSettingIntListPreference
+        android:key="power_menu_animations"
+        android:title="@string/power_menu_animation_title"
+        android:dialogTitle="@string/power_menu_animation_dialog_title"
+        android:entries="@array/power_menu_animations_entries"
+        android:entryValues="@array/power_menu_animations_values"
+        android:summary="%s"
+        android:defaultValue="0" />
+
      <com.aicp.gear.preference.SecureSettingSliderPreference
         android:key="volume_dialog_dismiss_timeout"
         android:title="@string/volume_dialog_timeout_title"
