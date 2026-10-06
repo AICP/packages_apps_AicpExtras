@@ -41,7 +41,31 @@
                 <!-- More actions will be added below by code generation,
                     in order to encode searchable fragments as intent actions.
                     Actions are inserted as replacement for following comment (don't touch!) -->
-                <!-- xx1xx -->
+                <!-- automated content: -->
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.About" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.AeSettings" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.AmbientEdgeLights" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.AmbientMediaTicker" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.BatteryBar" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.Dashboard" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.HeadsUpOptions" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.Lockscreen" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.LogIt" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.OtherUi" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.PixelSpoofingAppsSettings" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.PulseSettings" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.QuickSettings" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.SlimRecentAppSidebar" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.SlimRecentAppSidebarStyle" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.SlimRecents" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.SlimRecentsBlacklist" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.SmartPixels" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.Spoofing" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.StatusBar" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.StatusBarClockSettings" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.StatusBarLogo" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.SystemBehaviour" />
+                <action android:name="com.aicp.extras.fragmentaction.com.aicp.extras.fragments.Weather" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
