@@ -22,6 +22,13 @@
     android:key="other_ui"
     android:title="@string/other_ui_title">
 
+    <com.aicp.gear.preference.SystemSettingIntListPreference
+        android:key="theming_settings_dashboard_icons"
+        android:title="@string/theming_settings_dashboard_icons_title"
+        android:entries="@array/theming_settings_dashboard_icons_entries"
+        android:entryValues="@array/theming_settings_dashboard_icons_values"
+        android:defaultValue="0" />
+
     <com.aicp.gear.preference.SecureSettingSliderPreference
         android:key="volume_dialog_dismiss_timeout"
         android:title="@string/volume_dialog_timeout_title"
